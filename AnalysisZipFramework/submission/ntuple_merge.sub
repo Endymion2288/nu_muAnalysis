@@ -1,0 +1,21 @@
+universe              = vanilla
+executable            = AnalysisZipFramework/submission/run_ntuple_merge.sh
+arguments             = $(input_dir) $(slice) $(geometry) $(outfile)
+
+# One Athena reconstruction process per input file.  Files run concurrently
+# across the cluster; the maker itself has no command-line thread setting.
+request_cpus          = 2
+request_memory        = 6000MB
+request_disk          = 2500MB
+environment           = "OMP_NUM_THREADS=2"
+should_transfer_files = NO
+getenv                = False
+
+log                   = logs/ntuple_merge_$(ClusterId).log
+output                = logs/ntuple_merge_$(ClusterId).$(ProcId).out
+error                 = logs/ntuple_merge_$(ClusterId).$(ProcId).err
+
++JobFlavour           = "workday"
+
+queue run,sim_tag,geometry,slice,input_dir,outfile,first_segment,last_segment \
+      from AnalysisZipFramework/submission/merge_manifest.tsv
