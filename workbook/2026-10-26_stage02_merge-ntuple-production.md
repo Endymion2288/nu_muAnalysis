@@ -79,7 +79,8 @@ dry-run 实际展开 `467 job(s)`；通过 `module load lxbatch/eossubmit` 提�
 作业把 Athena 的 `PoolFileCatalog.xml` 和 event-loop 临时文件写入
 `_CONDOR_SCRATCH_DIR`，避免并发 job 在共享 EOS checkout 中互相覆盖。
 
-新 cluster 的 ID 和实时状态需以重新提交命令后的 Condor 查询为准；
+重新提交后的 cluster ID 为 **1512404**；截至本报告更新时需继续用
+`condor_q 1512404` 查询实时状态；
 全量输出文件数、总字节数、ROOT entry/branch 验证和失败 job 数**尚未测量**，
 不能用交互样本推代。作业完成后必须运行 ROOT 汇总检查，并将实际数值补入本报告。
 
@@ -91,7 +92,7 @@ merge 轨迹重建链路已在真实 MC xAOD 上成功启动并完成 100-event 
 
 ## 下一步计划与验收标准
 
-1. 监控 cluster 1509181，重试退出码非零的 job；验收：467 行中每行有且仅有一个
+1. 监控 cluster 1512404，重试退出码非零的 job；验收：467 行中每行有且仅有一个
    非空 PHYS ROOT 输出，失败数为 0。
 2. 用 ROOT 读取全部输出的 `nt` 树、entry 数、关键 track/truth branch，按 run
    汇总字节数和事件数；验收：输出路径、字节、entry、branch 和缺失文件表均有实测值。
