@@ -38,10 +38,21 @@ make
 ./analysis -r <run_number> -o <output_file>
 ```
 
+To run on a directory of NTuples without adding them to the file config (e.g. for tests):
+
+```bash
+./analysis --input-dir /path/to/ntuples -o test.root [--isMC]
+./analysis --input-dir /path/to/data_ntuples --aux-dir /path/to/waveform_ntuples -o test.root
+```
+
+All `.root` files directly in the directory are used (sorted by name); they must all have the same format (e.g. not data and MC mixed). The run numbers are read from the files and used for the GRL and the `meta` tree as with `-r`.
+
 Other options:
 
 | Option | Description |
 |---|---|
+| `--input-dir <dir>` | Instead of `-r`: run on all `.root` files in this directory (not subdirectories; can be given more than once). The file config is not used and the run number(s) are read from the files |
+| `--aux-dir <dir>` | With `--input-dir`: aux (waveform) files for the reduced charge, for data that needs them. Only for input from a single run |
 | `--file-config <yaml>` | File config to use (default `config/file_config.yaml`), e.g. `config/file_config_late_tracks.yaml` |
 | `--grl-config <yaml>` | GRL config to use (default `config/grl_config.yaml`) |
 | `--output-config <yaml>` | Which columns to save in the output `nt` tree (default `config/output_columns.yaml`) |
