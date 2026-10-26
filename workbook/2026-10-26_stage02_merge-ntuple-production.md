@@ -31,6 +31,7 @@ MC xAOD 为 `WaveformHitAuxContainer_v1`，实际缺少新转换器直接读取�
 `trigger_time` 和 `hit_status` aux 字段。已在 Calypso 工作区对
 `xAODWaveformHitAuxContainerCnv_v1` 做最小可用性判断修复，并只重建、安装
 `libxAODFaserWaveformAthenaPoolPoolCnv.so`；没有修改或复制输入 xAOD。
+该外部源码修复已在 Calypso 仓库提交为 `35c48423`，本仓库只记录其版本和运行配置。
 
 ### 输入、配置与验证
 
