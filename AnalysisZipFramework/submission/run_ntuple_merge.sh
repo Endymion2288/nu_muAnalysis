@@ -6,11 +6,18 @@ slice="$2"
 geometry="$3"
 outfile="$4"
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+workdir="${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_merge_${slice}_$$"
 
 export NU_MU_SKIP_LCG=1
 source "${repo_root}/setup_env.sh"
 nu_mu_calypso_setup
 set -u
+
+# Athena writes PoolFileCatalog.xml and event-loop diagnostics in the current
+# directory.  Keep those transient files on the worker scratch disk so jobs
+# never race through the shared EOS checkout.
+mkdir -p "${workdir}"
+cd "${workdir}"
 
 mkdir -p "$(dirname "${outfile}")"
 echo "host=$(hostname)"

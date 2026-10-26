@@ -75,6 +75,8 @@ dry-run 实际展开 `467 job(s)`；通过 `module load lxbatch/eossubmit` 提�
 cluster ID 为 **1509181**。每 job 请求 `2 CPU、6000 MB、2500 MB disk`，以
 文件级并行覆盖吞吐；不写 JSON、不复制 xAOD，唯一持久产物为
 `/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24/<run>/*-merge-PHYS.root`。
+作业把 Athena 的 `PoolFileCatalog.xml` 和 event-loop 临时文件写入
+`_CONDOR_SCRATCH_DIR`，避免并发 job 在共享 EOS checkout 中互相覆盖。
 
 截至本报告写作时，cluster 中实测状态为 `467 idle、0 running、0 done、0 held`；
 全量输出文件数、总字节数、ROOT entry/branch 验证和失败 job 数**尚未测量**，
