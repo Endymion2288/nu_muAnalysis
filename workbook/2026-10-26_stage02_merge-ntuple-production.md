@@ -72,13 +72,14 @@ NTUPLE_NEVENTS=100 AnalysisZipFramework/submission/run_ntuple_merge.sh \
 作业脚本为 [`run_ntuple_merge.sh`](../AnalysisZipFramework/submission/run_ntuple_merge.sh)，
 提交描述为 [`ntuple_merge.sub`](../AnalysisZipFramework/submission/ntuple_merge.sub)。
 dry-run 实际展开 `467 job(s)`；通过 `module load lxbatch/eossubmit` 提交，
-cluster ID 为 **1509181**。每 job 请求 `2 CPU、6000 MB、2500 MB disk`，以
+首次 cluster **1509181** 使用 `workday`，在 5 分钟内保持 `467 idle` 且未启动，
+因此已移除并改用短作业队列重新提交。每 job 请求 `2 CPU、6000 MB、2500 MB disk`，以
 文件级并行覆盖吞吐；不写 JSON、不复制 xAOD，唯一持久产物为
 `/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24/<run>/*-merge-PHYS.root`。
 作业把 Athena 的 `PoolFileCatalog.xml` 和 event-loop 临时文件写入
 `_CONDOR_SCRATCH_DIR`，避免并发 job 在共享 EOS checkout 中互相覆盖。
 
-截至本报告写作时，cluster 中实测状态为 `467 idle、0 running、0 done、0 held`；
+新 cluster 的 ID 和实时状态需以重新提交命令后的 Condor 查询为准；
 全量输出文件数、总字节数、ROOT entry/branch 验证和失败 job 数**尚未测量**，
 不能用交互样本推代。作业完成后必须运行 ROOT 汇总检查，并将实际数值补入本报告。
 

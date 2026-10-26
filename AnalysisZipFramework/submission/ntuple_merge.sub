@@ -15,7 +15,7 @@ log                   = logs/ntuple_merge_$(ClusterId).log
 output                = logs/ntuple_merge_$(ClusterId).$(ProcId).out
 error                 = logs/ntuple_merge_$(ClusterId).$(ProcId).err
 
-+JobFlavour           = "workday"
++JobFlavour           = "espresso"
 
 queue run,sim_tag,geometry,slice,input_dir,outfile,first_segment,last_segment \
       from AnalysisZipFramework/submission/merge_manifest.tsv
