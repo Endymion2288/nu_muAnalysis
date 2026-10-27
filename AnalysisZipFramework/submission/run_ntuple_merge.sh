@@ -5,7 +5,10 @@ input_dir="$1"
 slice="$2"
 geometry="$3"
 outfile="$4"
-repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+# EosSubmit transfers this executable to worker scratch.  Its location there
+# has no relationship to the repository; pass the checkout explicitly.
+repo_root="${5:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export NTUPLE_NEVENTS="${6:-${NTUPLE_NEVENTS:-}}"
 workdir="${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_merge_${slice}_$$"
 
 export NU_MU_SKIP_LCG=1

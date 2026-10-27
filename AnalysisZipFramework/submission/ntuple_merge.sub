@@ -1,6 +1,7 @@
 universe              = vanilla
 executable            = AnalysisZipFramework/submission/run_ntuple_merge.sh
-arguments             = $(input_dir) $(slice) $(geometry) $(outfile)
+arguments             = $(input_dir) $(slice) $(geometry) $(outfile) $(repository)
+repository            = $ENV(PWD)
 
 # One Athena reconstruction process per input file.  Files run concurrently
 # across the cluster; the maker itself has no command-line thread setting.
