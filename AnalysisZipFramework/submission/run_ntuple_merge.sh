@@ -63,6 +63,12 @@ python "${validator}" --rdo "${local_rdo}" --xaod "${xaod}" --ntuple "${workdir}
 xrdfs "${output_endpoint}" mkdir -p "$(dirname "${outfile}")"
 partial_out="${outfile}.partial.$$"
 xrdcp --force --silent "${workdir}/ntuple.root" "${output_endpoint}/${partial_out}"
+local_bytes=$(stat -c '%s' "${workdir}/ntuple.root")
+remote_bytes=$(xrdfs "${output_endpoint}" stat "${partial_out}" | awk '$1 == "Size:" {print $2}')
+if [[ "${remote_bytes}" != "${local_bytes}" ]]; then
+    echo "output size mismatch: local=${local_bytes} remote=${remote_bytes}" >&2
+    exit 1
+fi
 xrdfs "${output_endpoint}" mv "${partial_out}" "${outfile}"
 partial_out=""
-echo "completed output=${outfile} bytes=$(stat -c '%s' "${workdir}/ntuple.root")"
+echo "completed output=${outfile} bytes=${local_bytes} remote_bytes=${remote_bytes}"
