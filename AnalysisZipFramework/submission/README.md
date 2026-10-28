@@ -32,6 +32,9 @@ Only validated final ntuples are copied to
 `ntuples/merge_mc24_master_d32b0ff3/<run>/` on EOS. Scratch xAOD, runtime copies,
 diagnostics and temporary JSON files are removed. A retry skips an existing output
 only after validating its event count and fitted-track vectors.
+Publication uses `xrdfs mkdir`, `xrdcp` to a temporary name, and `xrdfs mv`, avoiding
+EOS mount cache races when many workers create directories. The output endpoint
+defaults to `root://eoshome-x.cern.ch` (`NU_MU_OUTPUT_ENDPOINT` can override it).
 
 For a small test, invoke `run_ntuple_merge.sh` with six arguments:
 `RDO geometry output repository runtime_archive nevents`; use a separate output

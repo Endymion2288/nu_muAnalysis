@@ -8,11 +8,14 @@ outfile="$3"
 repo_root="$4"
 runtime_archive="$5"
 nevents="${6:--1}"
+output_endpoint="${NU_MU_OUTPUT_ENDPOINT:-root://eoshome-x.cern.ch}"
 workdir=$(mktemp -d "${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_reco_merge.XXXXXX")
 partial_out=""
 cleanup() {
     rm -rf "${workdir}"
-    if [[ -n "${partial_out}" ]]; then rm -f "${partial_out}"; fi
+    if [[ -n "${partial_out}" ]]; then
+        xrdfs "${output_endpoint}" rm "${partial_out}" >/dev/null 2>&1 || true
+    fi
 }
 trap cleanup EXIT
 
@@ -57,9 +60,9 @@ run_stage ntuple faser_ntuple_maker.py --isMC --geom "${geometry}" \
 
 python "${validator}" --rdo "${local_rdo}" --xaod "${xaod}" --ntuple "${workdir}/ntuple.root" \
     --nevents "${nevents}" --logs reco.log ntuple.log
-mkdir -p "$(dirname "${outfile}")"
+xrdfs "${output_endpoint}" mkdir -p "$(dirname "${outfile}")"
 partial_out="${outfile}.partial.$$"
-cp "${workdir}/ntuple.root" "${partial_out}"
-mv "${partial_out}" "${outfile}"
+xrdcp --force --silent "${workdir}/ntuple.root" "${output_endpoint}/${partial_out}"
+xrdfs "${output_endpoint}" mv "${partial_out}" "${outfile}"
 partial_out=""
-echo "completed output=${outfile} bytes=$(stat -c '%s' "${outfile}")"
+echo "completed output=${outfile} bytes=$(stat -c '%s' "${workdir}/ntuple.root")"
