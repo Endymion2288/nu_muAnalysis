@@ -1,45 +1,65 @@
 #!/usr/bin/env bash
+# One RDO -> official reconstruction -> merge ntuple, entirely in worker scratch.
 set -eo pipefail
 
-input_dir="$1"
-slice="$2"
-geometry="$3"
-outfile="$4"
-# EosSubmit transfers this executable to worker scratch.  Its location there
-# has no relationship to the repository; pass the checkout explicitly.
-repo_root="${5:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
-export NTUPLE_NEVENTS="${6:-${NTUPLE_NEVENTS:-}}"
-workdir="${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_merge_${slice}_$$"
+rdo="$1"
+geometry="$2"
+outfile="$3"
+repo_root="$4"
+runtime_archive="$5"
+nevents="${6:--1}"
+workdir=$(mktemp -d "${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_reco_merge.XXXXXX")
+partial_out=""
+cleanup() {
+    rm -rf "${workdir}"
+    if [[ -n "${partial_out}" ]]; then rm -f "${partial_out}"; fi
+}
+trap cleanup EXIT
 
 export NU_MU_SKIP_LCG=1
+export FASER_OFFICIAL_ARCHIVE="${runtime_archive}"
 source "${repo_root}/setup_env.sh"
-nu_mu_calypso_setup
+nu_mu_official_setup "${workdir}/runtime"
 set -u
-
-# Athena writes PoolFileCatalog.xml and event-loop diagnostics in the current
-# directory.  Keep those transient files on the worker scratch disk so jobs
-# never race through the shared EOS checkout.
-mkdir -p "${workdir}"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
+export OPENBLAS_NUM_THREADS="${OMP_NUM_THREADS}"
+export MKL_NUM_THREADS="${OMP_NUM_THREADS}"
 cd "${workdir}"
 
-mkdir -p "$(dirname "${outfile}")"
-echo "host=$(hostname)"
-echo "input_dir=${input_dir} slice=${slice} geometry=${geometry}"
-echo "output=${outfile}"
-
-# A completed output is the only persistent job state.  This keeps retries
-# idempotent and avoids duplicate JSON or log products on EOS.
-if [[ -s "${outfile}" ]]; then
-    echo "output already exists; skipping"
+echo "host=$(hostname) rdo=${rdo} geometry=${geometry} nevents=${nevents}"
+cat "${FASER_CALYPSO_RUN}/NU_MU_BUILD_INFO.txt"
+validator="${repo_root}/AnalysisZipFramework/submission/validate_merge_ntuple.py"
+if [[ -f "${outfile}" ]] && python "${validator}" --rdo "${rdo}" \
+        --ntuple "${outfile}" --nevents "${nevents}"; then
+    echo "valid output already exists; skipping"
     exit 0
 fi
 
-maker_args=("${input_dir}" --slice "${slice}" --files 1 --merge 10
-    --geom "${geometry}" --isMC --CKFTrackType merge --outfile "${outfile}")
-if [[ -n "${NTUPLE_NEVENTS:-}" ]]; then
-    maker_args+=(--nevents "${NTUPLE_NEVENTS}")
-fi
-faser_ntuple_maker.py "${maker_args[@]}"
+run_stage() {
+    local stage="$1"
+    shift
+    if /usr/bin/time -f "${stage} wall_seconds=%e max_rss_kib=%M user_seconds=%U system_seconds=%S" \
+            -o "${stage}.time" "$@" > "${stage}.log" 2>&1; then
+        cat "${stage}.time"
+    else
+        cat "${stage}.time"
+        tail -n 120 "${stage}.log"
+        return 1
+    fi
+}
 
-test -s "${outfile}"
-echo "completed bytes=$(stat -c '%s' "${outfile}")"
+local_rdo="${workdir}/$(basename "${rdo}")"
+run_stage stage_rdo cp "${rdo}" "${local_rdo}"
+run_stage reco faser_reco.py --isMC --geom "${geometry}" --nevents "${nevents}" "${local_rdo}"
+xaod="$(basename "${rdo}" -RDO.root)-xAOD.root"
+run_stage ntuple faser_ntuple_maker.py --isMC --geom "${geometry}" \
+    --CKFTrackType merge --nevents "${nevents}" --outfile "${workdir}/ntuple.root" "${xaod}"
+
+python "${validator}" --rdo "${local_rdo}" --xaod "${xaod}" --ntuple "${workdir}/ntuple.root" \
+    --nevents "${nevents}" --logs reco.log ntuple.log
+mkdir -p "$(dirname "${outfile}")"
+partial_out="${outfile}.partial.$$"
+cp "${workdir}/ntuple.root" "${partial_out}"
+mv "${partial_out}" "${outfile}"
+partial_out=""
+echo "completed output=${outfile} bytes=$(stat -c '%s' "${outfile}")"

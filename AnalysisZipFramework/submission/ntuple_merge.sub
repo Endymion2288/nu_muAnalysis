@@ -1,14 +1,15 @@
 universe              = vanilla
 executable            = AnalysisZipFramework/submission/run_ntuple_merge.sh
-arguments             = $(input_dir) $(slice) $(geometry) $(outfile) $(repository)
+arguments             = $(rdo) $(geometry) $(outfile) $(repository) $(runtime_archive) $(nevents)
 repository            = $ENV(PWD)
+runtime_archive       = /eos/user/x/xcheng/FASER/nu_muAnalysis/software/calypso-master-d32b0ff3-el9-gcc13.tar.gz
+nevents               = -1
 
-# One Athena reconstruction process per input file.  Files run concurrently
-# across the cluster; the maker itself has no command-line thread setting.
-request_cpus          = 2
-request_memory        = 6000MB
-request_disk          = 2500MB
-environment           = "OMP_NUM_THREADS=2"
+# File-level parallelism; the unmodified official event loop is serial.
+request_cpus          = 1
+request_memory        = 3000MB
+request_disk          = 5000MB
+environment           = "OMP_NUM_THREADS=1"
 should_transfer_files = NO
 getenv                = False
 
@@ -16,7 +17,11 @@ log                   = logs/ntuple_merge_$(ClusterId).log
 output                = logs/ntuple_merge_$(ClusterId).$(ProcId).out
 error                 = logs/ntuple_merge_$(ClusterId).$(ProcId).err
 
-+JobFlavour           = "espresso"
++JobFlavour           = "workday"
++NuMuRun              = $(run)
++NuMuSimTag           = "$(sim_tag)"
++NuMuSegments         = "$(first_segment)-$(last_segment)"
++NuMuCalypsoCommit    = "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305"
 
-queue run,sim_tag,geometry,slice,input_dir,outfile,first_segment,last_segment \
+queue run,sim_tag,geometry,rdo,outfile,first_segment,last_segment \
       from AnalysisZipFramework/submission/merge_manifest.tsv

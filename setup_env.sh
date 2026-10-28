@@ -11,6 +11,7 @@ _nu_mu_setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export NU_MU_ANALYSIS_ROOT="${_nu_mu_setup_dir}"
 export NU_MU_ANALYSIS_SOURCE="${NU_MU_ANALYSIS_ROOT}/AnalysisZipFramework"
 export NU_MU_ANALYSIS_BUILD="${NU_MU_ANALYSIS_BUILD:-${NU_MU_ANALYSIS_ROOT}/build}"
+if [[ "${1:-}" == "--official" ]]; then export NU_MU_SKIP_LCG=1; fi
 
 # ROOT, CMake dependencies, and the FASER run-list files come from the LCG/CVMFS view.
 export NU_MU_LCG_VIEW="${NU_MU_LCG_VIEW:-/cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt}"
@@ -29,6 +30,24 @@ export FASER_ATHENA_SETUP="${FASER_ATHENA_SETUP:-/cvmfs/atlas.cern.ch/repo/sw/so
 export FASER_GCC13_SETUP="${FASER_GCC13_SETUP:-/cvmfs/atlas.cern.ch/repo/sw/software/24.0/sw/lcg/releases/gcc/13.1.0-b3d18/x86_64-el9/setup.sh}"
 export FASER_RELEASE_DATA="${FASER_RELEASE_DATA:-/cvmfs/faser.cern.ch/repo/sw/software/22.0/faser/offline/ReleaseData/v20}"
 export FASER_POOLCOND="${FASER_POOLCOND:-/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current}"
+export G4ENSDFSTATEDATA="${G4ENSDFSTATEDATA:-/cvmfs/geant4.cern.ch/share/data/G4ENSDFSTATE2.2}"
+export FASER_OFFICIAL_COMMIT=d32b0ff3cc4a2dad4abfb1474a82422c3c25b305
+export FASER_OFFICIAL_ARCHIVE="${FASER_OFFICIAL_ARCHIVE:-/eos/user/x/xcheng/FASER/nu_muAnalysis/software/calypso-master-d32b0ff3-el9-gcc13.tar.gz}"
+
+nu_mu_official_setup() {
+    local runtime="${1:-${TMPDIR:-/tmp}/nu_mu_calypso_master_d32b0ff3_${UID}}"
+    if [[ -n "${Calypso_SET_UP:-}" && "${FASER_CALYPSO_RUN}" != "${runtime}" ]]; then
+        echo "Load the official runtime in a fresh shell; another Calypso is already loaded." >&2
+        return 1
+    fi
+    if [[ ! -r "${runtime}/setup.sh" ]]; then
+        mkdir -p "${runtime}"
+        tar -xzf "${FASER_OFFICIAL_ARCHIVE}" -C "${runtime}" || return
+    fi
+    export FASER_CALYPSO_RUN="${runtime}"
+    nu_mu_calypso_setup || return
+    export ROOT_INCLUDE_PATH="${runtime}/include:${ROOT_INCLUDE_PATH:-}"
+}
 
 nu_mu_calypso_setup() {
     if [[ -r "${FASER_ATHENA_SETUP}" && -z "${FASER_ATHENA_LOADED:-}" ]]; then
@@ -95,3 +114,4 @@ nu_mu_env_report() {
 
 unset _nu_mu_setup_dir
 echo "nu_muAnalysis environment loaded; use nu_mu_env_report for a summary."
+if [[ "${1:-}" == "--official" ]]; then nu_mu_official_setup || return; fi
