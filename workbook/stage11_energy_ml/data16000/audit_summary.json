@@ -1,0 +1,44 @@
+{
+  "root_version": "6.40.02",
+  "platform": "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "peak_rss_mib": 408.266,
+  "samples": [
+    {
+      "sample": "data_16000",
+      "input": "root://eospublic.cern.ch//eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00000-00049-r0022-PHYS.root",
+      "entries": 868756,
+      "branches": 553,
+      "profiled_branches": 125,
+      "sampled_events": 128,
+      "duplicate_ids_in_prefix": 0,
+      "open_wall_s": 3.569735,
+      "scan_wall_s": 7.236579,
+      "prefix_events_per_s": 17.688,
+      "scan_read_bytes": 2272658,
+      "scan_read_calls": 1,
+      "alignment_checked_events": {
+        "Track_p0": 128,
+        "Track_px0": 128,
+        "Track_py0": 128,
+        "Track_Chi2": 128,
+        "Track_nDoF": 128,
+        "Track_nLayers": 128,
+        "Track_charge": 128,
+        "Track_hitSet": 128,
+        "SpacePoint_xyz": 128
+      },
+      "alignment_mismatch_events": {
+        "Track_p0": 0,
+        "Track_px0": 0,
+        "Track_py0": 0,
+        "Track_Chi2": 0,
+        "Track_nDoF": 0,
+        "Track_nLayers": 0,
+        "Track_charge": 0,
+        "Track_hitSet": 0,
+        "SpacePoint_xyz": 0
+      },
+      "note": "Unselected first entries; schema/pipeline evidence only. Counts are not physics yields."
+    }
+  ]
+}

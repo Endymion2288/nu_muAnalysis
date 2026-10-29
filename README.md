@@ -4,6 +4,10 @@
 
 Analysis framework for running the electron muon neutrino analysis without the need to produce intermidiary parquet files
 
+For the proposed multivariable neutrino-energy study, see the Chinese
+[machine-learning research roadmap](docs/nu_mu_energy_ml_roadmap.md), including
+verified input branches, model comparisons, validation criteria and staged tasks.
+
 ## Getting started
 
 The framework creates an executable called `analysis` which is configured to run over one run at a time (TODO: add multirun functionality)
