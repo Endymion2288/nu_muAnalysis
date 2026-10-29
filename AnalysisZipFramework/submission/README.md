@@ -116,3 +116,38 @@ After verifying `paired_results.npz` against the shards, the redundant shards ca
 be deleted. Add `--combined workbook/stage09_tracking_comparison/paired_results.npz`
 to regenerate all reports from the consolidated artifact without reprocessing ROOT
 files. See the stage 09 Chinese workbook for inputs, validation and interpretation.
+
+## Interaction-z efficiency and compact event summaries
+
+`tracking_z.sub` uses the same 342 inputs and the comparison worker's optional
+`fiducial` product. It reconstructs forward/backward temporarily, reads the existing
+merge, and requires all previous per-file counts, paired overlaps and pz/r bins to
+match the frozen stage 09 reference. Its separate payload
+`software/tracking-z-stage10.tar.gz` contains the extraction code/configuration and
+the reference NPZ under archive name `reference.npz`; freeze it before submission.
+The descriptor enables file transfer with an empty `transfer_output_files` list:
+the worker already publishes its NPZ with XRootD.
+This prevents automatic transfer of unrelated scratch files; stdout/stderr remain
+in the configured logs.
+
+The saved NPZ contains only truth-fiducial run/eventID, truth pz/x/y/z, and three
+uint16 cumulative cut masks. It avoids keeping duplicate ROOT files while allowing
+later coordinate plots without reconstruction. The final consolidated artifact is
+`workbook/stage10_tracking_z/fiducial_events.npz`.
+This compact event dataset stays on EOS and is ignored by Git; only binned results,
+figures, code and documentation are committed.
+
+```bash
+condor_submit AnalysisZipFramework/submission/tracking_z.sub
+source setup_env.sh --official
+python AnalysisZipFramework/scripts/report_tracking_z.py --repo "$PWD" \
+  --manifest AnalysisZipFramework/submission/tracking_z_manifest.tsv \
+  --reference workbook/stage09_tracking_comparison/paired_results.npz \
+  --output workbook/stage10_tracking_z
+```
+
+After shard cleanup, add `--combined workbook/stage10_tracking_z/fiducial_events.npz`
+to regenerate the figures/tables. z is the incoming neutrino's truth interaction
+coordinate in mm. The repository's box/lead fiducial gap has no denominator and must
+remain undefined. The main graph uses a common truth denominator; the additional
+heatmap shows each cut relative to its preceding row. See the stage 10 workbook.

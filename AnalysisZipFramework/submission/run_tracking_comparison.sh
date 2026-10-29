@@ -9,6 +9,7 @@ report="$5"
 repo="$6"
 payload="$7"
 nevents="${8:--1}"
+product="${9:-cutflow}"
 scratch=$(mktemp -d "${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_compare.XXXXXX")
 partial=""
 endpoint=root://eoshome-x.cern.ch
@@ -25,13 +26,17 @@ nu_mu_official_setup "$scratch/runtime"
 cd "$scratch"
 echo "index=$index host=$(hostname) input=$rdo existing_merge=$existing_merge nevents=$nevents"
 cat "$FASER_CALYPSO_RUN/NU_MU_BUILD_INFO.txt"
-if [[ -f "$report" ]] && python - "$report" <<'PY'
+if [[ -f "$report" ]] && python - "$report" "$product" <<'PY'
 import sys
 import numpy as np
 with np.load(sys.argv[1]) as result:
     assert result['counts'].shape == (3, 21)
-    assert result['energy_pass'].shape[-1] == 11
-    assert int(result['existing_merge_verified']) == 1
+    if sys.argv[2] == 'fiducial':
+        assert int(result['reference_verified']) == 1
+        assert result['event_cut_bits'].shape[1] == 3
+    else:
+        assert result['energy_pass'].shape[-1] == 11
+        assert int(result['existing_merge_verified']) == 1
 PY
 then
     echo "valid paired summary already exists; skipping"
@@ -53,19 +58,32 @@ stage input cp "$rdo" .
 local_rdo=$(basename "$rdo")
 stage reco faser_reco.py --isMC --geom "$geometry" --nevents "$nevents" "$local_rdo"
 xaod="${local_rdo%-RDO.root}-xAOD.root"
-for mode in forward backward merge; do
+modes=(forward backward merge)
+if [[ "$product" == fiducial ]]; then
+    stage existing_merge cp "$existing_merge" merge.root
+    modes=(forward backward)
+fi
+for mode in "${modes[@]}"; do
     stage "$mode" faser_ntuple_maker.py --isMC --geom "$geometry" --CKFTrackType "$mode" \
         --nevents "$nevents" --outfile "$mode.root" "$xaod"
 done
 # Use the existing merge only after all modes share the same new reconstruction.
 comparison=(python "$scratch/code/AnalysisZipFramework/scripts/compare_tracking.py"
     --repo "$scratch/code" --forward forward.root --backward backward.root --merge merge.root
-    --existing-merge "$existing_merge" --output result.npz --threads 1)
+    --output result.npz --threads 1)
+result_file=result.npz
+if [[ "$product" == fiducial ]]; then
+    comparison+=(--reference "$scratch/code/reference.npz" --index "$index"
+        --fiducial-output fiducial.npz)
+    result_file=fiducial.npz
+else
+    comparison+=(--existing-merge "$existing_merge")
+fi
 stage comparison "${comparison[@]}"
 cat comparison.log
 partial="${report}.partial.$$"
-xrdcp --force --silent result.npz "$endpoint/$partial"
-local_bytes=$(stat -c '%s' result.npz)
+xrdcp --force --silent "$result_file" "$endpoint/$partial"
+local_bytes=$(stat -c '%s' "$result_file")
 remote_bytes=$(xrdfs "$endpoint" stat "$partial" | awk '$1=="Size:" {print $2}')
 [[ "$local_bytes" == "$remote_bytes" ]] || exit 1
 xrdfs "$endpoint" mv "$partial" "$report"

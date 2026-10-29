@@ -12,6 +12,8 @@ MODES = ("forward", "backward", "merge")
 PAIRS = ((0, 1), (0, 2), (1, 2))
 ENERGY_EDGES = np.array([100, 200, 300, 500, 750, 1000, 1500, 2000, 3000, 5000, 10000., np.inf])
 RADIUS_EDGES = np.array([0, 20, 40, 60, 80, 100.])
+Z_EDGES = np.r_[np.arange(-3000., -1999., 100.), -1950.,
+                -1769.65, -1719.65, -1669.65, -1619.65]
 
 
 def selection(repo):
@@ -55,6 +57,7 @@ def extract(path, repo, threads=1):
         node = node.Define(col, expression)
         cut_columns.append(col)
     values = ["run", "eventID", "truth_pz_nu", "truth_dec_r", "truth_dec_z_nu",
+              "truth_dec_x_nu", "truth_dec_y_nu",
               "longTracks", "LeadTrack_Idx", "LeadTrack_pz0", "LeadTrack_nLayers",
               "LeadTrack_nDoF", "LeadTrack_Chi2_NDF", "LeadTrack_r_atMaxRadius",
               "LeadTrack_rIFT", "LeadTrack_rVetoNu", "LeadTrack_Theta",
@@ -94,7 +97,8 @@ def raw_nontrack_check(paths):
     return len(common)
 
 
-def compare(paths, existing, repo, output, threads=1):
+def compare(paths, existing, repo, output, threads=1, fiducial_output=None,
+            reference=None, manifest_index=None):
     cuts, _ = selection(repo)
     data, masks = [], []
     for path in paths:
@@ -146,6 +150,33 @@ def compare(paths, existing, repo, output, threads=1):
             for j, stage in enumerate((fiducial+1, tracking, masks.shape[2]-1)):
                 hist[mode, j] = np.histogram(variable[masks[mode, :, stage]], edges)[0]
         bins[f"{label}_pass"] = hist
+    if reference:
+        with np.load(reference) as previous:
+            index = np.flatnonzero(previous['manifest_indices'] == manifest_index).item()
+            current = dict(counts=counts, overlaps=overlaps,
+                           nonfinite_leading_quality=nonfinite_quality, **bins)
+            for key, value in current.items():
+                if not np.array_equal(value, previous[key][index]):
+                    raise RuntimeError(f'stage09 reference mismatch: {key}')
+        print(f'stage09 reference matched index={manifest_index}', flush=True)
+    if fiducial_output:
+        baseline = masks[0, :, fiducial]
+        # Only truth-fiducial events; one uint16 per mode records all 14 reco cuts.
+        n_reco = masks.shape[2] - fiducial - 1
+        assert n_reco <= 16
+        bits = np.zeros((int(baseline.sum()), 3), dtype=np.uint16)
+        for m in range(3):
+            for j in range(n_reco):
+                bits[:, m] |= masks[m, baseline, fiducial+1+j].astype(np.uint16) << j
+        np.savez_compressed(fiducial_output,
+                            **{f'event_{key}':data[0][key][baseline] for key in
+                               ('run', 'eventID', 'truth_pz_nu', 'truth_dec_x_nu',
+                                'truth_dec_y_nu', 'truth_dec_z_nu')},
+                            event_cut_bits=bits, counts=counts, overlaps=overlaps,
+                            fiducial_index=fiducial, tracking_index=tracking,
+                            manifest_index=manifest_index,
+                            reference_verified=int(reference is not None),
+                            nontrack_columns=nontrack_columns)
     np.savez_compressed(output, counts=counts, overlaps=overlaps,
                         nonfinite_leading_quality=nonfinite_quality,
                         nontrack_columns=nontrack_columns, existing_merge_verified=old_verified,
@@ -162,9 +193,13 @@ def main():
     parser.add_argument("--existing-merge", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--threads", type=int, default=1)
+    parser.add_argument("--fiducial-output", type=Path)
+    parser.add_argument("--reference", type=Path, help='Consolidated stage09 statistics')
+    parser.add_argument("--index", type=int, dest='manifest_index')
     args = parser.parse_args()
     compare([args.forward, args.backward, args.merge], args.existing_merge,
-            args.repo, args.output, args.threads)
+            args.repo, args.output, args.threads, args.fiducial_output,
+            args.reference, args.manifest_index)
 
 
 if __name__ == "__main__":
