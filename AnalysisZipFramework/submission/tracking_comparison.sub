@@ -1,0 +1,19 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_tracking_comparison.sh
+payload = $(repository)/software/tracking-comparison-stage09.tar.gz
+arguments = $(index) $(rdo) $(geometry) $(merge) $(report) $(repository) $(payload) -1
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 6000MB
+environment = "OMP_NUM_THREADS=1"
+should_transfer_files = NO
+getenv = False
++JobFlavour = "workday"
++NuMuRun = $(run)
++NuMuCalypsoCommit = "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305"
+log = $(repository)/logs/tracking_comparison_$(ClusterId).log
+output = $(repository)/logs/tracking_comparison_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/tracking_comparison_$(ClusterId).$(ProcId).err
+queue index,run,geometry,rdo,merge,report from AnalysisZipFramework/submission/tracking_comparison_manifest.tsv

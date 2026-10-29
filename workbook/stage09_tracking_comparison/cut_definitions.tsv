@@ -1,0 +1,21 @@
+stage	cut	expression
+1	Remove CaloNu PMT region (truth)	(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)
+2	CC events only	is_cc
+3	nu_mu only	abs(SafeAt(truth_pdg, 0)) == 14
+4	In Faser Nu Box or Lead Block	decay_box || decay_lead
+5	Truth dec r < 100 mm	truth_dec_r < 100
+6	Truth pz > 100 GeV	truth_pz_nu > 100
+7	At least one long track	longTracks > 0
+8	Veto20 and Veto21 charge > 40 pC	Veto20_charge > 40 && Veto21_charge > 40
+9	Timing Station Charge > 20 pC	hitsTiming
+10	Preshower Charge > 2.5 pC	Preshower0_charge > 2.5 && Preshower1_charge > 2.5
+11	Track pz > 100 GeV	LeadTrack_pz0 > 100
+12	Leading track has at >= 7 layers	LeadTrack_nLayers >= 7
+13	Track nDoF >= 9	LeadTrack_nDoF >= 9
+14	Leading track has chi2/ndof < 15	LeadTrack_Chi2_NDF < 15
+15	Track R at max radius < 95 mm	LeadTrack_r_atMaxRadius < 95
+16	Track R at IFT < 95 mm	LeadTrack_rIFT < 95
+17	Track rVetoNu < 120 mm	LeadTrack_rVetoNu < 120
+18	Leading track theta < 25 mrad	LeadTrack_Theta < 25
+19	VetoNu0 reduced charge < 30 pC	VetoNu0_reduced_charge < 30
+20	VetoNu1 reduced charge < 30 pC	VetoNu1_reduced_charge < 30

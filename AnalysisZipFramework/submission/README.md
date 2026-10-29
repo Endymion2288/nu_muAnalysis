@@ -73,3 +73,46 @@ For upstream fit-quality diagnosis, reconstruct a small slice using `--skip` and
 in the official environment. It attaches a read-only diagnostic algorithm to the
 maker and prints source-track/state fit qualities and shared cluster identifiers.
 Diagnostic outputs are not production ntuples; remove temporary xAOD files afterward.
+
+## Paired forward / backward / merge cutflows
+
+`tracking_comparison_manifest.tsv` selects only the 342 RDOs with published merge
+outputs, excluding original index 291. Each comparison job reconstructs once and
+runs all three maker modes on the same scratch xAOD. It checks identical event IDs,
+truth/scintillator inputs, and agreement with the existing merge analysis columns.
+It saves a compressed statistics shard, then removes every intermediate ROOT file.
+The cuts and definitions come directly from the repository YAML with normal MC
+selection and native reduced charge. These are event efficiencies, without muon
+truth matching or flux weights.
+
+Freeze the extraction code/configuration before submitting (do not replace this
+archive while its jobs run):
+
+```bash
+tar -czf software/tracking-comparison-stage09.tar.gz setup_env.sh \
+  AnalysisZipFramework/scripts/compare_tracking.py \
+  AnalysisZipFramework/config/{cuts,definitions}.yaml \
+  AnalysisZipFramework/include/RDFDefines.h
+module load lxbatch/eossubmit
+condor_submit AnalysisZipFramework/submission/tracking_comparison.sub
+```
+
+The descriptor uses `/eos/user/x/` explicitly: the local `/eos/home-x/` alias is
+not accepted by the EosSubmit XRootD transfer plugin. Create the manifest's shard
+directory before submission. Each job requests 1 CPU/3000 MB RAM; a larger memory
+request can cause CERN to allocate additional CPUs even though Athena is serial.
+
+Once all shards are present, aggregate tables, paired uncertainties and PNG/SVG
+figures in a fresh official-runtime shell:
+
+```bash
+source setup_env.sh --official
+python AnalysisZipFramework/scripts/report_tracking_comparison.py --repo "$PWD" \
+  --manifest AnalysisZipFramework/submission/tracking_comparison_manifest.tsv \
+  --output workbook/stage09_tracking_comparison
+```
+
+After verifying `paired_results.npz` against the shards, the redundant shards can
+be deleted. Add `--combined workbook/stage09_tracking_comparison/paired_results.npz`
+to regenerate all reports from the consolidated artifact without reprocessing ROOT
+files. See the stage 09 Chinese workbook for inputs, validation and interpretation.
