@@ -1,0 +1,93 @@
+# Additional definitions, merged with definitions.yaml by export_ml_dataset.py.
+Definitions:
+  ML_mu_p_GeV:
+    expression: SafeAt(Track_p0, LeadTrack_Idx) / 1000.0
+    data_type: ALL
+  ML_mu_px0_GeV:
+    expression: SafeAt(Track_px0, LeadTrack_Idx) / 1000.0
+    data_type: ALL
+  ML_mu_py0_GeV:
+    expression: SafeAt(Track_py0, LeadTrack_Idx) / 1000.0
+    data_type: ALL
+  ML_mu_pz0_GeV:
+    expression: SafeAt(Track_pz0, LeadTrack_Idx) / 1000.0
+    data_type: ALL
+  ML_mu_x0_mm:
+    expression: SafeAt(Track_x0, LeadTrack_Idx)
+    data_type: ALL
+  ML_mu_y0_mm:
+    expression: SafeAt(Track_y0, LeadTrack_Idx)
+    data_type: ALL
+  ML_mu_z0_mm:
+    expression: SafeAt(Track_z0, LeadTrack_Idx)
+    data_type: ALL
+  ML_mu_X_atVetoNu_mm:
+    expression: SafeAt(Track_X_atVetoNu, LeadTrack_Idx)
+    data_type: ALL
+  ML_mu_Y_atVetoNu_mm:
+    expression: SafeAt(Track_Y_atVetoNu, LeadTrack_Idx)
+    data_type: ALL
+  ML_mu_X_atCalo_mm:
+    expression: SafeAt(Track_X_atCalo, LeadTrack_Idx)
+    data_type: ALL
+  ML_mu_Y_atCalo_mm:
+    expression: SafeAt(Track_Y_atCalo, LeadTrack_Idx)
+    data_type: ALL
+  ML_sp_mean_x_mm:
+    expression: 'SpacePoint_x.empty() ? std::numeric_limits<double>::quiet_NaN() :
+      double(ROOT::VecOps::Mean(SpacePoint_x))'
+    data_type: ALL
+  ML_sp_rms_x_mm:
+    expression: 'SpacePoint_x.empty() ? std::numeric_limits<double>::quiet_NaN() :
+      std::sqrt(std::max(0.0, double(ROOT::VecOps::Mean(SpacePoint_x*SpacePoint_x))
+      - ML_sp_mean_x_mm*ML_sp_mean_x_mm))'
+    data_type: ALL
+  ML_sp_mean_y_mm:
+    expression: 'SpacePoint_y.empty() ? std::numeric_limits<double>::quiet_NaN() :
+      double(ROOT::VecOps::Mean(SpacePoint_y))'
+    data_type: ALL
+  ML_sp_rms_y_mm:
+    expression: 'SpacePoint_y.empty() ? std::numeric_limits<double>::quiet_NaN() :
+      std::sqrt(std::max(0.0, double(ROOT::VecOps::Mean(SpacePoint_y*SpacePoint_y))
+      - ML_sp_mean_y_mm*ML_sp_mean_y_mm))'
+    data_type: ALL
+  ML_truth_E_GeV:
+    expression: std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2)
+      + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0
+    data_type: MC
+  ML_truth_pdg:
+    expression: SafeAt(truth_pdg,0)
+    data_type: MC
+  ML_truth_barcode:
+    expression: SafeAt(truth_barcode,0)
+    data_type: MC
+  ML_truth_P_MeV:
+    expression: SafeAt(truth_P,0)
+    data_type: MC
+  ML_truth_m_MeV:
+    expression: SafeAt(truth_m,0)
+    data_type: MC
+  ML_truth_px_MeV:
+    expression: SafeAt(truth_px,0)
+    data_type: MC
+  ML_truth_py_MeV:
+    expression: SafeAt(truth_py,0)
+    data_type: MC
+  ML_truth_pz_MeV:
+    expression: SafeAt(truth_pz,0)
+    data_type: MC
+  ML_calo0_E_EM_GeV:
+    expression: Calo0_E_EM / 1000.0
+    data_type: ALL
+  ML_calo1_E_EM_GeV:
+    expression: Calo1_E_EM / 1000.0
+    data_type: ALL
+  ML_calo2_E_EM_GeV:
+    expression: Calo2_E_EM / 1000.0
+    data_type: ALL
+  ML_calo3_E_EM_GeV:
+    expression: Calo3_E_EM / 1000.0
+    data_type: ALL
+  ML_calo_total_E_EM_GeV:
+    expression: Calo_total_E_EM / 1000.0
+    data_type: ALL

@@ -1,0 +1,18 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_extract.sh
+arguments = $(index) $(input) $(cache) energy-ml-stage12.tar.gz
+transfer_input_files = $(repository)/software/energy-ml-stage12.tar.gz
+request_cpus = 1
+request_memory = 1800MB
+request_disk = 1000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-extract"
+log = $(repository)/logs/ml_extract_$(ClusterId).log
+output = $(repository)/logs/ml_extract_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_extract_$(ClusterId).$(ProcId).err
+queue index,input,cache from AnalysisZipFramework/submission/ml_extract_manifest.tsv

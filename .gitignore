@@ -26,3 +26,8 @@ notebooks/
 *.asetup
 ntuples/tracking_z_stage10/
 workbook/stage10_tracking_z/fiducial_events.npz
+
+# Compact ML event caches, predictions and fitted models stay outside Git.
+ntuples/energy_ml_stage12/
+ml/artifacts/
+__pycache__/
