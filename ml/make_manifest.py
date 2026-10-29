@@ -43,6 +43,8 @@ def main():
     with path.open('w') as f:
         w=csv.DictWriter(f,fieldnames=list(out[0]),delimiter='\t',lineterminator='\n')
         w.writeheader();w.writerows(out)
+    (repo/'AnalysisZipFramework/submission/ml_extract_manifest.tsv').write_text(
+        ''.join('\t'.join(row[k] for k in ['index','input','cache'])+'\n' for row in out))
     assert len(out)==342 and not any(int(r['index'])==291 for r in out)
     for part in ['train','validation','calibration','test','challenge']:
         subset=[r for r in out if r['partition']==part]

@@ -1,0 +1,18 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_bdt.sh
+arguments = energy-ml-bdt-stage13.tar.gz $(repository)/workbook/stage13_energy_ml $(repository)/ml/artifacts/stage13
+transfer_input_files = $(repository)/software/energy-ml-bdt-stage13.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 1000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuStage = "energy-ml-bdt"
+log = $(repository)/logs/ml_bdt_$(ClusterId).log
+output = $(repository)/logs/ml_bdt_$(ClusterId).out
+error = $(repository)/logs/ml_bdt_$(ClusterId).err
+queue 1

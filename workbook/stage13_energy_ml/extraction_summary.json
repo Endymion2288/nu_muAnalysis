@@ -1,0 +1,534 @@
+{
+  "files": 342,
+  "raw_events": 3374987,
+  "selected_events": 104930,
+  "feature_nonfinite_counts": {
+    "ML_mu_p_GeV": 0,
+    "ML_mu_px0_GeV": 0,
+    "ML_mu_py0_GeV": 0,
+    "LeadTrack_charge": 0,
+    "LeadTrack_Theta": 0,
+    "LeadTrack_Chi2_NDF": 0,
+    "LeadTrack_nDoF": 0,
+    "LeadTrack_nLayers": 0,
+    "LeadTrack_r_atMaxRadius": 0,
+    "LeadTrack_rVetoNu": 0,
+    "ML_mu_x0_mm": 0,
+    "ML_mu_y0_mm": 0,
+    "ML_mu_z0_mm": 0,
+    "ML_mu_X_atVetoNu_mm": 0,
+    "ML_mu_Y_atVetoNu_mm": 0,
+    "ML_mu_X_atCalo_mm": 0,
+    "ML_mu_Y_atCalo_mm": 0,
+    "nClusters0": 0,
+    "nClusters1": 0,
+    "nClusters2": 0,
+    "nClusters3": 0,
+    "SpacePoints": 0,
+    "TrackSegments": 0,
+    "longTracks": 0,
+    "VetoNu0_charge": 0,
+    "VetoNu1_charge": 0,
+    "Veto10_charge": 0,
+    "Veto20_charge": 0,
+    "Veto21_charge": 0,
+    "Timing0_charge": 0,
+    "Timing1_charge": 0,
+    "Timing2_charge": 0,
+    "Timing3_charge": 0,
+    "Preshower0_charge": 0,
+    "Preshower1_charge": 0,
+    "VetoNu0_reduced_charge": 0,
+    "VetoNu1_reduced_charge": 0,
+    "ML_calo0_E_EM_GeV": 0,
+    "ML_calo1_E_EM_GeV": 0,
+    "ML_calo2_E_EM_GeV": 0,
+    "ML_calo3_E_EM_GeV": 0,
+    "ML_calo_total_E_EM_GeV": 0,
+    "ML_sp_mean_x_mm": 0,
+    "ML_sp_rms_x_mm": 0,
+    "ML_sp_mean_y_mm": 0,
+    "ML_sp_rms_y_mm": 0
+  },
+  "genweight_values": [
+    1.0
+  ],
+  "cross_sections": [
+    1.0
+  ],
+  "raw_first_pdg_counts": {
+    "-14": 732500,
+    "-12": 158396,
+    "12": 321832,
+    "14": 2149897,
+    "-16": 4308,
+    "16": 8054
+  },
+  "cross_partition_exact_truth_duplicates": 0,
+  "max_spacepoints": 32105,
+  "max_relative_truth_P_difference": 0.0,
+  "max_relative_label_difference": 0.0,
+  "max_E_minus_pz_GeV": 0.0013440690026982338,
+  "sum_extraction_wall_s": 7166.004527777899,
+  "extraction_wall_quantiles_s": [
+    11.16339111328125,
+    20.911148103885353,
+    27.38929311838001,
+    41.393501376733184
+  ],
+  "max_analysis_rss_MiB": 873.6953125,
+  "max_parent_rss_MiB": 456.3125,
+  "original_cache_bytes": 35185104,
+  "consolidated_cache_bytes": 24498825,
+  "weight_mode": "unit diagnostic; physical flux normalization unverified",
+  "config": {
+    "version": 1,
+    "seed": 20261029,
+    "production": "official merge d32b0ff3 without-IFT FASERNU-04 OFLCOND-FASER-06",
+    "target": "ML_truth_E_GeV",
+    "feature_groups": {
+      "mu": [
+        "ML_mu_p_GeV"
+      ],
+      "mu_context": [
+        "ML_mu_px0_GeV",
+        "ML_mu_py0_GeV",
+        "LeadTrack_charge",
+        "LeadTrack_Theta",
+        "LeadTrack_Chi2_NDF",
+        "LeadTrack_nDoF",
+        "LeadTrack_nLayers",
+        "LeadTrack_r_atMaxRadius",
+        "LeadTrack_rVetoNu",
+        "ML_mu_x0_mm",
+        "ML_mu_y0_mm",
+        "ML_mu_z0_mm",
+        "ML_mu_X_atVetoNu_mm",
+        "ML_mu_Y_atVetoNu_mm",
+        "ML_mu_X_atCalo_mm",
+        "ML_mu_Y_atCalo_mm"
+      ],
+      "counts": [
+        "nClusters0",
+        "nClusters1",
+        "nClusters2",
+        "nClusters3",
+        "SpacePoints",
+        "TrackSegments",
+        "longTracks"
+      ],
+      "scintillator": [
+        "VetoNu0_charge",
+        "VetoNu1_charge",
+        "Veto10_charge",
+        "Veto20_charge",
+        "Veto21_charge",
+        "Timing0_charge",
+        "Timing1_charge",
+        "Timing2_charge",
+        "Timing3_charge",
+        "Preshower0_charge",
+        "Preshower1_charge",
+        "VetoNu0_reduced_charge",
+        "VetoNu1_reduced_charge"
+      ],
+      "calo": [
+        "ML_calo0_E_EM_GeV",
+        "ML_calo1_E_EM_GeV",
+        "ML_calo2_E_EM_GeV",
+        "ML_calo3_E_EM_GeV",
+        "ML_calo_total_E_EM_GeV"
+      ],
+      "shape": [
+        "ML_sp_mean_x_mm",
+        "ML_sp_rms_x_mm",
+        "ML_sp_mean_y_mm",
+        "ML_sp_rms_y_mm"
+      ]
+    },
+    "feature_versions": {
+      "F0": [
+        "mu"
+      ],
+      "F1": [
+        "mu",
+        "mu_context"
+      ],
+      "F2": [
+        "mu",
+        "mu_context",
+        "counts"
+      ],
+      "F3": [
+        "mu",
+        "mu_context",
+        "counts",
+        "scintillator"
+      ],
+      "F4": [
+        "mu",
+        "mu_context",
+        "counts",
+        "scintillator",
+        "calo"
+      ],
+      "F5": [
+        "mu",
+        "mu_context",
+        "counts",
+        "scintillator",
+        "calo",
+        "shape"
+      ]
+    },
+    "units": {
+      "ML_mu_p_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_p0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_px0_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_px0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_py0_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_py0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_pz0_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_x0_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_x0, LeadTrack_Idx)"
+      },
+      "ML_mu_y0_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_y0, LeadTrack_Idx)"
+      },
+      "ML_mu_z0_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_z0, LeadTrack_Idx)"
+      },
+      "ML_mu_X_atVetoNu_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_X_atVetoNu, LeadTrack_Idx)"
+      },
+      "ML_mu_Y_atVetoNu_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_Y_atVetoNu, LeadTrack_Idx)"
+      },
+      "ML_mu_X_atCalo_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_X_atCalo, LeadTrack_Idx)"
+      },
+      "ML_mu_Y_atCalo_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_Y_atCalo, LeadTrack_Idx)"
+      },
+      "ML_sp_mean_x_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_x.empty() ? std::numeric_limits<double>::quiet_NaN() : double(ROOT::VecOps::Mean(SpacePoint_x))"
+      },
+      "ML_sp_rms_x_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_x.empty() ? std::numeric_limits<double>::quiet_NaN() : std::sqrt(std::max(0.0, double(ROOT::VecOps::Mean(SpacePoint_x*SpacePoint_x)) - ML_sp_mean_x_mm*ML_sp_mean_x_mm))"
+      },
+      "ML_sp_mean_y_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_y.empty() ? std::numeric_limits<double>::quiet_NaN() : double(ROOT::VecOps::Mean(SpacePoint_y))"
+      },
+      "ML_sp_rms_y_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_y.empty() ? std::numeric_limits<double>::quiet_NaN() : std::sqrt(std::max(0.0, double(ROOT::VecOps::Mean(SpacePoint_y*SpacePoint_y)) - ML_sp_mean_y_mm*ML_sp_mean_y_mm))"
+      },
+      "ML_truth_E_GeV": {
+        "unit": "GeV",
+        "role": "label",
+        "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0"
+      },
+      "ML_truth_pdg": {
+        "unit": "dimensionless",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_pdg,0)"
+      },
+      "ML_truth_barcode": {
+        "unit": "dimensionless",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_barcode,0)"
+      },
+      "ML_truth_P_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_P,0)"
+      },
+      "ML_truth_m_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_m,0)"
+      },
+      "ML_truth_px_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_px,0)"
+      },
+      "ML_truth_py_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_py,0)"
+      },
+      "ML_truth_pz_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_pz,0)"
+      },
+      "ML_calo0_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo0_E_EM / 1000.0"
+      },
+      "ML_calo1_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo1_E_EM / 1000.0"
+      },
+      "ML_calo2_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo2_E_EM / 1000.0"
+      },
+      "ML_calo3_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo3_E_EM / 1000.0"
+      },
+      "ML_calo_total_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo_total_E_EM / 1000.0"
+      },
+      "LeadTrack_charge": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_Theta": {
+        "unit": "mrad",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_Chi2_NDF": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_nDoF": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_nLayers": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_r_atMaxRadius": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_rVetoNu": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters0": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters1": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters2": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters3": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "SpacePoints": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "TrackSegments": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "longTracks": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu0_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu1_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Veto10_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Veto20_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Veto21_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing0_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing1_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing2_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing3_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Preshower0_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Preshower1_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu0_reduced_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu1_reduced_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      }
+    },
+    "metadata_columns": [
+      "run",
+      "eventID",
+      "CrossSection",
+      "truth_pz_nu",
+      "truth_dec_x_nu",
+      "truth_dec_y_nu",
+      "truth_dec_z_nu",
+      "ML_truth_pdg",
+      "ML_truth_barcode",
+      "ML_truth_P_MeV",
+      "ML_truth_m_MeV",
+      "ML_truth_px_MeV",
+      "ML_truth_py_MeV",
+      "ML_truth_pz_MeV",
+      "VetoNu0_status",
+      "VetoNu1_status",
+      "Veto10_status",
+      "Veto20_status",
+      "Veto21_status",
+      "Timing0_status",
+      "Timing1_status",
+      "Timing2_status",
+      "Timing3_status",
+      "Preshower0_status",
+      "Preshower1_status",
+      "Calo0_status",
+      "Calo1_status",
+      "Calo2_status",
+      "Calo3_status",
+      "LeadTrack_pz0"
+    ],
+    "partition": {
+      "fractions": {
+        "train": 0.6,
+        "validation": 0.15,
+        "calibration": 0.1,
+        "test": 0.15
+      },
+      "group": "same component and RDO generation range across both periods; SIBYLL challenge only"
+    },
+    "energy_edges_GeV": [
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      6400
+    ],
+    "weight_mode": "unit diagnostic; physical flux normalization not verified",
+    "loss": "squared error in log(E/GeV), plus residual log(E/p)",
+    "xgboost": {
+      "n_estimators": 600,
+      "max_depth": 3,
+      "learning_rate": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "early_stopping_rounds": 40,
+      "n_jobs": 1
+    },
+    "bootstrap_replicates": 500,
+    "test_policy": "development reports use validation only; calibration and test unopened for model selection",
+    "limitations": [
+      "shape means and widths are global SpacePoint summaries, not station topology",
+      "no CaloNu or dual-gain data calibration in this stage",
+      "no Track_hitSet or Track_nMeasurements indexing",
+      "unit weights cannot establish physical flux averaged performance"
+    ]
+  }
+}

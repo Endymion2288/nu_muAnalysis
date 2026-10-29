@@ -1,0 +1,101 @@
+{
+  "xgboost_version": "2.1.3",
+  "train_events": 54196,
+  "validation_events": 13375,
+  "train_groups": 91,
+  "validation_groups": 22,
+  "fitted_scale": 1.3766156722615175,
+  "physical_weighting": "not measured; all rows have unit weight",
+  "calibration_and_test_used": false,
+  "features": {
+    "mu": [
+      "ML_mu_p_GeV"
+    ],
+    "mu_context": [
+      "ML_mu_px0_GeV",
+      "ML_mu_py0_GeV",
+      "LeadTrack_charge",
+      "LeadTrack_Theta",
+      "LeadTrack_Chi2_NDF",
+      "LeadTrack_nDoF",
+      "LeadTrack_nLayers",
+      "LeadTrack_r_atMaxRadius",
+      "LeadTrack_rVetoNu",
+      "ML_mu_x0_mm",
+      "ML_mu_y0_mm",
+      "ML_mu_z0_mm",
+      "ML_mu_X_atVetoNu_mm",
+      "ML_mu_Y_atVetoNu_mm",
+      "ML_mu_X_atCalo_mm",
+      "ML_mu_Y_atCalo_mm"
+    ],
+    "counts": [
+      "nClusters0",
+      "nClusters1",
+      "nClusters2",
+      "nClusters3",
+      "SpacePoints",
+      "TrackSegments",
+      "longTracks"
+    ],
+    "scintillator": [
+      "VetoNu0_charge",
+      "VetoNu1_charge",
+      "Veto10_charge",
+      "Veto20_charge",
+      "Veto21_charge",
+      "Timing0_charge",
+      "Timing1_charge",
+      "Timing2_charge",
+      "Timing3_charge",
+      "Preshower0_charge",
+      "Preshower1_charge",
+      "VetoNu0_reduced_charge",
+      "VetoNu1_reduced_charge"
+    ],
+    "calo": [
+      "ML_calo0_E_EM_GeV",
+      "ML_calo1_E_EM_GeV",
+      "ML_calo2_E_EM_GeV",
+      "ML_calo3_E_EM_GeV",
+      "ML_calo_total_E_EM_GeV"
+    ],
+    "shape": [
+      "ML_sp_mean_x_mm",
+      "ML_sp_rms_x_mm",
+      "ML_sp_mean_y_mm",
+      "ML_sp_rms_y_mm"
+    ]
+  },
+  "energy_edges_GeV": [
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "validation_counts_per_energy_bin": [
+    731,
+    2455,
+    4247,
+    3933,
+    1741,
+    268
+  ],
+  "train_energy_range_GeV": [
+    100.66000025770079,
+    6206.900002308643
+  ],
+  "validation_energy_range_GeV": [
+    100.2500013892573,
+    6206.900002308643
+  ],
+  "validation_outside_primary_energy_range": 0,
+  "bootstrap_replicates": 500,
+  "total_wall_s": 66.80801087617874,
+  "total_cpu_s": 65.72716134800001,
+  "peak_rss_MiB": 317.28125,
+  "caveat": "Validation is used for early stopping and ablation development; bootstrap intervals are conditional on fitted models, not unbiased final test intervals."
+}

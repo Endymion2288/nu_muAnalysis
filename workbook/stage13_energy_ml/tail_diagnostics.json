@@ -1,0 +1,15 @@
+{
+  "train_distinct_incident_p4": 38685,
+  "validation_distinct_incident_p4": 12148,
+  "validation_events_with_incident_p4_in_train": 6272,
+  "proxy_abs_relative_residual_gt_10": 35,
+  "proxy_max_abs_relative_residual": 424.4303595688465,
+  "validation_mu_p_quantiles_GeV": [
+    100.01100106556575,
+    496.2621009396206,
+    5595.81440118168,
+    43883.22710158144,
+    461971.18738330796
+  ],
+  "note": "Incident momenta may recur independently of vertices; exact event lineage is not proved by equality or inequality of momentum alone. Large proxy tails are retained; truth matching and covariance not yet audited."
+}

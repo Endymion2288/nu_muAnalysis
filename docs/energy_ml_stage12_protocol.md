@@ -86,10 +86,11 @@ relative RMS、|r|>0.5/1 尾部。主差值区间按同一来源组配对 bootst
 ```bash
 source AnalysisZipFramework/setup.sh
 python3 ml/make_manifest.py
+mkdir -p ntuples/energy_ml_stage12/shards
 python3 AnalysisZipFramework/scripts/export_ml_dataset.py \
   --input <official-merge.root> --index <stage09-index> \
   --executable build/analysis --threads 1 --output <cache.npz>
-condor_submit AnalysisZipFramework/submission/ml_extract.sub
+condor_submit -name bigbird24.cern.ch AnalysisZipFramework/submission/ml_extract.sub
 # 仅在全部缓存通过来源、计数和事件键验收后，通过 HTCondor 运行：
 python3 ml/train_bdt.py --output-dir workbook/stage13_energy_ml \
   --model-dir ml/artifacts/stage13
@@ -102,3 +103,10 @@ python3 ml/train_bdt.py --output-dir workbook/stage13_energy_ml \
 
 R2 仍须完成物理权重、按来源/时期/电荷/能量的条件诊断、容量/学习曲线、重复 seed、
 条件置乱和 primary μ matching/oracle 后，才讨论稳定的物理信息增益。
+
+2026-10-29 后续：已提交提取 cluster 1540833 与自动等待数据就绪的 BDT DAG
+cluster 1540841（bigbird24）。默认 bigbird28 会拒绝直接 EOS 路径，故显式指定
+EOS schedd；参见 CERN [EosSubmit 文档](https://batchdocs.web.cern.ch/local/eossubmit.html)。
+DAG PRE 每 60 s 只检查清单内文件就绪情况，不占用计算 worker 等待数据。
+实际消融结果将写入 `workbook/stage13_energy_ml/`，数据缓存合并为五个分区，
+模型和逐事件 validation 预测保存在 `ml/artifacts/stage13/`（不进入 Git）。

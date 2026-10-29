@@ -450,3 +450,23 @@ EOS 只留必要紧凑数据、模型和最终 response；不新增长期 xAOD�
 本次完成代码/配置调查、四文件 schema 与 512-event 前缀审计、公开文献检索、研究设计和资源实测；对应阶段记录见 [`阶段 11`](../workbook/2026-10-29_stage11_energy-ml-roadmap.md)。
 
 尚未测量：任何 ML 能量分辨率/排名、变量与 Eν 的条件关联、标签逐事件交叉核对、完整数据集重复率、最终官方 merge 的本次 schema、全量 CaloNu 统计、data 能量真值、systematic envelope、GPU 训练/推理成本、最终 flux/cross-section 精度。后续每一项都须通过上述工作包取得数据证据。
+
+## 15. 2026-10-29 执行进展：阶段 12/13
+
+以上第 14 节记录制定路线图时的状态。当前已经完成官方 merge 的全量精简提取和
+首轮单位权重 validation BDT 探索，详见
+[阶段 12](../workbook/2026-10-29_stage12_energy-ml-input-contract.md)、
+[阶段 13](../workbook/2026-10-29_stage13_energy-ml-bdt-first-results.md)。
+342 文件/3,374,987 raw events，nominal 89,786、SIBYLL challenge 15,144 selected
+events，逐文件 cutflow/最终事件键与阶段 09/10 一致，五个分区已冻结。
+
+train/validation 为 54,196/13,375 events。首轮 macro log-RMSE：p/0.8 0.631674，
+p-only BDT 0.543307，+ μ context 0.516713，+ 计数 0.434073，+ 闪烁体 0.390037，
++ Calo 0.387153，+ 全局 SpacePoint 矩 0.385054。计数和闪烁体的累加改善有
+500 次同来源组配对 bootstrap 支持，但完整模型去计数/Calo 与空间矩增益的区间
+包含零，不能将累加结果理解成各组的不可替代贡献或因果贡献。
+
+仍缺物理 flux 权重、完整来源谱系、容量/seed/条件置乱、primary-μ oracle 与 data
+响应校准；高能 bin 仍有显著负偏差。测试集/校准集/挑战集未参与模型评价或选择。
+因此 R0/R2 尚未完整验收，不以该表直接替换物理分析或进入架构最终排名；下一步
+先完成这些 BDT 输入与稳健性检查，再按同预算比较 MLP/ResNet/TabM，随后 Deep Sets。

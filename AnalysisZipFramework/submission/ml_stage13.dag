@@ -1,0 +1,2 @@
+JOB bdt AnalysisZipFramework/submission/ml_bdt.sub
+SCRIPT DEFER 75 60 PRE bdt /usr/bin/python3 /eos/user/x/xcheng/FASER/nu_muAnalysis/ml/check_ready.py --manifest /eos/user/x/xcheng/FASER/nu_muAnalysis/ml/configs/files.tsv
