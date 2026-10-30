@@ -1,0 +1,75 @@
+{
+  "partitions": {
+    "train": {
+      "events": 54196,
+      "spacepoints": 13204073,
+      "empty_stations": 2788,
+      "maximum_global_moment_difference_mm": [
+        0.0,
+        1.9649282201328333e-12,
+        0.0,
+        1.1509043718049838e-11
+      ],
+      "station_points": [
+        12036596,
+        550986,
+        325364,
+        291127
+      ]
+    },
+    "validation": {
+      "events": 13375,
+      "spacepoints": 3083555,
+      "empty_stations": 730,
+      "maximum_global_moment_difference_mm": [
+        0.0,
+        1.4913625889789728e-12,
+        0.0,
+        2.0747847884194925e-12
+      ],
+      "station_points": [
+        2794220,
+        134470,
+        81754,
+        73111
+      ]
+    }
+  },
+  "files": 222,
+  "input_events": 2203362,
+  "selected_events": 67571,
+  "spacepoints": 16287628,
+  "file_wall_sum_s": 578.42514061369,
+  "file_cpu_sum_s": 414.838158145,
+  "extraction_peak_rss_MiB": 554.015625,
+  "source_file_bytes": 9311534548,
+  "maximum_layer_distance_mm": 6.400048828124909,
+  "layer_point_counts": [
+    [
+      5152010,
+      5007771,
+      4671035
+    ],
+    [
+      234320,
+      226391,
+      224745
+    ],
+    [
+      136132,
+      135379,
+      135607
+    ],
+    [
+      122321,
+      121301,
+      120616
+    ]
+  ],
+  "final_cache_bytes": 21135725,
+  "null_global_moments_and_counts_verified": true,
+  "all_fields_readback_verified": true,
+  "consolidation_wall_s": 5.328136070864275,
+  "consolidation_cpu_s": 2.6427394819999996,
+  "consolidation_peak_rss_MiB": 533.32421875
+}

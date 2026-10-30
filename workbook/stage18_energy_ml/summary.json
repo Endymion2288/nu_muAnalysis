@@ -1,0 +1,30 @@
+{
+  "models": 7,
+  "fits": 21,
+  "seeds": [
+    20261029,
+    20261030,
+    20261031
+  ],
+  "train_events": 54196,
+  "validation_events": 13375,
+  "source_groups": 22,
+  "F5_max_relative_difference_from_stage16": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fit_wall_sum_s": 68.23509700736031,
+  "worker_wall_sum_s": 94.8679547375068,
+  "worker_cpu_sum_s": 85.629203684,
+  "worker_peak_rss_MiB": 1393.9609375,
+  "actual_gpus": [
+    "NVIDIA A100-PCIE-40GB",
+    "NVIDIA A100-PCIE-40GB",
+    "NVIDIA A100-PCIE-40GB"
+  ],
+  "calibration_test_challenge_evaluated": false,
+  "report_wall_s": 1.9389336979947984,
+  "report_cpu_s": 1.4014934600000002,
+  "report_peak_rss_MiB": 544.67578125
+}

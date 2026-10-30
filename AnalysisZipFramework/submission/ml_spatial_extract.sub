@@ -1,0 +1,18 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_spatial_extract.sh
+arguments = $(Process) energy-ml-spatial-extract-stage18.tar.gz $(repository)/ntuples/energy_ml_stage18/shards/$(Process).npz
+transfer_input_files = $(repository)/software/energy-ml-spatial-extract-stage18.tar.gz
+request_cpus = 1
+request_memory = 1500MB
+request_disk = 300MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-spatial-extract"
+log = $(repository)/logs/ml_spatial_extract_$(ClusterId).log
+output = $(repository)/logs/ml_spatial_extract_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_spatial_extract_$(ClusterId).$(ProcId).err
+queue 19

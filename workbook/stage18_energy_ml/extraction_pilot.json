@@ -1,0 +1,63 @@
+{
+  "reports": [
+    {
+      "index": 45,
+      "run": 200082,
+      "partition": "train",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200082/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-merge-PHYS.root",
+      "input_events": 10000,
+      "selected_events": 288,
+      "spacepoints": 40904,
+      "point_counts": [
+        [
+          12229,
+          11490,
+          10311
+        ],
+        [
+          1540,
+          1475,
+          1390
+        ],
+        [
+          420,
+          430,
+          434
+        ],
+        [
+          393,
+          395,
+          397
+        ]
+      ],
+      "maximum_layer_distance_mm": 6.400048828124909,
+      "wall_s": 1.6025543250143528,
+      "cpu_s": 0.9327935520000001,
+      "peak_rss_MiB": 533.32421875,
+      "source_file_bytes": 28303984,
+      "alignment_failures": 0,
+      "coordinate_ranges_mm": [
+        [
+          -126.00426483154297,
+          126.00426483154297
+        ],
+        [
+          -130.51597595214844,
+          131.1361083984375
+        ],
+        [
+          -1898.050048828125,
+          2465.300048828125
+        ]
+      ]
+    }
+  ],
+  "global_moments_max_abs_difference_mm": [
+    0.0,
+    2.5579538487363607e-13,
+    0.0,
+    6.110667527536862e-13
+  ],
+  "selected_event_keys_verified": true,
+  "cache_bytes": 94703
+}

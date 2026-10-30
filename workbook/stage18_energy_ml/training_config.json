@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "stage": 18,
+  "partitions": [
+    "train",
+    "validation"
+  ],
+  "seeds": [
+    20261029,
+    20261030,
+    20261031
+  ],
+  "station_centers_mm": [
+    -1860.15,
+    47.4,
+    1237.4,
+    2427.4
+  ],
+  "layer_offsets_mm": [
+    -31.5,
+    0,
+    31.5
+  ],
+  "maximum_layer_distance_mm": 10,
+  "geometry": "FASERNU-04 SCTTopLevel-02; interface=1237.4-3097.55 mm, stations=1237.4+[-1190,0,1190] mm",
+  "baseline": "F5 with shared stage16 train-only preprocessing",
+  "models": [
+    "F5",
+    "counts",
+    "moments",
+    "centroids",
+    "widths",
+    "tangent",
+    "reassigned"
+  ],
+  "xgboost": {
+    "max_depth": 7,
+    "rounds": 1200,
+    "patience": 100
+  },
+  "bootstrap_replicates": 500,
+  "energy_edges_GeV": [
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "y_edges": [
+    0,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "weight_mode": "unit MC; physical normalization unavailable, accepted by user",
+  "null": "independently permute paired xy over fixed z slots within each event, one realization per seed; preserve counts and complete global xy multiset; retrain on reassigned train and validation",
+  "scope": "frozen selected events and source groups; no truth model inputs; calibration/test/challenge not evaluated"
+}

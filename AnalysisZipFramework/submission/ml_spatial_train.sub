@@ -1,0 +1,21 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_spatial_train.sh
+arguments = $(Process) energy-ml-spatial-train-stage18.tar.gz $(repository)
+transfer_input_files = $(repository)/software/energy-ml-spatial-train-stage18.tar.gz
+request_cpus = 1
+request_gpus = 1
+gpus_minimum_capability = 7.5
+gpus_minimum_memory = 8GB
+request_memory = 3000MB
+request_disk = 500MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuStage = "energy-ml-spatial-train"
+log = $(repository)/logs/ml_spatial_train_$(ClusterId).log
+output = $(repository)/logs/ml_spatial_train_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_spatial_train_$(ClusterId).$(ProcId).err
+queue 3

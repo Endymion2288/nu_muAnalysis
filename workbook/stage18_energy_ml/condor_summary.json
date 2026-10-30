@@ -1,0 +1,22 @@
+{
+  "spatial_extract": {
+    "jobs": 19,
+    "all_exit_zero": true,
+    "submit_to_last_finish_s": 103.0,
+    "condor_execute_sum_s": 720,
+    "remote_cpu_sum_s": 446,
+    "wrapper_wall_sum_s": 657.76,
+    "wrapper_cpu_sum_s": 443.17,
+    "wrapper_peak_rss_KiB": 567312
+  },
+  "spatial_train": {
+    "jobs": 3,
+    "all_exit_zero": true,
+    "submit_to_last_finish_s": 336.0,
+    "condor_execute_sum_s": 155,
+    "remote_cpu_sum_s": 116,
+    "wrapper_wall_sum_s": 144.73000000000002,
+    "wrapper_cpu_sum_s": 112.82000000000001,
+    "wrapper_peak_rss_KiB": 1427416
+  }
+}
