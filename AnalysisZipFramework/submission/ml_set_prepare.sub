@@ -1,0 +1,18 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_set_prepare.sh
+arguments = energy-ml-set-prepare-stage19.tar.gz $(repository)
+transfer_input_files = $(repository)/software/energy-ml-set-prepare-stage19.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 700MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-set-prepare"
+log = $(repository)/logs/ml_set_prepare_$(ClusterId).log
+output = $(repository)/logs/ml_set_prepare_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_set_prepare_$(ClusterId).$(ProcId).err
+queue 1

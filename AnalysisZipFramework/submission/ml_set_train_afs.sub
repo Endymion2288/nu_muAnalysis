@@ -1,0 +1,27 @@
+# Standard schedds require the executable and logs on AFS; data stay on EOS.
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage19
+initialdir = $(spool)
+executable = $(spool)/run_ml_set_train.sh
+arguments = $(variant) energy-ml-set-train-stage19.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-set-train-stage19.tar.gz
+request_cpus = 1
+request_gpus = 1
+require_gpus = (Capability >= 7.5 || regexp("A100|H100", DeviceName)) && GlobalMemoryMb >= 8192
+request_memory = 6000MB
+request_disk = 500MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuStage = "energy-ml-set-train"
+log = $(spool)/logs/ml_set_train_$(ClusterId).log
+output = $(spool)/logs/ml_set_train_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/ml_set_train_$(ClusterId).$(ProcId).err
+queue variant from (
+summary
+global
+full
+reassigned
+)

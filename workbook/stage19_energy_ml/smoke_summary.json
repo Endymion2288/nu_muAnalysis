@@ -1,0 +1,94 @@
+[
+  {
+    "variant": "summary",
+    "smoke": true,
+    "winner_trial": 0,
+    "train_events": 1200,
+    "validation_events": 400,
+    "point_events_train": 1200,
+    "train_points": 194896,
+    "validation_points": 56240,
+    "wall_s": 9.394997810013592,
+    "cpu_s": 3.692042689999999,
+    "peak_rss_MiB": 1100.3671875,
+    "gpu": "Tesla T4",
+    "torch_version": "2.10.0",
+    "cuda_version": "12.5",
+    "point_setup": [
+      {
+        "seed_index": 0,
+        "wall_s": 2.8170179575681686e-06
+      }
+    ],
+    "calibration_test_challenge_evaluated": false
+  },
+  {
+    "variant": "global",
+    "smoke": true,
+    "winner_trial": 0,
+    "train_events": 1200,
+    "validation_events": 400,
+    "point_events_train": 1200,
+    "train_points": 194896,
+    "validation_points": 56240,
+    "wall_s": 7.7198628089390695,
+    "cpu_s": 3.7997569280000008,
+    "peak_rss_MiB": 1162.8359375,
+    "gpu": "Tesla T4",
+    "torch_version": "2.10.0",
+    "cuda_version": "12.5",
+    "point_setup": [
+      {
+        "seed_index": 0,
+        "wall_s": 0.5479932210873812
+      }
+    ],
+    "calibration_test_challenge_evaluated": false
+  },
+  {
+    "variant": "full",
+    "smoke": true,
+    "winner_trial": 0,
+    "train_events": 1200,
+    "validation_events": 400,
+    "point_events_train": 1200,
+    "train_points": 194896,
+    "validation_points": 56240,
+    "wall_s": 7.199296914041042,
+    "cpu_s": 3.5813873880000004,
+    "peak_rss_MiB": 1167.078125,
+    "gpu": "Tesla T4",
+    "torch_version": "2.10.0",
+    "cuda_version": "12.5",
+    "point_setup": [
+      {
+        "seed_index": 0,
+        "wall_s": 0.45966608193702996
+      }
+    ],
+    "calibration_test_challenge_evaluated": false
+  },
+  {
+    "variant": "reassigned",
+    "smoke": true,
+    "winner_trial": 0,
+    "train_events": 1200,
+    "validation_events": 400,
+    "point_events_train": 1200,
+    "train_points": 194896,
+    "validation_points": 56240,
+    "wall_s": 6.989907729905099,
+    "cpu_s": 3.8272562750000008,
+    "peak_rss_MiB": 1166.265625,
+    "gpu": "Tesla T4",
+    "torch_version": "2.10.0",
+    "cuda_version": "12.5",
+    "point_setup": [
+      {
+        "seed_index": 0,
+        "wall_s": 0.5330659719184041
+      }
+    ],
+    "calibration_test_challenge_evaluated": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "payload": "energy-ml-set-extract-stage19.tar.gz",
+    "bytes": 11544,
+    "files": [
+      "ml/extract_sets.py",
+      "ml/configs/sets.yaml",
+      "ml/configs/spatial.yaml",
+      "ml/configs/files.tsv"
+    ],
+    "all_source_bytes_equal": true
+  },
+  {
+    "payload": "energy-ml-set-prepare-stage19.tar.gz",
+    "bytes": 17478,
+    "files": [
+      "ml/prepare_sets.py",
+      "ml/extract_spatial.py",
+      "ml/train_bdt.py",
+      "ml/configs/sets.yaml",
+      "ml/configs/spatial.yaml",
+      "ml/configs/files.tsv"
+    ],
+    "all_source_bytes_equal": true
+  },
+  {
+    "payload": "energy-ml-set-train-stage19.tar.gz",
+    "bytes": 24636,
+    "files": [
+      "ml/train_sets.py",
+      "ml/set_data.py",
+      "ml/train_tabular.py",
+      "ml/train_bdt.py",
+      "ml/extract_spatial.py",
+      "ml/configs/baseline.yaml",
+      "ml/configs/sets.yaml",
+      "ml/configs/spatial.yaml",
+      "ml/configs/files.tsv"
+    ],
+    "all_source_bytes_equal": true
+  }
+]

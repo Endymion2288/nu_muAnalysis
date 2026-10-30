@@ -1,0 +1,24 @@
+{
+  "variant": "full",
+  "smoke": false,
+  "winner_trial": 0,
+  "train_events": 54196,
+  "validation_events": 13375,
+  "point_events_train": 54196,
+  "train_points": 13204073,
+  "validation_points": 3083555,
+  "wall_s": 149.08318705111742,
+  "cpu_s": 137.74018740999998,
+  "peak_rss_MiB": 1958.30859375,
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "torch_version": "2.10.0",
+  "cuda_version": "12.5",
+  "point_setup": [
+    {
+      "seed_index": 0,
+      "wall_s": 2.563537534326315
+    }
+  ],
+  "calibration_test_challenge_evaluated": false,
+  "configuration_file": "../training_config.json"
+}

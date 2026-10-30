@@ -1,0 +1,28 @@
+version: 1
+stage: 19
+partitions: [train, validation]
+seeds: [20261029, 20261030, 20261031]
+models: [summary, global, full, reassigned]
+scalar_input: original F5 plus 12 layer counts and 20 station moments, identical for all four variants
+geometry_config: ml/configs/spatial.yaml
+point_input: asinh(x/100 mm), asinh(y/100 mm), station one-hot(4), layer one-hot(3), (z-station_center-layer_offset)/10 mm
+point_selection: all selected-event SpacePoints retained, no truncation, clipping, or energy weights
+encoder: {hidden: 64, output: 32}
+pooling: mean per station for full/reassigned; global mean repeated four times for global; summary encoder per station for summary
+trials:
+  - {width: 128, blocks: 3, dropout: 0.1, lr: 0.001, weight_decay: 0.0001}
+  - {width: 256, blocks: 3, dropout: 0.1, lr: 0.0005, weight_decay: 0.0001}
+epochs: 200
+patience: 15
+max_fit_wall_s: 600
+batch_size: 256
+validation_batch_size: 512
+trial_selection: minimum validation overall log-MSE using seed0, then fix winner for seeds1/2; no subgroup tuning
+target: train-standardized log(E_nu/GeV)
+scalar_preprocessing: stage16 train-only asinh, imputation, standardization, missing masks
+'null': per-seed within-event paired xy permutation across fixed z slots using stage18 seed scheme on the canonical point order; common real scalar summaries unchanged
+bootstrap_replicates: 500
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+weight_mode: unit MC, as accepted by user; physical normalization unverified
+scope: frozen event selection and source-group splits; no truth model input or calibration/test/challenge evaluation

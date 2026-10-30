@@ -1,0 +1,24 @@
+{
+  "models": 4,
+  "reference_models": 3,
+  "fits": 16,
+  "selected_fits": 12,
+  "train_events": 54196,
+  "validation_events": 13375,
+  "source_groups": 22,
+  "total_fit_wall_s": 427.94221106218174,
+  "worker_wall_sum_s": 523.7079038512893,
+  "worker_cpu_sum_s": 462.44333696599995,
+  "worker_peak_rss_MiB": 2771.703125,
+  "actual_gpus": [
+    "NVIDIA A100-PCIE-40GB",
+    "NVIDIA A100-PCIE-40GB",
+    "NVIDIA A100-PCIE-40GB",
+    "NVIDIA H100 NVL"
+  ],
+  "budget_stops": 0,
+  "calibration_test_challenge_evaluated": false,
+  "report_wall_s": 2.8686682609841228,
+  "report_cpu_s": 1.9148450590000001,
+  "report_peak_rss_MiB": 566.59375
+}

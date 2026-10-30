@@ -1,0 +1,102 @@
+{
+  "reason": "All frozen event keys/layer counts/moments and full set training inputs verified; source payload bytes verified; remove duplicate shards and completed transfer archives only.",
+  "removed_files": [
+    {
+      "path": "ntuples/energy_ml_stage19/shards/0.npz",
+      "bytes": 3648077
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/1.npz",
+      "bytes": 3605312
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/10.npz",
+      "bytes": 3577441
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/11.npz",
+      "bytes": 3625694
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/12.npz",
+      "bytes": 4147709
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/13.npz",
+      "bytes": 6721007
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/14.npz",
+      "bytes": 6922572
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/15.npz",
+      "bytes": 6341988
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/16.npz",
+      "bytes": 6908974
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/17.npz",
+      "bytes": 5243831
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/18.npz",
+      "bytes": 1884712
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/2.npz",
+      "bytes": 3301656
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/3.npz",
+      "bytes": 4900474
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/4.npz",
+      "bytes": 7043258
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/5.npz",
+      "bytes": 6194519
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/6.npz",
+      "bytes": 6841945
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/7.npz",
+      "bytes": 6518469
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/8.npz",
+      "bytes": 4595629
+    },
+    {
+      "path": "ntuples/energy_ml_stage19/shards/9.npz",
+      "bytes": 3576618
+    },
+    {
+      "path": "software/energy-ml-set-extract-stage19.tar.gz",
+      "bytes": 11544
+    },
+    {
+      "path": "software/energy-ml-set-prepare-stage19.tar.gz",
+      "bytes": 17478
+    },
+    {
+      "path": "software/energy-ml-set-train-stage19.tar.gz",
+      "bytes": 24636
+    }
+  ],
+  "removed_bytes": 95653543,
+  "retained_point_cache_bytes": 195699654,
+  "retained_model_prediction_bytes": 5561158,
+  "retained_point_cache_files": [
+    "ntuples/energy_ml_stage19/train_events.npz",
+    "ntuples/energy_ml_stage19/train_points.npy",
+    "ntuples/energy_ml_stage19/validation_events.npz",
+    "ntuples/energy_ml_stage19/validation_points.npy"
+  ]
+}

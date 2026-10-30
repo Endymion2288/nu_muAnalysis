@@ -1,0 +1,32 @@
+{
+  "set_extract": {
+    "jobs": 19,
+    "all_exit_zero": true,
+    "submit_to_last_finish_s": 147.0,
+    "condor_execute_sum_s": 864,
+    "remote_cpu_sum_s": 557,
+    "wrapper_wall_sum_s": 798.67,
+    "wrapper_cpu_sum_s": 560.6800000000001,
+    "wrapper_peak_rss_KiB": 620288
+  },
+  "set_prepare": {
+    "jobs": 1,
+    "all_exit_zero": true,
+    "submit_to_last_finish_s": 148.0,
+    "condor_execute_sum_s": 79,
+    "remote_cpu_sum_s": 62,
+    "wrapper_wall_sum_s": 75.03,
+    "wrapper_cpu_sum_s": 62.01,
+    "wrapper_peak_rss_KiB": 541936
+  },
+  "set_train": {
+    "jobs": 4,
+    "all_exit_zero": true,
+    "submit_to_last_finish_s": 742.0,
+    "condor_execute_sum_s": 602,
+    "remote_cpu_sum_s": 501,
+    "wrapper_wall_sum_s": 588.84,
+    "wrapper_cpu_sum_s": 498.33,
+    "wrapper_peak_rss_KiB": 2838224
+  }
+}

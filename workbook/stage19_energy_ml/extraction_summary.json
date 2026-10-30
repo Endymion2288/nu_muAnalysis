@@ -1,0 +1,33 @@
+{
+  "files": 222,
+  "events": 67571,
+  "points": 16287628,
+  "input_events": 2203362,
+  "file_wall_sum_s": 700.9784306101501,
+  "file_cpu_sum_s": 514.810580019,
+  "extraction_peak_rss_MiB": 605.75,
+  "source_file_bytes": 9311534548,
+  "maximum_float32_coordinate_loss_mm": 0.0,
+  "maximum_station_moment_difference": {
+    "mean_x_mm": 3.814697265625e-06,
+    "mean_y_mm": 7.62939453125e-06,
+    "rms_x_mm": 3.814697265625e-06,
+    "rms_y_mm": 3.814697265625e-06,
+    "cov_xy_mm2": 0.0003802019782597199
+  },
+  "all_event_keys_counts_and_moments_verified": true,
+  "parts": {
+    "train": {
+      "events": 54196,
+      "points": 13204073
+    },
+    "validation": {
+      "events": 13375,
+      "points": 3083555
+    }
+  },
+  "final_cache_bytes": 195699654,
+  "wall_s": 61.1062336564064,
+  "cpu_s": 57.546129287,
+  "peak_rss_MiB": 529.234375
+}

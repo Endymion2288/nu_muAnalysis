@@ -1,0 +1,22 @@
+{
+  "cluster": 1543614,
+  "local_date": "2026-10-30",
+  "original_require_gpus": "Capability >= 7.5 && GlobalMemoryMb >= 8192",
+  "updated_require_gpus": "(Capability >= 7.5 || regexp(\"A100|H100\", DeviceName)) && GlobalMemoryMb >= 8192",
+  "reason": "Some H100 MIG advertisements omit Capability; recognize known compatible families without changing model or fit budget.",
+  "all_four_jobs_edited_before_start": true,
+  "remaining_scheduler_limit": "Observed MIG slots in staged drain and some full H100 slots restricted to other accounting groups; compatible hardware does not imply schedulable availability.",
+  "migration": {
+    "original_schedd": "bigbird24.cern.ch",
+    "original_cluster": 1543614,
+    "original_jobs_never_started": true,
+    "new_schedd": "bigbird15.cern.ch",
+    "new_cluster": 16976451,
+    "reason": "Lower advertised schedd queue: 54 idle vs 5812 at comparison; not proof of GPU availability.",
+    "standard_schedd_EOS_submission_rejected": true,
+    "afs_spool": "/afs/cern.ch/user/x/xcheng/nu_mu_stage19",
+    "data_and_results_remain_on_EOS": true,
+    "payload_unchanged": true,
+    "old_jobs_removed_after_new_submission": true
+  }
+}

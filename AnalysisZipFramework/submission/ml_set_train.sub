@@ -1,0 +1,26 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_set_train.sh
+arguments = $(variant) energy-ml-set-train-stage19.tar.gz $(repository)
+transfer_input_files = $(repository)/software/energy-ml-set-train-stage19.tar.gz
+request_cpus = 1
+request_gpus = 1
+# Some MIG ClassAds omit Capability; these device families support the same kernels.
+require_gpus = (Capability >= 7.5 || regexp("A100|H100", DeviceName)) && GlobalMemoryMb >= 8192
+request_memory = 6000MB
+request_disk = 500MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuStage = "energy-ml-set-train"
+log = $(repository)/logs/ml_set_train_$(ClusterId).log
+output = $(repository)/logs/ml_set_train_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_set_train_$(ClusterId).$(ProcId).err
+queue variant from (
+summary
+global
+full
+reassigned
+)
