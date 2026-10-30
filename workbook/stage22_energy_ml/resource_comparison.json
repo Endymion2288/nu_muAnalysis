@@ -1,0 +1,26 @@
+{
+  "formal_cpu_jobs": 4,
+  "total_stage_fits": 16,
+  "fit_wall_before_s": 438.2338308300823,
+  "fit_wall_after_s": 173.23810671269894,
+  "fit_wall_speed_ratio": 2.529661857577657,
+  "fit_cpu_before_s": 433.19162548800006,
+  "fit_cpu_after_s": 685.3423239830001,
+  "total_fit_wall_s": 611.4719375427812,
+  "wrapper_wall_sum_s": 708.39,
+  "wrapper_cpu_sum_s": 1172.97,
+  "wrapper_peak_rss_KiB": 788064,
+  "condor_remote_cpu_sum_s": 1174,
+  "condor_gpu_allocation_s": 0,
+  "condor_allocated_cpu_core_s": 2880,
+  "all_exit_zero": true,
+  "resource_collector_original_defaults_regression_passed": true,
+  "before_CPU_models": [
+    "Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz",
+    "Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz"
+  ],
+  "after_CPU_models": [
+    "Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz",
+    "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz"
+  ]
+}

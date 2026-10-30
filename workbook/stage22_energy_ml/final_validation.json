@@ -1,0 +1,124 @@
+{
+  "all_passed": true,
+  "local_time": "2026-10-30T14:39:49.116334",
+  "table_rows": {
+    "macro_summary.tsv": 4,
+    "macro_gains.tsv": 4,
+    "metrics.tsv": 300,
+    "stratified_gains.tsv": 100,
+    "nonlinear_gains.tsv": 64,
+    "costs.tsv": 8,
+    "prefix_controls.tsv": 6,
+    "preprocessing_checks.tsv": 4,
+    "checkpoint_checks.tsv": 2,
+    "threading_reproduction.tsv": 6,
+    "stage21_hardware_reference.tsv": 6,
+    "condor_resources.tsv": 2
+  },
+  "prediction_models": 4,
+  "seeds": 3,
+  "validation_events": 13375,
+  "source_groups": 22,
+  "independent_macro_integrated_recalculation_passed": true,
+  "paired_difference_signs_passed": true,
+  "signed_tail_partition_passed": true,
+  "six_long_fits_patience_without_caps": true,
+  "independent_short_controls": 2,
+  "thread_fix_prediction_max_relative_difference": 2.220446049250313e-16,
+  "full_local_float32_transform_checks": 12,
+  "checkpoint_readback_models": 2,
+  "checkpoint_events_per_model": 2048,
+  "total_formal_fits_including_revalidation": 16,
+  "scalar_preprocessing_consistent": true,
+  "syntax_and_whitespace_checks_passed": true,
+  "resource_collector_original_defaults_regression_passed": true,
+  "sparse_run_bootstrap_rows": [
+    {
+      "reference": "FU1200",
+      "model": "FU4800",
+      "stratum": "run",
+      "value": "200089",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "UU4800",
+      "model": "FU4800",
+      "stratum": "run",
+      "value": "200089",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "UU1200",
+      "model": "UU4800",
+      "stratum": "run",
+      "value": "200089",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "UU1200",
+      "model": "FU1200",
+      "stratum": "run",
+      "value": "200089",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "FU1200",
+      "model": "FU4800",
+      "stratum": "run",
+      "value": "200100",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "UU4800",
+      "model": "FU4800",
+      "stratum": "run",
+      "value": "200100",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "UU1200",
+      "model": "UU4800",
+      "stratum": "run",
+      "value": "200100",
+      "bootstrap_valid": "477"
+    },
+    {
+      "reference": "UU1200",
+      "model": "FU1200",
+      "stratum": "run",
+      "value": "200100",
+      "bootstrap_valid": "477"
+    }
+  ],
+  "queues": [
+    {
+      "schedd": "bigbird103.cern.ch",
+      "cluster": 848838,
+      "active_jobs": 0,
+      "command": "condor_q -name bigbird103.cern.ch 848838 -autoformat ClusterId ProcId JobStatus"
+    },
+    {
+      "schedd": "bigbird20.cern.ch",
+      "cluster": 1561047,
+      "active_jobs": 0,
+      "command": "condor_q -name bigbird20.cern.ch 1561047 -autoformat ClusterId ProcId JobStatus"
+    },
+    {
+      "schedd": "bigbird20.cern.ch",
+      "cluster": 1561135,
+      "active_jobs": 0,
+      "command": "condor_q -name bigbird20.cern.ch 1561135 -autoformat ClusterId ProcId JobStatus"
+    },
+    {
+      "schedd": "bigbird20.cern.ch",
+      "cluster": 1561194,
+      "active_jobs": 0,
+      "command": "condor_q -name bigbird20.cern.ch 1561194 -autoformat ClusterId ProcId JobStatus"
+    }
+  ],
+  "local_document_links_checked": 49,
+  "calibration_test_challenge_evaluated": false,
+  "wall_s": 1.7205521739087999,
+  "staged_whitespace_checks_passed": true,
+  "cost_control_missing_fields_explicitly_marked_unmeasured": true
+}

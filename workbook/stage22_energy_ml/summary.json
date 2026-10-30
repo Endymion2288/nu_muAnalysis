@@ -1,0 +1,35 @@
+{
+  "models": 4,
+  "new_fits": 8,
+  "long_fits": 6,
+  "independent_short_controls": 2,
+  "train_events": 54196,
+  "validation_events": 13375,
+  "source_groups": 22,
+  "total_new_fit_wall_s": 173.23810671269894,
+  "worker_wall_sum_s": 180.3014369904995,
+  "worker_cpu_sum_s": 697.370469639,
+  "worker_peak_rss_MiB": 769.59375,
+  "actual_gpus": [
+    "none (CPU)",
+    "none (CPU)"
+  ],
+  "cpu_models": [
+    "Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz",
+    "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz"
+  ],
+  "hosts": [
+    "b9g42p2013.cern.ch",
+    "b9g03p0004.cern.ch"
+  ],
+  "calibration_test_challenge_evaluated": false,
+  "report_wall_s": 5.729070278117433,
+  "report_cpu_s": 3.094784714,
+  "report_peak_rss_MiB": 544.67578125,
+  "first_round_fits": 8,
+  "total_stage_fits": 16,
+  "first_round_fit_wall_s": 438.2338308300823,
+  "total_stage_fit_wall_s": 611.4719375427812,
+  "total_stage_worker_wall_s": 633.0659906044602,
+  "total_stage_worker_cpu_s": 1143.491541218
+}

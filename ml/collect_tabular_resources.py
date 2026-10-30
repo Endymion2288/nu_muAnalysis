@@ -14,8 +14,10 @@ def main():
     p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1])
     p.add_argument('--cluster',type=int,required=True);p.add_argument('--log-dir',type=Path)
     p.add_argument('--prefix',default='ml_tabular');p.add_argument('--report-dir',type=Path)
+    p.add_argument('--jobs',type=int,default=8)
+    p.add_argument('--gpus',type=int,default=1);p.add_argument('--cpus',type=int,default=1)
     args=p.parse_args();logs=args.log_dir or args.repo/'logs';out=args.report_dir or args.repo/'workbook/stage16_energy_ml'
-    log=(logs/f'{args.prefix}_{args.cluster}.log').read_text();events={i:{} for i in range(8)}
+    log=(logs/f'{args.prefix}_{args.cluster}.log').read_text();events={i:{} for i in range(args.jobs)}
     for block in log.split('...'):
         m=re.search(r'(\d{3}) \(\d+\.(\d+)\.000\) (\d\d/\d\d \d\d:\d\d:\d\d)',block)
         if m:
@@ -32,7 +34,7 @@ def main():
         wall,rss,user,sys=map(float,m.groups());done=e['005'][1]
         gpu_memory=re.search(r'GpusMemory \(MB\)\s*:\s*([\d.]+)',done)
         cpu=re.findall(r'(?:Usr|Sys) (\d+) (\d+):(\d+):(\d+)',done)[:2]
-        rows.append(dict(cluster=args.cluster,proc=i,exit_code=code,requested_cpus=1,requested_gpus=1,requested_memory_MB=3000,
+        rows.append(dict(cluster=args.cluster,proc=i,exit_code=code,requested_cpus=args.cpus,requested_gpus=args.gpus,requested_memory_MB=3000,
                          allocated_cpus=int(re.search(r'Cpus = (\d+)',e['001'][1]).group(1)),
                          allocated_memory_MB=int(re.search(r'Memory = (\d+)',e['001'][1]).group(1)),
                          submitted_local=e['000'][0].isoformat(),executed_local=e['001'][0].isoformat(),terminated_local=e['005'][0].isoformat(),
@@ -42,8 +44,8 @@ def main():
                          remote_cpu_s=sum(int(d)*86400+int(h)*3600+int(m)*60+int(s) for d,h,m,s in cpu),
                          wrapper_wall_s=wall,wrapper_peak_rss_KiB=int(rss),wrapper_user_s=user,wrapper_system_s=sys))
     write_table(out/'condor_resources.tsv',rows)
-    summary=dict(cluster=args.cluster,jobs=8,all_exit_zero=True,submit_to_last_finish_s=max(r['submit_to_finish_s'] for r in rows),
-                 condor_gpu_allocation_s=sum(r['condor_execute_s'] for r in rows),
+    summary=dict(cluster=args.cluster,jobs=args.jobs,all_exit_zero=True,submit_to_last_finish_s=max(r['submit_to_finish_s'] for r in rows),
+                 condor_gpu_allocation_s=args.gpus*sum(r['condor_execute_s'] for r in rows),
                  remote_cpu_s=sum(r['remote_cpu_s'] for r in rows),wrapper_wall_s=sum(r['wrapper_wall_s'] for r in rows),
                  wrapper_cpu_s=sum(r['wrapper_user_s']+r['wrapper_system_s'] for r in rows),
                  wrapper_peak_rss_KiB=max(r['wrapper_peak_rss_KiB'] for r in rows))

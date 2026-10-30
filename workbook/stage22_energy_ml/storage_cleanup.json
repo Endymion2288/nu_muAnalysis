@@ -1,0 +1,36 @@
+{
+  "removed_payloads": [
+    {
+      "path": "software/energy-ml-prior-cpu-threaded-stage22.tar.gz",
+      "bytes": 55918,
+      "source_check": "current bytes equal"
+    },
+    {
+      "path": "software/energy-ml-prior-cpu-stage22.tar.gz",
+      "bytes": 55887,
+      "source_check": "reverse-patch source reconstruction equal"
+    },
+    {
+      "path": "software/energy-ml-prior-stage22.tar.gz",
+      "bytes": 54618,
+      "source_check": "verified at packing; never used for formal fits"
+    }
+  ],
+  "removed_bytes": 166423,
+  "retained_artifacts": [
+    {
+      "directory": "ml/artifacts/stage22",
+      "files": 6,
+      "bytes": 15017373
+    },
+    {
+      "directory": "ml/artifacts/stage22_before_thread_fix",
+      "files": 4,
+      "bytes": 1466161
+    }
+  ],
+  "retained_artifact_bytes": 16483534,
+  "new_input_event_caches": 0,
+  "duplicate_short_control_checkpoints": 0,
+  "reason_for_before_fix_predictions": "Compact reference for full-seed threading audit; before-fix model checkpoints are not retained."
+}

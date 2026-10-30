@@ -1,0 +1,26 @@
+version: 1
+stage: 22
+architectures: [bdt]
+feature_version: F5
+seeds: [20261029, 20261030, 20261031]
+modes:
+  UU: {train: unit, monitor: unit}
+  FU: {train: flat, monitor: unit}
+fixed_trials:
+  bdt: {max_depth: 7, rounds: 1200}
+bdt_rounds_override: 4800
+comparison_rounds: 1200
+reference_study: ml/configs/tabular.yaml
+reference_prior: ml/configs/prior.yaml
+weight_formula: N_train / (6 * N_train_bin), mean one on full train, no clipping
+weight_scope: same train-only flat mapping as stage21; final evaluation always unit
+target_preprocessing: original unweighted train mean/std of log(E/GeV), unchanged
+selection: stage12 frozen cuts, leading definition and source groups; no event removal
+max_fit_wall_s: 180
+bootstrap_replicates: 500
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+scope: fixed-budget convergence diagnostic; not new input information or independent closure
+device: cpu
+threads: 4
+verify_short_budget: true

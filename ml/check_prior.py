@@ -18,9 +18,11 @@ from train_tabular import make_model
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--smoke',action='store_true');args=p.parse_args()
-    root=Path(__file__).resolve().parents[1];out=root/'workbook/stage21_energy_ml'
-    cfg=yaml.safe_load((root/'ml/configs/prior.yaml').read_text());study=yaml.safe_load((root/cfg['reference_study']).read_text())
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--smoke',action='store_true')
+    p.add_argument('--config',type=Path,default=Path('ml/configs/prior.yaml'));args=p.parse_args()
+    root=Path(__file__).resolve().parents[1]
+    cfg=yaml.safe_load((root/args.config).read_text());study=yaml.safe_load((root/cfg['reference_study']).read_text())
+    stage=cfg['stage'];out=root/f'workbook/stage{stage}_energy_ml'
     base=yaml.safe_load((root/'ml/configs/baseline.yaml').read_text());torch.set_num_threads(1)
     torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
     with np.load(root/'ntuples/energy_ml_stage12/dataset/train.npz') as d:train_energy=d[base['target']]
@@ -35,14 +37,16 @@ def main():
     for arch in cfg['architectures']:
         for mode in cfg['modes']:
             name=f'{arch}_{mode}'
-            folder=Path(f'/tmp/nu_mu_stage21_smoke_{name}') if args.smoke else root/f'ml/artifacts/stage21/{name}'
+            folder=Path(f'/tmp/nu_mu_stage{stage}_smoke_{name}') if args.smoke else root/f'ml/artifacts/stage{stage}/{name}'
             meta=json.loads((folder/'preprocessing.json').read_text())
             if common is None:common=meta
             difference=compare_preprocessing(common,meta)
             x=transform(np.column_stack([val[k] for k in meta['features']]),meta['preprocessor'])
             if arch=='bdt':
-                model=xgb.Booster();model.load_model(folder/'best.ubj');model.set_param({'device':'cuda','nthread':1})
-                raw=cp.asnumpy(model.inplace_predict(cp.asarray(x),iteration_range=(0,model.best_iteration+1)))
+                device=cfg.get('device','cuda')
+                model=xgb.Booster();model.load_model(folder/'best.ubj');model.set_param({'device':device,'nthread':cfg.get('threads',1)})
+                raw=model.inplace_predict(cp.asarray(x) if device=='cuda' else x,iteration_range=(0,model.best_iteration+1))
+                if device=='cuda':raw=cp.asnumpy(raw)
             else:
                 ckpt=torch.load(folder/'best.pt',map_location='cpu',weights_only=True)
                 assert ckpt['prior_study']==cfg and ckpt['mode']==mode
@@ -61,13 +65,13 @@ def main():
                 train_sumw=float(w.sum()),train_sumw2=float((w*w).sum()),train_Neff=float(w.sum()**2/(w*w).sum()),
                 equal_train_bin_weight_sums_passed=True,all_preprocessing_consistent=True,smoke=args.smoke)
     if args.smoke:
-        summaries=[json.loads(Path(f'/tmp/nu_mu_stage21_smoke_{a}_{m}/summary.json').read_text()) for a in cfg['architectures'] for m in cfg['modes']]
+        summaries=[json.loads(Path(f'/tmp/nu_mu_stage{stage}_smoke_{a}_{m}/summary.json').read_text()) for a in cfg['architectures'] for m in cfg['modes']]
         for s in summaries:s.pop('study')
         (out/'smoke_summary.json').write_text(json.dumps(summaries,indent=2)+'\n')
         record['common_trajectory_checks']=[]
-        for arch in cfg['architectures']:
+        for arch in cfg['architectures'] if 'UF' in cfg['modes'] else []:
             for left,right in [('UU','UF'),('FU','FF')]:
-                paths=[Path(f'/tmp/nu_mu_stage21_smoke_{arch}_{m}')/'predictions.npz' for m in [left,right]]
+                paths=[Path(f'/tmp/nu_mu_stage{stage}_smoke_{arch}_{m}')/'predictions.npz' for m in [left,right]]
                 with np.load(paths[0]) as a,np.load(paths[1]) as b:np.testing.assert_array_equal(a['seed_0'],b['seed_0'])
                 record['common_trajectory_checks'].append(dict(architecture=arch,modes=[left,right],smoke_predictions_identical=True))
     (out/f'{prefix}numerical_checks.json').write_text(json.dumps(record,indent=2)+'\n');print(json.dumps(record,indent=2))

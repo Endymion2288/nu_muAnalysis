@@ -1,0 +1,71 @@
+{
+  "schedd": "bigbird103.cern.ch",
+  "cluster": 848838,
+  "local_time": "2026-10-30T13:49:28.939042",
+  "jobs": 2,
+  "fits_per_job": 3,
+  "model_hardware": "NVIDIA H100 NVL",
+  "JobFlavour": "espresso",
+  "fit_wall_cap_s": 180,
+  "requested_cpus": 1,
+  "requested_memory_MB": 3000,
+  "observed_schedd_snapshot": {
+    "bigbird103_idle": 57,
+    "bigbird103_running": 1012,
+    "bigbird15_idle": 937,
+    "bigbird15_running": 471
+  },
+  "reason": "Use previously validated EosSubmit endpoint with lower observed idle queue and same H100 hardware; queue size does not guarantee GPU availability.",
+  "dry_run_jobs": 2,
+  "smoke_checkpoint_readbacks_passed": true,
+  "resource_diagnostic": {
+    "local_time": "2026-10-30T13:52:55.512922",
+    "public_H100_immediate_matches": 0,
+    "restricted_idle_H100_nodes": [
+      "b9pgpun014.cern.ch",
+      "b9pgpun015.cern.ch"
+    ],
+    "restriction": "SCond_vo_filter requires group_u_BE.ABP.gpu or group_u_ATS.u_gpu; unavailable to this account",
+    "action": "Keep same H100 NVL request; schedd migration cannot bypass resource group restrictions."
+  },
+  "migration": {
+    "original_schedd": "bigbird103.cern.ch",
+    "original_cluster": 848838,
+    "new_schedd": "bigbird20.cern.ch",
+    "new_cluster": 1561047,
+    "local_time": "2026-10-30T14:02:06.754651",
+    "all_old_NumJobStarts_zero": true,
+    "old_jobs_held_before_submission": true,
+    "old_jobs_removed_after_success": true,
+    "observed_new_schedd_idle_jobs": 0,
+    "observed_new_schedd_running_jobs": 1174,
+    "submit_file": "AnalysisZipFramework/submission/ml_prior_budget.sub",
+    "payload_and_hardware_unchanged": true,
+    "reason": "Try less-loaded schedd after about 12 minutes of initial queuing; a scheduler change does not add GPUs or bypass allocation rules."
+  },
+  "CPU_amendment": {
+    "local_time": "2026-10-30T14:11:44.107860",
+    "old_gpu_cluster": 1561047,
+    "all_old_gpu_NumJobStarts_zero": true,
+    "old_jobs_held_before_CPU_submission": true,
+    "old_gpu_jobs_removed_after_CPU_submission": true,
+    "new_schedd": "bigbird20.cern.ch",
+    "new_cluster": 1561135,
+    "requested_cpus": 4,
+    "requested_gpus": 0,
+    "fit_wall_cap_s": 180,
+    "long_fits": 6,
+    "independent_short_controls": 2,
+    "within_CPU_prefix_baselines": true,
+    "CPU_smoke_checkpoint_readbacks_passed": true,
+    "preregistered_before_formal_fits": true
+  },
+  "thread_fix_revalidation": {
+    "schedd": "bigbird20.cern.ch",
+    "cluster": 1561194,
+    "new_fits": 8,
+    "old_predictions_and_costs_preserved": true,
+    "training_config_seeds_weights_budgets_unchanged": true,
+    "change": "CPU Torch global OpenMP thread count 1 to configured 4; GPU default remains 1"
+  }
+}

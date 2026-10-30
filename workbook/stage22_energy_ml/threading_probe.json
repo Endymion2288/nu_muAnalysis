@@ -1,0 +1,49 @@
+{
+  "synthetic_events": 5000,
+  "features": 92,
+  "trees": 20,
+  "runs": [
+    {
+      "torch_threads": 1,
+      "xgboost_nthread": 4,
+      "wall_s": 0.7524702590890229,
+      "cpu_s": 0.7478453409999997,
+      "cpu_over_wall": 0.9938536865302525
+    },
+    {
+      "torch_threads": 4,
+      "xgboost_nthread": 4,
+      "wall_s": 0.27249368699267507,
+      "cpu_s": 1.0473280119999995,
+      "cpu_over_wall": 3.8434945908605687
+    }
+  ],
+  "prediction_max_abs_difference": 0.0,
+  "xgboost_build_info": {
+    "BUILTIN_PREFETCH_PRESENT": true,
+    "CUDA_VERSION": [
+      12,
+      5
+    ],
+    "DEBUG": false,
+    "GCC_VERSION": [
+      13,
+      1,
+      0
+    ],
+    "MM_PREFETCH_PRESENT": true,
+    "THRUST_VERSION": [
+      2,
+      7,
+      0
+    ],
+    "USE_CUDA": true,
+    "USE_DLOPEN_NCCL": false,
+    "USE_FEDERATED": false,
+    "USE_NCCL": false,
+    "USE_OPENMP": true,
+    "USE_RMM": false,
+    "libxgboost": "/cvmfs/sft.cern.ch/lcg/views/LCG_109_cuda/x86_64-el9-gcc13-opt/lib/python3.13/site-packages/xgboost/lib/libxgboost.so"
+  },
+  "used_for_physics": false
+}

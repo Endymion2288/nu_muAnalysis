@@ -1,0 +1,91 @@
+{
+  "all_passed": true,
+  "scope": "Same local transform implementation applied to saved preprocessing; worker intermediate arrays were not persisted.",
+  "checks": [
+    {
+      "partition": "train",
+      "model": "stage21_UU",
+      "events": 54196,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "train",
+      "model": "stage21_FU",
+      "events": 54196,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "train",
+      "model": "stage22_before_thread_fix_UU",
+      "events": 54196,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "train",
+      "model": "stage22_before_thread_fix_FU",
+      "events": 54196,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "train",
+      "model": "stage22_UU",
+      "events": 54196,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "train",
+      "model": "stage22_FU",
+      "events": 54196,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "validation",
+      "model": "stage21_UU",
+      "events": 13375,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "validation",
+      "model": "stage21_FU",
+      "events": 13375,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "validation",
+      "model": "stage22_before_thread_fix_UU",
+      "events": 13375,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "validation",
+      "model": "stage22_before_thread_fix_FU",
+      "events": 13375,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "validation",
+      "model": "stage22_UU",
+      "events": 13375,
+      "features": 92,
+      "float32_mismatches": 0
+    },
+    {
+      "partition": "validation",
+      "model": "stage22_FU",
+      "events": 13375,
+      "features": 92,
+      "float32_mismatches": 0
+    }
+  ],
+  "wall_s": 1.7977698631584644
+}

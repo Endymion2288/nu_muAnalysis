@@ -1,0 +1,22 @@
+{
+  "payload": "software/energy-ml-prior-cpu-threaded-stage22.tar.gz",
+  "bytes": 55918,
+  "files": [
+    "ml/train_prior.py",
+    "ml/train_tabular.py",
+    "ml/train_bdt.py",
+    "ml/robustness.py",
+    "ml/configs/prior_budget.yaml",
+    "ml/configs/prior.yaml",
+    "ml/configs/tabular.yaml",
+    "ml/configs/baseline.yaml",
+    "ml/configs/robustness.yaml",
+    "ml/configs/files.tsv",
+    "software/energy_ml_tabular_deps/rtdl_num_embeddings-0.0.12-py3-none-any.whl",
+    "software/energy_ml_tabular_deps/tabm-0.0.3-py3-none-any.whl",
+    "ml/configs/prior_budget_cpu.yaml"
+  ],
+  "all_source_bytes_equal": true,
+  "preregistered_protocol": "workbook/stage22_energy_ml/preregistered_protocol.md",
+  "verified_local_time": "2026-10-30T14:22:13.809172"
+}

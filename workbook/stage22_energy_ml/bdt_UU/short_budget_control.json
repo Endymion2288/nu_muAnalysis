@@ -1,0 +1,21 @@
+{
+  "seed": 20261029,
+  "trial": {
+    "max_depth": 7,
+    "rounds": 1200
+  },
+  "cost": {
+    "train_wall_s": 17.736989164724946,
+    "train_cpu_s": 69.99487709700001,
+    "gpu_peak_allocated_MiB": "unmeasured",
+    "parameters": "",
+    "best_iteration": 678,
+    "iterations": 779,
+    "stop_reason": "patience"
+  },
+  "common_metric_max_differences": {
+    "train": 0.0,
+    "validation": 0.0
+  },
+  "max_relative_prediction_difference": 0.0
+}

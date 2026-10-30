@@ -4,6 +4,8 @@ architecture="$1"
 mode="$2"
 payload="$3"
 repository="$4"
+configuration="${5:-ml/configs/prior.yaml}"
+stage="${6:-21}"
 scratch=$(mktemp -d "${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_prior.XXXXXX")
 trap 'rm -rf "$scratch"' EXIT
 mkdir -p "$scratch/code" "$scratch/results"
@@ -15,16 +17,16 @@ for wheel in "$scratch/code/software/energy_ml_tabular_deps/"*.whl; do
 done
 /usr/bin/time -f 'prior_train wall_s=%e max_rss_KiB=%M user_s=%U system_s=%S' \
     python3 -u "$scratch/code/ml/train_prior.py" --repo "$scratch/code" \
-    --architecture "$architecture" --mode "$mode" --output-dir "$scratch/results"
+    --architecture "$architecture" --mode "$mode" --config "$configuration" --output-dir "$scratch/results"
 endpoint=root://eoshome-x.cern.ch
 destination="${architecture}_${mode}"
-for folder in workbook/stage21_energy_ml ml/artifacts/stage21; do
+for folder in "workbook/stage${stage}_energy_ml" "ml/artifacts/stage${stage}"; do
     xrdfs "$endpoint" mkdir -p "$repository/$folder/$destination"
 done
 for file in "$scratch/results/"*; do
     case "$file" in
-        *.pt|*.ubj|*/predictions.npz|*/preprocessing.json) folder=ml/artifacts/stage21 ;;
-        *) folder=workbook/stage21_energy_ml ;;
+        *.pt|*.ubj|*/predictions.npz|*/preprocessing.json) folder="ml/artifacts/stage${stage}" ;;
+        *) folder="workbook/stage${stage}_energy_ml" ;;
     esac
     xrdcp -f --silent "$file" "$endpoint/$repository/$folder/$destination/$(basename "$file")"
 done

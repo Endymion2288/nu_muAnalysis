@@ -1,0 +1,90 @@
+[
+  {
+    "architecture": "bdt",
+    "mode": "UU",
+    "smoke": true,
+    "effective_trial": {
+      "max_depth": 7,
+      "rounds": 4800
+    },
+    "weights": {
+      "counts": [
+        2944,
+        9776,
+        17237,
+        15790,
+        7303,
+        1146
+      ],
+      "mapping": [
+        3.068161231884058,
+        0.9239634478996182,
+        0.5240277697201756,
+        0.5720498205615369,
+        1.236843306403761,
+        7.881908086096567
+      ],
+      "train_sumw": 54196.00000000001,
+      "train_sumw2": 128326.67678273527,
+      "train_Neff": 22888.50993135953
+    },
+    "train_events": 1200,
+    "validation_events": 400,
+    "wall_s": 1.3320679520256817,
+    "cpu_s": 1.491922732,
+    "peak_rss_MiB": 688.6875,
+    "gpu": "none (CPU)",
+    "device": "cpu",
+    "threads": 4,
+    "torch_threads": 4,
+    "host": "lxplus908.cern.ch",
+    "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+    "torch_version": "2.10.0",
+    "xgboost_version": "2.1.3",
+    "calibration_test_challenge_evaluated": false
+  },
+  {
+    "architecture": "bdt",
+    "mode": "FU",
+    "smoke": true,
+    "effective_trial": {
+      "max_depth": 7,
+      "rounds": 4800
+    },
+    "weights": {
+      "counts": [
+        2944,
+        9776,
+        17237,
+        15790,
+        7303,
+        1146
+      ],
+      "mapping": [
+        3.068161231884058,
+        0.9239634478996182,
+        0.5240277697201756,
+        0.5720498205615369,
+        1.236843306403761,
+        7.881908086096567
+      ],
+      "train_sumw": 54196.00000000001,
+      "train_sumw2": 128326.67678273527,
+      "train_Neff": 22888.50993135953
+    },
+    "train_events": 1200,
+    "validation_events": 400,
+    "wall_s": 1.3637056190054864,
+    "cpu_s": 1.5168358900000003,
+    "peak_rss_MiB": 684.39453125,
+    "gpu": "none (CPU)",
+    "device": "cpu",
+    "threads": 4,
+    "torch_threads": 4,
+    "host": "lxplus908.cern.ch",
+    "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+    "torch_version": "2.10.0",
+    "xgboost_version": "2.1.3",
+    "calibration_test_challenge_evaluated": false
+  }
+]

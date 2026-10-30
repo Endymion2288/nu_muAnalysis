@@ -1,0 +1,24 @@
+{
+  "architecture": "bdt",
+  "mode": "UU",
+  "smoke": false,
+  "effective_trial": {
+    "max_depth": 7,
+    "rounds": 4800
+  },
+  "train_events": 54196,
+  "validation_events": 13375,
+  "wall_s": 127.34132343903184,
+  "cpu_s": 125.10516698900001,
+  "peak_rss_MiB": 683.1484375,
+  "gpu": "none (CPU)",
+  "device": "cpu",
+  "threads": 4,
+  "host": "b9p14p8635.cern.ch",
+  "cpu_model": "Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz",
+  "torch_version": "2.10.0",
+  "xgboost_version": "2.1.3",
+  "calibration_test_challenge_evaluated": false,
+  "configuration_file": "../../training_config.json",
+  "weights_file": "../../weights.json"
+}

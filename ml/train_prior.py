@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import resource
+import socket
 import time
 from pathlib import Path
 
@@ -53,8 +54,9 @@ def weighted_nn(trial, study, seed, xt, xv, yt, yv, wt, wv, flat_train, flat_mon
 def weighted_bdt(trial, base, study, seed, xt, xv, yt, yv, wt, wv, smoke):
     params=dict(base['xgboost'])
     for k in ['n_estimators','early_stopping_rounds','n_jobs']:params.pop(k)
-    params.update(max_depth=trial['max_depth'],device='cuda',objective='reg:squarederror',seed=seed,nthread=1)
-    train=xgb.DMatrix(xt,label=yt,weight=wt,nthread=1);val=xgb.DMatrix(xv,label=yv,weight=wv,nthread=1)
+    threads=study.get('bdt_threads',1)
+    params.update(max_depth=trial['max_depth'],device=study.get('bdt_device','cuda'),objective='reg:squarederror',seed=seed,nthread=threads)
+    train=xgb.DMatrix(xt,label=yt,weight=wt,nthread=threads);val=xgb.DMatrix(xv,label=yv,weight=wv,nthread=threads)
     limit=TimeLimit(study['max_trial_wall_s']);history={};tick=time.perf_counter();cpu=time.process_time()
     model=xgb.train(params,train,num_boost_round=20 if smoke else trial['rounds'],evals=[(train,'train'),(val,'validation')],
                     early_stopping_rounds=study['bdt_patience'],callbacks=[limit],evals_result=history,verbose_eval=False)
@@ -67,11 +69,18 @@ def weighted_bdt(trial, base, study, seed, xt, xv, yt, yv, wt, wv, smoke):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1])
+    p.add_argument('--config',type=Path,default=Path('ml/configs/prior.yaml'))
     p.add_argument('--architecture',choices=['bdt','tabm'],required=True);p.add_argument('--mode',choices=['UU','FU','UF','FF'],required=True)
     p.add_argument('--output-dir',type=Path,required=True);p.add_argument('--smoke',action='store_true');args=p.parse_args()
     repo=args.repo;out=args.output_dir;out.mkdir(parents=True,exist_ok=True);tick=time.perf_counter();cpu=time.process_time()
     torch.set_num_threads(1);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
-    cfg=yaml.safe_load((repo/'ml/configs/prior.yaml').read_text());study=yaml.safe_load((repo/cfg['reference_study']).read_text())
+    cfg=yaml.safe_load((repo/args.config).read_text());study=yaml.safe_load((repo/cfg['reference_study']).read_text())
+    assert args.architecture in cfg['architectures'] and args.mode in cfg['modes']
+    device=cfg.get('device','cuda');threads=cfg.get('threads',1)
+    if device=='cpu':
+        assert args.architecture=='bdt'
+        torch.set_num_threads(threads)
+        study=dict(study,bdt_device='cpu',bdt_threads=threads)
     base=yaml.safe_load((repo/'ml/configs/baseline.yaml').read_text());assert study['max_trial_wall_s']==cfg['max_fit_wall_s']
     rows=list(csv.DictReader((repo/'ml/configs/files.tsv').open(),delimiter='\t'));train,tgroups=load(rows,base,'train');val,groups=load(rows,base,'validation')
     assert not set(tgroups)&set(groups)
@@ -89,16 +98,35 @@ def main():
     wt=wt if flat_train else np.ones(len(yt));wv=wv if setting['monitor']=='flat' else np.ones(len(yv))
     if args.architecture=='tabm':xt,xv,yt,yv,wt,wv=[torch.as_tensor(a.astype('float32'),device='cuda') for a in [xt,xv,yt,yv,wt,wv]]
     trial=cfg['fixed_trials'][args.architecture];assert trial in study['bdt_trials' if args.architecture=='bdt' else 'nn_trials']
+    trial=dict(trial)
+    if args.architecture=='bdt' and 'bdt_rounds_override' in cfg:trial['rounds']=cfg['bdt_rounds_override']
     predictions={};costs=[];traces={}
     preprocessing=dict(features=names,preprocessor=pre,target_center=center,target_spread=spread)
     for si,seed in enumerate(cfg['seeds'][:1] if args.smoke else cfg['seeds']):
-        if args.mode=='UU':
+        if args.mode=='UU' and device=='cuda':
             fit=fit_bdt if args.architecture=='bdt' else fit_nn
             fit_args=(trial,base,study,seed,xt,xv,yt,yv,args.smoke) if args.architecture=='bdt' else ('tabm',trial,study,seed,xt,xv,yt,yv,args.smoke)
             raw,cost,trace,state=fit(*fit_args)
         elif args.architecture=='bdt':raw,cost,trace,state=weighted_bdt(trial,base,study,seed,xt,xv,yt,yv,wt,wv,args.smoke)
         else:raw,cost,trace,state=weighted_nn(trial,study,seed,xt,xv,yt,yv,wt,wv,flat_train,setting['monitor']=='flat',args.smoke)
         raw=raw.astype(float)*spread+center;prediction=np.exp(raw);predictions[f'seed_{si}']=prediction;traces[f'seed_{si}']=trace
+        if args.architecture=='bdt' and 'comparison_rounds' in cfg:
+            prefix=trace['validation']['rmse'][:cfg['comparison_rounds']]
+            cost['prefix_best_iteration']=int(np.argmin(prefix))
+            prefix_raw=state.predict(xgb.DMatrix(xv,nthread=threads),iteration_range=(0,cost['prefix_best_iteration']+1))
+            predictions[f'prefix_seed_{si}']=np.exp(prefix_raw.astype(float)*spread+center)
+            if si==0 and not args.smoke and cfg.get('verify_short_budget',False):
+                short_trial=dict(trial,rounds=cfg['comparison_rounds'])
+                short_raw,short_cost,short_trace,_=weighted_bdt(short_trial,base,study,seed,xt,xv,yt,yv,wt,wv,False)
+                short_pred=np.exp(short_raw.astype(float)*spread+center)
+                np.testing.assert_array_equal(short_pred,predictions[f'prefix_seed_{si}'])
+                differences={}
+                for split in ['train','validation']:
+                    a=trace[split]['rmse'][:len(short_trace[split]['rmse'])];b=short_trace[split]['rmse']
+                    np.testing.assert_array_equal(a,b);differences[split]=float(np.max(abs(np.array(a)-b)))
+                control=dict(seed=seed,trial=short_trial,cost=short_cost,common_metric_max_differences=differences,
+                             max_relative_prediction_difference=float(np.max(abs(short_pred/predictions[f'prefix_seed_{si}']-1))))
+                (out/'short_budget_control.json').write_text(json.dumps(control,indent=2)+'\n')
         costs.append(dict(seed_index=si,seed=seed,validation_unit_log_MSE=float(np.mean((raw-np.log(val[base['target']]))**2)),**cost))
         if si==0:
             if args.architecture=='bdt':state.save_model(out/'best.ubj')
@@ -107,9 +135,11 @@ def main():
     np.savez_compressed(out/'predictions.npz',run=val['run'],eventID=val['eventID'],truth_E_GeV=val[base['target']],group=groups,**predictions)
     write_table(out/'costs.tsv',costs);(out/'learning_traces.json').write_text(json.dumps(traces)+'\n')
     (out/'preprocessing.json').write_text(json.dumps(preprocessing,indent=2)+'\n')
-    summary=dict(architecture=args.architecture,mode=args.mode,smoke=args.smoke,study=cfg,weights=weights,train_events=len(yt),validation_events=len(yv),
+    summary=dict(architecture=args.architecture,mode=args.mode,smoke=args.smoke,study=cfg,effective_trial=trial,weights=weights,train_events=len(yt),validation_events=len(yv),
                  wall_s=time.perf_counter()-tick,cpu_s=time.process_time()-cpu,peak_rss_MiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
-                 gpu=torch.cuda.get_device_name(0),torch_version=torch.__version__,xgboost_version=xgb.__version__,calibration_test_challenge_evaluated=False)
+                 gpu=torch.cuda.get_device_name(0) if device=='cuda' else 'none (CPU)',device=device,threads=threads,torch_threads=torch.get_num_threads(),host=socket.gethostname(),
+                 cpu_model=next((line.split(':',1)[1].strip() for line in Path('/proc/cpuinfo').read_text().splitlines() if line.startswith('model name')),'unmeasured'),
+                 torch_version=torch.__version__,xgboost_version=xgb.__version__,calibration_test_challenge_evaluated=False)
     (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary),flush=True)
 
 

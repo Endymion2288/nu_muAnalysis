@@ -1,0 +1,25 @@
+{
+  "architecture": "bdt",
+  "mode": "FU",
+  "smoke": false,
+  "effective_trial": {
+    "max_depth": 7,
+    "rounds": 4800
+  },
+  "train_events": 54196,
+  "validation_events": 13375,
+  "wall_s": 115.97169931605458,
+  "cpu_s": 452.524876315,
+  "peak_rss_MiB": 769.59375,
+  "gpu": "none (CPU)",
+  "device": "cpu",
+  "threads": 4,
+  "torch_threads": 4,
+  "host": "b9g03p0004.cern.ch",
+  "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+  "torch_version": "2.10.0",
+  "xgboost_version": "2.1.3",
+  "calibration_test_challenge_evaluated": false,
+  "configuration_file": "../training_config.json",
+  "weights_file": "../weights.json"
+}
