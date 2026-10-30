@@ -1,0 +1,19 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage24
+initialdir = $(spool)
+executable = $(spool)/run_ml_within_response.sh
+arguments = $(model) energy-ml-within-stage24.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-within-stage24.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 200MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-within-response"
+log = $(spool)/logs/ml_within_$(ClusterId).log
+output = $(spool)/logs/ml_within_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/ml_within_$(ClusterId).$(ProcId).err
+queue model in mu_p_over0p8,bdt_UU,tabm_UU

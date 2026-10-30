@@ -1,0 +1,86 @@
+{
+  "mu_p_over0p8": {
+    "model": "mu_p_over0p8",
+    "smoke": true,
+    "events": 1768,
+    "groups": 22,
+    "seeds": 1,
+    "bootstrap": 8,
+    "toys_per_cell": 8,
+    "total_fits": {
+      "central": 14,
+      "bootstrap": 112,
+      "selfcheck": 14,
+      "toy": 224
+    },
+    "failure_cells": 0,
+    "selfcheck_failures": 0,
+    "synthetic_checks": {
+      "half_only": {
+        "max_fraction_errors": {
+          "coarse6": 0.01812148505944977,
+          "fine12": 7.316266553702988e-08,
+          "continuous": 7.316266553702988e-08
+        },
+        "derivative_error": 2.8755470227181945e-12
+      },
+      "within_half": {
+        "max_fraction_errors": {
+          "coarse6": 0.026444744390053204,
+          "fine12": 0.009059972356104923,
+          "continuous": 1.5121151458741267e-07
+        },
+        "derivative_error": 6.188799472894857e-13
+      }
+    },
+    "wall_s": 0.9575222982093692,
+    "cpu_s": 0.917847762,
+    "max_rss_KiB": 79188,
+    "host": "lxplus908.cern.ch",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "calibration_test_challenge_evaluated": false
+  },
+  "tabm_UU": {
+    "model": "tabm_UU",
+    "smoke": true,
+    "events": 1768,
+    "groups": 22,
+    "seeds": 1,
+    "bootstrap": 8,
+    "toys_per_cell": 8,
+    "total_fits": {
+      "central": 14,
+      "bootstrap": 112,
+      "selfcheck": 14,
+      "toy": 224
+    },
+    "failure_cells": 0,
+    "selfcheck_failures": 0,
+    "synthetic_checks": {
+      "half_only": {
+        "max_fraction_errors": {
+          "coarse6": 0.01812148505944977,
+          "fine12": 7.316266553702988e-08,
+          "continuous": 7.316266553702988e-08
+        },
+        "derivative_error": 2.8755470227181945e-12
+      },
+      "within_half": {
+        "max_fraction_errors": {
+          "coarse6": 0.026444744390053204,
+          "fine12": 0.009059972356104923,
+          "continuous": 1.5121151458741267e-07
+        },
+        "derivative_error": 6.188799472894857e-13
+      }
+    },
+    "wall_s": 0.8556221560575068,
+    "cpu_s": 0.8243903190000001,
+    "max_rss_KiB": 557748,
+    "host": "lxplus908.cern.ch",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "calibration_test_challenge_evaluated": false
+  }
+}

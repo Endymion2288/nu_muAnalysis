@@ -1,0 +1,19 @@
+version: 1
+stage: 24
+parent_config: ml/configs/closure.yaml
+seed: 20261030
+models:
+  mu_p_over0p8: {kind: mu, scale: 1.25, seeds: [0]}
+  bdt_UU: {path: ml/artifacts/stage22/bdt_UU/predictions.npz, seeds: [0, 1, 2]}
+  tabm_UU: {path: ml/artifacts/stage21/tabm_UU/predictions.npz, seeds: [0, 1, 2]}
+methods: [coarse6, fine12, continuous]
+alphas: [-1.0, 0.0, 1.0]
+internal_truth_bins: 12
+reco_scheme: energy
+bootstrap_replicates: 500
+toys: 200
+toy_laws: [cross_source, response_control]
+primary_metric: RMS of (fhat_alpha-fhat_nominal)/ftrue across bins, seeds, reciprocal directions and both nonzero alphas
+method_pairs: [[coarse6, fine12], [coarse6, continuous], [fine12, continuous]]
+profile_diagnostic: one common unbounded local within-bin alpha, no prior; Fisher only at alpha=0; not a fitted nuisance model
+scope: fixed injected alpha known to response construction; selected unit MC validation only; no training, flux, acceptance, backgrounds or held-out samples

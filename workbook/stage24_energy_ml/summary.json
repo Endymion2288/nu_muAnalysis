@@ -1,0 +1,161 @@
+{
+  "runs": {
+    "mu_p_over0p8": {
+      "model": "mu_p_over0p8",
+      "smoke": false,
+      "events": 13375,
+      "groups": 22,
+      "seeds": 1,
+      "bootstrap": 500,
+      "toys_per_cell": 200,
+      "total_fits": {
+        "central": 14,
+        "bootstrap": 7000,
+        "selfcheck": 14,
+        "toy": 5600
+      },
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "half_only": {
+          "max_fraction_errors": {
+            "coarse6": 0.01812148505944977,
+            "fine12": 7.316266553702988e-08,
+            "continuous": 7.316266553702988e-08
+          },
+          "derivative_error": 2.8755470227181945e-12
+        },
+        "within_half": {
+          "max_fraction_errors": {
+            "coarse6": 0.026444744390053204,
+            "fine12": 0.009059972356104923,
+            "continuous": 1.5121151458741267e-07
+          },
+          "derivative_error": 6.188799472894857e-13
+        }
+      },
+      "wall_s": 27.738809321075678,
+      "cpu_s": 26.962703799,
+      "max_rss_KiB": 71740,
+      "host": "b9p29p9581.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "bdt_UU": {
+      "model": "bdt_UU",
+      "smoke": false,
+      "events": 13375,
+      "groups": 22,
+      "seeds": 3,
+      "bootstrap": 500,
+      "toys_per_cell": 200,
+      "total_fits": {
+        "central": 42,
+        "bootstrap": 21000,
+        "selfcheck": 42,
+        "toy": 16800
+      },
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "half_only": {
+          "max_fraction_errors": {
+            "coarse6": 0.01812148505944977,
+            "fine12": 7.316266553702988e-08,
+            "continuous": 7.316266553702988e-08
+          },
+          "derivative_error": 2.8755470227181945e-12
+        },
+        "within_half": {
+          "max_fraction_errors": {
+            "coarse6": 0.026444744390053204,
+            "fine12": 0.009059972356104923,
+            "continuous": 1.5121151458741267e-07
+          },
+          "derivative_error": 6.188799472894857e-13
+        }
+      },
+      "wall_s": 86.14454157464206,
+      "cpu_s": 84.123627177,
+      "max_rss_KiB": 78112,
+      "host": "b9p18p7089.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "tabm_UU": {
+      "model": "tabm_UU",
+      "smoke": false,
+      "events": 13375,
+      "groups": 22,
+      "seeds": 3,
+      "bootstrap": 500,
+      "toys_per_cell": 200,
+      "total_fits": {
+        "central": 42,
+        "bootstrap": 21000,
+        "selfcheck": 42,
+        "toy": 16800
+      },
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "half_only": {
+          "max_fraction_errors": {
+            "coarse6": 0.01812148505944977,
+            "fine12": 7.316266553702988e-08,
+            "continuous": 7.316266553702988e-08
+          },
+          "derivative_error": 2.8755470227181945e-12
+        },
+        "within_half": {
+          "max_fraction_errors": {
+            "coarse6": 0.026444744390053204,
+            "fine12": 0.009059972356104923,
+            "continuous": 1.5121151458741267e-07
+          },
+          "derivative_error": 6.188799472894857e-13
+        }
+      },
+      "wall_s": 80.68460787646472,
+      "cpu_s": 79.595709094,
+      "max_rss_KiB": 80448,
+      "host": "b9p26p5060.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    }
+  },
+  "checks": {
+    "table_rows": {
+      "metrics": 126,
+      "closure_bins": 756,
+      "response": 5880,
+      "internal_counts": 168,
+      "profile": 14,
+      "selfchecks": 98,
+      "toys": 1512,
+      "failures": 0
+    },
+    "paired_draws_identical": true,
+    "all_selfchecks_passed": true,
+    "maximum_selfclosure_fraction_error": 2.003933259886459e-07,
+    "maximum_selfclosure_reco_error": 7.093631008980861e-08,
+    "central_fit_failures": 0,
+    "maximum_kkt": 6.363062621250748e-07,
+    "nominal_methods_identical": true
+  },
+  "totals": {
+    "worker_wall_s": 194.56795877218246,
+    "worker_cpu_s": 190.68204007,
+    "peak_rss_KiB": 80448,
+    "fits": {
+      "central": 98,
+      "bootstrap": 49000,
+      "selfcheck": 98,
+      "toy": 39200
+    }
+  },
+  "report_wall_s": 2.313033188926056
+}

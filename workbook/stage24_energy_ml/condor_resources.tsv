@@ -1,0 +1,4 @@
+cluster	proc	exit_code	requested_cpus	requested_gpus	requested_memory_MB	allocated_cpus	allocated_memory_MB	submitted_local	executed_local	terminated_local	submit_to_finish_s	condor_execute_s	condor_observed_gpu_memory_MB	remote_cpu_s	wrapper_wall_s	wrapper_peak_rss_KiB	wrapper_user_s	wrapper_system_s
+1561616	0	0	1	0	3000	1	3000	2026-10-30T15:43:12	2026-10-30T15:45:24	2026-10-30T15:45:58	166.0	34	unmeasured	28	29.93	71740	27.42	0.57
+1561616	1	0	1	0	3000	1	3000	2026-10-30T15:43:12	2026-10-30T15:45:24	2026-10-30T15:46:57	225.0	93	unmeasured	85	87.91	78112	84.27	0.79
+1561616	2	0	1	0	3000	1	3000	2026-10-30T15:43:12	2026-10-30T15:45:24	2026-10-30T15:46:51	219.0	87	unmeasured	81	82.18	80448	79.99	0.39
