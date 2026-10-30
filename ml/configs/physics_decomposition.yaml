@@ -1,0 +1,21 @@
+version: 1
+stage: 15
+seeds: [20261029, 20261030, 20261031]
+vertex_tolerance_mm: 0.0001
+partitions: [train, validation]
+primary_definition: unique sign-correct muon among saved first ten truth particles produced at incoming-neutrino decay vertex; audit generator order and matched parent barcode
+matching_definition: aligned leading t_pdg and t_barcode equal primary candidate; parent PDG and barcode equal incoming neutrino; no hit-ratio cut
+reference_station: 1
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+seeds_oracle_models: [O0, O1, O2]
+oracle_features: [primary_log_p_GeV, primary_slope_x, primary_slope_y, primary_pdg, vertex_x_mm, vertex_y_mm, vertex_z_mm]
+oracle_groups:
+  O0: []
+  O1: [counts]
+  O2: [counts, scintillator]
+xgboost: {max_depth: 5, rounds: 1600, patience: 100}
+bootstrap_replicates: 500
+scope: truth-only oracle diagnostics are isolated from deployment feature lists; no calibration/test/challenge evaluation; existing selected events unchanged
+weight_mode: unit MC diagnostic; physical flux normalization unverified
+interpretation: leptonic y=1-E_mu_vertex/E_nu; E_nu-E_mu_vertex is transferred-energy proxy, not measured calorimeter hadronic energy

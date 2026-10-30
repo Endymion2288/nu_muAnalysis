@@ -1,0 +1,38 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_primary_extract.sh
+arguments = $(batch) energy-ml-primary-stage15.tar.gz $(repository)/ntuples/energy_ml_stage15/shards/$(batch).npz
+transfer_input_files = $(repository)/software/energy-ml-primary-stage15.tar.gz
+request_cpus = 1
+request_memory = 1200MB
+request_disk = 500MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-primary-extract"
+log = $(repository)/logs/ml_primary_extract_$(ClusterId).log
+output = $(repository)/logs/ml_primary_extract_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_primary_extract_$(ClusterId).$(ProcId).err
+queue batch from (
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+)

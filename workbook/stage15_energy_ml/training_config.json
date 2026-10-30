@@ -1,0 +1,520 @@
+{
+  "study": {
+    "version": 1,
+    "stage": 15,
+    "seeds": [
+      20261029,
+      20261030,
+      20261031
+    ],
+    "vertex_tolerance_mm": 0.0001,
+    "partitions": [
+      "train",
+      "validation"
+    ],
+    "primary_definition": "unique sign-correct muon among saved first ten truth particles produced at incoming-neutrino decay vertex; audit generator order and matched parent barcode",
+    "matching_definition": "aligned leading t_pdg and t_barcode equal primary candidate; parent PDG and barcode equal incoming neutrino; no hit-ratio cut",
+    "reference_station": 1,
+    "energy_edges_GeV": [
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      6400
+    ],
+    "y_edges": [
+      0,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "seeds_oracle_models": [
+      "O0",
+      "O1",
+      "O2"
+    ],
+    "oracle_features": [
+      "primary_log_p_GeV",
+      "primary_slope_x",
+      "primary_slope_y",
+      "primary_pdg",
+      "vertex_x_mm",
+      "vertex_y_mm",
+      "vertex_z_mm"
+    ],
+    "oracle_groups": {
+      "O0": [],
+      "O1": [
+        "counts"
+      ],
+      "O2": [
+        "counts",
+        "scintillator"
+      ]
+    },
+    "xgboost": {
+      "max_depth": 5,
+      "rounds": 1600,
+      "patience": 100
+    },
+    "bootstrap_replicates": 500,
+    "scope": "truth-only oracle diagnostics are isolated from deployment feature lists; no calibration/test/challenge evaluation; existing selected events unchanged",
+    "weight_mode": "unit MC diagnostic; physical flux normalization unverified",
+    "interpretation": "leptonic y=1-E_mu_vertex/E_nu; E_nu-E_mu_vertex is transferred-energy proxy, not measured calorimeter hadronic energy"
+  },
+  "baseline": {
+    "version": 1,
+    "seed": 20261029,
+    "production": "official merge d32b0ff3 without-IFT FASERNU-04 OFLCOND-FASER-06",
+    "target": "ML_truth_E_GeV",
+    "feature_groups": {
+      "mu": [
+        "ML_mu_p_GeV"
+      ],
+      "mu_context": [
+        "ML_mu_px0_GeV",
+        "ML_mu_py0_GeV",
+        "LeadTrack_charge",
+        "LeadTrack_Theta",
+        "LeadTrack_Chi2_NDF",
+        "LeadTrack_nDoF",
+        "LeadTrack_nLayers",
+        "LeadTrack_r_atMaxRadius",
+        "LeadTrack_rVetoNu",
+        "ML_mu_x0_mm",
+        "ML_mu_y0_mm",
+        "ML_mu_z0_mm",
+        "ML_mu_X_atVetoNu_mm",
+        "ML_mu_Y_atVetoNu_mm",
+        "ML_mu_X_atCalo_mm",
+        "ML_mu_Y_atCalo_mm"
+      ],
+      "counts": [
+        "nClusters0",
+        "nClusters1",
+        "nClusters2",
+        "nClusters3",
+        "SpacePoints",
+        "TrackSegments",
+        "longTracks"
+      ],
+      "scintillator": [
+        "VetoNu0_charge",
+        "VetoNu1_charge",
+        "Veto10_charge",
+        "Veto20_charge",
+        "Veto21_charge",
+        "Timing0_charge",
+        "Timing1_charge",
+        "Timing2_charge",
+        "Timing3_charge",
+        "Preshower0_charge",
+        "Preshower1_charge",
+        "VetoNu0_reduced_charge",
+        "VetoNu1_reduced_charge"
+      ],
+      "calo": [
+        "ML_calo0_E_EM_GeV",
+        "ML_calo1_E_EM_GeV",
+        "ML_calo2_E_EM_GeV",
+        "ML_calo3_E_EM_GeV",
+        "ML_calo_total_E_EM_GeV"
+      ],
+      "shape": [
+        "ML_sp_mean_x_mm",
+        "ML_sp_rms_x_mm",
+        "ML_sp_mean_y_mm",
+        "ML_sp_rms_y_mm"
+      ]
+    },
+    "feature_versions": {
+      "F0": [
+        "mu"
+      ],
+      "F1": [
+        "mu",
+        "mu_context"
+      ],
+      "F2": [
+        "mu",
+        "mu_context",
+        "counts"
+      ],
+      "F3": [
+        "mu",
+        "mu_context",
+        "counts",
+        "scintillator"
+      ],
+      "F4": [
+        "mu",
+        "mu_context",
+        "counts",
+        "scintillator",
+        "calo"
+      ],
+      "F5": [
+        "mu",
+        "mu_context",
+        "counts",
+        "scintillator",
+        "calo",
+        "shape"
+      ]
+    },
+    "units": {
+      "ML_mu_p_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_p0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_px0_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_px0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_py0_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_py0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_pz0_GeV": {
+        "unit": "GeV",
+        "role": "feature",
+        "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000.0"
+      },
+      "ML_mu_x0_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_x0, LeadTrack_Idx)"
+      },
+      "ML_mu_y0_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_y0, LeadTrack_Idx)"
+      },
+      "ML_mu_z0_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_z0, LeadTrack_Idx)"
+      },
+      "ML_mu_X_atVetoNu_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_X_atVetoNu, LeadTrack_Idx)"
+      },
+      "ML_mu_Y_atVetoNu_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_Y_atVetoNu, LeadTrack_Idx)"
+      },
+      "ML_mu_X_atCalo_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_X_atCalo, LeadTrack_Idx)"
+      },
+      "ML_mu_Y_atCalo_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SafeAt(Track_Y_atCalo, LeadTrack_Idx)"
+      },
+      "ML_sp_mean_x_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_x.empty() ? std::numeric_limits<double>::quiet_NaN() : double(ROOT::VecOps::Mean(SpacePoint_x))"
+      },
+      "ML_sp_rms_x_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_x.empty() ? std::numeric_limits<double>::quiet_NaN() : std::sqrt(std::max(0.0, double(ROOT::VecOps::Mean(SpacePoint_x*SpacePoint_x)) - ML_sp_mean_x_mm*ML_sp_mean_x_mm))"
+      },
+      "ML_sp_mean_y_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_y.empty() ? std::numeric_limits<double>::quiet_NaN() : double(ROOT::VecOps::Mean(SpacePoint_y))"
+      },
+      "ML_sp_rms_y_mm": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "SpacePoint_y.empty() ? std::numeric_limits<double>::quiet_NaN() : std::sqrt(std::max(0.0, double(ROOT::VecOps::Mean(SpacePoint_y*SpacePoint_y)) - ML_sp_mean_y_mm*ML_sp_mean_y_mm))"
+      },
+      "ML_truth_E_GeV": {
+        "unit": "GeV",
+        "role": "label",
+        "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0"
+      },
+      "ML_truth_pdg": {
+        "unit": "dimensionless",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_pdg,0)"
+      },
+      "ML_truth_barcode": {
+        "unit": "dimensionless",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_barcode,0)"
+      },
+      "ML_truth_P_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_P,0)"
+      },
+      "ML_truth_m_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_m,0)"
+      },
+      "ML_truth_px_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_px,0)"
+      },
+      "ML_truth_py_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_py,0)"
+      },
+      "ML_truth_pz_MeV": {
+        "unit": "MeV",
+        "role": "diagnostic",
+        "expression": "SafeAt(truth_pz,0)"
+      },
+      "ML_calo0_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo0_E_EM / 1000.0"
+      },
+      "ML_calo1_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo1_E_EM / 1000.0"
+      },
+      "ML_calo2_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo2_E_EM / 1000.0"
+      },
+      "ML_calo3_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo3_E_EM / 1000.0"
+      },
+      "ML_calo_total_E_EM_GeV": {
+        "unit": "GeV (EM scale)",
+        "role": "feature",
+        "expression": "Calo_total_E_EM / 1000.0"
+      },
+      "LeadTrack_charge": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_Theta": {
+        "unit": "mrad",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_Chi2_NDF": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_nDoF": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_nLayers": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_r_atMaxRadius": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "LeadTrack_rVetoNu": {
+        "unit": "mm",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters0": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters1": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters2": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "nClusters3": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "SpacePoints": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "TrackSegments": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "longTracks": {
+        "unit": "dimensionless",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu0_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu1_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Veto10_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Veto20_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Veto21_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing0_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing1_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing2_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Timing3_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Preshower0_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "Preshower1_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu0_reduced_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      },
+      "VetoNu1_reduced_charge": {
+        "unit": "pC",
+        "role": "feature",
+        "expression": "existing branch or definitions.yaml"
+      }
+    },
+    "metadata_columns": [
+      "run",
+      "eventID",
+      "CrossSection",
+      "truth_pz_nu",
+      "truth_dec_x_nu",
+      "truth_dec_y_nu",
+      "truth_dec_z_nu",
+      "ML_truth_pdg",
+      "ML_truth_barcode",
+      "ML_truth_P_MeV",
+      "ML_truth_m_MeV",
+      "ML_truth_px_MeV",
+      "ML_truth_py_MeV",
+      "ML_truth_pz_MeV",
+      "VetoNu0_status",
+      "VetoNu1_status",
+      "Veto10_status",
+      "Veto20_status",
+      "Veto21_status",
+      "Timing0_status",
+      "Timing1_status",
+      "Timing2_status",
+      "Timing3_status",
+      "Preshower0_status",
+      "Preshower1_status",
+      "Calo0_status",
+      "Calo1_status",
+      "Calo2_status",
+      "Calo3_status",
+      "LeadTrack_pz0"
+    ],
+    "partition": {
+      "fractions": {
+        "train": 0.6,
+        "validation": 0.15,
+        "calibration": 0.1,
+        "test": 0.15
+      },
+      "group": "same component and RDO generation range across both periods; SIBYLL challenge only"
+    },
+    "energy_edges_GeV": [
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      6400
+    ],
+    "weight_mode": "unit diagnostic; physical flux normalization not verified",
+    "loss": "squared error in log(E/GeV), plus residual log(E/p)",
+    "xgboost": {
+      "n_estimators": 600,
+      "max_depth": 3,
+      "learning_rate": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "early_stopping_rounds": 40,
+      "n_jobs": 1
+    },
+    "bootstrap_replicates": 500,
+    "test_policy": "development reports use validation only; calibration and test unopened for model selection",
+    "limitations": [
+      "shape means and widths are global SpacePoint summaries, not station topology",
+      "no CaloNu or dual-gain data calibration in this stage",
+      "no Track_hitSet or Track_nMeasurements indexing",
+      "unit weights cannot establish physical flux averaged performance"
+    ]
+  }
+}

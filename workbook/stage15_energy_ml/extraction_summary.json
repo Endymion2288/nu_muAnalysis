@@ -1,0 +1,26 @@
+{
+  "train": {
+    "events": 54196,
+    "unique_primary": 54196,
+    "lead_primary_parent_confirmed": 53042,
+    "any_primary_parent_confirmed": 53176,
+    "station1_available": 53758
+  },
+  "validation": {
+    "events": 13375,
+    "unique_primary": 13375,
+    "lead_primary_parent_confirmed": 13104,
+    "any_primary_parent_confirmed": 13131,
+    "station1_available": 13264
+  },
+  "files": 222,
+  "input_events": 2203362,
+  "selected_events": 67571,
+  "file_read_wall_s": 340.9032865539193,
+  "extraction_peak_rss_MiB": 267.51953125,
+  "consolidation_wall_s": 2.6071717420127243,
+  "consolidation_cpu_s": 1.899248006,
+  "consolidation_peak_rss_MiB": 233.45703125,
+  "final_cache_bytes": 10018750,
+  "all_fields_readback_verified": true
+}
