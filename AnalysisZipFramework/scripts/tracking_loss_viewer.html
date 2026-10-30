@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backward 通过、merge 失败：逐事件轨迹对照</title>
+<style>
+body{font:15px system-ui,sans-serif;color:#18232d;background:#f6f8fa;margin:24px;max-width:1500px}h1{font-size:24px}p{line-height:1.6}select,button,input{padding:7px;margin:4px}label{display:inline-block;margin-right:18px}.panel{background:white;border:1px solid #d7dde3;padding:16px;margin:16px 0;border-radius:6px}table{border-collapse:collapse;width:100%}th,td{padding:8px;text-align:right;border-bottom:1px solid #ddd}th:first-child,td:first-child{text-align:left}svg{width:100%;height:auto}#plots{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hint{color:#536370;font-size:13px}.legend{display:flex;gap:20px;flex-wrap:wrap}svg text{font:12px system-ui,sans-serif}@media(max-width:850px){#plots{grid-template-columns:1fr}body{margin:12px}}
+</style>
+<h1>Backward 通过、merge 失败：逐事件轨迹对照</h1>
+<p>相同 RDO、官方 master d32b0ff3、原有分析 cuts。展示全部 89 个最终 backward-only 事件。位置单位 mm，动量单位 GeV。此页可离线使用。</p>
+<div class="panel"><label>首次失败的 cut <select id="failure"></select></label><label>事件 <select id="event"></select></label><button id="previous">上一例</button><button id="next">下一例</button><br>
+<label>显示 <select id="coordinate"><option value="0">x–z</option><option value="1">y–z</option></select></label>
+<label>纵轴中心 (mm) <input id="center" type="number" value="0" step="5"></label>
+<label>纵轴半宽 (mm) <select id="span"><option>125</option><option>40</option><option>10</option><option>2</option><option>0.5</option></select></label>
+<label><input id="candidates" type="checkbox" checked>显示未成为 long track 的候选</label>
+<div class="legend"><span style="color:#0072B2">● forward</span><span style="color:#D55E00">● backward</span><span style="color:#009E73">● merge</span><span>粗线：leading track；细线：其他 long track；虚线：非 long 候选；灰点：space points</span></div></div>
+<div class="panel" id="description"></div><div id="plots"><div class="panel"><svg id="projection" viewBox="0 0 760 430"></svg></div><div class="panel"><svg id="radial" viewBox="0 0 520 430"></svg></div></div>
+<div class="panel"><table id="table"></table></div>
+<p class="hint">轨迹线连接实际拟合 states，不在磁场间隙作额外传播拟合。右图是 VetoStation2 外推点（分析中的 rIFT 定义），圆为 95 mm cut；放大左图可比较亚毫米差异。近似 tracker station z=0、1190、2380 mm 的位置参照 EventDisplay_PHYS；未叠加不匹配的 pixel preshower 几何。真值顶点与轨迹最大半径位置的 z 是不同的量。</p>
+<script type="application/json" id="data">__EVENT_DATA__</script>
+<script>
+const events=JSON.parse(document.getElementById('data').textContent), colors={forward:'#0072B2',backward:'#D55E00',merge:'#009E73'}, modes=Object.keys(colors);
+const get=id=>document.getElementById(id), ns='http://www.w3.org/2000/svg';
+function add(svg,name,attrs,text){const e=document.createElementNS(ns,name);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text!==undefined)e.textContent=text;svg.appendChild(e);return e}
+function fmt(x){return x===null||x===undefined?'—':typeof x==='number'?x.toFixed(3):x}
+get('failure').innerHTML='<option value="">全部</option>'+[...new Set(events.map(e=>e.info.first_failed_cut))].sort().map(s=>`<option>${s}</option>`).join('');
+function choices(){const select=get('event');select.innerHTML='';events.forEach((e,i)=>{if(!get('failure').value||get('failure').value===e.info.first_failed_cut){const o=document.createElement('option');o.value=i;o.textContent=`${e.run} / ${e.event}`;select.appendChild(o)}});render()}
+function base(svg,xmin,xmax,ymin,ymax,width){svg.replaceChildren();const left=60,right=width-25,top=25,bottom=370;const x=v=>left+(v-xmin)/(xmax-xmin)*(right-left),y=v=>bottom-(v-ymin)/(ymax-ymin)*(bottom-top);for(let k=0;k<=5;k++){const xv=xmin+(xmax-xmin)*k/5,yv=ymin+(ymax-ymin)*k/5;add(svg,'line',{x1:x(xv),y1:top,x2:x(xv),y2:bottom,stroke:'#e3e7ea'});add(svg,'line',{x1:left,y1:y(yv),x2:right,y2:y(yv),stroke:'#e3e7ea'});add(svg,'text',{x:x(xv),y:390,'text-anchor':'middle'},xv.toFixed(0));add(svg,'text',{x:53,y:y(yv)+4,'text-anchor':'end'},yv.toFixed(1))}return {x,y,top,bottom,left,right}}
+function render(){const e=events[Number(get('event').value)];if(!e)return;const row=e.info,coord=Number(get('coordinate').value),center=Number(get('center').value),span=Number(get('span').value),svg=get('projection');
+get('description').textContent=`Run ${e.run} / event ${e.event}；首次失败：${row.first_failed_cut}。${row.backward_leader_retained?'原 backward leading track 仍在 merge 中，但被其他最高 pz 轨迹取代。':'原 backward leading track 在 merge 去重中被移除。'} 共享 measurements=${row.blocking_shared_hits}；backward / 阻挡候选 measurements=${row.backward_measurements} / ${row.blocking_measurements}；阻挡候选覆盖 stations=${row.blocking_stations||'—'}。真值顶点 r=${fmt(row.truth_r_mm)} mm，z=${fmt(row.truth_z_mm)} mm。`;
+const p=base(svg,-1700,2500,center-span,center+span,760);add(svg,'text',{x:420,y:420,'text-anchor':'middle'},'z (mm)');add(svg,'text',{x:14,y:20},(coord?'y':'x')+' (mm)');
+for(const z of [0,1190,2380])add(svg,'line',{x1:p.x(z),x2:p.x(z),y1:p.top,y2:p.bottom,stroke:'#bdc5ce','stroke-width':3});
+const clipId='plotClip';const defs=add(svg,'defs',{});const clip=add(defs,'clipPath',{id:clipId});add(clip,'rect',{x:p.left,y:p.top,width:p.right-p.left,height:p.bottom-p.top});const group=add(svg,'g',{'clip-path':`url(#${clipId})`});
+for(const point of e.spacepoints)add(group,'circle',{cx:p.x(point[2]),cy:p.y(point[coord]),r:1.5,fill:'#888',opacity:.3});
+function line(points,color,width,dash){const good=points.filter(pt=>pt.every(Number.isFinite)).sort((a,b)=>a[2]-b[2]);add(group,'polyline',{points:good.map(pt=>`${p.x(pt[2])},${p.y(pt[coord])}`).join(' '),fill:'none',stroke:color,'stroke-width':width,'stroke-dasharray':dash||''})}
+for(const mode of modes){const m=e.modes[mode];if(get('candidates').checked)m.rejected.forEach(points=>line(points,colors[mode],1.5,'5 4'));m.tracks.forEach((track,i)=>line(track.points,colors[mode],i===m.scalars.LeadTrack_Idx?2.5:1,''))}
+const r=get('radial'),a=base(r,-110,110,-110,110,520);add(r,'ellipse',{cx:a.x(0),cy:a.y(0),rx:95*(a.right-a.left)/220,ry:95*(a.bottom-a.top)/220,fill:'none',stroke:'#555','stroke-dasharray':'5 3'});add(r,'text',{x:275,y:420,'text-anchor':'middle'},'VetoStation2 x (mm)');add(r,'text',{x:4,y:16},'y (mm)');
+for(const mode of modes){const m=e.modes[mode],track=m.tracks[m.scalars.LeadTrack_Idx];if(track&&track.ift.every(v=>Number.isFinite(v)&&Math.abs(v)<200)){add(r,'circle',{cx:a.x(track.ift[0]),cy:a.y(track.ift[1]),r:mode==='merge'?4:7,fill:mode==='merge'?colors[mode]:'none',stroke:colors[mode],'stroke-width':2});add(r,'text',{x:a.x(track.ift[0])+8,y:a.y(track.ift[1])+(mode==='backward'?-12:mode==='merge'?18:4),fill:colors[mode]},mode)}}
+const fields=[['longTracks','N long'],['LeadTrack_pz0','pz (GeV)'],['LeadTrack_nLayers','layers'],['LeadTrack_nDoF','nDoF'],['LeadTrack_Chi2_NDF','χ²/nDoF'],['LeadTrack_r_atMaxRadius','rmax (mm)'],['LeadTrack_rIFT','rIFT (mm)'],['LeadTrack_Theta','θ (mrad)']];get('table').innerHTML='<tr><th>模式</th>'+fields.map(f=>`<th>${f[1]}</th>`).join('')+'</tr>'+modes.map(mode=>`<tr><td style="color:${colors[mode]}">${mode}</td>`+fields.map(f=>`<td>${fmt(e.modes[mode].scalars[f[0]])}</td>`).join('')+'</tr>' ).join('')}
+get('failure').onchange=choices;['event','coordinate','center','span','candidates'].forEach(id=>get(id).onchange=render);get('next').onclick=()=>{const s=get('event');s.selectedIndex=(s.selectedIndex+1)%s.options.length;render()};get('previous').onclick=()=>{const s=get('event');s.selectedIndex=(s.selectedIndex+s.options.length-1)%s.options.length;render()};choices();
+</script></html>

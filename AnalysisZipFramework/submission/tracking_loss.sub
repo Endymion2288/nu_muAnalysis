@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_tracking_loss.sh
+payload = $(repository)/software/tracking-loss-stage17.tar.gz
+arguments = $(run) $(event) $(rdo) $(merge) $(report) $(payload) $(fbits) $(bbits) $(mbits)
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 2000MB
+environment = "OMP_NUM_THREADS=1"
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuCalypsoCommit = "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305"
+log = $(repository)/logs/tracking_loss_$(ClusterId).log
+output = $(repository)/logs/tracking_loss_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/tracking_loss_$(ClusterId).$(ProcId).err
+requirements = (Machine =!= "b9p02p8722.cern.ch")
+queue run,event,rdo,merge,report,fbits,bbits,mbits from AnalysisZipFramework/submission/tracking_loss_manifest.tsv
