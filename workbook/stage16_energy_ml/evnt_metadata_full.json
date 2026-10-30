@@ -1,0 +1,515 @@
+{
+  "files": [
+    {
+      "run": 200082,
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "metadata": {
+        "file_type": "POOL",
+        "file_size": 436481770,
+        "nentries": 559607,
+        "auto_flush": -30000000,
+        "file_guid": "51A61DBB-9603-A040-995B-F0FD10734237",
+        "file_comp_alg": 1,
+        "file_comp_level": 1,
+        "metadata_items": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo",
+          "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "/TagInfo": "IOVMetaDataContainer"
+        },
+        "FileMetaData": {
+          "productionRelease": "",
+          "dataType": "StreamEVGEN",
+          "runNumbers": [
+            0
+          ],
+          "lumiBlocks": [
+            0
+          ]
+        },
+        "EventStreamInfo_p3_StreamEVGEN": {
+          "eventTypes": [
+            {
+              "bit_mask": [],
+              "mc_channel_number": 0,
+              "mc_event_number": 0,
+              "mc_event_weights": [
+                1.0
+              ],
+              "user_type": "",
+              "type": [
+                "IS_DATA",
+                "IS_ATLAS",
+                "IS_PHYSICS"
+              ]
+            }
+          ],
+          "numberOfEvents": 559607,
+          "runNumbers": [
+            0
+          ],
+          "lumiBlockNumbers": [
+            0
+          ],
+          "processingTags": [
+            "StreamEVGEN"
+          ],
+          "itemList": [
+            [
+              "EventInfo",
+              "McEventInfo"
+            ],
+            [
+              "McEventCollection",
+              "BeamTruthEvent"
+            ],
+            [
+              "xAOD::FaserEventInfoAux",
+              "FaserEventInfoAux."
+            ],
+            [
+              "xAOD::FaserEventInfo",
+              "FaserEventInfo"
+            ],
+            [
+              "DataHeader",
+              "StreamEVGEN"
+            ]
+          ]
+        },
+        "xAOD::EventFormat_v1_EventFormatStreamEVGEN": {
+          "FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1"
+        },
+        "/TagInfo": {}
+      }
+    },
+    {
+      "run": 200083,
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "metadata": {
+        "file_type": "POOL",
+        "file_size": 634451243,
+        "nentries": 752808,
+        "auto_flush": -30000000,
+        "file_guid": "A2EE669F-B957-8D44-8D52-01592BD08B7D",
+        "file_comp_alg": 1,
+        "file_comp_level": 1,
+        "metadata_items": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo",
+          "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "/TagInfo": "IOVMetaDataContainer"
+        },
+        "FileMetaData": {
+          "productionRelease": "",
+          "dataType": "StreamEVGEN",
+          "runNumbers": [
+            0
+          ],
+          "lumiBlocks": [
+            0
+          ]
+        },
+        "EventStreamInfo_p3_StreamEVGEN": {
+          "eventTypes": [
+            {
+              "bit_mask": [],
+              "mc_channel_number": 0,
+              "mc_event_number": 0,
+              "mc_event_weights": [
+                1.0
+              ],
+              "user_type": "",
+              "type": [
+                "IS_DATA",
+                "IS_ATLAS",
+                "IS_PHYSICS"
+              ]
+            }
+          ],
+          "numberOfEvents": 752808,
+          "runNumbers": [
+            0
+          ],
+          "lumiBlockNumbers": [
+            0
+          ],
+          "processingTags": [
+            "StreamEVGEN"
+          ],
+          "itemList": [
+            [
+              "EventInfo",
+              "McEventInfo"
+            ],
+            [
+              "McEventCollection",
+              "BeamTruthEvent"
+            ],
+            [
+              "xAOD::FaserEventInfoAux",
+              "FaserEventInfoAux."
+            ],
+            [
+              "xAOD::FaserEventInfo",
+              "FaserEventInfo"
+            ],
+            [
+              "DataHeader",
+              "StreamEVGEN"
+            ]
+          ]
+        },
+        "xAOD::EventFormat_v1_EventFormatStreamEVGEN": {
+          "FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1"
+        },
+        "/TagInfo": {}
+      }
+    },
+    {
+      "run": 200089,
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "metadata": {
+        "file_type": "POOL",
+        "file_size": 156049918,
+        "nentries": 180947,
+        "auto_flush": -30000000,
+        "file_guid": "5AA7C191-9023-954F-9808-016D349A14EB",
+        "file_comp_alg": 1,
+        "file_comp_level": 1,
+        "metadata_items": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo",
+          "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "/TagInfo": "IOVMetaDataContainer"
+        },
+        "FileMetaData": {
+          "productionRelease": "",
+          "dataType": "StreamEVGEN",
+          "runNumbers": [
+            0
+          ],
+          "lumiBlocks": [
+            0
+          ]
+        },
+        "EventStreamInfo_p3_StreamEVGEN": {
+          "eventTypes": [
+            {
+              "bit_mask": [],
+              "mc_channel_number": 0,
+              "mc_event_number": 0,
+              "mc_event_weights": [
+                1.0
+              ],
+              "user_type": "",
+              "type": [
+                "IS_DATA",
+                "IS_ATLAS",
+                "IS_PHYSICS"
+              ]
+            }
+          ],
+          "numberOfEvents": 180947,
+          "runNumbers": [
+            0
+          ],
+          "lumiBlockNumbers": [
+            0
+          ],
+          "processingTags": [
+            "StreamEVGEN"
+          ],
+          "itemList": [
+            [
+              "EventInfo",
+              "McEventInfo"
+            ],
+            [
+              "McEventCollection",
+              "BeamTruthEvent"
+            ],
+            [
+              "xAOD::FaserEventInfoAux",
+              "FaserEventInfoAux."
+            ],
+            [
+              "xAOD::FaserEventInfo",
+              "FaserEventInfo"
+            ],
+            [
+              "DataHeader",
+              "StreamEVGEN"
+            ]
+          ]
+        },
+        "xAOD::EventFormat_v1_EventFormatStreamEVGEN": {
+          "FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1"
+        },
+        "/TagInfo": {}
+      }
+    },
+    {
+      "run": 200093,
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "metadata": {
+        "file_type": "POOL",
+        "file_size": 420637359,
+        "nentries": 541884,
+        "auto_flush": -30000000,
+        "file_guid": "8FF65B03-4855-484C-BE8D-E6F4608381E1",
+        "file_comp_alg": 1,
+        "file_comp_level": 1,
+        "metadata_items": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo",
+          "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "/TagInfo": "IOVMetaDataContainer"
+        },
+        "FileMetaData": {
+          "productionRelease": "",
+          "dataType": "StreamEVGEN",
+          "runNumbers": [
+            0
+          ],
+          "lumiBlocks": [
+            0
+          ]
+        },
+        "EventStreamInfo_p3_StreamEVGEN": {
+          "eventTypes": [
+            {
+              "bit_mask": [],
+              "mc_channel_number": 0,
+              "mc_event_number": 0,
+              "mc_event_weights": [
+                1.0
+              ],
+              "user_type": "",
+              "type": [
+                "IS_DATA",
+                "IS_ATLAS",
+                "IS_PHYSICS"
+              ]
+            }
+          ],
+          "numberOfEvents": 541884,
+          "runNumbers": [
+            0
+          ],
+          "lumiBlockNumbers": [
+            0
+          ],
+          "processingTags": [
+            "StreamEVGEN"
+          ],
+          "itemList": [
+            [
+              "EventInfo",
+              "McEventInfo"
+            ],
+            [
+              "McEventCollection",
+              "BeamTruthEvent"
+            ],
+            [
+              "xAOD::FaserEventInfoAux",
+              "FaserEventInfoAux."
+            ],
+            [
+              "xAOD::FaserEventInfo",
+              "FaserEventInfo"
+            ],
+            [
+              "DataHeader",
+              "StreamEVGEN"
+            ]
+          ]
+        },
+        "xAOD::EventFormat_v1_EventFormatStreamEVGEN": {
+          "FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1"
+        },
+        "/TagInfo": {}
+      }
+    },
+    {
+      "run": 200094,
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "metadata": {
+        "file_type": "POOL",
+        "file_size": 620973724,
+        "nentries": 738614,
+        "auto_flush": -30000000,
+        "file_guid": "17D83359-511C-7247-8FE6-D284E1F0E0BC",
+        "file_comp_alg": 1,
+        "file_comp_level": 1,
+        "metadata_items": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo",
+          "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "/TagInfo": "IOVMetaDataContainer"
+        },
+        "FileMetaData": {
+          "productionRelease": "",
+          "dataType": "StreamEVGEN",
+          "runNumbers": [
+            0
+          ],
+          "lumiBlocks": [
+            0
+          ]
+        },
+        "EventStreamInfo_p3_StreamEVGEN": {
+          "eventTypes": [
+            {
+              "bit_mask": [],
+              "mc_channel_number": 0,
+              "mc_event_number": 0,
+              "mc_event_weights": [
+                1.0
+              ],
+              "user_type": "",
+              "type": [
+                "IS_DATA",
+                "IS_ATLAS",
+                "IS_PHYSICS"
+              ]
+            }
+          ],
+          "numberOfEvents": 738614,
+          "runNumbers": [
+            0
+          ],
+          "lumiBlockNumbers": [
+            0
+          ],
+          "processingTags": [
+            "StreamEVGEN"
+          ],
+          "itemList": [
+            [
+              "EventInfo",
+              "McEventInfo"
+            ],
+            [
+              "McEventCollection",
+              "BeamTruthEvent"
+            ],
+            [
+              "xAOD::FaserEventInfoAux",
+              "FaserEventInfoAux."
+            ],
+            [
+              "xAOD::FaserEventInfo",
+              "FaserEventInfo"
+            ],
+            [
+              "DataHeader",
+              "StreamEVGEN"
+            ]
+          ]
+        },
+        "xAOD::EventFormat_v1_EventFormatStreamEVGEN": {
+          "FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1"
+        },
+        "/TagInfo": {}
+      }
+    },
+    {
+      "run": 200100,
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "metadata": {
+        "file_type": "POOL",
+        "file_size": 145895659,
+        "nentries": 170343,
+        "auto_flush": -30000000,
+        "file_guid": "D04DCE05-555D-D447-9FEF-B0D5BEB1012C",
+        "file_comp_alg": 1,
+        "file_comp_level": 1,
+        "metadata_items": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo",
+          "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "/TagInfo": "IOVMetaDataContainer"
+        },
+        "FileMetaData": {
+          "productionRelease": "",
+          "dataType": "StreamEVGEN",
+          "runNumbers": [
+            0
+          ],
+          "lumiBlocks": [
+            0
+          ]
+        },
+        "EventStreamInfo_p3_StreamEVGEN": {
+          "eventTypes": [
+            {
+              "bit_mask": [],
+              "mc_channel_number": 0,
+              "mc_event_number": 0,
+              "mc_event_weights": [
+                1.0
+              ],
+              "user_type": "",
+              "type": [
+                "IS_DATA",
+                "IS_ATLAS",
+                "IS_PHYSICS"
+              ]
+            }
+          ],
+          "numberOfEvents": 170343,
+          "runNumbers": [
+            0
+          ],
+          "lumiBlockNumbers": [
+            0
+          ],
+          "processingTags": [
+            "StreamEVGEN"
+          ],
+          "itemList": [
+            [
+              "EventInfo",
+              "McEventInfo"
+            ],
+            [
+              "McEventCollection",
+              "BeamTruthEvent"
+            ],
+            [
+              "xAOD::FaserEventInfoAux",
+              "FaserEventInfoAux."
+            ],
+            [
+              "xAOD::FaserEventInfo",
+              "FaserEventInfo"
+            ],
+            [
+              "DataHeader",
+              "StreamEVGEN"
+            ]
+          ]
+        },
+        "xAOD::EventFormat_v1_EventFormatStreamEVGEN": {
+          "FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1"
+        },
+        "/TagInfo": {}
+      }
+    }
+  ],
+  "wall_s": 44.651459337212145
+}

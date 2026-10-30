@@ -1,0 +1,30 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_tabular.sh
+arguments = $(architecture) $(version) energy-ml-tabular-stage16-v2.tar.gz $(repository)/workbook/stage16_energy_ml $(repository)/ml/artifacts/stage16
+transfer_input_files = $(repository)/software/energy-ml-tabular-stage16-v2.tar.gz
+request_cpus = 1
+request_gpus = 1
+gpus_minimum_capability = 7.5
+gpus_minimum_memory = 8GB
+request_memory = 3000MB
+request_disk = 500MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuStage = "energy-ml-tabular"
+log = $(repository)/logs/ml_tabular_$(ClusterId).log
+output = $(repository)/logs/ml_tabular_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_tabular_$(ClusterId).$(ProcId).err
+queue architecture,version from (
+bdt F3
+bdt F5
+mlp F3
+mlp F5
+resnet F3
+resnet F5
+tabm F3
+tabm F5
+)
