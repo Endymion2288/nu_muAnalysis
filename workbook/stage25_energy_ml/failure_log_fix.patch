@@ -1,0 +1,10 @@
+--- a/ml/run_profile_response.py
++++ b/ml/run_profile_response.py
+@@ -152,6 +152,7 @@
+         print(f'{args.model} seed={si} {direction} bootstrap complete', flush=True)
+     np.savez_compressed(out / 'inference.npz', coefficients=coeffs, truth=truth, qs=qs, central=central, central_nll=central_nll,
+                         bootstrap=boots, boot_truth=boot_truth, draws=draws, toy_counts=toy_counts, toy_fits=fits, toy_nll=losses, toy_lr=lr)
++    for row in failures: row.setdefault('law', 'not_applicable')
+     for filename, rows in [('metrics', metrics), ('estimates', estimates), ('intervals', intervals), ('toys', toy_rows),
+                            ('toy_global', toy_global), ('failures', failures), ('compression', compression)]: write_table(out / f'{filename}.tsv', rows)
+     summary = dict(model=args.model, seed=si, smoke=args.smoke, events=len(y), groups=ng, bootstrap=nb, toys_per_cell=nt,

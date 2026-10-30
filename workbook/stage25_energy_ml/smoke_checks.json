@@ -1,0 +1,82 @@
+{
+  "mu_p_over0p8": {
+    "model": "mu_p_over0p8",
+    "seed": 0,
+    "smoke": true,
+    "events": 1768,
+    "groups": 22,
+    "bootstrap": 4,
+    "toys_per_cell": 4,
+    "total_toys": 48,
+    "numerical_stats": {
+      "solver_calls": 1430,
+      "solver_failures": 0,
+      "iterations": 22146
+    },
+    "failure_cells": 0,
+    "minimum_raw_lr": 0.0,
+    "negative_lr_clipped": 0,
+    "synthetic_checks": {
+      "fraction_error": 3.2268307284533115e-07,
+      "alpha_error": 1.912670243631176e-06,
+      "derivative_error": 2.7407734068396472e-11,
+      "gradient_error": 1.8646136934821755e-10,
+      "lr_at_truth": 0.0,
+      "alpha_interval": {
+        "low": -1.2456388230286917,
+        "high": 3.0,
+        "low_limited": false,
+        "high_limited": true,
+        "scan_reentry": false,
+        "interval_status": "ok"
+      }
+    },
+    "wall_s": 6.514503321843222,
+    "cpu_s": 6.348840674,
+    "max_rss_KiB": 80548,
+    "host": "lxplus908.cern.ch",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "calibration_test_challenge_evaluated": false
+  },
+  "tabm_UU": {
+    "model": "tabm_UU",
+    "seed": 0,
+    "smoke": true,
+    "events": 1768,
+    "groups": 22,
+    "bootstrap": 4,
+    "toys_per_cell": 4,
+    "total_toys": 48,
+    "numerical_stats": {
+      "solver_calls": 1435,
+      "solver_failures": 0,
+      "iterations": 20268
+    },
+    "failure_cells": 0,
+    "minimum_raw_lr": 0.0,
+    "negative_lr_clipped": 0,
+    "synthetic_checks": {
+      "fraction_error": 3.2268307284533115e-07,
+      "alpha_error": 1.912670243631176e-06,
+      "derivative_error": 2.7407734068396472e-11,
+      "gradient_error": 1.8646136934821755e-10,
+      "lr_at_truth": 0.0,
+      "alpha_interval": {
+        "low": -1.2456388230286917,
+        "high": 3.0,
+        "low_limited": false,
+        "high_limited": true,
+        "scan_reentry": false,
+        "interval_status": "ok"
+      }
+    },
+    "wall_s": 6.405591055052355,
+    "cpu_s": 6.215307130999999,
+    "max_rss_KiB": 557748,
+    "host": "lxplus908.cern.ch",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "calibration_test_challenge_evaluated": false
+  }
+}

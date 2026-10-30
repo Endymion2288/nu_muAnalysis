@@ -1,0 +1,22 @@
+version: 1
+stage: 25
+parent_config: ml/configs/within_response.yaml
+seed: 20261030
+models:
+  mu_p_over0p8: {kind: mu, scale: 1.25, seeds: [0]}
+  bdt_UU: {path: ml/artifacts/stage22/bdt_UU/predictions.npz, seeds: [0, 1, 2]}
+  tabm_UU: {path: ml/artifacts/stage21/tabm_UU/predictions.npz, seeds: [0, 1, 2]}
+alphas: [-1.0, 0.0, 1.0]
+fit_alpha_bounds: [-3.0, 3.0]
+global_alpha_starts: [-3.0, 0.0, 3.0]
+conditional_alpha_starts: projected global MLE and opposite alpha endpoint
+moment_order: 16
+bootstrap_replicates: 500
+toys: 200
+toy_laws: [cross_source, response_control]
+likelihood_ratio_threshold: 1.0
+negative_lr_failure_threshold: -0.00001
+endpoint_scan_intervals: 12
+endpoint_root_xtol: 0.0000001
+optimizer: {method: SLSQP, ftol: 1.0e-13, maxiter: 500}
+scope: selected unit MC validation; one common unknown alpha; bounded numerical stress only; no physical prior, normalization, background, acceptance or held-out sample

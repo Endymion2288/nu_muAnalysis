@@ -1,0 +1,93 @@
+{
+  "payload_members_byte_verified": [
+    {
+      "path": "ml/closure.py",
+      "bytes": 8499,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/within_response.py",
+      "bytes": 5907,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/profile_response.py",
+      "bytes": 11688,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/run_profile_response.py",
+      "bytes": 12905,
+      "worker_failure_logging_fix_excluded": true
+    },
+    {
+      "path": "ml/configs/closure.yaml",
+      "bytes": 1497,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/configs/within_response.yaml",
+      "bytes": 968,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/configs/profile_response.yaml",
+      "bytes": 924,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "workbook/stage23_energy_ml/folds.tsv",
+      "bytes": 865,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ntuples/energy_ml_stage12/dataset/validation.npz",
+      "bytes": 3152489,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/artifacts/stage22/bdt_UU/predictions.npz",
+      "bytes": 727229,
+      "worker_failure_logging_fix_excluded": false
+    },
+    {
+      "path": "ml/artifacts/stage21/tabm_UU/predictions.npz",
+      "bytes": 423447,
+      "worker_failure_logging_fix_excluded": false
+    }
+  ],
+  "removed_payload": "software/energy-ml-profile-stage25.tar.gz",
+  "removed_payload_bytes": 4300598,
+  "inference_arrays": [
+    {
+      "path": "ml/artifacts/stage25/bdt_UU/seed_0/inference.npz",
+      "bytes": 898110
+    },
+    {
+      "path": "ml/artifacts/stage25/bdt_UU/seed_1/inference.npz",
+      "bytes": 898346
+    },
+    {
+      "path": "ml/artifacts/stage25/bdt_UU/seed_2/inference.npz",
+      "bytes": 898592
+    },
+    {
+      "path": "ml/artifacts/stage25/mu_p_over0p8/seed_0/inference.npz",
+      "bytes": 897247
+    },
+    {
+      "path": "ml/artifacts/stage25/tabm_UU/seed_0/inference.npz",
+      "bytes": 898509
+    },
+    {
+      "path": "ml/artifacts/stage25/tabm_UU/seed_1/inference.npz",
+      "bytes": 898343
+    },
+    {
+      "path": "ml/artifacts/stage25/tabm_UU/seed_2/inference.npz",
+      "bytes": 898578
+    }
+  ],
+  "inference_array_bytes": 6287725,
+  "numerical_worker_unchanged": true
+}
