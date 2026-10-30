@@ -1,0 +1,19 @@
+{
+  "payload": "software/energy-ml-prior-stage21.tar.gz",
+  "bytes": 54266,
+  "files": [
+    "ml/train_prior.py",
+    "ml/train_tabular.py",
+    "ml/train_bdt.py",
+    "ml/robustness.py",
+    "ml/configs/prior.yaml",
+    "ml/configs/tabular.yaml",
+    "ml/configs/baseline.yaml",
+    "ml/configs/robustness.yaml",
+    "ml/configs/files.tsv",
+    "software/energy_ml_tabular_deps/rtdl_num_embeddings-0.0.12-py3-none-any.whl",
+    "software/energy_ml_tabular_deps/tabm-0.0.3-py3-none-any.whl"
+  ],
+  "all_source_bytes_equal": true,
+  "preregistered_protocol": "workbook/stage21_energy_ml/preregistered_protocol.md"
+}

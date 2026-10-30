@@ -1,0 +1,16 @@
+{
+  "architecture": "bdt",
+  "mode": "UF",
+  "smoke": false,
+  "train_events": 54196,
+  "validation_events": 13375,
+  "wall_s": 7.490992011968046,
+  "cpu_s": 7.470074188999999,
+  "peak_rss_MiB": 959.41796875,
+  "gpu": "NVIDIA H100 NVL",
+  "torch_version": "2.10.0",
+  "xgboost_version": "2.1.3",
+  "calibration_test_challenge_evaluated": false,
+  "configuration_file": "../training_config.json",
+  "weights_file": "../weights.json"
+}

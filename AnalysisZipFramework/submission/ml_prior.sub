@@ -1,0 +1,30 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage21
+initialdir = $(spool)
+executable = $(spool)/run_ml_prior.sh
+arguments = $(architecture) $(mode) energy-ml-prior-stage21.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-prior-stage21.tar.gz
+request_cpus = 1
+request_gpus = 1
+require_gpus = DeviceName == "NVIDIA H100 NVL" && GlobalMemoryMb >= 8192
+request_memory = 3000MB
+request_disk = 500MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-prior"
+log = $(spool)/logs/ml_prior_$(ClusterId).log
+output = $(spool)/logs/ml_prior_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/ml_prior_$(ClusterId).$(ProcId).err
+queue architecture,mode from (
+bdt UU
+bdt FU
+bdt UF
+bdt FF
+tabm UU
+tabm FU
+tabm UF
+tabm FF
+)

@@ -1,0 +1,24 @@
+version: 1
+stage: 21
+architectures: [bdt, tabm]
+feature_version: F5
+seeds: [20261029, 20261030, 20261031]
+modes:
+  UU: {train: unit, monitor: unit}
+  FU: {train: flat, monitor: unit}
+  UF: {train: unit, monitor: flat}
+  FF: {train: flat, monitor: flat}
+fixed_trials:
+  bdt: {max_depth: 7, rounds: 1200}
+  tabm: {width: 256, blocks: 3, dropout: 0.1, lr: 0.0005, weight_decay: 0.0001}
+reference_study: ml/configs/tabular.yaml
+weight_formula: N_train / (6 * N_train_bin), mean one on full train, no clipping
+weight_scope: fit mapping on train only; same mapping for optional flat validation monitor; final evaluation always unit
+target_preprocessing: original unweighted train mean/std of log(E/GeV), unchanged for all modes
+selection: stage12 frozen cuts, leading definition and source groups; no event removal
+max_fit_wall_s: 180
+bootstrap_replicates: 500
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+main_pairs: [[UU, FU], [FU, FF], [UU, UF], [UU, FF]]
+scope: fixed configuration sensitivity study, not physical flux normalization or independent test closure

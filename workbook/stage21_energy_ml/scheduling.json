@@ -1,0 +1,37 @@
+{
+  "schedd": "bigbird15.cern.ch",
+  "cluster": 16976464,
+  "model_hardware": "NVIDIA H100 NVL",
+  "initial_job_flavour": "longlunch",
+  "updated_job_flavour": "espresso",
+  "job_MaxRuntime_s": 1200,
+  "fit_wall_cap_s": 180,
+  "fits_per_job": 3,
+  "reason": "Each job needs at most 540 s of capped fitting plus loading/upload; shorten outer runtime while all jobs unstarted.",
+  "all_jobs_unstarted_at_edit": true,
+  "models_inputs_and_fit_budget_unchanged": true,
+  "initial_model_hardware": "NVIDIA A100-PCIE-40GB",
+  "hardware_change_local_time": "2026-10-30T13:17:41.506304",
+  "hardware_change_reason": "Observed all A100-PCIE-40GB occupied, with two H100 NVL publicly available; switch all modes uniformly before any fit.",
+  "all_jobs_held_before_hardware_change": true,
+  "all_NumJobStarts_zero_at_hardware_change": true,
+  "same_statistical_protocol": true,
+  "migration": {
+    "original_schedd": "bigbird15.cern.ch",
+    "original_cluster": 16976464,
+    "new_schedd": "bigbird103.cern.ch",
+    "new_cluster": 848785,
+    "local_time": "2026-10-30T13:24:21.377074",
+    "old_jobs_held_before_submission": true,
+    "all_old_NumJobStarts_zero": true,
+    "old_jobs_removed_after_success": true,
+    "AFS_paths_rejected_by_EosSubmit": true,
+    "corrected_submit_file": "AnalysisZipFramework/submission/ml_prior_eos.sub",
+    "payload_and_protocol_unchanged": true,
+    "observed_idle_queues_at_migration": {
+      "bigbird15": 41,
+      "bigbird103": 35
+    },
+    "note": "bigbird103 had 1 idle in earlier snapshot, 35 at migration; a low queue is not proof of immediate GPU availability."
+  }
+}

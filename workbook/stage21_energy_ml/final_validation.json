@@ -1,0 +1,59 @@
+{
+  "all_passed": true,
+  "table_rows": {
+    "macro_summary.tsv": 8,
+    "macro_gains.tsv": 11,
+    "factor_interaction.tsv": 2,
+    "metrics.tsv": 600,
+    "stratified_gains.tsv": 275,
+    "nonlinear_gains.tsv": 176,
+    "learning_endpoints.tsv": 24,
+    "costs.tsv": 24,
+    "checkpoint_checks.tsv": 8,
+    "trajectory_checks.tsv": 12,
+    "preprocessing_checks.tsv": 8,
+    "baseline_reproduction.tsv": 6,
+    "condor_resources.tsv": 8
+  },
+  "prediction_models": 8,
+  "prediction_seeds_per_model": 3,
+  "validation_events": 13375,
+  "source_groups": 22,
+  "independent_macro_integrated_recalculation_passed": true,
+  "paired_difference_signs_passed": true,
+  "signed_tail_partition_passed": true,
+  "identical_common_training_trajectories": 12,
+  "identical_scalar_preprocessing_models": 8,
+  "actual_gpu": "NVIDIA H100 NVL",
+  "all_job_exit_codes_zero": true,
+  "formal_fit_stops": {
+    "patience": 21,
+    "rounds_bdt_FU": 3,
+    "time": 0
+  },
+  "python_syntax_files": [
+    "ml/train_prior.py",
+    "ml/check_prior.py",
+    "ml/report_prior.py",
+    "ml/collect_tabular_resources.py"
+  ],
+  "bash_syntax_passed": true,
+  "git_diff_whitespace_passed": true,
+  "local_document_links_checked": 40,
+  "queues": [
+    {
+      "schedd": "bigbird103.cern.ch",
+      "cluster": 848785,
+      "active_jobs": 0,
+      "command": "condor_q -name bigbird103.cern.ch 848785 -autoformat ClusterId ProcId JobStatus"
+    },
+    {
+      "schedd": "bigbird15.cern.ch",
+      "cluster": 16976464,
+      "active_jobs": 0,
+      "command": "condor_q -name bigbird15.cern.ch 16976464 -autoformat ClusterId ProcId JobStatus"
+    }
+  ],
+  "calibration_test_challenge_evaluated": false,
+  "elapsed_s": 1.3875542571768165
+}

@@ -1,0 +1,16 @@
+{
+  "architecture": "tabm",
+  "mode": "UU",
+  "smoke": false,
+  "train_events": 54196,
+  "validation_events": 13375,
+  "wall_s": 118.42769598215818,
+  "cpu_s": 113.220585706,
+  "peak_rss_MiB": 1349.2890625,
+  "gpu": "NVIDIA H100 NVL",
+  "torch_version": "2.10.0",
+  "xgboost_version": "2.1.3",
+  "calibration_test_challenge_evaluated": false,
+  "configuration_file": "../training_config.json",
+  "weights_file": "../weights.json"
+}
