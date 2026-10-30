@@ -1,0 +1,45 @@
+{
+  "payload_bytes_removed": 5440073,
+  "payload_files_verified": [
+    "ml/closure.py",
+    "ml/run_closure.py",
+    "ml/configs/closure.yaml",
+    "workbook/stage23_energy_ml/folds.tsv",
+    "ntuples/energy_ml_stage12/dataset/validation.npz",
+    "ml/artifacts/stage22/bdt_UU/predictions.npz",
+    "ml/artifacts/stage22/bdt_FU/predictions.npz",
+    "ml/artifacts/stage21/tabm_UU/predictions.npz",
+    "ml/artifacts/stage21/tabm_FU/predictions.npz"
+  ],
+  "byte_verification_wall_s": 0.15380546008236706,
+  "retained_artifacts": [
+    {
+      "path": "ml/artifacts/stage23/bdt_FU/bootstrap.npz",
+      "bytes": 395129
+    },
+    {
+      "path": "ml/artifacts/stage23/bdt_UU/bootstrap.npz",
+      "bytes": 395504
+    },
+    {
+      "path": "ml/artifacts/stage23/mu_p/bootstrap.npz",
+      "bytes": 399121
+    },
+    {
+      "path": "ml/artifacts/stage23/mu_p_over0p8/bootstrap.npz",
+      "bytes": 398751
+    },
+    {
+      "path": "ml/artifacts/stage23/tabm_FU/bootstrap.npz",
+      "bytes": 394510
+    },
+    {
+      "path": "ml/artifacts/stage23/tabm_UU/bootstrap.npz",
+      "bytes": 395053
+    }
+  ],
+  "retained_artifact_bytes": 2378068,
+  "event_cache_created": false,
+  "checkpoints_created": false,
+  "merged_shard_bytes_removed": 976458
+}

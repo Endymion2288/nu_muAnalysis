@@ -1,0 +1,25 @@
+version: 1
+stage: 23
+seed: 20261030
+truth_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+energy_reco_internal_GeV: [200, 282.842712474619, 400, 565.685424949238, 800, 1131.370849898476, 1600, 2262.741699796952, 3200]
+rank_bins: 10
+benchmark_selected_events: 1000
+bootstrap_replicates: 500
+toys: 200
+optimizer: {method: SLSQP, ftol: 1.0e-13, maxiter: 500}
+fisher_relative_eigenvalue_floor: 1.0e-10
+cases: [nominal, tilt_minus, tilt_plus, within_minus, within_plus, component_matched]
+tilt_exponents: {tilt_minus: -0.5, tilt_plus: 0.5, within_minus: -1.0, within_plus: 1.0}
+bootstrap_cases: [nominal, tilt_minus, tilt_plus, within_minus, within_plus]
+models:
+  mu_p: {kind: mu, scale: 1.0, seeds: [0]}
+  mu_p_over0p8: {kind: mu, scale: 1.25, seeds: [0]}
+  bdt_UU: {path: ml/artifacts/stage22/bdt_UU/predictions.npz, seeds: [0, 1, 2]}
+  bdt_FU: {path: ml/artifacts/stage22/bdt_FU/predictions.npz, seeds: [0, 1, 2]}
+  tabm_UU: {path: ml/artifacts/stage21/tabm_UU/predictions.npz, seeds: [0, 1, 2]}
+  tabm_FU: {path: ml/artifacts/stage21/tabm_FU/predictions.npz, seeds: [0, 1, 2]}
+pairs: [[mu_p, mu_p_over0p8], [mu_p_over0p8, bdt_UU], [mu_p_over0p8, tabm_UU], [bdt_UU, bdt_FU], [tabm_UU, tabm_FU], [bdt_UU, tabm_UU]]
+fold_starts: {charm: A, k: B, pi: A}
+fold_assignment: alternate lexicographically sorted source groups within component; never split paired nu/antinu group
+scope: selected nominal MC shape only; existing validation; no flux normalization, acceptance, background or independent test

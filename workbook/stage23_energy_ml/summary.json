@@ -1,0 +1,280 @@
+{
+  "runs": {
+    "mu_p": {
+      "model": "mu_p",
+      "smoke": false,
+      "events": 13375,
+      "seeds": 1,
+      "groups": 22,
+      "folds": {
+        "A": {
+          "groups": 11,
+          "events": 6527
+        },
+        "B": {
+          "groups": 11,
+          "events": 6848
+        }
+      },
+      "target_components": {
+        "charm": 0.08007476635514019,
+        "k": 0.5408598130841121,
+        "pi": 0.37906542056074766
+      },
+      "bootstrap": 500,
+      "toys": 200,
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "fraction_error": 2.7379361333679242e-08,
+        "gradient_error": 1.9026336062211158e-10,
+        "condition": 18.511037267748577,
+        "zero_support_detected": true,
+        "nonidentifiability_detected": true
+      },
+      "wall_s": 25.610311795026064,
+      "cpu_s": 25.029344301,
+      "max_rss_KiB": 75416,
+      "host": "b9p29p3559.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "mu_p_over0p8": {
+      "model": "mu_p_over0p8",
+      "smoke": false,
+      "events": 13375,
+      "seeds": 1,
+      "groups": 22,
+      "folds": {
+        "A": {
+          "groups": 11,
+          "events": 6527
+        },
+        "B": {
+          "groups": 11,
+          "events": 6848
+        }
+      },
+      "target_components": {
+        "charm": 0.08007476635514019,
+        "k": 0.5408598130841121,
+        "pi": 0.37906542056074766
+      },
+      "bootstrap": 500,
+      "toys": 200,
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "fraction_error": 2.7379361333679242e-08,
+        "gradient_error": 1.9026336062211158e-10,
+        "condition": 18.511037267748577,
+        "zero_support_detected": true,
+        "nonidentifiability_detected": true
+      },
+      "wall_s": 24.263260072097182,
+      "cpu_s": 23.844449884,
+      "max_rss_KiB": 73412,
+      "host": "b9p26p6528.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "bdt_UU": {
+      "model": "bdt_UU",
+      "smoke": false,
+      "events": 13375,
+      "seeds": 3,
+      "groups": 22,
+      "folds": {
+        "A": {
+          "groups": 11,
+          "events": 6527
+        },
+        "B": {
+          "groups": 11,
+          "events": 6848
+        }
+      },
+      "target_components": {
+        "charm": 0.08007476635514019,
+        "k": 0.5408598130841121,
+        "pi": 0.37906542056074766
+      },
+      "bootstrap": 500,
+      "toys": 200,
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "fraction_error": 2.7379361333679242e-08,
+        "gradient_error": 1.9026336062211158e-10,
+        "condition": 18.511037267748577,
+        "zero_support_detected": true,
+        "nonidentifiability_detected": true
+      },
+      "wall_s": 74.00594806112349,
+      "cpu_s": 73.093014693,
+      "max_rss_KiB": 78504,
+      "host": "b9p18p6967.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "bdt_FU": {
+      "model": "bdt_FU",
+      "smoke": false,
+      "events": 13375,
+      "seeds": 3,
+      "groups": 22,
+      "folds": {
+        "A": {
+          "groups": 11,
+          "events": 6527
+        },
+        "B": {
+          "groups": 11,
+          "events": 6848
+        }
+      },
+      "target_components": {
+        "charm": 0.08007476635514019,
+        "k": 0.5408598130841121,
+        "pi": 0.37906542056074766
+      },
+      "bootstrap": 500,
+      "toys": 200,
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "fraction_error": 2.7379361333679242e-08,
+        "gradient_error": 1.9026336062211158e-10,
+        "condition": 18.511037267748577,
+        "zero_support_detected": true,
+        "nonidentifiability_detected": true
+      },
+      "wall_s": 70.77236331999302,
+      "cpu_s": 69.932250232,
+      "max_rss_KiB": 74656,
+      "host": "b9p28p1203.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "tabm_UU": {
+      "model": "tabm_UU",
+      "smoke": false,
+      "events": 13375,
+      "seeds": 3,
+      "groups": 22,
+      "folds": {
+        "A": {
+          "groups": 11,
+          "events": 6527
+        },
+        "B": {
+          "groups": 11,
+          "events": 6848
+        }
+      },
+      "target_components": {
+        "charm": 0.08007476635514019,
+        "k": 0.5408598130841121,
+        "pi": 0.37906542056074766
+      },
+      "bootstrap": 500,
+      "toys": 200,
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "fraction_error": 2.7379361333679242e-08,
+        "gradient_error": 1.9026336062211158e-10,
+        "condition": 18.511037267748577,
+        "zero_support_detected": true,
+        "nonidentifiability_detected": true
+      },
+      "wall_s": 90.68441182561219,
+      "cpu_s": 89.164931764,
+      "max_rss_KiB": 68640,
+      "host": "b9p09p0548.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    },
+    "tabm_FU": {
+      "model": "tabm_FU",
+      "smoke": false,
+      "events": 13375,
+      "seeds": 3,
+      "groups": 22,
+      "folds": {
+        "A": {
+          "groups": 11,
+          "events": 6527
+        },
+        "B": {
+          "groups": 11,
+          "events": 6848
+        }
+      },
+      "target_components": {
+        "charm": 0.08007476635514019,
+        "k": 0.5408598130841121,
+        "pi": 0.37906542056074766
+      },
+      "bootstrap": 500,
+      "toys": 200,
+      "failure_cells": 0,
+      "selfcheck_failures": 0,
+      "synthetic_checks": {
+        "fraction_error": 2.7379361333679242e-08,
+        "gradient_error": 1.9026336062211158e-10,
+        "condition": 18.511037267748577,
+        "zero_support_detected": true,
+        "nonidentifiability_detected": true
+      },
+      "wall_s": 85.43791188299656,
+      "cpu_s": 84.79414069100001,
+      "max_rss_KiB": 79456,
+      "host": "b9g03p0586.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "calibration_test_challenge_evaluated": false
+    }
+  },
+  "checks": {
+    "rows": {
+      "metrics": 336,
+      "closure_bins": 2016,
+      "response": 6720,
+      "correlations": 4032,
+      "reco_edges": 504,
+      "selfchecks": 112,
+      "toys": 336,
+      "bootstrap_failures": 0,
+      "flows": 56
+    },
+    "all_selfchecks_passed": true,
+    "maximum_selfclosure_fraction_error": 2.1470586819560822e-07,
+    "maximum_selfclosure_reco_error": 7.440038393702331e-08,
+    "central_fit_failures": 0,
+    "nonidentifiable_central": 0,
+    "maximum_kkt": 7.014084869583215e-07,
+    "paired_draws_identical": true,
+    "mu_rank_scale_control": {
+      "bias_sq": 0.0,
+      "sigma_sq": 0.0,
+      "central_bias_sq": 0.0,
+      "central_sigma_sq": 0.0
+    }
+  },
+  "totals": {
+    "worker_wall_s": 370.7742069568485,
+    "worker_cpu_s": 365.858131565,
+    "peak_rss_KiB": 79456,
+    "bootstrap_direction_case_fits": 140000,
+    "requested_toy_fits": 11200
+  },
+  "report_wall_s": 1.8617366291582584,
+  "report_cpu_s": 1.4011682810000001,
+  "report_peak_rss_KiB": 119864
+}
