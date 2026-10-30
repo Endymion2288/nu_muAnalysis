@@ -1,0 +1,214 @@
+{
+  "removed_payloads": [
+    {
+      "path": "software/energy-ml-source-stage26.tar.gz",
+      "bytes": 4302471,
+      "members": [
+        {
+          "path": "ml/closure.py",
+          "bytes": 8499,
+          "version": "current",
+          "mtime": 1793369716.9333265
+        },
+        {
+          "path": "ml/within_response.py",
+          "bytes": 5907,
+          "version": "current",
+          "mtime": 1793371332.283579
+        },
+        {
+          "path": "ml/profile_response.py",
+          "bytes": 11688,
+          "version": "current",
+          "mtime": 1793373488.997973
+        },
+        {
+          "path": "ml/source_response.py",
+          "bytes": 6078,
+          "version": "current",
+          "mtime": 1793375607.8400273
+        },
+        {
+          "path": "ml/run_source_response.py",
+          "bytes": 12313,
+          "version": "base snapshot, inverse amendment checked",
+          "mtime": 1793375737.7899966
+        },
+        {
+          "path": "ml/configs/closure.yaml",
+          "bytes": 1497,
+          "version": "current",
+          "mtime": 1793369403.3883042
+        },
+        {
+          "path": "ml/configs/within_response.yaml",
+          "bytes": 968,
+          "version": "current",
+          "mtime": 1793371181.6775765
+        },
+        {
+          "path": "ml/configs/profile_response.yaml",
+          "bytes": 924,
+          "version": "current",
+          "mtime": 1793373279.1320565
+        },
+        {
+          "path": "ml/configs/source_response.yaml",
+          "bytes": 1644,
+          "version": "base snapshot, inverse amendment checked",
+          "mtime": 1793375553.6659636
+        },
+        {
+          "path": "workbook/stage23_energy_ml/folds.tsv",
+          "bytes": 865,
+          "version": "current",
+          "mtime": 1793369403.501662
+        },
+        {
+          "path": "ntuples/energy_ml_stage12/dataset/validation.npz",
+          "bytes": 3152489,
+          "version": "current",
+          "mtime": 1793307171.247619
+        },
+        {
+          "path": "ml/artifacts/stage22/bdt_UU/predictions.npz",
+          "bytes": 727229,
+          "version": "current",
+          "mtime": 1793366777.7748032
+        },
+        {
+          "path": "ml/artifacts/stage21/tabm_UU/predictions.npz",
+          "bytes": 423447,
+          "version": "current",
+          "mtime": 1793363327.0194778
+        }
+      ],
+      "byte_verified": true
+    },
+    {
+      "path": "software/energy-ml-source-extension-stage26.tar.gz",
+      "bytes": 4304964,
+      "members": [
+        {
+          "path": "ml/closure.py",
+          "bytes": 8499,
+          "version": "current",
+          "mtime": 1793369716.9333265
+        },
+        {
+          "path": "ml/within_response.py",
+          "bytes": 5907,
+          "version": "current",
+          "mtime": 1793371332.283579
+        },
+        {
+          "path": "ml/profile_response.py",
+          "bytes": 11688,
+          "version": "current",
+          "mtime": 1793373488.997973
+        },
+        {
+          "path": "ml/source_response.py",
+          "bytes": 6078,
+          "version": "current",
+          "mtime": 1793375607.8400273
+        },
+        {
+          "path": "ml/run_source_response.py",
+          "bytes": 12332,
+          "version": "current",
+          "mtime": 1793376294.4187675
+        },
+        {
+          "path": "ml/configs/closure.yaml",
+          "bytes": 1497,
+          "version": "current",
+          "mtime": 1793369403.3883042
+        },
+        {
+          "path": "ml/configs/within_response.yaml",
+          "bytes": 968,
+          "version": "current",
+          "mtime": 1793371181.6775765
+        },
+        {
+          "path": "ml/configs/profile_response.yaml",
+          "bytes": 924,
+          "version": "current",
+          "mtime": 1793373279.1320565
+        },
+        {
+          "path": "ml/configs/source_response.yaml",
+          "bytes": 1682,
+          "version": "current",
+          "mtime": 1793376243.3235645
+        },
+        {
+          "path": "workbook/stage23_energy_ml/folds.tsv",
+          "bytes": 865,
+          "version": "current",
+          "mtime": 1793369403.501662
+        },
+        {
+          "path": "ntuples/energy_ml_stage12/dataset/validation.npz",
+          "bytes": 3152489,
+          "version": "current",
+          "mtime": 1793307171.247619
+        },
+        {
+          "path": "ml/artifacts/stage22/bdt_UU/predictions.npz",
+          "bytes": 727229,
+          "version": "current",
+          "mtime": 1793366777.7748032
+        },
+        {
+          "path": "ml/artifacts/stage21/tabm_UU/predictions.npz",
+          "bytes": 423447,
+          "version": "current",
+          "mtime": 1793363327.0194778
+        },
+        {
+          "path": "ml/extend_source_response.py",
+          "bytes": 4493,
+          "version": "current",
+          "mtime": 1793376294.426951
+        }
+      ],
+      "byte_verified": true
+    }
+  ],
+  "removed_payload_bytes": 8607435,
+  "inference_arrays": [
+    {
+      "path": "ml/artifacts/stage26/bdt_UU/seed_0/source_inference.npz",
+      "bytes": 3818718
+    },
+    {
+      "path": "ml/artifacts/stage26/bdt_UU/seed_1/source_inference.npz",
+      "bytes": 3818648
+    },
+    {
+      "path": "ml/artifacts/stage26/bdt_UU/seed_2/source_inference.npz",
+      "bytes": 3815707
+    },
+    {
+      "path": "ml/artifacts/stage26/mu_p_over0p8/seed_0/source_inference.npz",
+      "bytes": 3832162
+    },
+    {
+      "path": "ml/artifacts/stage26/tabm_UU/seed_0/source_inference.npz",
+      "bytes": 3815430
+    },
+    {
+      "path": "ml/artifacts/stage26/tabm_UU/seed_1/source_inference.npz",
+      "bytes": 3811410
+    },
+    {
+      "path": "ml/artifacts/stage26/tabm_UU/seed_2/source_inference.npz",
+      "bytes": 3816449
+    }
+  ],
+  "inference_array_bytes": 26728524,
+  "base_amendment_inverse_byte_verified": true,
+  "event_or_checkpoint_copies_created": false
+}

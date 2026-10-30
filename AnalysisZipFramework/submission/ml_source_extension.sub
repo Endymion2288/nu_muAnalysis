@@ -1,0 +1,27 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage26
+initialdir = $(spool)
+executable = $(spool)/run_ml_source_extension.sh
+arguments = $(model) $(seed) energy-ml-source-extension-stage26.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-source-extension-stage26.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 200MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-source-extension"
+log = $(spool)/logs/ml_source_ext_$(ClusterId).log
+output = $(spool)/logs/ml_source_ext_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/ml_source_ext_$(ClusterId).$(ProcId).err
+queue model, seed from (
+mu_p_over0p8 0
+bdt_UU 0
+bdt_UU 1
+bdt_UU 2
+tabm_UU 0
+tabm_UU 1
+tabm_UU 2
+)

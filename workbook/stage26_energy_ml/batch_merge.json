@@ -1,0 +1,140 @@
+{
+  "merged": [
+    {
+      "model": "mu_p_over0p8",
+      "seed": 0,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    },
+    {
+      "model": "bdt_UU",
+      "seed": 0,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    },
+    {
+      "model": "bdt_UU",
+      "seed": 1,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    },
+    {
+      "model": "bdt_UU",
+      "seed": 2,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    },
+    {
+      "model": "tabm_UU",
+      "seed": 0,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    },
+    {
+      "model": "tabm_UU",
+      "seed": 1,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    },
+    {
+      "model": "tabm_UU",
+      "seed": 2,
+      "point_trials": 1000,
+      "coverage_trials": 200,
+      "byte_arrays_verified": true
+    }
+  ],
+  "removed": [
+    {
+      "path": "ml/artifacts/stage26/mu_p_over0p8/seed_0/source_extension.npz",
+      "bytes": 2103706
+    },
+    {
+      "path": "workbook/stage26_energy_ml/mu_p_over0p8/seed_0/extension_summary.json",
+      "bytes": 533
+    },
+    {
+      "path": "workbook/stage26_energy_ml/mu_p_over0p8/seed_0/extension_failures.tsv",
+      "bytes": 43579
+    },
+    {
+      "path": "ml/artifacts/stage26/bdt_UU/seed_0/source_extension.npz",
+      "bytes": 2102614
+    },
+    {
+      "path": "workbook/stage26_energy_ml/bdt_UU/seed_0/extension_summary.json",
+      "bytes": 529
+    },
+    {
+      "path": "workbook/stage26_energy_ml/bdt_UU/seed_0/extension_failures.tsv",
+      "bytes": 40435
+    },
+    {
+      "path": "ml/artifacts/stage26/bdt_UU/seed_1/source_extension.npz",
+      "bytes": 2101971
+    },
+    {
+      "path": "workbook/stage26_energy_ml/bdt_UU/seed_1/extension_summary.json",
+      "bytes": 527
+    },
+    {
+      "path": "workbook/stage26_energy_ml/bdt_UU/seed_1/extension_failures.tsv",
+      "bytes": 40435
+    },
+    {
+      "path": "ml/artifacts/stage26/bdt_UU/seed_2/source_extension.npz",
+      "bytes": 2101529
+    },
+    {
+      "path": "workbook/stage26_energy_ml/bdt_UU/seed_2/extension_summary.json",
+      "bytes": 527
+    },
+    {
+      "path": "workbook/stage26_energy_ml/bdt_UU/seed_2/extension_failures.tsv",
+      "bytes": 40435
+    },
+    {
+      "path": "ml/artifacts/stage26/tabm_UU/seed_0/source_extension.npz",
+      "bytes": 2101339
+    },
+    {
+      "path": "workbook/stage26_energy_ml/tabm_UU/seed_0/extension_summary.json",
+      "bytes": 527
+    },
+    {
+      "path": "workbook/stage26_energy_ml/tabm_UU/seed_0/extension_failures.tsv",
+      "bytes": 40959
+    },
+    {
+      "path": "ml/artifacts/stage26/tabm_UU/seed_1/source_extension.npz",
+      "bytes": 2099930
+    },
+    {
+      "path": "workbook/stage26_energy_ml/tabm_UU/seed_1/extension_summary.json",
+      "bytes": 527
+    },
+    {
+      "path": "workbook/stage26_energy_ml/tabm_UU/seed_1/extension_failures.tsv",
+      "bytes": 40959
+    },
+    {
+      "path": "ml/artifacts/stage26/tabm_UU/seed_2/source_extension.npz",
+      "bytes": 2101763
+    },
+    {
+      "path": "workbook/stage26_energy_ml/tabm_UU/seed_2/extension_summary.json",
+      "bytes": 533
+    },
+    {
+      "path": "workbook/stage26_energy_ml/tabm_UU/seed_2/extension_failures.tsv",
+      "bytes": 40959
+    }
+  ],
+  "removed_bytes": 15004316
+}

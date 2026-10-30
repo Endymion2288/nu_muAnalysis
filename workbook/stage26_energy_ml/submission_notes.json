@@ -1,0 +1,20 @@
+{
+  "schedd": "bigbird21.cern.ch",
+  "initial_submission": "rejected before queue commit: invalid JobFlavour microcent",
+  "correction": "use canonical microcentury (one hour)",
+  "numerical_protocol_changed": false,
+  "base_cluster": 2107788,
+  "extension_requeue": {
+    "removed_cluster": "2109838@bigbird21.cern.ch",
+    "removed_jobs": 7,
+    "all_never_ran": true,
+    "remote_wall_s": 0,
+    "observed_idle_jobs": {
+      "bigbird21": 2014,
+      "bigbird20": 76
+    },
+    "destination": "bigbird20.cern.ch"
+  },
+  "extension_cluster": 1562498,
+  "fuse_sync": "one remote JSON existed but POSIX negative entry stale; recovered byte-identical remote content and verified against stdout"
+}

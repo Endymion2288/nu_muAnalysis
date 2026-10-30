@@ -1,0 +1,23 @@
+--- a/ml/configs/source_response.yaml
++++ b/ml/configs/source_response.yaml
+@@ -4,7 +4,8 @@
+ seed: 20261030
+ cases: [raw, run_bin_matched]
+ nulls: [event_stratified, group_component]
+-permutations: 200
++permutations: 1000
++permutation_coverage_replicates: 200
+ toys: 200
+ alphas: [-1.0, 0.0, 1.0]
+ permutation_coverage_alphas: [0.0]
+--- a/ml/run_source_response.py
++++ b/ml/run_source_response.py
+@@ -31,7 +31,7 @@
+     assert seed in cfg['models'][args.model]['seeds']; cfg['models'][args.model]['seeds'] = [seed]
+     checks = synthetic_checks(cfg); out = args.output_dir; out.mkdir(parents=True, exist_ok=True)
+     y, bins, gi, groups, fold, predictions, runs, ri = load_events(args.repo, cfg, args.model, args.smoke)
+-    nr = len(runs); scores = predictions[0]; nt = 2 if args.smoke else cfg['toys']; npart = 2 if args.smoke else cfg['permutations']
++    nr = len(runs); scores = predictions[0]; nt = 2 if args.smoke else cfg['toys']; npart = 2 if args.smoke else cfg['permutation_coverage_replicates']
+     basis, index, loge, reco = event_basis(y, bins, ri, scores, nr, cfg)
+     pool = aggregate(basis, index, np.ones(len(y)), nr); target = target_mix(pool)
+     original = fold[gi] == 'A'; a_coeff = aggregate(basis, index, original, nr)

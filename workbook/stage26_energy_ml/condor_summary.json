@@ -1,0 +1,40 @@
+{
+  "batches": [
+    {
+      "cluster": 2107788,
+      "jobs": 7,
+      "all_exit_zero": true,
+      "submit_to_last_finish_s": 1229.0,
+      "condor_gpu_allocation_s": 0,
+      "remote_cpu_s": 6994,
+      "wrapper_wall_s": 7062.849999999999,
+      "wrapper_cpu_s": 6992.11,
+      "wrapper_peak_rss_KiB": 83416,
+      "schedd": "bigbird21.cern.ch",
+      "batch": "base"
+    },
+    {
+      "cluster": 1562498,
+      "jobs": 7,
+      "all_exit_zero": true,
+      "submit_to_last_finish_s": 853.0,
+      "condor_gpu_allocation_s": 0,
+      "remote_cpu_s": 4045,
+      "wrapper_wall_s": 4094.96,
+      "wrapper_cpu_s": 4042.38,
+      "wrapper_peak_rss_KiB": 84960,
+      "schedd": "bigbird20.cern.ch",
+      "batch": "extension"
+    }
+  ],
+  "successful_jobs": 14,
+  "all_exit_zero": true,
+  "removed_before_running_jobs": 7,
+  "removed_job_compute_s": 0,
+  "remote_cpu_s": 11039,
+  "wrapper_wall_s": 11157.81,
+  "wrapper_cpu_s": 11034.49,
+  "wrapper_peak_rss_KiB": 84960,
+  "gpu_allocation_s": 0,
+  "first_submit_to_last_finish_s": 1538.0
+}

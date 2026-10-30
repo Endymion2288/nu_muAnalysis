@@ -1,0 +1,24 @@
+version: 1
+stage: 26
+parent_config: ml/configs/profile_response.yaml
+seed: 20261030
+cases: [raw, run_bin_matched]
+nulls: [event_stratified, group_component]
+permutations: 1000
+permutation_coverage_replicates: 200
+toys: 200
+alphas: [-1.0, 0.0, 1.0]
+permutation_coverage_alphas: [0.0]
+toy_laws: [cross_source, response_control]
+matching_target: pooled nominal run proportions separately in each of six truth bins; fixed across alpha
+matching_shape: normalize exp(alpha*log(E/Ecenter)) within each run and truth bin, then mix with common target
+truth_fractions: retain pseudo fold nominal six-bin fractions for both cases and every alpha
+null_event: permute A/B labels within run and truth bin, preserving original A counts in each stratum
+null_group: permute whole source groups within component, preserving original A group count
+permutation_rng: SeedSequence([seed,26,null_index,replicate]); same assignments for all models and seeds
+observed_toy_rng: SeedSequence([seed,26,2,seed_index,direction_index,alpha_index]); shared uniform events across case and law
+permutation_toy_rng: SeedSequence([seed,26,3,seed_index,replicate,direction_index]); shared uniforms across case and law
+primary_tests: nominal profile-alpha closure RMS and alpha-error RMS, three models, two cases, two nulls; Holm across 24 tests
+permutation_pvalue: (1+number of valid null statistics >= observed)/(1+valid draws); conditional on support for matched group null
+intervals: actual LR at truth <= 1; no new endpoint inversion or interval calibration
+scope: diagnostic selected unit MC validation; empirical finite-pool random-split ensemble, not general unconditional coverage or independent generator test
