@@ -1,0 +1,19 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage27
+initialdir = $(spool)
+executable = $(spool)/run_ml_independent_audit.sh
+arguments = $(model) $(seed) $(alpha_index) energy-ml-independent-audit-stage27.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-independent-audit-stage27.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 200MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-independent-audit"
+log = $(spool)/logs/ml_independent_audit_$(ClusterId).log
+output = $(spool)/logs/ml_independent_audit_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/ml_independent_audit_$(ClusterId).$(ProcId).err
+queue model, seed, alpha_index from /afs/cern.ch/user/x/xcheng/nu_mu_stage27/start_audit_jobs.tsv

@@ -1,0 +1,67 @@
+{
+  "model": "bdt_UU",
+  "seed": 2,
+  "alpha_index": 0,
+  "failed_starts": [
+    {
+      "trial": 284,
+      "fixed_bin": 4,
+      "value": 0.1301682242990654,
+      "known_alpha": null,
+      "start": [
+        0.06953973900073104,
+        0.21052833244847222,
+        0.3172678256127363,
+        0.27249587863899505,
+        0.1301682242990654,
+        1.3035054003718014e-18,
+        -0.4712244401799946
+      ],
+      "candidate": {
+        "f": [
+          0.09565239289202017,
+          0.20510270581488926,
+          0.31343413977437534,
+          0.2556425372466781,
+          0.1301682242990654,
+          0.0
+        ],
+        "alpha": 3.0,
+        "nll": 2.134820865662038,
+        "status": "optimizer",
+        "iterations": 32,
+        "kkt": 2.4321089586720746e-10
+      },
+      "scipy": {
+        "success": false,
+        "status": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 32,
+        "x": [
+          0.09565239289202017,
+          0.20510270581488926,
+          0.31343413977437534,
+          0.2556425372466781,
+          0.1301682242990654,
+          0.0,
+          3.0
+        ],
+        "fun": 2.134820865662038
+      },
+      "independent_best_nll": 2.134820865688895
+    }
+  ],
+  "original_arrays_unchanged": true,
+  "replay_maximum_array_differences": {
+    "pool": 0.0,
+    "truth": 0.0,
+    "sizes": 0.0,
+    "local_covariance": 0.0,
+    "fits": 0.0,
+    "losses": 0.0,
+    "lrs": 0.0,
+    "counts": 0.0,
+    "qs": 0.0,
+    "statuses": 0.0
+  }
+}

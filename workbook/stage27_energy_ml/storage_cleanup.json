@@ -1,0 +1,52 @@
+{
+  "removed_payloads": [
+    {
+      "path": "software/energy-ml-independent-stage27.tar.gz",
+      "bytes": 4302245,
+      "members_byte_verified": [
+        "ml/closure.py",
+        "ml/within_response.py",
+        "ml/profile_response.py",
+        "ml/source_response.py",
+        "ml/independent_response.py",
+        "ml/run_independent_response.py",
+        "ml/configs/closure.yaml",
+        "ml/configs/within_response.yaml",
+        "ml/configs/profile_response.yaml",
+        "ml/configs/independent_response.yaml",
+        "workbook/stage23_energy_ml/folds.tsv",
+        "ntuples/energy_ml_stage12/dataset/validation.npz",
+        "ml/artifacts/stage22/bdt_UU/predictions.npz",
+        "ml/artifacts/stage21/tabm_UU/predictions.npz"
+      ]
+    },
+    {
+      "path": "software/energy-ml-independent-audit-stage27.tar.gz",
+      "bytes": 5333171,
+      "members_byte_verified": [
+        "ml/closure.py",
+        "ml/within_response.py",
+        "ml/profile_response.py",
+        "ml/source_response.py",
+        "ml/independent_response.py",
+        "ml/run_independent_response.py",
+        "ml/configs/closure.yaml",
+        "ml/configs/within_response.yaml",
+        "ml/configs/profile_response.yaml",
+        "ml/configs/independent_response.yaml",
+        "workbook/stage23_energy_ml/folds.tsv",
+        "ntuples/energy_ml_stage12/dataset/validation.npz",
+        "ml/artifacts/stage22/bdt_UU/predictions.npz",
+        "ml/artifacts/stage21/tabm_UU/predictions.npz",
+        "ml/artifacts/stage27/bdt_UU/seed_0/alpha_1/independent_inference.npz",
+        "ml/artifacts/stage27/bdt_UU/seed_2/alpha_0/independent_inference.npz",
+        "ml/audit_independent_starts.py",
+        "ml/check_profile_response.py"
+      ]
+    }
+  ],
+  "removed_payload_bytes": 9635416,
+  "post_compaction_report_tsv_bytes_unchanged": true,
+  "final_npz_files": 21,
+  "final_npz_bytes": 10783990
+}

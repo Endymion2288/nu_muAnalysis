@@ -1,0 +1,21 @@
+version: 1
+stage: 27
+parent_config: ml/configs/profile_response.yaml
+seed: 20261030
+replicates: 400
+alphas: [-1.0, 0.0, 1.0]
+layers: [oracle, source_mc, mean_mc, both_mc]
+counting: [asimov, multinomial_N1000]
+source_bin_sizes: floor(pooled nominal truth counts / 2)
+mean_bin_sizes: same as source; independent draws with replacement within truth bin
+truth_fractions: pooled nominal truth counts / 13375; fixed for all cases and alpha
+population: fixed pooled validation empirical joint (energy, reco); continuous exp(alpha log(E/Ecenter)) within each truth bin
+mc_rng: SeedSequence([seed,27,0,side,trial]); independent sides; common across models, seeds and injected alpha
+count_rng: SeedSequence([seed,27,1,seed_index,alpha_index,trial]); common uniform events across four layers
+width_trials: 32
+width_alpha: 0.0
+width_parameters: [5, 6]
+width_method: actual profile LR=1 connected interval; same frozen numerical domain; no MC correction
+primary_tests: nominal unknown-alpha macro coverage source_mc minus oracle and both_mc minus source_mc; three models; Holm across six paired tests
+local_propagation: population-truth delta method; independent source and mean MC covariance plus count covariance; diagnostic only, not an interval prescription
+scope: independent event draws from a fixed finite empirical population; not new generator events, group uncertainty, detector systematics, or unconditional true-data coverage

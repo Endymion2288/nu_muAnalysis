@@ -1,0 +1,25 @@
+{
+  "schedd": "bigbird20.cern.ch",
+  "cluster": 1562723,
+  "jobs": 21,
+  "observed_before_submission": {
+    "bigbird20_idle": 2,
+    "bigbird20_running": 3118,
+    "bigbird103_idle": 57,
+    "bigbird103_running": 1460
+  },
+  "all_jobs_observed_running": true,
+  "resource_request": {
+    "cpus": 1,
+    "memory_MB": 3000,
+    "disk_MB": 200,
+    "flavour": "microcentury",
+    "gpus": 0
+  },
+  "log_dir": "/afs/cern.ch/user/x/xcheng/nu_mu_stage27/logs",
+  "requeue": false,
+  "note": "Protocol and covariance/smoke checks frozen before formal submission; no formal physics results used to alter budget.",
+  "start_audit_cluster": 1563155,
+  "start_audit_jobs": 2,
+  "audit_replays_original_arrays": true
+}

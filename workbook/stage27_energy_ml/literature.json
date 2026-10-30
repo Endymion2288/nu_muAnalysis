@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-10-30",
+  "references": [
+    {
+      "title": "Fitting using finite Monte Carlo samples",
+      "authors": "R. Barlow and C. Beeston",
+      "doi": "10.1016/0010-4655(93)90005-W",
+      "lookup": "https://inspirehep.net/api/literature?q=doi:10.1016/0010-4655(93)90005-W&size=1&fields=titles,dois",
+      "verified": "title and DOI",
+      "applicability": "Next-stage finite-template auxiliary likelihood candidate; normalized continuous weighted columns and unknown alpha require explicit validation, not blind independent-Poisson cell substitution."
+    },
+    {
+      "title": "A binned likelihood for stochastic models",
+      "authors": "C. A. Argüelles, A. Schneider and T. Yuan",
+      "url": "https://arxiv.org/abs/1901.04645",
+      "verified": "title and abstract",
+      "applicability": "Motivates MC-aware coverage and interval-width validation. This stage isolates independent sampling layers and checks truth-point delta covariance; it does not implement this likelihood."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "table_rows": {
+    "metrics": 1008,
+    "summary_metrics": 72,
+    "coverage": 288,
+    "coverage_comparisons": 288,
+    "sd_comparisons": 27,
+    "primary_tests": 6,
+    "intervals": 1792,
+    "width_summary": 24,
+    "width_comparisons": 18,
+    "condor_resources": 21
+  },
+  "table_keys_unique": true,
+  "npz_files_checked": 21,
+  "all_fits_finite_simplex_and_lrs_nonnegative": true,
+  "all_counts_N1000": true,
+  "paired_oracle_source_and_mean_both_observations_identical": true,
+  "counted_profile_lrs_within_1e_minus5_of_threshold": 3,
+  "json_svg_parse_passed": true,
+  "figures_visually_checked": true,
+  "python_compilation_files": 6,
+  "shell_syntax_files": 2,
+  "main_jobs_exit_zero": 21,
+  "audit_jobs_exit_zero": 2,
+  "failed_start_audits_exact_array_replay": true,
+  "protocol_and_config_precede_submission": true,
+  "completed_clusters_absent_from_queue": [
+    1562723,
+    1563155
+  ],
+  "compact_report_reproduction_passed": true,
+  "local_markdown_link_counts": {
+    "docs/nu_mu_energy_ml_roadmap.md": 20,
+    "workbook/2026-10-30_stage27_independent-mc-physics.md": 28,
+    "workbook/stage27_energy_ml/preregistered_protocol.md": 0
+  },
+  "local_markdown_links_checked": 48,
+  "all_three_near_threshold_classifications_independently_checked": true
+}
