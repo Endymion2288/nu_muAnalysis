@@ -1,0 +1,19 @@
+{
+  "seeds": [
+    20261029,
+    20261030,
+    20261031
+  ],
+  "capacity_models": 63,
+  "extra_first_seed_models": 9,
+  "permutation_repeats": 10,
+  "permutation_models": 100,
+  "train_events": 54196,
+  "validation_events": 13375,
+  "sum_wall_s": 732.9484602846205,
+  "sum_cpu_s": 722.8460252030001,
+  "peak_rss_MiB": 415.921875,
+  "uncertainty": "source-group bootstrap conditional on fitted models; seed losses averaged, no prediction ensemble; no independent test/physical normalization",
+  "baseline_600_best_iteration_max": 599,
+  "extended_2400_best_iteration_max": 2387
+}

@@ -470,3 +470,20 @@ p-only BDT 0.543307，+ μ context 0.516713，+ 计数 0.434073，+ 闪烁体 0.
 响应校准；高能 bin 仍有显著负偏差。测试集/校准集/挑战集未参与模型评价或选择。
 因此 R0/R2 尚未完整验收，不以该表直接替换物理分析或进入架构最终排名；下一步
 先完成这些 BDT 输入与稳健性检查，再按同预算比较 MLP/ResNet/TabM，随后 Deep Sets。
+
+## 16. 2026-10-30 执行进展：阶段14
+
+[阶段14报告](../workbook/2026-10-30_stage14_bdt-information-robustness.md)完成3seeds、
+3档容量、72个训练模型和100个条件置乱预测。depth3/2400的macro log-RMSE
+三seed均值依次为F1 0.516378、F2 0.425119、F3 0.380672、F5 0.376669。
+计数/电荷增益在六个run内与depth5早停模型中保留；同run、电荷和近似μ运动学格内
+置乱并重训后，原增益消失，支持新增读出有逐事件能量关联。
+
+电荷增量在FASERν box明确，但lead-block 628个validation事件中未测得明确改善；
+两区域谱/接受度不同，尚不作材料位置因果归因。全局空间矩显示小幅条件改善，
+常规Calo去组重训仍无稳定独立增益。训练能量bin展平使F5 macro降至0.349667，
+同时整体log-RMSE变差、800–1600GeV尾部增大，明确显示先验取舍。
+
+下一步优先primary-μ/y_inel物理分解、物理flux归一化，再按同输入/预算比较强表格NN；
+小幅全局矩增益支持按station矩与DeepSets对照，仍不足以宣称GNN/Transformer必要。
+calibration/test/SIBYLL challenge保持未评价；MC/data系统学和最终能谱闭合未完成。

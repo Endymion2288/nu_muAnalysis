@@ -1,0 +1,22 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+initialdir = $(repository)
+executable = $(repository)/AnalysisZipFramework/submission/run_ml_robustness.sh
+arguments = $(seed_index) energy-ml-stage14.tar.gz $(repository)/workbook/stage14_energy_ml $(repository)/ml/artifacts/stage14
+transfer_input_files = $(repository)/software/energy-ml-stage14.tar.gz
+request_cpus = 1
+request_memory = 2500MB
+request_disk = 1000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "longlunch"
++NuMuStage = "energy-ml-robustness"
+log = $(repository)/logs/ml_robustness_$(ClusterId).log
+output = $(repository)/logs/ml_robustness_$(ClusterId).$(ProcId).out
+error = $(repository)/logs/ml_robustness_$(ClusterId).$(ProcId).err
+queue seed_index from (
+0
+1
+2
+)

@@ -1,0 +1,29 @@
+version: 1
+stage: 14
+seeds: [20261029, 20261030, 20261031]
+capacities:
+  d3_600: {max_depth: 3, rounds: 600}
+  d3_2400: {max_depth: 3, rounds: 2400}
+  d5_1600: {max_depth: 5, rounds: 1600}
+patience: 100
+versions:
+  F1: [mu, mu_context]
+  F2: [mu, mu_context, counts]
+  F3: [mu, mu_context, counts, scintillator]
+  F5: [mu, mu_context, counts, scintillator, calo, shape]
+  F5_without_scintillator: [mu, mu_context, counts, calo, shape]
+  F5_without_calo: [mu, mu_context, counts, scintillator, shape]
+  F5_without_shape: [mu, mu_context, counts, scintillator, calo]
+bootstrap_replicates: 500
+training_prior_variants: [unit, flat_energy_bins]
+learning_curve_fractions: [0.25, 0.5]
+conditional_permutation:
+  repeats: 10
+  controls: [run, LeadTrack_charge, log_mu_p, mu_theta, mu_rVetoNu]
+  coarse: {log_p_width: 0.35, theta_width_mrad: 5.0, radius_width_mm: 60.0}
+  fine: {log_p_width: 0.2, theta_width_mrad: 2.5, radius_width_mm: 30.0}
+  targets: {F2: [counts], F3: [scintillator], F5: [scintillator, calo, shape]}
+  interpretation: approximate within-cell block permutation, not an exact conditional-independence or causal test
+frozen_scope: train and validation only; calibration, test, challenge unopened for model evaluation
+weight_scope: unit diagnostic and train-bin-flattened sensitivity; neither is physical flux normalization
+selection_scope: unchanged stage12 selection; no truth matching requirement or tail removal

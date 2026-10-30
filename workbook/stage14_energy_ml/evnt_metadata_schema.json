@@ -1,0 +1,224 @@
+[
+  {
+    "run": "200082",
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+    "objects": {
+      "##Params;2": "TTree",
+      "##Params;1": "TTree",
+      "##Shapes;2": "TTree",
+      "##Shapes;1": "TTree",
+      "##Links;2": "TTree",
+      "##Links;1": "TTree",
+      "CollectionTree;1": "TTree",
+      "POOLContainer;1": "TTree",
+      "POOLContainerForm;1": "TTree",
+      "MetaData;1": "TTree",
+      "MetaDataHdr;1": "TTree",
+      "MetaDataHdrForm;1": "TTree"
+    },
+    "trees": {
+      "##Params;2": {
+        "entries": 4,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Params;1": {
+        "entries": 4,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Shapes;2": {
+        "entries": 11,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Shapes;1": {
+        "entries": 11,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Links;2": {
+        "entries": 14,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Links;1": {
+        "entries": 14,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "CollectionTree;1": {
+        "entries": 559607,
+        "branches": [
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.",
+          "EventInfo_p4_McEventInfo",
+          "McEventCollection_p6_BeamTruthEvent",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo",
+          "index_ref"
+        ]
+      },
+      "POOLContainer;1": {
+        "entries": 559607,
+        "branches": [
+          "DataHeader",
+          "index_ref"
+        ]
+      },
+      "POOLContainerForm;1": {
+        "entries": 1,
+        "branches": [
+          "DataHeaderForm",
+          "index_ref"
+        ]
+      },
+      "MetaData;1": {
+        "entries": 1,
+        "branches": [
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+          "EventStreamInfo_p3_StreamEVGEN",
+          "xAOD::FileMetaData_v1_FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+          "IOVMetaDataContainer_p1__TagInfo",
+          "index_ref"
+        ]
+      },
+      "MetaDataHdr;1": {
+        "entries": 1,
+        "branches": [
+          "DataHeader",
+          "index_ref"
+        ]
+      },
+      "MetaDataHdrForm;1": {
+        "entries": 1,
+        "branches": [
+          "DataHeaderForm",
+          "index_ref"
+        ]
+      }
+    }
+  },
+  {
+    "run": "200093",
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+    "objects": {
+      "##Params;2": "TTree",
+      "##Params;1": "TTree",
+      "##Shapes;2": "TTree",
+      "##Shapes;1": "TTree",
+      "##Links;2": "TTree",
+      "##Links;1": "TTree",
+      "CollectionTree;1": "TTree",
+      "POOLContainer;1": "TTree",
+      "POOLContainerForm;1": "TTree",
+      "MetaData;1": "TTree",
+      "MetaDataHdr;1": "TTree",
+      "MetaDataHdrForm;1": "TTree"
+    },
+    "trees": {
+      "##Params;2": {
+        "entries": 4,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Params;1": {
+        "entries": 4,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Shapes;2": {
+        "entries": 11,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Shapes;1": {
+        "entries": 11,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Links;2": {
+        "entries": 14,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "##Links;1": {
+        "entries": 14,
+        "branches": [
+          "db_string",
+          "index_ref"
+        ]
+      },
+      "CollectionTree;1": {
+        "entries": 541884,
+        "branches": [
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.",
+          "EventInfo_p4_McEventInfo",
+          "McEventCollection_p6_BeamTruthEvent",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo",
+          "index_ref"
+        ]
+      },
+      "POOLContainer;1": {
+        "entries": 541884,
+        "branches": [
+          "DataHeader",
+          "index_ref"
+        ]
+      },
+      "POOLContainerForm;1": {
+        "entries": 1,
+        "branches": [
+          "DataHeaderForm",
+          "index_ref"
+        ]
+      },
+      "MetaData;1": {
+        "entries": 1,
+        "branches": [
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+          "EventStreamInfo_p3_StreamEVGEN",
+          "xAOD::FileMetaData_v1_FileMetaData",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+          "IOVMetaDataContainer_p1__TagInfo",
+          "index_ref"
+        ]
+      },
+      "MetaDataHdr;1": {
+        "entries": 1,
+        "branches": [
+          "DataHeader",
+          "index_ref"
+        ]
+      },
+      "MetaDataHdrForm;1": {
+        "entries": 1,
+        "branches": [
+          "DataHeaderForm",
+          "index_ref"
+        ]
+      }
+    }
+  }
+]
