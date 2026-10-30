@@ -1,0 +1,18 @@
+scope	events	backward_primary	forward_primary	both_primary	same_truth_particle	both_high_purity	backward_charge_flip	forward_charge_flip	primary_truth_pz_below_cut
+all_89_including_nonlong	89	78	73	67	69	65	18	15	6
+long_84	84	74	69	63	64	61	17	14	5
+same_primary_long	63	63	63	63	63	61	8	4	2
+same_primary_high_purity_long	61	61	61	61	61	61	8	2	2
+different_particle_long	20	11	6	0	0	0	8	9	2
+same_primary_without_sibyll	53	53	53	53	53	51	8	4	2
+same_primary_nonlong	4	4	4	4	4	4	0	0	0
+nonlong_5	5	4	4	4	5	4	1	1	1
+mechanism_backward_leader_removed_by_merge	62	62	62	62	62	61	8	3	2
+mechanism_backward_leader_retained_but_not_leading	1	1	1	1	1	0	0	1	0
+cut_At least one long track	0	0	0	0	0	0	0	0	0
+cut_Leading track has chi2/ndof < 15	3	3	3	3	3	3	0	2	0
+cut_Leading track theta < 25 mrad	1	1	1	1	1	1	0	0	0
+cut_Track R at IFT < 95 mm	26	26	26	26	26	26	6	0	0
+cut_Track R at max radius < 95 mm	12	12	12	12	12	12	1	0	0
+cut_Track nDoF >= 9	1	1	1	1	1	0	0	1	0
+cut_Track pz > 100 GeV	20	20	20	20	20	19	1	1	2
