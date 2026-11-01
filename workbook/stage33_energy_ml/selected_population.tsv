@@ -1,0 +1,13 @@
+partition	p_low_GeV	p_high_GeV	N	confirmed
+train	0	25	138	0
+train	25	100	353	15
+train	100	175	4512	4302
+train	175	250	5306	5185
+train	250	1000	32408	32114
+train	1000	1000000000	11479	11426
+validation	0	25	32	0
+validation	25	100	84	4
+validation	100	175	1122	1055
+validation	175	250	1282	1260
+validation	250	1000	8064	8002
+validation	1000	1000000000	2791	2783

@@ -15,8 +15,8 @@ def source_interval(values,groups):
  return lo,hi,'source_group_bootstrap'
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--compact',action='store_true');a=p.parse_args();repo=a.repo;tick=time.perf_counter();cpu=time.process_time()
- cfg=yaml.safe_load((repo/'ml/configs/reference_audit.yaml').read_text());out=repo/'workbook/stage32_energy_ml';root=repo/'ntuples/energy_ml_stage32'
+ p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--config',default='ml/configs/reference_audit.yaml');p.add_argument('--compact',action='store_true');a=p.parse_args();repo=a.repo;tick=time.perf_counter();cpu=time.process_time()
+ cfg=yaml.safe_load((repo/a.config).read_text());out=repo/f"workbook/stage{cfg['stage']}_energy_ml";root=repo/f"ntuples/energy_ml_stage{cfg['stage']}"
  archive_path=root/'native_results.json.gz'
  archive=json.load(gzip.open(archive_path,'rt')) if archive_path.exists() else dict(cfg=cfg,requests={},truth={},cov={})
  assert archive['cfg']==cfg
@@ -47,7 +47,7 @@ def main():
   correlation=mat/np.sqrt(np.outer(np.diag(mat),np.diag(mat)));eigen=np.linalg.eigvalsh(correlation)
   bound=momentum_bound(e['chain'],cov['surface_center_mm'],cov['surface_normal']) if not e['ambiguity'] else dict(valid=False,reason='ambiguous_chain')
   sigma=cov['sigma_kappa_GeVinv'];assert sigma>0;kappa=cov['kappa_GeVinv'];q=-np.sign(old['primary_pdg'])
-  assert cov['primary_barcode_pdg_confirmed']==old['lead_primary_parent_confirmed']
+  # Keep identity disagreements visible; a parent requirement is a separate flag.
   r=dict(run=key[0],eventID=key[1],group=old['group'],truth_E_GeV=old['truth_E_GeV'],primary_p_GeV=old['primary_p_GeV'],y_lepton=old['y_lepton'],vertex_z_mm=old['vertex_z_mm'],confirmed=old['lead_primary_parent_confirmed'],reco_p_GeV=old['reco_p_GeV'],q_true=q,q_reco=cov['charge'],sign_disagreement=cov['charge']!=q,kappa_reco_GeVinv=kappa,sigma_kappa_GeVinv=sigma,abs_kappa_over_sigma=abs(kappa)/sigma,production_standardized_residual=(kappa-q/old['primary_p_GeV'])/sigma,covariance_correlation_min_eigenvalue=eigen.min(),plane_normal_z=cov['surface_normal'][2],bound_available=bound['valid'],bound_reason=bound['reason'])
   vals=dict(p_low_GeV=np.nan,p_high_GeV=np.nan,propagation_fraction_loss_low=np.nan,propagation_fraction_loss_high=np.nan,kappa_truth_low_GeVinv=np.nan,kappa_truth_high_GeVinv=np.nan,standardized_residual_low=np.nan,standardized_residual_high=np.nan,kappa_interval_width_over_sigma=np.nan,guaranteed_abs_standardized_gt3=np.nan,possible_abs_standardized_gt3=np.nan)
   if bound['valid']:
@@ -59,13 +59,21 @@ def main():
   lo,hi=sorted([q*r['standardized_residual_low'],q*r['standardized_residual_high']])
   r.update(aligned_residual_low=lo,aligned_residual_high=hi,
            production_aligned_residual=q*r['production_standardized_residual'])
+  r.update(native_primary_barcode_pdg_confirmed=cov['primary_barcode_pdg_confirmed'],
+           confirmation_flag_agrees=cov['primary_barcode_pdg_confirmed']==old['lead_primary_parent_confirmed'],
+           relative_momentum_residual_low=old['reco_p_GeV']/r['p_high_GeV']-1,
+           relative_momentum_residual_high=old['reco_p_GeV']/r['p_low_GeV']-1)
   ref.append(r)
  write_table(out/'transport_events.tsv',table);write_table(out/'reference_events.tsv',ref);write_table(out/'native_jobs.tsv',jobs)
- # Six source groups are the only resampling units, including repeated periods.
+ # Source groups are the resampling units, including repeated periods.
  groups=sorted({r['group'] for r in ref});ng=len(groups);gid=np.array([groups.index(r['group']) for r in ref]);rng=np.random.default_rng(cfg['seed']);draws=rng.multinomial(ng,np.full(ng,1/ng),size=cfg['bootstrap_replicates'])
  arrays={k:np.array([r[k] for r in ref]) for k in ref[0]};masks=[('all','all',np.ones(len(ref),bool)),('primary','confirmed',arrays['confirmed']),('primary','unconfirmed',~arrays['confirmed'])]
- for field,edges in [('primary_p_GeV',[0,400,1600,6400]),('truth_E_GeV',cfg['energy_edges_GeV']),('y_lepton',cfg['y_edges']),('vertex_z_mm',cfg['vertex_z_edges_mm']),('q_true',[-2,0,2])]:
+ for field,edges in [('primary_p_GeV',cfg.get('truth_p_edges_GeV',[0,400,1600,6400])),('truth_E_GeV',cfg['energy_edges_GeV']),('y_lepton',cfg['y_edges']),('vertex_z_mm',cfg['vertex_z_edges_mm']),('q_true',[-2,0,2])]:
   masks += [(field,f'{lo:g}_{hi:g}',(arrays[field]>=lo)&(arrays[field]<hi)) for lo,hi in zip(edges[:-1],edges[1:])]
+ if 'focus_p_range_GeV' in cfg:
+  lo,hi=cfg['focus_p_range_GeV'];focus=(arrays['primary_p_GeV']>=lo)&(arrays['primary_p_GeV']<hi)
+  masks += [('focus_primary_p_GeV',f'{lo:g}_{hi:g}',focus),('focus_confirmed',f'{lo:g}_{hi:g}',focus&arrays['confirmed']),('reco_p_GeV',f'{lo:g}_{hi:g}',(arrays['reco_p_GeV']>=lo)&(arrays['reco_p_GeV']<hi))]
+  masks += [(label+'_confirmed',value,mask&arrays['confirmed']) for label,value,mask in list(masks) if label in ['primary_p_GeV','y_lepton']]
  summaries=[]
  functions={'median_sigma_kappa_GeVinv':('sigma_kappa_GeVinv',np.median),'median_abs_kappa_over_sigma':('abs_kappa_over_sigma',np.median),'sign_disagreement_fraction':('sign_disagreement',np.mean),'production_standardized_RMS':('production_standardized_residual',lambda x:np.sqrt(np.mean(x*x))),'bound_fraction':('bound_available',np.mean),'median_interval_width_over_sigma':('kappa_interval_width_over_sigma',np.median),'mean_propagation_loss_low':('propagation_fraction_loss_low',np.mean),'mean_propagation_loss_high':('propagation_fraction_loss_high',np.mean),'guaranteed_gt3_fraction':('guaranteed_abs_standardized_gt3',np.mean),'possible_gt3_fraction':('possible_abs_standardized_gt3',np.mean),'mean_aligned_residual_low':('aligned_residual_low',np.mean),'mean_aligned_residual_high':('aligned_residual_high',np.mean)}
  for label,value,mask in masks:
@@ -102,10 +110,31 @@ def main():
    lo,hi,status=source_interval(bs[metric],len(set(gg)))
    interval_summaries.append(dict(stratum=label,value=value,N=len(low),groups=len(set(gg)),metric=metric,point=v,CI025=lo,CI975=hi,bootstrap_valid=len(bs[metric]),interval_status=status))
  write_table(out/'bounded_aligned_summary.tsv',interval_summaries)
+ if 'focus_p_range_GeV' in cfg:
+  relative=[]
+  for label,value,mask in masks:
+   selected=mask&arrays['bound_available'];gg=gid[selected]
+   if not selected.any():continue
+   low=arrays['relative_momentum_residual_low'][selected];high=arrays['relative_momentum_residual_high'][selected]
+   def relative_metrics(ll,hh):
+    result=endpoint_metrics(ll,hh)
+    for threshold in [.2,.5]:
+     result[f'guaranteed_tail_gt{threshold:g}']=np.mean((ll>threshold)|(hh< -threshold))
+     result[f'possible_tail_gt{threshold:g}']=np.mean((ll< -threshold)|(hh>threshold))
+    return result
+   point=relative_metrics(low,high);bs={k:[] for k in point}
+   for draw in draws:
+    ll=np.repeat(low,draw[gg]);hh=np.repeat(high,draw[gg])
+    if not len(ll):continue
+    for key,val in relative_metrics(ll,hh).items():bs[key].append(val)
+   for metric,point_value in point.items():
+    lo,hi,status=source_interval(bs[metric],len(set(gg)))
+    relative.append(dict(stratum=label,value=value,N=len(low),groups=len(set(gg)),metric=metric,point=point_value,CI025=lo,CI975=hi,bootstrap_valid=len(bs[metric]),interval_status=status))
+  write_table(out/'bounded_relative_momentum_summary.tsv',relative)
  coverage=[]
  ta={k:np.array([r[k] for r in table]) for k in table[0]};tg=np.array([groups.index(r['group']) for r in table])
  tm=[('all','all',np.ones(len(table),bool)),('primary','confirmed',ta['confirmed']),('primary','unconfirmed',~ta['confirmed'])]
- for field,edges in [('truth_E_GeV',cfg['energy_edges_GeV']),('y_lepton',cfg['y_edges']),('vertex_z_mm',cfg['vertex_z_edges_mm'])]:
+ for field,edges in [('primary_p_GeV',cfg.get('truth_p_edges_GeV',[0,400,1600,6400])),('truth_E_GeV',cfg['energy_edges_GeV']),('y_lepton',cfg['y_edges']),('vertex_z_mm',cfg['vertex_z_edges_mm'])]:
   tm += [(field,f'{lo:g}_{hi:g}',(ta[field]>=lo)&(ta[field]<hi)) for lo,hi in zip(edges[:-1],edges[1:])]
  for label,value,mask in tm:
   if not mask.any():continue
@@ -117,23 +146,25 @@ def main():
   coverage.append(dict(stratum=label,value=value,N=len(v),groups=len(set(gg)),bounded=int(sum(v)),fraction=np.mean(v),CI025=lo,CI975=hi,bootstrap_valid=len(bs),interval_status=status))
  write_table(out/'transport_coverage.tsv',coverage)
  bounded=[r for r in ref if r['bound_available']]
- highp=[r for r in bounded if r['primary_p_GeV']>=1600]
+ highp_min=cfg.get('highp_reference_min_GeV',1600)
+ highp=[r for r in bounded if r['primary_p_GeV']>=highp_min]
  below=[r for r in highp if r['reco_p_GeV']<r['p_low_GeV']]
- highp_sign=[r for r in ref if r['confirmed'] and r['primary_p_GeV']>=1600 and r['sign_disagreement']]
+ highp_sign=[r for r in ref if r['confirmed'] and r['primary_p_GeV']>=highp_min and r['sign_disagreement']]
  physics=dict(
   bounded_confirmed_events=sum(r['confirmed'] for r in bounded),
   same_support_production_standardized_RMS=np.sqrt(np.mean([r['production_standardized_residual']**2 for r in bounded])),
-  maximum_interval_width_over_sigma=max(r['kappa_interval_width_over_sigma'] for r in bounded),
-  max_possible_abs_standardized_residual=max(max(abs(r['standardized_residual_low']),abs(r['standardized_residual_high'])) for r in bounded),
-  highp_bounded_events=len(highp),highp_reco_below_bound=len(below),
-  highp_propagation_loss_min=min(r['propagation_fraction_loss_low'] for r in highp),
-  highp_propagation_loss_max=max(r['propagation_fraction_loss_high'] for r in highp),
-  highp_below_bound_reco_deficit_min=min(1-r['reco_p_GeV']/r['primary_p_GeV'] for r in below),
-  highp_below_bound_reco_deficit_max=max(1-r['reco_p_GeV']/r['primary_p_GeV'] for r in below),
+  maximum_interval_width_over_sigma=max((r['kappa_interval_width_over_sigma'] for r in bounded),default=np.nan),
+  max_possible_abs_standardized_residual=max((max(abs(r['standardized_residual_low']),abs(r['standardized_residual_high'])) for r in bounded),default=np.nan),
+  highp_reference_min_GeV=highp_min,highp_bounded_events=len(highp),highp_reco_below_bound=len(below),
+  highp_propagation_loss_min=min((r['propagation_fraction_loss_low'] for r in highp),default=np.nan),
+  highp_propagation_loss_max=max((r['propagation_fraction_loss_high'] for r in highp),default=np.nan),
+  highp_below_bound_reco_deficit_min=min((1-r['reco_p_GeV']/r['primary_p_GeV'] for r in below),default=np.nan),
+  highp_below_bound_reco_deficit_max=max((1-r['reco_p_GeV']/r['primary_p_GeV'] for r in below),default=np.nan),
   highp_confirmed_sign_disagreements=[dict(run=r['run'],eventID=r['eventID'],primary_p_GeV=r['primary_p_GeV'],abs_kappa_over_sigma=r['abs_kappa_over_sigma'],bound_available=r['bound_available']) for r in highp_sign],
   covariance_track_fitters=sorted({r['track_fitter'] for c in archive['cov'].values() for r in c['events']}),
   nearest_saved_z_distance_mm_quantiles=np.quantile([r['nearest_saved_z_distance_mm'] for r in table],[0,.5,1]).tolist(),
   exploratory_endpoint_summaries=True)
+ physics['confirmation_flag_disagreements']=sum(not r['confirmation_flag_agrees'] for r in ref)
  (out/'physics_summary.json').write_text(json.dumps(physics,indent=2)+'\n')
  # Keep measured copy/reconstruction/export costs after raw shards are compacted.
  import re

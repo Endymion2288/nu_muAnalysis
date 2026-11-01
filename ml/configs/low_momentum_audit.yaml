@@ -1,0 +1,21 @@
+stage: 33
+seed: 20261103
+partitions: [train, validation]
+components: [charm, k, pi]
+new_groups_per_component_partition: 2
+exclude_manifest: workbook/stage32_energy_ml/manifest.tsv
+truth_events_per_file: 24
+covariance_events_per_file: 4
+sampling_p_edges_GeV: [100, 250, 1000, 1000000000]
+truth_quotas: [12, 8, 4]
+covariance_quotas: [2, 1, 1]
+truth_p_edges_GeV: [0, 25, 100, 175, 250, 1000, 1000000000]
+highp_reference_min_GeV: 1000
+focus_p_range_GeV: [100, 250]
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.2, 0.6, 0.8, 1.0]
+vertex_z_edges_mm: [-3000, -2650, -2300, -1950, -1600]
+bootstrap_replicates: 500
+plane_tolerance_mm: 0.001
+max_reconstruction_events: 96
+scope: lower-momentum response control; unchanged nominal pz>100GeV selection; no new fits or held-out partitions

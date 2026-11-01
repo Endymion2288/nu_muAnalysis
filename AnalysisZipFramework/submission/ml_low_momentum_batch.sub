@@ -1,0 +1,66 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage33
+initialdir = $(spool)
+executable = $(spool)/run_ml_reference_audit.sh
+arguments = $(action) $(index) energy-ml-reference-audit-stage33.tar.gz $(repository) 33
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-reference-audit-stage33.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 2000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-low-momentum-audit"
+log = $(spool)/logs/native_$(ClusterId).log
+output = $(spool)/logs/native_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/native_$(ClusterId).$(ProcId).err
+queue action,index from (
+truth 180
+cov 180
+truth 326
+cov 326
+truth 328
+cov 328
+truth 181
+cov 181
+truth 192
+cov 192
+truth 329
+cov 329
+truth 340
+cov 340
+truth 102
+cov 102
+truth 103
+cov 103
+truth 252
+cov 252
+truth 253
+cov 253
+truth 112
+cov 112
+truth 119
+cov 119
+truth 262
+cov 262
+truth 269
+cov 269
+truth 46
+cov 46
+truth 48
+cov 48
+truth 197
+cov 197
+truth 199
+cov 199
+truth 49
+cov 49
+truth 51
+cov 51
+truth 200
+cov 200
+truth 202
+cov 202
+)
