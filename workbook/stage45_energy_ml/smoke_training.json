@@ -1,0 +1,165 @@
+{
+  "stage": 45,
+  "fold": 0,
+  "smoke": true,
+  "config": {
+    "seed": 20261101,
+    "indices": [
+      0,
+      6,
+      14,
+      19,
+      28,
+      33,
+      39,
+      44,
+      46,
+      51,
+      59,
+      63,
+      72,
+      81,
+      86,
+      95,
+      101,
+      106,
+      109,
+      113,
+      120
+    ],
+    "folds": 3,
+    "train_role": "(evaluation_fold+1)%3",
+    "calibration_role": "(evaluation_fold+2)%3",
+    "rounds": 400,
+    "xgboost": {
+      "max_depth": 3,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "reg:squarederror"
+    },
+    "fit_wall_limit_s": 120,
+    "bootstrap_replicates": 500,
+    "energy_edges_GeV": [
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      6400
+    ],
+    "max_events": 4000,
+    "stage": 45,
+    "starting_commit": "bc5d9786ed7d76da8cbfd97e150e9b4892ae9400",
+    "frozen_utc": "2026-11-01T21:36:17.221002+00:00",
+    "input_cache": "ntuples/energy_ml_stage42/development.npz",
+    "local_cache": "ntuples/energy_ml_stage44/features.npz",
+    "max_formal_fits": 15,
+    "max_smoke_fits": 1,
+    "candidates": [
+      "reco_depth",
+      "oracle_z"
+    ],
+    "regions_mm": [
+      [
+        -3000,
+        -2928
+      ],
+      [
+        -2812,
+        -2600
+      ],
+      [
+        -2600,
+        -2300
+      ],
+      [
+        -2300,
+        -1950
+      ],
+      [
+        -1769.65,
+        -1619.65
+      ]
+    ],
+    "region_names": [
+      "target_upstream",
+      "target_mid1",
+      "target_mid2",
+      "target_downstream",
+      "lead"
+    ],
+    "inner_split": "lexicographic source group rank modulo 2 within outer training role",
+    "depth_rounds": 200,
+    "depth_prior_alpha": 0.5,
+    "probability_floor_for_scoring": 1e-12,
+    "depth_seed": 20261145,
+    "depth_xgboost": {
+      "max_depth": 3,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "multi:softprob",
+      "num_class": 5
+    },
+    "gate": {
+      "pair": "I0->reco_depth",
+      "focus": "100<=reco_p_GeV<1000",
+      "minimum_relative_log_RMSE_gain": 0.02,
+      "paired_source_CI025_above": 0,
+      "increment_pair": "local->reco_depth",
+      "increment_CI025_above": 0
+    }
+  },
+  "records": [
+    {
+      "model": "depth_smoke",
+      "kind": "depth",
+      "fold": 0,
+      "train_N": 200,
+      "train_sources": [
+        "pi:00060-00069"
+      ],
+      "predict_N": {
+        "evaluation": 100
+      },
+      "predict_sources": {
+        "evaluation": [
+          "pi:00000-00009"
+        ]
+      },
+      "columns": 87,
+      "rounds": 20,
+      "region_train_N": [
+        6,
+        13,
+        38,
+        123,
+        20
+      ],
+      "depth_prior": [
+        0.03209876543209877,
+        0.06666666666666667,
+        0.19012345679012346,
+        0.6098765432098765,
+        0.10123456790123457
+      ],
+      "wall_s": 0.09323873603716493,
+      "cpu_s": 0.0303356050000001
+    }
+  ],
+  "wall_s": 0.16380891297012568,
+  "cpu_s": 0.081556199,
+  "peak_rss_MiB": 655.4609375,
+  "xgboost_version": "2.1.3",
+  "numpy_version": "2.2.6"
+}

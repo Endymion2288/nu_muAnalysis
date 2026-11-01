@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage45
+initialdir = $(spool)
+executable = $(spool)/run_ml_coarse_depth.sh
+transfer_executable = False
+arguments = energy-ml-coarse-depth-stage45.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-coarse-depth-stage45.tar.gz
+request_cpus = 1
+request_memory = 1000MB
+request_disk = 100MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-coarse-depth-stage45"
+log = $(spool)/logs/$(ClusterId).log
+output = $(spool)/logs/$(ClusterId).$(ProcId).out
+error = $(spool)/logs/$(ClusterId).$(ProcId).err
+queue 1
