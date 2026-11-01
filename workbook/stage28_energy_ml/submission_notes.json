@@ -1,0 +1,23 @@
+{
+  "protocol_frozen_before_formal_submission": true,
+  "planned_jobs": 7,
+  "trial_count_per_job": 200,
+  "calibration_trials": 100,
+  "bootstrap_replicates": 16,
+  "resource_request": {
+    "cpus": 1,
+    "memory_MB": 3000,
+    "disk_MB": 200,
+    "gpus": 0,
+    "flavour": "microcentury"
+  },
+  "purpose": "Test held-out response-MC bootstrap calibration of profile-LR after stage27 independent-layer diagnosis.",
+  "schedd": "bigbird22.cern.ch",
+  "selection": "9 idle / 3988 running; bigbird20 and 21 had near-zero running capacity, so use an active pool",
+  "bootstrap_generation": "Parent finite response generates; independently resampled response fits. Corrected before formal submission; smokes rerun.",
+  "cluster": 17503485,
+  "all_jobs_observed_running": true,
+  "submit_local": "2026-11-01T09:02:17",
+  "schedd_idle_at_selection": 9,
+  "schedd_running_at_selection": 3988
+}

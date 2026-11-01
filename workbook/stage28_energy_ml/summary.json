@@ -1,0 +1,446 @@
+{
+  "runs": {
+    "mu_p_over0p8/seed_0": {
+      "model": "mu_p_over0p8",
+      "seed": 0,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.12043048481262,
+        1.1449052421154686
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57142,
+        "solver_failures": 0,
+        "iterations": 1030620
+      },
+      "maximum_kkt": 2.5191785524292243e-07,
+      "negative_lr_clipped": 93,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 5.551115123125783e-16,
+        "maximum_direct_derivative_error": 9.367506770274758e-16
+      },
+      "wall_s": 500.0908164884895,
+      "cpu_s": 494.849893294,
+      "max_rss_KiB": 77900,
+      "host": "b9p13p5166.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    },
+    "bdt_UU/seed_0": {
+      "model": "bdt_UU",
+      "seed": 0,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.1210304256205181,
+        1.2254163352604146
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57399,
+        "solver_failures": 0,
+        "iterations": 1034598
+      },
+      "maximum_kkt": 5.140693883909364e-07,
+      "negative_lr_clipped": 22,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 6.661338147750939e-16,
+        "maximum_direct_derivative_error": 8.465450562766819e-16
+      },
+      "wall_s": 507.3644888680428,
+      "cpu_s": 502.96412382200003,
+      "max_rss_KiB": 75428,
+      "host": "b9g23p2657.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    },
+    "bdt_UU/seed_1": {
+      "model": "bdt_UU",
+      "seed": 1,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.0623734975291372,
+        1.126940392657067
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57518,
+        "solver_failures": 0,
+        "iterations": 1030660
+      },
+      "maximum_kkt": 4.688087200666047e-07,
+      "negative_lr_clipped": 52,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 7.771561172376096e-16,
+        "maximum_direct_derivative_error": 9.71445146547012e-16
+      },
+      "wall_s": 508.5243457830511,
+      "cpu_s": 504.369161743,
+      "max_rss_KiB": 75440,
+      "host": "b9p14p8346.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    },
+    "bdt_UU/seed_2": {
+      "model": "bdt_UU",
+      "seed": 2,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.1103616100676428,
+        1.089067990591917
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57572,
+        "solver_failures": 0,
+        "iterations": 1027430
+      },
+      "maximum_kkt": 4.639591215660488e-07,
+      "negative_lr_clipped": 42,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 6.661338147750939e-16,
+        "maximum_direct_derivative_error": 8.465450562766819e-16
+      },
+      "wall_s": 457.57359371706843,
+      "cpu_s": 452.856626882,
+      "max_rss_KiB": 78468,
+      "host": "b9p13p6922.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    },
+    "tabm_UU/seed_0": {
+      "model": "tabm_UU",
+      "seed": 0,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.1241807807040458,
+        1.2608024460709182
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57378,
+        "solver_failures": 0,
+        "iterations": 1018704
+      },
+      "maximum_kkt": 3.9133131490842743e-07,
+      "negative_lr_clipped": 27,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 7.216449660063518e-16,
+        "maximum_direct_derivative_error": 8.465450562766819e-16
+      },
+      "wall_s": 540.4292062968016,
+      "cpu_s": 534.928179833,
+      "max_rss_KiB": 74380,
+      "host": "b9p19p0921.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    },
+    "tabm_UU/seed_1": {
+      "model": "tabm_UU",
+      "seed": 1,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.0753819717194655,
+        1.0874665008739006
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57504,
+        "solver_failures": 0,
+        "iterations": 1031344
+      },
+      "maximum_kkt": 4.3442236141721935e-07,
+      "negative_lr_clipped": 54,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 7.771561172376096e-16,
+        "maximum_direct_derivative_error": 8.951173136040325e-16
+      },
+      "wall_s": 516.2656229604036,
+      "cpu_s": 510.735210817,
+      "max_rss_KiB": 77188,
+      "host": "b9p18p3576.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    },
+    "tabm_UU/seed_2": {
+      "model": "tabm_UU",
+      "seed": 2,
+      "smoke": false,
+      "events": 13375,
+      "trials": 200,
+      "calibration_trials": 100,
+      "bootstrap_replicates": 16,
+      "truth_counts": [
+        731,
+        2455,
+        4247,
+        3933,
+        1741,
+        268
+      ],
+      "mc_counts": [
+        365,
+        1227,
+        2123,
+        1966,
+        870,
+        134
+      ],
+      "thresholds": [
+        1.1011725137209223,
+        1.1121189129890727
+      ],
+      "widths": 32,
+      "failures": 0,
+      "numerical_stats": {
+        "solver_calls": 57521,
+        "solver_failures": 0,
+        "iterations": 1022112
+      },
+      "maximum_kkt": 3.2602933330849737e-07,
+      "negative_lr_clipped": 44,
+      "checks": {
+        "fraction_error": 3.2268307284533115e-07,
+        "alpha_error": 1.912670243631176e-06,
+        "derivative_error": 2.7407734068396472e-11,
+        "gradient_error": 1.8646136934821755e-10,
+        "lr_at_truth": 0.0,
+        "alpha_interval": {
+          "low": -1.2456388230286917,
+          "high": 3.0,
+          "low_limited": false,
+          "high_limited": true,
+          "scan_reentry": false,
+          "interval_status": "ok"
+        },
+        "maximum_direct_response_error": 8.326672684688674e-16,
+        "maximum_direct_derivative_error": 8.881784197001252e-16
+      },
+      "wall_s": 539.4897914044559,
+      "cpu_s": 534.066343191,
+      "max_rss_KiB": 78984,
+      "host": "b9g23p2447.cern.ch",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3"
+    }
+  },
+  "failures": [],
+  "held_out_trials": 100,
+  "calibration_trials": 100,
+  "primary_tests": 3,
+  "holm_rejections": 3,
+  "totals": {
+    "worker_wall_s": 3569.737865518313,
+    "worker_cpu_s": 3534.769539582,
+    "peak_rss_KiB": 78984,
+    "solver_calls": 402034,
+    "solver_failures": 0,
+    "iterations": 7195468,
+    "failure_cells": 0
+  },
+  "report_wall_s": 4.607557131908834
+}

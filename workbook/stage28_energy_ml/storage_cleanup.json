@@ -1,0 +1,25 @@
+{
+  "removed_payload": "software/energy-ml-mc-bootstrap-stage28.tar.gz",
+  "removed_payload_bytes": 4301973,
+  "members_byte_verified_before_whitespace_only_cleanup": [
+    "ml/closure.py",
+    "ml/within_response.py",
+    "ml/profile_response.py",
+    "ml/independent_response.py",
+    "ml/mc_bootstrap.py",
+    "ml/run_mc_bootstrap.py",
+    "ml/configs/closure.yaml",
+    "ml/configs/within_response.yaml",
+    "ml/configs/profile_response.yaml",
+    "ml/configs/independent_response.yaml",
+    "ml/configs/mc_bootstrap.yaml",
+    "workbook/stage23_energy_ml/folds.tsv",
+    "ntuples/energy_ml_stage12/dataset/validation.npz",
+    "ml/artifacts/stage22/bdt_UU/predictions.npz",
+    "ml/artifacts/stage21/tabm_UU/predictions.npz"
+  ],
+  "production_source_whitespace_patch": "workbook/stage28_energy_ml/production_source_format.json",
+  "post_compaction_report_tsv_bytes_unchanged": true,
+  "npz_files": 7,
+  "npz_bytes": 2974259
+}

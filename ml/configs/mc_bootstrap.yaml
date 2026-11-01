@@ -1,0 +1,21 @@
+version: 1
+stage: 28
+parent_config: ml/configs/profile_response.yaml
+seed: 20261101
+alpha_injected: 0.0
+trials: 200
+calibration_trials: 100
+bootstrap_replicates: 16
+selected_events: 1000
+source_bin_sizes: floor(pooled nominal truth counts / 2)
+population: fixed pooled validation empirical joint (energy, reco); source MC sampled independently within each truth bin
+response_bootstrap: nonparametric resample of the finite source MC events within each truth bin, preserving its bin size
+count_rng: SeedSequence([seed,28,1,model_seed,trial]); shared fixed-template observed counts across bootstrap layers
+bootstrap_rng: SeedSequence([seed,28,2,model_seed,trial,replicate]); pseudo-count uniforms shared across parameters
+threshold_quantile: 0.682689492137
+threshold_scope: separate fraction(6 LR values) and alpha(1 LR value); calibrated only from trials 0:100, applied to trials 100:200
+interval_width_trials: 16
+interval_parameters: [5, 6]
+interval_method: profile LR connected interval with fixed threshold 1 or held-out calibrated threshold
+primary_tests: held-out test-trial macro coverage calibrated minus fixed, three models after averaging seeds within trial; exploratory alpha coverage
+scope: finite response-MC bootstrap calibration on fixed empirical population; no auxiliary-likelihood implementation, no generator/detector or data systematics

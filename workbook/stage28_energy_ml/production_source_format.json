@@ -1,0 +1,6 @@
+{
+  "file": "ml/run_mc_bootstrap.py",
+  "change": "Remove trailing spaces from blank line 36 after byte-verifying the production payload.",
+  "unified_diff": "--- production/ml/run_mc_bootstrap.py\n+++ ml/run_mc_bootstrap.py\n@@ -33,7 +33,7 @@\n             target=truth[par] if par<6 else 0.\n             partial=inf.conditional(obs,best,par,target);lr,raw=inf.lr(partial,best);actual[ti,par]=lr\n             if np.isfinite(raw) and raw<0 and np.isfinite(lr):negclip+=1\n-        \n+\n             if not np.isfinite(lr):failures.append(dict(trial=ti,kind='observed_lr',parameter=par,status='profile_or_negative_lr'))\n         for ri in range(nb):\n             boot=bootstrap_indices(source,ti,ri,cfg,seed);bw=np.bincount(np.concatenate(boot),minlength=len(bins));rb=Response(aggregate(powers,index,bw));prob=response.at(best['alpha'])[0]@best['f'];pseudo=counts_from_uniform(prob,pseudo_uniform(seed,ti,ri,cfg));ib=Inference(rb,cfg,stats);bb=ib.fit(pseudo)\n",
+  "python_ast_unchanged": true
+}

@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-11-01",
+  "references": [
+    {
+      "title": "Bootstrap Methods: Another Look at the Jackknife",
+      "author": "B. Efron",
+      "year": 1979,
+      "doi": "10.1214/aos/1176344552",
+      "lookup": "https://api.crossref.org/works/10.1214/aos/1176344552",
+      "verified": "title, author and publication date",
+      "applicability": "Nonparametric resampling of finite empirical source MC within fixed truth strata; the profile-LR calibration and held-out coverage are tested here, not guaranteed by the resampling principle."
+    },
+    {
+      "title": "A binned likelihood for stochastic models",
+      "url": "https://arxiv.org/abs/1901.04645",
+      "verified": "arXiv citation title",
+      "applicability": "Alternative future likelihood for MC uncertainty; this stage implements bootstrap LR calibration, not the analytic likelihood."
+    }
+  ]
+}
