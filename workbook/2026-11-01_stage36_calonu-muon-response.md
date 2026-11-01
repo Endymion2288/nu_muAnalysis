@@ -1,5 +1,9 @@
 # stage36：CaloNu μ控制揭示整流噪声pedestal与响应可比性缺口
 
+> stage37更正：实际MC/data CaloNu调用均关闭HV外推，故本报告q/nMIP是MIP_ref；
+> 下文原“data含HV gainRatio”的解释已被调用点核验取代，原实测数字不变。
+> 见[stage37源码审计](stage37_energy_ml/source_audit.md)。
+
 日期2026-11-01；起点`7e7f89e`。按修订路线第17节推进，不改stage35模型或重读其test。
 **本阶段得到的物理结论：μ MC约8GeV EM的窄总响应有主要的正半波噪声积分pedestal贡献，
 不能认作穿越μ物理沉积能量峰。** 专门μ MC中88.2865%事件四通道均低于5σ峰阈值；

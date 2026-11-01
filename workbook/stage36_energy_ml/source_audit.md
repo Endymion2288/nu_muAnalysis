@@ -1,5 +1,9 @@
 # stage36：正半波积分、标度、几何与生产来源审计
 
+> stage37更正：下文CaloRecTool通式中的data HV外推不适用于实际CaloNu调用，
+> MC/data源均显式correct_gain=false，实测q/nMIP就是MIP_ref。
+> 见[调用点及2040682对数值核验](../stage37_energy_ml/source_audit.md)。原测量数字保留。
+
 本阶段只读匹配源commit `1ec47efe`，不是当前Calypso工作树的实现；未修改/重编译Calypso。
 完整生产片段见[production_audit.json](production_audit.json)。37个有界日志reference全部找到，
 它们不能证明所有实际bck文件的maker、完整conditions/HV或生成谱系一致。

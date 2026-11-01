@@ -1,0 +1,48 @@
+{
+  "retained_path": "ntuples/energy_ml_stage37/native_response.npz",
+  "retained_bytes": 649006,
+  "events": 128,
+  "retained_native_fields_checked": [
+    "adc",
+    "saved_wave",
+    "saved_time",
+    "integral",
+    "raw_integral",
+    "status",
+    "baseline_mean",
+    "baseline_rms",
+    "localtime",
+    "peak",
+    "width",
+    "mean",
+    "alpha",
+    "nval"
+  ],
+  "full_lineage_equal": true,
+  "all_field_readback_equal": true,
+  "removed": [
+    {
+      "path": "ntuples/energy_ml_stage37/shards/0.npz",
+      "bytes": 60106581
+    },
+    {
+      "path": "ntuples/energy_ml_stage37/shards/5.npz",
+      "bytes": 66785475
+    },
+    {
+      "path": "ntuples/energy_ml_stage37/shards/6.npz",
+      "bytes": 123411267
+    },
+    {
+      "path": "ntuples/energy_ml_stage37/shards/11.npz",
+      "bytes": 123522655
+    },
+    {
+      "path": "software/energy-ml-calonu-native-stage37.tar.gz",
+      "bytes": 14123
+    }
+  ],
+  "removed_bytes": 373840101,
+  "original_ROOT_files_modified": false,
+  "wall_s": 0.3797600478865206
+}

@@ -1,0 +1,28 @@
+{
+  "stage": 37,
+  "starting_commit": "b93abf4",
+  "frozen_utc": "2026-11-01T14:51:06.325607+00:00",
+  "groups": [
+    0,
+    5,
+    6,
+    11
+  ],
+  "max_cases": 128,
+  "regular_per_group": 24,
+  "diagnostic_per_group": 8,
+  "new_fits": 0,
+  "new_G4_events": 0,
+  "source_commit": "1ec47efe",
+  "dictionary_runtime_commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "cache": "ntuples/energy_ml_stage37",
+  "max_condor_jobs": 8,
+  "pilot": "Only first native entry of MC100049 first source inspected before freeze; all pilot failures retained",
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20261104,
+  "tolerances": {
+    "raw_charge_absolute_pC": 3e-05,
+    "waveform_absolute_mV": 0.0003
+  },
+  "data_MC_physics_closure": false
+}

@@ -1,0 +1,7 @@
+cluster	proc	group	schedd	exit_code	requested_cpus	requested_memory_MB	requested_gpus	submitted_local	terminated_local	submit_to_finish_s	execute_s	locate_wall_s	native_wall_s	wrapper_cpu_s	peak_rss_KiB	reason
+2187365	0	0	bigbird21.cern.ch	0	1	3000	0	2026-11-01T15:58:36	2026-11-01T16:03:19	283.0	140	7.08	122.5	109.42999999999999	2325368	success
+2187365	1	5	bigbird21.cern.ch	0	1	3000	0	2026-11-01T15:58:36	2026-11-01T16:02:16	220.0	78	5.67	63.82	54.09	2079064	success
+2187365	2	6	bigbird21.cern.ch	1	1	3000	0	2026-11-01T15:58:36	2026-11-01T16:02:16	220.0	78	5.42	63.71	50.89	1317424	Over-strict BeamTruth mass equality; momentum identical, mass differs 1 float ULP
+2187365	3	11	bigbird21.cern.ch	1	1	3000	0	2026-11-01T15:58:36	2026-11-01T16:02:29	233.0	91	4.66	77.62	69.36	1245796	Over-strict BeamTruth mass equality; momentum identical, mass differs 1 float ULP
+2187366	0	6	bigbird21.cern.ch	0	1	3000	0	2026-11-01T16:05:58	2026-11-01T16:09:43	225.0	165	5.43	148.99	138.62	2899424	success
+2187366	1	11	bigbird21.cern.ch	0	1	3000	0	2026-11-01T16:05:58	2026-11-01T16:09:12	194.0	134	6.52	117.86	109.22	2337624	success

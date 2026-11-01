@@ -1,0 +1,1243 @@
+{
+  "wall_s": 14.679617440095171,
+  "records": [
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 429707182997504,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "CableMapping-00",
+      "label": "MC100049",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/Digitization",
+      "key": 429707182997504,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "WAVE-Digitization-03-LG",
+      "label": "MC100049",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "base_mean": 15650.0,
+            "base_rms": 3.0,
+            "cb_norm": 0.550000011920929,
+            "cb_mean": 820.0,
+            "cb_sigma": 3.6700000762939453,
+            "cb_alpha": -0.3199999928474426,
+            "cb_n": 1000.0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "base_mean": 15650.0,
+            "base_rms": 3.0,
+            "cb_norm": 0.550000011920929,
+            "cb_mean": 820.0,
+            "cb_sigma": 3.6700000762939453,
+            "cb_alpha": -0.3199999928474426,
+            "cb_n": 1000.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/Calibration/MIP_ref",
+      "key": 429707182997504,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "WAVE-Calibration-03-LG",
+      "label": "MC100049",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/Range",
+      "key": 429707182997504,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "",
+      "label": "MC100049",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/Timing",
+      "key": 429707182997504,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "",
+      "label": "MC100049",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "NominalTriggerTime": 820.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/TimingOffset",
+      "key": 429707182997504,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "",
+      "label": "MC100049",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_250908.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 429707182997504,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "MC100049_archived",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 429711477964800,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "CableMapping-00",
+      "label": "MC100050",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/Digitization",
+      "key": 429711477964800,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "WAVE-Digitization-03-LG",
+      "label": "MC100050",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "base_mean": 15650.0,
+            "base_rms": 3.0,
+            "cb_norm": 0.550000011920929,
+            "cb_mean": 820.0,
+            "cb_sigma": 3.6700000762939453,
+            "cb_alpha": -0.3199999928474426,
+            "cb_n": 1000.0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "base_mean": 15650.0,
+            "base_rms": 3.0,
+            "cb_norm": 0.550000011920929,
+            "cb_mean": 820.0,
+            "cb_sigma": 3.6700000762939453,
+            "cb_alpha": -0.3199999928474426,
+            "cb_n": 1000.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/Calibration/MIP_ref",
+      "key": 429711477964800,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "WAVE-Calibration-03-LG",
+      "label": "MC100050",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 0.07569999992847443,
+            "HV_ref": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/Range",
+      "key": 429711477964800,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "",
+      "label": "MC100050",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/Timing",
+      "key": 429711477964800,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "",
+      "label": "MC100050",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "NominalTriggerTime": 820.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/TimingOffset",
+      "key": 429711477964800,
+      "global_tag": "OFLCOND-FASER-05",
+      "resolved_tag": "",
+      "label": "MC100050",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_250908.db",
+      "instance": "OFLP200",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 429711477964800,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "MC100050_archived",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 4294967296000,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 68023692034048,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/MIP_ref",
+      "key": 68023692034048,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 67950677590016,
+          "until": 72348724101119,
+          "payload": {
+            "charge_ref": 1.8919999599456787,
+            "HV_ref": 485.0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 67950677590016,
+          "until": 72348724101119,
+          "payload": {
+            "charge_ref": 1.847000002861023,
+            "HV_ref": 482.0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 67950677590016,
+          "until": 72348724101119,
+          "payload": {
+            "charge_ref": 1.9019999504089355,
+            "HV_ref": 485.0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 67950677590016,
+          "until": 72348724101119,
+          "payload": {
+            "charge_ref": 1.9859999418258667,
+            "HV_ref": 488.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/Range",
+      "key": 68023692034048,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 67280662691840,
+          "until": 69243462746112,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 67280662691840,
+          "until": 69243462746112,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 67280662691840,
+          "until": 69243462746112,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 67280662691840,
+          "until": 69243462746112,
+          "payload": {
+            "range": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/Timing",
+      "key": 68023692034048,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 67628555042816,
+          "until": 68431713927168,
+          "payload": {
+            "NominalTriggerTime": 200.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/TimingOffset",
+      "key": 68023692034048,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838",
+      "rows": [
+        {
+          "channel": 20,
+          "since": 67950677590016,
+          "until": 68053756805119,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 67950677590016,
+          "until": 68053756805119,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 67950677590016,
+          "until": 68053756805119,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 67950677590016,
+          "until": 68053756805119,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 68719476736000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16000",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/MIP_ref",
+      "key": 68719476736000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16000",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 68053756805120,
+          "until": 72692321484799,
+          "payload": {
+            "charge_ref": 1.8919999599456787,
+            "HV_ref": 485.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 68053756805120,
+          "until": 72692321484799,
+          "payload": {
+            "charge_ref": 1.847000002861023,
+            "HV_ref": 482.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 68053756805120,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 1.9019999504089355,
+            "HV_ref": 485.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 68053756805120,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 1.9859999418258667,
+            "HV_ref": 488.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/Range",
+      "key": 68719476736000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16000",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 67280662691840,
+          "until": 69179038236672,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 67280662691840,
+          "until": 69179038236672,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 67280662691840,
+          "until": 69179038236672,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 67280662691840,
+          "until": 69179038236672,
+          "payload": {
+            "range": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/Timing",
+      "key": 68719476736000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16000",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 68470368632832,
+          "until": 69179038236672,
+          "payload": {
+            "NominalTriggerTime": 200.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/TimingOffset",
+      "key": 68719476736000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16000",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "key": 72683731550208,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16923",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 68053756805120,
+          "until": 72705206386688,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/MIP_ref",
+      "key": 72683731550208,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16923",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 68053756805120,
+          "until": 72692321484799,
+          "payload": {
+            "charge_ref": 1.8919999599456787,
+            "HV_ref": 485.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 68053756805120,
+          "until": 72692321484799,
+          "payload": {
+            "charge_ref": 1.847000002861023,
+            "HV_ref": 482.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 68053756805120,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 1.9019999504089355,
+            "HV_ref": 485.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 68053756805120,
+          "until": 9223372036854775807,
+          "payload": {
+            "charge_ref": 1.9859999418258667,
+            "HV_ref": 488.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/Range",
+      "key": 72683731550208,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16923",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 72142565670912,
+          "until": 72773925863424,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 72142565670912,
+          "until": 72773925863424,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 72142565670912,
+          "until": 72773925863424,
+          "payload": {
+            "range": 2.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 72142565670912,
+          "until": 72773925863424,
+          "payload": {
+            "range": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/Timing",
+      "key": 72683731550208,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16923",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 72275709657088,
+          "until": 72773925863424,
+          "payload": {
+            "NominalTriggerTime": 200.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/TimingOffset",
+      "key": 72683731550208,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data16923",
+      "rows": [
+        {
+          "channel": 6,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 68053756805120,
+          "until": 72692321484800,
+          "payload": {
+            "TriggerOffset": -48.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/HV",
+      "key": 1720449636000000000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838_time1720449636",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/HV",
+      "key": 1720450117000000000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838_time1720450117",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/HV",
+      "key": 1720473060000000000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838_time1720473060",
+      "rows": []
+    },
+    {
+      "file": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+      "instance": "CONDBR3",
+      "folder": "/WAVE/Calibration/HV",
+      "key": 1720473375000000000,
+      "global_tag": "",
+      "resolved_tag": "",
+      "label": "data15838_time1720473375",
+      "rows": []
+    }
+  ],
+  "source_commit": "1ec47efe",
+  "dictionary_readonly_compatibility": {
+    "Calorimeter/CaloEventCnv/FaserCaloSimEventTPCnv/src/CaloHits/CaloHitCollectionCnv_p1a.cxx": true,
+    "Calorimeter/CaloEventCnv/FaserCaloSimEventTPCnv/FaserCaloSimEventTPCnv/CaloHits/CaloHitCollection_p1a.h": true,
+    "Waveform/WaveEventCnv/WaveEventAthenaPool/WaveEventAthenaPool/RawWaveformContainer_p0.h": true,
+    "Waveform/WaveEventCnv/WaveEventAthenaPool/WaveEventAthenaPool/RawWaveform_p0.h": true,
+    "xAOD/xAODFaserWaveform/xAODFaserWaveform/versions/WaveformHitAuxContainer_v1.h": true
+  },
+  "gdml_factory_module_order": [
+    {
+      "region": 0,
+      "physical_volume": "caloNuModuleBoxTopLeft",
+      "row": 0,
+      "module": 0,
+      "hit_id": 1,
+      "readout_id32": 3758096384
+    },
+    {
+      "region": 1,
+      "physical_volume": "caloNuModuleBoxTopRight",
+      "row": 0,
+      "module": 1,
+      "hit_id": 9,
+      "readout_id32": 3892314112
+    },
+    {
+      "region": 2,
+      "physical_volume": "caloNuModuleBoxBottomLeft",
+      "row": 1,
+      "module": 0,
+      "hit_id": 3,
+      "readout_id32": 4026531840
+    },
+    {
+      "region": 3,
+      "physical_volume": "caloNuModuleBoxBottomRight",
+      "row": 1,
+      "module": 1,
+      "hit_id": 11,
+      "readout_id32": 4160749568
+    }
+  ],
+  "CaloNu_gain_correction_callsite": {
+    "1ec47efe": "CaloNu explicitly passes correct_gain=false, including real data",
+    "d0b1b2dd": "CaloNu explicitly passes correct_gain=false, including real data"
+  },
+  "limitations": [
+    "Current immutable tags and archived 2025 cable payload compared; not a complete production snapshot equivalence proof",
+    "Nominal simulation geometry numbering verified from factory/GDML; data survey orientation and native GeoModel transforms not measured",
+    "Sensitive hit energyLoss contains production Birk/nonuniform correction; not uncorrected total G4 deposition"
+  ]
+}

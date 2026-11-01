@@ -1,0 +1,30 @@
+{
+  "events": 128,
+  "regular": 96,
+  "diagnostic": 32,
+  "all_retained_fields_loaded": true,
+  "unique_actual_input_entries": true,
+  "source_identity_and_subfile_order": true,
+  "ADC_waveform_exact": true,
+  "raw_integral_tolerance_passed": true,
+  "actual_table_rows": {
+    "native_case_response.tsv": 128,
+    "native_module_response.tsv": 512,
+    "native_metrics.tsv": 80,
+    "nonfinite_integral_diagnosis.tsv": 8,
+    "wavefit_replay.tsv": 8,
+    "paired_signal_residual.tsv": 3,
+    "calibration_constant_checks.tsv": 20,
+    "condor_resources.tsv": 6
+  },
+  "four_nonfinite_source_replays_confirmed": true,
+  "eight_saved_parameter_overflows_confirmed": true,
+  "calibration_forward_relation_confirmed": true,
+  "Python_AST_files": 12,
+  "bash_syntax_passed": true,
+  "checked_local_links": 83,
+  "SVG_XML_valid": true,
+  "final_cache_bytes": 649006,
+  "archive_checked": true,
+  "wall_s": 0.3788423230871558
+}

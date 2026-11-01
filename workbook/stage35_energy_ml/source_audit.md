@@ -1,5 +1,8 @@
 # stage35：CaloNu生产、单位及读出定义审计
 
+> stage37补充：CaloRecTool有HV外推通式，但实际MC/data CaloNu调用均关闭该项；
+> 不能把普通Calo的data gain路径直接套到本分支，见[调用点核验](../stage37_energy_ml/source_audit.md)。
+
 本文件只核验已有PHYS和源码定义，不代表data/MC响应闭合或强子标定。
 
 ## 生产与几何
