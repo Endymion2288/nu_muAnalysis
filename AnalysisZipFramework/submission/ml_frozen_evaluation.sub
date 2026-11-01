@@ -1,0 +1,21 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage34
+initialdir = $(spool)
+executable = $(spool)/run_ml_frozen_evaluation.sh
+arguments = $(part) $(batch) energy-ml-frozen-stage34-$(part).tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-frozen-stage34-$(part).tar.gz
+request_cpus = 1
+request_memory = 1500MB
+request_disk = 250MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-frozen-stage34"
+log = $(spool)/logs/$(part)_$(ClusterId).log
+output = $(spool)/logs/$(part)_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/$(part)_$(ClusterId).$(ProcId).err
+# Submit calibration/test with -queue 3/4 and challenge with -queue 4;
+# batch=$(Process), part is supplied by the submit command.
+batch = $(Process)

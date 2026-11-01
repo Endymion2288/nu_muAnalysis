@@ -1,0 +1,34 @@
+{
+  "partition": "challenge",
+  "created_utc": "2026-11-01T12:20:14.886040+00:00",
+  "events": 15144,
+  "groups": 45,
+  "confirmed": 14843,
+  "primary_invalid": 0,
+  "macro_F5_cal": 0.2642054587682903,
+  "macro_F6_cal": 0.2570136032628481,
+  "macro_relative_gain": 0.02722069233152946,
+  "macro_gain_lo": 0.017248077749688576,
+  "macro_gain_hi": 0.03814259274960589,
+  "macro_invalid_boot": 0,
+  "focus_relative_gain": 0.01767350438725579,
+  "focus_gain_lo": 0.011123763432792217,
+  "focus_gain_hi": 0.025000165137499367,
+  "extension_criterion_passed": false,
+  "calibration_offset_95": {
+    "F5": [
+      -0.02667399201041518,
+      0.019377081765926188
+    ],
+    "F6": [
+      -0.024887416519261348,
+      0.017551839163872623
+    ]
+  },
+  "wall_s": 19.65732832206413,
+  "cpu_s": 19.411206796000002,
+  "peak_rss_MiB": 359.0546875,
+  "zero_new_model_fits": true,
+  "bootstrap_replicates": 500,
+  "bootstrap_scope": "paired evaluation source groups plus independent calibration groups"
+}

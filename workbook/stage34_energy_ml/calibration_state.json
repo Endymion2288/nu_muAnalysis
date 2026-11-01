@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-01T12:13:31.572055+00:00",
+  "events": 9727,
+  "groups": 16,
+  "offset_log": {
+    "F5": -0.003237893841049072,
+    "F6": -0.00336167096945149
+  },
+  "multiplicative_scale": {
+    "F5": 0.9967673424841342,
+    "F6": 0.9966439731201066
+  },
+  "parameters": 2,
+  "definition": "one global additive log-energy offset per ensemble, mean(log(Etruth)-log(Epred)) on calibration only",
+  "frozen_before_test": true
+}

@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-11-01T12:30:16.642420+00:00",
+  "preregistration_and_unblinding_order_verified": true,
+  "retained": [
+    {
+      "partition": "calibration",
+      "events": 9727,
+      "source_groups": 16,
+      "bytes": 1489608,
+      "all_fixed_predictions_finite": true
+    },
+    {
+      "partition": "test",
+      "events": 12488,
+      "source_groups": 22,
+      "bytes": 1905478,
+      "all_fixed_predictions_finite": true
+    },
+    {
+      "partition": "challenge",
+      "events": 15144,
+      "source_groups": 45,
+      "bytes": 2300045,
+      "all_fixed_predictions_finite": true
+    }
+  ],
+  "retained_bytes": 5695131,
+  "removed_shards": 11,
+  "removed_payloads": 3,
+  "removed_bytes": 24330004,
+  "syntax_checks_passed": true,
+  "condor_clusters": [
+    2187194,
+    2187195,
+    2187196
+  ],
+  "new_fits": 0
+}

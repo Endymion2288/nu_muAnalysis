@@ -1,0 +1,21 @@
+stage: 34
+frozen_utc: '2026-11-01 12:05:51 UTC'
+reference_commit: 06224d5
+order: [calibration, test, challenge]
+batch_size: 12
+models:
+  F5: ml/artifacts/stage30/main/seed_{seed}/A0.ubj
+  F6: ml/artifacts/stage31/seed_{seed}/nu_F6.ubj
+seed_indices: [0, 1, 2]
+ensemble: arithmetic mean of log-energy predictions; exponentiate once in float64
+calibration: one global additive log-energy offset per ensemble, mean(log(Etruth)-log(Epred)) on calibration only
+primary_p_range_GeV: [100, 1000]
+p_subranges_GeV: [[100, 250], [250, 1000], [1000, .inf]]
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+bootstrap_replicates: 500
+bootstrap_seed: 20261101
+minimum_relative_gain: 0.05
+focus_noninferiority_margin: 0.01
+weight_mode: unit MC; no verified physical flux normalization
+budget: zero new tree fits; six existing models; two calibration parameters; no conditional calibration or seed selection

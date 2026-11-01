@@ -1,0 +1,34 @@
+{
+  "partition": "test",
+  "created_utc": "2026-11-01T12:16:51.250463+00:00",
+  "events": 12488,
+  "groups": 22,
+  "confirmed": 12229,
+  "primary_invalid": 0,
+  "macro_F5_cal": 0.35427206135796646,
+  "macro_F6_cal": 0.3379535131972127,
+  "macro_relative_gain": 0.046062193270908436,
+  "macro_gain_lo": 0.020160162370636742,
+  "macro_gain_hi": 0.06880935855628942,
+  "macro_invalid_boot": 0,
+  "focus_relative_gain": 0.02797621191855071,
+  "focus_gain_lo": 0.02309807767228903,
+  "focus_gain_hi": 0.033915356675427416,
+  "extension_criterion_passed": false,
+  "calibration_offset_95": {
+    "F5": [
+      -0.027816256994758377,
+      0.019863155303828126
+    ],
+    "F6": [
+      -0.025944964486074786,
+      0.01808913251107048
+    ]
+  },
+  "wall_s": 16.03277476807125,
+  "cpu_s": 15.725786288,
+  "peak_rss_MiB": 306.71484375,
+  "zero_new_model_fits": true,
+  "bootstrap_replicates": 500,
+  "bootstrap_scope": "paired evaluation source groups plus independent calibration groups"
+}
