@@ -15,6 +15,7 @@ def main():
     p.add_argument('--request', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--include', required=True)
+    p.add_argument('--compact-signal', action='store_true', help='Retain nominal signal and hit totals, not individual HITS')
     a = p.parse_args()
     request = json.loads(a.request.read_text())
     tick, cpu = time.perf_counter(), time.process_time()
@@ -109,6 +110,19 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
                   adc=np.zeros((n, 4, 600), np.uint16),
                   saved_time=np.full((n, 4, 76), np.nan), saved_wave=np.full((n, 4, 76), np.nan),
                   saved_samples=np.zeros((n, 4), np.int16))
+    if a.compact_signal:
+        from report_calonu_native import nominal_signal
+        repo = Path(__file__).resolve().parents[1]
+        conditions = json.loads((repo/'workbook/stage37_energy_ml/conditions_audit.json').read_text())
+        geometry = json.loads((repo/'workbook/stage36_energy_ml/geometry_audit.json').read_text())
+        digi = next(r['rows'][0]['payload'] for r in conditions['records'] if r['label'] == 'MC100049' and r['folder'] == '/WAVE/Digitization')
+        parameters = {k:digi['cb_'+k] for k in ['norm','mean','sigma','alpha']}
+        parameters['exponent'] = digi['cb_n']
+        cable = next(r['rows'] for r in conditions['records'] if r['label'] == 'MC100049_archived')
+        ids = [1+(r['payload']['row']<<1)+(r['payload']['module']<<3) for r in sorted(cable,key=lambda r:r['channel'])]
+        centers = {r['hit_id']:geometry['nominal_core_centers_global_mm'][r['region']] for r in conditions['gdml_factory_module_order']}
+        arrays.update(signal_nominal_ADC=np.zeros((n,4,600),np.float32), hit_energy_MeV=np.zeros((n,4)),
+                      hit_count=np.zeros((n,4),int), hit_energy_outside_hist_MeV=np.zeros((n,4)))
     for j, case in enumerate(request['cases']):
         entry = case['input_entry']
         rdo.GetEntry(entry)
@@ -134,8 +148,15 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
         expanded[encoded == 65535] = list(persistent.m_hitEne_4b)
         np.testing.assert_allclose(h[:, 1], expanded, rtol=2e-7, atol=1e-7)
         assert np.all(np.isin(h[:, 0], [1, 3, 9, 11]))
-        all_hits.append(h)
-        hit_offsets.append(hit_offsets[-1]+len(h))
+        if a.compact_signal:
+            signal,energy,count,outside = nominal_signal(h,ids,centers,parameters)
+            arrays['signal_nominal_ADC'][j] = signal
+            arrays['hit_energy_MeV'][j] = energy
+            arrays['hit_count'][j] = count
+            arrays['hit_energy_outside_hist_MeV'][j] = outside
+        else:
+            all_hits.append(h)
+            hit_offsets.append(hit_offsets[-1]+len(h))
         waves = member(rdo.RawWaveformContainer_p0_CaloNuWaveforms, 'm_waveforms', 'std::vector<RawWaveform_p0>')
         aux = getattr(rec, 'CaloNuWaveformHitsAux.')
         channels = list(member(aux, 'channel', 'std::vector<unsigned int>'))
@@ -163,13 +184,15 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
                             beam_signature=signature, hits_RDO_beam_momentum_equal=True,
                             beam_mass_difference_MeV=mass_difference))
         print('NATIVE_CASE', request['index'], entry, case['role'], 'hits', len(h), flush=True)
-    arrays.update(hits=np.concatenate(all_hits), hit_offsets=np.array(hit_offsets),
-                  cases_json=np.array(json.dumps(records)), schemas_json=np.array(json.dumps(schemas)))
+    if not a.compact_signal:
+        arrays.update(hits=np.concatenate(all_hits), hit_offsets=np.array(hit_offsets))
+    arrays.update(cases_json=np.array(json.dumps(records)), schemas_json=np.array(json.dumps(schemas)))
     metadata = dict(index=request['index'], events=n, group=request['group'],
                     locate_wall_s=request['locate_wall_s'], wall_s=time.perf_counter()-tick, cpu_s=time.process_time()-cpu,
                     peak_rss_MiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
                     input_rdo=request['input_rdo'], input_rec=request['input_rec'],
                     native_converter_energy_expansion_checked=True, layout_checksums_equal=True,
+                    individual_HITS_retained=not a.compact_signal,
                     method='Read-only persistent layouts + unchanged p1a converter; no geometry or HepMC link dereference; ID helpers from ordinary runtime NOT called')
     arrays['metadata_json'] = np.array(json.dumps(metadata))
     a.output.parent.mkdir(parents=True, exist_ok=True)

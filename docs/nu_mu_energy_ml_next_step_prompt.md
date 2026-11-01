@@ -1,70 +1,66 @@
-# 下一轮执行 Prompt：稳定积分、失败回退与弱信号读出验证
+# 下一轮执行 Prompt：CC同事件波形读出与时间/形状控制
 
-先读AGENTS.md、修订路线第19节、`workbook/2026-11-01_stage37_calonu-native-response.md`、
-stage37协议/source_audit/逐例表与stage35–36报告（注意HV更正）。stage30–37已完成。
-用户重点reco p100–1000GeV，保留100–250/250–1000；≥TeV仅参考。
+先读AGENTS.md、修订路线第20节、`workbook/2026-11-01_stage38_calonu-waveform-repair.md`、
+stage38冻结协议/确认表及stage35–37报告。stage30–38已完成。
+用户重点reco p100–1000 GeV，保留100–250/250–1000；≥TeV仅参考。
 
-**唯一主线：在原波形上有界验证稳定积分、完整初始化与有限性fallback，再检验弱信号读出。**
-不先重训BDT、扩架构、全量重模拟或重复已用test。
+**唯一主线：另冻小预算CC同事件原生波形比较，先确认可联接与时间/形状适用性，再决定有限建模。**
 
-已测证据：
+最新证据：
 
-- stage35同事件65维F6加5CaloNu量，重点改善3.3359% [2.2676%,4.7581%]，
-  没达到冻结5%扩展门槛；仍是生产条件下的信息，不是data可部署能量精度。
-- stage36 MC约8GeV EM主要有正半波噪声pedestal贡献。
-  stage37固定4来源/128例，96常规不切CaloNu质量，32诊断富集，原生联接全部通过。
-  常规敏感层保存能量中位85.7583MeV、预测信号.115149pC、整流噪声1.78828pC；
-  最大名义信号峰中位.797585σ，89/96<5σ；名义窗口捕获中位99.9956%、最小99.9382%。
-  这是TOF采用名义GDML的卷积预测，不是完整digitization随机种子重放；
-  signed−预测均值.0328667 [.0174613,.0482721]pC仍非零，不能声称精确信号闭合或直接扣常数。
-- 8个诊断模块保存−inf/status0。原源码+ROOT6.28/12重放4个，4/4重现−inf，
-  CB valid/fit_status正常、time有限；这四例不是time NaN。
-  ROOT解析原函数中间项A=(n/|alpha|)^n exp(−alpha²/2)溢出：8例log(A)>double上限。
-  同保存参数稳定积分全部有限正(.858457–65.9948pC)，细网格核验通过，无输出修改。
-  富集样本不给总体失败率；两个故障fit数值不精确重现，不把全部异常归成一种机制。
-- WaveformFitResult::clear()没有初始化全部字段，time NaN fallback未同步valid，
-  最终积分有限性未检查，都是独立待验证程序路径。
-- **HV更正**：MC源1ec47efe、data源d0b1b2dd实际CaloNu均correct_gain=false。
-  2040682对通过q=MIP_ref*nMIP的float32前向关系，10个subnormal保留；
-  q/nMIP是MIP_ref，旧报告“data含HV gainRatio”不适用。
-  MC .0757/data1.847–1.986pC/MIP不自动证明25倍错误，不统一缩放。
-- MC branch→GDML region [1,0,3,2]由factory/bit布局、历史payload和native id32认证。
-  当前global tag的CableMapping-00标20–23为none，不能直接复现旧生产。
-  历史四条payload/IOV在stage37 conditions_audit.json，后续显式固定。
-  data hardware从20–23变6/7/14/15，实际survey/全球安装方向未认证，禁止按关联峰翻转。
-- data15838同TBP/TAP15/15下两时期仍4.86558/.618096GeV EM，
-  不由触发位模式混合或单一MIP常数改变解释。实际时序、活动、位置/硬件HV贡献未分离。
+- stage38旧开发8非有限恢复；84组合成、75组旧参数独立积分通过。
+  新来源1/4/7/10、128例/512模块，96常规/32富集；原4非有限→修复0。
+  新56组固定参数quadrature通过，40/40正常可辨认正脉冲保真；不强限n或删大/负/窄响应。
+  time NaN注入拒绝且status32/fallback有限；无饱和覆盖。
+  patch针对1ec47efe，仅源函数scaffold/ROOT解释编译验证，未完成Athena tool重建或生产修复。
+- 主候选为固定生产模板+常数基线项，mean820 ns，未逐例选峰/调时间。
+  96常规总电荷signed→主候选RMSE0.485709→0.135039 pC，改善72.1974%
+  [69.3173%,74.3946%]，离峰RMS0.490822→0.115990 pC，常数baseline扰动不变。
+  两个p层分别改善73.1825%/71.4506%。只是电荷相对名义HITS信号的条件MC证据，不是ν能量精度。
+  主候选bias−0.012532 [−0.023001,−0.002063] pC仍非零，100–250 GeV层−0.032646 pC，禁止事后扣常数。
+- 原数值修复fit常规仍RMSE1.760829 pC，阈下raw整流噪声没有被积分补丁消除。
+  MC已知digitizer baseline解释性signed RMSE0.235104 pC，理想白噪声0.255404 pC；
+  保存baseline积分偏移RMS0.409148 pC，与signed误差相关0.875539。已知MC baseline不作data输入。
+- ±2 ns控制常规RMSE0.144640/0.139250 pC，但32富集从名义0.119275升至
+  1.575770/1.694162 pC。强信号时间/形状失配是具体局限，不逐事件选三者最优，不忽略高信号。
+  斜坡/非平稳、相关噪声及饱和精度未测量。四来源block区间不含系统误差或完整总体统计不确定性。
+- stage35同事件F6+原CaloNu重点改善3.3359% [2.2676%,4.7581%]，未达冻结5%扩展门槛。
+  stage34/35 test均已评价；后续变模型不能再叫新独立确认。stage38只通过μ弱信号读出门槛。
 
-下一步：
+下一步具体任务：
 
-1. 以stage37原波形作为修复开发控制，固定保存参数，比较稳定解析/数值积分和原ROOT路径。
-   首先读明确的源1ec47efe；需要修改源码时只编译相关模块，优先匹配现成runtime。
-   不为了避免溢出强行限制n、删除大信号或改物理标度。
-2. 完整初始化fit结果；明确Gaussian/CB失败、time NaN、积分非有限等的valid/status和raw fallback。
-   验证普通有效信号不受破坏、异常不无标记传播；不把仍不可靠的窄尖峰宣布修成物理信号。
-   区分固定参数积分检查、源函数重放、完整tool重建，不相互冒充。
-3. 冻结新来源组的有限原波形确认预算，保留两个p层、阈下/高信号/饱和/窄峰。
-   先小样本核验，再Condor；如当前schedd繁忙可换空闲且有相应资源的schedd。
-   不自动全量G4/重模拟/重跑PHYS，不以重复开发样本代替独立确认。
-4. 在同一确认事件比较可于data执行的signed积分/固定模板振幅，报告噪声、偏差、baseline敏感性。
-   truth HITS只作控制标签；没有精确匹配就保留未测量。
-   验收通过后才另冻小预算同事件CC读出实验；stage35 test已用，不再作为新独立确认。
+1. 审计已有CaloNu CC来源，定位同事件PHYS/rec/RDO及历史cable/conditions，
+   用实际entry、多变量fingerprint和独立真值签名核验联接。PG重复eventID不能照搬为唯一键。
+   先小样本，量化可覆盖的CC事件/来源组与缺失；不能用不同几何、不同事件或普通几何helper假匹配。
+2. 新冻结小预算波形支持，保留p层、低/高信号、阈下、负值、失败/饱和及固定±2 ns控制。
+   部署接口只读保存waveform/ADC/baseline/conditions；HITS只作控制标签，不用truth逐例调时间。
+   先查CC时间/形状和常数baseline适用性，不能把μ电荷增益直接折算为ν能量/谱收益。
+3. 若可比较且读出适用，冻结同事件输入/划分/预算，比较原F6、加原CaloNu、加固定signed/模板。
+   映射/校准只用train内部独立预测；不立即扫描网络或高维变量。
+   报告ν能量误差、bias、R68、尾部和来源配对区间，分p/y/primary状态，明确统计与系统局限。
+   新确认组和stage35已用test分开说明，不能把开发测试冒充新独立确认。
+4. 若CC高信号时间控制不通过，先量化失效区域，再决定有限的时间/形状模型或生产读出约束；
+   不逐例选更优输出、不删尾、不默认全量重模拟或重跑PHYS，不恢复架构竞赛。
 
-资源与保留支持：
+输入与资源：
 
-- ntuples/energy_ml_stage37/native_response.npz为649006bytes，128例ADC、保存波形/时间、
-  fit/status/参数、名义信号、敏感层汇总和完整lineage，逐字段读回；四个大HITS分片/payload已清。
-  原HITS/波形源路径在冻结request与lineage，PG eventID重复，必须用真实input entry/子文件次序。
-- 原生产CaloNu AFS build不可读；d32b0ff3只读字典相关五文件与源相同、持久化布局核验通过。
-  禁止因此调用普通几何CaloHit helper或普通master几何重建。
-- stage37共6 jobs（4成功、2因mass一float ULP技术失败），wall629.28s、CPU531.61s，峰2899424KiB。
-  非有限解析积分重放使用原ROOT6.28/12，LCG109_cuda适合其余Python统计。
-  PyROOT6.28构造vector<float>不能直接传float64 NumPy buffer，必须list转换并逐值检查。
-- HITS保存energyLoss含Birk/nonuniform修正，不是未修正G4总沉积；不以truth_st*模长测材料能损。
-- stage34/35 test已经评价，冻结结果/模型保持；truth/PDG/matching/isForward不进部署输入。
-  无正式flux归一化材料就沿用unit默认，不重复询问；真实data闭合、强子标定、
-  detector/interaction系统与最终谱收益仍未测量。
+- `ntuples/energy_ml_stage38/confirmation.npz`：620787 bytes，128例ADC/波形/名义信号、保存和修复读出及lineage，
+  逐字段读回，分片/payload已清，见stage38 archive.json。开发stage37 cache649006 bytes仍保留。
+- stage38用了bigbird14，cluster17555947，4 jobs全exit0无重提，wall564.62 s/CPU324.11 s、峰1405544 KiB。
+  大批量走Condor；繁忙schedd可换空闲且资源匹配者。优先现成build，仅改模块才构建。
+- 原生产源1ec47efe；现成d32b0ff3只读字典持久化布局核验通过，但不是相同几何重建。
+  原ROOT6.28/12适合源函数重放，其余统计用LCG109_cuda。
+  PyROOT6.28 vector<float>用list转换并逐值检查，不能把float64 NumPy buffer误作float32。
+- branch→region `[1,0,3,2]`已认证，历史payload/IOV见stage37 conditions_audit.json；
+  当前tag CableMapping-00的20–23为none，不能直接复现旧生产。
+  data硬件6/7/14/15、安装/survey方向未认证，不能按关联峰翻转。
+- CaloNu MC和data实际均`correct_gain=false`，MIP_ref标度前向核验通过；
+  MC .0757/data1.847–1.986 pC/MIP不能直接证明25倍错误，不能统一缩放。
+- data15838同TBP/TAP15/15两时期仍4.86558/.618096 GeV EM；实际时序/活动/位置/HV贡献未分离。
+  data闭合、绝对MIP/强子响应、探测器/相互作用系统及最终谱收益继续标注未测量。
+- 不以truth_st*模长测材料能损；truth/PDG/matching/isForward不入部署输入。
+  没有flux/亮度归一化材料就沿用unit默认，不重复询问。
 
-计wall/CPU/RSS、失败和重复检查成本；只留紧凑最终cache，不保存ROOT/xAOD/重复大JSON。
-每阶段中文workbook须有实测物理结论、单位/输入/选择/命令/统计及系统局限/下一验收，
+计wall/CPU/RSS及失败/重复成本；只留紧凑最终cache，读回后清重复分片，不保存新ROOT/xAOD。
+每阶段中文workbook须有实测物理结论、单位/选择/输入/命令/统计与系统局限/具体下一验收，
 更新路线与Prompt，Conventional Commit，逐提交blob读回、工作区干净，不push。

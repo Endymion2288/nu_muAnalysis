@@ -1,0 +1,156 @@
+--- a/Waveform/WaveRecTools/src/WaveformFitResult.cxx
++++ b/Waveform/WaveRecTools/src/WaveformFitResult.cxx
+@@ -19,6 +19,11 @@
+   peak = 0.;
+   mean = 0.;
+   sigma = 0.;
++  alpha = 0.;
++  nval = 0.;
++  chi2ndf = 0.;
++  integral = 0.;
++  time = 0.;
+   fit_status = -1;
+   chi2n = 0.;
+ }
+--- a/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx
++++ b/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx
+@@ -9,6 +9,7 @@
+  **/
+ 
+ #include "WaveformReconstructionTool.h"
++#include "StableWaveformIntegral.h"
+ 
+ #include "TH1F.h"
+ #include "TF1.h"
+@@ -452,6 +453,8 @@
+   raw.peak = hit->peak();
+   raw.mean = hit->mean();
+   raw.sigma = hit->width();
++  raw.integral = hit->raw_integral();
++  raw.time = hit->localtime();
+ 
+   //
+   // Perform Gaussian fit to waveform
+@@ -467,6 +470,10 @@
+   } 
+ 
+   // Fit results (or raw if it failed)
++  if (!gfit.valid) {
++    gfit = raw;
++    gfit.valid = false;
++  }
+   hit->set_peak(gfit.peak);
+   hit->set_mean(gfit.mean);
+   hit->set_width(gfit.sigma);
+@@ -728,8 +735,8 @@
+   auto peakloc = std::max_element(wave.begin(), wave.end());
+ 
+   // Initial parameters from waveform
+-  rfit.mean = sum/tot;
+-  rfit.sigma = std::sqrt(sum2/tot - rfit.mean*rfit.mean);
++  rfit.mean = tot > 0. ? sum/tot : (3*time.front()+time.back())/4.;
++  rfit.sigma = tot > 0. ? std::sqrt(sum2/tot - rfit.mean*rfit.mean) : 2.;
+   rfit.peak = *peakloc;
+   rfit.integral = 2*tot; // Factor of 2 because at 500 MHz, dt = 2 ns
+   rfit.time = rfit.mean;
+@@ -783,7 +790,7 @@
+   TFitResultPtr gfitptr = tg.Fit(&gfunc, "QNS", "");
+ 
+   gfit.fit_status = gfitptr;
+-  gfit.valid = (gfit.fit_status == 0);
++  gfit.valid = (gfit.fit_status == 0) && gfitptr->IsValid();
+ 
+   if (!gfitptr->IsValid()) {
+     ATH_MSG_WARNING( " Gaussian waveform fit failed! ");
+@@ -797,10 +804,11 @@
+     // Find time here
+     gfit.time = gfunc.GetX( gfit.peak * m_timingPeakFraction, time.front(), gfit.mean );
+ 
+-    if (isnan(gfit.time)) {
++    if (!std::isfinite(gfit.time) || !std::isfinite(gfit.integral)) {
+       ATH_MSG_WARNING(" Gaussian fit returned time as NaN, assume fit failed");
+       gfit = raw;
+-      gfit.fit_status = false;
++      gfit.valid = false;
++      gfit.fit_status = -2;
+     }
+ 
+     ATH_MSG_DEBUG("G Fit   Mean: " << gfit.mean << " RMS: " << gfit.sigma 
+@@ -861,7 +869,7 @@
+   cbfitptr = tg.Fit(&cbfunc, "QNS", "");
+ 
+   cbfit.fit_status = cbfitptr;
+-  cbfit.valid = (cbfit.fit_status == 0);
++  cbfit.valid = (cbfit.fit_status == 0) && cbfitptr->IsValid();
+ 
+   if (!cbfitptr->IsValid()) {
+     ATH_MSG_DEBUG( " Full Crystal Ball waveform fit failed! ");
+@@ -878,15 +886,17 @@
+     if (ndf == 0) ndf = 1;
+     cbfit.chi2ndf = chi2/ndf;
+ 
+-    cbfit.integral = cbfunc.Integral(time.front(), time.back());
++    cbfit.integral = StableWaveformIntegral(cbfit.peak, cbfit.mean, cbfit.sigma,
++                                             cbfit.alpha, cbfit.nval, time.front(), time.back());
+ 
+     // Find time here
+     cbfit.time = cbfunc.GetX( cbfit.peak * m_timingPeakFraction, time.front(), cbfit.mean );
+ 
+-    if (isnan(cbfit.time)) {
++    if (!std::isfinite(cbfit.time) || !std::isfinite(cbfit.integral)) {
+       ATH_MSG_WARNING(" Crystal Ball fit returned time as NaN, assume fit failes");
+       cbfit.time = gfit.time;
+-      cbfit.fit_status = false;
++      cbfit.valid = false;
++      cbfit.fit_status = -2;
+     }
+ 
+     ATH_MSG_DEBUG("CB Fit  Mean: " << cbfit.mean << " RMS: " << cbfit.sigma 
+--- /dev/null
++++ b/Waveform/WaveRecTools/src/StableWaveformIntegral.h
+@@ -0,0 +1,45 @@
++#ifndef NU_MU_STABLE_WAVEFORM_INTEGRAL_H
++#define NU_MU_STABLE_WAVEFORM_INTEGRAL_H
++
++#include <algorithm>
++#include <cmath>
++#include <limits>
++
++// Unnormalised ROOT "crystalball" shape, integrated only over a finite window.
++// n <= 1 is allowed: the finite-window integral remains defined.
++inline double StableWaveformIntegral(double peak, double mean, double sigma,
++                                     double alpha, double n, double low, double high) {
++    if (!std::isfinite(peak) || !std::isfinite(mean) || !std::isfinite(sigma) ||
++        !std::isfinite(alpha) || !std::isfinite(n) || !std::isfinite(low) ||
++        !std::isfinite(high) || sigma <= 0. || alpha == 0. || n <= 0. || high < low)
++        return std::numeric_limits<double>::quiet_NaN();
++    const double a = std::abs(alpha);
++    double z0 = (low - mean) / sigma;
++    double z1 = (high - mean) / sigma;
++    if (alpha < 0.) {
++        z0 = -z0;
++        z1 = -z1;
++    }
++    if (z1 < z0) std::swap(z0, z1);
++    double integral = 0.;
++    if (z0 < -a) {
++        const double end = std::min(z1, -a);
++        const double logU0 = std::log1p((-a - end) * a / n);
++        const double logU1 = std::log1p((-a - z0) * a / n);
++        const double k = 1. - n;
++        const double difference = k == 0. ? logU1 - logU0 :
++            std::exp(k * logU0) * std::expm1(k * (logU1 - logU0)) / k;
++        integral += n / a * std::exp(-.5 * a * a) * difference;
++    }
++    if (z1 > -a) {
++        const double start = std::max(z0, -a);
++        const double sqrtTwo = std::sqrt(2.);
++        const double difference = start >= 0. ?
++            std::erfc(start / sqrtTwo) - std::erfc(z1 / sqrtTwo) :
++            std::erf(z1 / sqrtTwo) - std::erf(start / sqrtTwo);
++        integral += std::sqrt(std::acos(-1.) / 2.) * difference;
++    }
++    return peak * sigma * integral;
++}
++
++#endif

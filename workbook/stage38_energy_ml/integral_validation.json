@@ -1,0 +1,41 @@
+{
+  "saved_parameter_cases": 56,
+  "quadrature_all_passed": true,
+  "normal_resolved": 40,
+  "normal_preserved": 40,
+  "recovered_saved_nonfinite": 4,
+  "narrow_width_lt02_cases": 9,
+  "compact_smoke_common_fields_exact": [
+    "integral",
+    "raw_integral",
+    "baseline_mean",
+    "baseline_rms",
+    "localtime",
+    "peak",
+    "width",
+    "mean",
+    "alpha",
+    "nval",
+    "status",
+    "adc",
+    "saved_time",
+    "saved_wave",
+    "signal_nominal_ADC",
+    "hit_energy_MeV",
+    "hit_count"
+  ],
+  "ideal_independent_ADC_noise_total_RMS_pC": {
+    "signed": 0.2554042349730864,
+    "template_fixed_baseline": 0.11190192496786132,
+    "template_plus_constant": 0.12448645500164436
+  },
+  "regular_all_four_threshold_failed": 85,
+  "regular_sensitivity_hit_median_MeV": 83.68253286106119,
+  "regular_repaired_fit_median_pC": 1.95672607421875,
+  "explanatory_MC_known_baseline_signed_RMSE_pC": 0.23510396977416925,
+  "explanatory_MC_baseline_offset_RMS_pC": 0.4091484161785045,
+  "explanatory_signed_error_baseline_offset_correlation": 0.8755387800922174,
+  "wall_s": 0.20016953791491687,
+  "cpu_s": 0.16850727399999998,
+  "peak_rss_MiB": 586.8359375
+}
