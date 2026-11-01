@@ -1,0 +1,30 @@
+stage: 30
+seeds: [20261029, 20261030, 20261031]
+split_seed: 20261101
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+vertex_z_edges_mm: [-3000, -2650, -2300, -1950, -1600]
+oracle:
+  A0: []
+  Ap: [primary_log_p_GeV]
+  Av: [vertex_x_mm, vertex_y_mm, vertex_z_mm]
+  Apv: [primary_log_p_GeV, vertex_x_mm, vertex_y_mm, vertex_z_mm]
+controls:
+  Az: [vertex_z_mm]
+  Axy: [vertex_x_mm, vertex_y_mm]
+xgboost: {max_depth: 5, rounds: 1600, patience: 80, nthread: 4}
+max_regression_wall_s: 120
+max_classifier_wall_s: 240
+bootstrap_replicates: 500
+representation_bootstrap_replicates: 200
+toys: 100
+benchmark_selected_events: 1000
+minimum_relative_gain: 0.05
+control_gate: Av macro log-RMSE relative improvement >= 0.05 and paired gain CI025 > 0
+mapping: weighted train-only temperature plus class intercepts; scalar cubic splines with 8 knots and multinomial logistic C=1
+prior: unit fit-subset class frequencies; mapping weights pi_fit/pi_map
+split: component-stratified permuted groups; first ceil(20%) mapping, next ceil(10%) stopping, remainder fit
+budget: 12 oracle and 3 classifier fits; at most 6 gated controls; 9 cheap mappings; no scans or refits
+alpha: 0
+within_gate: full q score sigma improves >=5% over compressed q and paired CI025 of relative gain >0
+scope: development only; train and validation; no held-out partition access

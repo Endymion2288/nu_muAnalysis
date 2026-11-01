@@ -1,0 +1,30 @@
+{
+  "source": "workbook/stage23_energy_ml/model_summary.tsv",
+  "rows": [
+    {
+      "model": "bdt_UU",
+      "scheme": "energy",
+      "case": "nominal",
+      "metric": "bias",
+      "value": "0.04911272409458965",
+      "high_bin": "0.08849666150440313",
+      "low95": "0.04562906161791782",
+      "high95": "0.2678285667174441",
+      "valid": "500",
+      "failure_fraction": "0.0"
+    },
+    {
+      "model": "bdt_UU",
+      "scheme": "energy",
+      "case": "nominal",
+      "metric": "sigma",
+      "value": "0.2675154565602675",
+      "high_bin": "0.5886807732325822",
+      "low95": "0.23431062674897357",
+      "high95": "0.4166646538096911",
+      "valid": "500",
+      "failure_fraction": "0.0"
+    }
+  ],
+  "limitation": "Same validation events, different training/early-stopping/response estimation; not a dimensionality-only contrast."
+}

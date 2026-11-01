@@ -1,0 +1,21 @@
+{
+  "seed": 20261030,
+  "seed_index": 1,
+  "smoke": false,
+  "within": false,
+  "validation_events": 13375,
+  "groups": 22,
+  "checks": {
+    "synthetic_fraction_max_error": 5.119737195302676e-08,
+    "score_curvature_covariance_relative_error": 9.975225174340132e-16,
+    "gradient_error": 4.1633141378838445e-11,
+    "no_information_detected": true
+  },
+  "bootstrap_replicates": 200,
+  "toys": 100,
+  "failures": 0,
+  "wall_s": 15.148149210959673,
+  "cpu_s": 15.006033401999998,
+  "peak_rss_MiB": 186.53515625,
+  "calibration_test_challenge_evaluated": false
+}

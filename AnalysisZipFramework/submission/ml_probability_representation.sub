@@ -1,0 +1,19 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage30
+initialdir = $(spool)
+executable = $(spool)/run_ml_probability_representation.sh
+arguments = $(seed) energy-ml-probability-stage30.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-probability-stage30.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 100MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-probability-representation"
+log = $(spool)/logs/ml_probability_$(ClusterId).log
+output = $(spool)/logs/ml_probability_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/ml_probability_$(ClusterId).$(ProcId).err
+queue seed in 0,1,2

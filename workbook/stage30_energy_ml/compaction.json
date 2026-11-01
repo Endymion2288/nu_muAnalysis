@@ -1,0 +1,21 @@
+{
+  "before_bytes": {
+    "ml/artifacts/stage30": 71839055,
+    "workbook/stage30_energy_ml": 1325518
+  },
+  "after_bytes": {
+    "ml/artifacts/stage30": 71397783,
+    "workbook/stage30_energy_ml": 1325518
+  },
+  "removed_paths": [
+    "ml/artifacts/stage30/smoke",
+    "ml/artifacts/stage30/probability_smoke",
+    "software/energy-ml-information-gap-stage30.tar.gz",
+    "software/energy-ml-probability-stage30.tar.gz"
+  ],
+  "source_bundles_removed_after_model_readback": true,
+  "final_payload_bytes_excluding_compaction_json": {
+    "ml/artifacts/stage30": 71397783,
+    "workbook/stage30_energy_ml": 1317647
+  }
+}
