@@ -16,6 +16,7 @@ def main():
     p.add_argument('--prefix',default='ml_tabular');p.add_argument('--report-dir',type=Path)
     p.add_argument('--jobs',type=int,default=8)
     p.add_argument('--gpus',type=int,default=1);p.add_argument('--cpus',type=int,default=1)
+    p.add_argument('--memory-mb',type=int,default=3000)
     args=p.parse_args();logs=args.log_dir or args.repo/'logs';out=args.report_dir or args.repo/'workbook/stage16_energy_ml'
     log=(logs/f'{args.prefix}_{args.cluster}.log').read_text();events={i:{} for i in range(args.jobs)}
     for block in log.split('...'):
@@ -34,7 +35,7 @@ def main():
         wall,rss,user,sys=map(float,m.groups());done=e['005'][1]
         gpu_memory=re.search(r'GpusMemory \(MB\)\s*:\s*([\d.]+)',done)
         cpu=re.findall(r'(?:Usr|Sys) (\d+) (\d+):(\d+):(\d+)',done)[:2]
-        rows.append(dict(cluster=args.cluster,proc=i,exit_code=code,requested_cpus=args.cpus,requested_gpus=args.gpus,requested_memory_MB=3000,
+        rows.append(dict(cluster=args.cluster,proc=i,exit_code=code,requested_cpus=args.cpus,requested_gpus=args.gpus,requested_memory_MB=args.memory_mb,
                          allocated_cpus=int(re.search(r'Cpus = (\d+)',e['001'][1]).group(1)),
                          allocated_memory_MB=int(re.search(r'Memory = (\d+)',e['001'][1]).group(1)),
                          submitted_local=e['000'][0].isoformat(),executed_local=e['001'][0].isoformat(),terminated_local=e['005'][0].isoformat(),

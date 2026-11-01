@@ -1,0 +1,36 @@
+stage: 31
+seeds: [20261029, 20261030, 20261031]
+reference_config: ml/configs/information_gap.yaml
+partitions: [train, validation]
+batch_size: 12
+features:
+  - ML_track_p1_GeV
+  - ML_track_px1_GeV
+  - ML_track_py1_GeV
+  - ML_track_pz1_GeV
+  - ML_track_x1_mm
+  - ML_track_y1_mm
+  - ML_track_z1_mm
+  - ML_track_qOverP0_GeVinv
+  - ML_track_qOverP1_GeVinv
+  - ML_track_log_p1_over_p0
+  - ML_track_span_z_mm
+  - ML_track_bend_x
+  - ML_track_bend_y
+  - ML_track_chord_slope_x
+  - ML_track_chord_slope_y
+  - ML_track_module_eta0
+  - ML_track_module_phi0
+  - ML_track_z_atMaxRadius_mm
+  - ML_event_SCT_error
+diagnostic_only: [lead_isForward]
+truth_p_edges_GeV: [0, 100, 200, 400, 800, 1600, 3200, 6400]
+data_control:
+  input: root://eospublic.cern.ch//eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00000-00049-r0022-PHYS.root
+  entry_stop: 16000
+  selection: exactly one saved long track; pz>100GeV; layers>=7; nDoF>=9; chi2/nDoF<15; rmax<95mm; both VetoNu charges>40pC; all four CaloHi nMIP in (0.5,2)
+bootstrap_replicates: 500
+max_fit_wall_s: 120
+minimum_relative_gain: 0.05
+budget: 9 new BDT fits total; F6 neutrino and F5/F6 production-muon residual per seed; no scans; reuse stage30 F5 neutrino
+scope: composite vertex-to-reco response; transported truth/covariance unavailable in saved nominal PHYS; not a material/fitting separation

@@ -1,0 +1,26 @@
+{
+  "reports": [
+    {
+      "input": "root://eospublic.cern.ch//eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00000-00049-r0022-PHYS.root",
+      "input_events": 16000,
+      "selected_events": 4908,
+      "tracker_only_control": true,
+      "cutflow": {
+        "input": 16000,
+        "one_saved_track": 15855,
+        "pz_gt100GeV": 11238,
+        "layers_ge7": 10948,
+        "ndof_ge9": 10511,
+        "chi2ndof_lt15": 10477,
+        "rmax_lt95mm": 4910,
+        "veto_MIP": 4908,
+        "calo_MIP": 0
+      }
+    }
+  ],
+  "wall_s": 1.2339951731264591,
+  "cpu_s": 0.965098654,
+  "peak_rss_MiB": 114.1328125,
+  "data_control": true,
+  "config_file": "ml/configs/track_response.yaml"
+}

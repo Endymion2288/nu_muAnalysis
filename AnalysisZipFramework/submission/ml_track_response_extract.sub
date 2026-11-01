@@ -1,0 +1,40 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage31
+initialdir = $(spool)
+executable = $(spool)/run_ml_track_response.sh
+arguments = $(action) $(index) energy-ml-track-response-stage31.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-track-response-stage31.tar.gz
+request_cpus = 1
+request_memory = 1500MB
+request_disk = 250MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-track-response-extract"
+log = $(spool)/logs/extract_$(ClusterId).log
+output = $(spool)/logs/extract_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/extract_$(ClusterId).$(ProcId).err
+queue action,index from (
+extract 0
+extract 1
+extract 2
+extract 3
+extract 4
+extract 5
+extract 6
+extract 7
+extract 8
+extract 9
+extract 10
+extract 11
+extract 12
+extract 13
+extract 14
+extract 15
+extract 16
+extract 17
+extract 18
+data 0
+)

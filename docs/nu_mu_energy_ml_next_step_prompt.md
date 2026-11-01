@@ -1,42 +1,50 @@
-# 下一轮执行 Prompt：stage31同参考面动量与曲率
+# 下一轮执行 Prompt：同参考面真值与轨迹响应闭合
 
-继续本仓库νμ能量研究。先读AGENTS.md、修订路线图第12节、
-`workbook/2026-11-01_stage30_oracle-information-gap.md`和stage15的station真值语义审计。
-stage30 A/B已完成，不重跑，不继续扩展逐参数覆盖率、树预算或架构竞赛。
+继续本仓库νμ能量研究。先读AGENTS.md、修订路线图第13节、
+`workbook/2026-11-01_stage31_track-response-information.md`和
+`workbook/stage31_energy_ml/source_audit.md`。stage30 A/B及stage31九个BDT已完成，不重跑。
 
-本轮唯一优先主线是：**取得同参考面真实μ动量与拟合协方差，区分传播、拟合响应和非高斯曲率尾。**
-stage30 A0/Ap/Av/Apv macro log-RMSE为0.378062/0.237497/0.351194/0.209044；
-产生动量条件增益最大，但不能全部算成拟合误差。z-only近似xyz，整体协同区间跨零。
-高y-confirmed仍是例外：99例中单加真实产生动量反而增加误差，不能宣布改善动量解决全部高y。
-完整概率q的类别log score较好，但其谱误差未明确胜过灵活scalar映射；暂不扩大概率网络。
+本轮唯一优先任务：**用原始输入取得真实输运时刻、同参考面μ动量与reco拟合协方差，
+将产生→参考面传播与reco→同面truth分开。** 保留完整F5及新增轨迹族F6这两个有限候选，
+不无限加变量、扫参、扩大概率/拓扑网络或调coverage。
 
-先冻结有上限协议、一个明确物理问题和验收条件，再执行：
+已有结论：同13,375例三seed，ν F5/F6 macro log-RMSE=0.378062/0.363245，
+相对改善3.919% [1.957%,6.485%]，未达到中心值5%扩展门槛但不能排除5%收益。
+辅助μ F5/F6=0.389132/0.366357，改善5.853% [2.440%,10.051%]，原始reco=0.517336。
+不能将产生动量校正当无偏tracker测量：核心、最高能量偏差和高y存在折中。
+confirmed primary p=3.2–6.4TeV有18/110电荷差异；confirmed y≥0.8的99例原始μ已相当准确，
+ν F6−F5未见收益。先区分高p曲率尾与高y能量分配，不将二者全部归于μ拟合。
 
-1. 查当前官方ntuple及匹配Calypso源码/现成构建，确认reco动量/曲率的参考面、charge单位，
-   查完整协方差及同参考面的primary输运真值是否已保存。核实barcode/母粒子与轨迹索引。
-   `truth_st1`动量模长来自产生动量，**不能**用它测材料能损，也不能换个字段名沿用。
-2. 若缺少入口/参考面真动量，设计代表性小样本导出：保持原selected事件键、来源组及选择，
-   包括低/高能、y与z区域，不能只挑离群或响应好的事件。truth必须来自真实输运时刻；
-   记录参考面坐标、primary ID、动量、reco q/p、协方差和状态。优先复用编译好的软件；
-   仅源码改变才编译，小样本smoke后HTCondor，不保存大xAOD/无必要中间产物。
-3. 在相同confirmed支持上测有符号q/p残差、bias、核心宽度、非高斯尾和pull，按真能量、
-   leptonic y、真实z、charge分层，给来源组配对区间。将真实产生点→参考面的传播变化
-   与同参考面reco→truth分开；不要对接近零曲率取倒数后截断尾部。未确认样本保留为独立诊断，
-   不事后删除来改善结果。需要归因时分别给物理证据与程序检查，未知项写未测量。
-4. 用穿透μ/已有data与MC做对应tracker参考面、charge、协方差和响应控制；MIP不是强子能量校准。
-   根据实测结果决定缺口是否可由当前读出恢复。只有证据支持时才用单个固定小模型验证收益；
-   若不可恢复，再按路线转向同事件CaloNu或有效新读出族，不盲目扩大网络。
+执行顺序：
 
-沿用原六run、官方merge/without-IFT、原20 cuts和最高pz leading、truth fiducial、unit权重，
-不再询问flux清单。正式calibration/test/challenge暂不读；validation已是开发样本。
-来源组完整保留，所有比较同事件。需要大批计算走Condor，可选择较空闲schedd。
-stage30曾因普通命令行`mode=controls`被sub内赋值覆盖而误重复主实验；以后先dry-run检查Args，
-使用明确队列表或`-append`，成本包含失败/技术重复，不把它们当独立证据。
+1. 冻结有预算协议。读取manifest的实际RDO，不只检查PHYS：index101已确认保存
+   `McEventCollection_p6_TruthEvent`、BeamTruthEvent、SCT_Hits、SDO与raw readout。
+   uproot对1例TruthEvent报memberwise serialization不支持，这是reader限制，不能断言无输运信息。
+   用匹配native POOL/ROOT字典审计μ continuation、barcode、真实顶点和覆盖；
+   现成构建目录为`../calypso/build/x86_64-el9-gcc13-opt`，先核对构建版本与conditions，勿无依据全重建。
+2. 设计代表性小样本：按原selected run/eventID/source键，对组件、能量、y、z分层，
+   保留响应良好、尾部和未确认事件，不能只挑离群。导出reco front参考面坐标、q/p、5×5拟合协方差、
+   primary输运状态/ID及匹配状态。FaserSiHit无输运动量，沉积能不能替代；
+   truth_st1/t_st*模长来自产生点，禁止拿来测材料能损。
+3. 如果TruthEvent仅有稀疏相互作用顶点，不能将最近顶点当精确同面真值。
+   给出实际覆盖率并用有预算的少量G4步/参考面导出补齐，不保存大xAOD。
+   小样本smoke后Condor；大数据不在登录节点计算，可换较空闲schedd。
+4. 同confirmed支持上测传播变化、同面有符号κ残差、偏差、R68、非高斯尾、符号差异与pull，
+   按能量/primary p/y/z/charge分层，来源组配对区间；未确认事件另报且不删除。
+   不对近零曲率倒数再截断。无协方差或同面truth时明确未测量，不造pull。
+5. 对应tracker data控制需匹配参考面、几何/对齐和conditions。
+   stage31 run016000前16,000例pre-Calo tracker候选4,908例，19维有限，但MC/data端点z离散性不同；
+   尚未证明模型迁移。旧data无isForward，继续只作MC诊断，不入部署。
+   原“四Calo同时MIP”代理为0例且不适合单轨迹横向分块，不能声称已做MIP校准；
+   Hi/Lo/status需校准与bit语义审计，不凭分布猜饱和，也不以MIP校准强子能量。
 
-每次推进必须形成实测支持的物理结论，不仅提交作业或仅写“缺字段”。若新真值暂时不可取，
-可先完成对已有产生动量与reco曲率的**复合响应**测量，但明确不能由此独立分开材料/拟合。
-报告样本、选择、单位、命令、数值/区间、吞吐、CPU/RSS、程序核查和产物路径，
-未测量的闭合/data/系统效应明确列出。最终写中文stage31 workbook，更新修订路线、
-合并重复JSON和紧凑产物后Conventional Commit；保留现有工作，不推送远端。
+保持原六nominal run、官方merge/without-IFT、原20 cuts和最高pz leading、truth fiducial、unit权重，
+不再次询问flux。F5计数、电荷、Calo、空间量全部保留，F6的19维定义不漂移；
+19维含相关状态和确定性重表达，stage31并未证明每变量独立有用。
+正式calibration/test/challenge先不读；同面控制完成后，为有限F5/F6候选冻结允许的校准与独立检验协议。
+不按test结果回头调参再称独立。
 
-最终回答：新物理结论、支持证据和限制、下一步唯一优先任务、一段继续执行Prompt。
+每次推进必须得到实测物理结论，不仅提交作业或写缺字段。记录样本、选择、单位、
+实际数值/来源区间、吞吐和CPU/RSS、源码/程序核查、产物路径及未测量项目。
+完成后写中文workbook、更新路线/下一Prompt，去重JSON、保留紧凑缓存，Conventional Commit，
+提交对象读回，不push。最终回答说明新结论、证据限制和下一条唯一优先任务。
