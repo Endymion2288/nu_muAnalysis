@@ -1,5 +1,7 @@
 # 利用电子探测器多变量重建入射 νμ 能量：研究路线图
 
+**2026-11-01 修订入口：** 依据 stage13–28 的实际结果，后续优先级见[修订路线](nu_mu_energy_ml_revised_roadmap.md)及[下一轮执行 Prompt](nu_mu_energy_ml_next_step_prompt.md)。本文保留初始方案与阶段历史；stage28 提议的继续覆盖率调校已不作为默认主线。
+
 版本：2026-10-29。适用仓库：`nu_muAnalysis`；调研起点为 `80d7827`。
 
 **建议主线：固定物理样本与评价方法 → 建立 μ 动量基线 → 用 BDT 检验新增信息 → 比较 MLP、表格 ResNet、TabM → 用 Deep Sets 检验空间拓扑 → 有证据后比较 GNN/Transformer → 完成系统误差与物理测量闭合。**
