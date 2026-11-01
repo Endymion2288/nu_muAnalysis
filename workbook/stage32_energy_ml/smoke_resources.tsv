@@ -1,0 +1,7 @@
+stage	status	wall_s	peak_rss_KiB	cpu_s	original_log
+native_pilot	success	82.22	1611864	unmeasured	/tmp/stage32_native_pilot.log
+truth_unit_failure	failed	unmeasured	unmeasured	unmeasured	/tmp/stage32_truth_smoke.log
+truth_fixed	success	71.27	1519156	54.370000000000005	/tmp/stage32_truth_smoke_fixed.log
+reconstruction	success	23.29	1021056	9.64	/tmp/stage32_reco_smoke.log
+covariance_unit_failure	failed	76.98	2020952	59.84	/tmp/stage32_cov_smoke.log
+covariance_fixed	success	80.81	1983120	66.41	/tmp/stage32_cov_smoke_fixed.log

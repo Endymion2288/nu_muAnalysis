@@ -1,0 +1,35 @@
+{
+  "schedd": "bigbird21.cern.ch",
+  "clusters": [
+    2187190,
+    2187191
+  ],
+  "jobs": 24,
+  "wrapper_wall_s": 5766.53,
+  "wrapper_cpu_s": 3915.7799999999997,
+  "wrapper_peak_rss_KiB": 2138152,
+  "cov_subprocesses": {
+    "copy": {
+      "processes": 12,
+      "wall_s": 74.05,
+      "cpu_s": 19.169999999999998,
+      "peak_rss_KiB": 2048
+    },
+    "cov": {
+      "processes": 24,
+      "wall_s": 3059.01,
+      "cpu_s": 2323.71,
+      "peak_rss_KiB": 2138152
+    },
+    "reco": {
+      "processes": 24,
+      "wall_s": 486.66,
+      "cpu_s": 345.91,
+      "peak_rss_KiB": 1019748
+    }
+  },
+  "measured_smoke_wall_s": 334.57,
+  "measured_smoke_cpu_s": 190.26,
+  "smoke_wall_incomplete": true,
+  "input_rdo_bytes": 12516548391
+}

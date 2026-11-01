@@ -1,0 +1,32 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage32
+initialdir = $(spool)
+executable = $(spool)/run_ml_reference_audit.sh
+arguments = $(action) $(index) energy-ml-reference-audit-stage32.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-reference-audit-stage32.tar.gz
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 2000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-reference-audit"
+log = $(spool)/logs/native_$(ClusterId).log
+output = $(spool)/logs/native_$(ClusterId).$(ProcId).out
+error = $(spool)/logs/native_$(ClusterId).$(ProcId).err
+queue action,index from (
+cov 177
+cov 325
+cov 179
+cov 327
+cov 101
+cov 251
+cov 109
+cov 259
+cov 45
+cov 196
+cov 47
+cov 198
+)

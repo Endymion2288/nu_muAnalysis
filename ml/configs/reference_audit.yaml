@@ -1,0 +1,14 @@
+stage: 32
+seed: 20261102
+partitions: [train, validation]
+components: [charm, k, pi]
+source_selection: lexicographically first group in each component and partition, both production periods
+truth_events_per_file: 24
+covariance_events_per_file: 2
+energy_edges_GeV: [100, 200, 400, 800, 1600, 3200, 6400]
+y_edges: [0, 0.2, 0.6, 0.8, 1.0]
+vertex_z_edges_mm: [-3000, -2650, -2300, -1950, -1600]
+bootstrap_replicates: 500
+plane_tolerance_mm: 0.001
+max_reconstruction_events: 24
+scope: representation audit and composite curvature significance, no new ML fits or held-out partitions

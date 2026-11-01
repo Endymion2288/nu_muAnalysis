@@ -1,0 +1,45 @@
+{
+  "bounded_confirmed_events": 15,
+  "same_support_production_standardized_RMS": 1.4425531608174078,
+  "maximum_interval_width_over_sigma": 0.13502127354557883,
+  "max_possible_abs_standardized_residual": 2.4861137332291445,
+  "highp_bounded_events": 7,
+  "highp_reco_below_bound": 6,
+  "highp_propagation_loss_min": 0.0008613358380563652,
+  "highp_propagation_loss_max": 0.03488898887788139,
+  "highp_below_bound_reco_deficit_min": 0.19599711425480004,
+  "highp_below_bound_reco_deficit_max": 0.522281771572437,
+  "highp_confirmed_sign_disagreements": [
+    {
+      "run": 200089,
+      "eventID": 2658,
+      "primary_p_GeV": 3240.4142954697163,
+      "abs_kappa_over_sigma": 0.787165540684605,
+      "bound_available": true
+    },
+    {
+      "run": 200100,
+      "eventID": 986,
+      "primary_p_GeV": 2163.1478801622725,
+      "abs_kappa_over_sigma": 1.8295554537253804,
+      "bound_available": false
+    },
+    {
+      "run": 200100,
+      "eventID": 29599,
+      "primary_p_GeV": 1774.291665700904,
+      "abs_kappa_over_sigma": 0.0712654312792394,
+      "bound_available": false
+    }
+  ],
+  "covariance_track_fitters": [
+    0,
+    3
+  ],
+  "nearest_saved_z_distance_mm_quantiles": [
+    1616.5604782104492,
+    1975.6266894340515,
+    2807.417021751404
+  ],
+  "exploratory_endpoint_summaries": true
+}
