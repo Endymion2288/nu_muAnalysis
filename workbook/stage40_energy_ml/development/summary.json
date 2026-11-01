@@ -1,0 +1,14 @@
+{
+  "input": "stage39 already used controls; development only",
+  "selected_method": "bounded_time",
+  "derivative_step_ns": 0.1,
+  "bound_ns": 4.0,
+  "step_ns": 0.25,
+  "reason": "Amplitude is almost orthogonal to a first time derivative: it does not correct the measured second-order amplitude loss; bounded waveform-residual fit addresses that loss.",
+  "methods_tried": 3,
+  "further_method_scan": false,
+  "truth_used_for_fit": false,
+  "wall_s": 0.5072799560148269,
+  "cpu_s": 0.32974481899999997,
+  "peak_rss_MiB": 52.2421875
+}

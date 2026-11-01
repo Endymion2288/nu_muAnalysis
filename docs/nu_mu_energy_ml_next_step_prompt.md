@@ -1,76 +1,73 @@
-# 下一轮执行 Prompt：完整CaloNu读出响应与有限时间自由度
+# 下一轮执行 Prompt：匹配历史CaloNu条件的最小Athena响应闭合
 
-先读AGENTS.md、修订路线第21节、`workbook/2026-11-01_stage39_calonu-cc-waveform.md`、
-stage39冻结协议/结果/源码审计及stage35–38报告。stage30–39已完成。
-用户重点reco p100–1000 GeV，保留100–250/250–1000；≥TeV仅参考。
+先读AGENTS.md、修订路线第22节、`workbook/2026-11-01_stage40_calonu-full-response.md`、
+stage40协议/配置/源码fixture范围及stage35–39报告。stage30–40已完成。
+用户重点reco p100–1000GeV，保留100–250/250–1000；≥TeV仅参考。
 
-**唯一主线：先控制空HITS噪声缺失机制和强信号时间敏感性，再决定有限能量建模。**
+**唯一主线：最小Athena数字化/重建闭合，之后才决定有限能量建模。**
 
-最新证据：
+最新实测：
 
-- stage39冻结六来源组π/K/charm各两组，190例=142常规+48富集，皆为stage35已有fit分区。
-  PHYS真实entry/fingerprint→HITS/RDO/rec及PHYS读出全部联接通过。
-  固定stage38模板+常数项，没有本次CC调权、逐例选时间或用truth作输入。
-- 112常规共同有效波形，signed→主候选总电荷RMSE0.484287→0.128924 pC，
-  改善73.3787% [70.1344%,76.7130%]；离峰RMS0.479922→0.133249 pC。
-  两p层改善76.9216%/68.6610%，常数baseline扰动最大1.421085e−14 pC。
-  高p层bias−0.028192 [−0.048949,−0.006720] pC，未扣常数。不是ν能量73%收益。
-- 常规30/142（21.1268%）无任何波形且空敏感HITS，全部在名义中心下游。
-  全190有147完整、43全缺、无部分缺失；缺失估计保留NaN/presence mask。
-  `CaloWaveformDigiAlg::execute`空HITS时在波形/噪声生成前返回，PHYS默认charge/raw0、status1。
-  因而缺失是生产机制，不能当data测得的无噪声零；status1不能单独判有效波形。
-  全fit零读出2403/14309、重点2074/11658只作描述；未认证全体零值均为空HITS。
-  stage35约3.34%收益中缺失标记贡献未测量，不宣称全部收益为伪影。
-- 常规高信号≥1pC仅17例。名义模型相对RMSE2.4062%，提前2ns为7.5224%，
-  14/17误差>5%，12/17相对名义变化>5%；π/K/charm均有约−7%早移偏差。
-  固定单模板时间鲁棒性不足，不能用总体平均降噪掩盖。
-  常规名义信号中位0.007343pC；高y≥.8仅8例，无≥1pC参考；饱和精度未测量。
-- stage38稳定CB积分/初始化/fallback源函数验证通过；正常40/40脉冲保真、time NaN注入拒绝。
-  仍只是源函数scaffold，未完成完整Athena tool/生产修复。
-  stage35同事件F6+原CaloNu重点改善3.3359% [2.2676%,4.7581%]，未达冻结5%扩展门槛。
-  stage34/35 test已用，后续改模型不能再叫新独立确认；stage39也不是新ν能量test。
+- stage40六新原生来源2/43、49/105、111/119，共181=133常规+48诊断；142完整、39全缺。
+  与stage39组隔离，但都是stage35已有fit，不能称新独立ν能量test。
+  常规24/133缺失全在名义中心下游，全部空HITS；原生产status1/零读出不能区分缺失与真实阈下。
+- 直接删空HITS早退不安全：两个calo生成方法均用首hit区分探测器。
+  新patch新增显式CaloNu noise helper→原convolve(empty)，只影响空CaloNu且显式opt-in，默认false。
+  非空信号生成/卷积函数保持，接口升2.0，使用须重建工具/算法及相关接口消费者。
+  patch适用1ec47efe；未部署到外部checkout或生产。
+- 源函数fixture用原create_waveform_map/generate_baseline/create_kernel/convolve及新helper，
+  ID迭代/历史conditions/EventContext/Gaudi handle为明确替身。2048独立合成noise，ADC RMS3.01505对理论3.01386，
+  256对无hist/全零hist全部ADC相同，理想恒定波形0/2048。原缺失ADC未补造。
+  完整Athena/GeoModel、原始随机种子及RDO→rec→PHYS验证仍未测量。
+- 有界时间模型固定四通道共享时间、各有符号振幅与常数baseline，中心820ns、范围±4ns、步长0.25ns。
+  不接truth/PDG/matching，不裁负/删边界；一次时间导数诊断未改振幅损失，未继续扫描。
+  新15常规+19诊断≥1pC，三个中心的模型最大误差4.64515%/3.82736%，中心变化0；冻结门槛通过。
+  含噪声常规仍5/15误差>5%，不能称逐例5%精度或真实时序系统闭合。
+- 名义109常规fixed→有界RMSE0.143794→0.160735pC，恶化11.7815% [8.6347%,14.8819%]；
+  离峰RMS增加14.5725%，低于冻结25%上限。相对signed仍改善61.0335% [58.8093%,62.8819%]。
+  常规信号中位0.005268pC；94弱信号中43时间触边、41总读出负，全部保留；高信号0/34触边。
+  不把弱信号拟合时间当新物理特征，不开发基于truth的逐例选方法。
 
-下一阶段具体任务与验收：
+下一阶段任务与验收：
 
-1. **先验证空HITS读出路径**。以已认证空/非空事件和原生产源为输入，
-   定位最小源码修复或受限源函数验证：无信号也应生成同条件通道噪声，
-   明确输出容器/通道/presence语义，检查PHYS缺失标记。
-   只构建相关模块/函数，使用历史CaloNu映射/conditions；不默认重跑全量G4或PHYS。
-   模拟控制不得伪装成新测得的原生观测，不向现有缺失ADC直接补造随机数后当真实波形。
-2. **冻结一个简单时间自由度**，例如模板+时间导数联合估计或固定有界时间拟合。
-   先stage37–39已有控制开发，接口仅waveform/ADC/baseline/conditions，
-   HITS只用于评估；不得truth选时间、逐例选更优方法或扩大模型扫描。
-   覆盖弱信号、负值/失败、名义高信号、固定±2ns，保留饱和覆盖缺口。
-3. 新来源确认前，冻结来源隔离/支持/预算及噪声、偏差、强信号时间鲁棒性门槛。
-   验证空HITS不再成为无噪声理想零标记、非空响应保真，并定量比较读出噪声与时间扰动。
-   若未通过，定位物理/程序原因，不删尾、不把旧开发支持再称独立确认。
-   若没有适用的新原生支持，明确源函数控制范围与未测量项，不能虚称全链生产验证。
-4. 响应控制通过后才另冻同事件F6、加原CaloNu、加改进波形的有限能量模型实验。
-   映射/校准只用train内部独立预测，划分须明确已用test。
-   报告误差、bias、R68、尾部、来源组配对区间和p/y/primary支持；不立即恢复架构竞赛。
+1. 审查现成匹配Calypso22/CaloNuMC源与几何/conditions是否可用。
+   保留1ec47efe源，候选patch在`ml/patches/calonu-empty-noise-1ec47efe.patch`；
+   stage38稳定积分补丁仍是源函数级，不能假定已在完整tool生效。
+   优先现成build，只在隔离位置构建必要接口/工具/算法及消费者，记录2.0接口兼容性和实际成本。
+   不修改共享外部工作树，不自动全量G4或全量PHYS。
+2. 原生输入从已认证空/非空HITS小支持取，先smoke。
+   显式装载原CaloNu几何、历史cable/payload/IOV、Digitization条件，认证实际channel/id/branch；
+   当前mapping中20–23为none不可直接复现。普通runtime只读字典通过不等于几何重建正确。
+   无匹配时量化缺口、推进能独立验证的部分，不虚称完整生产闭合。
+3. 开新确认前冻结支持/预算/随机控制/验收：空HITS四通道有同条件噪声，
+   非空信号在相同随机控制下保真，空事件插入是否改变后续随机流需单独记录；
+   检查RDO→rec baseline/status/有符号电荷和存在性，保留阈下/负/失败/饱和覆盖缺口。
+   source fixture合成控制不能填进旧缺失观测后冒充新原生数据。
+4. 完整响应验证通过后才另冻同事件F6、原CaloNu、改进波形的有限能量模型实验。
+   固定与有界时间都保留参考；本次确认不再调范围/步长，不逐例挑最优输出。
+   输出映射/校准用train内部独立预测，能量test设计须明确stage34/35已评价，
+   新波形来源隔离不等于新独立ν能量test。报告误差/bias/R68/尾部、p/y/primary及配对区间。
+   缺失标记贡献和电荷→ν能量/谱收益继续未测量，不由电荷RMSE直接推算。
 
-输入、条件与资源：
+输入与资源：
 
-- `ntuples/energy_ml_stage39/cc_waveform.npz`：1244048bytes，190例ADC/保存波形/名义信号、
-  存在性及固定读出、完整lineage；六分片22原生数组逐字段重联相等，metadata/schema保留。
-  分片与payload已清，见archive.json；汇总脚本依赖归档前分片，不重提旧jobs重造重复产物。
-  stage38 `confirmation.npz`620787bytes、stage37 cache649006bytes仍保留作开发控制。
-- stage39使用bigbird14，17555948六技术失败、17555949两合并成功，严格8jobs预算已用完。
-  总wall1007.52s/CPU770.33s、峰1462368KiB，最终原生0.405655events/s。
-  新阶段另冻预算，先小样本；大批量走Condor，繁忙可换资源匹配的空闲schedd。
-- 原生产源1ec47efe；现成d32b0ff3用于只读持久化字典，布局通过，不是相同几何重建。
-  原ROOT6.28/12可源函数重放，统计用LCG109_cuda；PyROOT vector<float>用list转换，避免buffer类型误读。
-  CC每HITS1000例、合并10000例；PG每HITS10000、合并50000，不能照搬。
-  近无质量ν质量检查用signed m²舍入界，barcode/生成质量和三动量严格匹配；不是放宽身份。
-- branch→region `[1,0,3,2]`已认证；历史payload/IOV见stage37 conditions_audit.json，IOV覆盖三个CC run。
-  当前tag CableMapping-00的20–23为none，不能直接复现旧生产。
-  data硬件6/7/14/15、安装/survey方向未认证，不能按关联峰翻转。
-- CaloNu MC和data均`correct_gain=false`，MIP_ref前向核验通过；约25倍q/nMIP差不直接证明标定错误。
-  data15838同TBP/TAP15/15两时期仍4.86558/.618096GeV EM，时序/活动/位置/HV贡献未分离。
-  data闭合、绝对MIP/强子响应、探测器/相互作用系统及最终谱收益继续标注未测量。
-- 不以truth_st*模长测材料能损；truth/PDG/matching/isForward不入部署。
-  没有flux/亮度归一化材料就沿用unit默认，不重复询问。
+- `ntuples/energy_ml_stage40/response.npz`1204523bytes：181原生ADC/保存波形/信号/固定读出及lineage；
+  `source_noise.npz`39622bytes：2048独立合成读出，只作源函数控制。合计1244145bytes。
+  六分片22原生字段/metadata/schema重联相等，重复分片和payload已清；汇总依赖归档前分片，勿重提旧jobs。
+- stage39 cache1244048bytes、stage38 cache620787bytes、stage37 cache649006bytes可作已有开发控制。
+  stage40用bigbird14、cluster17556151，3 jobs全exit0无重提，总wall479.46s/CPU349.47s、峰1447980KiB。
+  新阶段另冻预算，先smoke，大批量Condor；可换空闲且资源匹配的schedd。线性分析无需GPU。
+- 现成d32b0ff3只读字典持久化布局已核验，不是相同几何生产。源函数fixtureROOT6.38/LCG109_cuda；
+  原积分故障重放ROOT6.28/12。vector<float>用list转换，避免PyROOT buffer类型误读。
+- branch→region `[1,0,3,2]`，历史payload/IOV见stage37 conditions_audit.json，覆盖三个CC run。
+  CC每HITS1000例、合并10000；PG每HITS10000、合并50000；真实entry和指纹联接不可省。
+  ν近光锥质量用signed m²舍入界，barcode/生成质量/三动量严格匹配，不放宽身份。
+- CaloNu MC/data均correct_gain=false，MIP_ref前向标度核验通过；约25倍q/nMIP差不等于已证标定错误。
+  data安装/survey方向未认证，不能按关联峰翻转；data15838同触发两时期4.86558/.618096GeV EM原因未分离。
+  data闭合、绝对MIP/强子响应、探测器/相互作用系统及最终谱收益继续未测量。
+- truth/PDG/matching/isForward不入部署，不用truth_st*模长测材料能损。
+  没有flux/亮度材料就沿用unit默认，不重复询问。
 
-计wall/CPU/RSS及失败/重复成本；只留紧凑最终cache，读回后清重复分片，不保存新ROOT/xAOD。
-每阶段中文workbook记录实测物理结论、单位/选择/输入/命令/统计与系统局限及下一验收，
-更新路线与Prompt，Conventional Commit，提交blob读回并确认工作区干净，不push。
+记录wall/CPU/RSS和失败/重复成本，保持紧凑缓存与归档，不保存新ROOT/xAOD大中间结果。
+每阶段中文workbook含实测结论、单位/支持/命令/验证/系统局限及下一验收，更新路线与Prompt，
+Conventional Commit，提交blob读回、工作区干净，不push。

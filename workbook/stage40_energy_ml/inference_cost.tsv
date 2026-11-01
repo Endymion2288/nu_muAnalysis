@@ -1,0 +1,3 @@
+method	batch_events	repeats	total_event_evaluations	wall_s	CPU_s	wall_us_per_event	finite	note
+fixed	142	10	1420	0.000434348126873374	0.0004138880000000289	0.30587896258688313	True	Fixed weights precomputed; bounded implementation includes 33 template designs per batch; single CPU thread
+bounded_time	142	10	1420	0.1443856549449265	0.1429802	101.68003869361021	True	Fixed weights precomputed; bounded implementation includes 33 template designs per batch; single CPU thread

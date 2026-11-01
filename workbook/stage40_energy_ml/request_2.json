@@ -1,0 +1,530 @@
+{
+  "index": 2,
+  "run": 200139,
+  "group": "pi_00020-00029",
+  "component": "pi",
+  "expected_phys_entries": 10000,
+  "hits_events_per_file": 1000,
+  "first_subfile": 20,
+  "hits_name_template": "FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-{subfile:05}-s0015-HITS.root",
+  "allow_missing_channels": true,
+  "verify_phys_truth": true,
+  "input_phys": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00020-00029-s0015-PHYS.root",
+  "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00020-00029-s0015-RDO.root",
+  "input_rec": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00020-00029-s0015-xAOD.root",
+  "sim_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015",
+  "cases": [
+    {
+      "role": "regular",
+      "cache_row": 421,
+      "fingerprint": {
+        "eventID": 20166,
+        "Track_p0": 145802.21875,
+        "Track_X_atVetoNu": 107.24277853874382,
+        "Track_Y_atVetoNu": -14.861358751503412,
+        "CaloNu0_raw_charge": 0.52734375
+      },
+      "reco_p_GeV": 145.80221657878693,
+      "truth_E_GeV": 154.66000315137143,
+      "y_lepton": 0.05188969992295811,
+      "vertex_z_mm": -2168.967529296875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 433,
+      "fingerprint": {
+        "eventID": 20756,
+        "Track_p0": 115676.03125,
+        "Track_X_atVetoNu": -5.010954409463247,
+        "Track_Y_atVetoNu": 37.5739641058277,
+        "CaloNu0_raw_charge": 0.533129870891571
+      },
+      "reco_p_GeV": 115.67603048213554,
+      "truth_E_GeV": 193.48000009134475,
+      "y_lepton": 0.3689686930056244,
+      "vertex_z_mm": -2243.8076171875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 447,
+      "fingerprint": {
+        "eventID": 21452,
+        "Track_p0": 132748.859375,
+        "Track_X_atVetoNu": 52.81643782307963,
+        "Track_Y_atVetoNu": 49.77363654620339,
+        "CaloNu0_raw_charge": 0.39335936307907104
+      },
+      "reco_p_GeV": 132.7488546900811,
+      "truth_E_GeV": 145.07000092629613,
+      "y_lepton": 0.05675188326056568,
+      "vertex_z_mm": -2331.716552734375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 462,
+      "fingerprint": {
+        "eventID": 22303,
+        "Track_p0": 218472.9375,
+        "Track_X_atVetoNu": 53.269716367301015,
+        "Track_Y_atVetoNu": 35.94148805641235,
+        "CaloNu0_raw_charge": 0.4180664122104645
+      },
+      "reco_p_GeV": 218.47293362640147,
+      "truth_E_GeV": 657.6100054561782,
+      "y_lepton": 0.7656447778497026,
+      "vertex_z_mm": -1998.5096435546875,
+      "primary_kinematic_parent_proxy": false
+    },
+    {
+      "role": "regular",
+      "cache_row": 483,
+      "fingerprint": {
+        "eventID": 23631,
+        "Track_p0": 187562.890625,
+        "Track_X_atVetoNu": 70.67905101689034,
+        "Track_Y_atVetoNu": 23.597650800716714,
+        "CaloNu0_raw_charge": 1.945556640625
+      },
+      "reco_p_GeV": 187.56289465787566,
+      "truth_E_GeV": 198.17000202705685,
+      "y_lepton": 0.046839976112832304,
+      "vertex_z_mm": -2618.535888671875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 497,
+      "fingerprint": {
+        "eventID": 24474,
+        "Track_p0": 166237.734375,
+        "Track_X_atVetoNu": -57.33657830437104,
+        "Track_Y_atVetoNu": -0.6599542030083452,
+        "CaloNu0_raw_charge": 0.4199804663658142
+      },
+      "reco_p_GeV": 166.2377278607186,
+      "truth_E_GeV": 169.03000073303096,
+      "y_lepton": 0.04915991702091882,
+      "vertex_z_mm": -2140.963134765625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 522,
+      "fingerprint": {
+        "eventID": 25841,
+        "Track_p0": 136318.0625,
+        "Track_X_atVetoNu": 28.982084698017406,
+        "Track_Y_atVetoNu": 17.73296570989016,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 136.31805557685354,
+      "truth_E_GeV": 149.81000061090023,
+      "y_lepton": 0.024823079693303884,
+      "vertex_z_mm": -2001.6661376953125,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 534,
+      "fingerprint": {
+        "eventID": 26463,
+        "Track_p0": 134137.890625,
+        "Track_X_atVetoNu": 43.62298575992375,
+        "Track_Y_atVetoNu": -16.866771900545096,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 134.13789744516694,
+      "truth_E_GeV": 188.95000123291686,
+      "y_lepton": 0.29893261309043617,
+      "vertex_z_mm": -1975.0997314453125,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 553,
+      "fingerprint": {
+        "eventID": 27293,
+        "Track_p0": 142659.15625,
+        "Track_X_atVetoNu": 20.1065316138283,
+        "Track_Y_atVetoNu": 108.02445201001606,
+        "CaloNu0_raw_charge": 0.4914257824420929
+      },
+      "reco_p_GeV": 142.65915743656524,
+      "truth_E_GeV": 361.8100056559641,
+      "y_lepton": 0.9628257573834181,
+      "vertex_z_mm": -1726.0584716796875,
+      "primary_kinematic_parent_proxy": false
+    },
+    {
+      "role": "regular",
+      "cache_row": 564,
+      "fingerprint": {
+        "eventID": 27630,
+        "Track_p0": 120740.015625,
+        "Track_X_atVetoNu": 18.31764800274083,
+        "Track_Y_atVetoNu": 91.50267667221433,
+        "CaloNu0_raw_charge": 0.4705273509025574
+      },
+      "reco_p_GeV": 120.74001952492209,
+      "truth_E_GeV": 142.2200018083101,
+      "y_lepton": 0.09596834978650082,
+      "vertex_z_mm": -2163.611083984375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 585,
+      "fingerprint": {
+        "eventID": 28997,
+        "Track_p0": 175148.78125,
+        "Track_X_atVetoNu": -9.139200870216499,
+        "Track_Y_atVetoNu": 42.92298933262508,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 175.14877524579566,
+      "truth_E_GeV": 244.76000022112672,
+      "y_lepton": 0.26258574440563986,
+      "vertex_z_mm": -1735.1041259765625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 600,
+      "fingerprint": {
+        "eventID": 29927,
+        "Track_p0": 221292.578125,
+        "Track_X_atVetoNu": 21.091288782988094,
+        "Track_Y_atVetoNu": 106.87785803679847,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 221.29257084704295,
+      "truth_E_GeV": 273.320004087375,
+      "y_lepton": 0.18840170178117754,
+      "vertex_z_mm": -1984.7274169921875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 422,
+      "fingerprint": {
+        "eventID": 20181,
+        "Track_p0": 420241.625,
+        "Track_X_atVetoNu": -8.29710130537325,
+        "Track_Y_atVetoNu": 78.29059631932437,
+        "CaloNu0_raw_charge": 0.8640820384025574
+      },
+      "reco_p_GeV": 420.2416372124435,
+      "truth_E_GeV": 489.75000434214377,
+      "y_lepton": 0.07653656437494916,
+      "vertex_z_mm": -2554.1064453125,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 438,
+      "fingerprint": {
+        "eventID": 20977,
+        "Track_p0": 339663.0625,
+        "Track_X_atVetoNu": -8.726158419616112,
+        "Track_Y_atVetoNu": 40.36301986747379,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 339.66305217344103,
+      "truth_E_GeV": 349.7300007660929,
+      "y_lepton": 0.0028239575820697693,
+      "vertex_z_mm": -1971.0745849609375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 454,
+      "fingerprint": {
+        "eventID": 21868,
+        "Track_p0": 671338.9375,
+        "Track_X_atVetoNu": -82.05913180924532,
+        "Track_Y_atVetoNu": -34.166675214318666,
+        "CaloNu0_raw_charge": 0.49703124165534973
+      },
+      "reco_p_GeV": 671.338965582733,
+      "truth_E_GeV": 651.8700088788215,
+      "y_lepton": 0.17371361781074635,
+      "vertex_z_mm": -2050.81103515625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 471,
+      "fingerprint": {
+        "eventID": 22926,
+        "Track_p0": 334109.40625,
+        "Track_X_atVetoNu": 39.115345999255084,
+        "Track_Y_atVetoNu": 105.06713178880851,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 334.1093964195699,
+      "truth_E_GeV": 422.8200070492354,
+      "y_lepton": 0.2066798131269848,
+      "vertex_z_mm": -1966.9361572265625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 491,
+      "fingerprint": {
+        "eventID": 24018,
+        "Track_p0": 830570.125,
+        "Track_X_atVetoNu": -64.13225809763898,
+        "Track_Y_atVetoNu": 23.217258344430356,
+        "CaloNu0_raw_charge": 0.9216552972793579
+      },
+      "reco_p_GeV": 830.5700990014604,
+      "truth_E_GeV": 824.9500057148971,
+      "y_lepton": 0.05149814783894058,
+      "vertex_z_mm": -2095.076904296875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 508,
+      "fingerprint": {
+        "eventID": 25196,
+        "Track_p0": 269606.3125,
+        "Track_X_atVetoNu": 3.3056323192648005,
+        "Track_Y_atVetoNu": -64.83123198240385,
+        "CaloNu0_raw_charge": 0.3343749940395355
+      },
+      "reco_p_GeV": 269.6063205597212,
+      "truth_E_GeV": 314.38000276061496,
+      "y_lepton": 0.11838721830843058,
+      "vertex_z_mm": -2113.448486328125,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 521,
+      "fingerprint": {
+        "eventID": 25709,
+        "Track_p0": 838174.3125,
+        "Track_X_atVetoNu": -29.98037972277991,
+        "Track_Y_atVetoNu": 79.05766876662273,
+        "CaloNu0_raw_charge": 0.47276365756988525
+      },
+      "reco_p_GeV": 838.1742909950256,
+      "truth_E_GeV": 1065.4000121574236,
+      "y_lepton": 0.1271017437062384,
+      "vertex_z_mm": -2421.041259765625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 539,
+      "fingerprint": {
+        "eventID": 26779,
+        "Track_p0": 765869.25,
+        "Track_X_atVetoNu": -24.398397991372132,
+        "Track_Y_atVetoNu": 47.02528958596162,
+        "CaloNu0_raw_charge": 0.4087597727775574
+      },
+      "reco_p_GeV": 765.8692369279527,
+      "truth_E_GeV": 822.8900048271141,
+      "y_lepton": 0.08104450644300609,
+      "vertex_z_mm": -2115.877685546875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 554,
+      "fingerprint": {
+        "eventID": 27308,
+        "Track_p0": 325902.5,
+        "Track_X_atVetoNu": -23.479675686731966,
+        "Track_Y_atVetoNu": -10.07476956039998,
+        "CaloNu0_raw_charge": 0.45337891578674316
+      },
+      "reco_p_GeV": 325.9025001623602,
+      "truth_E_GeV": 431.7000011297492,
+      "y_lepton": 0.20480436981846828,
+      "vertex_z_mm": -2142.95703125,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 571,
+      "fingerprint": {
+        "eventID": 27997,
+        "Track_p0": 663077.375,
+        "Track_X_atVetoNu": 24.678300482635855,
+        "Track_Y_atVetoNu": -36.07272354250516,
+        "CaloNu0_raw_charge": 0.3472900390625
+      },
+      "reco_p_GeV": 663.0773848855047,
+      "truth_E_GeV": 1003.6000108957397,
+      "y_lepton": 0.4003316294574981,
+      "vertex_z_mm": -2149.406494140625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 586,
+      "fingerprint": {
+        "eventID": 29012,
+        "Track_p0": 618487.4375,
+        "Track_X_atVetoNu": -61.009660222254865,
+        "Track_Y_atVetoNu": 25.66611679986286,
+        "CaloNu0_raw_charge": 0.33113279938697815
+      },
+      "reco_p_GeV": 618.4874299712458,
+      "truth_E_GeV": 696.230005621317,
+      "y_lepton": 0.1496428754675193,
+      "vertex_z_mm": -1953.054443359375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "regular",
+      "cache_row": 602,
+      "fingerprint": {
+        "eventID": 29987,
+        "Track_p0": 349039.375,
+        "Track_X_atVetoNu": 15.066368784216747,
+        "Track_Y_atVetoNu": 0.045911947704959086,
+        "CaloNu0_raw_charge": 1.126621127128601
+      },
+      "reco_p_GeV": 349.03937960704116,
+      "truth_E_GeV": 359.1400002970282,
+      "y_lepton": 0.059665309261212496,
+      "vertex_z_mm": -2536.489990234375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "high_raw",
+      "cache_row": 475,
+      "fingerprint": {
+        "eventID": 23131,
+        "Track_p0": 429729.5,
+        "Track_X_atVetoNu": 46.607718379420334,
+        "Track_Y_atVetoNu": 27.634780012885958,
+        "CaloNu0_raw_charge": 19.937108993530273
+      },
+      "reco_p_GeV": 429.7294951977832,
+      "truth_E_GeV": 764.4300033935397,
+      "y_lepton": 0.42403950411968283,
+      "vertex_z_mm": -2504.301513671875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "high_raw",
+      "cache_row": 488,
+      "fingerprint": {
+        "eventID": 23884,
+        "Track_p0": 618198.4375,
+        "Track_X_atVetoNu": 33.50807530943774,
+        "Track_Y_atVetoNu": 78.52064487773748,
+        "CaloNu0_raw_charge": 12.069672584533691
+      },
+      "reco_p_GeV": 618.1984576305919,
+      "truth_E_GeV": 880.5400101766268,
+      "y_lepton": 0.2812728695921859,
+      "vertex_z_mm": -2971.153076171875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "negative",
+      "cache_row": 460,
+      "fingerprint": {
+        "eventID": 22224,
+        "Track_p0": 461081.0,
+        "Track_X_atVetoNu": -96.3060366867542,
+        "Track_Y_atVetoNu": -16.733709130605398,
+        "CaloNu0_raw_charge": 0.47703126072883606
+      },
+      "reco_p_GeV": 461.08098708625266,
+      "truth_E_GeV": 653.9200131187689,
+      "y_lepton": 0.2212176903758466,
+      "vertex_z_mm": -2463.177978515625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "negative",
+      "cache_row": 472,
+      "fingerprint": {
+        "eventID": 22980,
+        "Track_p0": 619847.9375,
+        "Track_X_atVetoNu": 25.468726689437542,
+        "Track_Y_atVetoNu": -25.25354139859588,
+        "CaloNu0_raw_charge": 0.49384766817092896
+      },
+      "reco_p_GeV": 619.8479400177479,
+      "truth_E_GeV": 740.3900032570464,
+      "y_lepton": 0.07580307442693812,
+      "vertex_z_mm": -2217.935302734375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "fit_failed",
+      "cache_row": 552,
+      "fingerprint": {
+        "eventID": 27291,
+        "Track_p0": 356494.15625,
+        "Track_X_atVetoNu": 43.930776968083364,
+        "Track_Y_atVetoNu": 23.697995574660602,
+        "CaloNu0_raw_charge": 0.6874902248382568
+      },
+      "reco_p_GeV": 356.494142865397,
+      "truth_E_GeV": 384.9500017749259,
+      "y_lepton": 0.08731636414881938,
+      "vertex_z_mm": -2368.640380859375,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "zero_readout",
+      "cache_row": 424,
+      "fingerprint": {
+        "eventID": 20339,
+        "Track_p0": 1046466.375,
+        "Track_X_atVetoNu": 69.0206944198213,
+        "Track_Y_atVetoNu": -16.882874454323957,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 1046.466368624978,
+      "truth_E_GeV": 1079.1000133848277,
+      "y_lepton": 0.13343425371507822,
+      "vertex_z_mm": -1961.028076171875,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "zero_readout",
+      "cache_row": 427,
+      "fingerprint": {
+        "eventID": 20473,
+        "Track_p0": 252371.546875,
+        "Track_X_atVetoNu": -51.49110123412875,
+        "Track_Y_atVetoNu": 18.185714490539183,
+        "CaloNu0_raw_charge": 0.0
+      },
+      "reco_p_GeV": 252.37154702337486,
+      "truth_E_GeV": 279.0200007133888,
+      "y_lepton": 0.12275021693744259,
+      "vertex_z_mm": -1718.6256103515625,
+      "primary_kinematic_parent_proxy": true
+    },
+    {
+      "role": "high_y",
+      "cache_row": 485,
+      "fingerprint": {
+        "eventID": 23738,
+        "Track_p0": 148592.5,
+        "Track_X_atVetoNu": -65.47551343099686,
+        "Track_Y_atVetoNu": 34.26865254037116,
+        "CaloNu0_raw_charge": 0.31574708223342896
+      },
+      "reco_p_GeV": 148.59250464771347,
+      "truth_E_GeV": 762.6400056211095,
+      "y_lepton": 0.8037612162750355,
+      "vertex_z_mm": -2180.96630859375,
+      "primary_kinematic_parent_proxy": true
+    }
+  ]
+}

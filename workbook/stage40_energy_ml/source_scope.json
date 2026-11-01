@@ -1,0 +1,27 @@
+{
+  "source_commit": "1ec47efe",
+  "patch_applies_to_pinned_files": true,
+  "exact_methods": [
+    "create_waveform_map",
+    "generate_baseline",
+    "create_kernel",
+    "convolve_waveforms"
+  ],
+  "new_helper": "generate_calonu_noise_waveforms",
+  "source_tokens_unchanged_after_trailing_whitespace_removal": true,
+  "explicit_substitutes": [
+    "CaloNuID iteration",
+    "EventContext",
+    "historical conditions",
+    "Gaudi handle"
+  ],
+  "source_identifiers_branch_order": [
+    3892314112,
+    3758096384,
+    4160749568,
+    4026531840
+  ],
+  "nonempty_digitisation_source_unchanged": true,
+  "full_Athena_build": "not measured",
+  "original_random_seed_replay": "not measured"
+}

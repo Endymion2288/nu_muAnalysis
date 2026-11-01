@@ -1,0 +1,53 @@
+{
+  "stage": 40,
+  "starting_commit": "7485e05",
+  "frozen_utc": "2026-11-01T17:40:25.192084+00:00",
+  "indices": [
+    2,
+    43,
+    49,
+    105,
+    111,
+    119
+  ],
+  "source_commit": "1ec47efe",
+  "max_events": 192,
+  "max_condor_jobs": 10,
+  "new_ML_fits": 0,
+  "new_G4_events": 0,
+  "primary_readout": "bounded_time",
+  "reference_readout": "template_plus_constant",
+  "bound_ns": 4.0,
+  "step_ns": 0.25,
+  "center_controls_ns": [
+    -2.0,
+    0.0,
+    2.0
+  ],
+  "high_signal_threshold_pC": 1.0,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20261107,
+  "template_parameters": {
+    "norm": 0.550000011920929,
+    "mean": 820.0,
+    "sigma": 3.6700000762939453,
+    "alpha": -0.3199999928474426,
+    "exponent": 1000.0
+  },
+  "source_noise_events": 2048,
+  "source_zero_hist_pairs": 256,
+  "source_noise_seed": 20261107,
+  "gates": {
+    "high_signal_model_max_abs_error": 0.05,
+    "high_signal_model_max_abs_center_change": 0.05,
+    "offpulse_RMS_ratio_to_fixed_max": 1.25,
+    "offpulse_RMS_below_signed": true,
+    "regular_RMSE_gain_vs_signed_lower95_min": 0.0,
+    "constant_baseline_max_delta_pC": 1e-10,
+    "source_noise_ADC_mean_tolerance": 0.02,
+    "source_noise_ADC_RMS_relative_tolerance": 0.02,
+    "source_zero_hist_bitwise_equal": true
+  },
+  "partition": "New native waveform groups from existing stage35 fit; not a new neutrino-energy test",
+  "source_test_scope": "Exact pinned noise/convolution methods with explicit historical ID/conditions substitutes; no complete Athena/GeoModel replay"
+}

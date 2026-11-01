@@ -1,0 +1,42 @@
+{
+  "scope": "Synthetic source-function fixture; not observed missing events or full Athena production",
+  "events": 2048,
+  "channels": 4,
+  "samples_per_channel": 600,
+  "ADC_samples": 4915200,
+  "seed": 20261107,
+  "ROOT_version": "6.38.00",
+  "ADC_mean": 15650.001061401366,
+  "ADC_RMS": 3.0150522132066016,
+  "ADC_expected_mean": 15650.0,
+  "ADC_expected_RMS": 3.013856886670854,
+  "zero_histogram_pairs": 256,
+  "zero_histogram_channel_mismatches": 0,
+  "exact_ideal_zero_events": 0,
+  "readouts": {
+    "signed": {
+      "bias_pC": 0.00028133392333984375,
+      "RMS_pC": 0.25826851655895855,
+      "R68_pC": 0.25996093750000004
+    },
+    "fixed": {
+      "bias_pC": 0.00014419965687854095,
+      "RMS_pC": 0.1276313714830352,
+      "R68_pC": 0.128868697472926
+    },
+    "bounded": {
+      "bias_pC": -0.002267157688240638,
+      "RMS_pC": 0.14911659385031956,
+      "R68_pC": 0.1536277049779633
+    },
+    "positive": {
+      "bias_pC": 1.7697501182556152,
+      "RMS_pC": 1.7760806947096004,
+      "R68_pC": 0.1513671875
+    }
+  },
+  "source_noise_gate": true,
+  "wall_s": 4.712944673374295,
+  "cpu_s": 4.595942599000001,
+  "peak_rss_MiB": 757.8828125
+}

@@ -1,0 +1,92 @@
+--- a/Calorimeter/CaloDigiAlgs/src/CaloWaveformDigiAlg.cxx
++++ b/Calorimeter/CaloDigiAlgs/src/CaloWaveformDigiAlg.cxx
+@@ -68,7 +68,9 @@
+ 
+   ATH_MSG_DEBUG("WaveformsContainer '" << waveformContainerHandle.name() << "' initialized");
+ 
+-  if (caloHitHandle->size() == 0) {
++  const bool emptyCaloNu = caloHitHandle->size() == 0 && m_digitizeEmptyCaloNu
++                          && m_caloHitContainerKey.key() == "CaloNuHits";
++  if (caloHitHandle->size() == 0 && !emptyCaloNu) {
+     ATH_MSG_DEBUG("CaloHitCollection found with zero length!");
+     return StatusCode::SUCCESS;
+   }
+@@ -90,7 +92,9 @@
+   }
+ 
+   // Try our new tool instead
+-  if (m_advancedTiming) {
++  if (emptyCaloNu) {
++    waveforms = m_digiTool->generate_calonu_noise_waveforms(ctx, m_digiCondTool);
++  } else if (m_advancedTiming) {
+     waveforms = m_digiTool->generate_calo_timing_waveforms(ctx, m_digiCondTool, caloHitHandle.get());
+   } else {
+     waveforms = m_digiTool->generate_calo_waveforms(ctx, m_digiCondTool, caloHitHandle.get());
+--- a/Calorimeter/CaloDigiAlgs/src/CaloWaveformDigiAlg.h
++++ b/Calorimeter/CaloDigiAlgs/src/CaloWaveformDigiAlg.h
+@@ -42,6 +42,9 @@
+   //
+   // Simulate detailed timing of waveforms
+   BooleanProperty m_advancedTiming{this, "AdvancedTiming", true};
++
++  // Opt in only after validating the historical CaloNu mapping/conditions.
++  BooleanProperty m_digitizeEmptyCaloNu{this, "DigitizeEmptyCaloNu", false};
+ 
+  private:
+ 
+--- a/Waveform/WaveDigiTools/WaveDigiTools/IWaveformDigitisationTool.h
++++ b/Waveform/WaveDigiTools/WaveDigiTools/IWaveformDigitisationTool.h
+@@ -46,7 +46,7 @@
+ public:
+ 
+   // InterfaceID
+-  DeclareInterfaceID(IWaveformDigitisationTool, 1, 0);
++  DeclareInterfaceID(IWaveformDigitisationTool, 2, 0);
+ 
+   IWaveformDigitisationTool():
+     m_msgSvc         ( "MessageSvc",   "ITrkEventCnvTool" )
+@@ -78,6 +78,11 @@
+ 	      	const ToolHandle<IWaveformDigiConditionsTool>& digiCondTool,
+ 		const CaloHitCollection* hitCollection) const = 0;
+ 
++
++  /// Explicit CaloNu noise path: never infer detector type from an empty hit collection.
++  virtual std::map<Identifier, std::vector<uint16_t>> generate_calonu_noise_waveforms(
++      const EventContext& ctx,
++      const ToolHandle<IWaveformDigiConditionsTool>& digiCondTool) const = 0;
+ 
+   /* /// Evaluate time kernel over time samples   */
+   /* virtual std::vector<float> evaluate_timekernel(TF1* kernel) const = 0; */
+--- a/Waveform/WaveDigiTools/src/WaveformDigitisationTool.h
++++ b/Waveform/WaveDigiTools/src/WaveformDigitisationTool.h
+@@ -115,6 +115,11 @@
+ 		      const ToolHandle<IWaveformDigiConditionsTool>&, 
+ 		      const CaloHitCollection*) const;
+ 
++  /// Explicit CaloNu noise path: never infer detector type from an empty hit collection.
++  std::map<Identifier, std::vector<uint16_t>> generate_calonu_noise_waveforms(
++      const EventContext& ctx,
++      const ToolHandle<IWaveformDigiConditionsTool>& digiCondTool) const override;
++
+  private:
+ 
+   template <class ID, class DM>
+--- a/Waveform/WaveDigiTools/src/WaveformDigitisationTool.cxx
++++ b/Waveform/WaveDigiTools/src/WaveformDigitisationTool.cxx
+@@ -512,6 +512,16 @@
+ }
+ 
+ 
++std::map<Identifier, std::vector<uint16_t>>
++WaveformDigitisationTool::generate_calonu_noise_waveforms(
++    const EventContext& ctx,
++    const ToolHandle<IWaveformDigiConditionsTool>& digiCondTool) const {
++  auto waveforms = create_waveform_map(m_caloNuID);
++  const EvstHistMap empty;
++  convolve_waveforms(ctx, digiCondTool, empty, waveforms);
++  return waveforms;
++}
++
+ template <class ID, class DM>
+ std::map<Identifier, float> 
+ WaveformDigitisationTool::create_tof_map(const ID* idHelper, const DM* detman) const {
