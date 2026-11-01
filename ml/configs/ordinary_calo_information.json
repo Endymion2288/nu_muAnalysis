@@ -1,0 +1,131 @@
+{
+  "seed": 20261101,
+  "indices": [
+    0,
+    6,
+    14,
+    19,
+    28,
+    33,
+    39,
+    44,
+    46,
+    51,
+    59,
+    63,
+    72,
+    81,
+    86,
+    95,
+    101,
+    106,
+    109,
+    113,
+    120
+  ],
+  "folds": 3,
+  "train_role": "(evaluation_fold+1)%3",
+  "calibration_role": "(evaluation_fold+2)%3",
+  "rounds": 400,
+  "xgboost": {
+    "max_depth": 3,
+    "eta": 0.04,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 20,
+    "lambda": 10,
+    "tree_method": "hist",
+    "nthread": 1,
+    "objective": "reg:squarederror"
+  },
+  "fit_wall_limit_s": 120,
+  "bootstrap_replicates": 500,
+  "energy_edges_GeV": [
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "max_events": 4000,
+  "stage": 47,
+  "starting_commit": "44b58988dd53775417264f54a9aac14ab3e7ac3c",
+  "frozen_utc": "2026-11-01T22:19:31.390430+00:00",
+  "input_cache": "ntuples/energy_ml_stage42/development.npz",
+  "local_cache": "ntuples/energy_ml_stage44/features.npz",
+  "max_formal_fits": 6,
+  "max_smoke_fits": 1,
+  "candidates": [
+    "ordinary_calo",
+    "ordinary_calo_z"
+  ],
+  "regions_mm": [
+    [
+      -3000,
+      -2928
+    ],
+    [
+      -2812,
+      -2600
+    ],
+    [
+      -2600,
+      -2300
+    ],
+    [
+      -2300,
+      -1950
+    ],
+    [
+      -1769.65,
+      -1619.65
+    ]
+  ],
+  "region_names": [
+    "target_upstream",
+    "target_mid1",
+    "target_mid2",
+    "target_downstream",
+    "lead"
+  ],
+  "gate": {
+    "pair": "local->ordinary_calo",
+    "focus": "100<=reco_p_GeV<1000",
+    "minimum_relative_log_RMSE_gain": 0.02,
+    "paired_source_CI025_above": 0,
+    "conditional_pair": "oracle_z->ordinary_calo_z",
+    "conditional_point_nonnegative": true,
+    "purpose": "ideal sensitive sampling diagnosis; never deployment"
+  },
+  "baseline_cache": "ntuples/energy_ml_stage45/predictions.npz",
+  "input_definition": "X87 plus four physical ordinary Ecal saved-sensitive-deposit sums; optional true z; oracle only",
+  "sensitive_cache": "ntuples/energy_ml_stage47/sensitive.npz",
+  "hit_ids": [
+    0,
+    8,
+    2,
+    10
+  ],
+  "module_row_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "max_HITS_events": 4000,
+  "max_extraction_attempts_per_source": 2
+}

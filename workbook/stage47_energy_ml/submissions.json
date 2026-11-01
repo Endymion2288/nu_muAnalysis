@@ -1,0 +1,29 @@
+{
+  "extraction": "bigbird10.cern.ch:13110733",
+  "training_migration": {
+    "old_schedd": "bigbird10.cern.ch",
+    "old_cluster": 13110734,
+    "held_readback": {
+      "ClusterId": 13110734,
+      "JobStatus": 5,
+      "NumJobStarts": 0,
+      "ProcId": 0,
+      "RemoteWallClockTime": 0.0
+    },
+    "reason": "idle approximately three minutes, zero starts; migrate after hold/readback",
+    "epoch": 1793572109.016683,
+    "new_schedd": "bigbird23.cern.ch",
+    "new_cluster": 12063684,
+    "old_removed_before_new_submission": true,
+    "payload_and_candidates_unchanged": true,
+    "final_outcome": {
+      "JobStatus": 4,
+      "NumJobStarts": 1,
+      "QDate": 1793572109,
+      "JobStartDate": 1793572303,
+      "CompletionDate": 1793572326,
+      "ExitCode": 0,
+      "RemoteWallClockTime": 23.0
+    }
+  }
+}

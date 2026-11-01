@@ -1,0 +1,952 @@
+[
+  {
+    "stratum": "all",
+    "N": 3703,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.056239557459054054,
+      0.11041708989327889,
+      1.7275093464847302,
+      28.57509684914509,
+      177.03105960758785
+    ],
+    "module_median_energy_GeV": [
+      0.0019289800184778868,
+      0.0032097805570811032,
+      0.010814357149298303,
+      0.023813087173301026
+    ],
+    "module_zero_N": [
+      1179,
+      1124,
+      885,
+      769
+    ],
+    "finite_reco_N": 3703,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.647410135927623,
+    "transfer_proxy_valid_N": 3703,
+    "sensitive_vs_transfer_proxy_spearman": 0.3764349516815691,
+    "recoEM_vs_transfer_proxy_spearman": 0.31035659231591356,
+    "recoEM_over_sensitive_quantiles": [
+      6.720498942730226,
+      74.44511440046053,
+      159.18127402680045
+    ]
+  },
+  {
+    "stratum": "focus",
+    "N": 3024,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.055725400855636695,
+      0.10005960042407605,
+      1.4651946297405787,
+      26.49692209170027,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.0015773699914570897,
+      0.002540790552273393,
+      0.007936447810789105,
+      0.01700490794759753
+    ],
+    "module_zero_N": [
+      1016,
+      982,
+      784,
+      686
+    ],
+    "finite_reco_N": 3024,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.6069179367446932,
+    "transfer_proxy_valid_N": 3024,
+    "sensitive_vs_transfer_proxy_spearman": 0.3677685243080847,
+    "recoEM_vs_transfer_proxy_spearman": 0.30715341290074755,
+    "recoEM_over_sensitive_quantiles": [
+      6.6490157163599255,
+      82.10400610430682,
+      160.28389445315176
+    ]
+  },
+  {
+    "stratum": "p100_250",
+    "N": 849,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.02638272139057517,
+      0.053984991238580554,
+      0.0808744897377037,
+      4.451182817243729,
+      26.274548346152134,
+      52.79679834919957
+    ],
+    "module_median_energy_GeV": [
+      0.000986680001486093,
+      0.0012821000046096742,
+      0.004828562639653683,
+      0.01368952608201289
+    ],
+    "module_zero_N": [
+      329,
+      322,
+      265,
+      241
+    ],
+    "finite_reco_N": 849,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.5804541283144367,
+    "transfer_proxy_valid_N": 849,
+    "sensitive_vs_transfer_proxy_spearman": 0.43329414117803927,
+    "recoEM_vs_transfer_proxy_spearman": 0.3809537890761344,
+    "recoEM_over_sensitive_quantiles": [
+      6.227252926225258,
+      99.14874421445762,
+      166.20988178923122
+    ]
+  },
+  {
+    "stratum": "p250_1000",
+    "N": 2175,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.05704176741836709,
+      0.11011781909787532,
+      1.1520715995573114,
+      26.598264142235077,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.0017494100034236909,
+      0.0031907499991357326,
+      0.009154604538809508,
+      0.018834694877092262
+    ],
+    "module_zero_N": [
+      687,
+      660,
+      519,
+      445
+    ],
+    "finite_reco_N": 2175,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.6122833859062623,
+    "transfer_proxy_valid_N": 2175,
+    "sensitive_vs_transfer_proxy_spearman": 0.30584813422878904,
+    "recoEM_vs_transfer_proxy_spearman": 0.26231884452225024,
+    "recoEM_over_sensitive_quantiles": [
+      7.341260856867848,
+      75.19812266140168,
+      158.15602698796206
+    ]
+  },
+  {
+    "stratum": "p1000_up",
+    "N": 679,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.0075851500564021995,
+      0.05931661160790827,
+      0.1893496523783215,
+      2.740738309986214,
+      33.53221581789286,
+      177.03105960758785
+    ],
+    "module_median_energy_GeV": [
+      0.005565760044846684,
+      0.006978733570838813,
+      0.03179416475142352,
+      0.053381475308997325
+    ],
+    "module_zero_N": [
+      163,
+      142,
+      101,
+      83
+    ],
+    "finite_reco_N": 679,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.7892853884551722,
+    "transfer_proxy_valid_N": 679,
+    "sensitive_vs_transfer_proxy_spearman": 0.24124324668285338,
+    "recoEM_vs_transfer_proxy_spearman": 0.19381466298772038,
+    "recoEM_over_sensitive_quantiles": [
+      6.862679923418867,
+      43.84068925538311,
+      150.5751908101154
+    ]
+  },
+  {
+    "stratum": "focus_E100_200",
+    "N": 222,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.04398919001515606,
+      0.053220072806702226,
+      0.06809718556929147,
+      0.18522078013558282,
+      9.810788150169344,
+      16.46882711014049
+    ],
+    "module_median_energy_GeV": [
+      9.032499825116248e-05,
+      9.73049987151171e-05,
+      0.0010147999993059785,
+      0.0024243049911856357
+    ],
+    "module_zero_N": [
+      109,
+      106,
+      88,
+      80
+    ],
+    "finite_reco_N": 222,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.34518070207861823,
+    "transfer_proxy_valid_N": 222,
+    "sensitive_vs_transfer_proxy_spearman": 0.06006402076040694,
+    "recoEM_vs_transfer_proxy_spearman": 0.08488481582651987,
+    "recoEM_over_sensitive_quantiles": [
+      18.046793355924763,
+      113.60891852623678,
+      166.23174787969515
+    ]
+  },
+  {
+    "stratum": "focus_E200_400",
+    "N": 770,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.0114193291234551,
+      0.05435001134088125,
+      0.0771542395663273,
+      0.4355568698609653,
+      13.982542728018059,
+      21.956885336497013
+    ],
+    "module_median_energy_GeV": [
+      0.000503360003232956,
+      0.0007615299918688834,
+      0.0025234541707322934,
+      0.004828652887459611
+    ],
+    "module_zero_N": [
+      322,
+      306,
+      251,
+      232
+    ],
+    "finite_reco_N": 770,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.38844302843634937,
+    "transfer_proxy_valid_N": 770,
+    "sensitive_vs_transfer_proxy_spearman": 0.2056461731080848,
+    "recoEM_vs_transfer_proxy_spearman": 0.17165913127316332,
+    "recoEM_over_sensitive_quantiles": [
+      9.73624142738747,
+      102.95999563475274,
+      166.1425041099296
+    ]
+  },
+  {
+    "stratum": "focus_E400_800",
+    "N": 1142,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.01339580736552307,
+      0.055987927399811455,
+      0.10347644071157447,
+      1.1610480527280538,
+      24.546397744169052,
+      48.80481480948209
+    ],
+    "module_median_energy_GeV": [
+      0.0013938900117645972,
+      0.0027258223879616707,
+      0.008271428150648717,
+      0.024894521514157532
+    ],
+    "module_zero_N": [
+      375,
+      357,
+      288,
+      231
+    ],
+    "finite_reco_N": 1142,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.5959586157095933,
+    "transfer_proxy_valid_N": 1142,
+    "sensitive_vs_transfer_proxy_spearman": 0.22980705490311237,
+    "recoEM_vs_transfer_proxy_spearman": 0.20841747366446023,
+    "recoEM_over_sensitive_quantiles": [
+      6.992753609328546,
+      79.54917383573218,
+      161.97201618305522
+    ]
+  },
+  {
+    "stratum": "focus_E800_1600",
+    "N": 788,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.05942714637875179,
+      0.16192595835235263,
+      4.584423291098925,
+      38.12399351628389,
+      75.37248244661629
+    ],
+    "module_median_energy_GeV": [
+      0.007010609033066431,
+      0.008224019225890515,
+      0.025990076278896594,
+      0.03391130678744594
+    ],
+    "module_zero_N": [
+      197,
+      196,
+      149,
+      136
+    ],
+    "finite_reco_N": 788,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.7565559473761008,
+    "transfer_proxy_valid_N": 788,
+    "sensitive_vs_transfer_proxy_spearman": 0.28578463650149405,
+    "recoEM_vs_transfer_proxy_spearman": 0.29522305828276607,
+    "recoEM_over_sensitive_quantiles": [
+      6.270833414809131,
+      53.59614043194425,
+      149.75112707267087
+    ]
+  },
+  {
+    "stratum": "focus_E1600_3200",
+    "N": 91,
+    "sources": 17,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.023133901694687667,
+      0.07451710305782035,
+      0.5410553703298683,
+      24.764671310136105,
+      73.38221654220784,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.031439014713061625,
+      0.03292458472729777,
+      0.06159301764961856,
+      0.09904297491698526
+    ],
+    "module_zero_N": [
+      12,
+      15,
+      8,
+      7
+    ],
+    "finite_reco_N": 91,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.8738971173753782,
+    "transfer_proxy_valid_N": 91,
+    "sensitive_vs_transfer_proxy_spearman": 0.49372511546424597,
+    "recoEM_vs_transfer_proxy_spearman": 0.4053511705685619,
+    "recoEM_over_sensitive_quantiles": [
+      5.968238943272054,
+      17.80629368819631,
+      137.21412151125708
+    ]
+  },
+  {
+    "stratum": "focus_E3200_6400",
+    "N": 11,
+    "sources": 8,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.06734399985347408,
+      0.08585007226398739,
+      0.28357262915048703,
+      1.1238297645002384,
+      1.4732063125512285,
+      1.5120259290013383
+    ],
+    "module_median_energy_GeV": [
+      0.01557939487331896,
+      0.016579748790856684,
+      0.02767372477549361,
+      0.12648883552049664
+    ],
+    "module_zero_N": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "finite_reco_N": 11,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.23636363636363636,
+    "transfer_proxy_valid_N": 11,
+    "sensitive_vs_transfer_proxy_spearman": -0.4909090909090909,
+    "recoEM_vs_transfer_proxy_spearman": -0.44545454545454555,
+    "recoEM_over_sensitive_quantiles": [
+      11.106721241360786,
+      32.032677253511736,
+      134.46695567509659
+    ]
+  },
+  {
+    "stratum": "focus_y0_0.2",
+    "N": 1645,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.054789007462363225,
+      0.08350089065034262,
+      0.4066226021950448,
+      2.745358010219717,
+      21.956885336497013
+    ],
+    "module_median_energy_GeV": [
+      0.0004771599960513413,
+      0.0007740699867717922,
+      0.0034439812215496203,
+      0.007345692895411048
+    ],
+    "module_zero_N": [
+      663,
+      636,
+      494,
+      437
+    ],
+    "finite_reco_N": 1645,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.4315589835059199,
+    "transfer_proxy_valid_N": 1645,
+    "sensitive_vs_transfer_proxy_spearman": 0.19704876218217515,
+    "recoEM_vs_transfer_proxy_spearman": 0.14110672141232922,
+    "recoEM_over_sensitive_quantiles": [
+      14.720276320483181,
+      95.85958780340856,
+      163.7254629391061
+    ]
+  },
+  {
+    "stratum": "focus_y0.2_0.5",
+    "N": 973,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.02977007596315525,
+      0.05646750729629711,
+      0.11657228605088311,
+      1.4198768812190101,
+      16.452718719171347,
+      34.05780654442173
+    ],
+    "module_median_energy_GeV": [
+      0.003292620949447155,
+      0.006162782895378769,
+      0.01012666152350721,
+      0.018107166081637843
+    ],
+    "module_zero_N": [
+      281,
+      276,
+      225,
+      196
+    ],
+    "finite_reco_N": 973,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.642460484620294,
+    "transfer_proxy_valid_N": 973,
+    "sensitive_vs_transfer_proxy_spearman": 0.29351681133500035,
+    "recoEM_vs_transfer_proxy_spearman": 0.21610837743001107,
+    "recoEM_over_sensitive_quantiles": [
+      7.396755026919001,
+      71.43211042483385,
+      158.71445871883742
+    ]
+  },
+  {
+    "stratum": "focus_y0.5_0.8",
+    "N": 316,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.02638272139057517,
+      0.05800845612718876,
+      0.3530871475013173,
+      13.947929097627757,
+      48.17430562406485,
+      69.5657036549903
+    ],
+    "module_median_energy_GeV": [
+      0.04781816421645271,
+      0.0456739393444077,
+      0.06996327459500026,
+      0.07316608587660994
+    ],
+    "module_zero_N": [
+      63,
+      63,
+      55,
+      47
+    ],
+    "finite_reco_N": 316,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.8940211407807144,
+    "transfer_proxy_valid_N": 316,
+    "sensitive_vs_transfer_proxy_spearman": 0.2798443819487625,
+    "recoEM_vs_transfer_proxy_spearman": 0.25637123195722405,
+    "recoEM_over_sensitive_quantiles": [
+      6.009065310888531,
+      26.79052848281031,
+      147.77082432583904
+    ]
+  },
+  {
+    "stratum": "focus_y0.8_1.01",
+    "N": 90,
+    "sources": 19,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.051337674294714815,
+      0.07725913986459056,
+      10.442632240850326,
+      38.130771697397286,
+      78.93190095547693,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.3563720287130909,
+      0.4660023846212571,
+      0.8535945067237007,
+      0.7290037531365505
+    ],
+    "module_zero_N": [
+      9,
+      7,
+      10,
+      6
+    ],
+    "finite_reco_N": 90,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.9933818989998765,
+    "transfer_proxy_valid_N": 90,
+    "sensitive_vs_transfer_proxy_spearman": 0.026085524961929455,
+    "recoEM_vs_transfer_proxy_spearman": 0.042103963452278056,
+    "recoEM_over_sensitive_quantiles": [
+      5.9114135544375115,
+      6.269047976466279,
+      130.9195246185749
+    ]
+  },
+  {
+    "stratum": "focus_z-3000_-2928",
+    "N": 55,
+    "sources": 19,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.02638272139057517,
+      0.054482604637310576,
+      0.07633958994536078,
+      0.29368090874890773,
+      0.7074440292527451,
+      0.7434508436048345
+    ],
+    "module_median_energy_GeV": [
+      0.0005884299948811531,
+      7.845999882556498e-05,
+      0.0027996060475707052,
+      0.005716641809791327
+    ],
+    "module_zero_N": [
+      22,
+      26,
+      17,
+      16
+    ],
+    "finite_reco_N": 55,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.5473304473304473,
+    "transfer_proxy_valid_N": 55,
+    "sensitive_vs_transfer_proxy_spearman": 0.16984126984126985,
+    "recoEM_vs_transfer_proxy_spearman": -0.13059163059163062,
+    "recoEM_over_sensitive_quantiles": [
+      23.535117708245366,
+      99.14874421445762,
+      173.75158261960905
+    ]
+  },
+  {
+    "stratum": "focus_z-2812_-2600",
+    "N": 197,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.04793876139447093,
+      0.05494064537758823,
+      0.09146095126005821,
+      0.3699539549498237,
+      3.3985663311097416,
+      7.900905901549813
+    ],
+    "module_median_energy_GeV": [
+      0.00029995998740196226,
+      0.001067490005865693,
+      0.002405570001457818,
+      0.010122936685103922
+    ],
+    "module_zero_N": [
+      90,
+      76,
+      55,
+      42
+    ],
+    "finite_reco_N": 197,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.4883801236230533,
+    "transfer_proxy_valid_N": 197,
+    "sensitive_vs_transfer_proxy_spearman": 0.18811548615754567,
+    "recoEM_vs_transfer_proxy_spearman": 0.2367783292366324,
+    "recoEM_over_sensitive_quantiles": [
+      15.389432336454181,
+      86.82583354905597,
+      159.86602135802792
+    ]
+  },
+  {
+    "stratum": "focus_z-2600_-2300",
+    "N": 452,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.0114193291234551,
+      0.05517758777471063,
+      0.08995804947311808,
+      0.5533836873593263,
+      10.257109877137482,
+      75.37248244661629
+    ],
+    "module_median_energy_GeV": [
+      0.0008749749971320853,
+      0.0019120844147109892,
+      0.002102940022945404,
+      0.01360767672964721
+    ],
+    "module_zero_N": [
+      168,
+      160,
+      155,
+      111
+    ],
+    "finite_reco_N": 452,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.46118785307559185,
+    "transfer_proxy_valid_N": 452,
+    "sensitive_vs_transfer_proxy_spearman": 0.27454523883253573,
+    "recoEM_vs_transfer_proxy_spearman": 0.19586862979283892,
+    "recoEM_over_sensitive_quantiles": [
+      11.147073093130073,
+      89.00346141224674,
+      163.0148318971014
+    ]
+  },
+  {
+    "stratum": "focus_z-2300_-1950",
+    "N": 2062,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.05583424792640144,
+      0.10496533296200142,
+      1.9550866033909589,
+      28.64695455053615,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.0017893082479713486,
+      0.0029481150253741362,
+      0.012510317430725991,
+      0.022340899590359186
+    ],
+    "module_zero_N": [
+      668,
+      653,
+      504,
+      472
+    ],
+    "finite_reco_N": 2062,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.641862404026111,
+    "transfer_proxy_valid_N": 2062,
+    "sensitive_vs_transfer_proxy_spearman": 0.40498890448290253,
+    "recoEM_vs_transfer_proxy_spearman": 0.3473076547931178,
+    "recoEM_over_sensitive_quantiles": [
+      6.482710102121292,
+      78.49374993043071,
+      160.25493642280392
+    ]
+  },
+  {
+    "stratum": "focus_z-1769.65_-1619.65",
+    "N": 258,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.01339580736552307,
+      0.05763393494032207,
+      0.10252578169923435,
+      6.553885566200542,
+      35.808864868295096,
+      52.79679834919957
+    ],
+    "module_median_energy_GeV": [
+      0.002670040403754683,
+      0.003725385170604568,
+      0.016344764028281132,
+      0.02130122083016613
+    ],
+    "module_zero_N": [
+      68,
+      67,
+      53,
+      45
+    ],
+    "finite_reco_N": 258,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.6461579150928531,
+    "transfer_proxy_valid_N": 258,
+    "sensitive_vs_transfer_proxy_spearman": 0.5840862774171977,
+    "recoEM_vs_transfer_proxy_spearman": 0.4618387406370395,
+    "recoEM_over_sensitive_quantiles": [
+      6.261926709228671,
+      78.50022155824905,
+      151.21932850242706
+    ]
+  },
+  {
+    "stratum": "focus_pi",
+    "N": 1406,
+    "sources": 8,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.0114193291234551,
+      0.05502738825486449,
+      0.08891477656083224,
+      0.8666948324848218,
+      20.57846166874357,
+      75.37248244661629
+    ],
+    "module_median_energy_GeV": [
+      0.0009480450020637363,
+      0.001531059987959452,
+      0.005121572749005281,
+      0.01621232652755316
+    ],
+    "module_zero_N": [
+      546,
+      504,
+      403,
+      354
+    ],
+    "finite_reco_N": 1406,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.5370888309699869,
+    "transfer_proxy_valid_N": 1406,
+    "sensitive_vs_transfer_proxy_spearman": 0.35427783195015583,
+    "recoEM_vs_transfer_proxy_spearman": 0.2813328120221294,
+    "recoEM_over_sensitive_quantiles": [
+      6.901570973884853,
+      89.74028747302276,
+      164.2384392130008
+    ]
+  },
+  {
+    "stratum": "focus_k",
+    "N": 1398,
+    "sources": 10,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.05656007321167854,
+      0.10956148181820755,
+      1.8704881991631714,
+      30.028765011675468,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.0021978637597640047,
+      0.003538863153429702,
+      0.01111139793350776,
+      0.016872867177793523
+    ],
+    "module_zero_N": [
+      407,
+      406,
+      337,
+      294
+    ],
+    "finite_reco_N": 1398,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.6572396972017158,
+    "transfer_proxy_valid_N": 1398,
+    "sensitive_vs_transfer_proxy_spearman": 0.3595290909324123,
+    "recoEM_vs_transfer_proxy_spearman": 0.3026732578748525,
+    "recoEM_over_sensitive_quantiles": [
+      6.513864191533669,
+      74.37929836107378,
+      157.4792129467712
+    ]
+  },
+  {
+    "stratum": "focus_charm",
+    "N": 220,
+    "sources": 3,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.023133901694687667,
+      0.057156804179330355,
+      0.11616949975638999,
+      2.6953235585627953,
+      42.51152767901907,
+      64.3678399258126
+    ],
+    "module_median_energy_GeV": [
+      0.003184700824916945,
+      0.0036317550331586975,
+      0.01283702821636325,
+      0.02627248499439156
+    ],
+    "module_zero_N": [
+      63,
+      72,
+      44,
+      38
+    ],
+    "finite_reco_N": 220,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.6859536917554645,
+    "transfer_proxy_valid_N": 220,
+    "sensitive_vs_transfer_proxy_spearman": 0.3664155345057843,
+    "recoEM_vs_transfer_proxy_spearman": 0.3646653105154314,
+    "recoEM_over_sensitive_quantiles": [
+      6.56679992684503,
+      67.71775112645966,
+      157.68189402754348
+    ]
+  },
+  {
+    "stratum": "focus_proxy",
+    "N": 2879,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.004761004000261891,
+      0.05548865597261756,
+      0.09420655462221111,
+      0.828343502768638,
+      11.005767586775253,
+      64.3678399258126
+    ],
+    "module_median_energy_GeV": [
+      0.0012674400210380555,
+      0.0018069999876897782,
+      0.0061810885882005095,
+      0.013563753487542272
+    ],
+    "module_zero_N": [
+      1006,
+      975,
+      776,
+      682
+    ],
+    "finite_reco_N": 2879,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.5543476337949521,
+    "transfer_proxy_valid_N": 2879,
+    "sensitive_vs_transfer_proxy_spearman": 0.30343696713309726,
+    "recoEM_vs_transfer_proxy_spearman": 0.2348507295383841,
+    "recoEM_over_sensitive_quantiles": [
+      8.986708065615911,
+      85.786609135931,
+      161.8919242926432
+    ]
+  },
+  {
+    "stratum": "focus_not_proxy",
+    "N": 145,
+    "sources": 21,
+    "zero_hit_events": 0,
+    "zero_energy_events": 0,
+    "energy_total_quantiles_GeV": [
+      0.05160704357130453,
+      0.16377907588084345,
+      11.618555697545526,
+      38.34097764683771,
+      72.81749977830087,
+      107.73083252716782
+    ],
+    "module_median_energy_GeV": [
+      0.4954265964640435,
+      0.5524684230641979,
+      1.0799484472283694,
+      1.1540250267801166
+    ],
+    "module_zero_N": [
+      10,
+      7,
+      8,
+      4
+    ],
+    "finite_reco_N": 145,
+    "nonpositive_reco_N": 0,
+    "sensitive_vs_recoEM_spearman": 0.9979491418674225,
+    "transfer_proxy_valid_N": 145,
+    "sensitive_vs_transfer_proxy_spearman": 0.2769130845536136,
+    "recoEM_vs_transfer_proxy_spearman": 0.28422689340261376,
+    "recoEM_over_sensitive_quantiles": [
+      5.934540737002447,
+      6.249862992365569,
+      107.58730573284639
+    ]
+  }
+]

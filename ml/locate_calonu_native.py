@@ -24,6 +24,7 @@ def main():
         tree = f['nt']
         values = tree.arrays(keys+(truth_keys if row.get('verify_phys_truth') else []),entry_stop=256 if a.smoke else None)
         row['phys_entries'] = tree.num_entries
+        row['locate_bytes_read'] = int(f.file.source.num_requested_bytes)
     idx = ak.argmax(values['Track_pz0'], axis=1, keepdims=True)
     d = {key: ak.to_numpy(ak.fill_none(ak.firsts(values[key][idx]), np.nan)).astype(np.float32)
          if key.startswith('Track_') else ak.to_numpy(values[key]) for key in keys}

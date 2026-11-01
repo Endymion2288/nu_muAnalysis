@@ -1,0 +1,13 @@
+{
+  "existing_fit_outside_selected_events": 10606,
+  "focus_events": 8634,
+  "sources": 60,
+  "component_sources": {
+    "pi": 22,
+    "k": 31,
+    "charm": 7
+  },
+  "exposure": "stage35 fit and stage42 A training already exposed; only source-external to current X/Z models; not a new blind test",
+  "input_cache": "ntuples/energy_ml_stage42/development.npz",
+  "selection": "exclude every source group appearing in selected rows; metadata inventory only; no new predictions or fits"
+}

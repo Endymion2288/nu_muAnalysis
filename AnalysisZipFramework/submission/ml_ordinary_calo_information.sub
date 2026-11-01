@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage47
+initialdir = $(spool)
+executable = $(spool)/run_ml_ordinary_calo_information.sh
+transfer_executable = False
+arguments = $(mode) $(index) energy-ml-ordinary-calo-stage47-$(mode).tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-ordinary-calo-stage47-$(mode).tar.gz
+request_cpus = 1
+request_memory = $(memory)
+request_disk = 1000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-ordinary-calo-stage47"
+log = $(spool)/logs/$(ClusterId).log
+output = $(spool)/logs/$(ClusterId).$(ProcId).out
+error = $(spool)/logs/$(ClusterId).$(ProcId).err
+queue mode,index from $(jobs)
