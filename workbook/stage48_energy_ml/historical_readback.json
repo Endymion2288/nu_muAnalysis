@@ -1,0 +1,188 @@
+{
+  "old_support_events": 3703,
+  "old_sources": 21,
+  "original_mapping_reconstructions": 6,
+  "energy_fits": 0,
+  "target_calibration_fits": 0,
+  "new_support_labels_used": false,
+  "new_source_overlap": 0,
+  "records": [
+    {
+      "fold": 0,
+      "model": "local",
+      "original_calibration_N": 971,
+      "original_evaluation_N": 1473,
+      "original_calibration_sources": [
+        "charm:00110-00119",
+        "k:00130-00139",
+        "k:00350-00359",
+        "k:00550-00559",
+        "pi:00140-00149",
+        "pi:00330-00339"
+      ],
+      "original_training_sources": [
+        "charm:00040-00049",
+        "k:00050-00059",
+        "k:00260-00269",
+        "k:00490-00499",
+        "pi:00060-00069",
+        "pi:00280-00289",
+        "pi:00440-00449"
+      ],
+      "log_offset": 0.03115042758171896,
+      "raw_float32_log_prediction_exact": true,
+      "energy_max_relative_difference": 0.0,
+      "probability_max_absolute_difference": 0.0,
+      "mapping_iterations": 67
+    },
+    {
+      "fold": 0,
+      "model": "oracle_z",
+      "original_calibration_N": 971,
+      "original_evaluation_N": 1473,
+      "original_calibration_sources": [
+        "charm:00110-00119",
+        "k:00130-00139",
+        "k:00350-00359",
+        "k:00550-00559",
+        "pi:00140-00149",
+        "pi:00330-00339"
+      ],
+      "original_training_sources": [
+        "charm:00040-00049",
+        "k:00050-00059",
+        "k:00260-00269",
+        "k:00490-00499",
+        "pi:00060-00069",
+        "pi:00280-00289",
+        "pi:00440-00449"
+      ],
+      "log_offset": 0.026677156324732918,
+      "raw_float32_log_prediction_exact": true,
+      "energy_max_relative_difference": 2.220446049250313e-16,
+      "probability_max_absolute_difference": 2.220446049250313e-16,
+      "mapping_iterations": 54
+    },
+    {
+      "fold": 1,
+      "model": "local",
+      "original_calibration_N": 1473,
+      "original_evaluation_N": 1259,
+      "original_calibration_sources": [
+        "charm:00000-00009",
+        "k:00000-00009",
+        "k:00170-00179",
+        "k:00400-00409",
+        "k:00600-00609",
+        "pi:00000-00009",
+        "pi:00190-00199",
+        "pi:00390-00399"
+      ],
+      "original_training_sources": [
+        "charm:00110-00119",
+        "k:00130-00139",
+        "k:00350-00359",
+        "k:00550-00559",
+        "pi:00140-00149",
+        "pi:00330-00339"
+      ],
+      "log_offset": -0.018363392356146306,
+      "raw_float32_log_prediction_exact": true,
+      "energy_max_relative_difference": 0.0,
+      "probability_max_absolute_difference": 0.0,
+      "mapping_iterations": 58
+    },
+    {
+      "fold": 1,
+      "model": "oracle_z",
+      "original_calibration_N": 1473,
+      "original_evaluation_N": 1259,
+      "original_calibration_sources": [
+        "charm:00000-00009",
+        "k:00000-00009",
+        "k:00170-00179",
+        "k:00400-00409",
+        "k:00600-00609",
+        "pi:00000-00009",
+        "pi:00190-00199",
+        "pi:00390-00399"
+      ],
+      "original_training_sources": [
+        "charm:00110-00119",
+        "k:00130-00139",
+        "k:00350-00359",
+        "k:00550-00559",
+        "pi:00140-00149",
+        "pi:00330-00339"
+      ],
+      "log_offset": -0.019144074813100983,
+      "raw_float32_log_prediction_exact": true,
+      "energy_max_relative_difference": 2.220446049250313e-16,
+      "probability_max_absolute_difference": 2.220446049250313e-16,
+      "mapping_iterations": 54
+    },
+    {
+      "fold": 2,
+      "model": "local",
+      "original_calibration_N": 1259,
+      "original_evaluation_N": 971,
+      "original_calibration_sources": [
+        "charm:00040-00049",
+        "k:00050-00059",
+        "k:00260-00269",
+        "k:00490-00499",
+        "pi:00060-00069",
+        "pi:00280-00289",
+        "pi:00440-00449"
+      ],
+      "original_training_sources": [
+        "charm:00000-00009",
+        "k:00000-00009",
+        "k:00170-00179",
+        "k:00400-00409",
+        "k:00600-00609",
+        "pi:00000-00009",
+        "pi:00190-00199",
+        "pi:00390-00399"
+      ],
+      "log_offset": -0.0035043088784824502,
+      "raw_float32_log_prediction_exact": true,
+      "energy_max_relative_difference": 0.0,
+      "probability_max_absolute_difference": 0.0,
+      "mapping_iterations": 60
+    },
+    {
+      "fold": 2,
+      "model": "oracle_z",
+      "original_calibration_N": 1259,
+      "original_evaluation_N": 971,
+      "original_calibration_sources": [
+        "charm:00040-00049",
+        "k:00050-00059",
+        "k:00260-00269",
+        "k:00490-00499",
+        "pi:00060-00069",
+        "pi:00280-00289",
+        "pi:00440-00449"
+      ],
+      "original_training_sources": [
+        "charm:00000-00009",
+        "k:00000-00009",
+        "k:00170-00179",
+        "k:00400-00409",
+        "k:00600-00609",
+        "pi:00000-00009",
+        "pi:00190-00199",
+        "pi:00390-00399"
+      ],
+      "log_offset": -0.001233164929611586,
+      "raw_float32_log_prediction_exact": true,
+      "energy_max_relative_difference": 2.220446049250313e-16,
+      "probability_max_absolute_difference": 3.3306690738754696e-16,
+      "mapping_iterations": 55
+    }
+  ],
+  "wall_s": 0.598272955045104,
+  "cpu_s": 0.4309689619999999,
+  "peak_rss_MiB": 658.95703125
+}

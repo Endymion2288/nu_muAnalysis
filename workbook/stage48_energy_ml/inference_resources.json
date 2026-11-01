@@ -1,0 +1,57 @@
+{
+  "stage": 48,
+  "events": 4000,
+  "sources": 60,
+  "energy_fits": 0,
+  "target_calibration_fits": 0,
+  "original_calibration_states_only": true,
+  "records": [
+    {
+      "fold": 0,
+      "model": "local",
+      "N": 1328,
+      "columns": 87,
+      "wall_s": 0.020884245000161172
+    },
+    {
+      "fold": 0,
+      "model": "oracle_z",
+      "N": 1328,
+      "columns": 88,
+      "wall_s": 0.013844142999914766
+    },
+    {
+      "fold": 1,
+      "model": "local",
+      "N": 1336,
+      "columns": 87,
+      "wall_s": 0.013072341999759374
+    },
+    {
+      "fold": 1,
+      "model": "oracle_z",
+      "N": 1336,
+      "columns": 88,
+      "wall_s": 0.012953770000422082
+    },
+    {
+      "fold": 2,
+      "model": "local",
+      "N": 1336,
+      "columns": 87,
+      "wall_s": 0.012735247999444255
+    },
+    {
+      "fold": 2,
+      "model": "oracle_z",
+      "N": 1336,
+      "columns": 88,
+      "wall_s": 0.013446956999359827
+    }
+  ],
+  "wall_s": 0.4549503979997098,
+  "cpu_s": 0.173583834,
+  "peak_rss_MiB": 173.6875,
+  "xgboost_version": "2.1.3",
+  "numpy_version": "2.2.6"
+}

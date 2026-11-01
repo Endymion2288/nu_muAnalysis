@@ -1,0 +1,36 @@
+{
+  "manifest_sources": 124,
+  "manifest_partitions": {
+    "fit": 81,
+    "calibration": 14,
+    "test": 18,
+    "stop": 11
+  },
+  "no_certified_unused_same_geometry_source": true,
+  "audit_scope": "existing calonu_files.tsv + stage35/stage42 provenance; no EOS scan; nominal non-CaloNu geometry is not interchangeable",
+  "supporting_records": [
+    "workbook/2026-11-01_stage35_calonu-readout-information.md",
+    "workbook/stage35_energy_ml/source_audit.md",
+    "workbook/2026-11-01_stage42_calonu-information-budget.md"
+  ],
+  "support_level": "source-external development replication; not blind or independent production",
+  "eligible_events": 10606,
+  "eligible_sources": 60,
+  "selected_events": 4000,
+  "selected_sources": 60,
+  "component_sources": {
+    "pi": 22,
+    "k": 31,
+    "charm": 7
+  },
+  "source_event_count_range": [
+    59,
+    67
+  ],
+  "fold_N": [
+    1328,
+    1336,
+    1336
+  ],
+  "new_predictions_read": false
+}
