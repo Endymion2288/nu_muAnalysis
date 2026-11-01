@@ -1,0 +1,76 @@
+{
+  "valid": true,
+  "events": 2,
+  "input": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00000-r0022-xAOD.root",
+  "schemas": [
+    {
+      "branch": "EventInfoAux.",
+      "class_name": "xAOD::EventAuxInfo_v3",
+      "loaded_checksum": 3545528082,
+      "saved_checksums": [
+        3545528082
+      ]
+    },
+    {
+      "branch": "CaloNuWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1",
+      "loaded_checksum": 2563110354,
+      "saved_checksums": [
+        2563110354
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "run": 16000,
+      "eventID": 1,
+      "channels": [
+        6,
+        7,
+        14,
+        15
+      ],
+      "wave_max_difference_mV": 0.0,
+      "raw_charge_max_difference_pC": 0.0,
+      "start_ns": [
+        112.0,
+        112.0,
+        112.0,
+        112.0
+      ],
+      "stop_ns": [
+        262.0,
+        262.0,
+        262.0,
+        262.0
+      ]
+    },
+    {
+      "run": 16000,
+      "eventID": 2,
+      "channels": [
+        6,
+        7,
+        14,
+        15
+      ],
+      "wave_max_difference_mV": 0.0,
+      "raw_charge_max_difference_pC": 0.0,
+      "start_ns": [
+        112.0,
+        112.0,
+        112.0,
+        112.0
+      ],
+      "stop_ns": [
+        262.0,
+        262.0,
+        262.0,
+        262.0
+      ]
+    }
+  ],
+  "wall_s": 42.20628592208959,
+  "cpu_s": 38.712157474,
+  "peak_rss_MiB": 1191.4453125
+}

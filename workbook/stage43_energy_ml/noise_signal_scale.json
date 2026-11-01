@@ -1,0 +1,57 @@
+{
+  "charge_gain_pC_per_sensitive_MeV": 0.0013424396125810325,
+  "total_fixed_noise_RMS_pC": 0.11984372731501951,
+  "total_fixed_noise_SD_pC": 0.11980863198763009,
+  "signal_summary": [
+    {
+      "stratum": "all",
+      "N": 3703,
+      "empty_HITS": 644,
+      "signal_sum_median_pC": 0.004494172020405527,
+      "signal_sum_p90_pC": 5.093392737510725,
+      "max_module_SNR_median": 0.04340490013315473,
+      "fraction_max_module_SNR_lt1": 0.7647853092087497,
+      "fraction_max_module_SNR_gt3": 0.2100999189846071
+    },
+    {
+      "stratum": "focus",
+      "N": 3024,
+      "empty_HITS": 547,
+      "signal_sum_median_pC": 0.004001603979207238,
+      "signal_sum_p90_pC": 4.125980786796412,
+      "max_module_SNR_median": 0.04006166901388988,
+      "fraction_max_module_SNR_lt1": 0.7698412698412699,
+      "fraction_max_module_SNR_gt3": 0.2046957671957672
+    },
+    {
+      "stratum": "p100_250",
+      "N": 849,
+      "empty_HITS": 185,
+      "signal_sum_median_pC": 0.0029077678634028257,
+      "signal_sum_p90_pC": 2.821246555101671,
+      "max_module_SNR_median": 0.031875622004668064,
+      "fraction_max_module_SNR_lt1": 0.7915194346289752,
+      "fraction_max_module_SNR_gt3": 0.17667844522968199
+    },
+    {
+      "stratum": "p250_1000",
+      "N": 2175,
+      "empty_HITS": 362,
+      "signal_sum_median_pC": 0.004566937206929489,
+      "signal_sum_p90_pC": 4.704627649833253,
+      "max_module_SNR_median": 0.04385999587353581,
+      "fraction_max_module_SNR_lt1": 0.7613793103448275,
+      "fraction_max_module_SNR_gt3": 0.21563218390804598
+    },
+    {
+      "stratum": "p1000_up",
+      "N": 679,
+      "empty_HITS": 97,
+      "signal_sum_median_pC": 0.007533300908356131,
+      "signal_sum_p90_pC": 11.430539328525859,
+      "max_module_SNR_median": 0.06722011610922943,
+      "fraction_max_module_SNR_lt1": 0.7422680412371134,
+      "fraction_max_module_SNR_gt3": 0.2341678939617084
+    }
+  ]
+}

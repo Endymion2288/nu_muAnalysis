@@ -1,0 +1,21 @@
+{
+  "part": "train",
+  "payload": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/energy-ml-calonu-data-noise-stage43.tar.gz",
+  "bytes": 3694654,
+  "paths": [
+    "ml/calonu_data_noise.py",
+    "ml/run_calonu_data_noise.py",
+    "ml/run_calonu_information.py",
+    "ml/information_gap.py",
+    "ml/train_bdt.py",
+    "ml/calonu_weak_readout.py",
+    "ml/report_calonu_native.py",
+    "ml/configs/calonu_data_noise.json",
+    "workbook/stage43_energy_ml/raw_manifest.json",
+    "ntuples/energy_ml_stage42/development.npz",
+    "ntuples/energy_ml_stage43/response.npz"
+  ],
+  "reader_headers": "official Calypso d32b0ff3 installed EventFormats and Exceptions; Logging include from source",
+  "reader_compiler": "String dump of section '.comment':\n  [     0]  GCC: (GNU) 11.5.0 20240719 (Red Hat 11.5.0-14)",
+  "packager_compiler": "g++ (GCC) 15.2.0"
+}

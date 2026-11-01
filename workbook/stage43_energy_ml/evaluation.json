@@ -1,0 +1,36 @@
+{
+  "events": 3703,
+  "focus_events": 3024,
+  "sources": 21,
+  "formal_fits": 9,
+  "main": {
+    "stratum": "focus",
+    "reference": "I0",
+    "model": "data_noise_nominal",
+    "N": 3024,
+    "sources": 21,
+    "relative_gain": 0.01336527867286097,
+    "CI025": 0.005716968961785114,
+    "CI975": 0.020317225108811444,
+    "log_RMSE_delta": -0.0038371305859582483,
+    "delta_CI025": -0.005669878729426006,
+    "delta_CI975": -0.0017296822921353463,
+    "mean_bias_delta": -0.0028177154406817725,
+    "bias_CI025": -0.005017757396466393,
+    "bias_CI975": -0.00037346583454269874,
+    "valid_bootstrap": 500
+  },
+  "practical_gate_passed": false,
+  "models": [
+    "I0",
+    "Is",
+    "ideal_sum",
+    "fixed_nominal",
+    "data_noise_nominal",
+    "data_noise_half_gain"
+  ],
+  "noise_library_uncertainty_propagated": false,
+  "wall_s": 5.825269913999364,
+  "cpu_s": 5.592643032,
+  "peak_rss_MiB": 175.6640625
+}

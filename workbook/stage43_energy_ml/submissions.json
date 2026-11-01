@@ -1,0 +1,32 @@
+{
+  "jobs": [
+    {
+      "mode": "extract",
+      "schedd": "bigbird18",
+      "cluster": 13645334,
+      "status": 4,
+      "exit_code": 0,
+      "starts": 1
+    },
+    {
+      "mode": "aborted",
+      "schedd": "bigbird18",
+      "cluster": 13645335,
+      "status": 3,
+      "exit_code": 0,
+      "starts": 1
+    },
+    {
+      "mode": "train",
+      "schedd": "bigbird12",
+      "cluster": 16114840,
+      "status": 4,
+      "exit_code": 0,
+      "starts": 1
+    }
+  ],
+  "migration": "bigbird18 initial training was idle at decision; allocation raced condor_rm and ran startup for5s; 1userCPU s, no stdout/models/predictions recovered. Whether xgb.train was entered is unmeasured; nine formal fits completed only in replacement. Do not claim guaranteed zero execution or zero partial fits.",
+  "formal_completed_fits": 9,
+  "smoke_completed_fits": 1,
+  "aborted_startup_jobs": 1
+}

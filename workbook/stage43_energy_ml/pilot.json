@@ -1,0 +1,106 @@
+{
+  "cases": [
+    {
+      "run": 16000,
+      "eventID": 1,
+      "counter": 1,
+      "timestamp_us": 1722730021650882,
+      "status": 2,
+      "trigger_bits": 16,
+      "raw_entry": 0,
+      "bytes_through": 7291,
+      "board_valid": [
+        1,
+        1
+      ],
+      "board_time_tag": [
+        8264,
+        8263
+      ],
+      "adc_shape": [
+        4,
+        280
+      ],
+      "xaod_channels": [
+        6,
+        7,
+        14,
+        15
+      ],
+      "window_start_ns": [
+        112.0,
+        112.0,
+        112.0,
+        112.0
+      ],
+      "window_stop_ns": [
+        262.0,
+        262.0,
+        262.0,
+        262.0
+      ],
+      "wave_max_difference_mV": 0.0,
+      "raw_charge_max_difference_pC": 0.0,
+      "baseline_rms_mV": [
+        0.4102058708667755,
+        0.46719619631767273,
+        0.2739894390106201,
+        0.22325138747692108
+      ]
+    },
+    {
+      "run": 16000,
+      "eventID": 2,
+      "counter": 2,
+      "timestamp_us": 1722730021660710,
+      "status": 2,
+      "trigger_bits": 4,
+      "raw_entry": 1,
+      "bytes_through": 15126,
+      "board_valid": [
+        1,
+        1
+      ],
+      "board_time_tag": [
+        7216,
+        7215
+      ],
+      "adc_shape": [
+        4,
+        280
+      ],
+      "xaod_channels": [
+        6,
+        7,
+        14,
+        15
+      ],
+      "window_start_ns": [
+        112.0,
+        112.0,
+        112.0,
+        112.0
+      ],
+      "window_stop_ns": [
+        262.0,
+        262.0,
+        262.0,
+        262.0
+      ],
+      "wave_max_difference_mV": 0.0,
+      "raw_charge_max_difference_pC": 0.0,
+      "baseline_rms_mV": [
+        0.30540964007377625,
+        0.34293413162231445,
+        0.2253861129283905,
+        0.3528777062892914
+      ]
+    }
+  ],
+  "events": 2,
+  "formal_events_include_pilot": true,
+  "framing": "official EventFormats EventFull and DigitizerDataFragment",
+  "decoder_runtime": "/tmp/xcheng/nu_mu_calypso_master_d32b0ff3_180107",
+  "original_data": "Calypso22.0.49 r0022, revision d0b1b2dd",
+  "historical_production_equivalence": false
+}
