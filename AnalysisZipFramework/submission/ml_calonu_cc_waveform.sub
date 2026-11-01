@@ -1,0 +1,19 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage39
+initialdir = $(spool)
+executable = $(spool)/run_ml_calonu_cc_waveform.sh
+arguments = $(casegroup) energy-ml-calonu-cc-waveform-stage39.tar.gz $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-calonu-cc-waveform-stage39.tar.gz
+request_cpus = 1
+request_memory = 4000MB
+request_disk = 1000MB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++JobFlavour = "espresso"
++NuMuStage = "energy-ml-calonu-cc-waveform-stage39"
+log = $(spool)/logs/$(ClusterId).log
+output = $(spool)/logs/$(ClusterId).$(ProcId).out
+error = $(spool)/logs/$(ClusterId).$(ProcId).err
+queue casegroup in (left right)

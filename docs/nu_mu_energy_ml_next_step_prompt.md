@@ -1,66 +1,76 @@
-# 下一轮执行 Prompt：CC同事件波形读出与时间/形状控制
+# 下一轮执行 Prompt：完整CaloNu读出响应与有限时间自由度
 
-先读AGENTS.md、修订路线第20节、`workbook/2026-11-01_stage38_calonu-waveform-repair.md`、
-stage38冻结协议/确认表及stage35–37报告。stage30–38已完成。
+先读AGENTS.md、修订路线第21节、`workbook/2026-11-01_stage39_calonu-cc-waveform.md`、
+stage39冻结协议/结果/源码审计及stage35–38报告。stage30–39已完成。
 用户重点reco p100–1000 GeV，保留100–250/250–1000；≥TeV仅参考。
 
-**唯一主线：另冻小预算CC同事件原生波形比较，先确认可联接与时间/形状适用性，再决定有限建模。**
+**唯一主线：先控制空HITS噪声缺失机制和强信号时间敏感性，再决定有限能量建模。**
 
 最新证据：
 
-- stage38旧开发8非有限恢复；84组合成、75组旧参数独立积分通过。
-  新来源1/4/7/10、128例/512模块，96常规/32富集；原4非有限→修复0。
-  新56组固定参数quadrature通过，40/40正常可辨认正脉冲保真；不强限n或删大/负/窄响应。
-  time NaN注入拒绝且status32/fallback有限；无饱和覆盖。
-  patch针对1ec47efe，仅源函数scaffold/ROOT解释编译验证，未完成Athena tool重建或生产修复。
-- 主候选为固定生产模板+常数基线项，mean820 ns，未逐例选峰/调时间。
-  96常规总电荷signed→主候选RMSE0.485709→0.135039 pC，改善72.1974%
-  [69.3173%,74.3946%]，离峰RMS0.490822→0.115990 pC，常数baseline扰动不变。
-  两个p层分别改善73.1825%/71.4506%。只是电荷相对名义HITS信号的条件MC证据，不是ν能量精度。
-  主候选bias−0.012532 [−0.023001,−0.002063] pC仍非零，100–250 GeV层−0.032646 pC，禁止事后扣常数。
-- 原数值修复fit常规仍RMSE1.760829 pC，阈下raw整流噪声没有被积分补丁消除。
-  MC已知digitizer baseline解释性signed RMSE0.235104 pC，理想白噪声0.255404 pC；
-  保存baseline积分偏移RMS0.409148 pC，与signed误差相关0.875539。已知MC baseline不作data输入。
-- ±2 ns控制常规RMSE0.144640/0.139250 pC，但32富集从名义0.119275升至
-  1.575770/1.694162 pC。强信号时间/形状失配是具体局限，不逐事件选三者最优，不忽略高信号。
-  斜坡/非平稳、相关噪声及饱和精度未测量。四来源block区间不含系统误差或完整总体统计不确定性。
-- stage35同事件F6+原CaloNu重点改善3.3359% [2.2676%,4.7581%]，未达冻结5%扩展门槛。
-  stage34/35 test均已评价；后续变模型不能再叫新独立确认。stage38只通过μ弱信号读出门槛。
+- stage39冻结六来源组π/K/charm各两组，190例=142常规+48富集，皆为stage35已有fit分区。
+  PHYS真实entry/fingerprint→HITS/RDO/rec及PHYS读出全部联接通过。
+  固定stage38模板+常数项，没有本次CC调权、逐例选时间或用truth作输入。
+- 112常规共同有效波形，signed→主候选总电荷RMSE0.484287→0.128924 pC，
+  改善73.3787% [70.1344%,76.7130%]；离峰RMS0.479922→0.133249 pC。
+  两p层改善76.9216%/68.6610%，常数baseline扰动最大1.421085e−14 pC。
+  高p层bias−0.028192 [−0.048949,−0.006720] pC，未扣常数。不是ν能量73%收益。
+- 常规30/142（21.1268%）无任何波形且空敏感HITS，全部在名义中心下游。
+  全190有147完整、43全缺、无部分缺失；缺失估计保留NaN/presence mask。
+  `CaloWaveformDigiAlg::execute`空HITS时在波形/噪声生成前返回，PHYS默认charge/raw0、status1。
+  因而缺失是生产机制，不能当data测得的无噪声零；status1不能单独判有效波形。
+  全fit零读出2403/14309、重点2074/11658只作描述；未认证全体零值均为空HITS。
+  stage35约3.34%收益中缺失标记贡献未测量，不宣称全部收益为伪影。
+- 常规高信号≥1pC仅17例。名义模型相对RMSE2.4062%，提前2ns为7.5224%，
+  14/17误差>5%，12/17相对名义变化>5%；π/K/charm均有约−7%早移偏差。
+  固定单模板时间鲁棒性不足，不能用总体平均降噪掩盖。
+  常规名义信号中位0.007343pC；高y≥.8仅8例，无≥1pC参考；饱和精度未测量。
+- stage38稳定CB积分/初始化/fallback源函数验证通过；正常40/40脉冲保真、time NaN注入拒绝。
+  仍只是源函数scaffold，未完成完整Athena tool/生产修复。
+  stage35同事件F6+原CaloNu重点改善3.3359% [2.2676%,4.7581%]，未达冻结5%扩展门槛。
+  stage34/35 test已用，后续改模型不能再叫新独立确认；stage39也不是新ν能量test。
 
-下一步具体任务：
+下一阶段具体任务与验收：
 
-1. 审计已有CaloNu CC来源，定位同事件PHYS/rec/RDO及历史cable/conditions，
-   用实际entry、多变量fingerprint和独立真值签名核验联接。PG重复eventID不能照搬为唯一键。
-   先小样本，量化可覆盖的CC事件/来源组与缺失；不能用不同几何、不同事件或普通几何helper假匹配。
-2. 新冻结小预算波形支持，保留p层、低/高信号、阈下、负值、失败/饱和及固定±2 ns控制。
-   部署接口只读保存waveform/ADC/baseline/conditions；HITS只作控制标签，不用truth逐例调时间。
-   先查CC时间/形状和常数baseline适用性，不能把μ电荷增益直接折算为ν能量/谱收益。
-3. 若可比较且读出适用，冻结同事件输入/划分/预算，比较原F6、加原CaloNu、加固定signed/模板。
-   映射/校准只用train内部独立预测；不立即扫描网络或高维变量。
-   报告ν能量误差、bias、R68、尾部和来源配对区间，分p/y/primary状态，明确统计与系统局限。
-   新确认组和stage35已用test分开说明，不能把开发测试冒充新独立确认。
-4. 若CC高信号时间控制不通过，先量化失效区域，再决定有限的时间/形状模型或生产读出约束；
-   不逐例选更优输出、不删尾、不默认全量重模拟或重跑PHYS，不恢复架构竞赛。
+1. **先验证空HITS读出路径**。以已认证空/非空事件和原生产源为输入，
+   定位最小源码修复或受限源函数验证：无信号也应生成同条件通道噪声，
+   明确输出容器/通道/presence语义，检查PHYS缺失标记。
+   只构建相关模块/函数，使用历史CaloNu映射/conditions；不默认重跑全量G4或PHYS。
+   模拟控制不得伪装成新测得的原生观测，不向现有缺失ADC直接补造随机数后当真实波形。
+2. **冻结一个简单时间自由度**，例如模板+时间导数联合估计或固定有界时间拟合。
+   先stage37–39已有控制开发，接口仅waveform/ADC/baseline/conditions，
+   HITS只用于评估；不得truth选时间、逐例选更优方法或扩大模型扫描。
+   覆盖弱信号、负值/失败、名义高信号、固定±2ns，保留饱和覆盖缺口。
+3. 新来源确认前，冻结来源隔离/支持/预算及噪声、偏差、强信号时间鲁棒性门槛。
+   验证空HITS不再成为无噪声理想零标记、非空响应保真，并定量比较读出噪声与时间扰动。
+   若未通过，定位物理/程序原因，不删尾、不把旧开发支持再称独立确认。
+   若没有适用的新原生支持，明确源函数控制范围与未测量项，不能虚称全链生产验证。
+4. 响应控制通过后才另冻同事件F6、加原CaloNu、加改进波形的有限能量模型实验。
+   映射/校准只用train内部独立预测，划分须明确已用test。
+   报告误差、bias、R68、尾部、来源组配对区间和p/y/primary支持；不立即恢复架构竞赛。
 
-输入与资源：
+输入、条件与资源：
 
-- `ntuples/energy_ml_stage38/confirmation.npz`：620787 bytes，128例ADC/波形/名义信号、保存和修复读出及lineage，
-  逐字段读回，分片/payload已清，见stage38 archive.json。开发stage37 cache649006 bytes仍保留。
-- stage38用了bigbird14，cluster17555947，4 jobs全exit0无重提，wall564.62 s/CPU324.11 s、峰1405544 KiB。
-  大批量走Condor；繁忙schedd可换空闲且资源匹配者。优先现成build，仅改模块才构建。
-- 原生产源1ec47efe；现成d32b0ff3只读字典持久化布局核验通过，但不是相同几何重建。
-  原ROOT6.28/12适合源函数重放，其余统计用LCG109_cuda。
-  PyROOT6.28 vector<float>用list转换并逐值检查，不能把float64 NumPy buffer误作float32。
-- branch→region `[1,0,3,2]`已认证，历史payload/IOV见stage37 conditions_audit.json；
+- `ntuples/energy_ml_stage39/cc_waveform.npz`：1244048bytes，190例ADC/保存波形/名义信号、
+  存在性及固定读出、完整lineage；六分片22原生数组逐字段重联相等，metadata/schema保留。
+  分片与payload已清，见archive.json；汇总脚本依赖归档前分片，不重提旧jobs重造重复产物。
+  stage38 `confirmation.npz`620787bytes、stage37 cache649006bytes仍保留作开发控制。
+- stage39使用bigbird14，17555948六技术失败、17555949两合并成功，严格8jobs预算已用完。
+  总wall1007.52s/CPU770.33s、峰1462368KiB，最终原生0.405655events/s。
+  新阶段另冻预算，先小样本；大批量走Condor，繁忙可换资源匹配的空闲schedd。
+- 原生产源1ec47efe；现成d32b0ff3用于只读持久化字典，布局通过，不是相同几何重建。
+  原ROOT6.28/12可源函数重放，统计用LCG109_cuda；PyROOT vector<float>用list转换，避免buffer类型误读。
+  CC每HITS1000例、合并10000例；PG每HITS10000、合并50000，不能照搬。
+  近无质量ν质量检查用signed m²舍入界，barcode/生成质量和三动量严格匹配；不是放宽身份。
+- branch→region `[1,0,3,2]`已认证；历史payload/IOV见stage37 conditions_audit.json，IOV覆盖三个CC run。
   当前tag CableMapping-00的20–23为none，不能直接复现旧生产。
   data硬件6/7/14/15、安装/survey方向未认证，不能按关联峰翻转。
-- CaloNu MC和data实际均`correct_gain=false`，MIP_ref标度前向核验通过；
-  MC .0757/data1.847–1.986 pC/MIP不能直接证明25倍错误，不能统一缩放。
-- data15838同TBP/TAP15/15两时期仍4.86558/.618096 GeV EM；实际时序/活动/位置/HV贡献未分离。
+- CaloNu MC和data均`correct_gain=false`，MIP_ref前向核验通过；约25倍q/nMIP差不直接证明标定错误。
+  data15838同TBP/TAP15/15两时期仍4.86558/.618096GeV EM，时序/活动/位置/HV贡献未分离。
   data闭合、绝对MIP/强子响应、探测器/相互作用系统及最终谱收益继续标注未测量。
-- 不以truth_st*模长测材料能损；truth/PDG/matching/isForward不入部署输入。
+- 不以truth_st*模长测材料能损；truth/PDG/matching/isForward不入部署。
   没有flux/亮度归一化材料就沿用unit默认，不重复询问。
 
 计wall/CPU/RSS及失败/重复成本；只留紧凑最终cache，读回后清重复分片，不保存新ROOT/xAOD。
-每阶段中文workbook须有实测物理结论、单位/选择/输入/命令/统计与系统局限/具体下一验收，
-更新路线与Prompt，Conventional Commit，逐提交blob读回、工作区干净，不push。
+每阶段中文workbook记录实测物理结论、单位/选择/输入/命令/统计与系统局限及下一验收，
+更新路线与Prompt，Conventional Commit，提交blob读回并确认工作区干净，不push。

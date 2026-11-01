@@ -1,0 +1,47 @@
+{
+  "stage": 39,
+  "starting_commit": "d25c353",
+  "frozen_utc": "2026-11-01T16:47:50.467515+00:00",
+  "indices": [
+    1,
+    44,
+    47,
+    106,
+    110,
+    120
+  ],
+  "max_events": 192,
+  "regular_per_group_per_p_bin": 12,
+  "diagnostic_per_group": 8,
+  "source_commit": "1ec47efe",
+  "max_condor_jobs": 8,
+  "new_ML_fits": 0,
+  "new_G4_events": 0,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20261106,
+  "primary_readout": "template_plus_constant",
+  "reference_readout": "signed_saved",
+  "timing_controls_ns": [
+    -2,
+    2
+  ],
+  "baseline_controls_sigma": [
+    -1,
+    1
+  ],
+  "offpulse_samples": [
+    100,
+    176
+  ],
+  "high_signal_threshold_pC": 1.0,
+  "timing_fraction_tolerance": 0.05,
+  "gate": "Native lineage and waveform checks; regular primary paired RMSE gain lower95>0 and lower offpulse RMS; no unsupported channel imputation; high-signal nominal-model timing loss >5% is a limitation requiring resolution before CC energy-model training",
+  "partition": "Only existing stage35 fit groups; waveform confirmation with stage38 algorithm fixed, not a new independent neutrino-energy test",
+  "template_parameters": {
+    "norm": 0.550000011920929,
+    "mean": 820.0,
+    "sigma": 3.6700000762939453,
+    "alpha": -0.3199999928474426,
+    "exponent": 1000.0
+  }
+}

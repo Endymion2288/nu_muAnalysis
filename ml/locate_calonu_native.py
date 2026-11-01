@@ -19,14 +19,15 @@ def main():
     row = json.loads(a.request.read_text())
     tick = time.perf_counter()
     keys = ['run', 'eventID', 'Track_p0', 'Track_pz0', 'Track_X_atVetoNu', 'Track_Y_atVetoNu', 'CaloNu0_raw_charge']
+    truth_keys=['truth_'+k for k in ['pdg','px','py','pz']]
     with uproot.open(row['input_phys']) as f:
         tree = f['nt']
-        values = tree.arrays(keys, entry_stop=256 if a.smoke else None)
+        values = tree.arrays(keys+(truth_keys if row.get('verify_phys_truth') else []),entry_stop=256 if a.smoke else None)
         row['phys_entries'] = tree.num_entries
     idx = ak.argmax(values['Track_pz0'], axis=1, keepdims=True)
     d = {key: ak.to_numpy(ak.fill_none(ak.firsts(values[key][idx]), np.nan)).astype(np.float32)
          if key.startswith('Track_') else ak.to_numpy(values[key]) for key in keys}
-    assert row['phys_entries'] == 50000
+    assert row['phys_entries'] == row.get('expected_phys_entries',50000)
     if a.smoke:
         row['cases'] = row['cases'][:1]
     for case in row['cases']:
@@ -36,9 +37,15 @@ def main():
         entry = np.flatnonzero(mask)
         assert len(entry) == 1, (case, entry)
         case['input_entry'] = int(entry[0])
+        if row.get('verify_phys_truth'):
+            case['phys_neutrino_signature']=[float(ak.firsts(values[k])[entry[0]]) for k in truth_keys]
         assert d['run'][entry[0]] == row['run']
-        case['hits_subfile_ordinal'] = case['input_entry']//10000
-        case['hits_entry'] = case['input_entry'] % 10000
+        hits_size=row.get('hits_events_per_file',10000)
+        case['hits_subfile_ordinal'] = case['input_entry']//hits_size
+        case['hits_entry'] = case['input_entry'] % hits_size
+        if 'hits_name_template' in row:
+            case['hits_file']=str(Path(row['sim_directory'])/row['hits_name_template'].format(
+                subfile=row['first_subfile']+case['hits_subfile_ordinal']))
     row['locate_wall_s'] = time.perf_counter()-tick
     a.output.write_text(json.dumps(row, indent=2)+'\n')
     print(json.dumps(dict(index=row['index'], located=len(row['cases']), wall_s=row['locate_wall_s'])))

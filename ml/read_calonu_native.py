@@ -63,6 +63,8 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
             return ctypes.c_int.from_address(address).value
         if typename == 'float':
             return ctypes.c_float.from_address(address).value
+        if typename == 'short':
+            return ctypes.c_short.from_address(address).value
         return ROOT.bind_object(address, typename)
 
     opened, schemas = {}, []
@@ -97,9 +99,15 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
         return [[member(part, name, typ) for name, typ in [('m_pdgId', 'int'), ('m_status', 'int'),
                 ('m_px', 'float'), ('m_py', 'float'), ('m_pz', 'float'), ('m_m', 'float')]] for part in particles]
 
+    def beam_identity(t):
+        event=getattr(t,'McEventCollection_p6_BeamTruthEvent')
+        particles=member(event,'m_genParticles','std::vector<GenParticle_p6>')
+        return [[member(p,'m_barcode','int'),member(p,'m_generated_mass','float'),member(p,'m_recoMethod','short')] for p in particles]
+
     rdo = tree(request['input_rdo'], ['RawWaveformContainer_p0_CaloNuWaveforms', 'xAOD::EventAuxInfo_v3_EventInfoAux.', 'McEventCollection_p6_BeamTruthEvent'])
     rec = tree(request['input_rec'], ['CaloNuWaveformHitsAux.', 'EventInfoAux.'])
-    assert rdo.GetEntries() == rec.GetEntries() == request['phys_entries'] == 50000
+    assert rdo.GetEntries() == rec.GetEntries() == request['phys_entries']
+    assert request['phys_entries'] == request.get('expected_phys_entries',50000)
     first = int(request['group'].split('_')[1].split('-')[0])
     stem = Path(request['input_rdo']).name.split(f'-{request["run"]}-')[0]+f'-{request["run"]}-'
     all_hits, hit_offsets, records = [], [0], []
@@ -110,6 +118,9 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
                   adc=np.zeros((n, 4, 600), np.uint16),
                   saved_time=np.full((n, 4, 76), np.nan), saved_wave=np.full((n, 4, 76), np.nan),
                   saved_samples=np.zeros((n, 4), np.int16))
+    allow_missing=request.get('allow_missing_channels',False)
+    if allow_missing:
+        arrays['channel_present']=np.zeros((n,4),bool)
     if a.compact_signal:
         from report_calonu_native import nominal_signal
         repo = Path(__file__).resolve().parents[1]
@@ -128,18 +139,39 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
         rdo.GetEntry(entry)
         rec.GetEntry(entry)
         assert info(rdo) == info(rec) == (request['run'], case['fingerprint']['eventID'])
-        hp = str(Path(request['sim_directory'])/f'{stem}{first+case["hits_subfile_ordinal"]:05}-HITS.root')
+        hp = case.get('hits_file',str(Path(request['sim_directory'])/f'{stem}{first+case["hits_subfile_ordinal"]:05}-HITS.root'))
         ht = tree(hp, ['CaloHitCollection_p1a_CaloNuHits', 'xAOD::EventAuxInfo_v3_EventInfoAux.', 'McEventCollection_p6_BeamTruthEvent'])
-        assert ht.GetEntries() == 10000
+        assert ht.GetEntries() == request.get('hits_events_per_file',10000)
         ht.GetEntry(case['hits_entry'])
         assert info(ht) == info(rdo)
         signature = beam_signature(ht)
         rdo_signature = beam_signature(rdo)
         assert signature and len(signature) == len(rdo_signature)
         assert [p[:5] for p in signature] == [p[:5] for p in rdo_signature], (hp, entry, 'BeamTruth identity/momentum differs')
+        if 'phys_neutrino_signature' in case:
+            pdg,px,py,pz=case['phys_neutrino_signature']
+            candidates=[p for p in signature if p[0]==pdg]
+            assert any(np.allclose(p[2:5],[px,py,pz],rtol=2e-6,atol=.001) for p in candidates), (hp,entry,'PHYS neutrino differs')
         # HepMC persistence recomputes mass; the measured failures differ by one float ULP only.
         mass_difference = max(abs(p[5]-q[5]) for p, q in zip(signature, rdo_signature))
-        assert mass_difference < .001, (hp, entry, 'BeamTruth mass differs by >=1 keV')
+        mass_record={}
+        if request.get('verify_phys_truth'):
+            hi,ri=beam_identity(ht),beam_identity(rdo)
+            assert [p[:2] for p in hi]==[p[:2] for p in ri], (hp,entry,'Barcode/generated mass differs')
+            assert [p[2]==2 for p in hi]==[p[2]==2 for p in ri], 'Energy sign differs'
+            # Re-persistence reconstructs E and recomputes signed m^2=E^2-|p|^2.
+            # Near a light cone an absolute mass tolerance is ill-conditioned.
+            normalized=[]
+            for hp6,rp6 in zip(signature,rdo_signature):
+                mh,mr=hp6[5],rp6[5]
+                delta=abs(mh*abs(mh)-mr*abs(mr))
+                bound=64*np.finfo(float).eps*sum(v*v for v in hp6[2:5])+4*np.finfo(np.float32).eps*max(mh*mh,mr*mr)+1e-12
+                normalized.append(delta/bound)
+            assert max(normalized)<1, (hp,entry,'Mass-shell change exceeds floating point bound',max(normalized))
+            mass_record=dict(beam_barcode_generated_mass_equal=True,beam_mass_shell_max_bound_ratio=max(normalized),
+                             beam_persistent_identity=hi)
+        else:
+            assert mass_difference < .001, (hp, entry, 'BeamTruth mass differs by >=1 keV')
         persistent = ht.CaloHitCollection_p1a_CaloNuHits
         h = np.asarray(list(ROOT.ReadCaloNuSensitiveHits(persistent))).reshape(-1, 9)
         # Independent energy expansion checks the unchanged native converter, including overflow coding.
@@ -162,10 +194,12 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
         channels = list(member(aux, 'channel', 'std::vector<unsigned int>'))
         statuses = list(member(aux, 'hit_status', 'std::vector<unsigned int>'))
         positions = {ch: k for k, (ch, status) in enumerate(zip(channels, statuses)) if status & 2 == 0}
-        assert set(positions) == {20, 21, 22, 23}
+        assert set(positions).issubset({20,21,22,23}) if allow_missing else set(positions)=={20,21,22,23}
         for w in waves:
             ch = member(w, 'm_channel', 'unsigned int')
             i, k = ch-20, positions[ch]
+            if allow_missing:
+                arrays['channel_present'][j,i]=True
             arrays['id32'][j, i] = member(w, 'm_ID', 'unsigned int')
             assert arrays['id32'][j, i] == member(aux, 'id32', 'std::vector<unsigned int>')[k]
             adc = list(member(w, 'm_adc_counts', 'std::vector<unsigned int>'))
@@ -179,10 +213,13 @@ std::vector<double> ReadCaloNuSensitiveHits(const CaloHitCollection_p1a* p) {
                 assert len(value) in [0, 76], (entry, ch, key, len(value))
                 arrays[dest][j, i, :len(value)] = value
                 arrays['saved_samples'][j, i] = len(value)
-        np.testing.assert_allclose(arrays['raw_integral'][j, 0]/50, case['fingerprint']['CaloNu0_raw_charge'], atol=3e-5, rtol=0)
-        records.append(dict(**case, hits_file=hp, run=request['run'], group=request['group'], index=request['index'],
+        if not allow_missing or arrays['channel_present'][j,0]:
+            np.testing.assert_allclose(arrays['raw_integral'][j,0]/50,case['fingerprint']['CaloNu0_raw_charge'],atol=3e-5,rtol=0)
+        else:
+            assert case['fingerprint']['CaloNu0_raw_charge']==0
+        records.append(dict(case, hits_file=hp, run=request['run'], group=request['group'], index=request['index'],
                             beam_signature=signature, hits_RDO_beam_momentum_equal=True,
-                            beam_mass_difference_MeV=mass_difference))
+                            beam_mass_difference_MeV=mass_difference,**mass_record))
         print('NATIVE_CASE', request['index'], entry, case['role'], 'hits', len(h), flush=True)
     if not a.compact_signal:
         arrays.update(hits=np.concatenate(all_hits), hit_offsets=np.array(hit_offsets))

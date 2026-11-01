@@ -1,0 +1,887 @@
+[
+  {
+    "class_name": "RawWaveformContainer_p0",
+    "loaded_checksum": 1036687253,
+    "saved_checksums": [
+      1036687253
+    ],
+    "checked_branches": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-00019-s0015-RDO.root",
+        "branch": "RawWaveformContainer_p0_CaloNuWaveforms"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-00449-s0015-RDO.root",
+        "branch": "RawWaveformContainer_p0_CaloNuWaveforms"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-00019-s0015-RDO.root",
+        "branch": "RawWaveformContainer_p0_CaloNuWaveforms"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-00609-s0015-RDO.root",
+        "branch": "RawWaveformContainer_p0_CaloNuWaveforms"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-00019-s0015-RDO.root",
+        "branch": "RawWaveformContainer_p0_CaloNuWaveforms"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-00119-s0015-RDO.root",
+        "branch": "RawWaveformContainer_p0_CaloNuWaveforms"
+      }
+    ]
+  },
+  {
+    "class_name": "xAOD::EventAuxInfo_v3",
+    "loaded_checksum": 3545528082,
+    "saved_checksums": [
+      3545528082
+    ],
+    "checked_branches": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-00019-s0015-RDO.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-00019-s0015-xAOD.root",
+        "branch": "EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00011-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00012-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00013-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00014-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00015-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00016-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00018-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00019-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00017-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-00449-s0015-RDO.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-00449-s0015-xAOD.root",
+        "branch": "EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00441-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00442-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00443-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00444-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00445-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00446-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00448-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00449-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00447-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-00019-s0015-RDO.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-00019-s0015-xAOD.root",
+        "branch": "EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00012-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00013-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00014-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00015-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00017-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00018-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00019-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00016-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00011-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-00609-s0015-RDO.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-00609-s0015-xAOD.root",
+        "branch": "EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00601-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00602-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00604-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00605-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00606-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00607-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00608-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00609-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00603-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-00019-s0015-RDO.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-00019-s0015-xAOD.root",
+        "branch": "EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00012-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00014-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00015-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00016-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00018-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00019-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00011-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00013-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00017-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-00119-s0015-RDO.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-00119-s0015-xAOD.root",
+        "branch": "EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00111-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00114-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00115-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00116-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00112-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00113-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00117-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00118-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00119-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux."
+      }
+    ]
+  },
+  {
+    "class_name": "McEventCollection_p6",
+    "loaded_checksum": 3988193236,
+    "saved_checksums": [
+      3988193236
+    ],
+    "checked_branches": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-00019-s0015-RDO.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00011-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00012-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00013-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00014-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00015-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00016-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00018-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00019-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00017-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-00449-s0015-RDO.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00441-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00442-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00443-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00444-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00445-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00446-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00448-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00449-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00447-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-00019-s0015-RDO.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00012-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00013-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00014-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00015-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00017-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00018-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00019-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00016-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00011-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-00609-s0015-RDO.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00601-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00602-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00604-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00605-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00606-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00607-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00608-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00609-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00603-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-00019-s0015-RDO.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00012-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00014-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00015-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00016-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00018-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00019-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00011-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00013-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00017-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rdo/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-00119-s0015-RDO.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00111-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00114-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00115-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00116-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00112-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00113-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00117-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00118-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00119-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent"
+      }
+    ]
+  },
+  {
+    "class_name": "xAOD::WaveformHitAuxContainer_v1",
+    "loaded_checksum": 2563110354,
+    "saved_checksums": [
+      2563110354
+    ],
+    "checked_branches": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-00019-s0015-xAOD.root",
+        "branch": "CaloNuWaveformHitsAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-00449-s0015-xAOD.root",
+        "branch": "CaloNuWaveformHitsAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-00019-s0015-xAOD.root",
+        "branch": "CaloNuWaveformHitsAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-00609-s0015-xAOD.root",
+        "branch": "CaloNuWaveformHitsAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-00019-s0015-xAOD.root",
+        "branch": "CaloNuWaveformHitsAux."
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/rec/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-00119-s0015-xAOD.root",
+        "branch": "CaloNuWaveformHitsAux."
+      }
+    ]
+  },
+  {
+    "class_name": "CaloHitCollection_p1a",
+    "loaded_checksum": 2205932996,
+    "saved_checksums": [
+      2205932996
+    ],
+    "checked_branches": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00011-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00012-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00013-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00014-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00015-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00016-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00018-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00019-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00017-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00441-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00442-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00443-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00444-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00445-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00446-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00448-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00449-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00447-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00012-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00013-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00014-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00015-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00017-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00018-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00019-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00016-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00011-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00601-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00602-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00604-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00605-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00606-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00607-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00608-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00609-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00603-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00012-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00014-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00015-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00016-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00018-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00019-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00011-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00013-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00017-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00111-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00114-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00115-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00116-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00112-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00113-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00117-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00118-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00119-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits"
+      }
+    ]
+  }
+]

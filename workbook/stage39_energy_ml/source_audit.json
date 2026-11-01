@@ -1,0 +1,13 @@
+{
+  "source_commit": "1ec47efe",
+  "source_path": "Calorimeter/CaloDigiAlgs/src/CaloWaveformDigiAlg.cxx",
+  "empty_hit_collection_records_empty_RDO_and_returns_before_noise": true,
+  "digitization_payload_IOV_covers_CC_runs": true,
+  "ntuple_absent_channel_default_status": 1,
+  "caveat": "Cached historical payload, source and native mapping support nominal replay; original embedded complete conditions/random seed not reconstructed",
+  "source_excerpt": "  // Find the output waveform container\n  SG::WriteHandle<RawWaveformContainer> waveformContainerHandle(m_waveformContainerKey, ctx);\n  ATH_CHECK( waveformContainerHandle.record( std::make_unique<RawWaveformContainer>()) );\n\n  ATH_MSG_DEBUG(\"WaveformsContainer '\" << waveformContainerHandle.name() << \"' initialized\");\n\n  if (caloHitHandle->size() == 0) {\n    ATH_MSG_DEBUG(\"CaloHitCollection found with zero length!\");\n    return StatusCode::SUCCESS;\n  }\n\n",
+  "ntuple_default_zero_excerpt": "      m_wave_localtime[ii]=0;\n      m_wave_triggertime[ii]=0;\n      m_wave_bcidtime[ii]=0;\n      m_wave_peak[ii]=0;\n      m_wave_width[ii]=0;\n      m_wave_charge[ii]=0;\n\n      m_wave_raw_peak[ii]=0;\n      m_wave_raw_charge[ii]=0;\n      m_wave_baseline_mean[ii]=0;\n      m_wave_baseline_rms[ii]=0;\n      m_wave_status[ii]=1; // default = 1 means below threshold\n\n      m_calibrated_nMIP[ii]=0;\n      m_calibrated_E_dep[ii]=0;\n      m_calibrated_E_EM[ii]=0;\n  }\n  for (unsigned int ii=0; ii<2; ii++) {\n    m_vetonu_reduced_charge[ii]=0;\n  }\n\n  m_scintHit = 0;\n\n  m_calo_total_nMIP=0;\n  m_calo_total_E_dep=0;\n  m_calo_total_fit_E_EM=0;\n  m_calo_total_raw_E_EM=0;\n  m_calo_total_E_EM=0;\n  m_calo_total_fit_E_EM_fudged=0;\n  m_calo_total_raw_E_EM_fudged=0;\n  m_calo_total_E_EM_fudged=0;\n\n  m_calolo_total_nMIP=0;\n  m_calolo_total_E_dep=0;\n  m_calolo_total_fit_E_EM=0;\n  m_calolo_total_raw_E_EM=0;\n  m_calolo_total_E_EM=0;\n\n  m_calohi_total_nMIP=0;\n  m_calohi_total_E_dep=0;\n  m_calohi_total_fit_E_EM=0;\n  m_calohi_total_raw_E_EM=0;\n  m_calohi_total_E_EM=0;\n\n  m_calonu_total_nMIP=0;\n  m_calonu_total_E_dep=0;\n  m_calonu_total_fit_E_EM=0;\n  m_calonu_total_raw_E_EM=0;\n  m_calonu_total_E_EM=0;",
+  "wall_s": 0.7854482631664723,
+  "cpu_s": 0.064232491,
+  "peak_rss_MiB": 41.1640625
+}
