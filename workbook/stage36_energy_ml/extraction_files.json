@@ -1,0 +1,1568 @@
+[
+  {
+    "index": 0,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00000-00004",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00000-00004-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 22616,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 45978
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44284
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 22618
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 22616
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 22616
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.03124506608583033,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 6.032578170334091e-06,
+      "Track_Y_atVetoNu": 3.8142989069456235e-06,
+      "Track_ThetaX_atVetoNu": 6.016279557874427e-10,
+      "Track_ThetaY_atVetoNu": 4.3083934336829444e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.252182859927416,
+    "cpu_s": 0.835807798,
+    "peak_rss_MiB": 118.3359375,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 1,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00100-00104",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00100-00104-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 22807,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46024
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44334
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 22811
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 22807
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 22807
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031249529565684497,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 3.888810141461363e-06,
+      "Track_Y_atVetoNu": 6.659722544100077e-06,
+      "Track_ThetaX_atVetoNu": 8.550318925104605e-10,
+      "Track_ThetaY_atVetoNu": 4.473308719971092e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.3805637639015913,
+    "cpu_s": 0.988372961,
+    "peak_rss_MiB": 116.34765625,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 2,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00195-00199",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00195-00199-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 22594,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46021
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44279
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 22597
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 22594
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 22594
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031245185993611813,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.404708867397858e-06,
+      "Track_Y_atVetoNu": 3.8143268028534294e-06,
+      "Track_ThetaX_atVetoNu": 4.5854065336414784e-10,
+      "Track_ThetaY_atVetoNu": 4.583732716306743e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.965064153075218,
+    "cpu_s": 1.44003842,
+    "peak_rss_MiB": 117.44140625,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 3,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00295-00299",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00295-00299-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 22498,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 45993
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44302
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 22500
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 22498
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 22498
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.03124600334558636,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 4.5712295388966595e-06,
+      "Track_Y_atVetoNu": 3.814676304614295e-06,
+      "Track_ThetaX_atVetoNu": 4.649940744949621e-10,
+      "Track_ThetaY_atVetoNu": 4.5438803587816157e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.9182117767632008,
+    "cpu_s": 1.21147677,
+    "peak_rss_MiB": 116.3125,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 4,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00395-00399",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00395-00399-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 22710,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 45964
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44222
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 22712
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 22710
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 22710
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.03124969289638102,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.5405366715131095e-06,
+      "Track_Y_atVetoNu": 7.224849298381741e-06,
+      "Track_ThetaX_atVetoNu": 5.187281923446641e-10,
+      "Track_ThetaY_atVetoNu": 4.464885006855157e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.8050464978441596,
+    "cpu_s": 1.3339125179999998,
+    "peak_rss_MiB": 116.35546875,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 5,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00495-00499",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00495-00499-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 22444,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 45896
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44120
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 22444
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 22444
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 22444
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.0312497221166268,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.407942916870525e-06,
+      "Track_Y_atVetoNu": 5.009810848832785e-06,
+      "Track_ThetaX_atVetoNu": 6.729254167781029e-10,
+      "Track_ThetaY_atVetoNu": 8.377405887050049e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 3.041404690593481,
+    "cpu_s": 1.3726253550000003,
+    "peak_rss_MiB": 113.4375,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 6,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00000-00004",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00000-00004-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 21004,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46294
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44529
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 21005
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 21004
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 21004
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031246282975189388,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 3.8137527269554994e-06,
+      "Track_Y_atVetoNu": 3.8134478330675847e-06,
+      "Track_ThetaX_atVetoNu": 8.680016254369871e-10,
+      "Track_ThetaY_atVetoNu": 4.492104136583075e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.7662808038294315,
+    "cpu_s": 1.152486514,
+    "peak_rss_MiB": 113.4375,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 7,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00100-00104",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00100-00104-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 21050,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46314
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44510
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 21052
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 21050
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 21050
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.03124883072450757,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 4.029465571875335e-06,
+      "Track_Y_atVetoNu": 3.814036659832709e-06,
+      "Track_ThetaX_atVetoNu": 8.558221527288357e-10,
+      "Track_ThetaY_atVetoNu": 4.377053823556576e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 3.084593962877989,
+    "cpu_s": 1.436275197,
+    "peak_rss_MiB": 117.17578125,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 8,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00200-00204",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00200-00204-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 21119,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46221
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44503
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 21120
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 21119
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 21119
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.0312466430477798,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.535987691653645e-06,
+      "Track_Y_atVetoNu": 3.8146264813576636e-06,
+      "Track_ThetaX_atVetoNu": 4.631184671866073e-10,
+      "Track_ThetaY_atVetoNu": 4.640297070201971e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.168425502255559,
+    "cpu_s": 0.9407980220000001,
+    "peak_rss_MiB": 113.4375,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 9,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00295-00299",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00295-00299-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 20985,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46306
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44611
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 20989
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 20985
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 20985
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031246877508237958,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 6.9450130411041755e-06,
+      "Track_Y_atVetoNu": 3.813627003523834e-06,
+      "Track_ThetaX_atVetoNu": 7.941156413004968e-10,
+      "Track_ThetaY_atVetoNu": 9.183002552815012e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 3.0792824933305383,
+    "cpu_s": 1.2025133259999998,
+    "peak_rss_MiB": 108.0,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 10,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00395-00399",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00395-00399-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 21217,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46180
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44409
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 21217
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 21217
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 21217
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.03124938253313303,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 3.8130653763346345e-06,
+      "Track_Y_atVetoNu": 3.813790030449127e-06,
+      "Track_ThetaX_atVetoNu": 4.4841340363088733e-10,
+      "Track_ThetaY_atVetoNu": 4.642007282035232e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 2.519253170117736,
+    "cpu_s": 1.2069758299999997,
+    "peak_rss_MiB": 111.5,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 11,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00495-00499",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00495-00499-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 21192,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 50000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 50000
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 46347
+      },
+      {
+        "cut": "track_quality",
+        "passed": 44573
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 21196
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 21192
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 21192
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031244067358784378,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 3.814612796304573e-06,
+      "Track_Y_atVetoNu": 3.812663379676451e-06,
+      "Track_ThetaX_atVetoNu": 6.20113425886526e-10,
+      "Track_ThetaY_atVetoNu": 4.553184582839487e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 3.9977427534759045,
+    "cpu_s": 1.3196255449999998,
+    "peak_rss_MiB": 112.5,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 12,
+    "sample": "data",
+    "run": 15838,
+    "group": "15838_file0",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root",
+    "file_entries": 780874,
+    "read_entries": 100000,
+    "selected": 41092,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 100000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 98918
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 98716
+      },
+      {
+        "cut": "track_quality",
+        "passed": 90095
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 41296
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 41203
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 41092
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031244060257449746,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.627524411191189e-06,
+      "Track_Y_atVetoNu": 7.624767931702081e-06,
+      "Track_ThetaX_atVetoNu": 9.258063135564321e-10,
+      "Track_ThetaY_atVetoNu": 9.307795957591569e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 14.58789947628975,
+    "cpu_s": 1.7520488159999998,
+    "peak_rss_MiB": 151.44921875,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 13,
+    "sample": "data",
+    "run": 15838,
+    "group": "15838_file8",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00400-00449-r0022-PHYS.root",
+    "file_entries": 933264,
+    "read_entries": 100000,
+    "selected": 41703,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 100000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 99536
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 99336
+      },
+      {
+        "cut": "track_quality",
+        "passed": 90681
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 41926
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 41827
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 41703
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031248532002791762,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.624857914834138e-06,
+      "Track_Y_atVetoNu": 7.624466690003828e-06,
+      "Track_ThetaX_atVetoNu": 9.303475663469118e-10,
+      "Track_ThetaY_atVetoNu": 9.311141475898399e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 11.888318413868546,
+    "cpu_s": 2.1205370550000002,
+    "peak_rss_MiB": 154.33984375,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 14,
+    "sample": "data",
+    "run": 16000,
+    "group": "16000_file0",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00000-00049-r0022-PHYS.root",
+    "file_entries": 868756,
+    "read_entries": 100000,
+    "selected": 41020,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 100000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 99235
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 99041
+      },
+      {
+        "cut": "track_quality",
+        "passed": 90467
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 41220
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 41106
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 41020
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.03124993701931089,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.6221962217459804e-06,
+      "Track_Y_atVetoNu": 7.619160385274881e-06,
+      "Track_ThetaX_atVetoNu": 9.268824041619439e-10,
+      "Track_ThetaY_atVetoNu": 9.1357778286838e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 7.8106161542236805,
+    "cpu_s": 2.327902536,
+    "peak_rss_MiB": 153.00390625,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 15,
+    "sample": "data",
+    "run": 16000,
+    "group": "16000_file8",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00400-00449-r0022-PHYS.root",
+    "file_entries": 993990,
+    "read_entries": 100000,
+    "selected": 41482,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 100000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 99608
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 99388
+      },
+      {
+        "cut": "track_quality",
+        "passed": 90828
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 41679
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 41576
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 41482
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031248644459992647,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.623897829489579e-06,
+      "Track_Y_atVetoNu": 7.6046082142511295e-06,
+      "Track_ThetaX_atVetoNu": 9.225475279539541e-10,
+      "Track_ThetaY_atVetoNu": 9.267701883697299e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 6.875247422605753,
+    "cpu_s": 1.867861092,
+    "peak_rss_MiB": 147.68359375,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 16,
+    "sample": "data",
+    "run": 16923,
+    "group": "16923_file0",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016923/Faser-Physics-016923-00000-00049-r0022-PHYS.root",
+    "file_entries": 846889,
+    "read_entries": 100000,
+    "selected": 41220,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 100000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 99269
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 99053
+      },
+      {
+        "cut": "track_quality",
+        "passed": 90372
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 41416
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 41322
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 41220
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031245733029209077,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.6274526747965865e-06,
+      "Track_Y_atVetoNu": 7.622516449146133e-06,
+      "Track_ThetaX_atVetoNu": 9.28010970152604e-10,
+      "Track_ThetaY_atVetoNu": 9.294799131753795e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 12.539779970422387,
+    "cpu_s": 1.8322398340000001,
+    "peak_rss_MiB": 144.8828125,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  },
+  {
+    "index": 17,
+    "sample": "data",
+    "run": 16923,
+    "group": "16923_file8",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016923/Faser-Physics-016923-00400-00449-r0022-PHYS.root",
+    "file_entries": 997762,
+    "read_entries": 100000,
+    "selected": 41806,
+    "cutflow": [
+      {
+        "cut": "input",
+        "passed": 100000
+      },
+      {
+        "cut": "stable_colliding_if_data",
+        "passed": 99540
+      },
+      {
+        "cut": "one_long_track",
+        "passed": 99331
+      },
+      {
+        "cut": "track_quality",
+        "passed": 90809
+      },
+      {
+        "cut": "reco_p_100_1000_GeV",
+        "passed": 42021
+      },
+      {
+        "cut": "valid_vetonu_extrapolation",
+        "passed": 41910
+      },
+      {
+        "cut": "independent_scintillator_coincidence",
+        "passed": 41806
+      }
+    ],
+    "max_float32_absolute_difference": {
+      "Track_p0": 0.031247481238096952,
+      "Track_pz0": 0.0,
+      "Track_nLayers": 0.0,
+      "Track_nDoF": 0.0,
+      "Track_Chi2": 0.0,
+      "Track_X_atVetoNu": 7.611338901369891e-06,
+      "Track_Y_atVetoNu": 7.624042666520836e-06,
+      "Track_ThetaX_atVetoNu": 9.252454115371567e-10,
+      "Track_ThetaY_atVetoNu": 9.238130399547018e-10,
+      "VetoNu0_raw_charge": 0.0,
+      "VetoNu1_raw_charge": 0.0,
+      "Veto20_raw_charge": 0.0,
+      "Veto21_raw_charge": 0.0,
+      "CaloNu0_charge": 0.0,
+      "CaloNu0_raw_charge": 0.0,
+      "CaloNu0_nMIP": 0.0,
+      "CaloNu0_E_EM": 0.0,
+      "CaloNu0_raw_peak": 0.0,
+      "CaloNu0_baseline_rms": 0.0,
+      "CaloNu1_charge": 0.0,
+      "CaloNu1_raw_charge": 0.0,
+      "CaloNu1_nMIP": 0.0,
+      "CaloNu1_E_EM": 0.0,
+      "CaloNu1_raw_peak": 0.0,
+      "CaloNu1_baseline_rms": 0.0,
+      "CaloNu2_charge": 0.0,
+      "CaloNu2_raw_charge": 0.0,
+      "CaloNu2_nMIP": 0.0,
+      "CaloNu2_E_EM": 0.0,
+      "CaloNu2_raw_peak": 0.0,
+      "CaloNu2_baseline_rms": 0.0,
+      "CaloNu3_charge": 0.0,
+      "CaloNu3_raw_charge": 0.0,
+      "CaloNu3_nMIP": 0.0,
+      "CaloNu3_E_EM": 0.0,
+      "CaloNu3_raw_peak": 0.0,
+      "CaloNu3_baseline_rms": 0.0,
+      "CaloNu_total_E_EM": 0.0,
+      "CaloNu_total_fit_E_EM": 0.0,
+      "CaloNu_total_raw_E_EM": 0.0
+    },
+    "wall_s": 10.057375499978662,
+    "cpu_s": 1.6963415999999998,
+    "peak_rss_MiB": 146.0,
+    "protocol_frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+    "smoke": false
+  }
+]

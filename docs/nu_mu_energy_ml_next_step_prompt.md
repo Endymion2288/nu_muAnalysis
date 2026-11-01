@@ -1,55 +1,60 @@
-# 下一轮执行 Prompt：CaloNu匹配μ与波形响应控制
+# 下一轮执行 Prompt：原生CaloNu响应链与通道映射审计
 
-先读AGENTS.md、修订路线第17节、`workbook/2026-11-01_stage35_calonu-readout-information.md`、
-stage35冻结协议与source_audit。stage30–35已完成，不重跑已评价test或旧模型训练。
-用户重点100–1000 GeV，保留100–250和250–1000子层，≥TeV只参考。
+先读AGENTS.md、修订路线第18节、`workbook/2026-11-01_stage36_calonu-muon-response.md`、
+stage36冻结协议/source_audit与stage35报告。stage30–36已完成，不重复已评价test或旧模型训练。
+用户重点100–1000GeV，保留100–250和250–1000子层，≥TeV只参考。
 
-**唯一主线：以已有匹配CaloNu through-going μ MC/data控制读出响应和拟合质量，暂不扩模型。**
+**唯一主线：有界原生HITS→RDO waveform→xAOD/PHYS响应链和通道映射核验，暂不建模。**
 
-已测物理依据：
+已测依据：
 
-- 同事件C0=65维F6，C1=70维，额外四模块+total EM-scale；CaloNu bck124 PHYS，
-  test3247例/18组，重点2689例风险改善3.3359% [2.2676%,4.7581%]；总体2.9276%。
-  两低p子层均约3.3%；重点R68从16.6154%降至15.5974%，50%尾从3.9048%降至3.3842%。
-  这些是500来源组配对且传播calibration统计的unit-MC结果，不是系统闭合或最终谱收益。
-- 收益明显随交互z分层：最前57例改善21.33%；−2650至−2300mm的573例改善7.51%；
-  −2300至−1950mm占2201例，仅1.01%且区间跨0，total中位7.5911GeV EM、q84=8.8760GeV。
-  lead block中位0，88/264有限非零。尚不能叫约8GeV响应为MIP或强子标定。
-- 预注册重点改善中心≥5%扩展门槛未达，区间上限亦<5%。不降低门槛、不加架构/扫描。
-- s0015缺truth_barcode，严格primary确认未测；kinematic-parent代理不能冒充确认。
-  真p重点高y仅40例、代理仅8例，不能声称解决stage34 confirmed高y缺口。
-- MC fit14309及未选择run016000 data前2048条的有限读出代数/单位核验0失败；
-  MC total10个非有限，模块1最小−117895.168GeV且status32=CB fit failed，模块2最小−1670.179GeV且status48。
-  异常fit未删/裁剪，非有限按XGB missing；具体失效波形机制和收益影响未隔离。
-  status1是threshold failed，不能一律当missing；total raw/overflow定义不等于四模块fit和。
+- stage35同事件C0全部65维F6、C1加五CaloNu量，重点2689例改善3.3359% [2.2676%,4.7581%]，
+  未达冻结5%架构扩展门槛；不降低门槛、不扫描。收益随交互深度变化，只是unit-MC条件证据。
+- stage36独立外部符合选择，262236 μ MC+248323 data候选；18 Condor jobs，0新fit。
+  MC四通道全低于5σ阈值88.2865%；该层total中位8.26571GeV EM，正半波噪声预期7.93610，
+  逐例比值1.04178 [1.04106,1.04246]，约8GeV主要有整流噪声pedestal贡献。
+  源findRawHitValues只积正采样，76×2ns；公式冻结前提出，没有用正式结果调参数。
+  仍有约4%残差，不叫精确纯噪声闭合、MIP峰或真实强子能量，不对CC逐例扣除。
+- data全阈下4.9009%，同层.287250/.276203GeV EM，比值1.04523 [1.03424,1.05126]。
+  MC/data raw约.46–.48/.48–.52pC，但有效charge/nMIP=.0757对1.847–1.986pC/MIP。
+  data含HV外推，不等同原MIP_ref；不能据25倍差直接改增益或缩放旧模型。
+- 名义DB+GDML box中心[10,−21,−2605.68]mm，非实测安装；直线±tilt不是native传播。
+  事后raw关联候选排列MC[1,0,3,2]、data[3,2,1,0]，未被认证或应用。
+  冻结的分支=region假设下paired interior/off负值不能解释成物理反向信号。
+- data15838首/中文件4.76952/.610798GeV EM，有效MIP比例基本不变、raw和阈值率不同；
+  不用单一MIP系数漂移解释，不删除该时期。data几何/HV/conditions和MC不相同，物理闭合未测。
+- MC模块非有限21例全无fit failure位，data117中114无该位，raw全有限；
+  固定源fitCBall time NaN分支没清valid是具体可疑路径，但未case replay，不归因所有异常。
 
 下一步依次执行：
 
-1. 查找已有CaloNu through-going μ MC/data及生产记录，核验通道映射、安装全局位置/外推面、
-   几何/材料、时期、HV/增益、conditions、bck maker。reference为Calypso22.0.49、CaloNuMC/1ec47efe，
-   **K/charm exact bck maker未核实**，所存forward ntp日志不能证明它。
-   本地匹配源树`/eos/home-x/xcheng/FASER/calypso`，优先现成构建；不自动用ordinary master重建CaloNu。
-2. 先小样本确认支持，再冻结有预算的响应控制协议。through-going μ选择与轨迹外推使用data可执行量，
-   不按CaloNu信号本身挑出好峰；报告选择效率/覆盖/失败，避免只选好波形。MC真值仅诊断，禁入部署。
-3. 四模块检查raw/fit电荷(pC)、nMIP、E_EM(GeV EM)、status/overflow、轨迹交点/路径长度依赖，
-   分来源/运行块给区间及匹配条件。检验窄响应是否符合μ穿越/标定，及极端fit是否能由raw/status识别。
-   单位公式通过不是data/MC物理闭合；阈值失败与缺容器分开。不得臆造精确安装全局z。
-4. 必须得到实测响应/覆盖/拟合原因的物理结论；若缺匹配输入，量化缺口、记录未测量，不用不相容
-   CC MC/data分布造闭合，不预报控制结果、不自动全量重模拟或重训模型。
+1. 有界查已有同源HITS/RDO/xAOD及原生dictionary/匹配build、合并次序、ChannelMapping和conditions。
+   source commit1ec47efe，Calypso22.0.49，优先现成build，不用普通master替代CaloNu。
+   先小样本证明能读和联接，再冻结≤4来源组（两符号各2）、≤128个预定义μ候选及异常对照的协议。
+   无新ML fit，不自动全量G4；有必要的有界重放先计预算再Condor。
+2. 独立认证geometry region→identifier→hardware→ntuple分支，给MC/data适用时期。
+   不把stage36关联峰当硬件真值，不在同样本上调排列造MIP闭合。
+3. 同例比较active真实Edep MeV、波形signed/正半波积分pC、baseline/noise、峰位置/时间窗，
+   digitization kernel/gain/MIP_ref/HV条件；区分信号弱、窗口漏失、标度不同和噪声整流。
+   保存失败/缺失与各环节覆盖，不能用truth_st*模长测材料能损。
+4. 重放代表非有限/未标flag和正常对照，检验valid/status路径；查data15838两时期trigger/conditions。
+   验收要以数值判断哪个响应环节可闭合/不闭合，含来源/统计与程序解释；不能只做目录搜索。
+   缺匹配输入就量化未测量，禁止用跨几何分布冒充闭合；响应核验后再决定修生产/校准/建模。
 
-状态、存储和禁止事项：
+身份、来源、存储与禁止事项：
 
-- `ntuples/energy_ml_stage35/`四分区和两预测NPZ共9607764bytes；
-  `ml/artifacts/stage35/seed_{0,1,2}/{C0,C1}.ubj`共7667374bytes，六fit已冻结，勿覆盖。
-  紧凑cache已逐字段读回；13shards、2payload已清。不重复PHYS提取。训练配置重复JSON已合并。
-- stage34 calibration/test/challenge和stage35 calibration/test均已评价；以后据此调模型只能当开发，
-  新独立确认要新未使用来源。旧ordinary模型只作域外参考，不以跨几何差估计CaloNu读出收益。
-- 不加tracking变量/拓扑/概率大架构，不追逐TeV精度，不按truth p切换部署。
-  truth方向、PDG、matching、isForward均不入部署；truth_st*/t_st*模长禁止测材料能损。
-- 无新flux归一化材料继续unit默认，不重复询问。来源组互斥不保证完整flux-library谱系独立。
-  MIP/强子标定、data/探测器/相互作用系统以及最终谱收益尚未完成。
+- `ntuples/energy_ml_stage36/{MC,data}.npz`共66953477bytes，53字段，全字段读回。
+  18分片/payload已清；提取全部原ROOT不再重跑。PG eventID在同一合并文件中重启！
+  cache的(file group, source_selected_row)唯一，但selected ordinal不是原ROOT entry。
+  native配对需input entry/生成子文件顺序，不得仅run/eventID或selected ordinal强行联接。
+- MC实际输入在bck/s0015；μ−6日志显式backward，μ+0020/0040/0059日志reference没有backward，
+  不能证明三份实际bck maker。data6日志均backward。日志和fingerprint不证明完整生成谱系独立。
+- stage35六模型及四分区/两预测保持；stage34/35 test已用，之后调模型不再作为独立确认。
+  不追加架构/tracking变量/概率扫描，不按truth p切换部署；truth/PDG/matching/isForward不入部署。
+- 无新flux归一化材料继续unit默认，不重复问。真实data闭合、强子标定、探测器/相互作用系统、
+  最终谱收益仍未测量；不得把统计条件区间当这些系统的包络。
 
-LCG109_cuda CVMFS现成环境；大批量Condor，可换空闲schedd，stage35用bigbird21。
-小样本先验证，计wall/CPU/RSS/吞吐和失败成本；只留紧凑最终cache，不留ROOT/xAOD和分片/重复JSON。
-每阶段中文workbook含实测数值/单位、输入/选择/命令/验证/产物/统计和系统局限/下一验收标准，
-更新路线与Prompt，Conventional Commit、逐提交blob读回、工作区干净，不push。
+LCG109_cuda CVMFS现成环境；大批量Condor，可换空闲schedd，stage36用bigbird21。
+小样本先验，计wall/CPU/RSS/吞吐与失败；只留紧凑最终cache，不留ROOT/xAOD/重复JSON。
+每阶段写中文workbook，含实测数值单位、输入/选择/命令/验证/产物/统计及系统局限/下一验收，
+更新路线和Prompt，Conventional Commit，逐提交blob读回、工作区干净，不push。

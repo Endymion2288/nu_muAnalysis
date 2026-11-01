@@ -1,0 +1,9 @@
+sample	diagnostic	module_observations	count	with_fit_failure_flag	without_fit_failure_flag	finite_raw	note
+MC	nonfinite_EM	1048944	21	0	21	21	Count audit only; extreme finite values are not automatically errors
+MC	finite_abs_EM_gt_1000GeV	1048944	35	3	32	35	Count audit only; extreme finite values are not automatically errors
+MC	negative_finite_EM	1048944	972	752	220	972	Count audit only; extreme finite values are not automatically errors
+MC	exact_repeated_selected_fingerprint	262236	0				Fingerprint is descriptive, not proof of full generator/flux genealogy independence
+data	nonfinite_EM	993292	117	3	114	117	Count audit only; extreme finite values are not automatically errors
+data	finite_abs_EM_gt_1000GeV	993292	102	2	100	102	Count audit only; extreme finite values are not automatically errors
+data	negative_finite_EM	993292	1386	1093	293	1386	Count audit only; extreme finite values are not automatically errors
+data	exact_repeated_selected_fingerprint	248323	0				Fingerprint is descriptive, not proof of full generator/flux genealogy independence

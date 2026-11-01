@@ -1,0 +1,140 @@
+{
+  "geometry_db": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/geomDB/geomDB_sqlite",
+  "source_commit": "1ec47efe",
+  "resolved_calo_tags": [
+    {
+      "id": 107963,
+      "name": "Calorimeter-CALONU"
+    },
+    {
+      "id": 107960,
+      "name": "CaloNu-00"
+    },
+    {
+      "id": 107962,
+      "name": "CaloNuTopLevel-00"
+    },
+    {
+      "id": 107961,
+      "name": "CaloNuSwitches-00"
+    }
+  ],
+  "top_level_DB_row": [
+    0,
+    10.0,
+    -21.0,
+    -2505.68,
+    0.0,
+    0.0,
+    0.0,
+    321,
+    "CaloNu"
+  ],
+  "calonu_box_center_global_mm": [
+    10.0,
+    -21.0,
+    -2605.68
+  ],
+  "tilt_rad": [
+    0.05,
+    0.05,
+    0.0
+  ],
+  "nominal_core_centers_global_mm": [
+    [
+      -46.988031272779814,
+      35.84076441811901,
+      -2524.040553088494
+    ],
+    [
+      74.55987541728759,
+      36.144760960951146,
+      -2530.1154164914537
+    ],
+    [
+      -46.988031272779814,
+      -85.70714227194838,
+      -2530.1230179887357
+    ],
+    [
+      74.55987541728759,
+      -85.40314572911625,
+      -2536.1978813916953
+    ]
+  ],
+  "core_half_sizes_mm": [
+    60.6,
+    60.6,
+    216.0
+  ],
+  "rotation_matrix_RxRy": [
+    [
+      0.9987502603949663,
+      0.0,
+      0.04997916927067833
+    ],
+    [
+      0.002497917360987117,
+      0.9987502603949663,
+      -0.04991670832341408
+    ],
+    [
+      -0.04991670832341408,
+      0.04997916927067833,
+      0.997502082639013
+    ]
+  ],
+  "constants": {
+    "gapSize": 0.5,
+    "detectorLength": 1050.0,
+    "detectorWidth": 250.0,
+    "detectorHeight": 300.0,
+    "frontTungstenLength": 100.0,
+    "frontTungstenZ": -475.0,
+    "backTungstenLength": 300.0,
+    "backTungstenZ": 375.0,
+    "caloNuBoxLength": 649.0,
+    "caloNuBoxZ": -100.0,
+    "pmtLength": 100.0,
+    "coreModuleLength": 432.0,
+    "frontCoverLength": 72.0,
+    "backCoverLength": 21.0,
+    "moduleLength": 526.0,
+    "caloNuLength": 626.5,
+    "caloNuWidth": 242.9,
+    "caloNuHeight": 242.9,
+    "caloNuModuleBoxWidth": 121.2,
+    "caloNuModuleBoxHeight": 121.2,
+    "pmtWidth": 60.6,
+    "pmtHeight": 60.6,
+    "pmtCasingThickness": 10.0,
+    "pmtZ": -263.25,
+    "caloNuModuleZ": 50.25,
+    "frontCoverZ": -227.0,
+    "coreModuleZ": 25.5,
+    "backCoverZ": 252.5,
+    "caloNuSteelCellLength": 1.0,
+    "caloNuSteelCellFrontZ": -215.0,
+    "caloNuPlasticCellLength": 7.0,
+    "caloNuPlasticCellFrontZ": -211.0,
+    "caloNuPaperCellLength": 2.24,
+    "caloNuPaperCellNumber": 66.0,
+    "caloNuPaperCellStartingZ": -209.38,
+    "caloNuPaperCellsCombineLength": 422.0,
+    "caloNuPaperCellSpacing": 6.393939393939394,
+    "caloNuLeadCellLength": 2.0,
+    "caloNuLeadCellZ": -0.1200000000000001,
+    "caloNuFiberRadius": 0.6,
+    "caloNuFiberNumberX": 8.0,
+    "caloNuFiberNumberY": 8.0,
+    "caloNuFiberSpacingX": 15.15,
+    "caloNuFiberSpacingY": 15.15
+  },
+  "analytic_ray_box_checks_passed": true,
+  "limitations": [
+    "Nominal DB and pinned GDML; not an in situ survey or alignment measurement",
+    "RxRy convention and opposite tilt sensitivity control, not native GeoModel transform verification",
+    "module branch to hardware/geometric identifier correspondence not independently confirmed",
+    "straight line extrapolation proxy, not a fit propagation or scattering calculation"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "files": 18,
+  "input_events": 1200000,
+  "extraction_wall_s": 97.737289365381,
+  "extraction_cpu_s": 26.037839189,
+  "peak_rss_MiB": 154.33984375,
+  "samples": {
+    "MC": {
+      "events": 262236,
+      "groups": 12,
+      "bytes": 33628487,
+      "all_field_readback_equal": true,
+      "distinct_run_event_pairs": 20000,
+      "unique_file_selected_row_keys": true,
+      "identity_note": "PG eventID restarts within merged generation files; no collision removed; file and selected row preserve identity"
+    },
+    "data": {
+      "events": 248323,
+      "groups": 6,
+      "bytes": 33324990,
+      "all_field_readback_equal": true,
+      "distinct_run_event_pairs": 248323,
+      "unique_file_selected_row_keys": true,
+      "identity_note": "run/eventID unique in this cohort; file and selected row also preserve identity"
+    }
+  }
+}

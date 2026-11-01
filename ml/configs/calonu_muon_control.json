@@ -1,0 +1,30 @@
+{
+  "stage": 36,
+  "frozen_utc": "2026-11-01T13:56:34.015898+00:00",
+  "starting_commit": "7e7f89e",
+  "manifest": "ml/configs/calonu_muon_files.tsv",
+  "grl": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json",
+  "geometry_db": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/geomDB/geomDB_sqlite",
+  "source_repo": "/eos/home-x/xcheng/FASER/calypso",
+  "source_commit": "1ec47efe",
+  "geometry_tag": "FASERNU-CALONU",
+  "minimum_momentum_GeV": 100,
+  "maximum_momentum_GeV": 1000,
+  "independent_scintillator_raw_charge_min_pC": 40,
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 20261103,
+  "max_jobs": 18,
+  "max_input_events": 1200000,
+  "new_fits": 0,
+  "cache": "ntuples/energy_ml_stage36",
+  "pilot": "first 2048 entries only of first MC100049 and data16000 files, inspected before freeze; both may recur in response cohort",
+  "geometry_proxy": "straight line from saved -3112mm VetoNu plane; nominal GDML RxRy and inverse-tilt controls; not native fitted propagation or data survey alignment",
+  "geometry_margin_mm": 10,
+  "raw_noise_samples": 76,
+  "raw_noise_formula": "2*76*baseline_rms_mV/(50*sqrt(2*pi)) pC",
+  "thresholds": {
+    "extreme_abs_E_EM_GeV": 1000,
+    "large_relative_fit_raw_difference": 0.5
+  },
+  "data_MC_physics_closure": false
+}

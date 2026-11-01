@@ -1,0 +1,31 @@
+{
+  "python_ast_files": 9,
+  "bash_syntax_passed": true,
+  "response_rows": 2760,
+  "quality_rows": 3312,
+  "cache_checks": {
+    "MC": {
+      "events": 262236,
+      "fields": 53,
+      "file_selected_row_unique": true,
+      "main_table_median_recomputed": true,
+      "p_boundaries_unambiguous": true
+    },
+    "data": {
+      "events": 248323,
+      "fields": 53,
+      "file_selected_row_unique": true,
+      "main_table_median_recomputed": true,
+      "p_boundaries_unambiguous": true
+    }
+  },
+  "local_markdown_links_checked": 53,
+  "missing_links": [],
+  "stage35_model_count": 6,
+  "stage35_model_bytes": 7667374,
+  "stage35_models_not_written_by_stage36": true,
+  "new_fits": 0,
+  "wall_s": 2.3382335829082876,
+  "prior_QA_failure": "float32 np.median averages middle ranks in float32; table describes float64 converted values. Difference 4.76837158e-7 GeV EM; aligned verifier dtype, no table/cache changed; standalone timing not measured",
+  "manifest_LF_normalization_rows_unchanged": true
+}
