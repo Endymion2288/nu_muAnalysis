@@ -1,0 +1,119 @@
+[
+  {
+    "fold": 0,
+    "role": "train",
+    "N": 1259,
+    "sources": 7,
+    "region_N": [
+      24,
+      81,
+      189,
+      861,
+      104
+    ]
+  },
+  {
+    "fold": 0,
+    "role": "calibration",
+    "N": 971,
+    "sources": 6,
+    "region_N": [
+      16,
+      74,
+      145,
+      649,
+      87
+    ]
+  },
+  {
+    "fold": 0,
+    "role": "evaluation",
+    "N": 1473,
+    "sources": 8,
+    "region_N": [
+      22,
+      91,
+      234,
+      1000,
+      126
+    ]
+  },
+  {
+    "fold": 1,
+    "role": "train",
+    "N": 971,
+    "sources": 6,
+    "region_N": [
+      16,
+      74,
+      145,
+      649,
+      87
+    ]
+  },
+  {
+    "fold": 1,
+    "role": "calibration",
+    "N": 1473,
+    "sources": 8,
+    "region_N": [
+      22,
+      91,
+      234,
+      1000,
+      126
+    ]
+  },
+  {
+    "fold": 1,
+    "role": "evaluation",
+    "N": 1259,
+    "sources": 7,
+    "region_N": [
+      24,
+      81,
+      189,
+      861,
+      104
+    ]
+  },
+  {
+    "fold": 2,
+    "role": "train",
+    "N": 1473,
+    "sources": 8,
+    "region_N": [
+      22,
+      91,
+      234,
+      1000,
+      126
+    ]
+  },
+  {
+    "fold": 2,
+    "role": "calibration",
+    "N": 1259,
+    "sources": 7,
+    "region_N": [
+      24,
+      81,
+      189,
+      861,
+      104
+    ]
+  },
+  {
+    "fold": 2,
+    "role": "evaluation",
+    "N": 971,
+    "sources": 6,
+    "region_N": [
+      16,
+      74,
+      145,
+      649,
+      87
+    ]
+  }
+]

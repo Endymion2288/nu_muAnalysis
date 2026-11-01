@@ -1,43 +1,47 @@
-# 下一轮执行 Prompt：stage46 真实粗区域oracle，拆开粒度与估计质量
+# 下一轮执行 Prompt：stage47 普通Calo理想敏感采样，结束区域扫描
 
-先读AGENTS.md、stage45中文报告/协议/全量表，信息预算计划§12、修订路线§27。
-当前stage45完成：3703例/21来源，重点3024例；X=F6全65+stage44的22摘要。
-9个来源OOF/全外train深度classifier、6个能量BDT、1 classifier smoke；没有重开旧test或删例。
-区域accuracy68.188%→79.134%、log score差−.424965 [−.446229,−.402454] nats；
-但ν I0/X/R（X+预测粗区域概率）/Z（X+连续真z）log-RMSE
-.28709694/.28740092/.28710998/.27690373。
-R对I0 −.0045% [−.8410%,.7364%]、对X .1012% [−.2224%,.3984%]；
-Z对X3.6525% [2.2156%,5.0617%]，下游2062例4.3215%，高y90例8.0636%。
-小scalar proper收益只在R对X确认，对I0及六箱谱未确认，不抹去也不升级为实用ν风险改善。
+先读AGENTS.md、stage46中文报告/冻结协议/全量表，修订路线§28、信息预算计划§13。
+stage46已完成：同3703例/21来源（pi8/k10/charm3）、重点3024例，X=F6全65+22局部活动。
+真实五区域C对X改善.5705% [.2581%,.9353%]，C对预测区域R .4697% [.2260%,.7632%]；
+连续真z的Z对C仍3.0997% [1.8109%,4.3441%]。重点I0/X/R/C/Z log-RMSE
+.28709694/.28740092/.28710998/.28576139/.27690373。
+多数下游2062例Z对C4.0932%，高y90例/19来源7.5791%，下限均>0；上游C局部小样本价值保留。
+C对X proper有小收益，六箱谱未确认。3正式+1smoke已完成，回读模型/offset/scalar精确一致。
+粗区域完全已知仍不足以保留连续z收益；不把缺口全归classifier，也不把有限BDT差当信息论上界。
 
-本轮唯一主线：**同X增加真实五区域one-hot控制C**。
-理由是Z与R同时改变连续/粗粒度与真值/估计质量，不能由当前差距归因全部精细z或分类误差。
-这不是继续扩大区域模型预算；只补3正式fit的明确oracle控制，完成后停止区域/容量扫描。
+本轮唯一主线：**已有HITS中普通下游Calo四模块敏感能损的信息诊断**。
+停止区域细分/classifier/容量/网络扫描。F6已有普通Calo重建量，新增的是敏感层保存沉积oracle，
+不是重命名原电荷，不叫完整强子能量，不当reco部署特征。其可得性及ν收益目前未测量。
 
-1. 只读复用stage42 development.npz、stage44 features.npz、stage45预测与冻结区域；
-   精确cache_row/run/event/fold rejoin。同3703例/21来源（pi/k/charm=8/10/3）、原三折。
-   F6全65项+22摘要/最高pz/original truth fiducial含lead/PMT veto/unit MC不变。
-   重点100≤reco pμ<1000 GeV及100–250/250–1000，不截Eν，≥1TeV参考；困难事件全保留。
-2. 五个固定半开z区间[-3000,-2928),[-2812,-2600),[-2600,-2300),[-2300,-1950),[-1769.65,-1619.65) mm。
-   沿用62/246/568/2510/317支持，不能依ν标签/预测合并区域；-2600/-2300是分析分界非模块边界。
-   C=X+5个真类one-hot（92列，与R同列数），truth仅oracle；不能部署真z/类gate、真实方向/PDG/matching。
-3. 拟合前冻结预算/参数/种子/验收。仅3正式能量BDT+最多1个小smoke；
-   原400轮depth3/eta.04/min_child20/lambda10/种子/来源角色和独立cal offset/scalar完全一致。
-   I0/X/R/Z允许精确缓存，不再训练classifier，不新ROOT/G4/Athena，不扫容量/区域/半径。
-4. 冻结并报告重点C对X、C对R、Z对C的来源配对区间；C对X≥2%且下限>0为信息诊断门槛，
-   不是部署验收。保留all/p/Eν/y/z/component/primary独立运动学parent代理、mean/median bias/R68/尾、
-   灵活scalar proper与原六箱谱。barcode不可得不称confirmed；真z只诊断，不用truth_st1估材料能损。
-5. C接近Z说明完美粗知识可能足够，约束当前估计/其利用的不足；C接近X且Z有益支持当前粒度不足。
-   但连续z与one-hot对有限BDT的可用表示也不同，C可能优于Z，不当严格信息上界/唯一因果分账。
-   不以一次不显著当相等；报告差值区间与无法区分的范围。
-   完成该控制后只选有效新读出信息或新的独立物理支持，不追加区域分类器/分箱扫描。
+1. 只读stage42 development、stage44 features与stage45/46预测，复用同3703例/21来源/三折/X87。
+   stage42 requests已匹配PHYS↔HITS，复用其请求和源文件路径，不重新定位大样本。
+   原最高pz/含lead的fiducial/PMT veto/unit MC不变。重点100≤reco pμ<1000 GeV及100–250/250–1000，
+   ≥1TeV参考，不截Eν，不丢高y/代理失败/最高能箱/缺失/尾部。不得重开stage34/35旧test冒充独立确认。
+2. 先做≤2来源、总≤40事件pilot：按manifest顺序首个已选pi和K来源，各取请求中前20例，
+   不依Eν/y/z或沉积挑事件。检查普通Calo敏感branch/persistent schema、物理四模块ID/单位、
+   当前生产中的位置/模块含义与保存沉积定义、全事件身份指纹、动态范围。
+   参考ml/read_calonu_sensitive_summary.py及stage42匹配脚本，不能照抄CaloNu ID/EM标定。
+   优先匹配的现成Calypso构建，不新编完整软件栈；较重I/O和完整提取走Condor。
+3. pilot可用后，拟合前冻结S_Calo四模块敏感能损（MeV→GeV），只此一个新族；
+   总粒子沉积不扣truth μ，不输入真实方向/PDG/matching，不引入truth可见强子能量。
+   同21来源完整≤4000事件（目标3703），只读必要branch/entries，每文件尽量一次读，写紧凑摘要。
+   空hit是可定义的零；缺失branch/无法匹配不能假填零或删例。不能以完整子样本重训并称原总体收益。
+   全支持不可取得则不启动比较或新生产链，明确记录不可测量，转来源/生产谱系独立支持审计。
+4. 完整支持确认后仅拟合X+S_Calo和X+S_Calo+连续真z：≤6正式400轮depth3能量fit+1小smoke。
+   X/Z复用stage45精确缓存，原来源角色、种子20261101+fold、独立cal offset/scalar不变。
+   冻结重点S对X≥2%且500次pi/k/charm来源配对95%下限>0、S+z对Z的条件增量，
+   原log-RMSE/bias/R68/尾/p/Eν/y/z/component/独立primary运动学parent代理、proper/Brier/六箱谱同报。
+   真z/S仅oracle，不用truth_st1模长估能损；barcode缺失不冒充primary-confirmed。
+   不追加种子/噪声/阈值/容量/新读出族扫描，不因少数离群或不利能箱停止物理分支。
+5. 若S有实用且已知z后仍有的条件收益，区分理想沉积与已有重建量，再决定可实现响应/独立确认；
+   若只在少数区域有效，报告占比/来源/区间，不扩大为全部ν收益；无实用收益则结束这条采样支线，
+   转新的来源/生产谱系支持，不继续网络或电子学前置链。有限模型oracle仍非严格信息上界。
 
-先小smoke，再单Condor作业内3折（CVMFS LCG_109、1CPU/1GB足够，站点可能改3GB）。
-参考stage45 wrapper，只读小缓存；资源计时、模型回读/精确rejoin、预算与角色验证必须完成。
-切schedd先hold并回读实际启动状态/完整折；stage45的12队列等8分多无启动，安全迁10后51s匹配，
-不保证未来排序相同，不根据低idle独断资源合适。EOS文件先XRootD核验再决定，不能盲目重训。
+资源：小smoke后Condor，CVMFS现成LCG/匹配Calypso；提取按来源限制线程/I/O，训练CPU1足够。
+切schedd先hold回读启动/完整输出，不并发重复fit。EOS访问失败先XRootD核验，不盲目重训。
+只保留模块摘要/小模型/紧凑预测及单份表/SVG，记录计时/CPU/RSS/吞吐/实际I/O。
+模型序列化、校准映射、精确事件rejoin与缓存/角色/预算必须验证。
 
-写中文stage46报告：实际样本/配置/命令/数字/单位、物理和程序原因、统计/系统边界、资源/产物、具体下一步。
-未测量明确写出；不把unit开发MC风险/proper/经验谱当真实data收益或独立确认。
-更新两份计划和本Prompt，Conventional Commit提交、回读blob与clean，不推送。
-最终给本轮物理结论及下一条单主线，不以分类准确率代替ν收益。
+先中文stage47报告，再报告与相关代码/配置Conventional Commit；更新两份计划及本Prompt，回读blob/clean，不推送。
+明确真实data/系统/归一化/新独立ν确认与最终谱总误差仍未测量，不把unit开发MC收益升级为实际物理测量收益。
+本轮必须形成有数据证据的物理判断；不能以多写计划或只通过schema/软件检查代替信息诊断结果。
