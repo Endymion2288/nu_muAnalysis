@@ -1,0 +1,104 @@
+{
+  "source_groups_disjoint": true,
+  "selected_keys_disjoint": true,
+  "model_feature_orders_verified": 6,
+  "finite_aligned_prediction_files": 2,
+  "training_payload_fit_stop_only_verified": true,
+  "partition_npz_field_readback": "all fields checked in collect before shard cleanup",
+  "final_cache_files": [
+    {
+      "path": "ntuples/energy_ml_stage35/fit.npz",
+      "bytes": 6056526
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/stop.npz",
+      "bytes": 900454
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/calibration.npz",
+      "bytes": 1075125
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/test.npz",
+      "bytes": 1425023
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/calibration_predictions.npz",
+      "bytes": 20334
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/test_predictions.npz",
+      "bytes": 130302
+    }
+  ],
+  "final_cache_bytes": 9607764,
+  "model_bytes": 7667374,
+  "disposable_files": [
+    {
+      "path": "ntuples/energy_ml_stage35/shards/0.npz",
+      "bytes": 860942
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/1.npz",
+      "bytes": 851312
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/10.npz",
+      "bytes": 787465
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/11.npz",
+      "bytes": 474200
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/12.npz",
+      "bytes": 196570
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/2.npz",
+      "bytes": 849947
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/3.npz",
+      "bytes": 830000
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/4.npz",
+      "bytes": 860145
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/5.npz",
+      "bytes": 822879
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/6.npz",
+      "bytes": 837799
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/7.npz",
+      "bytes": 878483
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/8.npz",
+      "bytes": 834031
+    },
+    {
+      "path": "ntuples/energy_ml_stage35/shards/9.npz",
+      "bytes": 873241
+    },
+    {
+      "path": "software/energy-ml-calonu-stage35-extract.tar.gz",
+      "bytes": 18998
+    },
+    {
+      "path": "software/energy-ml-calonu-stage35-train.tar.gz",
+      "bytes": 6932506
+    }
+  ],
+  "disposable_bytes": 16908518,
+  "quality_audit": "posthoc descriptive only; no cuts, refits or changed test estimates",
+  "diagnostic_counter_correction": "finite nonzero and nonfinite separated from compact cache; no selections or predictions changed",
+  "wall_s": 0.9243798649404198,
+  "cleanup_completed": true,
+  "removed_files": 15
+}

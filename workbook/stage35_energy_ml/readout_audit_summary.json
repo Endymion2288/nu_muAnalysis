@@ -1,0 +1,159 @@
+{
+  "samples": [
+    {
+      "sample": "MC_fit",
+      "N": 14309,
+      "status_counts": {
+        "0": {
+          "0": 1403,
+          "1": 12858,
+          "16": 26,
+          "32": 11,
+          "48": 11
+        },
+        "1": {
+          "0": 1362,
+          "1": 12893,
+          "16": 28,
+          "32": 6,
+          "48": 20
+        },
+        "2": {
+          "0": 935,
+          "1": 13341,
+          "16": 19,
+          "32": 5,
+          "48": 9
+        },
+        "3": {
+          "0": 861,
+          "1": 13410,
+          "16": 25,
+          "32": 6,
+          "48": 7
+        }
+      },
+      "overflow_events": 0,
+      "total_zero": 2403,
+      "total_nonzero": 11896,
+      "total_nonfinite": 10,
+      "total_definition_eligible": 14299,
+      "total_definition_unmeasured_nonfinite": 10,
+      "total_definition_failures": 0,
+      "total_definition_max_abs_diff_MeV": 0.10277547349687666,
+      "fit_sum_definition_eligible": 14299,
+      "fit_sum_definition_failures": 0,
+      "unit_formula_tests": [
+        {
+          "module": 0,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 14306,
+          "E_dep_eligible": 14306
+        },
+        {
+          "module": 1,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 14305,
+          "E_dep_eligible": 14305
+        },
+        {
+          "module": 2,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 14308,
+          "E_dep_eligible": 14308
+        },
+        {
+          "module": 3,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 14307,
+          "E_dep_eligible": 14307
+        }
+      ]
+    },
+    {
+      "sample": "data16000_first2048_unselected",
+      "N": 2048,
+      "status_counts": {
+        "0": {
+          "0": 594,
+          "1": 1442,
+          "16": 10,
+          "32": 1,
+          "48": 1
+        },
+        "1": {
+          "0": 605,
+          "1": 1432,
+          "4": 1,
+          "16": 7,
+          "32": 1,
+          "48": 2
+        },
+        "2": {
+          "0": 524,
+          "1": 1505,
+          "4": 1,
+          "16": 13,
+          "32": 5
+        },
+        "3": {
+          "0": 526,
+          "1": 1508,
+          "16": 13,
+          "48": 1
+        }
+      },
+      "overflow_events": 2,
+      "total_zero": 0,
+      "total_nonzero": 2047,
+      "total_nonfinite": 1,
+      "total_definition_eligible": 2047,
+      "total_definition_unmeasured_nonfinite": 1,
+      "total_definition_failures": 0,
+      "total_definition_max_abs_diff_MeV": 0.08722758828662336,
+      "fit_sum_definition_eligible": 2047,
+      "fit_sum_definition_failures": 0,
+      "unit_formula_tests": [
+        {
+          "module": 0,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 2048,
+          "E_dep_eligible": 2048
+        },
+        {
+          "module": 1,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 2047,
+          "E_dep_eligible": 2047
+        },
+        {
+          "module": 2,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 2048,
+          "E_dep_eligible": 2048
+        },
+        {
+          "module": 3,
+          "E_EM_equals_330_nMIP_failures": 0,
+          "E_dep_equals_58p5_nMIP_failures": 0,
+          "E_EM_eligible": 2048,
+          "E_dep_eligible": 2048
+        }
+      ]
+    }
+  ],
+  "data_input": "root://eospublic.cern.ch//eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00000-00049-r0022-PHYS.root",
+  "data_selection": "first 2048 entries, no GRL/trigger/MIP selection, descriptive only",
+  "wall_s": 0.6688173161819577,
+  "cpu_s": 0.505684928,
+  "peak_rss_MiB": 218.53515625,
+  "physical_data_MC_closure": false,
+  "hadronic_energy_calibration": false
+}

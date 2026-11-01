@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-01T12:50:59.424602+00:00",
+  "events": 3247,
+  "groups": 18,
+  "primary_valid": 3247,
+  "kinematic_parent_proxy": 3086,
+  "strict_primary_barcode_confirmation": "unmeasured: truth_barcode absent",
+  "micro_C0_cal": 0.2337961461619523,
+  "micro_C1_cal": 0.22695147122063566,
+  "all_relative_gain": 0.029276252212366516,
+  "all_gain_lo": 0.018244493766257974,
+  "all_gain_hi": 0.042141466551523704,
+  "focus_relative_gain": 0.0333588402820334,
+  "focus_gain_lo": 0.022676259109223832,
+  "focus_gain_hi": 0.04758135847076186,
+  "macro_C0_cal": 0.22855977101101949,
+  "macro_C1_cal": 0.22076349397417955,
+  "macro_gain": 0.034110451731525715,
+  "macro_gain_lo": 0.018080398408950312,
+  "macro_gain_hi": 0.0489101383311697,
+  "further_readout_modeling_gate": false,
+  "calibration_offset_95": {
+    "C0": [
+      -0.011568398117840925,
+      0.022866540886176
+    ],
+    "C1": [
+      -0.011417418071549732,
+      0.022809863408047262
+    ]
+  },
+  "six_model_inference_wall_s": 0.6531610230449587,
+  "six_model_inference_events_per_s": 4971.209067042723,
+  "wall_s": 5.7855523359030485,
+  "cpu_s": 5.51812387,
+  "peak_rss_MiB": 334.734375,
+  "bootstrap_replicates": 500,
+  "calibration_uncertainty_propagated": true,
+  "unchanged_test_parameters": true
+}

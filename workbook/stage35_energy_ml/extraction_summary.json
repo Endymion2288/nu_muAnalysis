@@ -1,0 +1,34 @@
+{
+  "files": 124,
+  "input_events": 1234895,
+  "selected_events": 21979,
+  "extraction_wall_s": 581.0667497795075,
+  "extraction_cpu_s": 524.712563763,
+  "peak_rss_MiB": 873.046875,
+  "partitions": {
+    "fit": {
+      "events": 14309,
+      "groups": 81,
+      "bytes": 6056526,
+      "readback_verified": true
+    },
+    "stop": {
+      "events": 2007,
+      "groups": 11,
+      "bytes": 900454,
+      "readback_verified": true
+    },
+    "calibration": {
+      "events": 2416,
+      "groups": 14,
+      "bytes": 1075125,
+      "readback_verified": true
+    },
+    "test": {
+      "events": 3247,
+      "groups": 18,
+      "bytes": 1425023,
+      "readback_verified": true
+    }
+  }
+}

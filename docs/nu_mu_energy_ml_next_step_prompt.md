@@ -1,57 +1,55 @@
-# 下一轮执行 Prompt：100–1000 GeV非μ能量分配与同事件CaloNu控制
+# 下一轮执行 Prompt：CaloNu匹配μ与波形响应控制
 
-先读AGENTS.md、修订路线第16节、`workbook/2026-11-01_stage34_frozen-low-momentum-evaluation.md`及冻结协议。
-stage30 A/B、stage31固定BDT、stage32/33原生审计及stage34独立性能检验均完成，不重跑。
-用户重点扩大为100–1000 GeV，保留100–250、250–1000子层，≥TeV仅参考，不追求高p达到低p精度。
+先读AGENTS.md、修订路线第17节、`workbook/2026-11-01_stage35_calonu-readout-information.md`、
+stage35冻结协议与source_audit。stage30–35已完成，不重跑已评价test或旧模型训练。
+用户重点100–1000 GeV，保留100–250和250–1000子层，≥TeV只参考。
 
-**唯一物理主线：转向非μ能量分配的新读出控制，先核验并冻结同事件CaloNu有/无实验。**
-保留完整F5/F6固定BDT，不新增tracking变量/架构/扫参，不扩大原生审计或全量重模拟。
+**唯一主线：以已有匹配CaloNu through-going μ MC/data控制读出响应和拟合质量，暂不扩模型。**
 
-已完成的独立证据：
+已测物理依据：
 
-- stage34协议先于解封；固定三个log预测ensemble，calibration 9727例仅两个global log offset，
-  乘数F5/F6=0.9967673425/0.9966439731。先冻结再test，test报告固定后challenge，零新fit。
-- test 12488例/22组：校准后macro F5/F6=0.354272/0.337954，改善4.6062% [2.0160%,6.8809%]；
-  reco p 100–1000的10014例改善2.7976% [2.3098%,3.3915%]。
-  中心未达预注册5%架构扩展门槛，但区间未排除5%，保留有限候选，不事后改门槛。
-- confirmed truth p 100–250的2162例ν改善0.1626% [−0.5033%,0.7537%]，250–1000的7482例
-  改善2.3031% [1.6593%,2.9647%]。原始μ对产生动量R68分别3.4608%/8.8527%；
-  ≥TeV参考35.2943%。reco低箱有true高p迁入，不能把reco低箱改善全说成真实低p改善。
-- confirmed truth重点且y≥0.8的104例/21组：原始μ log-RMSE=0.066595，ν=0.811343/0.811514，
-  无明确F6收益，mean bias约−44%/−45%。支持研究能量分配/非μ响应，不等于现有所有读出不可恢复。
-- SIBYLL π reco重点改善1.7674% [1.1124%,2.5000%]；nominal π test与SIBYLL π共同100–1600
-  四真能箱macro差区间跨0，未确立整体恶化，也未证明等效。不是完整相互作用/探测器系统检查。
-- 全局offset不能消除低真能上偏、高真能/高y下偏；未确认及部分尾率未一致改善。
-  不能宣布data部署/无偏校正/最终能谱收益。
+- 同事件C0=65维F6，C1=70维，额外四模块+total EM-scale；CaloNu bck124 PHYS，
+  test3247例/18组，重点2689例风险改善3.3359% [2.2676%,4.7581%]；总体2.9276%。
+  两低p子层均约3.3%；重点R68从16.6154%降至15.5974%，50%尾从3.9048%降至3.3842%。
+  这些是500来源组配对且传播calibration统计的unit-MC结果，不是系统闭合或最终谱收益。
+- 收益明显随交互z分层：最前57例改善21.33%；−2650至−2300mm的573例改善7.51%；
+  −2300至−1950mm占2201例，仅1.01%且区间跨0，total中位7.5911GeV EM、q84=8.8760GeV。
+  lead block中位0，88/264有限非零。尚不能叫约8GeV响应为MIP或强子标定。
+- 预注册重点改善中心≥5%扩展门槛未达，区间上限亦<5%。不降低门槛、不加架构/扫描。
+- s0015缺truth_barcode，严格primary确认未测；kinematic-parent代理不能冒充确认。
+  真p重点高y仅40例、代理仅8例，不能声称解决stage34 confirmed高y缺口。
+- MC fit14309及未选择run016000 data前2048条的有限读出代数/单位核验0失败；
+  MC total10个非有限，模块1最小−117895.168GeV且status32=CB fit failed，模块2最小−1670.179GeV且status48。
+  异常fit未删/裁剪，非有限按XGB missing；具体失效波形机制和收益影响未隔离。
+  status1是threshold failed，不能一律当missing；total raw/overflow定义不等于四模块fit和。
 
-当前状态与禁区：
+下一步依次执行：
 
-1. **calibration/test/challenge均已解封并评价**，不得反复返调后再称新独立确认。
-   `ntuples/energy_ml_stage34/{calibration,test,challenge}.npz`为5695131bytes最终紧凑cache，
-   含19维、六固定模型log预测及隔离truth诊断；11shards与3payload已清，不重复PHYS提取。
-   历史native archive也保留，不重跑。无flux归一化新资料就按已授权默认unit，不再询问flux。
-2. 原nominal六run/ordinary geometry/official withoutIFT/20cuts/最高pz leading/truth fiducial不变；
-   truth p、方向、PDG、matching/isForward不得入部署。不能按truth p切换模型。
-   raw μ对产生点响应不是同面pull；truth_st1/t_st*模长禁止测材料能损。
-3. 来源组互斥不保证完整生成谱系独立；旧flux-library入射ν复用局限保留。
-   unit-MC不是物理flux平均性能。SIBYLL是flux/母粒子挑战，不能说是相互作用生成器变体。
+1. 查找已有CaloNu through-going μ MC/data及生产记录，核验通道映射、安装全局位置/外推面、
+   几何/材料、时期、HV/增益、conditions、bck maker。reference为Calypso22.0.49、CaloNuMC/1ec47efe，
+   **K/charm exact bck maker未核实**，所存forward ntp日志不能证明它。
+   本地匹配源树`/eos/home-x/xcheng/FASER/calypso`，优先现成构建；不自动用ordinary master重建CaloNu。
+2. 先小样本确认支持，再冻结有预算的响应控制协议。through-going μ选择与轨迹外推使用data可执行量，
+   不按CaloNu信号本身挑出好峰；报告选择效率/覆盖/失败，避免只选好波形。MC真值仅诊断，禁入部署。
+3. 四模块检查raw/fit电荷(pC)、nMIP、E_EM(GeV EM)、status/overflow、轨迹交点/路径长度依赖，
+   分来源/运行块给区间及匹配条件。检验窄响应是否符合μ穿越/标定，及极端fit是否能由raw/status识别。
+   单位公式通过不是data/MC物理闭合；阈值失败与缺容器分开。不得臆造精确安装全局z。
+4. 必须得到实测响应/覆盖/拟合原因的物理结论；若缺匹配输入，量化缺口、记录未测量，不用不相容
+   CC MC/data分布造闭合，不预报控制结果、不自动全量重模拟或重训模型。
 
-下一阶段具体执行：
+状态、存储和禁止事项：
 
-1. 先在仓库和源路径找**已有**CaloNu读出及同事件F5/F6/primary/y支持，审计事件键、几何、
-   材料、conditions、能量单位、status/双增益与选择，记录真实来源与缺失。
-   不以ordinary与CaloNu不同几何的性能差来估计读出增益，不自动启动全量生产。
-2. 输入具备时，先小样本验证读出非恒定、特征定义、配对及选择；在看新保留标签前冻结
-   同事件有/无CaloNu、有限BDT预算（建议最多2输入×3seed）、来源划分及简单允许校准。
-   其余重建输入和事件完全相同，真值仅标签/诊断；新来源保留支持不能冒充旧test仍未使用。
-3. 用Condor做有限比较，给出100–1000、两个子层、高y、全selected支持的误差、bias/R68/尾部和
-   来源组配对区间。明确CaloNu是否增加能量分配信息，不以少数尾停止分支或扩大TeV tracking预算。
-4. 若同事件输入不存在，明确未测量和所缺输入/conditions，不造读出增益、不拿重复训练当物理推进。
-   在扩大生产之前先给出具体、可审阅的小样本方案与数据依据。实际阶段必须有物理数据支持的结论。
-5. data仍需匹配时期、参考面、几何/对齐/conditions及选择；旧data无isForward。
-   MIP/强子校准与真实data闭合未完成，不能将活动相关性称已标定强子能量。
+- `ntuples/energy_ml_stage35/`四分区和两预测NPZ共9607764bytes；
+  `ml/artifacts/stage35/seed_{0,1,2}/{C0,C1}.ubj`共7667374bytes，六fit已冻结，勿覆盖。
+  紧凑cache已逐字段读回；13shards、2payload已清。不重复PHYS提取。训练配置重复JSON已合并。
+- stage34 calibration/test/challenge和stage35 calibration/test均已评价；以后据此调模型只能当开发，
+  新独立确认要新未使用来源。旧ordinary模型只作域外参考，不以跨几何差估计CaloNu读出收益。
+- 不加tracking变量/拓扑/概率大架构，不追逐TeV精度，不按truth p切换部署。
+  truth方向、PDG、matching、isForward均不入部署；truth_st*/t_st*模长禁止测材料能损。
+- 无新flux归一化材料继续unit默认，不重复询问。来源组互斥不保证完整flux-library谱系独立。
+  MIP/强子标定、data/探测器/相互作用系统以及最终谱收益尚未完成。
 
-环境优先LCG109_cuda现成CVMFS；大批量走Condor，可换空闲schedd。stage34的bigbird21可用。
-先小样本、记录wall/CPU/RSS/吞吐及失败；只留紧凑cache，清ROOT/xAOD和分片/重复JSON。
-每阶段写中文workbook含实际数值/单位、输入/命令/验证/产物/局限/下一验收标准，
-更新路线和本Prompt，Conventional Commit、提交blob读回、不push。最终回答给新结论、限制、报告和commit。
+LCG109_cuda CVMFS现成环境；大批量Condor，可换空闲schedd，stage35用bigbird21。
+小样本先验证，计wall/CPU/RSS/吞吐和失败成本；只留紧凑最终cache，不留ROOT/xAOD和分片/重复JSON。
+每阶段中文workbook含实测数值/单位、输入/选择/命令/验证/产物/统计和系统局限/下一验收标准，
+更新路线与Prompt，Conventional Commit、逐提交blob读回、工作区干净，不push。
