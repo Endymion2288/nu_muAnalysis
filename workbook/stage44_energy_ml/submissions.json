@@ -1,0 +1,32 @@
+[
+  {
+    "schedd": "bigbird12.cern.ch",
+    "cluster": 16114847,
+    "mode": "extract",
+    "hold_checked_JobStatus": 5,
+    "hold_checked_NumJobStarts": 0,
+    "hold_checked_JobStartDate": null,
+    "action": "hold, verify zero starts, remove before migration",
+    "log": "/afs/cern.ch/user/x/xcheng/nu_mu_stage44/logs/16114847.log"
+  },
+  {
+    "schedd": "bigbird21.cern.ch",
+    "cluster": 2187557,
+    "mode": "extract",
+    "hold_checked_JobStatus": 5,
+    "hold_checked_NumJobStarts": 0,
+    "hold_checked_JobStartDate": null,
+    "action": "hold, verify zero starts, remove before migration",
+    "log": "/afs/cern.ch/user/x/xcheng/nu_mu_stage44/logs/2187557.log"
+  },
+  {
+    "schedd": "bigbird10.cern.ch",
+    "cluster": 13110723,
+    "initial_mode": "extract",
+    "final_mode": "all",
+    "hold_checked_JobStatus": 5,
+    "hold_checked_NumJobStarts": 0,
+    "action": "hold before any start; update wrapper/Args/TransferExecutable; release once; extract and train in same job",
+    "log": "/afs/cern.ch/user/x/xcheng/nu_mu_stage44/logs/13110723.log"
+  }
+]

@@ -1,0 +1,324 @@
+{
+  "input_manifest_index": 0,
+  "events": 8,
+  "labels_read": false,
+  "source_reference": "CaloNuMC 1ec47efe NtupleDumperAlg.cxx: Trig z0, Veto1 z-1769.65, fitted downstreamParameters; TrackSegment is separate track collection and not leading association",
+  "schema_verified": true,
+  "station_centers_mm": [
+    -1860.15,
+    47.4,
+    1237.4,
+    2427.4
+  ],
+  "layer_offsets_mm": [
+    -31.5,
+    0.0,
+    31.5
+  ],
+  "cases": [
+    {
+      "eventID": 68,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        8628,
+        32,
+        7,
+        3
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 8628,
+          "nearest_mm": 0.5265839288554446,
+          "n_out10": 8405,
+          "n_out50": 5362,
+          "maximum_local_dz_mm": 128.4000488281249
+        },
+        {
+          "station": 1,
+          "points": 32,
+          "nearest_mm": 0.8934735095212604,
+          "n_out10": 29,
+          "n_out50": 19,
+          "maximum_local_dz_mm": 85.30000305175781
+        },
+        {
+          "station": 3,
+          "points": 3,
+          "nearest_mm": 0.3425944032863272,
+          "n_out10": 1,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 63.885009765625
+        }
+      ]
+    },
+    {
+      "eventID": 176,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        40,
+        11,
+        6,
+        2
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 40,
+          "nearest_mm": 0.40164876830971097,
+          "n_out10": 34,
+          "n_out50": 19,
+          "maximum_local_dz_mm": 128.4000488281249
+        },
+        {
+          "station": 1,
+          "points": 11,
+          "nearest_mm": 0.47880697318945126,
+          "n_out10": 8,
+          "n_out50": 8,
+          "maximum_local_dz_mm": 77.3550033569336
+        },
+        {
+          "station": 3,
+          "points": 2,
+          "nearest_mm": 0.5443350725571813,
+          "n_out10": 0,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 39.445068359375
+        }
+      ]
+    },
+    {
+      "eventID": 255,
+      "leading_index": 1,
+      "track_count": 2,
+      "station_counts": [
+        417,
+        42,
+        13,
+        6
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 417,
+          "nearest_mm": 1.4261121098945608,
+          "n_out10": 390,
+          "n_out50": 213,
+          "maximum_local_dz_mm": 128.4000488281249
+        },
+        {
+          "station": 1,
+          "points": 42,
+          "nearest_mm": 0.12107679367494155,
+          "n_out10": 38,
+          "n_out50": 28,
+          "maximum_local_dz_mm": 77.3550033569336
+        },
+        {
+          "station": 3,
+          "points": 6,
+          "nearest_mm": 0.07314924849153709,
+          "n_out10": 3,
+          "n_out50": 3,
+          "maximum_local_dz_mm": 63.885009765625
+        }
+      ]
+    },
+    {
+      "eventID": 283,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        7,
+        3,
+        3,
+        3
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 7,
+          "nearest_mm": 0.7696148664180719,
+          "n_out10": 4,
+          "n_out50": 1,
+          "maximum_local_dz_mm": 128.4000488281249
+        },
+        {
+          "station": 1,
+          "points": 3,
+          "nearest_mm": 0.03287191780799548,
+          "n_out10": 0,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 72.5
+        },
+        {
+          "station": 3,
+          "points": 3,
+          "nearest_mm": 0.14504437765520717,
+          "n_out10": 0,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 63.885009765625
+        }
+      ]
+    },
+    {
+      "eventID": 304,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "max_layer_distance_mm": 1.545019531250091,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 3,
+          "nearest_mm": 1.5657808735887435,
+          "n_out10": 0,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 123.54494628906241
+        },
+        {
+          "station": 1,
+          "points": 3,
+          "nearest_mm": 0.2839515044803744,
+          "n_out10": 0,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 77.3550033569336
+        },
+        {
+          "station": 3,
+          "points": 0,
+          "nearest_mm": null,
+          "n_out10": 0,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 0
+        }
+      ]
+    },
+    {
+      "eventID": 344,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        10,
+        6,
+        3,
+        3
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 10,
+          "nearest_mm": 1.5607231594329516,
+          "n_out10": 7,
+          "n_out50": 1,
+          "maximum_local_dz_mm": 123.54494628906241
+        },
+        {
+          "station": 1,
+          "points": 6,
+          "nearest_mm": 0.026749451563728932,
+          "n_out10": 3,
+          "n_out50": 0,
+          "maximum_local_dz_mm": 85.30000305175781
+        },
+        {
+          "station": 3,
+          "points": 3,
+          "nearest_mm": 0.07616931573351333,
+          "n_out10": 1,
+          "n_out50": 1,
+          "maximum_local_dz_mm": 62.114990234375
+        }
+      ]
+    },
+    {
+      "eventID": 349,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        151,
+        18,
+        2,
+        15
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 151,
+          "nearest_mm": 0.22218573916514583,
+          "n_out10": 121,
+          "n_out50": 73,
+          "maximum_local_dz_mm": 128.4000488281249
+        },
+        {
+          "station": 1,
+          "points": 18,
+          "nearest_mm": 0.027094428873944518,
+          "n_out10": 15,
+          "n_out50": 15,
+          "maximum_local_dz_mm": 85.30000305175781
+        },
+        {
+          "station": 3,
+          "points": 15,
+          "nearest_mm": 0.06494091625343595,
+          "n_out10": 13,
+          "n_out50": 8,
+          "maximum_local_dz_mm": 63.0
+        }
+      ]
+    },
+    {
+      "eventID": 455,
+      "leading_index": 0,
+      "track_count": 1,
+      "station_counts": [
+        140,
+        10,
+        6,
+        5
+      ],
+      "max_layer_distance_mm": 6.400048828124909,
+      "local_states": [
+        {
+          "station": 0,
+          "points": 140,
+          "nearest_mm": 1.1090894402343265,
+          "n_out10": 129,
+          "n_out50": 49,
+          "maximum_local_dz_mm": 128.4000488281249
+        },
+        {
+          "station": 1,
+          "points": 10,
+          "nearest_mm": 0.32957436296766224,
+          "n_out10": 7,
+          "n_out50": 7,
+          "maximum_local_dz_mm": 80.44499969482422
+        },
+        {
+          "station": 3,
+          "points": 5,
+          "nearest_mm": 0.15170287318547163,
+          "n_out10": 3,
+          "n_out50": 3,
+          "maximum_local_dz_mm": 67.85498046875
+        }
+      ]
+    }
+  ]
+}
