@@ -1,0 +1,119 @@
+{
+  "known": {
+    "index": 1,
+    "events": 1,
+    "files": 1,
+    "channel_hit_ids": [
+      9,
+      1,
+      11,
+      3
+    ],
+    "locate_wall_s": null,
+    "wall_s": 49.49261067993939,
+    "cpu_s": 42.829635124,
+    "peak_rss_MiB": 1171.1875,
+    "identity_checked": "PHYS fingerprint + HITS run/event + independent neutrino pdg/three-momentum",
+    "schemas": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits",
+        "loaded": 2205932996,
+        "saved": [
+          2205932996
+        ]
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux.",
+        "loaded": 3545528082,
+        "saved": [
+          3545528082
+        ]
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent",
+        "loaded": 3988193236,
+        "saved": [
+          3988193236
+        ]
+      }
+    ],
+    "signal_MeV": [
+      [
+        0.17406999971717596,
+        0.0,
+        19.57723514076497,
+        75.52316199010238
+      ]
+    ],
+    "matches_stage39": true
+  },
+  "new": {
+    "index": 0,
+    "events": 2,
+    "files": 1,
+    "channel_hit_ids": [
+      9,
+      1,
+      11,
+      3
+    ],
+    "locate_wall_s": 1.3821358738932759,
+    "wall_s": 44.15983219910413,
+    "cpu_s": 40.243681503999994,
+    "peak_rss_MiB": 1177.3125,
+    "identity_checked": "PHYS fingerprint + HITS run/event + independent neutrino pdg/three-momentum",
+    "schemas": [
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00000-s0015-HITS.root",
+        "branch": "CaloHitCollection_p1a_CaloNuHits",
+        "loaded": 2205932996,
+        "saved": [
+          2205932996
+        ]
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00000-s0015-HITS.root",
+        "branch": "xAOD::EventAuxInfo_v3_EventInfoAux.",
+        "loaded": 3545528082,
+        "saved": [
+          3545528082
+        ]
+      },
+      {
+        "file": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/sim/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00000-s0015-HITS.root",
+        "branch": "McEventCollection_p6_BeamTruthEvent",
+        "loaded": 3988193236,
+        "saved": [
+          3988193236
+        ]
+      }
+    ],
+    "signal_MeV": [
+      [
+        0.0746299996972084,
+        0.04258999973535538,
+        0.009119999594986439,
+        1.2042600088752806
+      ],
+      [
+        0.08912999927997589,
+        0.035660000514326384,
+        0.23808999359607697,
+        0.07873000204563141
+      ]
+    ]
+  },
+  "training": {
+    "fits": 2,
+    "rounds": 20,
+    "events_per_role": [
+      200,
+      200,
+      100
+    ],
+    "missing_mapping_classes": true
+  }
+}

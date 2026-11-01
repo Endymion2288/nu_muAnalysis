@@ -1,0 +1,34 @@
+{
+  "valid": true,
+  "A_events": 14309,
+  "B_events": 3703,
+  "B_sources": 21,
+  "F6_columns": 65,
+  "formal_fits": 33,
+  "smoke_fits": 2,
+  "C_triggered": true,
+  "models": {
+    "A": [
+      "A0",
+      "A_readout",
+      "A_zero"
+    ],
+    "B": [
+      "I0",
+      "Is",
+      "Isz",
+      "Iz"
+    ],
+    "C": [
+      "fixed_double_noise",
+      "fixed_nominal",
+      "legacy_zero_nominal",
+      "positive_nominal"
+    ]
+  },
+  "source_roles_disjoint": true,
+  "all_predictions_finite": true,
+  "compact_summaries_readback": true,
+  "old_test_read": false,
+  "no_new_G4": true
+}
