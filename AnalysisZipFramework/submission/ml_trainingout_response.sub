@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage66
+initialdir = $(spool)
+executable = $(spool)/run_ml_trainingout_response.sh
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-trainingout-stage66.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 100MB
+getenv = False
+max_retries = 0
++JobFlavour = "microcentury"
++MaxRuntime = 600
++NuMuStage = "energy-ml-spectrum-trainingout-stage66"
+log = $(spool)/logs/trainingout.$(ClusterId).log
+output = $(spool)/logs/trainingout.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/trainingout.$(ClusterId).$(ProcId).err
+queue 1

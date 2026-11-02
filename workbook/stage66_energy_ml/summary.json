@@ -1,0 +1,301 @@
+{
+  "Fisher": [
+    {
+      "template_role": "cal",
+      "point": "eval",
+      "representation": "M_mu",
+      "f": 0.07924877285338265,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.5547912340080505,
+      "information_correlation": -0.2171571698786808,
+      "parameter_correlation": 0.2171571698786808,
+      "sigma_f_fixed": 0.01263547346508236,
+      "sigma_f_free": 0.012944369456793968,
+      "sigma_alpha": 0.06210240297200064,
+      "sigma_r_over_r_fixed": 0.17316362458871953,
+      "sigma_r_over_r_free": 0.1773969087385795,
+      "sigma_f_cost_ratio": 1.0244467286932484,
+      "Schur_sigma_f": 0.012944369456793966,
+      "unit_operator_error": 3.3306690738754696e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5686195465003049,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          6263.498242441884,
+          -283.5068965848637
+        ],
+        [
+          -283.5068965848636,
+          272.120932189673
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.2171571698786808
+        ],
+        [
+          -0.2171571698786808,
+          1.0
+        ]
+      ],
+      "fixed_linear_f_outside_range": false,
+      "fixed_bootstrap_f_outside_range_N": 0,
+      "fixed_bootstrap_invalid_N": 0,
+      "free_linear_f_outside_range": false,
+      "free_bootstrap_f_outside_range_N": 0,
+      "free_bootstrap_invalid_N": 0
+    },
+    {
+      "template_role": "cal",
+      "point": "eval",
+      "representation": "M_mu",
+      "f": 0.07924877285338265,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.5707433514300884,
+      "information_correlation": -0.2220149090777917,
+      "parameter_correlation": 0.2220149090777917,
+      "sigma_f_fixed": 0.013038733313044323,
+      "sigma_f_free": 0.01337246633256929,
+      "sigma_alpha": 0.06574497117611262,
+      "sigma_r_over_r_fixed": 0.17869012402043155,
+      "sigma_r_over_r_free": 0.18326378874819838,
+      "sigma_f_cost_ratio": 1.0255955092808815,
+      "Schur_sigma_f": 0.013372466332569288,
+      "unit_operator_error": 3.3306690738754696e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5686195465003049,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5882.056540586617,
+          -265.6197162793239
+        ],
+        [
+          -265.61971627932394,
+          243.34764208205067
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.2220149090777917
+        ],
+        [
+          -0.2220149090777917,
+          1.0
+        ]
+      ],
+      "fixed_linear_f_outside_range": false,
+      "fixed_bootstrap_f_outside_range_N": 0,
+      "fixed_bootstrap_invalid_N": 0,
+      "free_linear_f_outside_range": false,
+      "free_bootstrap_f_outside_range_N": 0,
+      "free_bootstrap_invalid_N": 0
+    },
+    {
+      "template_role": "cal",
+      "point": "eval",
+      "representation": "S_scalar",
+      "f": 0.07924877285338265,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.3954573925708333,
+      "information_correlation": -0.1650863813304663,
+      "parameter_correlation": 0.1650863813304663,
+      "sigma_f_fixed": 0.010262092882285176,
+      "sigma_f_free": 0.010404856756862379,
+      "sigma_alpha": 0.056349615842623,
+      "sigma_r_over_r_fixed": 0.14063748416498442,
+      "sigma_r_over_r_free": 0.14259400047997925,
+      "sigma_f_cost_ratio": 1.0139117698713922,
+      "Schur_sigma_f": 0.010404856756862377,
+      "unit_operator_error": 2.7755575615628914e-16,
+      "C_sum": 1.3877787807814457e-17,
+      "high_mean_log_E_over400": 0.568619546500305,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          9495.724758034514,
+          -289.4573032970433
+        ],
+        [
+          -289.45730329704327,
+          323.7564354237197
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.1650863813304663
+        ],
+        [
+          -0.1650863813304663,
+          1.0
+        ]
+      ],
+      "fixed_linear_f_outside_range": false,
+      "fixed_bootstrap_f_outside_range_N": 0,
+      "fixed_bootstrap_invalid_N": 0,
+      "free_linear_f_outside_range": false,
+      "free_bootstrap_f_outside_range_N": 0,
+      "free_bootstrap_invalid_N": 0
+    },
+    {
+      "template_role": "cal",
+      "point": "eval",
+      "representation": "S_scalar",
+      "f": 0.07924877285338265,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4105194531327974,
+      "information_correlation": -0.17030331474789462,
+      "parameter_correlation": 0.17030331474789462,
+      "sigma_f_fixed": 0.010437347132917291,
+      "sigma_f_free": 0.01059207952346654,
+      "sigma_alpha": 0.05964437974236158,
+      "sigma_r_over_r_fixed": 0.14303926684039436,
+      "sigma_r_over_r_free": 0.14515980641992254,
+      "sigma_f_cost_ratio": 1.0148248772967658,
+      "Schur_sigma_f": 0.01059207952346654,
+      "unit_operator_error": 2.220446049250313e-16,
+      "C_sum": 1.3877787807814457e-17,
+      "high_mean_log_E_over400": 0.568619546500305,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          9179.515181259301,
+          -277.6224302300314
+        ],
+        [
+          -277.62243023003134,
+          289.4963927808858
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.17030331474789462
+        ],
+        [
+          -0.17030331474789462,
+          1.0
+        ]
+      ],
+      "fixed_linear_f_outside_range": false,
+      "fixed_bootstrap_f_outside_range_N": 0,
+      "fixed_bootstrap_invalid_N": 0,
+      "free_linear_f_outside_range": false,
+      "free_bootstrap_f_outside_range_N": 0,
+      "free_bootstrap_invalid_N": 0
+    }
+  ],
+  "protected_counts": [
+    {
+      "role": "train",
+      "N": 41447,
+      "sources": 91,
+      "low_N": 4331,
+      "missing_inputs_N": 21,
+      "unconfirmed_N": 1495,
+      "negative_correction_N": 1963
+    },
+    {
+      "role": "cal",
+      "N": 8440,
+      "sources": 16,
+      "low_N": 841,
+      "missing_inputs_N": 3,
+      "unconfirmed_N": 301,
+      "negative_correction_N": 431
+    },
+    {
+      "role": "eval",
+      "N": 14057,
+      "sources": 22,
+      "low_N": 1114,
+      "missing_inputs_N": 7,
+      "unconfirmed_N": 510,
+      "negative_correction_N": 913
+    }
+  ],
+  "source_groups": {
+    "cal": [
+      "charm:00110-00119",
+      "charm:00160-00169",
+      "k:00060-00069",
+      "k:00070-00079",
+      "k:00120-00129",
+      "k:00330-00339",
+      "k:00500-00509",
+      "k:00540-00549",
+      "k:00660-00669",
+      "k:00730-00739",
+      "pi:00080-00089",
+      "pi:00260-00269",
+      "pi:00310-00319",
+      "pi:00330-00339",
+      "pi:00350-00359",
+      "pi:00480-00489"
+    ],
+    "eval": [
+      "charm:00020-00029",
+      "charm:00040-00049",
+      "charm:00150-00159",
+      "k:00080-00089",
+      "k:00110-00119",
+      "k:00180-00189",
+      "k:00190-00199",
+      "k:00260-00269",
+      "k:00340-00349",
+      "k:00410-00419",
+      "k:00480-00489",
+      "k:00570-00579",
+      "k:00700-00709",
+      "k:00710-00719",
+      "pi:00020-00029",
+      "pi:00040-00049",
+      "pi:00060-00069",
+      "pi:00110-00119",
+      "pi:00200-00209",
+      "pi:00220-00229",
+      "pi:00240-00249",
+      "pi:00360-00369"
+    ]
+  },
+  "max_C_normalization_error": 1.8041124150158794e-16,
+  "max_operator_identity_error": 5.551115123125783e-16,
+  "max_decomposition_conservation_error": 1.1449174941446927e-16,
+  "bootstrap_replicates": 500,
+  "Fisher_bootstrap_fields": [
+    "sigma_f_fixed",
+    "sigma_f_free",
+    "sigma_alpha",
+    "parameter_correlation",
+    "sigma_f_cost_ratio",
+    "normalized_condition",
+    "normalized_rank",
+    "C_sum",
+    "unit_operator_error"
+  ],
+  "projection_bootstrap_fields": [
+    "fixed_delta_f",
+    "free_delta_f",
+    "free_delta_alpha",
+    "fixed_half_L1",
+    "free_half_L1",
+    "fixed_weighted_norm",
+    "free_weighted_norm"
+  ],
+  "new_train_draws": 0,
+  "energy_fits": 0,
+  "F7_inferences": 0,
+  "nonlinear_profiles": 0
+}

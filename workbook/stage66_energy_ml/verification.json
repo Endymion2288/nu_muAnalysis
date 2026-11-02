@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "method": "independent event weights and explicit strata; reduced simplex covariance inverse",
+  "central_models": 4,
+  "bootstrap_indices": [
+    0,
+    249,
+    499
+  ],
+  "bootstrap_models": 12,
+  "max_absolute_differences": {
+    "derivative": 5.164230154619531e-12,
+    "direction": 8.326672684688674e-17,
+    "covariance_inverse": 2.546585164964199e-11,
+    "Fisher": 5.4569682106375694e-12,
+    "operator": 6.661338147750939e-15,
+    "sigma": 5.551115123125783e-17,
+    "vectors": 3.1086244689504383e-15,
+    "residuals": 1.5612511283791264e-17,
+    "bootstrap_Fisher": 1.5543122344752192e-15,
+    "bootstrap_projection": 3.1086244689504383e-15,
+    "ESS": 0.0
+  },
+  "invalid_entries": {
+    "cal_ESS": 0,
+    "cal_stratum_counts": 0,
+    "eval_ESS": 0,
+    "eval_stratum_counts": 0,
+    "M_mu_unmatched_mass": 0,
+    "M_mu_known_Fisher": 0,
+    "M_mu_known_projection": 0,
+    "M_mu_finite_Fisher": 0,
+    "M_mu_finite_projection": 0,
+    "S_scalar_unmatched_mass": 0,
+    "S_scalar_known_Fisher": 0,
+    "S_scalar_known_projection": 0,
+    "S_scalar_finite_Fisher": 0,
+    "S_scalar_finite_projection": 0
+  },
+  "protected_counts": [
+    {
+      "role": "train",
+      "N": 41447,
+      "sources": 91,
+      "low_N": 4331,
+      "missing_inputs_N": 21,
+      "unconfirmed_N": 1495,
+      "negative_correction_N": 1963,
+      "high_y_N": 1204,
+      "reco_pz50_100_N": 2498
+    },
+    {
+      "role": "cal",
+      "N": 8440,
+      "sources": 16,
+      "low_N": 841,
+      "missing_inputs_N": 3,
+      "unconfirmed_N": 301,
+      "negative_correction_N": 431,
+      "high_y_N": 230,
+      "reco_pz50_100_N": 504
+    },
+    {
+      "role": "eval",
+      "N": 14057,
+      "sources": 22,
+      "low_N": 1114,
+      "missing_inputs_N": 7,
+      "unconfirmed_N": 510,
+      "negative_correction_N": 913,
+      "high_y_N": 440,
+      "reco_pz50_100_N": 682
+    }
+  ],
+  "binning_support_protection_pass": true
+}

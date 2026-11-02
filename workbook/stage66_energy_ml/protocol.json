@@ -1,0 +1,81 @@
+{
+  "stage": 66,
+  "starting_commit": "f6e80d7",
+  "alpha": 0.0,
+  "energy_scale_GeV": 400,
+  "N_selected": 1000,
+  "covariance_relative_cut": 1e-12,
+  "covariance_absolute_cut": 1e-18,
+  "direction_information_min": 1e-12,
+  "normalized_rank_cut": 1e-10,
+  "fraction_boundary_tolerance": 1e-08,
+  "numerical_tolerance": 1e-08,
+  "derivative_difference_step": 1e-05,
+  "bootstrap_replicates": 500,
+  "bootstrap_seeds": {
+    "cal": 2026110366,
+    "eval": 2026110367
+  },
+  "parameters": [
+    "selected low fraction f",
+    "selected high component power tilt alpha"
+  ],
+  "high_spectrum": "b_alpha proportional to (E/400GeV)^alpha within selected high component; only alpha0 local derivatives",
+  "bootstrap": "500 component-stratified independent cal/eval conservative source draws, M/S paired; fixed nominal eval f_true; re-estimate cal a/b/C/V/operators, eval response and support every draw; no new train draws",
+  "singular": "rank<2, zero direction or f within1e-8 boundary: no free precision/regular projection; keep NaN in NPZ and null in JSON, report invalid counts and finite-only quantiles together; no ridge, prior or pseudocount",
+  "uncertainty": "local tangent multinomial Fisher, including finite MC at alpha0; source intervals conditional on fitted F7/bins, no training/lineage/detector/calibration coverage guarantee",
+  "residual": "full signed vector, half-L1 and sqrt(r^T V+ r); no goodness-of-fit p value, no nonlinear correction/fit or clipping unphysical linear extrapolation",
+  "formal_jobs": 1,
+  "request_cpus": 1,
+  "request_memory_MB": 3000,
+  "cpu_budget_s": 600,
+  "wall_budget_s": 600,
+  "retained_budget_bytes": 5000000,
+  "energy_fits": 0,
+  "F7_inferences": 0,
+  "ROOT_RDO_production": 0,
+  "nonlinear_spectrum_profiles": 0,
+  "coverage_toys": 0,
+  "input_cache": "ml/artifacts/stage63/observables.npz",
+  "template_role": "cal",
+  "target_role": "eval",
+  "f_eval": 0.07924877285338265,
+  "expected_template_low_high": [
+    841,
+    7599
+  ],
+  "expected_target_low_high": [
+    1114,
+    12943
+  ],
+  "reference": "cal; shared k mixture=(w_eval-w_cal)*R_cal; conditional=w_eval*(R_eval-R_cal); unmatched=original J_eval-J_cal outside shared k",
+  "support": "all27 coarseE x pi/k/charm strata and both components; no pruning or pseudocount; record cal/eval source counts and per-draw zero/shared frequencies and ESS",
+  "comparison": "read stage65 train-to-eval Fisher/projection/intervals only, no new train resampling; no reversed or merged template",
+  "independent_QA_bootstrap_indices": [
+    0,
+    249,
+    499
+  ],
+  "comparison_tolerance": 1e-08,
+  "truth_E_edges_GeV": [
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "production_components": [
+    "pi",
+    "k",
+    "charm"
+  ],
+  "category_counts": {
+    "M_mu": 17,
+    "S_scalar": 17
+  },
+  "frozen_utc": "2026-11-02T23:24:23.047681+00:00",
+  "synthetic_projected_2004_Fisher_wall_s": 0.5094883628748358
+}

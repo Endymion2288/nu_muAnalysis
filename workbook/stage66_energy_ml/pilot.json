@@ -1,0 +1,179 @@
+{
+  "wall_s": 0.041160729713737965,
+  "cpu_s": 0.030060453000000043,
+  "peak_rss_MiB": 616.60546875,
+  "proc_io_delta": {
+    "rchar": 2334,
+    "wchar": 0,
+    "syscr": 4,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "derivative_max_abs_error": 6.678879671540017e-12,
+  "orthogonal": {
+    "f": 0.1,
+    "finite_MC": true,
+    "regular": true,
+    "normalized_rank": 2,
+    "normalized_condition": 1.0,
+    "information_correlation": -7.540514487216023e-17,
+    "parameter_correlation": 7.540514487216023e-17,
+    "sigma_f_fixed": 0.09510827375838263,
+    "sigma_f_free": 0.09510827375838263,
+    "sigma_alpha": 0.02789539300581125,
+    "sigma_r_over_r_fixed": 1.0567585973153624,
+    "sigma_r_over_r_free": 1.0567585973153624,
+    "sigma_f_cost_ratio": 1.0,
+    "Schur_sigma_f": 0.09510827375838263,
+    "unit_operator_error": 2.220446049250313e-16,
+    "C_sum": -1.1102230246251565e-16,
+    "high_mean_log_E_over400": -1.4210854715202004e-16,
+    "covariance_rank": 3,
+    "fisher": [
+      [
+        110.5511848700821,
+        -2.842170943040401e-14
+      ],
+      [
+        -1.4210854715202004e-14,
+        1285.0944005042688
+      ]
+    ],
+    "normalized_fisher": [
+      [
+        1.0,
+        -7.540514487216023e-17
+      ],
+      [
+        -7.540514487216023e-17,
+        1.0
+      ]
+    ]
+  },
+  "collinear": {
+    "f": 0.1,
+    "finite_MC": true,
+    "regular": false,
+    "normalized_rank": 1,
+    "normalized_condition": null,
+    "information_correlation": 1.0,
+    "parameter_correlation": null,
+    "sigma_f_fixed": 0.09510827375838263,
+    "sigma_f_free": null,
+    "sigma_alpha": null,
+    "sigma_r_over_r_fixed": 1.0567585973153624,
+    "sigma_r_over_r_free": null,
+    "sigma_f_cost_ratio": null,
+    "Schur_sigma_f": null,
+    "unit_operator_error": null,
+    "C_sum": 0.0,
+    "high_mean_log_E_over400": 0.0,
+    "covariance_rank": 3,
+    "fisher": [
+      [
+        110.5511848700821,
+        99.4960663830739
+      ],
+      [
+        99.4960663830739,
+        89.54645974476651
+      ]
+    ],
+    "normalized_fisher": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "zero_direction": {
+    "f": 0.1,
+    "finite_MC": true,
+    "regular": false,
+    "normalized_rank": 1,
+    "normalized_condition": null,
+    "information_correlation": null,
+    "parameter_correlation": null,
+    "sigma_f_fixed": 0.09510827375838263,
+    "sigma_f_free": null,
+    "sigma_alpha": null,
+    "sigma_r_over_r_fixed": 1.0567585973153624,
+    "sigma_r_over_r_free": null,
+    "sigma_f_cost_ratio": null,
+    "Schur_sigma_f": null,
+    "unit_operator_error": null,
+    "C_sum": 0.0,
+    "high_mean_log_E_over400": 0.0,
+    "covariance_rank": 3,
+    "fisher": [
+      [
+        110.5511848700821,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "normalized_fisher": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "boundary": {
+    "f": 0.0,
+    "finite_MC": true,
+    "regular": false,
+    "normalized_rank": 2,
+    "normalized_condition": 1.0342550769268843,
+    "information_correlation": 0.016839125690487514,
+    "parameter_correlation": null,
+    "sigma_f_fixed": null,
+    "sigma_f_free": null,
+    "sigma_alpha": null,
+    "sigma_r_over_r_fixed": null,
+    "sigma_r_over_r_free": null,
+    "sigma_f_cost_ratio": null,
+    "Schur_sigma_f": null,
+    "unit_operator_error": null,
+    "C_sum": -1.1102230246251565e-16,
+    "high_mean_log_E_over400": -1.4210854715202004e-16,
+    "covariance_rank": 3,
+    "fisher": [
+      [
+        96.21212121212123,
+        6.003382264056654
+      ],
+      [
+        6.003382264056693,
+        1321.0617820270531
+      ]
+    ],
+    "normalized_fisher": [
+      [
+        1.0,
+        0.016839125690487514
+      ],
+      [
+        0.016839125690487514,
+        1.0
+      ]
+    ]
+  },
+  "synthetic_100_Fisher_wall_s": 0.02542357100173831,
+  "synthetic_100_Fisher_CPU_s": 0.025176225000000052,
+  "synthetic_checks_pass": true
+}
