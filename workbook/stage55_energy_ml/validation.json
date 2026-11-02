@@ -1,0 +1,76 @@
+{
+  "formal_fits": 15,
+  "all_models_reloaded": [
+    {
+      "model": "nominal100",
+      "seed_models": 3,
+      "max_seed_log_difference": 0.0,
+      "raw_prediction_exact": true,
+      "offset_exact": true,
+      "calibrated_prediction_exact": true,
+      "max_raw_log_difference": 0.0,
+      "offset_difference": 0.0,
+      "max_calibrated_log_difference": 0.0,
+      "allowed_absolute_log_difference": 0
+    },
+    {
+      "model": "nominal50",
+      "seed_models": 3,
+      "max_seed_log_difference": 0.0,
+      "raw_prediction_exact": true,
+      "offset_exact": true,
+      "calibrated_prediction_exact": true,
+      "max_raw_log_difference": 0.0,
+      "offset_difference": 0.0,
+      "max_calibrated_log_difference": 0.0,
+      "allowed_absolute_log_difference": 0
+    },
+    {
+      "model": "mixture50",
+      "seed_models": 3,
+      "max_seed_log_difference": 0.0,
+      "raw_prediction_exact": true,
+      "offset_exact": true,
+      "calibrated_prediction_exact": true,
+      "max_raw_log_difference": 0.0,
+      "offset_difference": 0.0,
+      "max_calibrated_log_difference": 0.0,
+      "allowed_absolute_log_difference": 0
+    },
+    {
+      "model": "residual50",
+      "seed_models": 3,
+      "max_seed_log_difference": 8.881784197001252e-16,
+      "raw_prediction_exact": false,
+      "offset_exact": true,
+      "calibrated_prediction_exact": false,
+      "max_raw_log_difference": 1.7763568394002505e-15,
+      "offset_difference": 0.0,
+      "max_calibrated_log_difference": 1.7763568394002505e-15,
+      "allowed_absolute_log_difference": 8e-15
+    },
+    {
+      "model": "matched_flux50",
+      "seed_models": 3,
+      "max_seed_log_difference": 0.0,
+      "raw_prediction_exact": true,
+      "offset_exact": true,
+      "calibrated_prediction_exact": true,
+      "max_raw_log_difference": 0.0,
+      "offset_difference": 0.0,
+      "max_calibrated_log_difference": 0.0,
+      "allowed_absolute_log_difference": 0
+    }
+  ],
+  "train_protected_incoming_overlap": 0,
+  "cal_evaluation_incoming_overlap": 0,
+  "source_role_overlap": 0,
+  "metric_repeat_checks": 12,
+  "metric_max_absolute_difference": 7.105427357601002e-15,
+  "N": 95748,
+  "evaluation_N": 18933,
+  "calibration_N": 8440,
+  "wall_s": 3.980680725071579,
+  "cpu_s": 3.8832738630000003,
+  "rss_MiB": 527.6640625
+}

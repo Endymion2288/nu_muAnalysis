@@ -1,0 +1,19 @@
+universe = vanilla
+initialdir = /afs/cern.ch/user/x/xcheng/nu_mu_stage55
+executable = /bin/bash
+transfer_executable = False
+arguments = /afs/cern.ch/user/x/xcheng/nu_mu_stage55/worker_v2.sh $(index) $(mode)
+transfer_input_files = $(payloads)
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 1800MB
+request_disk = 5000MB
++JobFlavour = "workday"
++NuMuStage = "energy-ml-low-energy-stage55"
+log = /afs/cern.ch/user/x/xcheng/nu_mu_stage55/logs/$(mode).$(ClusterId).log
+output = /afs/cern.ch/user/x/xcheng/nu_mu_stage55/logs/$(mode).$(ClusterId).$(ProcId).out
+error = /afs/cern.ch/user/x/xcheng/nu_mu_stage55/logs/$(mode).$(ClusterId).$(ProcId).err
+max_materialize = 50
+max_idle = 50
+queue index from $(indices)

@@ -1,0 +1,107 @@
+{
+  "stage": 55,
+  "reason": "User prioritizes low energy bias, 50-100 GeV and alternative flux training",
+  "thresholds_GeV": {
+    "truth_pz": 50,
+    "reco_pz": 50
+  },
+  "selection": "original cuts except truth and reconstructed pz thresholds 100 -> 50; no truth E ceiling",
+  "nominal_runs": [
+    200082,
+    200083,
+    200089,
+    200093,
+    200094,
+    200100
+  ],
+  "alternative_runs": [
+    200080,
+    200081,
+    200084,
+    200085,
+    200086,
+    200087,
+    200088,
+    200090,
+    200091,
+    200092,
+    200095,
+    200096,
+    200097,
+    200098,
+    200099,
+    200101
+  ],
+  "alternative_groups_per_run": 3,
+  "alternative_train_groups": 2,
+  "alternative_evaluation_groups": 1,
+  "reconstruction": "official master d32b0ff3 merge without IFT TI12MC04 FASERNU-04 OFLCOND-FASER-06",
+  "feature_version": "F6: exact original 46+19 deployment features",
+  "seed_indices": [
+    0,
+    1,
+    2
+  ],
+  "rounds": 400,
+  "xgboost": {
+    "max_depth": 5,
+    "eta": 0.04,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 20,
+    "reg_lambda": 10,
+    "tree_method": "hist",
+    "nthread": 1,
+    "objective": "reg:squarederror"
+  },
+  "candidates": [
+    "nominal100",
+    "nominal50",
+    "mixture50",
+    "residual50",
+    "matched_flux50"
+  ],
+  "maximum_formal_fits": 15,
+  "maximum_smoke_fits": 1,
+  "calibration": "one common nominal calibration cohort pz>50; additive mean log offset for each model; raw also reported",
+  "energy_edges_GeV": [
+    50,
+    75,
+    100,
+    150,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "momentum_edges_GeV": [
+    50,
+    75,
+    100,
+    150,
+    250,
+    1000
+  ],
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 2026110255,
+  "weights": "unit MC, no physical flux normalization; mixture effect includes model and component/prior changes",
+  "support": "development comparison; old calibration/validation/challenge exposed; not new independent confirmation",
+  "gate": "report paired source confidence intervals vs p/0.8 separately for E 50-100,100-200 and reco p 50-100,100-250; no posthoc model selection",
+  "leakage": "group role consistent by component and generation range across run geometry and alternative flux; remove exact incoming-neutrino (pdg,px,py,pz) overlap with calibration/evaluation from training before fits; complete generation lineage independence unproven; exclude calibration incoming-neutrino vectors present in evaluation",
+  "full_file_extraction": true,
+  "maximum_new_reconstruction_files": 45,
+  "pre_fit_protocol_frozen_utc": "2026-11-02T14:55:57.853329+00:00",
+  "nominal_input_files": 254,
+  "existing_alternative_files": 3,
+  "total_source_files": 302,
+  "new_RDO_bytes": 45673906493,
+  "storage": "new RDO, xAOD and PHYS live only in worker scratch; verified scalar NPZ uploaded; archive/deduplicate successful shards after join",
+  "prior_control": "matched_flux50: weight each (component,true-E bin) to nominal50 training counts only; sum weights equals nominal50 N, retaining comparable regularization. Approximate binned prior control, not physical flux normalization.",
+  "protocol_amendment": "Before all formal fits, replace mu_only50 with matched_flux50 within the same 15-fit budget to distinguish additional sample support from changed training spectrum.",
+  "excluded_source_indices": [
+    257
+  ],
+  "protocol_deviation": "Before any formal fit, exclude training-only source257 after completed official reco/ntuple was lost to shell syntax failure: worker file was overwritten while its old process was still reading it. Keep all calibration/evaluation inputs and all22runs; no residual/physics-driven exclusion. 301 successful sources,44 successful new reconstruction sources; failed45th retained in resource accounting."
+}

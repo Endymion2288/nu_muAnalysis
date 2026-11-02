@@ -1,0 +1,673 @@
+sample	stratum	model	reference	N	groups	gain_pct	gain_low95_pct	gain_high95_pct	bootstrap_valid	interval_scope
+nominal	all	nominal100	mu_p_over0p8	14057	22	46.95501809073663	45.71930165627021	48.21494500700728	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	nominal50	mu_p_over0p8	14057	22	47.88024693857004	46.669412178268836	49.139153246369695	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	mixture50	mu_p_over0p8	14057	22	48.13083426675745	46.92988703249822	49.41079979217982	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	residual50	mu_p_over0p8	14057	22	47.069352350351004	46.04506062232972	48.16524625100395	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	matched_flux50	mu_p_over0p8	14057	22	48.07683195074457	46.85077365276277	49.35149341574537	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	frozen_F6_oldcal	mu_p_over0p8	14057	22	47.886989164040315	46.657741863458995	49.25118477612415	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	frozen_F6_common	mu_p_over0p8	14057	22	47.769975346095364	46.52603084555705	49.13273531740047	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	nominal50	nominal100	14057	22	1.744234448823201	1.3304018225876502	2.104341830526962	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	mixture50	nominal50	14057	22	0.480791472461628	0.21402872927133249	0.7476591335810536	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	residual50	mixture50	14057	22	-2.046460361181701	-2.9950804474858983	-1.2359656787255404	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	matched_flux50	nominal50	14057	22	0.377179477314149	0.10823718644843966	0.6409304926688708	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	all	matched_flux50	mixture50	14057	22	-0.10411255945510511	-0.24150544991160428	0.009445611663662347	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	nominal100	mu_p_over0p8	682	22	57.70561396595898	55.35962646668657	59.75737951088617	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	nominal50	mu_p_over0p8	682	22	61.809266992286304	59.765175462397664	63.885451047221615	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	mixture50	mu_p_over0p8	682	22	62.07220311111321	59.94578365999181	64.14320540012854	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	residual50	mu_p_over0p8	682	22	62.07709571401567	60.06813642578327	64.1483628741799	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	matched_flux50	mu_p_over0p8	682	22	62.04435973304907	59.914483462219735	64.10629905655044	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	frozen_F6_oldcal	mu_p_over0p8	682	22	57.89225799983102	55.32738170416015	59.997985761208504	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	frozen_F6_common	mu_p_over0p8	682	22	58.4112310669405	55.90956354351634	60.485853057623615	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	nominal50	nominal100	682	22	9.702595098612987	6.76986634222739	12.59283774845859	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	mixture50	nominal50	682	22	0.6884814668883132	-0.2714038556634757	1.6185015515607022	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	residual50	mixture50	682	22	0.01289978143683701	-1.2415039901327107	1.1815571469174482	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	matched_flux50	nominal50	682	22	0.6155753562396504	-0.40880979023036557	1.6294555334987137	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p50_100	matched_flux50	mixture50	682	22	-0.07341153546489565	-0.4770861556692291	0.34069025374962913	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	nominal100	mu_p_over0p8	2669	22	46.730515540877896	44.95524827913925	48.777315809174894	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	nominal50	mu_p_over0p8	2669	22	46.791833685042015	45.004417673325165	48.835794513296065	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	mixture50	mu_p_over0p8	2669	22	46.911380299141626	45.109286242348844	48.890955338809675	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	residual50	mu_p_over0p8	2669	22	46.969113153004216	44.97405781420509	49.28821225117825	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	matched_flux50	mu_p_over0p8	2669	22	47.0099937935597	45.14341536137503	49.049939672659235	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	frozen_F6_oldcal	mu_p_over0p8	2669	22	47.31810042131856	45.466150234057416	49.46887174583746	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	frozen_F6_common	mu_p_over0p8	2669	22	47.279455787968104	45.47795614489522	49.42455500609745	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	nominal50	nominal100	2669	22	0.11510932532335927	-0.5176717260873548	0.7690187639478595	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	mixture50	nominal50	2669	22	0.2246771922038593	-0.3674745787194367	0.8250295873459847	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	residual50	mixture50	2669	22	0.10874807856732227	-0.640968471071795	0.8917040458537835	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	matched_flux50	nominal50	2669	22	0.4100124541528305	-0.12316195927168372	1.0042409624600999	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_250	matched_flux50	mixture50	2669	22	0.18575260568788332	0.011578032830033285	0.35648987496198276	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	nominal100	mu_p_over0p8	8101	22	33.05638176031916	31.72981526480844	34.27976009513467	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	nominal50	mu_p_over0p8	8101	22	33.139978530683514	31.86887984238025	34.350816445838014	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	mixture50	mu_p_over0p8	8101	22	33.45654551744107	32.18886721502977	34.71920356895147	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	residual50	mu_p_over0p8	8101	22	33.40003359369157	32.11396673867738	34.563737451536895	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	matched_flux50	mu_p_over0p8	8101	22	33.22922355582828	31.9648137666024	34.46201904301957	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	frozen_F6_oldcal	mu_p_over0p8	8101	22	34.534709008529695	33.19203034595221	35.91771611392182	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	frozen_F6_common	mu_p_over0p8	8101	22	33.923129780050765	32.65375480580691	35.25969744783724	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	nominal50	nominal100	8101	22	0.12487638487814756	-0.10370586841153828	0.3538229991226706	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	mixture50	nominal50	8101	22	0.47347724365126576	0.1550150170275369	0.8155160562421323	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	residual50	mixture50	8101	22	-0.08492484225373076	-0.46767833803812714	0.2353978919926158	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	matched_flux50	nominal50	8101	22	0.13348040156662133	-0.11030297501956719	0.3753944281893904	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p250_1000	matched_flux50	mixture50	8101	22	-0.34161430809451776	-0.4868073454976318	-0.18397071069889367	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	nominal100	mu_p_over0p8	10770	22	39.46897646033229	38.35681681749235	40.70339933083317	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	nominal50	mu_p_over0p8	10770	22	39.542288420589664	38.442875601798484	40.70514935749507	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	mixture50	mu_p_over0p8	10770	22	39.770559738307796	38.730288749720394	40.95056058345305	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	residual50	mu_p_over0p8	10770	22	39.764451267339936	38.514704578442895	41.112052053470315	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	matched_flux50	mu_p_over0p8	10770	22	39.68732836131639	38.63909531462687	40.9016622393757	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	frozen_F6_oldcal	mu_p_over0p8	10770	22	40.547137014330744	39.307721700270875	41.91462746298235	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	frozen_F6_common	mu_p_over0p8	10770	22	40.19104524051982	39.00812412721688	41.51923327178929	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	nominal50	nominal100	10770	22	0.12111468792416202	-0.21127669748133182	0.4471213955445508	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	mixture50	nominal50	10770	22	0.37757187917757395	0.08399404887922542	0.6814991411362895	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	residual50	mixture50	10770	22	-0.010142001886981333	-0.506875594543198	0.384147533663251	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	matched_flux50	nominal50	10770	22	0.23990312722342866	-0.038110499819900556	0.533025309689164	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p100_1000	matched_flux50	mixture50	10770	22	-0.1381905204992373	-0.2635986591073791	-0.0148260782205534	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	nominal100	mu_p_over0p8	2605	22	53.68151481911987	49.39393218658647	57.34778803619849	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	nominal50	mu_p_over0p8	2605	22	53.87557095201292	49.69576997393781	57.54463079730991	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	mixture50	mu_p_over0p8	2605	22	54.200717342352256	49.99310173868155	57.74614474191678	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	residual50	mu_p_over0p8	2605	22	49.165883587159556	45.77156654436569	51.99629905004211	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	matched_flux50	mu_p_over0p8	2605	22	54.20126205030273	50.01739712428012	57.801970616916385	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	frozen_F6_oldcal	mu_p_over0p8	2605	22	55.05909728962284	51.10207462911788	58.563767548518584	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	frozen_F6_common	mu_p_over0p8	2605	22	54.936819591385046	50.95119727798859	58.44505024430597	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	nominal50	nominal100	2605	22	0.4189604477245479	-0.011069584141848996	0.8276852386407187	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	mixture50	nominal50	2605	22	0.7049331494186184	0.2443749065600223	1.1123855299927707	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	residual50	mixture50	2605	22	-10.99325898361414	-15.329596340439442	-7.081113334267363	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	matched_flux50	nominal50	2605	22	0.7061141026829421	0.3151963612146366	1.0914284939757537	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	reco_p1000_inf	matched_flux50	mixture50	2605	22	0.0011893372971916172	-0.293963676332718	0.35956597663890716	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	nominal100	mu_p_over0p8	13547	22	40.172909044016215	38.22979230657365	42.00328244924939	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	nominal50	mu_p_over0p8	13547	22	41.25894920548829	39.24209266590598	43.10498844828803	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	mixture50	mu_p_over0p8	13547	22	41.493090906595164	39.44208280197229	43.40605421495144	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	residual50	mu_p_over0p8	13547	22	40.145650446750594	38.405316261007	41.68848163326182	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	matched_flux50	mu_p_over0p8	13547	22	41.428733458552216	39.40031979394448	43.33357260708042	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	frozen_F6_oldcal	mu_p_over0p8	13547	22	41.000989708105664	39.07369930590168	42.90704363715846	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	frozen_F6_common	mu_p_over0p8	13547	22	40.916612285574274	39.01414788811245	42.79152924711197	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	nominal50	nominal100	13547	22	1.815298293997114	1.4087844583698186	2.1769608422452147	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	mixture50	nominal50	13547	22	0.3985997831839061	0.1737413508539884	0.6357514565819197	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	residual50	mixture50	13547	22	-2.30304502617531	-3.3410225526056223	-1.438644063986448	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	matched_flux50	nominal50	13547	22	0.2890385016397934	0.04735035231621526	0.5364063190441665	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed	matched_flux50	mixture50	13547	22	-0.10999974027032788	-0.2557960077635829	0.03368030160250344	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	nominal100	mu_p_over0p8	510	22	65.04804681070962	62.701398712889755	66.94337926334104	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	nominal50	mu_p_over0p8	510	22	65.50672106182469	63.2237269259651	67.47882387137332	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	mixture50	mu_p_over0p8	510	22	65.8440641022377	63.540902741301785	67.82386462314085	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	residual50	mu_p_over0p8	510	22	65.68474513899862	63.569731543811336	67.57882588256822	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	matched_flux50	mu_p_over0p8	510	22	65.82077713418805	63.477987344483765	67.79425336527419	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	frozen_F6_oldcal	mu_p_over0p8	510	22	66.46713541832744	63.8297865302209	68.46831378712875	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	frozen_F6_common	mu_p_over0p8	510	22	66.21636397170076	63.593777307315406	68.19539243462627	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	nominal50	nominal100	510	22	1.31229934027155	0.0900500417296976	2.6237545867272263	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	mixture50	nominal50	510	22	0.9779964410389752	-0.1262582108264026	1.9722581926086085	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	residual50	mixture50	510	22	-0.4664459018659528	-2.1849973373087432	1.0060628588650238	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	matched_flux50	nominal50	510	22	0.91048483075864	-0.0635274688376447	1.8841779837809634	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	unconfirmed	matched_flux50	mixture50	510	22	-0.06817839253285829	-0.7092386844410226	0.4767027574821919	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	nominal100	mu_p_over0p8	440	22	60.712868260956476	59.13513191012304	62.483075989753175	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	nominal50	mu_p_over0p8	440	22	60.99329081757809	59.4825451750709	62.69960118250548	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	mixture50	mu_p_over0p8	440	22	61.047492238899494	59.457672928354164	62.82162019100413	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	residual50	mu_p_over0p8	440	22	60.363802464295645	58.46951688991817	62.262713060672645	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	matched_flux50	mu_p_over0p8	440	22	60.98894490044261	59.46686137318593	62.722669805796826	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	frozen_F6_oldcal	mu_p_over0p8	440	22	62.85272560180466	61.03004587101642	64.55858483486995	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	frozen_F6_common	mu_p_over0p8	440	22	62.391310066999814	60.565698647873475	64.05144726178958	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	nominal50	nominal100	440	22	0.7137771178722496	-0.8891674419200329	1.9820688943190492	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	mixture50	nominal50	440	22	0.13895409907028755	-0.626587720562754	0.973452847577745	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	residual50	mixture50	440	22	-1.7551880839020262	-2.9234144917409504	-0.4407915459704694	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	matched_flux50	nominal50	440	22	-0.011141460601460373	-0.7912984172650267	0.7765705563871032	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	y0.8_inf	matched_flux50	mixture50	440	22	-0.15030441381580495	-0.6634880903796381	0.2577854165254275	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	nominal100	mu_p_over0p8	208	19	-283.74463079224773	-318.5815339261039	-255.93262341366767	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	nominal50	mu_p_over0p8	208	19	-118.8053531808014	-154.70841178214394	-86.95715178707606	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	mixture50	mu_p_over0p8	208	19	-117.36194096036066	-154.62932468074143	-83.12927172571624	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	residual50	mu_p_over0p8	208	19	-100.6090593453052	-136.5307690036363	-67.48628637877285	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	matched_flux50	mu_p_over0p8	208	19	-114.7563574496186	-151.4994548181901	-81.37621019122454	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	frozen_F6_oldcal	mu_p_over0p8	208	19	-301.0001768723967	-336.3932179802075	-271.87084091744805	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	frozen_F6_common	mu_p_over0p8	208	19	-285.2751303752485	-319.90655493055743	-256.99860927682784	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	nominal50	nominal100	208	19	42.981520619826306	38.06368572521525	49.56603123267167	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	mixture50	nominal50	208	19	0.6596786593461634	-1.3352339639626998	3.0337515097784227	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	residual50	mixture50	208	19	7.707366589126385	3.927229904834363	11.792989358894033	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	matched_flux50	nominal50	208	19	1.8505012205241034	0.43292394965201353	3.642461814955998	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_100	matched_flux50	mixture50	208	19	1.1987303293437335	0.19012925481969173	2.02855410829377	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	nominal100	mu_p_over0p8	906	22	-14.747085855658781	-22.842391259864304	-7.586342912232458	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	nominal50	mu_p_over0p8	906	22	-16.50535467005787	-23.32858333237907	-9.471704201597829	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	mixture50	mu_p_over0p8	906	22	-18.83133665354444	-26.81536654911184	-10.908241265969828	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	residual50	mu_p_over0p8	906	22	-17.862858077439835	-26.0630090114907	-9.854894614594928	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	matched_flux50	mu_p_over0p8	906	22	-18.177131603180328	-25.633765325849712	-10.489120403925446	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	frozen_F6_oldcal	mu_p_over0p8	906	22	-27.253939929365846	-35.53118453449434	-19.736760407109212	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	frozen_F6_common	mu_p_over0p8	906	22	-20.520847732474824	-28.425648814774487	-13.072012107143985	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	nominal50	nominal100	906	22	-1.5322993183555234	-3.9826699397186776	0.9873301699202444	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	mixture50	nominal50	906	22	-1.9964592958613192	-3.6390861760664337	-0.27581115021308156	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	residual50	mixture50	906	22	0.8150026780631259	-1.2566552500342414	2.5850404840892005	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	matched_flux50	nominal50	906	22	-1.434935705622209	-2.7333751218616413	-0.08946999865150371	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_200	matched_flux50	mixture50	906	22	0.5505324342782281	-0.27886514464763085	1.2462952266174383	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	nominal100	mu_p_over0p8	66	12	-367.6949072026315	-435.1732448244814	-322.40085616504047	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	nominal50	mu_p_over0p8	66	12	-113.02513138801902	-169.14201219947424	-56.5048186499409	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	mixture50	mu_p_over0p8	66	12	-110.15371725538986	-165.3060684257807	-55.11411780751074	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	residual50	mu_p_over0p8	66	12	-89.50758253539823	-146.89994641613694	-40.244412674949544	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	matched_flux50	mu_p_over0p8	66	12	-107.55251653032727	-163.05966045712822	-53.01407654096373	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	frozen_F6_oldcal	mu_p_over0p8	66	12	-380.47153373876245	-446.24111723409135	-332.7463412557829	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	frozen_F6_common	mu_p_over0p8	66	12	-363.855801792232	-427.43732531251976	-317.97029962747183	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	nominal50	nominal100	66	12	54.452116517119855	48.27251666128024	64.6254080664224	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	mixture50	nominal50	66	12	1.347922714057137	-1.4460407210942596	3.8570935522383842	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	residual50	mixture50	66	12	9.824301463533647	4.152929337047492	16.407832853932348	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	matched_flux50	nominal50	66	12	2.5689996396357384	0.15049451789245125	5.704517556278299	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E50_75	matched_flux50	mixture50	66	12	1.2377609870690476	-0.8801272689280958	3.970703702081296	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	nominal100	mu_p_over0p8	142	19	-237.9594391909096	-273.65914866261727	-209.07083918570905	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	nominal50	mu_p_over0p8	142	19	-121.42645942029202	-163.56212360044768	-84.04322581053519	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	mixture50	mu_p_over0p8	142	19	-120.61459359717813	-165.1174271201893	-80.21911002654718	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	residual50	mu_p_over0p8	142	19	-105.5385223102312	-150.80963943265172	-64.61785382387181	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	matched_flux50	mu_p_over0p8	142	19	-118.00612995018906	-160.68891830890186	-78.38227741524719	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	frozen_F6_oldcal	mu_p_over0p8	142	19	-258.3537124809535	-290.97673157001367	-228.7090404018023	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	frozen_F6_common	mu_p_over0p8	142	19	-242.91535553238046	-275.18700056947785	-213.76667019917716	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	nominal50	nominal100	142	19	34.48135079452223	27.175735546531357	42.72763032400876	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	mixture50	nominal50	142	19	0.36665257857594336	-2.4793243438915242	3.1905754608461456	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	residual50	mixture50	142	19	6.833669088308103	1.150423063407675	14.312170874332237	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	matched_flux50	nominal50	142	19	1.5446796552939346	-0.15238090141884428	3.5324618847985807	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E75_100	matched_flux50	mixture50	142	19	1.1823622383530297	-0.40170329749748857	2.544257456586161	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	nominal100	mu_p_over0p8	395	21	-47.21352642261647	-60.27997896008067	-31.477213528646306	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	nominal50	mu_p_over0p8	395	21	-40.676562535806426	-52.14120107001108	-24.80266984946124	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	mixture50	mu_p_over0p8	395	21	-42.55316153786597	-54.32344797116292	-26.10732989884324	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	residual50	mu_p_over0p8	395	21	-40.478613287440226	-52.84684304491631	-24.446536007616903	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	matched_flux50	mu_p_over0p8	395	21	-41.63654825716987	-52.80701412416842	-25.958882720737073	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	frozen_F6_oldcal	mu_p_over0p8	395	21	-62.994609472430206	-75.6541116647966	-47.395309666351935	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	frozen_F6_common	mu_p_over0p8	395	21	-53.589565969055755	-66.23244585461595	-38.15558483841019	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	nominal50	nominal100	395	21	4.440464164987057	1.8922141231452994	7.1274070035607835	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	mixture50	nominal50	395	21	-1.3339812746575141	-2.410846838671846	-0.07899118376732188	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	residual50	mixture50	395	21	1.4552804217356274	-1.1053399988448254	3.4204102615081218	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	matched_flux50	nominal50	395	21	-0.6824062971535039	-1.7657654072473377	0.2665490628822669	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E100_150	matched_flux50	mixture50	395	21	0.6429975111093	-0.4643852607269021	1.4887500755175318	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	nominal100	mu_p_over0p8	511	22	4.656962568364409	-4.341690998146049	13.762373036301236	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	nominal50	mu_p_over0p8	511	22	-2.9263906876202395	-12.084167954221922	6.2001598528517	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	mixture50	mu_p_over0p8	511	22	-5.588079695789383	-15.745726768425575	4.1746067132983065	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	residual50	mu_p_over0p8	511	22	-5.314637787543464	-15.950643265573275	4.3537841717499655	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	matched_flux50	mu_p_over0p8	511	22	-5.092007816064137	-14.601378599020464	4.20508415323748	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	frozen_F6_oldcal	mu_p_over0p8	511	22	-5.93032604864685	-16.53399291874819	5.118678060895321	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	frozen_F6_common	mu_p_over0p8	511	22	-0.898317896948031	-11.094754920173058	9.883929896733264	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	nominal50	nominal100	511	22	-7.953756729663852	-12.039156964295447	-3.797087891301819	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	mixture50	nominal50	511	22	-2.5860121883097165	-5.5586107825340605	-0.07321079305741984	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	residual50	mixture50	511	22	0.25897043400519015	-2.419676984322505	2.7069429312611266	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	matched_flux50	nominal50	511	22	-2.1040445642522387	-4.377770889948723	0.1517383748671698	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E150_200	matched_flux50	mixture50	511	22	0.4698180714664768	-0.6412987172946626	1.6787699917759376	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	nominal100	mu_p_over0p8	2555	22	34.07459436402455	30.217892042384484	38.28955351597639	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	nominal50	mu_p_over0p8	2555	22	30.586172958745216	26.34281994011726	35.318733266717324	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	mixture50	mu_p_over0p8	2555	22	30.9826937784628	26.349791562212467	36.206008037614154	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	residual50	mu_p_over0p8	2555	22	30.495674821537865	25.645588562020492	35.56126111834006	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	matched_flux50	mu_p_over0p8	2555	22	31.242224771590276	26.715486672790682	36.088142941862046	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	frozen_F6_oldcal	mu_p_over0p8	2555	22	30.333483222671408	26.292160110176376	34.68123953528854	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	frozen_F6_common	mu_p_over0p8	2555	22	32.96646523606866	28.95448721135133	37.31180958024973	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	nominal50	nominal100	2555	22	-5.29146748757463	-6.38446043961657	-4.111388305291938	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	mixture50	nominal50	2555	22	0.5712418355523274	-0.09869359711406123	1.4354082871089173	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	residual50	mixture50	2555	22	-0.7056475883913338	-1.7835850185940276	0.32676727447058346	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	matched_flux50	nominal50	2555	22	0.9451313100128478	0.22404307799872514	1.8612817429931345	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E200_400	matched_flux50	mixture50	2555	22	0.37603755831098207	-0.4105770204451331	1.2114376447229849	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	nominal100	mu_p_over0p8	4349	22	48.016713275686726	46.23536057168295	49.857980334640594	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	nominal50	mu_p_over0p8	4349	22	47.24058960935881	45.68523589512382	48.853535521966855	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	mixture50	mu_p_over0p8	4349	22	47.04281614655604	45.41953620559293	48.7611693417478	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	residual50	mu_p_over0p8	4349	22	47.20431637518661	45.61115448056483	48.903483399705536	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	matched_flux50	mu_p_over0p8	4349	22	47.29095838020311	45.695209034187506	48.95460621216129	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	frozen_F6_oldcal	mu_p_over0p8	4349	22	47.005595458342384	45.10290435985209	48.85106604755218	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	frozen_F6_common	mu_p_over0p8	4349	22	47.42542641772024	45.56141542549559	49.37292529508306	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	nominal50	nominal100	4349	22	-1.4930253841854757	-2.619154774680519	-0.49849693871361694	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	mixture50	nominal50	4349	22	-0.37485912245496245	-0.9206979680858962	0.1558655300345623	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	residual50	mixture50	4349	22	0.3049637780541903	-0.3291459705248767	0.9437234753362412	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	matched_flux50	nominal50	4349	22	0.09546879025250643	-0.4749504917462122	0.6309947122689858	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E400_800	matched_flux50	mixture50	4349	22	0.46857142995704315	0.21368396348367652	0.7753951807723896	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	nominal100	mu_p_over0p8	4007	22	55.41799136502028	53.47024473282274	57.3837993616096	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	nominal50	mu_p_over0p8	4007	22	56.23057670679938	54.27005446360269	58.20079185224337	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	mixture50	mu_p_over0p8	4007	22	56.39932357658497	54.3906092868093	58.3644422455668	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	residual50	mu_p_over0p8	4007	22	55.80352301997251	53.72882805864046	57.97873766120825	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	matched_flux50	mu_p_over0p8	4007	22	56.20101703321632	54.20063295913748	58.14448760478825	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	frozen_F6_oldcal	mu_p_over0p8	4007	22	56.45598843006378	54.448623316742555	58.38200832322871	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	frozen_F6_common	mu_p_over0p8	4007	22	55.89911603037431	53.86952343705686	57.833632601897065	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	nominal50	nominal100	4007	22	1.8226754842569526	1.3090487039063867	2.426709389065763	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	mixture50	nominal50	4007	22	0.3855359680094428	-0.12995469705871232	0.8235279849151523	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	residual50	mixture50	4007	22	-1.3664938379086555	-3.4889844260403464	0.3680365921144264	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	matched_flux50	nominal50	4007	22	-0.06753498529110669	-0.5625487012765723	0.4101501161966253	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E800_1600	matched_flux50	mixture50	4007	22	-0.4548244652052391	-0.7019604712717653	-0.24311497435798304	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	nominal100	mu_p_over0p8	1761	22	50.806575361526605	48.130354985506216	53.55370861913134	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	nominal50	mu_p_over0p8	1761	22	51.62914627735151	49.17698681351772	54.10843034392152	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	mixture50	mu_p_over0p8	1761	22	52.29913055957552	49.54998073012707	55.11612783219903	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	residual50	mu_p_over0p8	1761	22	49.90995089144581	47.981337703427656	51.62090013836681	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	matched_flux50	mu_p_over0p8	1761	22	51.98883752660461	49.34911721675128	54.75469632484639	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	frozen_F6_oldcal	mu_p_over0p8	1761	22	54.24783733227461	51.65201517331127	57.034425345574626	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	frozen_F6_common	mu_p_over0p8	1761	22	52.73374488819529	50.07222656001552	55.66083420334934	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	nominal50	nominal100	1761	22	1.672115576156874	0.8156968183933297	2.383794884123652	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	mixture50	nominal50	1761	22	1.3850991468242313	0.5874588380558493	2.2649054946529277	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	residual50	mixture50	1761	22	-5.008671112617047	-8.098307747025618	-2.525191879979508	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	matched_flux50	nominal50	1761	22	0.7436115378808839	0.03776561466792507	1.4514883713616473	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E1600_3200	matched_flux50	mixture50	1761	22	-0.6504976462922585	-0.963712080145111	-0.31580035054653255	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	nominal100	mu_p_over0p8	271	14	37.308254151798636	30.933574166806324	43.98203090408408	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	nominal50	mu_p_over0p8	271	14	37.48648113537981	31.02045152855253	44.17815640544242	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	mixture50	mu_p_over0p8	271	14	38.34249038138625	32.173886334548754	44.53062085303242	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	residual50	mu_p_over0p8	271	14	34.90150743835541	28.058457233377595	40.89827284514416	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	matched_flux50	mu_p_over0p8	271	14	38.219029169448426	32.098350251907625	44.511410641256546	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	frozen_F6_oldcal	mu_p_over0p8	271	14	44.52188259200979	38.63325337679597	50.30274678511637	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	frozen_F6_common	mu_p_over0p8	271	14	42.841410041783625	36.93978625341111	48.68019680945733	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	nominal50	nominal100	271	14	0.2842909878642219	-0.5528653351605006	1.2194754050584533	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	mixture50	nominal50	271	14	1.3693186074842711	0.4241788461406823	2.7057729629503777	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	residual50	mixture50	271	14	-5.580801048104678	-9.340223288861921	-2.472427933305837	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	matched_flux50	nominal50	271	14	1.1718233869621453	0.23867191552796901	2.518846242649044	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	E3200_6400	matched_flux50	mixture50	271	14	-0.2002371044524942	-0.5227054516605845	0.12782030966824146	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	nominal100	mu_p_over0p8	320	22	58.40573002777588	55.70877094174608	60.54786711470622	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	nominal50	mu_p_over0p8	320	22	63.5679866315141	61.34430175631088	65.88729974530204	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	mixture50	mu_p_over0p8	320	22	64.04490578513949	61.792398381445864	66.37705544976984	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	residual50	mu_p_over0p8	320	22	64.29340499759834	62.077710757274914	66.70208463599239	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	matched_flux50	mu_p_over0p8	320	22	63.9566291164682	61.72015211449532	66.26662571726688	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	frozen_F6_oldcal	mu_p_over0p8	320	22	58.5514296490633	55.28412580849586	61.28236536076505	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	frozen_F6_common	mu_p_over0p8	320	22	59.12281401110548	55.97705294857787	61.64306329360094	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	nominal50	nominal100	320	22	12.41098018353366	7.540451287205748	17.534953433435263	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	mixture50	nominal50	320	22	1.3090661468573295	-0.38072688815062206	2.856466759107052	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	residual50	mixture50	320	22	0.691137703530631	-1.1502879098960521	2.429502108075882	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	matched_flux50	nominal50	320	22	1.0667609308967374	-0.7848997618141673	2.70844828504049	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p50_75	matched_flux50	mixture50	320	22	-0.24551922501934165	-1.0202661236936628	0.4311782923804203	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	nominal100	mu_p_over0p8	362	22	56.73109393955613	52.234247531925625	60.876702890836704	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	nominal50	mu_p_over0p8	362	22	59.44315332709807	55.00195151211814	63.681054766346385	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	mixture50	mu_p_over0p8	362	22	59.43595682488587	55.00858934349324	63.505943318678554	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	residual50	mu_p_over0p8	362	22	59.13649615513252	54.90944849876683	63.22948920565163	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	matched_flux50	mu_p_over0p8	362	22	59.48419270286331	55.08625600082558	63.480179807604046	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	frozen_F6_oldcal	mu_p_over0p8	362	22	56.97375665379565	52.52812270150185	61.09864275983203	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	frozen_F6_common	mu_p_over0p8	362	22	57.421399173467655	53.06593993595521	61.50995185455759	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	nominal50	nominal100	362	22	6.267917621382335	3.9824109850384226	8.862486043697325	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	mixture50	nominal50	362	22	-0.0177442350738799	-1.2909111376992548	1.2773097156011473	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	residual50	mixture50	362	22	-0.7382416699947214	-2.139407744291746	0.7534475993996242	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	matched_flux50	nominal50	362	22	0.1011897598850342	-1.138890636016473	1.2193969796618795	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p75_100	matched_flux50	mixture50	362	22	0.11891289477533595	-0.41310300411766976	0.7457625966855015	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	nominal100	mu_p_over0p8	842	22	49.12093596207956	45.43699691488526	53.01380412677133	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	nominal50	mu_p_over0p8	842	22	49.49845552176648	45.76992668393009	53.221072980804344	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	mixture50	mu_p_over0p8	842	22	49.76831807785204	46.10831309231563	53.41901108787914	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	residual50	mu_p_over0p8	842	22	50.213015077850834	46.014498143682886	54.30669567208382	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	matched_flux50	mu_p_over0p8	842	22	49.95288732312727	46.267518050606235	53.72536471272023	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	frozen_F6_oldcal	mu_p_over0p8	842	22	49.595288981553445	45.454862106033346	53.77953135223859	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	frozen_F6_common	mu_p_over0p8	842	22	49.67712927121097	45.58202772752976	53.945235884373055	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	nominal50	nominal100	842	22	0.7419939160153488	-0.5985450692783134	2.4635189493962537	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	mixture50	nominal50	842	22	0.5343649563071762	-0.3160625631787295	1.34769701347883	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	residual50	mixture50	842	22	0.8852918775206775	-0.33801072656311437	2.257423846310506	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	matched_flux50	nominal50	842	22	0.8998374328069492	0.21765853843305125	1.7136312849062239	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p100_150	matched_flux50	mixture50	842	22	0.36743592532157976	0.0002606614696848519	0.853912313822674	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	nominal100	mu_p_over0p8	1827	22	44.75757945277585	42.81340361551878	46.53772981266612	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	nominal50	mu_p_over0p8	1827	22	44.569920165238955	42.568160084554	46.33854652874248	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	mixture50	mu_p_over0p8	1827	22	44.57225174426627	42.5813556090514	46.41834778068381	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	residual50	mu_p_over0p8	1827	22	44.33054504638844	42.46442651906289	46.18021041175471	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	matched_flux50	mu_p_over0p8	1827	22	44.60419817451291	42.56673473724276	46.42296514324309	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	frozen_F6_oldcal	mu_p_over0p8	1827	22	45.4358268296413	43.1101808579254	47.47823664730837	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	frozen_F6_common	mu_p_over0p8	1827	22	45.3016104009676	43.06260953569219	47.39794179743749	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	nominal50	nominal100	1827	22	-0.3397014208971427	-1.1892717414445508	0.4664720701304425	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	mixture50	nominal50	1827	22	0.004206342538670693	-1.0233121216715402	0.9722442686493799	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	residual50	mixture50	1827	22	-0.4360752610093943	-1.4514148489814538	0.43325933063477057	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	matched_flux50	nominal50	1827	22	0.06184008642263761	-0.8478883569520773	0.9393035788648717	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p150_250	matched_flux50	mixture50	1827	22	0.0576361682586346	-0.3161619289300144	0.37588334948214436	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	nominal100	mu_p_over0p8	8101	22	33.05638176031916	31.72981526480844	34.27976009513467	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	nominal50	mu_p_over0p8	8101	22	33.139978530683514	31.86887984238025	34.350816445838014	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	mixture50	mu_p_over0p8	8101	22	33.45654551744107	32.18886721502977	34.71920356895147	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	residual50	mu_p_over0p8	8101	22	33.40003359369157	32.11396673867738	34.563737451536895	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	matched_flux50	mu_p_over0p8	8101	22	33.22922355582828	31.9648137666024	34.46201904301957	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	frozen_F6_oldcal	mu_p_over0p8	8101	22	34.534709008529695	33.19203034595221	35.91771611392182	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	frozen_F6_common	mu_p_over0p8	8101	22	33.923129780050765	32.65375480580691	35.25969744783724	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	nominal50	nominal100	8101	22	0.12487638487814756	-0.10370586841153828	0.3538229991226706	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	mixture50	nominal50	8101	22	0.47347724365126576	0.1550150170275369	0.8155160562421323	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	residual50	mixture50	8101	22	-0.08492484225373076	-0.46767833803812714	0.2353978919926158	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	matched_flux50	nominal50	8101	22	0.13348040156662133	-0.11030297501956719	0.3753944281893904	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	p250_1000	matched_flux50	mixture50	8101	22	-0.34161430809451776	-0.4868073454976318	-0.18397071069889367	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	nominal100	mu_p_over0p8	402	22	22.593033943272832	14.10155768055601	29.9176959394797	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	nominal50	mu_p_over0p8	402	22	38.0625121236149	32.716889629549726	43.54764848569679	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	mixture50	mu_p_over0p8	402	22	37.98542981041118	32.47459857952526	43.64085787649643	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	residual50	mu_p_over0p8	402	22	38.48076028754588	32.87283642565198	43.88643969943461	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	matched_flux50	mu_p_over0p8	402	22	38.23964318705285	32.67095413908983	43.774041955567014	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	frozen_F6_oldcal	mu_p_over0p8	402	22	19.973196549900063	10.459629603047098	27.86803263351089	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	frozen_F6_common	mu_p_over0p8	402	22	22.340195553405316	13.368196438723151	30.10315150531187	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	nominal50	nominal100	402	22	19.98460728845175	14.427764705854838	25.47117266740347	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	mixture50	nominal50	402	22	-0.12445179138933504	-0.8822391092170284	0.7664474398487435	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	residual50	mixture50	402	22	0.7987324198496903	-1.3081554397503319	2.736657642944746	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	matched_flux50	nominal50	402	22	0.2859836094603496	-0.6427569711834907	1.3877818565502427	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p50_100	matched_flux50	mixture50	402	22	0.40992524154321863	-0.21988846025235154	0.9650958846358241	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	nominal100	mu_p_over0p8	2351	22	39.880576243529454	37.3528040399755	41.8551723309099	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	nominal50	mu_p_over0p8	2351	22	39.36124000137614	36.79654831201892	41.37514276655116	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	mixture50	mu_p_over0p8	2351	22	38.93450673636896	36.262063097173225	41.036408864907216	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	residual50	mu_p_over0p8	2351	22	39.126633486801424	36.44616257594017	41.183856127780864	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	matched_flux50	mu_p_over0p8	2351	22	39.15101698541117	36.47524341598244	41.319639483453095	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	frozen_F6_oldcal	mu_p_over0p8	2351	22	38.881600204689114	36.30119763887261	40.85461393172186	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	frozen_F6_common	mu_p_over0p8	2351	22	39.34877440877609	36.79423760305008	41.28009684980866	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	nominal50	nominal100	2351	22	-0.8638410179329314	-1.6470471978766255	-0.1130010791996736	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	mixture50	nominal50	2351	22	-0.7037301966875242	-1.1886762093128	-0.22012311415660354	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	residual50	mixture50	2351	22	0.3146240866392813	-0.15132268088895395	0.8924038102378997	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	matched_flux50	nominal50	2351	22	-0.3466809281221117	-0.9759495764684278	0.2552076360650522	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p100_250	matched_flux50	mixture50	2351	22	0.3545541638507732	0.015539373809556892	0.7048751695302987	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	nominal100	mu_p_over0p8	8009	22	37.05867517708311	34.4545149788992	39.87035136605755	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	nominal50	mu_p_over0p8	8009	22	36.78807027537596	34.141263892271034	39.659726001209776	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	mixture50	mu_p_over0p8	8009	22	36.922720853968585	34.286567694171666	39.753591067562965	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	residual50	mu_p_over0p8	8009	22	36.56934218569058	34.26640018753267	38.87884669748748	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	matched_flux50	mu_p_over0p8	8009	22	36.85255319116594	34.27132799879083	39.676593126763905	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	frozen_F6_oldcal	mu_p_over0p8	8009	22	36.90400014644292	34.29768223006179	39.93225912871154	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	frozen_F6_common	mu_p_over0p8	8009	22	37.04603803118419	34.47513697070051	40.02299121643535	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	nominal50	nominal100	8009	22	-0.4299320080543012	-0.7065622348275807	-0.1327396406928311	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	mixture50	nominal50	8009	22	0.2130145040330378	-0.0030784872694933334	0.4353891644059635	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	residual50	mixture50	8009	22	-0.5602313115945945	-1.7349790041097994	0.3030358691351694	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	matched_flux50	nominal50	8009	22	0.10201067436302891	-0.162894432054827	0.3580951185682918	500	fixed models and calibration; component-stratified paired source bootstrap
+nominal	confirmed_true_p250_1000	matched_flux50	mixture50	8009	22	-0.11124078868429699	-0.29519197575107237	0.0549933266651891	500	fixed models and calibration; component-stratified paired source bootstrap
+alternative	all	nominal100	mu_p_over0p8	4876	3	47.81270882392018	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	nominal50	mu_p_over0p8	4876	3	49.16973331113134	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	mixture50	mu_p_over0p8	4876	3	49.391008604999534	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	residual50	mu_p_over0p8	4876	3	48.57436752068527	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	matched_flux50	mu_p_over0p8	4876	3	49.36534307899401	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	frozen_F6_oldcal	mu_p_over0p8	4876	3	47.943279266512725	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	frozen_F6_common	mu_p_over0p8	4876	3	47.836736229107466	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	nominal50	nominal100	4876	3	2.6002968474308386	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	mixture50	nominal50	4876	3	0.4353219219222604	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	residual50	mixture50	4876	3	-1.6136284517911381	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	matched_flux50	nominal50	4876	3	0.3848293164779193	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	all	matched_flux50	mixture50	4876	3	-0.050713371869437474	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	nominal100	mu_p_over0p8	259	3	55.58900186826639	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	nominal50	mu_p_over0p8	259	3	60.80285850579563	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	mixture50	mu_p_over0p8	259	3	61.133085212354935	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	residual50	mu_p_over0p8	259	3	61.87097937284236	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	matched_flux50	mu_p_over0p8	259	3	61.20386742052393	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	frozen_F6_oldcal	mu_p_over0p8	259	3	55.19185511122693	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	frozen_F6_common	mu_p_over0p8	259	3	55.809544173362525	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	nominal50	nominal100	259	3	11.740012287189982	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	mixture50	nominal50	259	3	0.8424765020381253	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	residual50	mixture50	259	3	1.8985148796065388	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	matched_flux50	nominal50	259	3	1.0230565277000836	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p50_100	matched_flux50	mixture50	259	3	0.1821142958110089	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	nominal100	mu_p_over0p8	934	3	50.51494756704567	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	nominal50	mu_p_over0p8	934	3	50.819788453688474	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	mixture50	mu_p_over0p8	934	3	50.858655952733955	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	residual50	mu_p_over0p8	934	3	50.3947428902953	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	matched_flux50	mu_p_over0p8	934	3	50.84295113025391	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	frozen_F6_oldcal	mu_p_over0p8	934	3	50.57837799662991	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	frozen_F6_common	mu_p_over0p8	934	3	50.50055865258625	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	nominal50	nominal100	934	3	0.6160261971144387	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	mixture50	nominal50	934	3	0.07903076831803357	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	residual50	mixture50	934	3	-0.9440382053703233	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	matched_flux50	nominal50	934	3	0.04709755374602276	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_250	matched_flux50	mixture50	934	3	-0.03195847159764842	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	nominal100	mu_p_over0p8	2777	3	34.23182208447512	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	nominal50	mu_p_over0p8	2777	3	34.449213911290414	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	mixture50	mu_p_over0p8	2777	3	34.86962895770136	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	residual50	mu_p_over0p8	2777	3	34.89487873703395	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	matched_flux50	mu_p_over0p8	2777	3	34.684965632759244	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	frozen_F6_oldcal	mu_p_over0p8	2777	3	35.09203874361262	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	frozen_F6_common	mu_p_over0p8	2777	3	34.26475352614271	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	nominal50	nominal100	2777	3	0.33054257196318826	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	mixture50	nominal50	2777	3	0.6413577494585598	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	residual50	mixture50	2777	3	0.03876805694258412	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	matched_flux50	nominal50	2777	3	0.3596474360350044	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p250_1000	matched_flux50	mixture50	2777	3	-0.28352874701447206	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	nominal100	mu_p_over0p8	3711	3	41.888607733096286	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	nominal50	mu_p_over0p8	3711	3	42.14143816196586	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	mixture50	mu_p_over0p8	3711	3	42.39349433998878	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	residual50	mu_p_over0p8	3711	3	42.20695126772912	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	matched_flux50	mu_p_over0p8	3711	3	42.2834222518104	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	frozen_F6_oldcal	mu_p_over0p8	3711	3	42.396460333318295	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	frozen_F6_common	mu_p_over0p8	3711	3	41.90084369850698	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	nominal50	nominal100	3711	3	0.43507893892532623	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	mixture50	nominal50	3711	3	0.4356419689941715	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	residual50	mixture50	3711	3	-0.3238229261129266	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	matched_flux50	nominal50	3711	3	0.24539858118491908	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p100_1000	matched_flux50	mixture50	3711	3	-0.19107579416119957	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	nominal100	mu_p_over0p8	906	3	54.93706210908367	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	nominal50	mu_p_over0p8	906	3	55.07964469030438	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	mixture50	mu_p_over0p8	906	3	55.07439589535505	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	residual50	mu_p_over0p8	906	3	50.280877434317084	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	matched_flux50	mu_p_over0p8	906	3	55.221239865680204	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	frozen_F6_oldcal	mu_p_over0p8	906	3	54.51292910904064	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	frozen_F6_common	mu_p_over0p8	906	3	54.72533540496365	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	nominal50	nominal100	906	3	0.31640764649178976	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	mixture50	nominal50	906	3	-0.011684669262135294	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	residual50	mixture50	906	3	-10.669903180094042	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	matched_flux50	nominal50	906	3	0.3152138365772772	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	reco_p1000_inf	matched_flux50	mixture50	906	3	0.3268603132928649	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	nominal100	mu_p_over0p8	4709	3	41.176602430043275	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	nominal50	mu_p_over0p8	4709	3	42.78644526907844	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	mixture50	mu_p_over0p8	4709	3	43.031341010367456	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	residual50	mu_p_over0p8	4709	3	41.97975207379554	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	matched_flux50	mu_p_over0p8	4709	3	43.009141553026865	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	frozen_F6_oldcal	mu_p_over0p8	4709	3	41.11928557762775	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	frozen_F6_common	mu_p_over0p8	4709	3	41.03022232427308	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	nominal50	nominal100	4709	3	2.736738960242191	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	mixture50	nominal50	4709	3	0.42803797533778054	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	residual50	mixture50	4709	3	-1.8459078293615372	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	matched_flux50	nominal50	4709	3	0.3892369299474119	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed	matched_flux50	mixture50	4709	3	-0.03896784255466024	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	nominal100	mu_p_over0p8	167	3	65.56330474874197	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	nominal50	mu_p_over0p8	167	3	66.17401592338172	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	mixture50	mu_p_over0p8	167	3	66.33598412332779	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	residual50	mu_p_over0p8	167	3	66.2639523479563	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	matched_flux50	mu_p_over0p8	167	3	66.29528685526043	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	frozen_F6_oldcal	mu_p_over0p8	167	3	66.387747677873	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	frozen_F6_common	mu_p_over0p8	167	3	66.20420182976095	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	nominal50	nominal100	167	3	1.773431423032512	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	mixture50	nominal50	167	3	0.47882775436541847	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	residual50	mixture50	167	3	-0.21397261585007765	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	matched_flux50	nominal50	167	3	0.3585141280857185	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	unconfirmed	matched_flux50	mixture50	167	3	-0.12089249308955274	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	nominal100	mu_p_over0p8	145	3	63.66830398969539	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	nominal50	mu_p_over0p8	145	3	64.49257969911955	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	mixture50	mu_p_over0p8	145	3	64.7296196002678	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	residual50	mu_p_over0p8	145	3	64.75013316701379	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	matched_flux50	mu_p_over0p8	145	3	64.6947995746117	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	frozen_F6_oldcal	mu_p_over0p8	145	3	65.15659069481433	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	frozen_F6_common	mu_p_over0p8	145	3	64.80705065828904	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	nominal50	nominal100	145	3	2.2687509803846706	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	mixture50	nominal50	145	3	0.6675784924380479	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	residual50	mixture50	145	3	0.058160888863401095	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	matched_flux50	nominal50	145	3	0.5695144107304762	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	y0.8_inf	matched_flux50	mixture50	145	3	-0.09872313613144001	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	nominal100	mu_p_over0p8	78	2	-269.1044978458875	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	nominal50	mu_p_over0p8	78	2	-95.25015671294175	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	mixture50	mu_p_over0p8	78	2	-90.8281647291215	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	residual50	mu_p_over0p8	78	2	-68.16042855965176	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	matched_flux50	mu_p_over0p8	78	2	-89.32999887529157	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	frozen_F6_oldcal	mu_p_over0p8	78	2	-290.34973413341237	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	frozen_F6_common	mu_p_over0p8	78	2	-275.6221957352477	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	nominal50	nominal100	78	2	47.10165878431947	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	mixture50	nominal50	78	2	2.2647828090204825	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	residual50	mixture50	78	2	11.878611420723118	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	matched_flux50	nominal50	78	2	3.0320886483866216	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_100	matched_flux50	mixture50	78	2	0.7850863398265018	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	nominal100	mu_p_over0p8	315	3	-10.373326564162632	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	nominal50	mu_p_over0p8	315	3	-8.305645250446304	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	mixture50	mu_p_over0p8	315	3	-8.216919102545074	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	residual50	mu_p_over0p8	315	3	-8.467563181821426	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	matched_flux50	mu_p_over0p8	315	3	-7.808967039957815	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	frozen_F6_oldcal	mu_p_over0p8	315	3	-21.6483087850186	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	frozen_F6_common	mu_p_over0p8	315	3	-14.965045141568156	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	nominal50	nominal100	315	3	1.873352356118707	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	mixture50	nominal50	315	3	0.08192199741393624	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	residual50	mixture50	315	3	-0.2316126548001618	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	matched_flux50	nominal50	315	3	0.4585894016327363	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_200	matched_flux50	mixture50	315	3	0.3769762306767399	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	nominal100	mu_p_over0p8	26	1	-419.35338019154995	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	nominal50	mu_p_over0p8	26	1	-153.68494509160632	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	mixture50	mu_p_over0p8	26	1	-156.38568778061975	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	residual50	mu_p_over0p8	26	1	-115.78124496447924	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	matched_flux50	mu_p_over0p8	26	1	-152.33716493058273	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	frozen_F6_oldcal	mu_p_over0p8	26	1	-444.8516230194362	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	frozen_F6_common	mu_p_over0p8	26	1	-428.0417113877248	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	nominal50	nominal100	26	1	51.15369327180633	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	mixture50	nominal50	26	1	-1.064605031267507	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	residual50	mixture50	26	1	15.837250186478558	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	matched_flux50	nominal50	26	1	0.5312810977162741	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E50_75	matched_flux50	mixture50	26	1	1.579075214799519	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	nominal100	mu_p_over0p8	52	2	-187.18456416723743	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	nominal50	mu_p_over0p8	52	2	-66.00326365229412	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	mixture50	mu_p_over0p8	52	2	-56.867587422655454	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	residual50	mu_p_over0p8	52	2	-44.61737268607928	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	matched_flux50	mu_p_over0p8	52	2	-56.96500753824172	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	frozen_F6_oldcal	mu_p_over0p8	52	2	-206.88640625866864	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	frozen_F6_common	mu_p_over0p8	52	2	-192.60675193197807	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	nominal50	nominal100	52	2	42.196314020685065	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	mixture50	nominal50	52	2	5.503311217286678	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	residual50	mixture50	52	2	7.809270823787107	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	matched_flux50	nominal50	52	2	5.4446255544612026	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E75_100	matched_flux50	mixture50	52	2	-0.06210340656529478	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	nominal100	mu_p_over0p8	132	3	-34.6301161096281	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	nominal50	mu_p_over0p8	132	3	-26.374458250567034	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	mixture50	mu_p_over0p8	132	3	-24.939594498704132	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	residual50	mu_p_over0p8	132	3	-26.104291663318335	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	matched_flux50	mu_p_over0p8	132	3	-25.493098063846208	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	frozen_F6_oldcal	mu_p_over0p8	132	3	-45.20482319395634	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	frozen_F6_common	mu_p_over0p8	132	3	-37.36327061115992	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	nominal50	nominal100	132	3	6.132103349252516	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	mixture50	nominal50	132	3	1.1354064513716455	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	residual50	mixture50	132	3	-0.9322082157280365	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	matched_flux50	nominal50	132	3	0.6974195568643538	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E100_150	matched_flux50	mixture50	132	3	-0.44301693739514647	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	nominal100	mu_p_over0p8	183	3	6.896959615491305	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	nominal50	mu_p_over0p8	183	3	3.964751563629687	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	mixture50	mu_p_over0p8	183	3	3.0184459893542237	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	residual50	mu_p_over0p8	183	3	3.465259620567629	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	matched_flux50	mu_p_over0p8	183	3	4.170880795691245	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	frozen_F6_oldcal	mu_p_over0p8	183	3	-5.267856054922615	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	frozen_F6_common	mu_p_over0p8	183	3	0.6264290606729395	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	nominal50	nominal100	183	3	-3.1494224460896447	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	mixture50	nominal50	183	3	-0.9853731725413928	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	residual50	mixture50	183	3	0.4607202222851159	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	matched_flux50	nominal50	183	3	0.21463914075061652	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E150_200	matched_flux50	mixture50	183	3	1.1883030934011551	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	nominal100	mu_p_over0p8	895	3	37.06733956807944	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	nominal50	mu_p_over0p8	895	3	33.46952025732296	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	mixture50	mu_p_over0p8	895	3	32.67045205638488	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	residual50	mu_p_over0p8	895	3	32.411684770249295	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	matched_flux50	mu_p_over0p8	895	3	33.19263598976491	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	frozen_F6_oldcal	mu_p_over0p8	895	3	33.21168704020203	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	frozen_F6_common	mu_p_over0p8	895	3	35.348619022677155	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	nominal50	nominal100	895	3	-5.716935031927539	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	mixture50	nominal50	895	3	-1.2010558228779944	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	residual50	mixture50	895	3	-0.3843294571831857	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	matched_flux50	nominal50	895	3	-0.4161765684374652	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E200_400	matched_flux50	mixture50	895	3	0.775564294323372	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	nominal100	mu_p_over0p8	1426	3	49.88713508880661	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	nominal50	mu_p_over0p8	1426	3	50.018636000052254	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	mixture50	mu_p_over0p8	1426	3	49.782415090091035	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	residual50	mu_p_over0p8	1426	3	49.51082754247883	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	matched_flux50	mu_p_over0p8	1426	3	49.95761564477653	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	frozen_F6_oldcal	mu_p_over0p8	1426	3	47.94010560466256	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	frozen_F6_common	mu_p_over0p8	1426	3	48.40065237126638	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	nominal50	nominal100	1426	3	0.2624094860245507	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	mixture50	nominal50	1426	3	-0.4726179740942138	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	residual50	mixture50	1426	3	-0.5408216028298662	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	matched_flux50	nominal50	1426	3	-0.12208621452542978	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E400_800	matched_flux50	mixture50	1426	3	0.348882876386436	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	nominal100	mu_p_over0p8	1452	3	53.11625407170438	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	nominal50	mu_p_over0p8	1452	3	53.66381515291714	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	mixture50	mu_p_over0p8	1452	3	54.321959923310146	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	residual50	mu_p_over0p8	1452	3	54.357631138604454	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	matched_flux50	mu_p_over0p8	1452	3	54.1040619213623	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	frozen_F6_oldcal	mu_p_over0p8	1452	3	54.28881403245924	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	frozen_F6_common	mu_p_over0p8	1452	3	53.47926846944514	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	nominal50	nominal100	1452	3	1.1679123977213601	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	mixture50	nominal50	1452	3	1.42036892455647	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	residual50	mixture50	1452	3	0.07809270107568267	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	matched_flux50	nominal50	1452	3	0.9501144082061375	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E800_1600	matched_flux50	mixture50	1452	3	-0.4770301037041236	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	nominal100	mu_p_over0p8	664	3	50.512391399209065	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	nominal50	mu_p_over0p8	664	3	51.17755316044944	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	mixture50	mu_p_over0p8	664	3	51.51316109628967	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	residual50	mu_p_over0p8	664	3	50.03496963614032	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	matched_flux50	mu_p_over0p8	664	3	51.3077857870955	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	frozen_F6_oldcal	mu_p_over0p8	664	3	53.50457655561345	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	frozen_F6_common	mu_p_over0p8	664	3	51.893719171932354	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	nominal50	nominal100	664	3	1.3440976035155372	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	mixture50	nominal50	664	3	0.6874049900513435	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	residual50	mixture50	664	3	-3.048644732408512	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	matched_flux50	nominal50	664	3	0.2667474390909752	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E1600_3200	matched_flux50	mixture50	664	3	-0.4235691866859792	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	nominal100	mu_p_over0p8	46	2	57.08400025244653	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	nominal50	mu_p_over0p8	46	2	58.46146157765473	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	mixture50	mu_p_over0p8	46	2	58.706181624616306	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	residual50	mu_p_over0p8	46	2	50.74232661876	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	matched_flux50	mu_p_over0p8	46	2	58.623689586324176	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	frozen_F6_oldcal	mu_p_over0p8	46	2	62.13344050189353	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	frozen_F6_common	mu_p_over0p8	46	2	60.750918089813354	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	nominal50	nominal100	46	2	3.2096684996525737	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	mixture50	nominal50	46	2	0.5891397633526974	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	residual50	mixture50	46	2	-19.28582853118701	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	matched_flux50	nominal50	46	2	0.3905481868909044	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	E3200_6400	matched_flux50	mixture50	46	2	-0.1997684920833187	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	nominal100	mu_p_over0p8	130	3	56.20578176735567	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	nominal50	mu_p_over0p8	130	3	61.99280596125749	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	mixture50	mu_p_over0p8	130	3	62.50105056923469	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	residual50	mu_p_over0p8	130	3	63.295658645879115	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	matched_flux50	mu_p_over0p8	130	3	62.46036117549478	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	frozen_F6_oldcal	mu_p_over0p8	130	3	56.17218967553459	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	frozen_F6_common	mu_p_over0p8	130	3	56.67175592983475	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	nominal50	nominal100	130	3	13.214128319770225	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	mixture50	nominal50	130	3	1.337232649848119	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	residual50	mixture50	130	3	2.1190142356161457	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	matched_flux50	nominal50	130	3	1.2301755656065394	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p50_75	matched_flux50	mixture50	130	3	-0.10850808984674831	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	nominal100	mu_p_over0p8	129	3	53.9950753897941	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	nominal50	mu_p_over0p8	129	3	57.812549913559266	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	mixture50	mu_p_over0p8	129	3	57.722684215896024	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	residual50	mu_p_over0p8	129	3	58.33171614052339	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	matched_flux50	mu_p_over0p8	129	3	58.05689796358314	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	frozen_F6_oldcal	mu_p_over0p8	129	3	52.69299522563495	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	frozen_F6_common	mu_p_over0p8	129	3	53.602886751634806	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	nominal50	nominal100	129	3	8.297969306786513	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	mixture50	nominal50	129	3	-0.21301523907963915	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	residual50	mixture50	129	3	1.4405643152405667	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	matched_flux50	nominal50	129	3	0.5791960631022275	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p75_100	matched_flux50	mixture50	129	3	0.7905273584392969	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	nominal100	mu_p_over0p8	276	3	51.23098114922557	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	nominal50	mu_p_over0p8	276	3	51.56757070497626	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	mixture50	mu_p_over0p8	276	3	51.79642788168381	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	residual50	mu_p_over0p8	276	3	51.254959384751864	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	matched_flux50	mu_p_over0p8	276	3	51.58843657184975	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	frozen_F6_oldcal	mu_p_over0p8	276	3	51.575772478182614	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	frozen_F6_common	mu_p_over0p8	276	3	51.6409034208923	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	nominal50	nominal100	276	3	0.6901708578156973	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	mixture50	nominal50	276	3	0.47252879948161963	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	residual50	mixture50	276	3	-1.123295376539546	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	matched_flux50	nominal50	276	3	0.04308242881313484	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p100_150	matched_flux50	mixture50	276	3	-0.43148526280074595	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	nominal100	mu_p_over0p8	658	3	50.00175667067265	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	nominal50	mu_p_over0p8	658	3	50.28417989023595	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	mixture50	mu_p_over0p8	658	3	50.18918706263058	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	residual50	mu_p_over0p8	658	3	49.779726092694965	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	matched_flux50	mu_p_over0p8	658	3	50.30896961688134	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	frozen_F6_oldcal	mu_p_over0p8	658	3	49.86701191257738	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	frozen_F6_common	mu_p_over0p8	658	3	49.689214674202105	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	nominal50	nominal100	658	3	0.5648662848073194	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	mixture50	nominal50	658	3	-0.19107162950471324	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	residual50	mixture50	658	3	-0.822032297385844	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	matched_flux50	nominal50	658	3	0.049862853696591714	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p150_250	matched_flux50	mixture50	658	3	0.24047500369320796	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	nominal100	mu_p_over0p8	2777	3	34.23182208447512	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	nominal50	mu_p_over0p8	2777	3	34.449213911290414	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	mixture50	mu_p_over0p8	2777	3	34.86962895770136	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	residual50	mu_p_over0p8	2777	3	34.89487873703395	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	matched_flux50	mu_p_over0p8	2777	3	34.684965632759244	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	frozen_F6_oldcal	mu_p_over0p8	2777	3	35.09203874361262	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	frozen_F6_common	mu_p_over0p8	2777	3	34.26475352614271	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	nominal50	nominal100	2777	3	0.33054257196318826	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	mixture50	nominal50	2777	3	0.6413577494585598	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	residual50	mixture50	2777	3	0.03876805694258412	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	matched_flux50	nominal50	2777	3	0.3596474360350044	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	p250_1000	matched_flux50	mixture50	2777	3	-0.28352874701447206	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	nominal100	mu_p_over0p8	157	3	15.576407135367965	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	nominal50	mu_p_over0p8	157	3	36.90142699457376	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	mixture50	mu_p_over0p8	157	3	36.983410485125	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	residual50	mu_p_over0p8	157	3	38.97562120624918	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	matched_flux50	mu_p_over0p8	157	3	37.70940478901856	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	frozen_F6_oldcal	mu_p_over0p8	157	3	11.719705608167141	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	frozen_F6_common	mu_p_over0p8	157	3	14.494380354328374	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	nominal50	nominal100	157	3	25.25955024610139	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	mixture50	nominal50	157	3	0.12992923079923058	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	residual50	mixture50	157	3	3.161406760443486	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	matched_flux50	nominal50	157	3	1.2805008987688549	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p50_100	matched_flux50	mixture50	157	3	1.1520685417642063	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	nominal100	mu_p_over0p8	851	3	43.86406273239738	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	nominal50	mu_p_over0p8	851	3	43.74446576941096	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	mixture50	mu_p_over0p8	851	3	43.53593558395562	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	residual50	mu_p_over0p8	851	3	43.64635705443646	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	matched_flux50	mu_p_over0p8	851	3	43.67330097281239	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	frozen_F6_oldcal	mu_p_over0p8	851	3	43.15353050915015	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	frozen_F6_common	mu_p_over0p8	851	3	43.384337446345256	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	nominal50	nominal100	851	3	-0.21304883966983823	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	mixture50	nominal50	851	3	-0.37068385947696125	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	residual50	mixture50	851	3	0.19556061297183458	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	matched_flux50	nominal50	851	3	-0.12650274781298432	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p100_250	matched_flux50	mixture50	851	3	0.2432793145116463	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	nominal100	mu_p_over0p8	2698	3	36.81837483438123	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	nominal50	mu_p_over0p8	2698	3	36.781032430010626	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	mixture50	mu_p_over0p8	2698	3	36.84948499030052	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	residual50	mu_p_over0p8	2698	3	36.423696121598894	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	matched_flux50	mu_p_over0p8	2698	3	36.766200501373135	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	frozen_F6_oldcal	mu_p_over0p8	2698	3	36.00280097270977	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	frozen_F6_common	mu_p_over0p8	2698	3	35.890357677114004	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	nominal50	nominal100	2698	3	-0.05910326661067167	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	mixture50	nominal50	2698	3	0.1082785165925193	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	residual50	mixture50	2698	3	-0.6742444913335088	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	matched_flux50	nominal50	2698	3	-0.023461200344798705	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component
+alternative	confirmed_true_p250_1000	matched_flux50	mixture50	2698	3	-0.13188251737075163	nan	nan	0	not measured: insufficient generation-range group support; alternative has one per component

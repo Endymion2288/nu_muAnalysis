@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "partition": "train",
+      "N": 54196,
+      "F5_exact": true
+    },
+    {
+      "partition": "validation",
+      "N": 13375,
+      "F5_exact": true
+    },
+    {
+      "partition": "calibration",
+      "N": 9727,
+      "F5_exact": true
+    }
+  ],
+  "validation_all_65_exact": true
+}

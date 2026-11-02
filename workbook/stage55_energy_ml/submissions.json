@@ -1,0 +1,41 @@
+{
+  "schedd": "bigbird18.cern.ch",
+  "existing_extract": {
+    "cluster": 13647425,
+    "jobs": 257,
+    "exit0_jobs": 257
+  },
+  "first_alternative": {
+    "cluster": 13647424,
+    "jobs": 1,
+    "index": 257,
+    "intended_mode": "100 event pilot",
+    "actual_mode": "full reconstruction; setup clobbered generic mode variable; subsequently lost to worker overwrite syntax failure",
+    "exit_code": 2,
+    "retained_as_formal_input": false,
+    "reason": "Worker file overwritten during execution; syntax failure after successful reco/ntuple, cleanup removed scratch. Training-only source excluded before all formal fits. Failed resource cost retained."
+  },
+  "corrected_pilot": {
+    "index": 258,
+    "events": 100,
+    "stage_specific_shell_variables": true,
+    "cluster": 13647426,
+    "exit_code": 0,
+    "selected_events": 5
+  },
+  "alternative_formal": {
+    "cluster": 13647430,
+    "jobs": 44,
+    "indices": "258-301",
+    "plus_first_alternative_index257": false,
+    "exit0_jobs": 44,
+    "successful_formal_sources": 44
+  },
+  "training": {
+    "cluster": 13648313,
+    "jobs": 1,
+    "formal_fits": 15,
+    "exit_code": 0,
+    "completed_fits": 15
+  }
+}

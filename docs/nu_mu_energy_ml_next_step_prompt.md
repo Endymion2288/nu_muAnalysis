@@ -1,4 +1,24 @@
-# 下一轮执行 Prompt：stage54 data中的tracker孤立活动与有效噪声约束
+# 下一轮执行 Prompt：stage55后的低能条件诊断，并保留stage54 data控制
+
+先读AGENTS.md、[stage55报告](../workbook/2026-11-02_stage55_low-energy-flux-training.md)、修订路线§36、`ml/configs/low_energy.json`及`workbook/stage55_energy_ml/{support,metrics,paired,raw_metrics}.tsv`。用户优先关心真实低能不如传统方法，以及50–100 GeV和替代flux。已完成15正式fit，不重复训练或重建；stage54未提交文件保持原状，不误当stage55成果。
+
+## 0. 当前低能优先任务
+
+已测：门槛受控100→50将true50–100 log-RMSE从.558448降到.318419；混训.316318、残差.291938，仍差于传统.145526。true100–200残差.267378/传统.226855。替代flux增加139低能训练例，unit混训50–100收益+.660% [−1.335,3.034]，不足以解决；matched先验+1.851% [.433,3.642]也很小。不可说低能已修复或已经证明只有缺数据。
+
+reco p50–100的682例只有208个true50–100，其余含高E/high-y；混训总体降低62.072%，不能用这个数字替代trueE指标，不能把全部低p切回传统。真低E的206/208 leading确认primary，median y=.0643，μ产生p复合R68=2.172%，不支持将巨大ν上偏直接归为低pμ核心失效。residual低E有益但全样本退化，不能truth-gate选赢家。
+
+下一轮首先做一次**0新fit、0新RDO、0谱toy**的有界条件诊断：
+
+1. 输入`ntuples/energy_ml_stage55/dataset.npz`、`predictions.npz`及`seed_predictions.npz`、保留的15模型和`training_metadata.json`。shards已逐301源验证归档，不重建它们；历史F6只作已开发参照。cal8,440、nominal/替代eval14,057/4,876，精确四动量保护排除已写入cache，不撤销。完整谱系独立仍未证明。
+2. 只用train冻结少量p/活动格，活动量沿用已有部署读出（cluster/SP、Timing、calo EM）；不得根据validation残差或trueE调边界，不使用truth作部署gate，不拓展大量变量/阈值网格。可先在train独立来源中定义边界，再固定评价；保留缺失读出者与尾。
+3. 在相同读出格内量化true50–100、100–200与≥200/high-y/未确认的比例、已有传统/mixture/residual风险、bias/R68/尾、来源支持及区间。明确低活动剩余上偏、连续谱/先验与读出混合的可辨识边界；不能以少数离群者结束低能分支，不能宣称观测信息严格不可恢复。
+4. 验收为给出一个可核查结论：何种data可定义条件有机会保留μ低E精度，同时保留高y收益；或为何现有读出在相同条件内无法稳定区分。新训练前再冻结一次来源内cross-fitting的μ/残差收缩方案、fit预算与低E对传统/高E-highy代价的共同验收。此诊断阶段不追加fit、不立即换架构或扩无边界生产；已暴露validation不能再次称blind。
+5. 读取紧凑cache，小规模交互验证计wall/CPU/RSS；若扩到批量ROOT必须Condor并先小样本测试。写中文workbook报告、实测表图与明确下一任务，再作一次Conventional Commit，不推送。低能MC结果不取代data响应、interaction/FSI、材料或归一化谱收益。
+
+## 保留的stage54 data占据支线
+
+以下§1–5为尚未完成的原协议，仅进入该支线时适用；其中“本轮”均指stage54 data控制。原未提交工具/缓存不得混入stage55提交。当前低能优先级按上面的§0，data可靠性交付仍需完成。
 
 先读AGENTS.md、stage49审查§7、[stage53报告](../workbook/2026-11-02_stage53_tracker-noise-mechanism.md)、修订路线§35、信息计划§20，以及stage52/53的manifest、实际conditions和原生collection读取工具。本轮只做一次有界data占据/有效读出条件约束；不自动执行ν重放、能量训练或谱toy。
 

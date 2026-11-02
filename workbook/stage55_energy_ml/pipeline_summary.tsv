@@ -1,0 +1,11 @@
+role	stage	timed_processes	wall_sum_s	cpu_sum_s	max_rss_KiB
+formal	copy_rdo	44	284.5	70.87	2048
+formal	reco	44	109726.09	108191.18000000001	1382692
+formal	ntuple	44	21107.18	20696.57	1056460
+formal	extract	301	5196.13	3669.41	703804
+100-event-pilot	copy_rdo	1	6.45	2.07	2048
+100-event-pilot	reco	1	30.12	23.94	1024804
+100-event-pilot	ntuple	1	11.54	9.54	894364
+100-event-pilot	extract	1	11.45	8.28	654780
+technical-failure	reco	1	3009.18	2982.15	1272004
+technical-failure	ntuple	1	642.03	632.5899999999999	1024944
