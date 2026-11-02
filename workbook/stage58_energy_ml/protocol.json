@@ -1,0 +1,66 @@
+{
+  "stage": 58,
+  "frozen_utc": "2026-11-02T19:00:16.338871+00:00",
+  "starting_commit": "4a55cf5",
+  "feature_version": "F7_pz0_raw_v1",
+  "cell_names": [
+    "pz50_100_low",
+    "pz50_100_high",
+    "pz100_250_low",
+    "pz100_250_high"
+  ],
+  "timing_medians_pC": [
+    77.02123252302408,
+    64.26187857985497
+  ],
+  "timing_sum": "float64 sum of cleaned float32 Timing0..3 raw; any missing propagates; signed values retained",
+  "routing": "50<=pz<100 and 100<=pz<250; timing < median is low, >= median high; all others F7",
+  "fold_by_group": {
+    "pi:00260-00269": 0,
+    "pi:00480-00489": 1,
+    "pi:00350-00359": 2,
+    "pi:00310-00319": 2,
+    "pi:00330-00339": 1,
+    "pi:00080-00089": 0,
+    "k:00540-00549": 0,
+    "k:00060-00069": 2,
+    "k:00120-00129": 1,
+    "k:00330-00339": 1,
+    "k:00070-00079": 2,
+    "k:00500-00509": 0,
+    "k:00660-00669": 2,
+    "k:00730-00739": 1,
+    "charm:00110-00119": 0,
+    "charm:00160-00169": 1
+  },
+  "folds_method": "component-wise greedy source event-count balance, pi/k/charm; no truth or residual",
+  "families": [
+    "two",
+    "three"
+  ],
+  "combination_optimization_calls": 8,
+  "new_energy_model_fits": 0,
+  "objective": "min max low-E log-MSE / pz0-over0.8 MSE; numerical lexicographic all-event risk tie break",
+  "low_groups": [
+    "E50_100",
+    "E100_200"
+  ],
+  "RMSE_cost_limits": {
+    "all": 1.01,
+    "E200_inf": 1.03,
+    "pz50_100": 1.03,
+    "high_y": 1.03,
+    "unconfirmed": 1.03
+  },
+  "numerical_secondary_epsilon": 1e-06,
+  "primary_sacrifice_upper_bound": 1.0201e-06,
+  "numerical_note": "one SLSQP call per family/fold; fixed epsilon is numerical tie tolerance, not a scanned tradeoff; primary is approximate within the explicit bound",
+  "optimizer": "SLSQP analytic quadratic gradients, ftol=1e-13, maxiter=3000, feasibility tolerance=1e-8",
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 2026110258,
+  "recovery_ratio_upper95_max": 1.05,
+  "breakthrough_gain_low95_min_pct": 0,
+  "maximum_key_tail50_increase_pp": 2,
+  "locked_test_evaluation": false,
+  "forbidden": "no new ROOT/RDO, flux toy, energy fits, threshold/gate/family/lambda scans, or eval tuning"
+}

@@ -1,0 +1,21 @@
+{
+  "wall_s": 1.0294482801109552,
+  "cpu_s": 0.939601364,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 32258816,
+    "wchar": 4955,
+    "syscr": 452,
+    "syscw": 2,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "small_sample_checks": "routing boundaries/defaults, signed/NaN strict sum, three expert vertices",
+  "input_file_bytes": {
+    "ntuples/energy_ml_stage55/dataset.npz": 25505895,
+    "ntuples/energy_ml_stage56/readout.npz": 6194961,
+    "ml/artifacts/stage56/predictions.npz": 297800
+  }
+}

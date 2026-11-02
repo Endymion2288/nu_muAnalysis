@@ -1,0 +1,88 @@
+{
+  "wall_s": 2.178792275954038,
+  "cpu_s": 2.137540875,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 64706759,
+    "wchar": 0,
+    "syscr": 941,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "combination_problems_checked": 8,
+  "additional_optimizer_calls": 0,
+  "thresholds_train_only_exact": true,
+  "source_groups_disjoint": true,
+  "fold_offsets_and_predictions_exact": true,
+  "empirical_constraints_checked": true,
+  "quadratic_gradient_checked": true,
+  "F7_stage56_metrics_exact": true,
+  "missing_events_by_role": {
+    "train": 21,
+    "cal": 3,
+    "eval": 7
+  },
+  "per_model": [
+    {
+      "family": "two",
+      "fold": 0,
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "two",
+      "fold": 1,
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "two",
+      "fold": 2,
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "two",
+      "fold": "final",
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "three",
+      "fold": 0,
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "three",
+      "fold": 1,
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "three",
+      "fold": 2,
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    },
+    {
+      "family": "three",
+      "fold": "final",
+      "offset_exact": true,
+      "predictions_exact": true,
+      "empirical_risks_exact": true
+    }
+  ],
+  "full_nominal_missing_events": 42,
+  "missing_outside_preexisting_eligible_roles": 11
+}
