@@ -1,0 +1,39 @@
+{
+  "frozen_utc": "2026-11-02T11:30:37.060783+00:00",
+  "target": 2048,
+  "source_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "range": "all 50000 entries/source",
+  "selection_config": "ml/configs/f6_muon_response.json",
+  "p_edges_GeV": [
+    100,
+    250,
+    1000
+  ],
+  "counts": "85 per source x pbin; +1 for cell IDs 0,3,6,9,12,15,18,21",
+  "seed": 2026110253,
+  "algorithm": "numpy default_rng SeedSequence([seed,source,pbin]); permute all passing candidate entries independently per cell; take first N; sort by entry",
+  "probe_dependent_sampling": false,
+  "weighting": "equal selected-event weight; fixed balanced source/p/sign mixture, not stage52 standardized population",
+  "preparation_limits": {
+    "jobs": 1,
+    "cpus": 1,
+    "memory_MiB": 1500,
+    "wall_s": 600,
+    "input_MB": 200,
+    "final_MB": 2
+  },
+  "physics_arm_results_seen": false
+}

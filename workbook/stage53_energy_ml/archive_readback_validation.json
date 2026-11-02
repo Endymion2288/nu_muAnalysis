@@ -1,0 +1,25 @@
+{
+  "archive": "ntuples/energy_ml_stage53/replay_results.tar.gz",
+  "events": 2048,
+  "byte_identical_recomputed_outputs": [
+    "nominal_validation.json",
+    "summary.json",
+    "nominal_response.tsv",
+    "nominal_failure_rates.tsv",
+    "paired_response.tsv",
+    "selection_migration.tsv",
+    "selection_failure_cases.json"
+  ],
+  "all_passed": true,
+  "resources": {
+    "wall_s": 4.329955645138398,
+    "cpu_s": 3.9241850730000003,
+    "peak_rss_MiB": 109.71875
+  },
+  "tsv_format": "LF line endings; missing source intervals explicitly NA; numerical values unchanged",
+  "first_archive_resources": {
+    "wall_s": 4.600313884904608,
+    "cpu_s": 3.9988220950000004,
+    "peak_rss_MiB": 108.28125
+  }
+}

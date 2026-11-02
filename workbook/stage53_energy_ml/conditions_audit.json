@@ -1,0 +1,243 @@
+{
+  "database": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db",
+  "global_tag": "OFLCOND-FASER-05",
+  "records": [
+    {
+      "run": 100049,
+      "folder": "/SCT/DAQ/Calibration/ChipNoise",
+      "tag": "SCT-DAQ-Calibration-Noise-02",
+      "rows": 192,
+      "unique_channels": 192,
+      "iov": [
+        [
+          0,
+          9223372036854775807
+        ]
+      ],
+      "fields": {
+        "offsetByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "60.0": 2304
+          }
+        },
+        "occupancyByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "13": 192
+          },
+          "values": {
+            "3.5e-05": 2496
+          }
+        },
+        "occupancyRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "13": 192
+          },
+          "values": {
+            "2.5e-05": 2496
+          }
+        },
+        "noiseByChip": {
+          "empty_rows": 192,
+          "lengths": {
+            "0": 192
+          },
+          "values": {}
+        }
+      }
+    },
+    {
+      "run": 100049,
+      "folder": "/SCT/DAQ/Calibration/ChipGain",
+      "tag": "SCT-DAQ-Calibration-ChipGain-02",
+      "rows": 192,
+      "unique_channels": 192,
+      "iov": [
+        [
+          0,
+          9223372036854775807
+        ]
+      ],
+      "fields": {
+        "gainByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "52.0": 2304
+          }
+        },
+        "gainRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "1.25": 2304
+          }
+        },
+        "offsetByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "45.0": 2304
+          }
+        },
+        "offsetRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "1.75": 2304
+          }
+        },
+        "noiseByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "1600.0": 2304
+          }
+        },
+        "noiseRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "45.0": 2304
+          }
+        }
+      }
+    },
+    {
+      "run": 100050,
+      "folder": "/SCT/DAQ/Calibration/ChipNoise",
+      "tag": "SCT-DAQ-Calibration-Noise-02",
+      "rows": 192,
+      "unique_channels": 192,
+      "iov": [
+        [
+          0,
+          9223372036854775807
+        ]
+      ],
+      "fields": {
+        "offsetByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "60.0": 2304
+          }
+        },
+        "occupancyByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "13": 192
+          },
+          "values": {
+            "3.5e-05": 2496
+          }
+        },
+        "occupancyRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "13": 192
+          },
+          "values": {
+            "2.5e-05": 2496
+          }
+        },
+        "noiseByChip": {
+          "empty_rows": 192,
+          "lengths": {
+            "0": 192
+          },
+          "values": {}
+        }
+      }
+    },
+    {
+      "run": 100050,
+      "folder": "/SCT/DAQ/Calibration/ChipGain",
+      "tag": "SCT-DAQ-Calibration-ChipGain-02",
+      "rows": 192,
+      "unique_channels": 192,
+      "iov": [
+        [
+          0,
+          9223372036854775807
+        ]
+      ],
+      "fields": {
+        "gainByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "52.0": 2304
+          }
+        },
+        "gainRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "1.25": 2304
+          }
+        },
+        "offsetByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "45.0": 2304
+          }
+        },
+        "offsetRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "1.75": 2304
+          }
+        },
+        "noiseByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "1600.0": 2304
+          }
+        },
+        "noiseRMSByChip": {
+          "empty_rows": 0,
+          "lengths": {
+            "12": 192
+          },
+          "values": {
+            "45.0": 2304
+          }
+        }
+      }
+    }
+  ],
+  "wall_s": 12.521925650071353
+}

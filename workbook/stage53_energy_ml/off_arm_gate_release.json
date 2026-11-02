@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-02T12:19:58.032171+00:00",
+  "gate": "workbook/stage53_energy_ml/nominal_validation.json",
+  "passed": true,
+  "events": 2048,
+  "sources": 12,
+  "failures": {
+    "rdo_p4_exact": 0,
+    "reference_p4_idempotent": 0,
+    "reference_original_counts": 0,
+    "replay_reference_counts": 0,
+    "reference_original_selection": 0,
+    "replay_original_selection": 0,
+    "nominal_reference_track_exact": 0
+  },
+  "noise_off_results_seen": false,
+  "unchanged_frozen_intervention": true
+}

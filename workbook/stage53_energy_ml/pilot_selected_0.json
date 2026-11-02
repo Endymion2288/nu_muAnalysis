@@ -1,0 +1,242 @@
+{
+  "mode": "nominal",
+  "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rdo/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00000-00004-RDO.root",
+  "requested_entries": [
+    354,
+    596
+  ],
+  "frontend": {
+    "NoiseOn": "True",
+    "AnalogueNoiseOn": "True",
+    "UseCalibData": "True",
+    "Threshold": "1.0",
+    "TimeOfThreshold": "30.0",
+    "DataCompressionMode": "1",
+    "DataReadOutMode": "1"
+  },
+  "records": [
+    {
+      "ordinal": 0,
+      "run": 100049,
+      "event": 355,
+      "entry": 354,
+      "rdo_reference": 27,
+      "rdo_replay": 27,
+      "rdo_exact_equal": false,
+      "only_reference_words": 27,
+      "only_replay_words": 27,
+      "clusters": {
+        "Reference": [
+          7,
+          7,
+          7,
+          6
+        ],
+        "Replay": [
+          7,
+          7,
+          7,
+          6
+        ]
+      },
+      "identifiers_equal": true,
+      "word_values_equal": false,
+      "first_reference_words": [
+        [
+          9315994896378626048,
+          8388609
+        ],
+        [
+          9325028483912433664,
+          12582913
+        ],
+        [
+          9460664238314881024,
+          12582913
+        ]
+      ],
+      "first_replay_words": [
+        [
+          9315994896378626048,
+          8982529
+        ],
+        [
+          9325028483912433664,
+          13182977
+        ],
+        [
+          9460664238314881024,
+          13305857
+        ]
+      ],
+      "rdo_p4_exact_equal": true,
+      "reference_p4_idempotent": true,
+      "spacepoints": {
+        "Reference": 12,
+        "Replay": 12
+      },
+      "segments": {
+        "Reference": 4,
+        "Replay": 4
+      },
+      "tracks": {
+        "Reference": [
+          [
+            233445.559405867,
+            233443.42409406614,
+            9.0,
+            13.0,
+            10.793628692626953,
+            -1.0,
+            63.3955854474584,
+            22.807911767995297,
+            0.003467871472988638,
+            0.0014095269133700295,
+            74.18904956682908,
+            28.08273680108284
+          ]
+        ],
+        "Replay": [
+          [
+            233445.559405867,
+            233443.42409406614,
+            9.0,
+            13.0,
+            10.793628692626953,
+            -1.0,
+            63.3955854474584,
+            22.807911767995297,
+            0.003467871472988638,
+            0.0014095269133700295,
+            74.18904956682908,
+            28.08273680108284
+          ]
+        ]
+      },
+      "selected": {
+        "Reference": true,
+        "Replay": true
+      },
+      "event_wall_s": 38.53684260509908,
+      "event_cpu_s": 35.261625398,
+      "original_counts_equal": true
+    },
+    {
+      "ordinal": 1,
+      "run": 100049,
+      "event": 597,
+      "entry": 596,
+      "rdo_reference": 34,
+      "rdo_replay": 34,
+      "rdo_exact_equal": false,
+      "only_reference_words": 34,
+      "only_replay_words": 34,
+      "clusters": {
+        "Reference": [
+          7,
+          9,
+          8,
+          8
+        ],
+        "Replay": [
+          7,
+          9,
+          8,
+          8
+        ]
+      },
+      "identifiers_equal": true,
+      "word_values_equal": false,
+      "first_reference_words": [
+        [
+          9298094847078432768,
+          12582913
+        ],
+        [
+          9307137230705262592,
+          8388609
+        ],
+        [
+          9442746596828643328,
+          12582913
+        ]
+      ],
+      "first_replay_words": [
+        [
+          9298094847078432768,
+          13203457
+        ],
+        [
+          9307137230705262592,
+          9017345
+        ],
+        [
+          9442746596828643328,
+          13328385
+        ]
+      ],
+      "rdo_p4_exact_equal": true,
+      "reference_p4_idempotent": true,
+      "spacepoints": {
+        "Reference": 13,
+        "Replay": 13
+      },
+      "segments": {
+        "Reference": 4,
+        "Replay": 4
+      },
+      "tracks": {
+        "Reference": [
+          [
+            329174.72155707766,
+            329173.3020411079,
+            9.0,
+            13.0,
+            6.326022148132324,
+            -1.0,
+            -66.33287972080244,
+            28.616763924985822,
+            -0.002392687629199523,
+            -0.0024770948467587894,
+            -73.77981801410093,
+            21.53856498293564
+          ]
+        ],
+        "Replay": [
+          [
+            329174.72155707766,
+            329173.3020411079,
+            9.0,
+            13.0,
+            6.326022148132324,
+            -1.0,
+            -66.33287972080244,
+            28.616763924985822,
+            -0.002392687629199523,
+            -0.0024770948467587894,
+            -73.77981801410093,
+            21.53856498293564
+          ]
+        ]
+      },
+      "selected": {
+        "Reference": true,
+        "Replay": true
+      },
+      "event_wall_s": 0.03090525697916746,
+      "event_cpu_s": 0.015026631999994322,
+      "original_counts_equal": true
+    }
+  ],
+  "nominal_gate": true,
+  "wall_s": 79.43842436000705,
+  "cpu_s": 60.720901127000005,
+  "root_files_read": [
+    {
+      "name": "root://eospublic.cern.ch//eos/experiment/faser/data0/sim/mc24/particle_gun/100049/rdo/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00000-00004-RDO.root",
+      "bytes_read": 39663
+    }
+  ],
+  "root_all_files_bytes_read": 36342311,
+  "peak_rss_MiB": 2070.0234375
+}

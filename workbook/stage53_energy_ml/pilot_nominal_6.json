@@ -1,0 +1,124 @@
+{
+  "mode": "nominal",
+  "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rdo/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00000-00004-RDO.root",
+  "requested_entries": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "frontend": {
+    "NoiseOn": "True",
+    "AnalogueNoiseOn": "True",
+    "UseCalibData": "True",
+    "Threshold": "1.0",
+    "TimeOfThreshold": "30.0",
+    "DataCompressionMode": "1",
+    "DataReadOutMode": "1"
+  },
+  "records": [
+    {
+      "ordinal": 0,
+      "run": 100050,
+      "event": 1,
+      "rdo_reference": 128,
+      "rdo_replay": 128,
+      "rdo_exact_equal": false,
+      "only_reference_words": 128,
+      "only_replay_words": 128,
+      "clusters": {
+        "Reference": [
+          7,
+          48,
+          24,
+          31
+        ],
+        "Replay": [
+          7,
+          48,
+          24,
+          31
+        ]
+      },
+      "entry": 0
+    },
+    {
+      "ordinal": 1,
+      "run": 100050,
+      "event": 2,
+      "rdo_reference": 49,
+      "rdo_replay": 49,
+      "rdo_exact_equal": false,
+      "only_reference_words": 49,
+      "only_replay_words": 49,
+      "clusters": {
+        "Reference": [
+          27,
+          6,
+          7,
+          7
+        ],
+        "Replay": [
+          27,
+          6,
+          7,
+          7
+        ]
+      },
+      "entry": 1
+    },
+    {
+      "ordinal": 2,
+      "run": 100050,
+      "event": 3,
+      "rdo_reference": 54,
+      "rdo_replay": 54,
+      "rdo_exact_equal": false,
+      "only_reference_words": 54,
+      "only_replay_words": 54,
+      "clusters": {
+        "Reference": [
+          23,
+          12,
+          8,
+          9
+        ],
+        "Replay": [
+          23,
+          12,
+          8,
+          9
+        ]
+      },
+      "entry": 2
+    },
+    {
+      "ordinal": 3,
+      "run": 100050,
+      "event": 4,
+      "rdo_reference": 51,
+      "rdo_replay": 51,
+      "rdo_exact_equal": false,
+      "only_reference_words": 51,
+      "only_replay_words": 51,
+      "clusters": {
+        "Reference": [
+          17,
+          8,
+          15,
+          7
+        ],
+        "Replay": [
+          17,
+          8,
+          15,
+          7
+        ]
+      },
+      "entry": 3
+    }
+  ],
+  "wall_s": 82.32057707500644,
+  "cpu_s": 57.343677332,
+  "peak_rss_MiB": 1666.046875
+}

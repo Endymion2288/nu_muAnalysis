@@ -1,0 +1,40 @@
+{
+  "frozen_utc": "2026-11-02T11:45:16.698835+00:00",
+  "sample": "ntuples/energy_ml_stage53/sample.json",
+  "sampling_protocol": "workbook/stage53_energy_ml/sampling_protocol.json",
+  "target": 2048,
+  "arms": [
+    "nominal",
+    "nonoise"
+  ],
+  "intervention": "only FrontEnd.NoiseOn=False; preserve AnalogueNoiseOn=True and all remaining effective properties",
+  "repetitions": 1,
+  "seed_policy": "production default event-context seeding; same original tool name; no claim of identical later random draws",
+  "nominal_gate": "exact original vs native-p4-round-tripped replay strip-ID/word multiset, original/reference/replayed counts, original selection and input-entry identity; no tolerances",
+  "p4_conversion": "native unchanged FaserSCT3_RawDataCnv_p4; transient pre-persistence words retained diagnostically, no ad-hoc bit mask",
+  "reconstruction": "SCT clusters 01X/checkBadChannels; production SP/segment cuts; backward woIFT CKF; new side-based mask 0..5 preserves original layer-based 0..2 semantics; SCT+scintillator+dipole geometry",
+  "runtime": "prebuilt d32b0ff3 gcc13 Athena24.0.41; native gcc13 analysis helper, no Calypso package rebuild",
+  "legacy_track_float_difference": "nonzero observed; require exact counts/selection and quantify all track differences separately",
+  "resource_caps": {
+    "concurrent_jobs": 6,
+    "cpus_per_job": 1,
+    "memory_GB": 4,
+    "disk_GB": 1,
+    "total_CPU_h": 8,
+    "requested_input_GB": 10,
+    "final_MB": 20,
+    "timeout_per_source_arm_s": 900
+  },
+  "resource_basis": {
+    "pilot_wall_s": 79.43842436000705,
+    "pilot_cpu_s": 60.720901127000005,
+    "pilot_RSS_MiB": 2070.0234375,
+    "warm_event_cpu_s": 0.015026631999994322,
+    "ROOT_all_files_bytes_read": 36342311
+  },
+  "execution": "Run all 12 nominal sources first; inspect full nominal gate before authorizing unchanged frozen noise-off arm; failure ends this arm without off results",
+  "analysis": "unit selected-event mixture; 500 sign-stratified paired source bootstraps; p/sign/all-source counts, means/quantiles/tails and conditional selection migration; no total tracking efficiency",
+  "new_energy_fits": 0,
+  "new_G4": 0,
+  "noise_off_results_seen": false
+}

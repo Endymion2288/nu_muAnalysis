@@ -1,0 +1,20 @@
+{
+  "frozen_utc": "2026-11-02T11:12:27.418518+00:00",
+  "starting_commit": "ed911cd",
+  "unique_events_cap": 40,
+  "initial_sources": [
+    0,
+    6
+  ],
+  "initial_entries": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "purpose": "SCT original RDO/embedded-hit nominal replay and identity/resources only; no population response claim",
+  "nominal_gate": "exact original/replayed strip identifier+RDO word multiset and original/replayed cluster counts; no loosened tolerances",
+  "mechanism_arm": "Only NoiseOn=False; AnalogueNoiseOn remains nominal",
+  "new_G4_events": 0,
+  "new_energy_fits": 0
+}

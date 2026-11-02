@@ -1,8 +1,11 @@
 # stage40 后的研究修订：先测可见信息，再决定修复与模型投入
 
-**stage51实测更新：** [全支持短段方向报告](../workbook/2026-11-02_stage51_segment-angle-information.md)与§18为当前入口。全部14309例/81来源，重点11658例：角度对L5_F6改善log-RMSE −.129% [−.492%,.229%]，加局部会聚−.295% [−.660%,.111%]，真实关系对打乱−.152% [−.449%,.123%]；均未过门槛，9正式+1smoke预算结束。高y IFT覆盖21/369，局部阴性不排除早期方向潜力。下一轮为F6计数/闪烁体data响应控制，0新能量fit，见[stage52 Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+**stage53实测更新：** [2048例同事件噪声机制报告](../workbook/2026-11-02_stage53_tracker-noise-mechanism.md)及§20为当前入口。
+全名义门槛零不符后，仅关独立strip噪声：station3>6下降53.857 [52.036,55.773] pp，SP>12下降1.514 pp，segment变化与零相容；53例选择迁移全部保留。
+已定位一种模拟cluster过量机制，尚未建立data噪声范围或正式1σ。
+下一轮为有界data占据/有效读出条件约束，0新能量fit，见[stage54 Prompt](nu_mu_energy_ml_next_step_prompt.md)。
 
-以下§1–8保留stage41原方案。日期：2026-11-01。stage41复核 stage30–40，承接 stage29 的研究复盘。以下§1–8是当时的研究方案；当时未进行新的训练、ROOT读取或数值重算。§9–17另记后续实测与当时计划，§18为stage51最新实测与预算决策，不把未执行新方向的收益写成结果。
+以下§1–8保留stage41原方案。日期：2026-11-01。stage41复核 stage30–40，承接 stage29 的研究复盘。以下§1–8是当时的研究方案；当时未进行新的训练、ROOT读取或数值重算。§9–19另记后续实测与当时计划，§20为stage53最新实测与预算决策，不把未执行新方向的收益写成结果。
 
 **判断：已有独立的重建进展，也定位了真实程序问题；但 stage36–40 的成功指标主要是电荷响应，尚未回答这些改进能否帮助 ν 能量。下一步应先开展有预算的信息诊断，而不把完整历史 Athena 生产复现设为所有物理研究的前提。**
 
@@ -507,3 +510,26 @@ stage50的有限学习能力预算：
 stage53预算只用于**一次同事件tracker读出机制控制**，0新能量fit/谱反演。必要输入是已知原事件HITS/RDO/reco映射、实际SCT配置与nominal重放，不能凭PG重复eventID配对；≤40例预检后冻结CPU/I/O和跨来源μ规模，默认争取2048例而非机械沿用旧128。条件比较nominal与NoiseOn=False、AnalogueNoiseOn保持nominal的单机制臂；实际配置若不支持该含义，先报告验证失败的实测差异，不伪造介入。选前读出、两臂选择迁移和两动量层/来源区间均保留。
 
 on/off只测模拟因果份额，不是正式系统范围。若能定位额外cluster，应再要求data依据的真实可实现变体和同事件ν压力；若不足，明确能排除哪种机制，结束这一臂，不接续参数网格。当前不启动新G4、完整历史生产、CaloNu波形、架构或概率实验。独立interaction/FSI/输运、可辨识正向谱硬度和真正未开发生产确认继续保留；本轮不执行stage53，详细输入与资源验收见[下一轮Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 20. stage53单机制预算完成：大幅cluster响应，尚无data系统范围
+
+详[stage53报告](../workbook/2026-11-02_stage53_tracker-noise-mechanism.md)和修订路线§35。
+冻结2048例覆盖12来源完整50000-entry范围、两动量/两符号各1024，无probe取样。17例独立pilot身份≤40；原HITS再持久化及材料图遗漏造成的旧28例RDO/19例选择不符已定位，修正后原名单全部严格通过，才开唯一关噪声臂。
+
+- NoiseOn=False、AnalogueNoiseOn=True，actual occupancy3.5e−5、threshold1fC、compression/readout1/1；其他条件同名义，无新G4。
+- 四站各少约1.3 cluster；station3>6 −53.857 [−55.773,−52.036] pp；低/高p −55.371/−52.344 pp，逐来源全负。SP均值差与零相容，SP>12仍−1.514 [−2.052,−.878] pp；segment>4 −.049 [−.439,.391] pp。
+- 53/2048退出选择，2.588% [2.101%,3.029%]，低/高p1.074/4.102%；47例动量越界、4无longTrack，其他nDoF/边界有重叠，全部保留选前读出。不测全效率或新增truth动量误差。
+- 正式12 Condor进程各1启动/exit0，6并发；站点2CPU/6GB，remote CPU.615h、ROOT3.536GB，两个最终archive共1.684MiB。25 JSON字节回读、246响应/41迁移独立重算、7数值输出归档重跑精确；初期失败/程序修正/成本另保留。
+
+**结束单开关机制实验。** 大幅cluster增量获得因果证据，data的SP/segment excess仍无法同时解释。混合不同不能直接求解释比例；off全差不是1σ，不用常数计数/gain修正F6，不反调BDT。
+
+**stage54预算只给data占据/读出约束：**
+
+1. 输入已知6 data+12 MC PHYS、明确对应REC/RDO/日志与conditions、本轮2048例manifest；只做有界metadata查验，不递归扫EOS或恢复历史生产。
+2. ≤40例QA测collection/timebin/active channel/mask和实际I/O，再在6 data完整支持冻结目标2048μ（两动量层均覆盖），与本轮2048 MC同observable比较；不看probe残差选样。无法达到目标需先说明支持/成本，不静默缩小为有利子样本。
+3. μ邻域外未关联strip/cluster占据不等于纯电子噪声；报告次级/背景污染、来源与位置/动量支持，缺quiet/tag时只给条件分布或上限。只有data能约束可信范围时才定义响应变体，不凭on/off或线性插值造1σ。
+4. 默认≤6并发、每任务≤2CPU/6GB、累计CPU≤8h、实际输入≤10GB、最终≤20MB；pilot后冻结实际可执行预算，大量读取用Condor，保留紧凑统计/摘要，无hit点云或ROOT副本。
+5. 0新能量fit、0ν重放/谱toy；验收为同observable下data允许的占据范围/上限或明确最小缺失输入。下一阶段才评固定F6的ν真实读出/重建/选择压力；本轮不自动执行stage54。
+
+独立interaction/FSI、输运/材料、预定可辨识正向谱硬度和独立生产确认仍为最终必须交付，不由单μ噪声机制替代。

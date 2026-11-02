@@ -32,7 +32,7 @@ def branches():
             + [k+'_'+v for k in TIMING for v in ['charge','raw_charge','status']])
 
 
-def select(arr, sample, grl, cfg):
+def select(arr, sample, grl, cfg, include_mask=False):
     idx = ak.argmax(arr['Track_pz0'],axis=1,keepdims=True)
     lengths = ak.num(arr['Track_pz0'])
     v = {}
@@ -68,7 +68,8 @@ def select(arr, sample, grl, cfg):
     for name, cut in cuts:
         keep &= cut
         flow[name] = int(keep.sum())
-    return {k:x[keep] for k,x in v.items()}, flow
+    selected = {k:x[keep] for k,x in v.items()}
+    return (selected, flow, keep) if include_mask else (selected, flow)
 
 
 def cells(v,cfg):

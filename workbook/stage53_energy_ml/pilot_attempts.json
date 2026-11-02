@@ -1,0 +1,154 @@
+{
+  "unique_digitized_events": 13,
+  "unique_by_source": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      354,
+      596
+    ],
+    "6": [
+      0,
+      1,
+      2,
+      3,
+      17,
+      10003,
+      40007
+    ]
+  },
+  "attempts": [
+    {
+      "log": "stage53_pilot_0.log",
+      "note": "SCT helper lookup: service not subscriptable; initialize failed",
+      "snapshots": 0
+    },
+    {
+      "log": "stage53_pilot_0_retry.log",
+      "note": "Wrong SCT helper key SCT_ID; initialize failed",
+      "snapshots": 0
+    },
+    {
+      "log": "stage53_pilot_0_retry2.log",
+      "note": "Custom cluster key missing matching symlink key; first event stopped before snapshot",
+      "snapshots": 0,
+      "user_s": "14.70",
+      "sys_s": "5.59",
+      "RSS_KiB": "1344668",
+      "elapsed": "0:45.46",
+      "exit_status": "1"
+    },
+    {
+      "log": "stage53_pilot_0_retry3.log",
+      "note": "First raw-word comparison; 4 events completed; p4 representation difference diagnosed",
+      "snapshots": 4,
+      "user_s": "53.54",
+      "sys_s": "5.64",
+      "RSS_KiB": "1831788",
+      "elapsed": "1:21.76",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_6.log",
+      "note": "First mu-plus raw-word comparison; 4 events completed",
+      "snapshots": 4,
+      "user_s": "53.31",
+      "sys_s": "5.37",
+      "RSS_KiB": "1706032",
+      "elapsed": "1:24.90",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_0_diagnostic.log",
+      "note": "Strip identifiers exact; raw word differs by redundant strip field",
+      "snapshots": 4,
+      "user_s": "51.78",
+      "sys_s": "5.58",
+      "RSS_KiB": "1699040",
+      "elapsed": "1:19.31",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_0_p4.log",
+      "note": "Native p4 round trip; exact RDO/count/SP/segment equality, 4 events",
+      "snapshots": 4,
+      "user_s": "54.43",
+      "sys_s": "5.59",
+      "RSS_KiB": "1871092",
+      "elapsed": "1:20.31",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_0_tracks.log",
+      "note": "Missing scintillator/dipole geometry caused ACTS initialization crash; 0 events",
+      "snapshots": 0,
+      "user_s": "4.79",
+      "sys_s": "10.71",
+      "RSS_KiB": "755660",
+      "elapsed": "0:47.83",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_0_tracks_retry.log",
+      "note": "JIT ACTS analysis helper crashed during first-event propagation",
+      "snapshots": 0,
+      "user_s": "124.31",
+      "sys_s": "29.11",
+      "RSS_KiB": "2209420",
+      "elapsed": "2:34.75",
+      "exit_status": "129"
+    },
+    {
+      "log": "stage53_pilot_0_tracks_native.log",
+      "note": "Native gcc13 helper succeeded, 4 events",
+      "snapshots": 4,
+      "user_s": "53.88",
+      "sys_s": "5.49",
+      "RSS_KiB": "1969316",
+      "elapsed": "1:20.06",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_6_tracks_native.log",
+      "note": "Wrong selector property SkipEventList; config failed, 0 events",
+      "snapshots": 0,
+      "user_s": "2.72",
+      "sys_s": "1.16",
+      "RSS_KiB": "622920",
+      "elapsed": "0:07.89",
+      "exit_status": "1"
+    },
+    {
+      "log": "stage53_pilot_6_tracks_ranges.log",
+      "note": "SkipEventRanges covers repeated eventID across generator subfiles, 7 events",
+      "snapshots": 7,
+      "user_s": "55.34",
+      "sys_s": "6.91",
+      "RSS_KiB": "2017200",
+      "elapsed": "1:45.27",
+      "exit_status": "0"
+    },
+    {
+      "log": "stage53_pilot_selected_0.log",
+      "note": "Python queried unsupported IEventSeek interface; first event stopped",
+      "snapshots": 0,
+      "user_s": "52.38",
+      "sys_s": "5.69",
+      "RSS_KiB": "1932772",
+      "elapsed": "1:17.49",
+      "exit_status": "1"
+    },
+    {
+      "log": "stage53_pilot_selected_0_retry.log",
+      "note": "Native IEvtSelectorSeek input entry and original selection validated, 2 events",
+      "snapshots": 2,
+      "user_s": "56.32",
+      "sys_s": "6.00",
+      "RSS_KiB": "2119704",
+      "elapsed": "1:21.04",
+      "exit_status": "0"
+    }
+  ]
+}
