@@ -1,0 +1,12 @@
+{
+  "submission_request_memory_MB": 2000,
+  "local_dryrun_RequestMemory_MB": 2000,
+  "final_ClassAd_RequestMemory_MB": 3000,
+  "MemoryProvisioned_MB": 3000,
+  "protocol_memory_request_limit_respected": false,
+  "observed_batch_peak_rss_MiB": 105.69140625,
+  "explanation": "Local .sub and dry-run request 2000MB; final scheduler ClassAd requests/provisions 3000MB. Scheduler-side alteration is observed; the exact site transformation configuration was not inspected. No resubmission or extra job.",
+  "payload_bytes": 2284685,
+  "returned_archive_bytes": 326469,
+  "prior_cache_reused_bytes": 2236976
+}

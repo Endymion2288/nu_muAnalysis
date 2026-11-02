@@ -1,0 +1,67 @@
+{
+  "stage": 64,
+  "starting_commit": "0c77e96",
+  "truth_E_edges_GeV": [
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "production_components": [
+    "pi",
+    "k",
+    "charm"
+  ],
+  "statistics": [
+    "M_mu",
+    "S_scalar"
+  ],
+  "truth_components": [
+    "low",
+    "high"
+  ],
+  "reference": "train, shared k: mixture=(wR-wT)*RT; conditional=wR*(RR-RT); unmatched=original JR-JT outside shared support",
+  "strata": "true E coarse bin x production component; explicit under/overflow; diagnostic truth, never deployment input",
+  "fixed_N_selected": 1000,
+  "conservation_tolerance": 1e-12,
+  "eigen_relative_cut": 1e-12,
+  "eigen_absolute_cut": 1e-18,
+  "operator": "fixed nominal train a,b and role actual f_true; finite-MC covariance of stage63; L=v^T V+/(v^T V+v)",
+  "bootstrap_replicates": 500,
+  "bootstrap_seeds": {
+    "train": 2026110264,
+    "cal": 2026110265,
+    "eval": 2026110266
+  },
+  "bootstrap": "independent component-stratified source multinomial draws by role; same train draw reused for cal/eval, M/S paired; fixed f_true and nominal linear operator; recompute shared support each draw",
+  "bootstrap_scope": "conditional on fitted F7, bins and central operator; no retraining, full-lineage guarantee, detector/interaction systematics or coverage claim",
+  "thin_support_flag": "N<20 or conservative source count<3; descriptive only, no event/stratum exclusion",
+  "norms": "half L1 of each signed vector; only total response difference is a TV distance; term norms need not add",
+  "ratio_policy": "no attribution percentages: signed contributions and intervals retained with cancellations",
+  "profiles": 0,
+  "energy_model_fits": 0,
+  "F7_inferences": 0,
+  "ROOT_RDO_production": 0,
+  "coverage_toys": 0,
+  "jobs": 1,
+  "request_cpus": 1,
+  "request_memory_MB": 2000,
+  "cpu_budget_s": 600,
+  "wall_budget_s": 600,
+  "retained_budget_bytes": 5000000,
+  "input_cache": "ml/artifacts/stage63/observables.npz",
+  "versions": {
+    "python": "3.13.11",
+    "numpy": "2.2.6"
+  },
+  "category_counts": {
+    "M_mu": 17,
+    "S_scalar": 17
+  },
+  "frozen_utc": "2026-11-02T22:12:56.425441+00:00",
+  "pilot_projected_2004_decompositions_wall_s": 0.4128032912313938
+}

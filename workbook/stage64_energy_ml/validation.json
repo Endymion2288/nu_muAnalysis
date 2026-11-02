@@ -1,0 +1,27 @@
+{
+  "independent_vector_max_abs_error": 2.7755575615628914e-17,
+  "independent_projection_max_abs_error": 6.938893903907228e-18,
+  "independent_operator_max_abs_error": 4.440892098500626e-16,
+  "independent_event_bootstrap_max_abs_error": 1.5612511283791264e-17,
+  "independently_checked_bootstrap_indices": [
+    0,
+    249,
+    499
+  ],
+  "all_role_protection_binning_checks_pass": true,
+  "resources": {
+    "wall_s": 2.045031080953777,
+    "cpu_s": 1.7091467849999997,
+    "peak_rss_MiB": 616.60546875,
+    "proc_io_delta": {
+      "rchar": 25989330,
+      "wchar": 103202,
+      "syscr": 5360,
+      "syscw": 13,
+      "read_bytes": 0,
+      "write_bytes": 0,
+      "cancelled_write_bytes": 0
+    },
+    "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+  }
+}

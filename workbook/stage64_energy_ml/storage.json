@@ -1,0 +1,113 @@
+{
+  "scope": "new stage64 directory evidence excluding this manifest, source code and main report; existing inputs reused, not copied",
+  "bytes": 516613,
+  "MiB": 0.49268054962158203,
+  "files": [
+    {
+      "path": "workbook/stage64_energy_ml/batch_resources.json",
+      "bytes": 401
+    },
+    {
+      "path": "workbook/stage64_energy_ml/batch_stderr.txt",
+      "bytes": 67
+    },
+    {
+      "path": "workbook/stage64_energy_ml/batch_stdout.txt",
+      "bytes": 243
+    },
+    {
+      "path": "workbook/stage64_energy_ml/bootstrap.npz",
+      "bytes": 302400
+    },
+    {
+      "path": "workbook/stage64_energy_ml/component_norms.csv",
+      "bytes": 2584
+    },
+    {
+      "path": "workbook/stage64_energy_ml/conditional_support.csv",
+      "bytes": 11010
+    },
+    {
+      "path": "workbook/stage64_energy_ml/condor.json",
+      "bytes": 348
+    },
+    {
+      "path": "workbook/stage64_energy_ml/linear_checks.csv",
+      "bytes": 682
+    },
+    {
+      "path": "workbook/stage64_energy_ml/operators.json",
+      "bytes": 2502
+    },
+    {
+      "path": "workbook/stage64_energy_ml/pilot.json",
+      "bytes": 760
+    },
+    {
+      "path": "workbook/stage64_energy_ml/projection.csv",
+      "bytes": 4193
+    },
+    {
+      "path": "workbook/stage64_energy_ml/protocol.json",
+      "bytes": 2225
+    },
+    {
+      "path": "workbook/stage64_energy_ml/response_migration.pdf",
+      "bytes": 21068
+    },
+    {
+      "path": "workbook/stage64_energy_ml/response_migration.png",
+      "bytes": 71124
+    },
+    {
+      "path": "workbook/stage64_energy_ml/stratum_projection.csv",
+      "bytes": 42321
+    },
+    {
+      "path": "workbook/stage64_energy_ml/submission_resources.json",
+      "bytes": 603
+    },
+    {
+      "path": "workbook/stage64_energy_ml/summary.json",
+      "bytes": 21941
+    },
+    {
+      "path": "workbook/stage64_energy_ml/support.csv",
+      "bytes": 8204
+    },
+    {
+      "path": "workbook/stage64_energy_ml/unmatched_support.csv",
+      "bytes": 747
+    },
+    {
+      "path": "workbook/stage64_energy_ml/validation.json",
+      "bytes": 839
+    },
+    {
+      "path": "workbook/stage64_energy_ml/vectors.csv",
+      "bytes": 22351
+    }
+  ],
+  "reused_inputs": [
+    {
+      "path": "ml/artifacts/stage63/observables.npz",
+      "bytes": 2236976
+    },
+    {
+      "path": "workbook/stage63_energy_ml/protocol_v2.json",
+      "bytes": 5303
+    },
+    {
+      "path": "workbook/stage63_energy_ml/templates.json",
+      "bytes": 7513
+    },
+    {
+      "path": "workbook/stage63_energy_ml/fits.json",
+      "bytes": 868519
+    },
+    {
+      "path": "workbook/stage63_energy_ml/support.json",
+      "bytes": 34284
+    }
+  ]
+}

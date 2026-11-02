@@ -1,0 +1,22 @@
+{
+  "wall_s": 0.03507390571758151,
+  "cpu_s": 0.024813961999999967,
+  "peak_rss_MiB": 616.60546875,
+  "proc_io_delta": {
+    "rchar": 5412,
+    "wchar": 0,
+    "syscr": 4,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "synthetic_decompositions": 103,
+  "timing_100_decompositions_wall_s": 0.020598966628313065,
+  "timing_100_decompositions_CPU_s": 0.02043044100000002,
+  "maximum_conservation_error": 5.551115123125783e-17,
+  "independent_operator_max_abs_error": 1.9539925233402755e-14,
+  "pure_mixture_conditional_unmatched_QA_pass": true,
+  "operator_unit_contrast_error": 0.0
+}
