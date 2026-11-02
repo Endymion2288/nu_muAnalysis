@@ -1,0 +1,63 @@
+{
+  "wall_s": 2.4683297998271883,
+  "cpu_s": 2.415264473,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 65444182,
+    "wchar": 0,
+    "syscr": 983,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "gate_fits_checked": 4,
+  "additional_fits": 0,
+  "train_transforms_exact": true,
+  "grouped_OOF_offsets_exact": true,
+  "fold_partition_preserved": true,
+  "default_F7_exact": true,
+  "independent_inference_checked": true,
+  "full_cal_gradient_max_error": 1.1564670662073118e-10,
+  "original_F7_and_four_cell_metrics_exact": true,
+  "full_missing_events": 42,
+  "missing_by_role": {
+    "train": 21,
+    "cal": 3,
+    "eval": 7
+  },
+  "per_fit": [
+    {
+      "fold": 0,
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": false
+    },
+    {
+      "fold": 1,
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": false
+    },
+    {
+      "fold": 2,
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": false
+    },
+    {
+      "fold": "final",
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": false
+    }
+  ],
+  "numerical_QA_passed": true,
+  "optimizer_convergence_passed": false,
+  "promotion_allowed": false
+}

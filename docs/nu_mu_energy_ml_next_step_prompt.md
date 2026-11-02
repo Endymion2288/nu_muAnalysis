@@ -1,29 +1,27 @@
-# 下一轮执行 Prompt：一个更有信息的轻量专家gate，先冻结再执行
+# 下一轮执行 Prompt：同一轻量gate的解析可行性修正
 
-先读AGENTS.md、[stage58完整报告](../workbook/2026-11-02_stage58_constrained-physical-experts.md)、修订路线§39、stage57§4–5和[F7契约](nu_mu_energy_ml_features.md)。stage58已完成四格实验；不要重跑`prepare_expert_combination.py`或`run_expert_combination.py`，它们拒绝覆盖成功产物。复核用validate，不额外优化。
+先读AGENTS.md、[stage59报告](../workbook/2026-11-02_stage59_lightweight-expert-gate.md)、路线§40、`ml/lightweight_gate.py`及`workbook/stage59_energy_ml/{protocol,models,optimizer_diagnostics,acceptance,validation}.json`。stage59已运行4次，全部status9/maxiter500；不要重跑prepare/fit或覆盖失败记录。当前继续使用F7。
 
-## 当前结论与唯一下一问题
+## 当前证据与本次唯一任务
 
-三专家true50–100/100–200 log-RMSE=.262665/.252439，相对F7改善16.032%/4.745%，仍差于传统.145487/.226876。最低能bias仍+17.675%，tail50=8.654%/传统0%。全体代价通过，但reco低p/high-y对F7的95%比上限1.042697/1.038256超过1.03，cal OOF也不稳定。因此当前保持F7，不放宽验收、不在旧四格扫描λ/阈值/seed。
+stage59 eval true50–100 log-RMSE .169719，较F7 .312816大幅改善但仍差于传统.145487；100–200 .256517/传统.226876。全体/低reco p/high-y/未确认代价均失败，最低能cal OOF .245862且一折回退F7。梯度/推理QA通过，但4次优化都不收敛，严格完整可行checkpoint稀疏，不能把该结果当已充分优化gate的物理否定。
 
-理想三专家低E下界=.023980/.081975，理想二专家也优于传统；这不是部署结果或信息极限。唯一下一问题是：在有限cal支持下，一个加入counts/Calo的轻量读出gate能否改善专家选择，同时保持共同风险约束和OOF稳定性？不要同轮连开新flux/低E生产、F7重训、多头transfer或连续似然网络。
+本次只验证**同一gate的ρ解析可行性/profile修正**，不更换输入/网络/seed/验收，不追加连续似然、F7重训、flux生产或其他架构。不反复增加旧SLSQP迭代或做多起点网格。
 
-## 下一阶段执行范围
+## 冻结后一次完成的执行范围
 
-1. 复用`audited_features.load()`、stage56 cal/eval原始log预测及`workbook/stage58_energy_ml/{protocol,models,acceptance}.json`、stage58预测`ml/artifacts/stage58/predictions.npz`。保持train41447/cal8440/eval14057及所有原保护，cal已是开发集、eval已暴露，不叫blind。不读locked test、不为alternative伪填raw、不恢复transport/shards。
-2. F7输入不回退：线性模长/纵向仅pz0，允许px/py/q/p/弯折；11闪烁体raw，VetoNu reduced保留。统一build处理状态、有效域、依赖；signed负值保留。完整nominal42个缺失者中本轮eligible21/3/7，另11既有保护排除，不按缺失或残差新增删除。选择仍含部分fit-charge cut，不改接受度。
-3. **先写不可覆盖的有界协议。** gate仅用pz0、Timing raw严格总和、总cluster、清理后的calo EM四个读出；变换/中心尺度仅由train X冻结，signed量可用asinh，缺失显式路由F7。建议一个固定8单元hidden+3权重softmax gate、固定seed，不比较深度/宽度/学习率网格。执行前明确数值算法、F7可行参照、收敛/失败报告和实测CPU/存储预算；若合理实现需改变这一建议，先在看新结果前记录理由，不能用eval调结构。
-4. 仅现有cal保守来源三折+最终全cal，共4次gate拟合、0新F7能量fit/ROOT/RDO/生产/toy。每折offset只用其余cal，沿用stage58 fold映射；不能套全cal offset冒充OOF。cal只有16组/2charm，低E150/14组且无charm，必须报不足。权重非负和为1，推理不读truth/y/component/group。
-5. 目标与验收保持stage57/58：最小化两低E相对传统log-MSE最坏比；全体对F7 RMSE≤1.01、true≥200/reco pz50–100/high-y/未确认≤1.03，次级全体风险且不扫λ。truth只用于训练目标/诊断。两低E恢复需来源配对95%上限均≤1.05，突破需改善下限>0；全体/困难组同样按区间验收，关键tail50增加≤2pp，报告双方向tail50/100、bias/R68、分能量/两reco低p与全部缺失。不得改门槛或仅报有利层。
-6. 小样本先核路由/约束/梯度/OOF来源和offset；再一次完整拟合评价。报cal OOF各折/来源、固定F7及stage58四格主候选和新gate；500次component分层来源bootstrap只重抽样固定预测，不另做数百次重拟合，不把其称全流程确认。保持全部尾，不能用预测截断获得收益。
-7. 若通过，冻结并规划共同raw与独立低E确认；若仍失败但理想下界好，区分gate学习/条件支持/来源不稳定，给一次定向独立补样需求或单独冻结连续E似然实验。下一投入要具体：所需样本/component/条件、固定候选、成本与共同验收，不把粗gate阴性当全信息无用。新生产和下一模型在本阶段结束后另列方案，不自动连开。
-8. 写下一编号中文workbook，记录实际N/单位/选择/配置/命令、wall/CPU/RSS/I/O、模型/预测体积、验证、区间限制与科学决定；更新路线和下一Prompt，本地Conventional Commit，不推送。既有stage54文件实际状态先检查，不混入新阶段提交。
-
-当前MC raw有符号整窗积分与data旧源码只积正样本不同；共同raw定义、stage54占据、ν interaction/FSI/材料、独立生产与最终能谱收益继续必须完成。本轮MC方法研究不能宣称data改善。
+1. 复用`audited_features.load()`、stage56 cal/eval原始预测、stage58 fold/对照、stage59 train-only变换和已存checkpoint。保持train41447/cal8440/eval14057与全部保护，cal已开发、eval已暴露，不叫blind。不读locked test，不补造alternative raw，不恢复transport/shards。
+2. F7契约不回退：线性模长/纵向仅pz0，允许px/py/q/p/弯折，11闪烁体raw、VetoNu reduced保留，统一build状态/物理域/依赖。四个gate输入仍是pz0、Timing raw严格总和、total cluster、清理calo EM；沿用stage59 median/IQR及log/asinh变换，缺失或pz0不在[50,250)精确F7。保留负raw、全部尾和完整42缺失者原角色，不按风险新增删除。
+3. **先写不可覆盖协议，不先看新eval结果。** 网络仍4→tanh(8)→两相对logit+F7固定0，58网络参数[-8,8]；seed2026110259、同初值。给定网络，软专家相对F7修正Δ，预测为F7+ρΔ。每个代价组相对F7 MSE=`1+βρ+αρ²`，α≥0。解析五个二次不等式与[0,1]交集，得到从0起的可行区间；不放宽1%/3%。再在该区间解析profile两低E二次风险的最大值（端点、活跃二次极小点、交点；固定数值次级全体风险同处理），消除ρ/epigraph的外层约束。不能把profile称λ或阈值扫描，也不能称外层全局最优。
+4. 数值pilot先验证：解析可行区间含F7、二次根退化/接近边界、直接经验MSE、profile极小值、缺失默认、有符号量与导数/有限差分；仅小型合成或cal小样本，不增加未记录fit。明确外层梯度/不光滑处理及收敛判据后再运行。建议一个L-BFGS-B、单一起点、maxiter500/maxfun50000、每次wall90s，3折+全cal最多4次，CPU≤400s/RSS≤1200MiB/新逐例≤2MB；若合理算法实现需不同数值选项，必须在新结果前记录理由，不扫算法族。实际收益/收敛/成本未测量。
+5. 沿用stage58保守fold，每折offset只由其余cal标签计算；不能用全cal offset冒充OOF。cal16组/2charm、最低能150/14组且无charm，原样报告支持限制。保存末端网络参数、profileρ、逐约束值/违反、stationarity、选择原因和训练轨迹；不要只留总违反。数值失败不伪装成物理阴性，不将不可行末端当结果；4次预算内完成，不在本阶段反复重启。
+6. 目标及共同验收不变：两低E相对传统最坏log-MSE最小；全体/F7 RMSE≤1.01、true≥200/reco pz50–100/high-y/未确认≤1.03。低E恢复须两层来源95%比上限≤1.05，突破须改善下限>0，关键tail50变化≤2pp，报告双方向tail50/100、mean/median bias/R68、完整能量箱、两reco低p和缺失者。OOF与冻结eval均要报告，与F7、stage58四格、stage59可行但未收敛gate比较；不只报漂亮最低能eval。
+7. 500次component分层保守来源配对bootstrap仅重抽样固定预测，不多次重拟合，不叫全流程确认。参数化保证的是训练样本约束，不自动保证OOF/eval风险。若修复后通过，冻结并规划独立低E/共同raw确认；若数值修复后仍来源不稳或代价外推失败，结束gate调参支线，给下一次单项连续E响应似然或定向独立样本方案。不要再无界更换门控网络或关掉低能方向。
+8. 写下一编号中文workbook，实际N/单位/输入/选择/配置/命令、wall/CPU/RSS/I/O、紧凑产物、数值/物理原因和验收逐项记录；更新路线/Prompt并本地Conventional Commit，不推送。stage54工具/缓存先查实际状态，不混入新提交；data共同raw定义、占据、ν interaction/FSI/材料、独立生产及最终谱收益继续必须交付。
 
 ## 保留的stage54 data占据支线
 
-以下§1–5为尚未完成的原协议，仅进入该支线时适用；其中“本轮”均指stage54 data控制。保留其工具/缓存及当前实际工作树状态，历史“未提交”描述不能代替当前状态检查。当前低能优先级按上面的§0，data可靠性交付仍需完成。
+以下§1–5为尚未完成的原协议，仅进入该支线时适用；其中“本轮”均指stage54 data控制。保留其工具/缓存及当前实际工作树状态，历史“未提交”描述不能代替当前状态检查。当前低能优先级按上面的主任务，data可靠性交付仍需完成。
 
 先读AGENTS.md、stage49审查§7、[stage53报告](../workbook/2026-11-02_stage53_tracker-noise-mechanism.md)、修订路线§35、信息计划§20，以及stage52/53的manifest、实际conditions和原生collection读取工具。本轮只做一次有界data占据/有效读出条件约束；不自动执行ν重放、能量训练或谱toy。
 

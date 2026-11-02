@@ -1,0 +1,23 @@
+{
+  "wall_s": 0.8141388855874538,
+  "cpu_s": 0.755890793,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 32260971,
+    "wchar": 2978,
+    "syscr": 454,
+    "syscw": 2,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "pilot_N": 48,
+  "optimizer_calls": 0,
+  "train_transform_N": 12159,
+  "risk_jacobian_checked": true,
+  "exact_F7_reference": true,
+  "default_and_signed_checks": true,
+  "parameter_count": 59,
+  "risk_jacobian_max_error": 1.6386994539097088e-10
+}

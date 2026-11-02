@@ -1,0 +1,91 @@
+{
+  "stage": 59,
+  "frozen_utc": "2026-11-02T19:39:05.664955+00:00",
+  "starting_commit": "7bc479e",
+  "input_contract": "F7_pz0_raw_v1",
+  "inputs": [
+    "pz",
+    "timing",
+    "clusters",
+    "calo"
+  ],
+  "transforms": [
+    "log(pz/GeV)",
+    "asinh(Timing_raw_total/pC)",
+    "log1p(total_clusters)",
+    "asinh(calo_EM_total/GeV)"
+  ],
+  "center": [
+    5.059522378171977,
+    4.878308094172112,
+    3.713572066704308,
+    0.8284200968160723
+  ],
+  "scale": [
+    0.6177134944764049,
+    1.0022357439290754,
+    1.1641149979572263,
+    2.1777354788588856
+  ],
+  "standardization": "train eligible complete pz in [50,250), median/IQR; no clipping",
+  "architecture": "4 -> tanh(8) -> 2 relative logits + fixed F7 logit 0 -> 3-softmax; scalar rho blends with exact F7",
+  "parameter_count": 59,
+  "seed": 2026110259,
+  "parameter_bounds": [
+    -8,
+    8
+  ],
+  "rho_bounds": [
+    0,
+    1
+  ],
+  "routing": "any missing/invalid gate input or pz outside [50,250) uses F7 exactly; no event deletion",
+  "initial_point": "rho=0 (exact F7), hidden N(0,.5), output N(0,.1/sqrt(8)), relative biases -1, same fixed seed per fold",
+  "objective": "min maximum low-E MSE relative to traditional, plus fixed numerical secondary all/F7 MSE term",
+  "numerical_secondary_epsilon": 1e-06,
+  "RMSE_cost_limits": {
+    "all": 1.01,
+    "E200_inf": 1.03,
+    "pz50_100": 1.03,
+    "high_y": 1.03,
+    "unconfirmed": 1.03
+  },
+  "fold_by_group": {
+    "pi:00260-00269": 0,
+    "pi:00480-00489": 1,
+    "pi:00350-00359": 2,
+    "pi:00310-00319": 2,
+    "pi:00330-00339": 1,
+    "pi:00080-00089": 0,
+    "k:00540-00549": 0,
+    "k:00060-00069": 2,
+    "k:00120-00129": 1,
+    "k:00330-00339": 1,
+    "k:00070-00079": 2,
+    "k:00500-00509": 0,
+    "k:00660-00669": 2,
+    "k:00730-00739": 1,
+    "charm:00110-00119": 0,
+    "charm:00160-00169": 1
+  },
+  "gate_fit_calls": 4,
+  "new_energy_model_fits": 0,
+  "optimizer": "SLSQP, analytic gradients, one start, no retry",
+  "optimizer_ftol": 1e-10,
+  "optimizer_maxiter": 500,
+  "feasibility_tolerance": 1e-08,
+  "per_fit_wall_budget_s": 90,
+  "total_fit_wall_budget_s": 360,
+  "cpu_budget_s": 400,
+  "rss_budget_MiB": 1200,
+  "retained_prediction_budget_bytes": 2000000,
+  "failure_policy": "report failure/nonconvergence; select best training-feasible iterate including exact F7; do not retune or promote failed optimizer",
+  "nonconvex": true,
+  "global_optimality_claimed": false,
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 2026110259,
+  "recovery_upper95_limit": 1.05,
+  "maximum_key_tail50_increase_pp": 2,
+  "no_new_ROOT_RDO_or_production": true,
+  "no_locked_test_evaluation": true
+}

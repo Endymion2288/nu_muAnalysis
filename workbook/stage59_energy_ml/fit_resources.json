@@ -1,0 +1,21 @@
+{
+  "wall_s": 6.361649846658111,
+  "cpu_s": 6.013606816,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 32261453,
+    "wchar": 2248733,
+    "syscr": 454,
+    "syscw": 45,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "gate_fit_calls": 4,
+  "new_energy_model_fits": 0,
+  "optimizer_wall_sum_s": 5.2722029238939285,
+  "optimizer_cpu_sum_s": 5.205797518,
+  "converged_fits": 0,
+  "retained_prediction_bytes": 286402
+}
