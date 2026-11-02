@@ -1,0 +1,192 @@
+{
+  "wall_s": 2.3135247570462525,
+  "cpu_s": 2.209269676,
+  "peak_rss_MiB": 548.87109375,
+  "proc_io_delta": {
+    "rchar": 31996079,
+    "wchar": 14756,
+    "syscr": 476,
+    "syscw": 1,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "formal_fit_calls": 0,
+  "optimizer_updates": 0,
+  "train_E_min_GeV": 50.28500029106621,
+  "train_E_max_GeV": 5734.10001059777,
+  "support": [
+    {
+      "role": "train",
+      "N": 41447,
+      "groups": 91,
+      "missing": 21,
+      "invalid_pz": 0
+    },
+    {
+      "role": "cal",
+      "N": 8440,
+      "groups": 16,
+      "missing": 3,
+      "invalid_pz": 0
+    },
+    {
+      "role": "eval",
+      "N": 14057,
+      "groups": 22,
+      "missing": 7,
+      "invalid_pz": 0
+    }
+  ],
+  "weight_bins": [
+    {
+      "prior": "unit",
+      "low_GeV": 49.99999999999999,
+      "high_GeV": 99.99999999999996,
+      "N": 767,
+      "groups": 79,
+      "weight_sum": 767.0
+    },
+    {
+      "prior": "unit",
+      "low_GeV": 99.99999999999996,
+      "high_GeV": 199.99999999999991,
+      "N": 3564,
+      "groups": 90,
+      "weight_sum": 3564.0
+    },
+    {
+      "prior": "unit",
+      "low_GeV": 199.99999999999991,
+      "high_GeV": 399.99999999999955,
+      "N": 9232,
+      "groups": 90,
+      "weight_sum": 9232.0
+    },
+    {
+      "prior": "unit",
+      "low_GeV": 399.99999999999955,
+      "high_GeV": 799.9999999999991,
+      "N": 13805,
+      "groups": 91,
+      "weight_sum": 13805.0
+    },
+    {
+      "prior": "unit",
+      "low_GeV": 799.9999999999991,
+      "high_GeV": 1599.9999999999984,
+      "N": 10141,
+      "groups": 91,
+      "weight_sum": 10141.0
+    },
+    {
+      "prior": "unit",
+      "low_GeV": 1599.9999999999984,
+      "high_GeV": 3199.9999999999973,
+      "N": 3656,
+      "groups": 91,
+      "weight_sum": 3656.0
+    },
+    {
+      "prior": "unit",
+      "low_GeV": 3199.9999999999973,
+      "high_GeV": 6399.9999999999945,
+      "N": 282,
+      "groups": 54,
+      "weight_sum": 282.0
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 49.99999999999999,
+      "high_GeV": 99.99999999999996,
+      "N": 767,
+      "groups": 79,
+      "weight_sum": 5920.999999999999
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 99.99999999999996,
+      "high_GeV": 199.99999999999991,
+      "N": 3564,
+      "groups": 90,
+      "weight_sum": 5921.000000000001
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 199.99999999999991,
+      "high_GeV": 399.99999999999955,
+      "N": 9232,
+      "groups": 90,
+      "weight_sum": 5920.999999999998
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 399.99999999999955,
+      "high_GeV": 799.9999999999991,
+      "N": 13805,
+      "groups": 91,
+      "weight_sum": 5921.0
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 799.9999999999991,
+      "high_GeV": 1599.9999999999984,
+      "N": 10141,
+      "groups": 91,
+      "weight_sum": 5920.999999999999
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 1599.9999999999984,
+      "high_GeV": 3199.9999999999973,
+      "N": 3656,
+      "groups": 91,
+      "weight_sum": 5921.000000000002
+    },
+    {
+      "prior": "flat",
+      "low_GeV": 3199.9999999999973,
+      "high_GeV": 6399.9999999999945,
+      "N": 282,
+      "groups": 54,
+      "weight_sum": 5920.999999999999
+    }
+  ],
+  "pair_support": [
+    {
+      "training_prior": "unit",
+      "negative_pairs": 82894,
+      "unique_X": 35874,
+      "unique_t": 35819,
+      "accidental_same_row": 0,
+      "positive_weight_sum": 41447.0,
+      "negative_weight_sum": 41447.0,
+      "weight_min": 1.0,
+      "weight_max": 1.0,
+      "Neff": 41447.0
+    },
+    {
+      "training_prior": "flat",
+      "negative_pairs": 82894,
+      "unique_X": 29586,
+      "unique_t": 29595,
+      "accidental_same_row": 10,
+      "positive_weight_sum": 41447.0,
+      "negative_weight_sum": 41447.0,
+      "weight_min": 0.4289025715320536,
+      "weight_max": 20.99645390070922,
+      "Neff": 8621.671252388407
+    }
+  ],
+  "arithmetic_QA_passed": true,
+  "transformed_dimensions": {
+    "full": 125,
+    "mu_only": 3
+  },
+  "batch_backward_wall_s": 0.006057553420153757,
+  "batch_backward_cpu_s": 0.005362716916666639,
+  "scan1024x129_wall_s": 0.3761232760734856,
+  "projected120epoch_backward_s": 88.682582071051,
+  "resource_note": "pilot has backward but zero optimizer updates; extrapolation excludes AdamW/initialization and is not measured fit cost"
+}

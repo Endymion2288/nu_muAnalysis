@@ -1,0 +1,49 @@
+{
+  "wall_s": 2.308179078157991,
+  "cpu_s": 2.243751053,
+  "peak_rss_MiB": 548.87109375,
+  "proc_io_delta": {
+    "rchar": 76118256,
+    "wchar": 0,
+    "syscr": 1500,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "formal_fits_checked": 3,
+  "additional_fits": 0,
+  "train_transforms_exact": true,
+  "protected_source_partitions_preserved": true,
+  "full_missing_N": 42,
+  "eligible_missing_by_role": {
+    "train": 21,
+    "cal": 3,
+    "eval": 7
+  },
+  "inference_and_density_QA_passed": true,
+  "models": [
+    {
+      "model": "A_full_unit",
+      "epochs": 120,
+      "independent_logit_max_abs_error": 2.6283058154774608e-05,
+      "independent_Gaussian_quadrature_max_abs_error": 4.440892098500626e-15,
+      "identities_offsets_missing_preserved": true
+    },
+    {
+      "model": "B_full_flat",
+      "epochs": 120,
+      "independent_logit_max_abs_error": 2.4717853250422195e-05,
+      "independent_Gaussian_quadrature_max_abs_error": 7.105427357601002e-15,
+      "identities_offsets_missing_preserved": true
+    },
+    {
+      "model": "C_mu_unit",
+      "epochs": 120,
+      "independent_logit_max_abs_error": 4.148552731564337e-06,
+      "independent_Gaussian_quadrature_max_abs_error": 4.440892098500626e-15,
+      "identities_offsets_missing_preserved": true
+    }
+  ]
+}

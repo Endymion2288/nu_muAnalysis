@@ -1,0 +1,195 @@
+{
+  "wall_s": 1.8269359059631824,
+  "cpu_s": 1.757513382,
+  "peak_rss_MiB": 556.8046875,
+  "proc_io_delta": {
+    "rchar": 38632333,
+    "wchar": 2403,
+    "syscr": 601,
+    "syscw": 1,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "additional_fits": 0,
+  "global_reliability": [
+    {
+      "role": "cal",
+      "model": "A_full_unit",
+      "threshold_GeV": 100,
+      "predicted_probability": 0.016375349834561348,
+      "observed_fraction": 0.017772511848341232
+    },
+    {
+      "role": "cal",
+      "model": "A_full_unit",
+      "threshold_GeV": 200,
+      "predicted_probability": 0.09797598421573639,
+      "observed_fraction": 0.09964454976303318
+    },
+    {
+      "role": "cal",
+      "model": "B_full_flat",
+      "threshold_GeV": 100,
+      "predicted_probability": 0.016997741535305977,
+      "observed_fraction": 0.017772511848341232
+    },
+    {
+      "role": "cal",
+      "model": "B_full_flat",
+      "threshold_GeV": 200,
+      "predicted_probability": 0.09778490662574768,
+      "observed_fraction": 0.09964454976303318
+    },
+    {
+      "role": "cal",
+      "model": "C_mu_unit",
+      "threshold_GeV": 100,
+      "predicted_probability": 0.013899225741624832,
+      "observed_fraction": 0.017772511848341232
+    },
+    {
+      "role": "cal",
+      "model": "C_mu_unit",
+      "threshold_GeV": 200,
+      "predicted_probability": 0.08990845829248428,
+      "observed_fraction": 0.09964454976303318
+    },
+    {
+      "role": "eval",
+      "model": "A_full_unit",
+      "threshold_GeV": 100,
+      "predicted_probability": 0.013575732707977295,
+      "observed_fraction": 0.01479689834246283
+    },
+    {
+      "role": "eval",
+      "model": "A_full_unit",
+      "threshold_GeV": 200,
+      "predicted_probability": 0.0792558342218399,
+      "observed_fraction": 0.07924877285338265
+    },
+    {
+      "role": "eval",
+      "model": "B_full_flat",
+      "threshold_GeV": 100,
+      "predicted_probability": 0.014011694118380547,
+      "observed_fraction": 0.01479689834246283
+    },
+    {
+      "role": "eval",
+      "model": "B_full_flat",
+      "threshold_GeV": 200,
+      "predicted_probability": 0.07943297177553177,
+      "observed_fraction": 0.07924877285338265
+    },
+    {
+      "role": "eval",
+      "model": "C_mu_unit",
+      "threshold_GeV": 100,
+      "predicted_probability": 0.011753614991903305,
+      "observed_fraction": 0.01479689834246283
+    },
+    {
+      "role": "eval",
+      "model": "C_mu_unit",
+      "threshold_GeV": 200,
+      "predicted_probability": 0.07709009945392609,
+      "observed_fraction": 0.07924877285338265
+    }
+  ],
+  "source_stability": [
+    {
+      "sample": "cal_development",
+      "stratum": "all",
+      "groups": 16,
+      "positive_logscore_groups": 16,
+      "positive_CRPS_groups": 16,
+      "logscore_gain_min": 0.2562702000141144,
+      "logscore_gain_max": 0.41795265674591064
+    },
+    {
+      "sample": "cal_development",
+      "stratum": "E50_100",
+      "groups": 14,
+      "positive_logscore_groups": 14,
+      "positive_CRPS_groups": 14,
+      "logscore_gain_min": 0.005486845970153809,
+      "logscore_gain_max": 1.107548762112856
+    },
+    {
+      "sample": "cal_development",
+      "stratum": "E100_200",
+      "groups": 16,
+      "positive_logscore_groups": 15,
+      "positive_CRPS_groups": 16,
+      "logscore_gain_min": -0.06630444526672363,
+      "logscore_gain_max": 0.6328117549419403
+    },
+    {
+      "sample": "cal_development",
+      "stratum": "pz50_100",
+      "groups": 16,
+      "positive_logscore_groups": 16,
+      "positive_CRPS_groups": 16,
+      "logscore_gain_min": 0.16208720207214355,
+      "logscore_gain_max": 0.9978940486907959
+    },
+    {
+      "sample": "cal_development",
+      "stratum": "high_y",
+      "groups": 16,
+      "positive_logscore_groups": 15,
+      "positive_CRPS_groups": 16,
+      "logscore_gain_min": -0.8365644216537476,
+      "logscore_gain_max": 1.5719730854034424
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "all",
+      "groups": 22,
+      "positive_logscore_groups": 22,
+      "positive_CRPS_groups": 22,
+      "logscore_gain_min": 0.2287874072790146,
+      "logscore_gain_max": 0.3939991444349289
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "E50_100",
+      "groups": 19,
+      "positive_logscore_groups": 18,
+      "positive_CRPS_groups": 19,
+      "logscore_gain_min": -0.046165880747139454,
+      "logscore_gain_max": 1.9382104277610779
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "E100_200",
+      "groups": 22,
+      "positive_logscore_groups": 20,
+      "positive_CRPS_groups": 22,
+      "logscore_gain_min": -0.059470996260643005,
+      "logscore_gain_max": 0.6271179169416428
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "pz50_100",
+      "groups": 22,
+      "positive_logscore_groups": 21,
+      "positive_CRPS_groups": 22,
+      "logscore_gain_min": -0.4375631809234619,
+      "logscore_gain_max": 1.1309072971343994
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "high_y",
+      "groups": 22,
+      "positive_logscore_groups": 22,
+      "positive_CRPS_groups": 22,
+      "logscore_gain_min": 0.449329137802124,
+      "logscore_gain_max": 1.9471068382263184
+    }
+  ],
+  "note": "post-fit diagnostics; all events retained; non-tail scores never used for acceptance"
+}
