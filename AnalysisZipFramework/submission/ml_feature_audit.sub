@@ -1,0 +1,17 @@
+universe = vanilla
+initialdir = /afs/cern.ch/user/x/xcheng/nu_mu_stage56
+executable = /bin/bash
+transfer_executable = False
+arguments = /afs/cern.ch/user/x/xcheng/nu_mu_stage56/worker_v1.sh $(mode) $(batch)
+transfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-feature-audit-stage56.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 1500MB
+request_disk = 300MB
++JobFlavour = "microcentury"
++NuMuStage = "energy-ml-feature-audit-stage56"
+log = /afs/cern.ch/user/x/xcheng/nu_mu_stage56/logs/$(mode).$(ClusterId).log
+output = /afs/cern.ch/user/x/xcheng/nu_mu_stage56/logs/$(mode).$(ClusterId).$(ProcId).out
+error = /afs/cern.ch/user/x/xcheng/nu_mu_stage56/logs/$(mode).$(ClusterId).$(ProcId).err
+queue batch from $(batches)

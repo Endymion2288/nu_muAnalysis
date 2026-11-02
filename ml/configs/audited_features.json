@@ -1,0 +1,723 @@
+{
+  "stage": 56,
+  "version": "F7_pz0_raw_v1",
+  "frozen_utc": "2026-11-02T17:02:57.710894+00:00",
+  "starting_commit": "8c35b5c",
+  "features": [
+    "ML_mu_pz0_GeV",
+    "ML_mu_px0_GeV",
+    "ML_mu_py0_GeV",
+    "LeadTrack_charge",
+    "LeadTrack_Theta",
+    "LeadTrack_Chi2_NDF",
+    "LeadTrack_nDoF",
+    "LeadTrack_nLayers",
+    "LeadTrack_r_atMaxRadius",
+    "LeadTrack_rVetoNu",
+    "ML_mu_x0_mm",
+    "ML_mu_y0_mm",
+    "ML_mu_z0_mm",
+    "ML_mu_X_atVetoNu_mm",
+    "ML_mu_Y_atVetoNu_mm",
+    "ML_mu_X_atCalo_mm",
+    "ML_mu_Y_atCalo_mm",
+    "nClusters0",
+    "nClusters1",
+    "nClusters2",
+    "nClusters3",
+    "SpacePoints",
+    "TrackSegments",
+    "longTracks",
+    "VetoNu0_raw_charge",
+    "VetoNu1_raw_charge",
+    "Veto10_raw_charge",
+    "Veto20_raw_charge",
+    "Veto21_raw_charge",
+    "Timing0_raw_charge",
+    "Timing1_raw_charge",
+    "Timing2_raw_charge",
+    "Timing3_raw_charge",
+    "Preshower0_raw_charge",
+    "Preshower1_raw_charge",
+    "VetoNu0_reduced_charge",
+    "VetoNu1_reduced_charge",
+    "ML_calo0_E_EM_GeV",
+    "ML_calo1_E_EM_GeV",
+    "ML_calo2_E_EM_GeV",
+    "ML_calo3_E_EM_GeV",
+    "ML_calo_total_E_EM_GeV",
+    "ML_sp_mean_x_mm",
+    "ML_sp_rms_x_mm",
+    "ML_sp_mean_y_mm",
+    "ML_sp_rms_y_mm",
+    "ML_track_px1_GeV",
+    "ML_track_py1_GeV",
+    "ML_track_x1_mm",
+    "ML_track_y1_mm",
+    "ML_track_z1_mm",
+    "ML_track_qOverP0_GeVinv",
+    "ML_track_qOverP1_GeVinv",
+    "ML_track_span_z_mm",
+    "ML_track_bend_x",
+    "ML_track_bend_y",
+    "ML_track_chord_slope_x",
+    "ML_track_chord_slope_y",
+    "ML_track_module_eta0",
+    "ML_track_module_phi0",
+    "ML_track_z_atMaxRadius_mm",
+    "ML_event_SCT_error"
+  ],
+  "rules": {
+    "ML_mu_pz0_GeV": {
+      "domain": "positive",
+      "sentinels": []
+    },
+    "ML_mu_px0_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_mu_py0_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "LeadTrack_charge": {
+      "domain": "charge_sign",
+      "sentinels": []
+    },
+    "LeadTrack_Theta": {
+      "domain": "nonnegative",
+      "sentinels": []
+    },
+    "LeadTrack_Chi2_NDF": {
+      "domain": "nonnegative",
+      "sentinels": []
+    },
+    "LeadTrack_nDoF": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "LeadTrack_nLayers": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "LeadTrack_r_atMaxRadius": {
+      "domain": "nonnegative",
+      "sentinels": []
+    },
+    "LeadTrack_rVetoNu": {
+      "domain": "nonnegative",
+      "sentinels": []
+    },
+    "ML_mu_x0_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_mu_y0_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_mu_z0_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_mu_X_atVetoNu_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_mu_Y_atVetoNu_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_mu_X_atCalo_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_mu_Y_atCalo_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "nClusters0": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "nClusters1": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "nClusters2": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "nClusters3": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "SpacePoints": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "TrackSegments": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "longTracks": {
+      "domain": "count",
+      "sentinels": []
+    },
+    "VetoNu0_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "VetoNu1_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Veto10_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Veto20_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Veto21_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Timing0_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Timing1_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Timing2_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Timing3_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Preshower0_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "Preshower1_raw_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "VetoNu0_reduced_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "VetoNu1_reduced_charge": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_calo0_E_EM_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_calo1_E_EM_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_calo2_E_EM_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_calo3_E_EM_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_calo_total_E_EM_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_sp_mean_x_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_sp_rms_x_mm": {
+      "domain": "nonnegative",
+      "sentinels": []
+    },
+    "ML_sp_mean_y_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_sp_rms_y_mm": {
+      "domain": "nonnegative",
+      "sentinels": []
+    },
+    "ML_track_px1_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_py1_GeV": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_x1_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_track_y1_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_track_z1_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_track_qOverP0_GeVinv": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_qOverP1_GeVinv": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_span_z_mm": {
+      "domain": "positive",
+      "sentinels": []
+    },
+    "ML_track_bend_x": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_bend_y": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_chord_slope_x": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_chord_slope_y": {
+      "domain": "signed",
+      "sentinels": []
+    },
+    "ML_track_module_eta0": {
+      "domain": "signed",
+      "sentinels": [],
+      "allowed_values": [
+        -1,
+        1
+      ]
+    },
+    "ML_track_module_phi0": {
+      "domain": "count",
+      "sentinels": [],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "ML_track_z_atMaxRadius_mm": {
+      "domain": "signed",
+      "sentinels": [
+        999999
+      ]
+    },
+    "ML_event_SCT_error": {
+      "domain": "boolean",
+      "sentinels": []
+    }
+  },
+  "mapping": [
+    {
+      "old_feature": "ML_mu_p_GeV",
+      "new_feature": "ML_mu_pz0_GeV",
+      "action": "replace"
+    },
+    {
+      "old_feature": "ML_mu_px0_GeV",
+      "new_feature": "ML_mu_px0_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_py0_GeV",
+      "new_feature": "ML_mu_py0_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_charge",
+      "new_feature": "LeadTrack_charge",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_Theta",
+      "new_feature": "LeadTrack_Theta",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_Chi2_NDF",
+      "new_feature": "LeadTrack_Chi2_NDF",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_nDoF",
+      "new_feature": "LeadTrack_nDoF",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_nLayers",
+      "new_feature": "LeadTrack_nLayers",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_r_atMaxRadius",
+      "new_feature": "LeadTrack_r_atMaxRadius",
+      "action": "retain"
+    },
+    {
+      "old_feature": "LeadTrack_rVetoNu",
+      "new_feature": "LeadTrack_rVetoNu",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_x0_mm",
+      "new_feature": "ML_mu_x0_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_y0_mm",
+      "new_feature": "ML_mu_y0_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_z0_mm",
+      "new_feature": "ML_mu_z0_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_X_atVetoNu_mm",
+      "new_feature": "ML_mu_X_atVetoNu_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_Y_atVetoNu_mm",
+      "new_feature": "ML_mu_Y_atVetoNu_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_X_atCalo_mm",
+      "new_feature": "ML_mu_X_atCalo_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_mu_Y_atCalo_mm",
+      "new_feature": "ML_mu_Y_atCalo_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "nClusters0",
+      "new_feature": "nClusters0",
+      "action": "retain"
+    },
+    {
+      "old_feature": "nClusters1",
+      "new_feature": "nClusters1",
+      "action": "retain"
+    },
+    {
+      "old_feature": "nClusters2",
+      "new_feature": "nClusters2",
+      "action": "retain"
+    },
+    {
+      "old_feature": "nClusters3",
+      "new_feature": "nClusters3",
+      "action": "retain"
+    },
+    {
+      "old_feature": "SpacePoints",
+      "new_feature": "SpacePoints",
+      "action": "retain"
+    },
+    {
+      "old_feature": "TrackSegments",
+      "new_feature": "TrackSegments",
+      "action": "retain"
+    },
+    {
+      "old_feature": "longTracks",
+      "new_feature": "longTracks",
+      "action": "retain"
+    },
+    {
+      "old_feature": "VetoNu0_charge",
+      "new_feature": "VetoNu0_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "VetoNu1_charge",
+      "new_feature": "VetoNu1_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Veto10_charge",
+      "new_feature": "Veto10_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Veto20_charge",
+      "new_feature": "Veto20_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Veto21_charge",
+      "new_feature": "Veto21_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Timing0_charge",
+      "new_feature": "Timing0_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Timing1_charge",
+      "new_feature": "Timing1_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Timing2_charge",
+      "new_feature": "Timing2_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Timing3_charge",
+      "new_feature": "Timing3_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Preshower0_charge",
+      "new_feature": "Preshower0_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "Preshower1_charge",
+      "new_feature": "Preshower1_raw_charge",
+      "action": "replace"
+    },
+    {
+      "old_feature": "VetoNu0_reduced_charge",
+      "new_feature": "VetoNu0_reduced_charge",
+      "action": "retain"
+    },
+    {
+      "old_feature": "VetoNu1_reduced_charge",
+      "new_feature": "VetoNu1_reduced_charge",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_calo0_E_EM_GeV",
+      "new_feature": "ML_calo0_E_EM_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_calo1_E_EM_GeV",
+      "new_feature": "ML_calo1_E_EM_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_calo2_E_EM_GeV",
+      "new_feature": "ML_calo2_E_EM_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_calo3_E_EM_GeV",
+      "new_feature": "ML_calo3_E_EM_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_calo_total_E_EM_GeV",
+      "new_feature": "ML_calo_total_E_EM_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_sp_mean_x_mm",
+      "new_feature": "ML_sp_mean_x_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_sp_rms_x_mm",
+      "new_feature": "ML_sp_rms_x_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_sp_mean_y_mm",
+      "new_feature": "ML_sp_mean_y_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_sp_rms_y_mm",
+      "new_feature": "ML_sp_rms_y_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_px1_GeV",
+      "new_feature": "ML_track_px1_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_py1_GeV",
+      "new_feature": "ML_track_py1_GeV",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_x1_mm",
+      "new_feature": "ML_track_x1_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_y1_mm",
+      "new_feature": "ML_track_y1_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_z1_mm",
+      "new_feature": "ML_track_z1_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_qOverP0_GeVinv",
+      "new_feature": "ML_track_qOverP0_GeVinv",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_qOverP1_GeVinv",
+      "new_feature": "ML_track_qOverP1_GeVinv",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_span_z_mm",
+      "new_feature": "ML_track_span_z_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_bend_x",
+      "new_feature": "ML_track_bend_x",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_bend_y",
+      "new_feature": "ML_track_bend_y",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_chord_slope_x",
+      "new_feature": "ML_track_chord_slope_x",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_chord_slope_y",
+      "new_feature": "ML_track_chord_slope_y",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_module_eta0",
+      "new_feature": "ML_track_module_eta0",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_module_phi0",
+      "new_feature": "ML_track_module_phi0",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_track_z_atMaxRadius_mm",
+      "new_feature": "ML_track_z_atMaxRadius_mm",
+      "action": "retain"
+    },
+    {
+      "old_feature": "ML_event_SCT_error",
+      "new_feature": "ML_event_SCT_error",
+      "action": "retain"
+    }
+  ],
+  "removed_features": [
+    "ML_track_p1_GeV",
+    "ML_track_pz1_GeV",
+    "ML_track_log_p1_over_p0"
+  ],
+  "replaced_scalar": "ML_mu_p_GeV -> ML_mu_pz0_GeV",
+  "retained_momentum_parameterizations": "px/py, both q/p and bends retained by explicit user clarification; only linear momentum magnitude/longitudinal scalar is pz0",
+  "scintillators": [
+    "VetoNu0",
+    "VetoNu1",
+    "Veto10",
+    "Veto20",
+    "Veto21",
+    "Timing0",
+    "Timing1",
+    "Timing2",
+    "Timing3",
+    "Preshower0",
+    "Preshower1"
+  ],
+  "reduced_charge": "retain native raw-waveform time-window integrals, not fitted charge; baseline/missing/invalid waveform statuses mask them",
+  "raw_invalid_status_mask": 392,
+  "raw_fit_failure_masked": false,
+  "raw_overflow": "retain measured clipped raw integral; saturation is diagnostic, not an uncensored true charge",
+  "calo_invalid_status_mask": 444,
+  "negative_readout": "signed baseline-subtracted raw/reduced charges and EM energies are preserved; no blanket negative/sentinel replacement",
+  "unknown_marker": "audit -999/-9999 and unit-scaled occurrences; signed variables are not masked absent source or status evidence",
+  "selection": "same stage55 nominal selected identities and protections, pz>50; no quality-based event deletion",
+  "source_scope": "254 existing nominal PHYS; no new reconstruction and no attempt to fill raw charges for discarded alternative PHYS",
+  "maximum_formal_fits": 3,
+  "seeds": [
+    2026110255,
+    2026110256,
+    2026110257
+  ],
+  "rounds": 400,
+  "xgboost": {
+    "max_depth": 5,
+    "eta": 0.04,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 20,
+    "reg_lambda": 10,
+    "tree_method": "hist",
+    "nthread": 1,
+    "objective": "reg:squarederror"
+  },
+  "target": "direct log(E_nu/GeV)",
+  "calibration": "one mean log offset on same 8440 stage55 nominal calibration events",
+  "comparison": "reuse frozen stage55 nominal50; joint feature correction, no attribution to any single edit",
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 2026110256,
+  "pre_fit_policy_amendment": "Before any fit, validate module eta/phi against actual d32b0ff3 IdDictTracker.xml; read-phase workers only copy raw scalars and do not apply feature rules.",
+  "read_budget_requested_bytes": 1000000000,
+  "new_reconstruction_jobs": 0
+}

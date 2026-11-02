@@ -1,0 +1,88 @@
+{
+  "formal_fits": 3,
+  "feature_version": "F7_pz0_raw_v1",
+  "features": 62,
+  "offset_log": 0.004602409250700414,
+  "fit_wall_sum_s": 13.40771674401185,
+  "training": {
+    "feature_version": "F7_pz0_raw_v1",
+    "fits": [
+      {
+        "seed": 2026110255,
+        "train_N": 41447,
+        "cal_N": 8440,
+        "eval_N": 14057,
+        "features": 62,
+        "rounds": 400,
+        "fit_wall_s": 5.692450450005708,
+        "model_reload_exact": true,
+        "params": {
+          "max_depth": 5,
+          "eta": 0.04,
+          "subsample": 0.8,
+          "colsample_bytree": 1.0,
+          "min_child_weight": 20,
+          "reg_lambda": 10,
+          "tree_method": "hist",
+          "nthread": 1,
+          "objective": "reg:squarederror",
+          "seed": 2026110255
+        }
+      },
+      {
+        "seed": 2026110256,
+        "train_N": 41447,
+        "cal_N": 8440,
+        "eval_N": 14057,
+        "features": 62,
+        "rounds": 400,
+        "fit_wall_s": 3.9114076270052465,
+        "model_reload_exact": true,
+        "params": {
+          "max_depth": 5,
+          "eta": 0.04,
+          "subsample": 0.8,
+          "colsample_bytree": 1.0,
+          "min_child_weight": 20,
+          "reg_lambda": 10,
+          "tree_method": "hist",
+          "nthread": 1,
+          "objective": "reg:squarederror",
+          "seed": 2026110256
+        }
+      },
+      {
+        "seed": 2026110257,
+        "train_N": 41447,
+        "cal_N": 8440,
+        "eval_N": 14057,
+        "features": 62,
+        "rounds": 400,
+        "fit_wall_s": 3.8038586670008954,
+        "model_reload_exact": true,
+        "params": {
+          "max_depth": 5,
+          "eta": 0.04,
+          "subsample": 0.8,
+          "colsample_bytree": 1.0,
+          "min_child_weight": 20,
+          "reg_lambda": 10,
+          "tree_method": "hist",
+          "nthread": 1,
+          "objective": "reg:squarederror",
+          "seed": 2026110257
+        }
+      }
+    ],
+    "offset_log": 0.004602409250700414,
+    "wall_s": 14.866059537002002,
+    "cpu_s": 14.706604919000002,
+    "peak_rss_MiB": 384.765625
+  },
+  "cal_N": 8440,
+  "eval_N": 14057,
+  "interval_scope": "fixed models and common calibration; component-stratified 22-source-group bootstrap, no model/calibration/detector uncertainty or multiplicity correction",
+  "wall_s": 5.035782926948741,
+  "cpu_s": 4.316373281,
+  "rss_MiB": 539.6796875
+}

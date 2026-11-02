@@ -1,0 +1,15 @@
+{
+  "cases": 6,
+  "pilot_N": 323,
+  "features": 62,
+  "events_with_missing": 1,
+  "checks": [
+    "typed negative and scaled momentum sentinels",
+    "uint32 wrap before/after float32",
+    "signed charge -1 retained",
+    "unknown signed markers retained",
+    "invalid geometry masks derived slope",
+    "fit failure keeps raw charge",
+    "missing waveform masks raw charge"
+  ]
+}

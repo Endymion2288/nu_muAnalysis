@@ -1,0 +1,32 @@
+{
+  "formal_fits": 3,
+  "seed_models": [
+    {
+      "seed": 2026110255,
+      "feature_names_and_policy_exact": true,
+      "calibration_prediction_exact": true,
+      "evaluation_prediction_exact": true
+    },
+    {
+      "seed": 2026110256,
+      "feature_names_and_policy_exact": true,
+      "calibration_prediction_exact": true,
+      "evaluation_prediction_exact": true
+    },
+    {
+      "seed": 2026110257,
+      "feature_names_and_policy_exact": true,
+      "calibration_prediction_exact": true,
+      "evaluation_prediction_exact": true
+    }
+  ],
+  "typed_policy_checks": 7,
+  "dependency_checks": 5,
+  "cohort_and_pz0_exact": true,
+  "calibration_offset_absolute_difference": 0.0,
+  "N": 81313,
+  "events_with_missing": 42,
+  "wall_s": 1.2281163278967142,
+  "cpu_s": 1.1776947649999998,
+  "rss_MiB": 545.91796875
+}

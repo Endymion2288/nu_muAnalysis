@@ -1,20 +1,21 @@
-# 下一轮执行 Prompt：stage55后的低能条件诊断，并保留stage54 data控制
+# 下一轮执行 Prompt：以stage56 F7为基准的低能条件诊断
 
-先读AGENTS.md、[stage55报告](../workbook/2026-11-02_stage55_low-energy-flux-training.md)、修订路线§36、`ml/configs/low_energy.json`及`workbook/stage55_energy_ml/{support,metrics,paired,raw_metrics}.tsv`。用户优先关心真实低能不如传统方法，以及50–100 GeV和替代flux。已完成15正式fit，不重复训练或重建；stage54未提交文件保持原状，不误当stage55成果。
+先读AGENTS.md、[stage56变量报告](../workbook/2026-11-02_stage56_model-feature-validity.md)、[F7输入契约](nu_mu_energy_ml_features.md)、修订路线§37、`ml/configs/audited_features.json`和stage55低能报告。用户最终约定：**线性动量模长/纵向量只用pz0，px/py、q/p和弯折允许；不用p0/p1/pz1及log比；11闪烁体用raw_charge。** 不从旧F6配置恢复这些列。stage54未提交文件保持原状。
 
 ## 0. 当前低能优先任务
 
-已测：门槛受控100→50将true50–100 log-RMSE从.558448降到.318419；混训.316318、残差.291938，仍差于传统.145526。true100–200残差.267378/传统.226855。替代flux增加139低能训练例，unit混训50–100收益+.660% [−1.335,3.034]，不足以解决；matched先验+1.851% [.433,3.642]也很小。不可说低能已修复或已经证明只有缺数据。
+F7已完成3固定fit，nominal全体/true50–100/100–200 log-RMSE=.296363/.312816/.265014，pz0/.8为.568069/.145487/.226876。旧nominal50为.296059/.318419/.264299，整体接近，低E仍不如传统。stage55扩样的微小收益为历史F6结果，不能冒充F7替代flux确认。
 
-reco p50–100的682例只有208个true50–100，其余含高E/high-y；混训总体降低62.072%，不能用这个数字替代trueE指标，不能把全部低p切回传统。真低E的206/208 leading确认primary，median y=.0643，μ产生p复合R68=2.172%，不支持将巨大ν上偏直接归为低pμ核心失效。residual低E有益但全样本退化，不能truth-gate选赢家。
+补读254已有nominal PHYS后，81,313选中、train41,447/cal8,440/eval14,057，与旧nominal50同支持。Veto10/20/21拟合外推可超raw100倍，不应恢复为输入；但raw饱和不是未饱和真电荷。42例calo fit失败的有限数已置缺失并传播总和，全部事件保留。
+raw/reduced/EM能量、px/py、q/p、坐标可为负；charge与module eta的-1合法。已知d32b0ff3 raw为有符号整窗积分、data d0b1b2dd旧源码只积正样本，data/MC尚未闭合。VetoNu reduced是raw时间窗积分，保留。逐变量规则、状态mask及派生传播必须经`audited_features.build`，不能只调用matrix而绕过状态。
 
 下一轮首先做一次**0新fit、0新RDO、0谱toy**的有界条件诊断：
 
-1. 输入`ntuples/energy_ml_stage55/dataset.npz`、`predictions.npz`及`seed_predictions.npz`、保留的15模型和`training_metadata.json`。shards已逐301源验证归档，不重建它们；历史F6只作已开发参照。cal8,440、nominal/替代eval14,057/4,876，精确四动量保护排除已写入cache，不撤销。完整谱系独立仍未证明。
-2. 只用train冻结少量p/活动格，活动量沿用已有部署读出（cluster/SP、Timing、calo EM）；不得根据validation残差或trueE调边界，不使用truth作部署gate，不拓展大量变量/阈值网格。可先在train独立来源中定义边界，再固定评价；保留缺失读出者与尾。
-3. 在相同读出格内量化true50–100、100–200与≥200/high-y/未确认的比例、已有传统/mixture/residual风险、bias/R68/尾、来源支持及区间。明确低活动剩余上偏、连续谱/先验与读出混合的可辨识边界；不能以少数离群者结束低能分支，不能宣称观测信息严格不可恢复。
-4. 验收为给出一个可核查结论：何种data可定义条件有机会保留μ低E精度，同时保留高y收益；或为何现有读出在相同条件内无法稳定区分。新训练前再冻结一次来源内cross-fitting的μ/残差收缩方案、fit预算与低E对传统/高E-highy代价的共同验收。此诊断阶段不追加fit、不立即换架构或扩无边界生产；已暴露validation不能再次称blind。
-5. 读取紧凑cache，小规模交互验证计wall/CPU/RSS；若扩到批量ROOT必须Condor并先小样本测试。写中文workbook报告、实测表图与明确下一任务，再作一次Conventional Commit，不推送。低能MC结果不取代data响应、interaction/FSI、材料或归一化谱收益。
+1. 直接调用`ml/audited_features.load()`得到stage55身份/真值/保护集标记、stage56 raw/status补充和当前62列矩阵。新预测为`ml/artifacts/stage56/predictions.npz`，3模型目录为2026110255/56/57。shards和transport已去重，不恢复重复缓存。只在完整nominal支持上做F7条件研究，alternative缺当前raw补充，不混用fit充当raw。历史F6只作历史参照。
+2. 用train冻结少量pz0/活动格，活动量从当前raw Timing、counts和已清理calo选取；不得用validation残差、trueE或被测结果挑边界。不扫描大量变量/阈值。负raw/缺失者独立保留，不能以取log等方式悄悄删去；规则只依赖部署读出。
+3. 在相同读出格内量化true50–100、100–200与≥200/high-y/未确认的混合、已有pz0/.8及F7风险、bias/R68/尾、来源支持和区间；保留42缺失事件。reco pz50–100的682例只有208个true50–100，不能把该层约62%总风险改善当低真实E已修复。
+4. 验收为判断何种data可定义条件有机会保留μ低E精度并保住高y收益，或量化现有读出的混合边界。新的μ/残差收缩实验须在诊断后单独冻结来源内cross-fitting、fit预算及低E与高E代价共同验收。此阶段不追加fit、不在已暴露validation调gate，不恢复架构或无边界生产扫描；现有生产不是新blind。
+5. 读取紧凑cache测wall/CPU/RSS；批量ROOT必须Condor并先小测试。写中文workbook含实际数值/单位/输入/配置/命令/资源、物理与程序原因和具体下一任务，再一次Conventional Commit，不推送。用户新的输入约定优先于历史路线的旧变量，不以MC清理替代data、interaction/FSI、材料或归一化谱收益。
 
 ## 保留的stage54 data占据支线
 
