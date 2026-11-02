@@ -1,0 +1,41 @@
+{
+  "records": [
+    {
+      "fold": 0,
+      "model_columns": 65,
+      "rounds": 400,
+      "offset_exact": true,
+      "raw_float32_exact": true,
+      "energy_max_relative_difference": 2.220446049250313e-16,
+      "train_N": 4762,
+      "calibration_N": 4578,
+      "evaluation_N": 4969
+    },
+    {
+      "fold": 1,
+      "model_columns": 65,
+      "rounds": 400,
+      "offset_exact": true,
+      "raw_float32_exact": true,
+      "energy_max_relative_difference": 2.220446049250313e-16,
+      "train_N": 4578,
+      "calibration_N": 4969,
+      "evaluation_N": 4762
+    },
+    {
+      "fold": 2,
+      "model_columns": 65,
+      "rounds": 400,
+      "offset_exact": true,
+      "raw_float32_exact": true,
+      "energy_max_relative_difference": 2.220446049250313e-16,
+      "train_N": 4969,
+      "calibration_N": 4762,
+      "evaluation_N": 4578
+    }
+  ],
+  "new_baseline_fits": 0,
+  "wall_s": 0.35857249796390533,
+  "cpu_s": 0.307230812,
+  "peak_rss_MiB": 184.7109375
+}

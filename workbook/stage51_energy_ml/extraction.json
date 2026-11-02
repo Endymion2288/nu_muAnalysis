@@ -1,0 +1,4627 @@
+{
+  "events": 14309,
+  "sources": 81,
+  "all_events_seen_once": true,
+  "identity_failures": 0,
+  "bytes_read": 181206392,
+  "wall_sum_s": 119.83227859593171,
+  "cpu_sum_s": 87.074813519,
+  "peak_rss_MiB": 170.71875,
+  "angle_features": 46,
+  "convergence_features": 24,
+  "angle_finite_N": [
+    4401,
+    4401,
+    4401,
+    4401,
+    4401,
+    4401,
+    4401,
+    4401,
+    4401,
+    4401,
+    11512,
+    11512,
+    11512,
+    11512,
+    11512,
+    11512,
+    11512,
+    11512,
+    11512,
+    11512,
+    13481,
+    13481,
+    13481,
+    13481,
+    13481,
+    13481,
+    13481,
+    13481,
+    13481,
+    13481,
+    13954,
+    13954,
+    13954,
+    13954,
+    13954,
+    13954,
+    13954,
+    13954,
+    13954,
+    13954,
+    4401,
+    4401,
+    11512,
+    11512,
+    13954,
+    13954
+  ],
+  "convergence_finite_N": [
+    2330,
+    2330,
+    2330,
+    2330,
+    2330,
+    2330,
+    4324,
+    4324,
+    4324,
+    4324,
+    4324,
+    4324,
+    3902,
+    3902,
+    3902,
+    3902,
+    3902,
+    3902,
+    2830,
+    2830,
+    2830,
+    2830,
+    2830,
+    2830
+  ],
+  "raw_segments_N": 70613,
+  "ghost_segments_N": 70402,
+  "valid_unique_segments_N": 70402,
+  "raw_ghost_multiset_identical_N": 14168,
+  "exact_duplicate_N": 0,
+  "shuffled_pairings_N": 27014,
+  "collections": {
+    "TrackSegment_": {
+      "segments_N": 70613,
+      "valid_N": 70613,
+      "ndof0_N": 12417,
+      "valid_ndof0_N": 12417,
+      "negative_ndof_N": 0,
+      "negative_chi2_N": 6539,
+      "nonpositive_pz_N": 0,
+      "nonfinite_N": 0
+    },
+    "GhostBustedTrackSegment_": {
+      "segments_N": 70402,
+      "valid_N": 70402,
+      "ndof0_N": 12374,
+      "valid_ndof0_N": 12374,
+      "negative_ndof_N": 0,
+      "negative_chi2_N": 6515,
+      "nonpositive_pz_N": 0,
+      "nonfinite_N": 0
+    }
+  },
+  "collection_minimum_chi2": {
+    "TrackSegment_": -2.0902245978504652e-07,
+    "GhostBustedTrackSegment_": -2.0902245978504652e-07
+  },
+  "collection_maxima": {
+    "TrackSegment_": {
+      "maximum_station_distance_mm": 9.765625009094947e-05,
+      "maximum_dummy_p_deviation_MeV": 0.005491609146702103
+    },
+    "GhostBustedTrackSegment_": {
+      "maximum_station_distance_mm": 9.765625009094947e-05,
+      "maximum_dummy_p_deviation_MeV": 0.005491609146702103
+    }
+  },
+  "missing_and_center_dispersion_preserved": true,
+  "extraction_records": [
+    {
+      "stage": 51,
+      "index": 0,
+      "events": 218,
+      "raw_entries": 10000,
+      "entry_range": [
+        68,
+        9995
+      ],
+      "decoded_entries": 9927,
+      "bytes_read": 2328287,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00000-00009-s0015-PHYS.root",
+      "wall_s": 1.5850260559964227,
+      "cpu_s": 1.0048079419999998,
+      "peak_rss_MiB": 112.39453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        218,
+        218,
+        218
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 998,
+          "valid_N": 998,
+          "ndof0_N": 173,
+          "valid_ndof0_N": 173,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.640004267590484e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0044693802774418145
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 998,
+          "valid_N": 998,
+          "ndof0_N": 173,
+          "valid_ndof0_N": 173,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.640004267590484e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0044693802774418145
+        }
+      },
+      "raw_ghost_multiset_identical_N": 218,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 342
+    },
+    {
+      "stage": 51,
+      "index": 1,
+      "events": 203,
+      "raw_entries": 10000,
+      "entry_range": [
+        80,
+        9869
+      ],
+      "decoded_entries": 9789,
+      "bytes_read": 2301275,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00010-00019-s0015-PHYS.root",
+      "wall_s": 1.3410757199962973,
+      "cpu_s": 0.9004686400000002,
+      "peak_rss_MiB": 126.89453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        203,
+        203,
+        203
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 983,
+          "valid_N": 983,
+          "ndof0_N": 162,
+          "valid_ndof0_N": 162,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 91,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960468030252741e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004194038643618114
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 979,
+          "valid_N": 979,
+          "ndof0_N": 161,
+          "valid_ndof0_N": 161,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 91,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960468030252741e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004194038643618114
+        }
+      },
+      "raw_ghost_multiset_identical_N": 200,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 342
+    },
+    {
+      "stage": 51,
+      "index": 2,
+      "events": 182,
+      "raw_entries": 10000,
+      "entry_range": [
+        166,
+        9988
+      ],
+      "decoded_entries": 9822,
+      "bytes_read": 2290379,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00020-00029-s0015-PHYS.root",
+      "wall_s": 1.0879712819951237,
+      "cpu_s": 0.894088027,
+      "peak_rss_MiB": 137.89453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        182,
+        182,
+        182
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 921,
+          "valid_N": 921,
+          "ndof0_N": 158,
+          "valid_ndof0_N": 158,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.062464770664519e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004002765112090856
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 921,
+          "valid_N": 921,
+          "ndof0_N": 158,
+          "valid_ndof0_N": 158,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.062464770664519e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004002765112090856
+        }
+      },
+      "raw_ghost_multiset_identical_N": 182,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 328
+    },
+    {
+      "stage": 51,
+      "index": 4,
+      "events": 184,
+      "raw_entries": 10000,
+      "entry_range": [
+        10,
+        9863
+      ],
+      "decoded_entries": 9853,
+      "bytes_read": 2321924,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00040-00049-s0015-PHYS.root",
+      "wall_s": 1.261812953001936,
+      "cpu_s": 0.9740325169999995,
+      "peak_rss_MiB": 138.89453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 10,
+      "axis_valid_N": [
+        184,
+        184,
+        184
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 901,
+          "valid_N": 901,
+          "ndof0_N": 167,
+          "valid_ndof0_N": 167,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 87,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.0637323555329203e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004067571309860796
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 895,
+          "valid_N": 895,
+          "ndof0_N": 167,
+          "valid_ndof0_N": 167,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 87,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.0637323555329203e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004067571309860796
+        }
+      },
+      "raw_ghost_multiset_identical_N": 180,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 342
+    },
+    {
+      "stage": 51,
+      "index": 6,
+      "events": 200,
+      "raw_entries": 10000,
+      "entry_range": [
+        97,
+        9863
+      ],
+      "decoded_entries": 9766,
+      "bytes_read": 2332354,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00060-00069-s0015-PHYS.root",
+      "wall_s": 1.2692067910029436,
+      "cpu_s": 0.9125325929999999,
+      "peak_rss_MiB": 138.89453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        200,
+        200,
+        200
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 964,
+          "valid_N": 964,
+          "ndof0_N": 142,
+          "valid_ndof0_N": 142,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.5924989084132903e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00404477451229468
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 964,
+          "valid_N": 964,
+          "ndof0_N": 142,
+          "valid_ndof0_N": 142,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.5924989084132903e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00404477451229468
+        }
+      },
+      "raw_ghost_multiset_identical_N": 200,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 331
+    },
+    {
+      "stage": 51,
+      "index": 7,
+      "events": 170,
+      "raw_entries": 10000,
+      "entry_range": [
+        16,
+        9987
+      ],
+      "decoded_entries": 9971,
+      "bytes_read": 2293844,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00070-00079-s0015-PHYS.root",
+      "wall_s": 1.065615601997706,
+      "cpu_s": 0.8440955810000004,
+      "peak_rss_MiB": 138.89453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        170,
+        170,
+        170
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 813,
+          "valid_N": 813,
+          "ndof0_N": 126,
+          "valid_ndof0_N": 126,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 64,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.36874392007303e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038709237123839557
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 811,
+          "valid_N": 811,
+          "ndof0_N": 126,
+          "valid_ndof0_N": 126,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 64,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.36874392007303e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038709237123839557
+        }
+      },
+      "raw_ghost_multiset_identical_N": 169,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 269
+    },
+    {
+      "stage": 51,
+      "index": 9,
+      "events": 193,
+      "raw_entries": 10000,
+      "entry_range": [
+        69,
+        10000
+      ],
+      "decoded_entries": 9931,
+      "bytes_read": 2281247,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00090-00099-s0015-PHYS.root",
+      "wall_s": 1.093218275003892,
+      "cpu_s": 0.8697283539999994,
+      "peak_rss_MiB": 149.21875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        193,
+        193,
+        193
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 917,
+          "valid_N": 917,
+          "ndof0_N": 147,
+          "valid_ndof0_N": 147,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 73,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.5163851325469295e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038899248029338196
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 917,
+          "valid_N": 917,
+          "ndof0_N": 147,
+          "valid_ndof0_N": 147,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 73,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.5163851325469295e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038899248029338196
+        }
+      },
+      "raw_ghost_multiset_identical_N": 193,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 328
+    },
+    {
+      "stage": 51,
+      "index": 10,
+      "events": 185,
+      "raw_entries": 10000,
+      "entry_range": [
+        221,
+        9952
+      ],
+      "decoded_entries": 9731,
+      "bytes_read": 2334984,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00100-00109-s0015-PHYS.root",
+      "wall_s": 1.1015285329995095,
+      "cpu_s": 0.8713812579999995,
+      "peak_rss_MiB": 160.71875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        185,
+        185,
+        185
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 944,
+          "valid_N": 944,
+          "ndof0_N": 184,
+          "valid_ndof0_N": 184,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.163519769420418e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004108078443096019
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 940,
+          "valid_N": 940,
+          "ndof0_N": 184,
+          "valid_ndof0_N": 184,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.163519769420418e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004108078443096019
+        }
+      },
+      "raw_ghost_multiset_identical_N": 183,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 358
+    },
+    {
+      "stage": 51,
+      "index": 14,
+      "events": 170,
+      "raw_entries": 10000,
+      "entry_range": [
+        83,
+        9997
+      ],
+      "decoded_entries": 9914,
+      "bytes_read": 2299376,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00140-00149-s0015-PHYS.root",
+      "wall_s": 1.0154856649969588,
+      "cpu_s": 0.8294061729999989,
+      "peak_rss_MiB": 170.71875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        170,
+        170,
+        170
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 856,
+          "valid_N": 856,
+          "ndof0_N": 140,
+          "valid_ndof0_N": 140,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 79,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004284286653273739
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 856,
+          "valid_N": 856,
+          "ndof0_N": 140,
+          "valid_ndof0_N": 140,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 79,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004284286653273739
+        }
+      },
+      "raw_ghost_multiset_identical_N": 170,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 335
+    },
+    {
+      "stage": 51,
+      "index": 15,
+      "events": 205,
+      "raw_entries": 10000,
+      "entry_range": [
+        114,
+        9812
+      ],
+      "decoded_entries": 9698,
+      "bytes_read": 2339012,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00150-00159-s0015-PHYS.root",
+      "wall_s": 1.2547371319960803,
+      "cpu_s": 0.9484669180000002,
+      "peak_rss_MiB": 112.6171875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        205,
+        205,
+        205
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1023,
+          "valid_N": 1023,
+          "ndof0_N": 178,
+          "valid_ndof0_N": 178,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.96808141292604e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003908648985088803
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1023,
+          "valid_N": 1023,
+          "ndof0_N": 178,
+          "valid_ndof0_N": 178,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.96808141292604e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003908648985088803
+        }
+      },
+      "raw_ghost_multiset_identical_N": 205,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 368
+    },
+    {
+      "stage": 51,
+      "index": 16,
+      "events": 193,
+      "raw_entries": 10000,
+      "entry_range": [
+        93,
+        9899
+      ],
+      "decoded_entries": 9806,
+      "bytes_read": 2288366,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00160-00169-s0015-PHYS.root",
+      "wall_s": 1.184855683997739,
+      "cpu_s": 0.8744520820000001,
+      "peak_rss_MiB": 126.6171875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        193,
+        193,
+        193
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 926,
+          "valid_N": 926,
+          "ndof0_N": 163,
+          "valid_ndof0_N": 163,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 88,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.6464834585767676e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004716196097433567
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 923,
+          "valid_N": 923,
+          "ndof0_N": 161,
+          "valid_ndof0_N": 161,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 87,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.6464834585767676e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004716196097433567
+        }
+      },
+      "raw_ghost_multiset_identical_N": 190,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 304
+    },
+    {
+      "stage": 51,
+      "index": 17,
+      "events": 184,
+      "raw_entries": 10000,
+      "entry_range": [
+        59,
+        9986
+      ],
+      "decoded_entries": 9927,
+      "bytes_read": 2324537,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00170-00179-s0015-PHYS.root",
+      "wall_s": 1.1661889240058372,
+      "cpu_s": 0.9862414629999998,
+      "peak_rss_MiB": 137.6171875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        184,
+        184,
+        184
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 900,
+          "valid_N": 900,
+          "ndof0_N": 165,
+          "valid_ndof0_N": 165,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 98,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.1719598091985972e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004083322215592489
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 893,
+          "valid_N": 893,
+          "ndof0_N": 162,
+          "valid_ndof0_N": 162,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 96,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.1719598091985972e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004083322215592489
+        }
+      },
+      "raw_ghost_multiset_identical_N": 179,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 309
+    },
+    {
+      "stage": 51,
+      "index": 19,
+      "events": 183,
+      "raw_entries": 10000,
+      "entry_range": [
+        39,
+        9904
+      ],
+      "decoded_entries": 9865,
+      "bytes_read": 2308632,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00190-00199-s0015-PHYS.root",
+      "wall_s": 1.1527479060023325,
+      "cpu_s": 0.9346744980000001,
+      "peak_rss_MiB": 138.6171875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        183,
+        183,
+        183
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 839,
+          "valid_N": 839,
+          "ndof0_N": 130,
+          "valid_ndof0_N": 130,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.079336062863149e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003976935273385607
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 838,
+          "valid_N": 838,
+          "ndof0_N": 130,
+          "valid_ndof0_N": 130,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.079336062863149e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003976935273385607
+        }
+      },
+      "raw_ghost_multiset_identical_N": 182,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 252
+    },
+    {
+      "stage": 51,
+      "index": 20,
+      "events": 190,
+      "raw_entries": 10000,
+      "entry_range": [
+        68,
+        9902
+      ],
+      "decoded_entries": 9834,
+      "bytes_read": 2318826,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00200-00209-s0015-PHYS.root",
+      "wall_s": 1.2463994540012209,
+      "cpu_s": 0.9256322519999998,
+      "peak_rss_MiB": 138.6171875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        190,
+        190,
+        190
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 922,
+          "valid_N": 922,
+          "ndof0_N": 180,
+          "valid_ndof0_N": 180,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.949487551035418e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003888953142450191
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 922,
+          "valid_N": 922,
+          "ndof0_N": 180,
+          "valid_ndof0_N": 180,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.949487551035418e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003888953142450191
+        }
+      },
+      "raw_ghost_multiset_identical_N": 190,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 317
+    },
+    {
+      "stage": 51,
+      "index": 21,
+      "events": 209,
+      "raw_entries": 10000,
+      "entry_range": [
+        53,
+        9988
+      ],
+      "decoded_entries": 9935,
+      "bytes_read": 2344067,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00210-00219-s0015-PHYS.root",
+      "wall_s": 1.2738690500045777,
+      "cpu_s": 1.0510674279999996,
+      "peak_rss_MiB": 138.6171875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 10,
+      "axis_valid_N": [
+        209,
+        209,
+        209
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1057,
+          "valid_N": 1057,
+          "ndof0_N": 200,
+          "valid_ndof0_N": 200,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 99,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.94138949547596e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004707573709310964
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1054,
+          "valid_N": 1054,
+          "ndof0_N": 199,
+          "valid_ndof0_N": 199,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 98,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.94138949547596e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004707573709310964
+        }
+      },
+      "raw_ghost_multiset_identical_N": 207,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 393
+    },
+    {
+      "stage": 51,
+      "index": 22,
+      "events": 187,
+      "raw_entries": 10000,
+      "entry_range": [
+        98,
+        9910
+      ],
+      "decoded_entries": 9812,
+      "bytes_read": 2351641,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00220-00229-s0015-PHYS.root",
+      "wall_s": 1.2546770499975537,
+      "cpu_s": 0.9499287440000002,
+      "peak_rss_MiB": 148.39453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        187,
+        187,
+        187
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 881,
+          "valid_N": 881,
+          "ndof0_N": 150,
+          "valid_ndof0_N": 150,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 81,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.149752624333814e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003957944471039809
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 879,
+          "valid_N": 879,
+          "ndof0_N": 150,
+          "valid_ndof0_N": 150,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 81,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.149752624333814e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003957944471039809
+        }
+      },
+      "raw_ghost_multiset_identical_N": 186,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 272
+    },
+    {
+      "stage": 51,
+      "index": 24,
+      "events": 203,
+      "raw_entries": 10000,
+      "entry_range": [
+        67,
+        9997
+      ],
+      "decoded_entries": 9930,
+      "bytes_read": 2339219,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00240-00249-s0015-PHYS.root",
+      "wall_s": 1.2279946880007628,
+      "cpu_s": 0.9711576629999996,
+      "peak_rss_MiB": 159.39453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 2,
+      "axis_valid_N": [
+        203,
+        203,
+        203
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 965,
+          "valid_N": 965,
+          "ndof0_N": 149,
+          "valid_ndof0_N": 149,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.512290902563109e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00420817281701602
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 961,
+          "valid_N": 961,
+          "ndof0_N": 147,
+          "valid_ndof0_N": 147,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 72,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.512290902563109e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00420817281701602
+        }
+      },
+      "raw_ghost_multiset_identical_N": 200,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 335
+    },
+    {
+      "stage": 51,
+      "index": 28,
+      "events": 186,
+      "raw_entries": 10000,
+      "entry_range": [
+        98,
+        9986
+      ],
+      "decoded_entries": 9888,
+      "bytes_read": 2320857,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00280-00289-s0015-PHYS.root",
+      "wall_s": 1.0633062130000326,
+      "cpu_s": 0.8497717810000012,
+      "peak_rss_MiB": 169.89453125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        186,
+        186,
+        186
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 923,
+          "valid_N": 923,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.0999950461609842e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039035456284182146
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 923,
+          "valid_N": 923,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.0999950461609842e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039035456284182146
+        }
+      },
+      "raw_ghost_multiset_identical_N": 186,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 337
+    },
+    {
+      "stage": 51,
+      "index": 29,
+      "events": 197,
+      "raw_entries": 10000,
+      "entry_range": [
+        11,
+        9934
+      ],
+      "decoded_entries": 9923,
+      "bytes_read": 2309982,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00290-00299-s0015-PHYS.root",
+      "wall_s": 2.0844895727932453,
+      "cpu_s": 1.240434721,
+      "peak_rss_MiB": 106.71875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        197,
+        197,
+        197
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 970,
+          "valid_N": 970,
+          "ndof0_N": 165,
+          "valid_ndof0_N": 165,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 100,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003897819056874141
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 969,
+          "valid_N": 969,
+          "ndof0_N": 164,
+          "valid_ndof0_N": 164,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 100,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003897819056874141
+        }
+      },
+      "raw_ghost_multiset_identical_N": 196,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 326
+    },
+    {
+      "stage": 51,
+      "index": 31,
+      "events": 206,
+      "raw_entries": 10000,
+      "entry_range": [
+        19,
+        9851
+      ],
+      "decoded_entries": 9832,
+      "bytes_read": 2333497,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00310-00319-s0015-PHYS.root",
+      "wall_s": 1.4653529897332191,
+      "cpu_s": 1.1882411150000003,
+      "peak_rss_MiB": 121.71875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        206,
+        206,
+        206
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 981,
+          "valid_N": 981,
+          "ndof0_N": 174,
+          "valid_ndof0_N": 174,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 97,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.503861378817419e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004867148847552016
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 980,
+          "valid_N": 980,
+          "ndof0_N": 173,
+          "valid_ndof0_N": 173,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 97,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.503861378817419e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004867148847552016
+        }
+      },
+      "raw_ghost_multiset_identical_N": 205,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 303
+    },
+    {
+      "stage": 51,
+      "index": 32,
+      "events": 206,
+      "raw_entries": 10000,
+      "entry_range": [
+        54,
+        9972
+      ],
+      "decoded_entries": 9918,
+      "bytes_read": 2324631,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00320-00329-s0015-PHYS.root",
+      "wall_s": 1.4382572397589684,
+      "cpu_s": 1.1971690009999998,
+      "peak_rss_MiB": 131.21875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        206,
+        206,
+        206
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1010,
+          "valid_N": 1010,
+          "ndof0_N": 178,
+          "valid_ndof0_N": 178,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 99,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.053266084407369e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004651164097595029
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1008,
+          "valid_N": 1008,
+          "ndof0_N": 178,
+          "valid_ndof0_N": 178,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 99,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.053266084407369e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004651164097595029
+        }
+      },
+      "raw_ghost_multiset_identical_N": 204,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 344
+    },
+    {
+      "stage": 51,
+      "index": 33,
+      "events": 159,
+      "raw_entries": 10000,
+      "entry_range": [
+        150,
+        9933
+      ],
+      "decoded_entries": 9783,
+      "bytes_read": 2319278,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00330-00339-s0015-PHYS.root",
+      "wall_s": 1.4315805528312922,
+      "cpu_s": 1.1977178030000006,
+      "peak_rss_MiB": 132.21875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        159,
+        159,
+        159
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 785,
+          "valid_N": 785,
+          "ndof0_N": 129,
+          "valid_ndof0_N": 129,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 65,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.987358271866469e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004023884670459665
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 783,
+          "valid_N": 783,
+          "ndof0_N": 128,
+          "valid_ndof0_N": 128,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 65,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.987358271866469e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004023884670459665
+        }
+      },
+      "raw_ghost_multiset_identical_N": 157,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 297
+    },
+    {
+      "stage": 51,
+      "index": 35,
+      "events": 185,
+      "raw_entries": 10000,
+      "entry_range": [
+        28,
+        9774
+      ],
+      "decoded_entries": 9746,
+      "bytes_read": 2328320,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00350-00359-s0015-PHYS.root",
+      "wall_s": 1.3793836552649736,
+      "cpu_s": 1.100665297,
+      "peak_rss_MiB": 132.21875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        185,
+        185,
+        185
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 918,
+          "valid_N": 918,
+          "ndof0_N": 146,
+          "valid_ndof0_N": 146,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 93,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.4724700387632765e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00391883117845282
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 918,
+          "valid_N": 918,
+          "ndof0_N": 146,
+          "valid_ndof0_N": 146,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 93,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.4724700387632765e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00391883117845282
+        }
+      },
+      "raw_ghost_multiset_identical_N": 185,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 320
+    },
+    {
+      "stage": 51,
+      "index": 36,
+      "events": 192,
+      "raw_entries": 10000,
+      "entry_range": [
+        26,
+        9963
+      ],
+      "decoded_entries": 9937,
+      "bytes_read": 2295255,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00360-00369-s0015-PHYS.root",
+      "wall_s": 1.5490025710314512,
+      "cpu_s": 1.1943632590000002,
+      "peak_rss_MiB": 132.21875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        192,
+        192,
+        192
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1005,
+          "valid_N": 1005,
+          "ndof0_N": 186,
+          "valid_ndof0_N": 186,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 113,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.66065966217866e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004474374261917546
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 998,
+          "valid_N": 998,
+          "ndof0_N": 186,
+          "valid_ndof0_N": 186,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 113,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.66065966217866e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004474374261917546
+        }
+      },
+      "raw_ghost_multiset_identical_N": 191,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 401
+    },
+    {
+      "stage": 51,
+      "index": 38,
+      "events": 189,
+      "raw_entries": 10000,
+      "entry_range": [
+        36,
+        9949
+      ],
+      "decoded_entries": 9913,
+      "bytes_read": 2298957,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00380-00389-s0015-PHYS.root",
+      "wall_s": 1.5080242566764355,
+      "cpu_s": 1.1984842869999994,
+      "peak_rss_MiB": 140.8359375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 2,
+      "axis_valid_N": [
+        189,
+        189,
+        189
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 956,
+          "valid_N": 956,
+          "ndof0_N": 143,
+          "valid_ndof0_N": 143,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 78,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.978640160719806e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004361704763141461
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 948,
+          "valid_N": 948,
+          "ndof0_N": 143,
+          "valid_ndof0_N": 143,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 78,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.978640160719806e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004361704763141461
+        }
+      },
+      "raw_ghost_multiset_identical_N": 187,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 377
+    },
+    {
+      "stage": 51,
+      "index": 39,
+      "events": 169,
+      "raw_entries": 10000,
+      "entry_range": [
+        57,
+        9884
+      ],
+      "decoded_entries": 9827,
+      "bytes_read": 2327161,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00390-00399-s0015-PHYS.root",
+      "wall_s": 1.3367077875882387,
+      "cpu_s": 1.121207226000001,
+      "peak_rss_MiB": 150.8359375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 2,
+      "axis_valid_N": [
+        169,
+        169,
+        169
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 831,
+          "valid_N": 831,
+          "ndof0_N": 150,
+          "valid_ndof0_N": 150,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.999673646783776e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004107374494196847
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 828,
+          "valid_N": 828,
+          "ndof0_N": 149,
+          "valid_ndof0_N": 149,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 79,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.999673646783776e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004107374494196847
+        }
+      },
+      "raw_ghost_multiset_identical_N": 166,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 278
+    },
+    {
+      "stage": 51,
+      "index": 40,
+      "events": 190,
+      "raw_entries": 10000,
+      "entry_range": [
+        88,
+        9926
+      ],
+      "decoded_entries": 9838,
+      "bytes_read": 2296960,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00400-00409-s0015-PHYS.root",
+      "wall_s": 1.27309625223279,
+      "cpu_s": 1.0071316350000004,
+      "peak_rss_MiB": 161.8359375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        190,
+        190,
+        190
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 891,
+          "valid_N": 891,
+          "ndof0_N": 158,
+          "valid_ndof0_N": 158,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 86,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.8869075897073344e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003927989382646047
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 890,
+          "valid_N": 890,
+          "ndof0_N": 157,
+          "valid_ndof0_N": 157,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 85,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.8869075897073344e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003927989382646047
+        }
+      },
+      "raw_ghost_multiset_identical_N": 189,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 302
+    },
+    {
+      "stage": 51,
+      "index": 42,
+      "events": 190,
+      "raw_entries": 10000,
+      "entry_range": [
+        22,
+        9897
+      ],
+      "decoded_entries": 9875,
+      "bytes_read": 2316526,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00420-00429-s0015-PHYS.root",
+      "wall_s": 1.8748779989982722,
+      "cpu_s": 1.1513707690000001,
+      "peak_rss_MiB": 106.9296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        190,
+        190,
+        190
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 898,
+          "valid_N": 898,
+          "ndof0_N": 147,
+          "valid_ndof0_N": 147,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 83,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.2288511186397955e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039035456284182146
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 896,
+          "valid_N": 896,
+          "ndof0_N": 146,
+          "valid_ndof0_N": 146,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.2288511186397955e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039035456284182146
+        }
+      },
+      "raw_ghost_multiset_identical_N": 188,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 298
+    },
+    {
+      "stage": 51,
+      "index": 43,
+      "events": 197,
+      "raw_entries": 10000,
+      "entry_range": [
+        62,
+        9892
+      ],
+      "decoded_entries": 9830,
+      "bytes_read": 2358656,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00430-00439-s0015-PHYS.root",
+      "wall_s": 1.4698589999970864,
+      "cpu_s": 1.2019442690000002,
+      "peak_rss_MiB": 120.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        197,
+        197,
+        197
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 943,
+          "valid_N": 943,
+          "ndof0_N": 135,
+          "valid_ndof0_N": 135,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 69,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.9773202570027024e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004896820348221809
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 941,
+          "valid_N": 941,
+          "ndof0_N": 135,
+          "valid_ndof0_N": 135,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 69,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.9773202570027024e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004896820348221809
+        }
+      },
+      "raw_ghost_multiset_identical_N": 196,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 335
+    },
+    {
+      "stage": 51,
+      "index": 44,
+      "events": 200,
+      "raw_entries": 10000,
+      "entry_range": [
+        69,
+        9965
+      ],
+      "decoded_entries": 9896,
+      "bytes_read": 2331864,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200139/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_pi-200139-00440-00449-s0015-PHYS.root",
+      "wall_s": 1.4679911799976253,
+      "cpu_s": 1.2033958790000003,
+      "peak_rss_MiB": 131.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 13,
+      "axis_valid_N": [
+        200,
+        200,
+        200
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1036,
+          "valid_N": 1036,
+          "ndof0_N": 176,
+          "valid_ndof0_N": 176,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 87,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.62021264474788e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003896574125974439
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1036,
+          "valid_N": 1036,
+          "ndof0_N": 176,
+          "valid_ndof0_N": 176,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 87,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.62021264474788e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003896574125974439
+        }
+      },
+      "raw_ghost_multiset_identical_N": 200,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 400
+    },
+    {
+      "stage": 51,
+      "index": 46,
+      "events": 213,
+      "raw_entries": 10000,
+      "entry_range": [
+        50,
+        9852
+      ],
+      "decoded_entries": 9802,
+      "bytes_read": 2279765,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00000-00009-s0015-PHYS.root",
+      "wall_s": 1.6484755939964089,
+      "cpu_s": 1.3301401200000003,
+      "peak_rss_MiB": 131.9296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        213,
+        213,
+        213
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1077,
+          "valid_N": 1077,
+          "ndof0_N": 197,
+          "valid_ndof0_N": 197,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 92,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.647939277901969e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004193533561192453
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1073,
+          "valid_N": 1073,
+          "ndof0_N": 196,
+          "valid_ndof0_N": 196,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 91,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.647939277901969e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004193533561192453
+        }
+      },
+      "raw_ghost_multiset_identical_N": 209,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 489
+    },
+    {
+      "stage": 51,
+      "index": 47,
+      "events": 172,
+      "raw_entries": 10000,
+      "entry_range": [
+        2,
+        9998
+      ],
+      "decoded_entries": 9996,
+      "bytes_read": 2217747,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00010-00019-s0015-PHYS.root",
+      "wall_s": 1.5055593290016986,
+      "cpu_s": 1.1821983179999993,
+      "peak_rss_MiB": 131.9296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        172,
+        172,
+        172
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 800,
+          "valid_N": 800,
+          "ndof0_N": 143,
+          "valid_ndof0_N": 143,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 59,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.914744249935211e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003984622017014772
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 800,
+          "valid_N": 800,
+          "ndof0_N": 143,
+          "valid_ndof0_N": 143,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 59,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.914744249935211e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003984622017014772
+        }
+      },
+      "raw_ghost_multiset_identical_N": 172,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 303
+    },
+    {
+      "stage": 51,
+      "index": 49,
+      "events": 197,
+      "raw_entries": 10000,
+      "entry_range": [
+        74,
+        9930
+      ],
+      "decoded_entries": 9856,
+      "bytes_read": 2252423,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00030-00039-s0015-PHYS.root",
+      "wall_s": 1.7260648580049747,
+      "cpu_s": 1.1752568399999994,
+      "peak_rss_MiB": 131.9296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 10,
+      "axis_valid_N": [
+        197,
+        197,
+        197
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 952,
+          "valid_N": 952,
+          "ndof0_N": 157,
+          "valid_ndof0_N": 157,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 89,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960468030252741e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003927989382646047
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 950,
+          "valid_N": 950,
+          "ndof0_N": 157,
+          "valid_ndof0_N": 157,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 89,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960468030252741e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003927989382646047
+        }
+      },
+      "raw_ghost_multiset_identical_N": 195,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 393
+    },
+    {
+      "stage": 51,
+      "index": 50,
+      "events": 203,
+      "raw_entries": 10000,
+      "entry_range": [
+        29,
+        9990
+      ],
+      "decoded_entries": 9961,
+      "bytes_read": 2246964,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00040-00049-s0015-PHYS.root",
+      "wall_s": 1.5369338669988792,
+      "cpu_s": 1.2575418379999999,
+      "peak_rss_MiB": 142.3671875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 12,
+      "axis_valid_N": [
+        203,
+        203,
+        203
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1013,
+          "valid_N": 1013,
+          "ndof0_N": 189,
+          "valid_ndof0_N": 189,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 93,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.5258093333823126e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004094425981747918
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1009,
+          "valid_N": 1009,
+          "ndof0_N": 188,
+          "valid_ndof0_N": 188,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 92,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.5258093333823126e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004094425981747918
+        }
+      },
+      "raw_ghost_multiset_identical_N": 201,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 429
+    },
+    {
+      "stage": 51,
+      "index": 51,
+      "events": 175,
+      "raw_entries": 10000,
+      "entry_range": [
+        124,
+        9979
+      ],
+      "decoded_entries": 9855,
+      "bytes_read": 2248148,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00050-00059-s0015-PHYS.root",
+      "wall_s": 1.5041598069947213,
+      "cpu_s": 1.1032342899999996,
+      "peak_rss_MiB": 152.8671875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        175,
+        175,
+        175
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 868,
+          "valid_N": 868,
+          "ndof0_N": 156,
+          "valid_ndof0_N": 156,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 81,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.2336644772403815e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039011434419080615
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 867,
+          "valid_N": 867,
+          "ndof0_N": 155,
+          "valid_ndof0_N": 155,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.2336644772403815e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039011434419080615
+        }
+      },
+      "raw_ghost_multiset_identical_N": 174,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 358
+    },
+    {
+      "stage": 51,
+      "index": 52,
+      "events": 184,
+      "raw_entries": 10000,
+      "entry_range": [
+        47,
+        9995
+      ],
+      "decoded_entries": 9948,
+      "bytes_read": 2287211,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00060-00069-s0015-PHYS.root",
+      "wall_s": 1.561093329997675,
+      "cpu_s": 1.2352424880000008,
+      "peak_rss_MiB": 163.8671875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        184,
+        184,
+        184
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 941,
+          "valid_N": 941,
+          "ndof0_N": 188,
+          "valid_ndof0_N": 188,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 105,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.1576721681858544e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005491609146702103
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 934,
+          "valid_N": 934,
+          "ndof0_N": 187,
+          "valid_ndof0_N": 187,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 104,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.1576721681858544e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005491609146702103
+        }
+      },
+      "raw_ghost_multiset_identical_N": 179,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 378
+    },
+    {
+      "stage": 51,
+      "index": 53,
+      "events": 186,
+      "raw_entries": 10000,
+      "entry_range": [
+        160,
+        9864
+      ],
+      "decoded_entries": 9704,
+      "bytes_read": 2252891,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00070-00079-s0015-PHYS.root",
+      "wall_s": 2.2010790800050017,
+      "cpu_s": 1.298224883,
+      "peak_rss_MiB": 112.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        186,
+        186,
+        186
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 943,
+          "valid_N": 943,
+          "ndof0_N": 163,
+          "valid_ndof0_N": 163,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 93,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005137484156875871
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 940,
+          "valid_N": 940,
+          "ndof0_N": 163,
+          "valid_ndof0_N": 163,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 93,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005137484156875871
+        }
+      },
+      "raw_ghost_multiset_identical_N": 184,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 380
+    },
+    {
+      "stage": 51,
+      "index": 56,
+      "events": 182,
+      "raw_entries": 10000,
+      "entry_range": [
+        115,
+        9973
+      ],
+      "decoded_entries": 9858,
+      "bytes_read": 2203657,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00100-00109-s0015-PHYS.root",
+      "wall_s": 1.7592590540007222,
+      "cpu_s": 1.188846995,
+      "peak_rss_MiB": 126.9296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        182,
+        182,
+        182
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 844,
+          "valid_N": 844,
+          "ndof0_N": 130,
+          "valid_ndof0_N": 130,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.96103291172767e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004494192209676839
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 843,
+          "valid_N": 843,
+          "ndof0_N": 130,
+          "valid_ndof0_N": 130,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.96103291172767e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004494192209676839
+        }
+      },
+      "raw_ghost_multiset_identical_N": 181,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 296
+    },
+    {
+      "stage": 51,
+      "index": 58,
+      "events": 164,
+      "raw_entries": 10000,
+      "entry_range": [
+        16,
+        9973
+      ],
+      "decoded_entries": 9957,
+      "bytes_read": 2239595,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00120-00129-s0015-PHYS.root",
+      "wall_s": 1.4359051999999792,
+      "cpu_s": 1.115913559,
+      "peak_rss_MiB": 137.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        164,
+        164,
+        164
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 797,
+          "valid_N": 797,
+          "ndof0_N": 144,
+          "valid_ndof0_N": 144,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.729938206717634e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004355273529654369
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 792,
+          "valid_N": 792,
+          "ndof0_N": 143,
+          "valid_ndof0_N": 143,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.729938206717634e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004355273529654369
+        }
+      },
+      "raw_ghost_multiset_identical_N": 162,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 287
+    },
+    {
+      "stage": 51,
+      "index": 59,
+      "events": 174,
+      "raw_entries": 10000,
+      "entry_range": [
+        93,
+        9926
+      ],
+      "decoded_entries": 9833,
+      "bytes_read": 2236360,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00130-00139-s0015-PHYS.root",
+      "wall_s": 1.4214950669993414,
+      "cpu_s": 1.1367570360000006,
+      "peak_rss_MiB": 138.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        174,
+        174,
+        174
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 822,
+          "valid_N": 822,
+          "ndof0_N": 128,
+          "valid_ndof0_N": 128,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 68,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.098195370896065e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00394198956200853
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 820,
+          "valid_N": 820,
+          "ndof0_N": 128,
+          "valid_ndof0_N": 128,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 68,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.098195370896065e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00394198956200853
+        }
+      },
+      "raw_ghost_multiset_identical_N": 172,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 320
+    },
+    {
+      "stage": 51,
+      "index": 60,
+      "events": 196,
+      "raw_entries": 10000,
+      "entry_range": [
+        0,
+        9976
+      ],
+      "decoded_entries": 9976,
+      "bytes_read": 2292483,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00140-00149-s0015-PHYS.root",
+      "wall_s": 1.6551103250021697,
+      "cpu_s": 1.357574852,
+      "peak_rss_MiB": 138.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        196,
+        196,
+        196
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1031,
+          "valid_N": 1031,
+          "ndof0_N": 212,
+          "valid_ndof0_N": 212,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 122,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.6952971293449082e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004014754566014744
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1027,
+          "valid_N": 1027,
+          "ndof0_N": 212,
+          "valid_ndof0_N": 212,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 122,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.6952971293449082e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004014754566014744
+        }
+      },
+      "raw_ghost_multiset_identical_N": 194,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 404
+    },
+    {
+      "stage": 51,
+      "index": 61,
+      "events": 197,
+      "raw_entries": 10000,
+      "entry_range": [
+        1,
+        9999
+      ],
+      "decoded_entries": 9998,
+      "bytes_read": 2237690,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00150-00159-s0015-PHYS.root",
+      "wall_s": 1.5816598990058992,
+      "cpu_s": 1.2682706750000001,
+      "peak_rss_MiB": 138.4296875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        197,
+        197,
+        197
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 959,
+          "valid_N": 959,
+          "ndof0_N": 169,
+          "valid_ndof0_N": 169,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 73,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.331600843623164e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004926386900478974
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 956,
+          "valid_N": 956,
+          "ndof0_N": 168,
+          "valid_ndof0_N": 168,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 73,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.331600843623164e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004926386900478974
+        }
+      },
+      "raw_ghost_multiset_identical_N": 195,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 379
+    },
+    {
+      "stage": 51,
+      "index": 62,
+      "events": 180,
+      "raw_entries": 10000,
+      "entry_range": [
+        37,
+        9981
+      ],
+      "decoded_entries": 9944,
+      "bytes_read": 2272959,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00160-00169-s0015-PHYS.root",
+      "wall_s": 1.4851214590016752,
+      "cpu_s": 1.14995974,
+      "peak_rss_MiB": 147.91796875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 7,
+      "axis_valid_N": [
+        180,
+        180,
+        180
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 904,
+          "valid_N": 904,
+          "ndof0_N": 164,
+          "valid_ndof0_N": 164,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 89,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -9.871818917872588e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004093802534043789
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 901,
+          "valid_N": 901,
+          "ndof0_N": 162,
+          "valid_ndof0_N": 162,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 89,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -9.871818917872588e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004093802534043789
+        }
+      },
+      "raw_ghost_multiset_identical_N": 177,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 392
+    },
+    {
+      "stage": 51,
+      "index": 63,
+      "events": 182,
+      "raw_entries": 10000,
+      "entry_range": [
+        47,
+        9978
+      ],
+      "decoded_entries": 9931,
+      "bytes_read": 2214553,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00170-00179-s0015-PHYS.root",
+      "wall_s": 1.464801838999847,
+      "cpu_s": 1.1425205810000012,
+      "peak_rss_MiB": 157.91796875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        182,
+        182,
+        182
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 899,
+          "valid_N": 899,
+          "ndof0_N": 167,
+          "valid_ndof0_N": 167,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 78,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.9802322387695312e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038927226851228625
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 894,
+          "valid_N": 894,
+          "ndof0_N": 165,
+          "valid_ndof0_N": 165,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.9802322387695312e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038927226851228625
+        }
+      },
+      "raw_ghost_multiset_identical_N": 179,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 385
+    },
+    {
+      "stage": 51,
+      "index": 66,
+      "events": 166,
+      "raw_entries": 10000,
+      "entry_range": [
+        4,
+        9907
+      ],
+      "decoded_entries": 9903,
+      "bytes_read": 2231018,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00200-00209-s0015-PHYS.root",
+      "wall_s": 1.657403079996584,
+      "cpu_s": 1.2481448790000016,
+      "peak_rss_MiB": 168.41796875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 13,
+      "axis_valid_N": [
+        166,
+        166,
+        166
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 870,
+          "valid_N": 870,
+          "ndof0_N": 165,
+          "valid_ndof0_N": 165,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.1135990263255735e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038865477254148573
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 869,
+          "valid_N": 869,
+          "ndof0_N": 164,
+          "valid_ndof0_N": 164,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.1135990263255735e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038865477254148573
+        }
+      },
+      "raw_ghost_multiset_identical_N": 165,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 402
+    },
+    {
+      "stage": 51,
+      "index": 70,
+      "events": 202,
+      "raw_entries": 10000,
+      "entry_range": [
+        23,
+        9848
+      ],
+      "decoded_entries": 9825,
+      "bytes_read": 2276577,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00240-00249-s0015-PHYS.root",
+      "wall_s": 1.9873290899995482,
+      "cpu_s": 1.2649309469999999,
+      "peak_rss_MiB": 110.9140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 11,
+      "axis_valid_N": [
+        202,
+        202,
+        202
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1038,
+          "valid_N": 1038,
+          "ndof0_N": 193,
+          "valid_ndof0_N": 193,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 111,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.3751030293369695e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004012693330878392
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1033,
+          "valid_N": 1033,
+          "ndof0_N": 193,
+          "valid_ndof0_N": 193,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 111,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.3751030293369695e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004012693330878392
+        }
+      },
+      "raw_ghost_multiset_identical_N": 200,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 437
+    },
+    {
+      "stage": 51,
+      "index": 71,
+      "events": 207,
+      "raw_entries": 10000,
+      "entry_range": [
+        19,
+        9994
+      ],
+      "decoded_entries": 9975,
+      "bytes_read": 2271261,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00250-00259-s0015-PHYS.root",
+      "wall_s": 1.7313089829985984,
+      "cpu_s": 1.2762613919999999,
+      "peak_rss_MiB": 124.9140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        207,
+        207,
+        207
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1021,
+          "valid_N": 1021,
+          "ndof0_N": 205,
+          "valid_ndof0_N": 205,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 112,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.7150855664312985e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004666602981160395
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1017,
+          "valid_N": 1017,
+          "ndof0_N": 203,
+          "valid_ndof0_N": 203,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 112,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.7150855664312985e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004666602981160395
+        }
+      },
+      "raw_ghost_multiset_identical_N": 205,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 396
+    },
+    {
+      "stage": 51,
+      "index": 72,
+      "events": 205,
+      "raw_entries": 10000,
+      "entry_range": [
+        94,
+        9993
+      ],
+      "decoded_entries": 9899,
+      "bytes_read": 2256602,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00260-00269-s0015-PHYS.root",
+      "wall_s": 1.5764664279995486,
+      "cpu_s": 1.1543704849999998,
+      "peak_rss_MiB": 134.9140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        205,
+        205,
+        205
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1032,
+          "valid_N": 1032,
+          "ndof0_N": 204,
+          "valid_ndof0_N": 204,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 104,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.3165661982839083e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003995003120508045
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1031,
+          "valid_N": 1031,
+          "ndof0_N": 204,
+          "valid_ndof0_N": 204,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 104,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.3165661982839083e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003995003120508045
+        }
+      },
+      "raw_ghost_multiset_identical_N": 204,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 421
+    },
+    {
+      "stage": 51,
+      "index": 73,
+      "events": 165,
+      "raw_entries": 10000,
+      "entry_range": [
+        78,
+        9986
+      ],
+      "decoded_entries": 9908,
+      "bytes_read": 2237652,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00270-00279-s0015-PHYS.root",
+      "wall_s": 1.8026199460000498,
+      "cpu_s": 1.264885038,
+      "peak_rss_MiB": 135.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        165,
+        165,
+        165
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 850,
+          "valid_N": 850,
+          "ndof0_N": 158,
+          "valid_ndof0_N": 158,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.935796103060056e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038830973935546353
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 846,
+          "valid_N": 846,
+          "ndof0_N": 156,
+          "valid_ndof0_N": 156,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.935796103060056e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038830973935546353
+        }
+      },
+      "raw_ghost_multiset_identical_N": 163,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 355
+    },
+    {
+      "stage": 51,
+      "index": 75,
+      "events": 182,
+      "raw_entries": 10000,
+      "entry_range": [
+        40,
+        9911
+      ],
+      "decoded_entries": 9871,
+      "bytes_read": 2261304,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00290-00299-s0015-PHYS.root",
+      "wall_s": 1.7161841560009634,
+      "cpu_s": 1.275779677,
+      "peak_rss_MiB": 135.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 10,
+      "axis_valid_N": [
+        182,
+        182,
+        182
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 883,
+          "valid_N": 883,
+          "ndof0_N": 150,
+          "valid_ndof0_N": 150,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 65,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.454085183487223e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005206639732932672
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 881,
+          "valid_N": 881,
+          "ndof0_N": 150,
+          "valid_ndof0_N": 150,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 65,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.454085183487223e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005206639732932672
+        }
+      },
+      "raw_ghost_multiset_identical_N": 180,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 325
+    },
+    {
+      "stage": 51,
+      "index": 76,
+      "events": 183,
+      "raw_entries": 10000,
+      "entry_range": [
+        11,
+        9986
+      ],
+      "decoded_entries": 9975,
+      "bytes_read": 2245423,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00300-00309-s0015-PHYS.root",
+      "wall_s": 1.6190556729998207,
+      "cpu_s": 1.3076517289999998,
+      "peak_rss_MiB": 135.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        183,
+        183,
+        183
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 851,
+          "valid_N": 851,
+          "ndof0_N": 141,
+          "valid_ndof0_N": 141,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.475714376894757e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038735768903279677
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 851,
+          "valid_N": 851,
+          "ndof0_N": 141,
+          "valid_ndof0_N": 141,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.475714376894757e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038735768903279677
+        }
+      },
+      "raw_ghost_multiset_identical_N": 183,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 302
+    },
+    {
+      "stage": 51,
+      "index": 79,
+      "events": 204,
+      "raw_entries": 10000,
+      "entry_range": [
+        77,
+        9922
+      ],
+      "decoded_entries": 9845,
+      "bytes_read": 2233292,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00330-00339-s0015-PHYS.root",
+      "wall_s": 1.8131919570005266,
+      "cpu_s": 1.385368176,
+      "peak_rss_MiB": 145.11328125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        204,
+        204,
+        204
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 989,
+          "valid_N": 989,
+          "ndof0_N": 182,
+          "valid_ndof0_N": 182,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 88,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.300305864850088e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00457471574191004
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 984,
+          "valid_N": 984,
+          "ndof0_N": 181,
+          "valid_ndof0_N": 181,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 88,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.300305864850088e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00457471574191004
+        }
+      },
+      "raw_ghost_multiset_identical_N": 201,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 373
+    },
+    {
+      "stage": 51,
+      "index": 81,
+      "events": 193,
+      "raw_entries": 10000,
+      "entry_range": [
+        15,
+        9962
+      ],
+      "decoded_entries": 9947,
+      "bytes_read": 2265611,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00350-00359-s0015-PHYS.root",
+      "wall_s": 1.5519450409992714,
+      "cpu_s": 1.2360590509999998,
+      "peak_rss_MiB": 155.61328125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        193,
+        193,
+        193
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 983,
+          "valid_N": 983,
+          "ndof0_N": 170,
+          "valid_ndof0_N": 170,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 84,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.548794419965361e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003938982568797655
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 978,
+          "valid_N": 978,
+          "ndof0_N": 168,
+          "valid_ndof0_N": 168,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 83,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.548794419965361e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003938982568797655
+        }
+      },
+      "raw_ghost_multiset_identical_N": 188,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 435
+    },
+    {
+      "stage": 51,
+      "index": 82,
+      "events": 176,
+      "raw_entries": 10000,
+      "entry_range": [
+        24,
+        9978
+      ],
+      "decoded_entries": 9954,
+      "bytes_read": 2268503,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00360-00369-s0015-PHYS.root",
+      "wall_s": 1.4419293380051386,
+      "cpu_s": 1.1160344759999994,
+      "peak_rss_MiB": 165.61328125,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 12,
+      "axis_valid_N": [
+        176,
+        176,
+        176
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 883,
+          "valid_N": 883,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 77,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -9.655554578102965e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039102116716094315
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 881,
+          "valid_N": 881,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 77,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -9.655554578102965e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039102116716094315
+        }
+      },
+      "raw_ghost_multiset_identical_N": 174,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 342
+    },
+    {
+      "stage": 51,
+      "index": 84,
+      "events": 182,
+      "raw_entries": 10000,
+      "entry_range": [
+        4,
+        9969
+      ],
+      "decoded_entries": 9965,
+      "bytes_read": 2258633,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00380-00389-s0015-PHYS.root",
+      "wall_s": 2.111838989003445,
+      "cpu_s": 1.227632747,
+      "peak_rss_MiB": 109.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 11,
+      "axis_valid_N": [
+        182,
+        182,
+        182
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 883,
+          "valid_N": 883,
+          "ndof0_N": 152,
+          "valid_ndof0_N": 152,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 91,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.956135140650076e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005115083622513339
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 878,
+          "valid_N": 878,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 91,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.956135140650076e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.005115083622513339
+        }
+      },
+      "raw_ghost_multiset_identical_N": 178,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 365
+    },
+    {
+      "stage": 51,
+      "index": 85,
+      "events": 173,
+      "raw_entries": 10000,
+      "entry_range": [
+        36,
+        9975
+      ],
+      "decoded_entries": 9939,
+      "bytes_read": 2218557,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00390-00399-s0015-PHYS.root",
+      "wall_s": 1.2903127380050137,
+      "cpu_s": 0.8609242510000001,
+      "peak_rss_MiB": 122.9140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        173,
+        173,
+        173
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 937,
+          "valid_N": 937,
+          "ndof0_N": 171,
+          "valid_ndof0_N": 171,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 92,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960477977851042e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004606312635587528
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 936,
+          "valid_N": 936,
+          "ndof0_N": 171,
+          "valid_ndof0_N": 171,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 92,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960477977851042e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004606312635587528
+        }
+      },
+      "raw_ghost_multiset_identical_N": 172,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 384
+    },
+    {
+      "stage": 51,
+      "index": 86,
+      "events": 203,
+      "raw_entries": 10000,
+      "entry_range": [
+        9,
+        9917
+      ],
+      "decoded_entries": 9908,
+      "bytes_read": 2281646,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00400-00409-s0015-PHYS.root",
+      "wall_s": 1.1920244960056152,
+      "cpu_s": 0.9324842370000002,
+      "peak_rss_MiB": 133.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        203,
+        203,
+        203
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1005,
+          "valid_N": 1005,
+          "ndof0_N": 183,
+          "valid_ndof0_N": 183,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 103,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.470348358154297e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004178066927124746
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1003,
+          "valid_N": 1003,
+          "ndof0_N": 182,
+          "valid_ndof0_N": 182,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 102,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -4.470348358154297e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004178066927124746
+        }
+      },
+      "raw_ghost_multiset_identical_N": 201,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 382
+    },
+    {
+      "stage": 51,
+      "index": 89,
+      "events": 181,
+      "raw_entries": 10000,
+      "entry_range": [
+        35,
+        9979
+      ],
+      "decoded_entries": 9944,
+      "bytes_read": 2277227,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00430-00439-s0015-PHYS.root",
+      "wall_s": 1.4945582119980827,
+      "cpu_s": 1.1359826430000002,
+      "peak_rss_MiB": 134.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        181,
+        181,
+        181
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 843,
+          "valid_N": 843,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 77,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.361736382132221e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00445815286366269
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 839,
+          "valid_N": 839,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 77,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -6.361736382132221e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00445815286366269
+        }
+      },
+      "raw_ghost_multiset_identical_N": 179,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 304
+    },
+    {
+      "stage": 51,
+      "index": 91,
+      "events": 187,
+      "raw_entries": 10000,
+      "entry_range": [
+        55,
+        9920
+      ],
+      "decoded_entries": 9865,
+      "bytes_read": 2235169,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00450-00459-s0015-PHYS.root",
+      "wall_s": 1.5223309570064885,
+      "cpu_s": 1.1562081590000002,
+      "peak_rss_MiB": 134.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        187,
+        187,
+        187
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 961,
+          "valid_N": 961,
+          "ndof0_N": 170,
+          "valid_ndof0_N": 170,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 89,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.50594255849046e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0052010754006914794
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 951,
+          "valid_N": 951,
+          "ndof0_N": 170,
+          "valid_ndof0_N": 170,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 89,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.50594255849046e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0052010754006914794
+        }
+      },
+      "raw_ghost_multiset_identical_N": 184,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 376
+    },
+    {
+      "stage": 51,
+      "index": 94,
+      "events": 200,
+      "raw_entries": 10000,
+      "entry_range": [
+        4,
+        9991
+      ],
+      "decoded_entries": 9987,
+      "bytes_read": 2258178,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00480-00489-s0015-PHYS.root",
+      "wall_s": 1.4428645560037694,
+      "cpu_s": 1.1211455059999995,
+      "peak_rss_MiB": 134.4140625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 15,
+      "axis_valid_N": [
+        200,
+        200,
+        200
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 966,
+          "valid_N": 966,
+          "ndof0_N": 165,
+          "valid_ndof0_N": 165,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.526157499322835e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003941746428608894
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 965,
+          "valid_N": 965,
+          "ndof0_N": 165,
+          "valid_ndof0_N": 165,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 76,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.526157499322835e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003941746428608894
+        }
+      },
+      "raw_ghost_multiset_identical_N": 199,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 377
+    },
+    {
+      "stage": 51,
+      "index": 95,
+      "events": 176,
+      "raw_entries": 10000,
+      "entry_range": [
+        118,
+        9838
+      ],
+      "decoded_entries": 9720,
+      "bytes_read": 2275343,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00490-00499-s0015-PHYS.root",
+      "wall_s": 1.2283255020010984,
+      "cpu_s": 0.867218168,
+      "peak_rss_MiB": 143.58984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        176,
+        176,
+        176
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 836,
+          "valid_N": 836,
+          "ndof0_N": 167,
+          "valid_ndof0_N": 167,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 83,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.775733313839737e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003959509878768586
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 835,
+          "valid_N": 835,
+          "ndof0_N": 166,
+          "valid_ndof0_N": 166,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.775733313839737e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003959509878768586
+        }
+      },
+      "raw_ghost_multiset_identical_N": 175,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 314
+    },
+    {
+      "stage": 51,
+      "index": 96,
+      "events": 199,
+      "raw_entries": 10000,
+      "entry_range": [
+        29,
+        9954
+      ],
+      "decoded_entries": 9925,
+      "bytes_read": 2269916,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00500-00509-s0015-PHYS.root",
+      "wall_s": 1.2526556340017123,
+      "cpu_s": 0.9376713219999999,
+      "peak_rss_MiB": 154.58984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 11,
+      "axis_valid_N": [
+        199,
+        199,
+        199
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 1019,
+          "valid_N": 1019,
+          "ndof0_N": 183,
+          "valid_ndof0_N": 183,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 84,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00437175614933949
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 1017,
+          "valid_N": 1017,
+          "ndof0_N": 183,
+          "valid_ndof0_N": 183,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 84,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960464477539063e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00437175614933949
+        }
+      },
+      "raw_ghost_multiset_identical_N": 198,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 415
+    },
+    {
+      "stage": 51,
+      "index": 98,
+      "events": 184,
+      "raw_entries": 10000,
+      "entry_range": [
+        18,
+        9958
+      ],
+      "decoded_entries": 9940,
+      "bytes_read": 2250596,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00520-00529-s0015-PHYS.root",
+      "wall_s": 1.4424183630035259,
+      "cpu_s": 1.119044799000001,
+      "peak_rss_MiB": 165.08984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 9,
+      "axis_valid_N": [
+        184,
+        184,
+        184
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 892,
+          "valid_N": 892,
+          "ndof0_N": 144,
+          "valid_ndof0_N": 144,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 75,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.028765505064257e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004389450448798016
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 889,
+          "valid_N": 889,
+          "ndof0_N": 143,
+          "valid_ndof0_N": 143,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 74,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.028765505064257e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004389450448798016
+        }
+      },
+      "raw_ghost_multiset_identical_N": 182,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 329
+    },
+    {
+      "stage": 51,
+      "index": 99,
+      "events": 177,
+      "raw_entries": 10000,
+      "entry_range": [
+        103,
+        9898
+      ],
+      "decoded_entries": 9795,
+      "bytes_read": 2223497,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00530-00539-s0015-PHYS.root",
+      "wall_s": 1.9930297850005445,
+      "cpu_s": 1.0473025589999998,
+      "peak_rss_MiB": 105.06640625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        177,
+        177,
+        177
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 856,
+          "valid_N": 856,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 78,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.785353517419935e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0048225032951449975
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 856,
+          "valid_N": 856,
+          "ndof0_N": 151,
+          "valid_ndof0_N": 151,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 78,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.785353517419935e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0048225032951449975
+        }
+      },
+      "raw_ghost_multiset_identical_N": 177,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 342
+    },
+    {
+      "stage": 51,
+      "index": 100,
+      "events": 177,
+      "raw_entries": 10000,
+      "entry_range": [
+        130,
+        9996
+      ],
+      "decoded_entries": 9866,
+      "bytes_read": 2256189,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00540-00549-s0015-PHYS.root",
+      "wall_s": 1.6751384000017424,
+      "cpu_s": 1.139964006,
+      "peak_rss_MiB": 118.06640625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 8,
+      "axis_valid_N": [
+        177,
+        177,
+        177
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 893,
+          "valid_N": 893,
+          "ndof0_N": 164,
+          "valid_ndof0_N": 164,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 86,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.940761375697548e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039060856215655804
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 892,
+          "valid_N": 892,
+          "ndof0_N": 164,
+          "valid_ndof0_N": 164,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 86,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -8.940761375697548e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039060856215655804
+        }
+      },
+      "raw_ghost_multiset_identical_N": 176,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 384
+    },
+    {
+      "stage": 51,
+      "index": 101,
+      "events": 185,
+      "raw_entries": 10000,
+      "entry_range": [
+        51,
+        9934
+      ],
+      "decoded_entries": 9883,
+      "bytes_read": 2242551,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00550-00559-s0015-PHYS.root",
+      "wall_s": 1.5512949030016898,
+      "cpu_s": 1.13004872,
+      "peak_rss_MiB": 128.06640625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 8,
+      "axis_valid_N": [
+        185,
+        185,
+        185
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 911,
+          "valid_N": 911,
+          "ndof0_N": 145,
+          "valid_ndof0_N": 145,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 86,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.6359692267542414e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004540521345916204
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 906,
+          "valid_N": 906,
+          "ndof0_N": 144,
+          "valid_ndof0_N": 144,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 86,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.6359692267542414e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004540521345916204
+        }
+      },
+      "raw_ghost_multiset_identical_N": 182,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 353
+    },
+    {
+      "stage": 51,
+      "index": 103,
+      "events": 190,
+      "raw_entries": 10000,
+      "entry_range": [
+        157,
+        9997
+      ],
+      "decoded_entries": 9840,
+      "bytes_read": 2249927,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00570-00579-s0015-PHYS.root",
+      "wall_s": 1.8704682699972182,
+      "cpu_s": 1.305301504,
+      "peak_rss_MiB": 128.06640625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        190,
+        190,
+        190
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 974,
+          "valid_N": 974,
+          "ndof0_N": 203,
+          "valid_ndof0_N": 203,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 107,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.097482779272468e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0041548275330569595
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 970,
+          "valid_N": 970,
+          "ndof0_N": 201,
+          "valid_ndof0_N": 201,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 106,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.097482779272468e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0041548275330569595
+        }
+      },
+      "raw_ghost_multiset_identical_N": 186,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 411
+    },
+    {
+      "stage": 51,
+      "index": 104,
+      "events": 180,
+      "raw_entries": 10000,
+      "entry_range": [
+        13,
+        9976
+      ],
+      "decoded_entries": 9963,
+      "bytes_read": 2226318,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00580-00589-s0015-PHYS.root",
+      "wall_s": 1.5581421140013845,
+      "cpu_s": 1.134568712,
+      "peak_rss_MiB": 128.06640625,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 8,
+      "axis_valid_N": [
+        180,
+        180,
+        180
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 916,
+          "valid_N": 916,
+          "ndof0_N": 147,
+          "valid_ndof0_N": 147,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 81,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960595217402442e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038927226851228625
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 910,
+          "valid_N": 910,
+          "ndof0_N": 146,
+          "valid_ndof0_N": 146,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 80,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960595217402442e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038927226851228625
+        }
+      },
+      "raw_ghost_multiset_identical_N": 176,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 353
+    },
+    {
+      "stage": 51,
+      "index": 105,
+      "events": 184,
+      "raw_entries": 10000,
+      "entry_range": [
+        57,
+        9990
+      ],
+      "decoded_entries": 9933,
+      "bytes_read": 2253742,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00590-00599-s0015-PHYS.root",
+      "wall_s": 1.4387509139996837,
+      "cpu_s": 1.0873126810000002,
+      "peak_rss_MiB": 128.58984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 11,
+      "axis_valid_N": [
+        184,
+        184,
+        184
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 931,
+          "valid_N": 931,
+          "ndof0_N": 168,
+          "valid_ndof0_N": 168,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 85,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960372106983414e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004783175274496898
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 930,
+          "valid_N": 930,
+          "ndof0_N": 168,
+          "valid_ndof0_N": 168,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 85,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960372106983414e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004783175274496898
+        }
+      },
+      "raw_ghost_multiset_identical_N": 183,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 405
+    },
+    {
+      "stage": 51,
+      "index": 106,
+      "events": 187,
+      "raw_entries": 10000,
+      "entry_range": [
+        53,
+        9950
+      ],
+      "decoded_entries": 9897,
+      "bytes_read": 2253858,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00600-00609-s0015-PHYS.root",
+      "wall_s": 1.4809213019980234,
+      "cpu_s": 1.19185212,
+      "peak_rss_MiB": 137.58984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 12,
+      "axis_valid_N": [
+        187,
+        187,
+        187
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 949,
+          "valid_N": 949,
+          "ndof0_N": 171,
+          "valid_ndof0_N": 171,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.0902245978504652e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003907810503733344
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 946,
+          "valid_N": 946,
+          "ndof0_N": 171,
+          "valid_ndof0_N": 171,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 82,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.0902245978504652e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.003907810503733344
+        }
+      },
+      "raw_ghost_multiset_identical_N": 185,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 403
+    },
+    {
+      "stage": 51,
+      "index": 108,
+      "events": 168,
+      "raw_entries": 8184,
+      "entry_range": [
+        88,
+        8178
+      ],
+      "decoded_entries": 8090,
+      "bytes_read": 1878891,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200140/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_epos_k-200140-00620-00629-s0015-PHYS.root",
+      "wall_s": 1.5813441010031966,
+      "cpu_s": 1.0161999780000013,
+      "peak_rss_MiB": 145.58984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        168,
+        168,
+        168
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 833,
+          "valid_N": 833,
+          "ndof0_N": 156,
+          "valid_ndof0_N": 156,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 72,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.197712127369414e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004130683810217306
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 830,
+          "valid_N": 830,
+          "ndof0_N": 155,
+          "valid_ndof0_N": 155,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 71,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.197712127369414e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004130683810217306
+        }
+      },
+      "raw_ghost_multiset_identical_N": 166,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 337
+    },
+    {
+      "stage": 51,
+      "index": 109,
+      "events": 118,
+      "raw_entries": 10000,
+      "entry_range": [
+        241,
+        9890
+      ],
+      "decoded_entries": 9649,
+      "bytes_read": 2020775,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00000-00009-s0015-PHYS.root",
+      "wall_s": 1.2960317279939773,
+      "cpu_s": 0.8319140429999994,
+      "peak_rss_MiB": 155.58984375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        118,
+        118,
+        118
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 610,
+          "valid_N": 610,
+          "ndof0_N": 137,
+          "valid_ndof0_N": 137,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 71,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.9581157785260075e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004055887533468194
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 608,
+          "valid_N": 608,
+          "ndof0_N": 136,
+          "valid_ndof0_N": 136,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 71,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.9581157785260075e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004055887533468194
+        }
+      },
+      "raw_ghost_multiset_identical_N": 116,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 239
+    },
+    {
+      "stage": 51,
+      "index": 110,
+      "events": 109,
+      "raw_entries": 10000,
+      "entry_range": [
+        77,
+        9965
+      ],
+      "decoded_entries": 9888,
+      "bytes_read": 2014087,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00010-00019-s0015-PHYS.root",
+      "wall_s": 1.932931732997531,
+      "cpu_s": 0.9280629479999998,
+      "peak_rss_MiB": 107.87109375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 4,
+      "axis_valid_N": [
+        109,
+        109,
+        109
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 515,
+          "valid_N": 515,
+          "ndof0_N": 90,
+          "valid_ndof0_N": 90,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 47,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.450580596923828e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039228840614669025
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 513,
+          "valid_N": 513,
+          "ndof0_N": 90,
+          "valid_ndof0_N": 90,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 47,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.450580596923828e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0039228840614669025
+        }
+      },
+      "raw_ghost_multiset_identical_N": 107,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 212
+    },
+    {
+      "stage": 51,
+      "index": 111,
+      "events": 82,
+      "raw_entries": 10000,
+      "entry_range": [
+        208,
+        9931
+      ],
+      "decoded_entries": 9723,
+      "bytes_read": 2028839,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00020-00029-s0015-PHYS.root",
+      "wall_s": 1.4457524239987833,
+      "cpu_s": 0.8181054200000002,
+      "peak_rss_MiB": 121.37109375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 2,
+      "axis_valid_N": [
+        82,
+        82,
+        82
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 413,
+          "valid_N": 413,
+          "ndof0_N": 85,
+          "valid_ndof0_N": 85,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 47,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960791327197512e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004398318691528402
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 411,
+          "valid_N": 411,
+          "ndof0_N": 85,
+          "valid_ndof0_N": 85,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 47,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.960791327197512e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004398318691528402
+        }
+      },
+      "raw_ghost_multiset_identical_N": 80,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 172
+    },
+    {
+      "stage": 51,
+      "index": 112,
+      "events": 110,
+      "raw_entries": 10000,
+      "entry_range": [
+        62,
+        9939
+      ],
+      "decoded_entries": 9877,
+      "bytes_read": 2056269,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00030-00039-s0015-PHYS.root",
+      "wall_s": 1.2435601710021729,
+      "cpu_s": 0.8812147499999998,
+      "peak_rss_MiB": 131.87109375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        110,
+        110,
+        110
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 585,
+          "valid_N": 585,
+          "ndof0_N": 97,
+          "valid_ndof0_N": 97,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 50,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.440507612140209e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004861042805714533
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 580,
+          "valid_N": 580,
+          "ndof0_N": 97,
+          "valid_ndof0_N": 97,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 50,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.440507612140209e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004861042805714533
+        }
+      },
+      "raw_ghost_multiset_identical_N": 106,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 251
+    },
+    {
+      "stage": 51,
+      "index": 113,
+      "events": 117,
+      "raw_entries": 10000,
+      "entry_range": [
+        26,
+        9926
+      ],
+      "decoded_entries": 9900,
+      "bytes_read": 2030885,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00040-00049-s0015-PHYS.root",
+      "wall_s": 1.3037240539997583,
+      "cpu_s": 0.9527064989999996,
+      "peak_rss_MiB": 134.87109375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        117,
+        117,
+        117
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 556,
+          "valid_N": 556,
+          "ndof0_N": 93,
+          "valid_ndof0_N": 93,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 42,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.2980834185327694e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00499718492210377
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 556,
+          "valid_N": 556,
+          "ndof0_N": 93,
+          "valid_ndof0_N": 93,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 42,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.2980834185327694e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.00499718492210377
+        }
+      },
+      "raw_ghost_multiset_identical_N": 117,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 220
+    },
+    {
+      "stage": 51,
+      "index": 115,
+      "events": 96,
+      "raw_entries": 10000,
+      "entry_range": [
+        44,
+        9662
+      ],
+      "decoded_entries": 9618,
+      "bytes_read": 2024231,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00060-00069-s0015-PHYS.root",
+      "wall_s": 1.289364095995552,
+      "cpu_s": 0.8901728180000008,
+      "peak_rss_MiB": 134.87109375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 5,
+      "axis_valid_N": [
+        96,
+        96,
+        96
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 481,
+          "valid_N": 481,
+          "ndof0_N": 80,
+          "valid_ndof0_N": 80,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 43,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.0268618666486873e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038709237123839557
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 480,
+          "valid_N": 480,
+          "ndof0_N": 80,
+          "valid_ndof0_N": 80,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 43,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -1.0268618666486873e-07,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038709237123839557
+        }
+      },
+      "raw_ghost_multiset_identical_N": 95,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 210
+    },
+    {
+      "stage": 51,
+      "index": 117,
+      "events": 92,
+      "raw_entries": 10000,
+      "entry_range": [
+        157,
+        9927
+      ],
+      "decoded_entries": 9770,
+      "bytes_read": 2017448,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00080-00089-s0015-PHYS.root",
+      "wall_s": 1.154711863004195,
+      "cpu_s": 0.8069228190000004,
+      "peak_rss_MiB": 134.87109375,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 1,
+      "axis_valid_N": [
+        92,
+        92,
+        92
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 424,
+          "valid_N": 424,
+          "ndof0_N": 69,
+          "valid_ndof0_N": 69,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 47,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.96047655676557e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038925683038542047
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 421,
+          "valid_N": 421,
+          "ndof0_N": 69,
+          "valid_ndof0_N": 69,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 47,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -5.96047655676557e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038925683038542047
+        }
+      },
+      "raw_ghost_multiset_identical_N": 91,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 147
+    },
+    {
+      "stage": 51,
+      "index": 119,
+      "events": 90,
+      "raw_entries": 10000,
+      "entry_range": [
+        75,
+        9950
+      ],
+      "decoded_entries": 9875,
+      "bytes_read": 2071065,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00100-00109-s0015-PHYS.root",
+      "wall_s": 1.90245391499775,
+      "cpu_s": 0.9066788399999997,
+      "peak_rss_MiB": 140.23046875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 6,
+      "axis_valid_N": [
+        90,
+        90,
+        90
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 469,
+          "valid_N": 469,
+          "ndof0_N": 72,
+          "valid_ndof0_N": 72,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 43,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.570728399741711e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004180881354841404
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 464,
+          "valid_N": 464,
+          "ndof0_N": 72,
+          "valid_ndof0_N": 72,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 43,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -7.570728399741711e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004180881354841404
+        }
+      },
+      "raw_ghost_multiset_identical_N": 88,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 183
+    },
+    {
+      "stage": 51,
+      "index": 120,
+      "events": 90,
+      "raw_entries": 10000,
+      "entry_range": [
+        76,
+        9985
+      ],
+      "decoded_entries": 9909,
+      "bytes_read": 2067340,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00110-00119-s0015-PHYS.root",
+      "wall_s": 1.7500553639983991,
+      "cpu_s": 0.8682311099999991,
+      "peak_rss_MiB": 150.73046875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 3,
+      "axis_valid_N": [
+        90,
+        90,
+        90
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 463,
+          "valid_N": 463,
+          "ndof0_N": 65,
+          "valid_ndof0_N": 65,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 35,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.4409858074013755e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038709237123839557
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 462,
+          "valid_N": 462,
+          "ndof0_N": 65,
+          "valid_ndof0_N": 65,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 35,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -3.4409858074013755e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.0038709237123839557
+        }
+      },
+      "raw_ghost_multiset_identical_N": 89,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 199
+    },
+    {
+      "stage": 51,
+      "index": 123,
+      "events": 59,
+      "raw_entries": 6711,
+      "entry_range": [
+        216,
+        6648
+      ],
+      "decoded_entries": 6432,
+      "bytes_read": 1375612,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200146/bck/s0015/FaserMC-MC24_Genie_24_xing_angle_caloNu_powheg_pythia_charm_central-200146-00140-00149-s0015-PHYS.root",
+      "wall_s": 1.0787815770017914,
+      "cpu_s": 0.7147149200000005,
+      "peak_rss_MiB": 156.23046875,
+      "identity_failures": 0,
+      "F6_total_segments_and_leading_fingerprint_verified": true,
+      "nonfirst_leading_N": 1,
+      "axis_valid_N": [
+        59,
+        59,
+        59
+      ],
+      "collections": {
+        "TrackSegment_": {
+          "segments_N": 285,
+          "valid_N": 285,
+          "ndof0_N": 60,
+          "valid_ndof0_N": 60,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 34,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.4661877873199956e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004916275822324678
+        },
+        "GhostBustedTrackSegment_": {
+          "segments_N": 285,
+          "valid_N": 285,
+          "ndof0_N": 60,
+          "valid_ndof0_N": 60,
+          "negative_ndof_N": 0,
+          "negative_chi2_N": 34,
+          "nonpositive_pz_N": 0,
+          "nonfinite_N": 0,
+          "minimum_chi2": -2.4661877873199956e-08,
+          "maximum_station_distance_mm": 9.765625009094947e-05,
+          "maximum_dummy_p_deviation_MeV": 0.004916275822324678
+        }
+      },
+      "raw_ghost_multiset_identical_N": 59,
+      "exact_duplicate_N": 0,
+      "shuffled_pairings_N": 123
+    }
+  ],
+  "columns": [
+    "run",
+    "eventID",
+    "TrackSegments",
+    "GhostBustedTrackSegments",
+    "TrackSegment_x",
+    "TrackSegment_y",
+    "TrackSegment_z",
+    "TrackSegment_px",
+    "TrackSegment_py",
+    "TrackSegment_pz",
+    "TrackSegment_Chi2",
+    "TrackSegment_nDoF",
+    "GhostBustedTrackSegment_x",
+    "GhostBustedTrackSegment_y",
+    "GhostBustedTrackSegment_z",
+    "GhostBustedTrackSegment_px",
+    "GhostBustedTrackSegment_py",
+    "GhostBustedTrackSegment_pz",
+    "GhostBustedTrackSegment_Chi2",
+    "GhostBustedTrackSegment_nDoF",
+    "Track_p0",
+    "Track_pz0",
+    "Track_x0",
+    "Track_y0",
+    "Track_z0",
+    "Track_x1",
+    "Track_y1",
+    "Track_z1",
+    "Track_px1",
+    "Track_py1",
+    "Track_pz1",
+    "Track_X_atVetoStation1",
+    "Track_Y_atVetoStation1",
+    "Track_ThetaX_atVetoStation1",
+    "Track_ThetaY_atVetoStation1",
+    "Track_X_atTrig",
+    "Track_Y_atTrig",
+    "Track_ThetaX_atTrig",
+    "Track_ThetaY_atTrig"
+  ]
+}

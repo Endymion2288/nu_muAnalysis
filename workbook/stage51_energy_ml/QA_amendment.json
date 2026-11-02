@@ -1,0 +1,11 @@
+{
+  "amended_utc": "2026-11-02T09:59:46.702712+00:00",
+  "reason": "pilot found 20 finite tiny negative chi2 segments, all ndof0; they are not a physical negative quality selection",
+  "pilot_negative_chi2_N": 20,
+  "pilot_chi2_minimum": -1.427170293055724e-08,
+  "old_quality": "finite 8-vectors, no 999999 sentinel, pz>0, ndof>=0, chi2>=0, station centre within 1mm; exact duplicate removal only; no chi2/angle cut",
+  "new_quality": "finite 8-vectors, no 999999 sentinel, pz>0, ndof>=0, finite chi2 without sign/size selection, station centre within 1mm; exact duplicate removal only; no chi2/angle cut",
+  "new_energy_residuals_examined": false,
+  "formal_jobs_started": 0,
+  "formal_energy_fits": 0
+}

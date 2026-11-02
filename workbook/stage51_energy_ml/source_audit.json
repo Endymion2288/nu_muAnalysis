@@ -1,0 +1,30 @@
+{
+  "source_repository": "/eos/home-x/xcheng/FASER/calypso",
+  "commit": "1ec47efe",
+  "ntuple_source": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+  "ntuple_lines": [
+    1882,
+    1918
+  ],
+  "segment_source": "Tracker/TrackerRecAlgs/TrackerSegmentFit/src/SegmentFitAlg.cxx",
+  "segment_lines": [
+    169,
+    188,
+    653,
+    732
+  ],
+  "measured_semantics": "station-centre straight-line fit; stored px/py/pz from front fitted parameters; q/p fixed to 1/100000 MeV^-1",
+  "not_measured_hadron_momentum": true,
+  "production_min_clusters": 4,
+  "production_max_clusters": 36,
+  "occupancy_rejection_mechanism_measured_on_events": false,
+  "pilot_negative_chi2_all_ndof0": true,
+  "global_z_as_nominal_direction": true,
+  "slope_field_mrad_suffix": "tx,ty moments are 1000 times dimensionless slopes (milli-slope); exact polar and relative angles are true mrad",
+  "target_depth_convergence_tested": false,
+  "segment_covariance_or_truth_error_measured": false,
+  "commands": [
+    "git -C /eos/home-x/xcheng/FASER/calypso show 1ec47efe:PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+    "git -C /eos/home-x/xcheng/FASER/calypso show 1ec47efe:Tracker/TrackerRecAlgs/TrackerSegmentFit/src/SegmentFitAlg.cxx"
+  ]
+}
