@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage63
+initialdir = $(spool)
+executable = $(spool)/run_ml_joint_response.sh
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-joint-stage63.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 100MB
+getenv = False
+max_retries = 0
++JobFlavour = "microcentury"
++MaxRuntime = 3300
++NuMuStage = "energy-ml-joint-stage63"
+log = $(spool)/logs/joint.$(ClusterId).log
+output = $(spool)/logs/joint.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/joint.$(ClusterId).$(ProcId).err
+queue 1

@@ -1,0 +1,480 @@
+{
+  "independent_convex_profiles": [
+    {
+      "role": "train",
+      "representation": "M_mu",
+      "point": "minimum",
+      "NLL_error": 6.546111438609239e-10
+    },
+    {
+      "role": "train",
+      "representation": "M_mu",
+      "point": "low68",
+      "NLL_error": 4.266371145256187e-10
+    },
+    {
+      "role": "train",
+      "representation": "M_mu",
+      "point": "high68",
+      "NLL_error": 1.1498091923023424e-09
+    },
+    {
+      "role": "train",
+      "representation": "S_scalar",
+      "point": "minimum",
+      "NLL_error": 3.15152623753733e-10
+    },
+    {
+      "role": "train",
+      "representation": "S_scalar",
+      "point": "low68",
+      "NLL_error": 4.4035347590565266e-10
+    },
+    {
+      "role": "train",
+      "representation": "S_scalar",
+      "point": "high68",
+      "NLL_error": 3.472757081901534e-10
+    },
+    {
+      "role": "train",
+      "representation": "J_joint",
+      "point": "minimum",
+      "NLL_error": 4.662816803290987e-10
+    },
+    {
+      "role": "train",
+      "representation": "J_joint",
+      "point": "low68",
+      "NLL_error": 4.1187792065855433e-10
+    },
+    {
+      "role": "train",
+      "representation": "J_joint",
+      "point": "high68",
+      "NLL_error": 1.8471992269120108e-09
+    },
+    {
+      "role": "cal",
+      "representation": "M_mu",
+      "point": "minimum",
+      "NLL_error": 4.5339021426116233e-10
+    },
+    {
+      "role": "cal",
+      "representation": "M_mu",
+      "point": "low68",
+      "NLL_error": 2.3366730772522715e-10
+    },
+    {
+      "role": "cal",
+      "representation": "M_mu",
+      "point": "high68",
+      "NLL_error": 1.6052879026062783e-09
+    },
+    {
+      "role": "cal",
+      "representation": "S_scalar",
+      "point": "minimum",
+      "NLL_error": 3.772937517965147e-10
+    },
+    {
+      "role": "cal",
+      "representation": "S_scalar",
+      "point": "low68",
+      "NLL_error": 4.3496228840922413e-10
+    },
+    {
+      "role": "cal",
+      "representation": "S_scalar",
+      "point": "high68",
+      "NLL_error": 7.005951374594588e-10
+    },
+    {
+      "role": "cal",
+      "representation": "J_joint",
+      "point": "minimum",
+      "NLL_error": 4.19694501374579e-10
+    },
+    {
+      "role": "cal",
+      "representation": "J_joint",
+      "point": "low68",
+      "NLL_error": 3.043894025722693e-10
+    },
+    {
+      "role": "cal",
+      "representation": "J_joint",
+      "point": "high68",
+      "NLL_error": 1.0416458806616902e-09
+    },
+    {
+      "role": "eval",
+      "representation": "M_mu",
+      "point": "minimum",
+      "NLL_error": 4.960885036098261e-10
+    },
+    {
+      "role": "eval",
+      "representation": "M_mu",
+      "point": "low68",
+      "NLL_error": 7.332054963171686e-10
+    },
+    {
+      "role": "eval",
+      "representation": "M_mu",
+      "point": "high68",
+      "NLL_error": 1.0032703556817069e-09
+    },
+    {
+      "role": "eval",
+      "representation": "S_scalar",
+      "point": "minimum",
+      "NLL_error": 3.496420930559907e-10
+    },
+    {
+      "role": "eval",
+      "representation": "S_scalar",
+      "point": "low68",
+      "NLL_error": 3.126814362985897e-10
+    },
+    {
+      "role": "eval",
+      "representation": "S_scalar",
+      "point": "high68",
+      "NLL_error": 4.773497153109929e-10
+    },
+    {
+      "role": "eval",
+      "representation": "J_joint",
+      "point": "minimum",
+      "NLL_error": 3.9397818341058155e-10
+    },
+    {
+      "role": "eval",
+      "representation": "J_joint",
+      "point": "low68",
+      "NLL_error": 4.5212367183466995e-10
+    },
+    {
+      "role": "eval",
+      "representation": "J_joint",
+      "point": "high68",
+      "NLL_error": 8.949427865445614e-10
+    }
+  ],
+  "largest_independent_NLL_error": 1.8471992269120108e-09,
+  "counts_binning_and_all_294_checks_pass": true,
+  "positive_MC_probability_analytic_lower_bound": 2.623570154265925e-05,
+  "numerical_floor": 1e-14,
+  "numerical_floor_inactive_for_positive_MC_cells": true,
+  "source_summary": [
+    {
+      "role": "cal",
+      "representation": "M_mu",
+      "sources": 16,
+      "regular": 11,
+      "zero_low_sources": 0,
+      "boundary_fits": 5,
+      "abs_bias_r_sigma_median": 1.9709281738248532,
+      "abs_bias_r_sigma_max": 3.9495764354145164,
+      "truth_in_profile68_sources": 0
+    },
+    {
+      "role": "cal",
+      "representation": "S_scalar",
+      "sources": 16,
+      "regular": 14,
+      "zero_low_sources": 0,
+      "boundary_fits": 2,
+      "abs_bias_r_sigma_median": 1.5121844283509969,
+      "abs_bias_r_sigma_max": 3.5433517204578715,
+      "truth_in_profile68_sources": 3
+    },
+    {
+      "role": "cal",
+      "representation": "J_joint",
+      "sources": 16,
+      "regular": 10,
+      "zero_low_sources": 0,
+      "boundary_fits": 6,
+      "abs_bias_r_sigma_median": 3.6725419133553814,
+      "abs_bias_r_sigma_max": 4.577662937121931,
+      "truth_in_profile68_sources": 0
+    },
+    {
+      "role": "eval",
+      "representation": "M_mu",
+      "sources": 22,
+      "regular": 13,
+      "zero_low_sources": 0,
+      "boundary_fits": 9,
+      "abs_bias_r_sigma_median": 1.7736040595271496,
+      "abs_bias_r_sigma_max": 3.3221983224560927,
+      "truth_in_profile68_sources": 2
+    },
+    {
+      "role": "eval",
+      "representation": "S_scalar",
+      "sources": 22,
+      "regular": 22,
+      "zero_low_sources": 0,
+      "boundary_fits": 0,
+      "abs_bias_r_sigma_median": 2.111971375845312,
+      "abs_bias_r_sigma_max": 3.770175745651281,
+      "truth_in_profile68_sources": 4
+    },
+    {
+      "role": "eval",
+      "representation": "J_joint",
+      "sources": 22,
+      "regular": 8,
+      "zero_low_sources": 0,
+      "boundary_fits": 14,
+      "abs_bias_r_sigma_median": 1.7034805856163728,
+      "abs_bias_r_sigma_max": 2.502625823772737,
+      "truth_in_profile68_sources": 0
+    }
+  ],
+  "component_response": [
+    {
+      "role": "train",
+      "component": "true50_200",
+      "representation": "M_mu",
+      "N": 4331,
+      "sources": 90,
+      "zero_cells": 11,
+      "TV_to_train": 0.0,
+      "mean_M": 4.712950724448016,
+      "mean_S": 5.0407479415186005,
+      "mean_log_truth_E": 4.906537451790442
+    },
+    {
+      "role": "train",
+      "component": "true50_200",
+      "representation": "S_scalar",
+      "N": 4331,
+      "sources": 90,
+      "zero_cells": 8,
+      "TV_to_train": 0.0,
+      "mean_M": 4.712950724448016,
+      "mean_S": 5.0407479415186005,
+      "mean_log_truth_E": 4.906537451790442
+    },
+    {
+      "role": "train",
+      "component": "true50_200",
+      "representation": "J_joint",
+      "N": 4331,
+      "sources": 90,
+      "zero_cells": 10,
+      "TV_to_train": 0.0,
+      "mean_M": 4.712950724448016,
+      "mean_S": 5.0407479415186005,
+      "mean_log_truth_E": 4.906537451790442
+    },
+    {
+      "role": "train",
+      "component": "true200_inf",
+      "representation": "M_mu",
+      "N": 37116,
+      "sources": 91,
+      "zero_cells": 1,
+      "TV_to_train": 0.0,
+      "mean_M": 6.135469872450326,
+      "mean_S": 6.487932870831949,
+      "mean_log_truth_E": 6.498560297928373
+    },
+    {
+      "role": "train",
+      "component": "true200_inf",
+      "representation": "S_scalar",
+      "N": 37116,
+      "sources": 91,
+      "zero_cells": 1,
+      "TV_to_train": 0.0,
+      "mean_M": 6.135469872450326,
+      "mean_S": 6.487932870831949,
+      "mean_log_truth_E": 6.498560297928373
+    },
+    {
+      "role": "train",
+      "component": "true200_inf",
+      "representation": "J_joint",
+      "N": 37116,
+      "sources": 91,
+      "zero_cells": 1,
+      "TV_to_train": 0.0,
+      "mean_M": 6.135469872450326,
+      "mean_S": 6.487932870831949,
+      "mean_log_truth_E": 6.498560297928373
+    },
+    {
+      "role": "cal",
+      "component": "true50_200",
+      "representation": "M_mu",
+      "N": 841,
+      "sources": 16,
+      "zero_cells": 12,
+      "TV_to_train": 0.007652982082275508,
+      "mean_M": 4.7191375171712275,
+      "mean_S": 5.055137265792197,
+      "mean_log_truth_E": 4.908122753978362
+    },
+    {
+      "role": "cal",
+      "component": "true50_200",
+      "representation": "S_scalar",
+      "N": 841,
+      "sources": 16,
+      "zero_cells": 9,
+      "TV_to_train": 0.010485477728655341,
+      "mean_M": 4.7191375171712275,
+      "mean_S": 5.055137265792197,
+      "mean_log_truth_E": 4.908122753978362
+    },
+    {
+      "role": "cal",
+      "component": "true50_200",
+      "representation": "J_joint",
+      "N": 841,
+      "sources": 16,
+      "zero_cells": 12,
+      "TV_to_train": 0.02607367563600742,
+      "mean_M": 4.7191375171712275,
+      "mean_S": 5.055137265792197,
+      "mean_log_truth_E": 4.908122753978362
+    },
+    {
+      "role": "cal",
+      "component": "true200_inf",
+      "representation": "M_mu",
+      "N": 7599,
+      "sources": 16,
+      "zero_cells": 1,
+      "TV_to_train": 0.03509905905481208,
+      "mean_M": 6.194438300059273,
+      "mean_S": 6.543813636385568,
+      "mean_log_truth_E": 6.560084093608286
+    },
+    {
+      "role": "cal",
+      "component": "true200_inf",
+      "representation": "S_scalar",
+      "N": 7599,
+      "sources": 16,
+      "zero_cells": 1,
+      "TV_to_train": 0.041100410245924174,
+      "mean_M": 6.194438300059273,
+      "mean_S": 6.543813636385568,
+      "mean_log_truth_E": 6.560084093608286
+    },
+    {
+      "role": "cal",
+      "component": "true200_inf",
+      "representation": "J_joint",
+      "N": 7599,
+      "sources": 16,
+      "zero_cells": 1,
+      "TV_to_train": 0.04157330373459812,
+      "mean_M": 6.194438300059273,
+      "mean_S": 6.543813636385568,
+      "mean_log_truth_E": 6.560084093608286
+    },
+    {
+      "role": "eval",
+      "component": "true50_200",
+      "representation": "M_mu",
+      "N": 1114,
+      "sources": 22,
+      "zero_cells": 12,
+      "TV_to_train": 0.016837404922219523,
+      "mean_M": 4.707856062727487,
+      "mean_S": 5.05509316654399,
+      "mean_log_truth_E": 4.900512079139014
+    },
+    {
+      "role": "eval",
+      "component": "true50_200",
+      "representation": "S_scalar",
+      "N": 1114,
+      "sources": 22,
+      "zero_cells": 8,
+      "TV_to_train": 0.021188940157115366,
+      "mean_M": 4.707856062727487,
+      "mean_S": 5.05509316654399,
+      "mean_log_truth_E": 4.900512079139014
+    },
+    {
+      "role": "eval",
+      "component": "true50_200",
+      "representation": "J_joint",
+      "N": 1114,
+      "sources": 22,
+      "zero_cells": 12,
+      "TV_to_train": 0.029873978544723914,
+      "mean_M": 4.707856062727487,
+      "mean_S": 5.05509316654399,
+      "mean_log_truth_E": 4.900512079139014
+    },
+    {
+      "role": "eval",
+      "component": "true200_inf",
+      "representation": "M_mu",
+      "N": 12943,
+      "sources": 22,
+      "zero_cells": 1,
+      "TV_to_train": 0.07848901843965103,
+      "mean_M": 6.271257211763876,
+      "mean_S": 6.606990509102467,
+      "mean_log_truth_E": 6.642640060004567
+    },
+    {
+      "role": "eval",
+      "component": "true200_inf",
+      "representation": "S_scalar",
+      "N": 12943,
+      "sources": 22,
+      "zero_cells": 1,
+      "TV_to_train": 0.08320199070265033,
+      "mean_M": 6.271257211763876,
+      "mean_S": 6.606990509102467,
+      "mean_log_truth_E": 6.642640060004567
+    },
+    {
+      "role": "eval",
+      "component": "true200_inf",
+      "representation": "J_joint",
+      "N": 12943,
+      "sources": 22,
+      "zero_cells": 1,
+      "TV_to_train": 0.07442108345813339,
+      "mean_M": 6.271257211763876,
+      "mean_S": 6.606990509102467,
+      "mean_log_truth_E": 6.642640060004567
+    }
+  ],
+  "selected_pz_range_GeV": [
+    50.029765625,
+    3738863.36
+  ],
+  "selected_truth_E_range_GeV": [
+    50.28500029106622,
+    6206.900002308643
+  ],
+  "resources": {
+    "wall_s": 2.1309790620580316,
+    "cpu_s": 1.586959754,
+    "peak_rss_MiB": 137.28515625,
+    "proc_io_delta": {
+      "rchar": 28627355,
+      "wchar": 1216099,
+      "syscr": 5833,
+      "syscw": 44,
+      "read_bytes": 0,
+      "write_bytes": 0,
+      "cancelled_write_bytes": 0
+    },
+    "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+  }
+}

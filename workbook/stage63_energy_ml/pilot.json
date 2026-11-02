@@ -1,0 +1,247 @@
+{
+  "wall_s": 2.8914870000444353,
+  "cpu_s": 2.76853753,
+  "peak_rss_MiB": 556.8046875,
+  "proc_io_delta": {
+    "rchar": 35195317,
+    "wchar": 2242486,
+    "syscr": 452,
+    "syscw": 56,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "energy_fits": 0,
+  "synthetic_profile_fits": 4,
+  "synthetic_main_fits": [
+    {
+      "finite_MC": false,
+      "f_hat": 0.12000000179927595,
+      "r_hat": 1.000000017038598,
+      "f_low68": 0.10451846088264691,
+      "f_high68": 0.1362265264546171,
+      "r_low68": 0.8559291059142257,
+      "r_high68": 1.1565468932884189,
+      "boundary": false,
+      "interval_hits_boundary": false,
+      "twice_NLL_min": 9.480341723244398e-15,
+      "sigma_f": 0.015858870311533515,
+      "relative_sigma_r": 0.150178694187232,
+      "fraction_profile_calls": 63,
+      "max_EM_iterations": 0,
+      "max_simplex_KKT": 0.0,
+      "convex_polish_calls": 0,
+      "scalar_terminations": [
+        {
+          "success": true,
+          "nfev": 20
+        }
+      ],
+      "grid_profile": [
+        {
+          "f": 0.0,
+          "twice_delta_NLL": 104.57056814010245
+        },
+        {
+          "f": 0.0625,
+          "twice_delta_NLL": 16.187289285713522
+        },
+        {
+          "f": 0.125,
+          "twice_delta_NLL": 0.09796185673789932
+        },
+        {
+          "f": 0.1875,
+          "twice_delta_NLL": 15.336802215046992
+        },
+        {
+          "f": 0.25,
+          "twice_delta_NLL": 50.87619747004012
+        },
+        {
+          "f": 0.3125,
+          "twice_delta_NLL": 102.48081886537317
+        },
+        {
+          "f": 0.375,
+          "twice_delta_NLL": 168.5032942765862
+        },
+        {
+          "f": 0.4375,
+          "twice_delta_NLL": 248.6598957092034
+        },
+        {
+          "f": 0.5,
+          "twice_delta_NLL": 343.6295417262702
+        },
+        {
+          "f": 0.5625,
+          "twice_delta_NLL": 454.9883964829209
+        },
+        {
+          "f": 0.625,
+          "twice_delta_NLL": 585.364071857208
+        },
+        {
+          "f": 0.6875,
+          "twice_delta_NLL": 738.8369577637953
+        },
+        {
+          "f": 0.75,
+          "twice_delta_NLL": 921.750848673399
+        },
+        {
+          "f": 0.8125,
+          "twice_delta_NLL": 1144.3646118429645
+        },
+        {
+          "f": 0.875,
+          "twice_delta_NLL": 1424.5343254833854
+        },
+        {
+          "f": 0.9375,
+          "twice_delta_NLL": 1797.3024902933807
+        },
+        {
+          "f": 1.0,
+          "twice_delta_NLL": 2347.2624429741636
+        }
+      ],
+      "grid_global_check_pass": true
+    },
+    {
+      "finite_MC": true,
+      "f_hat": 0.12000000117624536,
+      "r_hat": 1.000000011138687,
+      "f_low68": 0.10217210456125793,
+      "f_high68": 0.1383908988505763,
+      "r_low68": 0.8345275346448766,
+      "r_high68": 1.177873574242678,
+      "boundary": false,
+      "interval_hits_boundary": false,
+      "twice_NLL_min": -4.105670788884471e-13,
+      "sigma_f": 0.018095116800838147,
+      "relative_sigma_r": 0.17135527128461844,
+      "fraction_profile_calls": 58,
+      "max_EM_iterations": 45,
+      "max_simplex_KKT": 6.41565830764276e-12,
+      "convex_polish_calls": 0,
+      "scalar_terminations": [
+        {
+          "success": true,
+          "nfev": 17
+        }
+      ],
+      "grid_profile": [
+        {
+          "f": 0.0,
+          "twice_delta_NLL": 47.01687858616784
+        },
+        {
+          "f": 0.0625,
+          "twice_delta_NLL": 10.936587416406374
+        },
+        {
+          "f": 0.125,
+          "twice_delta_NLL": 0.07568945002708749
+        },
+        {
+          "f": 0.1875,
+          "twice_delta_NLL": 12.352946413053603
+        },
+        {
+          "f": 0.25,
+          "twice_delta_NLL": 41.44083857493506
+        },
+        {
+          "f": 0.3125,
+          "twice_delta_NLL": 83.22257180526573
+        },
+        {
+          "f": 0.375,
+          "twice_delta_NLL": 135.02748048301868
+        },
+        {
+          "f": 0.4375,
+          "twice_delta_NLL": 194.61454540767855
+        },
+        {
+          "f": 0.5,
+          "twice_delta_NLL": 259.43539521909753
+        },
+        {
+          "f": 0.5625,
+          "twice_delta_NLL": 326.3452985602135
+        },
+        {
+          "f": 0.625,
+          "twice_delta_NLL": 392.24133205327803
+        },
+        {
+          "f": 0.6875,
+          "twice_delta_NLL": 454.9923505562934
+        },
+        {
+          "f": 0.75,
+          "twice_delta_NLL": 513.6045296257017
+        },
+        {
+          "f": 0.8125,
+          "twice_delta_NLL": 567.8355040138525
+        },
+        {
+          "f": 0.875,
+          "twice_delta_NLL": 617.8163523600782
+        },
+        {
+          "f": 0.9375,
+          "twice_delta_NLL": 663.8295875510004
+        },
+        {
+          "f": 1.0,
+          "twice_delta_NLL": 706.1999516285637
+        }
+      ],
+      "grid_global_check_pass": true
+    }
+  ],
+  "synthetic_zero_cell_f_hat": 0.09999999837162994,
+  "synthetic_endpoint_f_hat": 5.301316828256794e-09,
+  "synthetic_two_fit_wall_s": 0.0645219711586833,
+  "synthetic_two_fit_CPU_s": 0.06242187099999996,
+  "independent_Fisher_Schur_relative_error": 0.0,
+  "F7_models": [
+    {
+      "seed": 2026110255,
+      "readback_predictions_exact": true,
+      "feature_names_policy_exact": true
+    },
+    {
+      "seed": 2026110256,
+      "readback_predictions_exact": true,
+      "feature_names_policy_exact": true
+    },
+    {
+      "seed": 2026110257,
+      "readback_predictions_exact": true,
+      "feature_names_policy_exact": true
+    }
+  ],
+  "protected_counts": {
+    "train": 41447,
+    "cal": 8440,
+    "eval": 14057
+  },
+  "eligible_missing": {
+    "train": 21,
+    "cal": 3,
+    "eval": 7
+  },
+  "train_component_N": [
+    4331,
+    37116
+  ],
+  "train_negative_correction_N": 1963,
+  "cache_bytes": 2236976
+}

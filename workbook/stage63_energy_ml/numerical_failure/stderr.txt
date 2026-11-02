@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/pool/condor/dir_3865434/nu_mu_joint.NGOU9m/ml/run_joint_response.py", line 117, in <module>
+    try:main()
+        ~~~~^^
+  File "/pool/condor/dir_3865434/nu_mu_joint.NGOU9m/ml/run_joint_response.py", line 58, in main
+    tick=time.perf_counter();result=TemplateLikelihood(templates[name],data,p,finite).fit(f0)
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/pool/condor/dir_3865434/nu_mu_joint.NGOU9m/ml/joint_response.py", line 136, in fit
+    values=np.array([self.evaluate(f)[0] for f in grid])
+                     ~~~~~~~~~~~~~^^^
+  File "/pool/condor/dir_3865434/nu_mu_joint.NGOU9m/ml/joint_response.py", line 126, in evaluate
+    assert kkt<self.p['EM_KKT_tolerance'],(f,kkt,nit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (0.8125, np.float64(3.1284307011974623e-06), 300)
+Command exited with non-zero status 1
+joint wall_s=2.71 user_s=1.79 system_s=0.32 max_rss_KiB=88280

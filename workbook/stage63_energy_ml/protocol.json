@@ -1,0 +1,142 @@
+{
+  "stage": 63,
+  "starting_commit": "d0c8d06",
+  "N_selected": 1000,
+  "parameter": "r=relative selected true50-200 vs >=200 strength; f(r)=r*f0/(1-f0+r*f0)",
+  "EM_initial_probability": 1e-06,
+  "EM_probability_tolerance": 1e-12,
+  "EM_active_probability": 1e-09,
+  "EM_KKT_tolerance": 1e-06,
+  "EM_maxiter": 300,
+  "simplex_positive_floor": 1e-14,
+  "simplex_ftol": 1e-14,
+  "simplex_maxiter": 300,
+  "fraction_bracket_points": 17,
+  "fraction_xtol": 1e-10,
+  "fraction_maxiter": 200,
+  "likelihood": "conditional data multinomial plus two conditional MC multinomials; fixed-f convex simplex profile via EM and analytic-gradient SLSQP polish for slow boundary convergence, no pseudocount",
+  "interval": "profile delta NLL=.5 with physical f in [0,1]; asymptotic reference, not coverage claim",
+  "outer_search": "fixed17 fraction grid, bounded refinement at every local/end grid minimum, brentq interval crossings; retain diagnostics",
+  "curvature": "efficient joint multinomial Fisher; zero cells are tangent Gaussian approximation; exact profile interval also reported",
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 2026110263,
+  "bootstrap": "component-stratified conservative train-source multinomial reweighting; fixed bins/F7/f0; paired curvature sigma ratios, no refits/toys",
+  "pressures": {
+    "low_internal": {
+      "target": "true50-100 within true50-200",
+      "factors": [
+        0.75,
+        1.25
+      ]
+    },
+    "high_y_mix": {
+      "target": "true>=200, reco pz50-100 and y>=.8 within high component",
+      "factors": [
+        0.75,
+        1.25
+      ]
+    }
+  },
+  "pressure_normalization": "renormalize weights separately in true low/high components, preserving original role f and total N; diagnostic, not1sigma",
+  "acceptance": {
+    "sigma_ratio_J_over_S_upper95_lt": 1.0,
+    "pooled_nominal_abs_bias_sigma_max": 1.0,
+    "pooled_pressure_abs_bias_sigma_max": 1.0,
+    "J_minus_S_abs_bias_sigma_max": 0.25
+  },
+  "acceptance_note": "prespecified research tolerances; pooled cal/eval only, all source diagnostics retained; not measured detector tolerances",
+  "train_template_caveat": "F7 was trained on the template train events; source-held-out closure is essential; no independent production certification",
+  "selected_models": [
+    "M_mu",
+    "S_scalar",
+    "J_joint"
+  ],
+  "energy_model_fits": 0,
+  "invalid_statistics": "separate missing category per representation; otherwise +-infinity implicit end bins, no event deletion",
+  "formal_job_limit": 1,
+  "request_cpus": 1,
+  "request_memory_MB": 3000,
+  "cpu_budget_s": 3600,
+  "wall_budget_s": 3300,
+  "retained_budget_bytes": 10000000,
+  "no_ROOT_RDO_locked_test_or_production": true,
+  "versions": {
+    "python": "3.13.11",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "xgboost": "2.1.3"
+  },
+  "f0": 0.10449489709749801,
+  "global_offset_log": 0.004602409250700414,
+  "binning": {
+    "M_edges": [
+      4.622008104703176,
+      4.963820170373869,
+      5.212968481111645,
+      5.40495606398496,
+      5.571701308903979,
+      5.716058043985917,
+      5.851815270163299,
+      5.9830297773679115,
+      6.1154091339812435,
+      6.2480997968342775,
+      6.386925390993755,
+      6.5424500762613835,
+      6.72598728767845,
+      6.946210352682183,
+      7.285445033047299
+    ],
+    "S_edges": [
+      5.140131212122404,
+      5.447721696741545,
+      5.660824295726581,
+      5.83149613623536,
+      5.982434130556547,
+      6.112853623278105,
+      6.240839060989185,
+      6.366153852986459,
+      6.485355036305551,
+      6.6075423725914595,
+      6.73548775598125,
+      6.873173372792367,
+      7.034807579564218,
+      7.220028178738717,
+      7.465283668882811
+    ],
+    "J_M_edges": [
+      5.40495606398496,
+      5.9830297773679115,
+      6.5424500762613835
+    ],
+    "J_delta_edges": [
+      [
+        0.20939637906386332,
+        0.3667714674386424,
+        0.7490918914751306
+      ],
+      [
+        0.1807538475649615,
+        0.2901681330638617,
+        0.4556097959637784
+      ],
+      [
+        0.1593075992111348,
+        0.26128660353841937,
+        0.4248953455526756
+      ],
+      [
+        0.04495773848399476,
+        0.1617334205890022,
+        0.3094020069662855
+      ]
+    ]
+  },
+  "category_counts": {
+    "M_mu": 17,
+    "S_scalar": 17,
+    "J_joint": 17
+  },
+  "frozen_utc": "2026-11-02T21:41:12.101067+00:00",
+  "resource_pilot_projection_s": 9.678295673802495,
+  "frozen_resource_note": "synthetic 4-category profiles only; projected300 curves, not measured physics cost; <=1CPU/3GB one Condor job"
+}
