@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "independent_method": "direct weighted event accumulation, reduced simplex covariance inverse, direct stratum decomposition",
+  "central_models_checked": 12,
+  "bootstrap_indices": [
+    0,
+    249,
+    499
+  ],
+  "bootstrap_projection_cases": 24,
+  "maximum_absolute_differences": {
+    "derivative": 1.4315751709070845e-11,
+    "direction": 9.020562075079397e-17,
+    "inverse_covariance": 2.7284841053187847e-11,
+    "operator": 7.993605777301127e-15,
+    "Fisher": 5.4569682106375694e-12,
+    "sigma": 5.551115123125783e-17,
+    "bootstrap_Fisher": 1.9984014443252818e-15,
+    "bootstrap_projection": 5.773159728050814e-15,
+    "residual": 2.7755575615628914e-17
+  },
+  "invalid_array_entries": {
+    "reference_M_mu_known_Fisher": 0,
+    "reference_M_mu_finite_Fisher": 0,
+    "reference_S_scalar_known_Fisher": 0,
+    "reference_S_scalar_finite_Fisher": 0,
+    "cal_M_mu_known_Fisher": 0,
+    "cal_M_mu_known_projection": 0,
+    "cal_M_mu_finite_Fisher": 0,
+    "cal_M_mu_finite_projection": 0,
+    "cal_S_scalar_known_Fisher": 0,
+    "cal_S_scalar_known_projection": 0,
+    "cal_S_scalar_finite_Fisher": 0,
+    "cal_S_scalar_finite_projection": 0,
+    "eval_M_mu_known_Fisher": 0,
+    "eval_M_mu_known_projection": 0,
+    "eval_M_mu_finite_Fisher": 0,
+    "eval_M_mu_finite_projection": 0,
+    "eval_S_scalar_known_Fisher": 0,
+    "eval_S_scalar_known_projection": 0,
+    "eval_S_scalar_finite_Fisher": 0,
+    "eval_S_scalar_finite_projection": 0
+  },
+  "binning_and_protection_checks_pass": true,
+  "protected_counts": [
+    {
+      "role": "train",
+      "N": 41447,
+      "sources": 91,
+      "low_N": 4331,
+      "missing_inputs_N": 21,
+      "unconfirmed_N": 1495,
+      "negative_correction_N": 1963,
+      "high_y_N": 1204,
+      "reco_pz50_100_N": 2498
+    },
+    {
+      "role": "cal",
+      "N": 8440,
+      "sources": 16,
+      "low_N": 841,
+      "missing_inputs_N": 3,
+      "unconfirmed_N": 301,
+      "negative_correction_N": 431,
+      "high_y_N": 230,
+      "reco_pz50_100_N": 504
+    },
+    {
+      "role": "eval",
+      "N": 14057,
+      "sources": 22,
+      "low_N": 1114,
+      "missing_inputs_N": 7,
+      "unconfirmed_N": 510,
+      "negative_correction_N": 913,
+      "high_y_N": 440,
+      "reco_pz50_100_N": 682
+    }
+  ],
+  "wall_s": 2.0533643011003733
+}

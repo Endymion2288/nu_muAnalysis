@@ -1,0 +1,725 @@
+{
+  "Fisher": [
+    {
+      "point": "reference",
+      "representation": "M_mu",
+      "f": 0.10449489709749801,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.583866108579576,
+      "information_correlation": -0.2259660849456878,
+      "parameter_correlation": 0.2259660849456878,
+      "sigma_f_fixed": 0.013785968993017445,
+      "sigma_f_free": 0.014152008288656114,
+      "sigma_alpha": 0.06515358058776975,
+      "sigma_r_over_r_fixed": 0.14732421977754065,
+      "sigma_r_over_r_free": 0.15123591098076336,
+      "sigma_f_cost_ratio": 1.0265515826870106,
+      "Schur_sigma_f": 0.014152008288656112,
+      "unit_operator_error": 5.551115123125783e-17,
+      "C_sum": 1.1102230246251565e-16,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5261.691791435127,
+          -258.25483013017407
+        ],
+        [
+          -258.25483013017407,
+          248.24755403996846
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.2259660849456878
+        ],
+        [
+          -0.2259660849456878,
+          1.0
+        ]
+      ]
+    },
+    {
+      "point": "reference",
+      "representation": "M_mu",
+      "f": 0.10449489709749801,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.5880589743353564,
+      "information_correlation": -0.22722008275965852,
+      "parameter_correlation": 0.22722008275965852,
+      "sigma_f_fixed": 0.013870135770921561,
+      "sigma_f_free": 0.014242675245666624,
+      "sigma_alpha": 0.06593488270677615,
+      "sigma_r_over_r_fixed": 0.1482236708710542,
+      "sigma_r_over_r_free": 0.1522048264561966,
+      "sigma_f_cost_ratio": 1.0268591080071532,
+      "Schur_sigma_f": 0.014242675245666622,
+      "unit_operator_error": 2.220446049250313e-16,
+      "C_sum": 1.1102230246251565e-16,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5198.027531627583,
+          -255.13005519966185
+        ],
+        [
+          -255.1300551996619,
+          242.54439517896753
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.22722008275965852
+        ],
+        [
+          -0.22722008275965852,
+          1.0
+        ]
+      ]
+    },
+    {
+      "point": "reference",
+      "representation": "S_scalar",
+      "f": 0.10449489709749801,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4052118266308875,
+      "information_correlation": -0.1684724073548607,
+      "parameter_correlation": 0.1684724073548607,
+      "sigma_f_fixed": 0.011429356065111104,
+      "sigma_f_free": 0.011595092019659192,
+      "sigma_alpha": 0.05810104032233475,
+      "sigma_r_over_r_fixed": 0.12214019672502137,
+      "sigma_r_over_r_free": 0.12391133955910508,
+      "sigma_f_cost_ratio": 1.0145009004535268,
+      "Schur_sigma_f": 0.011595092019659192,
+      "unit_operator_error": 2.220446049250313e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          7655.198817891994,
+          -257.3804448095018
+        ],
+        [
+          -257.3804448095018,
+          304.88570079016654
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.1684724073548607
+        ],
+        [
+          -0.1684724073548607,
+          1.0
+        ]
+      ]
+    },
+    {
+      "point": "reference",
+      "representation": "S_scalar",
+      "f": 0.10449489709749801,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4092636980362423,
+      "information_correlation": -0.1698708606989877,
+      "parameter_correlation": 0.1698708606989877,
+      "sigma_f_fixed": 0.011468400086091275,
+      "sigma_f_free": 0.011637536178084178,
+      "sigma_alpha": 0.05879777050217751,
+      "sigma_r_over_r_fixed": 0.12255744196406078,
+      "sigma_r_over_r_free": 0.12436492048092801,
+      "sigma_f_cost_ratio": 1.0147480111195308,
+      "Schur_sigma_f": 0.011637536178084178,
+      "unit_operator_error": 3.885780586188048e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          7603.1634933716,
+          -255.63093114049514
+        ],
+        [
+          -255.6309311404952,
+          297.8480080768517
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.1698708606989877
+        ],
+        [
+          -0.1698708606989877,
+          1.0
+        ]
+      ]
+    },
+    {
+      "point": "cal",
+      "representation": "M_mu",
+      "f": 0.09964454976303318,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.5880987094744516,
+      "information_correlation": -0.2272319472675264,
+      "parameter_correlation": 0.2272319472675264,
+      "sigma_f_fixed": 0.013650223489525173,
+      "sigma_f_free": 0.014016896162299123,
+      "sigma_alpha": 0.06494303155425148,
+      "sigma_r_over_r_fixed": 0.15215009046084205,
+      "sigma_r_over_r_free": 0.1562371503082421,
+      "sigma_f_cost_ratio": 1.0268620270617053,
+      "Schur_sigma_f": 0.014016896162299123,
+      "unit_operator_error": 1.6653345369377348e-16,
+      "C_sum": 1.1102230246251565e-16,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5366.862590863798,
+          -263.21410880666406
+        ],
+        [
+          -263.2141088066641,
+          250.01097443718203
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.2272319472675264
+        ],
+        [
+          -0.2272319472675264,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "cal",
+      "representation": "M_mu",
+      "f": 0.09964454976303318,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.5921600231957225,
+      "information_correlation": -0.22844269562713293,
+      "parameter_correlation": 0.22844269562713293,
+      "sigma_f_fixed": 0.013735472755678423,
+      "sigma_f_free": 0.014108539782445754,
+      "sigma_alpha": 0.06572519865032615,
+      "sigma_r_over_r_fixed": 0.15310030813067657,
+      "sigma_r_over_r_free": 0.15725864164911052,
+      "sigma_f_cost_ratio": 1.0271608435620172,
+      "Schur_sigma_f": 0.014108539782445754,
+      "unit_operator_error": 3.3306690738754696e-16,
+      "C_sum": 1.1102230246251565e-16,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5300.4504181958055,
+          -259.9203075766758
+        ],
+        [
+          -259.92030757667584,
+          244.23792169849452
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.22844269562713293
+        ],
+        [
+          -0.22844269562713293,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "cal",
+      "representation": "S_scalar",
+      "f": 0.09964454976303318,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4056607323524108,
+      "information_correlation": -0.16862757366277883,
+      "parameter_correlation": 0.16862757366277883,
+      "sigma_f_fixed": 0.011238347497491245,
+      "sigma_f_free": 0.011401620560459522,
+      "sigma_alpha": 0.05789238699513135,
+      "sigma_r_over_r_fixed": 0.12526649030221487,
+      "sigma_r_over_r_free": 0.12708638807308326,
+      "sigma_f_cost_ratio": 1.0145282091521661,
+      "Schur_sigma_f": 0.011401620560459522,
+      "unit_operator_error": 2.220446049250313e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          7917.627883143894,
+          -262.9473540711511
+        ],
+        [
+          -262.94735407115115,
+          307.1039066999541
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.16862757366277883
+        ],
+        [
+          -0.16862757366277883,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "cal",
+      "representation": "S_scalar",
+      "f": 0.09964454976303318,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4095284678208222,
+      "information_correlation": -0.16996207900842925,
+      "parameter_correlation": 0.16996207900842925,
+      "sigma_f_fixed": 0.011277067047302,
+      "sigma_f_free": 0.011443563998681862,
+      "sigma_alpha": 0.05858915042164865,
+      "sigma_r_over_r_fixed": 0.12569807173462366,
+      "sigma_r_over_r_free": 0.1275539040756355,
+      "sigma_f_cost_ratio": 1.0147642069237937,
+      "Schur_sigma_f": 0.011443563998681862,
+      "unit_operator_error": 2.220446049250313e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          7863.351236462966,
+          -261.0380472945626
+        ],
+        [
+          -261.03804729456255,
+          299.9824719065916
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.16996207900842925
+        ],
+        [
+          -0.16996207900842925,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "eval",
+      "representation": "M_mu",
+      "f": 0.07924877285338265,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.6079163716543707,
+      "information_correlation": -0.23310424301248958,
+      "parameter_correlation": 0.23310424301248958,
+      "sigma_f_fixed": 0.013039653059473843,
+      "sigma_f_free": 0.013409048849371332,
+      "sigma_alpha": 0.0640676013146889,
+      "sigma_r_over_r_fixed": 0.17870272874204154,
+      "sigma_r_over_r_free": 0.1837651361036042,
+      "sigma_f_cost_ratio": 1.0283286517066579,
+      "Schur_sigma_f": 0.013409048849371332,
+      "unit_operator_error": 5.551115123125783e-17,
+      "C_sum": 1.1102230246251565e-16,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5881.22679309553,
+          -286.9310941107865
+        ],
+        [
+          -286.9310941107865,
+          257.624370870155
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.23310424301248958
+        ],
+        [
+          -0.23310424301248958,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "eval",
+      "representation": "M_mu",
+      "f": 0.07924877285338265,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.6113931507311947,
+      "information_correlation": -0.234125279282441,
+      "parameter_correlation": 0.234125279282441,
+      "sigma_f_fixed": 0.013130056012930184,
+      "sigma_f_free": 0.01350541976569472,
+      "sigma_alpha": 0.06485375216888117,
+      "sigma_r_over_r_fixed": 0.17994166158751712,
+      "sigma_r_over_r_free": 0.18508585726388446,
+      "sigma_f_cost_ratio": 1.0285881303472648,
+      "Schur_sigma_f": 0.01350541976569472,
+      "unit_operator_error": 5.551115123125783e-17,
+      "C_sum": 1.1102230246251565e-16,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          5800.518849244131,
+          -282.8056816945798
+        ],
+        [
+          -282.8056816945798,
+          251.54332742337465
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.234125279282441
+        ],
+        [
+          -0.234125279282441,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "eval",
+      "representation": "S_scalar",
+      "f": 0.07924877285338265,
+      "finite_MC": false,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4077004670197513,
+      "information_correlation": -0.16933188849873937,
+      "parameter_correlation": 0.16933188849873937,
+      "sigma_f_fixed": 0.010358592694862657,
+      "sigma_f_free": 0.01051037207657978,
+      "sigma_alpha": 0.0570154245236966,
+      "sigma_r_over_r_fixed": 0.14195997179192035,
+      "sigma_r_over_r_free": 0.14404004167997028,
+      "sigma_f_cost_ratio": 1.0146525098715773,
+      "Schur_sigma_f": 0.010510372076579781,
+      "unit_operator_error": 1.6653345369377348e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          9319.626048137743,
+          -290.912891429399
+        ],
+        [
+          -290.9128914293989,
+          316.7013709175551
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.16933188849873937
+        ],
+        [
+          -0.16933188849873937,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    },
+    {
+      "point": "eval",
+      "representation": "S_scalar",
+      "f": 0.07924877285338265,
+      "finite_MC": true,
+      "regular": true,
+      "normalized_rank": 2,
+      "normalized_condition": 1.4107684675205154,
+      "information_correlation": -0.17038901622228053,
+      "parameter_correlation": 0.17038901622228053,
+      "sigma_f_fixed": 0.010395945809203494,
+      "sigma_f_free": 0.0105502230537977,
+      "sigma_alpha": 0.057712579871341874,
+      "sigma_r_over_r_fixed": 0.14247187984877402,
+      "sigma_r_over_r_free": 0.14458618185251923,
+      "sigma_f_cost_ratio": 1.0148401355129828,
+      "Schur_sigma_f": 0.0105502230537977,
+      "unit_operator_error": 4.440892098500626e-16,
+      "C_sum": 4.163336342344337e-17,
+      "high_mean_log_E_over400": 0.5070957508203912,
+      "covariance_rank": 15,
+      "fisher": [
+        [
+          9252.774669067541,
+          -288.2071391438425
+        ],
+        [
+          -288.20713914384254,
+          309.210542027507
+        ]
+      ],
+      "normalized_fisher": [
+        [
+          1.0,
+          -0.17038901622228053
+        ],
+        [
+          -0.17038901622228053,
+          1.0
+        ]
+      ],
+      "linear_f_outside_physical_range": false,
+      "bootstrap_linear_f_outside_range_N": 0,
+      "bootstrap_free_projection_invalid_N": 0
+    }
+  ],
+  "protected_counts": [
+    {
+      "role": "train",
+      "N": 41447,
+      "sources": 91,
+      "low_N": 4331,
+      "missing_inputs_N": 21,
+      "unconfirmed_N": 1495,
+      "negative_correction_N": 1963
+    },
+    {
+      "role": "cal",
+      "N": 8440,
+      "sources": 16,
+      "low_N": 841,
+      "missing_inputs_N": 3,
+      "unconfirmed_N": 301,
+      "negative_correction_N": 431
+    },
+    {
+      "role": "eval",
+      "N": 14057,
+      "sources": 22,
+      "low_N": 1114,
+      "missing_inputs_N": 7,
+      "unconfirmed_N": 510,
+      "negative_correction_N": 913
+    }
+  ],
+  "source_groups": {
+    "train": [
+      "charm:00000-00009",
+      "charm:00010-00019",
+      "charm:00030-00039",
+      "charm:00050-00059",
+      "charm:00060-00069",
+      "charm:00080-00089",
+      "charm:00090-00099",
+      "charm:00100-00109",
+      "charm:00120-00129",
+      "charm:00130-00139",
+      "charm:00180-00189",
+      "k:00000-00009",
+      "k:00010-00019",
+      "k:00020-00029",
+      "k:00030-00039",
+      "k:00040-00049",
+      "k:00050-00059",
+      "k:00090-00099",
+      "k:00140-00149",
+      "k:00150-00159",
+      "k:00160-00169",
+      "k:00200-00209",
+      "k:00210-00219",
+      "k:00220-00229",
+      "k:00230-00239",
+      "k:00240-00249",
+      "k:00270-00279",
+      "k:00280-00289",
+      "k:00290-00299",
+      "k:00300-00309",
+      "k:00360-00369",
+      "k:00370-00379",
+      "k:00380-00389",
+      "k:00390-00399",
+      "k:00420-00429",
+      "k:00430-00439",
+      "k:00440-00449",
+      "k:00450-00459",
+      "k:00470-00479",
+      "k:00490-00499",
+      "k:00510-00519",
+      "k:00520-00529",
+      "k:00530-00539",
+      "k:00550-00559",
+      "k:00580-00589",
+      "k:00590-00599",
+      "k:00600-00609",
+      "k:00610-00619",
+      "k:00620-00629",
+      "k:00630-00639",
+      "k:00650-00659",
+      "k:00670-00679",
+      "k:00680-00689",
+      "k:00690-00699",
+      "k:00720-00729",
+      "k:00740-00749",
+      "k:00750-00759",
+      "pi:00000-00009",
+      "pi:00010-00019",
+      "pi:00030-00039",
+      "pi:00050-00059",
+      "pi:00070-00079",
+      "pi:00100-00109",
+      "pi:00120-00129",
+      "pi:00130-00139",
+      "pi:00140-00149",
+      "pi:00180-00189",
+      "pi:00190-00199",
+      "pi:00230-00239",
+      "pi:00250-00259",
+      "pi:00270-00279",
+      "pi:00280-00289",
+      "pi:00290-00299",
+      "pi:00340-00349",
+      "pi:00370-00379",
+      "pi:00380-00389",
+      "pi:00390-00399",
+      "pi:00400-00409",
+      "pi:00410-00419",
+      "pi:00420-00429",
+      "pi:00430-00439",
+      "pi:00440-00449",
+      "pi:00450-00459",
+      "pi:00460-00469",
+      "pi:00470-00479",
+      "pi:00490-00499",
+      "pi:00500-00509",
+      "pi:00510-00519",
+      "pi:00520-00529",
+      "pi:00530-00539",
+      "pi:00550-00559"
+    ],
+    "cal": [
+      "charm:00110-00119",
+      "charm:00160-00169",
+      "k:00060-00069",
+      "k:00070-00079",
+      "k:00120-00129",
+      "k:00330-00339",
+      "k:00500-00509",
+      "k:00540-00549",
+      "k:00660-00669",
+      "k:00730-00739",
+      "pi:00080-00089",
+      "pi:00260-00269",
+      "pi:00310-00319",
+      "pi:00330-00339",
+      "pi:00350-00359",
+      "pi:00480-00489"
+    ],
+    "eval": [
+      "charm:00020-00029",
+      "charm:00040-00049",
+      "charm:00150-00159",
+      "k:00080-00089",
+      "k:00110-00119",
+      "k:00180-00189",
+      "k:00190-00199",
+      "k:00260-00269",
+      "k:00340-00349",
+      "k:00410-00419",
+      "k:00480-00489",
+      "k:00570-00579",
+      "k:00700-00709",
+      "k:00710-00719",
+      "pi:00020-00029",
+      "pi:00040-00049",
+      "pi:00060-00069",
+      "pi:00110-00119",
+      "pi:00200-00209",
+      "pi:00220-00229",
+      "pi:00240-00249",
+      "pi:00360-00369"
+    ]
+  },
+  "max_C_normalization_error": 1.8041124150158794e-16,
+  "max_operator_identity_error": 7.216449660063518e-16,
+  "max_decomposition_conservation_error": 1.3183898417423734e-16,
+  "bootstrap_replicates": 500,
+  "Fisher_bootstrap_fields": [
+    "sigma_f_fixed",
+    "sigma_f_free",
+    "sigma_alpha",
+    "parameter_correlation",
+    "sigma_f_cost_ratio",
+    "normalized_condition",
+    "normalized_rank",
+    "C_sum",
+    "unit_operator_error"
+  ],
+  "projection_bootstrap_fields": [
+    "fixed_delta_f",
+    "free_delta_f",
+    "free_delta_alpha",
+    "fixed_half_L1",
+    "free_half_L1",
+    "fixed_weighted_norm",
+    "free_weighted_norm"
+  ],
+  "exact_profiles": 0,
+  "energy_fits": 0,
+  "F7_inferences": 0
+}

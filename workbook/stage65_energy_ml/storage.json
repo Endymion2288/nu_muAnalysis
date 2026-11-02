@@ -1,0 +1,40 @@
+{
+  "evidence_bytes_excluding_manifest": 2960549,
+  "evidence_MiB": 2.823399543762207,
+  "files": {
+    "workbook/stage65_energy_ml/Fisher.csv": 2925,
+    "workbook/stage65_energy_ml/Fisher_intervals.csv": 10514,
+    "workbook/stage65_energy_ml/batch_resources.json": 404,
+    "workbook/stage65_energy_ml/batch_stderr.txt": 66,
+    "workbook/stage65_energy_ml/batch_stdout.txt": 622,
+    "workbook/stage65_energy_ml/bootstrap.npz": 2387617,
+    "workbook/stage65_energy_ml/condor.json": 397,
+    "workbook/stage65_energy_ml/local_information.png": 76892,
+    "workbook/stage65_energy_ml/models.json": 129309,
+    "workbook/stage65_energy_ml/pilot.json": 4171,
+    "workbook/stage65_energy_ml/projections.csv": 73658,
+    "workbook/stage65_energy_ml/protocol.json": 2216,
+    "workbook/stage65_energy_ml/report_resources.json": 403,
+    "workbook/stage65_energy_ml/residuals.csv": 190600,
+    "workbook/stage65_energy_ml/response_projections.png": 58001,
+    "workbook/stage65_energy_ml/submission_resources.json": 580,
+    "workbook/stage65_energy_ml/summary.json": 19863,
+    "workbook/stage65_energy_ml/verification.json": 2311
+  },
+  "code_submission_report_bytes": 47570,
+  "code_submission_report": {
+    "ml/spectrum_hardness.py": 4422,
+    "ml/prepare_spectrum_hardness.py": 4482,
+    "ml/run_spectrum_hardness.py": 8595,
+    "ml/report_spectrum_hardness.py": 11149,
+    "AnalysisZipFramework/submission/ml_spectrum_hardness.sub": 714,
+    "AnalysisZipFramework/submission/run_ml_spectrum_hardness.sh": 878,
+    "workbook/2026-11-02_stage65_spectrum-hardness-identifiability.md": 17330
+  },
+  "new_files_total_excluding_manifest": 3008119,
+  "budget_bytes": 5000000,
+  "reused_event_cache_bytes": 2236976,
+  "new_event_caches": 0,
+  "temporary_payload_and_return_archive_removed": true,
+  "actual_EOS_physical_network_bytes": "未测量"
+}

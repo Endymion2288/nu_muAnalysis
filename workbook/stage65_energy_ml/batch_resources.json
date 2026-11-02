@@ -1,0 +1,15 @@
+{
+  "wall_s": 4.903846621513367,
+  "cpu_s": 4.849952202000001,
+  "peak_rss_MiB": 116.4375,
+  "proc_io_delta": {
+    "rchar": 2382852,
+    "wchar": 2816722,
+    "syscr": 87,
+    "syscw": 239,
+    "read_bytes": 0,
+    "write_bytes": 2830336,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+}
