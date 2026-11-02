@@ -1,35 +1,59 @@
-# 下一轮执行 Prompt：有界连续能量似然比研究
+# 下一轮执行 Prompt：stage62 平滑连续响应与额外读出的条件价值
 
-先读AGENTS.md、[stage60报告](../workbook/2026-11-02_stage60_profiled-expert-gate.md)、路线§41、stage57研究报告及 `workbook/stage60_energy_ml/{protocol,models,optimizer_diagnostics,acceptance,validation}.json`。stage60的4次gate拟合已完成，不重跑prepare/fit、不覆盖历史协议或失败记录。当前继续F7，结束当前gate调参支线；本次只做以下连续能量似然比研究。
+先读 AGENTS.md、[stage61研究复盘](../workbook/2026-11-02_stage61_research-reassessment.md)、[stage60实测](../workbook/2026-11-02_stage60_profiled-expert-gate.md)、修订路线§42和信息预算§22。stage61只做研究设计，没有新实验；下一次实验编号为stage62。stage58–60已完成，不重跑prepare/fit、不覆盖历史协议。本次在有CERN环境的节点执行以下有限研究，当前继续F7。
 
-## 已测证据和唯一问题
+## 研究问题与预定决定
 
-stage60解析rho使所有训练callback及选中/末端均可行，但evaluation低E50–100/100–200 log-RMSE为.186690/.260643，传统为.145487/.226876。全体/低reco p/high-y/未确认代价仍失败；cal OOF最低能.203420也未恢复传统。3/4求解器成功仅为函数变化终止，末端梯度与方向探测不支持充分stationarity。不能宣称信息极限，也不再延长gate优化。
+**相对只看pz0，完整62个读出是否能更可靠地预测同一pz下的能量分布；该增量能否同时改善低true E与全区点预测？**
 
-本次问题：**用连续E条件似然比保留完整能量依赖，能否改善低真实E与同reco低p高E/high-y混合下的风险取舍，并减少对训练能谱先验的敏感性？** 方法入口沿用stage57的[Hermans等2020](https://proceedings.mlr.press/v119/hermans20a.html)。收益、所需功效和实际资源尚未测量；旧六箱概率负结果仍约束投入，不重新包装旧q或flat回归。
+stage60 true50–100/100–200 log-RMSE=.186690/.260643，传统=.145487/.226876；全体/低p/high-y等代价仍失败。原gate只用四个汇总量，训练标签来自cal，其中最低能仅150例；不能据此否定完整X。3.2–6.4TeV的F7中位bias仍约−43%。本次用完整train和连续能量假设，不续调gate。
 
-## 执行前冻结的输入与训练协议
+相同X与先验下，理想posterior mean(logE)与log-MSE回归有同一Bayes目标；似然不会自动增加信息，也不保证MLE无偏。主要点候选事前固定为unit完整模型的posterior mean(logE)。概率增量和点预测推广标准分别回答，不能用其中一个替另一个报成功。
 
-1. 复用stage55 `dataset.npz`、stage56 `readout.npz`和F7预测。train41447/cal8440/eval14057、来源保护、truth去重及原pz>50选择不变；cal/eval均已开发，不叫blind。只读紧凑缓存，不读locked test、ROOT/RDO，不新生产/重建、不恢复shards、不做谱toy。原选择仍含部分fit-charge cut，本次不测其接受度影响。
-2. X仅为`audited_features.load/build`的同62个F7清理读出。线性模长/纵向动量仅pz0，px/py、q/p、弯折允许；11闪烁体raw及VetoNu reduced不回退。保留合法负数，非法占位/status/父项依赖转NaN；不删缺失者，不用fit charge补raw。完整42缺失者原角色、全部大尾/high-y/未确认保留。除扫描参数t=log(E假设/GeV)外，不加入truth/y/来源/身份；假设E不是部署事件的真实能量。
-3. 在新fit和新评价结果前写不可覆盖stage61协议，记录输入/软件、精确负配对/权重/先验、候选、seed、输出和资源。只有两种训练先验：unit empirical；按train固定logE箱等总权重的bin-flat。默认50/100/200/400/800/1600/3200/6400GeV边界；先核全部train支持，越界/空箱必须记录并在冻结前明确处理，不丢事件或按eval改箱。flat权重仅取train计数，报告各箱N/来源、权重和/范围及Neff，不称纯样本量干预。
-4. 每种先验的正例为train真实(X,t)，保留相应权重；负例从同一加权train的X边际与t边际**独立有放回**各抽2N，形成乘积分布。负例均匀权重，正负类别总权重相等。固定一次负配对seed，记录重复使用及偶然重复真实配对，不用删除真实配对改变乘积分布。负配对不增加独立MC事件/来源。平衡分类器logit近似log p(X|t,S)/p_ref(X|S)，仅是选中S内的响应比，不包含接受度/背景。
-5. 只做两次固定XGBoost二分类fit：unit与bin-flat各一次，depth5/400轮、同F7级其余超参数、单一seed2026110261。冻结确切参数/版本，不以cal/eval早停，不重训F7或回归器，不扫seed/架构/网格/负例数，不续调gate。保存训练状态、损失、CPU/wall/RSS及支持统计。
+## 1. 输入和样本
 
-## 预定输出、敏感性及验收
+1. 复用stage55 `dataset.npz`、stage56 `readout.npz`、F7预测及stage60固定对照。train41447/91组、cal8440/16组、eval14057/22组，沿用来源保护与原pz>50选择；不读locked test、ROOT/RDO、不新生产、不补造alternative raw、不恢复已删PHYS、不做谱toy。cal/eval已开发，不能叫blind。原选择仍含部分fitted-charge cut，本次不测接受度变化。
+2. X只取`ml/audited_features.load/build`的F7 62列：线性模长/纵向动量仅pz0；px/py、q/p、弯折允许；不用p0/p1/pz1/log(p1/p0)。11闪烁体用raw，VetoNu reduced保留。合法signed负值/−1按逐变量域保留，失败status/父项依赖转NaN；不删缺失、不nansum补零、不fit补raw。
+3. 原42缺失者角色、所有high-y/大尾/未确认保留；unconfirmed不能全当错primary。除扫描假设t=log(E假设/GeV)外，不把truth/y/来源/身份用作部署输入。
+4. 全部train标签用于训练，cal仅作预定校准/诊断；不再仅靠150个cal低E例学gate。cal最低能150/14组、无charm，eval208/19组；这些支持限制仍须报告。去重保护不等于已认证完整谱系独立。
 
-1. 每事件扫描固定129个log-spaced 50–6400GeV假设，分块计算log-ratio，避免全量(X,t)展开驻留内存；只留必要紧凑预测/模型和聚合曲线。事前固定两个输出：网格MLE（并列取最低E并报并列率）；加入**共同unit train-only冻结先验**、以固定logE积分权重归一化的posterior mean(logE)，再取exp。参考先验在logE的密度、端点权重和零支持处理必须在fit前写明；不能每个分类器使用其自身先验来混淆比较。raw及每输出一个global cal log-offset均报告，不做分箱校准，不用eval挑估计器。cal为校准开发指标，不能以全cal offset称OOF。
-2. 两分类器在同一参考先验下比较稳定性；再使用共同bin-flat参考先验作0新fit的预定敏感性诊断，与unit输出并列报告。有限样本/容量会使训练先验仍影响响应。检查端点率、次峰/并列、网格积分及固定少量train/cal例的曲线；不按结果加密网格或改范围。扫描范围外真值事件保留并单列。不能承诺MLE无偏、最低RMSE、后验校准或覆盖。
-3. 与传统pz0/.8、F7及stage60固定参考完整比较：true50–100/100–200、全部能量箱、全体、true≥200、reco pz50–100/100–250、high-y、未确认、缺失组。报告N/来源、log-RMSE、mean/median bias、R68、双方向tail50/100，不只报低能中心宽度。两低E/传统RMSE比来源95%上限须≤1.05；真正优于传统需改善下限>0。全体/F7≤1.01、困难组≤1.03、关键tail50增加≤2pp沿用，不改门槛报成功。
-4. 500次component分层来源配对bootstrap只重抽固定预测，不增加fit；注明不含训练/校准/分类器有限模拟/响应/研究选择误差，不作多重比较修正。cal16组/两个charm、最低能150/14组且无charm，evaluation最低能208/19组，不用大量负配对掩盖独立支持不足。
-5. 无论结果都完成一次有限研究，解释响应表示、训练/推断先验、偏差/尾、边界和支持/数值因素。未知原因不作结论。失败则停止本次扫描，给下一项定向独立低E及同reco困难样本的具体输入/功效验收；通过也只冻结候选并安排共同raw和新生产确认，不自动替换部署。
+## 2. 只做三个固定平滑分类fit
 
-## 预算、QA和交付
+在任何正式fit及新评价前写stage62协议，冻结版本、输入、变换、先验、负配对、seed、模型和资源；不覆盖既有协议。
 
-- 先小样本核joint/product权重、比值代数、推理不读truth、假设单位、signed/NaN、端点积分及分块一致性。数值QA不增加分类fit预算；已知函数算术检验不叫物理toy。先测内存/推理时间，再冻结Condor分块配置，不把预算当实测成本。
-- 固定2fit，批量通过HTCondor；拟议最多2任务、各≤2CPU/3GB、累计CPU≤1h、最终新增≤20MB，包含fit和整网格推理。若pilot表明不可达，先给实测瓶颈及具体缩减方案，不静默追加任务。不按结果重试/扩网格；技术失败如实记录，不当物理阴性。复用CVMFS，不重建无改动C++或读大型ROOT。
-- 写stage61中文workbook，包含实际N/选择/输入/配置/命令、实测wall/CPU/RSS/I/O、fit数、产物、结论/限制及具体下一项验收；更新路线/Prompt，本地Conventional Commit，不推送、不自动启动下一研究。stage54既有工具/缓存保持原状且不混入提交。
-- stage54/data占据、共同raw积分/饱和/时间窗定义、ν interaction/FSI/材料、独立低能及困难样本和最终正向谱收益仍必须交付；本次选中事件似然比不替代这些工作。
+1. 三个模型：A=完整X＋unit；B=完整X＋train logE-bin-flat；C=pz0-only＋unit。A是唯一主候选，B检验抽样先验敏感性，C是μ-only概率对照。不是选三个模型中eval最好的。模型均为两层64单元SiLU MLP＋单一logit，固定seed2026110262；AdamW lr=1e−3、weight_decay=1e−4、batch1024、120epoch，无cal/eval早停，不扫seed/层数/损失/负例数。不采用树网格并列最低能MLE。
+2. 对每一配对先生成(X,t)，再构造`u=t−log(pz0/GeV)`作为能量假设坐标。不能独立抽u后仍声称joint/product代数不变。μ-only模型使用logpz和u；完整模型使用同62列的变换、缺失mask和u。坐标变换不增加物理信息，不等于重做residual50回归。若有无效pz，先在协议中明确可推理的缺失分支，事件保留，不能取非法对数后删例。
+3. 正值动量用log、非负计数用log1p、signed量用asinh；尺度和median/IQR均只由train确定，零尺度回退须有固定规则。缺失用train-only插补并保留mask。无需为此重新读取ROOT或历史波形。
+4. B的flat权重按train固定logE箱等总权重，默认50/100/200/400/800/1600/3200/6400GeV边界。先只查train支持，越界时在fit前按固定倍增边界覆盖；空箱无事件不能靠合成填充，不丢越界事件、不看eval改箱。记录N/来源、权重和/范围及Neff；不称纯样本量干预。
+5. 各模型正例为train真实(X,t)，带对应unit/flat权重并归一到总权重N。负例从同一加权train的X边际与t边际独立有放回抽2N；每负例权重1/2，使类别总权重相等。A/C复用同一unit负配对以便比较。一次冻结负配对seed，偶然真实配对不删；负例/重复使用不增加独立MC。
+6. 平衡binary logit的目标为`log p(X|t,S)−log p_ref(X|S)`；是选中S内响应比，不含接受度/背景。B的不同reference改变X相关常数，比较时必须归一到共同先验，不能直接比较原始logit高度。
+
+## 3. 推断、概率增量与点预测
+
+1. 固定129点logE网格，默认50–6400GeV。若train支持要求扩展，在任何fit前按上面的固定倍增规则冻结统一范围；不能看eval后改。分块推断，不让全量(X,t)展开常驻。t/u在推理时只来自假设和reco，不读该事件真值。
+2. 共同先验π_unit只由unit train的选中谱冻结：默认每能量倍程两个等logE箱的分段常数密度，每箱加入1/2伪计数后归一；边界覆盖扫描支持并写入协议。该正则是数值/先验选择，不是新增MC。三模型均用同一π_unit和同一logE积分/密度插值约定，得到`qπ∝exp(logit)π`。共同logE均匀π_flat只作0新fit敏感性对照。
+3. 主点输出为A的exp(E_q[t])；A/B/C在共同π_unit下均报raw及各一次global cal log-offset点输出。此offset不是OOF，也不能把点校准说成完整分布已校准。概率评分只对原始归一化q；π_flat敏感性只报raw，不据eval选先验/估计器。
+4. 概率主比较：A相对C的held-out log-density score、logE-CRPS与低E概率可靠性，按来源报告全体、true低E、同reco低p/high-y等。C是动量条件分布，不能把传统pz0/.8当零宽概率分布直接比NLL。B相对A比较共同先验下的形状/评分稳定性。单个真能量组上的评分是诊断，整体proper score增量也不等于精确互信息。无增量不能证明额外X无信息。
+5. 报告积分误差、扫描边界率、非唯一/多峰及低/高能曲线。MLE仅作诊断：宽平台/多峰报告其范围，不能并列取最低能后据此报低E改善。范围外真值事件保留点评价，明确概率支持失效；不偷偷只报覆盖内结果。少量train/cal曲线事前固定选例规则，不按eval挑漂亮曲线。
+6. 传统pz0/.8、F7、stage60固定参考与A完整比较：true50–100/100–200、全部能量箱、全体、≥200、reco pz50–100/100–250、high-y、未确认及缺失组。报N/来源、log-RMSE、mean/median bias、R68、双向tail50/100；B/C并列控制，不用其最佳分数替换A。
+7. 点预测沿用旧标准：两低E/传统RMSE比来源95%上限≤1.05是恢复；真正优于传统须改善下限>0。全体/F7≤1.01、困难组≤1.03、关键tail50增加≤2pp。1%/3%/5%等是既定研究取舍，不是实测物理容忍度；不后改门槛宣布通过。概率有用而点未过应如实分别说明。
+8. 500次component分层来源配对bootstrap仅重抽固定预测，不增加fit；明确不含重训/校准/有限分类器/响应/研究选择误差，不作多重比较修正。按实际来源支持解释，不能把负配对数当独立统计量。
+
+## 4. 预算、QA与停止条件
+
+- 正式fit固定3次，单一结构和seed；global offsets为既定校准，不是额外模型搜索。先少量pair验证加权joint/product代数、signed/NaN、u依赖、logE密度单位、归一化/积分和分块一致性；资源pilot只作数值/吞吐验证，不额外训练候选或读取新物理结果。
+- 小型MLP的实际成本未测量。拟议最多3个Condor任务，每个≤2CPU/3GB、累计CPU≤3h、最终新增≤20MB，包含fit和完整推断；先按pilot实测冻结可交付资源。GPU若可用需记录actual资源，不能用GPU速度掩盖I/O；不重建无变化C++。预算是上限建议，不是测得耗时。
+- 保存模型、变换/先验、必要逐例点/评分摘要和少量曲线；不保存全train×能量网格、不复制ROOT/NPZ、不留批量重复JSON。记录实际wall/CPU/RSS/I/O，不能把文件大小当网络I/O。
+- A概率稳定且点过门槛：冻结候选，安排共同raw和新独立来源确认，不自动部署。概率有增量而点失败：保留分布价值，下一研究做联合μ/ML物理响应，不续扫点估计器。无稳定增量：结束本次模型预算，给出定向独立低E及同p困难样本需求，或物理transfer/可见度分量的单一后续。技术失败与物理阴性分开，不能用3次fit否定全部似然方法。
+- 不因本次成功或失败自动训练flow/TabM/Transformer/GNN、重启gate、改选择或开新生产。不要把原有概率六箱/flat/residual方案重新包装成新解。
+
+## 5. 报告与下一项物理交付
+
+写stage62中文workbook，包含目标、实际样本与选择、输入/配置/命令、全部数值与单位/区间、资源、产物、方法与物理解释、正负结果和明确下一项验收；未测量项写明。更新路线/Prompt后本地Conventional Commit，不推送，不自动启动下一研究。stage54工具/缓存按实际状态保留，不混入无关修改。
+
+下一物理研究已明确：复用F7，以`z=(logpz0, logE_F7−logpz0)`联合响应，对比μ-only与已有灵活scalar，检验选中50–200相对≥200成分参数的不确定性；包含有限MC、来源留出及低能箱内/高E-high-y混合压力。不是重开六自由箱谱或大批coverage toy；stage62成功不是其前置条件，详见stage61§5，本次不连开。
+
+共同raw积分/饱和/时间窗定义、stage54 data占据、ν interaction/FSI/材料、定向独立低E及困难样本、接受度/背景和最终flux收益仍需交付；选中事件似然不能替代它们。
 
 ## 保留的stage54 data占据支线
 
