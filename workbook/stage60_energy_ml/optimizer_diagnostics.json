@@ -1,0 +1,226 @@
+[
+  {
+    "fold": 0,
+    "optimizer_status": 1,
+    "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "success": false,
+    "selection": "best_training_profiled_callback",
+    "iterations": 500,
+    "function_evaluations": 35636,
+    "selected_low_MSE_ratio": 1.1213189248097932,
+    "selected_rho": 0.5799296170496433,
+    "selected_rho_max": 0.5799296170496433,
+    "selected_cost_slacks": {
+      "all": 0.0016497362574394714,
+      "E200_inf": 0.006966975972071632,
+      "pz50_100": 0.0,
+      "high_y": 0.006344488352004518,
+      "unconfirmed": 0.14714756533762197
+    },
+    "terminal_profile": {
+      "rho": 0.5799296170496433,
+      "rho_max": 0.5799296170496433,
+      "individual_cost_caps": {
+        "all": 0.592674339905744,
+        "E200_inf": 0.6343108155407656,
+        "pz50_100": 0.5799296170496433,
+        "high_y": 0.6024402097608714,
+        "unconfirmed": 1.0
+      },
+      "objective": 1.1213199432600574,
+      "risk_ratios": {
+        "E50_100": 1.1213189248097932,
+        "E100_200": 1.0643478984505932,
+        "all": 1.0184502637425605,
+        "E200_inf": 1.0539330240279283,
+        "pz50_100": 1.0609,
+        "high_y": 1.0545555116479954,
+        "unconfirmed": 0.913752434662378
+      },
+      "max_low_MSE_ratio": 1.1213189248097932,
+      "cost_slacks": {
+        "all": 0.0016497362574394714,
+        "E200_inf": 0.006966975972071632,
+        "pz50_100": 0.0,
+        "high_y": 0.006344488352004518,
+        "unconfirmed": 0.14714756533762197
+      },
+      "maximum_constraint_violation": 0.0,
+      "inner_candidate_count": 3
+    },
+    "terminal_projected_gradient_max_abs": 0.0006122276673673415,
+    "terminal_coordinate_objective_decreases": {
+      "0.0001": 5.923060220069942e-08,
+      "1e-05": 6.094717175386677e-09
+    },
+    "terminal_parameters_saved": true
+  },
+  {
+    "fold": 1,
+    "optimizer_status": 0,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true,
+    "selection": "converged_terminal",
+    "iterations": 52,
+    "function_evaluations": 6962,
+    "selected_low_MSE_ratio": 1.1425653310752724,
+    "selected_rho": 0.4104766161247319,
+    "selected_rho_max": 0.4104766161247319,
+    "selected_cost_slacks": {
+      "all": 0.0,
+      "E200_inf": 0.009676066729287225,
+      "pz50_100": 2.319566760888847e-11,
+      "high_y": 0.025785412265910246,
+      "unconfirmed": 0.054467652042234915
+    },
+    "terminal_profile": {
+      "rho": 0.4104766161247319,
+      "rho_max": 0.4104766161247319,
+      "individual_cost_caps": {
+        "all": 0.4104766161247319,
+        "E200_inf": 0.46329869107914207,
+        "pz50_100": 0.41047661617082404,
+        "high_y": 0.550933577466449,
+        "unconfirmed": 0.7925573254520527
+      },
+      "objective": 1.1425663511752724,
+      "risk_ratios": {
+        "E50_100": 1.1425653310752724,
+        "E100_200": 0.9618376080342619,
+        "all": 1.0201,
+        "E200_inf": 1.0512239332707127,
+        "pz50_100": 1.0608999999768043,
+        "high_y": 1.0351145877340897,
+        "unconfirmed": 1.006432347957765
+      },
+      "max_low_MSE_ratio": 1.1425653310752724,
+      "cost_slacks": {
+        "all": 0.0,
+        "E200_inf": 0.009676066729287225,
+        "pz50_100": 2.319566760888847e-11,
+        "high_y": 0.025785412265910246,
+        "unconfirmed": 0.054467652042234915
+      },
+      "maximum_constraint_violation": 0.0,
+      "inner_candidate_count": 3
+    },
+    "terminal_projected_gradient_max_abs": 0.008267566012177487,
+    "terminal_coordinate_objective_decreases": {
+      "0.0001": 1.6439428973669123e-07,
+      "1e-05": 1.6722369711175133e-08
+    },
+    "terminal_parameters_saved": true
+  },
+  {
+    "fold": 2,
+    "optimizer_status": 0,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true,
+    "selection": "converged_terminal",
+    "iterations": 49,
+    "function_evaluations": 6136,
+    "selected_low_MSE_ratio": 1.1595246093138614,
+    "selected_rho": 0.650693044677277,
+    "selected_rho_max": 0.650693044677277,
+    "selected_cost_slacks": {
+      "all": 0.0020150349570144943,
+      "E200_inf": 0.015210237842268715,
+      "pz50_100": 1.4802325432050623e-07,
+      "high_y": 0.0,
+      "unconfirmed": 0.0378057760495607
+    },
+    "terminal_profile": {
+      "rho": 0.650693044677277,
+      "rho_max": 0.650693044677277,
+      "individual_cost_caps": {
+        "all": 0.6711739003546814,
+        "E200_inf": 0.7993056651939737,
+        "pz50_100": 0.6506934650476471,
+        "high_y": 0.650693044677277,
+        "unconfirmed": 0.9945663362044866
+      },
+      "objective": 1.159525627398827,
+      "risk_ratios": {
+        "E50_100": 1.1595246093138614,
+        "E100_200": 1.159466098587796,
+        "all": 1.0180849650429855,
+        "E200_inf": 1.0456897621577312,
+        "pz50_100": 1.0608998519767456,
+        "high_y": 1.0609,
+        "unconfirmed": 1.0230942239504393
+      },
+      "max_low_MSE_ratio": 1.1595246093138614,
+      "cost_slacks": {
+        "all": 0.0020150349570144943,
+        "E200_inf": 0.015210237842268715,
+        "pz50_100": 1.4802325432050623e-07,
+        "high_y": 0.0,
+        "unconfirmed": 0.0378057760495607
+      },
+      "maximum_constraint_violation": 0.0,
+      "inner_candidate_count": 3
+    },
+    "terminal_projected_gradient_max_abs": 0.2262118847572722,
+    "terminal_coordinate_objective_decreases": {
+      "0.0001": 4.498256022333891e-06,
+      "1e-05": 8.916263669611624e-07
+    },
+    "terminal_parameters_saved": true
+  },
+  {
+    "fold": "final",
+    "optimizer_status": 0,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true,
+    "selection": "converged_terminal",
+    "iterations": 105,
+    "function_evaluations": 13039,
+    "selected_low_MSE_ratio": 1.0895401228565669,
+    "selected_rho": 0.5220352701405365,
+    "selected_rho_max": 0.5220352704626761,
+    "selected_cost_slacks": {
+      "all": 0.0035236429593614726,
+      "E200_inf": 0.014457765971725989,
+      "pz50_100": 1.5133383435284031e-10,
+      "high_y": 0.006631315150257278,
+      "unconfirmed": 0.08855210307553185
+    },
+    "terminal_profile": {
+      "rho": 0.5220352701405365,
+      "rho_max": 0.5220352704626761,
+      "individual_cost_caps": {
+        "all": 0.5511265918122378,
+        "E200_inf": 0.634580481015055,
+        "pz50_100": 0.5220352704626761,
+        "high_y": 0.5507895094009341,
+        "unconfirmed": 1.0
+      },
+      "objective": 1.089541139432924,
+      "risk_ratios": {
+        "E50_100": 1.0895401228565662,
+        "E100_200": 1.0895401228565669,
+        "all": 1.0165763570406385,
+        "E200_inf": 1.046442234028274,
+        "pz50_100": 1.0608999998486661,
+        "high_y": 1.0542686848497427,
+        "unconfirmed": 0.9723478969244681
+      },
+      "max_low_MSE_ratio": 1.0895401228565669,
+      "cost_slacks": {
+        "all": 0.0035236429593614726,
+        "E200_inf": 0.014457765971725989,
+        "pz50_100": 1.5133383435284031e-10,
+        "high_y": 0.006631315150257278,
+        "unconfirmed": 0.08855210307553185
+      },
+      "maximum_constraint_violation": 0.0,
+      "inner_candidate_count": 4
+    },
+    "terminal_projected_gradient_max_abs": 0.04263834813194438,
+    "terminal_coordinate_objective_decreases": {
+      "0.0001": 7.622582676169998e-07,
+      "1e-05": 7.72282997552054e-08
+    },
+    "terminal_parameters_saved": true
+  }
+]

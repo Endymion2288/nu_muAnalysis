@@ -1,0 +1,129 @@
+{
+  "wall_s": 1.8582628169097006,
+  "cpu_s": 1.812054711,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 65320590,
+    "wchar": 0,
+    "syscr": 984,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "gate_fits_checked": 4,
+  "additional_fits": 0,
+  "train_transforms_exact": true,
+  "grouped_OOF_offsets_exact": true,
+  "fold_partition_preserved": true,
+  "default_F7_exact": true,
+  "independent_inference_checked": true,
+  "full_cal_gradient_max_error": 1.0547336268262875e-10,
+  "original_F7_and_four_cell_metrics_exact": true,
+  "full_missing_events": 42,
+  "missing_by_role": {
+    "train": 21,
+    "cal": 3,
+    "eval": 7
+  },
+  "per_fit": [
+    {
+      "fold": 0,
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": false
+    },
+    {
+      "fold": 1,
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": true
+    },
+    {
+      "fold": 2,
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": true
+    },
+    {
+      "fold": "final",
+      "prediction_and_offset_exact": true,
+      "independent_prediction_checked": true,
+      "empirical_risks_checked": true,
+      "optimizer_converged": true
+    }
+  ],
+  "numerical_QA_passed": true,
+  "optimizer_converged_fits": 3,
+  "analytic_profile_checks": [
+    {
+      "fold": 0,
+      "state": "selected",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": 0,
+      "state": "terminal",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": 1,
+      "state": "selected",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": 1,
+      "state": "terminal",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": 2,
+      "state": "selected",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": 2,
+      "state": "terminal",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": "final",
+      "state": "selected",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    },
+    {
+      "fold": "final",
+      "state": "terminal",
+      "rho_profile_exact": true,
+      "empirical_constraints_exact": true,
+      "maximum_violation": 0.0,
+      "profile_objective_below_dense_grid": true
+    }
+  ],
+  "promotion_allowed": false
+}

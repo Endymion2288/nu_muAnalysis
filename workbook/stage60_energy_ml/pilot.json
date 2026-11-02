@@ -1,0 +1,31 @@
+{
+  "wall_s": 0.8900364148430526,
+  "cpu_s": 0.841536629,
+  "peak_rss_MiB": 545.91796875,
+  "proc_io_delta": {
+    "rchar": 32261453,
+    "wchar": 3407,
+    "syscr": 454,
+    "syscw": 1,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "optimizer_calls": 0,
+  "small_cal_N": 48,
+  "synthetic_known_cases": [
+    "interior_intersection",
+    "single_active_vertex",
+    "cost_boundary",
+    "linear_cost",
+    "zero_response",
+    "tangent_root"
+  ],
+  "random_quadratic_cases": 100,
+  "max_dense_grid_gap": 2.005655836967435e-07,
+  "profiled_derivative_refinement_max_abs": 2.220446049250313e-11,
+  "train_transforms_exact": true,
+  "empirical_constraints_checked": true,
+  "signed_and_missing_checks": true
+}
