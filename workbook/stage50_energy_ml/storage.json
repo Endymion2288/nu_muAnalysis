@@ -1,0 +1,78 @@
+{
+  "removed_duplicate_prediction_files": [
+    "ml/artifacts/stage50/formal/0/predictions.npz",
+    "ml/artifacts/stage50/formal/1/predictions.npz",
+    "ml/artifacts/stage50/formal/2/predictions.npz"
+  ],
+  "removed_duplicate_prediction_bytes": 401176,
+  "removed_payload_bytes": 3482255,
+  "exact_fold_rejoin_before_deletion": true,
+  "retained_files": 16,
+  "retained_bytes": 6324390,
+  "retained": [
+    {
+      "path": "ml/artifacts/stage50/formal/0/L3_F6z.ubj",
+      "bytes": 440659
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/0/L5_F6.ubj",
+      "bytes": 730946
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/0/L5_F6z.ubj",
+      "bytes": 735230
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/0/metadata.json",
+      "bytes": 9334
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/1/L3_F6z.ubj",
+      "bytes": 442356
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/1/L5_F6.ubj",
+      "bytes": 751958
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/1/L5_F6z.ubj",
+      "bytes": 745158
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/1/metadata.json",
+      "bytes": 9356
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/2/L3_F6z.ubj",
+      "bytes": 436348
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/2/L5_F6.ubj",
+      "bytes": 721902
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/2/L5_F6z.ubj",
+      "bytes": 721970
+    },
+    {
+      "path": "ml/artifacts/stage50/formal/2/metadata.json",
+      "bytes": 9354
+    },
+    {
+      "path": "ml/artifacts/stage50/smoke/0/L5_F6.ubj",
+      "bytes": 20324
+    },
+    {
+      "path": "ml/artifacts/stage50/smoke/0/predictions.npz",
+      "bytes": 3997
+    },
+    {
+      "path": "ntuples/energy_ml_stage50/predictions.npz",
+      "bytes": 455057
+    },
+    {
+      "path": "ntuples/energy_ml_stage50/support_controls.npz",
+      "bytes": 90441
+    }
+  ]
+}

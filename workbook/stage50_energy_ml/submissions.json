@@ -1,0 +1,18 @@
+{
+  "rejected_attempt": {
+    "schedd": "bigbird24.cern.ch",
+    "cluster_created": false,
+    "fit_starts": 0,
+    "reason": "EosSubmit schedd requires executable/log/input/output paths on EOS; payload was unchanged for next submission"
+  },
+  "successful_schedd": "bigbird13.cern.ch",
+  "cluster": 15314138,
+  "NumJobStarts": 1,
+  "ExitCode": 0,
+  "wait_s": 58,
+  "slot_wall_s": 34.0,
+  "submit_to_complete_s": 92,
+  "requested_CPUs": 1,
+  "requested_memory_MB": 1000,
+  "site_memory_MB": 3000
+}
