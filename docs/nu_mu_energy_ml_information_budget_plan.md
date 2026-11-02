@@ -493,3 +493,17 @@ stage50的有限学习能力预算：
 3. 默认这些已知文件全事件范围；metadata和pilot计时后冻结流式读取/并发/I/O上限，不继承entry_stop前缀。超预算先说明覆盖/可作结论，不能静默缩为有利小样本。
 4. 给出在相同重建选择/运动学支持下，哪些MIP/电子读出相容，哪些存在可测差异；区分触发/生产/几何/选择和响应，不任意反调BDT或编造±系统。μ控制不等于强子shower/ν能量闭合。
 5. 无可靠tag/共同定义则明确未测量和最小需要输入；不以小pilot否定全文件支持。本轮不执行stage52。独立interaction/输运、预定可辨识谱目标与真正未开发确认继续必须完成。
+
+
+## 19. stage52可靠性控制完成：先定位tracker读出差异，再构建可信压力
+
+完整协议/数值/区间/成本见[stage52报告](../workbook/2026-11-02_stage52_f6-muon-response-control.md)及修订路线§34。18文件完整6,021,535条；旧data前缀扩大9.036倍。选中data940,724、MC199,239；主来源隔离评价511,500/99,421，固定40格共支持，Neff465,020/85,396。没有新增能量fit/概率映射/谱toy。
+
+- station3>6的data/MC为26.069/71.210%，差−45.141 [−45.441,−44.866] pp；station1/2也差−38.880/−40.835pp。两动量层、逐run/MC符号/四象限均保持，非仅高p或总体p混合。SpacePoints>12和普通segment>4反而data高4.417/4.233pp，不能用统一计数缩放描述。
+- Timing fit/raw总电荷中央尺度较接近：57.5/58.5与59.5/59.5pC；1pC分箱的数值包络必须同报。宽度、nonfinite和状态尚有差异。四Veto tag只在线下独立于这些probe，在线菜单未认证；不测无偏低信号、全tracking效率，也不认证ν强子能量。
+- 已知data/MC源的计数累加/charge单位一致，但actualSCTnoise、masking、timebin/compression、collection与几何/重建不同尚未分离。Noise-strip注入只是具体机制候选，非已测结论；没有任意±gain或data反调BDT。
+- 完整提取内部wall167.398s/CPU73.934s、peak348.047MiB，最终充分统计archive0.772MiB。I/O2.452GB超预算22.613%，已由metadata精确解释跨50k块重复basket；原事件覆盖完整。下一提取先测basket复用，不为美化计时重扫。archive回读/直方图分母/主计数独立重算通过。
+
+stage53预算只用于**一次同事件tracker读出机制控制**，0新能量fit/谱反演。必要输入是已知原事件HITS/RDO/reco映射、实际SCT配置与nominal重放，不能凭PG重复eventID配对；≤40例预检后冻结CPU/I/O和跨来源μ规模，默认争取2048例而非机械沿用旧128。条件比较nominal与NoiseOn=False、AnalogueNoiseOn保持nominal的单机制臂；实际配置若不支持该含义，先报告验证失败的实测差异，不伪造介入。选前读出、两臂选择迁移和两动量层/来源区间均保留。
+
+on/off只测模拟因果份额，不是正式系统范围。若能定位额外cluster，应再要求data依据的真实可实现变体和同事件ν压力；若不足，明确能排除哪种机制，结束这一臂，不接续参数网格。当前不启动新G4、完整历史生产、CaloNu波形、架构或概率实验。独立interaction/FSI/输运、可辨识正向谱硬度和真正未开发生产确认继续保留；本轮不执行stage53，详细输入与资源验收见[下一轮Prompt](nu_mu_energy_ml_next_step_prompt.md)。

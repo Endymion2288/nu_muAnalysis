@@ -1,64 +1,48 @@
-# 下一轮执行 Prompt：stage52 F6关键计数和闪烁体的data响应控制
+# 下一轮执行 Prompt：stage53 tracker额外活动的同事件噪声机制控制
 
-先读AGENTS.md、stage49审查§7、`workbook/2026-11-02_stage51_segment-angle-information.md`、修订路线§33、信息预算计划§18，以及stage36的μ选择/manifest/GRL和stage13–14的变量组物理结论。
+先读AGENTS.md、stage49审查§7、[stage52报告](../workbook/2026-11-02_stage52_f6-muon-response-control.md)、修订路线§34、信息计划§19，以及stage37/38已验证的μ HITS/RDO/reco身份联结工具与manifest。**只推进一次有界tracker读出机制问题，不恢复CaloNu波形/历史生产或架构扫描。**
 
-本轮推进必须完成的可靠性交付，只回答：**在可核实的μ控制选择和共同几何/运动学支持下，F6真正有效的计数、闪烁体读出在data与MC中哪些相容，哪些响应差异值得建立有依据的nuisance？** 这是对应MIP/电子响应的控制，不是强子shower或ν能量闭合。
+## 1. 已知物理结果与本轮问题
 
-## 1. 已有结论与停止项
+stage52完整18文件6,021,535条，选中data940,724/MC199,239，来源隔离40格标准化主评价data511,500/MC99,421。station3>6的data26.069%、MC71.210%，差−45.141 [−45.441,−44.866] pp；station1/2也大幅MC偏多。SpacePoints>12、普通segment>4却是data多4.417/4.233pp。两动量层、三个run、MC符号和位置都保持。Timing总电荷中央尺度接近，不替代宽度/状态/触发或强子闭合。
 
-stage50扩大训练支持共用cal后改善8.234%，固定depth5仅改善.868%，真z条件增量未关闭。stage51用全14309例/81来源、重点11658例，角度相对固定L5_F6改善−.129% [−.492%,.229%]，局部会聚−.295% [−.660%,.111%]，真实配对相对打乱−.152% [−.449%,.123%]。本地短段表示未过实用/关系门槛，9正式+1smoke预算已结束。
+MC/data已核计数branch代数、charge单位和Timing面一致，但生产、noise、masking、timebin/compression及tracking未完全匹配。SCT FrontEnd源码有随机noise-strip注入，expanded特定模式可改变占据；DB可覆盖fallback。**尚未测该噪声项是否解释多出来的cluster，不能已当成定因或正式系统。**
 
-不再追加角阈值、半径、depth、seed、GNN/Transformer或tracklet生产。高y IFT覆盖只有21/369，不能把局部阴性当所有早期角信息的上界；输运后SiHit角oracle潜力仍未测量，仅为具体重建投入前的另立有界备选。本轮不启动它，不补跑谱形倾斜/普通Calo/完整波形或历史生产。
+本轮只回答：在已核实同事件、同生成/输运末态和相同重建配置下，独立随机noise-strip注入对额外cluster、SpacePoint/segment及μ选择产生多大因果变化？这一机制份额能否解释stage52的部分模式，哪些差异仍不能解释？
 
-本轮 **0新能量fit、0新概率映射、0谱反演/toys/coverage**，不在data差异上训练分类器/反调BDT。历史已独立评价F6保留；L5仅较强开发研究控制，不能升级为新独立确认模型。
+0新能量fit、0新概率映射、0谱反演/toy/coverage、0新G4事件。不对data残差训练或反调BDT，不把MC on/off全差当正式1σ，不宣称μ控制证明ν hadron响应。
 
-## 2. 输入与样本支持
+## 2. 必要输入与有界预检
 
-- 已知路径清单：`ml/configs/calonu_muon_files.tsv`，12个MC100049/100050和6个data15838/16000/16923 PHYS来源。只用这些已知文件，不递归扫EOS。
-- 配套 `ml/configs/calonu_muon_grl.json`、`ml/configs/calonu_muon_control.json`、`ml/calonu_muon_control.py` 的实际GRL/事件标识与最高pz leading规则；复用经过核实的工具。
-- F6全部65项allowlist在 `workbook/stage42_energy_ml/preparation.json`；本轮优先固定与已有变量组收益对应的 `nClusters0–3`、`SpacePoints`、`TrackSegments`，以及可核对的VetoNu/Veto/Timing/Preshower charge或reduced_charge。具体有限probe清单、单位和读出定义在看probe的data/MC残差前冻结。
-- 原stage36缓存主要是CaloNu响应，不能冒充已有F6关键计数/电荷的可靠性结果。缺列就只补所需最小列，不复制完整ROOT/xAOD。
+- 使用既有12个MC μ PHYS来源和 `ml/configs/calonu_muon_files.tsv`；配套stage37/38的 `ml/locate_calonu_native.py`、`ml/read_calonu_native.py`、`ml/prepare_calonu_native.py`、`ml/prepare_calonu_repair.py` 和已保存case manifest。先读其真实产物路径，不猜新路径，不递归扫EOS/全历史生产。
+- 从**已知**对应production logs/config与CVMFS已编译构建核实actualSCT NoiseOn、AnalogueNoiseOn、UseCalibData、occupancy/threshold、timebin/compression、masking和collection。header默认不是actual；noIFT目录字样不是物理几何或collection证明。
+- 最多40例预检只用于schema/事件身份/名义重放、输出/计时。PG merged eventID会重启：用source/entry与生成子文件映射、primary指纹/原生标识验证，不按重复run/eventID强配。
+- 先验证nominal重放能复现原RDO的SCT strip/timebin及reco计数/选择；规定允差，实际报告不符比例/幅度。原始配置未复现则不能把nominal-vs-新臂差冒充单一噪声效应。优先运行现成匹配build，只有确需源码变化才隔离补编译。
+- 预检用最小branches/collection，统计实际wall/CPU/RSS/I/O；大规模读出和重放通过Condor，不在交互节点批量运行。不保存xAOD/RDO/HITS副本或逐hit点云，临时产品scratch内处理并删除。
 
-按用户要求扩大重要结论支持：**默认这些18个文件的完整事件范围，不机械继承旧entry_stop的50000/100000前缀。** 先读metadata并用小pilot计时，再冻结实际流式分块、线程/作业、I/O/存储上限。若完整范围确实超预算，先明确来源覆盖、统一身份取样及可排除的结论范围，不能静默缩样或按probe/残差选有利子样本。全部来源和三个data run分别报告，不以高统计单run替代运行条件变化。
+不能只交元数据库存结束：若nominal不可重复，至少给出同事件SCT/计数的实测不符、已定位与未知配置边界及缺失的具体输入；不得以小pilot否定整个读出方向。
 
-数据和MC的几何/生产/触发定义可能不同，先核实际schema和配置，不能仅因同名branch就声称物理等价。MC为粒子枪μ，不是ν hadron模型变体；data控制若沿用旧已开发来源，也不是独立确认。
+## 3. 看两臂结果前冻结唯一实验
 
-## 3. 小pilot与物理有效性
+- 目标跨12来源、两μ符号和100–250/250–1000GeV的**2048例**；按已知身份哈希/固定分层从完整已知范围选，不能看计数/噪声残差挑例。尽量扩大支持而非机械复用旧128。选择权重、source混合与两动量N事前冻结；小机制样本不得称为全ν性能确认。
+- 受实际映射/资源限制时，明确全部来源覆盖、可用范围、无法测的结论；重要总体判断须扩大来源/样本，不能用少数异常终止分支。旧128例可作程序对照，不单独承担最终推广判断。
+- 两臂为actual nominal，以及**仅**NoiseOn=False、AnalogueNoiseOn保持nominal、其他occupancy/threshold/timebin/masking/几何/重建不变的机制臂。预检必须从工具实现确认该配置确实只移除独立随机strip注入；不能未经核实把DoInnerDetectorNoise=False当同义，它可能同时去掉analog噪声。
+- 实际noise已关闭或语义不支持时，不强造干预；报告nominal验证和为何此机制不适用，不自动扩展成任意noise/timebin网格。
+- 相同HITS/初态，记录两臂随机配置；不以共用随机种子宣称除该项外所有随机流完全配对。尽可能复用同一信号处理/已有RDO去噪重建时，要核实可追踪noise身份，不用“无SDO”未经证明就当noise。
+- stage52最高pz、tag、质量、几何/动量定义保留。原事件名单以nominal参考固定，**同时**报全部配对事件选前读出，以及各臂通过/失败迁移，不只留两臂都通过。不能用重新匹配运动学把真实选择效应抹掉。
 
-小pilot仅核schema/身份/单位/计时，至多40个事件，可复用已核实的旧schema事实；不据它作总体响应阴性结论。检查：
+## 4. 指标、成本与解释
 
-1. 最高pz leading、track向量对齐、track与探测器面的坐标/角度单位、传播失败哨兵、event/run/time/GRL/碰撞BCID。
-2. 计数的物理定义和整数范围、station命名、是否包含IFT、segment collection差别；不假定不同生产/几何完全一致。
-3. 电荷raw/fit/reduced的定义、符号、积分窗、增益、状态/饱和，核实后再报告pC等单位；不要用CaloNu固定归一化或一个新比例去统一其他探测器。
-4. 实际触发菜单/TBP/TAP与离线tag可用性。独立tag要求其逻辑不对当前probe的同一信号施加阈值；仅换名而使用同路信号仍有截断。
-5. 用实际读取字节、wall/CPU/RSS和事件吞吐冻结全量Condor预算；大批量读取走Condor、单进程流式最小列、限制并发和内存，不保存逐事例点云。
+主报nClusters0–3、SpacePoints、普通TrackSegments的配对均值、>6/>12/>4额外率、中央分位数与尾；两动量层、μ符号、所有来源、选择迁移。来源配对500次区间，稀少source的限制明确；如noise随机波动过大，可事前冻结少量重复，不看结果追加seed。
 
-不能从40例缺branch或空探针否定全来源；需要关闭输入分支时，先全18文件metadata/最小列覆盖审计。可靠单位、tag或共同几何不可得时如实记录未测量和最小所需输入，不能假设问题不存在或强行画闭合图。
+把noise开/关对μ控制的变化与stage52同条件差异方向/幅度并列，明确运动学/生产支持差别。若cluster下降而SP/segment基本不变，可支持特定孤立噪声机制；若方向/幅度不足，报告能排除的范围，不能自动说所有噪声/几何/读出已排除。不用统一计数或gain比例替代变体。
 
-## 4. 看probe差异前冻结选择与比较
+资源先由预检测量冻结：默认不超过8个并发Condor、每进程1–2CPU/≤6GB、累计CPU≤8h、请求输入≤10GB、紧凑最终输出≤20MB；这是后续上限，不是已测成本。若2048例重放真实超限，先用已测耗时说明可交付支持，不悄悄缩为有利子样本。schedd忙可换，但先核旧任务0启动后hold/remove，避免重复。按stage52经验避免固定entry块跨basket重复读，先验证iterate/basket复用效果，不把理论byte数当实际I/O。
 
-**原stage36四路Veto raw charge>40 pC的选择不能照搬来测同四路完整电荷分布或低信号效率。** 必须为有限probe族设计其他已核实触发/探测器的tag，记录剩余相关性、触发预选与阈值截断范围。无需一次验证所有读出；优先交付一个可解释且支持充分的核心控制，其他量明确未测量。
+## 5. 结束条件与后续
 
-固定100≤reco pμ<1000 GeV，并报100–250/250–1000；高p不作为核心成败指标。保持最高pz leading，用相同重建质量条件，实际共有的geometry/p/x/y支持在看probe差异前定义。不得用data probe残差挑较好几何区域或只留低占据好事件。
+- nominal重放通过且单机制差异有清楚配对证据：交付该噪声项的因果份额及剩余差异；下一轮才考虑有data依据的真实读出变体及固定F6对同事件ν的压力，on/off不直接作为正式1σ。
+- 机制不足或nominal不匹配：给出实际差异、区间/覆盖和最小缺失配置，结束这一臂；不续开参数/seed/读出族扫描，不宣布F6全部不可部署或达到硬件极限。
+- 本轮不启动ν重训练/谱toy。独立ν interaction/FSI、G4/材料输运、预定可辨识正向谱硬度及真正未开发生产确认仍必须交付；μ噪声控制不能替代它们。六箱病态结论保留，不以改箱/更多toy遮蔽。
 
-若选择单longTrack、nLayers/χ²等质量条件，明确是在该条件下测计数/响应，**不能据此认证全tracker效率或多轨迹效率**；被固定为1的longTracks不能当分布闭合证据。需要真正效率测量时必须另有独立参考。
-
-允许一个事先冻结的、只依赖p/x/y等tag运动学的条件匹配/分层。报告匹配前后样本、源混合、支持重叠和Neff；不在被测电荷/计数上重加权，不以匹配成功代替响应闭合。校准或匹配若需拟合，只用来源隔离的专用控制部分并在另一部分评价，不重复试验挑最好结果；这不授权新能量模型。
-
-## 5. 测量、区间与解释
-
-冻结少量主指标：计数的条件分布/分位数或额外活动率；电荷的中位数、中心68%宽度、预定义低信号与状态/饱和比例，具体阈值须有源代码/硬件/既有标定依据，不能看data后选。不用一个总体KS p值代替物理差异大小。
-
-逐data run、MC μ±来源、两个动量层和共有位置区域报告实际N/来源N、单位、差异或比值及区间。使用有限来源组bootstrap/分run对照，说明只有6个data文件/3个run时来源精度与相关性限制；单事件高统计不等于独立运行条件充分。
-
-发现差异时分别核查程序定义/哨兵/触发、生产/几何/选择和响应。缺少变体时明确原因未识别，不将未知原因当结论；不把任意±增益当正式系统。没有测量强子响应、ν相互作用/FSI或输运系统就标未测量；EPOS/SIBYLL也不能代替interaction变体。
-
-本轮不对单μdata声称测出ν能量bias，不以Ehat≈pμ当ν事件能量闭合；μ对照只能约束对应读出响应。若确有响应不相容，为以后能量压力给出有依据且范围明确的变化需求，不当场用data残差反调BDT或宣布全部信息不可部署。
-
-## 6. 必须形成的决策与交付
-
-用充分支持给出至少一项有测量依据的判断：某个F6核心读出在明确μ条件下相容/有多大差异；或由于实际tag/定义/几何缺口，哪些响应无法测、需要哪些具体输入。不要仅提交库存清单或把少数pilot异常当总体现象。
-
-阶段结束先写中文stage52报告：协议/选择/tag、支持和独立性、完整数值/单位/分层/区间、物理与程序解释、实际命令、wall/CPU/RSS/I/O/存储、下一步所需输入及验收；代码/配置/紧凑表图一起本地Conventional Commit，不推送。精简归档，去重JSON/中间NPZ，不提交ROOT/逐事件原始向量/模型。
-
-后续仍须完成独立ν相互作用/输运压力、一个预固定且可辨识的正向谱硬度测量与真正未开发生产确认。只有取得可靠nuisance变体再讨论对谱目标的总误差；六箱自由谱原不稳定结果继续保留，不通过改箱/加toy隐藏。本轮完成控制后再据结果冻结下一任务，不在同一阶段无限扩展。
+先写中文stage53 workbook报告，记录协议、actual配置/身份、全部数值/单位/分层/区间、程序与物理解释、执行命令、计时/资源/I/O/最终路径及具体下一任务。代码/配置/紧凑表图一起本地Conventional Commit，不推送；不自动启动stage54。

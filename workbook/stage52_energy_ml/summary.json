@@ -1,0 +1,219 @@
+{
+  "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+  "support_cells": 40,
+  "overlap_mass": 0.7548933889884798,
+  "resources": {
+    "files": 18,
+    "input_events": 6021535,
+    "selected_MC": 199239,
+    "selected_data": 940724,
+    "full_range_all_sources": true,
+    "extraction_wall_s": 167.39784403292288,
+    "extraction_cpu_s": 73.934493517,
+    "requested_bytes": 2452265764,
+    "peak_rss_MiB": 348.046875,
+    "throughput_events_per_extraction_wall_s": 35971.40115386264,
+    "shards_bytes": 1046349,
+    "probe_histogram_denominators_exact": true,
+    "charge_nonfinite_events": [
+      489,
+      0
+    ],
+    "count_hist_overflow_events": [
+      3685,
+      42,
+      14,
+      69,
+      6770,
+      0
+    ],
+    "analysis_wall_s": 111.65065122814849,
+    "analysis_cpu_s": 108.517958744,
+    "analysis_peak_rss_MiB": 420.71875
+  },
+  "strata": {
+    "all": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 511500,
+        "sources": 3,
+        "Neff": 465020.1943318456,
+        "min_cell_N": 3002,
+        "max_event_weight": 2.802046465213653e-06
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 99421,
+        "sources": 6,
+        "Neff": 85395.67004922613,
+        "min_cell_N": 1420,
+        "max_event_weight": 1.4146979801861266e-05
+      },
+      "valid_bootstrap_replicates": 500
+    },
+    "p100_250": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 186434,
+        "sources": 3,
+        "Neff": 173623.03656199828,
+        "min_cell_N": 8597,
+        "max_event_weight": 8.18966232672985e-06
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 26781,
+        "sources": 6,
+        "Neff": 26638.784970861787,
+        "min_cell_N": 1420,
+        "max_event_weight": 4.1347989392273414e-05
+      },
+      "valid_bootstrap_replicates": 500
+    },
+    "p250_1000": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 325066,
+        "sources": 3,
+        "Neff": 293165.8301160465,
+        "min_cell_N": 3002,
+        "max_event_weight": 4.101161858264188e-06
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 72640,
+        "sources": 6,
+        "Neff": 59156.50402179672,
+        "min_cell_N": 2222,
+        "max_event_weight": 2.0745171834507037e-05
+      },
+      "valid_bootstrap_replicates": 500
+    },
+    "xy_0_0": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 118570,
+        "sources": 3,
+        "Neff": 109445.0961266838,
+        "min_cell_N": 3002,
+        "max_event_weight": 1.1484643341466663e-05
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 24966,
+        "sources": 6,
+        "Neff": 20499.315239591488,
+        "min_cell_N": 1439,
+        "max_event_weight": 6.044104510981766e-05
+      }
+    },
+    "xy_0_1": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 136157,
+        "sources": 3,
+        "Neff": 120554.43738955994,
+        "min_cell_N": 5215,
+        "max_event_weight": 1.0756026243975909e-05
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 24616,
+        "sources": 6,
+        "Neff": 21838.788857165604,
+        "min_cell_N": 1474,
+        "max_event_weight": 5.298179962960092e-05
+      }
+    },
+    "xy_1_0": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 121479,
+        "sources": 3,
+        "Neff": 113245.59708467494,
+        "min_cell_N": 3125,
+        "max_event_weight": 1.1058431464128279e-05
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 25013,
+        "sources": 6,
+        "Neff": 20890.448325238158,
+        "min_cell_N": 1420,
+        "max_event_weight": 5.7215021180733884e-05
+      }
+    },
+    "xy_1_1": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 135294,
+        "sources": 3,
+        "Neff": 121781.94300399309,
+        "min_cell_N": 4998,
+        "max_event_weight": 1.0284171487911093e-05
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 24826,
+        "sources": 6,
+        "Neff": 22188.497950785724,
+        "min_cell_N": 1488,
+        "max_event_weight": 5.165723561082233e-05
+      }
+    },
+    "charge_-1": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 270824,
+        "sources": 3,
+        "Neff": 242628.32597812393,
+        "min_cell_N": 3002,
+        "max_event_weight": 6.381791520217266e-06
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 51342,
+        "sources": 6,
+        "Neff": 38195.05375471412,
+        "min_cell_N": 1420,
+        "max_event_weight": 3.4021880972467196e-05
+      }
+    },
+    "charge_1": {
+      "data": {
+        "supported": true,
+        "events": 511500,
+        "events_common": 240676,
+        "sources": 3,
+        "Neff": 237352.12303261404,
+        "min_cell_N": 8597,
+        "max_event_weight": 4.796546684710633e-06
+      },
+      "MC": {
+        "supported": true,
+        "events": 99421,
+        "events_common": 48079,
+        "sources": 6,
+        "Neff": 47508.502231712475,
+        "min_cell_N": 1524,
+        "max_event_weight": 2.3895020777571355e-05
+      }
+    }
+  }
+}

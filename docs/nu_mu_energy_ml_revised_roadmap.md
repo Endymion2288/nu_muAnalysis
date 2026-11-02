@@ -979,3 +979,29 @@ Rθ为46项角度/斜率/同面μ相对角；C为24项各station自身±31.5 mm�
 **stage52优先完成既有F6的data可靠性控制，0新能量fit。** 使用既有muon manifest的12 MC+6 data PHYS来源、GRL/触发/schema，先小QA再冻结不按被测电荷截断的独立tag、几何/p/位置共支持与实际I/O预算。默认读取这些已知来源完整事件范围，不照搬stage36的前50000/100000 entry_stop。原四路Veto raw>40 pC选择不能用于同路低信号效率/完整响应闭合；测试探针必须有其他已核实tag。单μ质量/单轨迹选择也不能验证全tracker效率。
 
 报告nClusters0–3/SpacePoints/TrackSegments及实际有效闪烁体电荷的条件分布、来源/run差异和统计区间；μ只标定对应MIP/电子响应，不能证明ν强子shower闭合。不按data差异反调BDT、不用任意±比例当正式系统。缺独立tag/共同几何时如实记未测量。ν相互作用/输运、可辨识正向谱硬度和真正未开发生产确认仍必须交付，本轮未测；stage52具体范围见[执行Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 34. stage52：完整μ来源暴露tracker活动失配，Timing中央尺度较接近
+
+按stage49审查扩大重要结论支持：18个已知PHYS完整6,021,535条，MC600,000、data5,421,535；旧data前缀扩大9.036倍。最终选中MC199,239、data940,724。以四Veto raw>40 pC独立于计数/Timing的离线tag，固定最高pz、单longTrack/质量、100–1000 GeV及Timing面|x/y|<80mm。未认证在线菜单/生产scint-filter，不测Veto自身完整响应、无偏Timing或tracking效率。
+
+40个固定p/x/y/reco电荷格，只用9参考来源运动学冻结重叠质量；另9来源评价。全部格通过，评价data511,500/3来源、MC99,421/6来源，Neff465,020/85,396。参考/评价不交叠，但旧生产不是blind。500次run/MC符号内来源bootstrap，固定参考质量；连续格内运动学、角度、材料/生产条件仍未完全相同。
+
+| 条件主评价 | data | MC | data−MC [来源95%] |
+|---|---:|---:|---:|
+| nClusters0>6 % | 52.719 | 77.101 | −24.383 [−24.665,−24.151] pp |
+| nClusters1>6 % | 34.022 | 72.902 | −38.880 [−39.317,−38.506] pp |
+| nClusters2>6 % | 30.323 | 71.158 | −40.835 [−41.053,−40.593] pp |
+| nClusters3>6 % | 26.069 | 71.210 | −45.141 [−45.441,−44.866] pp |
+| SpacePoints>12 % | 56.401 | 51.983 | +4.417 [4.042,4.777] pp |
+| TrackSegments>4 % | 27.540 | 23.307 | +4.233 [4.021,4.462] pp |
+
+station1–3均值也多约.90–1.18 cluster/event；nClusters0/SpacePoints均值接近不代表分布闭合。两动量层、三个data run、两个MC符号与四象限均保留cluster失配方向，不能全归>1TeV tracker或总体p谱。普通segment与GhostBusted没有混用，全部大尾与非有限保留。
+
+Timing fit总电荷中位data57.5/MC58.5 pC；raw59.5/59.5 pC。中央1pC分箱使差值另有±1pC数值包络：fit差含包络[−2,0]、raw[−1,2] pC，只支持中央尺度较接近。raw R68为20/18 pC、差源区间[1.5,2.5] pC，含分箱包络[.5,3.5]。完整选中fit非有限MC2/data487，raw全有限；状态和在线接受度未关闭，不能据总体中位给gain校准或宣布所有闪烁体闭合。
+
+已知MC/data源码的station累加、电荷/50与Timing参考面一致；实际noise、timebin/compression、masking、collection、几何及tracking生产尚未等同。SCT源有独立noise-strip注入与expanded模式噪声变化，值得因果检验，但fallback参数不是实际配置，**本轮未识别噪声份额，也未建立正式nuisance**。μ条件不外推为ν强子shower闭合或能量bias。
+
+6个正式Condor任务各1启动/exit0，完整提取累计wall167.398s/CPU73.934s、peak348.047MiB；源统计归档809,763bytes，无逐事件缓存。首批6任务空转有记录，未当完成。请求I/O2.452GB超冻结2GB预算22.613%，metadata证明固定50k块重复basket2,448,887,887bytes加metadata3,377,877bytes恰等于实测；没有静默缩样。远尾libm边界差5.82e−11pC不会改变float32分箱，主计数表独立重算和全18归档回读通过。详见[stage52中文报告](../workbook/2026-11-02_stage52_f6-muon-response-control.md)。0新能量fit/概率映射/谱toy。
+
+**下一阶段先用一次有限同事件tracker噪声/读出机制实验定位差异。** 复用已知HITS/RDO/reco身份联结，≤40例核actual配置和原nominal可重复性后按资源冻结扩大跨源μ支持；比较nominal与仅去掉独立随机noise-strip注入、保留analog噪声的机制臂，报告cluster/SP/segment配对变化及选前/选后迁移。on/off不是正式1σ，不用data差值任意反调。得到可信变体后才评固定F6的ν压力；不恢复CaloNu历史/波形、树/网络扫描。具体预算/输入/验收见[stage53 Prompt](nu_mu_energy_ml_next_step_prompt.md)。独立ν interaction/FSI与输运、预定正向谱硬度、真正未开发生产确认仍必须完成，均未由本轮μ控制替代。

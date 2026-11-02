@@ -1,0 +1,115 @@
+{
+  "stage": 52,
+  "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+  "starting_commit": "73aa10194699d48e03074bb74278b6cab77fb82f",
+  "manifest": "ml/configs/calonu_muon_files.tsv",
+  "input_audit": "workbook/stage52_energy_ml/input_audit.json",
+  "grl": "ml/configs/calonu_muon_grl.json",
+  "cache": "ntuples/energy_ml_stage52",
+  "source_reference": "calypso 1ec47efe; reference semantics, not certification of r0022 production flags",
+  "input_range": "all entries of all 18 known files, ignoring legacy entry_stop",
+  "selection": "data GRL+colliding; exactly one longTrack; highest-pz leading; nLayers>=7,nDoF>=9,Chi2/nDoF<15;100<=p<1000 GeV; valid VetoNu extrapolation |x,y|<500mm and hypot(thetaX,thetaY)<0.025; four VetoNu0/1,Veto20/21 raw charges>40pC; |X_atTrig|,|Y_atTrig|<80mm; charge=+/-1",
+  "tag": "four Veto raw charges as existing muon tag; independent of count/Timing probes offline only",
+  "acquisition_limit": "online trigger menu and production scint-filter flags not certified; acquired and reconstructed muons only, no unbiased Timing low-signal efficiency, Veto response, tracking efficiency or hadron closure",
+  "geometry_limit": "common central saved z=0 Timing-plane coordinates; does not guarantee identical data/MC material, alignment or digitization",
+  "count_probes": [
+    "nClusters0",
+    "nClusters1",
+    "nClusters2",
+    "nClusters3",
+    "SpacePoints",
+    "TrackSegments"
+  ],
+  "extra_activity_thresholds": [
+    6,
+    6,
+    6,
+    6,
+    12,
+    4
+  ],
+  "extra_activity_interpretation": "above nominal four stations x three SCT layers x two sides and one segment/station; descriptive activity, not inefficiency",
+  "charge_probes": [
+    "Timing_total_charge",
+    "Timing_total_raw_charge"
+  ],
+  "charge_units": "pC = stored integral (mV ns)/50 ohm; no new normalization",
+  "charge_histogram": "1pC bins [-128,8192], geometric tail to1e6pC, separate under/overflow/nonfinite; median and half central68% width reported at bin center with <=0.5pC central-bin discretization",
+  "charge_low_threshold_pC": 20,
+  "charge_low_threshold_source": "existing definitions.yaml hitsTiming total>20pC; diagnostic total<=20, not efficiency",
+  "status_bits": {
+    "threshold_failed": 1,
+    "overflow": 4,
+    "missing_or_invalid": 384
+  },
+  "status_rule": "OR over geometrically active Timing pair: y>20 channels2/3, y<-20 channels0/1, otherwise all4; no status filtering",
+  "p_edges_GeV": [
+    100,
+    160,
+    250,
+    400,
+    650,
+    1000
+  ],
+  "x_edges_mm": [
+    -80,
+    0,
+    80
+  ],
+  "y_edges_mm": [
+    -80,
+    0,
+    80
+  ],
+  "charge_strata": [
+    -1,
+    1
+  ],
+  "reference_indices": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "evaluation_indices": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17
+  ],
+  "reference_rule": "40 fixed p/x/y/charge cells. Each reference data run and the reference MC production sign corresponding to that cell reco charge must have >=20 entries/cell. Fixed target mass proportional to min(normalized reference data cell mass, normalized pooled reference MC cell mass); no probe used. Evaluate other source files by direct cell standardization to this target. Missing eval cells cause a declared unsupported result, never a residual-driven support change.",
+  "strata": "overall,100-250,250-1000GeV; each run/MC sign/source, four x/y quadrants",
+  "intervals": "500 source bootstrap replicates; eval data resample three runs (one file each); MC resample three files within each sign; fixed reference masses/support, recompute within-cell normalization; conditional on reference and selection, not full systematic",
+  "bootstrap_seed": 20261105,
+  "bootstrap_replicates": 500,
+  "new_energy_fits": 0,
+  "chunk_entries": 50000,
+  "jobs": 6,
+  "max_concurrent_jobs": 6,
+  "request_cpus": 1,
+  "request_memory_MB": 1500,
+  "request_disk_MB": 200,
+  "timeout_s_per_file": 600,
+  "max_input_entries": 6021535,
+  "estimated_selected_columns_compressed_GB": 1.33,
+  "requested_bytes_budget_GB": 2.0,
+  "output_budget_MB": 50,
+  "performance_basis": "all18 metadata+40 schema events:8.681s wall,5.457s CPU,135.7MiB peak,9.073MB requested; stage36 1.2M scalar entries97.737s cumulative; stream50k entries, no raw vectors/cache",
+  "freeze_note": "frozen before any probe response comparison; pilot only schema/status/alignment, no response values persisted",
+  "pre_response_clarification": {
+    "utc": "2026-11-02T10:40:22.751132+00:00",
+    "jobs": "13646689.0-5 idle, NumJobStarts=0 at clarification",
+    "reason": "MC mu-minus and mu-plus supports are evaluated in the corresponding reco-charge cells, not requiring each production sign to populate both charge signs; purely logical correction before full extraction response seen",
+    "extraction_changed": false
+  }
+}

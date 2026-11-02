@@ -1,0 +1,118 @@
+{
+  "event_entries_read": 0,
+  "wall_s": 7.81314098299481,
+  "files": [
+    {
+      "index": 0,
+      "selected_columns_compressed_bytes": 7584812,
+      "predicted_chunk_basket_touches_bytes": 7584812,
+      "metadata_requested_bytes": 148819
+    },
+    {
+      "index": 1,
+      "selected_columns_compressed_bytes": 7588827,
+      "predicted_chunk_basket_touches_bytes": 7588827,
+      "metadata_requested_bytes": 148056
+    },
+    {
+      "index": 2,
+      "selected_columns_compressed_bytes": 7582438,
+      "predicted_chunk_basket_touches_bytes": 7582438,
+      "metadata_requested_bytes": 149337
+    },
+    {
+      "index": 3,
+      "selected_columns_compressed_bytes": 7586377,
+      "predicted_chunk_basket_touches_bytes": 7586377,
+      "metadata_requested_bytes": 148759
+    },
+    {
+      "index": 4,
+      "selected_columns_compressed_bytes": 7586824,
+      "predicted_chunk_basket_touches_bytes": 7586824,
+      "metadata_requested_bytes": 149187
+    },
+    {
+      "index": 5,
+      "selected_columns_compressed_bytes": 7580989,
+      "predicted_chunk_basket_touches_bytes": 7580989,
+      "metadata_requested_bytes": 148541
+    },
+    {
+      "index": 6,
+      "selected_columns_compressed_bytes": 7605906,
+      "predicted_chunk_basket_touches_bytes": 7605906,
+      "metadata_requested_bytes": 151667
+    },
+    {
+      "index": 7,
+      "selected_columns_compressed_bytes": 7604882,
+      "predicted_chunk_basket_touches_bytes": 7604882,
+      "metadata_requested_bytes": 151554
+    },
+    {
+      "index": 8,
+      "selected_columns_compressed_bytes": 7606423,
+      "predicted_chunk_basket_touches_bytes": 7606423,
+      "metadata_requested_bytes": 151777
+    },
+    {
+      "index": 9,
+      "selected_columns_compressed_bytes": 7604712,
+      "predicted_chunk_basket_touches_bytes": 7604712,
+      "metadata_requested_bytes": 152220
+    },
+    {
+      "index": 10,
+      "selected_columns_compressed_bytes": 7604953,
+      "predicted_chunk_basket_touches_bytes": 7604953,
+      "metadata_requested_bytes": 153033
+    },
+    {
+      "index": 11,
+      "selected_columns_compressed_bytes": 7599865,
+      "predicted_chunk_basket_touches_bytes": 7599865,
+      "metadata_requested_bytes": 151717
+    },
+    {
+      "index": 12,
+      "selected_columns_compressed_bytes": 115593113,
+      "predicted_chunk_basket_touches_bytes": 335566172,
+      "metadata_requested_bytes": 257664
+    },
+    {
+      "index": 13,
+      "selected_columns_compressed_bytes": 137640070,
+      "predicted_chunk_basket_touches_bytes": 412211925,
+      "metadata_requested_bytes": 261849
+    },
+    {
+      "index": 14,
+      "selected_columns_compressed_bytes": 128430032,
+      "predicted_chunk_basket_touches_bytes": 377916238,
+      "metadata_requested_bytes": 260360
+    },
+    {
+      "index": 15,
+      "selected_columns_compressed_bytes": 146586891,
+      "predicted_chunk_basket_touches_bytes": 431313025,
+      "metadata_requested_bytes": 265800
+    },
+    {
+      "index": 16,
+      "selected_columns_compressed_bytes": 125175561,
+      "predicted_chunk_basket_touches_bytes": 367829802,
+      "metadata_requested_bytes": 261838
+    },
+    {
+      "index": 17,
+      "selected_columns_compressed_bytes": 147202307,
+      "predicted_chunk_basket_touches_bytes": 432913717,
+      "metadata_requested_bytes": 265699
+    }
+  ],
+  "selected_columns_compressed_bytes": 891764982,
+  "predicted_chunk_basket_touches_bytes": 2448887887,
+  "metadata_requested_bytes": 3377877,
+  "interpretation": "Fixed entry arrays requests reread baskets spanning adjacent50k chunks; diagnostic not additional physics extraction. Next extraction should use basket-aware t.iterate with byte step, budget measured touches rather than unique bytes; no rerun solely to improve timing."
+}

@@ -1,0 +1,1252 @@
+[
+  {
+    "index": 0,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00000-00004",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00000-00004-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 17232,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 45978,
+      "track_quality": 44284,
+      "reco_p_100_1000_GeV": 22618,
+      "valid_vetonu_extrapolation": 22616,
+      "four_veto_tag": 22616,
+      "central_timing_plane": 17232,
+      "unit_reco_charge": 17232
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 17232
+      },
+      "TAP": {
+        "0": 17232
+      },
+      "inputBits": {
+        "0": 17232
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      4068,
+      489,
+      556,
+      443,
+      15355,
+      29
+    ],
+    "requested_bytes": 7733631,
+    "wall_s": 2.1813149359077215,
+    "cpu_s": 1.0292853,
+    "peak_rss_MiB": 113.98828125,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 1,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00100-00104",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00100-00104-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 17334,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46024,
+      "track_quality": 44334,
+      "reco_p_100_1000_GeV": 22811,
+      "valid_vetonu_extrapolation": 22807,
+      "four_veto_tag": 22807,
+      "central_timing_plane": 17334,
+      "unit_reco_charge": 17334
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 17334
+      },
+      "TAP": {
+        "0": 17334
+      },
+      "inputBits": {
+        "0": 17334
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      3902,
+      373,
+      705,
+      375,
+      16442,
+      30
+    ],
+    "requested_bytes": 7736883,
+    "wall_s": 2.575085996002599,
+    "cpu_s": 0.9918843799999999,
+    "peak_rss_MiB": 111.2265625,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 2,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00195-00199",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00195-00199-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 17249,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46021,
+      "track_quality": 44279,
+      "reco_p_100_1000_GeV": 22597,
+      "valid_vetonu_extrapolation": 22594,
+      "four_veto_tag": 22594,
+      "central_timing_plane": 17249,
+      "unit_reco_charge": 17249
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 17249
+      },
+      "TAP": {
+        "0": 17249
+      },
+      "inputBits": {
+        "0": 17249
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      4097,
+      302,
+      388,
+      866,
+      16092,
+      36
+    ],
+    "requested_bytes": 7731775,
+    "wall_s": 2.491609274999064,
+    "cpu_s": 0.81454918,
+    "peak_rss_MiB": 103.0,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 3,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00295-00299",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00295-00299-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 17190,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 45993,
+      "track_quality": 44302,
+      "reco_p_100_1000_GeV": 22500,
+      "valid_vetonu_extrapolation": 22498,
+      "four_veto_tag": 22498,
+      "central_timing_plane": 17190,
+      "unit_reco_charge": 17190
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 17190
+      },
+      "TAP": {
+        "0": 17190
+      },
+      "inputBits": {
+        "0": 17190
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      3930,
+      363,
+      374,
+      980,
+      16227,
+      35
+    ],
+    "requested_bytes": 7735136,
+    "wall_s": 2.1334410590061452,
+    "cpu_s": 1.018558063,
+    "peak_rss_MiB": 110.26953125,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 4,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00395-00399",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00395-00399-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 17367,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 45964,
+      "track_quality": 44222,
+      "reco_p_100_1000_GeV": 22712,
+      "valid_vetonu_extrapolation": 22710,
+      "four_veto_tag": 22710,
+      "central_timing_plane": 17367,
+      "unit_reco_charge": 17367
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 17367
+      },
+      "TAP": {
+        "0": 17367
+      },
+      "inputBits": {
+        "0": 17367
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3874,
+      175,
+      248,
+      609,
+      15041,
+      36
+    ],
+    "requested_bytes": 7736011,
+    "wall_s": 2.1446784750005463,
+    "cpu_s": 0.7995128230000002,
+    "peak_rss_MiB": 105.2109375,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 5,
+    "sample": "MC",
+    "run": 100049,
+    "group": "100049_00495-00499",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100049/bck/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00495-00499-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 17076,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 45896,
+      "track_quality": 44120,
+      "reco_p_100_1000_GeV": 22444,
+      "valid_vetonu_extrapolation": 22444,
+      "four_veto_tag": 22444,
+      "central_timing_plane": 17076,
+      "unit_reco_charge": 17076
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 17076
+      },
+      "TAP": {
+        "0": 17076
+      },
+      "inputBits": {
+        "0": 17076
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      3733,
+      419,
+      273,
+      1043,
+      15561,
+      32
+    ],
+    "requested_bytes": 7729530,
+    "wall_s": 2.0170108169986634,
+    "cpu_s": 0.7522232999999999,
+    "peak_rss_MiB": 113.859375,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 6,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00000-00004",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00000-00004-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 15828,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46294,
+      "track_quality": 44529,
+      "reco_p_100_1000_GeV": 21005,
+      "valid_vetonu_extrapolation": 21004,
+      "four_veto_tag": 21004,
+      "central_timing_plane": 15828,
+      "unit_reco_charge": 15828
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 15828
+      },
+      "TAP": {
+        "0": 15828
+      },
+      "inputBits": {
+        "0": 15828
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3539,
+      1143,
+      490,
+      561,
+      13327,
+      43
+    ],
+    "requested_bytes": 7757573,
+    "wall_s": 2.175418149679899,
+    "cpu_s": 0.7890620070000001,
+    "peak_rss_MiB": 108.93359375,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 7,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00100-00104",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00100-00104-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 15838,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46314,
+      "track_quality": 44510,
+      "reco_p_100_1000_GeV": 21052,
+      "valid_vetonu_extrapolation": 21050,
+      "four_veto_tag": 21050,
+      "central_timing_plane": 15838,
+      "unit_reco_charge": 15838
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 15838
+      },
+      "TAP": {
+        "0": 15838
+      },
+      "inputBits": {
+        "0": 15838
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      3920,
+      648,
+      277,
+      1525,
+      15733,
+      36
+    ],
+    "requested_bytes": 7756436,
+    "wall_s": 2.55179973399936,
+    "cpu_s": 1.142996296,
+    "peak_rss_MiB": 116.49609375,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 8,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00200-00204",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00200-00204-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 16082,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46221,
+      "track_quality": 44503,
+      "reco_p_100_1000_GeV": 21120,
+      "valid_vetonu_extrapolation": 21119,
+      "four_veto_tag": 21119,
+      "central_timing_plane": 16082,
+      "unit_reco_charge": 16082
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 16082
+      },
+      "TAP": {
+        "0": 16082
+      },
+      "inputBits": {
+        "0": 16082
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      3297,
+      268,
+      321,
+      782,
+      12042,
+      53
+    ],
+    "requested_bytes": 7758200,
+    "wall_s": 1.9040219680027803,
+    "cpu_s": 0.8260185729999999,
+    "peak_rss_MiB": 114.30859375,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 9,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00295-00299",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00295-00299-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 15874,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46306,
+      "track_quality": 44611,
+      "reco_p_100_1000_GeV": 20989,
+      "valid_vetonu_extrapolation": 20985,
+      "four_veto_tag": 20985,
+      "central_timing_plane": 15874,
+      "unit_reco_charge": 15874
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 15874
+      },
+      "TAP": {
+        "0": 15874
+      },
+      "inputBits": {
+        "0": 15874
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3207,
+      1635,
+      562,
+      1357,
+      11144,
+      32
+    ],
+    "requested_bytes": 7756932,
+    "wall_s": 2.3927039850022993,
+    "cpu_s": 0.93258794,
+    "peak_rss_MiB": 104.7890625,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 10,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00395-00399",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00395-00399-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 16060,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46180,
+      "track_quality": 44409,
+      "reco_p_100_1000_GeV": 21217,
+      "valid_vetonu_extrapolation": 21217,
+      "four_veto_tag": 21217,
+      "central_timing_plane": 16060,
+      "unit_reco_charge": 16060
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 16060
+      },
+      "TAP": {
+        "0": 16060
+      },
+      "inputBits": {
+        "0": 16060
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      4173,
+      340,
+      1168,
+      948,
+      17197,
+      79
+    ],
+    "requested_bytes": 7757986,
+    "wall_s": 19.150367314003233,
+    "cpu_s": 0.813720798,
+    "peak_rss_MiB": 110.1796875,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 11,
+    "sample": "MC",
+    "run": 100050,
+    "group": "100050_00495-00499",
+    "input": "/eos/experiment/faser/sim/mc24/particle_gun/100050/bck/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00495-00499-PHYS.root",
+    "file_entries": 50000,
+    "read_entries": 50000,
+    "selected": 16109,
+    "cutflow": {
+      "input": 50000,
+      "stable_colliding_if_data": 50000,
+      "one_long_track": 46347,
+      "track_quality": 44573,
+      "reco_p_100_1000_GeV": 21196,
+      "valid_vetonu_extrapolation": 21192,
+      "four_veto_tag": 21192,
+      "central_timing_plane": 16109,
+      "unit_reco_charge": 16109
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "0": 16109
+      },
+      "TAP": {
+        "0": 16109
+      },
+      "inputBits": {
+        "0": 16109
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      6,
+      1
+    ],
+    "maximum_counts": [
+      4056,
+      485,
+      241,
+      1808,
+      14866,
+      57
+    ],
+    "requested_bytes": 7751582,
+    "wall_s": 2.1348154669976793,
+    "cpu_s": 0.79482401,
+    "peak_rss_MiB": 114.546875,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 12,
+    "sample": "data",
+    "run": 15838,
+    "group": "15838_file0",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root",
+    "file_entries": 780874,
+    "read_entries": 780874,
+    "selected": 133478,
+    "cutflow": {
+      "input": 780874,
+      "stable_colliding_if_data": 774232,
+      "one_long_track": 772465,
+      "track_quality": 705466,
+      "reco_p_100_1000_GeV": 321600,
+      "valid_vetonu_extrapolation": 320790,
+      "four_veto_tag": 319967,
+      "central_timing_plane": 133478,
+      "unit_reco_charge": 133478
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "14": 682,
+        "15": 132793,
+        "11": 2,
+        "7": 1
+      },
+      "TAP": {
+        "14": 682,
+        "15": 132793,
+        "11": 2,
+        "7": 1
+      },
+      "inputBits": {
+        "220": 449,
+        "221": 60050,
+        "222": 2230,
+        "223": 5143,
+        "236": 174,
+        "237": 750,
+        "238": 52904,
+        "239": 3682,
+        "252": 59,
+        "253": 2700,
+        "254": 3226,
+        "255": 2106,
+        "110": 1,
+        "205": 2,
+        "157": 1,
+        "230": 1
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3443,
+      1597,
+      798,
+      2097,
+      13900,
+      49
+    ],
+    "requested_bytes": 335823836,
+    "wall_s": 21.663753539323807,
+    "cpu_s": 10.963835168000001,
+    "peak_rss_MiB": 344.1875,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 13,
+    "sample": "data",
+    "run": 15838,
+    "group": "15838_file8",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00400-00449-r0022-PHYS.root",
+    "file_entries": 933264,
+    "read_entries": 933264,
+    "selected": 162391,
+    "cutflow": {
+      "input": 933264,
+      "stable_colliding_if_data": 928760,
+      "one_long_track": 926769,
+      "track_quality": 846404,
+      "reco_p_100_1000_GeV": 388540,
+      "valid_vetonu_extrapolation": 387627,
+      "four_veto_tag": 386638,
+      "central_timing_plane": 162391,
+      "unit_reco_charge": 162391
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "14": 830,
+        "15": 161560,
+        "7": 1
+      },
+      "TAP": {
+        "14": 830,
+        "15": 161560,
+        "7": 1
+      },
+      "inputBits": {
+        "220": 523,
+        "221": 73321,
+        "222": 2775,
+        "223": 6114,
+        "236": 233,
+        "237": 774,
+        "238": 64570,
+        "239": 4365,
+        "252": 74,
+        "253": 3123,
+        "254": 4008,
+        "255": 2510,
+        "157": 1
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3750,
+      925,
+      632,
+      1454,
+      15247,
+      71
+    ],
+    "requested_bytes": 412473774,
+    "wall_s": 26.9530758960027,
+    "cpu_s": 15.528048810000001,
+    "peak_rss_MiB": 348.046875,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 14,
+    "sample": "data",
+    "run": 16000,
+    "group": "16000_file0",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00000-00049-r0022-PHYS.root",
+    "file_entries": 868756,
+    "read_entries": 868756,
+    "selected": 148926,
+    "cutflow": {
+      "input": 868756,
+      "stable_colliding_if_data": 862743,
+      "one_long_track": 860890,
+      "track_quality": 786483,
+      "reco_p_100_1000_GeV": 357462,
+      "valid_vetonu_extrapolation": 356567,
+      "four_veto_tag": 355765,
+      "central_timing_plane": 148926,
+      "unit_reco_charge": 148926
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "14": 516,
+        "15": 148406,
+        "31": 1,
+        "7": 2,
+        "11": 1
+      },
+      "TAP": {
+        "14": 516,
+        "15": 148407,
+        "7": 2,
+        "11": 1
+      },
+      "inputBits": {
+        "84": 343,
+        "85": 57740,
+        "86": 2154,
+        "87": 4642,
+        "92": 17,
+        "93": 9042,
+        "94": 116,
+        "95": 888,
+        "100": 140,
+        "101": 778,
+        "102": 50606,
+        "103": 3580,
+        "110": 190,
+        "111": 67,
+        "117": 2511,
+        "118": 2945,
+        "119": 1949,
+        "125": 476,
+        "126": 108,
+        "127": 284,
+        "221": 333,
+        "222": 19,
+        "223": 105,
+        "229": 22,
+        "230": 7619,
+        "231": 544,
+        "237": 6,
+        "238": 740,
+        "239": 196,
+        "246": 390,
+        "247": 113,
+        "253": 21,
+        "254": 78,
+        "255": 106,
+        "116": 33,
+        "213": 7,
+        "228": 4,
+        "245": 4,
+        "244": 1,
+        "109": 1,
+        "236": 2,
+        "215": 1,
+        "166": 1,
+        "183": 1,
+        "220": 1,
+        "69": 1,
+        "124": 1
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      4208,
+      642,
+      525,
+      2260,
+      16900,
+      62
+    ],
+    "requested_bytes": 378176598,
+    "wall_s": 18.952915219000715,
+    "cpu_s": 9.084472112,
+    "peak_rss_MiB": 334.375,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 15,
+    "sample": "data",
+    "run": 16000,
+    "group": "16000_file8",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016000/Faser-Physics-016000-00400-00449-r0022-PHYS.root",
+    "file_entries": 993990,
+    "read_entries": 993990,
+    "selected": 173102,
+    "cutflow": {
+      "input": 993990,
+      "stable_colliding_if_data": 990135,
+      "one_long_track": 988019,
+      "track_quality": 902697,
+      "reco_p_100_1000_GeV": 414071,
+      "valid_vetonu_extrapolation": 412974,
+      "four_veto_tag": 411927,
+      "central_timing_plane": 173102,
+      "unit_reco_charge": 173102
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "14": 649,
+        "15": 172447,
+        "11": 2,
+        "7": 4
+      },
+      "TAP": {
+        "14": 649,
+        "15": 172447,
+        "11": 2,
+        "7": 4
+      },
+      "inputBits": {
+        "84": 397,
+        "85": 67627,
+        "86": 2649,
+        "87": 5362,
+        "93": 10524,
+        "94": 203,
+        "95": 1006,
+        "100": 200,
+        "101": 807,
+        "102": 58617,
+        "103": 4071,
+        "110": 202,
+        "111": 78,
+        "116": 52,
+        "117": 2724,
+        "118": 3491,
+        "119": 2228,
+        "125": 568,
+        "126": 131,
+        "127": 312,
+        "221": 351,
+        "222": 25,
+        "223": 123,
+        "228": 8,
+        "229": 32,
+        "230": 8760,
+        "231": 627,
+        "236": 4,
+        "237": 8,
+        "238": 878,
+        "239": 201,
+        "246": 412,
+        "247": 112,
+        "253": 38,
+        "254": 112,
+        "255": 114,
+        "92": 22,
+        "215": 1,
+        "70": 2,
+        "124": 5,
+        "245": 7,
+        "213": 2,
+        "220": 5,
+        "81": 1,
+        "166": 1,
+        "174": 1,
+        "98": 1
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      4003,
+      735,
+      885,
+      1023,
+      16442,
+      110
+    ],
+    "requested_bytes": 431578825,
+    "wall_s": 18.11715919499693,
+    "cpu_s": 10.070983764000001,
+    "peak_rss_MiB": 321.03515625,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 16,
+    "sample": "data",
+    "run": 16923,
+    "group": "16923_file0",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016923/Faser-Physics-016923-00000-00049-r0022-PHYS.root",
+    "file_entries": 846889,
+    "read_entries": 846889,
+    "selected": 146820,
+    "cutflow": {
+      "input": 846889,
+      "stable_colliding_if_data": 841932,
+      "one_long_track": 840140,
+      "track_quality": 767466,
+      "reco_p_100_1000_GeV": 351367,
+      "valid_vetonu_extrapolation": 350528,
+      "four_veto_tag": 349591,
+      "central_timing_plane": 146820,
+      "unit_reco_charge": 146820
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "14": 654,
+        "15": 146165,
+        "7": 1
+      },
+      "TAP": {
+        "14": 654,
+        "15": 146165,
+        "7": 1
+      },
+      "inputBits": {
+        "84": 457,
+        "85": 56483,
+        "86": 2266,
+        "87": 4661,
+        "92": 30,
+        "93": 8935,
+        "94": 174,
+        "95": 866,
+        "100": 157,
+        "101": 685,
+        "102": 50282,
+        "103": 3301,
+        "110": 143,
+        "111": 47,
+        "116": 40,
+        "117": 2461,
+        "118": 3033,
+        "119": 1820,
+        "125": 464,
+        "126": 107,
+        "127": 245,
+        "221": 297,
+        "222": 27,
+        "223": 119,
+        "230": 7579,
+        "231": 486,
+        "237": 10,
+        "238": 712,
+        "239": 161,
+        "246": 377,
+        "247": 110,
+        "253": 24,
+        "254": 87,
+        "255": 110,
+        "109": 3,
+        "229": 25,
+        "213": 6,
+        "236": 5,
+        "228": 8,
+        "220": 3,
+        "245": 4,
+        "124": 4,
+        "21": 1,
+        "108": 1,
+        "244": 2,
+        "252": 1,
+        "215": 1
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3919,
+      1505,
+      468,
+      1114,
+      16126,
+      63
+    ],
+    "requested_bytes": 368091640,
+    "wall_s": 20.536555904000124,
+    "cpu_s": 8.29070093,
+    "peak_rss_MiB": 331.44921875,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  },
+  {
+    "index": 17,
+    "sample": "data",
+    "run": 16923,
+    "group": "16923_file8",
+    "input": "/eos/experiment/faser/data0/phys/2024_back/r0022/016923/Faser-Physics-016923-00400-00449-r0022-PHYS.root",
+    "file_entries": 997762,
+    "read_entries": 997762,
+    "selected": 176007,
+    "cutflow": {
+      "input": 997762,
+      "stable_colliding_if_data": 993687,
+      "one_long_track": 991474,
+      "track_quality": 905111,
+      "reco_p_100_1000_GeV": 418289,
+      "valid_vetonu_extrapolation": 417239,
+      "four_veto_tag": 416264,
+      "central_timing_plane": 176007,
+      "unit_reco_charge": 176007
+    },
+    "trigger_patterns": {
+      "TBP": {
+        "7": 4,
+        "14": 808,
+        "15": 175195
+      },
+      "TAP": {
+        "7": 4,
+        "14": 808,
+        "15": 175195
+      },
+      "inputBits": {
+        "23": 1,
+        "84": 569,
+        "85": 68065,
+        "86": 2857,
+        "87": 5637,
+        "92": 45,
+        "93": 10740,
+        "94": 210,
+        "95": 1088,
+        "100": 178,
+        "101": 849,
+        "102": 59775,
+        "103": 3920,
+        "109": 3,
+        "110": 199,
+        "111": 65,
+        "116": 61,
+        "117": 2845,
+        "118": 3646,
+        "119": 2109,
+        "125": 527,
+        "126": 159,
+        "127": 290,
+        "213": 7,
+        "220": 6,
+        "221": 327,
+        "223": 127,
+        "228": 9,
+        "229": 24,
+        "230": 9088,
+        "231": 601,
+        "237": 3,
+        "238": 906,
+        "239": 199,
+        "246": 460,
+        "247": 129,
+        "253": 30,
+        "254": 94,
+        "255": 121,
+        "124": 4,
+        "222": 21,
+        "236": 2,
+        "252": 2,
+        "245": 5,
+        "83": 1,
+        "166": 2,
+        "244": 1
+      }
+    },
+    "source_entry_identity": "stream every original entry once; PG eventID collisions not deduplicated",
+    "leading": "highest pz; all Track vectors aligned",
+    "minimum_counts": [
+      0,
+      2,
+      2,
+      2,
+      5,
+      1
+    ],
+    "maximum_counts": [
+      3973,
+      2610,
+      557,
+      2551,
+      15857,
+      79
+    ],
+    "requested_bytes": 433179416,
+    "wall_s": 17.322117103998607,
+    "cpu_s": 9.291230062999999,
+    "peak_rss_MiB": 343.13671875,
+    "frozen_utc": "2026-11-02T10:37:15.434071+00:00",
+    "smoke": false
+  }
+]
