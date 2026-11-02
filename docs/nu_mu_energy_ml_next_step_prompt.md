@@ -1,25 +1,31 @@
-# 下一轮执行 Prompt：以stage56 F7为基准的低能条件诊断
+# 下一轮执行 Prompt：完成低能三物理专家组合，而非只增加诊断
 
-先读AGENTS.md、[stage56变量报告](../workbook/2026-11-02_stage56_model-feature-validity.md)、[F7输入契约](nu_mu_energy_ml_features.md)、修订路线§37、`ml/configs/audited_features.json`和stage55低能报告。用户最终约定：**线性动量模长/纵向量只用pz0，px/py、q/p和弯折允许；不用p0/p1/pz1及log比；11闪烁体用raw_charge。** 不从旧F6配置恢复这些列。stage54未提交文件保持原状。
+请在具备 CERN 工作环境的终端执行本轮有界研究。先读 AGENTS.md、[stage57研究报告](../workbook/2026-11-02_stage57_low-energy-research-reassessment.md)§2–5、[stage56实测](../workbook/2026-11-02_stage56_model-feature-validity.md)、stage55、[F7契约](nu_mu_energy_ml_features.md)和修订路线§38。stage57只检索/分析，没有新训练结果。若终端仍无工作环境，只完善执行协议和缺失输入，不伪造结果或在别的环境重复物理计算。
 
-## 0. 当前低能优先任务
+## 0. 当前主任务：同一阶段完成诊断、组合与决策
 
-F7已完成3固定fit，nominal全体/true50–100/100–200 log-RMSE=.296363/.312816/.265014，pz0/.8为.568069/.145487/.226876。旧nominal50为.296059/.318419/.264299，整体接近，低E仍不如传统。stage55扩样的微小收益为历史F6结果，不能冒充F7替代flux确认。
+目标：在 true Eν=50–100 和100–200 GeV 恢复/超过传统方法，同时保住全体和高E/high-y/未确认leading收益。两种低E与两种reco低p分层各自保留，不按truth gate推理，不把低reco p整体切回传统。
 
-补读254已有nominal PHYS后，81,313选中、train41,447/cal8,440/eval14,057，与旧nominal50同支持。Veto10/20/21拟合外推可超raw100倍，不应恢复为输入；但raw饱和不是未饱和真电荷。42例calo fit失败的有限数已置缺失并传播总和，全部事件保留。
-raw/reduced/EM能量、px/py、q/p、坐标可为负；charge与module eta的-1合法。已知d32b0ff3 raw为有符号整窗积分、data d0b1b2dd旧源码只积正样本，data/MC尚未闭合。VetoNu reduced是raw时间窗积分，保留。逐变量规则、状态mask及派生传播必须经`audited_features.build`，不能只调用matrix而绕过状态。
+当前 nominal train/cal/eval=41447/8440/14057；F7 全体/true50–100/100–200 log-RMSE=.296363/.312816/.265014，pz0/.8=.568069/.145487/.226876。低E训练0→767已证实有效，但+139替代flux、普通残差、全局offset和F7输入修订均未解决；不重开这些扫描。
 
-下一轮首先做一次**0新fit、0新RDO、0谱toy**的有界条件诊断：
+**输入约定不可回退：** F7_pz0_raw_v1，62列；线性动量模长/纵向量仅pz0，允许px/py、q/p及弯折；不用p0/p1/pz1/log比，11闪烁体用raw_charge，保留VetoNu reduced。所有变量经过`ml/audited_features.load()`/`build()`的状态、有效域和派生依赖，不绕过build只拼matrix；合法负值保留，42个新标缺失calo事件、high-y、未确认者及全部大尾保留。原选择仍含fit-charge cut，不在本轮改接受度。
 
-1. 直接调用`ml/audited_features.load()`得到stage55身份/真值/保护集标记、stage56 raw/status补充和当前62列矩阵。新预测为`ml/artifacts/stage56/predictions.npz`，3模型目录为2026110255/56/57。shards和transport已去重，不恢复重复缓存。只在完整nominal支持上做F7条件研究，alternative缺当前raw补充，不混用fit充当raw。历史F6只作历史参照。
-2. 用train冻结少量pz0/活动格，活动量从当前raw Timing、counts和已清理calo选取；不得用validation残差、trueE或被测结果挑边界。不扫描大量变量/阈值。负raw/缺失者独立保留，不能以取log等方式悄悄删去；规则只依赖部署读出。
-3. 在相同读出格内量化true50–100、100–200与≥200/high-y/未确认的混合、已有pz0/.8及F7风险、bias/R68/尾、来源支持和区间；保留42缺失事件。reco pz50–100的682例只有208个true50–100，不能把该层约62%总风险改善当低真实E已修复。
-4. 验收为判断何种data可定义条件有机会保留μ低E精度并保住高y收益，或量化现有读出的混合边界。新的μ/残差收缩实验须在诊断后单独冻结来源内cross-fitting、fit预算及低E与高E代价共同验收。此阶段不追加fit、不在已暴露validation调gate，不恢复架构或无边界生产扫描；现有生产不是新blind。
-5. 读取紧凑cache测wall/CPU/RSS；批量ROOT必须Condor并先小测试。写中文workbook含实际数值/单位/输入/配置/命令/资源、物理与程序原因和具体下一任务，再一次Conventional Commit，不推送。用户新的输入约定优先于历史路线的旧变量，不以MC清理替代data、interaction/FSI、材料或归一化谱收益。
+本轮按以下顺序自主完成，不停在诊断表后再请求启动已列明的组合实验：
+
+1. **复用已有数据。** 读取F7紧凑缓存和`ml/artifacts/stage56/predictions.npz`的`cal_row/eval_row`、`cal_raw_log/eval_raw_log`；三seed平均log预测。保持现有保护分区。0新能量模型fit、0ROOT/RDO重读/新生产、0谱toy/SHA。alternative缺当前raw补充，不混用F6预测冒充F7。不读历史locked test，不恢复重复shards/transport。
+2. **结果前固定四格。** pz0为50–100/100–250两层，各用本层train的Timing0–3 raw有效总和中位数分两格；仅train X定边界，不用eval或truth挑阈值。求和传播缺失，负数合法；Timing缺失和pz0≥250默认F7。counts/Calo只作本轮同格诊断，不增加边界搜索。先记录实际cal低E/困难组及来源支持，保护前150个cal低E不能当当前支持。
+3. **建立三个专家。** t0=log(pz0/GeV)，tμ=log((pz0/.8)/GeV)，tF=F7 log能量。主候选为各格内非负、和为1的log输出组合，二专家w0=0为消融。pz0只作小transfer参照，其ν能量表现未测，不是产生面μ校准。
+4. **只在cal开发组合。** 按保守generation/source groups作三折、尽量维持component支持。每折F7 offset只由其余cal原始预测计算，在其余cal拟合权重，再预测留出cal；不能套全cal offset冒充OOF。两族各三折+最终全cal，共≤8次低维组合优化，0新F7训练。全cal最终offset/组合拟合后，冻结评价完整14057例。cal改为组合开发集；eval仍是已暴露开发检验，不叫blind。支持不足或空组明示，不用eval补训练；不增加大门控网络。
+5. **优化真正的低E取舍。** 以两低E组相对传统log-MSE的最大比值最小化；约束全体对F7 log-RMSE增加≤1%，trueE≥200、reco pz50–100、y≥.8、未确认者各≤3%（MSE约束用1.01²/1.03²）。同主目标的解以全体风险作次级选择，不扫λ。真值仅用于训练目标/诊断，权重查表只依赖读出。所有格取F7是代价约束的参照；达不到低E≤传统时量化最佳取舍，不改门槛宣布成功。
+6. **一次完整报告。** 比较pz0、pz0/.8、F7、二专家、三专家；报true50–100/100–200及完整能量箱、reco低p、high-y、未确认者，N/来源、log-RMSE、mean/median bias、R68、正负tail50/100。预定恢复标准：两低E相对传统RMSE比的来源配对95%上限≤1.05；超过传统须改善下限>0。全体/困难组代价按上述1%/3%同验收，默认关键组tail50增加不得>2pp；这是拟议研究取舍，不是已测系统范围。500次来源分层bootstrap条件于最终模型；另报cal OOF来源/折间波动，不把固定模型区间说成全流程确认，不追加数百次组合优化。
+7. **给出能决定下一投入的结论。** 只作诊断地计算真值投影到三专家log输出区间的理想损失下界，明确不可部署、不是通用信息极限。组合有效则冻结并规划独立低E/共同raw确认；理想下界好但粗格失败则定位gate/支持缺口；理想下界也无低E突破则转小transfer响应或连续E条件似然比。新生产、神经似然和多头模型不在本轮自动连开，给出下一次单项可执行方案即可。单个粗格阴性不能关闭整个低能方向。
+8. **交付。** 小样本先核实现，记录实际wall/CPU/RSS/I/O和紧凑最终产物；新成本未测不能引用旧秒数。写下一编号中文workbook，含实际数值/单位、样本/选择/配置/命令、程序与物理原因、区间限制和下一科学决定；更新路线后本地Conventional Commit，不推送。保留stage54未完成支线及其他人的文件，不能沿用旧报告文字就认定当前仍有未提交文件。
+
+已知当前MC raw有符号整窗积分与data旧源码正样本积分不同，噪声/活动响应也未闭合。当前MC方法研究可继续，但不宣称data改善；共同定义、stage54占据、interaction/FSI、材料、独立生产和最终能谱物理收益继续必须交付。
 
 ## 保留的stage54 data占据支线
 
-以下§1–5为尚未完成的原协议，仅进入该支线时适用；其中“本轮”均指stage54 data控制。原未提交工具/缓存不得混入stage55提交。当前低能优先级按上面的§0，data可靠性交付仍需完成。
+以下§1–5为尚未完成的原协议，仅进入该支线时适用；其中“本轮”均指stage54 data控制。保留其工具/缓存及当前实际工作树状态，历史“未提交”描述不能代替当前状态检查。当前低能优先级按上面的§0，data可靠性交付仍需完成。
 
 先读AGENTS.md、stage49审查§7、[stage53报告](../workbook/2026-11-02_stage53_tracker-noise-mechanism.md)、修订路线§35、信息计划§20，以及stage52/53的manifest、实际conditions和原生collection读取工具。本轮只做一次有界data占据/有效读出条件约束；不自动执行ν重放、能量训练或谱toy。
 
