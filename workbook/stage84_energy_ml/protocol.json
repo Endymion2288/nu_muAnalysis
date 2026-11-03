@@ -1,0 +1,411 @@
+{
+  "prepared_in_stage": 83,
+  "executed": false,
+  "next_single_task": "stage84 one full pooled pi+K fixed F7-policy ensemble; three fits only",
+  "retain": "F7 until original joint recovery and risk gates pass; any pass still needs untouched confirmation",
+  "reason": "actual new5934 pi includes159/740 two-lowE and161 same-lowpz true>=200; pooled7720/26groups and each-lowE about24% increase justify one bounded full-support comparison, not assumed sufficiency",
+  "inputs": [
+    {
+      "stage": 70,
+      "path": "ntuples/energy_ml_stage70/support.npz",
+      "mask": "new_training_support",
+      "new_N": 28
+    },
+    {
+      "stage": 81,
+      "path": "ntuples/energy_ml_stage81/support.npz",
+      "mask": "new_training_support",
+      "new_N": 742
+    },
+    {
+      "stage": 82,
+      "path": "ntuples/energy_ml_stage82/support.npz",
+      "mask": "new_training_support",
+      "new_N": 1016
+    },
+    {
+      "stage": 83,
+      "path": "ntuples/energy_ml_stage83/support.npz",
+      "mask": "new_training_support",
+      "new_N": 5934
+    }
+  ],
+  "pooled_new_N": 7720,
+  "pooled_groups": 26,
+  "pooled_pi_N": 6704,
+  "pooled_K_N": 1016,
+  "train_N": 49167,
+  "original_train_N": 41447,
+  "cal_N": 8440,
+  "eval_N": 14057,
+  "original_groups_train_cal_eval": [
+    91,
+    16,
+    22
+  ],
+  "original_missing_train_cal_eval_unused": [
+    21,
+    3,
+    7,
+    11
+  ],
+  "feature_version": "F7_pz0_raw_v1",
+  "features": [
+    "ML_mu_pz0_GeV",
+    "ML_mu_px0_GeV",
+    "ML_mu_py0_GeV",
+    "LeadTrack_charge",
+    "LeadTrack_Theta",
+    "LeadTrack_Chi2_NDF",
+    "LeadTrack_nDoF",
+    "LeadTrack_nLayers",
+    "LeadTrack_r_atMaxRadius",
+    "LeadTrack_rVetoNu",
+    "ML_mu_x0_mm",
+    "ML_mu_y0_mm",
+    "ML_mu_z0_mm",
+    "ML_mu_X_atVetoNu_mm",
+    "ML_mu_Y_atVetoNu_mm",
+    "ML_mu_X_atCalo_mm",
+    "ML_mu_Y_atCalo_mm",
+    "nClusters0",
+    "nClusters1",
+    "nClusters2",
+    "nClusters3",
+    "SpacePoints",
+    "TrackSegments",
+    "longTracks",
+    "VetoNu0_raw_charge",
+    "VetoNu1_raw_charge",
+    "Veto10_raw_charge",
+    "Veto20_raw_charge",
+    "Veto21_raw_charge",
+    "Timing0_raw_charge",
+    "Timing1_raw_charge",
+    "Timing2_raw_charge",
+    "Timing3_raw_charge",
+    "Preshower0_raw_charge",
+    "Preshower1_raw_charge",
+    "VetoNu0_reduced_charge",
+    "VetoNu1_reduced_charge",
+    "ML_calo0_E_EM_GeV",
+    "ML_calo1_E_EM_GeV",
+    "ML_calo2_E_EM_GeV",
+    "ML_calo3_E_EM_GeV",
+    "ML_calo_total_E_EM_GeV",
+    "ML_sp_mean_x_mm",
+    "ML_sp_rms_x_mm",
+    "ML_sp_mean_y_mm",
+    "ML_sp_rms_y_mm",
+    "ML_track_px1_GeV",
+    "ML_track_py1_GeV",
+    "ML_track_x1_mm",
+    "ML_track_y1_mm",
+    "ML_track_z1_mm",
+    "ML_track_qOverP0_GeVinv",
+    "ML_track_qOverP1_GeVinv",
+    "ML_track_span_z_mm",
+    "ML_track_bend_x",
+    "ML_track_bend_y",
+    "ML_track_chord_slope_x",
+    "ML_track_chord_slope_y",
+    "ML_track_module_eta0",
+    "ML_track_module_phi0",
+    "ML_track_z_atMaxRadius_mm",
+    "ML_event_SCT_error"
+  ],
+  "xgboost": {
+    "max_depth": 5,
+    "eta": 0.04,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 20,
+    "reg_lambda": 10,
+    "tree_method": "hist",
+    "nthread": 1,
+    "objective": "reg:squarederror"
+  },
+  "xgboost_version": "2.1.3",
+  "seeds": [
+    2026110255,
+    2026110256,
+    2026110257
+  ],
+  "rounds": 400,
+  "weights": "unit event weights, direct natural-log truthE; no flux/source/energy reweighting",
+  "initialization": "original F7 xgb.train defaults, no base_score or boost_from_average override",
+  "calibration": "one unit global mean-log offset for the three-seed ensemble on original8440cal; raw parallel; main pooled_cal fixed",
+  "formal_energy_fits": 3,
+  "pilot_fits": 0,
+  "main": "pooled_cal",
+  "F7_new_fits": 0,
+  "F7_new_inference": 0,
+  "source_OOF_refits": 0,
+  "baselines": {
+    "primary": "original F7 cached predictions and offset, ml/artifacts/stage56/predictions.npz; traditional pz0/0.8",
+    "secondary": "stage82 full cached ml/artifacts/stage82/full/comparison.npz + workbook/stage82_energy_ml/fit_full.json; same event rows; mechanism only, no candidate selection"
+  },
+  "before_submit": "cache-only key/role/reference/raw/typed-domain/feature checks and actual transferred-payload zero-fit startup; then freeze actual ClassAds; reuse measured extraction and stage82 training costs, no energy pilot",
+  "identity": "exact native-MeV incoming; assert all7720 mutually unique and disjoint from allstage55 exposure; stable prior ownership retained; no fresh ROOT or source selection",
+  "QA_limits": "stage83 fixed40source-head selected0; inherited old nonempty actual-payload check was after submission; stage83 formal7354 nonempty and full-module formula independently validated; do not erase this ordering limit",
+  "calo": "all four stages already WAVE-Calibration-01-LG reference; no second03to01 scaling; NaN propagation ordinary sum",
+  "bootstrap_seed": 2026111384,
+  "bootstrap_replicates": 500,
+  "intervals": "component-stratified conservative-source fixed-prediction paired draws; exclude refitting, augmentation/source sampling, offset estimation, genealogy, response and research selection; developed cal/eval, not joint coverage",
+  "recovery_RMSE_upper95_vs_mu": {
+    "E50_100": 1.05,
+    "E100_200": 1.05
+  },
+  "protection_RMSE_upper95_vs_F7": {
+    "all": 1.01,
+    "E200_inf": 1.03,
+    "pz50_100": 1.03,
+    "high_y": 1.03,
+    "unconfirmed": 1.03
+  },
+  "tail50_upper95_delta_pp_vs_F7": 2,
+  "tail50_gate_strata": [
+    "E50_100",
+    "E100_200",
+    "all",
+    "E200_inf",
+    "pz50_100",
+    "high_y",
+    "unconfirmed"
+  ],
+  "tail_gate_sides": [
+    "total",
+    "positive",
+    "negative"
+  ],
+  "diagnostics": "raw/cal metrics and paired intervals; original seven gate strata plus confirmed lowtransfer, same lowpz true>=200/high-y/unconfirmed, inputmissing, all trueE bins/highend; bias/R68/both tails/loss fractions, source and seed diagnostics, train-in-sample explicitly labeled",
+  "no_scans": "one full arm only; no half/size/seed/weights/offset/rounds/feature/architecture tuning, no new source or response production, no test/locked reads",
+  "resources": {
+    "condor_jobs_max": 1,
+    "cpus": 1,
+    "memory_MB": 3000,
+    "MaxRuntime_ceiling_s": 1800,
+    "total_CPU_max_s": 1800,
+    "retained_bytes_max": 20000000
+  },
+  "cost_basis": "stage82 sixfits remote43CPU/wall51s, script36.822459s/peak266.067MiB; stage84 cost unmeasured, not a benchmark result",
+  "acceptance": "complete exactly3 fixed fits or explicit resource/program failure; saved models exact readback, pooled roles/keys clean, all original paired gates and diagnostic strata independently verified; failure retains F7 and closes this fixed augmentation experiment",
+  "limitations": "lowE statistical sufficiency/energy gains unmeasured; native exact key not full parent/subfile/seed independence; pi-source mixture and model refit cochange, cannot isolate pure N; common response and untouched confirmation remain open",
+  "K_policy": "retain all1016 used K; user removed old production time/no-retry prohibitions; no extra K production required by stage84",
+  "training_context": [
+    {
+      "stratum": "all",
+      "old_train_N": "41447",
+      "new_stage83_N": "5934",
+      "previous_new_N": "1786",
+      "pooled_new_N": "7720",
+      "stage83_increment_pct": "14.317079643882549",
+      "pooled_increment_pct": "18.626197312230076"
+    },
+    {
+      "stratum": "E50_100",
+      "old_train_N": "767",
+      "new_stage83_N": "159",
+      "previous_new_N": "23",
+      "pooled_new_N": "182",
+      "stage83_increment_pct": "20.73011734028683",
+      "pooled_increment_pct": "23.728813559322035"
+    },
+    {
+      "stratum": "E100_200",
+      "old_train_N": "3564",
+      "new_stage83_N": "740",
+      "previous_new_N": "105",
+      "pooled_new_N": "845",
+      "stage83_increment_pct": "20.763187429854096",
+      "pooled_increment_pct": "23.709315375982044"
+    },
+    {
+      "stratum": "E200_inf",
+      "old_train_N": "37116",
+      "new_stage83_N": "5035",
+      "previous_new_N": "1658",
+      "pooled_new_N": "6693",
+      "stage83_increment_pct": "13.565578187304666",
+      "pooled_increment_pct": "18.032654380860006"
+    },
+    {
+      "stratum": "pz50_100",
+      "old_train_N": "2498",
+      "new_stage83_N": "463",
+      "previous_new_N": "74",
+      "pooled_new_N": "537",
+      "stage83_increment_pct": "18.53482786228983",
+      "pooled_increment_pct": "21.497197758206564"
+    },
+    {
+      "stratum": "high_y",
+      "old_train_N": "1204",
+      "new_stage83_N": "167",
+      "previous_new_N": "54",
+      "pooled_new_N": "221",
+      "stage83_increment_pct": "13.870431893687707",
+      "pooled_increment_pct": "18.35548172757475"
+    },
+    {
+      "stratum": "unconfirmed",
+      "old_train_N": "1495",
+      "new_stage83_N": "215",
+      "previous_new_N": "66",
+      "pooled_new_N": "281",
+      "stage83_increment_pct": "14.381270903010034",
+      "pooled_increment_pct": "18.795986622073578"
+    },
+    {
+      "stratum": "input_missing",
+      "old_train_N": "21",
+      "new_stage83_N": "1",
+      "previous_new_N": "1",
+      "pooled_new_N": "2",
+      "stage83_increment_pct": "4.761904761904762",
+      "pooled_increment_pct": "9.523809523809524"
+    },
+    {
+      "stratum": "E50_100_confirmed_low_transfer",
+      "old_train_N": "685",
+      "new_stage83_N": "140",
+      "previous_new_N": "19",
+      "pooled_new_N": "159",
+      "stage83_increment_pct": "20.437956204379564",
+      "pooled_increment_pct": "23.21167883211679"
+    },
+    {
+      "stratum": "E100_200_confirmed_low_transfer",
+      "old_train_N": "2562",
+      "new_stage83_N": "509",
+      "previous_new_N": "78",
+      "pooled_new_N": "587",
+      "stage83_increment_pct": "19.86729117876659",
+      "pooled_increment_pct": "22.911787665886028"
+    },
+    {
+      "stratum": "pz50_100_trueE200_inf",
+      "old_train_N": "1005",
+      "new_stage83_N": "161",
+      "previous_new_N": "29",
+      "pooled_new_N": "190",
+      "stage83_increment_pct": "16.019900497512438",
+      "pooled_increment_pct": "18.90547263681592"
+    },
+    {
+      "stratum": "pz50_100_high_y",
+      "old_train_N": "512",
+      "new_stage83_N": "92",
+      "previous_new_N": "18",
+      "pooled_new_N": "110",
+      "stage83_increment_pct": "17.96875",
+      "pooled_increment_pct": "21.484375"
+    },
+    {
+      "stratum": "pz50_100_unconfirmed",
+      "old_train_N": "692",
+      "new_stage83_N": "121",
+      "previous_new_N": "23",
+      "pooled_new_N": "144",
+      "stage83_increment_pct": "17.485549132947977",
+      "pooled_increment_pct": "20.809248554913296"
+    },
+    {
+      "stratum": "E50_75",
+      "old_train_N": "244",
+      "new_stage83_N": "54",
+      "previous_new_N": "8",
+      "pooled_new_N": "62",
+      "stage83_increment_pct": "22.131147540983605",
+      "pooled_increment_pct": "25.40983606557377"
+    },
+    {
+      "stratum": "E75_100",
+      "old_train_N": "523",
+      "new_stage83_N": "105",
+      "previous_new_N": "15",
+      "pooled_new_N": "120",
+      "stage83_increment_pct": "20.076481835564053",
+      "pooled_increment_pct": "22.94455066921606"
+    },
+    {
+      "stratum": "E100_150",
+      "old_train_N": "1559",
+      "new_stage83_N": "287",
+      "previous_new_N": "42",
+      "pooled_new_N": "329",
+      "stage83_increment_pct": "18.409236690186017",
+      "pooled_increment_pct": "21.103271327774213"
+    },
+    {
+      "stratum": "E150_200",
+      "old_train_N": "2005",
+      "new_stage83_N": "453",
+      "previous_new_N": "63",
+      "pooled_new_N": "516",
+      "stage83_increment_pct": "22.59351620947631",
+      "pooled_increment_pct": "25.7356608478803"
+    },
+    {
+      "stratum": "E200_400",
+      "old_train_N": "9232",
+      "new_stage83_N": "1675",
+      "previous_new_N": "279",
+      "pooled_new_N": "1954",
+      "stage83_increment_pct": "18.143414211438476",
+      "pooled_increment_pct": "21.165511265164646"
+    },
+    {
+      "stratum": "E400_800",
+      "old_train_N": "13805",
+      "new_stage83_N": "2150",
+      "previous_new_N": "526",
+      "pooled_new_N": "2676",
+      "stage83_increment_pct": "15.574067366896053",
+      "pooled_increment_pct": "19.38428105758783"
+    },
+    {
+      "stratum": "E800_1600",
+      "old_train_N": "10141",
+      "new_stage83_N": "1110",
+      "previous_new_N": "572",
+      "pooled_new_N": "1682",
+      "stage83_increment_pct": "10.945666107878907",
+      "pooled_increment_pct": "16.586135489596685"
+    },
+    {
+      "stratum": "E1600_3200",
+      "old_train_N": "3656",
+      "new_stage83_N": "100",
+      "previous_new_N": "249",
+      "pooled_new_N": "349",
+      "stage83_increment_pct": "2.735229759299781",
+      "pooled_increment_pct": "9.545951859956237"
+    },
+    {
+      "stratum": "E3200_6400",
+      "old_train_N": "282",
+      "new_stage83_N": "0",
+      "previous_new_N": "32",
+      "pooled_new_N": "32",
+      "stage83_increment_pct": "0.0",
+      "pooled_increment_pct": "11.347517730496454"
+    },
+    {
+      "stratum": "E6400_inf",
+      "old_train_N": "0",
+      "new_stage83_N": "0",
+      "previous_new_N": "0",
+      "pooled_new_N": "0",
+      "stage83_increment_pct": "未测量",
+      "pooled_increment_pct": "未测量"
+    }
+  ],
+  "stage": 84,
+  "starting_commit": "fe89ba9",
+  "frozen_utc": "2026-11-03T20:30:41.842400+00:00",
+  "formal_fits": 3,
+  "figure_title": "Stage84: full pooled pi+K support; developed evaluation",
+  "input_scalar_bytes": 16562479,
+  "retained_max_bytes": 20000000
+}

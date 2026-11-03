@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage84
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_v1.sh
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-full-support-stage84.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 180MB
+max_retries = 0
++MaxRuntime = 1800
++NuMuStage = "energy-ml-full-support-stage84"
+log = $(spool)/logs/fit.$(ClusterId).log
+output = $(spool)/logs/fit.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/fit.$(ClusterId).$(ProcId).err
+queue 1

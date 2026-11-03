@@ -1,0 +1,24 @@
+{
+  "cluster": 9663311,
+  "result": "9663311.0 - 9663311.0\n",
+  "paths": [
+    "ml/full_support_fit.py",
+    "ml/audited_features.py",
+    "ml/support_augmentation.py",
+    "ml/configs/audited_features.json",
+    "ntuples/energy_ml_stage84/input.npz",
+    "workbook/stage84_energy_ml/protocol.json"
+  ],
+  "payload_bytes": 16517975,
+  "dryrun": "Dry-Run job(s).\n1 job(s) dry-run to cluster 1.\n",
+  "actual_ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage84/worker_v1.sh",
+      "ClusterId": 9663311,
+      "MaxRuntime": 1800,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ]
+}

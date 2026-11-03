@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "actual_payload": "actual payload: full train/cal/eval DMatrix, missing/key/K and version QA passed; zero fits\n",
+  "source_references": [
+    {
+      "stage": 70,
+      "reference": "WAVE-Calibration-01-LG",
+      "additional_rescaling": false
+    },
+    {
+      "stage": 81,
+      "reference": "WAVE-Calibration-01-LG",
+      "additional_rescaling": false
+    },
+    {
+      "stage": 82,
+      "reference": "WAVE-Calibration-01-LG",
+      "additional_rescaling": false
+    },
+    {
+      "stage": 83,
+      "reference": "WAVE-Calibration-01-LG",
+      "additional_rescaling": false
+    }
+  ],
+  "payload_bytes": 16517975,
+  "model_fits": 0,
+  "wall_s": 4.067010795231909,
+  "CPU_s": 0.7172558549999999,
+  "peak_RSS_MiB": 616.60546875
+}

@@ -1,0 +1,93 @@
+{
+  "prepared_in_stage": 84,
+  "executed": false,
+  "next_single_task": "stage85 actual common data/MC tracker readout and isolated occupancy control, completing retained stage54 protocol in new output paths; zero energy fits",
+  "retain": "F7; close fixed complete pi+K augmentation experiment; all three stage84 fits completed and original lowE recovery failed",
+  "reason": "new7720 incl1016K already used; both lowE support about24% larger yet eval0.313532/0.265800 and traditional upper95 2.498753/1.242889; not a data-sufficiency or information-limit proof; common data/MC response still unmeasured",
+  "original_protocol": "docs/nu_mu_energy_ml_next_step_prompt.md preserved stage54 suffix, unchanged; roadmap historical35/information20",
+  "sources": {
+    "manifest": "ml/configs/calonu_muon_files.tsv",
+    "data_indices": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "data_runs": [
+      15838,
+      16000,
+      16923
+    ],
+    "MC_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "data_historical_entry_stop": "not a sampling prefix; select over full known PHYS support",
+    "previous_source_statistics": "ntuples/energy_ml_stage52/source_histograms.tar.gz",
+    "MC_fixed_sample": "ntuples/energy_ml_stage53/replay_results.tar.gz",
+    "MC_pre_correction": "ntuples/energy_ml_stage53/pre_correction_nominal.tar.gz",
+    "native_readers": [
+      "ml/replay_tracker_noise.py",
+      "ml/analyze_tracker_noise.py",
+      "ml/read_f6_muon_response.py"
+    ],
+    "prior_actual_conditions": [
+      "workbook/stage53_energy_ml/conditions_audit.json",
+      "workbook/stage53_energy_ml/source_audit.md"
+    ]
+  },
+  "preserved_untracked_readonly": [
+    "AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub",
+    "AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh",
+    "ml/prepare_tracker_occupancy.py",
+    "ntuples/energy_ml_stage54/",
+    "workbook/stage54_energy_ml/"
+  ],
+  "outputs": [
+    "workbook/2026-11-03_stage85_tracker-occupancy-control.md",
+    "workbook/stage85_energy_ml/",
+    "ntuples/energy_ml_stage85/"
+  ],
+  "question": "given verified common station/sensor/active-channel/readout definitions, what conditional isolated strip/cluster activity or defensible noise upper bound do data provide, and can it justify a response variant?",
+  "not_claimed": "not a known cause of MC truth lowE error; single-muon100-1000GeV control does not directly calibrate50-100GeV neutrinos or full shower efficiency",
+  "QA_max_independent_identities": 40,
+  "QA": "schema/identity/units/native collection/active channel denominator/timebin/trigger/mask/common geometry/path and actual payload/cost; metadata-only fallback not a full result",
+  "sample": {
+    "data_target": 2048,
+    "MC_fixed": 2048,
+    "momentum_GeV": [
+      100,
+      250,
+      1000
+    ],
+    "selection": "retain original stage54 four independent Veto raw tags and quality/geometry/momentum definition; no tracker-probe selection or residual matching",
+    "freeze": "after actual QA, before probes; equal two original momentum strata across known6data sources, report finite population and conditional source/event probabilities; do not reuse historical entry_stop prefix",
+    "probe": "one physically justified muon-neighbour/association exclusion, fixed before probe result; retain unassociated activity and station/timebin correlations"
+  },
+  "resource_ceilings": {
+    "concurrent_condor_jobs_max": 6,
+    "cpus_per_job_max": 2,
+    "memory_MB_max": 6000,
+    "total_CPU_s_max": 28800,
+    "input_bytes_max": 10000000000,
+    "retained_bytes_max": 20000000
+  },
+  "resource_status": "ceilings inherited from preserved stage54 protocol, not measured costs or permission to submit without representative QA and actual package freeze; prefer existing matching builds, no global EOS scan",
+  "inference": "500 paired/source-stratified draws, source/run/p/position layers; no quiet/random trigger means conditional activity or justified upper bound, not pure electronic-noise estimate",
+  "acceptance": "actual joint readout/denominator and measured data+MC observables with support, intervals, units, selections, cost and limitations; if native inputs cannot be delivered, quantify identifiable PHYS activity where meaningful and specify minimal missing collection/coverage/conditions, no guessed normalization or empty source list",
+  "prohibitions": "zero energy training/F7 inference/neutrino replay/GENIE/G4/spectral toys; no fitting BDT to data, no calling on/off whole difference1sigma, no automatic stage86",
+  "stage84_assets": "keep all four support caches and exactly three stage84 models/comparison; no more size/seed/weights/feature/architecture scans",
+  "K_policy": "retain completed1016K; lifted historical K production time/no-retry bans remain superseded; this control needs no new K production"
+}

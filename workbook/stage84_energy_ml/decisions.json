@@ -1,0 +1,109 @@
+{
+  "main": "pooled_cal",
+  "versions": {
+    "pooled_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "pooled_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    }
+  },
+  "conclusion": "retain F7; close fixed full-support experiment",
+  "interval_scope": "fixed predictions and offsets, developed cal/eval; exclude refit/augmentation sampling/offset estimation/genealogy/response/research choice; not joint coverage"
+}

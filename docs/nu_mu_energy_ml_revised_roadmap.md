@@ -1787,3 +1787,25 @@ P_cal/传统两低E比2.142423 [1.826960,2.497108]/1.140002 [1.070227,1.214789]�
 **继续F7；唯一下一项stage84：累计完整π＋K一次原F7政策三seed训练，恰3fit、0pilot，不再半/全或更多规模曲线。** 原41447＋新7720=train49167，固定原62/400轮/原3seed/unit direct logE/默认初始化，各ensemble仅原cal一个global offset，主pooled_cal预定。size0原F7只用旧预测，stage82full旧缓存只作机制对照；0新ROOT/支持生产/F7推理/来源OOF。先cache角色/key/reference/实际包零fit启动，后≤1Condor1CPU3000MB、CPU累计1800秒/wall1800秒/留存20MB；实际能量/资源尚未测量。本轮未执行stage84，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage83_energy_ml/followup_input_request.json)。
 
 原传统两低E1.05/all-F7 1.01/困难1.03/七层总正负tail50+2pp门槛不降；500component分层来源固定预测区间、两低E及同pz另一侧/高端/缺失全报，不以开发通过替代独立确认。失败关闭本固定增补，不续扫描、不据此否证缺数据；用户放开的K旧生产时限/禁令不恢复。共同响应、raw/stage54、interaction/FSI/材料/接受度/背景及真正随机未开发确认继续，独立支持协议/stage54后缀及历史§1–63保留。
+
+
+## 65. stage84：完整 π＋K 三seed训练未恢复低能，结束本固定增补
+
+[stage84报告](../workbook/2026-11-03_stage84_full-support-fit.md)完成原41447＋全7720新支持=train49167，π6704/K1016、26来源；两低E182/845约增原24%。原62/pz0-only一次方动量/允许px-py-q/p-弯折/raw11/typed NaN/参考01-LG无二次缩放、pz>50/全部困难尾、41447/8440/14057及91/16/22组、原缺失21/3/7＋11与新增2不变。实际包零fit QA后才提交，恰3正式原seed/400轮/unit direct logE/默认初始化、0pilot/新ROOT/新F7推理/来源OOF/生成，原cal单global log offset .007550640，主pooled_cal预定。
+
+| eval log-RMSE | 传统μ | F7 | stage82full | stage84主 |
+|---|---:|---:|---:|---:|
+|true50–100|.145487|.312816|.311861|.313532|
+|true100–200|.226876|.265014|.263216|.265800|
+|all|.568069|.296363|.295603|.295944|
+|reco pz50–100|1.336853|.502965|.502823|.502276|
+
+主两低E/传统2.155061 [1.810447,2.498753]/1.171565 [1.100987,1.242889]未恢复；all/F7 .998587 [.996663,1.000424]未证增量。原五RMSE保护及七层总/正/负tail50全部通过，不将总体安全写成低能成功或所有风险失败。最低能32/208正tail50占73.8522%损失，median+16.0655%，高端median−42.9553%；额外confirmed最低能低transfer正/总tail上限+2.430147pp，缺失7例/F7 1.006619 [.786300,1.122628]仍需保留。额外同低pz真≥200/F7 .996068 [.984494,1.006178]、总/负tail上限+1.427137/+1.753651pp，此次没有超过2pp；不外推为各子层均恢复。
+
+相对旧stage82full，第二低E1.009817 [1.000854,1.018749]变差，最低能1.005360 [.988704,1.018561]/all1.001152 [.999480,1.002861]未证改善。raw两低E .308758/.261817相对传统仍失败，不能靠挑raw去掉问题。训练内最低能raw .240635、949例仍有偏，不能单归eval统计。支持不足/先验与损失/响应/选择尚未唯一分解，不能把24%增补无收益当数据无关或信息极限证明。
+
+1Condor9663311.0一次exit0，实际1CPU3000MB1800秒，remoteCPU34秒/execute wall40秒；scriptCPU30.943590秒/wall31.200644秒/peak276.266MiB，三模型逐位回读。numpy独立key/输入、4338指标表行及276配对行全部500来源draw独立复核，最大区间差1.111e−15。原F7/stage82旧预测逐行精确复用，cal/eval仍开发，区间固定预测/offset，排除重训/新增抽样/offset估计/谱系/响应/研究选择，非联合确认。共享输入/包/重复预测清理，最终<20MB，物理EOS I/O未测。
+
+**继续F7，关闭本固定完整支持实验；唯一下一项stage85转实际共同data/MC tracker读出与占据控制，完成保留stage54协议，0能量fit。** 原6data/12MC已知manifest、stage52统计与stage53固定2048摘要为入口；先≤40实际schema/native联结/共同station-active-channel/条件与成本QA，再冻结data2048和单一关联排除定义，交真实条件活动/有效占据或有依据上限，不用metadata列表/DB参数冒充data测量。不将本控制预称MC低E错误原因，100–1000GeV单μ不替代50–100GeV ν或完整shower效率。
+
+原stage54§1–5及其五项未跟踪工作保持，新实现/产物隔离stage85；≤6并发/每≤2CPU6GB、CPU8h/输入10GB/紧凑20MB仅QA后资源上限，实际覆盖/成本/噪声约束未测。无quiet/随机触发时不硬分解pure noise、不把on/off全差1sigma、不按data改BDT；缺原生入口则交可识别统计与具体最小条件缺口。下阶段未执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage84_energy_ml/followup_input_request.json)。K旧生产限制不恢复，interaction/FSI/材料/接受度/背景、共同Calo/脉冲及未开发随机确认继续；历史§1–64、独立支持协议/stage54后缀保留。

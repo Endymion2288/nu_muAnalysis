@@ -1,40 +1,26 @@
-# 下一轮执行 Prompt：stage84 完整 π＋K 支持的一次固定训练
+# 下一轮执行 Prompt：stage85 实际共同 data/MC tracker 读出与占据控制
 
-先读AGENTS.md、[stage83报告](../workbook/2026-11-03_stage83_pi-support-delivery.md)、路线§64/信息预算§44和[实际输入合同](../workbook/stage83_energy_ml/followup_input_request.json)。本轮只对已交付的完整累计支持训练一个原F7政策三seed ensemble，**恰3能量fit、0pilot、无半量或其他规模臂**；不自动执行stage85。
+先读AGENTS.md、[stage84报告](../workbook/2026-11-03_stage84_full-support-fit.md)、路线§65/信息预算§45及[输入合同](../workbook/stage84_energy_ml/followup_input_request.json)。本轮进入下方保留stage54 data控制协议，完成尚缺的实际共同响应测量；**0能量fit/F7新推理/ν重放/GENIE/G4/谱toy**，不自动执行stage86。
 
-## 1. 已测支持与未测结论
+## 1. 当前结论与为什么转向共同响应
 
-stage83全取事前冻结剩余20个合法train兼容π PHYS，200000完整输入→7354 selected→5934新唯一native-MeV incoming key，已对stage55全部95748曝光/66843unique＋stage70新28＋stage81新742＋stage82新1016及内部排重。新π两低E159/740、confirmed低transfer140/509、低pz真≥200为161、high-y167/未确认215，20源均覆盖两低E和歧义另一侧；≥3200新0，不能用总数掩盖高端。4Condor9663291一次exit0、remoteCPU227秒/wall合计308秒，非训练。
+stage84已用原41447＋全7720新增（π6704/K1016，26来源）完整训练49167，恰原3seed/400轮/unit direct logE/原62，0pilot；原cal8440一个global log offset .007550640，主pooled_cal，0新F7推理/来源OOF。新增低E182/845各增约24%，而eval两低E .313532/.265800、相对传统95上限2.498753/1.242889仍未恢复。all/F7 .998587 [.996663,1.000424]未测出显著增量，所有原五RMSE保护和七层总正负tail50通过；不能写所有门槛失败。主最低能32/208正tail占73.8522%损失，额外confirmed低transfer最低能tail上限+2.430147pp仍保留。
 
-累计新支持7720唯一key/26来源=π6704＋K1016；两低E182/845，相对原767/3564各增23.728814%/23.709315%；低pz真≥200新增190/原1005。拟train49167=41447＋7720，cal8440/eval14057及原91/16/22组不变。低E足量功效、新能量表现尚未测量；π分布/来源与N、重训共同改变，不称纯N因果效应。完整谱系/未开发随机确认仍未交付。
+相对stage82full，第二低E比1.009817 [1.000854,1.018749]变差，最低能/总体区间跨1。关闭本固定完整支持实验、继续F7；不续扫更多规模/来源/seed/权重/架构。失败没有证明缺数据无关、24%已足量、完整响应已认证或物理信息极限。
 
-stage82已经解除K旧3600秒时限并完整重建3源，1016 K已实际加入6fit；旧不生产/不重试K禁令由用户覆盖，不能恢复为审批阻碍。本轮保留全部K，不需要新重建。stage82 full主两低E/传统95上限2.464666/1.237750未恢复，all/F7 .997438 [.996118,.998709]小收益，原七层保护通过但低pz真高E尾代价仍保留；当前继续F7。
+共同data/MC读出可靠性一直未交付。stage53 on/off同事件证明独立strip噪声可贡献MC额外cluster，但on/off全差不是1sigma，也未解释data的SP/segment过量。现在用真实data检验共同定义下活动与有效占据是否给出约束；**不是已知MC低E退化原因**，100–1000GeV单μ控制不能直接替代50–100GeV ν或强子响应/效率确认。已有K已重建且入模，其旧时限/禁令仍被用户覆盖，不恢复为阻碍。
 
-## 2. 输入 QA 与唯一训练
+## 2. 输入、隔离输出与完整验收
 
-仅从stage70/81/82/83各support.npz的new_training_support合并，保持历史稳定归属，不从all selected再排不同新名单；7720互异且与stage55全部曝光无交集。全池62/readout/reference/typed NaN逐值回读，角色不扩至cal/eval/test，原缺失21/3/7＋11保护不变，新增缺失2保留。stage83小QA40身份selected0，没有非空逐值证据；旧非空实际包核查在提交后，正式7354非空/四模块formula已核验，不能追写为全部QA先齐。
+按下方原stage54§1–5原文执行。只用`ml/configs/calonu_muon_files.tsv`已知6data（index12–17、run15838/16000/16923）、原12MC和stage52统计/原stage53固定2048同事件摘要；不重做MC两臂。先≤40独立身份核native collection/联结/单位、实际geometry/station/sensor、timebin/trigger/mask及active-channel分母和成本，再冻结data2048、原100–250/250–1000GeV两层与一个muon邻域/关联排除定义。按全部已知PHYS支持取样，不用历史entry_stop前缀，不按probe或data残差挑样本/匹配。
 
-原62 F7_pz0_raw_v1：一次方动量仅pz0，px/py、q/p和弯折允许；11signed raw_charge/VetoNu reduced，按typed域/status/dependency清理占位与无效值，合法signed负值保留；Calo缺模块totalNaN，不nansum。四期支持都已经参考WAVE-Calibration-01-LG，**不再做03→01缩放**。原pz>50 GeV/quality/geometry/truth fiducial及全部困难尾保持。0新ROOT/RDO/GENIE/G4/toy/响应/形状补充。
+阶段编号和新产物统一为stage85（workbook报告/证据/缓存），保留stage54原协议文字。原五项未跟踪工作仅只读参考，不能改动/stage/提交或清理其路径；复用前核实际内容与协议，不把历史partial JSON当已完成产物。需要实现/修正工具时写新的stage85文件，使用现有匹配构建，批量走Condor。
 
-复用LCG109/XGBoost2.1.3。所有7720完整新支持＋原41447一起，以原max_depth5、eta.04、subsample.8、colsample1、min_child_weight20、reg_lambda10、hist、nthread1、400轮、seed2026110255/256/257，unit direct ln(E_true/GeV)训练，原xgb.train默认初始化，不覆盖base_score/boost_from_average。恰3fit、0pilot，不做新来源OOF，不称整管道留出。三seed log预测取均值后，仅在原cal拟一个unit global mean-log offset；预定主pooled_cal，raw并报，不挑seed/raw/cal/轮数。
+必须交actual共同读出定义与真实计量：每active-channel/event孤立strip/cluster活动、timebin/大小/站间相关、来源/run/p/位置、两臂支持差异及500来源区间。没有quiet/random触发时给条件活动或可证明的上限，不将未关联、无SDO或sideband全称noise，不凭同名noIFT分母强合并。不以metadata目录清单替代可测统计；真入口缺失明确路径/collection/coverage/条件和最小需要，能测PHYS条件活动则说明其不等于原生strip噪声。
 
-主对照μ=pz0/.8及原F7缓存预测/offset，0F7新fit/推理。stage82 full既存缓存作为次机制对照，先核同一cal/eval行；报告pooled/stage82full的配对变化但不从中选赢家。保留训练内误差与留出误差的区别。
+原资源为上限：≤6并发/每≤2CPU6GB、累计CPU8h、实际输入10GB/紧凑20MB，均须实际小QA和actual包后冻结；不是新成本测量。0ν重放/参数扫描或data反调BDT。报告需回答是否足以定义可信响应变体、只能给含背景上限、或当前定义无法识别电子噪声，不能制造一个非零最佳值。后续真ν响应变体另立合同，本轮不执行。
 
-实际转移包先做cache-only零fit启动、参数/角色/key/缺失/reference与资源核查，不安装/编译；再冻结≤1Condor、每1CPU3000MB、wall≤1800秒、CPU累计≤1800秒、紧凑最终≤20MB。stage82六fit remote43CPU/wall51秒仅预算依据，本轮实际成本尚未测量。核实际ClassAds，flavor改写在预算内照实记；资源/程序失败不写成物理否证，不无限重试。
-
-## 3. 原恢复/风险判据与诊断
-
-原eval两低E相对传统log-RMSE比95%上限≤1.05；all/F7≤1.01，≥200/低pz/high-y/未确认≤1.03；两低E＋五保护层各总/正/负tail50增量95%上限≤2pp，保持原七层门槛。500次component分层保守来源paired固定预测区间（seed2026111384，cal+1），非重训/offset估计/新增抽样/谱系/响应/研究选择区间，非联合覆盖；cal/eval均已开发，不称独立确认。
-
-raw/cal均报两低E、confirmed低transfer、低pz及同pz真≥200/high-y/未确认、全体/high-y/未确认/缺失、高端及原细能箱，logRMSE/bias/R68/双向tail50/100与损失贡献，来源和seed诊断，统计少或空层明确未测量。额外低pz真高E不能被总低pz通过掩盖。新增支持与原队列各层N/来源/唯一key/概率保留，不将source概率当flux权重。
-
-模型逐位回读和所有主配对区间独立核验；完整报告成功/失败哪些门槛，失败继续F7并关闭本次固定完整支持实验，不续扫规模/来源/权重/seed/架构，不以失败证明缺数据无关或信息上限。若全部原门槛通过也仅为开发候选，另需未开发确认。
-
-## 4. 交付
-
-先中文stage84 workbook实际报告，再代码/协议/紧凑表图本地Conventional Commit，不push/外发，不动stage54已有五项工作。共享输入包和三seed模型只保留必要一份，删传输/重复预测/大特征缓存，原四期support保持；计实际CPU/wall/RSS/请求与物理EOS I/O，未测明确未测。本轮只有一个训练候选，不自动下阶段。
-
-共同raw/stage54、完整Calo/脉冲条件、interaction/FSI/材料/接受度/背景和真正随机未开发确认义务保留；独立支持协议原文和stage54后缀保持。
+先中文stage85报告，再新代码/配置/紧凑表图本地Conventional Commit，不push/外发。保留原四期support、stage84三模型/比较和所有困难事件保护；独立支持协议及以下原后缀逐字保持。interaction/FSI/材料/接受度/背景与真正随机未开发确认继续，data控制不替代它们。
 
 以下stage54原后缀逐字保留，仅进入该支线时适用。
 

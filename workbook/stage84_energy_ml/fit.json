@@ -1,0 +1,92 @@
+{
+  "status": "completed",
+  "formal_fits": 3,
+  "records": [
+    {
+      "seed": 2026110255,
+      "rounds": 400,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110255
+      },
+      "model_reload_exact": true,
+      "actual_learner_model_param": {
+        "base_score": "6.3091497E0",
+        "boost_from_average": "1",
+        "num_class": "0",
+        "num_feature": "62",
+        "num_target": "1"
+      },
+      "wall_s": 8.658533509995323,
+      "CPU_s": 8.584625482,
+      "peak_RSS_MiB": 276.265625
+    },
+    {
+      "seed": 2026110256,
+      "rounds": 400,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110256
+      },
+      "model_reload_exact": true,
+      "actual_learner_model_param": {
+        "base_score": "6.3091497E0",
+        "boost_from_average": "1",
+        "num_class": "0",
+        "num_feature": "62",
+        "num_target": "1"
+      },
+      "wall_s": 11.031305790995248,
+      "CPU_s": 10.942038429999998,
+      "peak_RSS_MiB": 276.265625
+    },
+    {
+      "seed": 2026110257,
+      "rounds": 400,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257
+      },
+      "model_reload_exact": true,
+      "actual_learner_model_param": {
+        "base_score": "6.3091497E0",
+        "boost_from_average": "1",
+        "num_class": "0",
+        "num_feature": "62",
+        "num_target": "1"
+      },
+      "wall_s": 11.156880391004961,
+      "CPU_s": 11.067006819000003,
+      "peak_RSS_MiB": 276.265625
+    }
+  ],
+  "offset_log": 0.00755063984043598,
+  "train_N": 49167,
+  "wall_s": 31.2006436290103,
+  "CPU_s": 30.943589935,
+  "peak_RSS_MiB": 276.265625
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "seed": 2026110255,
+      "rounds": 400,
+      "cal_eval_predictions_exact": true,
+      "parameters_exact": true
+    },
+    {
+      "seed": 2026110256,
+      "rounds": 400,
+      "cal_eval_predictions_exact": true,
+      "parameters_exact": true
+    },
+    {
+      "seed": 2026110257,
+      "rounds": 400,
+      "cal_eval_predictions_exact": true,
+      "parameters_exact": true
+    }
+  ],
+  "train_N": 49167,
+  "all_new_unique_N": 7720,
+  "retained_K_N": 1016,
+  "original_features_and_roles_exact": true,
+  "no_second_Calo_scale": true,
+  "new_keys_old_exposure_intersection_N": 0,
+  "metrics_rows_independently_checked": 4338,
+  "paired_interval_rows_checked": 276,
+  "source_draws": 500,
+  "max_interval_absolute_difference": 1.1102230246251565e-15,
+  "cal_offset_exact": true,
+  "train_metrics_in_sample_verified": true,
+  "original_gates_independently_verified": true,
+  "once_exit0": true,
+  "formal_fits": 3,
+  "F7_inference": 0,
+  "wall_s": 6.73991742124781,
+  "CPU_s": 6.421855924999999,
+  "peak_RSS_MiB": 616.60546875
+}
