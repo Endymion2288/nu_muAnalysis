@@ -1,0 +1,18 @@
+{
+  "wall_s": 16.87651947606355,
+  "cpu_s": 15.793097374999999,
+  "peak_rss_MiB": 478.625,
+  "proc_io_delta": {
+    "rchar": 59344163,
+    "wchar": 3203832,
+    "syscr": 4467,
+    "syscw": 282,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "bootstrap_replicates": 500,
+  "bootstrap_scope": "component-stratified conservative source groups, paired fixed predictions; excludes retraining, calibration refit, full genealogy, response/interaction and research selection uncertainty; development cal/eval",
+  "new_fits": 0
+}

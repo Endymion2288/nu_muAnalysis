@@ -1,0 +1,71 @@
+{
+  "wall_s": 9.777048121206462,
+  "cpu_s": 3.998662717,
+  "peak_rss_MiB": 475.5234375,
+  "proc_io_delta": {
+    "rchar": 55524759,
+    "wchar": 123574,
+    "syscr": 2210,
+    "syscw": 9,
+    "read_bytes": 135168,
+    "write_bytes": 122880,
+    "cancelled_write_bytes": 122880
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "families": {
+    "C": {
+      "family": "C",
+      "epochs": 5,
+      "train_N": 512,
+      "auxiliary_valid_N": 494,
+      "parameter_count": 12420,
+      "target_center": 5.923304001123098,
+      "resources": {
+        "wall_s": 0.030491592828184366,
+        "cpu_s": 0.025852992000000796,
+        "peak_rss_MiB": 475.5234375,
+        "proc_io_delta": {
+          "rchar": 117,
+          "wchar": 0,
+          "syscr": 2,
+          "syscw": 0,
+          "read_bytes": 0,
+          "write_bytes": 0,
+          "cancelled_write_bytes": 0
+        },
+        "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+      },
+      "terminal_train_MSE": 0.4401463519890918,
+      "terminal_aux_CE": 1.0973091125488281
+    },
+    "P": {
+      "family": "P",
+      "epochs": 5,
+      "train_N": 512,
+      "auxiliary_valid_N": 494,
+      "parameter_count": 12420,
+      "target_center": 5.923304001123098,
+      "resources": {
+        "wall_s": 0.024983111303299665,
+        "cpu_s": 0.024685980000000107,
+        "peak_rss_MiB": 475.5234375,
+        "proc_io_delta": {
+          "rchar": 119,
+          "wchar": 0,
+          "syscr": 2,
+          "syscw": 0,
+          "read_bytes": 0,
+          "write_bytes": 0,
+          "cancelled_write_bytes": 0
+        },
+        "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+      },
+      "terminal_train_MSE": 0.44215214179764256,
+      "terminal_aux_CE": 1.0365012884140015
+    }
+  },
+  "boundary_mask_gradient_and_normalization_checks": true,
+  "identical_initial_states": true,
+  "standalone_reload_exact": true,
+  "retained_pilot_models": 0
+}

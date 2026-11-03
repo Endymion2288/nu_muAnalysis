@@ -1,0 +1,21 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage69
+initialdir = $(spool)
+executable = $(spool)/run_ml_transfer_supervision.sh
+arguments = $(pair)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-transfer-supervision-stage69.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 180MB
+getenv = False
+max_retries = 0
++JobFlavour = "microcentury"
++MaxRuntime = 2700
++NuMuStage = "energy-ml-transfer-supervision-stage69"
+log = $(spool)/logs/transfer.$(ClusterId).log
+output = $(spool)/logs/transfer.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/transfer.$(ClusterId).$(ProcId).err
+queue pair in fold0 fold1 fold2 final

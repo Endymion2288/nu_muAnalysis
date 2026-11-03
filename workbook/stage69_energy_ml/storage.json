@@ -1,0 +1,34 @@
+{
+  "scope": "logical file bytes in models/predictions and aggregate evidence, excluding this storage.json; no EOS physical allocation/network measurement",
+  "directories_bytes": {
+    "ml/artifacts/stage69": 3649965,
+    "workbook/stage69_energy_ml": 2506391
+  },
+  "total_bytes_excluding_this_record": 6156356,
+  "retained_budget_bytes": 20000000,
+  "removed_verified_redundant_archives": [
+    {
+      "path": "software/energy-ml-transfer-supervision-stage69.tar.gz",
+      "bytes": 31461240
+    },
+    {
+      "path": "ntuples/energy_ml_stage69/fold0.tar.gz",
+      "bytes": 401279
+    },
+    {
+      "path": "ntuples/energy_ml_stage69/fold1.tar.gz",
+      "bytes": 397483
+    },
+    {
+      "path": "ntuples/energy_ml_stage69/fold2.tar.gz",
+      "bytes": 404775
+    },
+    {
+      "path": "ntuples/energy_ml_stage69/final.tar.gz",
+      "bytes": 1433512
+    }
+  ],
+  "models_and_event_predictions": "local ignored ml/artifacts/stage69; not committed",
+  "new_ROOT_or_RDO_event_inputs": 0,
+  "EOS_actual_physical_network_bytes": "未测量"
+}

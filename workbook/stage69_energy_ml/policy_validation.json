@@ -1,0 +1,45 @@
+{
+  "wall_s": 2.4117757119238377,
+  "cpu_s": 2.3560803829999997,
+  "peak_rss_MiB": 616.60546875,
+  "proc_io_delta": {
+    "rchar": 63871910,
+    "wchar": 0,
+    "syscr": 850,
+    "syscw": 0,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "features": 62,
+  "raw_scintillators": 11,
+  "forbidden_linear_momenta": [],
+  "typed_nonnegative_and_count_sentinels_to_NaN": true,
+  "legal_signed_minus1_and_minus999_retained": true,
+  "geometry_sentinel_dependency_to_NaN": true,
+  "bad_fit_raw_retained_bad_waveform_raw_NaN": true,
+  "missing_calo_module_invalidates_total": true,
+  "original_missing_N": 42,
+  "eligible_missing_counts": [
+    21,
+    3,
+    7
+  ],
+  "protected_unused_missing_rows": [
+    591,
+    9335,
+    11638,
+    13406,
+    17281,
+    22812,
+    26954,
+    57749,
+    59639,
+    74738,
+    75235
+  ],
+  "train_cal_eval_exact_incoming_overlap": 0,
+  "old_artifacts_written": 0,
+  "model_fits": 0
+}

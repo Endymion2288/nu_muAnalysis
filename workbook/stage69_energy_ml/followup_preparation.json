@@ -1,0 +1,61 @@
+{
+  "wall_s": 0.36553453421220183,
+  "cpu_s": 0.01355361799999999,
+  "peak_rss_MiB": 616.60546875,
+  "proc_io_delta": {
+    "rchar": 212003,
+    "wchar": 4254,
+    "syscr": 30,
+    "syscw": 2,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "directory_listings": 2,
+  "recursive": false,
+  "files_statted": 2,
+  "ROOT_headers_read": 0,
+  "events_read": 0,
+  "reconstruction_jobs": 0,
+  "sources": [
+    {
+      "run": 200080,
+      "component": "pi",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200080/rdo/s0014/FaserMC-MC24_Genie_sibyll_pi-200080-00440-00449-s0014-RDO.root",
+      "group": "pi:00440-00449",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "role": "training_support_pilot",
+      "already_in_stage55_alternative_manifest": false,
+      "eligible_source_files": 23,
+      "selection_index": 22,
+      "source_inclusion_probability": 0.043478260869565216,
+      "conditional_event_inclusion_probability": 1.0,
+      "file_bytes": 42220266,
+      "generator_parent_seed": "\u672a\u6d4b\u91cf",
+      "independent_confirmation": false
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-RDO.root",
+      "group": "k:00630-00639",
+      "historical_roles": [
+        "train"
+      ],
+      "role": "training_support_pilot",
+      "already_in_stage55_alternative_manifest": false,
+      "eligible_source_files": 41,
+      "selection_index": 36,
+      "source_inclusion_probability": 0.024390243902439025,
+      "conditional_event_inclusion_probability": 1.0,
+      "file_bytes": 1293229936,
+      "generator_parent_seed": "\u672a\u6d4b\u91cf",
+      "independent_confirmation": false
+    }
+  ],
+  "config": "ml/configs/alternative_support_pilot.json"
+}

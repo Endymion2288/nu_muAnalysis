@@ -1,0 +1,18 @@
+{
+  "wall_s": 2.994337175041437,
+  "cpu_s": 2.602458114,
+  "peak_rss_MiB": 616.60546875,
+  "proc_io_delta": {
+    "rchar": 49769629,
+    "wchar": 97305,
+    "syscr": 3146,
+    "syscw": 7,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "new_fits": 0,
+  "inference_calls": 0,
+  "source_scores": "fixed P probabilities versus own-training class prior; confirmed valid labels only"
+}

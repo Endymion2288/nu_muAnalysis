@@ -1,0 +1,66 @@
+{
+  "cluster": 9662730,
+  "jobs": [
+    {
+      "job": "fold0",
+      "proc": 0,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 29.0,
+      "remote_wall_s": 36.0,
+      "time_wall_s": 33.1,
+      "time_user_s": 27.41,
+      "time_system_s": 1.8,
+      "time_peak_RSS_KiB": 486692
+    },
+    {
+      "job": "fold1",
+      "proc": 1,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 31.0,
+      "remote_wall_s": 43.0,
+      "time_wall_s": 40.96,
+      "time_user_s": 28.14,
+      "time_system_s": 2.15,
+      "time_peak_RSS_KiB": 480316
+    },
+    {
+      "job": "fold2",
+      "proc": 2,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 30.0,
+      "remote_wall_s": 36.0,
+      "time_wall_s": 34.27,
+      "time_user_s": 27.56,
+      "time_system_s": 2.09,
+      "time_peak_RSS_KiB": 483332
+    },
+    {
+      "job": "final",
+      "proc": 3,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 121.0,
+      "remote_wall_s": 129.0,
+      "time_wall_s": 127.13,
+      "time_user_s": 119.29,
+      "time_system_s": 1.89,
+      "time_peak_RSS_KiB": 489120
+    }
+  ],
+  "total_remote_CPU_s": 211.0,
+  "sum_remote_wall_s": 244.0,
+  "fit_CPU_s": 179.608461498,
+  "payload_bytes": 31461240,
+  "condor_input_received_bytes": 125849652,
+  "request_cpus": 1,
+  "request_memory_MB": 3000,
+  "request_disk_MB": 180,
+  "MaxRuntime_s": 2700,
+  "max_retries": 0,
+  "CPU_budget_s": 10800,
+  "EOS_actual_physical_network_bytes": "未测量",
+  "resource_scope": "local condor_history -userlog; eventlog and dryrun preserved"
+}
