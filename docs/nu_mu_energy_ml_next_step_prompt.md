@@ -1,46 +1,48 @@
-# 下一轮执行 Prompt：stage67 定向独立补样身份与可交付性审计
+# 下一轮执行 Prompt：stage68 完整读出的群体风险受约束回归
 
-先读AGENTS.md、[stage66实测](../workbook/2026-11-03_stage66_trainingout-response.md)、路线§47与信息预算§27，再读stage55低能补样、stage56变量/保护、stage61物理目标。stage66一个任务完成，不覆盖协议/结果、不重跑正式Fisher/来源抽样；继续F7，结束本轮模板轮换，不加局部参数/布局/先验/toy。
+先读AGENTS.md、[stage67研究复盘](../workbook/2026-11-03_stage67_research-reassessment.md)、[stage62](../workbook/2026-11-02_stage62_smooth-continuous-response.md)、[stage66](../workbook/2026-11-03_stage66_trainingout-response.md)、路线§48/信息预算§28。stage67是研究报告，无新实验；原拟stage67身份审计尚未执行，改为独立补样准备，不冒充已完成，也不作为已有缓存方法实验的无限前置。下一实验使用stage68。
 
-## 已知证据与唯一问题
+继续保留F7，结束现有模板轮换/α=0投影链。本轮在有CERN环境的节点完成一个直接推动单事例目标的训练实验，不重跑stage62–66，不在本终端配置环境。
 
-cal权重训练外模板的S自由条件δf−.346904 [−.733243,+.057334]pp，仍近旧train−.362477pp；低组件−.165032pp。区间跨零是证据变弱，不能称残差消失或唯一归因训练内模板。最低能charm cal0/eval1、31%重复eval也零支持，100–200 charm仅6/17例；同pz高E/high-y/低可见/未确认也需要独立支持，不能只补容易低E核心。
+## 1. 唯一科学问题
 
-本轮只回答：**现有数据中哪些支持已被开发/重复/保护，用户指定200080–200101中还有什么可核身份的候选输入，可以形成怎样一个最小定向补样合同？** 不以metadata条数冒充新独立事件，不声称已测功效或纯样本量收益，不自动启动正式生产。
+**完整62读出＋完整train，直接优化低真实E与困难组风险，是否比同容量的普通回归获得更好的泛化取舍？**
 
-## 1. 固定输入、角色和身份
+stage62已有完整读出概率增量，但A低E50–100/100–200 log-RMSE=.277739/.259126，传统=.145487/.226876，全体仍差于F7；其最低能25/208尾贡献67.8241%平方log损失。stage58–60风险约束只在四输入、cal小样本及三专家凸包中学习，不能替代本实验。不要把本轮改成flat、普通残差、门控续调、NRE结构/先验或点估计器搜索。
 
-1. 既有`ml/configs/low_energy.json`、`low_energy_files.tsv`、`ntuples/energy_ml_stage55/dataset.npz`与`extraction_metadata.json.gz`，stage56 `audited_features`/raw审计及F7原角色/身份保护，stage64/66支持表。只读已经开发的缓存和必要身份metadata，不读locked-test事件/预测，不恢复历史大ROOT/RDO/xAOD或做SHA。
-2. stage55替代flux已经开发过31训练来源、16评价来源，新增true50–100训练139例；完整生成谱系仍未认证，保守component×generation-range跨run角色一致，精确入射ν(pdg,px,py,pz)复用有原保护。这些来源不能再次叫未开发独立确认；F7未用某些替代样本作权重训练也不撤销早期研究曝光。
-3. 不改变pz>50/原cuts/最高pz leading/真值fiducial/角色/保护，F7的62输入/pz0-only线性动量/11raw/VetoNu reduced/signed/typed NaN沿用，px/py、q/p、弯折仍允许。0F7训练/推理或重新校准、0谱fit/profile/toy、0重建/新生产。
-4. 开始批量前冻结stage67不可覆盖协议：缓存schema/单位、身份主键/精确复用与谱系证据等级、角色保护、支持分层、候选选择顺序、metadata目录/文件/QA事件上限、I/O/资源/停止。小QA只核字段/身份/单位/读字节，不按模型残差/低E结果挑候选。
+物理解释沿用stage55/58：pz>50选择下true50–100偏向低y，但相近低pz/低活动仍包含高E/high-y低可见者。不能把传统在真低E的优势推广为“全部低pz应降低预测”，也不能将选择近似当部署真值边界。
 
-## 2. 现有缓存的可测支持
+## 2. 输入与训练角色
 
-按原nominal/alternative、run/production/generation-range和角色，列实际N/保守来源及精确重复/保护计数：true50–100、100–200、reco pz50–100且true≥200、与high-y交集、未确认；所有困难尾/缺失/负修正保留，不重定义角色。沿用stage55/56明确的eligible/保护标记，不把原95,748原始选中者与41,447 F7训练者混称同一总体。
+- 只读stage55 `dataset.npz`、stage56 `readout.npz`和必要身份/来源metadata、既有F7/传统/stage60/stage62固定参考。train41447/91来源，cal8440/16，eval14057/22；原pz>50选择、最高pz leading、truth fiducial和保护不变。cal/eval已开发，不叫blind。
+- X经`audited_features.load/build`得到同62列，线性模长/纵向动量仅pz0；px/py、q/p和弯折允许。不加p0/p1/pz1、次轨迹线性动量或truth/y/来源输入。11scintillator raw、VetoNu reduced、合法signed/typed NaN/状态/依赖规则沿用。
+- 不删缺失、巨大动量、高-y、未确认、负修正和大尾。原42缺失者eligible21/3/7、另11既有保护保持；不fit补raw、不nansum补零。原部分fitted-charge cuts不改，本轮不测接受度变化。
+- 不读locked-test或大型ROOT/RDO、不新生产/重建、不恢复已删PHYS、不拟造alternative raw、不做SHA或谱toy。
 
-检查精确入射ν身份在不同flux/run/几何间的复用，保留原键/单位和合法signed值；不同四动量或run/eventID不同不能自动证明独立谱系。没有可信生成ID/种子/子文件联结则标谱系未证。输出需要支持的层和已有曝光来源，而非新性能或事件数功效。低可见若缺共同raw状态/积分窗/有效mask定义，明确未测量，不拿小ML修正或零charge定义quiet。
+## 3. 两个模型、最多八fit
 
-缓存统计经Condor，按source分组/分块复用，禁止保存逐事例副本或重新生成旧95K缓存。报告实际读取/CPU/wall/RSS；文件大小、系统计数和EOS实际网络/物理字节分开。
+1. C：同F7级depth5/400轮的普通平方log损失BDT；R：相同输入、容量、正则、单seed的受约束群体风险BDT。两者都直接预测t=log(Eν/GeV)，使用相同初始化/参数化。固定一个seed2026110368，不扫seed/结构/初值。C为匹配控制，原F7仍是推广参照；不能以C更弱降低成功标准。
+2. train内按既有保守来源分三折，遵守已有generation-range/精确入射ν保护，同一已知身份不得跨fold。每折C/R各一次，再各一次全train最终fit，合计8fit。折内所有归一化、参照风险及模型/对偶更新只用其余train，留出折不早停、不调对偶、不挑checkpoint。不拿已见train标签的原F7预测冒充独立OOF基线。完整谱系未认证的限制如实保留，不称新独立确认。
+3. 令`R_g=mean_g[(f−t)^2]`。低能目标为`min max(R_50–100/Rμ_50–100, R_100–200/Rμ_100–200)`；μ为同支持log(pz0/.8)。保护全体`R_all≤1.01² R_all(C)`，保护true≥200、reco pz50–100、high-y≥.8、未确认各`R_g≤1.03² R_g(C)`。真值仅定义训练/评价组，部署只使用X；重叠组须用各自N正确归一。
+4. 用非负对偶权重/functional-gradient boosting实现有限的风险训练；每轮仅加一棵树，对当前各组平方误差构成的加权梯度/Hessian作更新。训练前冻结低能minimax和保护组的更新规则、尺度、dual上界/数值处理、固定400轮终点/唯一checkpoint政策，做小型算术/梯度QA。不因cal/eval结果改规则或多轮重训，不将对偶更新包装成额外候选搜索。
+5. C的折内训练风险是R的训练参照，可能乐观；必须并列报训练与来源留出风险，不能把满足训练约束当泛化保证。没有全局最优/自动可行性定理；预算内找不到解则记录本实现未找到，不声称所有完整读出都不可行，不连开优化器认证阶段。
+6. 不在首轮再叠加Huber/CVaR/各类尾损失或辅助分类头。尾部用真实指标验收，不能裁剪或弱化大误差让分数变好。
 
-## 3. 替代runs的有界输入审计
+## 4. 评价与决定
 
-只访问原manifest指向的200080–200101共22个run的`rdo/s0014`已知目录，一层文件清单/metadata；明确其中nominal六run和替代16run。不能递归扫全EOS或从不同几何/flux名称推独立。对照stage55实际成功301源与技术失败257、已用range/角色/保护，不能只对照原计划302。
+- OOF比较C/R原始预测，仅在各自未参加训练/对偶选择的train来源上计算；最终两模型raw及各一个全cal global log-offset均报告。全cal offset不是OOF，点校准不等于概率校准。不得从eval选择raw/cal或C/R“最佳版本”替代预定主候选R。
+- 同一最终eval对传统/F7/stage60/stage62固定参考，报告两个true低E层、所有能量箱、全体、true≥200、reco pz50–100/100–250、high-y、未确认和缺失组。给N/来源、log-RMSE、mean/median bias、R68、双向tail50/100、尾部平方log损失份额；3.2–6.4TeV单列，≥6400无支持标未测量。不要仅报告macro或中心宽度。
+- 原推广标准不改：两低E/传统RMSE比来源95%上限≤1.05是恢复；改善下限>0才叫优于传统。全体/F7上限≤1.01、困难组≤1.03、关键tail50增加≤2pp。训练中相对新C的限制不替换最终对F7的限制。这些是研究取舍，非已测detector容忍度；相对C有改善但未过原门槛应分别报告。
+- 500次component分层保守来源配对bootstrap只重抽固定预测，不重训；注明不含完整重训、校准、谱系、响应/interaction或研究选择误差，不作多重比较修正。train/cal/eval区分，不以负配对/重抽样当新独立支持。
+- R在OOF与eval有稳定收益并过原门槛：冻结候选，安排新来源/共同raw确认，不自动部署。train改善而OOF/eval不转移：停止同数据调权，转定向独立混合边界支持。OOF有收益但未过原F7标准：保留研究结论，不放宽门槛。训练/OOF均无实用改善：结束本次目标实验，下一项在stage67§5的物理transfer/可见度分量或新支持中选一项，不续扫对偶/seed。
 
-在看到新候选事例前按run/production/来源范围确定最多24个文件、总≤40个native头/schema/身份QA事件，不能按低能残差选源或只取有利前缀当物理样本。优先用已有匹配构建/头读取工具；环境不匹配则交付可测的头信息和缺失字段，不重编译或恢复完整历史生产链。
+## 5. 资源、报告与保留任务
 
-候选分为已开发、受保护、精确重复/几何变体、未用但谱系未证、具可核谱系的新来源；分类依证据，不能为满足数量目标升级未知。metadata能证明文件/条目/身份可访问，不能证明通过选择后的低E数、同pz困难支持或功效；这些未测项目明确标注。不得把重复digitization/重抽样/替代flux同一入射ν叫新增独立运动学支持。
-
-## 4. 交付、预算和停止
-
-交付实测缓存支持/复用/保护表、候选来源证据表、最少缺失生成身份或quiet/raw输入，并给**一个**最小定向提取/生产输入合同：具体源与角色隔离/生成谱系要求、共同重建和变量定义、低E及同pz高E/high-y/未确认支持、去重与校准/最终未开发确认边界、pilot测得I/O/计时对应的预算和停止条件。无法证明独立输入时明确未定，不用metadata清单冒充新增物理样本，也不自动开生产或新模型。
-
-拟议≤1Condor/1CPU/**3000MB**、CPU及wall≤600s、实际新增读取≤1GB、紧凑最终≤5MB；先小QA实测冻结，缓存批量统计经Condor，dry-run和最终ClassAd均核，不静默追加任务。0F7训练/推理、0重建/新生产/原始ROOT大提取、0谱fit/profile/toy/SHA。本轮新独立事件数/选中支持/功效和实际任务成本均未测量，不照抄旧3000–5000目标。
-
-先写stage67中文workbook（输入/选择/身份与单位、实测支持/重复/未知和源表、命令/验证/资源/I/O、物理/程序限制、唯一最小下一任务及验收），再更新路线/信息预算/Prompt并本地Conventional Commit，不推送，不自动运行后续生产。若只有未证谱系或无新源，给具体缺失输入和仍可推进的共同raw/响应任务，不靠扩大目录扫描或更多模板/toy制造答案。
-
-继续F7，stage62概率有用但低能点失败、stage63固定J布局阴性保留。stage54共同signed/rectified raw/状态/积分窗/mask与有效占据、ν interaction/FSI/材料、接受度/背景和真正未开发确认仍必须交付；沿用stage61连续正向谱/有限MC文献入口。stage54已有未提交工具/缓存与下方原协议后缀不改、不混入提交。
-
+- 正式fit前冻结stage68协议，先少量样本验证组归一/梯度/Hessian、有限/NaN、推理不读truth及来源折；仅做资源/算术pilot，不增加正式候选。复用CVMFS与紧凑缓存，不重建无变化C++。
+- 拟议最多4个Condor任务（各sourcefold两模型及一个最终两模型任务），每个≤2CPU/3000MB、累计CPU≤3h、紧凑最终≤20MB；先以pilot实测调整并冻结资源，预算不是实测成本。批量走Condor，记录actual wall/CPU/RSS及进程/I/O口径。只保存模型、必要OOF/cal/eval点输出和聚合轨迹，不存批量输入副本/重复JSON。
+- 写stage68中文workbook：目标/输入/选择/单位、完整数据与区间、训练/OOF/eval对比、程序与物理解释、实际命令/验证/资源/I/O/产物及唯一下一项验收。所有未测项写明，更新路线/Prompt后本地Conventional Commit，不推送，不自动运行后续阶段。
+- 独立补样准备沿用[stage66§9](../workbook/2026-11-03_stage66_trainingout-response.md)：原200080–200101已知22目录一层清单、≤24文件/≤40头事件的限量身份核实，不递归EOS。旧替代31训练/16评价来源与+139低能已开发，不能称新确认。其任务是找到可交付新源/缺失生成身份，不作为本轮唯一科研产物，也不自动启动生产。新支持重点为低E核心＋同pz高E/high-y/低可见成分；quiet缺共同读出定义时明确未测量。
+- stage54共同signed/rectified raw、状态/积分窗/mask与有效占据、ν interaction/FSI/材料、接受度/背景和真正未开发确认继续交付。stage63的4×4阴性不重跑；后续联合量若做须嵌套保留S原格，α≈.32需有限范围非线性检验，本次不连开谱研究。
 
 ## 保留的stage54 data占据支线
 
