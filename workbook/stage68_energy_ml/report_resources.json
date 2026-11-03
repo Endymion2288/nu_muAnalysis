@@ -1,0 +1,27 @@
+{
+  "wall_s": 16.61989919701591,
+  "cpu_s": 15.011212187,
+  "peak_rss_MiB": 336.98828125,
+  "proc_io_delta": {
+    "rchar": 85128253,
+    "wchar": 3106150,
+    "syscr": 5824,
+    "syscw": 332,
+    "read_bytes": 0,
+    "write_bytes": 0,
+    "cancelled_write_bytes": 0
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "bootstrap_replicates": 500,
+  "bootstrap_scope": "component-stratified conservative source groups, paired fixed predictions; excludes retraining, calibration refit, full genealogy, response/interaction and research selection uncertainty; development cal/eval",
+  "new_fits": 0,
+  "previous_report_passes": [
+    {
+      "purpose": "initial report and deployment validation before compacting duplicate JSON trajectories",
+      "wall_s": 16.859663974959403,
+      "cpu_s": 15.171158637000001,
+      "peak_rss_MiB": 333.9609375
+    }
+  ],
+  "total_measured_reporting_CPU_s": 30.182370824000003
+}

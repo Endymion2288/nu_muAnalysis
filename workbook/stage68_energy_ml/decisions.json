@@ -1,0 +1,117 @@
+{
+  "main_candidate": "R_cal",
+  "deployment": "retain F7",
+  "versions": {
+    "R_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    },
+    "R_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    }
+  },
+  "policy": "original traditional/F7 thresholds, no selection of favorable raw/cal variant"
+}

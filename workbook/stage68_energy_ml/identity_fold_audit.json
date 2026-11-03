@@ -1,0 +1,70 @@
+{
+  "train_N": 41447,
+  "unique_incoming": 32046,
+  "finite_incoming_N": 41447,
+  "zero_incoming_N": 0,
+  "crossgroup_incoming_keys": 6625,
+  "crossgroup_incoming_events": 15918,
+  "union_components": 3,
+  "union_component_interpretation": "pi/k/charm, not three interchangeable source folds",
+  "exact_incoming_is_conservative_reuse_proxy_not_complete_generator_identity": true,
+  "fold_counts": [
+    {
+      "fold": 0,
+      "held_N": 13820,
+      "held_groups": 32,
+      "candidate_train_N": 27627,
+      "purged_train_N": 4832,
+      "train_N": 22795,
+      "train_groups": 59,
+      "train_components": {
+        "pi": 10508,
+        "k": 10001,
+        "charm": 2286
+      },
+      "held_components": {
+        "pi": 6270,
+        "k": 6492,
+        "charm": 1058
+      }
+    },
+    {
+      "fold": 1,
+      "held_N": 13667,
+      "held_groups": 29,
+      "candidate_train_N": 27780,
+      "purged_train_N": 4902,
+      "train_N": 22878,
+      "train_groups": 62,
+      "train_components": {
+        "pi": 10708,
+        "k": 9876,
+        "charm": 2294
+      },
+      "held_components": {
+        "pi": 6029,
+        "k": 6576,
+        "charm": 1062
+      }
+    },
+    {
+      "fold": 2,
+      "held_N": 13960,
+      "held_groups": 30,
+      "candidate_train_N": 27487,
+      "purged_train_N": 4944,
+      "train_N": 22543,
+      "train_groups": 61,
+      "train_components": {
+        "pi": 10708,
+        "k": 9852,
+        "charm": 1983
+      },
+      "held_components": {
+        "pi": 6030,
+        "k": 6574,
+        "charm": 1356
+      }
+    }
+  ]
+}

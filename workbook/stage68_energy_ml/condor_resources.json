@@ -1,0 +1,67 @@
+{
+  "cluster": 9662707,
+  "jobs": [
+    {
+      "job": "fold0",
+      "proc": 0,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 20.0,
+      "remote_wall_s": 25.0,
+      "time_wall_s": 22.18,
+      "time_user_s": 18.96,
+      "time_system_s": 0.85,
+      "time_peak_RSS_KiB": 301136
+    },
+    {
+      "job": "fold1",
+      "proc": 1,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 12.0,
+      "remote_wall_s": 14.0,
+      "time_wall_s": 12.25,
+      "time_user_s": 9.96,
+      "time_system_s": 0.96,
+      "time_peak_RSS_KiB": 294408
+    },
+    {
+      "job": "fold2",
+      "proc": 2,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 11.0,
+      "remote_wall_s": 15.0,
+      "time_wall_s": 12.52,
+      "time_user_s": 10.28,
+      "time_system_s": 1.0,
+      "time_peak_RSS_KiB": 296452
+    },
+    {
+      "job": "final",
+      "proc": 3,
+      "starts": 1,
+      "exitcode": 0,
+      "remote_CPU_s": 14.0,
+      "remote_wall_s": 17.0,
+      "time_wall_s": 14.93,
+      "time_user_s": 12.79,
+      "time_system_s": 0.96,
+      "time_peak_RSS_KiB": 295356
+    }
+  ],
+  "total_remote_CPU_s": 57.0,
+  "sum_remote_wall_s": 71.0,
+  "pair_fit_CPU_s": 39.418493348,
+  "total_condor_input_bytes": 125820124,
+  "payload_bytes": 31453896,
+  "request_CPUs": 1,
+  "request_memory_MB": 3000,
+  "request_disk_MB": 150,
+  "MaxRuntime_s": 2700,
+  "max_retries": 0,
+  "CPU_budget_s": 10800,
+  "retained_budget_bytes": 20000000,
+  "EOS_actual_physical_network_bytes": "\u672a\u6d4b\u91cf",
+  "history_note": "Remote schedd condor_history stalled, stopped the read-only query; local condor_history -userlog plus preserved dryrun/event log provide completion/starts/CPU/wall/requests."
+}

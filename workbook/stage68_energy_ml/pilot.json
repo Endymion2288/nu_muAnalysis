@@ -1,0 +1,52 @@
+{
+  "wall_s": 3.5601710588671267,
+  "cpu_s": 2.821924512,
+  "peak_rss_MiB": 616.60546875,
+  "proc_io_delta": {
+    "rchar": 49808124,
+    "wchar": 89286,
+    "syscr": 2112,
+    "syscw": 10,
+    "read_bytes": 0,
+    "write_bytes": 102400,
+    "cancelled_write_bytes": 49152
+  },
+  "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O",
+  "synthetic_gradient_error": 6.931608065308126e-14,
+  "synthetic_checks_pass": true,
+  "pilot_N": 256,
+  "pilot_rounds_per_family": 20,
+  "pilot_fits_not_candidates": 2,
+  "pilot_pair_CPU_s": 0.07895686499999988,
+  "pilot_C_resources": {
+    "wall_s": 0.039936114102602005,
+    "cpu_s": 0.036267544999999846,
+    "peak_rss_MiB": 616.60546875,
+    "proc_io_delta": {
+      "rchar": 112,
+      "wchar": 23616,
+      "syscr": 2,
+      "syscw": 2,
+      "read_bytes": 0,
+      "write_bytes": 24576,
+      "cancelled_write_bytes": 0
+    },
+    "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+  },
+  "pilot_R_resources": {
+    "wall_s": 0.043407988734543324,
+    "cpu_s": 0.04268932000000003,
+    "peak_rss_MiB": 616.60546875,
+    "proc_io_delta": {
+      "rchar": 114,
+      "wchar": 19653,
+      "syscr": 2,
+      "syscw": 2,
+      "read_bytes": 0,
+      "write_bytes": 20480,
+      "cancelled_write_bytes": 0
+    },
+    "io_scope": "process counters; rchar includes imports/cache, read_bytes is kernel accounting, not EOS physical/network I/O"
+  },
+  "retained_pilot_models": 0
+}

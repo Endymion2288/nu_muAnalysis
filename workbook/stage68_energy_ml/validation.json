@@ -1,0 +1,121 @@
+{
+  "models": [
+    {
+      "job": "fold0",
+      "model": "C",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 22795,
+      "purged_N": 4832,
+      "held_N": 13820,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "fold0",
+      "model": "R",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 22795,
+      "purged_N": 4832,
+      "held_N": 13820,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "fold1",
+      "model": "C",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 22878,
+      "purged_N": 4902,
+      "held_N": 13667,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "fold1",
+      "model": "R",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 22878,
+      "purged_N": 4902,
+      "held_N": 13667,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "fold2",
+      "model": "C",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 22543,
+      "purged_N": 4944,
+      "held_N": 13960,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "fold2",
+      "model": "R",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 22543,
+      "purged_N": 4944,
+      "held_N": 13960,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "final",
+      "model": "C",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 41447,
+      "purged_N": 0,
+      "held_N": 0,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    },
+    {
+      "job": "final",
+      "model": "R",
+      "trees": 400,
+      "features": 62,
+      "standalone_prediction_max_abs_diff": 0.0,
+      "training_risks_recomputed": true,
+      "train_N": 41447,
+      "purged_N": 0,
+      "held_N": 0,
+      "group_overlap": 0,
+      "exact_incoming_overlap": 0
+    }
+  ],
+  "OOF_exactly_once_N": 41447,
+  "OOF_missing": 0,
+  "bootstrap_replication_max_abs_diff": 4.440892098500626e-16,
+  "original_eligible_missing_counts": [
+    21,
+    3,
+    7
+  ],
+  "protocol_version": 2,
+  "formal_fits": 8,
+  "additional_fits": 0,
+  "locked_test": false,
+  "truth_free_standalone_inputs": true
+}
