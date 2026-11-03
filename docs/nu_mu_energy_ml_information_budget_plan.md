@@ -969,3 +969,43 @@ known π22/K42池事前seed2026110377均匀各2来源，概率2/22、2/42，40�
 **继续F7，关闭本固定完整支持实验；唯一下一项stage85转实际共同data/MC tracker读出与占据控制，完成保留stage54协议，0能量fit。** 原6data/12MC已知manifest、stage52统计与stage53固定2048摘要为入口；先≤40实际schema/native联结/共同station-active-channel/条件与成本QA，再冻结data2048和单一关联排除定义，交真实条件活动/有效占据或有依据上限，不用metadata列表/DB参数冒充data测量。不将本控制预称MC低E错误原因，100–1000GeV单μ不替代50–100GeV ν或完整shower效率。
 
 原stage54§1–5及其五项未跟踪工作保持，新实现/产物隔离stage85；≤6并发/每≤2CPU6GB、CPU8h/输入10GB/紧凑20MB仅QA后资源上限，实际覆盖/成本/噪声约束未测。无quiet/随机触发时不硬分解pure noise、不把on/off全差1sigma、不按data改BDT；缺原生入口则交可识别统计与具体最小条件缺口。下阶段未执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage84_energy_ml/followup_input_request.json)。K旧生产限制不恢复，interaction/FSI/材料/接受度/背景、共同Calo/脉冲及未开发随机确认继续；历史§1–44、独立支持协议/stage54后缀保留。
+
+## 46. stage85 研究复盘：响应、transfer 后验与有条件补样
+
+[stage85研究复盘](../workbook/2026-11-03_stage85_research-reassessment.md)把新增信息预算从“再买随机支持”改为三项相互独立的证据：共同 data/MC response、转移能条件分布、以及只针对模型分歧区的主动模拟。stage84 已实际使用 7720 个 π/K 新 key 后仍未改善 50–100 GeV；低能训练内仍有约 +15.6% 中位偏差。该结果关闭无条件随机扩样作为默认投资，但不能证明样本量、响应或物理信息已经被完全排除。
+
+### 46.1 先购买共同 response 证据
+
+stage85 按保留 stage54 协议测量共同 collection、active-channel 分母、孤立 strip/cluster、timebin/大小、站间相关、来源/run/动量/位置和 data/MC 条件差异。若有 quiet/random trigger 缺口，只交 PHYS 条件活动或含背景上限；不得把未关联活动、无 SDO 或 sideband 全称纯电子噪声。若共同 collection、coverage 或分母不可识别，交最小缺失条件并停止 noise 参数扫描。
+
+该预算的成功标准是“能否定义有依据的 response nuisance variant”，不是得到一个非零 noise 最佳值。实际样本功效、I/O、CPU、内存、系统效应和低能能量收益均未测量；stage85 不执行能量 fit、ν replay、GENIE/G4 或谱 toy。
+
+### 46.2 再购买 transfer posterior 的信息分解
+
+若 response evidence 可用或至少能给出 nuisance 边界，只做一次固定模型比较：
+
+- F7 direct-logE；
+- 以传统缪子估计为锚的 bounded residual/shrinkage；
+- hurdle/zero-inflated transfer mixture，显式区分低 transfer 和连续正 transfer，并输出后验区间。
+
+输入从经 schema 审计的缪子、两个 veto、各 station hit 数、Calo 模块和有效 pulse summary 中选择，保留缺失状态。训练目标用预先固定的 NLL/CRPS/quantile，split 按来源/incoming 隔离，新增 coverage/PIT/tail 验收。低 pz 同时保留真低能和真高能/high-y 两侧，禁止硬切换。
+
+### 46.3 把两类 reweight 分账
+
+**能量先验 reweight** 是 prior stress test：用 `π_target(E)/π_train(E)` 在推理或一次固定加权 fit 中比较平坦 logE、名义谱和低能压力谱；报告 capped weight 和每层 ESS，禁止按 eval 结果选谱。**data/MC domain reweight** 只有在 stage85 交付共同 control 变量后才执行 classifier density-ratio、cross-fit、clipping、ESS、sideband closure 和来源留出。若域差异不由 control 变量解释，保留为 response nuisance，不强行校正。
+
+两类权重都不能制造未观测的低能信息。加权训练的真实方差、低能功效、响应闭合和系统误差均未测量；这些结果不能用理论上的“均衡”替代。
+
+### 46.4 只在可识别缺口上使用主动模拟
+
+当 transfer posterior 已显示某状态可识别但 support 不足时，才用 committee disagreement＋输入 OOD/密度构造 acquisition，成对补充真低能低 pz 和低 pz 真高能/high-y 反例，并保留中间 transfer、高端控制、source/incoming 去重和响应条件。query-by-committee 有 HEP 主动扫描先例（[Caron et al., 1905.08628](https://arxiv.org/abs/1905.08628)），但本项目的 acquisition gain、样本功效、资源和系统效应均未测量。
+
+不能用单个 eval 事件、当前正 tail 或 source count 直接挑新文件；不能把新增 key 数等同独立生成数。若主动补样后仍无法降低低能后验风险，就把该状态记录为当前响应/物理覆盖下的不可识别边界，停止继续扩样。
+
+### 46.5 信息预算的停止条件
+
+- **继续：** stage85 给出可解释 response variant，且 transfer posterior 在低能和低 pz 两侧显示可重复的后验/coverage 改善；再执行一次有界主动补样。
+- **转 nuisance：** 只有条件活动或含背景上限，但 posterior 仍可做；把 response 作为变体包络，不作纯 noise correction。
+- **停止该支线：** 共同定义不可识别，或 posterior/主动补样都没有低能可识别增益；交付 calibrated posterior、风险边界和最小缺失输入。
+
+历史 §1–45 和 stage54 原协议不改；本节新增的资源、收益、功效与系统效应均为未测量。

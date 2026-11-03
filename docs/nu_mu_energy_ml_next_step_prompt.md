@@ -1,28 +1,32 @@
-# 下一轮执行 Prompt：stage85 实际共同 data/MC tracker 读出与占据控制
+# 下一轮执行 Prompt：stage85 共同 data/MC tracker 响应与占据控制
 
-先读AGENTS.md、[stage84报告](../workbook/2026-11-03_stage84_full-support-fit.md)、路线§65/信息预算§45及[输入合同](../workbook/stage84_energy_ml/followup_input_request.json)。本轮进入下方保留stage54 data控制协议，完成尚缺的实际共同响应测量；**0能量fit/F7新推理/ν重放/GENIE/G4/谱toy**，不自动执行stage86。
+先读 `AGENTS.md`、[stage84报告](../workbook/2026-11-03_stage84_full-support-fit.md)、[stage85研究复盘](../workbook/2026-11-03_stage85_research-reassessment.md)、路线§66、信息预算§46及[输入合同](../workbook/stage84_energy_ml/followup_input_request.json)。本轮只执行共同 data/MC tracker 读出与 occupancy control；**0 能量 fit、F7 新推理、ν replay、GENIE/G4、谱 toy、data 反调 BDT，也不自动执行 stage86。**
 
-## 1. 当前结论与为什么转向共同响应
+## 1. 本轮定位：响应/域偏移证据，不是低能修复实验
 
-stage84已用原41447＋全7720新增（π6704/K1016，26来源）完整训练49167，恰原3seed/400轮/unit direct logE/原62，0pilot；原cal8440一个global log offset .007550640，主pooled_cal，0新F7推理/来源OOF。新增低E182/845各增约24%，而eval两低E .313532/.265800、相对传统95上限2.498753/1.242889仍未恢复。all/F7 .998587 [.996663,1.000424]未测出显著增量，所有原五RMSE保护和七层总正负tail50通过；不能写所有门槛失败。主最低能32/208正tail占73.8522%损失，额外confirmed低transfer最低能tail上限+2.430147pp仍保留。
+stage84 已用原 41447＋全 7720 新支持（π6704/K1016、26 来源）完整训练 49167。主 eval 50–100/100–200/all/低 pz log-RMSE 为 0.313532/0.265800/0.295944/0.502276；相对传统低能 95% 上限为 2.498753/1.242889，仍未恢复。低能新增支持约 24%，训练内最低能 median bias 仍约 +15.6%，所以关闭无条件随机扩样、架构和 seed 扫描；但这不证明数据量无关、响应已认证或信息达到极限。
 
-相对stage82full，第二低E比1.009817 [1.000854,1.018749]变差，最低能/总体区间跨1。关闭本固定完整支持实验、继续F7；不续扫更多规模/来源/seed/权重/架构。失败没有证明缺数据无关、24%已足量、完整响应已认证或物理信息极限。
+stage78 的专家组合显示错误互补，stage79–80 显示真实 hit-time convolution 和有限 pulse variation，stage53 显示 on/off 噪声不能解释全部 data/MC 差异。本轮的唯一新问题是：在共同定义、共同分母和实际 collection 下，data/MC 的活动与响应差异能否被量化。100–1000 GeV 单 μ 控制不能直接替代 50–100 GeV ν shower 或强子响应校准。
 
-共同data/MC读出可靠性一直未交付。stage53 on/off同事件证明独立strip噪声可贡献MC额外cluster，但on/off全差不是1sigma，也未解释data的SP/segment过量。现在用真实data检验共同定义下活动与有效占据是否给出约束；**不是已知MC低E退化原因**，100–1000GeV单μ控制不能直接替代50–100GeV ν或强子响应/效率确认。已有K已重建且入模，其旧时限/禁令仍被用户覆盖，不恢复为阻碍。
+## 2. 完整验收与 stage85 后分流
 
-## 2. 输入、隔离输出与完整验收
+按下方保留的 stage54 §1–5 执行，先 ≤40 个身份 QA，再冻结 data2048 和单一关联排除定义。必须交付真实 active-channel/event、孤立 strip/cluster、timebin/大小、站间相关、run/来源/p/位置分层、两臂支持差异和来源重抽样区间；不能用 metadata 清单、DB 参数、无 SDO 或未配对活动冒充纯 noise。
 
-按下方原stage54§1–5原文执行。只用`ml/configs/calonu_muon_files.tsv`已知6data（index12–17、run15838/16000/16923）、原12MC和stage52统计/原stage53固定2048同事件摘要；不重做MC两臂。先≤40独立身份核native collection/联结/单位、实际geometry/station/sensor、timebin/trigger/mask及active-channel分母和成本，再冻结data2048、原100–250/250–1000GeV两层与一个muon邻域/关联排除定义。按全部已知PHYS支持取样，不用历史entry_stop前缀，不按probe或data残差挑样本/匹配。
+stage85 结束后只允许三种分流：
 
-阶段编号和新产物统一为stage85（workbook报告/证据/缓存），保留stage54原协议文字。原五项未跟踪工作仅只读参考，不能改动/stage/提交或清理其路径；复用前核实际内容与协议，不把历史partial JSON当已完成产物。需要实现/修正工具时写新的stage85文件，使用现有匹配构建，批量走Condor。
+- **A：可识别 response variant。** 共同 collection、active-channel 分母和条件差异均有实际证据。下一阶段另立一次固定 physics-constrained transfer posterior 合同：bounded residual/shrinkage 与 hurdle/zero-inflated transfer mixture 只做预定比较；不继续随机扩样或架构网格。
+- **B：只有条件活动/含背景上限。** 继续报告 PHYS 条件活动及上限，把它作为 response nuisance envelope 的边界；不能把它当纯电子噪声，也不能先做“噪声修正”训练。
+- **C：当前定义不可识别。** 明确缺少的 quiet/random trigger、共同 collection、coverage 或 active-channel 条件，并停止 noise 支线；转入带未识别 response nuisance 的 transfer posterior 研究，不追加 occupancy 参数扫描。
 
-必须交actual共同读出定义与真实计量：每active-channel/event孤立strip/cluster活动、timebin/大小/站间相关、来源/run/p/位置、两臂支持差异及500来源区间。没有quiet/random触发时给条件活动或可证明的上限，不将未关联、无SDO或sideband全称noise，不凭同名noIFT分母强合并。不以metadata目录清单替代可测统计；真入口缺失明确路径/collection/coverage/条件和最小需要，能测PHYS条件活动则说明其不等于原生strip噪声。
+无论 A/B/C，stage85 都不自动启动 stage86，不改变历史 F7、四期 support、传统估计和困难事件保护。
 
-原资源为上限：≤6并发/每≤2CPU6GB、累计CPU8h、实际输入10GB/紧凑20MB，均须实际小QA和actual包后冻结；不是新成本测量。0ν重放/参数扫描或data反调BDT。报告需回答是否足以定义可信响应变体、只能给含背景上限、或当前定义无法识别电子噪声，不能制造一个非零最佳值。后续真ν响应变体另立合同，本轮不执行。
+## 3. 研究方向的固定原则
 
-先中文stage85报告，再新代码/配置/紧凑表图本地Conventional Commit，不push/外发。保留原四期support、stage84三模型/比较和所有困难事件保护；独立支持协议及以下原后缀逐字保持。interaction/FSI/材料/接受度/背景与真正随机未开发确认继续，data控制不替代它们。
+后续 transfer posterior 的目标是学习可见缪子能量与转移能的条件分布，而不是继续把全区均值回归当作唯一目标。模型可预测低 transfer/大 transfer 状态的软概率、非负转移或有界转移比例，并输出点估计、68/90% 区间与 tail 概率。能量先验修正与 data/MC domain reweight 必须分开：前者用预先固定的 `pi_target/pi_train` 做 prior stress test，后者只有在共同 control 变量可比时才用 classifier density ratio，并报告 clipping、ESS、closure 和来源留出。
 
-以下stage54原后缀逐字保留，仅进入该支线时适用。
+当前 62 维标量 ntuple 先以 BDT/小型 MLP/MDN 为候选；Transformer/GNN 只有在逐 hit/时间/几何输入和 response 语义真实可用后再评估。低 pz 必须同时保留真低能和真高能/high-y 两侧，不能按 pz 硬切换传统估计。所有新收益、功效、资源、systematic 和 coverage 在实际测量前写“未测量”。
+
+以下保留的 stage54 原后缀逐字不改，仅进入该支线时适用。
 
 ## 保留的stage54 data占据支线
 

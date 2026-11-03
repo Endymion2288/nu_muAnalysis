@@ -1809,3 +1809,40 @@ P_cal/传统两低E比2.142423 [1.826960,2.497108]/1.140002 [1.070227,1.214789]�
 **继续F7，关闭本固定完整支持实验；唯一下一项stage85转实际共同data/MC tracker读出与占据控制，完成保留stage54协议，0能量fit。** 原6data/12MC已知manifest、stage52统计与stage53固定2048摘要为入口；先≤40实际schema/native联结/共同station-active-channel/条件与成本QA，再冻结data2048和单一关联排除定义，交真实条件活动/有效占据或有依据上限，不用metadata列表/DB参数冒充data测量。不将本控制预称MC低E错误原因，100–1000GeV单μ不替代50–100GeV ν或完整shower效率。
 
 原stage54§1–5及其五项未跟踪工作保持，新实现/产物隔离stage85；≤6并发/每≤2CPU6GB、CPU8h/输入10GB/紧凑20MB仅QA后资源上限，实际覆盖/成本/噪声约束未测。无quiet/随机触发时不硬分解pure noise、不把on/off全差1sigma、不按data改BDT；缺原生入口则交可识别统计与具体最小条件缺口。下阶段未执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage84_energy_ml/followup_input_request.json)。K旧生产限制不恢复，interaction/FSI/材料/接受度/背景、共同Calo/脉冲及未开发随机确认继续；历史§1–64、独立支持协议/stage54后缀保留。
+
+## 66. stage85 研究复盘：从随机支持转向响应与 transfer posterior
+
+[stage85研究复盘](../workbook/2026-11-03_stage85_research-reassessment.md)重新读取 stage78–84 的结果。stage78 的专家组合已经在两低能相对 F7 产生互补收益（50–100/100–200 GeV 为 .225775/.242931），但仍高于传统 .145487/.226876；stage80 的 raw_peak/width 族有小幅信息但没有恢复低能；stage84 把 π6704＋K1016、26 来源、7720 新 key 实际加入 49167 训练后，主 50–100/100–200/all/低 pz 为 .313532/.265800/.295944/.502276，低能训练内仍约 +15.6% median bias。两低能相对传统上限 2.498753/1.242889，all/F7 上限 1.000424，原总体与困难保护通过。
+
+这些结果关闭“继续随机扩样、继续换 seed/架构、继续扫 pulse 通道”作为默认路线，但没有证明数据量无关、response 已认证或信息极限。低 pz 层同时包含真低能和真高能/high-y 事件，必须停止按 pz 硬切换传统估计。后续的核心变量应是 transfer-energy 状态与 response domain，而不是更多同类 direct-logE 均值回归。
+
+### 66.1 stage85 的定位和三路分流
+
+stage85 仍按 stage54 保留协议完成共同 data/MC tracker readout、active-channel 分母、孤立 strip/cluster、timebin、站间相关和条件活动测量；它是**响应/域偏移证据**，不是低能修复 fit。若存在共同 collection 和可复现差异，只定义一个有依据的 response variant；若只有 PHYS 条件活动，给含背景上限并作为 nuisance 边界；若缺少 quiet/random trigger、共同 collection 或 coverage，写明不可识别和最小缺失输入，停止纯 noise 支线。任何分流都不自动启动 stage86。
+
+### 66.2 新主线：physics-constrained transfer posterior
+
+stage85 后只立一次固定的条件分布实验，保留 F7 direct-logE 作为基线，并比较：
+
+1. 以传统缪子能量估计为锚的 bounded residual/shrinkage，学习 `log(Eν)−log(Eμ_base)`，用 `[0,1]` soft gate 只在证据充分时施加大修正；
+2. hurdle/zero-inflated transfer mixture，先预测低 transfer/大 transfer/response state 的软概率，再对正 transfer 的 log 值拟合少量 mixture，输出 `p(Eν|x)` 的 median、68/90% 区间和 tail 概率。
+
+“zero-inflated”在此表示低 transfer 质量与连续正 transfer 的混合，不假定真实 transfer 严格为零。监督标签中的顶点缪子能量、transfer 或 transfer fraction 仅用于 MC 训练与诊断；部署输入仍限于核实过的缪子、veto、station、Calo、pulse 和缺失状态列。固定 NLL/CRPS/quantile 目标、来源/incoming 隔离 split 和一个真正未参与选择的 locked source，新增 posterior coverage/PIT/可靠性验收。
+
+### 66.3 两种 reweight 必须分开
+
+能量先验 reweight 使用预先固定的
+
+`p_target(E|x) ∝ p_train(E|x) × π_target(E)/π_train(E)`
+
+比较平坦 logE、名义物理谱和低能压力谱；若训练加权，固定权重上限并报告每层 ESS，禁止用 eval 反调。data/MC response reweight 只有在 stage85 证明 control 变量可比后才使用 classifier density ratio，采用 cross-fit、clipping、ESS、sideband closure 和来源留出。二者都不能制造没有观测区分度的低能信息，也不能替代 interaction/FSI/材料/接受度系统学。
+
+### 66.4 只有在可识别支持缺口时才主动补样
+
+若 transfer posterior 显示某一状态可识别但支持不足，使用 F7、bounded residual、mixture ensemble 的 disagreement 加 OOD/密度分数构造 acquisition，成对补充真低能低 pz 与低 pz 真高能/high-y 反例，并保留中间 transfer 和高端控制。query-by-committee 的 HEP 先例支持把昂贵模拟放在分歧/边界区域（[Caron et al., 1905.08628](https://arxiv.org/abs/1905.08628)），但本项目的收益、样本功效和资源均未测量；不能按单事件 loss 或几例异常挑源。
+
+### 66.5 架构选择和最终门槛
+
+当前是 62 维标量 ntuple，先用 BDT/小型 MLP/MDN 完成一次固定比较。Transformer/GNN/高粒度自监督只有在逐 hit/时间/几何输入和 response 语义真实交付后才进入候选。最终仍要求两低能相对传统 95% 上限 1.05、all/≥200/低 pz 真高能/high-y/未确认和七层双向 tail50 保护通过，并新增 posterior coverage。若只能得到总体小幅改善而低能门槛失败，应交付 calibrated posterior、可识别边界和缺失条件，结束无边界架构网格。新增收益、功效、资源和系统效应均未测量。
+
+历史 §1–65、stage54 后缀、四期支持协议和传统/F7 保护不改；本节只改写下一阶段的研究优先级。
