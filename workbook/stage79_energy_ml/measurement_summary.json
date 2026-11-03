@@ -1,0 +1,80 @@
+{
+  "N": 2048,
+  "sources": 12,
+  "runs": 6,
+  "components": {
+    "charm": 526,
+    "k": 598,
+    "pi": 924
+  },
+  "pz_N": [
+    142,
+    575,
+    1331
+  ],
+  "unique_incoming_N": 2031,
+  "original62_nan_rows": 0,
+  "strong_shape_N": 14097,
+  "channel_event_N": 22528,
+  "status_counts": {
+    "0": 14097,
+    "1": 5679,
+    "4": 2583,
+    "32": 1,
+    "36": 168
+  },
+  "trigger_all_zero": true,
+  "bcid_all_zero": true,
+  "sentinel_counts": {
+    "width": {
+      "-999": 0,
+      "-1": 0
+    },
+    "raw_peak": {
+      "-999": 0,
+      "-1": 0
+    },
+    "localtime": {
+      "-999": 0,
+      "-1": 0
+    },
+    "baseline_rms": {
+      "-999": 0,
+      "-1": 0
+    }
+  },
+  "source_shape_valid_N": {
+    "18": 1481,
+    "34": 1667,
+    "74": 1067,
+    "109": 980,
+    "113": 845,
+    "125": 908,
+    "134": 1739,
+    "163": 1523,
+    "176": 1027,
+    "222": 1043,
+    "244": 968,
+    "245": 849
+  },
+  "original62_exact": true,
+  "raw_status_baseline_cache_exact": true,
+  "all_legal_train_nominal": true,
+  "inclusion_probability_range": [
+    0.02608695652173913,
+    0.2
+  ],
+  "formal_requested_bytes": 2710755042,
+  "formal_wall_sum_s": 259.35815407303744,
+  "formal_CPU_sum_s": 207.376561493,
+  "formal_peak_rss_MiB": 359.2578125,
+  "analysis_wall_s": 3.6616387628018856,
+  "analysis_CPU_s": 3.325277083,
+  "analysis_peak_rss_MiB": 913.765625,
+  "no_energy_fit": true,
+  "no_F7_inference": true,
+  "no_test_cal_eval_acquisition": true,
+  "physical_corrected_time": false,
+  "energy_gain": "unmeasured",
+  "variation_interpretation": "finite-tolerance descriptive matching, not strict conditional independence or causal information"
+}

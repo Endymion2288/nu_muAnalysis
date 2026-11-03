@@ -1,40 +1,40 @@
-# 下一轮执行Prompt：stage79 实际脉冲形状与相对时序的信息审计
+# 下一轮执行Prompt：stage80 固定脉冲形状族的同容量消融
 
-先读AGENTS.md、[stage78报告](../workbook/2026-11-03_stage78_nested-risk-complementarity.md)、[stage77研究复盘§5.1](../workbook/2026-11-03_stage77_research-reassessment.md)、路线§59/信息预算§39及[请求](../workbook/stage78_energy_ml/followup_input_request.json)。最新实测stage78，Q_local低E改善但未联合过传统/困难尾，继续F7。结束固定组合与stage74分类器续调，0专家/深度/seed/q/温度扫描。
+先读AGENTS.md、[stage79报告](../workbook/2026-11-03_stage79_pulse-information-audit.md)、路线§60/信息预算§40、[stage79测量](../workbook/stage79_energy_ml/measurement_summary.json)、[生成证据](../workbook/stage79_energy_ml/source_evidence.json)和[下一合同](../workbook/stage79_energy_ml/followup_input_request.json)。最新实测stage79为0能量训练，继续F7；不得重开stage74概率/积分或stage78专家/分区续调。
 
-## 1. 唯一问题与边界
+## 1. 唯一问题与未测项
 
-本轮0能量训练，实际回答：当前nominal ν PHYS在积分/pz/位置/状态之外，是否生成并记录了可审计、跨来源可复现的脉冲形状或相对时间变化？这不是能量风险收益已测，也不是另一个电荷总和/旧CaloNu波形/点云池化试验。必须交实际同事件测量与生成机制证据，或具体字段/条件缺口，不能用一份分支目录结束。
+原62＋一族11×(raw_peak,width)是否在匹配容量/训练政策下，改善低pz与低E风险并保持原困难/全体/尾保护？唯一对照U=原62、P=原62＋22；不扫通道、阈值、seed、权重、深度或架构。shape族包含状态依赖缺失模式，收益不能全归纯物理形状。
 
-只沿stage55已知nominal来源manifest、既有canonical train身份/source/inputentry/incoming和实际writer/模拟/读出源码入口，优先已有匹配build。不得递归扫全EOS、不取test/cal/eval/locked新身份、不访问新PHYS增补或K RDO，不做重建/生成/F7推理/谱toy/SHA。stage78原62/角色/全部尾/缺失及用户变量合同不改。
+stage79实测12已知train来源/2048身份，原62/raw/status/RMS精确闭合；实际生产均hit-time convolution，观测到跨源摘要差。但214通道对仅240不同事件、低pz50–100只有1对、VetoNu零对；只固定本通道积分有限容差，噪声/fit和其他61输入未排除。新增能量信息、风险增量、完整提取/训练成本均未测量，不把变化图当收益。
 
-## 2. 先有界核实真实语义与成本
+localtime/trigger/bcid及baseline RMS不作新增能量输入。MC trigger/bcid全0有写出/clock条件原因，CLOCK_INVALID未置也不能认证clock。RMS仅用于有效性，不是积分电荷误差；不以高能μ飞行时间测能，不按truth E/y调响应。
 
-旧stage11 schema出现width/baseline_rms/raw_peak/localtime只是线索；当前nominal可用性、单位、生成机制、有效率与成本未测。总≤40个事前身份QA，核run/event/inputentry/leading及原incoming联结、分支单位、typed sentinel/domain/status/dependency、合法负值、波形积分与宽/峰/时的关系。不能把另一个重建的同名列当共同定义。
+## 2. 输入、清理与先行QA
 
-定位实际使用的脉冲生成、模板/叠加/噪声/截断和fit算法及其版本/条件；确认这些新列是否随真实活动改变，还是固定模板/电子学设置/低信号拟合产物。不以当前DB默认、旧schema或data观察替代本nominal证据。若字段/条件缺失，保留失败来源与未测标志，列最小需要的实际输入，不静默换族或夸称可用。
+仅stage55已知nominal manifest中**原41447/8440/14057 train/cal/eval身份**，原source/group/incoming角色及缺失/困难/尾全部保持；不得取新身份、test/challenge/locked或alternative支持。不读取新RDO/HITS、重建/生成、递归扫EOS或做SHA。真实π/K按独立支持协议另交付，本轮不自动执行。
 
-相对时间需共同clock、可验证固定通道offset与可靠μ路径/飞行项；没有依据则先保留原时间并说明不可解释，不能按truth E/y反调offset。弱/无效信号时间保持缺失，不fit补raw；signed负积分可合法，不随意作小/负分母比。baseline逐点RMS不能直接作积分电荷误差，后者需要窗口/相关性；额外活动含次级/背景/噪声，不全称hadron。不可用超相对论μ飞行时间直接测50GeV以上能量。
+复用stage79固定≤40 QA身份，先小样本验证新增scalar提取、实际writer/digitization语义和完整包无fit启动/资源。12源已知生成日志可直接复用；新涉及的既有nominal来源需有界核对应生产入口/差异，不能拿当前默认或另一版本代替。本轮须把所需语义/成本QA放在正式提交前，不复制stage79日志核准迟于提交的顺序偏差。沿已知构建/LCG，不安装、不重建C++。
 
-同时实测代表性wall/CPU/RSS/读取请求字节与basket复用。先验证实际语义/小成本，再冻结正式提取，不能仅按前缀线性速率保证尾成本。
+只补22列及必需run/eventID/status/raw_charge/baseline_rms联结，原62直接使用冻结缓存；按源/basket批读后只保留合法固定身份，不将默认0当测量，不保存全波形/ROOT/PHYS副本。逐源标量联结和旧raw/status/RMS精确闭合；保持一次方模长/纵向动量仅pz0，px/py、q/p、弯折允许。11signed raw、VetoNu reduced、typed/dependency NaN、缺一Calo总和NaN不改，不二次缩放Calo。
 
-## 3. 一次冻结的同事件有界测量
+新增两列按stage79 `strong_shape_validity`的同一保守联合mask：status & (444|1)==0、finite width>0、localtime>0、baseline_rms>0、raw_peak≥5×RMS。localtime只为既定有效性依赖，不进模型；5σ是审计约定，不称已认证生产阈值。不合格新列NaN，所有事件仍参加训练/评价；旧raw不应用fit-invalid mask，不以拟合charge补raw。−999/正域−1/默认0依赖需验证；合法signed负值保持。不能依新形状有效率/真E/坏残差换样或截prefix。
 
-QA通过后，在合法且可联结的已知train输入内，seed2026110379冻结≤2048个既有train身份、≤12个明确来源；按reco pz50–100/100–250/≥250、component/source事前分层，记录非零包含概率和可用池。不得按新形状/时间、truth E/y、坏残差或拟合结果选/换身份；保留原抽样中的弱信号、missing和尾。支持不足如实报告，不取有利prefix/凑产额。
+## 3. 一次冻结的8fit与评价
 
-只读取所需波形摘要及联结/原62/状态/路径字段，按source/basket聚合请求，不保留全波形或ROOT/PHYS副本。逐事件匹配原raw/Calo表示，原62逐值/NaN一致；一次方纵向/模长仅pz0，11signed raw/VetoNu reduced，typed/status/dependency NaN、合法负数、缺一Calo总和NaN原合同保持，不二次缩放Calo。
+QA和实际资源通过后才冻结最终ClassAd/worker上限。沿stage68 v2三outer来源折、train端incoming purge，U/P每折各1fit＋final各1fit，共最多8fit；41447恰一次来源OOF。两臂同原depth5/400轮/unit direct logE，seed2026110380，同实际fold train mean(logE)初始化、boost_from_average=0，余参数原low_energy配置；不扫seed/超参，不早停挑轮/挑列，不加入其他目标或重权。禁止F7新推理，复用原预测作参考。
 
-冻结一族形状/相对时序测量定义，先解释各量物理含义/单位和有效性；不多组参数/特征扫描。测给定积分、pz、位置/状态下的形状/时间条件变异、跨来源/组件稳定性、missing/饱和/弱信号及模板退化。可引用原incoming E/y作事后分层描述，但不得用其拟合响应、定义尺度/offset/选择或称训练收益。少量同来源不能冒充新独立运动学。
+OOF只报raw；final各原cal一个unit global log-offset，raw/cal并报，P_cal预定主候选，U为匹配控制。主信息增量对照为reco pz50–100的P/U配对log-RMSE，OOF与eval的500次component分层来源固定预测区间（seed2026111380，OOF+1/cal+2）；两真低E、同低pz真高E、高y、未确认、全体、≥200、稀疏高端、缺失/饱和状态及正负尾并报，不能只看新列有效子样本或总体分数。来源区间不含重训/offset/谱系/响应/研究选择，cal/eval仍已开发，不称新确认。
 
-## 4. 预算、验收和下一分流
+原推广门槛不降：两低E相对传统RMSE来源95%上限≤1.05，all相对F7≤1.01，≥200/低pz/high-y/未确认≤1.03，以及原关键层总/正/负tail50增量95%上限≤2pp。匹配控制收益和原恢复/保护分别交付；不得以某个中位数、macro或只有有效者收益替代。逐模型独立回读、角色/来源/incoming隔离、原62/新增NaN、校准和bootstrap核验。
 
-拟议≤4Condor、每≤2CPU/3000MB、CPU累计≤7200s、wall/job≤3600s、实际输入≤10GB、紧凑最终≤10MB。仅上限，成本/可完成性尚未测；QA后按实测冻结worker硬上限及最终ClassAd，批量走Condor。一次冻结测量，不自动重试失败源/改变政策或扩大输入。若无法在预算下交付，写具体输入/资源缺口，不能将未读取者记物理0。
+## 4. 预算、停止与交付
 
-验收至少包括实际事件联结/原62闭合、真实单位/生成语义与状态、同积分条件变化或模板退化证据、来源/抽样概率/有效N、缺失与成本/产物。描述性变异本身不证明增量能量信息，必须明确局限。若有可审计物理变化，下一阶段才冻结一次匹配训练政策/容量的基线vs＋这一族信息消融及原门槛，不能现在暗加能量fit。若无可用变化或缺条件，如实给具体结论/最小实际输入，不自动换任意特征/架构。
+拟议最多4个scalar提取＋4个训练Condor作业，每1CPU/3000MB，累计CPU≤7200s、每job wall≤1800s、输入≤10GB、最终≤20MB；是上限，实际完整成本未测，先QA后冻结，批量走Condor。记录请求字节/真实wall/CPU/RSS和basket复用，软件/缓存/分片归并去重，不保留重复传输包；不得将历史或理想前缀速率当实际成本。一次冻结，不自动重试失败源或扩大预算。
 
-中文stage79 workbook先记录实测/单位、输入/语义/条件/命令、物理与程序解释、资源/I/O、样本及局限和唯一下一合同，再和代码/紧凑表图本地Conventional Commit，不push、不外发，不连开后续生产。
+有增量且过原门槛仅冻结研究候选与独立确认合同；无跨源增量或风险失败，保留F7、结束这一固定族，解释物理/统计/程序限制，不自动改通道、mask、时间、权重/架构。条件/资源不可用则记录具体实际缺口和已测结果，不将未读者置0，不以目录清单结束。不要因少量异常就删支线，也不把未识别原因写成信息极限。
 
-实际π/K开发支持继续按[独立协议](nu_mu_energy_ml_support_delivery_prompt.md)准备，但本轮不自动执行；真正未开发确认仍需实际parent/subfile/seed/角色/曝光，共同raw/stage54、Calo、interaction/FSI/材料、接受度/背景不因新信息审计取消。
+先中文stage80 workbook，记录实测/输入/命令/资源/单位、原62与新增族有效性、全部风险/来源区间/失败及唯一下一合同，再和相关代码/紧凑结果本地Conventional Commit，不push、不外发、不连开stage81。真实π/K支持按[独立协议](nu_mu_energy_ml_support_delivery_prompt.md)，共同raw/stage54、Calo/完整脉冲条件、interaction/FSI/材料/接受度/背景及真正未开发随机确认继续。
 
 以下stage54原后缀逐字保留，仅进入该支线时适用。
 

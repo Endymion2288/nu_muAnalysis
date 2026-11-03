@@ -1,0 +1,22 @@
+{
+  "stage": 79,
+  "frozen_before_formal_pulse_inspection": true,
+  "matching": "greedy disjoint nearest pairs in fixed scaled control space; cross source, same component and reco-pz bin, exact status; no truth/outcome matching",
+  "control_tolerances": {
+    "asinh_raw_charge_pC": 0.1,
+    "log_pz_GeV": 0.2,
+    "x0_y0_and_VetoNu_Calo_xy_mm": 20,
+    "z0_mm": 100,
+    "baseline_rms_mV": 0.1
+  },
+  "strong_signal": "wave valid; no fit failure/overflow/threshold failure; raw_peak>=5*baseline_rms>0; finite positive width and finite localtime",
+  "pair_metric": "sum squared normalized control differences; each difference <= tolerance; greedy sorted distance then identity; no event reuse within channel",
+  "outputs": [
+    "width difference ns",
+    "raw_peak difference mV",
+    "uncorrected localtime difference ns"
+  ],
+  "relative_time": "only uncorrected Timing0-1 and Timing2-3 diagnostics; physically corrected time remains unavailable",
+  "claims": "descriptive conditional variation at finite tolerance; not strict conditional independence, calibrated physical timing, or energy information gain",
+  "uncertainty": "no inferential p-values; source/component/pz support and spread retained; insufficient pairs remain unmeasured"
+}

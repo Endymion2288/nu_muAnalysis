@@ -873,3 +873,14 @@ X/M来源OOF两低E比.432053/.742703、eval密度NLL .140668<.319245仍说明�
 继续F7，关闭固定组合，不增专家/深度/seed/优化器网格。唯一下一笔stage79为原62外的实际形状/相对时序语义与条件变异，0能量训练：已知nominal train身份/实际writer和模拟读出机制，≤40身份QA后才有界提取≤2048同事件/≤12已知源，测积分/pz/位置/状态外的可复现变异/模板局限。baseline点RMS不冒充电荷误差、时间需clock/offset/path，弱信号/合法负raw保持；不以超相对论μ飞行时间测能。输入可用性/物理变化/成本/点风险增量未测，不将目录或描述性变异当新能量收益。
 
 拟议4Condor/2CPU/3000MB、CPU7200s/wall3600s、输入10GB/留存10MB仅上限，先实际QA再冻结。交实际测量＋机制证据或具体条件缺口，可用再交固定匹配消融合同，本轮未执行。见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage78_energy_ml/followup_input_request.json)。兼容PHYS增补按[独立协议](nu_mu_energy_ml_support_delivery_prompt.md)准备，真正上游谱系/随机确认、共同raw/stage54、Calo/interaction/FSI/材料/接受度/背景继续交付。旧§1–38保留。
+
+
+## 40. stage79：购买到实际脉冲观测与机制证据，下一笔只检验一族的能量增量
+
+[stage79报告](../workbook/2026-11-03_stage79_pulse-information-audit.md)完成40身份QA、12合法nominal train来源/2048同事件、原62/raw/status/RMS逐值闭合和12确切RDO生产日志。0能量fit/新F7/重建/生成，原角色/输入/全部困难尾不改。actual6d6ab70b数字化与d32指定源码相同，12源均improved hit-time convolution、WAVE-Digitization-02-LG；不能再只凭固定kernel说没有hit时间结构，也不能将噪声/fit变化称物理信息。
+
+强且未饱和fit-valid形状14097/22528（62.5755%），threshold失败5679/overflow2751/fit失败169；VetoNu默认/弱信号、Veto饱和代价明显。固定跨源同组件/pz/status及本通道积分/pz/位置/RMS容差匹配214通道对，240不同事件，pz50–100仅1对、VetoNu0对未测。Timing宽度差median约.014–.028ns、Preshower .160–.178ns，所有12源有变化；这不是严格条件独立或独立于原62的证明。raw峰差可由积分容差部分解释，噪声/fit协方差未分离。trigger/bcid全0有MC写出/clock条件原因，缺有效clock/offset/path不构造校正时序。
+
+4任务9663208一次exit0、remote CPU216s/wall297s、formal peak359.258MiB；1CPU/3000MB/3600s保持。QA CPU11.428002s/24.108543wall；正式ROOT请求2.710755GB，含QA2.777516GB，1650聚合调用；物理EOS网络I/O未测。持久结果/配对/语义/状态占位/ClassAd独立验证通过，留存<10MB。生产语义实际认证在提交后、正式分析前，冻结注明诊断限制；保留这一顺序偏差，不伪称全部先核准。
+
+继续F7；stage80唯一有限假说为原62 vs 原62＋22个raw_peak/width，保持原全队列/来源隔离/容量/政策，≤8fit。缺失模式是族的一部分，不把增量全归纯形状；RMS仅有效性、time不入模。先≤40 QA和scalar同身份补充成本/新增来源语义，后冻结≤4提取＋≤4训练/每1CPU3000MB、CPU7200s/wall1800s、输入10GB/留存20MB；尚未执行/收益未测。两低E/低pz/困难的来源OOF及eval与原传统/F7恢复/保护门槛不降，失败不续扫变量/阈值/seed/时间或架构。详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage79_energy_ml/followup_input_request.json)。真实支持/共同响应/随机确认义务不由此替代，旧§1–39保留。

@@ -1,0 +1,24 @@
+{
+  "stage": 79,
+  "retained_data": [
+    {
+      "path": "ntuples/energy_ml_stage79/measurements.npz",
+      "bytes": 785945
+    },
+    {
+      "path": "ntuples/energy_ml_stage79/qa.npz",
+      "bytes": 18602
+    }
+  ],
+  "removed": [
+    "four job transfer tar archives",
+    "four duplicate NPZ parts",
+    "31460013-byte software input archive"
+  ],
+  "retained_limit_bytes": 10000000,
+  "merged_cache_rerun_no_new_ROOT": true,
+  "physical_EOS_network_bytes": "unmeasured; uproot request counts retained separately",
+  "retained_data_bytes": 804547,
+  "workbook_bytes_excluding_this_record": 421075,
+  "data_plus_workbook_bytes_excluding_this_record": 1225622
+}

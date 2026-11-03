@@ -1,0 +1,2512 @@
+{
+  "stage": 79,
+  "records": [
+    {
+      "source": 18,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-RDO-merge-23.rdo.log",
+      "segment": "00230-00239",
+      "bytes": 397746,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 533,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+        },
+        {
+          "line": 609,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 952,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 958,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 964,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 970,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 976,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 1055,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 1103,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1104,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 1105,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 1106,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 1107,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1108,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 1113,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1114,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1115,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1116,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1117,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1118,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1119,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1120,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1121,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1122,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1123,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1124,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1126,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1127,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 1128,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 1129,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 1130,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1131,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 1264,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1265,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1266,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1267,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1268,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1269,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [
+        "6d6ab70b"
+      ],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 34,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-RDO-merge-41.rdo.log",
+      "segment": "00410-00419",
+      "bytes": 402700,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 579,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+        },
+        {
+          "line": 655,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 998,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1004,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 1010,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1016,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 1022,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 1101,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 1149,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1150,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 1151,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 1152,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 1153,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1154,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 1159,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1160,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 1161,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 1162,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 1163,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1164,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 1278,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1279,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1280,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1281,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1282,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1283,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1288,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1289,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1290,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1291,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1292,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1293,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1295,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1296,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1297,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1298,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1299,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1300,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [
+        "6d6ab70b"
+      ],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 74,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-RDO-merge-30.rdo.log",
+      "segment": "00300-00309",
+      "bytes": 436109,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 808,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+        },
+        {
+          "line": 884,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 1227,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1233,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 1239,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1245,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 1251,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 1330,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 1381,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1382,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1383,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1384,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1385,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1386,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1387,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1388,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 1389,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 1390,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 1391,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1392,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 1499,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1500,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1501,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1502,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1503,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1504,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1506,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1507,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1508,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1509,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1510,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1511,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        },
+        {
+          "line": 1514,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1515,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 1516,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 1517,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 1518,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1519,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [
+        "6d6ab70b"
+      ],
+      "kernel_parameters": {
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        },
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 109,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-RDO-merge-72.rdo.log",
+      "segment": "00720-00729",
+      "bytes": 432137,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 780,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+        },
+        {
+          "line": 856,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 1199,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1205,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 1211,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1217,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 1223,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 1302,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 1350,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1351,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 1352,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 1353,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 1354,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1355,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 1360,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1361,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 1362,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 1363,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 1364,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1365,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 1479,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1480,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1481,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1482,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1483,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1484,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1485,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1486,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1487,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1488,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1489,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1490,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1492,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1493,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1494,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1495,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1496,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1497,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [
+        "6d6ab70b"
+      ],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 113,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-RDO-merge-0.rdo.log",
+      "segment": "00000-00009",
+      "bytes": 353337,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 172,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+        },
+        {
+          "line": 248,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 591,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 597,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 603,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 609,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 615,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 694,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 745,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 746,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 747,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 748,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 749,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 750,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 755,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 756,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 757,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 758,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 759,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 760,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 871,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 872,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 873,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 874,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 875,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 876,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 877,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 878,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 879,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 880,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 881,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 882,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 884,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 885,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 886,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 887,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 888,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 889,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [
+        "6d6ab70b"
+      ],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 125,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-RDO-merge-13.rdo.log",
+      "segment": "00130-00139",
+      "bytes": 360707,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 214,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+        },
+        {
+          "line": 290,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 633,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 639,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 645,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 651,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 657,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 736,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 787,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 788,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 789,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 790,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 791,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 792,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 797,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 798,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 799,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 800,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 801,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 802,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 803,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 804,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 805,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 806,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 807,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 808,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 923,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 924,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 925,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 926,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 927,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 928,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 930,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 931,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 932,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 933,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 934,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 935,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [
+        "6d6ab70b"
+      ],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 134,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200093/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_pi-200093-RDO-merge-5.rdo.log",
+      "segment": "00050-00059",
+      "bytes": 368762,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 207,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/4a0e366b] -- built on [2025-09-08T1233]"
+        },
+        {
+          "line": 283,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 636,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 642,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 648,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 654,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 660,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 739,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 787,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 788,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 789,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 790,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 791,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 792,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 794,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 795,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 796,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 797,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 798,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 799,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        },
+        {
+          "line": 907,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 908,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 909,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 910,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 911,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 912,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 916,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 917,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 918,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 919,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 920,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 921,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 926,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 927,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 928,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 929,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 930,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 931,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [],
+      "kernel_parameters": {
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 163,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200093/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_pi-200093-RDO-merge-41.rdo.log",
+      "segment": "00410-00419",
+      "bytes": 417999,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 569,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/4a0e366b] -- built on [2025-09-08T1233]"
+        },
+        {
+          "line": 645,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 998,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1004,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 1010,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1016,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 1022,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 1101,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 1152,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1153,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 1154,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 1155,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 1156,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1157,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 1162,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1163,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1164,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1165,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1166,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1167,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1168,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1169,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1170,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1171,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1172,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1173,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1175,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1176,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1177,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1178,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1179,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1180,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        },
+        {
+          "line": 1181,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1182,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 1183,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 1184,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 1185,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1186,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 176,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200094/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_k-200094-RDO-merge-0.rdo.log",
+      "segment": "00000-00009",
+      "bytes": 440737,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 703,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/4a0e366b] -- built on [2025-09-08T1233]"
+        },
+        {
+          "line": 779,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 1132,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1138,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 1144,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 1150,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 1156,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 1235,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 1283,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1284,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 1285,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 1286,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 1287,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1288,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 1293,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1294,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1295,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1296,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1297,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1298,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1299,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1300,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 1301,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 1302,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 1303,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1304,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 1418,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1419,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1420,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1421,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1422,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1423,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1430,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1431,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1432,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1433,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1434,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1435,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 222,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200094/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_k-200094-RDO-merge-55.rdo.log",
+      "segment": "00550-00559",
+      "bytes": 388774,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 397,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/4a0e366b] -- built on [2025-09-08T1233]"
+        },
+        {
+          "line": 473,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 826,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 832,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 838,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 844,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 850,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 929,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 977,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 978,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 979,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 980,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 981,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 982,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 987,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 988,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 989,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 990,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 991,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 992,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 1102,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1103,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 1104,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 1105,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 1106,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 1107,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 1108,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1109,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 1110,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 1111,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 1112,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 1113,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1122,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1123,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1124,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1125,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1126,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1127,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 244,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200100/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_powheg_pythia_charm_central-200100-RDO-merge-5.rdo.log",
+      "segment": "00050-00059",
+      "bytes": 369379,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 222,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/4a0e366b] -- built on [2025-09-08T1233]"
+        },
+        {
+          "line": 298,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 651,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 657,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 663,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 669,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 675,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 754,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 802,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 803,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 804,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 805,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 806,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 807,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 812,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 813,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 814,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 815,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 816,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 817,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 818,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 819,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 820,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 821,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 822,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 823,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 933,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 934,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 935,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 936,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 937,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 938,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 940,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 941,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 942,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 943,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 944,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 945,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [],
+      "kernel_parameters": {
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    },
+    {
+      "source": 245,
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200100/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_powheg_pythia_charm_central-200100-RDO-merge-6.rdo.log",
+      "segment": "00060-00069",
+      "bytes": 368012,
+      "exact_output_name_present": true,
+      "evidence": [
+        {
+          "line": 222,
+          "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/4a0e366b] -- built on [2025-09-08T1233]"
+        },
+        {
+          "line": 298,
+          "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+        },
+        {
+          "line": 651,
+          "text": "CaloWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 657,
+          "text": "TriggerWaveformDigiAlg                     INFO Using improved digitization timing"
+        },
+        {
+          "line": 663,
+          "text": "VetoWaveformDigiAlg                        INFO Using improved digitization timing"
+        },
+        {
+          "line": 669,
+          "text": "VetoNuWaveformDigiAlg                      INFO Using improved digitization timing"
+        },
+        {
+          "line": 675,
+          "text": "PreshowerWaveformDigiAlg                   INFO Using improved digitization timing"
+        },
+        {
+          "line": 754,
+          "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-04 resolved to WAVE-Digitization-02-LG for folder /WAVE/Digitization"
+        },
+        {
+          "line": 802,
+          "text": "TriggerWaveformDigiAlg                     INFO TriggerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 803,
+          "text": "TriggerWaveformDigiAlg                     INFO  Norm:  6360"
+        },
+        {
+          "line": 804,
+          "text": "TriggerWaveformDigiAlg                     INFO  Mean:  830"
+        },
+        {
+          "line": 805,
+          "text": "TriggerWaveformDigiAlg                     INFO  Sigma: 3.21"
+        },
+        {
+          "line": 806,
+          "text": "TriggerWaveformDigiAlg                     INFO  Alpha: -0.424"
+        },
+        {
+          "line": 807,
+          "text": "TriggerWaveformDigiAlg                     INFO  N:     6.14"
+        },
+        {
+          "line": 915,
+          "text": "CaloWaveformDigiAlg                        INFO CaloWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 916,
+          "text": "CaloWaveformDigiAlg                        INFO  Norm:  0.55"
+        },
+        {
+          "line": 917,
+          "text": "CaloWaveformDigiAlg                        INFO  Mean:  820"
+        },
+        {
+          "line": 918,
+          "text": "CaloWaveformDigiAlg                        INFO  Sigma: 3.67"
+        },
+        {
+          "line": 919,
+          "text": "CaloWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 920,
+          "text": "CaloWaveformDigiAlg                        INFO  N:     1000"
+        },
+        {
+          "line": 925,
+          "text": "PreshowerWaveformDigiAlg                   INFO PreshowerWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 926,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Norm:  530"
+        },
+        {
+          "line": 927,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Mean:  850"
+        },
+        {
+          "line": 928,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Sigma: 4"
+        },
+        {
+          "line": 929,
+          "text": "PreshowerWaveformDigiAlg                   INFO  Alpha: -0.32"
+        },
+        {
+          "line": 930,
+          "text": "PreshowerWaveformDigiAlg                   INFO  N:     1000"
+        },
+        {
+          "line": 935,
+          "text": "VetoWaveformDigiAlg                        INFO VetoWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 936,
+          "text": "VetoWaveformDigiAlg                        INFO  Norm:  8890"
+        },
+        {
+          "line": 937,
+          "text": "VetoWaveformDigiAlg                        INFO  Mean:  825"
+        },
+        {
+          "line": 938,
+          "text": "VetoWaveformDigiAlg                        INFO  Sigma: 3.35"
+        },
+        {
+          "line": 939,
+          "text": "VetoWaveformDigiAlg                        INFO  Alpha: -0.32"
+        },
+        {
+          "line": 940,
+          "text": "VetoWaveformDigiAlg                        INFO  N:     9"
+        },
+        {
+          "line": 1015,
+          "text": "VetoNuWaveformDigiAlg                      INFO VetoNuWaveformDigiAlg: initialize waveform digitization kernel"
+        },
+        {
+          "line": 1016,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Norm:  10420"
+        },
+        {
+          "line": 1017,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Mean:  800"
+        },
+        {
+          "line": 1018,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Sigma: 5"
+        },
+        {
+          "line": 1019,
+          "text": "VetoNuWaveformDigiAlg                      INFO  Alpha: -0.28"
+        },
+        {
+          "line": 1020,
+          "text": "VetoNuWaveformDigiAlg                      INFO  N:     1000"
+        }
+      ],
+      "scint_advanced_algorithms": [
+        "TriggerWaveformDigiAlg",
+        "VetoWaveformDigiAlg",
+        "VetoNuWaveformDigiAlg",
+        "PreshowerWaveformDigiAlg"
+      ],
+      "release_commits": [],
+      "kernel_parameters": {
+        "TriggerWaveformDigiAlg": {
+          "Norm": 6360.0,
+          "Mean": 830.0,
+          "Sigma": 3.21,
+          "Alpha": -0.424,
+          "N": 6.14
+        },
+        "CaloWaveformDigiAlg": {
+          "Norm": 0.55,
+          "Mean": 820.0,
+          "Sigma": 3.67,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "PreshowerWaveformDigiAlg": {
+          "Norm": 530.0,
+          "Mean": 850.0,
+          "Sigma": 4.0,
+          "Alpha": -0.32,
+          "N": 1000.0
+        },
+        "VetoWaveformDigiAlg": {
+          "Norm": 8890.0,
+          "Mean": 825.0,
+          "Sigma": 3.35,
+          "Alpha": -0.32,
+          "N": 9.0
+        },
+        "VetoNuWaveformDigiAlg": {
+          "Norm": 10420.0,
+          "Mean": 800.0,
+          "Sigma": 5.0,
+          "Alpha": -0.28,
+          "N": 1000.0
+        }
+      }
+    }
+  ],
+  "pinned_digitization_comparisons": [
+    {
+      "production_commit": "6d6ab70b",
+      "writer_commit": "d32b0ff3",
+      "path": "Waveform/WaveDigiTools/src/WaveformDigitisationTool.cxx",
+      "diff_numstat": "",
+      "identical": true
+    },
+    {
+      "production_commit": "6d6ab70b",
+      "writer_commit": "d32b0ff3",
+      "path": "Waveform/WaveDigiTools/src/WaveformDigitisationTool.h",
+      "diff_numstat": "",
+      "identical": true
+    },
+    {
+      "production_commit": "6d6ab70b",
+      "writer_commit": "d32b0ff3",
+      "path": "Scintillator/ScintDigiAlgs/src/ScintWaveformDigiAlg.cxx",
+      "diff_numstat": "",
+      "identical": true
+    },
+    {
+      "production_commit": "6d6ab70b",
+      "writer_commit": "d32b0ff3",
+      "path": "Scintillator/ScintDigiAlgs/src/ScintWaveformDigiAlg.h",
+      "diff_numstat": "",
+      "identical": true
+    }
+  ],
+  "all_twelve_logged_kernel_parameters_identical": true,
+  "wall_s": 0.9537065853364766,
+  "total_log_bytes": 4736399,
+  "input_scope": "only 12 chosen source production logs, exact RDO output-name checks; no event access or recursive scan",
+  "remaining": "actual full payload (baseline/noise/slopes), clock/offset and reliable channel-specific mu path not certified"
+}

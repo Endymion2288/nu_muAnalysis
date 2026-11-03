@@ -1678,3 +1678,20 @@ final头训练最坏低E MSE/μ τ=1.831164、RMSE比1.353205，四头τ均高�
 **继续F7，结束本次U/F/μ固定组合；唯一下一项stage79转实际脉冲形状/相对时序信息的语义与条件变异检验，0能量训练。** 原62无width/baseline_rms/raw_peak/localtime；旧schema有列≠当前nominal有物理信息。先由stage55已知manifest和合法train身份、实际writer/模拟/读出语义做≤40身份QA；通过再冻结≤2048既有train身份/≤12已知来源的同事件有界提取，测给定积分/pz/位置/状态后是否有跨来源可复现形状/时间变异，而不是固定模板/弱信号坏fit或旧电荷重组。raw合法负值不作小分母比，baseline点RMS不是积分电荷误差；时间需clock/offset/路径证据，不以高能μ飞行时间测能，不按truth E/y拟合响应。
 
 拟议≤4Condor/每≤2CPU/3000MB、CPU总7200s/wall每3600s、输入10GB/最终10MB仅上限，实际可用性/定义/成本/增量收益均未测，先QA再冻结。需交实际新测量与生成机制证据或具体缺失字段/条件，不能只交目录。可用才给下一份固定同容量＋一族信息消融合同，本轮不提取/训练stage79。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage78_energy_ml/followup_input_request.json)。实际π/K支持保留[独立协议](nu_mu_energy_ml_support_delivery_prompt.md)，共同raw/stage54、Calo、interaction/FSI/材料、接受度/背景及真正随机独立确认继续；历史§1–58保留。
+
+
+## 60. stage79：实际hit时间卷积已核实，脉冲摘要变化尚不是测能收益
+
+[stage79报告](../workbook/2026-11-03_stage79_pulse-information-audit.md)交付40事前身份QA、12既有nominal train源/2048同事件测量和12对应生产日志，0能量fit/F7推理/重建/生成。原62/pz0-only一次方动量/11signed raw/typed NaN、41447/8440/14057及91/16/22来源组、42缺失和所有困难尾不变；新读选定物理身份只限train。逐例run/event/inputentry/leading/incoming与原62、raw/status/baseline缓存精确闭合，signed负raw1518保留。
+
+seed2026110379，六run各2源，合法可用池2598→2048；π/K/charm924/598/526，reco pz50–100/100–250/≥250为142/575/1331，唯一incoming2031。每层N/n和两阶段概率因子保留；表中率为抽样描述，非全train加权估计。新联合强信号/未饱和/fit-valid通道14097/22528=62.5755%，threshold失败5679、overflow2751、fit失败169（可重合）；VetoNu弱/默认0和Veto大量饱和不能当有效形状，原事件不删。
+
+12源actual数字化日志均6d6ab70b、OFLCOND-FASER-04→WAVE-Digitization-02-LG，四闪烁体算法全部improved timing；与d32b0ff3指定digitization源码完全相同。实际按hit时间/能损＋几何光传播卷积固定核，再噪声/量化/截断，并非只有总积分乘模板。当前d32重建的width/localtime会被Gaussian/CB覆盖/回退，需独立状态清理；baseline点RMS不是积分误差。完整payload/offset/path及共同data/MC响应未认证。
+
+固定跨源、同component/pz/status、给定本通道积分/pz/位置/RMS有限容差匹配214通道对，仅240不同事件；三pz层1/44/169，VetoNu0对未测，全部12源/三组件有配对。Timing0–3 median绝对width差.028144/.025063/.018959/.014354ns，Preshower0/1 .177652/.160326ns；各来源也有变化。但有限积分容差、其他61输入、噪声/fit不确定未消除，不能宣布独立物理信息或低能增益，低pz证据尤其不足。trigger/bcid全0，源码MC不写trigger且缺clock时可能不调用时间校正；CLOCK_INVALID未置也不证明clock有效。未校正Timing0−1/2−3仅诊断，不入模型，不以μ飞行时间测能。
+
+4Condor9663208一次exit0，formal CPU207.376561s/remote216s、wall合计259.358154/remote297s、peak359.258MiB，1CPU/3000MB/3600s保持；QA wall24.108543s/CPU11.428002s/66.76MB请求。正式ROOT请求2.710755GB，含QA2.777516GB，1650合并调用较逐例少19.43%；物理EOS网络I/O未测。缓存/配对/状态/来源/合成占位/四ClassAd独立验证通过，最终<10MB、分片/包去重。顺序偏差：实际数字化日志核准在正式提交后、条件分析前完成；冻结时明确诊断限制，未换样本/定义，不称全部语义先齐。
+
+**继续F7；唯一下一项stage80：原62 vs 原62＋11×(raw_peak,width)一次固定容量/政策消融。** localtime/trigger/bcid和baseline RMS不作新增能量输入，RMS仅用于冻结有效性，缺失模式属于这一族，收益不能全归纯形状。先复用≤40 QA核同一原train/cal/eval身份的scalar补充与成本/语义，正式提取不扩身份/test/locked；然后三来源折＋final、两臂同原depth5/400轮/unit direct logE/seed2026110380，共≤8fit，OOF raw，final各原cal一个offset，P_cal预定。低pz/两低E/全部困难与500来源区间并报，传统1.05/all F7 1.01/困难1.03/关键层双向tail50+2pp原门槛不降。无增量或风险失败结束固定族，不扫通道/阈值/时间/seed。
+
+拟议≤4提取＋≤4训练/每1CPU3000MB、CPU总7200s/wall每1800s、输入10GB/留存20MB，先实际pilot再冻结，完整成本/能量收益未测，本轮未执行。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage79_energy_ml/followup_input_request.json)。真实π/K[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)、共同raw/stage54、Calo/interaction/FSI/材料/接受度/背景及未开发随机确认继续，历史§1–59保留。
