@@ -1,0 +1,164 @@
+{
+  "models": [
+    {
+      "job": "fold0",
+      "arm": "U",
+      "features": 62,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 22795,
+      "held_N": 13820,
+      "purged_N": 4832,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "fold0",
+      "arm": "P",
+      "features": 84,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 22795,
+      "held_N": 13820,
+      "purged_N": 4832,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "fold1",
+      "arm": "U",
+      "features": 62,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 22878,
+      "held_N": 13667,
+      "purged_N": 4902,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "fold1",
+      "arm": "P",
+      "features": 84,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 22878,
+      "held_N": 13667,
+      "purged_N": 4902,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "fold2",
+      "arm": "U",
+      "features": 62,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 22543,
+      "held_N": 13960,
+      "purged_N": 4944,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "fold2",
+      "arm": "P",
+      "features": 84,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 22543,
+      "held_N": 13960,
+      "purged_N": 4944,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "final",
+      "arm": "U",
+      "features": 62,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 41447,
+      "held_N": 0,
+      "purged_N": 0,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    },
+    {
+      "job": "final",
+      "arm": "P",
+      "features": 84,
+      "trees": 400,
+      "predictions_exact": true,
+      "train_risks_exact": true,
+      "train_N": 41447,
+      "held_N": 0,
+      "purged_N": 0,
+      "group_overlap": 0,
+      "incoming_overlap": 0
+    }
+  ],
+  "OOF_exactly_once_N": 41447,
+  "formal_fits": 8,
+  "extra_pilot_fits": 0,
+  "source_directions": [
+    {
+      "stratum": "E50_100",
+      "groups": 19,
+      "P_cal_better_than_U_cal": 9,
+      "P_cal_better_than_F7": 8
+    },
+    {
+      "stratum": "E100_200",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 13,
+      "P_cal_better_than_F7": 14
+    },
+    {
+      "stratum": "all",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 15,
+      "P_cal_better_than_F7": 14
+    },
+    {
+      "stratum": "E200_inf",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 14,
+      "P_cal_better_than_F7": 12
+    },
+    {
+      "stratum": "pz50_100",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 10,
+      "P_cal_better_than_F7": 8
+    },
+    {
+      "stratum": "high_y",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 12,
+      "P_cal_better_than_F7": 10
+    },
+    {
+      "stratum": "unconfirmed",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 7,
+      "P_cal_better_than_F7": 8
+    },
+    {
+      "stratum": "pz50_100_E200_inf",
+      "groups": 22,
+      "P_cal_better_than_U_cal": 7,
+      "P_cal_better_than_F7": 5
+    }
+  ],
+  "wall_s": 28.349420099984854,
+  "CPU_s": 25.096924789000003,
+  "peak_RSS_MiB": 336.5234375
+}

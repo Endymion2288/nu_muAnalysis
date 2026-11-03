@@ -1,0 +1,9 @@
+{
+  "before_formal_submission": true,
+  "energy_fits": 0,
+  "formal_jobs": 0,
+  "issue": "initial source-audit release parser assumed only Fast-forward/6d6ab70b; actual source129 log uses master/4a0e366b",
+  "correction": "parse actual logged release and compare all four pinned digitization paths to d32b0ff3, without assuming one release or changing event/source selection",
+  "repeated_log_read_bytes": "unmeasured",
+  "collection_note": "all extraction jobs exit0 once; EOS FUSE negative cache hid existing extract_2.tar.gz, confirmed by xrdfs and fetched existing tar to temporary local storage; collector Path import corrected before fitting; no source/identity/definition changes, no compute retry"
+}

@@ -1,0 +1,60 @@
+{
+  "mode": "extract",
+  "cluster": 9663221,
+  "submitted_jobs": 4,
+  "payload_bytes": 4900991,
+  "paths": [
+    "ml/pulse_ablation.py",
+    "ml/pulse_information_audit.py",
+    "ml/audited_features.py",
+    "ml/track_response.py",
+    "ml/support_augmentation.py",
+    "ml/group_risk.py",
+    "ml/expert_combination.py",
+    "ml/extract_pulse_ablation.py",
+    "workbook/stage80_energy_ml/protocol.json",
+    "ntuples/energy_ml_stage80/identity.npz"
+  ],
+  "ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh extract 0",
+      "ClusterId": 9663221,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh extract 1",
+      "ClusterId": 9663221,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 1,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh extract 2",
+      "ClusterId": 9663221,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 2,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh extract 3",
+      "ClusterId": 9663221,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 3,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "submitted_utc": "2026-11-03T17:21:20.960297+00:00",
+  "wall_s": 6.961641584057361,
+  "CPU_s": 0.22755252699999995,
+  "peak_RSS_MiB": 616.60546875
+}

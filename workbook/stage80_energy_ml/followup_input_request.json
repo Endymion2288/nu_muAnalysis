@@ -1,0 +1,43 @@
+{
+  "prepared_in_stage": 80,
+  "executed": false,
+  "next_single_task": "stage81 actual compatible pi/K PHYS development support delivery; zero model fits",
+  "decision": "retain F7; close fixed raw_peak,width family after lowE recovery and tail failures",
+  "independent_protocol": "docs/nu_mu_energy_ml_support_delivery_prompt.md",
+  "historical_protocol_stage": 77,
+  "protocol_unchanged": true,
+  "seed": 2026110377,
+  "source_selection": "known accessible canonical train pi/K pools; uniform <=2 sources each, <=4 full sources total; exclude completely delivered files; record probabilities before outcomes",
+  "QA": "<=40 predetermined identities; actual raw/status,62, linkage, units, Calo reference01-LG payload and closure, measured resources before formal freeze",
+  "identity": "native MeV exact incoming=(pdg,px,py,pz); deduplicate against all stage55 development exposures and stage70 actual28 plus within/across new files",
+  "physics": "original pz>50 and original62; pz0 only first-power magnitude/longitudinal momentum; px/py,q/p,bending allowed; signed raw,VetoNu reduced,typed/status/dependency NaN, missing Calo->total NaN, all tails retained",
+  "deliverables": [
+    "actual complete cutflow and new unique keys by source/component",
+    "true50-100/100-200, reco pz50-100 both lowE and true>=200, high-y/unconfirmed, high end and missing support",
+    "raw/status/Calo validity and response conditions",
+    "actual CPU/wall/RSS/requested bytes and deduplicated compact data",
+    "explicit unavailable input/condition and unmeasured sufficient N, no empty metadata milestone"
+  ],
+  "proposed_budget": {
+    "full_sources": 4,
+    "input_events": 40000,
+    "input_bytes": 10000000000,
+    "Condor_jobs": 4,
+    "CPUs_each_max": 2,
+    "memory_MB_each": 3000,
+    "CPU_total_s": 7200,
+    "wall_each_s": 3600,
+    "retained_bytes": 10000000
+  },
+  "max_model_fits": 0,
+  "no_new_RDO_HITS_reconstruction_generation": true,
+  "no_K_retry": true,
+  "no_test_locked_or_independent_confirmation_claim": true,
+  "restrictions": "do not execute stage81 in stage80; no source replacement based on residuals/energy/new-key yields; no automatic follow-on training",
+  "parallel_obligations": [
+    "true upstream genealogy and random unexposed confirmation",
+    "common raw/stage54 data",
+    "Calo and pulse payload/conditions",
+    "interaction/FSI/material/acceptance/background"
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "main_candidate": "P_cal",
+  "deployment": "retain F7",
+  "versions": {
+    "U_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    },
+    "U_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    },
+    "P_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "P_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    }
+  },
+  "primary_increment": {
+    "source_OOF_raw": {
+      "sample": "source_OOF_raw",
+      "stratum": "pz50_100",
+      "model": "P_raw",
+      "reference": "U_raw",
+      "N": 2498,
+      "groups": 90,
+      "sources": 176,
+      "unique_incoming": 2468,
+      "RMSE_ratio": 0.994011467799834,
+      "RMSE_ratio_low95": 0.9868506252299252,
+      "RMSE_ratio_high95": 1.0018167660442234,
+      "bootstrap_valid": 500,
+      "bootstrap_invalid": 0,
+      "tail50_delta_pp": -1.0808646917534026,
+      "tail50_low95_pp": -2.065976829118166,
+      "tail50_high95_pp": -0.12103695005875108,
+      "positive_tail50_delta_pp": -0.5204163330664507,
+      "positive_tail50_low95_pp": -1.218456992698867,
+      "positive_tail50_high95_pp": 0.16113957403086976,
+      "negative_tail50_delta_pp": -0.5604483586869491,
+      "negative_tail50_low95_pp": -1.0858862968331213,
+      "negative_tail50_high95_pp": 0.021393643031783916
+    },
+    "evaluation": {
+      "sample": "evaluation",
+      "stratum": "pz50_100",
+      "model": "P_raw",
+      "reference": "U_raw",
+      "N": 682,
+      "groups": 22,
+      "sources": 44,
+      "unique_incoming": 682,
+      "RMSE_ratio": 1.0036446293851637,
+      "RMSE_ratio_low95": 0.9936368250744914,
+      "RMSE_ratio_high95": 1.0137885938715663,
+      "bootstrap_valid": 500,
+      "bootstrap_invalid": 0,
+      "tail50_delta_pp": 0.4398826979472137,
+      "tail50_low95_pp": -0.9649621212121212,
+      "tail50_high95_pp": 1.8107402216842903,
+      "positive_tail50_delta_pp": 0.14662756598240456,
+      "positive_tail50_low95_pp": -0.745274155611378,
+      "positive_tail50_high95_pp": 1.0520531335519006,
+      "negative_tail50_delta_pp": 0.2932551319648091,
+      "negative_tail50_low95_pp": -0.5840806792607243,
+      "negative_tail50_high95_pp": 1.1443042321229284
+    }
+  }
+}

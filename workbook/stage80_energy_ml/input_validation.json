@@ -1,0 +1,43 @@
+{
+  "N": 63944,
+  "original62_and_roles_exact": true,
+  "all_events_retained": true,
+  "stage79_same_event_shape_exact_N": 2048,
+  "missing_N": [
+    21,
+    3,
+    7
+  ],
+  "strong_channel_N": 440934,
+  "channel_N": 703384,
+  "splits": [
+    {
+      "job": "fold0",
+      "train_N": 22795,
+      "held_N": 13820,
+      "purged_N": 4832
+    },
+    {
+      "job": "fold1",
+      "train_N": 22878,
+      "held_N": 13667,
+      "purged_N": 4902
+    },
+    {
+      "job": "fold2",
+      "train_N": 22543,
+      "held_N": 13960,
+      "purged_N": 4944
+    },
+    {
+      "job": "final",
+      "train_N": 41447,
+      "held_N": 0,
+      "purged_N": 0
+    }
+  ],
+  "input_bytes": 17649510,
+  "wall_s": 7.397508788853884,
+  "CPU_s": 5.109988993,
+  "peak_RSS_MiB": 616.60546875
+}

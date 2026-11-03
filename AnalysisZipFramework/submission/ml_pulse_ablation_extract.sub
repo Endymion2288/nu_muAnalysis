@@ -1,0 +1,26 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage80
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_v1.sh extract $(job)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-pulse-ablation-stage80-extract.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 180MB
+getenv = False
+max_retries = 0
++MaxRuntime = 1800
++NuMuStage = "energy-ml-pulse-ablation-stage80-extract"
+log = $(spool)/logs/extract.$(ClusterId).log
+output = $(spool)/logs/extract.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/extract.$(ClusterId).$(ProcId).err
+queue job from (
+0
+1
+2
+3
+)

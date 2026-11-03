@@ -1,0 +1,60 @@
+{
+  "mode": "fit",
+  "cluster": 9663223,
+  "submitted_jobs": 4,
+  "payload_bytes": 17598652,
+  "paths": [
+    "ml/pulse_ablation.py",
+    "ml/pulse_information_audit.py",
+    "ml/audited_features.py",
+    "ml/track_response.py",
+    "ml/support_augmentation.py",
+    "ml/group_risk.py",
+    "ml/expert_combination.py",
+    "ml/fit_pulse_ablation.py",
+    "workbook/stage80_energy_ml/protocol.json",
+    "ntuples/energy_ml_stage80/input.npz"
+  ],
+  "ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh fit fold0",
+      "ClusterId": 9663223,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh fit fold1",
+      "ClusterId": 9663223,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 1,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh fit fold2",
+      "ClusterId": 9663223,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 2,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage80/worker_v1.sh fit final",
+      "ClusterId": 9663223,
+      "JobStatus": 1,
+      "MaxRuntime": 1800,
+      "ProcId": 3,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "submitted_utc": "2026-11-03T17:29:04.617077+00:00",
+  "wall_s": 18.437277907971293,
+  "CPU_s": 0.687943573,
+  "peak_RSS_MiB": 616.60546875
+}

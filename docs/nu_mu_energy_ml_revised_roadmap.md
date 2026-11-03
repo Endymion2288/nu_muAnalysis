@@ -1695,3 +1695,26 @@ seed2026110379，六run各2源，合法可用池2598→2048；π/K/charm924/598/
 **继续F7；唯一下一项stage80：原62 vs 原62＋11×(raw_peak,width)一次固定容量/政策消融。** localtime/trigger/bcid和baseline RMS不作新增能量输入，RMS仅用于冻结有效性，缺失模式属于这一族，收益不能全归纯形状。先复用≤40 QA核同一原train/cal/eval身份的scalar补充与成本/语义，正式提取不扩身份/test/locked；然后三来源折＋final、两臂同原depth5/400轮/unit direct logE/seed2026110380，共≤8fit，OOF raw，final各原cal一个offset，P_cal预定。低pz/两低E/全部困难与500来源区间并报，传统1.05/all F7 1.01/困难1.03/关键层双向tail50+2pp原门槛不降。无增量或风险失败结束固定族，不扫通道/阈值/时间/seed。
 
 拟议≤4提取＋≤4训练/每1CPU3000MB、CPU总7200s/wall每1800s、输入10GB/留存20MB，先实际pilot再冻结，完整成本/能量收益未测，本轮未执行。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage79_energy_ml/followup_input_request.json)。真实π/K[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)、共同raw/stage54、Calo/interaction/FSI/材料/接受度/背景及未开发随机确认继续，历史§1–59保留。
+
+## 61. stage80：脉冲族有小幅信息增量，未恢复低能；转实际支持交付
+
+[stage80报告](../workbook/2026-11-03_stage80_pulse-shape-ablation.md)完成原254源/63944固定身份scalar补充、匹配U62/P84维8fit与独立验证。原pz>50/一次方动量仅pz0/11signed raw/typed NaN、41447/8440/14057、91/16/22保守来源组、缺失21/3/7＋11保护及所有困难尾不变。P只加11×raw_peak,width，复用stage79联合强信号/未饱和/fit-valid mask，无效新列NaN，事件不删；localtime/RMS仅有效性依赖不入模，新族含缺失模式。无新身份/alternative/RDO/HITS/生产/F7推理。
+
+正式前40QA逐值闭合，254生产语义全部核查：6d6ab70b135源、4a0e366b119源，四闪烁体improved timing、WAVE-Digitization-02-LG及所列kernel一致，指定四源码同d32。首次解析器漏识master在0正式作业/0fit时修复，不假定全源同release；完整共同data/MC响应仍未认证。254次scalar数组调用读取2521976源行，仅保留63944固定身份，旧62/角色/raw/status/RMS及stage79同2048新形状闭合；有效通道440934/703384。
+
+| log-RMSE | OOF μ/U/P raw | eval μ | F7 | U_cal | P_cal |
+|---|---|---:|---:|---:|---:|
+| true50–100 | .143853/.265914/.265704 | .145487 | .312816 | .317774 | .311694 |
+| true100–200 | .222426/.244853/.241619 | .226876 | .265014 | .263962 | .258639 |
+| all | .526281/.278351/.276328 | .568069 | .296363 | .296791 | .295463 |
+| reco pz50–100 | 1.187733/.471123/.468302 | 1.336853 | .502965 | .506465 | .508282 |
+
+原depth5/400轮/unit direct logE/seed2026110380，两臂同实际train均值初始化、boost_from_average0，原三来源折/incoming purge，41447恰一次OOF；final各原cal一个offset，主P_cal。主低pz raw P/U：OOF **.994011 [.986851,1.001817]**，eval **1.003645 [.993637,1.013789]**，未确立增量。all OOF/eval raw比.992729 [.990749,.995082]/.995557 [.992296,.998503]，第二低E .986790 [.977057,.996480]/.979612 [.966684,.992104]有小幅跨来源收益；最低能区间跨1，不能说所有新增信息为零，也不能以总体改善推广。
+
+P_cal/传统两低E比2.142423 [1.826960,2.497108]/1.140002 [1.070227,1.214789]均未恢复。all/≥200/低pz/high-y/未确认对F7 RMSE95上限1.000485/1.001390/1.020295/1.006509/1.014495，均通过原保护；最低能总/正tail50上限+2.593249pp、低pz总+2.215504、high-y总/负+2.601146/+3.032921、未确认总/负+2.708142/+2.475995pp失败，其余关键层尾通过。最低能33/208正尾占72.8837%损失、median+15.3065%；高端median−43.4070%。同低pz真≥200 P_cal/F7上限1.030876，另一侧代价保留。训练内最低能P .241467并未恢复，不能把唯一原因写成缺数据或过拟合。
+
+4提取9663221＋4训练9663223全部一次exit0/0重试，8正式fit/0pilot。两phase remote CPU254s/wall合计516s，1CPU/3000MB/1800s保持；ROOT请求含QA381981883bytes、额外新日志100075960bytes，实际EOS物理网络I/O未测。8模型逐位回读、原角色/42缺失、6000主对照draw逐事件展开（最大差1.776357e−15）、230风险行与双向尾独立复核通过。最终<20MB，重复输入/分片/软件与传输包去重，保留shape＋模型/预测/紧凑表图；不作新ROOT回读即可重建分析输入。500component分层来源区间不含重训/offset估计/完整谱系/响应/研究选择，cal/eval仍已开发，非联合确认。
+
+**继续F7，结束本固定raw_peak/width族，不续扫通道/mask/时间/seed/权重/架构。唯一下一项stage81：实际兼容π/K PHYS的新增开发支持交付，0模型训练。** 复用[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)原stage77物理/资源合同，文件逐字不改；stage81只在当前主Prompt/记录标号。known合法canonical train π/K事前seed2026110377各均匀≤2来源/总≤4完整源，先≤40身份实际schema/62/raw/status/Calo reference01-LG条件与联结/成本QA，再按实测冻结Condor。对stage55全部曝光＋stage70实际28 key排重，交两低E与同pz真高E/high-y/未确认/高端的新增唯一key/来源/缺失及完整cutflow/成本，原pz>50/所有尾不变。
+
+拟议总40000输入/10GB、≤4job/每≤2CPU3000MB、CPU7200s/wall3600s、最终10MB仅上限，成本/新增N/足量功效未测。实际PHYS/条件不可交付则列最小实际缺口，不再交空metadata清单、不自动重建/生成/失败K重试；角色与key干净的新增仅称开发增补，不作独立确认。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage80_energy_ml/followup_input_request.json)，本轮不执行stage81。共同raw/stage54、完整响应、interaction/FSI/材料/接受度/背景及真正随机未开发确认继续。历史§1–60保留。

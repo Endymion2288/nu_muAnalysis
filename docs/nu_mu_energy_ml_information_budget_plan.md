@@ -884,3 +884,15 @@ X/M来源OOF两低E比.432053/.742703、eval密度NLL .140668<.319245仍说明�
 4任务9663208一次exit0、remote CPU216s/wall297s、formal peak359.258MiB；1CPU/3000MB/3600s保持。QA CPU11.428002s/24.108543wall；正式ROOT请求2.710755GB，含QA2.777516GB，1650聚合调用；物理EOS网络I/O未测。持久结果/配对/语义/状态占位/ClassAd独立验证通过，留存<10MB。生产语义实际认证在提交后、正式分析前，冻结注明诊断限制；保留这一顺序偏差，不伪称全部先核准。
 
 继续F7；stage80唯一有限假说为原62 vs 原62＋22个raw_peak/width，保持原全队列/来源隔离/容量/政策，≤8fit。缺失模式是族的一部分，不把增量全归纯形状；RMS仅有效性、time不入模。先≤40 QA和scalar同身份补充成本/新增来源语义，后冻结≤4提取＋≤4训练/每1CPU3000MB、CPU7200s/wall1800s、输入10GB/留存20MB；尚未执行/收益未测。两低E/低pz/困难的来源OOF及eval与原传统/F7恢复/保护门槛不降，失败不续扫变量/阈值/seed/时间或架构。详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage79_energy_ml/followup_input_request.json)。真实支持/共同响应/随机确认义务不由此替代，旧§1–39保留。
+
+## 41. stage80：新增脉冲族的收益不足以替代支持交付
+
+[stage80报告](../workbook/2026-11-03_stage80_pulse-shape-ablation.md)交付254 nominal源/63944原身份同事件22列及原62匹配8fit；原41447/8440/14057、来源隔离/42缺失/pz0/raw/typed NaN/全部困难尾不变。40QA与254生产日志核查在正式提交前完成；实际release两种但指定digitization源码/四算法和所列kernel相同，完整共同响应仍未知。有效形状440934/703384；localtime/RMS仅mask依赖，新族收益不等于纯形状因果贡献。
+
+主低pz raw P/U来源OOF .994011 [.986851,1.001817]、eval1.003645 [.993637,1.013789]，未证增量。all及100–200 raw在OOF/eval有小幅区间<1收益，最低能跨1。主P_cal eval两低E .311694/.258639，相对传统95%上限2.497108/1.214789仍失败。all/F7 .996966 [.993616,1.000485]、全部困难RMSE原保护通过，最低能总/正、低pz总、高y/未确认总/负tail50部分失败；不能写所有风险失败或凭总体改善推广。最低能33/208正尾占72.8837%损失，高端median−43.4070%；训练内最低能P .241467，仍未恢复，数据不足不是已识别唯一原因。
+
+4提取＋4训练一次exit0/无重试，8fit/0pilot，remote CPU254s/wall516s、1CPU3000MB1800s，ROOT请求含QA .381982GB、额外生产日志 .100076GB；EOS物理网络I/O未测。8模型逐位回读/41447一次OOF/原角色缺失及6000主对照draw展开通过，紧凑留存<20MB。来源500区间为固定预测/offset，排除重训/响应/谱系/研究选择，cal/eval仍开发，不降传统1.05/all1.01/困难1.03/双向尾2pp标准。
+
+继续F7，关闭一次raw_peak/width族，不改mask/通道/seed/权重/时间续调。**下一笔stage81只购买实际新增π/K开发支持，0训练**，执行保留的[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)原stage77合同，协议逐字不改。已知合法train池事前选π/K各≤2、总≤4完整PHYS，≤40实际条件/62/raw/Calo/联结/资源QA后才冻结Condor；旧stage55全部曝光＋stage70实际28 key去重，完整报告低E及同pz高E/high-y/未确认歧义两侧新增唯一支持与代价。40000输入/10GB、≤4job≤2CPU3000MB、CPU7200s/wall3600s、留存10MB是上限而非可交付证明；新增N/充分功效未测。
+
+不能用空metadata阶段或旧28例复评替代实际增补；入口缺失交具体路径/字段/条件，不自动RDO生产/失败K重试/源替换。新增仅开发增补，真随机未开发确认、上游谱系、共同raw/stage54、Calo/脉冲响应和interaction/FSI/材料/接受度/背景仍待交付。见[主Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage80_energy_ml/followup_input_request.json)，本轮未执行stage81。旧§1–40保留。

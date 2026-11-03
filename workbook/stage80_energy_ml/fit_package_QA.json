@@ -1,0 +1,61 @@
+{
+  "actual_payload": true,
+  "zero_energy_fits": true,
+  "records": [
+    {
+      "job": "fold0",
+      "train_N": 22795,
+      "held_N": 13820,
+      "energy_fits": 0,
+      "features": [
+        62,
+        84
+      ],
+      "wall_s": 0.3815609863959253,
+      "CPU_s": 0.3729361080000002,
+      "peak_RSS_MiB": 258.59765625
+    },
+    {
+      "job": "fold1",
+      "train_N": 22878,
+      "held_N": 13667,
+      "energy_fits": 0,
+      "features": [
+        62,
+        84
+      ],
+      "wall_s": 0.37463727919384837,
+      "CPU_s": 0.3710750739999997,
+      "peak_RSS_MiB": 257.98046875
+    },
+    {
+      "job": "fold2",
+      "train_N": 22543,
+      "held_N": 13960,
+      "energy_fits": 0,
+      "features": [
+        62,
+        84
+      ],
+      "wall_s": 0.3682655831798911,
+      "CPU_s": 0.36515217899999985,
+      "peak_RSS_MiB": 257.671875
+    },
+    {
+      "job": "final",
+      "train_N": 41447,
+      "held_N": 0,
+      "energy_fits": 0,
+      "features": [
+        62,
+        84
+      ],
+      "wall_s": 0.2299106060527265,
+      "CPU_s": 0.22162041899999996,
+      "peak_RSS_MiB": 255.88671875
+    }
+  ],
+  "wall_s": 16.939548577181995,
+  "CPU_s": 0.6831794890000001,
+  "peak_RSS_MiB": 616.60546875
+}
