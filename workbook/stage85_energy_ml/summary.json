@@ -1,0 +1,2864 @@
+{
+  "events": {
+    "data": 2048,
+    "MC": 2048
+  },
+  "common_stations": [
+    1,
+    2,
+    3
+  ],
+  "active_denominator_certified": false,
+  "noise_identified": false,
+  "outcome": "B conditional activity; C for pure noise identification and certified active-channel rate",
+  "source_bootstrap": {
+    "replicates": 500,
+    "seed": 2026110385,
+    "scheme": "within fixed data run / MC charge run",
+    "limitations": "fixed prediction/sample/selection; no new-run extrapolation or detector nuisance coverage"
+  },
+  "correlations": [
+    {
+      "kind": "data",
+      "observable": "raw",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.3713505176677957,
+          0.28480722981166673
+        ],
+        [
+          0.37135051766779564,
+          1.0,
+          0.1350557697517546
+        ],
+        [
+          0.2848072298116667,
+          0.1350557697517546,
+          0.9999999999999999
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.2409736949990536,
+          "high95": 0.4437386228299025
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.14358775589481182,
+          "high95": 0.4593139786151395
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.0952433444970445,
+          "high95": 0.18135502242987156
+        }
+      ]
+    },
+    {
+      "kind": "data",
+      "observable": "outside_strips",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.3850655909133417,
+          0.28759947275053876
+        ],
+        [
+          0.3850655909133417,
+          1.0,
+          0.1542263505421035
+        ],
+        [
+          0.28759947275053876,
+          0.15422635054210349,
+          1.0
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.2580056462500914,
+          "high95": 0.4452251168849788
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.13512522392424936,
+          "high95": 0.46380521843447137
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.11676776425242236,
+          "high95": 0.20224101209025944
+        }
+      ]
+    },
+    {
+      "kind": "data",
+      "observable": "clusters",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          0.9999999999999998,
+          0.4058917180141887,
+          0.3414881916353405
+        ],
+        [
+          0.4058917180141887,
+          1.0,
+          0.17028577815946538
+        ],
+        [
+          0.3414881916353405,
+          0.17028577815946538,
+          0.9999999999999999
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.2825679602222633,
+          "high95": 0.4798400542690966
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.17422942660366003,
+          "high95": 0.5372749011767798
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.14250284754764417,
+          "high95": 0.20880145079383292
+        }
+      ]
+    },
+    {
+      "kind": "data",
+      "observable": "outside_clusters",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.40545638239295617,
+          0.37073056957861644
+        ],
+        [
+          0.40545638239295617,
+          1.0,
+          0.18750027457875382
+        ],
+        [
+          0.3707305695786164,
+          0.18750027457875382,
+          1.0
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.27911963849193533,
+          "high95": 0.4637213960071643
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.19113140084624256,
+          "high95": 0.5639709360907483
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.15175444334585947,
+          "high95": 0.2428698421223748
+        }
+      ]
+    },
+    {
+      "kind": "MC",
+      "observable": "raw",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.2723012165408253,
+          0.10372923400545814
+        ],
+        [
+          0.2723012165408253,
+          0.9999999999999999,
+          0.13039459824629737
+        ],
+        [
+          0.10372923400545815,
+          0.13039459824629737,
+          1.0
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.204601136949686,
+          "high95": 0.357333561278989
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.044786809039456796,
+          "high95": 0.20377832848207744
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.0932753161286373,
+          "high95": 0.20061522310630953
+        }
+      ]
+    },
+    {
+      "kind": "MC",
+      "observable": "outside_strips",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          0.9999999999999999,
+          0.2770531365806366,
+          0.10921349481968745
+        ],
+        [
+          0.2770531365806366,
+          0.9999999999999999,
+          0.13244339844170983
+        ],
+        [
+          0.10921349481968745,
+          0.13244339844170983,
+          1.0
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.21880286311428435,
+          "high95": 0.37782328108050284
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.04147608922646139,
+          "high95": 0.22501884773692327
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.09548062504849243,
+          "high95": 0.22325884465966836
+        }
+      ]
+    },
+    {
+      "kind": "MC",
+      "observable": "clusters",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.24156065185932374,
+          0.11871393497678633
+        ],
+        [
+          0.24156065185932377,
+          1.0,
+          0.14267358128088417
+        ],
+        [
+          0.11871393497678634,
+          0.14267358128088417,
+          1.0
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.1965019160770684,
+          "high95": 0.3273148717992684
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.05675823368995073,
+          "high95": 0.24219146447946108
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.09840628311366867,
+          "high95": 0.2361479889231908
+        }
+      ]
+    },
+    {
+      "kind": "MC",
+      "observable": "outside_clusters",
+      "stations": [
+        1,
+        2,
+        3
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.2535501186526095,
+          0.13184121174623314
+        ],
+        [
+          0.2535501186526095,
+          0.9999999999999999,
+          0.14151677762522158
+        ],
+        [
+          0.13184121174623314,
+          0.14151677762522158,
+          1.0
+        ]
+      ],
+      "intervals": [
+        {
+          "stations": [
+            1,
+            2
+          ],
+          "low95": 0.21856845544639159,
+          "high95": 0.3388527106000043
+        },
+        {
+          "stations": [
+            1,
+            3
+          ],
+          "low95": 0.06293364393955604,
+          "high95": 0.25061352141969057
+        },
+        {
+          "stations": [
+            2,
+            3
+          ],
+          "low95": 0.09335250312979758,
+          "high95": 0.24767574789027091
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "qa": false,
+      "definition": {
+        "collections": [
+          "SCT_RDOs",
+          "SCT_ClusterContainer",
+          "CKFTrackCollectionBackwardWithoutIFT"
+        ],
+        "common_stations": [
+          1,
+          2,
+          3
+        ],
+        "separate_station": 0,
+        "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+        "corridor_variants": 1,
+        "nominal_channels_per_station": 36864,
+        "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+        "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+        "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+        "energy_fits": 0,
+        "pitch_mm": 0.08,
+        "corridor_half_width_mm": 5.12,
+        "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+        "pbin_edges_GeV": [
+          100,
+          250,
+          1000
+        ],
+        "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+        "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+        "qa_expected_unique_payload_identities": 27,
+        "qa_identity_count_note": "8 old source12 smoke selected + one REC entry0 schema + first case of each 18 frozen source; repeated identities are not additional independent QA"
+      },
+      "bytes_read": 346089735,
+      "wall_s": 420.68671389482915,
+      "cpu_s": 187.144588378,
+      "peak_rss_MiB": 787.625
+    },
+    {
+      "qa": false,
+      "definition": {
+        "collections": [
+          "SCT_RDOs",
+          "SCT_ClusterContainer",
+          "CKFTrackCollectionBackwardWithoutIFT"
+        ],
+        "common_stations": [
+          1,
+          2,
+          3
+        ],
+        "separate_station": 0,
+        "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+        "corridor_variants": 1,
+        "nominal_channels_per_station": 36864,
+        "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+        "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+        "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+        "energy_fits": 0,
+        "pitch_mm": 0.08,
+        "corridor_half_width_mm": 5.12,
+        "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+        "pbin_edges_GeV": [
+          100,
+          250,
+          1000
+        ],
+        "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+        "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+        "qa_expected_unique_payload_identities": 27,
+        "qa_identity_count_note": "8 old source12 smoke selected + one REC entry0 schema + first case of each 18 frozen source; repeated identities are not additional independent QA"
+      },
+      "bytes_read": 345076759,
+      "wall_s": 443.6081753800099,
+      "cpu_s": 186.061390009,
+      "peak_rss_MiB": 787.8671875
+    },
+    {
+      "qa": false,
+      "definition": {
+        "collections": [
+          "SCT_RDOs",
+          "SCT_ClusterContainer",
+          "CKFTrackCollectionBackwardWithoutIFT"
+        ],
+        "common_stations": [
+          1,
+          2,
+          3
+        ],
+        "separate_station": 0,
+        "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+        "corridor_variants": 1,
+        "nominal_channels_per_station": 36864,
+        "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+        "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+        "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+        "energy_fits": 0,
+        "pitch_mm": 0.08,
+        "corridor_half_width_mm": 5.12,
+        "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+        "pbin_edges_GeV": [
+          100,
+          250,
+          1000
+        ],
+        "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+        "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+        "qa_expected_unique_payload_identities": 27,
+        "qa_identity_count_note": "8 old source12 smoke selected + one REC entry0 schema + first case of each 18 frozen source; repeated identities are not additional independent QA"
+      },
+      "bytes_read": 345761394,
+      "wall_s": 384.90288968384266,
+      "cpu_s": 178.75534293,
+      "peak_rss_MiB": 783.91015625
+    },
+    {
+      "qa": false,
+      "definition": {
+        "collections": [
+          "SCT_RDOs",
+          "SCT_ClusterContainer",
+          "CKFTrackCollectionBackwardWithoutIFT"
+        ],
+        "common_stations": [
+          1,
+          2,
+          3
+        ],
+        "separate_station": 0,
+        "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+        "corridor_variants": 1,
+        "nominal_channels_per_station": 36864,
+        "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+        "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+        "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+        "energy_fits": 0,
+        "pitch_mm": 0.08,
+        "corridor_half_width_mm": 5.12,
+        "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+        "pbin_edges_GeV": [
+          100,
+          250,
+          1000
+        ],
+        "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+        "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+        "qa_expected_unique_payload_identities": 27,
+        "qa_identity_count_note": "8 old source12 smoke selected + one REC entry0 schema + first case of each 18 frozen source; repeated identities are not additional independent QA"
+      },
+      "bytes_read": 344153456,
+      "wall_s": 417.60674302099505,
+      "cpu_s": 171.970197703,
+      "peak_rss_MiB": 788.62890625
+    },
+    {
+      "qa": false,
+      "definition": {
+        "collections": [
+          "SCT_RDOs",
+          "SCT_ClusterContainer",
+          "CKFTrackCollectionBackwardWithoutIFT"
+        ],
+        "common_stations": [
+          1,
+          2,
+          3
+        ],
+        "separate_station": 0,
+        "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+        "corridor_variants": 1,
+        "nominal_channels_per_station": 36864,
+        "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+        "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+        "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+        "energy_fits": 0,
+        "pitch_mm": 0.08,
+        "corridor_half_width_mm": 5.12,
+        "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+        "pbin_edges_GeV": [
+          100,
+          250,
+          1000
+        ],
+        "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+        "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+        "qa_expected_unique_payload_identities": 27,
+        "qa_identity_count_note": "8 old source12 smoke selected + one REC entry0 schema + first case of each 18 frozen source; repeated identities are not additional independent QA"
+      },
+      "bytes_read": 344237652,
+      "wall_s": 410.0421078230138,
+      "cpu_s": 169.468778198,
+      "peak_rss_MiB": 792.3828125
+    },
+    {
+      "qa": false,
+      "definition": {
+        "collections": [
+          "SCT_RDOs",
+          "SCT_ClusterContainer",
+          "CKFTrackCollectionBackwardWithoutIFT"
+        ],
+        "common_stations": [
+          1,
+          2,
+          3
+        ],
+        "separate_station": 0,
+        "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+        "corridor_variants": 1,
+        "nominal_channels_per_station": 36864,
+        "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+        "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+        "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+        "energy_fits": 0,
+        "pitch_mm": 0.08,
+        "corridor_half_width_mm": 5.12,
+        "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+        "pbin_edges_GeV": [
+          100,
+          250,
+          1000
+        ],
+        "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+        "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+        "qa_expected_unique_payload_identities": 27,
+        "qa_identity_count_note": "8 old source12 smoke selected + one REC entry0 schema + first case of each 18 frozen source; repeated identities are not additional independent QA"
+      },
+      "bytes_read": 344722542,
+      "wall_s": 385.6371083147824,
+      "cpu_s": 177.141508068,
+      "peak_rss_MiB": 787.87109375
+    }
+  ],
+  "files": [
+    {
+      "source": 0,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rec/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00000-00004-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 4765347
+    },
+    {
+      "source": 6,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rec/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00000-00004-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 5030802
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00000-r0022-xAOD.root",
+      "entries": 124391,
+      "matched": 0,
+      "bytes_read": 6478376
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00001-r0022-xAOD.root",
+      "entries": 123911,
+      "matched": 0,
+      "bytes_read": 6574828
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00002-r0022-xAOD.root",
+      "entries": 123783,
+      "matched": 0,
+      "bytes_read": 6548433
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00003-r0022-xAOD.root",
+      "entries": 119484,
+      "matched": 0,
+      "bytes_read": 7061916
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00004-r0022-xAOD.root",
+      "entries": 118586,
+      "matched": 0,
+      "bytes_read": 6480613
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00005-r0022-xAOD.root",
+      "entries": 118556,
+      "matched": 0,
+      "bytes_read": 6503608
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00006-r0022-xAOD.root",
+      "entries": 118505,
+      "matched": 5,
+      "bytes_read": 6631446
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00007-r0022-xAOD.root",
+      "entries": 118497,
+      "matched": 15,
+      "bytes_read": 6751409
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00008-r0022-xAOD.root",
+      "entries": 118504,
+      "matched": 7,
+      "bytes_read": 6504972
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00009-r0022-xAOD.root",
+      "entries": 118494,
+      "matched": 5,
+      "bytes_read": 6712183
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00010-r0022-xAOD.root",
+      "entries": 118492,
+      "matched": 7,
+      "bytes_read": 7297050
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00011-r0022-xAOD.root",
+      "entries": 118795,
+      "matched": 13,
+      "bytes_read": 6550949
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00012-r0022-xAOD.root",
+      "entries": 119141,
+      "matched": 8,
+      "bytes_read": 6615641
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00013-r0022-xAOD.root",
+      "entries": 118873,
+      "matched": 6,
+      "bytes_read": 6582094
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00014-r0022-xAOD.root",
+      "entries": 118578,
+      "matched": 9,
+      "bytes_read": 6937076
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00015-r0022-xAOD.root",
+      "entries": 118580,
+      "matched": 7,
+      "bytes_read": 6756406
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00016-r0022-xAOD.root",
+      "entries": 118507,
+      "matched": 8,
+      "bytes_read": 6793810
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00017-r0022-xAOD.root",
+      "entries": 118437,
+      "matched": 11,
+      "bytes_read": 6604451
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00018-r0022-xAOD.root",
+      "entries": 118464,
+      "matched": 8,
+      "bytes_read": 6677337
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00019-r0022-xAOD.root",
+      "entries": 118472,
+      "matched": 4,
+      "bytes_read": 6761489
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00020-r0022-xAOD.root",
+      "entries": 118443,
+      "matched": 6,
+      "bytes_read": 6928282
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00021-r0022-xAOD.root",
+      "entries": 118411,
+      "matched": 8,
+      "bytes_read": 6523750
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00022-r0022-xAOD.root",
+      "entries": 118451,
+      "matched": 6,
+      "bytes_read": 6648136
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00023-r0022-xAOD.root",
+      "entries": 118353,
+      "matched": 8,
+      "bytes_read": 7277761
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00024-r0022-xAOD.root",
+      "entries": 118422,
+      "matched": 11,
+      "bytes_read": 6551700
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00025-r0022-xAOD.root",
+      "entries": 118438,
+      "matched": 7,
+      "bytes_read": 6956556
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00026-r0022-xAOD.root",
+      "entries": 118410,
+      "matched": 8,
+      "bytes_read": 6527907
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00027-r0022-xAOD.root",
+      "entries": 118373,
+      "matched": 6,
+      "bytes_read": 6541456
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00028-r0022-xAOD.root",
+      "entries": 118329,
+      "matched": 5,
+      "bytes_read": 6440116
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00029-r0022-xAOD.root",
+      "entries": 118383,
+      "matched": 8,
+      "bytes_read": 6660945
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00030-r0022-xAOD.root",
+      "entries": 118348,
+      "matched": 5,
+      "bytes_read": 6499542
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00031-r0022-xAOD.root",
+      "entries": 118418,
+      "matched": 10,
+      "bytes_read": 6988873
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00032-r0022-xAOD.root",
+      "entries": 118341,
+      "matched": 6,
+      "bytes_read": 6639291
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00033-r0022-xAOD.root",
+      "entries": 118404,
+      "matched": 11,
+      "bytes_read": 6649186
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00034-r0022-xAOD.root",
+      "entries": 118326,
+      "matched": 8,
+      "bytes_read": 6906744
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00035-r0022-xAOD.root",
+      "entries": 118303,
+      "matched": 6,
+      "bytes_read": 7012804
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00036-r0022-xAOD.root",
+      "entries": 118286,
+      "matched": 6,
+      "bytes_read": 6659893
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00037-r0022-xAOD.root",
+      "entries": 118356,
+      "matched": 8,
+      "bytes_read": 6598240
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00038-r0022-xAOD.root",
+      "entries": 118339,
+      "matched": 6,
+      "bytes_read": 6575944
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00039-r0022-xAOD.root",
+      "entries": 118386,
+      "matched": 9,
+      "bytes_read": 6534762
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00040-r0022-xAOD.root",
+      "entries": 118268,
+      "matched": 4,
+      "bytes_read": 6661761
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00041-r0022-xAOD.root",
+      "entries": 118276,
+      "matched": 10,
+      "bytes_read": 6635890
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00042-r0022-xAOD.root",
+      "entries": 118332,
+      "matched": 5,
+      "bytes_read": 7120248
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00043-r0022-xAOD.root",
+      "entries": 118326,
+      "matched": 13,
+      "bytes_read": 7157345
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00044-r0022-xAOD.root",
+      "entries": 118325,
+      "matched": 11,
+      "bytes_read": 7223999
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00045-r0022-xAOD.root",
+      "entries": 118359,
+      "matched": 7,
+      "bytes_read": 6940836
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00046-r0022-xAOD.root",
+      "entries": 118407,
+      "matched": 9,
+      "bytes_read": 6761369
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00047-r0022-xAOD.root",
+      "entries": 118342,
+      "matched": 5,
+      "bytes_read": 6553138
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00048-r0022-xAOD.root",
+      "entries": 118381,
+      "matched": 9,
+      "bytes_read": 6519474
+    },
+    {
+      "source": 12,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00049-r0022-xAOD.root",
+      "entries": 118380,
+      "matched": 8,
+      "bytes_read": 6773551
+    },
+    {
+      "source": 1,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rec/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00100-00104-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 4893936
+    },
+    {
+      "source": 7,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rec/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00100-00104-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 4883516
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00400-r0022-xAOD.root",
+      "entries": 118515,
+      "matched": 7,
+      "bytes_read": 6585827
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00401-r0022-xAOD.root",
+      "entries": 118509,
+      "matched": 11,
+      "bytes_read": 7060661
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00402-r0022-xAOD.root",
+      "entries": 118485,
+      "matched": 8,
+      "bytes_read": 6785932
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00403-r0022-xAOD.root",
+      "entries": 118503,
+      "matched": 9,
+      "bytes_read": 6499202
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00404-r0022-xAOD.root",
+      "entries": 118483,
+      "matched": 4,
+      "bytes_read": 6829880
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00405-r0022-xAOD.root",
+      "entries": 118525,
+      "matched": 8,
+      "bytes_read": 6764200
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00406-r0022-xAOD.root",
+      "entries": 118506,
+      "matched": 3,
+      "bytes_read": 6889813
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00407-r0022-xAOD.root",
+      "entries": 118446,
+      "matched": 5,
+      "bytes_read": 6549384
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00408-r0022-xAOD.root",
+      "entries": 118483,
+      "matched": 7,
+      "bytes_read": 6513242
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00409-r0022-xAOD.root",
+      "entries": 118569,
+      "matched": 8,
+      "bytes_read": 6859476
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00410-r0022-xAOD.root",
+      "entries": 118526,
+      "matched": 3,
+      "bytes_read": 6739891
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00411-r0022-xAOD.root",
+      "entries": 118478,
+      "matched": 12,
+      "bytes_read": 6805072
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00412-r0022-xAOD.root",
+      "entries": 118457,
+      "matched": 5,
+      "bytes_read": 6859960
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00413-r0022-xAOD.root",
+      "entries": 118433,
+      "matched": 7,
+      "bytes_read": 6672731
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00414-r0022-xAOD.root",
+      "entries": 118398,
+      "matched": 7,
+      "bytes_read": 6600723
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00415-r0022-xAOD.root",
+      "entries": 118489,
+      "matched": 7,
+      "bytes_read": 7055635
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00416-r0022-xAOD.root",
+      "entries": 118463,
+      "matched": 8,
+      "bytes_read": 7042918
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00417-r0022-xAOD.root",
+      "entries": 118483,
+      "matched": 5,
+      "bytes_read": 7057557
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00418-r0022-xAOD.root",
+      "entries": 118520,
+      "matched": 6,
+      "bytes_read": 6501314
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00419-r0022-xAOD.root",
+      "entries": 118556,
+      "matched": 9,
+      "bytes_read": 6690341
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00420-r0022-xAOD.root",
+      "entries": 118436,
+      "matched": 2,
+      "bytes_read": 6427542
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00421-r0022-xAOD.root",
+      "entries": 118485,
+      "matched": 4,
+      "bytes_read": 6925236
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00422-r0022-xAOD.root",
+      "entries": 118481,
+      "matched": 14,
+      "bytes_read": 6684089
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00423-r0022-xAOD.root",
+      "entries": 118460,
+      "matched": 7,
+      "bytes_read": 6559361
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00424-r0022-xAOD.root",
+      "entries": 118483,
+      "matched": 9,
+      "bytes_read": 6646716
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00425-r0022-xAOD.root",
+      "entries": 118528,
+      "matched": 7,
+      "bytes_read": 6577194
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00426-r0022-xAOD.root",
+      "entries": 118427,
+      "matched": 9,
+      "bytes_read": 7291207
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00427-r0022-xAOD.root",
+      "entries": 118425,
+      "matched": 3,
+      "bytes_read": 6560744
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00428-r0022-xAOD.root",
+      "entries": 118452,
+      "matched": 7,
+      "bytes_read": 6510041
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00429-r0022-xAOD.root",
+      "entries": 118473,
+      "matched": 9,
+      "bytes_read": 6747686
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00430-r0022-xAOD.root",
+      "entries": 118492,
+      "matched": 7,
+      "bytes_read": 6659477
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00431-r0022-xAOD.root",
+      "entries": 118479,
+      "matched": 2,
+      "bytes_read": 6582930
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00432-r0022-xAOD.root",
+      "entries": 118499,
+      "matched": 9,
+      "bytes_read": 6859512
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00433-r0022-xAOD.root",
+      "entries": 118476,
+      "matched": 6,
+      "bytes_read": 6510746
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00434-r0022-xAOD.root",
+      "entries": 118471,
+      "matched": 4,
+      "bytes_read": 6472124
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00435-r0022-xAOD.root",
+      "entries": 118508,
+      "matched": 4,
+      "bytes_read": 6604017
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00436-r0022-xAOD.root",
+      "entries": 118507,
+      "matched": 5,
+      "bytes_read": 6487102
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00437-r0022-xAOD.root",
+      "entries": 118472,
+      "matched": 4,
+      "bytes_read": 6468672
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00438-r0022-xAOD.root",
+      "entries": 118511,
+      "matched": 5,
+      "bytes_read": 6574725
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00439-r0022-xAOD.root",
+      "entries": 118451,
+      "matched": 10,
+      "bytes_read": 6943197
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00440-r0022-xAOD.root",
+      "entries": 118416,
+      "matched": 7,
+      "bytes_read": 6576485
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00441-r0022-xAOD.root",
+      "entries": 118472,
+      "matched": 6,
+      "bytes_read": 7208687
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00442-r0022-xAOD.root",
+      "entries": 118478,
+      "matched": 9,
+      "bytes_read": 6489889
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00443-r0022-xAOD.root",
+      "entries": 118548,
+      "matched": 7,
+      "bytes_read": 7027665
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00444-r0022-xAOD.root",
+      "entries": 118502,
+      "matched": 7,
+      "bytes_read": 6867789
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00445-r0022-xAOD.root",
+      "entries": 118507,
+      "matched": 8,
+      "bytes_read": 6617221
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00446-r0022-xAOD.root",
+      "entries": 118508,
+      "matched": 10,
+      "bytes_read": 6488163
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00447-r0022-xAOD.root",
+      "entries": 118491,
+      "matched": 7,
+      "bytes_read": 6565793
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00448-r0022-xAOD.root",
+      "entries": 118531,
+      "matched": 8,
+      "bytes_read": 6480174
+    },
+    {
+      "source": 13,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00449-r0022-xAOD.root",
+      "entries": 118542,
+      "matched": 7,
+      "bytes_read": 6521364
+    },
+    {
+      "source": 2,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rec/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00195-00199-xAOD.root",
+      "entries": 50000,
+      "matched": 170,
+      "bytes_read": 4597343
+    },
+    {
+      "source": 8,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rec/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00200-00204-xAOD.root",
+      "entries": 50000,
+      "matched": 170,
+      "bytes_read": 4976160
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00000-r0022-xAOD.root",
+      "entries": 124323,
+      "matched": 0,
+      "bytes_read": 6474815
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00001-r0022-xAOD.root",
+      "entries": 123812,
+      "matched": 0,
+      "bytes_read": 6579454
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00002-r0022-xAOD.root",
+      "entries": 121920,
+      "matched": 0,
+      "bytes_read": 6843157
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00003-r0022-xAOD.root",
+      "entries": 118545,
+      "matched": 0,
+      "bytes_read": 6579985
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00004-r0022-xAOD.root",
+      "entries": 118440,
+      "matched": 3,
+      "bytes_read": 6896808
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00005-r0022-xAOD.root",
+      "entries": 118413,
+      "matched": 8,
+      "bytes_read": 6753927
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00006-r0022-xAOD.root",
+      "entries": 118455,
+      "matched": 8,
+      "bytes_read": 6620906
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00007-r0022-xAOD.root",
+      "entries": 118460,
+      "matched": 6,
+      "bytes_read": 6750365
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00008-r0022-xAOD.root",
+      "entries": 118383,
+      "matched": 5,
+      "bytes_read": 6639874
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00009-r0022-xAOD.root",
+      "entries": 118463,
+      "matched": 5,
+      "bytes_read": 6779467
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00010-r0022-xAOD.root",
+      "entries": 118429,
+      "matched": 11,
+      "bytes_read": 6820557
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00011-r0022-xAOD.root",
+      "entries": 118514,
+      "matched": 7,
+      "bytes_read": 6666527
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00012-r0022-xAOD.root",
+      "entries": 118844,
+      "matched": 5,
+      "bytes_read": 7114897
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00013-r0022-xAOD.root",
+      "entries": 119302,
+      "matched": 10,
+      "bytes_read": 6696319
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00014-r0022-xAOD.root",
+      "entries": 118828,
+      "matched": 4,
+      "bytes_read": 6875098
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00015-r0022-xAOD.root",
+      "entries": 118388,
+      "matched": 4,
+      "bytes_read": 6862358
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00016-r0022-xAOD.root",
+      "entries": 118426,
+      "matched": 7,
+      "bytes_read": 6575928
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00017-r0022-xAOD.root",
+      "entries": 118429,
+      "matched": 8,
+      "bytes_read": 6627533
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00018-r0022-xAOD.root",
+      "entries": 118365,
+      "matched": 10,
+      "bytes_read": 6562125
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00019-r0022-xAOD.root",
+      "entries": 118324,
+      "matched": 5,
+      "bytes_read": 7084001
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00020-r0022-xAOD.root",
+      "entries": 118394,
+      "matched": 9,
+      "bytes_read": 6636045
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00021-r0022-xAOD.root",
+      "entries": 118398,
+      "matched": 7,
+      "bytes_read": 7003936
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00022-r0022-xAOD.root",
+      "entries": 118314,
+      "matched": 9,
+      "bytes_read": 6508101
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00023-r0022-xAOD.root",
+      "entries": 118312,
+      "matched": 8,
+      "bytes_read": 7010841
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00024-r0022-xAOD.root",
+      "entries": 118359,
+      "matched": 5,
+      "bytes_read": 6670721
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00025-r0022-xAOD.root",
+      "entries": 118278,
+      "matched": 4,
+      "bytes_read": 6466804
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00026-r0022-xAOD.root",
+      "entries": 118200,
+      "matched": 11,
+      "bytes_read": 6546835
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00027-r0022-xAOD.root",
+      "entries": 118276,
+      "matched": 8,
+      "bytes_read": 6548692
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00028-r0022-xAOD.root",
+      "entries": 118293,
+      "matched": 10,
+      "bytes_read": 6514308
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00029-r0022-xAOD.root",
+      "entries": 118260,
+      "matched": 7,
+      "bytes_read": 6469701
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00030-r0022-xAOD.root",
+      "entries": 118238,
+      "matched": 4,
+      "bytes_read": 6994497
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00031-r0022-xAOD.root",
+      "entries": 118265,
+      "matched": 7,
+      "bytes_read": 6639792
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00032-r0022-xAOD.root",
+      "entries": 118282,
+      "matched": 8,
+      "bytes_read": 7068596
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00033-r0022-xAOD.root",
+      "entries": 118248,
+      "matched": 10,
+      "bytes_read": 6969374
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00034-r0022-xAOD.root",
+      "entries": 118212,
+      "matched": 7,
+      "bytes_read": 6515633
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00035-r0022-xAOD.root",
+      "entries": 118198,
+      "matched": 10,
+      "bytes_read": 6712479
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00036-r0022-xAOD.root",
+      "entries": 118173,
+      "matched": 6,
+      "bytes_read": 6432624
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00037-r0022-xAOD.root",
+      "entries": 118256,
+      "matched": 9,
+      "bytes_read": 6865644
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00038-r0022-xAOD.root",
+      "entries": 118216,
+      "matched": 11,
+      "bytes_read": 6767573
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00039-r0022-xAOD.root",
+      "entries": 118227,
+      "matched": 6,
+      "bytes_read": 6931708
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00040-r0022-xAOD.root",
+      "entries": 118249,
+      "matched": 9,
+      "bytes_read": 6700708
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00041-r0022-xAOD.root",
+      "entries": 118202,
+      "matched": 9,
+      "bytes_read": 7059317
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00042-r0022-xAOD.root",
+      "entries": 118231,
+      "matched": 4,
+      "bytes_read": 6580544
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00043-r0022-xAOD.root",
+      "entries": 118217,
+      "matched": 6,
+      "bytes_read": 6683245
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00044-r0022-xAOD.root",
+      "entries": 118229,
+      "matched": 5,
+      "bytes_read": 6601374
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00045-r0022-xAOD.root",
+      "entries": 118238,
+      "matched": 10,
+      "bytes_read": 6750655
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00046-r0022-xAOD.root",
+      "entries": 118246,
+      "matched": 10,
+      "bytes_read": 6782266
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00047-r0022-xAOD.root",
+      "entries": 118234,
+      "matched": 7,
+      "bytes_read": 6527699
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00048-r0022-xAOD.root",
+      "entries": 118236,
+      "matched": 9,
+      "bytes_read": 6855026
+    },
+    {
+      "source": 14,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00049-r0022-xAOD.root",
+      "entries": 118222,
+      "matched": 11,
+      "bytes_read": 6569052
+    },
+    {
+      "source": 3,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rec/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00295-00299-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 4547057
+    },
+    {
+      "source": 9,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rec/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00295-00299-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 4621352
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00400-r0022-xAOD.root",
+      "entries": 118087,
+      "matched": 6,
+      "bytes_read": 6466861
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00401-r0022-xAOD.root",
+      "entries": 118151,
+      "matched": 5,
+      "bytes_read": 6437941
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00402-r0022-xAOD.root",
+      "entries": 118156,
+      "matched": 11,
+      "bytes_read": 6598583
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00403-r0022-xAOD.root",
+      "entries": 118118,
+      "matched": 7,
+      "bytes_read": 6534095
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00404-r0022-xAOD.root",
+      "entries": 118121,
+      "matched": 8,
+      "bytes_read": 6702323
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00405-r0022-xAOD.root",
+      "entries": 118111,
+      "matched": 5,
+      "bytes_read": 6571813
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00406-r0022-xAOD.root",
+      "entries": 118092,
+      "matched": 4,
+      "bytes_read": 6957911
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00407-r0022-xAOD.root",
+      "entries": 118189,
+      "matched": 3,
+      "bytes_read": 6447652
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00408-r0022-xAOD.root",
+      "entries": 118079,
+      "matched": 6,
+      "bytes_read": 7434939
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00409-r0022-xAOD.root",
+      "entries": 118105,
+      "matched": 3,
+      "bytes_read": 6740025
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00410-r0022-xAOD.root",
+      "entries": 118089,
+      "matched": 7,
+      "bytes_read": 6689150
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00411-r0022-xAOD.root",
+      "entries": 118091,
+      "matched": 4,
+      "bytes_read": 6615942
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00412-r0022-xAOD.root",
+      "entries": 118121,
+      "matched": 8,
+      "bytes_read": 6799324
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00413-r0022-xAOD.root",
+      "entries": 118121,
+      "matched": 4,
+      "bytes_read": 6554031
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00414-r0022-xAOD.root",
+      "entries": 118117,
+      "matched": 5,
+      "bytes_read": 6959822
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00415-r0022-xAOD.root",
+      "entries": 118161,
+      "matched": 8,
+      "bytes_read": 6859588
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00416-r0022-xAOD.root",
+      "entries": 118150,
+      "matched": 4,
+      "bytes_read": 6937546
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00417-r0022-xAOD.root",
+      "entries": 118104,
+      "matched": 9,
+      "bytes_read": 6575674
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00418-r0022-xAOD.root",
+      "entries": 118137,
+      "matched": 7,
+      "bytes_read": 6743842
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00419-r0022-xAOD.root",
+      "entries": 118174,
+      "matched": 7,
+      "bytes_read": 6478061
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00420-r0022-xAOD.root",
+      "entries": 118170,
+      "matched": 6,
+      "bytes_read": 6627037
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00421-r0022-xAOD.root",
+      "entries": 118122,
+      "matched": 6,
+      "bytes_read": 7065834
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00422-r0022-xAOD.root",
+      "entries": 118135,
+      "matched": 8,
+      "bytes_read": 6461378
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00423-r0022-xAOD.root",
+      "entries": 118195,
+      "matched": 8,
+      "bytes_read": 6615544
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00424-r0022-xAOD.root",
+      "entries": 118141,
+      "matched": 7,
+      "bytes_read": 6607368
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00425-r0022-xAOD.root",
+      "entries": 118147,
+      "matched": 8,
+      "bytes_read": 7075182
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00426-r0022-xAOD.root",
+      "entries": 118168,
+      "matched": 6,
+      "bytes_read": 6398149
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00427-r0022-xAOD.root",
+      "entries": 118124,
+      "matched": 8,
+      "bytes_read": 6515159
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00428-r0022-xAOD.root",
+      "entries": 118113,
+      "matched": 10,
+      "bytes_read": 6807599
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00429-r0022-xAOD.root",
+      "entries": 118163,
+      "matched": 2,
+      "bytes_read": 6490733
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00430-r0022-xAOD.root",
+      "entries": 118173,
+      "matched": 11,
+      "bytes_read": 6502417
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00431-r0022-xAOD.root",
+      "entries": 118195,
+      "matched": 11,
+      "bytes_read": 6558047
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00432-r0022-xAOD.root",
+      "entries": 118173,
+      "matched": 11,
+      "bytes_read": 6597889
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00433-r0022-xAOD.root",
+      "entries": 118198,
+      "matched": 4,
+      "bytes_read": 6467744
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00434-r0022-xAOD.root",
+      "entries": 118188,
+      "matched": 9,
+      "bytes_read": 6509302
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00435-r0022-xAOD.root",
+      "entries": 118166,
+      "matched": 10,
+      "bytes_read": 6839654
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00436-r0022-xAOD.root",
+      "entries": 118180,
+      "matched": 4,
+      "bytes_read": 6603126
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00437-r0022-xAOD.root",
+      "entries": 118137,
+      "matched": 14,
+      "bytes_read": 7030281
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00438-r0022-xAOD.root",
+      "entries": 118146,
+      "matched": 8,
+      "bytes_read": 6810554
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00439-r0022-xAOD.root",
+      "entries": 118144,
+      "matched": 7,
+      "bytes_read": 6856145
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00440-r0022-xAOD.root",
+      "entries": 118094,
+      "matched": 6,
+      "bytes_read": 6449100
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00441-r0022-xAOD.root",
+      "entries": 118111,
+      "matched": 7,
+      "bytes_read": 6514107
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00442-r0022-xAOD.root",
+      "entries": 118125,
+      "matched": 5,
+      "bytes_read": 7233761
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00443-r0022-xAOD.root",
+      "entries": 118116,
+      "matched": 5,
+      "bytes_read": 7037778
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00444-r0022-xAOD.root",
+      "entries": 118126,
+      "matched": 7,
+      "bytes_read": 6683154
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00445-r0022-xAOD.root",
+      "entries": 118190,
+      "matched": 8,
+      "bytes_read": 6747353
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00446-r0022-xAOD.root",
+      "entries": 118214,
+      "matched": 8,
+      "bytes_read": 6497330
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00447-r0022-xAOD.root",
+      "entries": 118175,
+      "matched": 4,
+      "bytes_read": 6860859
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00448-r0022-xAOD.root",
+      "entries": 118177,
+      "matched": 8,
+      "bytes_read": 6572430
+    },
+    {
+      "source": 15,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016000/Faser-Physics-016000-00449-r0022-xAOD.root",
+      "entries": 118200,
+      "matched": 5,
+      "bytes_read": 6844910
+    },
+    {
+      "source": 4,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rec/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00395-00399-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 5001005
+    },
+    {
+      "source": 10,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rec/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00395-00399-xAOD.root",
+      "entries": 50000,
+      "matched": 171,
+      "bytes_read": 5024940
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00000-r0022-xAOD.root",
+      "entries": 124304,
+      "matched": 0,
+      "bytes_read": 6498733
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00001-r0022-xAOD.root",
+      "entries": 123794,
+      "matched": 0,
+      "bytes_read": 6439732
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00002-r0022-xAOD.root",
+      "entries": 123733,
+      "matched": 0,
+      "bytes_read": 6533938
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00003-r0022-xAOD.root",
+      "entries": 121150,
+      "matched": 0,
+      "bytes_read": 6852190
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00004-r0022-xAOD.root",
+      "entries": 118512,
+      "matched": 0,
+      "bytes_read": 6668553
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00005-r0022-xAOD.root",
+      "entries": 118409,
+      "matched": 0,
+      "bytes_read": 6634651
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00006-r0022-xAOD.root",
+      "entries": 118310,
+      "matched": 6,
+      "bytes_read": 6584879
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00007-r0022-xAOD.root",
+      "entries": 118336,
+      "matched": 6,
+      "bytes_read": 6611876
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00008-r0022-xAOD.root",
+      "entries": 118248,
+      "matched": 10,
+      "bytes_read": 6793594
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00009-r0022-xAOD.root",
+      "entries": 118357,
+      "matched": 5,
+      "bytes_read": 6437533
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00010-r0022-xAOD.root",
+      "entries": 118292,
+      "matched": 7,
+      "bytes_read": 6735482
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00011-r0022-xAOD.root",
+      "entries": 118813,
+      "matched": 6,
+      "bytes_read": 7273685
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00012-r0022-xAOD.root",
+      "entries": 118897,
+      "matched": 8,
+      "bytes_read": 6706898
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00013-r0022-xAOD.root",
+      "entries": 118556,
+      "matched": 7,
+      "bytes_read": 6695987
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00014-r0022-xAOD.root",
+      "entries": 118315,
+      "matched": 4,
+      "bytes_read": 6548876
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00015-r0022-xAOD.root",
+      "entries": 118352,
+      "matched": 9,
+      "bytes_read": 6581657
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00016-r0022-xAOD.root",
+      "entries": 118263,
+      "matched": 6,
+      "bytes_read": 6415315
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00017-r0022-xAOD.root",
+      "entries": 118282,
+      "matched": 5,
+      "bytes_read": 6658764
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00018-r0022-xAOD.root",
+      "entries": 118213,
+      "matched": 8,
+      "bytes_read": 6798387
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00019-r0022-xAOD.root",
+      "entries": 118351,
+      "matched": 4,
+      "bytes_read": 6575660
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00020-r0022-xAOD.root",
+      "entries": 118293,
+      "matched": 4,
+      "bytes_read": 7015039
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00021-r0022-xAOD.root",
+      "entries": 118216,
+      "matched": 8,
+      "bytes_read": 6548346
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00022-r0022-xAOD.root",
+      "entries": 118200,
+      "matched": 4,
+      "bytes_read": 6428472
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00023-r0022-xAOD.root",
+      "entries": 118273,
+      "matched": 8,
+      "bytes_read": 6932413
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00024-r0022-xAOD.root",
+      "entries": 118220,
+      "matched": 10,
+      "bytes_read": 7040961
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00025-r0022-xAOD.root",
+      "entries": 118205,
+      "matched": 10,
+      "bytes_read": 6735669
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00026-r0022-xAOD.root",
+      "entries": 118210,
+      "matched": 5,
+      "bytes_read": 6513812
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00027-r0022-xAOD.root",
+      "entries": 118186,
+      "matched": 18,
+      "bytes_read": 7406884
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00028-r0022-xAOD.root",
+      "entries": 118205,
+      "matched": 11,
+      "bytes_read": 6490146
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00029-r0022-xAOD.root",
+      "entries": 118204,
+      "matched": 6,
+      "bytes_read": 6583529
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00030-r0022-xAOD.root",
+      "entries": 118236,
+      "matched": 11,
+      "bytes_read": 6534339
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00031-r0022-xAOD.root",
+      "entries": 118281,
+      "matched": 8,
+      "bytes_read": 6913308
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00032-r0022-xAOD.root",
+      "entries": 118210,
+      "matched": 7,
+      "bytes_read": 6852019
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00033-r0022-xAOD.root",
+      "entries": 118202,
+      "matched": 7,
+      "bytes_read": 6468670
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00034-r0022-xAOD.root",
+      "entries": 118181,
+      "matched": 7,
+      "bytes_read": 6698356
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00035-r0022-xAOD.root",
+      "entries": 118224,
+      "matched": 9,
+      "bytes_read": 6449850
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00036-r0022-xAOD.root",
+      "entries": 118232,
+      "matched": 6,
+      "bytes_read": 6644266
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00037-r0022-xAOD.root",
+      "entries": 118219,
+      "matched": 8,
+      "bytes_read": 6681018
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00038-r0022-xAOD.root",
+      "entries": 118245,
+      "matched": 6,
+      "bytes_read": 6467645
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00039-r0022-xAOD.root",
+      "entries": 118148,
+      "matched": 10,
+      "bytes_read": 6753136
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00040-r0022-xAOD.root",
+      "entries": 118176,
+      "matched": 7,
+      "bytes_read": 6405421
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00041-r0022-xAOD.root",
+      "entries": 118214,
+      "matched": 7,
+      "bytes_read": 6743661
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00042-r0022-xAOD.root",
+      "entries": 118224,
+      "matched": 9,
+      "bytes_read": 6613142
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00043-r0022-xAOD.root",
+      "entries": 118155,
+      "matched": 7,
+      "bytes_read": 6763680
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00044-r0022-xAOD.root",
+      "entries": 118215,
+      "matched": 9,
+      "bytes_read": 6667607
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00045-r0022-xAOD.root",
+      "entries": 118165,
+      "matched": 15,
+      "bytes_read": 6884855
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00046-r0022-xAOD.root",
+      "entries": 118132,
+      "matched": 6,
+      "bytes_read": 6711857
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00047-r0022-xAOD.root",
+      "entries": 118145,
+      "matched": 11,
+      "bytes_read": 6659912
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00048-r0022-xAOD.root",
+      "entries": 118220,
+      "matched": 8,
+      "bytes_read": 6728783
+    },
+    {
+      "source": 16,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00049-r0022-xAOD.root",
+      "entries": 118189,
+      "matched": 7,
+      "bytes_read": 6828521
+    },
+    {
+      "source": 5,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100049/rec/s0015/FaserMC-MC24_PG_mumi_caloNu_5mrad_flukaE-100049-00495-00499-xAOD.root",
+      "entries": 50000,
+      "matched": 170,
+      "bytes_read": 4550297
+    },
+    {
+      "source": 11,
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100050/rec/s0015/FaserMC-MC24_PG_mupl_caloNu_5mrad_flukaE-100050-00495-00499-xAOD.root",
+      "entries": 50000,
+      "matched": 170,
+      "bytes_read": 4994584
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00400-r0022-xAOD.root",
+      "entries": 118122,
+      "matched": 8,
+      "bytes_read": 6659391
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00401-r0022-xAOD.root",
+      "entries": 118038,
+      "matched": 7,
+      "bytes_read": 6481667
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00402-r0022-xAOD.root",
+      "entries": 118075,
+      "matched": 5,
+      "bytes_read": 6383817
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00403-r0022-xAOD.root",
+      "entries": 118098,
+      "matched": 5,
+      "bytes_read": 6625835
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00404-r0022-xAOD.root",
+      "entries": 118054,
+      "matched": 8,
+      "bytes_read": 6563538
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00405-r0022-xAOD.root",
+      "entries": 118141,
+      "matched": 8,
+      "bytes_read": 6739293
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00406-r0022-xAOD.root",
+      "entries": 118172,
+      "matched": 5,
+      "bytes_read": 6641771
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00407-r0022-xAOD.root",
+      "entries": 118129,
+      "matched": 7,
+      "bytes_read": 6549274
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00408-r0022-xAOD.root",
+      "entries": 118091,
+      "matched": 8,
+      "bytes_read": 6603366
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00409-r0022-xAOD.root",
+      "entries": 118101,
+      "matched": 4,
+      "bytes_read": 6509025
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00410-r0022-xAOD.root",
+      "entries": 118155,
+      "matched": 5,
+      "bytes_read": 6903786
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00411-r0022-xAOD.root",
+      "entries": 118129,
+      "matched": 13,
+      "bytes_read": 6786544
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00412-r0022-xAOD.root",
+      "entries": 118124,
+      "matched": 9,
+      "bytes_read": 6664244
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00413-r0022-xAOD.root",
+      "entries": 118097,
+      "matched": 5,
+      "bytes_read": 6657263
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00414-r0022-xAOD.root",
+      "entries": 118105,
+      "matched": 4,
+      "bytes_read": 6502641
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00415-r0022-xAOD.root",
+      "entries": 118049,
+      "matched": 10,
+      "bytes_read": 6768537
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00416-r0022-xAOD.root",
+      "entries": 118103,
+      "matched": 5,
+      "bytes_read": 6596566
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00417-r0022-xAOD.root",
+      "entries": 118040,
+      "matched": 4,
+      "bytes_read": 7412913
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00418-r0022-xAOD.root",
+      "entries": 118002,
+      "matched": 10,
+      "bytes_read": 6912754
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00419-r0022-xAOD.root",
+      "entries": 117976,
+      "matched": 8,
+      "bytes_read": 7087015
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00420-r0022-xAOD.root",
+      "entries": 118028,
+      "matched": 14,
+      "bytes_read": 6458467
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00421-r0022-xAOD.root",
+      "entries": 118058,
+      "matched": 5,
+      "bytes_read": 7263312
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00422-r0022-xAOD.root",
+      "entries": 118066,
+      "matched": 4,
+      "bytes_read": 6827138
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00423-r0022-xAOD.root",
+      "entries": 118047,
+      "matched": 7,
+      "bytes_read": 6533358
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00424-r0022-xAOD.root",
+      "entries": 118028,
+      "matched": 6,
+      "bytes_read": 6979696
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00425-r0022-xAOD.root",
+      "entries": 118041,
+      "matched": 7,
+      "bytes_read": 6713198
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00426-r0022-xAOD.root",
+      "entries": 118058,
+      "matched": 12,
+      "bytes_read": 6480834
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00427-r0022-xAOD.root",
+      "entries": 118125,
+      "matched": 8,
+      "bytes_read": 6599271
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00428-r0022-xAOD.root",
+      "entries": 118094,
+      "matched": 6,
+      "bytes_read": 6561908
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00429-r0022-xAOD.root",
+      "entries": 118136,
+      "matched": 11,
+      "bytes_read": 7072634
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00430-r0022-xAOD.root",
+      "entries": 118143,
+      "matched": 8,
+      "bytes_read": 6514245
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00431-r0022-xAOD.root",
+      "entries": 118112,
+      "matched": 8,
+      "bytes_read": 6954353
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00432-r0022-xAOD.root",
+      "entries": 118100,
+      "matched": 6,
+      "bytes_read": 6577920
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00433-r0022-xAOD.root",
+      "entries": 118137,
+      "matched": 6,
+      "bytes_read": 6526432
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00434-r0022-xAOD.root",
+      "entries": 118160,
+      "matched": 13,
+      "bytes_read": 6675593
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00435-r0022-xAOD.root",
+      "entries": 118114,
+      "matched": 7,
+      "bytes_read": 7021204
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00436-r0022-xAOD.root",
+      "entries": 118154,
+      "matched": 8,
+      "bytes_read": 6553716
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00437-r0022-xAOD.root",
+      "entries": 118149,
+      "matched": 2,
+      "bytes_read": 6575699
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00438-r0022-xAOD.root",
+      "entries": 118110,
+      "matched": 9,
+      "bytes_read": 6807230
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00439-r0022-xAOD.root",
+      "entries": 118092,
+      "matched": 2,
+      "bytes_read": 6499520
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00440-r0022-xAOD.root",
+      "entries": 118090,
+      "matched": 4,
+      "bytes_read": 6438483
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00441-r0022-xAOD.root",
+      "entries": 118107,
+      "matched": 5,
+      "bytes_read": 6507154
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00442-r0022-xAOD.root",
+      "entries": 118124,
+      "matched": 3,
+      "bytes_read": 6518210
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00443-r0022-xAOD.root",
+      "entries": 118104,
+      "matched": 4,
+      "bytes_read": 6721038
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00444-r0022-xAOD.root",
+      "entries": 118029,
+      "matched": 7,
+      "bytes_read": 6645120
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00445-r0022-xAOD.root",
+      "entries": 118088,
+      "matched": 10,
+      "bytes_read": 7004198
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00446-r0022-xAOD.root",
+      "entries": 118084,
+      "matched": 2,
+      "bytes_read": 6632697
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00447-r0022-xAOD.root",
+      "entries": 118094,
+      "matched": 6,
+      "bytes_read": 7148317
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00448-r0022-xAOD.root",
+      "entries": 118126,
+      "matched": 8,
+      "bytes_read": 6729379
+    },
+    {
+      "source": 17,
+      "path": "/eos/experiment/faser/data0/rec/2024/r0022/016923/Faser-Physics-016923-00449-r0022-xAOD.root",
+      "entries": 118067,
+      "matched": 4,
+      "bytes_read": 6588097
+    }
+  ],
+  "bytes_read": 2070041538,
+  "analysis_wall_s": 12.00394290406257,
+  "analysis_cpu_s": 11.699118586,
+  "analysis_peak_rss_MiB": 118.1484375
+}

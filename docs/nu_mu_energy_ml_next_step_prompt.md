@@ -1,32 +1,33 @@
-# 下一轮执行 Prompt：stage85 共同 data/MC tracker 响应与占据控制
+# 下一轮执行 Prompt：stage86 latent-state 实测表与 transfer posterior 合同
 
-先读 `AGENTS.md`、[stage84报告](../workbook/2026-11-03_stage84_full-support-fit.md)、[stage85研究复盘](../workbook/2026-11-03_stage85_research-reassessment.md)、路线§66、信息预算§46及[输入合同](../workbook/stage84_energy_ml/followup_input_request.json)。本轮只执行共同 data/MC tracker 读出与 occupancy control；**0 能量 fit、F7 新推理、ν replay、GENIE/G4、谱 toy、data 反调 BDT，也不自动执行 stage86。**
+先读 `AGENTS.md`、路线§66–67、信息预算§46–47、[stage85研究复盘](../workbook/2026-11-03_stage85_research-reassessment.md)、[stage85实际读出控制](../workbook/2026-11-03_stage85_tracker-occupancy-control.md)及[输入请求](../workbook/stage85_energy_ml/followup_input_request.json)。本轮唯一任务是用已存在缓存交真实latent-target/transfer-state诊断表与固定后验实验合同；**0新能量fit、0新ROOT读取/重建/F7推理/ν replay/GENIE/G4/toy**。不自动启动后续模型训练。
 
-## 1. 本轮定位：响应/域偏移证据，不是低能修复实验
+## 1. 当前结论
 
-stage84 已用原 41447＋全 7720 新支持（π6704/K1016、26 来源）完整训练 49167。主 eval 50–100/100–200/all/低 pz log-RMSE 为 0.313532/0.265800/0.295944/0.502276；相对传统低能 95% 上限为 2.498753/1.242889，仍未恢复。低能新增支持约 24%，训练内最低能 median bias 仍约 +15.6%，所以关闭无条件随机扩样、架构和 seed 扫描；但这不证明数据量无关、响应已认证或信息达到极限。
+stage85已经交付2048data＋原2048MC、312REC原生身份/四站cluster全闭合，不能再用metadata-only控制代替。data/MC共有三站raw137.606445/29.061523 strip/event，但实际01X接受只有32.892578/29.057617；raw差96.467%位于不接受时间箱。邻域外cluster反向为3.718750/6.427734，MC未知ID上界6.428223；SP小样本差区间跨0，segment差+0.126465。共同历史active DAQ分母及quiet/random trigger没有认证：B条件活动可测，纯noise为C。结束本有界纯noise参数支线，保留响应未识别标记，不用raw比值、DB参数或stage53 on/off全差当校准/1σ。
 
-stage78 的专家组合显示错误互补，stage79–80 显示真实 hit-time convolution 和有限 pulse variation，stage53 显示 on/off 噪声不能解释全部 data/MC 差异。本轮的唯一新问题是：在共同定义、共同分母和实际 collection 下，data/MC 的活动与响应差异能否被量化。100–1000 GeV 单 μ 控制不能直接替代 50–100 GeV ν shower 或强子响应校准。
+这不是50–100GeVν低能问题的已证原因。F7继续作为现成基线，stage84已完整用49167支持及1016K，低能仍失败；不继续无条件随机补样、seed、权重或架构网格。
 
-## 2. 完整验收与 stage85 后分流
+## 2. 本轮实际交付
 
-按下方保留的 stage54 §1–5 执行，先 ≤40 个身份 QA，再冻结 data2048 和单一关联排除定义。必须交付真实 active-channel/event、孤立 strip/cluster、timebin/大小、站间相关、run/来源/p/位置分层、两臂支持差异和来源重抽样区间；不能用 metadata 清单、DB 参数、无 SDO 或未配对活动冒充纯 noise。
+1. 输入仅原完整stage84支持/旧角色及已有F7、传统、stage84预测、source/incoming谱系。先做≤40个已有缓存身份的schema、单位、角色和实际包零fit QA；不生成新F7预测。
+2. 核实真正的vertex μ能量、transfer/transfer fraction监督标签、confirmed/high-y/status及缺失值。部署输入不能含truth；**不得用重建pz0/0.8或传统估计制造非负truth transfer**。若标签缺失，交现有truth状态的实际表，并精确列出缺列/来源/最小输入，不能编造标签或丢缺失事件。
+3. 至少按true Eν50–100/100–200/≥200、reco pz0 50–100及其真高E反例、confirmed低transfer/high-y/未确认、response/missing状态交叉，报告N、来源数、既有F7/传统/stage84的log-RMSE、median bias、正/负/总tail50与500来源draw区间。稀少/空层保留并标注未测量，不以几个尾事件裁决信息极限。
+4. 在这张实表基础上冻结一次后续比较：F7旧direct-logE基线、bounded residual/shrinkage、hurdle/连续正transfer mixture。固定输入族、gate/target语义、少量混合成分、loss、点估计functional、calibration、68/90%区间coverage、PIT/可靠性和tail验收，不从eval扫描挑模型。近零transfer质量不等同真实严格零点。
+5. split必须source/incoming隔离；实际核认证明一个真正未参与研究选择的locked source/production，若现有入口都曝光就直报缺口。已有cal/eval是开发样本，不得换名独立blind或因此删高-y困难侧。
+6. 两类reweight分开预注册：后验πtarget/πtrain的平坦logE/名义/低能压力谱及capped权重/ESS；data/MC density ratio只在共同条件进一步认证后另立，不把本轮条件活动当可训练的noise correction。未识别response nuisance继续显式保留。
 
-stage85 结束后只允许三种分流：
+## 3. 固定保护、资源和停止条件
 
-- **A：可识别 response variant。** 共同 collection、active-channel 分母和条件差异均有实际证据。下一阶段另立一次固定 physics-constrained transfer posterior 合同：bounded residual/shrinkage 与 hurdle/zero-inflated transfer mixture 只做预定比较；不继续随机扩样或架构网格。
-- **B：只有条件活动/含背景上限。** 继续报告 PHYS 条件活动及上限，把它作为 response nuisance envelope 的边界；不能把它当纯电子噪声，也不能先做“噪声修正”训练。
-- **C：当前定义不可识别。** 明确缺少的 quiet/random trigger、共同 collection、coverage 或 active-channel 条件，并停止 noise 支线；转入带未识别 response nuisance 的 transfer posterior 研究，不追加 occupancy 参数扫描。
+模型输入一次方动量仅pz0，允许px/py/qOverP/弯折；禁止p0/p1/pz1及ln(p0/p1)。signed raw11、原typed NaN/status/missing政策、Calo缺项总NaN、原pz>50GeV与全部困难事件保留。真值标签另作监督/诊断，不能混入部署输入。
 
-无论 A/B/C，stage85 都不自动启动 stage86，不改变历史 F7、四期 support、传统估计和困难事件保护。
+原两低E/传统95%上限1.05、all/F7 1.01、困难1.03及七层总/正/负tail50+2pp保护不降；后续新增68/90后验coverage/PIT。当前只交实际表与合同，所有新后验收益和训练功效仍为未测量。
 
-## 3. 研究方向的固定原则
+先QA和传输包，后≤1Condor、1CPU/3000MB、累计CPU1800s、紧凑20MB；不做新ROOT、能量fit、F7推理或生成。复用现成环境、旧预测和完整π＋K支持，用户解除的K生产时限/禁令不恢复。验收必须有实际数字、单位、来源/缺失和可执行标签/谱系审计，不能仅写metadata方案。
 
-后续 transfer posterior 的目标是学习可见缪子能量与转移能的条件分布，而不是继续把全区均值回归当作唯一目标。模型可预测低 transfer/大 transfer 状态的软概率、非负转移或有界转移比例，并输出点估计、68/90% 区间与 tail 概率。能量先验修正与 data/MC domain reweight 必须分开：前者用预先固定的 `pi_target/pi_train` 做 prior stress test，后者只有在共同 control 变量可比时才用 classifier density ratio，并报告 clipping、ESS、closure 和来源留出。
+若标签或真正未开发holdout不足，记录可识别层和准确缺口，再决定后续最小输入；不伪造监督或blind。只有该实表证明标签/split可用后，才另冻具体训练与预算，不自动执行。中文stage86报告写在根目录workbook，再与代码/配置/紧凑证据本地Conventional Commit，不push；原stage54五项工作只读保留。
 
-当前 62 维标量 ntuple 先以 BDT/小型 MLP/MDN 为候选；Transformer/GNN 只有在逐 hit/时间/几何输入和 response 语义真实可用后再评估。低 pz 必须同时保留真低能和真高能/high-y 两侧，不能按 pz 硬切换传统估计。所有新收益、功效、资源、systematic 和 coverage 在实际测量前写“未测量”。
-
-以下保留的 stage54 原后缀逐字不改，仅进入该支线时适用。
+以下保留的 stage54 原后缀逐字不改，仅作已完成控制的历史合同，不自动重新启动。
 
 ## 保留的stage54 data占据支线
 

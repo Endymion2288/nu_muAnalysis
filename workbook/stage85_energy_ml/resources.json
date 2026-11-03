@@ -1,0 +1,39 @@
+{
+  "condor_jobs": 7,
+  "successful_jobs": 6,
+  "failed_initial_jobs": 1,
+  "max_concurrency": 6,
+  "remote_CPU_s": 1123.0,
+  "remote_wall_sum_s": 2583.0,
+  "script_success_CPU_s": 1070.541805286,
+  "script_success_wall_sum_s": 2462.483738117473,
+  "script_peak_rss_MiB": 792.3828125,
+  "native_success_bytes_read": 2070041538,
+  "native_headers_entries": 36142628,
+  "all_native_matched": 4096,
+  "successful_schema_QA_bytes": 124252607,
+  "successful_schema_QA_CPU_s": 38.594074637,
+  "successful_payload_QA_bytes": 39567982,
+  "successful_payload_QA_CPU_s": 22.919491033999996,
+  "failed_diagnostic_CPU_s": null,
+  "failed_diagnostic_bytes_read": null,
+  "failed_native_shard_bytes_read": null,
+  "metering_limit": "Remote batch CPU includes failed shard. ROOT I/O and CPU of initial interactive reader failures and partial failed shard I/O are not completely metered; successful counters are not all-attempt totals. Physical EOS network traffic unmeasured.",
+  "original_data_preparation": {
+    "reused_readonly": true,
+    "processed_entries": 5421535,
+    "CPU_s": 35.746551155,
+    "wall_sum_s": 102.10724388434028,
+    "requested_bytes": 802201184,
+    "note": "Measured in stage54, not rerun or charged as new extraction"
+  },
+  "analysis_CPU_s": 11.699118586,
+  "analysis_wall_s": 12.00394290406257,
+  "analysis_peak_rss_MiB": 118.1484375,
+  "source_bootstrap_runs_note": "Exploratory summary rerun only after adding production01X accounting, SP/segment support and independent interval check; no event extraction or model refits.",
+  "retained_before_report_bytes": 3975382,
+  "schema_header_sizes_bytes": {
+    "production_cluster": 56,
+    "Athena24_header_cluster": 72
+  }
+}

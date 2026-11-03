@@ -1846,3 +1846,24 @@ stage85 后只立一次固定的条件分布实验，保留 F7 direct-logE 作�
 当前是 62 维标量 ntuple，先用 BDT/小型 MLP/MDN 完成一次固定比较。Transformer/GNN/高粒度自监督只有在逐 hit/时间/几何输入和 response 语义真实交付后才进入候选。最终仍要求两低能相对传统 95% 上限 1.05、all/≥200/低 pz 真高能/high-y/未确认和七层双向 tail50 保护通过，并新增 posterior coverage。若只能得到总体小幅改善而低能门槛失败，应交付 calibrated posterior、可识别边界和缺失条件，结束无边界架构网格。新增收益、功效、资源和系统效应均未测量。
 
 历史 §1–65、stage54 后缀、四期支持协议和传统/F7 保护不改；本节只改写下一阶段的研究优先级。
+
+## 67. stage85：原生4096事件闭合，条件读出可测，纯noise未识别
+
+[stage85实际报告](../workbook/2026-11-03_stage85_tracker-occupancy-control.md)完成固定2048 data＋stage53原2048 MC，312已知REC、全部身份/四站cluster指纹闭合，0未解决/重复，0新能量fit/F7推理/重建/ν replay/GENIE/G4/toy。data旧六文件全5421535输入只读复用，与stage52全cutflow相同；两p箱母样本343563/597161，MC53624/145615，两侧各取1024。实际19身份QA及传输包先通过，source/entry联结MC重复eventID，data按实际header/time/cluster联结，不猜entry比例。
+
+共有station1–3，station0/IFT单列。固定所有已保存backward-track关联wafer内±64strip（0.08mm pitch，半宽5.12mm）并集，无测量wafer保留未归属。144wafer/110592名义channel不是DAQ active分母；data首文件227/225/227 bad strips、历史IOV/动态DAQ与quiet/random触发未共同认证。**结果B为条件活动；pure-noise与active-channel率属C，不给noise最佳值/1σ变体。**
+
+| 共有三站均值/event |data|MC|data−MC来源95%区间|
+|---|---:|---:|---:|
+| raw strip |137.606445|29.061523|[107.135967,109.799976]|
+| 实际01X接受raw strip |32.892578|29.057617|[2.433955,5.074317]|
+| 邻域外cluster下界 |3.718750|6.427734|[−3.383406,−2.112768]|
+| segment |4.609375|4.482910|[0.058807,0.197007]|
+
+raw差96.467%在01X不接受的时间箱，111为data92.095215/MC0.001953 strip/event；不能用raw比值调整cluster噪声。外侧strip data115.122070/MC8.994141、两p及三ρ层差同向，外侧cluster方向相反；SP均值差3.570313区间[−5.067572,12.007556]跨0，不写小样本显著SP excess。500来源draw条件于三个data run/两MC电荷run，完整时间箱/size/来源/p/位置/相关与名义率已交，不宣称新run或联合响应覆盖。旧on/off仅复用，每站cluster差约1.27–1.32，SP/segment变化小，不把全差当1σ。
+
+实际修正两程序问题：现成persistent cluster字典56B与Athena24 header72B的ABI差异，用deployed collection proxy解码；一18-strip cluster的short offset回绕，保留事件/总数，1cluster/2ID标未知，外侧MC上界6.428223，未删除异常或归因低能。初始6片中1失败，只重提该片，6最终成功；7任务含失败remoteCPU1123s/wall和2583s，成功ROOT读2.070041538GB/peak792.383MiB。初始交互失败CPU/I/O未完整计量，不冒称全尝试严格预算认证。4096身份、100均值与100个500draw区间独立复核，最大差0/2.220446e−16；紧凑约4MB，原stage54五项未跟踪工作只读保留。
+
+**继续F7，关闭本轮纯noise参数支线；下一唯一stage86先交实际latent-state/label表与transfer posterior预注册，尚未执行。** 输入原完整49167支持/既有F7、传统、stage84预测及source/incoming谱系；核实vertex μ/transfer真值、单位/缺失，交叉低E/低pz两侧/high-y/response状态的N、来源、bias、双向tail与500来源区间。固定bounded residual与hurdle/连续正transfer后验的输入、loss、prior stress、68/90 coverage/PIT及原保护，真正unused locked source缺失时直报，不把旧cal/eval重称blind；不能由reco pz0/0.8伪造非负truth transfer。该准备0新fit/ROOT/F7推理、≤1Condor1CPU3000MB/CPU1800s/紧凑20MB，实际标签与谱系审计后另冻训练合同，不续随机支持/架构/seed扫描。详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[输入请求](../workbook/stage85_energy_ml/followup_input_request.json)。
+
+本控制不证明MC低E失败原因、信息极限或50–100GeVν/shower响应闭合；interaction/FSI/材料、Calo/pulse、接受度/背景与未开发确认继续。K1016保留，用户解除的旧生产限制不恢复；历史§1–66、独立支持协议和stage54原后缀保留。

@@ -1009,3 +1009,15 @@ stage85 按保留 stage54 协议测量共同 collection、active-channel 分母�
 - **停止该支线：** 共同定义不可识别，或 posterior/主动补样都没有低能可识别增益；交付 calibrated posterior、风险边界和最小缺失输入。
 
 历史 §1–45 和 stage54 原协议不改；本节新增的资源、收益、功效与系统效应均为未测量。
+
+## 47. stage85：实际读出时间结构已测，active分母与纯noise仍未识别
+
+[实际控制报告](../workbook/2026-11-03_stage85_tracker-occupancy-control.md)交付2048data＋原2048MC、312原生REC、4096实际身份及四站cluster指纹全闭合。0新能量fit/F7推理/重建或生成。原data完整5421535输入抽样只读复用，data两p箱母样本343563/597161，MC53624/145615，固定各1024；有限总体概率、来源/p/位置支持均已交付。不是metadata-only控制。
+
+共有三站raw均值data137.606445/MC29.061523 strip/event，邻域外115.122070/8.994141；但实际01X接受raw仅32.892578/29.057617，raw差96.467%位于不接受时间箱，111为92.095215/0.001953。邻域外cluster反向为3.718750/6.427734，差来源区间[−3.383406,−2.112768]；segment差+0.126465 [0.058807,0.197007]，SP差+3.570313 [−5.067572,12.007556]未建立小样本显著性。不能以raw总比、DB参数或on/off全差替代电子噪声标定。
+
+单一关联带固定±64strip/5.12mm，未测量wafer保留未归属；station0另列。几何110592channel不等于active DAQ；首文件227/225/227坏strip证明不能直接统一分母。缺历史逐IOV mask/cabling/HV/DAQ/readout与quiet/random触发，**B条件活动可交；纯noise与active-channel率为C**。不定义数字化1σ nuisance，不按data改BDT；保留响应未识别状态，结束当前noise参数支线。
+
+程序原因已分开：56/72B persistent/header ABI用字典proxy解决；1个18-strip cluster的short offset回绕保留为未知，MC外侧cluster上界6.428223，未删事件。6正式片＋仅失败片1次修复，7任务CPU1123s、wall和2583s，成功ROOT2.070041538GB、peak792.383MiB；早期交互失败CPU/I/O未完整计量，不能宣称全尝试预算精确认证。19身份QA与实际包启动在先，100均值和100来源区间独立复核，最大区间差2.220446e−16，紧凑约4MB；stage54五项原工作只读保留。
+
+下一唯一stage86为**实际latent-target/transfer-state表＋固定posterior合同准备**，非新一轮架构/随机增补；0新fit/ROOT/F7推理。原49167支持、原F7/传统/stage84预测与incoming谱系，核vertex μ/transfer标签、单位/status和低pz真低E/真高E/high-y两侧，交N/source/bias/双向tail/500来源区间，固定bounded residual和hurdle混合的loss、输入、68/90coverage/PIT、先验stress及原保护。真正未开发locked source必须认证；缺失就报告，旧cal/eval不改名blind。标签/split与响应边界实际审计后另冻训练，不由reco pz0制造非负truth。准备上限1CPU3000MB/累计1800CPU秒/20MB，尚未执行；历史§1–46、stage54原协议及K解除政策保留。

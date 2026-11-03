@@ -1,0 +1,16 @@
+{
+  "reason": "Shard4 stopped on a decoded cluster strip outside physical [0,767]. Preserve all events; classify malformed cluster IDs as unknown association; do not silently drop or assign them outside.",
+  "changes": "Append invalid-cluster and invalid-RDO-ID counters, record exact diagnostics. Raw strip activity, cluster totals, frozen identities and single corridor unchanged; outside-cluster rate gets lower/upper bounds including unknown clusters.",
+  "repair_qa": {
+    "passed": true,
+    "wall_s": 20.862267690245062,
+    "cpu_s": 11.623592447999998,
+    "bytes_read": 19783991,
+    "peak_rss_MiB": 798.4921875
+  },
+  "retry": "Only failed shard4. Successful v1 shards have no strip-range failures and their first23 metrics remain usable; check common identity and exact cluster closure on every event.",
+  "pre_difference": true,
+  "repair_cluster": 9665388,
+  "repair_status": "exit0, final4096/4096 identities",
+  "QA_count_clarification": "Earlier sample definition27 includes8 historical selected smoke identities; actual new-stage payload QA is at most19:18 first cases plus REC entry0. Historical40-event smoke was not rerun."
+}

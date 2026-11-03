@@ -1,0 +1,61 @@
+{
+  "frozen_utc": "2026-11-03T21:46:04.081074+00:00",
+  "stage": 85,
+  "inputs": "ntuples/energy_ml_stage85/sample.json: immutable stage53 MC2048 / stage54 data2048; all312 native REC files",
+  "definition": {
+    "collections": [
+      "SCT_RDOs",
+      "SCT_ClusterContainer",
+      "CKFTrackCollectionBackwardWithoutIFT"
+    ],
+    "common_stations": [
+      1,
+      2,
+      3
+    ],
+    "separate_station": 0,
+    "corridor": "Union of inclusive +/-64 strip indices around every persisted backward-track SCT cluster-on-track identifier, on its own wafer; unmeasured wafers remain unassociated",
+    "corridor_variants": 1,
+    "nominal_channels_per_station": 36864,
+    "active_channels": "unverified: nominal geometry is not an active/DAQ denominator",
+    "sampling": "Reuse stage53 MC2048 and stage54 full-file priority data2048 exactly; historical p0 selection is preserved only in this muon control, not ML features",
+    "noise_interpretation": "Conditional activity only; quiet/random trigger and historical DAQ/masks not certified",
+    "energy_fits": 0,
+    "pitch_mm": 0.08,
+    "corridor_half_width_mm": 5.12,
+    "pitch_evidence": "CVMFS geomDB SCTBRLSENSOR_DATA row0 STRIPPITCH=0.08 mm; production geometry-specific conditions remain separately unverified",
+    "pbin_edges_GeV": [
+      100,
+      250,
+      1000
+    ],
+    "position_layers": "rho at VetoNu <40 /40-80/>=80 mm; x/y signs; existing timing-plane central selection unchanged",
+    "bootstrap": "500 source draws; data resample two files within each of 3 runs; MC resample six sources within each charge run; conditional on these fixed runs",
+    "qa_expected_unique_payload_identities": 19,
+    "qa_identity_count_note": "18 first source cases + one REC entry0, historical stage54 smoke not rerun"
+  },
+  "qa": "19 unique payload identities this stage (18 frozen first cases + REC entry0); old stage54 smoke40 is read-only prior evidence, no new run; exact run/event/time and four-station cluster closure",
+  "payload_qa": {
+    "passed": true,
+    "wall_s": 18.99556549312547,
+    "cpu_s": 11.295898586,
+    "bytes_read": 19783991,
+    "peak_rss_MiB": 805.41015625,
+    "log": "/tmp/stage85_payload_qa2.log"
+  },
+  "resources": {
+    "jobs": 6,
+    "cpus_per_job": 1,
+    "memory_MB": 3072,
+    "MaxRuntime_s": 7200,
+    "process_CPU_limit_s": 4200,
+    "per_shard_input_limit_bytes": 1450000000,
+    "global_CPU_limit_s": 28800,
+    "global_input_limit_bytes": 10000000000,
+    "retained_limit_bytes": 20000000
+  },
+  "unresolved_policy": "Report all unmatched/duplicates; no favourable subset or inferred identity; no model fit or rerun of stage53 arms",
+  "successful_qa_costs_only": "qa.json; failed-diagnostic totals incomplete, explicitly unmeasured",
+  "bulk_status": "6 final shards complete; one initial failed shard repaired once as9665388.0",
+  "cluster": 9665305
+}

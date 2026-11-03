@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage85
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/run_ml_tracker_readout_control.sh $(Process) $(repository)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-tracker-readout-stage85.tar.gz,root://eoshome-x.cern.ch/$(repository)/software/calypso-master-d32b0ff3-el9-gcc13.tar.gz
+request_cpus = 1
+request_memory = 3GB
+request_disk = 1GB
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
++MaxRuntime = 7200
++NuMuStage = "energy-ml-tracker-readout-stage85"
+log = $(spool)/logs/native.$(ClusterId).log
+output = $(spool)/logs/native.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/native.$(ClusterId).$(ProcId).err
+queue 6

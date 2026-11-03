@@ -1,0 +1,34 @@
+{
+  "prepared_in_stage": 85,
+  "executed": false,
+  "next_single_task": "stage86: actual latent-target/state identifiability table and fixed transfer-posterior preregistration; zero new energy fit in this preparation",
+  "inputs": [
+    "stage84 full support49167 and original roles41447/8440/14057, all prior F7 and stage84 predictions",
+    "stage85 conditional tracker readout summaries and limits",
+    "source/incoming lineage and exposure inventories; truly unused locked source candidates, if available"
+  ],
+  "deliverables": [
+    "Audit actual vertex-muon/transfer labels and their units/status; never derive true nonnegative transfer from reconstructed pz0/0.8",
+    "Cross true transfer/low pz0/trueE/high-y/response/missing status: N, source N, F7/traditional/stage84 bias, log-RMSE, positive/negative tail50 with500 source draws",
+    "Pre-register bounded residual and hurdle/continuous-positive mixture; fixed input families/loss/point functional/68-90 coverage/PIT/prior stress/response unidentified flag",
+    "Certify a genuinely unexposed locked source/incoming holdout or explicitly record its absence; existing cal/eval remain developed, no rebranding"
+  ],
+  "preserved_features": "pz0 only first-power momentum; px/py/qOverP/bends allowed; signed raw11 and typed NaN/masks, Calo NaN propagation, no log(p0/p1)",
+  "thresholds": "Original two lowE/traditional upper95<=1.05; all/F7<=1.01; difficult<=1.03; seven total/positive/negative tail50 protections+2pp; add68/90 posterior coverage and PIT",
+  "response": "Conditional activity only. No certified active DAQ denominator or pure noise; no noise scale from raw ratio or full stage53 on/off difference; no numerical1sigma variant yet",
+  "limits": {
+    "QA_identities_max": 40,
+    "energy_fits": 0,
+    "new_F7_inference": 0,
+    "new_ROOT_reads": 0,
+    "new_MC_generation": 0,
+    "condor_jobs_max": 1,
+    "cpus_max": 1,
+    "memory_MB_max": 3000,
+    "CPU_s_max": 1800,
+    "retained_MB_max": 20
+  },
+  "acceptance": "Actual table and executable schema/lineage audit, explicit missing labels/holdout; no metadata-only placeholder or invented truth. Freeze later fit only after its labels/split are demonstrated.",
+  "K_policy": "Keep completed1016K; lifted old K production bans/time limits stay lifted",
+  "not_automatic": "No stage86 work executed in stage85; no renewed occupancy/noise grid, random support or architecture scan"
+}

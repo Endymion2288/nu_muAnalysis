@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "unique_source_case": 4096,
+  "unique_native_identity": 4096,
+  "events": {
+    "MC": 2048,
+    "data": 2048
+  },
+  "qa_fingerprint_closure": 18,
+  "independent_means": 100,
+  "max_mean_delta": 0,
+  "independent_source_intervals": 100,
+  "max_interval_delta": 2.220446049250313e-16,
+  "native_bytes_read": 2070041538,
+  "invalid_cluster_cases": [
+    {
+      "source": 10,
+      "case": 3,
+      "event": 716,
+      "native_entry": 715,
+      "station": 2,
+      "clusters": 1,
+      "strip_ids": 2
+    }
+  ],
+  "limitations": "Identity/count/mean validation; no certified active denominator or pure-noise identification"
+}

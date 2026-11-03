@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/pool/condor/dir_3806653/nu_mu_readout85.Tzwzck/ml/read_tracker_readout.py", line 128, in <module>
+    main()
+  File "/pool/condor/dir_3806653/nu_mu_readout85.Tzwzck/ml/read_tracker_readout.py", line 102, in main
+    matrix = [list(v) for v in ROOT.ReadoutFromTree(tree, helper)]
+cppyy.gbl.std.runtime_error: vector<vector<int> > ::ReadoutFromTree(TTree* tree, const FaserSCT_ID* id) =>
+    runtime_error: cluster strip range
+
+INVALID_CLUSTER_STRIP hash=104 cluster=101 center=0 delta=-32768 decoded=1008 size=18
+INVALID_CLUSTER_STRIP hash=104 cluster=101 center=0 delta=-30720 decoded=1009 size=18
+
+INVALID_CLUSTER_IDENTITY 10 3 715 716
