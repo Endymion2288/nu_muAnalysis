@@ -1772,3 +1772,18 @@ P_cal/传统两低E比2.142423 [1.826960,2.497108]/1.140002 [1.070227,1.214789]�
 3生产9663277全部一次exit0，remoteCPU12530秒/wall累计12791秒，各wall4038–4537秒均超过旧3600；reco peak≤1122.465MiB，RDO逻辑复制3.919239502GB，scratch约4GB且随任务删除，物理EOS网络I/O未测。2训练9663288全部一次exit0，remoteCPU43秒/wall51秒，scriptCPU36.822459秒/peak≤266.067MiB；requested1800秒被CERN espresso改写为实际1200秒仍预算内，提交后严格相等断言修正，无重提交/重训。原角色/全曝光key/半量重现/03→01/6模型逐位回读及500来源draw的全部报告区间独立复核通过；区间排除重训/增补抽样/offset/谱系/响应/研究选择，cal/eval仍开发，非联合确认。紧凑最终<20MB，大缓存/重复传输清理。
 
 **继续F7，关闭本次固定6fit；唯一下一项stage83为实际剩余20个兼容π PHYS完整支持交付，0fit。** 从stage81已冻结22合法train候选全取未交付20源，不按残差/产额选源；已测逻辑PHYS611988745bytes，实际新N/功效/成本仍未测。先≤40真实身份/62/raw/01条件与实际包QA，再≤4Condor每1CPU3000MB、wall1800秒/CPU累计1800秒、200000输入/10GB/紧凑10MB；不新增重建/生成/F7推理，已有K保留。对stage55全部曝光＋stage70/81/82新支持及内部精确key去重，完整报告两低E及同pz真高E/high-y/未确认/高端/缺失、cutflow/实际资源；不以20文件当充分支持。后续训练按实际交付另冻合同，本轮不执行stage83，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage82_energy_ml/followup_input_request.json)。共同响应、interaction/FSI/材料/接受度/背景、stage54与随机未开发确认继续，历史章节及独立支持协议保留。
+
+
+## 64. stage83：完整20源 π 新增5934支持，低能与歧义两侧均实际增加
+
+[stage83报告](../workbook/2026-11-03_stage83_pi-support-delivery.md)交付事前冻结全部剩余20个兼容π PHYS，完整200000输入→7354 selected→**5934新增唯一native-MeV incoming key/20来源**。stage55全曝光复用332、stage70/81/82复用4/217/0，known合553；内部重复982（按最早全批归属同源36/跨源946），与known交叠115，故7354−553−982＋115=5934。源内/跨源稳定排重、原62/raw11/typed域、Calo缺一总NaN与角色独立核验，0能量fit/新F7推理/重建/GENIE/G4/toy。原pz>50/一次方动量仅pz0/允许px-py-q/p-弯折、41447/8440/14057、91/16/22组及原缺失21/3/7＋11不变。
+
+新两低E159/740、confirmed低transfer140/509、reco低pz463及同pz真≥200为161/high-y92/未确认121，全体high-y167/未确认215；各核心层均20来源。新高端≥3200为0、缺失1不删。既有π770＋K1016保留，累计**7720新key/26来源（π6704/K1016）**；两低E182/845，相对原767/3564各增23.728814%/23.709315%，同低pz真≥200累计190/原1005。支持增加已测，足量功效与能量收益未测，不把比例/源数当独立确认或纯N因果证据。
+
+40固定QA身份全未过选择；schema/空62/实际包启动在提交前通过，但没有新非空逐值闭合。已有stage81两selected的实际包检查在提交后补做，正式7354非空及四模块全文件formula再验证；明确顺序局限，不假称全部QA先齐。四模块有效非零formula计12642/12684/10946/10932，native参考01-LG无二次缩放；完整历史响应snapshot仍未认证。新增4493个合法负raw保留，fit-failure但raw有效341通道保留；新增一例Calo0 status32→module及totalNaN，其余不删。
+
+4Condor9663291一次exit0/无重试，实际1CPU3000MB1800秒，remoteCPU227秒/wall累计308秒（各75–80）；20源subprocessCPU224.93秒/wall297.07秒/peak669.672MiB，输入吞吐673.242events/累计wall秒。逻辑PHYS611988745bytes，正式Uproot85770191bytes，含重复QA已计ROOT/Uproot192558106bytes，C++分析ROOT请求/物理EOS网络I/O未测。QA CPU按每shard最终累计child计数而非重复相加；workerCPU ulimit按单进程继承并非整job累计硬截止，累计预算由实际history核验。1932支持表行/23层、全曝光key/原角色/四模块与所有紧凑数组回读通过，QA合并JSON、分片/包/ROOT清理，最终<10MB。
+
+**继续F7；唯一下一项stage84：累计完整π＋K一次原F7政策三seed训练，恰3fit、0pilot，不再半/全或更多规模曲线。** 原41447＋新7720=train49167，固定原62/400轮/原3seed/unit direct logE/默认初始化，各ensemble仅原cal一个global offset，主pooled_cal预定。size0原F7只用旧预测，stage82full旧缓存只作机制对照；0新ROOT/支持生产/F7推理/来源OOF。先cache角色/key/reference/实际包零fit启动，后≤1Condor1CPU3000MB、CPU累计1800秒/wall1800秒/留存20MB；实际能量/资源尚未测量。本轮未执行stage84，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage83_energy_ml/followup_input_request.json)。
+
+原传统两低E1.05/all-F7 1.01/困难1.03/七层总正负tail50+2pp门槛不降；500component分层来源固定预测区间、两低E及同pz另一侧/高端/缺失全报，不以开发通过替代独立确认。失败关闭本固定增补，不续扫描、不据此否证缺数据；用户放开的K旧生产时限/禁令不恢复。共同响应、raw/stage54、interaction/FSI/材料/接受度/背景及真正随机未开发确认继续，独立支持协议/stage54后缀及历史§1–63保留。

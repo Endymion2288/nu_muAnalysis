@@ -1,0 +1,62 @@
+{
+  "cluster": 9663291,
+  "result": "9663291.0 - 9663291.3\n",
+  "paths": [
+    "build/analysis",
+    "AnalysisZipFramework/config",
+    "AnalysisZipFramework/include",
+    "ml/pi_support_delivery.py",
+    "ml/extract_alternative_support.py",
+    "ml/audited_features.py",
+    "ml/collect_alternative_support.py",
+    "ml/support_augmentation.py",
+    "ml/alternative_calibration.py",
+    "ml/frozen_evaluation.py",
+    "ml/track_response.py",
+    "ml/train_bdt.py",
+    "ml/configs/audited_features.json",
+    "ml/configs/baseline.yaml",
+    "ml/configs/track_response.yaml",
+    "workbook/stage83_energy_ml/source_plan.json",
+    "workbook/stage83_energy_ml/protocol.json"
+  ],
+  "payload_bytes": 596779,
+  "dryrun": "Dry-Run job(s)....\n4 job(s) dry-run to cluster 1.\n",
+  "actual_ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage83/worker_v1.sh 0",
+      "ClusterId": 9663291,
+      "MaxRuntime": 1800,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage83/worker_v1.sh 1",
+      "ClusterId": 9663291,
+      "MaxRuntime": 1800,
+      "ProcId": 1,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage83/worker_v1.sh 2",
+      "ClusterId": 9663291,
+      "MaxRuntime": 1800,
+      "ProcId": 2,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage83/worker_v1.sh 3",
+      "ClusterId": 9663291,
+      "MaxRuntime": 1800,
+      "ProcId": 3,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "wall_s": 27.88810534682125,
+  "CPU_s": 2.539547459,
+  "peak_RSS_MiB": 836.03125
+}
