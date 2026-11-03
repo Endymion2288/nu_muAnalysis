@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/pool/condor/dir_2558668/nu_mu_reweight.di5pTR/ml/fit_energy_reweight.py", line 59, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/pool/condor/dir_2558668/nu_mu_reweight.di5pTR/ml/fit_energy_reweight.py", line 24, in main
+    dest=ART/job;assert not dest.exists();dest.mkdir(parents=True);(OUT/job).mkdir(parents=True)
+                                                                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc15-opt/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/pool/condor/dir_2558668/nu_mu_reweight.di5pTR/workbook/stage73_energy_ml/fold0'

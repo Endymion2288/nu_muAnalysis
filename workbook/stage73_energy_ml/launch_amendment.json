@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "reason": "worker output directory precreated before fit entry mkdir; FileExistsError before started marker / DMatrix / first fit",
+  "failed_cluster": 9662991,
+  "failed_jobs": 4,
+  "failed_fits": 0,
+  "corrective_jobs": 4,
+  "total_submission_limit": 8,
+  "formal_fit_limit": 12,
+  "scientific_protocol_changed": false,
+  "total_CPU_limit_s": 3600,
+  "wall_per_job_s": 1800,
+  "retained_budget_bytes": 20000000,
+  "exception": "original4submission cap exceeded by4pre-fit failures; recorded before corrected launch; no science candidate or parameter added"
+}

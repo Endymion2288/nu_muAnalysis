@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "moments": [
+    {
+      "role": "cal",
+      "stratum": "E50_100:all",
+      "N": 150,
+      "valid_N": 150,
+      "moment_identity_abs_diff": 4.163336342344337e-17
+    },
+    {
+      "role": "cal",
+      "stratum": "E50_100:tail50",
+      "N": 20,
+      "valid_N": 20,
+      "moment_identity_abs_diff": 0.0
+    },
+    {
+      "role": "cal",
+      "stratum": "E50_100:non_tail50",
+      "N": 130,
+      "valid_N": 130,
+      "moment_identity_abs_diff": 6.938893903907228e-18
+    },
+    {
+      "role": "cal",
+      "stratum": "E100_200:all",
+      "N": 691,
+      "valid_N": 676,
+      "moment_identity_abs_diff": 0.0
+    },
+    {
+      "role": "cal",
+      "stratum": "E100_200:tail50",
+      "N": 57,
+      "valid_N": 47,
+      "moment_identity_abs_diff": 0.0
+    },
+    {
+      "role": "cal",
+      "stratum": "E100_200:non_tail50",
+      "N": 634,
+      "valid_N": 629,
+      "moment_identity_abs_diff": 3.469446951953614e-18
+    },
+    {
+      "role": "eval",
+      "stratum": "E50_100:all",
+      "N": 208,
+      "valid_N": 206,
+      "moment_identity_abs_diff": 1.3877787807814457e-17
+    },
+    {
+      "role": "eval",
+      "stratum": "E50_100:tail50",
+      "N": 31,
+      "valid_N": 29,
+      "moment_identity_abs_diff": 1.6653345369377348e-16
+    },
+    {
+      "role": "eval",
+      "stratum": "E50_100:non_tail50",
+      "N": 177,
+      "valid_N": 177,
+      "moment_identity_abs_diff": 6.938893903907228e-18
+    },
+    {
+      "role": "eval",
+      "stratum": "E100_200:all",
+      "N": 906,
+      "valid_N": 882,
+      "moment_identity_abs_diff": 0.0
+    },
+    {
+      "role": "eval",
+      "stratum": "E100_200:tail50",
+      "N": 79,
+      "valid_N": 65,
+      "moment_identity_abs_diff": 1.6653345369377348e-16
+    },
+    {
+      "role": "eval",
+      "stratum": "E100_200:non_tail50",
+      "N": 827,
+      "valid_N": 817,
+      "moment_identity_abs_diff": 0.0
+    }
+  ],
+  "A_moment_identity_max_abs": 1.6653345369377348e-16,
+  "macro_bootstrap_event_replication_draws": [
+    0,
+    173,
+    499
+  ],
+  "macro_MSE_max_abs_diff": 1.1102230246251565e-16,
+  "under_over_boundary_QA": true,
+  "all_lowE_sources_partition_exact": true,
+  "invalid_labels_NaN": true,
+  "new_fits": 0,
+  "wall_s": 0.7374110743403435,
+  "CPU_s": 0.47798941600000006,
+  "peak_RSS_MiB": 616.60546875
+}

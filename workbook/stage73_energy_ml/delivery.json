@@ -1,0 +1,54 @@
+{
+  "status": "completed",
+  "formal_fits": 12,
+  "scientific_candidates": 3,
+  "main_candidate": "S_cal",
+  "deploy": "retain F7",
+  "removed_duplicate_files": [
+    {
+      "path": "ntuples/energy_ml_stage73/input.npz",
+      "bytes": 15634909
+    },
+    {
+      "path": "ntuples/energy_ml_stage73/fold0.tar.gz",
+      "bytes": 1012968
+    },
+    {
+      "path": "ntuples/energy_ml_stage73/fold1.tar.gz",
+      "bytes": 1013828
+    },
+    {
+      "path": "ntuples/energy_ml_stage73/fold2.tar.gz",
+      "bytes": 998190
+    },
+    {
+      "path": "ntuples/energy_ml_stage73/final.tar.gz",
+      "bytes": 1657048
+    },
+    {
+      "path": "software/energy-ml-reweight-stage73.tar.gz",
+      "bytes": 15565526
+    }
+  ],
+  "physical_EOS_network_bytes": "未测量",
+  "budget_bytes": 20000000,
+  "original_submission_cap": 4,
+  "actual_submissions": 8,
+  "submission_deviation": "4 pre-fit directory failures then4corrective successful jobs; amendment recorded before corrected launch",
+  "total_remote_CPU_s": 119,
+  "retained_scope": "stage73 artifact/workbook plus complete changed docs/report/code/submission files; excludes prior-stage inputs and Git object overhead",
+  "document_QA": {
+    "old_roadmap_sections_1_53_exact": true,
+    "old_information_sections_1_33_exact": true,
+    "stage54_prompt_suffix_exact": true,
+    "user_stage72_unchanged": true,
+    "markdown_fences_closed": true,
+    "links_missing": 0,
+    "trailing_whitespace": 0
+  },
+  "original_stage54_untracked_files_untouched": true,
+  "stage74_executed": false,
+  "retained_bytes": 18471594,
+  "retained_file_count": 79,
+  "condor_event_log_format": "original event text with trailing whitespace stripped; allocated CPUs1/memory3000MB confirmed for four successful jobs"
+}

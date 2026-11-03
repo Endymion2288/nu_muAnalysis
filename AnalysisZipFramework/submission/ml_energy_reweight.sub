@@ -1,0 +1,26 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage73
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_v1.sh $(job)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-reweight-stage73.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 180MB
+getenv = False
+max_retries = 0
++MaxRuntime = 1800
++NuMuStage = "energy-ml-reweight-stage73"
+log = $(spool)/logs/reweight.$(ClusterId).log
+output = $(spool)/logs/reweight.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/reweight.$(ClusterId).$(ProcId).err
+queue job from (
+fold0
+fold1
+fold2
+final
+)

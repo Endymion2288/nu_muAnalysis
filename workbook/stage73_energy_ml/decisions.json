@@ -1,0 +1,336 @@
+{
+  "main_candidate": "S_cal",
+  "deployment": "retain F7",
+  "versions": {
+    "S_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": true,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "S_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": true,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "U_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    },
+    "F_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": true
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": true
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": false,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "U_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    },
+    "F_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": true
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": true
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": false,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    }
+  }
+}

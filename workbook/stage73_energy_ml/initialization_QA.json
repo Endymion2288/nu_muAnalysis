@@ -1,0 +1,127 @@
+{
+  "records": [
+    {
+      "job": "fold0",
+      "arm": "U",
+      "actual_train_N": 22795,
+      "base_score_unweighted": 6.235211917918726,
+      "weighted_label_mean": 6.235211917918726,
+      "weighted_optimum_gradient_sum": -1.318767317570746e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold0",
+      "arm": "S",
+      "actual_train_N": 22795,
+      "base_score_unweighted": 6.235211917918726,
+      "weighted_label_mean": 6.216356632567653,
+      "weighted_optimum_gradient_sum": -2.4556356947869062e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold0",
+      "arm": "F",
+      "actual_train_N": 22795,
+      "base_score_unweighted": 6.235211917918726,
+      "weighted_label_mean": 6.319854016514685,
+      "weighted_optimum_gradient_sum": 1.1823431123048067e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold1",
+      "arm": "U",
+      "actual_train_N": 22878,
+      "base_score_unweighted": 6.225123899087473,
+      "weighted_label_mean": 6.225123899087473,
+      "weighted_optimum_gradient_sum": 1.0686562745831907e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold1",
+      "arm": "S",
+      "actual_train_N": 22878,
+      "base_score_unweighted": 6.225123899087473,
+      "weighted_label_mean": 6.210020292142718,
+      "weighted_optimum_gradient_sum": 2.1373125491663814e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold1",
+      "arm": "F",
+      "actual_train_N": 22878,
+      "base_score_unweighted": 6.225123899087473,
+      "weighted_label_mean": 6.319867822270836,
+      "weighted_optimum_gradient_sum": 3.637978807091713e-12,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold2",
+      "arm": "U",
+      "actual_train_N": 22543,
+      "base_score_unweighted": 6.22077740990842,
+      "weighted_label_mean": 6.22077740990842,
+      "weighted_optimum_gradient_sum": -2.9558577807620168e-12,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold2",
+      "arm": "S",
+      "actual_train_N": 22543,
+      "base_score_unweighted": 6.22077740990842,
+      "weighted_label_mean": 6.205896416658926,
+      "weighted_optimum_gradient_sum": -9.094947017729282e-12,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "fold2",
+      "arm": "F",
+      "actual_train_N": 22543,
+      "base_score_unweighted": 6.22077740990842,
+      "weighted_label_mean": 6.314996709624301,
+      "weighted_optimum_gradient_sum": 4.092726157978177e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "final",
+      "arm": "U",
+      "actual_train_N": 41447,
+      "base_score_unweighted": 6.332202034444325,
+      "weighted_label_mean": 6.332202034444325,
+      "weighted_optimum_gradient_sum": 4.6213699533836916e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "final",
+      "arm": "S",
+      "actual_train_N": 41447,
+      "base_score_unweighted": 6.332202034444325,
+      "weighted_label_mean": 6.298687671091668,
+      "weighted_optimum_gradient_sum": 4.7407411329913884e-11,
+      "underflow": 0,
+      "overflow": 0
+    },
+    {
+      "job": "final",
+      "arm": "F",
+      "actual_train_N": 41447,
+      "base_score_unweighted": 6.332202034444325,
+      "weighted_label_mean": 6.326868338776624,
+      "weighted_optimum_gradient_sum": 4.774847184307873e-12,
+      "underflow": 0,
+      "overflow": 0
+    }
+  ],
+  "common_unweighted_initialization": true,
+  "weighted_mean_gradient_zero": true,
+  "no_model_fit": true
+}

@@ -1,0 +1,43 @@
+{
+  "actual_package": true,
+  "worker_precreated_directory": true,
+  "formal_fits": 0,
+  "records": [
+    {
+      "job": "fold0",
+      "train_N": 22795,
+      "formal_fits": 0,
+      "worker_directory_exists": true,
+      "wall_s": 0.3767345719970763,
+      "CPU_s": 0.371098366,
+      "peak_RSS_MiB": 212.9609375
+    },
+    {
+      "job": "fold1",
+      "train_N": 22878,
+      "formal_fits": 0,
+      "worker_directory_exists": true,
+      "wall_s": 0.3641078770160675,
+      "CPU_s": 0.36125195600000004,
+      "peak_RSS_MiB": 212.03515625
+    },
+    {
+      "job": "fold2",
+      "train_N": 22543,
+      "formal_fits": 0,
+      "worker_directory_exists": true,
+      "wall_s": 0.38786579202860594,
+      "CPU_s": 0.3797941250000001,
+      "peak_RSS_MiB": 211.64453125
+    },
+    {
+      "job": "final",
+      "train_N": 41447,
+      "formal_fits": 0,
+      "worker_directory_exists": true,
+      "wall_s": 0.28657286893576384,
+      "CPU_s": 0.28201324299999997,
+      "peak_RSS_MiB": 228.85546875
+    }
+  ]
+}
