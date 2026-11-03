@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "output_checks": [
+    {
+      "job": "fold0",
+      "head_training_rows": 22795,
+      "held_N": 13820,
+      "deployment_replay_exact": true,
+      "all_primary_secondary_solved": true,
+      "base_X_unmodified": true
+    },
+    {
+      "job": "fold1",
+      "head_training_rows": 22878,
+      "held_N": 13667,
+      "deployment_replay_exact": true,
+      "all_primary_secondary_solved": true,
+      "base_X_unmodified": true
+    },
+    {
+      "job": "fold2",
+      "head_training_rows": 22543,
+      "held_N": 13960,
+      "deployment_replay_exact": true,
+      "all_primary_secondary_solved": true,
+      "base_X_unmodified": true
+    },
+    {
+      "job": "final",
+      "head_training_rows": 41447,
+      "held_N": 0,
+      "deployment_replay_exact": true,
+      "all_primary_secondary_solved": true,
+      "base_X_unmodified": true
+    }
+  ],
+  "OOF_exactly_once_N": 41447,
+  "bootstrap_event_expansion_draws": [
+    0,
+    173,
+    499
+  ],
+  "bootstrap_RMSE_ratio_max_abs_diff": 3.3306690738754696e-16,
+  "bootstrap_tail_delta_max_abs_diff_pp": 4.107825191113079e-15,
+  "eligible_missing_N": [
+    21,
+    3,
+    7
+  ],
+  "new_fits_in_report": 0,
+  "new_base_model_queries_in_report": 0,
+  "wall_s": 35.90885254973546,
+  "CPU_s": 35.029151526,
+  "peak_RSS_MiB": 616.60546875
+}

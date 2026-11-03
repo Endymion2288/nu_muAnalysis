@@ -1,0 +1,255 @@
+{
+  "stage": 78,
+  "status": "complete; retain F7",
+  "starting_commit": "4c3fae0",
+  "formal_execution": {
+    "cluster": 9663190,
+    "jobs": 4,
+    "starts": 4,
+    "retries": 0,
+    "successful_jobs": 4,
+    "formal_base_fits": 12,
+    "formal_partition_fits": 4,
+    "convex_problems": 8,
+    "solver_calls": 16,
+    "remote_CPU_s": 57.0,
+    "remote_wall_sum_s": 81.0,
+    "request_CPUs_each": 1,
+    "request_memory_MB_each": 3000,
+    "scheduled_MaxRuntime_s": [
+      3600,
+      3600,
+      3600,
+      3600
+    ],
+    "result_transport_bytes": 8106698,
+    "actual_EOS_physical_network_bytes": "未测量",
+    "wall_s": 1.7537245783023536,
+    "CPU_s": 0.1807125289999998,
+    "peak_RSS_MiB": 616.60546875
+  },
+  "numerical_primary_secondary_qualified": true,
+  "scientific_joint_gate_passed": false,
+  "main_candidate": "Q_local_cal",
+  "numerical_policy": "one analytic-gradient SLSQP primary + one fixed secondary per8problem, no retry/fallback",
+  "result": "lowE improves vs F7 but not traditional; all,>=200,lowpz,highy RMSE protection pass; unconfirmed RMSE and difficult negative tails fail; local improves lowestE vs Q0 but worsens secondLowE/highEnd/macro",
+  "training_tau_final": 1.8311635702584819,
+  "eval_Q_local_cal_lowE_log_RMSE": [
+    0.22577495604873005,
+    0.24293086394953325
+  ],
+  "eval_traditional_lowE_log_RMSE": [
+    0.14548660218675494,
+    0.22687596295542112
+  ],
+  "eval_Q_local_cal_over_F7_all95": [
+    0.9962235728976666,
+    1.0022036952331266
+  ],
+  "pilot_extra_non_candidates": {
+    "synthetic_rows": 4096,
+    "synthetic_partition_trees": 1,
+    "synthetic_QC_problems": 2,
+    "synthetic_solver_calls": 4,
+    "tiny_base_N": 512,
+    "tiny_base_rounds": 2,
+    "tiny_base_models": 1,
+    "retained": false
+  },
+  "independent_validation_path": "workbook/stage78_energy_ml/independent_validation.json",
+  "final_QA": {
+    "python_AST_files": 8,
+    "bash_syntax": true,
+    "git_diff_check": true,
+    "new_local_Markdown_links": 37,
+    "Markdown_fences_and_trailing_whitespace": true,
+    "JSON_parsing": true,
+    "old_roadmap_sections_exact_prefix": true,
+    "old_information_budget_exact_prefix": true,
+    "stage54_prompt_suffix_exact": true,
+    "user_stage77_and_stage72_reports_unchanged": true,
+    "existing_PHYS_support_protocol_unchanged": true,
+    "actual_submitted_package_all9members_exact_before_cleanup": true,
+    "cache_free_data_and_all_head_role_predictions_bitwise_exact": true,
+    "interpretation_reproduction_exact": true,
+    "compressed_source_table": {
+      "rows": 11844,
+      "uncompressed_bytes": 2992443,
+      "gzip_bytes": 820111,
+      "full_text_roundtrip_exact": true
+    },
+    "figure_visually_inspected": true,
+    "condor_event_log_only_trailing_whitespace_trimmed": true
+  },
+  "original_contract": {
+    "role_N": [
+      41447,
+      8440,
+      14057
+    ],
+    "source_groups": [
+      91,
+      16,
+      22
+    ],
+    "missing_eligible": [
+      21,
+      3,
+      7
+    ],
+    "missing_protected": 11,
+    "feature_policy": "62/pz0-only linear longitudinal or magnitude; px/py,q/p,bend allowed; signed11raw/VetoNu reduced/typed and status NaN; any Calo missing => total NaN",
+    "all_difficult_events_retained": true
+  },
+  "removed_duplicates": [
+    {
+      "path": "ntuples/energy_ml_stage78/input.npz",
+      "logical_bytes": 15924630
+    },
+    {
+      "path": "ntuples/energy_ml_stage78/fold0.tar.gz",
+      "logical_bytes": 1930480
+    },
+    {
+      "path": "ntuples/energy_ml_stage78/fold1.tar.gz",
+      "logical_bytes": 1929995
+    },
+    {
+      "path": "ntuples/energy_ml_stage78/fold2.tar.gz",
+      "logical_bytes": 1922213
+    },
+    {
+      "path": "ntuples/energy_ml_stage78/final.tar.gz",
+      "logical_bytes": 2324010
+    },
+    {
+      "path": "software/energy-ml-risk-complementarity-stage78.tar.gz",
+      "logical_bytes": 15861313
+    }
+  ],
+  "retained_artifacts": [
+    {
+      "path": "ml/artifacts/stage78/oof_predictions.npz",
+      "logical_bytes": 679945
+    },
+    {
+      "path": "ml/artifacts/stage78/final/head.json",
+      "logical_bytes": 12343
+    },
+    {
+      "path": "ml/artifacts/stage78/final/head_training.npz",
+      "logical_bytes": 721889
+    },
+    {
+      "path": "ml/artifacts/stage78/final/predictions.npz",
+      "logical_bytes": 1731467
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/head.json",
+      "logical_bytes": 12316
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/head_training.npz",
+      "logical_bytes": 397274
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/inner1_F.ubj",
+      "logical_bytes": 824716
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/inner1_U.ubj",
+      "logical_bytes": 832400
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/inner2_F.ubj",
+      "logical_bytes": 816283
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/inner2_U.ubj",
+      "logical_bytes": 841647
+    },
+    {
+      "path": "ml/artifacts/stage78/fold0/predictions.npz",
+      "logical_bytes": 601520
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/head.json",
+      "logical_bytes": 12396
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/head_training.npz",
+      "logical_bytes": 398576
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/inner0_F.ubj",
+      "logical_bytes": 824716
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/inner0_U.ubj",
+      "logical_bytes": 832400
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/inner2_F.ubj",
+      "logical_bytes": 831312
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/inner2_U.ubj",
+      "logical_bytes": 825124
+    },
+    {
+      "path": "ml/artifacts/stage78/fold1/predictions.npz",
+      "logical_bytes": 601057
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/head.json",
+      "logical_bytes": 12332
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/head_training.npz",
+      "logical_bytes": 392791
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/inner0_F.ubj",
+      "logical_bytes": 816283
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/inner0_U.ubj",
+      "logical_bytes": 841647
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/inner1_F.ubj",
+      "logical_bytes": 831312
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/inner1_U.ubj",
+      "logical_bytes": 825124
+    },
+    {
+      "path": "ml/artifacts/stage78/fold2/predictions.npz",
+      "logical_bytes": 599887
+    }
+  ],
+  "storage": {
+    "budget_bytes": 20000000,
+    "scope": "stage78 increment including full changed docs/.gitignore,all stage78 code,report/workbook and artifacts; unchanged stage55/56/73/76 prerequisites excluded",
+    "measurement": "logical stat bytes, not physical or EOS/network traffic",
+    "code_and_full_changed_docs_report_bytes": 427196,
+    "artifacts_bytes": 16116757,
+    "workbook_bytes": 2070350,
+    "total_retained_bytes": 18614303
+  },
+  "stage79_executed": false,
+  "new_ROOT_RDO_F7_inference": false,
+  "physical_EOS_network_bytes": "未测量",
+  "precise_entire_stage_CPU_s": "未测量",
+  "protected_untracked": [
+    "AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub",
+    "AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh",
+    "ml/prepare_tracker_occupancy.py",
+    "ntuples/energy_ml_stage54/",
+    "workbook/stage54_energy_ml/"
+  ],
+  "next_task": "stage79 actual pulse-shape and relative-time semantics/conditional-variation measurements;0energy training; see prompt and followup request",
+  "external_messages": false,
+  "push": false
+}

@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "actual_package": true,
+  "worker_precreated_report_directory": true,
+  "records": [
+    {
+      "job": "fold0",
+      "outer_train_N": 22795,
+      "inner_train_N": [
+        9815,
+        9504
+      ],
+      "formal_base_fits": 0,
+      "formal_partition_fits": 0,
+      "solver_calls": 0,
+      "wall_s": 0.6962399068288505,
+      "CPU_s": 0.6908137699999999,
+      "peak_RSS_MiB": 214.03125
+    },
+    {
+      "job": "fold1",
+      "outer_train_N": 22878,
+      "inner_train_N": [
+        9815,
+        9684
+      ],
+      "formal_base_fits": 0,
+      "formal_partition_fits": 0,
+      "solver_calls": 0,
+      "wall_s": 0.7121629742905498,
+      "CPU_s": 0.7060651360000001,
+      "peak_RSS_MiB": 213.234375
+    },
+    {
+      "job": "fold2",
+      "outer_train_N": 22543,
+      "inner_train_N": [
+        9504,
+        9684
+      ],
+      "formal_base_fits": 0,
+      "formal_partition_fits": 0,
+      "solver_calls": 0,
+      "wall_s": 0.7286621266975999,
+      "CPU_s": 0.7232537250000002,
+      "peak_RSS_MiB": 213.1875
+    },
+    {
+      "job": "final",
+      "outer_train_N": 41447,
+      "inner_train_N": [],
+      "formal_base_fits": 0,
+      "formal_partition_fits": 0,
+      "solver_calls": 0,
+      "wall_s": 0.17650764295831323,
+      "CPU_s": 0.17404226900000008,
+      "peak_RSS_MiB": 202.74609375
+    }
+  ],
+  "wall_s": 13.510966571047902,
+  "CPU_s": 0.6287951380000001,
+  "peak_RSS_MiB": 616.60546875
+}

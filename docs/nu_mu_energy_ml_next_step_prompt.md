@@ -1,62 +1,40 @@
-# 下一轮执行Prompt：stage78 损失互补与完整训练支持的条件风险组合
+# 下一轮执行Prompt：stage79 实际脉冲形状与相对时序的信息审计
 
-先读AGENTS.md、[stage77研究复盘](../workbook/2026-11-03_stage77_research-reassessment.md)、[stage73](../workbook/2026-11-03_stage73_reconstruction-energy-reweight.md)、[stage74](../workbook/2026-11-03_stage74_conditional-energy-hypotheses.md)、[stage76](../workbook/2026-11-03_stage76_exact-conditional-energy-decision.md)、stage58–60与路线§58/信息预算§38。最新物理实测仍为stage76，stage77仅研究，没有执行旧PHYS增补或本实验。保留F7，不把stage76分类分数密度叫校准后验，不继续其q/温度/估计器/架构续调。
+先读AGENTS.md、[stage78报告](../workbook/2026-11-03_stage78_nested-risk-complementarity.md)、[stage77研究复盘§5.1](../workbook/2026-11-03_stage77_research-reassessment.md)、路线§59/信息预算§39及[请求](../workbook/stage78_energy_ml/followup_input_request.json)。最新实测stage78，Q_local低E改善但未联合过传统/困难尾，继续F7。结束固定组合与stage74分类器续调，0专家/深度/seed/q/温度扫描。
 
-本轮完整回答一个问题：stage73普通U与均衡F，加上传统μ的误差是否互补；使用完整训练支持和62读出学习条件损失差，能否在原风险门槛下将端点收益与困难组保护结合？这是新专家族/完整支持/嵌套来源隔离的有限检验，仍属专家组合，不将旧gate改名当新架构。
+## 1. 唯一问题与边界
 
-## 1. 输入与不可改变的物理合同
+本轮0能量训练，实际回答：当前nominal ν PHYS在积分/pz/位置/状态之外，是否生成并记录了可审计、跨来源可复现的脉冲形状或相对时间变化？这不是能量风险收益已测，也不是另一个电荷总和/旧CaloNu波形/点云池化试验。必须交实际同事件测量与生成机制证据，或具体字段/条件缺口，不能用一份分支目录结束。
 
-- 只用stage55 dataset、stage56 readout经audited_features.load/build的62列，stage73已有U/F raw来源OOF及fold/final模型和预测、确定性传统μ=log(pz/.8)；F7/stage73 S/stage76等既存结果作固定评价参考，不新推理F7、不把其训练内预测当OOF。
-- 原nominal d32b0ff3、without-IFT、TI12MC04/FASERNU-04/OFLCOND-FASER-06，unit MC，train/cal/eval41447/8440/14057、91/16/22保守来源。原truth νpz/reco highest-pz leading>50GeV及其余选择不变；所有历史角色/曝光/incoming保护保留。cal/eval仍是开发，不是新blind。
-- 线性模长/纵向仅pz0，保留px/py、q/p及弯折；11signed raw/VetoNu reduced、typed/domain/status/dependency NaN、合法负数与缺一Calo总和NaN保留，不fit补raw、不nansum。42缺失21/3/7 eligible＋11既有保护保持；全部high-y、未确认、巨大动量/负修正和尾不删。
-- 本轮0新ROOT/RDO、重建、生成、stage70 π28加入、K重试、locked确认、谱toy或SHA。stage70 x不得再次缩放。旧PHYS支持交付完整保存在[独立协议](nu_mu_energy_ml_support_delivery_prompt.md)，作为数据准备入口，本轮不自动连开；缺谱系不阻断这次缓存开发，也不等于允许称独立确认。
+只沿stage55已知nominal来源manifest、既有canonical train身份/source/inputentry/incoming和实际writer/模拟/读出源码入口，优先已有匹配build。不得递归扫全EOS、不取test/cal/eval/locked新身份、不访问新PHYS增补或K RDO，不做重建/生成/F7推理/谱toy/SHA。stage78原62/角色/全部尾/缺失及用户变量合同不改。
 
-## 2. A：当前专家族的损失互补，0新能量fit/推理
+## 2. 先有界核实真实语义与成本
 
-使用完整stage73 raw来源OOF U/F和μ；保持逐row、来源、incoming和fold。t=log(E/GeV)，h=(U,F,μ)。报告两低E、完整真E箱、高端、低reco pz两侧、高y/未确认/缺失的N/来源/唯一incoming、各误差方向和交叉矩C_g,jk=mean[(h_j−t)(h_k−t)]、共同大错及平方log损失集中度。常数log组合风险为wᵀC_gw；不能误用能量算术平均。
+旧stage11 schema出现width/baseline_rms/raw_peak/localtime只是线索；当前nominal可用性、单位、生成机制、有效率与成本未测。总≤40个事前身份QA，核run/event/inputentry/leading及原incoming联结、分支单位、typed sentinel/domain/status/dependency、合法负值、波形积分与宽/峰/时的关系。不能把另一个重建的同名列当共同定义。
 
-同时计算h_oracle=clip(t,min_j h_j,max_j h_j)的逐例凸包下界，含全部尾/未确认。它是这一有限专家族的真值知情乐观潜力，不能部署或叫观测信息极限；stage58旧μ/pz/F7下界不能代替新U/F/μ下界。
+定位实际使用的脉冲生成、模板/叠加/噪声/截断和fit算法及其版本/条件；确认这些新列是否随真实活动改变，还是固定模板/电子学设置/低信号拟合产物。不以当前DB默认、旧schema或data观察替代本nominal证据。若字段/条件缺失，保留失败来源与未测标志，列最小需要的实际输入，不静默换族或夸称可用。
 
-μ本身在专家集合中，所以凸包oracle的逐例平方误差必≤μ，也必≤U/F；不能拿“oracle低E达到传统”作准入条件，它必然通过。oracle仅作共同错误与潜力诊断，不能证明reco可识别。输入有效后在同一阶段直接推进B，由整个组合的留出风险裁决，不能只交诊断表后等待新指令。A不把cal/eval残差用于分区或权重设计，未来评价的oracle若另报必须明确仅为开发诊断。
+相对时间需共同clock、可验证固定通道offset与可靠μ路径/飞行项；没有依据则先保留原时间并说明不可解释，不能按truth E/y反调offset。弱/无效信号时间保持缺失，不fit补raw；signed负积分可合法，不随意作小/负分母比。baseline逐点RMS不能直接作积分电荷误差，后者需要窗口/相关性；额外活动含次级/背景/噪声，不全称hadron。不可用超相对论μ飞行时间直接测50GeV以上能量。
 
-## 3. B：一次固定分区与受约束凸组合
+同时实测代表性wall/CPU/RSS/读取请求字节与basket复用。先验证实际语义/小成本，再冻结正式提取，不能仅按前缀线性速率保证尾成本。
 
-三个专家固定为h=(U_raw,F_raw,μ)，不增加S/F7/其他模型作可学习专家。监督损失差D_F=(U−t)^2−(F−t)^2、D_μ=(U−t)^2−(μ−t)^2，正值为相对U的收益；全部大尾保留，不只学winner类别或y类别。
+## 3. 一次冻结的同事件有界测量
 
-每个实际头训练端以其OOF专家输出构造D，训练一个双输出DecisionTreeRegressor：max_depth=3、min_samples_leaf=200、criterion=squared_error、random_state=2026110378，最多8叶。两输出各除以本训练端RMS；为0时保持0并记录，不因held效果另改。输入为原62读出；若环境需缺失预处理，用本训练端finite median（全缺列填0仅作路由并加mask）＋明确missing mask，保持原基模型X原样。预处理只服务分区，不把填补后的值反馈到F7/BDT。不能把truth E/y、来源、身份或确认状态作为部署分区特征。
+QA通过后，在合法且可联结的已知train输入内，seed2026110379冻结≤2048个既有train身份、≤12个明确来源；按reco pz50–100/100–250/≥250、component/source事前分层，记录非零包含概率和可用池。不得按新形状/时间、truth E/y、坏残差或拟合结果选/换身份；保留原抽样中的弱信号、missing和尾。支持不足如实报告，不取有利prefix/凑产额。
 
-分区L(X)固定后，每叶三个w≥0且sum(w)=1，组合log能量f=Σw_L,j h_j。以epigraph τ最小化两低E的R_g(f)/R_g(μ)最大值；训练保护：R_all(f)≤1.01²R_all(U)，≥200/reco pz50–100/high-y/未确认≤1.03²R_g(U)。R均为本头训练端OOF平方log风险。U顶点可行，不要求两低E目标事前可行。
+只读取所需波形摘要及联结/原62/状态/路径字段，按source/basket聚合请求，不保留全波形或ROOT/PHYS副本。逐事件匹配原raw/Calo表示，原62逐值/NaN一致；一次方纵向/模长仅pz0，11signed raw/VetoNu reduced，typed/status/dependency NaN、合法负数、缺一Calo总和NaN原合同保持，不二次缩放Calo。
 
-主问题为凸QC问题。用可用的有解析导数的求解器，一次预定起点U、预定容差/上限；有合适conic solver可直接使用，不能为了结果轮换优化器。主解后仅允许一次次级求解：在τ≤τ主解+1e−8及原保护内，最小化各叶按训练N加权的sum_j(w−U顶点)^2，以固定接近U的解，不扫正则。数值状态、实际风险/slack/恒等式独立核实；若未求得合格解，如实数值未定，不能当物理不可行或启动认证链。凸性不自动保证每次软件输出是全局解。
+冻结一族形状/相对时序测量定义，先解释各量物理含义/单位和有效性；不多组参数/特征扫描。测给定积分、pz、位置/状态下的形状/时间条件变异、跨来源/组件稳定性、missing/饱和/弱信号及模板退化。可引用原incoming E/y作事后分层描述，但不得用其拟合响应、定义尺度/offset/选择或称训练收益。少量同来源不能冒充新独立运动学。
 
-另用同目标/保护拟合全局常权重Q0，作为条件分区的机制控制；主候选Q_local_cal事前固定。两者都保留，不从控制挑赢家，不增加深度/叶数/专家/seed/dual/alpha网格。tail率不因均方约束自动安全，必须独立完整评价。
+## 4. 预算、验收和下一分流
 
-## 4. 整条管道必须嵌套隔离，最多12个新基模型fit
+拟议≤4Condor、每≤2CPU/3000MB、CPU累计≤7200s、wall/job≤3600s、实际输入≤10GB、紧凑最终≤10MB。仅上限，成本/可完成性尚未测；QA后按实测冻结worker硬上限及最终ClassAd，批量走Condor。一次冻结测量，不自动重试失败源/改变政策或扩大输入。若无法在预算下交付，写具体输入/资源缺口，不能将未读取者记物理0。
 
-不能直接将原stage73完整OOF用于训练头，再按相同三折评价头：头训练行的基模型可能用过外held，形成整管道泄漏。
+验收至少包括实际事件联结/原62闭合、真实单位/生成语义与状态、同积分条件变化或模板退化证据、来源/抽样概率/有效N、缺失与成本/产物。描述性变异本身不证明增量能量信息，必须明确局限。若有可审计物理变化，下一阶段才冻结一次匹配训练政策/容量的基线vs＋这一族信息消融及原门槛，不能现在暗加能量fit。若无可用变化或缺条件，如实给具体结论/最小实际输入，不自动换任意特征/架构。
 
-1. 外三折完全沿用stage68/73 v2，原held不删、outer train按exact incoming purge。
-2. 每个outer train中按剩余两个原来源折作inner2折；inner train再purge与inner held共享incoming。每个inner train各fit U/F一次，共4/outer、总12新基模型。F由其实际train计数做相同七倍程箱均衡，均值1；完整stage73参数、400轮、seed2026110373、base_score=未加权实际train mean(t)/boost_from_average=0，不改容量/初始化策略。所有outer train行恰获一次inner OOF。
-3. inner OOF构造D、分区树、Q0/Q_local；outer held用stage73已有对应fold U/F模型/预测和μ，再用本outer train冻结头预测。不能让outer held参与inner模型、任何预处理/树/权重/约束/停止选择。
-4. 最终头用完整41447的stage73 OOF拟合，final专家复用stage73最终U/F。最终cal/eval冻结推理；不重训原8个outer/final U/F，也不把F7最终预测冒充OOF。
+中文stage79 workbook先记录实测/单位、输入/语义/条件/命令、物理与程序解释、资源/I/O、样本及局限和唯一下一合同，再和代码/紧凑表图本地Conventional Commit，不push、不外发，不连开后续生产。
 
-预算：12新基模型fit＋4分区树＋8凸问题（Q0/Q_local各三外折及final），每凸问题最多主/次两次求解，最多16次优化调用。原U/F已有模型只复用。科学候选为Q_local，Q0控制。记录全部实际train/held支持，内层低E/高端稀疏如实报告，不将多fold当独立生成。
-
-## 5. 评价、成功与失败的解释
-
-- 整管道41447各一次outer OOF，raw；最终Q0/Q_local报raw及原8440cal一个unit global mean-log offset，主Q_local_cal。raw/cal不择优，不分E校准，推理只读reco及冻结模型。
-- 完整eval对传统、原F7、U/S/F、stage76固定参考；OOF只与真正存在的OOF比较。原门槛不降：两低E/传统来源95%上限≤1.05为恢复，正改善下限>0才叫超越；all/F7上限≤1.01，≥200/低pz/high-y/未确认≤1.03，原关键层总/正/负tail50增量上限≤2pp。
-- 相对Q0的增量用于说明分区价值，不替代以上标准。报告全E箱、低reco pz的真低/高E两侧、高端/≥6400空层、缺失、mean/median bias、R68、双向tail50/100/损失份额、unit与macro。空层性能未测，正能量negative-tail100为结构性0。
-- 500次component分层保守来源配对bootstrap，固定预测/头/offset，seed2026111378（cal+1、OOF+2）。不含重训/分区学习/校准/完整谱系/响应/研究选择，也不是各重叠门槛的联合95%保证。cal/eval已开发，任何通过只冻结研究候选，另需真正未开发确认及共同响应。
-- 本固定分区族连训练都不能兼顾→记录风险冲突并转新响应信息/实际支持，不推广为所有reco策略不可行；训练可行而outer/eval差→支持/来源泛化；Q_local不优于Q0→本分区未测出额外收益；两低E好而其他层代价超标→仍只是风险前沿。只有同时过原门槛才安排候选确认。不据任何一项失败宣称全方法不可能，也不继续参数网格。
-
-## 6. 资源与交付
-
-先冻结上述科学政策，做解析风险/梯度、原row/两层隔离、NaN与X-only接口及小资源pilot。拟议≤4Condor任务、各1CPU/3000MB、累计CPU≤7200s、wall/job≤3600s、新紧凑产物≤20MB；实际成本/收益未测，代表性pilot后按实测冻结。输入一次打包、scratch复用，避免逐任务重复JSON/输入长期留存，不重建C++或安装整套环境。求解器缺失/资源不可交付时给具体最小阻碍，不自动训练其他模型。
-
-本阶段交付应覆盖A及一次固定B；若实际输入/求解器/资源不能交付，说明具体障碍，不以oracle或metadata替代B，也不偷偷改变科学候选。中文stage78 workbook记录实际公式/支持/目标/全部风险与尾、泄漏控制、命令/CPU/wall/RSS/I/O/产物、程序与物理解释，下一项只能据结果选择一个。先报告后代码/配置/紧凑表图本地Conventional Commit，不push、不外发消息、不自动连开后续生产。
-
-后备研究优先考察62列没有包含的脉冲形状/基线噪声/相对时序和μ条件响应；若取对象关系，要区别于已做的SP Deep Sets、局部计数与segment角摘要。不能在本次62列实验暗加新信息。实际π/K PHYS增补、真正新谱系/随机确认、stage54共同raw、interaction/FSI/材料、接受度/背景继续保留；不能用少量增补或概率评分代替最终单事例与物理目标。
+实际π/K开发支持继续按[独立协议](nu_mu_energy_ml_support_delivery_prompt.md)准备，但本轮不自动执行；真正未开发确认仍需实际parent/subfile/seed/角色/曝光，共同raw/stage54、Calo、interaction/FSI/材料、接受度/背景不因新信息审计取消。
 
 以下stage54原后缀逐字保留，仅进入该支线时适用。
 

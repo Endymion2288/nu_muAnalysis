@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "formal_jobs": 4,
+  "formal_base_fits": 12,
+  "formal_partition_fits": 4,
+  "convex_problems": 8,
+  "max_solver_calls": 16,
+  "CPUs_each": 1,
+  "memory_MB_each": 3000,
+  "CPU_total_s": 7200,
+  "wall_each_s": 3600,
+  "worker_timeout_s": 3550,
+  "callback_CPU_each_s": 1700,
+  "callback_wall_each_s": 3500,
+  "retained_bytes_max": 20000000,
+  "pilot_limits": "512-row2-round cost and4096 synthetic QC not full-cost guarantee; generous original ceilings and worker hard stop remain",
+  "no_extra_scientific_fits_or_retry": true,
+  "wall_s": 0.5100421751849353,
+  "CPU_s": 0.3878778089999999,
+  "peak_RSS_MiB": 616.60546875
+}

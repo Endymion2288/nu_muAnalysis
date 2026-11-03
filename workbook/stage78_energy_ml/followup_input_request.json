@@ -1,0 +1,84 @@
+{
+  "prepared_in_stage": 78,
+  "executed": false,
+  "decision": "retain F7; end fixed U/F/mu conditional-combination budget",
+  "measured": {
+    "eval_Q_local_cal_lowE_log_RMSE": [
+      0.22577495604873005,
+      0.24293086394953325
+    ],
+    "eval_traditional_lowE_log_RMSE": [
+      0.14548660218675494,
+      0.22687596295542112
+    ],
+    "eval_Q_local_cal_over_F7_all": 0.9992193270296885,
+    "eval_Q_local_cal_over_F7_all95": [
+      0.9962235728976666,
+      1.0022036952331266
+    ],
+    "eval_unconfirmed_over_F7_high95": 1.031007268819592,
+    "final_head_training_tau": 1.8311635702584819,
+    "formal_base_fits": 12,
+    "formal_partition_trees": 4,
+    "convex_problems": 8,
+    "solver_calls": 16,
+    "all_primary_secondary_qualified": true
+  },
+  "next_single_task": "stage79 actual nominal scintillator pulse-shape/relative-time semantics and conditional variation, no energy training",
+  "scope": "a new measurement-information family beyond original62, not charge reaggregation, old CaloNu waveform or point-cloud retry",
+  "known_inputs": "stage55 known source manifest and original legal canonical train row/source/inputentry/incoming; matching actual writer/simulation/readout implementation and conditions",
+  "unknown": [
+    "current nominal PHYS branch availability",
+    "physical pulse generation semantics and units",
+    "status/sentinel/weak-signal time validity",
+    "common clock/channel offsets and reliable muon path",
+    "actual conditional shape/time variation",
+    "cost",
+    "incremental energy risk"
+  ],
+  "protection": "all historical cross-flux/geometry roles and incoming exposure; no test/cal/eval/locked identity acquisition, no true E/y calibration or bad-residual selection",
+  "QA": {
+    "max_identities": 40,
+    "checks": [
+      "actual schema and row/leading/event linkage",
+      "units and typed/status-dependent missing values",
+      "signed raw retained",
+      "clock/offset/path evidence",
+      "fixed-template vs actual activity generation",
+      "representative extraction cost"
+    ]
+  },
+  "bounded_measurement": {
+    "max_existing_train_identities": 2048,
+    "max_known_sources": 12,
+    "sampling": "freeze seed2026110379 and available pool before shape/time or outcome values; reco pz/component/source strata, record nonzero inclusion probabilities; missing/tails never excluded",
+    "observations": "eventwise raw shape and relative-time validity/variation conditional on charge,pz,position and status; source stability; units,payload and response controls; do not call descriptive variation energy information gain"
+  },
+  "resource_ceiling": {
+    "Condor_jobs": 4,
+    "CPUs_each": 2,
+    "memory_MB_each": 3000,
+    "CPU_total_s": 7200,
+    "wall_each_s": 3600,
+    "input_bytes": 10000000000,
+    "retained_bytes": 10000000
+  },
+  "resource_status": "proposed ceilings only; actual schema/physics/cost QA before any formal extraction; no automatic production or shortened favorable prefix",
+  "physics_rules": [
+    "baseline point RMS is not integrated-charge uncertainty",
+    "do not divide by small/negative signed raw or replace missing raw with fits",
+    "do not use ultrarelativistic muon time of flight as energy measurement",
+    "relative time requires justified clock,offset and path; weak times remain missing",
+    "do not label all extra activity hadrons",
+    "do not rescale reference Calo twice"
+  ],
+  "acceptance": "deliver actual new eventwise measurements and generation-mechanism evidence or concrete unavailable fields/conditions; branch inventory alone is insufficient",
+  "followup_if_useful": "one fixed matched-capacity baseline vs +one audited information family ablation contract; no gain assumed or training in stage79",
+  "followup_if_unavailable": "state concrete input/semantics/conditions limitation; no arbitrary feature or architecture rotation",
+  "parallel_support": "docs/nu_mu_energy_ml_support_delivery_prompt.md preserves actual pi/K development support; genealogy/random confirmation/common raw/Calo/interaction/FSI/material/acceptance/background remain required",
+  "no_new_training": true,
+  "no_new_F7_inference": true,
+  "no_ROOT_access_in_stage78": true,
+  "no_stage79_execution_in_stage78": true,
+  "no_external_messages": true
+}

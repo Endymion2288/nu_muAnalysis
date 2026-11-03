@@ -1,0 +1,26 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage78
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_v1.sh $(job)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-risk-complementarity-stage78.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 180MB
+getenv = False
+max_retries = 0
++MaxRuntime = 3600
++NuMuStage = "energy-ml-risk-complementarity-stage78"
+log = $(spool)/logs/risk.$(ClusterId).log
+output = $(spool)/logs/risk.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/risk.$(ClusterId).$(ProcId).err
+queue job from (
+fold0
+fold1
+fold2
+final
+)

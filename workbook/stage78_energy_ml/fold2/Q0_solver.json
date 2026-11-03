@@ -1,0 +1,97 @@
+{
+  "solved": true,
+  "weights": [
+    [
+      0.42884020644182036,
+      0.5711597896288559,
+      3.9293238402185965e-09
+    ]
+  ],
+  "selected_phase": "secondary",
+  "secondary_solved": true,
+  "primary_tau": 1.7782248636076354,
+  "solver_calls": 2,
+  "records": [
+    {
+      "phase": "primary",
+      "success": true,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "iterations": 8,
+      "qualified": true,
+      "tau": 1.7782248636076354,
+      "objective": 1.7782248636076354,
+      "normalized_MSE": {
+        "E50_100": 1.7782248636076907,
+        "E100_200": 1.070256827462988,
+        "all": 1.01469030834596,
+        "E200_inf": 1.0384393369682998,
+        "pz50_100": 1.0322669556276236,
+        "high_y": 1.0608999999999942,
+        "unconfirmed": 1.0296919175460344
+      },
+      "slack": {
+        "all": 0.005409691654040039,
+        "E200_inf": 0.022460663031700134,
+        "pz50_100": 0.02863304437237635,
+        "high_y": 5.773159728050814e-15,
+        "unconfirmed": 0.031208082453965558
+      },
+      "low_tau_slack": {
+        "E50_100": -5.5289106626332796e-14,
+        "E100_200": 0.7079680361446474
+      },
+      "risk_matrix_direct_max_abs_diff": 5.10702591327572e-14,
+      "simplex_max_abs_diff": 8.881784197001252e-16,
+      "minimum_weight": 0.0
+    },
+    {
+      "phase": "secondary",
+      "success": true,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "iterations": 2,
+      "qualified": true,
+      "tau_cap": 1.7782248736076354,
+      "objective": 0.6524470150663013,
+      "normalized_MSE": {
+        "E50_100": 1.7782248736076438,
+        "E100_200": 1.070256823460324,
+        "all": 1.0146903076550629,
+        "E200_inf": 1.0384393364166824,
+        "pz50_100": 1.032266955482551,
+        "high_y": 1.060899999999999,
+        "unconfirmed": 1.029691919243902
+      },
+      "slack": {
+        "all": 0.005409692344937156,
+        "E200_inf": 0.022460663583317553,
+        "pz50_100": 0.02863304451744897,
+        "high_y": 8.881784197001252e-16,
+        "unconfirmed": 0.031208080756097933
+      },
+      "low_tau_slack": {
+        "E50_100": -8.43769498715119e-15,
+        "E100_200": 0.7079680501473113
+      },
+      "risk_matrix_direct_max_abs_diff": 7.105427357601002e-15,
+      "simplex_max_abs_diff": 0.0,
+      "minimum_weight": 3.9293238402185965e-09
+    }
+  ],
+  "training_leaf_counts": [
+    22543
+  ],
+  "denominators": {
+    "E50_100": 0.020360993768730993,
+    "E100_200": 0.04629534653994955,
+    "all": 0.07546660618728196,
+    "E200_inf": 0.07778424228277475,
+    "pz50_100": 0.20881256538940693,
+    "high_y": 0.3962633189157776,
+    "unconfirmed": 0.29243022992119666
+  },
+  "wall_s": 0.03363361209630966,
+  "CPU_s": 0.02465048300000028,
+  "peak_RSS_MiB": 298.4375
+}
