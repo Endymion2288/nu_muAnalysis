@@ -1,29 +1,65 @@
-# 后续执行入口：stage71已完成，先交付真正新生成与共同响应输入
+# 下一轮执行Prompt：stage73 低能重建取证与固定能量重权
 
-先读AGENTS.md、[stage71报告](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)、路线§52/信息预算§32，以及[具体输入请求](../workbook/stage71_energy_ml/followup_input_request.json)。本轮唯一增补候选3fit已完成并停止；不是继续训练的待执行stage71 Prompt。没有自动安排stage72模型/metadata实验。
+先读AGENTS.md、[stage72研究复盘](../workbook/2026-11-03_stage72_reconstruction-reweight-reassessment.md)、[stage68](../workbook/2026-11-03_stage68_group-risk-regression.md)、[stage69](../workbook/2026-11-03_stage69_transfer-supervision.md)、[stage71](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)、路线§53/信息预算§33。stage72只有研究设计，最新实测仍是stage71；本Prompt供有CERN环境的节点执行，不要求在研究终端安装环境。本次用户明确提出重建排查和能量reweight，更新stage71后“所有新方法须先交新生成”的过强前置；真正独立确认仍需新输入。
 
-## 1. 已测结论与停止规则
+继续保留原F7。唯一科学问题是：当前低能失效与具体重建/读出状态怎样关联，固定边际能量权重能否纠正部分过修正，付出什么全区/困难组代价？不要重复28例π增补、对偶/辅助系数调参、架构/先验/校准扫描或EOS身份清单循环。
 
-π仅28个新key（低E4/2、同低pz困难0）增加到原41447train，原F7参数/62输入/400轮/三seed/unit MC。主增补cal两低E/传统95%比值上限2.480478/1.237628失败，raw也失败；全体/困难及双向尾保护通过，不能替代低能成功。继续原F7，停止这组样本的架构/权重/unit-matched/residual/gate/seed/校准变体；不重算旧预测当新进展，不降低门槛。
+## 1. 输入、选择和不可改变的契约
 
-K在stage70预算停止，完整支持未测，不能写0产额或把QA K行训练；不自动重试/分块/扩run。小π增补失败不能推论充分补样无效、物理不可能或缺数据唯一原因。真正独立确认及共同响应仍未交付。
+- 只用stage55 dataset、stage56 readout、已有F7/传统固定预测与必要stage68 C来源OOF、stage71固定参考及身份metadata。nominal train/cal/eval41447/8440/14057，91/16/22来源；不追加stage70 π28例、不读取K QA作为训练，以隔离本次权重因素。已有cal/eval均开发，不能叫新blind。
+- X必须通过audited_features.load/build使用同62列。线性模长/纵向动量只有pz0，px/py、q/p、弯折允许；p0/p1/pz1及其log比、次轨迹线性动量不作新增输入。11signed scintillator raw、VetoNu reduced、typed sentinel/domain/status/dependency→NaN保留；任一Calo module缺失使总和NaN，不nansum补零、不fit补raw、不裁合法负数。
+- 原truth νpz与reco highest-pz leading>50GeV、fiducial/质量/其余fitted-charge cuts不变。42缺失21/3/7 eligible与11保护保留，巨大动量/高y/未确认/负修正和全部尾保留；truth只作训练标签/权重/诊断，不进入部署。
+- 不读locked/未开发确认、原生大ROOT/RDO，不做新重建/生产、谱toy或SHA；不自动K重试/扩run。stage70参考化x不得重复缩放。新生成输入请求继续保留，但不阻断这次现有缓存开发。
 
-## 2. 下一项实际需要的输入与验收
+## 2. A模块：零新能量fit/推理的逐例误差路径
 
-优先交付请求中的实际可访问新π及K GENIE parent/input/subfile/entry映射、真实seed/是否重用运动学说明、跨flux/geometry事前角色与随机未开发确认池/包含概率。不同run/文件名/几何/flux不等于独立parent；四个原生头random_states为空和HepMC event_number0不能认证谱系。
+完整检查cal/eval的true50–100与100–200，含全部尾和非尾，另保留相似reco pz/活动的高E/high-y/未确认对照。只使用已存预测；不要再用一个总体RMSE表作为全部交付。
 
-同时交付共同nominal构建/几何和实际Calo payload/单位、11 signed scintillator raw/status与VetoNu reduced及原生Calo能量；01-LG只为兼容F7，不是完整物理响应认证。保留true50–100/100–200与同reco pz50–100 true高E/high-y/未确认、高端和缺失，不按已知残差择源/删尾，不捏造生成N或3000–5000选择后目标。
+对confirmed且primary/y有效的事例，由缓存E_mu,prod=(1−y)E_nu定义：
 
-收到明确新输入后，先在用户授权范围做有界schema/单位/身份与旧key交集/角色/成本分布QA。实际文件和生成身份、角色冻结、共同读出验证及资源成本可交付，才冻结下一单项物理实验与CPU/wall/事件/来源/storage上限及验收。尤其不要只凭16例平均吞吐预算整个K文件；须核最终ClassAd并保留worker硬上限（本轮dry-run900→schedd3600偏差已披露）。不得无合同自动全run/G4生产或新模型拟合。
+- a=log(pz_reco/E_mu,prod)；
+- b=log(Ehat/pz_reco)−log(E_nu/E_mu,prod)；
+- 检查逐例e=log(Ehat/E_nu)=a+b，组均方mean(e²)=mean(a²)+mean(b²)+2mean(ab)，保留有符号交叉项，不能解释成唯一因果百分比。
 
-输入未交付时，明确引用请求中的缺项并保留F7；不以反复metadata扫描/旧预测评价虚构下一阶段。无明确新实验不要虚设已执行stage72；不要未经授权发送邮件/消息要求他人交付。共同raw/stage54、interaction/FSI/材料、接受度/背景仍需完成，下方stage54协议只有进入该支线时适用。
+a是方向/传播/拟合的复合差，不叫纯tracker误差；b是附加修正与实际所需修正的差。未确认或非法标签单列且保留主评价，不能强填a/b或标错轨。train可用既有stage68 C的来源OOF作辅助，F7训练内预测不可冒充OOF。
 
-## 3. 任何后续能量实验必须保留
+交付两个低E全体/尾/非尾及来源层的a/b、F7修正、χ²/层数、几何、62列有效性与raw/Calo状态的联合证据，注明N/来源/缺失；与高E同读出者比较。可据已知尾作开发故障定位，未来确认不按旧坏例挑选。所有关联不自动等于因果。
 
-- 模长/纵向线性输入只pz0；px/py、q/p、弯折允许；11raw/VetoNu reduced/typed sentinel/status/dependency→NaN，合法signed负值保留，任一Calo模块缺失总和NaN，无nansum补零、fit-charge替代或困难尾删样。stage70 x已参考化，不能再乘比例。
-- 原train/cal/eval41447/8440/14057、42缺失21/3/7＋11保护不改；已有cal/eval均开发，不读locked/未开发确认事件择优。原两低E/传统≤1.05、all/F7≤1.01、困难≤1.03与整体/双向tail50增量≤2pp门槛不降，报告完整能量箱/缺失/空层。
-- 按新合同先小QA再Condor，现成LCG子进程、局部scratch、一次缓存/紧凑产物；不重配终端、无无必要SHA，不扩预算或自动重试；实测CPU/wall/RSS/吞吐与逻辑I/O，EOS物理总I/O未测照写。
-- 新阶段须中文workbook（实际输入/选择/单位/详细数据/误差与物理程序解释/命令/验证/资源/产物/下一具体输入与验收），更新路线/信息预算/入口并本地Conventional Commit、不push。旧路线§1–52、信息预算§1–32保留；原stage54五项未跟踪工具/缓存和下面6714bytes协议不动。
+沿用已有证据：stage55最低能206/208确认、μ核心R68=2.172%仅限选中支持；stage70 geometry/FPE日志和measurement长度不齐尚未证明进入旧nominal ML尾。stage55已说明measurement记录顺序问题，相关向量未入当前模型；先核计数/collection语义，不能自动宣布行错位。stage70 Calo03/01差已参考化，不作为同旧缓存失败的现成解释。
+
+有可复现的输入/单位/对齐错误直接影响当前X时，暂停B，交付具体字段/事件/影响与一个配对修复合同，不删事件绕过；仅有全局日志/相关性不能无限卡住B。A不重跑框架、不盲改几何。重建前效率缺未选中母样本，本模块明确未测量；后续有需要再对少量已知nominal PHYS做独立cut-flow/配对修复设计，不在本阶段自动读新文件。
+
+## 3. B模块：三种固定权重、最多12个正式fit
+
+只在当前输入可用于既定比较时实施。三臂均为当前F7级直接预测t=log(E_nu/GeV)的BDT，depth5/400轮、eta.04/subsample.8/colsample1/min_child_weight20/lambda10/hist/单线程，单seed2026110373；相同未加权训练mean(t)初始化（明确base_score、boost_from_average=0）、相同参数/正则，唯一变化为训练样本权重。不使用动态dual、早停/最佳checkpoint或辅助头。
+
+固定等倍程箱50/100/200/400/800/1600/3200/6400GeV；箱外不新增删除规则，真实空箱性能标未测量。对每次实际训练端计数n_b：
+
+- U：alpha=0，w_i=1，匹配控制；
+- S：alpha=1/2，w_i∝n_b^(−1/2)，唯一主研究候选；
+- F：alpha=1，w_i=N/(B n_b)，非空箱总权重一致的敏感性控制。
+
+N为本次实际训练端事件总数，B为非空箱数；空箱不赋伪权重。三者均使完整训练事件权重均值1；S箱总权重∝sqrt(n_b)，不是精确展平，F箱内谱也保持原样。权重直接进入DMatrix，不做加权抽样后再乘同样权重。report raw N/来源/唯一incoming数量、每箱总权重、权重范围及Kish ESS；ESS不叫独立物理N。完整train当前箱计数767/3564/9232/13805/10141/3656/282，F的既有全train ESS8621.671252只用于语义对照，折内要重新计算，不用held计数。
+
+沿用stage68 v2三个保守来源折及训练端exact incoming purge，held不删、全部41447一次OOF。每折三臂＋每臂全train一次，最多12fit。折内权重/任何尺度只用实际训练端，不用held早停、调alpha/箱界/参数。不恢复stage68的乘法对偶，不增加LDS/BalancedMSE/Huber/flow/seed或新特征版本。
+
+12fit是研究预算，单seed不包含重训不确定性。主候选S_cal固定，F不是事后备用赢家；所有臂都报告，不能因某臂更好改主候选。最终各模型raw及原8440cal的一个unit global mean-log offset并报，OOF仅raw；global unit offset与加权训练目标不同，应解释影响，不能另做truth分段校准。推理仅X，不按真实能量选模型。
+
+## 4. 验收与结果分流
+
+- 对OOF报告S/U与F/U；最终同一eval对U/传统/F7/stage68/stage69/stage71固定参考。给两个true低E层、全能量箱、≥200、reco pz50–100/100–250、高y、未确认及缺失的N/来源、log-RMSE、mean/median bias、R68、上下tail50/100和尾部损失。3.2–6.4TeV单列，≥6400空层不补0性能。
+- macro明确定义为固定非空能量箱MSE等权平均再开方；unit总体、macro及两低E的收益/代价并列。不要用加权总分、主体宽度或尾外条件分数替代全样本表现。
+- 延续500次component分层保守来源配对固定预测bootstrap，所有方向/空抽样透明；区间不含重训、offset重估、完整谱系、响应/interaction或研究选择误差，非独立确认。
+- 原推广门槛不降：两低E/传统RMSE比来源95%上限≤1.05为恢复，改善下限>0才叫超越；all/F7≤1.01，≥200/低pz/high-y/未确认≤1.03，整体及双向tail50增量上限≤2pp。它们是研究标准，不是测得detector容忍度。不能因新U更弱降低F7基线。
+- A发现可干预错误：先配对验证修复，B未运行照写。S在来源OOF/eval均稳定改善且原保护通过：冻结研究候选，安排共同响应/新来源确认，单seed不自动部署。F端点改善而其他区受损：报告三固定政策取舍，停止alpha扫描。train好而OOF/eval差：转真正新增的歧义两侧支持。a小、b大且三臂无收益：记录本次边际重权不足，下一项在条件能量假设判别、响应状态或实际新支持中依据A选择一个；不把结果叫全部方法不可行。
+
+## 5. 资源和交付
+
+先冻结stage73输入/公式/seed/分折/候选与结果分流，作小型加权均值/归一、解析梯度、NaN/推理仅X和资源pilot；不把pilot变额外科学候选。复用已有CVMFS与紧凑缓存，源码未变不重建C++。拟议≤4个Condor任务，每任务1CPU/3000MB、累计CPU≤1h、每任务wall≤1800s、最终≤20MB；预算/收益未测量，pilot后根据实测冻结，核最终ClassAd并保留worker上限。A/B复用一次缓存，scratch训练，不存新的全量输入副本/大量重复JSON。
+
+写中文stage73 workbook，至少包括a/b恒等式及交叉项、低E尾与非尾/困难对照、实际权重/ESS/训练和OOF风险、全部eval门槛/双向尾、物理与程序解释、实际命令/CPU/wall/RSS/I/O/产物，以及唯一下一任务的输入与验收。新方法未测不写结果。更新路线/信息预算/Prompt，本地Conventional Commit、不push，不自动启动后续生产或模型。
+
+共同raw/stage54、实际Calo条件、ν interaction/FSI/材料、接受度/背景、真正新π/K生成及未开发确认仍须交付。原stage71输入请求保留为数据分流，不能用metadata数量、重复digitization或28例小增补替代足量支持。下面stage54协议逐字保留，只有进入该支线才适用。
 
 ## 保留的stage54 data占据支线
 

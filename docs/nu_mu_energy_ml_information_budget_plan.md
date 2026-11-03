@@ -1,7 +1,8 @@
 # νμ 能量研究的信息预算：区分观测、学习与物理测量
 
-**2026-11-03 stage71实测更新：** [报告](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)、路线§52/信息预算§32及[后续输入入口](nu_mu_energy_ml_next_step_prompt.md)为当前进度。原F7算法固定三fit加入π28例，主候选true50–100/100–200 log-RMSE0.314206/0.264763，传统0.145487/0.226876；两低E/传统95%上限2.480478/1.237628仍失败，raw也失败。全体/困难组与双向tail保护通过，但不替代低E成功，**继续原F7，结束这组样本的方法轮换。**
-没有自动新fit/K重试/全run生产。下一步是交付真实新π/K generator parent/subfile/seed、事前角色和共同raw响应；当前只有具体输入请求，不能再用metadata循环或旧预测评价替代新物理实验。共同raw/stage54、独立确认、系统及接受度/背景仍须交付。
+**2026-11-03 stage72研究修订：** [最新复盘](../workbook/2026-11-03_stage72_reconstruction-reweight-reassessment.md)、路线§53/信息预算§33及[stage73执行Prompt](nu_mu_energy_ml_next_step_prompt.md)为当前研究优先级；最新实测仍为stage71，stage72没有训练、重算物理指标或SHA。**继续F7，响应用户提出的低能重建排查与能量reweight，安排一次有界取证＋固定权重对照。**
+stage68最低能OOF有收益，但对偶历史锁定、未解出平衡点；stage69辅助监督未覆盖多数high-y，未完成可见度建模；stage71仅增4/2低E例，不能裁决充分补样效果。低能已选中μ核心较准，不排除非μ读出/选择/尾部问题。下一实验先用缓存作复合μ差与ML修正差的逐例分解，再对当前62列直接回归比较unit、平方根逆频率、箱总权重一致三政策，最多12fit；实际收益/资源/功效未测量。
+真正新生成与共同响应仍为有效扩样/独立确认所需，不再作为这次已授权缓存研究的全部前置。原推广门槛、困难尾及阶段历史保留；0自动K重试/全run生产，stage54、interaction/FSI/材料、接受度/背景与独立确认仍需交付。
 
 ## 1. 这一次相对 stage29 真正新增的认识
 
@@ -755,3 +756,30 @@ OOF最低能P/C=.924198 [.903393,.944414]，总体.989517 [.986748,.992295]，10
 1任务9662919、3fit、一次exit0，remote CPU14s/wall20s；直接训练峰值254.016MiB，最终<10MB，重复归档/输入/预测去重。dry-run900s→最终MaxRuntime3600s偏差照报，实际<900且硬worker上限不变；无新增重试。独立预测/原F7参数数组/角色/标定/54个bootstrap展开检查通过，EOS物理总I/O及精确全阶段CPU未测。
 
 本组样本方法预算到此结束，下一笔需要[真实生成/共同响应输入交付](../workbook/stage71_energy_ml/followup_input_request.json)：实际新π/K parent/subfile/entry/seed，是否复用运动学，事前跨flux/几何角色和随机未开发确认，raw/status和Calo条件/单位，兼顾低E及同pz困难层、高端和缺失。交付后先有界身份/响应/成本QA再冻结单项实验；未交付不再metadata循环、重算旧预测或填未经测量的样本数。无自动stage72/新fit/K续跑；共同raw/stage54、interaction/FSI/材料、接受度/背景仍需完成。旧§1–31保留。
+
+
+## 33. stage72：新增预算用于重建误判路径与固定重权对照
+
+依据[stage72复盘](../workbook/2026-11-03_stage72_reconstruction-reweight-reassessment.md)及路线§53。用户新提出低能重建检查、能量分区reweight；本轮只有研究设计，没有新物理测量。最新实测仍stage71，继续F7，已有cal/eval仍开发，原§1–32保留。
+
+stage68最低能OOF有收益但乘法对偶历史锁定、未解出平衡目标，不能当所有目标不可能的证据。stage69辅助高transfer只覆盖360/1204训练high-y，软分类好不等于可见度/未确认问题解决。stage71仅增低E4/2例、同低pz困难0，K完整支持未测，小干预无法裁决足量补样。新生成对独立确认必要，不作为这次有限缓存研究的无限前置。
+
+### 33.1 A：零新能量fit的误判取证
+
+原stage55/56缓存及固定F7/传统/既有OOF。confirmed有效标签下用Eμ,prod=(1−y)Eν，a=log(pz/Eμ,prod)，b=log(Ehat/pz)−log(Eν/Eμ,prod)，逐例e=a+b，保留均方交叉项。a是方向/材料/拟合复合差，不叫纯tracker分辨率。普查两低E尾/非尾、相似reco的真高E困难者，连接质量、响应状态、几何与来源，未确认完整保留且不造标签。
+
+已有低能μ核心R68=2.172%只限选中支持，不能回答前选择效率。geometry/FPE或measurement长度不齐不是现成ML故障证据；stage55已有measurement顺序解释、当前未用其向量。Calo03/01差已对stage70 x参考化，不再缩放，也不是旧nominal失败原因。直接影响X的可复现错误才暂停B并给配对修复；只有相关/全局日志时不无限卡住训练政策研究。前选择/同面pull缺输入如实未测，不自动RDO重跑。
+
+### 33.2 B：一次固定三政策、最多12fit
+
+U/S/F为w_b∝n_b^(−alpha)，alpha=0/.5/1，均值1；固定七个等倍程箱，S唯一主候选，F敏感性。S不是精确箱均衡；F箱内连续谱也保持原样。当前N=767/3564/9232/13805/10141/3656/282，F Kish ESS8621.671252只表权重集中度，767个低E不因重权变成更多独立例。
+
+只用原41447train/62列、F7级direct logE BDT depth5/400轮/单seed2026110373；三来源折各三模型＋全train各一次。沿用stage68 v2 incoming训练端purge，实际train计数定权，held不调规则。相同初始化/正则，DMatrix直接给w，不重抽后再乘w；0辅助/dual/新特征/alpha或LDS/BalancedMSE扫描，不加π28。raw/各一个unit cal global offset并报，S_cal预定；原传统/F7恢复/全区/困难/双向尾标准沿用，不能以较弱U降门槛。
+
+拟议≤4任务，各1CPU/3000MB、CPU总≤1h、wall/job≤1800s、最终≤20MB；先算术/资源pilot冻结，实际成本/收益/功效未测量。A仅缓存，B一次scratch输入，0新ROOT/RDO/生产/K重试。完整协议见[stage73执行Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+### 33.3 这笔预算结束时应知道什么
+
+低能中心/尾与a还是b关联、是否存在可干预响应异常；固定重权是否改善来源泛化，以及对100–200、高端、同低pz高E、高y/未确认的代价。端点与全体取舍要并列，不靠macro或重权总分替代原门槛。训练好留出差则投向真实独立歧义两侧支持；三臂都无实用收益则停止边际频率方案，不继续扫权重。
+
+后备创新是条件于reco pz的竞争能量假设/负配对，及有实际状态语义的删失读出响应；概率恢复需实际q，不能把全局NRE或y辅助改名。DIR/BalancedMSE/2026综述与HEP先验/forward likelihood文献的适用边界见stage72§7，不移植外部精度。共同raw/stage54、interaction/FSI/材料、接受度/背景、真新π/K与随机未开发确认仍交付；旧输入请求保留，不用metadata循环替代研究。
