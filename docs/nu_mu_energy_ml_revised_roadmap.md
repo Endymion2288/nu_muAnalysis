@@ -1884,3 +1884,30 @@ vertex μ由生产者唯一电荷一致候选、0.0001mm顶点容差定义；`E�
 40缓存身份＋实际包零fitQA先通过，唯一Condor9666135一次exit0/0重试，实际1CPU3000MB1800s，remoteCPU59s/wall63s；script CPU58.627701s/wall59.310605s/peak684.426MiB，独立复核已含其中。3040非空指标/区间行和1799事件多重集median检查通过，最大差2.842171e−14。清单逻辑36,187,533bytes＋验证重开原NPZ25,505,895bytes，不冒称物理EOS I/O；早期一次语法失败成本未单独测量。正式后仅澄清资源字段及新locked必要推断范围，未改分层/数字/模型定义。最终<20MB，包去重、NPZ不入Git、stage54五项只读，原后缀逐字保留。
 
 **继续F7；唯一下一stage87：实际未曝光source/production及compatible缓存的交付、谱系核验和标签封存，0fit。** 需要真实入口、完整GENIE parent/subfile/entry/seed和曝光台账、62/raw/status/01-LG语义，以及与原全曝光和新支持的source/incoming隔离；只给旧metadata或改名blind不通过。QA不看候选locked能量风险，已看目标用于研究的source必须改为开发。当前无真实新路径，不能虚构run/seed、无限重复151源空清单或自动生产；若不可交付，准确交接缺口并停止该前置。只有实际准入后另冻两fit执行预算，不在stage86/87自动训练。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage86_energy_ml/followup_input_request.json)。完整response、interaction/FSI/材料/Calo/接受度/背景仍未闭合，历史§1–67及独立支持协议不改。
+
+
+## 69. stage87：按用户指示重划现有样本并完成五模型重训
+
+用户明确说明没有新样本，授权重整全部现有支持、重新区分训练/测试并重训。本节据此覆盖§68“新未曝光输入先行/本轮0fit/原角色不重划”的前置，历史结果不改，也不把已曝光池改名blind。[stage87实际报告](../workbook/2026-11-04_stage87_resplit-retraining.md)完成现成缓存合池与五模型正式训练：旧95748中有raw/status81313＋stage70/81/82/83新7720＝**89033**可兼容记录、60492唯一incoming；缺审计readout的14435单列，未以fitted charge替代。全部1016K新支持保留，无新ROOT/生成/重建。
+
+按pi/k/charm分层canonical-source seed2026110387重分，native-MeV incoming冲突test>cal>train，低优先级17657行隔离并保留身份。同key每角色全部重建视图总权重1，train/cal/test **46575/11612/13189**行、**37556/10811/12125**唯一key，源91/19/19，group/key跨角色均无交集；隔离key在高优先级有保留，不是按坏风险删事件。新test仅对新fit留出，整个池已有研究曝光；旧F7缓存可能训练过新test，故配对对照为同新split从头训练的direct62三原seed，不能称旧F7独立检验。62维、pz0-only一次方动量、允许px/py/q/p/弯折、raw11、typed NaN/Calo缺项、pz>50及困难侧不变。
+
+五正式模型=3×direct原400轮＋41观测族2×64 bounded和连续fraction/真μ响应posterior各150epochs，零pilot optimizer step。incoming加权、train-only预处理/new-cal校准，prior主名义预定，未按test选模型/seed/先验。新test传统/direct/bounded/posterior名义log-RMSE：
+
+| 层 |传统|direct|bounded|posterior |
+|---|---:|---:|---:|---:|
+|true50–100 GeV|.145661|.282644|.315593|.172273|
+|true100–200 GeV|.247937|.246329|.282926|.232803|
+|all|.557190|.287491|.323197|.326580|
+|低pz真≥200 GeV|1.887790|.658177|.740686|.825773|
+|high-y|1.618799|.609395|.714903|.805321|
+
+posterior最低能正tail13.114754%→2.732240%、median+19.882536%→+8.223458%，但仍不及传统，困难侧恶化。条件上端最低能/传统1.482576失败、第二低能1.017330仅条件通过；all/direct1.159577和低pz真高能1.337201失败，后者总/正/负tail差上端+18.252785/+5.403369/+15.321987pp。bounded也失败。flat最低能.102582却第二低能.291898/困难1.181159；pressure最低能.138552/第二.200395但困难1.236519，均不选赢家，不能推为信息极限或数据无关。
+
+来源共享incoming图实测每角色pi/k/charm各一大块，共3；在保守连通块定义下component内来源方差不可估，**source95未测量**，不写所有事件完全相关。500component内incoming重抽样仅条件于已有来源混合，排除来源/parent相关、重训/cal估计/响应/研究选择。整体名义68/90覆盖68.633677%/90.836976%，meanPIT .522204区间[.517522,.526791]仍偏；高端3200–6400仅22.343750%/59.947917%，high-y下端低于预设门槛，缺失5例不认证。总体覆盖不替代条件风险与PIT，未晋升模型。
+
+prepare9666913/fit9667100均一次exit0、零重试，1CPU3000MB/各MaxRuntime3600s，remoteCPU7+607=614s；fit全脚本598.556685CPU秒/612.990433wall秒/1090.003906MiB。40身份/实际包零fitQA在先；7560指标值、1728配对及1152coverage/PIT区间端点独立核验最大差2.273737e−13。模型/紧凑预测/全head/split保留，重复传输包和临时input删除，最终实际字节见storage.json，物理EOS请求字节未测量。新archive的FUSE滞后经XRootD取回同一结果，无重训；两前置失败和计时范围已记录。
+
+**继续既有部署，结束本固定五fit比较；唯一下一stage88为现成后验积分收敛与推断性能审计，0fit/ROOT/生成，无新样本前置。** 首40cal的max|PIT32−64|=.039193110、|64−128|=.012998450，主32不变，后验quantile/logscore尚不能称数值收敛。先≤40现成cal计时QA，冻结独立确定性参考/容差/数据范围，再≤1Condor1CPU3000MB/CPU1800s/wall1800s/紧凑20MB；用保存head在train/cal比较CDF/PIT/quantile/log-density与固定cal目标的数值敏感性，评估CDF复用，不能按test选节点、重校准/重训或把准确推断等同修复32点训练loss。实际成本/改善未测，尚未执行stage88，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[后续输入](../workbook/stage87_energy_ml/followup_input_request.json)。
+
+真实响应、interaction/FSI/材料/Calo/接受度/背景与将来的真正未开发确认仍需证据；没有新样本不阻止现有样本的有界数值研究。原stage54后缀与五项工作保持，K旧禁令/时限不恢复；历史§1–68及独立支持协议保留。

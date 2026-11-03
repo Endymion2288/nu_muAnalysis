@@ -1,0 +1,100 @@
+{
+  "status": "completed",
+  "formal_energy_models": 5,
+  "pilot_optimizer_steps": 0,
+  "records": [
+    {
+      "model": "direct",
+      "seed": 2026110255,
+      "rounds": 400,
+      "model_reload_exact": true,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110255,
+        "base_score": 6.185596261912373,
+        "boost_from_average": 0
+      },
+      "wall_s": 8.088917899993248,
+      "CPU_s": 8.000112181,
+      "peak_RSS_MiB": 516.08984375
+    },
+    {
+      "model": "direct",
+      "seed": 2026110256,
+      "rounds": 400,
+      "model_reload_exact": true,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110256,
+        "base_score": 6.185596261912373,
+        "boost_from_average": 0
+      },
+      "wall_s": 7.4611150169803295,
+      "CPU_s": 7.393830973999998,
+      "peak_RSS_MiB": 516.08984375
+    },
+    {
+      "model": "direct",
+      "seed": 2026110257,
+      "rounds": 400,
+      "model_reload_exact": true,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257,
+        "base_score": 6.185596261912373,
+        "boost_from_average": 0
+      },
+      "wall_s": 7.524213860015152,
+      "CPU_s": 7.460364916,
+      "peak_RSS_MiB": 516.08984375
+    },
+    {
+      "model": "bounded",
+      "epochs": 150,
+      "model_reload_exact": true,
+      "wall_s": 48.638824349007336,
+      "CPU_s": 41.44036081,
+      "peak_RSS_MiB": 682.65234375
+    },
+    {
+      "model": "posterior",
+      "epochs": 150,
+      "model_reload_exact": true,
+      "wall_s": 86.73208589098067,
+      "CPU_s": 85.875954811,
+      "peak_RSS_MiB": 682.65234375
+    }
+  ],
+  "offsets": {
+    "direct": 0.025193690596001274,
+    "bounded": 0.026893944316207147
+  },
+  "train_weighted_mean_logE": 6.185596261912373,
+  "wall_s": 524.804161196982,
+  "CPU_s": 512.532211165,
+  "peak_RSS_MiB": 682.65234375
+}

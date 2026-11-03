@@ -1,0 +1,63 @@
+{
+  "stage": 88,
+  "status": "proposal, not executed; freeze after <=40 identity timing QA",
+  "task": "existing posterior numerical convergence and inference cost audit; no new sample prerequisite",
+  "authority": "user authorizes reuse and new split; stage87 completed 5 fixed fits; this followup adds zero energy fits",
+  "input_paths": [
+    "ml/artifacts/stage87/posterior_parameters.npz",
+    "ml/artifacts/stage87/posterior.pt",
+    "ml/artifacts/stage87/predictions.npz",
+    "ntuples/energy_ml_stage87/split.npz",
+    "workbook/stage87_energy_ml/normalization.json",
+    "workbook/stage87_energy_ml/posterior_calibration.json",
+    "workbook/stage87_energy_ml/prior.json",
+    "workbook/stage87_energy_ml/protocol.json",
+    "workbook/stage87_energy_ml/quadrature_QA.json"
+  ],
+  "original_cache_inputs": [
+    "ntuples/energy_ml_stage55/dataset.npz",
+    "ntuples/energy_ml_stage56/readout.npz",
+    "ntuples/energy_ml_stage70/support.npz",
+    "ntuples/energy_ml_stage81/support.npz",
+    "ntuples/energy_ml_stage82/support.npz",
+    "ntuples/energy_ml_stage83/support.npz"
+  ],
+  "format": "posterior_parameters.row is original pooled row index; compact predictions.row matches active indices, not 0..Npool. Rejoin split/immutable caches; raw head is before stored b/T. Rich report input must be reconstructed before rerunning report/validator.",
+  "current_numerical_evidence": {
+    "cal_identities": 40,
+    "max_abs_PIT_32_64": 0.0391931096866614,
+    "max_abs_PIT_64_128": 0.012998450383724713,
+    "reference_converged": false
+  },
+  "scope": "train/cal only to design and validate deterministic independent reference; test untouched for algorithm selection. Saved weights/epochs/architecture/prior/calibration fixed. No reoptimization of b/T.",
+  "reference_proposal": "independent one-dimensional adaptive integration of the analytic r-inverse CDF/density over standard-normal s, with explicit tail bound; compare fixed GH32/64/128 and at most one predeclared higher reference. Reject unreliable reference, do not declare largest node count truth. Cache reusable mixture/bin CDF terms and measure actual cost.",
+  "sampling_proposal": "<=40 first cal identities matching quadrature_QA for startup; freeze deterministic <=512 evenly spaced cal and <=40 train checks without target/loss selection after cost QA. If full cal feasible under measured cap, explicitly freeze before running; do not silently shrink to favorable cases.",
+  "acceptance_proposal": {
+    "CDF_abs": 0.0001,
+    "quantile_abs_logE": 0.001,
+    "log_density_abs": 0.001,
+    "reference_requirement": "two independent/converged reference estimates with verified tail and tolerance budgets; otherwise unmeasured/unconverged",
+    "checks": [
+      "CDF bounds, monotonicity, probability normalization, tail residual",
+      "PIT, median, q05/q16/q84/q95, log-density differences from main32",
+      "fixed b/T cal objective and predeclared perturbations only, no scalar refit",
+      "runtime CPU/wall, peak RSS, CDF-call counts, compact cache bytes",
+      "separate inference integration sensitivity from training32-loss bias; no physical cause attribution from numerics alone"
+    ]
+  },
+  "proposed_limits": {
+    "Condor_jobs": 1,
+    "CPUs": 1,
+    "memory_MB": 3000,
+    "cumulative_CPU_s": 1800,
+    "wall_s": 1800,
+    "retained_bytes": 20000000,
+    "energy_fits": 0,
+    "new_ROOT_reads": 0,
+    "new_generation": 0,
+    "new_sample_requirement": false
+  },
+  "stop": "Reference or coverage cannot be certified: report actual bounds and missing condition, do not expand architecture/seed/quadrature grid or refit. No model promotion from overall coverage. End stage with Chinese report and local Conventional Commit; no push or automatic next stage.",
+  "unmeasured": "stage88 actual convergence, gain, runtime and I/O; response/interaction/FSI/material/Calo/acceptance/background remain unclosed",
+  "protected": "preserve original stage54 suffix and five untracked paths read-only; retain delivered1016K; do not reinstate old K production limits"
+}

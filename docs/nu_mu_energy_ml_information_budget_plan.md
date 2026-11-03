@@ -1036,3 +1036,16 @@ stage85 按保留 stage54 协议测量共同 collection、active-channel 分母�
 唯一Condor9666135一次exit0，1CPU3000MB/1800s、remoteCPU59s/wall63s，script58.627701CPU秒/59.310605wall秒/684.426MiB；40身份与实际包QA在先，3040指标区间独立复核最大差2.842171e−14。唯一逻辑文件36,187,533bytes＋验证重开25,505,895bytes，不作EOS请求/网络流量；早期语法失败成本未单独计量。紧凑<20MB、包去重、原stage54五项与后缀保留。
 
 **下一唯一stage87购买真实未曝光production/source及其compatible scalar/条件、parent/subfile/entry/seed与曝光封存证据，0fit。** 当前缺实际新入口，不能以空metadata阶段重复、虚构新run或重命名blind替代交付；无真实输入就准确交接缺口并停止该前置。实际source/incoming准入后才冻结训练提交资源；新locked上的F7/候选冻结推断也另列预算。K1016保留、旧生产限制不恢复，response/interaction/FSI/材料/Calo/接受度/背景及真正新确认继续；历史§1–47不改。
+
+
+## 49. stage87：现有支持重分与五fit实测，下一信息项为数值积分
+
+用户确认无新样本并授权重整/重训，覆盖§48的新source先行限制。[stage87报告](../workbook/2026-11-04_stage87_resplit-retraining.md)完成95748旧交付中81313审计readout＋7720新支持＝89033兼容记录，14435缺现成raw/status单列，1016K保留。按source分区再隔离跨角色incoming低优先级17657行，train/cal/test46575/11612/13189、唯一incoming37556/10811/12125；每key总权重1、group/key跨角色隔离。原五项stage54只读，无新ROOT/生成；新test是已研究池对本轮fit的留出，不是恢复blind。
+
+恰5正式模型、0pilot：direct三原seed/400轮、bounded与posterior同41族2×64/150epochs。新test传统/direct/bounded/posterior最低能log-RMSE .145661/.282644/.315593/.172273、第二低能 .247937/.246329/.282926/.232803、all .557190/.287491/.323197/.326580。posterior低能优于新direct但最低能仍差于传统，困难侧低pz真高能.825773对direct.658177、high-y.805321对.609395，尾部门槛失败。条件最低能/传统上端1.482576、第二1.017330、all/direct1.159577，均无联合通过；保留既有部署，不能将低能收益外推为系统学或信息极限结论。
+
+每角色source/incoming图仅3连通块（每component1），source95不可估；500incoming重抽样仅已有来源条件区间，不覆盖来源/parent/重训/cal估计/响应/选择。整体68/90覆盖68.633677%/90.836976%接近名义，meanPIT .522204区间不含.5，高端欠覆盖22.343750%/59.947917%，不认证后验。flat/pressure虽可降低某些低E风险却恶化困难侧，不作test先验选择。
+
+实际1prepare＋1fit Condor9666913/9667100，各一次exit0；1CPU3000MB/3600s，remoteCPU总614s，fit脚本598.556685CPU秒/612.990433wall秒/1090.003906MiB，前置小样本与实际包检查通过。7560指标、1728配对区间端点、1152coverage/PIT端点独立复核最大差2.273737e−13，回读精度范围和失败启动成本详见报告。紧凑模型/全head/split留存、包去重，20,000,000byte上限按storage.json实测，物理EOS I/O未测。
+
+**下一唯一stage88购买数值精度/推断成本证据，0新fit/ROOT/样本。** 40cal maxPIT32–64 .039193110、64–128 .012998450，当前GH32未认证收敛，不用它证明物理原因。保存head/calibration/prior/split/原缓存可在train/cal零训练比较独立参考CDF、PIT/quantile/log-density和固定cal目标；先≤40计时QA，再冻结确定性范围/容差与≤1Condor1CPU3000MB/1800CPU秒/wall1800秒/20MB预算。不按test选积分节点/先验，不优化cal参数，不将推断精度改善宣称消除训练近似偏差。尚未执行，收益与实际资源未测；输入/验收提议见[请求](../workbook/stage87_energy_ml/followup_input_request.json)。历史§1–48、stage54后缀与K解除政策保留，真实响应和后续未开发确认不冒称完成。

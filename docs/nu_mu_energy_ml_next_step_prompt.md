@@ -1,32 +1,36 @@
-# 下一轮执行 Prompt：stage87 未曝光来源实际交付与封存，0fit
+# 下一轮执行 Prompt：stage88 现成后验积分收敛与推断成本，0fit
 
-先读 `AGENTS.md`、路线§68、信息预算§48、[stage86实际报告](../workbook/2026-11-03_stage86_latent-transfer-diagnostics.md)、[条件posterior规范](../workbook/stage86_energy_ml/posterior_contract.json)和[输入请求](../workbook/stage86_energy_ml/followup_input_request.json)。**本轮唯一任务为真实未曝光source/production及compatible缓存的交付与谱系/封存核验，0能量fit。** 不把缺输入重复成空metadata阶段，不自动执行两fit合同。
+先读 `AGENTS.md`、路线§69、信息预算§49、[stage87实际报告](../workbook/2026-11-04_stage87_resplit-retraining.md)、[冻结训练协议](../workbook/stage87_energy_ml/protocol.json)、[数值QA](../workbook/stage87_energy_ml/quadrature_QA.json)与[下一输入/验收提议](../workbook/stage87_energy_ml/followup_input_request.json)。**唯一任务是已保存后验的数值精度和推断成本审计，0新能量fit、0ROOT、0生成；没有新样本不构成此前置。**
 
-## 1. 已测结论和前置边界
+## 1. 已测结果与边界
 
-stage86已完成49167训练支持（含1016K）＋8440cal/14057eval的真值/response表，0新fit/ROOT/F7推断。71664主角色记录都有物理正transfer，严格零0；未确认但标签有效1776/301/510保留。最低能eval208全status-normal，181confirmed低transfer的stage84/传统log-RMSE .283410/.142946，25/32正tail在该层。低pz682同时含299真≥200，传统/stage84风险1.990581/.646739，禁止pz硬切。当前没有证明信息极限、缺数据无关或真实响应已认证。
+用户授权重划现有样本，stage87已合池89033兼容记录并完成五模型，train/cal/test46575/11612/13189、唯一incoming37556/10811/12125，source/incoming跨角色隔离、每key权重1。14435无审计readout未混fitted charge；1016K新支持保留。新test仅留出本轮fit，已曝光开发池不是blind，旧F7缓存不能当新split独立对照。五fit已结束，不再重复训练。
 
-原train/cal/eval canonical group与精确native-MeV incoming跨角色隔离已闭合，但pooled49167只有39766唯一incoming；不能当独立生成数。151已登记canonical groups没有认证全新locked来源，旧stage34/35 test/challenge已经曝光。现有cal/eval仍开发，17369unused不是自动可用blind。当前缺真实新路径及完整parent/subfile/entry/seed/曝光台账。
+新test传统/direct/bounded/名义posterior最低能log-RMSE .145661/.282644/.315593/.172273，第二.247937/.246329/.282926/.232803；posterior有低E收益但最低能仍差传统，低pz真高E/high-y/未确认退化，候选均未通过联合门槛，继续既有部署。总体68/90覆盖68.633677%/90.836976%不能抵消PIT偏移、高端欠覆盖和点值/尾失败；flat/pressure为诊断，不选赢家，不归结信息极限。
 
-## 2. 实际交付，不能只换metadata名称
+每角色只有3个source/incoming连通块（pi/k/charm各1），保守来源区间不可估；500incoming bootstrap仅条件于已有来源混合，排除来源/parent相关、重训/cal估计/响应/研究选择。真实响应/interaction/FSI/材料/Calo/接受度/背景及未来真正未开发确认仍未闭合。
 
-1. 先核是否收到具体的新PHYS或紧凑scalar缓存URI、未曝光production/source登记和封存责任记录；只用明确入口，不递归扫全EOS，不虚构run/seed。没有真实入口时，准确交接输入请求中的缺口并停止该前置，不再重新生成同一151组空库存。
-2. 新source必须提供GENIE parent/subfile/entry/generation-seed到native run/event/input_entry的联结和累计曝光台账；核canonical group及精确incoming与全部95748旧曝光＋7720新支持隔离。四元key干净不能替代完整上游独立性；历史test、train与challenge不得改名blind。
-3. 交付需实际compatible62观测、11signed raw/status、Calo4/reference01-LG、release/geometry/conditions及已审计truth producer定义/单位。truth_mu/transfer只作监督，不进入部署；不能用重建pz0/.8制造非负truth。无效标签/缺失/高-y/未确认和低pz真高能不得删。
-4. ≤40个非风险schema/native身份/单位/条件QA，先量成本再冻结真实提取/传输/Condor资源。QA不得查看候选locked能量风险或据truth分布改模型/选择；已经为研究查看目标/风险的source标为开发，不能继续称locked。正式标签按外部事先封存顺序，候选/cal/prior最终冻结后才启用。
-5. 交实际紧凑缓存与谱系/封存验证，不能用新文件名/old test read=false或目录列表充当独立确认。若没有可交付来源，列出具体缺入口/台账/条件，不自动GENIE/G4/重建、随机补样或反复空审计。
+## 2. 实际输入及零fit启动
 
-## 3. 条件模型规范与继续准入
+- `ml/artifacts/stage87/posterior_parameters.npz`：全部活跃原始15维head、pooled row索引、b/T；保存的head尚未加b/T。
+- `posterior.pt`、`normalization.json`、`posterior_calibration.json`、`prior.json`、`split.npz`及原stage55/56/70/81/82/83缓存用于身份/状态与输入复现。紧凑`predictions.npz`也是active-row索引，不能当rich全89033行直接运行report/validator；先按row联结还原，不重训。
+- 已有首40cal固定身份：max|PIT32−64|=.039193110、|64−128|=.012998450。先只复用这≤40身份做独立积分/计时QA，不能无预算全cal×多节点扫描。
 
-stage86合同固定同41维μ/曲率/几何/station/raw/Calo＋missing的bounded residual与三成分连续transfer/真μ响应后验，两臂2×64/单seed/150epochs。原F7/stage84旧角色预测复用；joint NLL＋全事件marginal能量NLL，未知标签不伪监督；主median、68/90coverage/PIT/CRPS/锐度、原两低E/传统上95≤1.05、all/F7≤1.01、困难≤1.03、七层总正负tail50差≤2pp及低pz真高能保护不降。
+## 3. QA后冻结一次数值合同
 
-名义/平坦logE/低能×4 prior ratio cap[.1,10]＋ESS独立登记，不用eval选谱；data/MC density-ratio和noise数值1σ仍无条件，不能由stage85条件活动训练校正。未来最多两项fit、0pilot-fit仅为有条件设计，**收益/积分收敛/功效/训练资源未测量**。本轮即便交付locked也不自动开训：实际标签/split准入及零fit资源QA后，另冻训练作业预算。新locked上必要的一次冻结F7/stage84推断也须在后续模型/cal/prior冻结后单独列预算，不能在原开发角色重跑基线。
+提出一个独立确定性参考：对标准正态s的一维自适应积分、解析r逆变换/CDF或density、显式尾界；与GH32/64/128和至多一个事前较高参考比较。最大节点数本身不是truth，需独立交叉精度/尾残差/归一化证明。参考无法收敛时如实标未认证，不无限加节点。
 
-一次方动量仅pz0，允许px/py/qOverP/弯折；禁p0/p1/pz1与log动量比。原62/raw11/typed NaN/Calo缺项总NaN、pz>50GeV、困难尾和全部角色保持。1016K继续使用，用户解除的旧K禁令/时限不恢复。response/interaction/FSI/材料/Calo/接受度/背景不因posterior结构而消失。
+默认验收提议为CDF/PIT绝对误差≤1e−4、quantile绝对logE误差≤1e−3、log-density误差≤1e−3，并验证CDF单调、[0,1]、分箱质量和归一化。先固定参考实际可达容差，容差更改须解释数值依据，不能按test能量风险调整。基于小QA成本固定≤512等间隔cal＋≤40 train，若全cal可行必须事前明确范围；保留稀少/极端数值情况，不删坏事件。
 
-实际交付后写根目录中文stage87 workbook（数字/单位/输入/命令/CPU-I/O/封存与缺口/下一步），与代码配置和紧凑证据Conventional Commit，不push。原stage54五项只读；不自动执行下一阶段或发送外部消息。
+只在train/cal设计/验收，不按test挑节点、模型或先验。固定b/T和预定小邻域的cal目标变化可以诊断，不再优化校准。原主GH32数字保持历史；更精确推断的诊断须另名，不能宣称修复训练时32点loss偏差。禁止新增架构、seed、loss、early stop、谱或校准自由度。
 
-以下保留的stage54原后缀逐字不改，只作历史合同，不自动重启。
+## 4. 资源与交付
+
+大批量通过≤1Condor、1CPU/3000MB、累计CPU≤1800s、wall≤1800s，紧凑留存≤20,000,000bytes。QA后按真实耗时冻结，执行前包检查；测CPU/wall/peakRSS、CDF次数、逻辑/传输字节和CDF/bin缓存复用成本，未测物理EOS I/O不冒称。无新样本前置，不重读ROOT、不生产支持，不保存重复包/逐事件大网格。
+
+交CDF/PIT/median/q05/q16/q84/q95/log-density误差、固定校准目标敏感性、各来源/观测状态的数值稳定性、参考认证范围及性能；区分数值误差、条件统计、先验/训练loss与尚未识别物理响应。若以后评test，先冻结算法和预算，只交诊断，不据此选赢家或晋升模型。当前未来收敛/收益/成本均未测量。
+
+先写中文stage88 workbook实际报告（单位、输入/命令、数值/误差界、失败、资源、产物和下一具体任务），与代码/配置/紧凑证据本地Conventional Commit，不push、不自动启动stage89。原62/pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/Calo缺项、pz>50和全部困难侧不变；1016K保留，旧K生产禁令/时限不恢复。下面原stage54后缀与五项未跟踪路径逐字/只读保留。
 
 ## 保留的stage54 data占据支线
 

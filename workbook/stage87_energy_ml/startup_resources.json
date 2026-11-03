@@ -1,0 +1,47 @@
+{
+  "records": [
+    {
+      "action": "environment",
+      "user_CPU_s": 3.72,
+      "system_CPU_s": 1.64,
+      "total_CPU_s": 5.36,
+      "elapsed_hms": "0:13.34",
+      "peak_RSS_MiB": 338.48046875
+    },
+    {
+      "action": "submit_prepare",
+      "user_CPU_s": 2.77,
+      "system_CPU_s": 2.34,
+      "total_CPU_s": 5.109999999999999,
+      "elapsed_hms": "0:09.94",
+      "peak_RSS_MiB": 116.83984375
+    },
+    {
+      "action": "fit_preflight_syntax_failure",
+      "user_CPU_s": 1.24,
+      "system_CPU_s": 0.75,
+      "total_CPU_s": 1.99,
+      "elapsed_hms": "0:04.91",
+      "peak_RSS_MiB": 33.6875
+    },
+    {
+      "action": "fit_preflight_audit_dict_failure",
+      "user_CPU_s": 4.22,
+      "system_CPU_s": 1.49,
+      "total_CPU_s": 5.71,
+      "elapsed_hms": "0:11.03",
+      "peak_RSS_MiB": 334.6875
+    },
+    {
+      "action": "submit_fit_success",
+      "user_CPU_s": 4.21,
+      "system_CPU_s": 1.73,
+      "total_CPU_s": 5.9399999999999995,
+      "elapsed_hms": "0:20.50",
+      "peak_RSS_MiB": 334.77734375
+    }
+  ],
+  "measured_CPU_sum_s": 24.11,
+  "scope": "outer /usr/bin/time including children; parent package_QA timings overlap and are not added again",
+  "unmeasured": "initial independent AST command startup, collect/metadata/report-writing overhead; not exact all-command CPU"
+}

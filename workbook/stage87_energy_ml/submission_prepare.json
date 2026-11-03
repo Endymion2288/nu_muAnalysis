@@ -1,0 +1,28 @@
+{
+  "cluster": 9666913,
+  "result": "9666913.0 - 9666913.0\n",
+  "actual_ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage87/worker_v1.sh prepare",
+      "ClusterId": 9666913,
+      "MaxRuntime": 3600,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "paths": [
+    "ml/resplit_energy.py",
+    "ml/latent_transfer_diagnostics.py",
+    "ml/audited_features.py",
+    "ml/support_augmentation.py",
+    "ml/configs/audited_features.json",
+    "workbook/stage87_energy_ml/protocol.json",
+    "ntuples/energy_ml_stage55/dataset.npz",
+    "ntuples/energy_ml_stage56/readout.npz",
+    "ntuples/energy_ml_stage70/support.npz",
+    "ntuples/energy_ml_stage81/support.npz",
+    "ntuples/energy_ml_stage82/support.npz",
+    "ntuples/energy_ml_stage83/support.npz"
+  ]
+}

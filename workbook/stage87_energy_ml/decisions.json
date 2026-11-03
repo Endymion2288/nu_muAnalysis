@@ -1,0 +1,19 @@
+{
+  "main_posterior": "nominal_cal_median",
+  "versions": {
+    "bounded_cal": {
+      "conditional_point_and_tail_gates": false,
+      "independent_confirmation": false,
+      "source_intervals_available": false,
+      "meaning": "development decision only; no new blind/source robustness claim"
+    },
+    "posterior_nominal": {
+      "conditional_point_and_tail_gates": false,
+      "independent_confirmation": false,
+      "source_intervals_available": false,
+      "meaning": "development decision only; no new blind/source robustness claim"
+    }
+  },
+  "conclusion": "retain existing deployment; no independent/source-level confirmation; assess fixed development candidates",
+  "authority": "user-authorized resplit and retraining; old F7 metrics not a held-out comparator on reassigned data"
+}

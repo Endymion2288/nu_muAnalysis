@@ -1,0 +1,30 @@
+{
+  "Python_AST": true,
+  "bash_syntax": true,
+  "JSON_parse": true,
+  "TSV_uniform_shapes": true,
+  "append_only_roadmap_and_info": true,
+  "stage54_prompt_suffix_exact": true,
+  "scientific_figure_visually_checked": true,
+  "formal_models": 5,
+  "additional_fits_during_closeout": 0,
+  "additional_ROOT_reads": 0,
+  "validation_scope": "Closeout syntax/format/history and evidence checks; full numerical validator already passed within formal fit job. No rerun on compact predictions.",
+  "physical_EOS_IO_bytes": "未测量",
+  "independent_validation": {
+    "passed": true,
+    "split_and_native_incoming_disjoint": true,
+    "per_key_weight_sum1": true,
+    "independently_reproduced_all500_draws": true,
+    "weighted_metric_values_checked": 7560,
+    "paired_interval_bounds_checked": 1728,
+    "posterior_coverage_PIT_interval_bounds_checked": 1152,
+    "max_absolute_difference": 2.2737367544323206e-13,
+    "formal_models": 5,
+    "source_intervals_certifiable": false,
+    "model_reload_exact_all": true,
+    "wall_s": 36.850687904981896,
+    "CPU_s": 36.41263372100002,
+    "peak_RSS_MiB": 1090.00390625
+  }
+}
