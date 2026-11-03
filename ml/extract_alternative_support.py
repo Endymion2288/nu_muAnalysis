@@ -18,9 +18,10 @@ from frozen_evaluation import truth_diagnostics
 from track_response import TRACK_BRANCHES, derive, configuration as track_configuration
 
 
-def extract(index, input_path, output, qa=False):
+def extract(index, input_path, output, qa=False, source=None):
     start, cpu = time.perf_counter(), time.process_time()
-    source = json.loads((REPO/'ml/configs/alternative_support_pilot.json').read_text())['sources'][index]
+    if source is None:
+        source = json.loads((REPO/'ml/configs/alternative_support_pilot.json').read_text())['sources'][index]
     base = yaml.safe_load((REPO/'ml/configs/baseline.yaml').read_text())
     names = sum([base['feature_groups'][k] for k in base['feature_versions']['F5']], [])
     extra = track_configuration(REPO)['features']

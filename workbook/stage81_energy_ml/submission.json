@@ -1,0 +1,43 @@
+{
+  "cluster": 9663224,
+  "submitted_utc": "2026-11-03T18:01:42.661594+00:00",
+  "jobs": 2,
+  "actual_ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage81/worker_v1.sh 0",
+      "ClusterId": 9663224,
+      "MaxRuntime": 3600,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage81/worker_v1.sh 1",
+      "ClusterId": 9663224,
+      "MaxRuntime": 3600,
+      "ProcId": 1,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "payload_bytes": 581860,
+  "paths": [
+    "build/analysis",
+    "AnalysisZipFramework/config",
+    "AnalysisZipFramework/include",
+    "ml/extract_phys_support.py",
+    "ml/extract_alternative_support.py",
+    "ml/audited_features.py",
+    "ml/frozen_evaluation.py",
+    "ml/track_response.py",
+    "ml/train_bdt.py",
+    "ml/configs/alternative_support_pilot.json",
+    "ml/configs/audited_features.json",
+    "ml/configs/baseline.yaml",
+    "ml/configs/track_response.yaml",
+    "workbook/stage81_energy_ml/protocol.json"
+  ],
+  "wall_s": 27.503160443156958,
+  "CPU_s": 2.7322371420000002,
+  "peak_RSS_MiB": 687.25
+}

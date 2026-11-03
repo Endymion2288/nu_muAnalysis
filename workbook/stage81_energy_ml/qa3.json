@@ -1,0 +1,125 @@
+{
+  "index": 3,
+  "source": {
+    "run": 200081,
+    "component": "k",
+    "group": "k:00160-00169",
+    "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00160-00169-s0014-PHYS.root",
+    "historical_roles": [
+      "train"
+    ],
+    "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+    "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+    "file_bytes": 50029891,
+    "index": 3,
+    "source_probability": 0.047619047619047616,
+    "conditional_event_probability": 1.0,
+    "selection_index": 8,
+    "independent_confirmation": false,
+    "role": "development_enrichment"
+  },
+  "QA_identity_N": 10,
+  "QA_input_entries": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "raw_N": 10000,
+  "identities": [
+    {
+      "run": 200081,
+      "eventID": 160000
+    },
+    {
+      "run": 200081,
+      "eventID": 160001
+    },
+    {
+      "run": 200081,
+      "eventID": 160002
+    },
+    {
+      "run": 200081,
+      "eventID": 160003
+    },
+    {
+      "run": 200081,
+      "eventID": 160004
+    },
+    {
+      "run": 200081,
+      "eventID": 160005
+    },
+    {
+      "run": 200081,
+      "eventID": 160006
+    },
+    {
+      "run": 200081,
+      "eventID": 160007
+    },
+    {
+      "run": 200081,
+      "eventID": 160008
+    },
+    {
+      "run": 200081,
+      "eventID": 160009
+    }
+  ],
+  "production": {
+    "compatible": false,
+    "paths": [
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/log/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00160-00169-s0014-RDO.rec.log",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/log/s0014/FaserMC-MC24_Genie_sibyll_k-200081-0016-PHYS.ntp.log"
+    ],
+    "new_log_bytes": 1460372,
+    "release": "6d6ab70b",
+    "geometry": "TI12MC04/FASERNU-04",
+    "calibration": "actual logs WAVE-Calibration-01-LG",
+    "ntuple_tracks": "CKFTrackCollectionBackwardWithoutIFT",
+    "reference_tracks": "CKFTrackCollectionMergeWithoutIFT",
+    "reason": "actual backward-only collection differs from original merge selection/track readout; no paired equivalence or nominal merge PHYS delivered",
+    "missing_diagnostic": "Track_isForward; diagnostic only, not by itself the physical rejection reason",
+    "writer_source": "PhysicsAnalysis/NtupleDumper/scripts/faser_ntuple_maker.py@6d6ab70b",
+    "energy_yield": "未测量",
+    "model_fits": 0
+  },
+  "scalar_requested_bytes": 561697,
+  "calo_reference_MeV_per_pC": 4628.330998887742,
+  "calo": [
+    {
+      "module": 0,
+      "N": 2,
+      "median_MeV_per_pC": 4628.3310531316565
+    },
+    {
+      "module": 1,
+      "N": 2,
+      "median_MeV_per_pC": 4628.331081843931
+    },
+    {
+      "module": 2,
+      "N": 2,
+      "median_MeV_per_pC": 4628.330800779924
+    },
+    {
+      "module": 3,
+      "N": 1,
+      "median_MeV_per_pC": 4628.331110060477
+    }
+  ],
+  "calo_rescaled": false,
+  "compatible": false,
+  "energy_fits": 0,
+  "wall_s": 1.240097118075937,
+  "CPU_s": 0.26011629800000025,
+  "peak_RSS_MiB": 194.9765625
+}

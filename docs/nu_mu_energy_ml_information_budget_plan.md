@@ -896,3 +896,15 @@ X/M来源OOF两低E比.432053/.742703、eval密度NLL .140668<.319245仍说明�
 继续F7，关闭一次raw_peak/width族，不改mask/通道/seed/权重/时间续调。**下一笔stage81只购买实际新增π/K开发支持，0训练**，执行保留的[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)原stage77合同，协议逐字不改。已知合法train池事前选π/K各≤2、总≤4完整PHYS，≤40实际条件/62/raw/Calo/联结/资源QA后才冻结Condor；旧stage55全部曝光＋stage70实际28 key去重，完整报告低E及同pz高E/high-y/未确认歧义两侧新增唯一支持与代价。40000输入/10GB、≤4job≤2CPU3000MB、CPU7200s/wall3600s、留存10MB是上限而非可交付证明；新增N/充分功效未测。
 
 不能用空metadata阶段或旧28例复评替代实际增补；入口缺失交具体路径/字段/条件，不自动RDO生产/失败K重试/源替换。新增仅开发增补，真随机未开发确认、上游谱系、共同raw/stage54、Calo/脉冲响应和interaction/FSI/材料/接受度/背景仍待交付。见[主Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage80_energy_ml/followup_input_request.json)，本轮未执行stage81。旧§1–40保留。
+
+## 42. stage81：小成本交付歧义两侧新支持，下一笔限固定学习曲线
+
+[stage81报告](../workbook/2026-11-03_stage81_phys-support-delivery.md)交付两个π既存d32 merge PHYS的20000完整输入→797 selected→742新增唯一native incoming、两来源。45行stage55全曝光复用、stage70实际28复用0、内部11重复且与旧复用有1重叠。真50–100/100–200新19/89、confirmed低transfer16/64、同reco pz50–100真≥200新12、高y/未确认新16/22、高端0；原train增幅1.790238%，低E各约2.48/2.50%，仍不能称足量。原pz0/raw/62/typed NaN、角色/原42缺失/所有尾不变，0能量fit/推理/生产。
+
+known π22/K42池事前seed2026110377均匀各2来源，概率2/22、2/42，40固定身份QA/actual包启动和资源冻结在提交前。K direct bck PHYS的实际--backward绑定BackwardWithoutIFT，与原MergeWithoutIFT不等价；缺Track_isForward仅诊断不是唯一拒绝理由。Calo01-LG及geometry一致不等于完整共同轨迹，两个K完整产额未测，不换源/不填0/不自动重建。π不二次缩放；小QA有效非零Calo比例只module1/2，四模块历史snapshot限制保留。
+
+2任务9663224一次exit0/无重试，remote CPU25s/wall48s、1CPU3000MB3600s，C++ peak约670MiB；逻辑正式PHYS61.408284MB，Uproot8.042542MB、含重复QA已计请求27.509060MB，C++请求与物理EOS网络I/O未测。numpy独立key归属、原QA闭合、62域/raw/Calo NaN、角色/42缺失、10主层与源选择复现通过；合并缓存/表图<10MB，重复包/分片去重。仅开发增补、完整谱系未知，源概率不是flux权重；新性能与功效未测。
+
+继续F7；stage82按路线58.3只做固定0＋半/全两档支持曲线。合并旧28＋新742=770唯一πkey/3来源，seed2026110382按source均匀半385（194/177/14）/全770，原41447基础上41832/42217；size0只读旧F7。每档原3seed/400轮/原62/unit logE最多6fit、0pilot，各一个原cal offset，主full_cal预定，half不选赢家。不新增ROOT/支持源/响应/架构，不将样本量、π flux混合和重训效应混称纯N因果效应。
+
+先角色/key/NaN/原初始化及实际包无fit两档启动/资源，后冻结≤2Condor1CPU3000MB、CPU1800s/wall1800s、留存20MB拟议上限；传统1.05/all1.01/困难1.03/关键层总正负tail2pp原门槛不降，500来源固定预测区间和完整层/双向尾，cal/eval仍开发。收益未测，失败关闭固定增补，不按几例继续轮换方法，也不宣布缺数据假说已否证。见[主Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage81_energy_ml/followup_input_request.json)，本轮未执行。K名义merge实际入口/条件、共同raw/stage54、Calo/脉冲/interaction/FSI/材料/接受度/背景及真随机未开发确认仍待交付。旧§1–41保留。

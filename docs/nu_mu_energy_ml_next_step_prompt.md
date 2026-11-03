@@ -1,24 +1,33 @@
-# 下一轮执行Prompt：stage81 兼容既存PHYS的真实新增开发支持交付
+# 下一轮执行Prompt：stage82 固定0＋两档π增补支持学习曲线
 
-先读AGENTS.md、[stage80报告](../workbook/2026-11-03_stage80_pulse-shape-ablation.md)、路线§61/信息预算§41、[新增支持请求](../workbook/stage80_energy_ml/followup_input_request.json)，然后执行[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)原stage77合同。独立协议保持原文，其中阶段号stage77在本次执行记录为stage81；原seed2026110377、物理/角色/选择与资源合同不变，不复制重写协议或缩减保护。
+先读AGENTS.md、[stage81报告](../workbook/2026-11-03_stage81_phys-support-delivery.md)、路线§62/信息预算§42、[下一合同](../workbook/stage81_energy_ml/followup_input_request.json)、stage70参考Calo闭合和stage71三seed增补实现。继续F7，原固定脉冲族/分类器/组合预算已结束。本轮只执行一次0＋半/全真实π支持曲线，0新ROOT/PHYS/RDO/HITS/重建/生成/谱toy，不自动执行stage83。
 
-## 当前证据与唯一任务
+## 1. 问题、实际支持和边界
 
-stage80原62 vs 加22 raw_peak/width的8fit已完成。总体和100–200有小幅增量，但主低pz OOF/eval风险比区间跨1，最低能仍差传统，两低E恢复和部分双向尾门槛失败。继续F7，结束固定脉冲族；不续扫通道/mask/时间/seed/权重/架构，也不重开条件classifier/积分/专家组合。
+stage81完整两π文件20,000→797 selected→742新唯一incoming，true50–100/100–200为19/89、同低pz true≥200为12，两侧实际交付；但只有两个π来源、高端0。K虽然存在，actual backward-only collection非原merge，完整selected/new未测，不混入/补0或重试生产。所有新行仅开发增补，完整谱系/独立确认/共同响应仍未认证。
 
-本轮唯一问题：可访问的兼容既存π/K PHYS能交付多少相对旧开发缓存**实际新增**的低E及同reco pz真高E/high-y/未确认支持，条件与实际代价是什么？0模型训练。新增N、足量功效、学习曲线均未测；四来源只是入口，不预判足量，不以旧28例再评/目录清单当扩样。
+将stage70实际28与stage81实际742合并为770唯一πkey/3来源，用原41447 nominal train作基底，检验一次固定增补量的趋势与原风险。不是充分N或纯样本量因果实验，效应混合π flux/支持/重训；770只约原train1.86%，缺增益不能否证缺数据假说。收益与功效未测，禁止按结果挑规模、来源、seed或另换方法。
 
-## 执行要点与验收
+## 2. 输入、冻结规模与零fit预检
 
-- 输入限已知manifest明确PHYS、历史canonical train合法池；先读stage55/65/70角色与全部曝光，排除已完整交付的来源。事前seed2026110377在π/K各均匀≤2来源、总≤4完整文件，记录池/源概率及文件内概率1；不按能量、残差或新key产额换源，不扫全EOS/test/cal/eval/locked。
-- 先≤40事前身份QA实际schema/单位/62/raw/status/VetoNu reduced/联结及Calo reference01-LG实际payload与逐例闭合，复用现成build/LCG，仅源码变才重建。原pz>50、一次方模长/纵向动量仅pz0，px/py/q/p/弯折允许，typed/domain/status/dependency NaN与合法负raw、缺一Calo总和NaN保持，不二次缩放或以fit charge补raw。
-- 原生MeV incoming精确key，对stage55**全部已曝光开发缓存**＋stage70实际28新增排复用，再源内/源间稳定去重；保留原事件/来源包含概率。没有完整parent/subfile/entry/seed时明确未知，新行仅development enrichment，不能称随机独立确认；未知谱系也不自动否定所有合法有界开发提取。
-- 小样本测CPU/wall/RSS/请求字节与联结/资源，再冻结≤4Condor/每≤2CPU3000MB、CPU累计7200s/wall每3600s、总≤4完整源/40000输入/10GB、最终≤10MB。上限不是已证明可交付，不用有利prefix外推或自动扩大预算/重试失败K。批量走Condor，不长期留ROOT/PHYS/大输入和传输副本。
-- 完整cutflow、来源/组件、旧key/内部/跨源复用、新增唯一incoming、原62缺失/raw/status/Calo状态，true50–100/100–200、同pz50–100两低E与true≥200、high-y/未确认、3200–6400/≥6400及缺失的新增N/来源/唯一key和原41447实际增幅，所有困难/尾保留。输入/角色/定义/参考响应与预算QA通过才释放新增开发缓存；未交付或未测明确标记，不能填物理0。
+- 仅`ntuples/energy_ml_stage70/support.npz`的new_training_support28、`ntuples/energy_ml_stage81/support.npz`的new_training_support742，均用已经reference01-LG的x，**不再运行03→01缩放**。对stage55全部95748已曝光incoming和pooled源内/源间精确key重核，不能仅检查原eligible；只读旧缓存和F7旧预测。
+- 原62/pz0-only一次方动量/px-py-q/p-弯折、11signed raw/VetoNu reduced/typed-domain-status-dependency NaN、Calo缺一totalNaN不改，旧41447/8440/14057与91/16/22组、原缺失21/3/7＋11保护及全部困难/尾保持。
+- 事前seed2026110382，按canonical group顺序每source无放回均匀取floor(N/2)：π00100–00109取194/388，π00250–00259取177/354，π00440–00449取14/28，half385；full770。文件内所有新增候选的身份/源概率保留；不按E、y、p、残差或模型排序。两档train41832/42217，cal/eval不增补；half subset full，不调样本数。
+- 原F7实际版本/参数/初始化语义、label/features/incoming/源角色与NaN、缺失与signed值、支持层/概率、实际软件包两档无fit启动先通过；0pilot fit，完整成本仍未测，先QA/资源后冻结ClassAd/worker硬上限。沿LCG109/XGBoost2.1.3/现有构建，不安装/编译。
 
-实际兼容PHYS/条件入口不可交付则交最小缺失路径/字段/条件，不以空metadata清单制造新阶段commit，不自动读取新RDO/HITS/重建/生成或K重试。少量支持只交局限；是否进行一次固定增补比较，在真实数据交付后给唯一下一合同，本轮不训练或自动开始stage82。
+## 3. 唯一6fit与固定评价
 
-先中文stage81 workbook，记录实际输入、选择概率、数值/单位、完整QA/命令/成本、物理/程序限制及具体下一任务，再与代码和紧凑成果本地Conventional Commit。不push、不外发、不动stage54已有工具/缓存。共同raw/stage54、完整Calo/脉冲条件、interaction/FSI/材料、接受度/背景及真正随机未开发确认继续。
+size0复用stage56 F7已存cal/eval预测和原offset，0新基线fit/推理。half/full各原3seed **2026110255/2026110256/2026110257**、原depth5/400轮/原参数/unit direct logE，共最多6正式fit；初始化沿原F7实际语义，不自动换成另一初始化政策、早停、重权或挑轮。每档3seed平均raw log预测，再原8440 cal一个unit global log-offset，raw/cal均报。**主full_cal预定；half为曲线诊断，不从半/全/raw/cal中选赢家。** 不把每seed当独立生产重复。
+
+报告两真低E（含confirmed低transfer）、reco pz50–100、同pz真≥200/high-y/未确认、全体/≥200/全部能箱/高端/缺失和总正负tail50/100、bias/R68、来源方向、支持实际增幅与训练内风险。500component分层保守来源配对固定预测bootstrap，eval seed2026111382；每档对F7、主full对传统，full/half曲线也并报，不能只报总体或有利中位数。区间不含重训/增补抽样/offset估计/完整谱系/响应/研究选择，cal/eval仍开发，非联合覆盖或独立确认。逐模型回读、原角色/缺失、校准与bootstrap独立核验。
+
+原推广门槛不降：两低E相对传统RMSE来源95%上限≤1.05、all/F7≤1.01、≥200/低pz/high-y/未确认≤1.03、原关键层总/正/负tail50增量95%上限≤2pp；缺少证据不能改门槛。raw/half改善不能代替主full_cal同时通过。成功仅冻结研究候选与独立确认合同，失败继续F7并结束这次有限增补；不扫规模/源/权重/seed/架构或用同几例轮换方法。
+
+## 4. 预算和交付
+
+拟议≤2Condor任务（每档3fit）、每1CPU/3000MB、累计CPU≤1800s、每job wall≤1800s、紧凑最终≤20MB；是上限，实际拟合成本/收益未测，先实际无fit QA后冻结。批量Condor，一次尝试不自动重试/延长，记录脚本及remote CPU/wall/RSS、只读缓存输入与存储，删除重复大输入/传输包，保留6模型/预测和紧凑表图；无新ROOT I/O，EOS物理网络I/O未测要明示。
+
+先中文stage82 workbook实测报告，再与代码/协议/紧凑成果本地Conventional Commit，不push、不外发，不动stage54五项已有工作。K0090/0160两个固定来源缺名义d32 merge/without-IFT PHYS与actual条件/联结/62 QA或完整逐例等价证据；不自动RDO生产/失败K重试。真实π/K parent/subfile/seed和随机未开发确认、共同raw/stage54、完整Calo/脉冲/interaction/FSI/材料/接受度/背景请求继续，不以770例替代。
 
 以下stage54原后缀逐字保留，仅进入该支线时适用。
 

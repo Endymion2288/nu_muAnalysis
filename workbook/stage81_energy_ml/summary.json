@@ -1,0 +1,57 @@
+{
+  "raw_N": 20000,
+  "selected_N": 797,
+  "new_N": 742,
+  "unique_selected_keys": 786,
+  "stage55_reuse_N": 45,
+  "stage70_reuse_N": 0,
+  "internal_repeat_N": 11,
+  "within_source_repeat_N": 5,
+  "cross_source_repeat_N": 6,
+  "new_sources": 2,
+  "new_groups": 2,
+  "original_exposed_N": 95748,
+  "original_unique_keys": 66843,
+  "old_stage70_new_keys": 28,
+  "new_lowE": {
+    "E50_100": 19,
+    "E100_200": 89
+  },
+  "new_difficult": {
+    "pz50_100_trueE200_inf": 12,
+    "pz50_100_high_y": 6,
+    "pz50_100_unconfirmed": 10,
+    "high_y": 16,
+    "unconfirmed": 22,
+    "input_missing": 0,
+    "E3200_6400": 0,
+    "E6400_inf": 0
+  },
+  "complete_sources": [
+    0,
+    1
+  ],
+  "unmeasured_sources": [
+    2,
+    3
+  ],
+  "K_selected_and_new": "未测量",
+  "K_reason": "actual backward-only K PHYS; nominal merge input/paired equivalence not delivered",
+  "requested_uproot_bytes": 8042542,
+  "analysis_ROOT_requested_bytes": "未测量",
+  "physical_EOS_network_IO": "未测量",
+  "remote_CPU_s": 25.0,
+  "remote_wall_sum_s": 48.0,
+  "energy_model_fits": 0,
+  "F7_inference": 0,
+  "new_RDO_HITS_or_generation": 0,
+  "locked_test_read": false,
+  "calibration": "existing reference01-LG; no rescaling",
+  "response_systematics_certified": false,
+  "independence": "development only; full upstream parent/subfile/seed unproven",
+  "power": "未测量",
+  "all62_policy_and_incoming_veto_verified": true,
+  "wall_s": 2.5209986199624836,
+  "CPU_s": 1.750874709,
+  "peak_RSS_MiB": 358.85546875
+}

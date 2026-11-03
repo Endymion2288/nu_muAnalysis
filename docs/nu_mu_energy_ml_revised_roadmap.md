@@ -1718,3 +1718,33 @@ P_cal/传统两低E比2.142423 [1.826960,2.497108]/1.140002 [1.070227,1.214789]�
 **继续F7，结束本固定raw_peak/width族，不续扫通道/mask/时间/seed/权重/架构。唯一下一项stage81：实际兼容π/K PHYS的新增开发支持交付，0模型训练。** 复用[独立支持协议](nu_mu_energy_ml_support_delivery_prompt.md)原stage77物理/资源合同，文件逐字不改；stage81只在当前主Prompt/记录标号。known合法canonical train π/K事前seed2026110377各均匀≤2来源/总≤4完整源，先≤40身份实际schema/62/raw/status/Calo reference01-LG条件与联结/成本QA，再按实测冻结Condor。对stage55全部曝光＋stage70实际28 key排重，交两低E与同pz真高E/high-y/未确认/高端的新增唯一key/来源/缺失及完整cutflow/成本，原pz>50/所有尾不变。
 
 拟议总40000输入/10GB、≤4job/每≤2CPU3000MB、CPU7200s/wall3600s、最终10MB仅上限，成本/新增N/足量功效未测。实际PHYS/条件不可交付则列最小实际缺口，不再交空metadata清单、不自动重建/生成/失败K重试；角色与key干净的新增仅称开发增补，不作独立确认。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage80_energy_ml/followup_input_request.json)，本轮不执行stage81。共同raw/stage54、完整响应、interaction/FSI/材料/接受度/背景及真正随机未开发确认继续。历史§1–60保留。
+
+## 62. stage81：交付742唯一π支持；K直接PHYS的轨迹集合不兼容
+
+[stage81报告](../workbook/2026-11-03_stage81_phys-support-delivery.md)执行原stage77保留支持协议，0能量fit/新F7推理/RDO/HITS/重建/生成/谱toy。原pz>50、原62/pz0-only一次方动量/11signed raw/typed NaN、41447/8440/14057、91/16/22来源和42缺失及全部困难尾保持。
+
+由历史角色并集/完整交付排除得到π22、K42合法已知可访问PHYS池，seed2026110377各均匀抽2源，概率2/22、2/42，文件内条件概率1，不按产额换源。π200080的00100–00109/00250–00259为本地d32 merge，K200081的00090–00099/00160–00169来自已知配置bck目录。40固定身份QA和实际581860-byte包启动通过后才提交2个兼容π完整文件；K各10个scalar QA及实际生产日志确认6d6ab70b、TI12MC04/FASERNU-04、01-LG、UseIFTFalse，但--backward实际绑定BackwardWithoutIFT而非原MergeWithoutIFT。Track_isForward缺失仅诊断，不能作为唯一物理拒绝原因；真正缺口是名义merge输入/逐例等价证据，完整K selected/new未测，不能写零或换源重试。
+
+两个π10000＋10000输入→415＋382选中，stage55全95748曝光/66843唯一key复用45行、stage70实际28复用0、源内5/跨源6重复（与旧复用有1重叠），**新增388＋354=742唯一native-MeV incoming key、2来源**。原62/raw/status/联结/typed域、Calo缺一总NaN与原QA闭合，合法负raw保留；原native reference01-LG不二次缩放。四模块完整历史响应snapshot未认证，π小QA有效非零比例只覆盖module1/2，其余继承stage70相同writer族参考闭合，不能称所有模块新QA独立测到。
+
+| 新增层（GeV） | 新唯一key | 原F7 train N | 增量/% |
+|---|---:|---:|---:|
+| all |742|41447|1.790238|
+| true50–100 |19|767|2.477184|
+| true100–200 |89|3564|2.497194|
+| confirmed低transfer两低E |16/64|685/2562|2.335766/2.498048|
+| reco pz50–100 |52|2498|2.081665|
+| 同低pz true≥200 |12|1005|1.194030|
+| 同低pz high-y/未确认 |6/10|512/692|1.171875/1.445087|
+| high-y/未确认 |16/22|1204/1495|1.328904/1.471572|
+| 3200–6400/≥6400 |0/0|282/0|0/未测量|
+
+两源都交付低E与同低pz真高E，克服stage70该侧新增0的入口限制；但只有两个π来源/低E+19/+89/高端0/K缺项，足量功效与能量收益未测，不能据此裁决缺数据。历史train＋challenge曝光/完整parent/subfile/entry/seed未知，仅development enrichment，不称随机独立确认；不将源概率当flux权重或外推key总体产额。
+
+2Condor9663224一次exit0/0重试，1CPU3000MB3600s，remote CPU25s/wall合计48s；两源extractor wall13.860499/13.308915s，C++ peak662.766/669.668MiB。逻辑PHYS61,408,284bytes、正式Uproot请求8,042,542bytes，含重复QA已计ROOT/Uproot27,509,060bytes；C++自身ROOT请求和物理EOS网络I/O未测。40QA/实际包启动、numpy独立key归属、原NaN/角色/10主层/源抽样复现通过；合并紧凑缓存/表图<10MB，重复分片/传输/软件包去重，无长期ROOT副本。
+
+**继续F7；唯一下一项stage82：原F7政策的0＋两档真实新增π支持学习曲线。** 按§58.3合并stage70新28＋本轮742=770唯一πkey/3来源；size0复用旧F7预测/offset，不重训/推理基线。事前seed2026110382每source均匀一半194/177/14=385与全770，train41832/42217；各原3seed/400轮/原62/unit direct logE，最多6fit、0pilot，主full_cal预定，half仅曲线诊断不选赢家。两档各一个原cal unit global offset、raw并报，无新ROOT/重建/支持来源。
+
+先原角色/pooled key/NaN/原模型初始化语义及实际包两档零fit启动/资源QA，后冻结拟议≤2Condor/各1CPU3000MB、CPU总1800s/wall每1800s、留存20MB。原传统两低E1.05/all F7 1.01/困难1.03/关键层总正负tail50+2pp标准不降，500component分层保守来源固定预测区间、全部低E/低pz另一侧/高y/未确认/高端/缺失并报；区间排除重训/增补抽样/offset/谱系/响应/研究选择，cal/eval仍开发。收益/充分功效未测，不把770例的失败当缺数据无关，失败关闭固定实验不扫规模/来源/权重/seed/架构。详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage81_energy_ml/followup_input_request.json)，本轮未执行stage82。
+
+固定K两个来源缺名义d32 merge PHYS/实际条件与身份/62 QA，或完整逐例等价证据；不自动RDO生产/失败K重试。共同raw/stage54、完整Calo/脉冲条件、interaction/FSI/材料/接受度/背景及真正随机未开发确认继续。独立支持协议/stage54后缀保持原文，历史§1–61保留。

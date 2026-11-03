@@ -1,0 +1,2623 @@
+{
+  "stage": 81,
+  "seed": 2026110377,
+  "frozen_utc": "2026-11-03T17:55:08.175939+00:00",
+  "protocol": "docs/nu_mu_energy_ml_support_delivery_prompt.md original stage77 unchanged",
+  "roles_by_canonical_group": {
+    "charm:00000-00009": [
+      "train"
+    ],
+    "charm:00010-00019": [
+      "train"
+    ],
+    "charm:00020-00029": [
+      "validation"
+    ],
+    "charm:00030-00039": [
+      "train"
+    ],
+    "charm:00040-00049": [
+      "validation"
+    ],
+    "charm:00050-00059": [
+      "train"
+    ],
+    "charm:00060-00069": [
+      "train"
+    ],
+    "charm:00070-00079": [
+      "test"
+    ],
+    "charm:00080-00089": [
+      "train"
+    ],
+    "charm:00090-00099": [
+      "train"
+    ],
+    "charm:00100-00109": [
+      "train"
+    ],
+    "charm:00110-00119": [
+      "calibration"
+    ],
+    "charm:00120-00129": [
+      "train"
+    ],
+    "charm:00130-00139": [
+      "train"
+    ],
+    "charm:00140-00149": [
+      "test"
+    ],
+    "charm:00150-00159": [
+      "validation"
+    ],
+    "charm:00160-00169": [
+      "calibration"
+    ],
+    "charm:00170-00179": [
+      "test"
+    ],
+    "charm:00180-00189": [
+      "train"
+    ],
+    "k:00000-00009": [
+      "train"
+    ],
+    "k:00010-00019": [
+      "train"
+    ],
+    "k:00020-00029": [
+      "train"
+    ],
+    "k:00030-00039": [
+      "train"
+    ],
+    "k:00040-00049": [
+      "train"
+    ],
+    "k:00050-00059": [
+      "train"
+    ],
+    "k:00060-00069": [
+      "calibration"
+    ],
+    "k:00070-00079": [
+      "calibration"
+    ],
+    "k:00080-00089": [
+      "validation"
+    ],
+    "k:00090-00099": [
+      "train"
+    ],
+    "k:00100-00109": [
+      "test"
+    ],
+    "k:00110-00119": [
+      "validation"
+    ],
+    "k:00120-00129": [
+      "calibration"
+    ],
+    "k:00130-00139": [
+      "test"
+    ],
+    "k:00140-00149": [
+      "train"
+    ],
+    "k:00150-00159": [
+      "train"
+    ],
+    "k:00160-00169": [
+      "train"
+    ],
+    "k:00170-00179": [
+      "test"
+    ],
+    "k:00180-00189": [
+      "validation"
+    ],
+    "k:00190-00199": [
+      "validation"
+    ],
+    "k:00200-00209": [
+      "train"
+    ],
+    "k:00210-00219": [
+      "train"
+    ],
+    "k:00220-00229": [
+      "train"
+    ],
+    "k:00230-00239": [
+      "train"
+    ],
+    "k:00240-00249": [
+      "train"
+    ],
+    "k:00250-00259": [
+      "test"
+    ],
+    "k:00260-00269": [
+      "validation"
+    ],
+    "k:00270-00279": [
+      "train"
+    ],
+    "k:00280-00289": [
+      "train"
+    ],
+    "k:00290-00299": [
+      "train"
+    ],
+    "k:00300-00309": [
+      "train"
+    ],
+    "k:00310-00319": [
+      "test"
+    ],
+    "k:00320-00329": [
+      "test"
+    ],
+    "k:00330-00339": [
+      "calibration"
+    ],
+    "k:00340-00349": [
+      "validation"
+    ],
+    "k:00350-00359": [
+      "test"
+    ],
+    "k:00360-00369": [
+      "train"
+    ],
+    "k:00370-00379": [
+      "train"
+    ],
+    "k:00380-00389": [
+      "train"
+    ],
+    "k:00390-00399": [
+      "train"
+    ],
+    "k:00400-00409": [
+      "test"
+    ],
+    "k:00410-00419": [
+      "validation"
+    ],
+    "k:00420-00429": [
+      "train"
+    ],
+    "k:00430-00439": [
+      "train"
+    ],
+    "k:00440-00449": [
+      "train"
+    ],
+    "k:00450-00459": [
+      "train"
+    ],
+    "k:00460-00469": [
+      "test"
+    ],
+    "k:00470-00479": [
+      "train"
+    ],
+    "k:00480-00489": [
+      "validation"
+    ],
+    "k:00490-00499": [
+      "train"
+    ],
+    "k:00500-00509": [
+      "calibration"
+    ],
+    "k:00510-00519": [
+      "train"
+    ],
+    "k:00520-00529": [
+      "train"
+    ],
+    "k:00530-00539": [
+      "train"
+    ],
+    "k:00540-00549": [
+      "calibration"
+    ],
+    "k:00550-00559": [
+      "train"
+    ],
+    "k:00560-00569": [
+      "test"
+    ],
+    "k:00570-00579": [
+      "validation"
+    ],
+    "k:00580-00589": [
+      "train"
+    ],
+    "k:00590-00599": [
+      "train"
+    ],
+    "k:00600-00609": [
+      "train"
+    ],
+    "k:00610-00619": [
+      "train"
+    ],
+    "k:00620-00629": [
+      "train"
+    ],
+    "k:00630-00639": [
+      "train"
+    ],
+    "k:00640-00649": [
+      "test"
+    ],
+    "k:00650-00659": [
+      "train"
+    ],
+    "k:00660-00669": [
+      "calibration"
+    ],
+    "k:00670-00679": [
+      "train"
+    ],
+    "k:00680-00689": [
+      "train"
+    ],
+    "k:00690-00699": [
+      "train"
+    ],
+    "k:00700-00709": [
+      "validation"
+    ],
+    "k:00710-00719": [
+      "validation"
+    ],
+    "k:00720-00729": [
+      "train"
+    ],
+    "k:00730-00739": [
+      "calibration"
+    ],
+    "k:00740-00749": [
+      "train"
+    ],
+    "k:00750-00759": [
+      "train"
+    ],
+    "pi:00000-00009": [
+      "challenge",
+      "train"
+    ],
+    "pi:00010-00019": [
+      "challenge",
+      "train"
+    ],
+    "pi:00020-00029": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00030-00039": [
+      "challenge",
+      "train"
+    ],
+    "pi:00040-00049": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00050-00059": [
+      "challenge",
+      "train"
+    ],
+    "pi:00060-00069": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00070-00079": [
+      "challenge",
+      "train"
+    ],
+    "pi:00080-00089": [
+      "calibration",
+      "challenge"
+    ],
+    "pi:00090-00099": [
+      "challenge",
+      "test"
+    ],
+    "pi:00100-00109": [
+      "challenge",
+      "train"
+    ],
+    "pi:00110-00119": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00120-00129": [
+      "challenge",
+      "train"
+    ],
+    "pi:00130-00139": [
+      "challenge",
+      "train"
+    ],
+    "pi:00140-00149": [
+      "challenge",
+      "train"
+    ],
+    "pi:00150-00159": [
+      "challenge",
+      "test"
+    ],
+    "pi:00160-00169": [
+      "challenge",
+      "test"
+    ],
+    "pi:00170-00179": [
+      "challenge",
+      "test"
+    ],
+    "pi:00180-00189": [
+      "challenge",
+      "train"
+    ],
+    "pi:00190-00199": [
+      "challenge",
+      "train"
+    ],
+    "pi:00200-00209": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00210-00219": [
+      "challenge",
+      "test"
+    ],
+    "pi:00220-00229": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00230-00239": [
+      "challenge",
+      "train"
+    ],
+    "pi:00240-00249": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00250-00259": [
+      "challenge",
+      "train"
+    ],
+    "pi:00260-00269": [
+      "calibration",
+      "challenge"
+    ],
+    "pi:00270-00279": [
+      "challenge",
+      "train"
+    ],
+    "pi:00280-00289": [
+      "challenge",
+      "train"
+    ],
+    "pi:00290-00299": [
+      "challenge",
+      "train"
+    ],
+    "pi:00300-00309": [
+      "challenge",
+      "test"
+    ],
+    "pi:00310-00319": [
+      "calibration",
+      "challenge"
+    ],
+    "pi:00320-00329": [
+      "challenge",
+      "test"
+    ],
+    "pi:00330-00339": [
+      "calibration",
+      "challenge"
+    ],
+    "pi:00340-00349": [
+      "challenge",
+      "train"
+    ],
+    "pi:00350-00359": [
+      "calibration",
+      "challenge"
+    ],
+    "pi:00360-00369": [
+      "challenge",
+      "validation"
+    ],
+    "pi:00370-00379": [
+      "challenge",
+      "train"
+    ],
+    "pi:00380-00389": [
+      "challenge",
+      "train"
+    ],
+    "pi:00390-00399": [
+      "challenge",
+      "train"
+    ],
+    "pi:00400-00409": [
+      "challenge",
+      "train"
+    ],
+    "pi:00410-00419": [
+      "challenge",
+      "train"
+    ],
+    "pi:00420-00429": [
+      "challenge",
+      "train"
+    ],
+    "pi:00430-00439": [
+      "challenge",
+      "train"
+    ],
+    "pi:00440-00449": [
+      "challenge",
+      "train"
+    ],
+    "pi:00450-00459": [
+      "train"
+    ],
+    "pi:00460-00469": [
+      "train"
+    ],
+    "pi:00470-00479": [
+      "train"
+    ],
+    "pi:00480-00489": [
+      "calibration"
+    ],
+    "pi:00490-00499": [
+      "train"
+    ],
+    "pi:00500-00509": [
+      "train"
+    ],
+    "pi:00510-00519": [
+      "train"
+    ],
+    "pi:00520-00529": [
+      "train"
+    ],
+    "pi:00530-00539": [
+      "train"
+    ],
+    "pi:00540-00549": [
+      "test"
+    ],
+    "pi:00550-00559": [
+      "train"
+    ]
+  },
+  "complete_run_groups": [
+    [
+      200080,
+      "pi:00000-00009"
+    ],
+    [
+      200080,
+      "pi:00010-00019"
+    ],
+    [
+      200080,
+      "pi:00020-00029"
+    ],
+    [
+      200080,
+      "pi:00440-00449"
+    ],
+    [
+      200081,
+      "k:00010-00019"
+    ],
+    [
+      200081,
+      "k:00080-00089"
+    ],
+    [
+      200082,
+      "pi:00000-00009"
+    ],
+    [
+      200082,
+      "pi:00010-00019"
+    ],
+    [
+      200082,
+      "pi:00020-00029"
+    ],
+    [
+      200082,
+      "pi:00030-00039"
+    ],
+    [
+      200082,
+      "pi:00040-00049"
+    ],
+    [
+      200082,
+      "pi:00050-00059"
+    ],
+    [
+      200082,
+      "pi:00060-00069"
+    ],
+    [
+      200082,
+      "pi:00070-00079"
+    ],
+    [
+      200082,
+      "pi:00080-00089"
+    ],
+    [
+      200082,
+      "pi:00100-00109"
+    ],
+    [
+      200082,
+      "pi:00110-00119"
+    ],
+    [
+      200082,
+      "pi:00120-00129"
+    ],
+    [
+      200082,
+      "pi:00130-00139"
+    ],
+    [
+      200082,
+      "pi:00140-00149"
+    ],
+    [
+      200082,
+      "pi:00180-00189"
+    ],
+    [
+      200082,
+      "pi:00190-00199"
+    ],
+    [
+      200082,
+      "pi:00200-00209"
+    ],
+    [
+      200082,
+      "pi:00220-00229"
+    ],
+    [
+      200082,
+      "pi:00230-00239"
+    ],
+    [
+      200082,
+      "pi:00240-00249"
+    ],
+    [
+      200082,
+      "pi:00250-00259"
+    ],
+    [
+      200082,
+      "pi:00260-00269"
+    ],
+    [
+      200082,
+      "pi:00270-00279"
+    ],
+    [
+      200082,
+      "pi:00280-00289"
+    ],
+    [
+      200082,
+      "pi:00290-00299"
+    ],
+    [
+      200082,
+      "pi:00310-00319"
+    ],
+    [
+      200082,
+      "pi:00330-00339"
+    ],
+    [
+      200082,
+      "pi:00340-00349"
+    ],
+    [
+      200082,
+      "pi:00350-00359"
+    ],
+    [
+      200082,
+      "pi:00360-00369"
+    ],
+    [
+      200082,
+      "pi:00370-00379"
+    ],
+    [
+      200082,
+      "pi:00380-00389"
+    ],
+    [
+      200082,
+      "pi:00390-00399"
+    ],
+    [
+      200082,
+      "pi:00400-00409"
+    ],
+    [
+      200082,
+      "pi:00410-00419"
+    ],
+    [
+      200082,
+      "pi:00420-00429"
+    ],
+    [
+      200082,
+      "pi:00430-00439"
+    ],
+    [
+      200082,
+      "pi:00440-00449"
+    ],
+    [
+      200082,
+      "pi:00450-00459"
+    ],
+    [
+      200082,
+      "pi:00460-00469"
+    ],
+    [
+      200082,
+      "pi:00470-00479"
+    ],
+    [
+      200082,
+      "pi:00480-00489"
+    ],
+    [
+      200082,
+      "pi:00490-00499"
+    ],
+    [
+      200082,
+      "pi:00500-00509"
+    ],
+    [
+      200082,
+      "pi:00510-00519"
+    ],
+    [
+      200082,
+      "pi:00520-00529"
+    ],
+    [
+      200082,
+      "pi:00530-00539"
+    ],
+    [
+      200082,
+      "pi:00550-00559"
+    ],
+    [
+      200083,
+      "k:00000-00009"
+    ],
+    [
+      200083,
+      "k:00010-00019"
+    ],
+    [
+      200083,
+      "k:00020-00029"
+    ],
+    [
+      200083,
+      "k:00030-00039"
+    ],
+    [
+      200083,
+      "k:00040-00049"
+    ],
+    [
+      200083,
+      "k:00050-00059"
+    ],
+    [
+      200083,
+      "k:00060-00069"
+    ],
+    [
+      200083,
+      "k:00070-00079"
+    ],
+    [
+      200083,
+      "k:00080-00089"
+    ],
+    [
+      200083,
+      "k:00090-00099"
+    ],
+    [
+      200083,
+      "k:00110-00119"
+    ],
+    [
+      200083,
+      "k:00120-00129"
+    ],
+    [
+      200083,
+      "k:00140-00149"
+    ],
+    [
+      200083,
+      "k:00150-00159"
+    ],
+    [
+      200083,
+      "k:00160-00169"
+    ],
+    [
+      200083,
+      "k:00180-00189"
+    ],
+    [
+      200083,
+      "k:00190-00199"
+    ],
+    [
+      200083,
+      "k:00200-00209"
+    ],
+    [
+      200083,
+      "k:00210-00219"
+    ],
+    [
+      200083,
+      "k:00220-00229"
+    ],
+    [
+      200083,
+      "k:00230-00239"
+    ],
+    [
+      200083,
+      "k:00240-00249"
+    ],
+    [
+      200083,
+      "k:00260-00269"
+    ],
+    [
+      200083,
+      "k:00270-00279"
+    ],
+    [
+      200083,
+      "k:00280-00289"
+    ],
+    [
+      200083,
+      "k:00290-00299"
+    ],
+    [
+      200083,
+      "k:00300-00309"
+    ],
+    [
+      200083,
+      "k:00330-00339"
+    ],
+    [
+      200083,
+      "k:00340-00349"
+    ],
+    [
+      200083,
+      "k:00360-00369"
+    ],
+    [
+      200083,
+      "k:00370-00379"
+    ],
+    [
+      200083,
+      "k:00380-00389"
+    ],
+    [
+      200083,
+      "k:00390-00399"
+    ],
+    [
+      200083,
+      "k:00410-00419"
+    ],
+    [
+      200083,
+      "k:00420-00429"
+    ],
+    [
+      200083,
+      "k:00430-00439"
+    ],
+    [
+      200083,
+      "k:00440-00449"
+    ],
+    [
+      200083,
+      "k:00450-00459"
+    ],
+    [
+      200083,
+      "k:00470-00479"
+    ],
+    [
+      200083,
+      "k:00480-00489"
+    ],
+    [
+      200083,
+      "k:00490-00499"
+    ],
+    [
+      200083,
+      "k:00500-00509"
+    ],
+    [
+      200083,
+      "k:00510-00519"
+    ],
+    [
+      200083,
+      "k:00520-00529"
+    ],
+    [
+      200083,
+      "k:00530-00539"
+    ],
+    [
+      200083,
+      "k:00540-00549"
+    ],
+    [
+      200083,
+      "k:00550-00559"
+    ],
+    [
+      200083,
+      "k:00570-00579"
+    ],
+    [
+      200083,
+      "k:00580-00589"
+    ],
+    [
+      200083,
+      "k:00590-00599"
+    ],
+    [
+      200083,
+      "k:00600-00609"
+    ],
+    [
+      200083,
+      "k:00610-00619"
+    ],
+    [
+      200083,
+      "k:00620-00629"
+    ],
+    [
+      200083,
+      "k:00630-00639"
+    ],
+    [
+      200083,
+      "k:00650-00659"
+    ],
+    [
+      200083,
+      "k:00660-00669"
+    ],
+    [
+      200083,
+      "k:00670-00679"
+    ],
+    [
+      200083,
+      "k:00680-00689"
+    ],
+    [
+      200083,
+      "k:00690-00699"
+    ],
+    [
+      200083,
+      "k:00700-00709"
+    ],
+    [
+      200083,
+      "k:00710-00719"
+    ],
+    [
+      200083,
+      "k:00720-00729"
+    ],
+    [
+      200083,
+      "k:00730-00739"
+    ],
+    [
+      200083,
+      "k:00740-00749"
+    ],
+    [
+      200083,
+      "k:00750-00759"
+    ],
+    [
+      200084,
+      "pi:00000-00009"
+    ],
+    [
+      200084,
+      "pi:00010-00019"
+    ],
+    [
+      200084,
+      "pi:00020-00029"
+    ],
+    [
+      200085,
+      "k:00000-00009"
+    ],
+    [
+      200085,
+      "k:00010-00019"
+    ],
+    [
+      200085,
+      "k:00080-00089"
+    ],
+    [
+      200086,
+      "pi:00000-00009"
+    ],
+    [
+      200086,
+      "pi:00010-00019"
+    ],
+    [
+      200086,
+      "pi:00020-00029"
+    ],
+    [
+      200087,
+      "k:00000-00009"
+    ],
+    [
+      200087,
+      "k:00010-00019"
+    ],
+    [
+      200087,
+      "k:00080-00089"
+    ],
+    [
+      200088,
+      "charm:00000-00009"
+    ],
+    [
+      200088,
+      "charm:00010-00019"
+    ],
+    [
+      200088,
+      "charm:00020-00029"
+    ],
+    [
+      200089,
+      "charm:00000-00009"
+    ],
+    [
+      200089,
+      "charm:00010-00019"
+    ],
+    [
+      200089,
+      "charm:00020-00029"
+    ],
+    [
+      200089,
+      "charm:00030-00039"
+    ],
+    [
+      200089,
+      "charm:00040-00049"
+    ],
+    [
+      200089,
+      "charm:00050-00059"
+    ],
+    [
+      200089,
+      "charm:00060-00069"
+    ],
+    [
+      200089,
+      "charm:00080-00089"
+    ],
+    [
+      200089,
+      "charm:00090-00099"
+    ],
+    [
+      200089,
+      "charm:00100-00109"
+    ],
+    [
+      200089,
+      "charm:00110-00119"
+    ],
+    [
+      200089,
+      "charm:00120-00129"
+    ],
+    [
+      200089,
+      "charm:00130-00139"
+    ],
+    [
+      200089,
+      "charm:00150-00159"
+    ],
+    [
+      200089,
+      "charm:00160-00169"
+    ],
+    [
+      200089,
+      "charm:00180-00189"
+    ],
+    [
+      200090,
+      "charm:00000-00009"
+    ],
+    [
+      200090,
+      "charm:00010-00019"
+    ],
+    [
+      200090,
+      "charm:00020-00029"
+    ],
+    [
+      200091,
+      "pi:00000-00009"
+    ],
+    [
+      200091,
+      "pi:00010-00019"
+    ],
+    [
+      200091,
+      "pi:00020-00029"
+    ],
+    [
+      200092,
+      "k:00000-00009"
+    ],
+    [
+      200092,
+      "k:00010-00019"
+    ],
+    [
+      200092,
+      "k:00080-00089"
+    ],
+    [
+      200093,
+      "pi:00000-00009"
+    ],
+    [
+      200093,
+      "pi:00010-00019"
+    ],
+    [
+      200093,
+      "pi:00020-00029"
+    ],
+    [
+      200093,
+      "pi:00030-00039"
+    ],
+    [
+      200093,
+      "pi:00040-00049"
+    ],
+    [
+      200093,
+      "pi:00050-00059"
+    ],
+    [
+      200093,
+      "pi:00060-00069"
+    ],
+    [
+      200093,
+      "pi:00070-00079"
+    ],
+    [
+      200093,
+      "pi:00080-00089"
+    ],
+    [
+      200093,
+      "pi:00100-00109"
+    ],
+    [
+      200093,
+      "pi:00110-00119"
+    ],
+    [
+      200093,
+      "pi:00120-00129"
+    ],
+    [
+      200093,
+      "pi:00130-00139"
+    ],
+    [
+      200093,
+      "pi:00140-00149"
+    ],
+    [
+      200093,
+      "pi:00180-00189"
+    ],
+    [
+      200093,
+      "pi:00190-00199"
+    ],
+    [
+      200093,
+      "pi:00200-00209"
+    ],
+    [
+      200093,
+      "pi:00220-00229"
+    ],
+    [
+      200093,
+      "pi:00230-00239"
+    ],
+    [
+      200093,
+      "pi:00240-00249"
+    ],
+    [
+      200093,
+      "pi:00250-00259"
+    ],
+    [
+      200093,
+      "pi:00260-00269"
+    ],
+    [
+      200093,
+      "pi:00270-00279"
+    ],
+    [
+      200093,
+      "pi:00280-00289"
+    ],
+    [
+      200093,
+      "pi:00290-00299"
+    ],
+    [
+      200093,
+      "pi:00310-00319"
+    ],
+    [
+      200093,
+      "pi:00330-00339"
+    ],
+    [
+      200093,
+      "pi:00340-00349"
+    ],
+    [
+      200093,
+      "pi:00350-00359"
+    ],
+    [
+      200093,
+      "pi:00360-00369"
+    ],
+    [
+      200093,
+      "pi:00370-00379"
+    ],
+    [
+      200093,
+      "pi:00380-00389"
+    ],
+    [
+      200093,
+      "pi:00390-00399"
+    ],
+    [
+      200093,
+      "pi:00400-00409"
+    ],
+    [
+      200093,
+      "pi:00410-00419"
+    ],
+    [
+      200093,
+      "pi:00420-00429"
+    ],
+    [
+      200093,
+      "pi:00430-00439"
+    ],
+    [
+      200093,
+      "pi:00440-00449"
+    ],
+    [
+      200093,
+      "pi:00450-00459"
+    ],
+    [
+      200093,
+      "pi:00460-00469"
+    ],
+    [
+      200093,
+      "pi:00470-00479"
+    ],
+    [
+      200093,
+      "pi:00480-00489"
+    ],
+    [
+      200093,
+      "pi:00490-00499"
+    ],
+    [
+      200093,
+      "pi:00500-00509"
+    ],
+    [
+      200093,
+      "pi:00510-00519"
+    ],
+    [
+      200093,
+      "pi:00520-00529"
+    ],
+    [
+      200093,
+      "pi:00530-00539"
+    ],
+    [
+      200094,
+      "k:00000-00009"
+    ],
+    [
+      200094,
+      "k:00010-00019"
+    ],
+    [
+      200094,
+      "k:00020-00029"
+    ],
+    [
+      200094,
+      "k:00030-00039"
+    ],
+    [
+      200094,
+      "k:00040-00049"
+    ],
+    [
+      200094,
+      "k:00050-00059"
+    ],
+    [
+      200094,
+      "k:00060-00069"
+    ],
+    [
+      200094,
+      "k:00070-00079"
+    ],
+    [
+      200094,
+      "k:00080-00089"
+    ],
+    [
+      200094,
+      "k:00090-00099"
+    ],
+    [
+      200094,
+      "k:00110-00119"
+    ],
+    [
+      200094,
+      "k:00120-00129"
+    ],
+    [
+      200094,
+      "k:00140-00149"
+    ],
+    [
+      200094,
+      "k:00150-00159"
+    ],
+    [
+      200094,
+      "k:00160-00169"
+    ],
+    [
+      200094,
+      "k:00180-00189"
+    ],
+    [
+      200094,
+      "k:00190-00199"
+    ],
+    [
+      200094,
+      "k:00200-00209"
+    ],
+    [
+      200094,
+      "k:00210-00219"
+    ],
+    [
+      200094,
+      "k:00220-00229"
+    ],
+    [
+      200094,
+      "k:00230-00239"
+    ],
+    [
+      200094,
+      "k:00240-00249"
+    ],
+    [
+      200094,
+      "k:00260-00269"
+    ],
+    [
+      200094,
+      "k:00270-00279"
+    ],
+    [
+      200094,
+      "k:00280-00289"
+    ],
+    [
+      200094,
+      "k:00290-00299"
+    ],
+    [
+      200094,
+      "k:00300-00309"
+    ],
+    [
+      200094,
+      "k:00330-00339"
+    ],
+    [
+      200094,
+      "k:00340-00349"
+    ],
+    [
+      200094,
+      "k:00360-00369"
+    ],
+    [
+      200094,
+      "k:00370-00379"
+    ],
+    [
+      200094,
+      "k:00380-00389"
+    ],
+    [
+      200094,
+      "k:00390-00399"
+    ],
+    [
+      200094,
+      "k:00410-00419"
+    ],
+    [
+      200094,
+      "k:00420-00429"
+    ],
+    [
+      200094,
+      "k:00430-00439"
+    ],
+    [
+      200094,
+      "k:00440-00449"
+    ],
+    [
+      200094,
+      "k:00450-00459"
+    ],
+    [
+      200094,
+      "k:00470-00479"
+    ],
+    [
+      200094,
+      "k:00480-00489"
+    ],
+    [
+      200094,
+      "k:00490-00499"
+    ],
+    [
+      200094,
+      "k:00500-00509"
+    ],
+    [
+      200094,
+      "k:00510-00519"
+    ],
+    [
+      200094,
+      "k:00520-00529"
+    ],
+    [
+      200094,
+      "k:00530-00539"
+    ],
+    [
+      200094,
+      "k:00540-00549"
+    ],
+    [
+      200094,
+      "k:00550-00559"
+    ],
+    [
+      200094,
+      "k:00570-00579"
+    ],
+    [
+      200094,
+      "k:00580-00589"
+    ],
+    [
+      200094,
+      "k:00590-00599"
+    ],
+    [
+      200094,
+      "k:00600-00609"
+    ],
+    [
+      200094,
+      "k:00610-00619"
+    ],
+    [
+      200094,
+      "k:00620-00629"
+    ],
+    [
+      200094,
+      "k:00630-00639"
+    ],
+    [
+      200094,
+      "k:00650-00659"
+    ],
+    [
+      200094,
+      "k:00660-00669"
+    ],
+    [
+      200094,
+      "k:00670-00679"
+    ],
+    [
+      200094,
+      "k:00680-00689"
+    ],
+    [
+      200094,
+      "k:00690-00699"
+    ],
+    [
+      200094,
+      "k:00700-00709"
+    ],
+    [
+      200094,
+      "k:00710-00719"
+    ],
+    [
+      200094,
+      "k:00720-00729"
+    ],
+    [
+      200094,
+      "k:00730-00739"
+    ],
+    [
+      200095,
+      "pi:00000-00009"
+    ],
+    [
+      200095,
+      "pi:00010-00019"
+    ],
+    [
+      200095,
+      "pi:00020-00029"
+    ],
+    [
+      200096,
+      "k:00000-00009"
+    ],
+    [
+      200096,
+      "k:00010-00019"
+    ],
+    [
+      200096,
+      "k:00080-00089"
+    ],
+    [
+      200097,
+      "pi:00000-00009"
+    ],
+    [
+      200097,
+      "pi:00010-00019"
+    ],
+    [
+      200097,
+      "pi:00020-00029"
+    ],
+    [
+      200098,
+      "k:00000-00009"
+    ],
+    [
+      200098,
+      "k:00010-00019"
+    ],
+    [
+      200098,
+      "k:00080-00089"
+    ],
+    [
+      200099,
+      "charm:00000-00009"
+    ],
+    [
+      200099,
+      "charm:00010-00019"
+    ],
+    [
+      200099,
+      "charm:00020-00029"
+    ],
+    [
+      200100,
+      "charm:00000-00009"
+    ],
+    [
+      200100,
+      "charm:00010-00019"
+    ],
+    [
+      200100,
+      "charm:00020-00029"
+    ],
+    [
+      200100,
+      "charm:00030-00039"
+    ],
+    [
+      200100,
+      "charm:00040-00049"
+    ],
+    [
+      200100,
+      "charm:00050-00059"
+    ],
+    [
+      200100,
+      "charm:00060-00069"
+    ],
+    [
+      200100,
+      "charm:00080-00089"
+    ],
+    [
+      200100,
+      "charm:00090-00099"
+    ],
+    [
+      200100,
+      "charm:00100-00109"
+    ],
+    [
+      200100,
+      "charm:00110-00119"
+    ],
+    [
+      200100,
+      "charm:00120-00129"
+    ],
+    [
+      200100,
+      "charm:00130-00139"
+    ],
+    [
+      200100,
+      "charm:00150-00159"
+    ],
+    [
+      200100,
+      "charm:00160-00169"
+    ],
+    [
+      200101,
+      "charm:00000-00009"
+    ],
+    [
+      200101,
+      "charm:00010-00019"
+    ],
+    [
+      200101,
+      "charm:00020-00029"
+    ]
+  ],
+  "candidates": [
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00030-00039",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00030-00039-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:3",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30880539
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00050-00059",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00050-00059-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:5",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31002624
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00070-00079",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00070-00079-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:7",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30931510
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00100-00109",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00100-00109-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:10",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31249983
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00120-00129",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00120-00129-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:12",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30320026
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00130-00139",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00130-00139-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:13",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31133018
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00140-00149",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00140-00149-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:14",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30490105
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00180-00189",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00180-00189-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:18",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 29458759
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00190-00199",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00190-00199-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:19",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30457904
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00230-00239",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00230-00239-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:23",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30655671
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00250-00259",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00250-00259-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:25",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30158301
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00270-00279",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00270-00279-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:27",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30745654
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00280-00289",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00280-00289-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:28",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 29905652
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00290-00299",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00290-00299-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:29",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30686094
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00340-00349",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00340-00349-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:34",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30922613
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00370-00379",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00370-00379-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:37",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30187125
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00380-00389",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00380-00389-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:38",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30370972
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00390-00399",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00390-00399-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:39",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31004497
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00400-00409",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00400-00409-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:40",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30485897
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00410-00419",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00410-00419-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:41",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31077972
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00420-00429",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00420-00429-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:42",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30514142
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00430-00439",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00430-00439-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:43",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30757971
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00000-00009",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00000-00009-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50040040
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00020-00029",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00020-00029-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 52102230
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00030-00039",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00030-00039-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50592411
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00040-00049",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00040-00049-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 51503874
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00050-00059",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00050-00059-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49878232
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00090-00099",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00090-00099-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50757891
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00140-00149",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00140-00149-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50105760
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00150-00159",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00150-00159-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49555920
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00160-00169",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00160-00169-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50029891
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00200-00209",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00200-00209-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49570696
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00210-00219",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00210-00219-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50855981
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00220-00229",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00220-00229-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49721449
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00230-00239",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00230-00239-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49384525
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00240-00249",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00240-00249-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50593033
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00270-00279",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00270-00279-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50521533
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00280-00289",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00280-00289-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49824245
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00290-00299",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00290-00299-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 47515522
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00300-00309",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00300-00309-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 48625117
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00360-00369",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00360-00369-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49856495
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00370-00379",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00370-00379-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 52118047
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00380-00389",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00380-00389-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50451101
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00390-00399",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00390-00399-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49350082
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00420-00429",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00420-00429-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50081673
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00430-00439",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00430-00439-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49743676
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00440-00449",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00440-00449-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49589868
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00450-00459",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00450-00459-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50499459
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00470-00479",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00470-00479-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 48946948
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00490-00499",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00490-00499-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49734080
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00510-00519",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00510-00519-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49280325
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00520-00529",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00520-00529-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50360485
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00530-00539",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00530-00539-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50060799
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00550-00559",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00550-00559-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49803599
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00580-00589",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00580-00589-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 48976759
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00590-00599",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00590-00599-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50097308
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00600-00609",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00600-00609-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50839616
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00610-00619",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00610-00619-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49984317
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00620-00629",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00620-00629-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49811181
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00630-00639",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50175747
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00650-00659",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00650-00659-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49618273
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00670-00679",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00670-00679-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49825400
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00680-00689",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00680-00689-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 49003321
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00690-00699",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00690-00699-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50564200
+    }
+  ],
+  "unavailable": [],
+  "pools": {
+    "pi": {
+      "available_N": 22,
+      "selected_indices": [
+        3,
+        10
+      ],
+      "source_probability": 0.09090909090909091
+    },
+    "k": {
+      "available_N": 42,
+      "selected_indices": [
+        5,
+        8
+      ],
+      "source_probability": 0.047619047619047616
+    }
+  },
+  "sources": [
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00100-00109",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00100-00109-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:10",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31249983,
+      "index": 0,
+      "source_probability": 0.09090909090909091,
+      "conditional_event_probability": 1.0,
+      "selection_index": 3,
+      "independent_confirmation": false,
+      "role": "development_enrichment"
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00250-00259",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00250-00259-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:25",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30158301,
+      "index": 1,
+      "source_probability": 0.09090909090909091,
+      "conditional_event_probability": 1.0,
+      "selection_index": 10,
+      "independent_confirmation": false,
+      "role": "development_enrichment"
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00090-00099",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00090-00099-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50757891,
+      "index": 2,
+      "source_probability": 0.047619047619047616,
+      "conditional_event_probability": 1.0,
+      "selection_index": 5,
+      "independent_confirmation": false,
+      "role": "development_enrichment"
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00160-00169",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00160-00169-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 50029891,
+      "index": 3,
+      "source_probability": 0.047619047619047616,
+      "conditional_event_probability": 1.0,
+      "selection_index": 8,
+      "independent_confirmation": false,
+      "role": "development_enrichment"
+    }
+  ],
+  "QA_entries_per_source": 10,
+  "QA_total_max": 40,
+  "event_data_read_before_freeze": 0,
+  "proposed_limits": {
+    "source_files": 4,
+    "input_events": 40000,
+    "input_bytes": 10000000000,
+    "Condor_jobs": 4,
+    "CPUs_each_max": 2,
+    "memory_MB_each": 3000,
+    "total_CPU_s": 7200,
+    "wall_each_s": 3600,
+    "retained_bytes": 10000000
+  },
+  "actual_resources": "not frozen; actual selected-source QA precedes submission",
+  "energy_fits": 0,
+  "genealogy": "unknown full parent/subfile/entry/seed; inherited train/challenge is development only",
+  "wall_s": 0.12336716102436185,
+  "CPU_s": 0.036922489999999974,
+  "peak_RSS_MiB": 616.60546875
+}

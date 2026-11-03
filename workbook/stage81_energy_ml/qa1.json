@@ -1,0 +1,346 @@
+{
+  "index": 1,
+  "source": {
+    "run": 200080,
+    "component": "pi",
+    "group": "pi:00250-00259",
+    "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00250-00259-s0014-merge-PHYS.root",
+    "historical_roles": [
+      "challenge",
+      "train"
+    ],
+    "known_entry": "ml/configs/files.tsv:25",
+    "PHYS_kind": "d32b0ff3 merge without IFT",
+    "file_bytes": 30158301,
+    "index": 1,
+    "source_probability": 0.09090909090909091,
+    "conditional_event_probability": 1.0,
+    "selection_index": 10,
+    "independent_confirmation": false,
+    "role": "development_enrichment"
+  },
+  "QA_identity_N": 10,
+  "QA_input_entries": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "raw_N": 10000,
+  "identities": [
+    {
+      "run": 200080,
+      "eventID": 250000
+    },
+    {
+      "run": 200080,
+      "eventID": 250001
+    },
+    {
+      "run": 200080,
+      "eventID": 250002
+    },
+    {
+      "run": 200080,
+      "eventID": 250003
+    },
+    {
+      "run": 200080,
+      "eventID": 250004
+    },
+    {
+      "run": 200080,
+      "eventID": 250005
+    },
+    {
+      "run": 200080,
+      "eventID": 250006
+    },
+    {
+      "run": 200080,
+      "eventID": 250007
+    },
+    {
+      "run": 200080,
+      "eventID": 250008
+    },
+    {
+      "run": 200080,
+      "eventID": 250009
+    }
+  ],
+  "production": {
+    "compatible": true,
+    "kind": "same d32 merge source family as full stage70 reference closure",
+    "manifest_entry": "ml/configs/files.tsv:25",
+    "evidence": "workbook/stage70_energy_ml/calibration_closure.json",
+    "limits": "same recorded local merge production; full original conditions snapshot unproven",
+    "new_log_bytes": 0
+  },
+  "scalar_requested_bytes": 503382,
+  "calo_reference_MeV_per_pC": 4628.330998887742,
+  "calo": [
+    {
+      "module": 0,
+      "N": 0,
+      "median_MeV_per_pC": null
+    },
+    {
+      "module": 1,
+      "N": 0,
+      "median_MeV_per_pC": null
+    },
+    {
+      "module": 2,
+      "N": 1,
+      "median_MeV_per_pC": 4628.330961995162
+    },
+    {
+      "module": 3,
+      "N": 0,
+      "median_MeV_per_pC": null
+    }
+  ],
+  "calo_rescaled": false,
+  "compatible": true,
+  "energy_fits": 0,
+  "extraction": {
+    "source": {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00250-00259",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00250-00259-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:25",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30158301,
+      "index": 1,
+      "source_probability": 0.09090909090909091,
+      "conditional_event_probability": 1.0,
+      "selection_index": 10,
+      "independent_confirmation": false,
+      "role": "development_enrichment"
+    },
+    "qa": true,
+    "raw_N": 10,
+    "selected_N": 0,
+    "features": [
+      "ML_mu_pz0_GeV",
+      "ML_mu_px0_GeV",
+      "ML_mu_py0_GeV",
+      "LeadTrack_charge",
+      "LeadTrack_Theta",
+      "LeadTrack_Chi2_NDF",
+      "LeadTrack_nDoF",
+      "LeadTrack_nLayers",
+      "LeadTrack_r_atMaxRadius",
+      "LeadTrack_rVetoNu",
+      "ML_mu_x0_mm",
+      "ML_mu_y0_mm",
+      "ML_mu_z0_mm",
+      "ML_mu_X_atVetoNu_mm",
+      "ML_mu_Y_atVetoNu_mm",
+      "ML_mu_X_atCalo_mm",
+      "ML_mu_Y_atCalo_mm",
+      "nClusters0",
+      "nClusters1",
+      "nClusters2",
+      "nClusters3",
+      "SpacePoints",
+      "TrackSegments",
+      "longTracks",
+      "VetoNu0_raw_charge",
+      "VetoNu1_raw_charge",
+      "Veto10_raw_charge",
+      "Veto20_raw_charge",
+      "Veto21_raw_charge",
+      "Timing0_raw_charge",
+      "Timing1_raw_charge",
+      "Timing2_raw_charge",
+      "Timing3_raw_charge",
+      "Preshower0_raw_charge",
+      "Preshower1_raw_charge",
+      "VetoNu0_reduced_charge",
+      "VetoNu1_reduced_charge",
+      "ML_calo0_E_EM_GeV",
+      "ML_calo1_E_EM_GeV",
+      "ML_calo2_E_EM_GeV",
+      "ML_calo3_E_EM_GeV",
+      "ML_calo_total_E_EM_GeV",
+      "ML_sp_mean_x_mm",
+      "ML_sp_rms_x_mm",
+      "ML_sp_mean_y_mm",
+      "ML_sp_rms_y_mm",
+      "ML_track_px1_GeV",
+      "ML_track_py1_GeV",
+      "ML_track_x1_mm",
+      "ML_track_y1_mm",
+      "ML_track_z1_mm",
+      "ML_track_qOverP0_GeVinv",
+      "ML_track_qOverP1_GeVinv",
+      "ML_track_span_z_mm",
+      "ML_track_bend_x",
+      "ML_track_bend_y",
+      "ML_track_chord_slope_x",
+      "ML_track_chord_slope_y",
+      "ML_track_module_eta0",
+      "ML_track_module_phi0",
+      "ML_track_z_atMaxRadius_mm",
+      "ML_event_SCT_error"
+    ],
+    "feature_version": "F7_pz0_raw_v1",
+    "cutflow_passed": [
+      10,
+      10,
+      10,
+      4,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cutflow_names": [
+      "Remove CaloNu PMT region (truth)",
+      "CC events only",
+      "nu_mu only",
+      "In Faser Nu Box or Lead Block",
+      "Truth dec r < 100 mm",
+      "Truth pz > 50 GeV",
+      "At least one long track",
+      "Veto20 and Veto21 charge > 40 pC",
+      "Timing Station Charge > 20 pC",
+      "Preshower Charge > 2.5 pC",
+      "Track pz > 50 GeV",
+      "Leading track has at >= 7 layers",
+      "Track nDoF >= 9",
+      "Leading track has chi2/ndof < 15",
+      "Track R at max radius < 95 mm",
+      "Track R at IFT < 95 mm",
+      "Track rVetoNu < 120 mm",
+      "Leading track theta < 25 mrad",
+      "VetoNu0 reduced charge < 30 pC",
+      "VetoNu1 reduced charge < 30 pC"
+    ],
+    "requested_uproot_bytes": 39968,
+    "analysis_ROOT_requested_bytes": "未测量",
+    "all_raw_schema_present": true,
+    "all_raw_finite_N": {
+      "VetoNu0": 10,
+      "VetoNu1": 10,
+      "Veto10": 10,
+      "Veto20": 10,
+      "Veto21": 10,
+      "Timing0": 10,
+      "Timing1": 10,
+      "Timing2": 10,
+      "Timing3": 10,
+      "Preshower0": 10,
+      "Preshower1": 10
+    },
+    "all_status_values": {
+      "VetoNu0": [
+        1
+      ],
+      "VetoNu1": [
+        1
+      ],
+      "Veto10": [
+        0,
+        1,
+        4
+      ],
+      "Veto20": [
+        0,
+        1,
+        4
+      ],
+      "Veto21": [
+        0,
+        1,
+        4
+      ],
+      "Timing0": [
+        0,
+        1,
+        4
+      ],
+      "Timing1": [
+        0,
+        1,
+        4
+      ],
+      "Timing2": [
+        0,
+        1,
+        4
+      ],
+      "Timing3": [
+        0,
+        1,
+        4
+      ],
+      "Preshower0": [
+        0,
+        1
+      ],
+      "Preshower1": [
+        0,
+        1
+      ]
+    },
+    "actual_command": [
+      "/eos/home-x/xcheng/FASER/nu_muAnalysis/build/analysis",
+      "--isMC",
+      "-r",
+      "200080",
+      "-j",
+      "1",
+      "--file-config",
+      "/tmp/xcheng/stage70_selection_jup88tna/files.yaml",
+      "--definitions-config",
+      "/tmp/xcheng/stage70_selection_jup88tna/definitions.yaml",
+      "--cuts-config",
+      "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+      "--grl-config",
+      "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/grl_config.yaml",
+      "--output-config",
+      "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/ml_output_columns.yaml",
+      "-o",
+      "/tmp/xcheng/stage70_selection_jup88tna/selected.root"
+    ],
+    "wall_s": 6.190893544815481,
+    "cpu_s": 0.5775718760000004,
+    "child_user_s": 4.978235,
+    "child_system_s": 1.076337,
+    "peak_parent_rss_MiB": 834.53125,
+    "peak_analysis_rss_MiB": 829.37890625,
+    "unit_contract": "native MeV/mm; analysis momentum/E divided by1000; scintillator pC; incoming exact key in native MeV"
+  },
+  "ROOT_clone_requested_bytes": 4355338,
+  "original62_raw_exact": true,
+  "measured_child_CPU_s": 6.054572,
+  "wall_s": 10.035722224973142,
+  "CPU_s": 2.997922898,
+  "peak_RSS_MiB": 834.53125
+}
