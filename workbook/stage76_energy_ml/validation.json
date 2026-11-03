@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "output_checks": [
+    {
+      "job": "fold0",
+      "role": "held",
+      "arm": "M",
+      "N": 13820,
+      "zero_q_N": 4,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "fold0",
+      "role": "held",
+      "arm": "X",
+      "N": 13820,
+      "zero_q_N": 4,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "fold1",
+      "role": "held",
+      "arm": "M",
+      "N": 13667,
+      "zero_q_N": 5,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 3.3306690738754696e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "fold1",
+      "role": "held",
+      "arm": "X",
+      "N": 13667,
+      "zero_q_N": 5,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 6.661338147750939e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "fold2",
+      "role": "held",
+      "arm": "M",
+      "N": 13960,
+      "zero_q_N": 3,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "fold2",
+      "role": "held",
+      "arm": "X",
+      "N": 13960,
+      "zero_q_N": 3,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 5.551115123125783e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "final",
+      "role": "train",
+      "arm": "M",
+      "N": 41447,
+      "zero_q_N": 0,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "final",
+      "role": "train",
+      "arm": "X",
+      "N": 41447,
+      "zero_q_N": 0,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 6.661338147750939e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "final",
+      "role": "cal",
+      "arm": "M",
+      "N": 8440,
+      "zero_q_N": 0,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "final",
+      "role": "cal",
+      "arm": "X",
+      "N": 8440,
+      "zero_q_N": 0,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "final",
+      "role": "eval",
+      "arm": "M",
+      "N": 14057,
+      "zero_q_N": 0,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 4.440892098500626e-16,
+      "new_fits": 0
+    },
+    {
+      "job": "final",
+      "role": "eval",
+      "arm": "X",
+      "N": 14057,
+      "zero_q_N": 0,
+      "original_proposal_and_rows_exact": true,
+      "stage74_true_margin_density_exact": true,
+      "normalization_error_max": 6.661338147750939e-16,
+      "new_fits": 0
+    }
+  ],
+  "OOF_exactly_once_N": 41447,
+  "OOF_zero_q_N": 12,
+  "original256_pilot_readback_max_abs_diff": 8.881784197001252e-16,
+  "bootstrap_repeats": 500,
+  "bootstrap_event_expansion_draws": [
+    0,
+    173,
+    499
+  ],
+  "bootstrap_RMSE_ratio_max_abs_diff": 4.440892098500626e-16,
+  "bootstrap_tail_delta_max_abs_diff_pp": 1.4210854715202004e-14,
+  "new_fits": 0,
+  "new_full_model_inference_in_report": 0,
+  "eligible_missing_N": [
+    21,
+    3,
+    7
+  ],
+  "wall_s": 46.316778977867216,
+  "CPU_s": 44.659014657,
+  "peak_RSS_MiB": 616.60546875
+}

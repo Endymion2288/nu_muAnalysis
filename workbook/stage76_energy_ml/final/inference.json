@@ -1,0 +1,42 @@
+{
+  "job": "final",
+  "new_fits": 0,
+  "formal_point_jobs": 1,
+  "records": [
+    {
+      "arm": "M",
+      "intervals": 259,
+      "role_N": {
+        "train": 41447,
+        "cal": 8440,
+        "eval": 14057
+      },
+      "query_rows": 16561496,
+      "new_fits": 0,
+      "truth_not_in_energy_mapping": true,
+      "wall_s": 125.10816550627351,
+      "CPU_s": 124.532973853,
+      "peak_RSS_MiB": 213.57421875
+    },
+    {
+      "arm": "X",
+      "intervals": 260,
+      "role_N": {
+        "train": 41447,
+        "cal": 8440,
+        "eval": 14057
+      },
+      "query_rows": 16625440,
+      "new_fits": 0,
+      "truth_not_in_energy_mapping": true,
+      "wall_s": 135.1224532648921,
+      "CPU_s": 134.47582317500002,
+      "peak_RSS_MiB": 246.3359375
+    }
+  ],
+  "actual_train_N": 41447,
+  "purged_N": 0,
+  "wall_s": 260.9652739278972,
+  "CPU_s": 259.734798958,
+  "peak_RSS_MiB": 246.3359375
+}

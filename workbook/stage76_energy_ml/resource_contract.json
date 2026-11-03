@@ -1,0 +1,42 @@
+{
+  "pilot_passed": true,
+  "measured_min_query_rows_per_CPU_s": 131962.38060229766,
+  "estimates": [
+    {
+      "job": "fold0",
+      "real_X_N": 13820,
+      "model_query_rows": 7034380,
+      "estimated_CPU_s": 53.305949528145455
+    },
+    {
+      "job": "fold1",
+      "real_X_N": 13667,
+      "model_query_rows": 7079506,
+      "estimated_CPU_s": 53.647910621860476
+    },
+    {
+      "job": "fold2",
+      "real_X_N": 13960,
+      "model_query_rows": 7273160,
+      "estimated_CPU_s": 55.11540460852646
+    },
+    {
+      "job": "final",
+      "real_X_N": 63944,
+      "model_query_rows": 33186936,
+      "estimated_CPU_s": 251.4878547092698
+    }
+  ],
+  "estimated_query_CPU_sum_s": 413.5571194678022,
+  "estimate_is_not_full_job_measurement": true,
+  "request_CPUs": 1,
+  "request_memory_MB": 3000,
+  "CPU_budget_s": 3600,
+  "wall_job_budget_s": 1800,
+  "worker_timeout_s": 1750,
+  "callback_CPU_s": 850,
+  "callback_wall_s": 1700,
+  "formal_jobs": 4,
+  "new_fits": 0,
+  "retained_budget_bytes": 20000000
+}

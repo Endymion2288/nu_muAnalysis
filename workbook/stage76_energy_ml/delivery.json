@@ -1,0 +1,157 @@
+{
+  "stage": 76,
+  "status": "complete; retain F7",
+  "new_fits": 0,
+  "formal_point_jobs": 4,
+  "successful_jobs": 4,
+  "starts": 4,
+  "retries": 0,
+  "main_candidate": "X_cal",
+  "numerical_gate_passed": true,
+  "all_original_point_gates_jointly_passed": false,
+  "note": "X_cal all/>=200 bidirectional tail50 protection passed; low-energy recovery and every RMSE protection failed",
+  "results_measured": true,
+  "full_posterior_calibration_claimed": false,
+  "stage77_executed": false,
+  "execution": {
+    "cluster": 9663068,
+    "jobs": 4,
+    "formal_fits": 0,
+    "formal_point_jobs": 4,
+    "starts": 4,
+    "successful_jobs": 4,
+    "remote_CPU_s": 485.0,
+    "remote_wall_sum_s": 513.0,
+    "request_CPUs_each": 1,
+    "request_memory_MB_each": 3000,
+    "scheduled_MaxRuntime_s": [
+      1800,
+      1800,
+      1800,
+      1800
+    ],
+    "result_transport_bytes": 4756433,
+    "actual_EOS_physical_network_bytes": "未测量",
+    "wall_s": 1.1850593420676887,
+    "CPU_s": 0.07367860600000009,
+    "peak_RSS_MiB": 616.60546875
+  },
+  "independent_validation": {
+    "passed": true,
+    "direct_metric_rows_checked": 1060,
+    "direct_metric_max_abs_diff": 3.410605131648481e-13,
+    "calibration_max_abs_diff": 0.0,
+    "explicit_evaluation_source_draws": 500,
+    "bootstrap_RMSE_interval_max_abs_diff": 4.440892098500626e-16,
+    "bootstrap_tail_interval_max_abs_diff_pp": 0.0,
+    "OOF_zero_q_N": 12,
+    "all_zero_q_point_predictions_finite": true,
+    "new_fits": 0,
+    "new_model_queries": 0,
+    "wall_s": 3.2571081947535276,
+    "CPU_s": 3.109255155,
+    "peak_RSS_MiB": 616.60546875
+  },
+  "final_QA": {
+    "python_AST_files": 8,
+    "bash_syntax": true,
+    "git_diff_check": true,
+    "new_Markdown_links_checked": 34,
+    "Markdown_fences_and_trailing_whitespace": true,
+    "all_JSON_parsed": true,
+    "roadmap_old_sections_exact_prefix": true,
+    "information_budget_old_sections_exact_prefix": true,
+    "stage54_prompt_suffix_exact": true,
+    "user_stage72_report_unchanged": true,
+    "fold_to_merged_OOF": "all 14 arrays per fold bitwise equal before removal",
+    "interpretation_reproduction": "exact; no new queries",
+    "figure_visually_inspected": true
+  },
+  "feature_contract": "original62; pz0-only linear longitudinal/magnitude momentum; px/py,q/p,bend allowed; 11 signed raw and VetoNu reduced; typed/status/dependency NaN; legal negatives retained; any missing Calo => total NaN",
+  "original_roles": {
+    "train": 41447,
+    "cal": 8440,
+    "eval": 14057,
+    "source_groups": [
+      91,
+      16,
+      22
+    ],
+    "missing_eligible": [
+      21,
+      3,
+      7
+    ],
+    "missing_protected": 11,
+    "OOF_zero_q_retained": 12
+  },
+  "removed_duplicates": [
+    {
+      "path": "ntuples/energy_ml_stage76/input.npz",
+      "logical_bytes": 14243735
+    },
+    {
+      "path": "ntuples/energy_ml_stage76/fold0.tar.gz",
+      "logical_bytes": 621055
+    },
+    {
+      "path": "ntuples/energy_ml_stage76/fold1.tar.gz",
+      "logical_bytes": 594586
+    },
+    {
+      "path": "ntuples/energy_ml_stage76/fold2.tar.gz",
+      "logical_bytes": 627565
+    },
+    {
+      "path": "ntuples/energy_ml_stage76/final.tar.gz",
+      "logical_bytes": 2913227
+    },
+    {
+      "path": "software/energy-ml-exact-decision-stage76.tar.gz",
+      "logical_bytes": 16383558
+    },
+    {
+      "path": "ml/artifacts/stage76/fold0/predictions.npz",
+      "logical_bytes": 632676
+    },
+    {
+      "path": "ml/artifacts/stage76/fold1/predictions.npz",
+      "logical_bytes": 606104
+    },
+    {
+      "path": "ml/artifacts/stage76/fold2/predictions.npz",
+      "logical_bytes": 639518
+    }
+  ],
+  "retained_artifacts": [
+    {
+      "path": "ml/artifacts/stage76/oof_predictions.npz",
+      "logical_bytes": 1932186
+    },
+    {
+      "path": "ml/artifacts/stage76/final/predictions.npz",
+      "logical_bytes": 2988610
+    }
+  ],
+  "storage": {
+    "budget_bytes": 20000000,
+    "measurement": "logical file stat bytes, not physical EOS/network I/O",
+    "code_full_modified_docs_report_bytes": 403063,
+    "stage76_artifacts_bytes": 4920796,
+    "shared_stage74_artifacts_bytes": 10497246,
+    "stage76_workbook_bytes": 4072682,
+    "incremental_total_bytes": 9396541,
+    "conservative_total_including_shared74_bytes": 19893787
+  },
+  "full_stage_CPU_s": "未测量",
+  "EOS_physical_network_IO_bytes": "未测量",
+  "protected_untracked": [
+    "AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub",
+    "AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh",
+    "ml/prepare_tracker_occupancy.py",
+    "ntuples/energy_ml_stage54/",
+    "workbook/stage54_energy_ml/"
+  ],
+  "next_task": "stage77 bounded compatible-existing-PHYS actual pi/K development support, no training; see next-step prompt and followup request; not executed here",
+  "push": false
+}

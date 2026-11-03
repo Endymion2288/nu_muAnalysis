@@ -1,0 +1,38 @@
+{
+  "job": "fold2",
+  "new_fits": 0,
+  "formal_point_jobs": 1,
+  "records": [
+    {
+      "arm": "M",
+      "intervals": 261,
+      "role_N": {
+        "held": 13960
+      },
+      "query_rows": 3643560,
+      "new_fits": 0,
+      "truth_not_in_energy_mapping": true,
+      "wall_s": 25.7952798306942,
+      "CPU_s": 25.663768592,
+      "peak_RSS_MiB": 211.01953125
+    },
+    {
+      "arm": "X",
+      "intervals": 260,
+      "role_N": {
+        "held": 13960
+      },
+      "query_rows": 3629600,
+      "new_fits": 0,
+      "truth_not_in_energy_mapping": true,
+      "wall_s": 29.79594210162759,
+      "CPU_s": 29.657081899999998,
+      "peak_RSS_MiB": 226.28515625
+    }
+  ],
+  "actual_train_N": 22543,
+  "purged_N": 4944,
+  "wall_s": 56.12771894223988,
+  "CPU_s": 55.850036409999994,
+  "peak_RSS_MiB": 226.28515625
+}

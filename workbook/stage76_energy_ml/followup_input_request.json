@@ -1,0 +1,73 @@
+{
+  "prepared_in_stage": 76,
+  "executed": false,
+  "decision": "retain F7; end current fixed score-density point-decision budget",
+  "measured": {
+    "eval_lowE_X_cal_log_RMSE": [
+      0.4039175505373422,
+      0.3139856336487099
+    ],
+    "eval_traditional_log_RMSE": [
+      0.14548660218675494,
+      0.22687596295542112
+    ],
+    "eval_X_cal_over_F7_all": 1.1272439438516997,
+    "eval_X_cal_over_F7_all95": [
+      1.114229601570699,
+      1.1394330704184568
+    ],
+    "OOF_zero_q_N": 12,
+    "zero_q_OOF_loss_fraction": 0.007427817558527613,
+    "numerical_QA_passed": true
+  },
+  "previous_request": "workbook/stage74_energy_ml/followup_input_request.json",
+  "physics_delivery_request": [
+    {
+      "item": "Actual independent pi/K kinematic sources",
+      "required": "accessible GENIE parent/input paths or IDs, subfile/entry and seeds, flux/component and recycled/resampled declaration; mapping to incoming identity; not another geometry/digitization of the same parents",
+      "status": "未交付"
+    },
+    {
+      "item": "Preassigned roles and random untouched confirmation",
+      "required": "roles across every flux/geometry before reconstructed outcomes, inclusion probabilities and full parent lineage; retain old locked/test/cal/eval protection and exact incoming exclusion",
+      "status": "未交付"
+    },
+    {
+      "item": "Ambiguous-side support",
+      "required": "random truth-E/y/angular design yielding true50-100/100-200 AND same reco pz50-100 true>=200/high-y/unconfirmed; include 3.2-6.4 TeV across 50-250 GeV pz and full high-pz response; retain missing and tails; source-stratified counts and unique incoming; no post-hoc residual selection",
+      "status": "新增N/功效未测量"
+    },
+    {
+      "item": "Common detector response",
+      "required": "nominal reconstruction/build/geometry actual Calo payload/units with reference01-LG closure, signed 11 raw/status and VetoNu reduced, no fit substitution; common raw/control sample and actual readout conditions",
+      "status": "完整共同响应未交付"
+    },
+    {
+      "item": "Bounded QA before production",
+      "required": "after actual inputs:<=40head/schema/identity events and representative cost variation; explicit file/event/I/O/CPU/wall/storage limits and worker hard stop before any formal extraction; no K continuation by default",
+      "status": "新输入成本未测量"
+    }
+  ],
+  "next_single_task": "stage77 bounded actual pi/K development-support extraction from compatible existing PHYS, no model training; raw/common-response and genuine confirmation remain parallel",
+  "entry": "known manifests and canonical train roles only; concrete accessible PHYS with same62/raw/status/Calo representation; availability/cost/schema not yet measured",
+  "selection": "exclude already fully extracted/delivered sources; legitimate train sources with only partial caches may be read whole then deduplicated against all old incoming; seed2026110377 uniform at most2sources per pi/K,4total,whole-file selection frozen before outcome; <=40header/schema/identity QA events total",
+  "resource_ceiling": {
+    "input_events_total": 40000,
+    "input_logical_bytes_max": 10000000000,
+    "Condor_jobs": 4,
+    "CPUs_per_job": 2,
+    "memory_MB": 3000,
+    "total_CPU_s": 7200,
+    "wall_per_job_s": 3600,
+    "retained_bytes": 10000000
+  },
+  "resource_status": "proposed upper limits only; representative actual cost/schema/conditions QA must pass before any full extraction; no overbudget prefixes or source substitution",
+  "output": "measured selected/new unique counts and source/incoming support for lowE core AND same-reco highE/high-y/unconfirmed/high-end,raw missing and cutflow,cost/I/O,one deduplicated compact payload",
+  "exclusions": "all stage55 developed exact incoming and stage70 actual28; preserve all historic cross-flux canonical role/protected exposure; unknown genealogy never independent confirmation",
+  "development_vs_confirmation": "known-role and exact-key-clean enrichment may be measured without claiming full genealogy independence; genuinely untouched confirmation still needs actual GENIE parent/subfile/seed,roles and random selection",
+  "unavailable": "state concrete missing PHYS/raw/conditions input, keep physical request; do not manufacture another metadata-only stage, scan allEOS, retry failedK RDO,or train on unverified rows",
+  "no_new_training": true,
+  "no_stage70_K_reconstruction_retry": true,
+  "no_automatic_production": true,
+  "no_external_messages": true
+}

@@ -824,3 +824,18 @@ stage68 v2实际train计权/共同未加权初始化、41447恰一次OOF及12模
 结构定位为树查询阶梯与均匀节点不对齐：每模型244–254独立query cuts，原cuts与q边界预示251–261确定分段；精确积分实际成本尚未测。唯一下一笔stage76只修同一映射数值：考虑float32输入舍入的cut有效跳点，每段恒定score积质量和一阶矩，0新训练/q/temperature/seed/决策选择。先独立树遍历、NaN/边界/tie与支持/稳定指数、同256固定身份独立求和log均值≤1e−6/归一≤1e−12，≤32身份quarter/mid/three-quarter和小资源/实际包启动；未过不测正式点风险。
 
 过QA才动原≤4任务/1CPU/3000MB/CPU总1h/wall每1800s/20MB点预算，OOF raw、final原cal各一个unit offset、主X_cal；传统两低E/全体1%/困难3%/双向tail+2pp原门槛与500component来源固定预测bootstrap不改。r仍称分数密度，q0处密度logscore未定义，点分母完整；失败不扫描模型或均匀节点，按[修复合同](../workbook/stage75_energy_ml/integration_repair_contract.json)交具体数值问题或真实新增支持请求。本轮未执行stage76。物理输入/共同响应继续并行，旧§1–35保留。
+
+
+## 37. stage76：数值问题已排除，信息增量仍未变成低能点风险收益
+
+[stage76](../workbook/2026-11-03_stage76_exact-conditional-energy-decision.md)按原树query float32有效跳点＋q边界251–261段精确积分，0新训练/q/温度/决策选择。256身份独立均值差≤5.3291e−15、32身份逐树/全段三内点/全cuts邻域逐位通过，实际包四split启动后4任务9663068一次exit0；41447恰一次OOF，全缺失/困难/12q0不变。模型仍原62/pz0/raw/typed NaN，M仅pz0，原角色/选择保留。
+
+eval主X_cal两低E log-RMSE .403918/.313986，传统.145487/.226876；恢复比95%区间[2.423425,3.184732]/[1.291339,1.484742]失败。all/F7=1.127244 [1.114230,1.139433]、≥200/低pz/high-y/未确认原保护全失败；低E/困难尾失败，all/≥200双向tail单项通过不代替RMSE。最低能median+36.112%、45/208正tail50，高端median−48.110%；macro X .461233也比F7 .395271差。
+
+X/M来源OOF两低E比.432053/.742703、eval密度NLL .140668<.319245仍说明有信息，但M很弱；相对stage73 unit直接回归OOF低E与all更差。OOF12q0保留全体+∞ NLL与全部点风险，损失占比仅.742782%，eval0q0仍失败；不能用少数例或已排除的积分问题解释整体，也不能认定缺新训练数据是唯一原因。分类概率校准/先验和点目标的因果分解未测，非信息极限。
+
+500来源固定模型/q/offset区间不含重训、q/配对/offset估计、谱系/响应/研究选择，cal/eval已开发。独立1060行与eval500次逐事件区间复核通过，remote CPU485s/wall513s、final peak246.336MiB、最终ClassAd1CPU/3000MB/1800s保持，输入/包/分fold重复去重、留存≤20MB，物理EOS网络I/O未测。
+
+保留F7，关闭当前固定决策预算，不再温度/q/结构轮换。下一笔stage77只交付真实新增开发支持：优先兼容既存PHYS、≤40身份QA，按历史canonical train/跨flux保护冻结seed2026110377的π/K各≤2完整源，总≤4源/40000输入/10GB；实际共同62/raw/status/Calo表示/成本通过后才按实测冻结≤4Condor/每≤2CPU/3000MB、CPU总7200s/wall每3600s/10MB上限，原选择/缺失/尾全保留，对stage55全开发及stage70实际28 incoming去重，测低E与同pz困难两侧/高端新N和代价，0训练。上限/可用性/新N/功效未测，不自动K RDO重试/全run生产；不交付则指出具体缺失输入，不制造空metadata阶段。
+
+新增开发支持与真正独立确认区分：已知角色/精确key保护可衡量development enrichment；parent/subfile/seed未知不称新独立确认，后者须真实谱系和随机未曝光角色。共同响应与新生成请求仍并行，不把谱系未知变成所有有限提取的无限前置。见[请求](../workbook/stage76_energy_ml/followup_input_request.json)和[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)，本轮未执行。raw/stage54、Calo、interaction/FSI/材料、接受度/背景仍需交付，旧§1–36保留。

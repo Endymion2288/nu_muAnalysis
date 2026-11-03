@@ -1,0 +1,62 @@
+{
+  "actual_package": true,
+  "formal_fits": 0,
+  "formal_point_jobs": 0,
+  "worker_precreated_directory": true,
+  "both_query_arms_checked": true,
+  "records": [
+    {
+      "job": "fold0",
+      "role_N": {
+        "held": 13820
+      },
+      "new_fits": 0,
+      "formal_point_jobs": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.475294996984303,
+      "CPU_s": 0.4615182269999998,
+      "peak_RSS_MiB": 212.390625
+    },
+    {
+      "job": "fold1",
+      "role_N": {
+        "held": 13667
+      },
+      "new_fits": 0,
+      "formal_point_jobs": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.4699167748913169,
+      "CPU_s": 0.4638337960000001,
+      "peak_RSS_MiB": 212.75390625
+    },
+    {
+      "job": "fold2",
+      "role_N": {
+        "held": 13960
+      },
+      "new_fits": 0,
+      "formal_point_jobs": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.4812959171831608,
+      "CPU_s": 0.463273171,
+      "peak_RSS_MiB": 211.71484375
+    },
+    {
+      "job": "final",
+      "role_N": {
+        "train": 41447,
+        "cal": 8440,
+        "eval": 14057
+      },
+      "new_fits": 0,
+      "formal_point_jobs": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.2927912687882781,
+      "CPU_s": 0.290380898,
+      "peak_RSS_MiB": 215.1015625
+    }
+  ],
+  "wall_s": 20.869271791074425,
+  "CPU_s": 0.749317995,
+  "peak_RSS_MiB": 616.60546875
+}

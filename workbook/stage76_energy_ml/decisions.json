@@ -1,0 +1,229 @@
+{
+  "main_candidate": "X_cal",
+  "deployment": "retain F7",
+  "numerical_gate_passed": true,
+  "versions": {
+    "M_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": false,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "E200_inf": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "M_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": false,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "E200_inf": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": true,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "X_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": false,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    },
+    "X_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": false,
+        "E200_inf": false,
+        "pz50_100": false,
+        "high_y": false,
+        "unconfirmed": false
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        },
+        "unconfirmed": {
+          "tail50": false,
+          "positive_tail50": false,
+          "negative_tail50": false
+        }
+      },
+      "pass_all": false
+    }
+  },
+  "energy_point_risk_measured": true,
+  "full_posterior_calibration_claimed": false
+}

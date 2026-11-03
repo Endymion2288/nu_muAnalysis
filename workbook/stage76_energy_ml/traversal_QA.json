@@ -1,0 +1,134 @@
+{
+  "interior": [
+    {
+      "job": "fold0",
+      "arm": "M",
+      "real_X_N": 8,
+      "query_rows": 6024,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "fold0",
+      "arm": "X",
+      "real_X_N": 8,
+      "query_rows": 6192,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "fold1",
+      "arm": "M",
+      "real_X_N": 8,
+      "query_rows": 6216,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "fold1",
+      "arm": "X",
+      "real_X_N": 8,
+      "query_rows": 6216,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "fold2",
+      "arm": "M",
+      "real_X_N": 8,
+      "query_rows": 6264,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "fold2",
+      "arm": "X",
+      "real_X_N": 8,
+      "query_rows": 6240,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "final",
+      "arm": "M",
+      "real_X_N": 8,
+      "query_rows": 6216,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    },
+    {
+      "job": "final",
+      "arm": "X",
+      "real_X_N": 8,
+      "query_rows": 6240,
+      "missing_reco_values": 0,
+      "serialized_traversal_max_abs_diff": 0.0,
+      "interior_score_constancy_max_abs_diff": 0.0
+    }
+  ],
+  "cut_boundaries": [
+    {
+      "job": "fold0",
+      "arm": "M",
+      "query_cuts": 244,
+      "boundary_query_rows": 732,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "fold0",
+      "arm": "X",
+      "query_cuts": 251,
+      "boundary_query_rows": 753,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "fold1",
+      "arm": "M",
+      "query_cuts": 252,
+      "boundary_query_rows": 756,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "fold1",
+      "arm": "X",
+      "query_cuts": 252,
+      "boundary_query_rows": 756,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "fold2",
+      "arm": "M",
+      "query_cuts": 254,
+      "boundary_query_rows": 762,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "fold2",
+      "arm": "X",
+      "query_cuts": 253,
+      "boundary_query_rows": 759,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "final",
+      "arm": "M",
+      "query_cuts": 252,
+      "boundary_query_rows": 756,
+      "strict_cut_and_float32_neighbors_exact": true
+    },
+    {
+      "job": "final",
+      "arm": "X",
+      "query_cuts": 253,
+      "boundary_query_rows": 759,
+      "strict_cut_and_float32_neighbors_exact": true
+    }
+  ]
+}
