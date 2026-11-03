@@ -1,0 +1,59 @@
+{
+  "stage": 75,
+  "status": "complete_numerical_QA_failure_delivered",
+  "starting_commit": "a3cc31b",
+  "formal_fits": 0,
+  "formal_point_jobs": 0,
+  "Condor_submissions": 0,
+  "formal_retries": 0,
+  "numerical_gate_passed": false,
+  "max_abs_log_mean_difference": 0.007994014323699616,
+  "max_abs_log_mean_difference_limit": 0.005,
+  "max_source_median_difference": 0.005287113148267686,
+  "max_source_median_difference_limit": 0.001,
+  "unique_QA_real_X_N": 256,
+  "QA_arm_rows": 512,
+  "new_energy_point_risk_measured": false,
+  "new_calibration_measured": false,
+  "deployment": "retain F7",
+  "next_stage": 76,
+  "next_stage_executed": false,
+  "next_task": "exact same-model score density integration at float32 query split transitions and q edges; independent numerical/resource QA before unchanged point-risk contract",
+  "QA": {
+    "docs/nu_mu_energy_ml_revised_roadmap.md_old_prefix_preserved": true,
+    "docs/nu_mu_energy_ml_information_budget_plan.md_old_prefix_preserved": true,
+    "stage54_prompt_suffix_preserved": true,
+    "user_stage72_report_unchanged": true,
+    "python_AST_files_passed": 4,
+    "local_link_count": 27,
+    "markdown_fences_and_trailing_whitespace_passed": true,
+    "all_json_parse": true,
+    "figure_visually_inspected": true,
+    "git_diff_check_passed": true,
+    "stage54_five_existing_paths_excluded": true,
+    "numerical_gate_failure_preserved": true,
+    "no_formal_point_evaluation_or_Condor_submission": true,
+    "all_new_local_links_passed": true
+  },
+  "removed_duplicates": [
+    {
+      "path": "ntuples/energy_ml_stage75/input.npz",
+      "logical_bytes": 14243735
+    }
+  ],
+  "removed_duplicate_logical_bytes": 14243735,
+  "retained_budget_bytes": 20000000,
+  "physical_EOS_network_IO_bytes": "未测量",
+  "retained_size_scope": "new stage75 workbook/code/report plus complete modified docs/.gitignore; conservatively add ALL existing shared stage74 artifacts, counted once, no duplication; original stage55/56 inputs/Git objects/temporary files excluded",
+  "no_new_models": true,
+  "no_full_grids_retained": true,
+  "no_external_messages": true,
+  "no_push": true,
+  "retained_bytes": {
+    "new_workbook": 209817,
+    "code_report_full_modified_docs": 354723,
+    "existing_shared_stage74_artifacts": 10497246
+  },
+  "new_outputs_including_full_modified_docs_bytes": 564540,
+  "total_retained_logical_bytes_with_shared_stage74": 11061786
+}

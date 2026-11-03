@@ -1576,3 +1576,18 @@ macro为固定七非空箱等权MSE开根，eval U/S/F cal=.394622/.368145/.3565
 全部12零qOOF及所有困难/尾保留，原传统/F7恢复、全体1%、困难3%/双向tail50+2pp标准不降；真值q零的密度logscore明确未定义/−∞，点预测仍逐例评分，不混称完整后验成功。先合成积分/稳定指数/零q/部署与小资源pilot，拟议≤4任务/1CPU/3000MB、CPU总≤3600s、wall/job≤1800s、最终≤20MB；资源/点收益未测、本轮未执行。通过仅冻结研究候选与新确认，失败记录信息→决策落差再真实扩支持，不自动变体。具体见[stage75 Prompt](nu_mu_energy_ml_next_step_prompt.md)。
 
 [新物理支持/共同响应请求](../workbook/stage74_energy_ml/followup_input_request.json)继续并行：真实π/K parent/subfile/seed与事前跨flux角色、随机未开发确认，低E和同pz高E/high-y/未确认两侧、稀疏高端、raw/Calo实际条件/单位及成本QA；新增N/功效未测，不以12例或metadata当足量支持，不自动K重试/生产/外发。共同raw/stage54、interaction/FSI/材料、接受度/背景仍须交付。旧§1–54保留。
+
+
+## 56. stage75：数值预检失败，先修复同一固定决策的求积
+
+[stage75报告](../workbook/2026-11-03_stage75_conditional-decision-numerical-qa.md)完成既定257/513节点小样本收敛门槛，**未通过，0正式点任务/0Condor/0新fit，继续F7**。原stage55/56同62、pz0/raw/typed NaN、41447/8440/14057、来源隔离、42缺失及全部困难/尾/12零q不改。stage74信息增量正的结论未变，本轮新能量RMSE/校准/传统恢复/尾和bootstrap均未测量。
+
+256事前固定身份（3held各64＋final cal/eval各32），两模型512对比；257/513等log节点＋原q边界实际263/519。区间内线性exp(score)、分段常数q的零/一阶矩解析积分；合成piecewise/零箱/稳定+1000/已知均值通过，解析指数差3.966e−8、独立求积差8.882e−16，DMatrix与inplace路径逐位相同、归一差≤5.552e−16。但max|Δlog均值|=.007994014>.005，4行/4真实身份超标；逐“job×模型×来源”中位最大.005287113>.001，85/254组合超标（实际127来源，254非独立N）。不能删除少数行或只看X最大差放行，513也不是真积分基准。
+
+只读结构定位：各模型244–254个query float32 cut，均匀网格未对齐阶梯分数跳点；解析积分准确的是当前插值，不是原树阶梯。原cuts＋q边界对应251–261分段，**确切积分速度/误差未测量**。输入准备wall/CPU2.802288/2.620315s，完整pilot3.100013/2.902916s，报告核验2.360172/1.752298s，进程peak616.605MiB；主路径140788–170319query rows/CPU s仅小样本，不冒充批量资源。最终≤20MB、输入副本去重，物理EOS网络I/O未测。见[数值表](../workbook/stage75_energy_ml/numerical_summary.tsv)、[结构表](../workbook/stage75_energy_ml/query_threshold_inventory.tsv)。
+
+**唯一下一单项stage76：按已存查询分裂阈值做确定性分段积分修复，保持同一个r∝q exp(score)与exp(mean logE)决策。** 0新训练，不改q/模型/seed/温度/估计器/原验收。float32阈值的连续t有效跳点需考虑输入舍入（cut与其前驱float32的中点），与原q边界合并，各段内score常数，精确积质量和一阶矩。先独立树遍历/NaN/舍入与tie/合成支持与稳定指数QA；同256身份独立logsumexp与显式求和log均值差≤1e−6、归一≤1e−12，≤32固定身份验证quarter/mid/three-quarter，不按真E残差选数值方法。
+
+QA/小资源/实际4split包启动通过后，才在原≤4Condor/1CPU/3000MB、CPU总≤3600s、wall/job≤1800s、最终≤20MB内评价原全样本。OOF raw，final M/X各原cal一个unit log-offset，主X_cal；传统两低E1.05恢复、全体F7 1.01、困难1.03、双向tail50+2pp和500来源固定预测区间（seed2026111375，cal+1/OOF+2）不降。零q真实密度logscore未定义/−∞，点风险全评价，r仍非已校准真后验。不再扫描均匀节点/温度/q/决策，修复失败交具体程序问题；点风险失败结束固定决策预算、转真实新增歧义两侧支持，不自动变体。见[最小修复合同](../workbook/stage75_energy_ml/integration_repair_contract.json)及[stage76 Prompt](nu_mu_energy_ml_next_step_prompt.md)，本轮未执行。
+
+真实π/K/共同响应请求继续并行，raw/stage54、Calo实际条件、interaction/FSI/材料、接受度/背景与随机未开发确认仍待交付。数值阻碍不证明任何物理信息极限，也不把新生成作为现缓存修复的无限前置；不生产/K重试/扩run/外发/新谱toy。旧§1–55保留。

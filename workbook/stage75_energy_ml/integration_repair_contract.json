@@ -1,0 +1,32 @@
+{
+  "prepared_in_stage": 75,
+  "next_stage": 76,
+  "executed": false,
+  "formal_fits": 0,
+  "question": "Can an exact numerical integration of the SAME fixed score density support the prescribed sole energy decision?",
+  "inputs": [
+    "stage74 eight existing M/X models and original actual-train q",
+    "stage55/56 same62 audited cache and source folds",
+    "stage75 fixed256 numerical QA identities",
+    "original stage73/68/69/71/F7 reference predictions"
+  ],
+  "unchanged": "q,models,source folds,all events,log-MSE decision,original energy acceptance gates and single cal offset",
+  "repair": "partition continuous logE by serialized float32 query-split transition boundaries plus original q edges; score constant per interval; integrate interval mass and first moment exactly",
+  "float32_contract": "for numeric t<float32 cut, input casting transition at midpoint of predecessor(float32 cut) and cut; endpoint tie has zero integration measure; verify against actual XGBoost and independent serialized-tree traversal including NaNs",
+  "no_scan": "no denser grid/model/q/temperature/decision/seed candidate selection and no RMSE-based numeric choice",
+  "numerical_QA": "same256 fixed identities; independent float64 logsumexp and explicit interval sum logmean agreement<=1e-6; normalization<=1e-12; synthetic and float32 split/tie/NaN tests; <=32fixed identities quarter/mid/three-quarter checks and tree traversal, no truth-risk selection",
+  "measured_partition_interval_range": [
+    251,
+    261
+  ],
+  "exact_method_runtime": "未测量",
+  "resource_contract": "small pilot and actual 4-split package startup before formal point jobs; <=4Condor,1CPU/3000MB each,totalCPU<=3600s,wall/job<=1800s,worker1750s,totalretained<=20MB; no partial/successful formal reruns",
+  "roles": "OOF raw; final fulltrain/cal/eval; M and X each one unit original8440cal mean-log offset, preassigned mainX_cal",
+  "events": "41447/8440/14057,all12zero-q OOF and all missing/difficult/tails retained; no truth-dependent fallback",
+  "risk_gate": "original traditional lowE recovery1.05,all/F7 1.01,difficult/F7 1.03,tail50 both directions+2pp;500source bootstrap2026111375,cal+1/OOF+2",
+  "density_caveat": "normalized score density is not calibrated posterior; trueq0 logdensity remains undefined/-infinity; point risk all events",
+  "if_QA_fails": "deliver concrete remaining numerical defect; zero formal point-risk conclusions",
+  "if_point_risk_fails": "close this fixed-decision budget; retainF7 and request real new ambiguity-side support/common response; no automatic architecture/calibration rotation",
+  "physics_request": "workbook/stage74_energy_ml/followup_input_request.json remains parallel; no external messages or production",
+  "stage54_five_existing_paths_untouched": true
+}

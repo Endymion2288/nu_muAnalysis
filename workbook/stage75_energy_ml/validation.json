@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "QA_selection_exact": true,
+  "real_X_N": 256,
+  "arm_rows": 512,
+  "max_abs_log_mean_difference": 0.007994014323699616,
+  "max_source_median_abs_difference": 0.005287113148267686,
+  "max_limit_failed_arm_rows": 4,
+  "max_limit_failed_unique_X": 4,
+  "source_median_failed_job_arm_groups": 85,
+  "source_job_arm_groups": 254,
+  "all_persisted_differences_and_source_medians_exact": true,
+  "formal_fits": 0,
+  "Condor_submissions": 0,
+  "new_point_risk_or_calibration_evaluation": false,
+  "additional_model_queries": 0,
+  "failure": "frozen numerical grid convergence gates failed; not an energy-model risk result",
+  "next_contract": "exact piecewise-constant score integration on stored model query split transitions plus original q edges; zero new training; independent traversal and numerical/resource QA before point risks",
+  "wall_s": 0.8808777029626071,
+  "CPU_s": 0.6133515180000002,
+  "peak_RSS_MiB": 616.60546875
+}

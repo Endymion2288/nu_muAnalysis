@@ -813,3 +813,14 @@ stage68 v2实际train计权/共同未加权初始化、41447恰一次OOF及12模
 这修订旧Prompt过强停止规则：完整覆盖失败原样保留，但主信息和所有重要层为正，依据AGENTS“不因少数离群停止分支”，不以12罕见例/ECE未知代替实际点风险验证，也不把新生成设为现有有限研究的无限前置。只补一个零训练决策实验，成功仍需共同响应/真正新确认，失败才据实际信息→决策落差扩支持，不继续扫描。拟议≤4任务/1CPU/3000MB、CPU总≤1h、wall/job≤1800s、最终≤20MB，成本/收益未测、本轮未执行。
 
 [物理输入请求](../workbook/stage74_energy_ml/followup_input_request.json)作为并行交付：真实新π/K parent/seed/角色/随机确认，歧义两侧及高端、raw/status/Calo条件、成本QA，不用重复kinematics或metadata冒充新N/功效。共同raw/stage54、interaction/FSI/材料、接受度/背景继续交付；旧§1–34保留。
+
+
+## 36. stage75：有限数值预算否决均匀积分离散化，未花正式点评价预算
+
+[stage75](../workbook/2026-11-03_stage75_conditional-decision-numerical-qa.md)只做原8模型/q的固定log-MSE决策数值QA。三held各64、final cal/eval各32共256身份，M/X512对比；257/513主节点加原边界后263/519。合成/稳定归一/独立DMatrix通过，但最大log均值差.007994014>.005、来源中位最大.005287113>.001，4模型身份行/4真实X超前者，85/254“job×arm×group”超后者，实际127来源；不删事件或放宽验收，不把513当真积分。
+
+0正式点任务/0Condor/0新训练，无新能量RMSE、cal offset、传统恢复、尾或来源区间，继续F7。输入/完整pilot/报告CPU2.620315/2.902916/1.752298s，peak616.605MiB，主小查询吞吐140788–170319rows/CPU s；总物理I/O与完整任务成本未测，留存≤20MB并去重新输入。原62/pz0/raw/typed NaN/41447-8440-14057/困难尾/12零q及stage74信息结论不变。
+
+结构定位为树查询阶梯与均匀节点不对齐：每模型244–254独立query cuts，原cuts与q边界预示251–261确定分段；精确积分实际成本尚未测。唯一下一笔stage76只修同一映射数值：考虑float32输入舍入的cut有效跳点，每段恒定score积质量和一阶矩，0新训练/q/temperature/seed/决策选择。先独立树遍历、NaN/边界/tie与支持/稳定指数、同256固定身份独立求和log均值≤1e−6/归一≤1e−12，≤32身份quarter/mid/three-quarter和小资源/实际包启动；未过不测正式点风险。
+
+过QA才动原≤4任务/1CPU/3000MB/CPU总1h/wall每1800s/20MB点预算，OOF raw、final原cal各一个unit offset、主X_cal；传统两低E/全体1%/困难3%/双向tail+2pp原门槛与500component来源固定预测bootstrap不改。r仍称分数密度，q0处密度logscore未定义，点分母完整；失败不扫描模型或均匀节点，按[修复合同](../workbook/stage75_energy_ml/integration_repair_contract.json)交具体数值问题或真实新增支持请求。本轮未执行stage76。物理输入/共同响应继续并行，旧§1–35保留。

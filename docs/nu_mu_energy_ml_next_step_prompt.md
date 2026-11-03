@@ -1,48 +1,42 @@
-# 下一轮执行Prompt：stage75 固定条件分数密度的唯一能量决策
+# 下一轮执行Prompt：stage76 固定条件分数密度的分段积分修复与唯一能量决策
 
-先读AGENTS.md、[stage74报告](../workbook/2026-11-03_stage74_conditional-energy-hypotheses.md)、路线§55/信息预算§35、stage74协议/decisions及stage73点风险标准。继续F7。stage74信息主门槛和七重要组OOF/eval均正，完整支持合同因12个OOF零q例失败，X分类概率ECE也未闭合。保留两项事实，不把判别收益叫点风险恢复。
+先读AGENTS.md、[stage75报告](../workbook/2026-11-03_stage75_conditional-decision-numerical-qa.md)、路线§56/信息预算§36、[修复合同](../workbook/stage75_energy_ml/integration_repair_contract.json)、stage74模型/q与stage73原点风险标准。继续F7。stage74判别信息为正；stage75均匀257/513积分不收敛，0正式点风险结论。此次只修复同一科学映射的数值实现，不追加模型/估计器候选。
 
-本任务明确修订旧stage74 Prompt“支持不足即停止条件方向”的过强分流：AGENTS要求“不能因少数离群事件就停止某条分析分支”，不能以12罕见例或校准未知代替实际点风险；也不能反写完整覆盖失败、加伪计数重训或挑分布。本阶段仅用已训练8模型，0新fit，问**固定分数密度的一种决策能否将信息增量变成全样本点风险收益？** 真新支持/共同响应仍并行交付，不作为本有限实验的无限前置。
+## 1. 输入与不可改变项
 
-## 1. 输入与保护
+只用原stage55/56 audited_features同62、stage74八固定M/X模型及每实际train原q、stage75事前256数值身份、既有stage73/68/69/71/F7/传统固定参考。0classifier训练，不改q/seed/模型/温度/先验/决策或挑误差小的来源。原stage68 v2来源折＋train端exact incoming purge、41447/8440/14057与91/16/22保守来源、42缺失21/3/7＋11保护、12零q、所有困难/高y/未确认/巨大动量/负修正/双向尾保持。
 
-只用stage55/56原开发缓存、audited_features.load/build的同62、stage74八模型/各实际train q和既存stage73/F7/传统/stage68/69/71参考。train/cal/eval41447/8440/14057、91/16/22来源，stage68 v2 fold+train端incoming purge，OOF41447恰一次；不得重新fit分类器或改q/RNG/提议边界。stage74的12零q真实者、所有缺失/巨大动量/high-y/未确认/负修正/困难尾完整保留，不按未知真能量回退F7或M。
+一次方纵向/模长动量仅pz0，px/py、q/p和弯折保留；11signed raw/VetoNu reduced、typed/domain/status/dependency NaN、合法负值及缺一Calo使totalNaN不改。pz>50与其他cuts不变。不读新ROOT/RDO/π28/locked确认、不生产/K重试/扩run/谱toy/SHA/重缩放stage70参考化x/新F7推理。stage54五项工作树和下方支线保持。
 
-一次方模长/纵向动量仅pz0，px/py、q/p、弯折允许；11signed raw/VetoNu reduced、typed/domain/status/dependency NaN和缺一Calo使totalNaN保持。原pz>50及其他cuts、42缺失21/3/7＋11保护不变。query t只作部署候选，绝不读事件真E选择密度/估计器。无新ROOT/RDO/生产/π28/locked确认/K重试/扩run/谱toy/SHA，不重缩放stage70参考化x，不新F7推理。
+## 2. 同一科学映射的确定性求积修复
 
-## 2. 唯一映射与数学边界
+仍是t∈[ln50,ln6400]、`r(t|X)∝q(t|Bpz)exp(s(t,X))`、唯一 `logEhat=∫t rdt`，不硬施Ehat≥pz。r只称归一分数密度，不称已校准真后验。q零区保持0，真值q0的density logscore未定义/−∞，点预测仍全评价，不能删例/floor或按真E回退。
 
-对每个模型与它的实际train q（stage74精确7×7与log箱内均匀），定义
-`r(t|X) = q(t|Bpz(X)) exp(s(t,X)) / Z(X)`，固定t∈[log50,log6400]。
-称**归一分数密度**，不称已校准物理真后验。q=0处r=0，不伪填/merge/加floor或改条件层；真实标签q=0的密度logscore未定义/−∞，不得删它们或裁logscore凑有限均值。点决策仍对每个真实X存在，必须全评价；无实际箱外事件不等于未来支持已完整。
+读取已存模型序列化的query数值split（M feature1，X feature62），并计实际推理输入float32舍入。对条件float32(t)<cut，有效连续跳点是cut与其float32前驱的中点，tie为零测度；与原q边界合并，在每个非零长度区间选可核实的内点，score固定。每区间精确质量 `q exp(s) Δt`、一阶矩为该质量×区间中心；稳定logsumexp归一并求均值。不得在跳点之间假设线性树输出。结构库存给251–261段/模型，实际query成本/精度仍未测。
 
-唯一决策 `logEhat=∫ t r(t|X)dt`，Ehat=exp(logEhat)，与平方log损失口径一致。M/X都用相同规则，无MLE/median/quantile/拼接/gate/混合或truth分段校准。不硬施Ehat≥pz。用稳定指数减每行supported节点最大logit，归一时常数抵消，禁止裁odds/沉积负值。
+无更密均匀网格、q平滑/混合/伪计数、温度、mean/MLE/median/quantile/拼接/gate/分段校准选择；不根据RMSE挑积分定义。声明实际float32边界与序列化模型语义，不能只按JSON小数字符串当双精度真阈值。
 
-OOF仅raw、每fold各M/X query其完整held，最终M/X完整train/cal/eval；最终各在原8440cal上一个unit mean(logEtrue−logEhat) offset。预定主X_cal，X_raw、M_raw/cal并列，不因某版本更好改赢家。无温度/等距/能量分段校准，无新classifier、q混合/伪计数/seed或先验扫描。
+## 3. 数值、部署与资源QA先于正式点风险
 
-## 3. 数值QA与小资源pilot先于正式点评价
+先冻结合同与预算。合成piecewise score/q、单/零支持箱、已知均值、极大logit/常数平移、split/tie/边界/NaN分支通过；独立序列化树遍历与XGBoost输出逐例核实，包含float32前驱/cut/后继代表。固定reco时若段内并非常数，交具体最小程序问题，不继续正式点风险。
 
-先冻结输入/模型/来源/唯一映射/网格/验收/资源；0训练。主网格257等logE节点，积分分段显式包含原能量箱边界，不跨q跳点做错误平均。声明所用分数插值和求积定义；树阶梯输出不自动等于精确连续密度。
+使用stage75同256身份（每held64，final cal/eval各32），独立float64 logsumexp与显式分段积分log均值差≤1e−6、归一误差≤1e−12；另每held取这64排序等距8个，final cal/eval各4个，总≤32身份，核各段quarter/mid/three-quarter及独立树遍历。所有身份先定、不看真E残差。不要把257/513当精确参考或用密网格扫描替代结构验证。QA失败保留事实并交具体积分问题，0正式点结论。
 
-合成piecewise常数/指数、q跳点、单箱/零箱、稳定大logit/归一、已知均值、两模型相同输出/score加常数不变、独立参考积分和X-only必须通过。每job按row排序等距取≤64身份，final取cal/eval各≤32，共≤256个固定真实身份；不是按残差选。以513节点复核，要求最大|ΔlogEhat|≤.005、各有支持来源的中位|Δ|≤.001。数值标准是工程QA，非detector容忍度，不能根据能量RMSE选择网格。未通过先交实际误差/输入/最小积分修复合同，不直接报告成功或扫描更有利的决策。
+query仅reco＋候选t，不读事件真标签选密度/模型。分块复用输入与模型，每chunk约化为均值/归一/首尾箱质量等小摘要，不留全量grid；实测wall/CPU/RSS、query吞吐/I/O。小资源pilot后冻结实际预算，实际4split包 --check-only（含worker预建目录、两输入维数与0fit）通过才提交，无部分/成功正式任务重跑。
 
-用少量固定身份实测query吞吐、wall/CPU/RSS与chunk内存，0新训练、不保留全量逐例能量grid。每chunk及时约化为log均值/归一/边界质量等紧凑量，复用一次输入与已存模型；比对独立回读和提议计数。没有成功/部分正式任务重跑；先实际包4split无fit启动，避免目录冲突。
+## 4. 正式点风险与完整验收（仅QA通过）
 
-## 4. 点风险验收，完整保留分母
+原≤4Condor（每fold＋final）、1CPU/3000MB、CPU总≤3600s、wall/job≤1800s、worker1750s、紧凑最终≤20MB；核最终ClassAd和硬上限。0新训练。3OOF raw、41447各一次；final M/X完整train/cal/eval，各在原8440cal一个unit mean(logEtrue−logEhat) offset。预定主X_cal、raw及M并列，不挑赢家。
 
-原sample支持/来源和原标准不降：两个true低E/传统RMSE比来源95%上限≤1.05恢复，gain下限>0才超越；all/F7≤1.01，≥200/reco pz50–100/high-y/未确认/F7≤1.03，整体及正/负tail50增量上限≤2pp（原各关键层都报）。不能以较弱M替代传统/F7门槛。
+原两true低E对传统RMSE比来源95%上限≤1.05恢复、gain下限>0才超越；all/F7≤1.01，≥200/pz50–100/high-y/未确认/F7≤1.03；关键层总体及正负tail50增量上限≤2pp。不用弱M替代传统/F7门槛。OOF X/M、最终X/M、传统/F7与stage73/68/69/71固定参考全报，train内/OOF/cal/eval开发分开。
 
-OOF X_raw/M_raw及最终X/M、传统/F7/stage68/69/71固定参考完整对照；train内、OOF、cal和eval开发分开。所有七真E箱、3.2–6.4TeV、≥200、pz50–100/100–250、high-y、未确认、缺失和12零q诊断层给N/来源/唯一incoming、logRMSE、mean/median bias、R68、上下tail50/100及尾损失；≥6400空层未测。unit总体、固定七非空箱等权MSE开根的macro和两低E并列，不用macro替换unit保护。
+所有七真E非空箱、3.2–6.4TeV、≥6400空箱、≥200、pz50–100/100–250、high-y/未确认/缺失和12零q给N/来源/唯一incoming、logRMSE、mean/median bias、R68、tail50/100双向和尾损失。unit与固定七箱等权MSE开根macro并列。500次component分层保守来源配对固定预测bootstrap，seed2026111375（cal+1/OOF+2），记录有效/无效；模型/q/offset固定，排除重训、q/配对RNG、完整谱系、响应/研究选择误差。cal/eval已开发，非新盲测。
 
-500次component分层保守来源配对固定点预测bootstrap，seed2026111375（cal+1/OOF+2），offset/q/模型固定，记录有效/无效；不含重训、q/负配对RNG、完整谱系、响应/选择误差，cal/eval仍开发。密度/归一和数值误差另报；分类ECE/判别信息与新点风险的关系只能据实讨论，不能自动叫后验闭合。
+## 5. 分流与交付
 
-## 5. 资源、结果分流与交付
+QA通过且主X_cal原全门槛/OOF稳定才冻结研究候选，再安排共同响应/真正新来源随机确认；不得称完整校准后验。若信息正但点风险未恢复，结束这次固定决策预算，记录支持/边界/校准/双向代价，转真实新增歧义两侧支持，不自动temperature/q/架构轮换。数值仍失败只交具体程序问题。
 
-拟议≤4Condor，每fold一个＋final一个，M/X复用该job输入/分块查询，1CPU/3000MB、累计CPU≤3600s、wall/job≤1800s、最终≤20MB；pilot后按实测冻结，核最终ClassAd和worker硬上限，原预算不自动延长。源码未变不编译C++，用CVMFS；EOS实际物理I/O未测则明写，紧凑结果去重。仅257→513固定身份数值QA允许额外query，不能变种子/架构/先验/能量决策研究扫描。
-
-主X_cal若OOF/eval稳定且原全门槛通过：只冻结研究候选，需共同响应/真新来源随机确认。若有信息而点风险未恢复：给实际信息→决策落差、边界/校准/支持和困难双向代价，不推成信息极限定理；结束这一固定决策预算，转真实新增歧义两侧支持，不自动temperature/q/架构轮换。数值QA失败则交具体积分问题，0正式点结论。未测均标未测，不把概率或macro改善代替能量恢复。
-
-中文stage75报告包含实际输入/数值/单位/命令、数值与身份/来源QA、全部点风险/双向尾、CPU/wall/RSS/吞吐/产物、物理/程序解释及唯一下一任务。更新路线/信息预算/Prompt，先报告后本地Conventional Commit、不push，不自动执行新生产。实际[π/K/共同响应请求](../workbook/stage74_energy_ml/followup_input_request.json)、raw/stage54、Calo条件、interaction/FSI/材料、接受度/背景与未开发确认继续交付；不发外部消息或用metadata数量冒充功效。
+先中文stage76 workbook，实测数值/单位、输入/身份/数值QA、完整点风险（未测标未测）、程序与物理解释、命令/资源/产物和唯一下一项；更新路线/信息预算/Prompt，报告＋代码/小表图本地Conventional Commit，不push，不自动执行下一阶段。原[真实π/K/共同响应请求](../workbook/stage74_energy_ml/followup_input_request.json)、raw/stage54、Calo、interaction/FSI/材料、接受度/背景与未开发确认继续并行，不外发消息、不把metadata当新N/功效，也不将新生成作为有限积分修复的无限前置。
 
 下面stage54协议逐字保留，只有进入该支线时适用。
 
