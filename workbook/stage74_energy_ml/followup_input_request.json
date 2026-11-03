@@ -1,0 +1,70 @@
+{
+  "prepared_in_stage": 74,
+  "executed": false,
+  "current_decision": "retain F7; conditional discriminator has transferable score gain; no new energy point estimate or full posterior claim",
+  "evidence": {
+    "OOF_low_pz_BCE_gain": 0.10460042866015781,
+    "OOF_low_pz_gain95": [
+      0.09206225420088086,
+      0.11604000821402323
+    ],
+    "eval_low_pz_BCE_gain": 0.09979447997122005,
+    "eval_low_pz_gain95": [
+      0.08304696307654033,
+      0.1168781409807123
+    ],
+    "OOF_zero_q_N": 12,
+    "OOF_N": 41447,
+    "eval_zero_q_N": 0,
+    "highE3200_6400_OOF_gain95": [
+      -0.02902459124503787,
+      0.03263420441127797
+    ],
+    "eval_pair_ECE10_M_X": [
+      0.011875049130963268,
+      0.040752118429636344
+    ]
+  },
+  "interpretation": "zero q is finite proposal support, not impossible physics; positive discrimination is not energy posterior calibration or an information limit; do not terminate conditional research solely for 12 rare events",
+  "frozen_contract_passed": false,
+  "complete_energy_posterior_measured": false,
+  "existing_request": "workbook/stage71_energy_ml/followup_input_request.json",
+  "requested_delivery": [
+    {
+      "item": "Actual independent pi/K kinematic sources",
+      "required": "accessible GENIE parent/input paths or IDs, subfile/entry and seeds, flux/component and recycled/resampled declaration; mapping to incoming identity; not another geometry/digitization of the same parents",
+      "status": "未交付"
+    },
+    {
+      "item": "Preassigned roles and random untouched confirmation",
+      "required": "roles across every flux/geometry before reconstructed outcomes, inclusion probabilities and full parent lineage; retain old locked/test/cal/eval protection and exact incoming exclusion",
+      "status": "未交付"
+    },
+    {
+      "item": "Ambiguous-side support",
+      "required": "random truth-E/y/angular design yielding true50-100/100-200 AND same reco pz50-100 true>=200/high-y/unconfirmed; include 3.2-6.4 TeV across 50-250 GeV pz and full high-pz response; retain missing and tails; source-stratified counts and unique incoming; no post-hoc residual selection",
+      "status": "新增N/功效未测量"
+    },
+    {
+      "item": "Common detector response",
+      "required": "nominal reconstruction/build/geometry actual Calo payload/units with reference01-LG closure, signed 11 raw/status and VetoNu reduced, no fit substitution; common raw/control sample and actual readout conditions",
+      "status": "完整共同响应未交付"
+    },
+    {
+      "item": "Bounded QA before production",
+      "required": "after actual inputs:<=40head/schema/identity events and representative cost variation; explicit file/event/I/O/CPU/wall/storage limits and worker hard stop before any formal extraction; no K continuation by default",
+      "status": "新输入成本未测量"
+    }
+  ],
+  "support_diagnostics": {
+    "zero_q_event_table": "workbook/stage74_energy_ml/zero_q_events.tsv",
+    "proposal_counts": "workbook/stage74_energy_ml/proposal.tsv",
+    "not_sufficient_target": "filling 12 rows/cells does not establish adequate sample power or calibrated full posterior; new required counts未测量"
+  },
+  "next_single_task": "stage75 zero-new-fit fixed q*exp(logit) normalized score density, sole log-MSE decision, paired M/X and original energy risk gates; no q or temperature variant; physical support request remains parallel",
+  "without_delivery": "keep physical-input request explicit; do not manufacture metadata-only stage; bounded stage75 existing-cache fixed decision can proceed without new generation",
+  "no_external_messages_sent": true,
+  "no_production_started": true,
+  "no_K_retry": true,
+  "plan_amendment_reason": "AGENTS forbids stopping branch solely for rare outliers; both primary and all seven important strata have transferable positive gains, so full-support gate failure is preserved but not treated as evidence against every point decision"
+}

@@ -1,0 +1,76 @@
+{
+  "stage": 74,
+  "status": "complete",
+  "starting_commit": "1e6d6a1",
+  "formal_fits": 8,
+  "Condor_jobs": 4,
+  "successful_jobs": 4,
+  "formal_retries": 0,
+  "cluster": 9663005,
+  "primary_information_gain_positive": true,
+  "pass_frozen_information_contract": false,
+  "OOF_zero_q_N": 12,
+  "current_energy_predictor": "retain F7",
+  "new_energy_point_risk_measured": false,
+  "stage75_executed": false,
+  "next_task": "stage75: fixed existing-model score density and sole log-MSE energy decision; zero new training",
+  "plan_amendment": "preserve full-support failure, but positive source-transfer information and AGENTS rare-event rule support a bounded fixed decision test; physical-input request proceeds in parallel",
+  "QA": {
+    "docs/nu_mu_energy_ml_revised_roadmap.md_old_prefix_preserved": true,
+    "docs/nu_mu_energy_ml_information_budget_plan.md_old_prefix_preserved": true,
+    "stage54_prompt_suffix_preserved": true,
+    "user_stage72_report_unchanged": true,
+    "fold_low_pz_BCE_gain": {
+      "fold0": 0.10310300713244647,
+      "fold1": 0.11195201178949277,
+      "fold2": 0.09893203216533164
+    },
+    "python_AST_files_passed": 8,
+    "local_link_count": 32,
+    "markdown_fences_and_trailing_whitespace_passed": true,
+    "shell_syntax_passed": true,
+    "git_diff_check_passed": true,
+    "both_figures_visually_inspected": true,
+    "original_cache_fallback_after_duplicate_removal_passed": true,
+    "stage54_five_existing_paths_excluded": true,
+    "local_links_passed": true
+  },
+  "retained_budget_bytes": 20000000,
+  "removed_duplicates": [
+    {
+      "path": "ntuples/energy_ml_stage74/input.npz",
+      "logical_bytes": 14243735
+    },
+    {
+      "path": "ntuples/energy_ml_stage74/fold0.tar.gz",
+      "logical_bytes": 832878
+    },
+    {
+      "path": "ntuples/energy_ml_stage74/fold1.tar.gz",
+      "logical_bytes": 830367
+    },
+    {
+      "path": "ntuples/energy_ml_stage74/fold2.tar.gz",
+      "logical_bytes": 828833
+    },
+    {
+      "path": "ntuples/energy_ml_stage74/final.tar.gz",
+      "logical_bytes": 2141050
+    },
+    {
+      "path": "software/energy-ml-hypotheses-stage74.tar.gz",
+      "logical_bytes": 14180121
+    }
+  ],
+  "removed_duplicate_logical_bytes": 33056984,
+  "physical_EOS_network_IO_bytes": "未测量",
+  "retained_size_scope": "logical bytes of stage74 models/predictions, workbook tables/figures/manifest, code/submission/report, complete modified docs and .gitignore; no Git objects/temp/pycache",
+  "no_push": true,
+  "no_external_messages": true,
+  "retained_bytes": {
+    "models_and_compact_predictions": 10497246,
+    "workbook": 1425667,
+    "code_submission_report_full_modified_docs": 386347
+  },
+  "total_retained_logical_bytes": 12309260
+}

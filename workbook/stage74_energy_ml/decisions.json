@@ -1,0 +1,126 @@
+{
+  "deployment": "retain F7",
+  "energy_point_or_posterior_recovery_measured": false,
+  "primary_lower95_positive": {
+    "source_OOF": true,
+    "evaluation": true
+  },
+  "critical": [
+    {
+      "sample": "source_OOF",
+      "stratum": "E50_100",
+      "N": 767,
+      "zero_q_N": 2,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "source_OOF",
+      "stratum": "E100_200",
+      "N": 3564,
+      "zero_q_N": 1,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "source_OOF",
+      "stratum": "pz50_100_E50_100",
+      "N": 765,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "source_OOF",
+      "stratum": "pz50_100_E100_200",
+      "N": 728,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "source_OOF",
+      "stratum": "pz50_100_E200_inf",
+      "N": 1005,
+      "zero_q_N": 2,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "source_OOF",
+      "stratum": "high_y",
+      "N": 1204,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "source_OOF",
+      "stratum": "unconfirmed",
+      "N": 1495,
+      "zero_q_N": 3,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "E50_100",
+      "N": 208,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "E100_200",
+      "N": 906,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "pz50_100_E50_100",
+      "N": 208,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "pz50_100_E100_200",
+      "N": 175,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "pz50_100_E200_inf",
+      "N": 299,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "high_y",
+      "N": 440,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    },
+    {
+      "sample": "evaluation",
+      "stratum": "unconfirmed",
+      "N": 510,
+      "zero_q_N": 0,
+      "wholly_negative_gain": false,
+      "inconclusive": false
+    }
+  ],
+  "critical_support_covered": false,
+  "any_critical_wholly_negative_gain": false,
+  "pass_frozen_information_contract": false,
+  "interpretation": "pair-experiment discrimination only; no energy-predictor success or information-limit claim"
+}

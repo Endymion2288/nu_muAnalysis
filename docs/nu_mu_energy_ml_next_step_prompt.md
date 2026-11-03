@@ -1,51 +1,50 @@
-# 下一轮执行Prompt：stage74 同pz条件能量假设判别信息
+# 下一轮执行Prompt：stage75 固定条件分数密度的唯一能量决策
 
-先读AGENTS.md、[stage73报告](../workbook/2026-11-03_stage73_reconstruction-energy-reweight.md)、[stage72§6.1](../workbook/2026-11-03_stage72_reconstruction-reweight-reassessment.md)、路线§54/信息预算§34、stage68 v2协议。继续F7。stage73已完成固定U/S/F12fit，S在OOF/eval两个低E均改善但原恢复/困难标准失败；F100–200胜传统但全区/困难受损，停止alpha扫描。下一单项只问：**同reco pz内竞争不同能量解释时，全62输入相对pz0-only的判别信息，能否在来源留出及歧义两侧稳定转移？**
+先读AGENTS.md、[stage74报告](../workbook/2026-11-03_stage74_conditional-energy-hypotheses.md)、路线§55/信息预算§35、stage74协议/decisions及stage73点风险标准。继续F7。stage74信息主门槛和七重要组OOF/eval均正，完整支持合同因12个OOF零q例失败，X分类概率ECE也未闭合。保留两项事实，不把判别收益叫点风险恢复。
 
-stage62旧full/pz-only在低pz proper-score已有增量；它不是新条件负配对方法的收益或点预测保证。不要把另一个y辅助头、旧gate、全局joint/product重新命名。本次先交信息实验，不自动新能量点映射/谱拟合或部署。
+本任务明确修订旧stage74 Prompt“支持不足即停止条件方向”的过强分流：AGENTS要求“不能因少数离群事件就停止某条分析分支”，不能以12罕见例或校准未知代替实际点风险；也不能反写完整覆盖失败、加伪计数重训或挑分布。本阶段仅用已训练8模型，0新fit，问**固定分数密度的一种决策能否将信息增量变成全样本点风险收益？** 真新支持/共同响应仍并行交付，不作为本有限实验的无限前置。
 
 ## 1. 输入与保护
 
-仅stage55 dataset、stage56 readout和必要既存stage62/73聚合/固定参考，X通过audited_features.load/build，同62与角色train/cal/eval41447/8440/14057、91/16/22保守来源。stage68 v2来源折和train端exact incoming purge不改，held全部保留，41447恰一次OOF。q、权重、初始化及任何尺度只读每次**实际train**，不得用held频率。
+只用stage55/56原开发缓存、audited_features.load/build的同62、stage74八模型/各实际train q和既存stage73/F7/传统/stage68/69/71参考。train/cal/eval41447/8440/14057、91/16/22来源，stage68 v2 fold+train端incoming purge，OOF41447恰一次；不得重新fit分类器或改q/RNG/提议边界。stage74的12零q真实者、所有缺失/巨大动量/high-y/未确认/负修正/困难尾完整保留，不按未知真能量回退F7或M。
 
-一次方模长/纵向动量仅pz0，允许px/py、q/p、弯折；11signed raw/VetoNu reduced与typed/status/dependency NaN、缺一Calo使totalNaN保持。原pz>50及其他cuts、42缺失21/3/7＋11保护、巨大动量/未确认/high-y/负修正/全部尾不变；真E标签覆盖未确认，不贴错轨或无效y标签。
+一次方模长/纵向动量仅pz0，px/py、q/p、弯折允许；11signed raw/VetoNu reduced、typed/domain/status/dependency NaN和缺一Calo使totalNaN保持。原pz>50及其他cuts、42缺失21/3/7＋11保护不变。query t只作部署候选，绝不读事件真E选择密度/估计器。无新ROOT/RDO/生产/π28/locked确认/K重试/扩run/谱toy/SHA，不重缩放stage70参考化x，不新F7推理。
 
-无新ROOT/RDO/重建/生产/locked确认/π28追加/K重试/扩run/谱toy/SHA；stage70参考化x不重缩放。已有cal/eval仍开发，真正独立确认及共同响应另需输入，不用metadata循环替代实验。
+## 2. 唯一映射与数学边界
 
-## 2. 先冻结条件负配对与概率语义
+对每个模型与它的实际train q（stage74精确7×7与log箱内均匀），定义
+`r(t|X) = q(t|Bpz(X)) exp(s(t,X)) / Z(X)`，固定t∈[log50,log6400]。
+称**归一分数密度**，不称已校准物理真后验。q=0处r=0，不伪填/merge/加floor或改条件层；真实标签q=0的密度logscore未定义/−∞，不得删它们或裁logscore凑有限均值。点决策仍对每个真实X存在，必须全评价；无实际箱外事件不等于未来支持已完整。
 
-t=log(Eν/GeV)，Bpz固定reco边界[50,75,100,150,250,500,1000,+∞)GeV。能量固定stage73七箱[50,100,200,400,800,1600,3200,6400]GeV。对每个实际train的每个Bpz，q_b为其七能量箱unit频率；箱内在logE均匀，因此q(t|Bpz)=q_b/ΔlogE。没有伪计数或事后merge/clip；空Bpz/零q箱/箱外支持明确单列，不删事件或把未见叫物理不可能，遇实际箱外先冻结支持处理再fit，不盲裁边界。
+唯一决策 `logEhat=∫ t r(t|X)dt`，Ehat=exp(logEhat)，与平方log损失口径一致。M/X都用相同规则，无MLE/median/quantile/拼接/gate/混合或truth分段校准。不硬施Ehat≥pz。用稳定指数减每行supported节点最大logit，归一时常数抵消，禁止裁odds/沉积负值。
 
-每个真实训练X配一个真实t正例、一个由该实际train q(t|Bpz(X))独立抽出的负假设；两类1:1等权，U式unit事件，不再能量reweight。每job固定一次负配对，不扫负例数量/种子/带宽；同一配对同时给两对照。held/cal/eval的负例用该训练q独立固定RNG抽，不能用其真实谱估q，不能按坏例筛选。来源bootstrap按真实X的来源抽样，携带它的正/负假设对；合成负假设不是新增独立物理事件。
+OOF仅raw、每fold各M/X query其完整held，最终M/X完整train/cal/eval；最终各在原8440cal上一个unit mean(logEtrue−logEhat) offset。预定主X_cal，X_raw、M_raw/cal并列，不因某版本更好改赢家。无温度/等距/能量分段校准，无新classifier、q混合/伪计数/seed或先验扫描。
 
-平衡BCE的理想logit=log p(t|X)−log q(t|Bpz)。候选t是待查询假设，部署从候选输入；禁止读取未知真t选择模型/校准。要解释后验必须乘回q并处理归一，不能把raw sigmoid/logit直接称p(E|X)或条件互信息精确值。零q支持上的后验恢复未定义，分类器可输出但只能作外推诊断，所有角色主样本保留并报告支持缺口；不能静默从成功分母去掉。
+## 3. 数值QA与小资源pilot先于正式点评价
 
-本阶段不作高密度能量grid/新点能量/均值-MLE选择/额外概率校准；真实能量后验归一和点风险留给下一份独立合同。proper-score在已定义的正/负实验分布下评价，不冒充自然物理类先验。
+先冻结输入/模型/来源/唯一映射/网格/验收/资源；0训练。主网格257等logE节点，积分分段显式包含原能量箱边界，不跨q跳点做错误平均。声明所用分数插值和求积定义；树阶梯输出不自动等于精确连续密度。
 
-## 3. 两个固定判别器，最多8正式fit
+合成piecewise常数/指数、q跳点、单箱/零箱、稳定大logit/归一、已知均值、两模型相同输出/score加常数不变、独立参考积分和X-only必须通过。每job按row排序等距取≤64身份，final取cal/eval各≤32，共≤256个固定真实身份；不是按残差选。以513节点复核，要求最大|ΔlogEhat|≤.005、各有支持来源的中位|Δ|≤.001。数值标准是工程QA，非detector容忍度，不能根据能量RMSE选择网格。未通过先交实际误差/输入/最小积分修复合同，不直接报告成功或扫描更有利的决策。
 
-- M：仅pz0与候选t，共2输入；
-- X：原62reco列与候选t，共63输入，NaN原样。
+用少量固定身份实测query吞吐、wall/CPU/RSS与chunk内存，0新训练、不保留全量逐例能量grid。每chunk及时约化为log均值/归一/边界质量等紧凑量，复用一次输入与已存模型；比对独立回读和提议计数。没有成功/部分正式任务重跑；先实际包4split无fit启动，避免目录冲突。
 
-同容量BDT depth5/400轮、eta.04/subsample.8/colsample1/min_child_weight20/lambda10/hist/nthread1，objective=binary:logistic，base_score=.5、boost_from_average=0，模型seed2026110374。两者同一正/负配对及train顺序；q/RNG每job固定seed2026110374＋job序号0/1/2/3，评价负例另固定+100，不选RNG赢家。仅三来源折各M/X＋全train M/X，共8fit；不earlystop/checkpoint、无其他seed/aux/结构/权重/负分布变体。树直接接收原值和NaN，不添加truth-derived reco列。原62和候选假设的部署字段分别明确审计。
+## 4. 点风险验收，完整保留分母
 
-## 4. 必须回答的评价与验收
+原sample支持/来源和原标准不降：两个true低E/传统RMSE比来源95%上限≤1.05恢复，gain下限>0才超越；all/F7≤1.01，≥200/reco pz50–100/high-y/未确认/F7≤1.03，整体及正/负tail50增量上限≤2pp（原各关键层都报）。不能以较弱M替代传统/F7门槛。
 
-主指标为每真实X的平均正/负BCE：−.5[log σ(s_pos)+log(1−σ(s_neg))]，用稳定softplus；X相对M的gain=loss_M−loss_X，正为好。并报Brier、正/负分项与固定10个等宽概率箱的可靠性，原始N/保守来源/唯一incoming/q支持、sampled negatives数量分开。不能只印总体accuracy/AUC，分类概率好不自动恢复逐E箱能量风险。
+OOF X_raw/M_raw及最终X/M、传统/F7/stage68/69/71固定参考完整对照；train内、OOF、cal和eval开发分开。所有七真E箱、3.2–6.4TeV、≥200、pz50–100/100–250、high-y、未确认、缺失和12零q诊断层给N/来源/唯一incoming、logRMSE、mean/median bias、R68、上下tail50/100及尾损失；≥6400空层未测。unit总体、固定七非空箱等权MSE开根的macro和两低E并列，不用macro替换unit保护。
 
-主层reco pz50–100；同时报告pz50–75/75–100、100–250、原trueE七箱、同低pz true低E50–100/100–200/≥200、高y、未确认、缺失，以及stage73固定Timing活动格（原train阈值只作诊断）；所有层全保留，低支持/空层写未测。训练内、来源OOF raw、cal/eval开发分开；原F7/传统的stage73点风险只读参考，不新推理。
+500次component分层保守来源配对固定点预测bootstrap，seed2026111375（cal+1/OOF+2），offset/q/模型固定，记录有效/无效；不含重训、q/负配对RNG、完整谱系、响应/选择误差，cal/eval仍开发。密度/归一和数值误差另报；分类ECE/判别信息与新点风险的关系只能据实讨论，不能自动叫后验闭合。
 
-500次component分层保守来源配对bootstrap，seed2026111374（cal+1/OOF+2），固定模型/q/负配对，不重训/重抽q/重新校准；记录有效/无效，不含完整谱系/响应/重训/研究选择，不是独立确认。主“可迁移条件判别增量”仅在OOF和eval主低pz层gain95%下限均>0、关键两侧支持已覆盖，且未发现任一关键低E/同pz高E/high-y/未确认层gain区间整体<0时成立；单层区间跨零明确未定，不叫全层成功。零q缺口不允许宣称该层完整后验恢复。即使通过也不推广能量模型。
+## 5. 资源、结果分流与交付
 
-## 5. QA、资源与交付
+拟议≤4Condor，每fold一个＋final一个，M/X复用该job输入/分块查询，1CPU/3000MB、累计CPU≤3600s、wall/job≤1800s、最终≤20MB；pilot后按实测冻结，核最终ClassAd和worker硬上限，原预算不自动延长。源码未变不编译C++，用CVMFS；EOS实际物理I/O未测则明写，紧凑结果去重。仅257→513固定身份数值QA允许额外query，不能变种子/架构/先验/能量决策研究扫描。
 
-先冻结所有输入/来源/公式/负配对/主候选/验收；先做小合成条件独立（最优比值1）、已知条件密度比和q乘回/归一、零支持/边界、BCE解析梯度/类先验、NaN和假设查询不读truth、实际tar包四split `--check-only`（worker已预建目录）及资源pilot。stage73目录创建冲突须覆盖，不再只验证DMatrix。本轮不新增科学候选作pilot。
+主X_cal若OOF/eval稳定且原全门槛通过：只冻结研究候选，需共同响应/真新来源随机确认。若有信息而点风险未恢复：给实际信息→决策落差、边界/校准/支持和困难双向代价，不推成信息极限定理；结束这一固定决策预算，转真实新增歧义两侧支持，不自动temperature/q/架构轮换。数值QA失败则交具体积分问题，0正式点结论。未测均标未测，不把概率或macro改善代替能量恢复。
 
-拟议≤4Condor，每任务M/X各1fit、1CPU/3000MB，累计CPU≤3600s、wall/job≤1800s、最终≤20MB；pilot后按实测冻结，核最终ClassAd与worker硬上限。成功/部分fit不重跑，不自动突破提交/运行预算；异常先保存实际状态并交具体修复合同。用CVMFS现成构建、scratch和一次紧凑输入，记录逻辑bytes与实际测到的资源，物理EOS I/O未测则如实写，不保留点云/ROOT/全能量grid。
+中文stage75报告包含实际输入/数值/单位/命令、数值与身份/来源QA、全部点风险/双向尾、CPU/wall/RSS/吞吐/产物、物理/程序解释及唯一下一任务。更新路线/信息预算/Prompt，先报告后本地Conventional Commit、不push，不自动执行新生产。实际[π/K/共同响应请求](../workbook/stage74_energy_ml/followup_input_request.json)、raw/stage54、Calo条件、interaction/FSI/材料、接受度/背景与未开发确认继续交付；不发外部消息或用metadata数量冒充功效。
 
-写中文stage74报告：实际q/支持、两对照全部train/OOF/开发proper-score/校准/双侧来源证据、概率语义/程序物理解释、命令/CPU/wall/RSS/产物、独立回读/来源保护。更新路线/信息预算/Prompt，先报告再本地Conventional Commit、不push。通过则只冻结一个后续能量决策/共同响应独立确认合同；无转移/支持不足则停条件方向、交真正新增歧义两侧支持，禁止自动扫超参或把阴性当信息极限。共同raw/stage54、Calo实际状态/标度、interaction/FSI/材料、接受度/背景、新π/K parent/seed与随机未开发确认继续交付。本轮未执行stage74。
-
-下面stage54原协议逐字保留，只有进入该支线时适用。
+下面stage54协议逐字保留，只有进入该支线时适用。
 
 ## 保留的stage54 data占据支线
 

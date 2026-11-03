@@ -1,0 +1,9 @@
+{
+  "main": "pz50_100 per-real-X paired BCE gain X over M; sourceOOF and eval",
+  "critical_support": "all seven frozen critical strata in OOF/eval nonempty and zero_q_N=0; no removal of unsupported events",
+  "source_bootstrap_min_groups": 3,
+  "below_min_groups": "central values retained;95%interval marked unmeasured",
+  "reliability": "10 equal-width bins in balanced pair-experiment probability; report pair rows and contributing real-X counts, no probability calibration fit",
+  "negative_draws": "fixed one per real X; source resampling carries both rows together",
+  "no_extra_fit": true
+}

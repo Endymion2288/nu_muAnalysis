@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "conditional_independence_logratio_zero": true,
+  "known_ratio_and_q_recovery": true,
+  "wrong_unconditional_q_detected": true,
+  "proposal_normalized": true,
+  "zero_support_and_edges": true,
+  "BCE_gradient_max_abs_diff": 5.595948704417708e-11,
+  "analytic_one_step_exact": true,
+  "query_only_reco_and_candidate": true,
+  "NaN_N": 48,
+  "real_X_N": 512,
+  "pair_rows": 1024,
+  "pilot_trees": 2,
+  "pilot_is_scientific_candidate": false,
+  "retained_pilot_models": 0,
+  "resource_pilot": {
+    "wall_s": 0.025580402929335833,
+    "CPU_s": 0.02520930900000007,
+    "peak_RSS_MiB": 616.60546875
+  },
+  "xgboost_version": "2.1.3",
+  "frozen_budget": "4 jobs /8formal fits;1CPU/3000MB;CPUtotal3600s;wall/job1800s;retained20MB",
+  "wall_s": 0.4096000171266496,
+  "CPU_s": 0.2091120839999998,
+  "peak_RSS_MiB": 616.60546875
+}

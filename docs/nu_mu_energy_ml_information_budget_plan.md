@@ -796,3 +796,20 @@ stage68 v2实际train计权/共同未加权初始化、41447恰一次OOF及12模
 下一笔stage74只检验同pz竞争能量假设信息：train-only明确q(t|Bpz)条件负配对，pz-only/62两对照、stage68 v2三折＋final最多8fit。低pz两个能量解释/未确认均保留，不能贴错轨标签；查询能量非真实部署标签。理想logit=log p(t|X)−log q(t|Bpz)，q恢复/零支持/校准及来源转移先验收，不直接推广点能量。已存stage62低pz full/pz-only log-density增量.617984 [.558875,.676215]只支撑存在可用信息，不是新方法收益或信息极限。先合成QA、实际提交包无fit启动和资源冻结，拟议≤4任务/1CPU/3000MB、总CPU≤1h、wall/job≤1800s、最终≤20MB，成本/收益未测、不自动执行。
 
 通过则下一份能量决策/共同响应与独立确认合同；无转移/支持不足则结束条件方向并真正扩歧义两侧支持，不再系数/seed/架构循环。共同raw/stage54、实际Calo状态/标度、interaction/FSI/材料、接受度/背景、新π/K生成与随机未开发确认继续交付，旧§1–33保留。
+
+
+## 35. stage74：信息增量正，下一笔预算只验证固定决策而不追加训练
+
+[stage74](../workbook/2026-11-03_stage74_conditional-energy-hypotheses.md)用每实际train已知q(t|coarse-pz)条件负配对，M(pz0)与X(原62)各三来源OOF＋final，共8fit。原pz0/raw/NaN/角色41447/8440/14057、42缺失与11保护、未确认/困难尾不变。无新ROOT/RDO/生产/F7推理/点能量grid。query为候选能量，非真实部署标签；q恢复语义和已知条件比值、解析梯度/NaN/实际包启动先验收。
+
+主低pz BCE gain OOF .104600 [.092062,.116040]、eval .099794 [.083047,.116878]nat/真实X；七重要组包括两低E、同pz高E/high-y/未确认均gain下限>0，Brier同向，说明现输入有来源可迁移的判别信息。全体eval22/22来源中央正、最低能12/19，不能外推每源均显著。3.2–6.4TeV OOF gain跨零，cal一低pz子层跨零。
+
+完整覆盖合同仍失败，OOF零q12（9高端/2最低能/1第二低能）/41447、主低pz2/2498，全部保留；final cal/eval实际标签无零q，但非未来全支持。eval低pz M/X ECE10 .011875/.040752，判别好不等于已校准odds或点能量已胜。500来源区间固定q/模型/配对，不含重训/q估计/负配对RNG/完整谱系/响应/研究选择；非新确认。
+
+4任务9663005一次exit0，CPU89s/wall合计121s，final peak376.914MiB，最终ClassAd/分配1CPU/3000MB/1800s通过；8模型/41447OOF逐位、独立BCE/来源展开差≤3.331e−16，通过，留存<20MB，EOS实际物理I/O未测。没有重试或新增科学候选。
+
+下一单项stage75是0新训练的固定log-MSE能量决策：仅8模型原q，r∝q exp(logit)归一分数密度＋exp(mean logE)，M/X同规则、OOF raw、final各一个unit cal offset，主X_cal。257主节点/原边界＋固定≤256例513节点数值QA先过，再测原传统/F7全样本/双侧/高端/困难/双向尾门槛；不加q/temperature/seed/均值-MLE选择，12零q也保留点风险评价，密度logscore无支持则未定义，不叫完整真后验。
+
+这修订旧Prompt过强停止规则：完整覆盖失败原样保留，但主信息和所有重要层为正，依据AGENTS“不因少数离群停止分支”，不以12罕见例/ECE未知代替实际点风险验证，也不把新生成设为现有有限研究的无限前置。只补一个零训练决策实验，成功仍需共同响应/真正新确认，失败才据实际信息→决策落差扩支持，不继续扫描。拟议≤4任务/1CPU/3000MB、CPU总≤1h、wall/job≤1800s、最终≤20MB，成本/收益未测、本轮未执行。
+
+[物理输入请求](../workbook/stage74_energy_ml/followup_input_request.json)作为并行交付：真实新π/K parent/seed/角色/随机确认，歧义两侧及高端、raw/status/Calo条件、成本QA，不用重复kinematics或metadata冒充新N/功效。共同raw/stage54、interaction/FSI/材料、接受度/背景继续交付；旧§1–34保留。

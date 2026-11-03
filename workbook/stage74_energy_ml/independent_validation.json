@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "direct_probability_BCE_max_abs_diff": 3.3306690738754696e-16,
+  "float32_reco_pz_and_proposal_bin_exact": true,
+  "reliability_pair_rows_exact": true,
+  "proposal_draw_audit": [
+    {
+      "job": "fold0",
+      "role": "held",
+      "real_X_N": 13820,
+      "negative_N": 13820,
+      "forbidden_negative_N": 0,
+      "real_zero_q_N": 4
+    },
+    {
+      "job": "fold1",
+      "role": "held",
+      "real_X_N": 13667,
+      "negative_N": 13667,
+      "forbidden_negative_N": 0,
+      "real_zero_q_N": 5
+    },
+    {
+      "job": "fold2",
+      "role": "held",
+      "real_X_N": 13960,
+      "negative_N": 13960,
+      "forbidden_negative_N": 0,
+      "real_zero_q_N": 3
+    },
+    {
+      "job": "final",
+      "role": "train",
+      "real_X_N": 41447,
+      "negative_N": 41447,
+      "forbidden_negative_N": 0,
+      "real_zero_q_N": 0
+    },
+    {
+      "job": "final",
+      "role": "cal",
+      "real_X_N": 8440,
+      "negative_N": 8440,
+      "forbidden_negative_N": 0,
+      "real_zero_q_N": 0
+    },
+    {
+      "job": "final",
+      "role": "eval",
+      "real_X_N": 14057,
+      "negative_N": 14057,
+      "forbidden_negative_N": 0,
+      "real_zero_q_N": 0
+    }
+  ],
+  "all_zero_q_real_events_retained": true,
+  "new_fits": 0,
+  "new_point_or_grid_predictions": 0,
+  "wall_s": 1.4326490401290357,
+  "CPU_s": 1.285068692,
+  "peak_RSS_MiB": 616.60546875
+}

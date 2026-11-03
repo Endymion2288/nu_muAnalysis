@@ -1,0 +1,47 @@
+{
+  "actual_package": true,
+  "formal_fits": 0,
+  "worker_precreated_directory": true,
+  "both_query_arms_checked": true,
+  "records": [
+    {
+      "job": "fold0",
+      "train_N": 22795,
+      "formal_fits": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.33919402630999684,
+      "CPU_s": 0.3335211410000001,
+      "peak_RSS_MiB": 208.02734375
+    },
+    {
+      "job": "fold1",
+      "train_N": 22878,
+      "formal_fits": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.3391291410662234,
+      "CPU_s": 0.335327197,
+      "peak_RSS_MiB": 208.05078125
+    },
+    {
+      "job": "fold2",
+      "train_N": 22543,
+      "formal_fits": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.34013856388628483,
+      "CPU_s": 0.3357661650000001,
+      "peak_RSS_MiB": 207.66015625
+    },
+    {
+      "job": "final",
+      "train_N": 41447,
+      "formal_fits": 0,
+      "worker_precreated_directory": true,
+      "wall_s": 0.19431975297629833,
+      "CPU_s": 0.19089767699999993,
+      "peak_RSS_MiB": 207.2578125
+    }
+  ],
+  "wall_s": 12.743110361043364,
+  "CPU_s": 0.5677420009999999,
+  "peak_RSS_MiB": 616.60546875
+}
