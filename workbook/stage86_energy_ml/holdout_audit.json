@@ -1,0 +1,34 @@
+{
+  "metadata_groups": 151,
+  "role_memberships": {
+    "train": 91,
+    "validation": 22,
+    "calibration": 16,
+    "test": 22,
+    "challenge": 45
+  },
+  "certified_unused_locked_groups": 0,
+  "claim_scope": "only supplied metadata/cache registry; not all EOS or future productions",
+  "historical_exposure": {
+    "stage34_test": {
+      "events": 12488,
+      "groups": 22,
+      "created_utc": "2026-11-01T12:16:51.250463+00:00"
+    },
+    "stage34_challenge": {
+      "events": 15144,
+      "groups": 45,
+      "created_utc": "2026-11-01T12:20:14.886040+00:00"
+    },
+    "stage35_test": {
+      "events": 3247,
+      "groups": 18,
+      "created_utc": "2026-11-01T12:50:59.424602+00:00"
+    }
+  },
+  "exposure_evidence": "roadmap section16 and lines35/410; stage34/35 actual summaries",
+  "new_independent_parent_seed_mapping_available": false,
+  "holdout_payload_read": false,
+  "training_execution_blocked": true,
+  "minimal_input": "externally reserved previously unstudied production/source, full GENIE parent/subfile/entry/seed lineage and exposure ledger, canonical group/incoming-disjoint split; compatible audited62/raw/status/01-LG PHYS or selected scalar cache"
+}

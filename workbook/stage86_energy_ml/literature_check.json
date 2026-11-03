@@ -1,0 +1,27 @@
+{
+  "stage": 86,
+  "method": "bounded public web retrieval; no detector/event input",
+  "references": [
+    {
+      "url": "https://arxiv.org/abs/2205.05084",
+      "title": "Bias and Priors in Machine Learning Calibrations for High Energy Physics",
+      "evidence": "public title and abstract retrieved",
+      "use": "prior-dependence motivation, invariant conditional-response assumption remains unmeasured"
+    },
+    {
+      "url": "https://publications.aston.ac.uk/id/eprint/373/",
+      "title": "Mixture density networks",
+      "author": "Christopher M. Bishop",
+      "year": 1994,
+      "evidence": "public eprints title/author/abstract metadata retrieved",
+      "use": "multivalued inverse-problem conditional density, not a detector gain claim"
+    },
+    {
+      "url": "https://doi.org/10.1198/016214506000001437",
+      "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+      "evidence": "Crossref title metadata retrieved",
+      "use": "proper logscore/CRPS, not coverage alone"
+    }
+  ],
+  "new_method_gains": "未测量"
+}

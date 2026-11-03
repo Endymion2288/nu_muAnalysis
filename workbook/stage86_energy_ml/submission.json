@@ -1,0 +1,36 @@
+{
+  "cluster": 9666135,
+  "result": "9666135.0 - 9666135.0\n",
+  "dryrun": "Dry-Run job(s).\n1 job(s) dry-run to cluster 1.\n",
+  "actual_ads": [
+    {
+      "ClusterId": 9666135,
+      "MaxRuntime": 1800,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "paths": [
+    "ml/latent_transfer_diagnostics.py",
+    "ml/validate_latent_transfer.py",
+    "ml/audited_features.py",
+    "ml/support_augmentation.py",
+    "ml/configs/audited_features.json",
+    "workbook/stage86_energy_ml/protocol.json",
+    "workbook/stage86_energy_ml/posterior_contract.json",
+    "ntuples/energy_ml_stage55/dataset.npz",
+    "ntuples/energy_ml_stage56/readout.npz",
+    "ntuples/energy_ml_stage70/support.npz",
+    "ntuples/energy_ml_stage81/support.npz",
+    "ntuples/energy_ml_stage82/support.npz",
+    "ntuples/energy_ml_stage83/support.npz",
+    "ml/artifacts/stage84/comparison.npz",
+    "ml/artifacts/stage56/predictions.npz",
+    "workbook/stage84_energy_ml/fit.json",
+    "workbook/stage81_energy_ml/source_plan.json",
+    "workbook/stage34_energy_ml/test_summary.json",
+    "workbook/stage34_energy_ml/challenge_summary.json",
+    "workbook/stage35_energy_ml/test_summary.json"
+  ]
+}

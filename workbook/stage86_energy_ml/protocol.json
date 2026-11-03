@@ -1,0 +1,60 @@
+{
+  "stage": 86,
+  "starting_commit": "8caf43292e10102e5c728e4276d145069af6e443",
+  "frozen_utc": "2026-11-03T22:21:52.646475+00:00",
+  "energy_fits": 0,
+  "new_ROOT_reads": 0,
+  "new_inference": 0,
+  "new_generation": 0,
+  "inputs": "only existing stage55/56/70/81/82/83 caches and stage56/84 predictions plus source/exposure metadata",
+  "roles": {
+    "old_train": 41447,
+    "new_support": 7720,
+    "pooled_train": 49167,
+    "cal": 8440,
+    "eval": 14057
+  },
+  "truth_definition": "frozen_evaluation.truth_diagnostics: unique charge-consistent vertex muon within 0.0001 mm; E_mu=(1-y_lepton)*trueEnu; h=trueEnu-E_mu; not reconstructed pz/.8",
+  "truth_validity": "unique vertex candidate, finite positive truth E_mu and E_nu, fraction in [0,1); do not clip invalid truth or drop events; mass-shell compared to primary_p with m_mu=0.1056583755 GeV (reference only, producer mass not retained)",
+  "partitions": {
+    "E_GeV": [
+      "[50,100)",
+      "[100,200)",
+      "[200,inf)"
+    ],
+    "pz_GeV": [
+      "(50,100)",
+      "[100,inf)"
+    ],
+    "transfer_fraction": [
+      "[0,0.1)",
+      "[0.1,0.5)",
+      "[0.5,0.8)",
+      "[0.8,1)",
+      "unknown_or_nonphysical"
+    ],
+    "confirmed_low_transfer": "confirmed and physical fraction<0.2",
+    "high_y": "physical fraction>=0.8"
+  },
+  "response": "overlapping wave_invalid,fit_failure,negative_valid_raw,calo_invalid,input_missing; nominal means none except negative_valid_raw may remain",
+  "intervals": "500 canonical-source bootstrap draws, within pi/k/charm, fixed prediction+offset; seed2026110386; percentile2.5/97.5; exact integer-multiset median; report empty draws",
+  "sparse": "N<30 or groups<5, diagnostic only; empty layers explicit",
+  "excluded_uncertainty": [
+    "retraining",
+    "offset estimation",
+    "new-support sampling",
+    "full upstream lineage",
+    "detector/interaction/FSI/material/acceptance/background",
+    "research selection"
+  ],
+  "limits": {
+    "QA_distinct_identities": 40,
+    "condor_jobs": 1,
+    "cpus": 1,
+    "memory_MB": 3000,
+    "cumulative_CPU_s": 1800,
+    "retained_bytes": 20000000
+  },
+  "old_K_production_restrictions": "lifted by user; retain1016K; no new K production needed here",
+  "holdout": "do not evaluate old unused or historical test payload; certify external unused source or report absence"
+}

@@ -1,33 +1,32 @@
-# 下一轮执行 Prompt：stage86 latent-state 实测表与 transfer posterior 合同
+# 下一轮执行 Prompt：stage87 未曝光来源实际交付与封存，0fit
 
-先读 `AGENTS.md`、路线§66–67、信息预算§46–47、[stage85研究复盘](../workbook/2026-11-03_stage85_research-reassessment.md)、[stage85实际读出控制](../workbook/2026-11-03_stage85_tracker-occupancy-control.md)及[输入请求](../workbook/stage85_energy_ml/followup_input_request.json)。本轮唯一任务是用已存在缓存交真实latent-target/transfer-state诊断表与固定后验实验合同；**0新能量fit、0新ROOT读取/重建/F7推理/ν replay/GENIE/G4/toy**。不自动启动后续模型训练。
+先读 `AGENTS.md`、路线§68、信息预算§48、[stage86实际报告](../workbook/2026-11-03_stage86_latent-transfer-diagnostics.md)、[条件posterior规范](../workbook/stage86_energy_ml/posterior_contract.json)和[输入请求](../workbook/stage86_energy_ml/followup_input_request.json)。**本轮唯一任务为真实未曝光source/production及compatible缓存的交付与谱系/封存核验，0能量fit。** 不把缺输入重复成空metadata阶段，不自动执行两fit合同。
 
-## 1. 当前结论
+## 1. 已测结论和前置边界
 
-stage85已经交付2048data＋原2048MC、312REC原生身份/四站cluster全闭合，不能再用metadata-only控制代替。data/MC共有三站raw137.606445/29.061523 strip/event，但实际01X接受只有32.892578/29.057617；raw差96.467%位于不接受时间箱。邻域外cluster反向为3.718750/6.427734，MC未知ID上界6.428223；SP小样本差区间跨0，segment差+0.126465。共同历史active DAQ分母及quiet/random trigger没有认证：B条件活动可测，纯noise为C。结束本有界纯noise参数支线，保留响应未识别标记，不用raw比值、DB参数或stage53 on/off全差当校准/1σ。
+stage86已完成49167训练支持（含1016K）＋8440cal/14057eval的真值/response表，0新fit/ROOT/F7推断。71664主角色记录都有物理正transfer，严格零0；未确认但标签有效1776/301/510保留。最低能eval208全status-normal，181confirmed低transfer的stage84/传统log-RMSE .283410/.142946，25/32正tail在该层。低pz682同时含299真≥200，传统/stage84风险1.990581/.646739，禁止pz硬切。当前没有证明信息极限、缺数据无关或真实响应已认证。
 
-这不是50–100GeVν低能问题的已证原因。F7继续作为现成基线，stage84已完整用49167支持及1016K，低能仍失败；不继续无条件随机补样、seed、权重或架构网格。
+原train/cal/eval canonical group与精确native-MeV incoming跨角色隔离已闭合，但pooled49167只有39766唯一incoming；不能当独立生成数。151已登记canonical groups没有认证全新locked来源，旧stage34/35 test/challenge已经曝光。现有cal/eval仍开发，17369unused不是自动可用blind。当前缺真实新路径及完整parent/subfile/entry/seed/曝光台账。
 
-## 2. 本轮实际交付
+## 2. 实际交付，不能只换metadata名称
 
-1. 输入仅原完整stage84支持/旧角色及已有F7、传统、stage84预测、source/incoming谱系。先做≤40个已有缓存身份的schema、单位、角色和实际包零fit QA；不生成新F7预测。
-2. 核实真正的vertex μ能量、transfer/transfer fraction监督标签、confirmed/high-y/status及缺失值。部署输入不能含truth；**不得用重建pz0/0.8或传统估计制造非负truth transfer**。若标签缺失，交现有truth状态的实际表，并精确列出缺列/来源/最小输入，不能编造标签或丢缺失事件。
-3. 至少按true Eν50–100/100–200/≥200、reco pz0 50–100及其真高E反例、confirmed低transfer/high-y/未确认、response/missing状态交叉，报告N、来源数、既有F7/传统/stage84的log-RMSE、median bias、正/负/总tail50与500来源draw区间。稀少/空层保留并标注未测量，不以几个尾事件裁决信息极限。
-4. 在这张实表基础上冻结一次后续比较：F7旧direct-logE基线、bounded residual/shrinkage、hurdle/连续正transfer mixture。固定输入族、gate/target语义、少量混合成分、loss、点估计functional、calibration、68/90%区间coverage、PIT/可靠性和tail验收，不从eval扫描挑模型。近零transfer质量不等同真实严格零点。
-5. split必须source/incoming隔离；实际核认证明一个真正未参与研究选择的locked source/production，若现有入口都曝光就直报缺口。已有cal/eval是开发样本，不得换名独立blind或因此删高-y困难侧。
-6. 两类reweight分开预注册：后验πtarget/πtrain的平坦logE/名义/低能压力谱及capped权重/ESS；data/MC density ratio只在共同条件进一步认证后另立，不把本轮条件活动当可训练的noise correction。未识别response nuisance继续显式保留。
+1. 先核是否收到具体的新PHYS或紧凑scalar缓存URI、未曝光production/source登记和封存责任记录；只用明确入口，不递归扫全EOS，不虚构run/seed。没有真实入口时，准确交接输入请求中的缺口并停止该前置，不再重新生成同一151组空库存。
+2. 新source必须提供GENIE parent/subfile/entry/generation-seed到native run/event/input_entry的联结和累计曝光台账；核canonical group及精确incoming与全部95748旧曝光＋7720新支持隔离。四元key干净不能替代完整上游独立性；历史test、train与challenge不得改名blind。
+3. 交付需实际compatible62观测、11signed raw/status、Calo4/reference01-LG、release/geometry/conditions及已审计truth producer定义/单位。truth_mu/transfer只作监督，不进入部署；不能用重建pz0/.8制造非负truth。无效标签/缺失/高-y/未确认和低pz真高能不得删。
+4. ≤40个非风险schema/native身份/单位/条件QA，先量成本再冻结真实提取/传输/Condor资源。QA不得查看候选locked能量风险或据truth分布改模型/选择；已经为研究查看目标/风险的source标为开发，不能继续称locked。正式标签按外部事先封存顺序，候选/cal/prior最终冻结后才启用。
+5. 交实际紧凑缓存与谱系/封存验证，不能用新文件名/old test read=false或目录列表充当独立确认。若没有可交付来源，列出具体缺入口/台账/条件，不自动GENIE/G4/重建、随机补样或反复空审计。
 
-## 3. 固定保护、资源和停止条件
+## 3. 条件模型规范与继续准入
 
-模型输入一次方动量仅pz0，允许px/py/qOverP/弯折；禁止p0/p1/pz1及ln(p0/p1)。signed raw11、原typed NaN/status/missing政策、Calo缺项总NaN、原pz>50GeV与全部困难事件保留。真值标签另作监督/诊断，不能混入部署输入。
+stage86合同固定同41维μ/曲率/几何/station/raw/Calo＋missing的bounded residual与三成分连续transfer/真μ响应后验，两臂2×64/单seed/150epochs。原F7/stage84旧角色预测复用；joint NLL＋全事件marginal能量NLL，未知标签不伪监督；主median、68/90coverage/PIT/CRPS/锐度、原两低E/传统上95≤1.05、all/F7≤1.01、困难≤1.03、七层总正负tail50差≤2pp及低pz真高能保护不降。
 
-原两低E/传统95%上限1.05、all/F7 1.01、困难1.03及七层总/正/负tail50+2pp保护不降；后续新增68/90后验coverage/PIT。当前只交实际表与合同，所有新后验收益和训练功效仍为未测量。
+名义/平坦logE/低能×4 prior ratio cap[.1,10]＋ESS独立登记，不用eval选谱；data/MC density-ratio和noise数值1σ仍无条件，不能由stage85条件活动训练校正。未来最多两项fit、0pilot-fit仅为有条件设计，**收益/积分收敛/功效/训练资源未测量**。本轮即便交付locked也不自动开训：实际标签/split准入及零fit资源QA后，另冻训练作业预算。新locked上必要的一次冻结F7/stage84推断也须在后续模型/cal/prior冻结后单独列预算，不能在原开发角色重跑基线。
 
-先QA和传输包，后≤1Condor、1CPU/3000MB、累计CPU1800s、紧凑20MB；不做新ROOT、能量fit、F7推理或生成。复用现成环境、旧预测和完整π＋K支持，用户解除的K生产时限/禁令不恢复。验收必须有实际数字、单位、来源/缺失和可执行标签/谱系审计，不能仅写metadata方案。
+一次方动量仅pz0，允许px/py/qOverP/弯折；禁p0/p1/pz1与log动量比。原62/raw11/typed NaN/Calo缺项总NaN、pz>50GeV、困难尾和全部角色保持。1016K继续使用，用户解除的旧K禁令/时限不恢复。response/interaction/FSI/材料/Calo/接受度/背景不因posterior结构而消失。
 
-若标签或真正未开发holdout不足，记录可识别层和准确缺口，再决定后续最小输入；不伪造监督或blind。只有该实表证明标签/split可用后，才另冻具体训练与预算，不自动执行。中文stage86报告写在根目录workbook，再与代码/配置/紧凑证据本地Conventional Commit，不push；原stage54五项工作只读保留。
+实际交付后写根目录中文stage87 workbook（数字/单位/输入/命令/CPU-I/O/封存与缺口/下一步），与代码配置和紧凑证据Conventional Commit，不push。原stage54五项只读；不自动执行下一阶段或发送外部消息。
 
-以下保留的 stage54 原后缀逐字不改，仅作已完成控制的历史合同，不自动重新启动。
+以下保留的stage54原后缀逐字不改，只作历史合同，不自动重启。
 
 ## 保留的stage54 data占据支线
 

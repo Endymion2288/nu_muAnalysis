@@ -1867,3 +1867,20 @@ raw差96.467%在01X不接受的时间箱，111为data92.095215/MC0.001953 strip/
 **继续F7，关闭本轮纯noise参数支线；下一唯一stage86先交实际latent-state/label表与transfer posterior预注册，尚未执行。** 输入原完整49167支持/既有F7、传统、stage84预测及source/incoming谱系；核实vertex μ/transfer真值、单位/缺失，交叉低E/低pz两侧/high-y/response状态的N、来源、bias、双向tail与500来源区间。固定bounded residual与hurdle/连续正transfer后验的输入、loss、prior stress、68/90 coverage/PIT及原保护，真正unused locked source缺失时直报，不把旧cal/eval重称blind；不能由reco pz0/0.8伪造非负truth transfer。该准备0新fit/ROOT/F7推理、≤1Condor1CPU3000MB/CPU1800s/紧凑20MB，实际标签与谱系审计后另冻训练合同，不续随机支持/架构/seed扫描。详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[输入请求](../workbook/stage85_energy_ml/followup_input_request.json)。
 
 本控制不证明MC低E失败原因、信息极限或50–100GeVν/shower响应闭合；interaction/FSI/材料、Calo/pulse、接受度/背景与未开发确认继续。K1016保留，用户解除的旧生产限制不恢复；历史§1–66、独立支持协议和stage54原后缀保留。
+
+
+## 68. stage86：真实transfer标签闭合，低能失败并非只在坏拟合/未确认事件
+
+[stage86报告](../workbook/2026-11-03_stage86_latent-transfer-diagnostics.md)完成既有缓存的实际latent/response/谱系表和有条件posterior预注册，0能量fit/ROOT读取/F7推理/重建/生成/toy。原train41447＋π/K新7720＝49167、cal8440、developed eval14057，原62/pz0-only/raw11/typed NaN/Calo缺项总NaN、pz>50与全部困难侧保持；1016K实际保留，旧K生产禁令/时限不恢复。
+
+vertex μ由生产者唯一电荷一致候选、0.0001mm顶点容差定义；`Eμ=(1−y_lepton)Eν`、`h=Eν−Eμ`是真值还原，不用reco pz/.8造标签。三个角色71664条全物理有效，零/多候选、负h、未知标签及严格h=0均0；最小h train/cal/eval .045091501/.054180818/.051182670GeV，参考μ质量壳最大差2.173243e−9GeV。未确认但标签有效1776/301/510全部保留；标签有效不等于leading正确匹配，h不等于可见强子沉积。
+
+固定91层×5角色的455状态行、3251风险行，500component内canonical-source draws、偏差/总正负tail50区间全部交付，空层113/稀少64明确保留。最低能train/cal/eval949/150/208全部现有response-nominal；eval confirmed f<.2有181/18groups，stage84/传统log-RMSE **.283410 [.239480,.319278]/.142946 [.133251,.153231]**，25个正tail占最低能32个的78.125%。不能只归于未确认/已标记fit失败，也不能把status-normal当完整响应认证。低pz eval682中真≥200有299/22groups、fraction中位.806796、h中位408.137311GeV；传统/stage84 log-RMSE **1.990581/.646739**，传统负tail50 **95.317726%**，继续禁止pz硬切。
+
+谱系实测原train/cal/eval唯一incoming32046/7946/12780，pooled39766，记录数不等于独立生成数；跨角色canonical group和精确native-MeV incoming无交集，新7720与原全部95748曝光无交集。完整parent/subfile/seed关联仍未认证，来源区间不含该不确定度。151已登记canonical groups均有研究用途；stage34 test12488/22、challenge15144/45、stage35 test3247/18早已曝光，**本入口认证新locked source=0**，不外推整个EOS，也不重新激活17369unused或旧test事件。
+
+[条件合同](../workbook/stage86_energy_ml/posterior_contract.json)在正式数字前固定：旧F7/direct-logE和传统基线；两新臂同41维μ/曲率/几何/station/raw/Calo＋缺失状态，2×64固定MLP。bounded residual为传统ν锚＋soft gate有界log修正；三成分后验用连续低fraction＋两正fraction、显式真μ/reco响应及`Eν=Eμ+h`、joint NLL＋全事件marginal能量NLL，未知不伪造transfer监督。固定cal标量、主median、68/90coverage/PIT/CRPS/宽度及原两低E1.05/all1.01/困难1.03/七层双向tail+2pp保护。名义/平坦logE/低能×4先验ratio cap[.1,10]与ESS另列；data/MC域校正继续暂停，stage85不足以给noise数值1σ。收益/功效/积分收敛/训练成本未测，**这是有条件规范，不是训练准入**；新locked上的冻结基线推断需在后续候选/cal/prior全部冻结后另列预算。
+
+40缓存身份＋实际包零fitQA先通过，唯一Condor9666135一次exit0/0重试，实际1CPU3000MB1800s，remoteCPU59s/wall63s；script CPU58.627701s/wall59.310605s/peak684.426MiB，独立复核已含其中。3040非空指标/区间行和1799事件多重集median检查通过，最大差2.842171e−14。清单逻辑36,187,533bytes＋验证重开原NPZ25,505,895bytes，不冒称物理EOS I/O；早期一次语法失败成本未单独测量。正式后仅澄清资源字段及新locked必要推断范围，未改分层/数字/模型定义。最终<20MB，包去重、NPZ不入Git、stage54五项只读，原后缀逐字保留。
+
+**继续F7；唯一下一stage87：实际未曝光source/production及compatible缓存的交付、谱系核验和标签封存，0fit。** 需要真实入口、完整GENIE parent/subfile/entry/seed和曝光台账、62/raw/status/01-LG语义，以及与原全曝光和新支持的source/incoming隔离；只给旧metadata或改名blind不通过。QA不看候选locked能量风险，已看目标用于研究的source必须改为开发。当前无真实新路径，不能虚构run/seed、无限重复151源空清单或自动生产；若不可交付，准确交接缺口并停止该前置。只有实际准入后另冻两fit执行预算，不在stage86/87自动训练。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[请求](../workbook/stage86_energy_ml/followup_input_request.json)。完整response、interaction/FSI/材料/Calo/接受度/背景仍未闭合，历史§1–67及独立支持协议不改。

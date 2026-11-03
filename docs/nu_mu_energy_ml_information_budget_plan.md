@@ -1021,3 +1021,18 @@ stage85 按保留 stage54 协议测量共同 collection、active-channel 分母�
 程序原因已分开：56/72B persistent/header ABI用字典proxy解决；1个18-strip cluster的short offset回绕保留为未知，MC外侧cluster上界6.428223，未删事件。6正式片＋仅失败片1次修复，7任务CPU1123s、wall和2583s，成功ROOT2.070041538GB、peak792.383MiB；早期交互失败CPU/I/O未完整计量，不能宣称全尝试预算精确认证。19身份QA与实际包启动在先，100均值和100来源区间独立复核，最大区间差2.220446e−16，紧凑约4MB；stage54五项原工作只读保留。
 
 下一唯一stage86为**实际latent-target/transfer-state表＋固定posterior合同准备**，非新一轮架构/随机增补；0新fit/ROOT/F7推理。原49167支持、原F7/传统/stage84预测与incoming谱系，核vertex μ/transfer标签、单位/status和低pz真低E/真高E/high-y两侧，交N/source/bias/双向tail/500来源区间，固定bounded residual和hurdle混合的loss、输入、68/90coverage/PIT、先验stress及原保护。真正未开发locked source必须认证；缺失就报告，旧cal/eval不改名blind。标签/split与响应边界实际审计后另冻训练，不由reco pz0制造非负truth。准备上限1CPU3000MB/累计1800CPU秒/20MB，尚未执行；历史§1–46、stage54原协议及K解除政策保留。
+
+
+## 48. stage86：latent监督已实测，新的确认来源是准确输入缺口
+
+[stage86实际诊断](../workbook/2026-11-03_stage86_latent-transfer-diagnostics.md)用现有完整49167训练支持和8440/14057开发cal/eval，0新fit/ROOT/F7推断，交455状态行、3251风险行及500来源draw区间。顶点μ/正transfer全有效、严格零transfer0；参考质量壳最大差2.173243e−9GeV。未确认但标签有效1776/301/510保留，不用reco pz/.8伪造truth或把h等同可见强子沉积。
+
+最低能208eval全部status-normal，其中181confirmed低transfer，stage84/传统log-RMSE .283410/.142946；25/32正tail来自该常规层，不能只怪坏fit/未确认。低pz682有299真≥200、fraction中位.806796，传统/stage84风险1.990581/.646739、传统负tail95.317726%；任何低能收缩必须保护该侧。状态可由truth区分不证明可由部署观测量识别，响应normal也不等于真实data/MC闭合。
+
+输入谱系预算必须区分记录/唯一incoming/完整生成数：pooled49167对应39766唯一key，原train/cal/eval内部超唯一记录9401/494/1277；跨角色group/key隔离和新7720对全部95748曝光排重通过。完整parent/seed及跨源相关未认证，500draw不补齐它。151已知canonical groups中**认证新未曝光locked=0**；stage34/35实际test/challenge历史摘要证明已用，不能重命名独立确认，也未打开旧test或激活unused作新评估。
+
+[有条件posterior规范](../workbook/stage86_energy_ml/posterior_contract.json)已固定同41观测族的bounded residual与三成分连续fraction/真μ响应后验、2×64/单seed/固定epochs、joint+marginal NLL、cal标量、median、68/90coverage/PIT/CRPS、原风险门槛。名义/平坦logE/低能×4先验cap[.1,10]、ESS另列；density-ratio和noise数值变体没有条件，不执行。实际后验收益、积分收敛、功效、训练资源及系统效应未测，新的locked输入缺失时不启动该两fit合同。
+
+唯一Condor9666135一次exit0，1CPU3000MB/1800s、remoteCPU59s/wall63s，script58.627701CPU秒/59.310605wall秒/684.426MiB；40身份与实际包QA在先，3040指标区间独立复核最大差2.842171e−14。唯一逻辑文件36,187,533bytes＋验证重开25,505,895bytes，不作EOS请求/网络流量；早期语法失败成本未单独计量。紧凑<20MB、包去重、原stage54五项与后缀保留。
+
+**下一唯一stage87购买真实未曝光production/source及其compatible scalar/条件、parent/subfile/entry/seed与曝光封存证据，0fit。** 当前缺实际新入口，不能以空metadata阶段重复、虚构新run或重命名blind替代交付；无真实输入就准确交接缺口并停止该前置。实际source/incoming准入后才冻结训练提交资源；新locked上的F7/候选冻结推断也另列预算。K1016保留、旧生产限制不恢复，response/interaction/FSI/材料/Calo/接受度/背景及真正新确认继续；历史§1–47不改。

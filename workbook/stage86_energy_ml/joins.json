@@ -1,0 +1,44 @@
+{
+  "original_roles": {
+    "train": 41447,
+    "cal": 8440,
+    "eval": 14057,
+    "unused": 17369
+  },
+  "original_missing": {
+    "train": 21,
+    "cal": 3,
+    "eval": 7,
+    "unused": 11
+  },
+  "new": [
+    {
+      "stage": 70,
+      "N": 28,
+      "missing": 0
+    },
+    {
+      "stage": 81,
+      "N": 742,
+      "missing": 0
+    },
+    {
+      "stage": 82,
+      "N": 1016,
+      "missing": 1
+    },
+    {
+      "stage": 83,
+      "N": 5934,
+      "missing": 1
+    }
+  ],
+  "new_unique_keys": 7720,
+  "disjoint_all_original_exposed_rows": 95748,
+  "canonical_train_cal_eval_disjoint": true,
+  "exact_incoming_disjoint": true,
+  "full_upstream_independence": "未认证: parent/subfile/entry/generation seed complete mapping absent",
+  "unused_payload_evaluated": false,
+  "historical_test_payload_evaluated": false,
+  "existing_predictions_exact": true
+}
