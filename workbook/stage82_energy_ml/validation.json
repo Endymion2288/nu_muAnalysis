@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "arm": "half",
+      "seed": 2026110255,
+      "rounds": 400,
+      "predictions_exact": true,
+      "params_exact": true
+    },
+    {
+      "arm": "half",
+      "seed": 2026110256,
+      "rounds": 400,
+      "predictions_exact": true,
+      "params_exact": true
+    },
+    {
+      "arm": "half",
+      "seed": 2026110257,
+      "rounds": 400,
+      "predictions_exact": true,
+      "params_exact": true
+    },
+    {
+      "arm": "full",
+      "seed": 2026110255,
+      "rounds": 400,
+      "predictions_exact": true,
+      "params_exact": true
+    },
+    {
+      "arm": "full",
+      "seed": 2026110256,
+      "rounds": 400,
+      "predictions_exact": true,
+      "params_exact": true
+    },
+    {
+      "arm": "full",
+      "seed": 2026110257,
+      "rounds": 400,
+      "predictions_exact": true,
+      "params_exact": true
+    }
+  ],
+  "all_reported_source_draws": 500,
+  "paired_rows_checked": 368,
+  "full_half_curve_intervals_checked": 46,
+  "max_interval_absolute_difference": 1.4432899320127035e-15,
+  "all_stage55_exposure_veto": true,
+  "subset_reproduced": true,
+  "old_roles_and_features_exact": true,
+  "F7_old_predictions_exact": true,
+  "new_F7_inference": 0,
+  "calibration_payload_conversion_exact": true,
+  "wall_s": 5.834585653152317,
+  "CPU_s": 5.652327524,
+  "peak_RSS_MiB": 616.60546875
+}

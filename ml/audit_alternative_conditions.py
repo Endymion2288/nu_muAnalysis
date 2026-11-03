@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read only the actual MC calibration payloads used in the stage70 audit."""
 from PyCool import cool
+import argparse
 from pathlib import Path
 import json
 root=Path('/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200.db')
@@ -15,4 +16,7 @@ for tag in chosen:
   rows.append(dict(tag=tag,run=run,rows=vals))
 resolved=str(f.resolveTag('OFLCOND-FASER-06'));db.closeDatabase()
 r=dict(database=str(root),resolved_database=str(root.resolve()),folder='/WAVE/Calibration/MIP_ref',global_tag='OFLCOND-FASER-06',resolved_tag=resolved,listed_tags=tags,measurements=rows,scope='current local MC conditions; not a proof of the original F7 production snapshot',source_formula='CaloRecTool::reconstruct E_EM=charge_pC/MIPcharge_ref*330MeV for MC without gain correction')
-(Path(__file__).resolve().parents[1]/'workbook/stage70_energy_ml/calo_conditions_qa.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))
+p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--output',type=Path,default=Path(__file__).resolve().parents[1]/'workbook/stage70_energy_ml/calo_conditions_qa.json')
+args=p.parse_args()
+args.output.write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))

@@ -111,7 +111,7 @@ def main():
         values=[next(r['median_bias_pct'] for r in records if r['sample']=='eval' and r['stratum']==f'E{lo}_{hi}' and r['model']==name) for lo,hi in zip(edges[:-1],edges[1:])]
         axes[1].plot(np.sqrt(np.array(edges[:-1])*edges[1:]),values,'o-',label=name,ms=3)
     axes[1].set_xscale('log');axes[1].set_xlabel('True neutrino energy [GeV]');axes[1].set_ylabel('Median relative bias [%]');axes[1].axhline(0,color='black',lw=.6);axes[1].legend(fontsize=8)
-    fig.suptitle('Stage71: one fixed F7 augmentation, +28 pi events; developed evaluation')
+    fig.suptitle(p.get('figure_title', 'Stage71: one fixed F7 augmentation, +28 pi events; developed evaluation'))
     fig.savefig(OUT/'augmentation.png',dpi=150);plt.close(fig)
     save(OUT/'report_resources.json',resources(start));print(json.dumps(decisions,indent=2))
 

@@ -1,0 +1,968 @@
+[
+  {
+    "utc": "2026-11-03T18:32:57.530361+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "File \"<string>\", line 1\n    import glob,json,os,re,subprocess p=glob.glob('nu_mu_k82.*/reco.log') r={} if p: with open(p[0],'rb') as f: f.seek(max(0,os.path.getsize(p[0])-1000000));s=f.read().decode(errors='replace') lines=[l for l in s.splitlines() if re.search(r'(event|Event)',l) and ('AthenaEventLoopMgr' in l or 'faser_reco' in l)] r['event_progress']=lines[-2:];r['reco_log_bytes']=os.path.getsize(p[0]) r['result_files']=[os.path.basename(x) for x in glob.glob('nu_mu_k82.*/result/*')] ps=subprocess.check_output(['ps','-eo','etime,time,rss,pcpu,args'],text=True) r['processes']=[l for l in ps.splitlines() if '/cvmfs/' in l and ('faser_reco.py' in l or 'faser_ntuple_maker.py' in l)] print(json.dumps(r)) \n                                      ^\nSyntaxError: invalid syntax"
+      },
+      {
+        "proc": 1,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "File \"<string>\", line 1\n    import glob,json,os,re,subprocess p=glob.glob('nu_mu_k82.*/reco.log') r={} if p: with open(p[0],'rb') as f: f.seek(max(0,os.path.getsize(p[0])-1000000));s=f.read().decode(errors='replace') lines=[l for l in s.splitlines() if re.search(r'(event|Event)',l) and ('AthenaEventLoopMgr' in l or 'faser_reco' in l)] r['event_progress']=lines[-2:];r['reco_log_bytes']=os.path.getsize(p[0]) r['result_files']=[os.path.basename(x) for x in glob.glob('nu_mu_k82.*/result/*')] ps=subprocess.check_output(['ps','-eo','etime,time,rss,pcpu,args'],text=True) r['processes']=[l for l in ps.splitlines() if '/cvmfs/' in l and ('faser_reco.py' in l or 'faser_ntuple_maker.py' in l)] print(json.dumps(r)) \n                                      ^\nSyntaxError: invalid syntax"
+      },
+      {
+        "proc": 2,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "File \"<string>\", line 1\n    import glob,json,os,re,subprocess p=glob.glob('nu_mu_k82.*/reco.log') r={} if p: with open(p[0],'rb') as f: f.seek(max(0,os.path.getsize(p[0])-1000000));s=f.read().decode(errors='replace') lines=[l for l in s.splitlines() if re.search(r'(event|Event)',l) and ('AthenaEventLoopMgr' in l or 'faser_reco' in l)] r['event_progress']=lines[-2:];r['reco_log_bytes']=os.path.getsize(p[0]) r['result_files']=[os.path.basename(x) for x in glob.glob('nu_mu_k82.*/result/*')] ps=subprocess.check_output(['ps','-eo','etime,time,rss,pcpu,args'],text=True) r['processes']=[l for l in ps.splitlines() if '/cvmfs/' in l and ('faser_reco.py' in l or 'faser_ntuple_maker.py' in l)] print(json.dumps(r)) \n                                      ^\nSyntaxError: invalid syntax"
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:33:26.422563+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #630700, run #200081 700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #630700, run #200081 701 events processed so far  <<<===\"], \"reco_log_bytes\": 599410, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #90600, run #200081 600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #90600, run #200081 601 events processed so far  <<<===\"], \"reco_log_bytes\": 570776, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #160700, run #200081 700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #160700, run #200081 701 events processed so far  <<<===\"], \"reco_log_bytes\": 626517, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:34:27.122912+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #630900, run #200081 900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #630900, run #200081 901 events processed so far  <<<===\"], \"reco_log_bytes\": 656731, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #90800, run #200081 800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #90800, run #200081 801 events processed so far  <<<===\"], \"reco_log_bytes\": 624445, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #160900, run #200081 900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #160900, run #200081 901 events processed so far  <<<===\"], \"reco_log_bytes\": 684238, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:36:13.610432+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #631300, run #200081 1300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #631300, run #200081 1301 events processed so far  <<<===\"], \"reco_log_bytes\": 747272, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #91100, run #200081 1100 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #91100, run #200081 1101 events processed so far  <<<===\"], \"reco_log_bytes\": 705509, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #161300, run #200081 1300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #161300, run #200081 1301 events processed so far  <<<===\"], \"reco_log_bytes\": 776216, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:36:51.762506+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #631400, run #200081 1400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #631400, run #200081 1401 events processed so far  <<<===\"], \"reco_log_bytes\": 781822, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      08:00 00:07:47 994468 97.3 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #91200, run #200081 1200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #91200, run #200081 1201 events processed so far  <<<===\"], \"reco_log_bytes\": 727380, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      08:01 00:07:34 1030616 94.4 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #161400, run #200081 1400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #161400, run #200081 1401 events processed so far  <<<===\"], \"reco_log_bytes\": 807887, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      08:06 00:07:51 998104 97.0 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:38:15.207135+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #631600, run #200081 1600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #631600, run #200081 1601 events processed so far  <<<===\"], \"reco_log_bytes\": 834919, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      09:22 00:09:08 994492 97.6 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #91500, run #200081 1500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #91500, run #200081 1501 events processed so far  <<<===\"], \"reco_log_bytes\": 789055, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      09:24 00:08:56 1030616 95.0 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #161600, run #200081 1600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #161600, run #200081 1601 events processed so far  <<<===\"], \"reco_log_bytes\": 857792, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      09:30 00:09:14 1003428 97.3 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:40:13.833908+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #632000, run #200081 2000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #632000, run #200081 2001 events processed so far  <<<===\"], \"reco_log_bytes\": 877890, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      11:22 00:11:07 1055356 97.8 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #91800, run #200081 1800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #91800, run #200081 1801 events processed so far  <<<===\"], \"reco_log_bytes\": 846276, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      11:23 00:10:53 1030548 95.6 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #162000, run #200081 2000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #162000, run #200081 2001 events processed so far  <<<===\"], \"reco_log_bytes\": 899173, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      11:28 00:11:12 1005332 97.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:42:26.307406+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #632300, run #200081 2300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #632300, run #200081 2301 events processed so far  <<<===\"], \"reco_log_bytes\": 922233, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      13:35 00:13:18 1056328 98.0 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #92200, run #200081 2200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #92200, run #200081 2201 events processed so far  <<<===\"], \"reco_log_bytes\": 889345, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      13:35 00:13:04 1030548 96.2 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #162400, run #200081 2400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #162400, run #200081 2401 events processed so far  <<<===\"], \"reco_log_bytes\": 938409, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      13:41 00:13:24 1005332 97.9 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:44:14.819415+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #632600, run #200081 2600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #632600, run #200081 2601 events processed so far  <<<===\"], \"reco_log_bytes\": 951094, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      15:22 00:15:05 1056328 98.2 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #92500, run #200081 2500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #92500, run #200081 2501 events processed so far  <<<===\"], \"reco_log_bytes\": 924932, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      15:24 00:14:51 1030548 96.4 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #162800, run #200081 2800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #162800, run #200081 2801 events processed so far  <<<===\"], \"reco_log_bytes\": 955037, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      15:29 00:15:11 1025928 98.1 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:46:06.400586+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #633000, run #200081 3000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #633000, run #200081 3001 events processed so far  <<<===\"], \"reco_log_bytes\": 963614, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      17:14 00:16:56 1056328 98.2 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #92800, run #200081 2800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #92800, run #200081 2801 events processed so far  <<<===\"], \"reco_log_bytes\": 939959, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      17:15 00:16:41 1030544 96.7 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #163100, run #200081 3100 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #163100, run #200081 3101 events processed so far  <<<===\"], \"reco_log_bytes\": 961259, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      17:21 00:17:02 1026892 98.2 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:47:40.739659+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #633300, run #200081 3300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #633300, run #200081 3301 events processed so far  <<<===\"], \"reco_log_bytes\": 973302, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      18:49 00:18:30 1056328 98.3 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #93000, run #200081 3000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #93000, run #200081 3001 events processed so far  <<<===\"], \"reco_log_bytes\": 946943, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      18:50 00:18:14 1030536 96.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #163400, run #200081 3400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #163400, run #200081 3401 events processed so far  <<<===\"], \"reco_log_bytes\": 973224, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      18:55 00:18:36 1045348 98.3 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:49:32.975032+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #633600, run #200081 3600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #633600, run #200081 3601 events processed so far  <<<===\"], \"reco_log_bytes\": 982156, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      20:40 00:20:20 691000 98.3 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #93300, run #200081 3300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #93300, run #200081 3301 events processed so far  <<<===\"], \"reco_log_bytes\": 955821, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      20:41 00:20:04 1030536 97.0 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #163700, run #200081 3700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #163700, run #200081 3701 events processed so far  <<<===\"], \"reco_log_bytes\": 988390, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      20:48 00:20:27 1045348 98.3 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:50:59.748748+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #633900, run #200081 3900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #633900, run #200081 3901 events processed so far  <<<===\"], \"reco_log_bytes\": 988413, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      22:08 00:21:47 691000 98.4 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #93600, run #200081 3600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #93600, run #200081 3601 events processed so far  <<<===\"], \"reco_log_bytes\": 964551, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      22:09 00:21:30 664828 97.1 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #163900, run #200081 3901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #164000, run #200081 4000 events processed so far  <<<===\"], \"reco_log_bytes\": 999494, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      22:14 00:21:53 679956 98.4 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:52:35.242237+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #634100, run #200081 4100 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #634100, run #200081 4101 events processed so far  <<<===\"], \"reco_log_bytes\": 995693, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      23:43 00:23:21 691000 98.5 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #93800, run #200081 3801 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #93900, run #200081 3900 events processed so far  <<<===\"], \"reco_log_bytes\": 970829, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      23:44 00:23:04 681092 97.2 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #164200, run #200081 4200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #164200, run #200081 4201 events processed so far  <<<===\"], \"reco_log_bytes\": 1012332, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      23:50 00:23:28 679956 98.4 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:54:47.977170+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #634400, run #200081 4401 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #634500, run #200081 4500 events processed so far  <<<===\"], \"reco_log_bytes\": 1010211, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      25:56 00:25:33 691000 98.5 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #94200, run #200081 4200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #94200, run #200081 4201 events processed so far  <<<===\"], \"reco_log_bytes\": 979320, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      25:57 00:25:15 681096 97.3 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #164600, run #200081 4600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #164600, run #200081 4601 events processed so far  <<<===\"], \"reco_log_bytes\": 1027156, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      26:02 00:25:40 679956 98.6 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:56:10.160610+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #634700, run #200081 4700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #634700, run #200081 4701 events processed so far  <<<===\"], \"reco_log_bytes\": 1021208, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      27:19 00:26:55 711348 98.5 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #94400, run #200081 4400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #94400, run #200081 4401 events processed so far  <<<===\"], \"reco_log_bytes\": 983236, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      27:19 00:26:36 681096 97.4 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #164900, run #200081 4900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #164900, run #200081 4901 events processed so far  <<<===\"], \"reco_log_bytes\": 1038279, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      27:25 00:27:01 679956 98.5 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:57:05.742331+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #634900, run #200081 4900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #634900, run #200081 4901 events processed so far  <<<===\"], \"reco_log_bytes\": 1028723, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      28:14 00:27:49 711348 98.5 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #94600, run #200081 4600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #94600, run #200081 4601 events processed so far  <<<===\"], \"reco_log_bytes\": 989331, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      28:15 00:27:31 673732 97.4 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #165000, run #200081 5000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #165000, run #200081 5001 events processed so far  <<<===\"], \"reco_log_bytes\": 1042629, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      28:20 00:27:56 679956 98.6 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T18:58:47.777471+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #635200, run #200081 5200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #635200, run #200081 5201 events processed so far  <<<===\"], \"reco_log_bytes\": 1037777, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      29:56 00:29:30 711428 98.5 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #94900, run #200081 4900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #94900, run #200081 4901 events processed so far  <<<===\"], \"reco_log_bytes\": 999581, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      29:57 00:29:12 678000 97.5 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #165400, run #200081 5400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #165400, run #200081 5401 events processed so far  <<<===\"], \"reco_log_bytes\": 1054798, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      30:02 00:29:38 670188 98.6 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:00:32.057029+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #635500, run #200081 5500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #635500, run #200081 5501 events processed so far  <<<===\"], \"reco_log_bytes\": 1050875, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      31:40 00:31:13 711316 98.6 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #95100, run #200081 5100 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #95100, run #200081 5101 events processed so far  <<<===\"], \"reco_log_bytes\": 1009849, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      31:41 00:30:55 678044 97.5 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #165700, run #200081 5700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #165700, run #200081 5701 events processed so far  <<<===\"], \"reco_log_bytes\": 1064355, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      31:46 00:31:21 734204 98.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:02:08.914742+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #635800, run #200081 5800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #635800, run #200081 5801 events processed so far  <<<===\"], \"reco_log_bytes\": 1060472, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      33:18 00:32:50 711184 98.6 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #95400, run #200081 5400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #95400, run #200081 5401 events processed so far  <<<===\"], \"reco_log_bytes\": 1022376, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      33:18 00:32:31 678044 97.6 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #166000, run #200081 6000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #166000, run #200081 6001 events processed so far  <<<===\"], \"reco_log_bytes\": 1072179, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      33:23 00:32:57 734252 98.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:03:58.708489+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #636100, run #200081 6100 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #636100, run #200081 6101 events processed so far  <<<===\"], \"reco_log_bytes\": 1072183, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      35:07 00:34:38 711184 98.6 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #95600, run #200081 5600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #95600, run #200081 5601 events processed so far  <<<===\"], \"reco_log_bytes\": 1030910, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      35:08 00:34:18 678044 97.6 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #166300, run #200081 6300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #166300, run #200081 6301 events processed so far  <<<===\"], \"reco_log_bytes\": 1085102, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      35:13 00:34:46 734252 98.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:05:50.584680+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #636400, run #200081 6400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #636400, run #200081 6401 events processed so far  <<<===\"], \"reco_log_bytes\": 1086460, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      36:58 00:36:29 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #96000, run #200081 6000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #96000, run #200081 6001 events processed so far  <<<===\"], \"reco_log_bytes\": 1044139, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      36:59 00:36:08 678044 97.7 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #166700, run #200081 6700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #166700, run #200081 6701 events processed so far  <<<===\"], \"reco_log_bytes\": 1100187, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      37:05 00:36:37 734252 98.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:08:17.120567+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #636800, run #200081 6800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #636800, run #200081 6801 events processed so far  <<<===\"], \"reco_log_bytes\": 1098684, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      39:26 00:38:55 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #96400, run #200081 6400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #96400, run #200081 6401 events processed so far  <<<===\"], \"reco_log_bytes\": 1055667, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      39:26 00:38:34 678044 97.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #167200, run #200081 7200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #167200, run #200081 7201 events processed so far  <<<===\"], \"reco_log_bytes\": 1110908, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      39:32 00:39:03 734252 98.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:10:23.368803+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #637200, run #200081 7200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #637200, run #200081 7201 events processed so far  <<<===\"], \"reco_log_bytes\": 1110212, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      41:31 00:40:59 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #96700, run #200081 6700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #96700, run #200081 6701 events processed so far  <<<===\"], \"reco_log_bytes\": 1071600, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      41:32 00:40:38 678044 97.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #167600, run #200081 7600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #167600, run #200081 7601 events processed so far  <<<===\"], \"reco_log_bytes\": 1119311, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      41:38 00:41:08 734252 98.8 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:12:20.836256+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #637500, run #200081 7500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #637500, run #200081 7501 events processed so far  <<<===\"], \"reco_log_bytes\": 1128878, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      43:28 00:42:54 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #97000, run #200081 7000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #97000, run #200081 7001 events processed so far  <<<===\"], \"reco_log_bytes\": 1080422, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      43:29 00:42:33 678044 97.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #167900, run #200081 7900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #167900, run #200081 7901 events processed so far  <<<===\"], \"reco_log_bytes\": 1132852, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      43:35 00:43:05 734252 98.8 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:14:21.481530+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #637900, run #200081 7900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #637900, run #200081 7901 events processed so far  <<<===\"], \"reco_log_bytes\": 1145178, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      45:30 00:44:54 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #97300, run #200081 7300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #97300, run #200081 7301 events processed so far  <<<===\"], \"reco_log_bytes\": 1087912, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      45:30 00:44:32 686392 97.9 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #168300, run #200081 8300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #168300, run #200081 8301 events processed so far  <<<===\"], \"reco_log_bytes\": 1146500, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      45:36 00:45:05 734252 98.8 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:16:04.031067+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #638200, run #200081 8200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #638200, run #200081 8201 events processed so far  <<<===\"], \"reco_log_bytes\": 1153151, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      47:12 00:46:36 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #97600, run #200081 7600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #97600, run #200081 7601 events processed so far  <<<===\"], \"reco_log_bytes\": 1105431, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      47:13 00:46:13 686392 97.9 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #168600, run #200081 8600 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #168600, run #200081 8601 events processed so far  <<<===\"], \"reco_log_bytes\": 1151517, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      47:18 00:46:46 734276 98.8 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:18:00.986494+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #638500, run #200081 8500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #638500, run #200081 8501 events processed so far  <<<===\"], \"reco_log_bytes\": 1163976, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      49:08 00:48:31 711184 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #97900, run #200081 7900 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #97900, run #200081 7901 events processed so far  <<<===\"], \"reco_log_bytes\": 1115229, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      49:10 00:48:09 686392 97.9 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #168900, run #200081 8901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #169000, run #200081 9000 events processed so far  <<<===\"], \"reco_log_bytes\": 1161456, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      49:15 00:48:42 734412 98.9 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:19:55.045706+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #638800, run #200081 8800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #638800, run #200081 8801 events processed so far  <<<===\"], \"reco_log_bytes\": 1173528, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      51:02 00:50:23 721736 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #98200, run #200081 8200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #98200, run #200081 8201 events processed so far  <<<===\"], \"reco_log_bytes\": 1126653, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      51:03 00:50:01 686392 97.9 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #169300, run #200081 9300 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169300, run #200081 9301 events processed so far  <<<===\"], \"reco_log_bytes\": 1172415, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      51:09 00:50:36 734412 98.9 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:21:43.467176+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #639200, run #200081 9200 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639200, run #200081 9201 events processed so far  <<<===\"], \"reco_log_bytes\": 1179806, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      52:51 00:52:11 721864 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #98500, run #200081 8500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #98500, run #200081 8501 events processed so far  <<<===\"], \"reco_log_bytes\": 1138475, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      52:52 00:51:48 687476 97.9 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #169700, run #200081 9700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169700, run #200081 9701 events processed so far  <<<===\"], \"reco_log_bytes\": 1180390, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      52:58 00:52:23 734412 98.9 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:23:43.217275+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #639500, run #200081 9500 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639500, run #200081 9501 events processed so far  <<<===\"], \"reco_log_bytes\": 1186146, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      54:49 00:54:07 721864 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #98800, run #200081 8800 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #98800, run #200081 8801 events processed so far  <<<===\"], \"reco_log_bytes\": 1149403, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      54:51 00:53:45 687476 98.0 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      00:12 00:00:05 565808 43.4 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:25:19.987046+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #639700, run #200081 9700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639700, run #200081 9701 events processed so far  <<<===\"], \"reco_log_bytes\": 1191067, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      56:28 00:55:45 721864 98.7 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #99100, run #200081 9100 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99100, run #200081 9101 events processed so far  <<<===\"], \"reco_log_bytes\": 1157409, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      56:29 00:55:21 695188 98.0 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      01:48 00:01:38 966768 91.2 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:27:19.875928+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #630000, run #200081 0 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #630000, run #200081 1 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      01:00 00:00:52 935748 87.0 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #99400, run #200081 9400 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99400, run #200081 9401 events processed so far  <<<===\"], \"reco_log_bytes\": 1166166, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"      58:28 00:57:19 695232 98.0 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #163000, run #200081 3000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #163000, run #200081 3001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      03:48 00:03:37 962264 95.3 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:29:12.501806+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #632000, run #200081 2000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #632000, run #200081 2001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      02:53 00:02:44 977912 94.9 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #99700, run #200081 9700 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99700, run #200081 9701 events processed so far  <<<===\"], \"reco_log_bytes\": 1176455, \"result_files\": [\"copy.time\", \"reco.time\"], \"processes\": [\"   01:00:21 00:59:10 695232 98.0 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_reco.py --isMC --geom TI12MC04 --nevents -1 input-RDO.root\"], \"CPU_limits\": [\"Max cpu time              unlimited            unlimited            seconds\"]}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #164000, run #200081 4000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #164000, run #200081 4001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      05:41 00:05:29 977204 96.5 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:30:54.466016+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #633000, run #200081 3000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #633000, run #200081 3001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      04:35 00:04:25 1015384 96.4 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      00:05 00:00:01 260840 29.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #166000, run #200081 6000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #166000, run #200081 6001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      07:23 00:07:10 983220 97.2 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:32:52.039981+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #635000, run #200081 5000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #635000, run #200081 5001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      06:31 00:06:19 1017720 97.1 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #91000, run #200081 1000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #91000, run #200081 1001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      02:01 00:01:51 985488 92.3 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #168000, run #200081 8000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #168000, run #200081 8001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      09:20 00:09:07 984380 97.7 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:34:50.339174+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #636000, run #200081 6000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #636000, run #200081 6001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      08:31 00:08:18 1022984 97.6 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #93000, run #200081 3000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #93000, run #200081 3001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      04:01 00:03:50 908460 95.4 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1205119, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #169000, run #200081 9000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #169000, run #200081 9001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      11:19 00:11:04 894052 97.8 python /pool/condor/dir_3088681/nu_mu_k82.b6paBq/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:36:34.723228+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #638000, run #200081 8000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #638000, run #200081 8001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      10:19 00:10:05 932148 97.8 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #94000, run #200081 4000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #94000, run #200081 4001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      05:49 00:05:36 921668 96.2 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:38:10.529437+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1214716, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #639000, run #200081 9000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #639000, run #200081 9001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      11:55 00:11:40 936168 98.0 python /pool/condor/dir_2600210/nu_mu_k82.otNXVv/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #95000, run #200081 5000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #95000, run #200081 5001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      07:25 00:07:10 913708 96.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:40:09.528626+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #97000, run #200081 7000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #97000, run #200081 7001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      09:24 00:09:05 915260 96.8 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:42:58.756191+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      },
+      {
+        "proc": 1,
+        "returncode": 0,
+        "stdout": "{\"event_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99900, run #200081 9901 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO No more events in event selection \"], \"reco_log_bytes\": 1200507, \"ntuple_progress\": [\"AthenaEventLoopMgr                         INFO   ===>>>  start processing event #99000, run #200081 9000 events processed so far  <<<===\", \"AthenaEventLoopMgr                         INFO   ===>>>  done processing event #99000, run #200081 9001 events processed so far  <<<===\"], \"result_files\": [\"copy.time\", \"reco.time\", \"ntuple.time\"], \"processes\": [\"      12:13 00:11:52 924916 97.2 python /pool/condor/dir_2705192/nu_mu_k82.NYiElE/runtime/bin/faser_ntuple_maker.py --isMC --geom TI12MC04 --CKFTrackType merge --nevents -1 --outfile ntuple.root input-xAOD.root\"], \"CPU_limits\": []}",
+        "stderr": ""
+      },
+      {
+        "proc": 2,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      }
+    ]
+  },
+  {
+    "utc": "2026-11-03T19:44:21.527274+00:00",
+    "records": [
+      {
+        "proc": 0,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      },
+      {
+        "proc": 1,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      },
+      {
+        "proc": 2,
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Unable to fetch job ad; is it still in the queue?"
+      }
+    ]
+  }
+]

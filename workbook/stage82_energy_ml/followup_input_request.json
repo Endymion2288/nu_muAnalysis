@@ -1,0 +1,293 @@
+{
+  "prepared_in_stage": 82,
+  "executed": false,
+  "next_single_task": "stage83 complete remaining20 known compatible pi PHYS support delivery;0 fits",
+  "retain": "F7; stage82 full failed original two-lowE recovery",
+  "reason": "actual new K1016 now used in six fits; true50-100 K new0,100-200new14; total support still small in lowestE; do not infer data sufficiency",
+  "sources": [
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00030-00039",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00030-00039-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:3",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30880539
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00050-00059",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00050-00059-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:5",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31002624
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00070-00079",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00070-00079-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:7",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30931510
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00120-00129",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00120-00129-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:12",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30320026
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00130-00139",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00130-00139-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:13",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31133018
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00140-00149",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00140-00149-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:14",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30490105
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00180-00189",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00180-00189-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:18",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 29458759
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00190-00199",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00190-00199-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:19",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30457904
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00230-00239",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00230-00239-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:23",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30655671
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00270-00279",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00270-00279-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:27",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30745654
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00280-00289",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00280-00289-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:28",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 29905652
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00290-00299",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00290-00299-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:29",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30686094
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00340-00349",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00340-00349-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:34",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30922613
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00370-00379",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00370-00379-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:37",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30187125
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00380-00389",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00380-00389-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:38",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30370972
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00390-00399",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00390-00399-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:39",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31004497
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00400-00409",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00400-00409-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:40",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30485897
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00410-00419",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00410-00419-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:41",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 31077972
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00420-00429",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00420-00429-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:42",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30514142
+    },
+    {
+      "run": 200080,
+      "component": "pi",
+      "group": "pi:00430-00439",
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200080/FaserMC-MC24_Genie_sibyll_pi-200080-00430-00439-s0014-merge-PHYS.root",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "known_entry": "ml/configs/files.tsv:43",
+      "PHYS_kind": "d32b0ff3 merge without IFT",
+      "file_bytes": 30757971
+    }
+  ],
+  "selection": "all remaining known compatible canonical train pi candidates, no residual/yield ordering",
+  "full_files": true,
+  "logical_PHYS_bytes": 611988745,
+  "source_conditional_probability": 1.0,
+  "QA_max_identities": 40,
+  "resources": {
+    "condor_jobs_max": 4,
+    "cpus": 1,
+    "memory_MB": 3000,
+    "MaxRuntime_ceiling_s": 1800,
+    "total_CPU_max_s": 1800,
+    "input_events_max": 200000,
+    "input_bytes_max": 10000000000,
+    "retained_bytes_max": 10000000
+  },
+  "before_submit": "actual62/raw11/typed-domain/status/identity/reference01-LG no-rescale/actual-payload startup and resource QA",
+  "identity": "stage55all95748 exposure + stage70new28 + stage81new742 + stage82new1016 + stable source-internal/cross dedup; exact nativeMeV incoming",
+  "outputs": "full cutflow and selected/reuse/new unique source/key counts in true50-100/100-200, confirmed lowtransfer, same lowpz true>=200/high-y/unconfirmed, high end/missing plus actual CPU/wall/RSS/logical vs physicalIO; compact merged support",
+  "feature": "same62 F7_pz0_raw_v1; pz>50GeV; all difficult/tails retained; original roles unchanged",
+  "models": "0 energy fit,0 new F7 inference,0 ROOT reconstruction/GENIE/G4/toy",
+  "acceptance": "20 complete sources traced, original selection/reference62/raw/NaN exact, roles and all exposure dedup clean, measured resources and compact readback; actual yield/power unmeasured",
+  "limits": "development enrichment only; full genealogy, random untouched confirmation and common detector response not certified; no more learning-curve fits without a new actual-support contract",
+  "K_policy": "already completed and used K retained; old3600s/no-production ban is superseded, but stage83 does not require extra K production",
+  "cost": "same compatible pi extractor stage81 remote25CPU/48wall for2sources, scaling is a budget basis not a new20source measurement"
+}

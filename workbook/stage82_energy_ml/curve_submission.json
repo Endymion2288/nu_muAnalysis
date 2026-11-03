@@ -1,0 +1,44 @@
+{
+  "cluster": 9663288,
+  "actual_ads": [
+    {
+      "ClusterId": 9663288,
+      "ProcId": 0,
+      "MaxRuntime": 1200,
+      "JobFlavour": "espresso",
+      "RequestCpus": 1,
+      "RequestMemory": 3000,
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage82_curve/worker_v1.sh half"
+    },
+    {
+      "ClusterId": 9663288,
+      "ProcId": 1,
+      "MaxRuntime": 1200,
+      "JobFlavour": "espresso",
+      "RequestCpus": 1,
+      "RequestMemory": 3000,
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage82_curve/worker_v1.sh full"
+    }
+  ],
+  "actual_ads_origin": "restored from captured condor_q tool output immediately after submission; both jobs idle in that observation",
+  "actual_package_QA": "two-arm clean-payload import/DMatrix check passed before condor_submit; initial strict1800 post-submit assertion failed on CERN effective1200s; no resubmission or refit",
+  "payload_bytes": 13626105,
+  "paths": [
+    "ml/k_support_curve.py",
+    "ml/audited_features.py",
+    "ml/alternative_calibration.py",
+    "ml/frozen_evaluation.py",
+    "ml/track_response.py",
+    "ml/train_bdt.py",
+    "ml/support_augmentation.py",
+    "ml/configs/audited_features.json",
+    "ml/configs/baseline.yaml",
+    "ml/configs/track_response.yaml",
+    "ntuples/energy_ml_stage82/input.npz",
+    "workbook/stage82_energy_ml/protocol.json"
+  ],
+  "formal_fits": 6,
+  "requested_MaxRuntime": 1800,
+  "effective_MaxRuntime": 1200,
+  "within_frozen_wall_ceiling": true
+}

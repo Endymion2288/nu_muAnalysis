@@ -1,0 +1,151 @@
+{
+  "stage": 82,
+  "completed": true,
+  "K_raw_N": 30000,
+  "K_selected_N": 1094,
+  "K_new_unique_N": 1016,
+  "pi_new_N": 770,
+  "pooled_new_N": 1786,
+  "half_new_N": 892,
+  "train_N": {
+    "half": 42339,
+    "full": 43233
+  },
+  "original_train_cal_eval_N": [
+    41447,
+    8440,
+    14057
+  ],
+  "formal_fits": 6,
+  "pilot_fits": 0,
+  "F7_new_fit": 0,
+  "F7_new_inference": 0,
+  "main": "full_cal",
+  "original_gates": {
+    "recovery": {
+      "E50_100": false,
+      "E100_200": false
+    },
+    "breakthrough": {
+      "E50_100": false,
+      "E100_200": false
+    },
+    "protection": {
+      "all": true,
+      "E200_inf": true,
+      "pz50_100": true,
+      "high_y": true,
+      "unconfirmed": true
+    },
+    "tail50": {
+      "E50_100": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      },
+      "E100_200": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      },
+      "all": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      },
+      "E200_inf": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      },
+      "pz50_100": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      },
+      "high_y": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      },
+      "unconfirmed": {
+        "tail50": true,
+        "positive_tail50": true,
+        "negative_tail50": true
+      }
+    },
+    "pass_all": false
+  },
+  "deployment": "retain F7",
+  "K_production_MaxRuntime_s": 28800,
+  "K_production_remote_CPU_s": 12530.0,
+  "K_production_remote_wall_sum_s": 12791.0,
+  "all_original_RMSE_and_tail_protections_pass": true,
+  "lowE_recovery_pass": false,
+  "validation": {
+    "passed": true,
+    "models": [
+      {
+        "arm": "half",
+        "seed": 2026110255,
+        "rounds": 400,
+        "predictions_exact": true,
+        "params_exact": true
+      },
+      {
+        "arm": "half",
+        "seed": 2026110256,
+        "rounds": 400,
+        "predictions_exact": true,
+        "params_exact": true
+      },
+      {
+        "arm": "half",
+        "seed": 2026110257,
+        "rounds": 400,
+        "predictions_exact": true,
+        "params_exact": true
+      },
+      {
+        "arm": "full",
+        "seed": 2026110255,
+        "rounds": 400,
+        "predictions_exact": true,
+        "params_exact": true
+      },
+      {
+        "arm": "full",
+        "seed": 2026110256,
+        "rounds": 400,
+        "predictions_exact": true,
+        "params_exact": true
+      },
+      {
+        "arm": "full",
+        "seed": 2026110257,
+        "rounds": 400,
+        "predictions_exact": true,
+        "params_exact": true
+      }
+    ],
+    "all_reported_source_draws": 500,
+    "paired_rows_checked": 368,
+    "full_half_curve_intervals_checked": 46,
+    "max_interval_absolute_difference": 1.4432899320127035e-15,
+    "all_stage55_exposure_veto": true,
+    "subset_reproduced": true,
+    "old_roles_and_features_exact": true,
+    "F7_old_predictions_exact": true,
+    "new_F7_inference": 0,
+    "calibration_payload_conversion_exact": true,
+    "wall_s": 5.834585653152317,
+    "CPU_s": 5.652327524,
+    "peak_RSS_MiB": 616.60546875
+  },
+  "source_count": 6,
+  "independence": "development only; parent/subfile/seed and untouched confirmation unproven",
+  "physical_EOS_IO": "未测量",
+  "raw_negative_selected": 704,
+  "raw_negative_new": 659,
+  "next_task": "stage83 remaining20 compatible pi PHYS delivery,0fit; not executed"
+}

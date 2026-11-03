@@ -1,0 +1,93 @@
+{
+  "status": "completed",
+  "formal_fits": 3,
+  "arm": "half",
+  "train_N": 42339,
+  "records": [
+    {
+      "seed": 2026110255,
+      "rounds": 400,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110255
+      },
+      "actual_learner_model_param": {
+        "base_score": "6.3372293E0",
+        "boost_from_average": "1",
+        "num_class": "0",
+        "num_feature": "62",
+        "num_target": "1"
+      },
+      "model_reload_exact": true,
+      "wall_s": 5.804740908002714,
+      "CPU_s": 5.755267675000001,
+      "peak_RSS_MiB": 266.06640625
+    },
+    {
+      "seed": 2026110256,
+      "rounds": 400,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110256
+      },
+      "actual_learner_model_param": {
+        "base_score": "6.3372293E0",
+        "boost_from_average": "1",
+        "num_class": "0",
+        "num_feature": "62",
+        "num_target": "1"
+      },
+      "model_reload_exact": true,
+      "wall_s": 4.964039720012806,
+      "CPU_s": 4.92711591,
+      "peak_RSS_MiB": 266.06640625
+    },
+    {
+      "seed": 2026110257,
+      "rounds": 400,
+      "params": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257
+      },
+      "actual_learner_model_param": {
+        "base_score": "6.3372293E0",
+        "boost_from_average": "1",
+        "num_class": "0",
+        "num_feature": "62",
+        "num_target": "1"
+      },
+      "model_reload_exact": true,
+      "wall_s": 4.735109143977752,
+      "CPU_s": 4.701770645000002,
+      "peak_RSS_MiB": 266.06640625
+    }
+  ],
+  "offset_log": 0.0032170177577212,
+  "wall_s": 15.698087413009489,
+  "CPU_s": 15.574144623999999,
+  "peak_RSS_MiB": 266.06640625
+}

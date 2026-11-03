@@ -1,0 +1,24 @@
+validated entries=10000 branches=528 bytes=54113260 {'tracks': 1682, 'events_with_tracks': 1581, 'forward': 375, 'backward': 1307, 'measurement_length_mismatch_events': 2751, 'nonpositive_ndof_tracks': 16}
+nonpositive_ndof_examples(run,eventID,track,ndof,chi2)=[(200081, 90173, 0, -2147483648.0, 26.846084594726562), (200081, 91012, 0, 0.0, 7.963118553161621), (200081, 91373, 0, -2147483648.0, 28.87372589111328), (200081, 91554, 0, -2147483648.0, 21.446544647216797), (200081, 92221, 0, 0.0, 28.45529556274414)]
+log=reco.log levels={'WARNING': 8831, 'ERROR': 827} FPE_totals={'OVERFLOW': 1431, 'INVALID': 15785, 'DIVBYZERO': 428} FPE_INVALID_components={'StreamxAOD': 43, 'AthOutSeq': 43, 'VetoWaveformRecAlg': 26, 'TriggerWaveformRecAlg': 31, 'CKF2': 81, 'CKF_Back': 81, 'CKF_woIFT': 69, 'CKF_Back_woIFT': 69}
+GeoModelSvc.VetoNuDetectorTool          WARNING Called untested VetoNuDetectorTool::registerCallback()
+GeoModelSvc.VetoNuDetectorTool          WARNING Unable to register callback on AlignableTransformContainer with folder /Scint/Align, Alignment disabled (only if no Run2 scheme is loaded)!
+GeoModelSvc.VetoDetectorTool            WARNING Called untested VetoDetectorTool::registerCallback()
+GeoModelSvc.VetoDetectorTool            WARNING Unable to register callback on AlignableTransformContainer with folder /Scint/Align, Alignment disabled (only if no Run2 scheme is loaded)!
+GeoModelSvc.TriggerDetectorTool         WARNING Called untested TriggerDetectorTool::registerCallback()
+19:29:16    Acts::LayerA   ERROR     Layers are overlapping at: -1800.4. This should never happen. Please check your geometry description.
+19:29:16    Acts::LayerA   ERROR     Layers are overlapping at: -1778.9. This should never happen. Please check your geometry description.
+19:29:16    Acts::LayerA   ERROR     Layers are overlapping at: -1744.65. This should never happen. Please check your geometry description.
+19:29:16    Acts::LayerA   ERROR     Layers are overlapping at: -1630.4. This should never happen. Please check your geometry description.
+19:29:16    Acts::LayerA   ERROR     Layers are overlapping at: -1608.9. This should never happen. Please check your geometry description.
+log=ntuple.log levels={'WARNING': 316, 'ERROR': 38} FPE_totals={'OVERFLOW': 0, 'INVALID': 0, 'DIVBYZERO': 104} FPE_INVALID_components={}
+GeoModelSvc.VetoNuDetectorTool          WARNING Called untested VetoNuDetectorTool::registerCallback()
+GeoModelSvc.VetoNuDetectorTool          WARNING Unable to register callback on AlignableTransformContainer with folder /Scint/Align, Alignment disabled (only if no Run2 scheme is loaded)!
+GeoModelSvc.VetoDetectorTool            WARNING Called untested VetoDetectorTool::registerCallback()
+GeoModelSvc.VetoDetectorTool            WARNING Unable to register callback on AlignableTransformContainer with folder /Scint/Align, Alignment disabled (only if no Run2 scheme is loaded)!
+GeoModelSvc.TriggerDetectorTool         WARNING Called untested TriggerDetectorTool::registerCallback()
+20:31:02    Acts::LayerA   ERROR     Layers are overlapping at: -1800.4. This should never happen. Please check your geometry description.
+20:31:02    Acts::LayerA   ERROR     Layers are overlapping at: -1778.9. This should never happen. Please check your geometry description.
+20:31:02    Acts::LayerA   ERROR     Layers are overlapping at: -1744.65. This should never happen. Please check your geometry description.
+20:31:02    Acts::LayerA   ERROR     Layers are overlapping at: -1630.4. This should never happen. Please check your geometry description.
+20:31:02    Acts::LayerA   ERROR     Layers are overlapping at: -1608.9. This should never happen. Please check your geometry description.

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "produced": "WAVE-Calibration-03-LG",
+  "checks": [
+    {
+      "module": 0,
+      "N": 1199,
+      "median_MeV_per_pC": 4359.313083378978
+    },
+    {
+      "module": 1,
+      "N": 1183,
+      "median_MeV_per_pC": 4359.313076059836
+    },
+    {
+      "module": 2,
+      "N": 1094,
+      "median_MeV_per_pC": 4359.313088235567
+    },
+    {
+      "module": 3,
+      "N": 1084,
+      "median_MeV_per_pC": 4359.313087675546
+    }
+  ],
+  "reference": "WAVE-Calibration-01-LG",
+  "conversion": "payload only, once at collection"
+}

@@ -1,0 +1,21 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage82
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_v1.sh $(source_index)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-k-support-stage82.tar.gz,root://eoshome-x.cern.ch/$(repository)/software/calypso-master-d32b0ff3-el9-gcc13.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 8000MB
+max_retries = 0
++JobFlavour = "workday"
++MaxRuntime = 28800
++NuMuStage = "energy-ml-k-support-stage82"
+log = $(spool)/logs/k.$(ClusterId).log
+output = $(spool)/logs/k.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/k.$(ClusterId).$(ProcId).err
+queue source_index in 0 1 2

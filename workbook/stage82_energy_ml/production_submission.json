@@ -1,0 +1,33 @@
+{
+  "cluster": 9663277,
+  "result": "9663277.0 - 9663277.2\n",
+  "ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage82/worker_v1.sh 0",
+      "ClusterId": 9663277,
+      "JobFlavour": "workday",
+      "MaxRuntime": 28800,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage82/worker_v1.sh 1",
+      "ClusterId": 9663277,
+      "JobFlavour": "workday",
+      "MaxRuntime": 28800,
+      "ProcId": 1,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage82/worker_v1.sh 2",
+      "ClusterId": 9663277,
+      "JobFlavour": "workday",
+      "MaxRuntime": 28800,
+      "ProcId": 2,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ]
+}

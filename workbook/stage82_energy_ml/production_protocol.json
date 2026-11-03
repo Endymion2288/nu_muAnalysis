@@ -1,0 +1,77 @@
+{
+  "stage": 82,
+  "user_revision": "explicit request to remove old K production time restriction and use K samples",
+  "sources": [
+    {
+      "run": 200081,
+      "component": "k",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-RDO.root",
+      "group": "k:00630-00639",
+      "historical_roles": [
+        "train"
+      ],
+      "role": "training_support_pilot",
+      "already_in_stage55_alternative_manifest": false,
+      "eligible_source_files": 41,
+      "selection_index": 36,
+      "source_inclusion_probability": 0.024390243902439025,
+      "conditional_event_inclusion_probability": 1.0,
+      "file_bytes": 1293229936,
+      "generator_parent_seed": "未测量",
+      "independent_confirmation": false,
+      "index": 0
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00090-00099",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00090-00099-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 1314614993,
+      "index": 1,
+      "source_probability": 0.047619047619047616,
+      "conditional_event_probability": 1.0,
+      "selection_index": 5,
+      "independent_confirmation": false,
+      "role": "development_enrichment",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00090-00099-s0014-RDO.root"
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "group": "k:00160-00169",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/bck/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00160-00169-s0014-PHYS.root",
+      "historical_roles": [
+        "train"
+      ],
+      "known_entry": "AnalysisZipFramework/config/file_config.yaml run200081 data_paths",
+      "PHYS_kind": "existing configured bck PHYS; schema/conditions not yet verified",
+      "file_bytes": 1311394573,
+      "index": 2,
+      "source_probability": 0.047619047619047616,
+      "conditional_event_probability": 1.0,
+      "selection_index": 8,
+      "independent_confirmation": false,
+      "role": "development_enrichment",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00160-00169-s0014-RDO.root"
+    }
+  ],
+  "MaxRuntime": 28800,
+  "JobFlavour": "workday",
+  "cpus": 1,
+  "memory_MB": 3000,
+  "disk_MB": 8000,
+  "full_files": true,
+  "selection": "reuse stage70 failed K and stage81 two preselected K; no yield/residual selection",
+  "feature_version": "F7_pz0_raw_v1",
+  "calibration": "native03-LG to reference01-LG by measured payload once; old pi already01 unchanged",
+  "new_generator_or_G4": false,
+  "model_plan": "after complete K support freeze pooled 770 pi + delivered unique K; source-uniform half floor(N/2) seed2026110382 and full; original3seeds/400rounds each,6fits; primary full_cal",
+  "identity": "veto all stage55 exposure plus stage70 and81 new incoming native MeV keys; stable dedup; development only",
+  "old_cap_evidence": "stage70 9662832.1 removed after wall3604s, CPU3532s, about8801/10000 reconstructed",
+  "inference": "retain F7 until original recovery/protection/tail gates pass; developed cal/eval, no independent confirmation"
+}
