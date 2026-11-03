@@ -1,0 +1,20 @@
+{
+  "cluster": 9662919,
+  "starts": 1,
+  "exitcode": 0,
+  "request_CPUs": 1,
+  "request_memory_MB": 3000,
+  "remote_CPU_s": 14.0,
+  "remote_wall_s": 20.0,
+  "requested_MaxRuntime_s": 900,
+  "scheduled_MaxRuntime_s": 3600,
+  "MaxRuntime_request_preserved": false,
+  "resource_deviation": "dry-run900s -> schedd3600s with microcentury; worker timeout880s and callback850s remain frozen, actual job under900s",
+  "history_last_RSS_MiB": 170.8984375,
+  "history_RSS_scope": "final scheduler sample, not an exact peak",
+  "received_bytes": 13204800.0,
+  "sent_bytes": 3045.0,
+  "transport_bytes": 1104542,
+  "physical_EOS_network_bytes": "未测量",
+  "resources_scope": "formal job only; local preparation/report/validation separately timed"
+}

@@ -1,0 +1,66 @@
+{
+  "prepared_in_stage": 71,
+  "executed": false,
+  "current_decision": "retain F7; one fixed augmentation failed two lowE/traditional gates; stop variants on these samples",
+  "evidence": {
+    "new_pi_N": 28,
+    "new_K_N": "未测量; stage70 budget stop",
+    "lowE_50_100_new_N": 4,
+    "lowE_100_200_new_N": 2,
+    "new_same_low_pz_difficult_N": 0,
+    "evaluated_main": "augmented_cal",
+    "lowE_RMSE_vs_traditional_upper95": [
+      2.480477810489235,
+      1.2376279243776007
+    ],
+    "all_F7_upper95": 1.000443310733649,
+    "new_confirmed_low_transfer_N": {
+      "E50_100": 3,
+      "E100_200": 1
+    }
+  },
+  "existing_contract": "workbook/stage70_energy_ml/generation_input_request.json",
+  "requested_delivery": [
+    {
+      "item": "GENIE original kinematic parents",
+      "required": "actual input/parent file IDs or paths, subfile and entry, model/flux/component, incoming identity map to run/eventID; both pi and k",
+      "status": "未交付"
+    },
+    {
+      "item": "new generator kinematics and seeds",
+      "required": "actual seed values and explicit resampled versus recycled statement; changing geometry/flux over old parents does not qualify",
+      "status": "未交付"
+    },
+    {
+      "item": "role assignment and random confirmation pool",
+      "required": "preassign training/cal/development/untouched confirmation roles across every flux/geometry; random inclusion probabilities before reconstructed outcomes; exact incoming cross-role veto plus lineage verification",
+      "status": "未交付"
+    },
+    {
+      "item": "physics support with tails retained",
+      "required": "true50-100/100-200GeV together with same reco pz50-100 high trueE/high-y/uncertain-primary coverage; production targeting uses declared truth-E/y/angular design, not post-hoc residual cherry-picking; retain highE tails and missing readouts",
+      "status": "未交付; required generation counts and power未测量"
+    },
+    {
+      "item": "common response/readout",
+      "required": "nominal geometry/build and actual Calo payload/units, reference01-LG compatibility validation; signed11scintillator raw/status, VetoNu reduced and native calo energy, no fit-charge substitution; independent shared raw response/systematics validation",
+      "status": "完整共同响应未交付"
+    },
+    {
+      "item": "bounded production cost",
+      "required": "new source QA must measure cost variation and actual scheduler limits, not extrapolate16heads alone; explicit source/event/CPU/wall/storage caps and hard worker timeout before any batch",
+      "status": "新输入成本未测量"
+    }
+  ],
+  "no_unmeasured_target_counts": true,
+  "next_step": "first obtain actual listed inputs and frozen roles; then design one bounded physical-support/response experiment with measured acceptance criteria; no new architecture/weight/residual/unit-matched sweep",
+  "without_delivery": "retain F7 and issue this concrete input request; no replacement stage of repeatedly scanning metadata or reevaluating old predictions",
+  "K_policy": "no automatic retry/chunking/budget extension; incomplete K is not physical zero and does not prove K unusable",
+  "forbidden_actions": [
+    "new energy model variant on existing samples",
+    "retune gates or select raw/cal/seed after evaluation",
+    "read locked confirmation events",
+    "all-run G4 production",
+    "message external collaborators without explicit instruction"
+  ]
+}

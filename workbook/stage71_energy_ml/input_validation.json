@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "wall_s": 3.748367660213262,
+  "CPU_s": 3.537508817,
+  "peak_RSS_MiB": 391.57421875,
+  "old_train_cal_eval_N": [
+    41447,
+    8440,
+    14057
+  ],
+  "new_N": 28,
+  "original_missing_N": 42,
+  "eligible_missing_N": [
+    21,
+    3,
+    7
+  ],
+  "protected_missing_rows": [
+    591,
+    9335,
+    11638,
+    13406,
+    17281,
+    22812,
+    26954,
+    57749,
+    59639,
+    74738,
+    75235
+  ],
+  "new_key_intersection_all_stage55": 0,
+  "new_internal_unique": true,
+  "reference_matrix_exact": true,
+  "unchanged_other_features": 57,
+  "raw11_status_exact": true,
+  "original_roles_unchanged": true,
+  "forbidden_linear_momenta_absent": true,
+  "typed_NaN_signed_policy": true,
+  "old_F7_prediction_rows_exact": true,
+  "F7_new_inference": 0,
+  "model_fits": 0,
+  "locked_test_read": false,
+  "no_fit_DMatrix_N": 512,
+  "no_fit_DMatrix_resources": {
+    "wall_s": 0.015041202306747437,
+    "CPU_s": 0.0026516850000000147,
+    "peak_RSS_MiB": 391.57421875
+  },
+  "readback_exact": true,
+  "logical_input_bytes": 13259313,
+  "uncompressed_array_bytes": 20263830,
+  "physical_EOS_network_bytes": "未测量"
+}

@@ -1,0 +1,168 @@
+{
+  "logical_retained_bytes": 4667070,
+  "budget_bytes": 10000000,
+  "scope": "stage71 workbook evidence, stage report,3models and one compact comparison cache; excludes this storage.json itself, code/docs and shared old inputs",
+  "retained": [
+    {
+      "path": "workbook/stage71_energy_ml/augmentation.png",
+      "bytes": 132750
+    },
+    {
+      "path": "workbook/stage71_energy_ml/bootstrap_validation.json",
+      "bytes": 254
+    },
+    {
+      "path": "workbook/stage71_energy_ml/calibration.json",
+      "bytes": 229
+    },
+    {
+      "path": "workbook/stage71_energy_ml/code_validation.json",
+      "bytes": 437
+    },
+    {
+      "path": "workbook/stage71_energy_ml/condor_dryrun.ads",
+      "bytes": 2131
+    },
+    {
+      "path": "workbook/stage71_energy_ml/condor_events.log",
+      "bytes": 1961
+    },
+    {
+      "path": "workbook/stage71_energy_ml/condor_history.json",
+      "bytes": 453
+    },
+    {
+      "path": "workbook/stage71_energy_ml/condor_resources.json",
+      "bytes": 741
+    },
+    {
+      "path": "workbook/stage71_energy_ml/condor_userlog_history.json",
+      "bytes": 1517
+    },
+    {
+      "path": "workbook/stage71_energy_ml/decisions.json",
+      "bytes": 2770
+    },
+    {
+      "path": "workbook/stage71_energy_ml/document_validation.json",
+      "bytes": 176
+    },
+    {
+      "path": "workbook/stage71_energy_ml/fit.json",
+      "bytes": 1855
+    },
+    {
+      "path": "workbook/stage71_energy_ml/followup_input_request.json",
+      "bytes": 3455
+    },
+    {
+      "path": "workbook/stage71_energy_ml/gates.tsv",
+      "bytes": 1640
+    },
+    {
+      "path": "workbook/stage71_energy_ml/input_validation.json",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage71_energy_ml/metrics.tsv",
+      "bytes": 41927
+    },
+    {
+      "path": "workbook/stage71_energy_ml/package.json",
+      "bytes": 297
+    },
+    {
+      "path": "workbook/stage71_energy_ml/paired.tsv",
+      "bytes": 58975
+    },
+    {
+      "path": "workbook/stage71_energy_ml/preparation.time",
+      "bytes": 57
+    },
+    {
+      "path": "workbook/stage71_energy_ml/protocol.json",
+      "bytes": 6599
+    },
+    {
+      "path": "workbook/stage71_energy_ml/report.time",
+      "bytes": 56
+    },
+    {
+      "path": "workbook/stage71_energy_ml/report_resources.json",
+      "bytes": 91
+    },
+    {
+      "path": "workbook/stage71_energy_ml/retained_io_validation.json",
+      "bytes": 317
+    },
+    {
+      "path": "workbook/stage71_energy_ml/seed_metrics.tsv",
+      "bytes": 39866
+    },
+    {
+      "path": "workbook/stage71_energy_ml/source_metrics.tsv",
+      "bytes": 294918
+    },
+    {
+      "path": "workbook/stage71_energy_ml/submission.json",
+      "bytes": 131
+    },
+    {
+      "path": "workbook/stage71_energy_ml/training_support.tsv",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage71_energy_ml/validation.json",
+      "bytes": 1054
+    },
+    {
+      "path": "workbook/stage71_energy_ml/validation.time",
+      "bytes": 56
+    },
+    {
+      "path": "workbook/stage71_energy_ml/worker.time",
+      "bytes": 58
+    },
+    {
+      "path": "ml/artifacts/stage71/2026110255.ubj",
+      "bytes": 972807
+    },
+    {
+      "path": "ml/artifacts/stage71/2026110256.ubj",
+      "bytes": 976547
+    },
+    {
+      "path": "ml/artifacts/stage71/2026110257.ubj",
+      "bytes": 970971
+    },
+    {
+      "path": "ml/artifacts/stage71/comparison.npz",
+      "bytes": 1134308
+    },
+    {
+      "path": "workbook/2026-11-03_stage71_fixed-support-augmentation.md",
+      "bytes": 15618
+    }
+  ],
+  "deleted_duplicate_artifacts": [
+    {
+      "path": "ntuples/energy_ml_stage71/input.npz",
+      "bytes": 13259313
+    },
+    {
+      "path": "ntuples/energy_ml_stage71/results.tar.gz",
+      "bytes": 1104542
+    },
+    {
+      "path": "ml/artifacts/stage71/predictions.npz",
+      "bytes": 297769
+    },
+    {
+      "path": "software/energy-ml-support-augmentation-stage71.tar.gz",
+      "bytes": 13204682
+    }
+  ],
+  "old_input_artifacts_modified": false,
+  "event_or_model_arrays_added_to_git": false,
+  "EOS_physical_network_bytes": "未测量"
+}

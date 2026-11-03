@@ -1,7 +1,7 @@
 # νμ 能量研究的信息预算：区分观测、学习与物理测量
 
-**2026-11-03 stage70实测更新：** [报告](../workbook/2026-11-03_stage70_alternative-support-pilot.md)、路线§51/信息预算§31与[stage71 Prompt](nu_mu_energy_ml_next_step_prompt.md)为当前进度。预定π/K头测10784输入，仅π完整784→30选中→28新唯一开发key，true50–100/100–200新增4/2；K触及3600s预算停止，完整支持未测，不报零。0fit/新F7推理，继续F7。
-新样本Calo03-LG与F7参考01-LG不同，已按实际payload限定转换并用完整同源π闭合；不认证完整物理响应。下一项只准备实际π28例的固定F7增补合同，未执行；不自动重试K、扩源或方法轮换。独立生成确认、共同raw/stage54、系统和接受度/背景仍须交付。
+**2026-11-03 stage71实测更新：** [报告](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)、路线§52/信息预算§32及[后续输入入口](nu_mu_energy_ml_next_step_prompt.md)为当前进度。原F7算法固定三fit加入π28例，主候选true50–100/100–200 log-RMSE0.314206/0.264763，传统0.145487/0.226876；两低E/传统95%上限2.480478/1.237628仍失败，raw也失败。全体/困难组与双向tail保护通过，但不替代低E成功，**继续原F7，结束这组样本的方法轮换。**
+没有自动新fit/K重试/全run生产。下一步是交付真实新π/K generator parent/subfile/seed、事前角色和共同raw响应；当前只有具体输入请求，不能再用metadata循环或旧预测评价替代新物理实验。共同raw/stage54、独立确认、系统及接受度/背景仍须交付。
 
 ## 1. 这一次相对 stage29 真正新增的认识
 
@@ -744,3 +744,14 @@ OOF最低能P/C=.924198 [.903393,.944414]，总体.989517 [.986748,.992295]，10
 继续F7。下一笔仅[实际π28例的固定增补合同](../ml/configs/alternative_support_augmentation.json)，41447＋28、原62/400轮/三seed/unit MC、单一候选3fit；旧cal/eval和所有缺失/困难尾保护不改。小增补不保证功效，效应包含flux组成和重训。先无fitQA再冻结≤1任务/1CPU/3000MB、CPU/wall≤900s/最终≤10MB，收益和成本未测、本轮未执行。原双低E/传统、全体/F7及困难组/双向tail门槛不降。
 
 失败停止方法变体并保持F7，交具体GENIE parent/subfile/seed/两组件新运动学和共同响应输入；全通过仍需未开发确认。K若未来交付另需测成本分布及新合同，不自动续跑。本缓存π继承已暴露训练/challenge，谱系未证，不独立；共同raw/stage54、interaction/FSI/材料、接受度/背景仍需交付。原§1–30保留。
+
+
+## 32. stage71：小π增补保护通过、低E仍失败，停止既有样本的方法预算
+
+[stage71](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)唯一原F7三fit增补41447＋28，低E4/2、同低pz困难0。参考01-LG x/pz0/raw11/typed NaN、原cal/eval与42缺失及11保护不改；旧F7预测/offset复用，主cal一个ensemble offset、raw并报。主候选两低E log-RMSE0.314206/0.264763，相对传统95%上限2.480478/1.237628仍失败；all/F7上限1.000443和原困难/双向尾保护通过，不替代恢复。保持F7，不按raw/cal或seed择优。
+
+最低能31/208过估tail50贡献72.381585%平方log损失，完整保留；增补很小且没有同pz困难覆盖，不能得出充分补样无效或缺数据唯一解释。K完整支持未交付，不报物理零。500来源固定预测区间不含重训/offset/完整谱系/响应及研究选择；cal/eval仍开发，非独立确认。
+
+1任务9662919、3fit、一次exit0，remote CPU14s/wall20s；直接训练峰值254.016MiB，最终<10MB，重复归档/输入/预测去重。dry-run900s→最终MaxRuntime3600s偏差照报，实际<900且硬worker上限不变；无新增重试。独立预测/原F7参数数组/角色/标定/54个bootstrap展开检查通过，EOS物理总I/O及精确全阶段CPU未测。
+
+本组样本方法预算到此结束，下一笔需要[真实生成/共同响应输入交付](../workbook/stage71_energy_ml/followup_input_request.json)：实际新π/K parent/subfile/entry/seed，是否复用运动学，事前跨flux/几何角色和随机未开发确认，raw/status和Calo条件/单位，兼顾低E及同pz困难层、高端和缺失。交付后先有界身份/响应/成本QA再冻结单项实验；未交付不再metadata循环、重算旧预测或填未经测量的样本数。无自动stage72/新fit/K续跑；共同raw/stage54、interaction/FSI/材料、接受度/背景仍需完成。旧§1–31保留。

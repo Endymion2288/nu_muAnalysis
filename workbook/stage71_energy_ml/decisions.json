@@ -1,0 +1,117 @@
+{
+  "main_candidate": "augmented_cal",
+  "versions": {
+    "augmented_raw": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    },
+    "augmented_cal": {
+      "recovery": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "breakthrough": {
+        "E50_100": false,
+        "E100_200": false
+      },
+      "protection": {
+        "all": true,
+        "E200_inf": true,
+        "pz50_100": true,
+        "high_y": true,
+        "unconfirmed": true
+      },
+      "tail50": {
+        "E50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E100_200": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "all": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "E200_inf": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "pz50_100": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "high_y": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        },
+        "unconfirmed": {
+          "tail50": true,
+          "positive_tail50": true,
+          "negative_tail50": true
+        }
+      },
+      "pass_all": false
+    }
+  },
+  "deployment": "retain F7",
+  "policy": "no selecting raw/cal, seed, round or further methods; developed evaluation only"
+}

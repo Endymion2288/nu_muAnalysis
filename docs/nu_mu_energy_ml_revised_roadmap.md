@@ -1,7 +1,7 @@
 # νμ 能量研究路线修订：先识别信息缺口，再选择模型
 
-**2026-11-03 stage70实测更新：** [报告](../workbook/2026-11-03_stage70_alternative-support-pilot.md)、路线§51/信息预算§31与[stage71 Prompt](nu_mu_energy_ml_next_step_prompt.md)为当前进度。预定π/K头测10784输入，仅π完整784→30选中→28新唯一开发key，true50–100/100–200新增4/2；K触及3600s预算停止，完整支持未测，不报零。0fit/新F7推理，继续F7。
-新样本Calo03-LG与F7参考01-LG不同，已按实际payload限定转换并用完整同源π闭合；不认证完整物理响应。下一项只准备实际π28例的固定F7增补合同，未执行；不自动重试K、扩源或方法轮换。独立生成确认、共同raw/stage54、系统和接受度/背景仍须交付。
+**2026-11-03 stage71实测更新：** [报告](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)、路线§52/信息预算§32及[后续输入入口](nu_mu_energy_ml_next_step_prompt.md)为当前进度。原F7算法固定三fit加入π28例，主候选true50–100/100–200 log-RMSE0.314206/0.264763，传统0.145487/0.226876；两低E/传统95%上限2.480478/1.237628仍失败，raw也失败。全体/困难组与双向tail保护通过，但不替代低E成功，**继续原F7，结束这组样本的方法轮换。**
+没有自动新fit/K重试/全run生产。下一步是交付真实新π/K generator parent/subfile/seed、事前角色和共同raw响应；当前只有具体输入请求，不能再用metadata循环或旧预测评价替代新物理实验。共同raw/stage54、独立确认、系统及接受度/背景仍须交付。
 
 ## 1. 最终项目应交付什么
 
@@ -1464,3 +1464,18 @@ P辅助分类相对各自train类别先验的OOF NLL增量.266459 [.260723,.2722
 **下一单项stage71：仅实际π支持的一次固定F7增补对照。** [准备合同](../ml/configs/alternative_support_augmentation.json)：41447＋28＝41475，同F7原62/超参数/400轮/三seed/unit MC，一个候选3fit；旧F7/传统不重训或新推理。只用已参考化x，不用x_produced或重复缩放。原8440cal一个ensemble global offset、14057eval仍开发，主cal/raw并报，原两低E/传统95%上限≤1.05、all/F7≤1.01、≥200/低pz/high-y/未确认≤1.03及双向tail50增量≤2pp不降。新增很少且只有π，不能称总体缺口已补齐或纯N效应。
 
 先无fit身份/NaN/标定/资源QA再冻结；拟议≤1Condor/1CPU/3000MB、CPU/wall≤900s、最终≤10MB，成本/效果未测，本轮不执行。失败继续F7并停止这组样本方法循环，交[新生成输入请求](../workbook/stage70_energy_ml/generation_input_request.json)；全通过只冻结研究候选、需未开发确认。K未自动重试，未来若需交付须另阶段先测成本分布并冻结预算。共同raw/stage54、interaction/FSI/材料、接受度/背景继续交付。原§1–50逐字保留。
+
+
+## 52. stage71：固定增补未恢复低E，保护通过仍不推广
+
+[完整报告](../workbook/2026-11-03_stage71_fixed-support-augmentation.md)。仅π28个新唯一开发key追加原41447train＝41475（低E4/2、同低pz困难0），K完整支持未测且未重试。同62/pz0-only线性纵向动量/raw11/VetoNu reduced/typed NaN与合法signed、原8440cal/14057eval、42缺失21/3/7＋11保护不改。只用stage70参考01-LG的x，57列不变，不用x_produced或再缩放；0新ROOT/RDO/生产/F7 fit或新推理/谱toy/locked读取。
+
+原XGBoost2.1.3、depth5/400轮/原三seed2026110255/56/57、unit MC，一个增补候选3fit，旧F7预测与offset固定复用。ensemble仅cal一个global offset0.004623141008，主augmented_cal、raw并列，不按结果择优。主候选eval两低E/全体log-RMSE0.314206/0.264763/0.296235，旧F70.312816/0.265014/0.296363，传统两低E0.145487/0.226876。
+
+两低E/传统比值95%上限2.480478/1.237628>1.05，raw同样失败；all/F7=0.999569 [0.998629,1.000443]，原all≤1.01、≥200/低pz/high-y/未确认≤1.03与各组整体/双向tail50增量上限≤2pp全部通过。未确认RMSE/F7区间[0.991469,0.999301]局部低于1，但tail50增量上限1.982700pp近2pp，不替代全部验收。
+
+最低能31/208个过估tail50贡献72.381585%平方log损失；3.2–6.4TeV中位bias-43.312793%，高端未解决。增补仅原train的.067556%、低E.521512%/.056117%，且困难支持0；阴性不能证明足量补样无用，也不能将旧失败唯一归为缺数据/不可约歧义。效应包含样本组成及重训，不称纯N。500 component分层保守来源固定预测bootstrap，原cal16/eval22组，区间不含重训/offset/完整谱系/系统或研究选择，不是独立确认。
+
+1个Condor9662919一次exit0，remote CPU14s/wall20s；三fit内核wall11.196360s/CPU11.101462s，进程峰值254.016MiB。dry-run MaxRuntime900s被最终ClassAd改为3600s（microcentury），原协议/worker不反写；实际低于900s且worker timeout880/回调850保持，站点具体变换未定位。独立三模型预测逐位/原F7参数与数组/参考x/NaN角色/校准通过；54个事件展开bootstrap检查ratio差≤3.331e-16、tail差≤2.22e-16pp。最终<10MB，重复transport/预测/准备输入/payload去重，EOS物理/网络总字节与精确阶段总CPU未测。
+
+**继续F7并停止本组样本方法变体；下一步先交真实新输入。** [请求](../workbook/stage71_energy_ml/followup_input_request.json)列新π/K GENIE parent/input/subfile/entry、seed/是否复用、跨flux/几何事前角色、随机未开发确认和共同raw/Calo payload响应；需低E及同pz困难层/高端/缺失完整覆盖。没有这些实际可访问输入及身份/角色证据就不安排替代metadata扫描或旧预测复评阶段；不捏造生成N/功效。交付后先有界schema/身份/单位/成本分布QA，再冻结单项新物理实验及验收；不自动K重试/扩源/新fit。共同raw/stage54、interaction/FSI/材料、接受度/背景继续交付。原§1–51逐字保留，本轮完成后停止。

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "wall_s": 0.7921445840038359,
+  "CPU_s": 0.7525718190000001,
+  "peak_RSS_MiB": 194.36328125,
+  "models": [
+    {
+      "seed": 2026110255,
+      "reloaded_predictions_exact": true,
+      "rounds": 400,
+      "parameters_exact": true
+    },
+    {
+      "seed": 2026110256,
+      "reloaded_predictions_exact": true,
+      "rounds": 400,
+      "parameters_exact": true
+    },
+    {
+      "seed": 2026110257,
+      "reloaded_predictions_exact": true,
+      "rounds": 400,
+      "parameters_exact": true
+    }
+  ],
+  "formal_fits": 3,
+  "additional_fits": 0,
+  "F7_prediction_arrays_reused_exact": true,
+  "F7_archived_parameters_seeds_rounds_exact": true,
+  "F7_new_inference": 0,
+  "reference_x_appended_exact": true,
+  "training_labels_log_GeV_exact": true,
+  "single_global_cal_mean_residual": 3.636901206734162e-16,
+  "old_train_cal_eval_N": [
+    41447,
+    8440,
+    14057
+  ],
+  "new_N": 28,
+  "eligible_missing_N": [
+    21,
+    3,
+    7
+  ],
+  "protected_unused_missing_N": 11,
+  "no_OOF_claim": true,
+  "locked_test": false
+}
