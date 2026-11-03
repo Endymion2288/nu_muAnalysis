@@ -1,0 +1,24 @@
+{
+  "payload_bytes": 587190,
+  "official_runtime_archive_bytes": 54973160,
+  "paths": [
+    "setup_env.sh",
+    "build/analysis",
+    "AnalysisZipFramework/config",
+    "AnalysisZipFramework/include",
+    "AnalysisZipFramework/submission/validate_merge_ntuple.py",
+    "ml/extract_alternative_support.py",
+    "ml/audited_features.py",
+    "ml/frozen_evaluation.py",
+    "ml/track_response.py",
+    "ml/train_bdt.py",
+    "ml/configs/alternative_support_pilot.json",
+    "ml/configs/audited_features.json",
+    "ml/configs/baseline.yaml",
+    "ml/configs/track_response.yaml",
+    "workbook/stage70_energy_ml/protocol.json"
+  ],
+  "source_event_inputs_in_payload": 0,
+  "compiled": false,
+  "build_info": "code_commit=d32b0ff3cc4a2dad4abfb1474a82422c3c25b305\nfaser_common_commit=1770d15df9311f6535c09909edf9ad64a5779e32\ntracked_source_changes=none\nathena=24.0.41 gcc=13.1.0 platform=x86_64-el9-gcc13-opt\nbuild_type=Release filter=official_CI debug_symbols=stripped\nG4ENSDFSTATEDATA=/cvmfs/geant4.cern.ch/share/data/G4ENSDFSTATE2.2\nbuilt_utc=2026-10-28T12:22:31.197193+00:00\n"
+}

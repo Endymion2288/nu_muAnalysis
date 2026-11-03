@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "reference_tag": "WAVE-Calibration-01-LG",
+  "produced_tag": "WAVE-Calibration-03-LG",
+  "scales_by_module": [
+    1.061711079650782,
+    1.061711079650782,
+    1.061711079650782,
+    1.061711079650782
+  ],
+  "source": "actual COOL charge_ref and unmodified native MC E_EM formula; not residual fitted",
+  "full_pi_raw_N": 784,
+  "selected_N": 30,
+  "unchanged_feature_columns_exact": 57,
+  "identity_raw_status_truth_exact": true,
+  "full_cutflow_exact": true,
+  "calo_comparison": [
+    {
+      "feature": "ML_calo0_E_EM_GeV",
+      "finite_N": 30,
+      "max_abs_difference_GeV": 4.76837158203125e-07,
+      "max_relative_difference": 1.4211976460987626e-07
+    },
+    {
+      "feature": "ML_calo1_E_EM_GeV",
+      "finite_N": 30,
+      "max_abs_difference_GeV": 1.1920928955078125e-07,
+      "max_relative_difference": 1.1886869336203933e-07
+    },
+    {
+      "feature": "ML_calo2_E_EM_GeV",
+      "finite_N": 30,
+      "max_abs_difference_GeV": 2.384185791015625e-07,
+      "max_relative_difference": 1.2230841976053968e-07
+    },
+    {
+      "feature": "ML_calo3_E_EM_GeV",
+      "finite_N": 30,
+      "max_abs_difference_GeV": 1.9073486328125e-06,
+      "max_relative_difference": 1.1870819839178881e-07
+    },
+    {
+      "feature": "ML_calo_total_E_EM_GeV",
+      "finite_N": 30,
+      "max_abs_difference_GeV": 1.9073486328125e-06,
+      "max_relative_difference": 2.2600376748280395e-06
+    }
+  ],
+  "comparison_rtol": 1e-06,
+  "comparison_atol_GeV": 1e-06,
+  "K_prefix_checks": [
+    {
+      "component": "pi",
+      "module": 0,
+      "N": 1,
+      "native_current_MeV_per_pC": 4359.313139466699
+    },
+    {
+      "component": "pi",
+      "module": 1,
+      "N": 2,
+      "native_current_MeV_per_pC": 4359.312974323893
+    },
+    {
+      "component": "pi",
+      "module": 2,
+      "N": 1,
+      "native_current_MeV_per_pC": 4359.313281101934
+    },
+    {
+      "component": "pi",
+      "module": 3,
+      "N": 1,
+      "native_current_MeV_per_pC": 4359.312864157295
+    },
+    {
+      "component": "k",
+      "module": 0,
+      "N": 2,
+      "native_current_MeV_per_pC": 4359.313100503887
+    },
+    {
+      "component": "k",
+      "module": 1,
+      "N": 1,
+      "native_current_MeV_per_pC": 4359.313227186325
+    },
+    {
+      "component": "k",
+      "module": 2,
+      "N": 1,
+      "native_current_MeV_per_pC": 4359.31316202865
+    }
+  ],
+  "limits": "full paired reference only for pi; K uses same measured payloads and prefix formula, no full historical K counterpart; complete production response/systematics not certified",
+  "new_RDO_reconstruction_jobs": 0,
+  "model_fits": 0
+}

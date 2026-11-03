@@ -1,0 +1,241 @@
+{
+  "scope": "stage70 workbook evidence, stage report and merged support.npz; excludes this storage.json itself, code/docs and shared runtime",
+  "logical_retained_bytes": 314240,
+  "budget_bytes": 5000000,
+  "EOS_physical_network_bytes": "未测量",
+  "retained": [
+    {
+      "path": "workbook/stage70_energy_ml/aggregation.time",
+      "bytes": 56
+    },
+    {
+      "path": "workbook/stage70_energy_ml/calibration_amendment.json",
+      "bytes": 1245
+    },
+    {
+      "path": "workbook/stage70_energy_ml/calibration_closure.json",
+      "bytes": 2628
+    },
+    {
+      "path": "workbook/stage70_energy_ml/calo_conditions_qa.json",
+      "bytes": 17588
+    },
+    {
+      "path": "workbook/stage70_energy_ml/calo_conversion_qa.json",
+      "bytes": 3716
+    },
+    {
+      "path": "workbook/stage70_energy_ml/code_validation.json",
+      "bytes": 529
+    },
+    {
+      "path": "workbook/stage70_energy_ml/collector_smoke.json",
+      "bytes": 1532
+    },
+    {
+      "path": "workbook/stage70_energy_ml/condor_dryrun.ads",
+      "bytes": 2452
+    },
+    {
+      "path": "workbook/stage70_energy_ml/condor_events.log",
+      "bytes": 3960
+    },
+    {
+      "path": "workbook/stage70_energy_ml/condor_history.json",
+      "bytes": 1162
+    },
+    {
+      "path": "workbook/stage70_energy_ml/condor_resources.json",
+      "bytes": 1822
+    },
+    {
+      "path": "workbook/stage70_energy_ml/condor_userlog_history.json",
+      "bytes": 2904
+    },
+    {
+      "path": "workbook/stage70_energy_ml/cutflow.tsv",
+      "bytes": 962
+    },
+    {
+      "path": "workbook/stage70_energy_ml/delivery_smoke.json",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage70_energy_ml/document_validation.json",
+      "bytes": 176
+    },
+    {
+      "path": "workbook/stage70_energy_ml/existing_group_support.tsv",
+      "bytes": 260
+    },
+    {
+      "path": "workbook/stage70_energy_ml/existing_phys_qa.json",
+      "bytes": 5249
+    },
+    {
+      "path": "workbook/stage70_energy_ml/extraction_pi.json",
+      "bytes": 5330
+    },
+    {
+      "path": "workbook/stage70_energy_ml/feature_validity.tsv",
+      "bytes": 35615
+    },
+    {
+      "path": "workbook/stage70_energy_ml/final_validation.json",
+      "bytes": 499
+    },
+    {
+      "path": "workbook/stage70_energy_ml/generation_input_request.json",
+      "bytes": 3470
+    },
+    {
+      "path": "workbook/stage70_energy_ml/identities.tsv",
+      "bytes": 237
+    },
+    {
+      "path": "workbook/stage70_energy_ml/input_schema.json",
+      "bytes": 3288
+    },
+    {
+      "path": "workbook/stage70_energy_ml/native_k.json",
+      "bytes": 2577
+    },
+    {
+      "path": "workbook/stage70_energy_ml/native_pi.json",
+      "bytes": 2599
+    },
+    {
+      "path": "workbook/stage70_energy_ml/package.json",
+      "bytes": 1085
+    },
+    {
+      "path": "workbook/stage70_energy_ml/production_diagnostics.tsv",
+      "bytes": 259
+    },
+    {
+      "path": "workbook/stage70_energy_ml/production_pi.txt",
+      "bytes": 3496
+    },
+    {
+      "path": "workbook/stage70_energy_ml/protocol.json",
+      "bytes": 5833
+    },
+    {
+      "path": "workbook/stage70_energy_ml/qa_k.json",
+      "bytes": 5825
+    },
+    {
+      "path": "workbook/stage70_energy_ml/qa_k_production.txt",
+      "bytes": 3458
+    },
+    {
+      "path": "workbook/stage70_energy_ml/qa_pi.json",
+      "bytes": 5877
+    },
+    {
+      "path": "workbook/stage70_energy_ml/qa_pi_production.txt",
+      "bytes": 3458
+    },
+    {
+      "path": "workbook/stage70_energy_ml/raw_validity.tsv",
+      "bytes": 4080
+    },
+    {
+      "path": "workbook/stage70_energy_ml/reader_retry.json",
+      "bytes": 1281
+    },
+    {
+      "path": "workbook/stage70_energy_ml/reference_extraction_pi.json",
+      "bytes": 5290
+    },
+    {
+      "path": "workbook/stage70_energy_ml/role_validation.json",
+      "bytes": 399
+    },
+    {
+      "path": "workbook/stage70_energy_ml/runtime_observation.json",
+      "bytes": 13776
+    },
+    {
+      "path": "workbook/stage70_energy_ml/subprocess_resources.tsv",
+      "bytes": 212
+    },
+    {
+      "path": "workbook/stage70_energy_ml/summary.json",
+      "bytes": 1552
+    },
+    {
+      "path": "workbook/stage70_energy_ml/support.png",
+      "bytes": 81087
+    },
+    {
+      "path": "workbook/stage70_energy_ml/support.tsv",
+      "bytes": 30101
+    },
+    {
+      "path": "workbook/stage70_energy_ml/training_context.tsv",
+      "bytes": 443
+    },
+    {
+      "path": "workbook/stage70_energy_ml/validation.time",
+      "bytes": 55
+    },
+    {
+      "path": "ntuples/energy_ml_stage70/support.npz",
+      "bytes": 26623
+    },
+    {
+      "path": "workbook/2026-11-03_stage70_alternative-support-pilot.md",
+      "bytes": 19422
+    }
+  ],
+  "deleted_redundant_transports_shards_payload": [
+    {
+      "path": "ntuples/energy_ml_stage70/0.tar.gz",
+      "logical_bytes": 17725
+    },
+    {
+      "path": "ntuples/energy_ml_stage70/0",
+      "logical_bytes": 31145
+    },
+    {
+      "path": "software/energy-ml-alternative-support-stage70.tar.gz",
+      "logical_bytes": 587190
+    }
+  ],
+  "deleted_QA_ROOT": [
+    {
+      "path": "/tmp/nu_mu_stage70_qa/pi/input-RDO.root",
+      "symlink": true,
+      "logical_bytes": 0
+    },
+    {
+      "path": "/tmp/nu_mu_stage70_qa/pi/ntuple.root",
+      "symlink": false,
+      "logical_bytes": 179225
+    },
+    {
+      "path": "/tmp/nu_mu_stage70_qa/pi/input-xAOD.root",
+      "symlink": false,
+      "logical_bytes": 1373037
+    },
+    {
+      "path": "/tmp/nu_mu_stage70_qa/k/input-RDO.root",
+      "symlink": true,
+      "logical_bytes": 0
+    },
+    {
+      "path": "/tmp/nu_mu_stage70_qa/k/ntuple.root",
+      "symlink": false,
+      "logical_bytes": 183141
+    },
+    {
+      "path": "/tmp/nu_mu_stage70_qa/k/input-xAOD.root",
+      "symlink": false,
+      "logical_bytes": 6351567
+    }
+  ],
+  "shared_runtime_deleted": false,
+  "K_scratch": "Condor-owned cleanup; physical bytes unmeasured",
+  "events_added_to_git": false
+}

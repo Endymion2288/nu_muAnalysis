@@ -1,0 +1,21 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage70
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_v1.sh $(source_index)
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-alternative-support-stage70.tar.gz,root://eoshome-x.cern.ch/$(repository)/software/calypso-master-d32b0ff3-el9-gcc13.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 1
+request_memory = 3000MB
+request_disk = 5500MB
+max_retries = 0
++JobFlavour = "microcentury"
++MaxRuntime = 3600
++NuMuStage = "energy-ml-alternative-support-stage70"
+log = $(spool)/logs/support.$(ClusterId).log
+output = $(spool)/logs/support.$(ClusterId).$(ProcId).out
+error = $(spool)/logs/support.$(ClusterId).$(ProcId).err
+queue source_index in 0 1

@@ -1,48 +1,43 @@
-# 下一轮执行 Prompt：stage70 π/K替代flux的训练支持pilot
+# 下一轮执行 Prompt：stage71 固定F7补样增量对照
 
-先读AGENTS.md、[stage69报告](../workbook/2026-11-03_stage69_transfer-supervision.md)、[stage68报告](../workbook/2026-11-03_stage68_group-risk-regression.md)、路线§50/信息预算§30与[已冻结来源合同](../ml/configs/alternative_support_pilot.json)。保持F7，不重训stage68/69或继续系数/seed/结构搜索。本阶段编号70，只完成一个有界数据支持pilot，不在本终端安装/配置环境，不自动连开stage71。
+先读AGENTS.md、[stage70报告](../workbook/2026-11-03_stage70_alternative-support-pilot.md)、路线§51/信息预算§31、[增补合同](../ml/configs/alternative_support_augmentation.json)以及[标定闭合](../workbook/stage70_energy_ml/calibration_closure.json)。本阶段编号71，只一个固定增补候选，完成后停止；不自动连开stage72，不安装/重配本终端环境。
 
-## 1. 唯一科学问题
+## 1. 唯一问题与已测支持
 
-在保持历史角色和已知入射身份保护后，尚未提取的两个π/K替代flux训练来源实际能增加多少true50–100/100–200核心，以及相同reco低pz的高E/high-y/未确认边界支持？重点是选择后、有效62共同读出的新支持与代价，不能把metadata/file条数换算成新独立物理事件。
+在相同F7特征/算法/超参数下，加入实际已交付π来源的28个新唯一key，能否改善原真实低E及完整能量风险？stage70预定π/K头测10784输入；仅π完整784输入、30选中，K触及3600s预算停止、完整支持未测。实际π去重后true50–100/100–200增量4/2，同低pz高E/high-y/未确认0/0/0。只有π增补，K完整支持未交付，不把QA K行加入；不自动重试K或扩源。不是新独立确认，也未测模型收益。保留F7作为现用参照。
 
-stage69的transfer概率评分有来源迁移价值，但P_cal最低能.297088/传统.145487，100–200 .278826/传统.226876，全体.306012/F7 .296363，原推广失败。OOF最低能收益未稳健迁移，辅助高transfer仅360个train标签，未确认大多不监督；结束方法预算，按既定分流测训练增补，不把未知原因定为信息极限/纯样本不足。
+## 2. 输入与校准必须先核实
 
-## 2. 已经选定的两个输入，不能按结果替换
+- 新缓存`ntuples/energy_ml_stage70/support.npz`，只取`new_training_support=True`，与原audited_features.load的41447 nominal train_eligible行拼接，共41475。其余已知复用/内部重复保留证据但不训练，旧train/cal/eval41447/8440/14057及42缺失21/3/7＋11保护不改。
+- 必须用缓存`x`（reference WAVE-Calibration-01-LG），不能用`x_produced`（原默认03-LG），也不能对已参考化x重复乘1.061711。读metadata的features/version、calibration_amendment与passed closure，独立验证四模块与总和/NaN传播及57列未变。标度差异源于实际payload，不按truth/残差再拟合；01相容性不等于真实响应认证。
+- 同62输入：线性纵向/模长动量仅pz0，px/py、q/p、弯折允许，11raw/VetoNu reduced/typed invalid/status/dependency→NaN保留。p0/p1/pz1/ln比值不入模型，不fit补raw、不nansum补零、不删巨大动量/缺失/未确认/high-y/困难尾。MC原单位MeV/mm，部署读出GeV/既定单位；校准run/身份是预处理/审计信息，不作ML特征。
+- 新身份必须与stage55全部已开发cache零精确incoming交集、内部唯一，保留canonical角色。π继承已暴露challenge，两个预定源parent/subfile/seed未证，实际训练支持只有π，源概率1/23、1/41不作物理flux权重；所有旧角色保护保持。不能称cal/eval为新确认。
 
-[alternative_support_pilot.json](../ml/configs/alternative_support_pilot.json)由stage69 prepare_transfer_followup在任何新事件读取前，用seed2026110370从固定run的合格canonical train来源中均匀抽取：
+## 3. 唯一训练及资源
 
-- π run200080，pi:00440-00449，`FaserMC-MC24_Genie_sibyll_pi-200080-00440-00449-s0014-RDO.root`，完整绝对路径见config；23个合格来源中1个，源包含概率1/23，stat42220266bytes，继承train＋已暴露challenge。
-- K run200081，k:00630-00639，`FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-RDO.root`；41个合格来源中1个，源概率1/41，stat1293229936bytes，继承train。
+严格复用ml/configs/audited_features.json的F7原XGBoost参数、400末轮、原三seed2026110255/56/57、直接平方logE回归，unit MC。一个增补候选共3正式fit，无额外C重训/seed或树数选择/early stop。存量F7原三seed平均＋原offset，以及传统pz0/.8预测为固定参照，不重新推理F7。收益包括样本组成/flux先验及重训，不能叫纯样本量效果；不追加matched-flux/residual/gate/MLP/权重变体。
 
-已排除任何历史test/cal/validation范围及stage55已提取的替代文件。源文件内计划完整提取，条件事件包含概率1；不是按低E/残差抽事件或只取头前缀。实际entries未测，文件大小不能估N。若缺失/不兼容，报告确切失败，不另选看起来更有利的源。两个文件没有证成parent/seed独立，只作开发训练支持；真正未开发确认需要新生成运动学/parent与随机来源池。
+模型保存后cal/eval推理；三seed raw log平均为ensemble，8440cal只拟合一个global mean log offset。预定增补_cal为主，raw并列，不在两者间选好值，无E分段校准或E≥pz硬边界。旧evaluation14057仅开发比较，不用其结果回改训练政策。
 
-不要重复stage68的22目录/1134文件清单。53个无历史角色文件只在charm max，不妨碍历史训练范围内替代π/K增补，但不能将两者混称新确认。旧31训练/16评价替代源和+139低E均已开发，不重复计新增。原stage55全缓存/metadata和既有files.tsv角色为已知身份参照；不读取locked-test事件。
+先做无fit的标签/身份/62列/缺失/Calo reference对齐和小内存/I/O QA，冻结具体实现后一次HTCondor；拟议≤1任务/1CPU/3000MB、累计CPU/wall≤900s、最终≤10MB，最多3fit。现成LCG/GCC15子进程，局部scratch、一次缓存、紧凑模型/预测/表图；不读新ROOT/RDO、不重建/生产、0谱profile/toy/SHA。新成本收益未测，QA后冻结，不自动扩预算。
 
-## 3. 先完成有界QA，再冻结资源与提取
+## 4. 验收与物理解释
 
-1. 仅这2个指定文件，≤40总头事件核schema、原生成parent/subfile/seed可用性、事件身份/单位/collection。不能凭run/eventID或文件名证明独立；头中缺的字段写未测量。既有生成角色跨flux/几何继承；任何新发现的已知保护关系必须保留。
-2. 核实际可复用共同名义重建：d32b0ff3/without-IFT、TI12MC04/FASERNU-04/OFLCOND-FASER-06，优先精确匹配现成Calypso构建/配置；仅源码确需变化才构建。不要恢复全历史生产环境/扫描release，不猜几何或raw代数。先小原生资源QA量时间、CPU/RSS/I/O，验证原生能量/动量MeV→GeV、raw/status及关联。
-3. 原选择固定stage55 pz>50 GeV的truth/reco、最高pz leading、truth fiducial及其余cut，无E上限；原fitted-charge cut不变。每来源一次完整文件选择/62共同读出提取，最多2文件/20000输入事件。若实际entries/成本与cap不兼容，在正式完整提取前报告并明确最小缺项，不悄悄换前缀或扩大生产。
-4. 62变量契约沿用audited_features：线性纵向/模长动量仅pz0，允许px/py、q/p、弯折；11raw/VetoNu reduced、typed sentinel/合法signed/状态/依赖→NaN。无p0/p1/pz1或ln比值输入，不fit补raw、不nansum补零、不删缺失/巨大动量/未确认/高-y/困难尾。新源全62有效性需实际核对，不能从旧65拟合charge伪造raw。
-5. 大批量通过HTCondor，使用本地scratch，一次返回紧凑结果。最多2任务，各≤2CPU/3000MB，CPU总≤2h、单任务wall≤1h、最终≤5MB为拟议预算，QA后冻结精确资源。原PHYS若实际存在且配置匹配，优先复用；需要临时重建只处理2个指定RDO，保存紧凑所需结果后删除中间PHYS/ROOT/xAOD与重复归档，不做新G4或全run生产。预计CPU/I/O未测量，不能把预算记作实际成本。
+按原共同选择比较新增_cal/raw、固定F7和传统：两个trueE50–100/100–200、reco pz50–100/100–250、≥200、high-y/未确认/缺失、全E箱50/75/100/150/200/400/800/1600/3200/6400及更高空层。报告log-RMSE、bias/R68、上下tail50/100、损失归因，不删尾。缺支持或未测标未测量。
 
-## 4. 身份、支持与物理解释必须同时交付
+500次component分层保守来源配对固定预测bootstrap，原eval22组/14057例，记录valid/invalid重复；不含重训/offset重估/完整谱系/系统/研究选择误差，无独立确认/coverage认证。新增3seed平均不等同完整训练统计误差；训练内不是OOF，不给没有新fit的OOF。
 
-- 与stage55已开发完整dataset的incoming(pdg,px,py,pz)精确key比较，并在pilot内部去重；记录全部选择后N、已知复用N、剩余key/事件/来源N。其余原角色保护不能由去重放松。新key不是完整生成谱系独立证明，parent/seed不明继续标未证。
-- 角色只在新的训练支持池，现有train/cal/eval41447/8440/14057、原42缺失21/3/7＋11保护和所有旧输出不改。不能把新事件混进旧cal/eval或用旧evaluation挑新增坏例；不推理/重训F7，不用ML残差筛新源。
-- 每组件/来源在去重前后报告true50–100/100–200低transfer核心、同reco pz50–100且true≥200/high-y、未确认与high-E3.2–6.4TeV（≥6400无支持写未测量）；N/保守来源、primary确认/y覆盖、raw11/状态/NaN、实际执行命令/单位/资源/吞吐/I/O/产物。没有共同可见度定义就不编quiet；继承unit MC，不把源抽样概率当已测物理flux归一。
-- 用真实头schema、回读/选择cutflow、身份/特征对齐和极端/缺失小算例核程序；检查物理原因和程序原因。有限2来源只能测输入产出和支持组成，不能作总体泛化/模型饱和/正式功效结论；新增规模和功效根据pilot后再定，不照抄3000–5000事件目标。
+门槛不变：两低E/传统log-RMSE的95%上限≤1.05，全体/F7≤1.01，≥200/低pz/high-y/未确认/F7≤1.03；原各组总体/双向tail50增量95%上限≤2pp。突破另外报告两低E/传统改善下限>0，不以一个箱/局部输出替代全部标准。继续检查程序原因与物理支持，不能将未知或少数离群当不可恢复证明。
 
-## 5. 停止条件、交付与下一项
+模型回读预测逐位/行身份/所有缺失/校准协议/配对bootstrap独立复核；实际CPU、wall、RSS、吞吐和可计量I/O记录，不把逻辑file bytes当EOS总网络字节。合并删除重复transport/shards，不提交事件数组/ROOT。
 
-本阶段0能量模型fit/新F7推理、0谱profile/toy/SHA、0全run生产。完成2-source pilot即停止，无论剩余支持多少；别自动扩源、调模型或连开stage71。
+## 5. 停止与交付
 
-若有可复用剩余支持，给实测62共同读出质量/组成/身份限制与最小后续训练合同，继续原传统/F7低E/全区/困难双向尾推广标准，不降低门槛。若全部复用、无低E/困难增量或共同配置不可交付，保留零/失败测量，写具体所缺的新π/K generator parent/subfile/seed/共同raw输入请求，结束本轮，不再循环metadata和同eval方法。
+完成唯一3fit增补候选及报告即停止。失败保留F7，结束这组样本的方法变体，交已有generation_input_request中的具体新π/K parent/subfile/seed/共同raw所缺输入，不再改架构、权重或扩源。若全部门槛通过，仅冻结研究候选并给真正未开发随机来源/共同响应确认合同，不冒充已部署成功。
 
-写中文stage70 workbook，至少目标/工作/完整实测数据与单位/输入命令/验证与资源/物理程序解释/下一任务及输入验收；未测项目明确未测。更新路线/信息预算/Prompt，Conventional Commit本地提交、不推送。原stage54五项未跟踪工具/缓存及下方协议逐字保留。
+写中文stage71 workbook：目标、实际输入/选择/单位/详细结果/区间、程序与物理解释、执行命令/验证/资源/产物、下一任务的输入与验收。更新路线/信息预算/Prompt，本地Conventional Commit、不push。原stage54五项未跟踪工具/缓存和下方6714bytes协议逐字保留。
 
-共同raw/stage54、interaction/FSI/材料、接受度/背景与真正未开发独立确认仍须交付，不能由本开发补样pilot替代；谱联合表示/有限α非线性研究本轮不启动。
+共同raw/stage54、interaction/FSI/材料、真实随机确认、接受度/背景仍须交付；本轮不启动谱联合表示/非线性谱研究或历史重建扫描。
 
 ## 保留的stage54 data占据支线
 

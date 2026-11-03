@@ -1,7 +1,7 @@
 # νμ 能量研究的信息预算：区分观测、学习与物理测量
 
-**2026-11-03 stage69实测更新：** [报告](../workbook/2026-11-03_stage69_transfer-supervision.md)、§30与[stage70 Prompt](nu_mu_energy_ml_next_step_prompt.md)为当前预算。transfer辅助的8fit完成，OOF有能量增量/概率评分可迁移，但最终点预测未过原传统/F7门槛；继续F7，结束同数据的对偶/辅助参数方法循环。
-下一笔是有界π/K替代flux训练支持pilot：两个源已按历史训练角色及均匀包含概率选定，当前仅metadata合同，无新事件/生产。新支持与资源未测，真正独立确认另需新生成parent/seed。以下§1–29保留历史，以§30最新实测和唯一后续任务为准；共同raw/stage54、系统与最终物理交付仍未完成。
+**2026-11-03 stage70实测更新：** [报告](../workbook/2026-11-03_stage70_alternative-support-pilot.md)、路线§51/信息预算§31与[stage71 Prompt](nu_mu_energy_ml_next_step_prompt.md)为当前进度。预定π/K头测10784输入，仅π完整784→30选中→28新唯一开发key，true50–100/100–200新增4/2；K触及3600s预算停止，完整支持未测，不报零。0fit/新F7推理，继续F7。
+新样本Calo03-LG与F7参考01-LG不同，已按实际payload限定转换并用完整同源π闭合；不认证完整物理响应。下一项只准备实际π28例的固定F7增补合同，未执行；不自动重试K、扩源或方法轮换。独立生成确认、共同raw/stage54、系统和接受度/背景仍须交付。
 
 ## 1. 这一次相对 stage29 真正新增的认识
 
@@ -733,3 +733,14 @@ OOF最低能P/C=.924198 [.903393,.944414]，总体.989517 [.986748,.992295]，10
 先≤40头事件和小原生资源QA，核共同d32b0ff3重建/62 raw有效性，再对2完整文件/最多20000输入事件一次有界Condor提取；全部stage55已开发incoming和内部复用排除，缺失/困难不删，报告剩余key及组成/来源/包含概率/资源。0能量fit/谱toy，不扩大run；0新增支持则给具体新π/K生成parent/seed请求后停止，不再metadata循环。有支持才据实测计划后续。
 
 拟议≤2任务、各≤2CPU/3000MB、CPU总≤2h、wall/job≤1h、最终≤5MB，新收益和成本未测，QA后冻结。当前仅2目录列表/2 stat、0ROOT头/事件/生产；未自动执行stage70。真正未开发随机确认、新生成独立性、共同raw/stage54、interaction/FSI/材料及接受度/背景仍是最终预算缺口。
+
+
+## 31. stage70：实际交付只有π，K预算失败与物理零支持分开
+
+[stage70报告](../workbook/2026-11-03_stage70_alternative-support-pilot.md)实测π784→30选中→28新增唯一key，低E4/2，同低pz true高E/high-y/未确认0/0/0。K头测10000，重建3600s上限停止，完整选择和新增支持未测，不能写成0或拿QA替代；两来源完整交付目标未达。历史吞吐预测不足，未自动重试或扩预算。两任务remote CPU3654.00s，最终<5MB；部分QA CPU、EOS总物理I/O未测。
+
+初次QA漏绝对Calo标度，实际03-LG .0757与F7参考01-LG .0713pC/MIP解释4359.31/4628.33MeV/pC差异。限定按原生payload转换四E及NaN传播总和，保存原始x_produced和参考x；完整同源π57列/20cuts逐位闭合、五Calo量联合绝对/相对容差通过。K只有同payload/prefix验证；完整响应未认证。01相容不是物理优劣，也不是同nominal缓存旧低E失败的已证原因，不允许对x重复缩放。
+
+继续F7。下一笔仅[实际π28例的固定增补合同](../ml/configs/alternative_support_augmentation.json)，41447＋28、原62/400轮/三seed/unit MC、单一候选3fit；旧cal/eval和所有缺失/困难尾保护不改。小增补不保证功效，效应包含flux组成和重训。先无fitQA再冻结≤1任务/1CPU/3000MB、CPU/wall≤900s/最终≤10MB，收益和成本未测、本轮未执行。原双低E/传统、全体/F7及困难组/双向tail门槛不降。
+
+失败停止方法变体并保持F7，交具体GENIE parent/subfile/seed/两组件新运动学和共同响应输入；全通过仍需未开发确认。K若未来交付另需测成本分布及新合同，不自动续跑。本缓存π继承已暴露训练/challenge，谱系未证，不独立；共同raw/stage54、interaction/FSI/材料、接受度/背景仍需交付。原§1–30保留。

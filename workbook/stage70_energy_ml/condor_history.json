@@ -1,0 +1,43 @@
+[
+  {
+    "BytesRecvd": 55560580.0,
+    "BytesSent": 0.0,
+    "ClusterId": 9662832,
+    "EnteredCurrentStatus": 1793702685,
+    "JobStartDate": 1793699081,
+    "JobStatus": 3,
+    "MaxRuntime": 3600,
+    "MemoryUsage": "/Expr(((ResidentSetSize + 1023) / 1024))/",
+    "NumJobStarts": 1,
+    "ProcId": 1,
+    "RemoteSysCpu": 18.0,
+    "RemoteUserCpu": 3514.0,
+    "RemoteWallClockTime": 3604.0,
+    "RemoveReason": "Job removed by SYSTEM_PERIODIC_REMOVE due to wall time exceeded allowed max.",
+    "RequestCpus": 1,
+    "RequestDisk": 5632000,
+    "RequestMemory": 3000,
+    "ResidentSetSize": 750000
+  },
+  {
+    "BytesRecvd": 55560580.0,
+    "BytesSent": 156.0,
+    "ClusterId": 9662832,
+    "CompletionDate": 1793699232,
+    "EnteredCurrentStatus": 1793699232,
+    "ExitCode": 0,
+    "JobStartDate": 1793699081,
+    "JobStatus": 4,
+    "MaxRuntime": 3600,
+    "MemoryUsage": "/Expr(((ResidentSetSize + 1023) / 1024))/",
+    "NumJobStarts": 1,
+    "ProcId": 0,
+    "RemoteSysCpu": 14.0,
+    "RemoteUserCpu": 108.0,
+    "RemoteWallClockTime": 151.0,
+    "RequestCpus": 1,
+    "RequestDisk": 5632000,
+    "RequestMemory": 3000,
+    "ResidentSetSize": 1750
+  }
+]

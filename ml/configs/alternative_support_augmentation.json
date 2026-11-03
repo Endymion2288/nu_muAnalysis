@@ -1,0 +1,42 @@
+{
+  "stage": 71,
+  "prepared_in_stage": 70,
+  "executed": false,
+  "purpose": "one fixed F7 training-support augmentation; no architecture/weight/seed search",
+  "old_nominal_train_N": 41447,
+  "new_unique_training_support_N": 28,
+  "augmented_train_N": 41475,
+  "data": "ntuples/energy_ml_stage70/support.npz x (reference01-LG, original03-LG preserved in x_produced) where new_training_support=True, appended to audited_features.load nominal train_eligible rows",
+  "calibration_guard": "require passed calibration_closure.json and unchanged calibration_amendment.json; no correction fitted to truth/model residuals, no recomputation from x_produced for old F7 inputs",
+  "roles": "old train/cal/eval41447/8440/14057, original42 missing21/3/7 plus11 protected remain; new support train only; same canonical history roles and exact incoming exclusions",
+  "feature_config": "ml/configs/audited_features.json; unchanged62 pz0/raw11/typed NaN",
+  "model": "same F7 reg:squarederror direct logE;400rounds; exact original xgboost parameters and3fixed seeds from audited_features.json; no early stopping or candidate choice",
+  "controls": "reuse stored F7 cal/eval predictions and original offset, traditional pz0/.8;0new baseline fit; one new augmented candidate with3fits only",
+  "weights": "unit MC for old and new; effect combines added support, flux mixture and retraining. No physical flux normalization or claim of a pure sample-size effect",
+  "calibration": "mean3seed raw log predictions, one global mean log offset on unchanged8440cal; main augmented_cal, raw also reported; no binwise offset or raw/cal selection",
+  "validation": "train-only label/features/identity/roles/NaN QA before fitting; frozen model reload prediction equality; report both lowE, allE bins, lowpz/high-y/unconfirmed/missing and both tails;500 component-stratified paired evaluation-source fixed-prediction bootstrap",
+  "thresholds": "original two lowE/traditional RMSE95%upper<=1.05; all/F7<=1.01; >=200/reco50-100/high-y/unconfirmed/F7<=1.03; tail50 both-direction and combined delta95%upper<=2pp; no changed threshold",
+  "proposed_budget": {
+    "condor_jobs_max": 1,
+    "cpus": 1,
+    "memory_MB": 3000,
+    "CPU_s_max": 900,
+    "wall_s_max": 900,
+    "retained_bytes_max": 10000000,
+    "formal_fits_max": 3
+  },
+  "future_cost_and_model_gain": "未测量; perform small no-fit alignment/resource QA then freeze final implementation before fit",
+  "limits": "one inherited pi training source, historically exposed challenge; parent/subfile/seed unproven; K incomplete; cal/eval developed; no independent confirmation or power claim",
+  "stopping": "finish one3-fit candidate and stop; if failure retain F7 and request truly new pi/k generator parents/raw response; no unit/matched-flux/residual/seed/architecture variants; if all gates pass freeze research candidate and require untouched common-response confirmation before deployment",
+  "event_production": 0,
+  "new_ROOT_RDO": 0,
+  "new_F7_inference": 0,
+  "spectral_toys": 0,
+  "delivered_source_indices": [
+    0
+  ],
+  "unmeasured_source_indices": [
+    1
+  ],
+  "support_scope": "only complete pi source; K budget-stopped, no full selected support; QA K row not used"
+}

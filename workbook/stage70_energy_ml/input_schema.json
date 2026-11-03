@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "component": "pi",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200080/rdo/s0014/FaserMC-MC24_Genie_sibyll_pi-200080-00440-00449-s0014-RDO.root",
+      "entries": 784,
+      "branch_names": [
+        "xAOD::EventAuxInfo_v3_EventInfoAux.",
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.",
+        "McEventCollection_p6_BeamTruthEvent",
+        "McEventCollection_p6_TruthEvent",
+        "xAOD::EventInfo_v1_EventInfo",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo",
+        "TrackerSimDataCollection_p3_SCT_SDO_Map",
+        "FaserSiHitCollection_p3a_SCT_Hits",
+        "RawWaveformContainer_p0_CaloWaveforms",
+        "RawWaveformContainer_p0_PreshowerWaveforms",
+        "RawWaveformContainer_p0_TriggerWaveforms",
+        "RawWaveformContainer_p0_VetoNuWaveforms",
+        "RawWaveformContainer_p0_VetoWaveforms",
+        "FaserSCT_RawDataContainer_p4_SCT_RDOs",
+        "index_ref",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.mcEventNumber",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.streamTagRobs",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.streamTagDets",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.actualInteractionsPerCrossing",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.averageInteractionsPerCrossing",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.mcChannelNumber",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.mcEventWeights"
+      ],
+      "metadata_branches": [
+        "IOVMetaDataContainer_p1__TagInfo"
+      ],
+      "requested_bytes": 13111
+    },
+    {
+      "component": "k",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-RDO.root",
+      "entries": 10000,
+      "branch_names": [
+        "xAOD::EventAuxInfo_v3_EventInfoAux.",
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.",
+        "McEventCollection_p6_BeamTruthEvent",
+        "McEventCollection_p6_TruthEvent",
+        "xAOD::EventInfo_v1_EventInfo",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo",
+        "TrackerSimDataCollection_p3_SCT_SDO_Map",
+        "FaserSiHitCollection_p3a_SCT_Hits",
+        "RawWaveformContainer_p0_CaloWaveforms",
+        "RawWaveformContainer_p0_PreshowerWaveforms",
+        "RawWaveformContainer_p0_TriggerWaveforms",
+        "RawWaveformContainer_p0_VetoNuWaveforms",
+        "RawWaveformContainer_p0_VetoWaveforms",
+        "FaserSCT_RawDataContainer_p4_SCT_RDOs",
+        "index_ref",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.mcEventNumber",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.streamTagRobs",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.streamTagDets",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.actualInteractionsPerCrossing",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.averageInteractionsPerCrossing",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.mcChannelNumber",
+        "xAOD::EventAuxInfo_v3_EventInfoAuxDyn.mcEventWeights"
+      ],
+      "metadata_branches": [
+        "IOVMetaDataContainer_p1__TagInfo"
+      ],
+      "requested_bytes": 146546
+    }
+  ],
+  "total_events": 10784,
+  "events_read": 0,
+  "preliminary_schema_requested_bytes": 158895,
+  "wall_s": 0.08376289485022426,
+  "cpu_s": 0.06781086500000005,
+  "peak_rss_MiB": 49.93359375
+}

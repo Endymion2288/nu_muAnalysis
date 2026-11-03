@@ -1,0 +1,93 @@
+{
+  "source": {
+    "run": 200080,
+    "component": "pi",
+    "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200080/rdo/s0014/FaserMC-MC24_Genie_sibyll_pi-200080-00440-00449-s0014-RDO.root",
+    "group": "pi:00440-00449",
+    "historical_roles": [
+      "challenge",
+      "train"
+    ],
+    "role": "training_support_pilot",
+    "already_in_stage55_alternative_manifest": false,
+    "eligible_source_files": 23,
+    "selection_index": 22,
+    "source_inclusion_probability": 0.043478260869565216,
+    "conditional_event_inclusion_probability": 1.0,
+    "file_bytes": 42220266,
+    "generator_parent_seed": "\u672a\u6d4b\u91cf",
+    "independent_confirmation": false
+  },
+  "metadata": {
+    "reader_geometry": "FASERNU-04",
+    "reader_conditions": "OFLCOND-FASER-06",
+    "configuration_scope": "explicit nominal reader flags; not input production metadata",
+    "typed_collections": []
+  },
+  "events": [
+    {
+      "entry": 0,
+      "run": 200080,
+      "eventID": 440000,
+      "mcEventNumber": 440000,
+      "hepmc_event_number": 0,
+      "declared_momentum_enum": 1,
+      "declared_length_enum": 0,
+      "incoming_pdg": 14,
+      "incoming_raw": [
+        30.839801788330078,
+        39.186161041259766,
+        183800.0,
+        183800.0067645499
+      ],
+      "incoming_barcode": "1",
+      "attributes": {
+        "alphaQCD": "0",
+        "alphaQED": "0",
+        "barcodes": "GenEventBarcodes",
+        "event_scale": "0",
+        "filterHT": "-13",
+        "filterMET": "-13",
+        "filterWeight": "1",
+        "mpi": "-1",
+        "random_states": "",
+        "signal_process_id": "-1"
+      },
+      "particle_N": 2084
+    },
+    {
+      "entry": 1,
+      "run": 200080,
+      "eventID": 440001,
+      "mcEventNumber": 440001,
+      "hepmc_event_number": 0,
+      "declared_momentum_enum": 1,
+      "declared_length_enum": 0,
+      "incoming_pdg": 14,
+      "incoming_raw": [
+        35.570045471191406,
+        34.67473220825195,
+        240030.0,
+        240030.00514011824
+      ],
+      "incoming_barcode": "1",
+      "attributes": {
+        "alphaQCD": "0",
+        "alphaQED": "0",
+        "barcodes": "GenEventBarcodes",
+        "event_scale": "0",
+        "filterHT": "-13",
+        "filterMET": "-13",
+        "filterWeight": "1",
+        "mpi": "-1",
+        "random_states": "",
+        "signal_process_id": "-1"
+      },
+      "particle_N": 3041
+    }
+  ],
+  "generator_parent_subfile_seed": "not established by two event heads; no independence claim",
+  "wall_s": 64.8899159389548,
+  "cpu_s": 52.484567481999996,
+  "peak_rss_MiB": 1448.37890625
+}

@@ -1,0 +1,51 @@
+{
+  "only_real_QA_rows": true,
+  "formal_extraction": false,
+  "model_fits": 0,
+  "temporary_outputs_deleted": true,
+  "selected_N": 3,
+  "new_support_N": 3,
+  "new_support_sources": 2,
+  "known_stage55_reuse_N": 0,
+  "internal_repeat_N": 0,
+  "internal_repeat_not_known_N": 0,
+  "old_cache_N": 95748,
+  "old_cache_unique_keys": 66843,
+  "input_events": 32,
+  "selected_event_visits_per_source": [
+    2,
+    1
+  ],
+  "requested_uproot_bytes": 89425,
+  "new_lowE_N": {
+    "E50_100": 1,
+    "E100_200": 0
+  },
+  "new_difficult_N": {
+    "pz50_100_trueE200_inf": 0,
+    "pz50_100_high_y": 0,
+    "pz50_100_unconfirmed": 0,
+    "high_y": 1,
+    "unconfirmed": 1,
+    "input_missing": 0,
+    "E3200_6400": 0,
+    "E6400_inf": 0
+  },
+  "known_key_and_internal_masks_independently_verified": true,
+  "all62_typed_policy_validated": true,
+  "common_Calo_reference_conversion_validated": true,
+  "training_ready_N": 3,
+  "complete_response_systematics_certified": false,
+  "calibration_closure": "calibration_closure.json",
+  "F7_reference_Calo0_MeV_per_pC": 4628.3310546875,
+  "new_Calo0_MeV_per_pC": 4359.31298828125,
+  "old_train_cal_eval_modified": false,
+  "energy_model_fits": 0,
+  "F7_inference": 0,
+  "locked_test_read": false,
+  "physical_flux_normalization": "\u672a\u6d4b\u91cf; unit MC, source inclusion probability not a physical flux weight",
+  "generation_independence": "unproven; inherited train/challenge development ranges",
+  "wall_s": 0.8937002792954445,
+  "cpu_s": 0.7803573209999999,
+  "peak_rss_MiB": 81.02734375
+}

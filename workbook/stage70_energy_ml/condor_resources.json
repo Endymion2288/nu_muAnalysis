@@ -1,0 +1,51 @@
+{
+  "cluster": 9662832,
+  "jobs": [
+    {
+      "proc": 1,
+      "starts": 1,
+      "exitcode": null,
+      "status": 3,
+      "success": false,
+      "remove_reason": "Job removed by SYSTEM_PERIODIC_REMOVE due to wall time exceeded allowed max.",
+      "remote_CPU_s": 3532.0,
+      "remote_wall_s": 3604.0
+    },
+    {
+      "proc": 0,
+      "starts": 1,
+      "exitcode": 0,
+      "status": 4,
+      "success": true,
+      "remove_reason": null,
+      "remote_CPU_s": 122.0,
+      "remote_wall_s": 151.0
+    }
+  ],
+  "total_remote_CPU_s": 3654.0,
+  "sum_remote_wall_s": 3755.0,
+  "measured_pipeline_CPU_s": 113.02,
+  "sum_pipeline_wall_s": 132.23000000000002,
+  "pipeline_peak_RSS_MiB": 974.8515625,
+  "per_job_requests": {
+    "CPU": 1,
+    "memory_MB": 3000,
+    "disk_MB": 5500,
+    "MaxRuntime_s": 3600,
+    "max_retries": 0
+  },
+  "total_CPU_budget_s": 7200,
+  "input_RDO_logical_copy_bytes": 1335450202,
+  "physical_EOS_network_read_write_bytes": "未测量; logical copy size, uproot requests and Condor transport are separate counters",
+  "local_QA": {
+    "reco_CPU_s": 24.35,
+    "ntuple_CPU_s": 14.36,
+    "successful_native_CPU_s": 107.63,
+    "retry_accounting": "reader_retry.json: attempt2 CPU31.62s; attempt1/failed first-event reader CPU未测量; do not call remote CPU the complete stage cost"
+  },
+  "pipeline_timing_scope": "completed returned sources only; failed source has scheduler resources and runtime_observation.json, no invented pipeline timing",
+  "scheduler_observed_max_RSS_MiB": 732.421875,
+  "scheduler_RSS_scope": "maximum of recorded scheduler samples; not a continuous or exact failed-pipeline peak",
+  "scheduler_wall_scope": "schedd history RemoteWallClockTime; userlog execute intervals are separately preserved and may differ (pi151 versus148s)",
+  "requests_verified": true
+}

@@ -1,0 +1,122 @@
+{
+  "stage": 70,
+  "frozen_utc": "2026-11-03T09:42:59.749708+00:00",
+  "source_contract": {
+    "stage": 70,
+    "prepared_in_stage": 69,
+    "selection_seed": 2026110370,
+    "selection": "one uniform source file per fixed alternative pi/k run, sorted eligible canonical train ranges; complete selected file, no prefix or residual selection",
+    "sources": [
+      {
+        "run": 200080,
+        "component": "pi",
+        "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200080/rdo/s0014/FaserMC-MC24_Genie_sibyll_pi-200080-00440-00449-s0014-RDO.root",
+        "group": "pi:00440-00449",
+        "historical_roles": [
+          "challenge",
+          "train"
+        ],
+        "role": "training_support_pilot",
+        "already_in_stage55_alternative_manifest": false,
+        "eligible_source_files": 23,
+        "selection_index": 22,
+        "source_inclusion_probability": 0.043478260869565216,
+        "conditional_event_inclusion_probability": 1.0,
+        "file_bytes": 42220266,
+        "generator_parent_seed": "\u672a\u6d4b\u91cf",
+        "independent_confirmation": false
+      },
+      {
+        "run": 200081,
+        "component": "k",
+        "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-RDO.root",
+        "group": "k:00630-00639",
+        "historical_roles": [
+          "train"
+        ],
+        "role": "training_support_pilot",
+        "already_in_stage55_alternative_manifest": false,
+        "eligible_source_files": 41,
+        "selection_index": 36,
+        "source_inclusion_probability": 0.024390243902439025,
+        "conditional_event_inclusion_probability": 1.0,
+        "file_bytes": 1293229936,
+        "generator_parent_seed": "\u672a\u6d4b\u91cf",
+        "independent_confirmation": false
+      }
+    ],
+    "purpose": "measure added selected lowE core AND same-pz highE/high-y/uncertain-primary support after known incoming dedup; existing train generation ranges are development enrichment, not independent confirmation",
+    "identity_contract": "inherit all historical canonical component/generation-range roles; never read test/cal/validation candidate events; remove exact incoming(pdg,px,py,pz) already in all stage55 developed cache and duplicates within the pilot; parent generator ID/subfile/seed remains required for any independence claim",
+    "reconstruction_contract": "common nominal d32b0ff3 without IFT TI12MC04 FASERNU-04 OFLCOND-FASER-06; verify actual compatible existing build before use, no guessed geometry or alternative raw",
+    "selection_contract": "same stage55 pz>50 GeV original cuts and leading/vertex; no E ceiling or fitted-charge cut change",
+    "feature_contract": "same62 audited pz0/raw11/reduced/status/dependency/typed NaN; no new variables or imputation, retain missing and all difficult tails",
+    "input_limit": {
+      "source_files": 2,
+      "metadata_heads_events_total": 40,
+      "full_source_events_total_max": 20000
+    },
+    "proposed_budget": {
+      "condor_jobs_max": 2,
+      "cpus_per_job_max": 2,
+      "memory_MB": 3000,
+      "total_CPU_s_max": 7200,
+      "per_job_wall_s_max": 3600,
+      "retained_bytes_max": 5000000
+    },
+    "budgets_and_selection_yields": "\u672a\u6d4b\u91cf; first <=40 schema/identity heads and small native resource QA must precede full2-file pilot freeze; no scale-up if cap incompatible",
+    "output_contract": "counts by true50-100/100-200 core, same reco pz50-100 true>=200/high-y, unconfirmed and high-end; raw readout validity/missing N, exact incoming reuse/new key counts, actual CPU/RSS/I/O and inclusion probabilities; compact selected data only if needed, delete snapshots/PHYS duplicates",
+    "stopping": "0 energy model fits/0 spectral toys; after the2-source pilot report measured new support or0 and stop. No all-run production. If no new support after dedup, issue concrete new pi/k generator parent/seed request; no methods/metadata loop.",
+    "future_confirmation": "requires genuinely new generator kinematics/parents and random untouched source pool, not these inherited train ranges",
+    "executed": false
+  },
+  "input_events_by_source": [
+    784,
+    10000
+  ],
+  "full_files": true,
+  "energy_model_fits": 0,
+  "F7_inference": 0,
+  "spectral_toys": 0,
+  "qa": [
+    {
+      "component": "pi",
+      "raw_N": 16,
+      "selected_N": 2,
+      "raw_columns": 11,
+      "x_columns": 62,
+      "native_PHYS_incoming_exact": true
+    },
+    {
+      "component": "k",
+      "raw_N": 16,
+      "selected_N": 1,
+      "raw_columns": 11,
+      "x_columns": 62,
+      "native_PHYS_incoming_exact": true
+    }
+  ],
+  "qa_unique_RDO_entries": 32,
+  "native_successful_event_visits": 4,
+  "native_failed_event_visits": 2,
+  "total_explicit_QA_RDO_visits": 38,
+  "old_pi_PHYS_reuse": false,
+  "old_pi_PHYS_reason": "actual Calo energy columns differ in fixed 16-event comparison; do not patch calibration",
+  "resources": {
+    "condor_jobs": 2,
+    "request_cpus": 1,
+    "request_memory_MB": 3000,
+    "request_disk_MB": 5500,
+    "max_runtime_s": 3600,
+    "max_retries": 0,
+    "total_CPU_budget_s": 7200,
+    "retained_bytes_budget": 5000000
+  },
+  "cost_basis": "actual16-event reco wall25.99/25.15s; historical stage55 full-file reco4.010events/s and ntuple20.846events/s; estimates are not measured full-file costs",
+  "estimated_reco_plus_ntuple_wall_s": [
+    233.12035559187996,
+    2973.473923365816
+  ],
+  "exclusion": "all stage55 developed cache exact incoming(pdg,px,py,pz), then stable component/source/entry internal dedup; inherit protected roles; no residual selection",
+  "statistical_scope": "two inherited training sources; no independent confirmation or power claim; unit MC; keep all selected missing and difficult rows",
+  "wall_s": 0.8087709178216755
+}

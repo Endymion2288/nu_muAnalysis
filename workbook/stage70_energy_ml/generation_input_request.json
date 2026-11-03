@@ -1,0 +1,80 @@
+{
+  "prepared_in_stage": 70,
+  "executed": false,
+  "reason": "development enrichment does not supply untouched confirmation or complete lineage",
+  "observed_support": {
+    "new_N": 28,
+    "new_lowE_N": {
+      "E50_100": 4,
+      "E100_200": 2
+    },
+    "new_difficult_N": {
+      "pz50_100_trueE200_inf": 0,
+      "pz50_100_high_y": 0,
+      "pz50_100_unconfirmed": 0,
+      "high_y": 1,
+      "unconfirmed": 1,
+      "input_missing": 0,
+      "E3200_6400": 0,
+      "E6400_inf": 0
+    }
+  },
+  "existing_sources": [
+    {
+      "run": 200080,
+      "component": "pi",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200080/rdo/s0014/FaserMC-MC24_Genie_sibyll_pi-200080-00440-00449-s0014-RDO.root",
+      "group": "pi:00440-00449",
+      "historical_roles": [
+        "challenge",
+        "train"
+      ],
+      "role": "training_support_pilot",
+      "already_in_stage55_alternative_manifest": false,
+      "eligible_source_files": 23,
+      "selection_index": 22,
+      "source_inclusion_probability": 0.043478260869565216,
+      "conditional_event_inclusion_probability": 1.0,
+      "file_bytes": 42220266,
+      "generator_parent_seed": "未测量",
+      "independent_confirmation": false
+    },
+    {
+      "run": 200081,
+      "component": "k",
+      "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200081/rdo/s0014/FaserMC-MC24_Genie_sibyll_k-200081-00630-00639-s0014-RDO.root",
+      "group": "k:00630-00639",
+      "historical_roles": [
+        "train"
+      ],
+      "role": "training_support_pilot",
+      "already_in_stage55_alternative_manifest": false,
+      "eligible_source_files": 41,
+      "selection_index": 36,
+      "source_inclusion_probability": 0.024390243902439025,
+      "conditional_event_inclusion_probability": 1.0,
+      "file_bytes": 1293229936,
+      "generator_parent_seed": "未测量",
+      "independent_confirmation": false
+    }
+  ],
+  "requested_lineage": [
+    "original GENIE kinematic parent/input file ID, generator model/flux, parent subfile and entry map to each RDO event",
+    "generation random seeds and whether kinematics are resampled versus recycled; four inspected heads have empty random_states and HepMC event_number0",
+    "immutable train/development/confirmation role assignment across all flux/geometry variants, before seeing reconstructed outcomes"
+  ],
+  "requested_new_pi_k": [
+    "new pi AND k generator kinematics/parents, not simply rerunning another geometry/flux over existing parents",
+    "coverage for true50-100 and100-200GeV cores together with same reco pz50-100GeV highE/high-y/uncertain-primary ambiguity, high energy tails kept",
+    "stratified random source/event selection with recorded inclusion probabilities; genuinely untouched random confirmation pool"
+  ],
+  "common_response": "nominal d32b0ff3/without-IFT TI12MC04 FASERNU-04 OFLCOND-FASER-06; explicitly verify MIP_ref01-LG legacy F7 reference (.0713pC/MIP), not just global tag/current default03-LG; native11scintillator raw/status and compatible calorimeter energy; no fitted-charge substitute",
+  "missing": "actual generator parent IDs/subfiles/seeds, production counts and new confirmation statistical power未测量; no production launched",
+  "delivered_source_indices": [
+    0
+  ],
+  "unmeasured_source_indices": [
+    1
+  ],
+  "K_followup": "not retried; any future delivery requires separate measured cost QA and frozen resource contract, no automatic budget extension"
+}

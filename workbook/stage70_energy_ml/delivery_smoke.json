@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "only_real16event_QA": true,
+  "formal_results": false,
+  "temporary_outputs_deleted": true,
+  "failed_source_explicitly_unmeasured": true,
+  "tests": [
+    {
+      "delivered_sources": [
+        0,
+        1
+      ],
+      "unmeasured_sources": [],
+      "selected_QA_N": 3,
+      "new_QA_N": 3,
+      "two_source_pilot_complete": true,
+      "wall_s": 0.759209597017616,
+      "CPU_s": 0.614240764,
+      "peak_RSS_MiB": 81.3046875
+    },
+    {
+      "delivered_sources": [
+        0
+      ],
+      "unmeasured_sources": [
+        1
+      ],
+      "selected_QA_N": 2,
+      "new_QA_N": 2,
+      "two_source_pilot_complete": false,
+      "wall_s": 0.7246443880721927,
+      "CPU_s": 0.6449019069999999,
+      "peak_RSS_MiB": 81.11328125
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-03T10:14:40.912761+00:00",
+  "stage": 70,
+  "original_protocol_unchanged": true,
+  "reason": "post-freeze actual nominal F7 E_EM/charge check found default03-LG versus reference01-LG mismatch; initial QA checked only schema/typed policy and current runtime, missing this cross-production absolute scale check",
+  "correction": "native MC formula E_EM=charge/MIPcharge_ref*330MeV; current charge_ref .0757 -> reference .0713 pC/MIP, from actual COOL payloads and F7 reference pulse ratios; transform only4CaloE columns and recompute total with NaN propagation; keep original62 matrix",
+  "validation_before_release": "same frozen pi source complete784-event historical PHYS, identical20-cut flow/selected IDs, all57non-Calo features bitwise equal,4moduleE+sum at rtol1e-6/atol1e-6GeV; same two run IOV payloads and K prefix conversion; if failure release0",
+  "new_source_files": 0,
+  "new_RDO_reconstruction_jobs": 0,
+  "new_energy_model_fits": 0,
+  "additional_condor_jobs": 0,
+  "selection_or_identity_or_sentinel_change": false,
+  "scope": "calibration representation conversion from known native payloads; no residual/label fitting, no response systematics certification; complete production snapshot remains unproven"
+}
