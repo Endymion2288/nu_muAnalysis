@@ -1,0 +1,25 @@
+{
+  "cluster": 9667192,
+  "result": "9667192.0 - 9667192.1\n",
+  "actual_ads": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage89/worker_v1.sh cal",
+      "ClusterId": 9667192,
+      "MaxRuntime": 5400,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/nu_mu_stage89/worker_v1.sh test",
+      "ClusterId": 9667192,
+      "MaxRuntime": 5400,
+      "ProcId": 1,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ],
+  "wall_s": 5.10387773020193,
+  "CPU_s": 1.329222364,
+  "peak_RSS_MiB": 159.171875
+}

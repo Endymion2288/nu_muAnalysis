@@ -1,0 +1,294 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1814
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_accurate_posterior.sub",
+      "bytes": 711
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_accurate_posterior.sh",
+      "bytes": 1350
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "bytes": 154096
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "bytes": 11357
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "bytes": 268499
+    },
+    {
+      "path": "ml/accurate_posterior.py",
+      "bytes": 13300
+    },
+    {
+      "path": "ml/closeout_accurate_posterior.py",
+      "bytes": 6959
+    },
+    {
+      "path": "ml/report_accurate_posterior.py",
+      "bytes": 14969
+    },
+    {
+      "path": "ntuples/energy_ml_stage89/control.npz",
+      "bytes": 1883
+    },
+    {
+      "path": "ntuples/energy_ml_stage89/input_cal.npz",
+      "bytes": 1889757
+    },
+    {
+      "path": "ntuples/energy_ml_stage89/input_test.npz",
+      "bytes": 2143072
+    },
+    {
+      "path": "ntuples/energy_ml_stage89/predictions_cal.npz",
+      "bytes": 1506531
+    },
+    {
+      "path": "ntuples/energy_ml_stage89/predictions_test.npz",
+      "bytes": 1712101
+    },
+    {
+      "path": "workbook/2026-11-04_stage89_full-accurate-posterior.md",
+      "bytes": 17280
+    },
+    {
+      "path": "workbook/stage89_energy_ml/accurate_posterior.svg",
+      "bytes": 93379
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/PIT_reliability.tsv",
+      "bytes": 20423
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/coverage.tsv",
+      "bytes": 17509
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/decisions.json",
+      "bytes": 348
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/independent_validation.json",
+      "bytes": 428
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/inference_resources.json",
+      "bytes": 95
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/job.time",
+      "bytes": 880
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/metrics.tsv",
+      "bytes": 30298
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/numerical_checks.tsv",
+      "bytes": 1494776
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/numerical_summary.tsv",
+      "bytes": 2447
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/paired.tsv",
+      "bytes": 23532
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/quantile_reliability.tsv",
+      "bytes": 13493
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/report_resources.json",
+      "bytes": 97
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/scores.tsv",
+      "bytes": 2985
+    },
+    {
+      "path": "workbook/stage89_energy_ml/cal/total_resources.json",
+      "bytes": 153
+    },
+    {
+      "path": "workbook/stage89_energy_ml/closeout_resources.json",
+      "bytes": 97
+    },
+    {
+      "path": "workbook/stage89_energy_ml/closeout_validation.json",
+      "bytes": 309
+    },
+    {
+      "path": "workbook/stage89_energy_ml/condor_cal.txt",
+      "bytes": 4561
+    },
+    {
+      "path": "workbook/stage89_energy_ml/condor_test.txt",
+      "bytes": 3835
+    },
+    {
+      "path": "workbook/stage89_energy_ml/final_validation.json",
+      "bytes": 2646
+    },
+    {
+      "path": "workbook/stage89_energy_ml/followup_input_request.json",
+      "bytes": 3951
+    },
+    {
+      "path": "workbook/stage89_energy_ml/history_cal.json",
+      "bytes": 1511
+    },
+    {
+      "path": "workbook/stage89_energy_ml/history_test.json",
+      "bytes": 1513
+    },
+    {
+      "path": "workbook/stage89_energy_ml/input_counts.tsv",
+      "bytes": 271
+    },
+    {
+      "path": "workbook/stage89_energy_ml/numerical_summary.tsv",
+      "bytes": 994
+    },
+    {
+      "path": "workbook/stage89_energy_ml/package_QA_cal.json",
+      "bytes": 194
+    },
+    {
+      "path": "workbook/stage89_energy_ml/package_QA_test.json",
+      "bytes": 195
+    },
+    {
+      "path": "workbook/stage89_energy_ml/payload_source_validation.json",
+      "bytes": 1999
+    },
+    {
+      "path": "workbook/stage89_energy_ml/protocol.json",
+      "bytes": 2798
+    },
+    {
+      "path": "workbook/stage89_energy_ml/reference_source_identity.json",
+      "bytes": 217
+    },
+    {
+      "path": "workbook/stage89_energy_ml/resource_forecast.json",
+      "bytes": 737
+    },
+    {
+      "path": "workbook/stage89_energy_ml/resources.json",
+      "bytes": 8429
+    },
+    {
+      "path": "workbook/stage89_energy_ml/selected_metrics.tsv",
+      "bytes": 14918
+    },
+    {
+      "path": "workbook/stage89_energy_ml/startup_QA.json",
+      "bytes": 866
+    },
+    {
+      "path": "workbook/stage89_energy_ml/startup_numerical_checks.tsv",
+      "bytes": 5307
+    },
+    {
+      "path": "workbook/stage89_energy_ml/startup_reporting_QA.json",
+      "bytes": 573
+    },
+    {
+      "path": "workbook/stage89_energy_ml/startup_resources.json",
+      "bytes": 1985
+    },
+    {
+      "path": "workbook/stage89_energy_ml/storage.json",
+      "bytes": 7151
+    },
+    {
+      "path": "workbook/stage89_energy_ml/submission.json",
+      "bytes": 597
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/PIT_reliability.tsv",
+      "bytes": 21236
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/coverage.tsv",
+      "bytes": 17802
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/coverage_gates.tsv",
+      "bytes": 656
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/decisions.json",
+      "bytes": 431
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/gates.tsv",
+      "bytes": 1146
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/independent_validation.json",
+      "bytes": 425
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/inference_resources.json",
+      "bytes": 95
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/job.time",
+      "bytes": 877
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/metrics.tsv",
+      "bytes": 30727
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/numerical_checks.tsv",
+      "bytes": 1696489
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/numerical_summary.tsv",
+      "bytes": 2489
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/paired.tsv",
+      "bytes": 23500
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/quantile_reliability.tsv",
+      "bytes": 13976
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/report_resources.json",
+      "bytes": 93
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/scores.tsv",
+      "bytes": 3033
+    },
+    {
+      "path": "workbook/stage89_energy_ml/test/total_resources.json",
+      "bytes": 149
+    },
+    {
+      "path": "workbook/stage89_energy_ml/transfer_cleanup.json",
+      "bytes": 875
+    }
+  ],
+  "total_bytes": 11324175,
+  "limit_bytes": 20000000,
+  "includes_inventory_and_changed_full_documents": true,
+  "logical_bytes_not_physical_IO": true,
+  "duplicate_transfer_archives_removed": true,
+  "NPZ_in_Git": false
+}

@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "Python_AST_files": [
+    "ml/accurate_posterior.py",
+    "ml/report_accurate_posterior.py",
+    "ml/closeout_accurate_posterior.py"
+  ],
+  "bash_syntax_passed": true,
+  "JSON_files_parsed": 29,
+  "table_shapes": {
+    "input_counts.tsv": {
+      "rows": 2,
+      "columns": 13
+    },
+    "numerical_summary.tsv": {
+      "rows": 2,
+      "columns": 23
+    },
+    "selected_metrics.tsv": {
+      "rows": 80,
+      "columns": 16
+    },
+    "startup_numerical_checks.tsv": {
+      "rows": 40,
+      "columns": 12
+    },
+    "cal/PIT_reliability.tsv": {
+      "rows": 380,
+      "columns": 6
+    },
+    "cal/coverage.tsv": {
+      "rows": 76,
+      "columns": 20
+    },
+    "cal/metrics.tsv": {
+      "rows": 168,
+      "columns": 16
+    },
+    "cal/numerical_checks.tsv": {
+      "rows": 11612,
+      "columns": 12
+    },
+    "cal/numerical_summary.tsv": {
+      "rows": 19,
+      "columns": 12
+    },
+    "cal/paired.tsv": {
+      "rows": 57,
+      "columns": 25
+    },
+    "cal/quantile_reliability.tsv": {
+      "rows": 190,
+      "columns": 8
+    },
+    "cal/scores.tsv": {
+      "rows": 38,
+      "columns": 7
+    },
+    "test/PIT_reliability.tsv": {
+      "rows": 380,
+      "columns": 6
+    },
+    "test/coverage.tsv": {
+      "rows": 76,
+      "columns": 20
+    },
+    "test/coverage_gates.tsv": {
+      "rows": 14,
+      "columns": 7
+    },
+    "test/gates.tsv": {
+      "rows": 8,
+      "columns": 10
+    },
+    "test/metrics.tsv": {
+      "rows": 168,
+      "columns": 16
+    },
+    "test/numerical_checks.tsv": {
+      "rows": 13189,
+      "columns": 12
+    },
+    "test/numerical_summary.tsv": {
+      "rows": 19,
+      "columns": 12
+    },
+    "test/paired.tsv": {
+      "rows": 57,
+      "columns": 25
+    },
+    "test/quantile_reliability.tsv": {
+      "rows": 190,
+      "columns": 8
+    },
+    "test/scores.tsv": {
+      "rows": 38,
+      "columns": 7
+    }
+  },
+  "roadmap_and_information_append_only": true,
+  "stage54_prompt_suffix_byte_identical": true,
+  "reference_source_unchanged": true,
+  "protected_paths_not_changed_or_staged": [
+    "AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub",
+    "AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh",
+    "ml/prepare_tracker_occupancy.py",
+    "ntuples/energy_ml_stage54/",
+    "workbook/stage54_energy_ml/"
+  ],
+  "actual_job_exit_codes": [
+    0,
+    0
+  ],
+  "complete_and_certified_rows": 24801,
+  "checked_numeric_values": 5816,
+  "baseline_values_reproduced": 2016,
+  "fullcal_NLL_closed": true,
+  "no_ROOT_or_model_artifacts_in_commit": true,
+  "physics_gates_passed": false,
+  "independent_confirmation": false
+}

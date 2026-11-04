@@ -1,0 +1,24 @@
+{
+  "cal": {
+    "N": 11612,
+    "primary_CPU_s": 3915.564498324464,
+    "first500_primary_CPU_s": 160.16108481281512,
+    "first500_components": {
+      "pi": 500,
+      "k": 0,
+      "charm": 0
+    },
+    "basis": "source means from stage88 cal512 when same source, otherwise component mean; excludes endpoint checks/reporting, not actual or a guaranteed bound"
+  },
+  "test": {
+    "N": 13189,
+    "primary_CPU_s": 4440.48842199874,
+    "first500_primary_CPU_s": 177.35089649780764,
+    "first500_components": {
+      "pi": 500,
+      "k": 0,
+      "charm": 0
+    },
+    "basis": "source means from stage88 cal512 when same source, otherwise component mean; excludes endpoint checks/reporting, not actual or a guaranteed bound"
+  }
+}

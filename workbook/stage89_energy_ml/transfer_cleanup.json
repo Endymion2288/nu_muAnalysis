@@ -1,0 +1,27 @@
+{
+  "removed": [
+    {
+      "path": "software/energy-ml-accurate-stage89-cal.tar.gz",
+      "bytes": 1983696,
+      "type": "duplicate input payload"
+    },
+    {
+      "path": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage89/result_cal.tar.gz",
+      "bytes": 2097966,
+      "type": "duplicate collected result payload"
+    },
+    {
+      "path": "software/energy-ml-accurate-stage89-test.tar.gz",
+      "bytes": 2220194,
+      "type": "duplicate input payload"
+    },
+    {
+      "path": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage89/result_test.tar.gz",
+      "bytes": 2375572,
+      "type": "duplicate collected result payload"
+    }
+  ],
+  "total_removed_bytes": 8677428,
+  "retained": "compact input/control, accurate prediction NPZ, numerical TSV, metrics/evidence; original models not copied",
+  "physical_EOS_IO": "未测量"
+}

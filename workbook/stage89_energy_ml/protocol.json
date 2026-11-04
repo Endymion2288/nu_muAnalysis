@@ -1,0 +1,41 @@
+{
+  "stage": 89,
+  "starting_commit": "82ca1716777c64b8cdcb1c167bc23ed10713c2ab",
+  "frozen_utc": "2026-11-04T00:22:03Z",
+  "algorithm_frozen_before_test": true,
+  "scope": "complete existing cal11612/test13189; no fitting, calibration/prior choice, neural forward or ROOT/generation",
+  "numerical_definition": "unchanged stage88 posterior_numerics.Reference adaptive s integral, same nodes split/eps/tail/safeguarded quantile root; original b/T and nominal prior; GH32 stored quantiles only initialization/comparator",
+  "b": 0.011721733230708156,
+  "T": 1.2001641697078562,
+  "main_point": "nominal calibrated median",
+  "controls": "40 fixed firstcal match stage88 independently certified reference exactly; one reverse truth control; per-role actual package uses same cal control, no test risk before frozen full run",
+  "observed_QA_CPU_s": 11.794593614,
+  "observed_QA_N": 40,
+  "prior_stage88_cost": "cal512 primary172.79743188CPU s, projected24801=8370.21310167CPU s excluding extra checks/statistics",
+  "statistical_definition": "original incoming weights, all views per key total1;500 within-component incoming draws seed2026110387+rolecode; canonical source/incoming roles unchanged; source95 unavailable3blocks/role; test previously studied",
+  "risks": {
+    "two_lowE_vs_traditional_upper95": 1.05,
+    "all_vs_direct_upper95": 1.01,
+    "difficult_vs_direct_upper95": 1.03,
+    "total_positive_negative_tail50_upper_delta_pp": 2,
+    "coverage": "lower conditional95 >= nominal-5pp and PIT mean95 contains.5; missing sparse not certifiable; original seven tail layers and extra lowpz truehighE"
+  },
+  "reported": "GH32 vs accurate, accurate vs same-split direct/traditional; both role metrics, 68/90coverage/width/PIT10 and quantile reliability, nominal and training-prior NLL; exactCRPS unmeasured",
+  "numerical_certification": "quad error<1e-9, analytic tail<1e-10, root residual<1e-7, globalCDF endpoints1e-8/monotonicity1e-9, ordered quantiles/finite score; numerical failures retain row/flag, never replace/drop",
+  "limits": {
+    "Condor_jobs": 2,
+    "max_concurrency": 2,
+    "CPUs_per_job": 1,
+    "memory_MB_per_job": 3000,
+    "MaxRuntime_s_per_job": 5400,
+    "worker_CPU_soft_s": 5200,
+    "worker_CPU_hard_s": 5300,
+    "worker_wall_timeout_s": 5340,
+    "cumulative_CPU_s": 10800,
+    "retained_bytes": 20000000,
+    "new_fits": 0,
+    "new_ROOT_reads": 0
+  },
+  "protected": "pz0-only first-power momentum; px/py/q/p/bends allowed; raw11/typedNaN/Calo missing,pz>50 and all difficult sides remain;1016K retained and old K limits not reinstated; stage54 suffix/five paths read-only",
+  "stop": "one full pass per role, no node/prior/model/grid; preserve unresolved rows and report gaps; no deployment promotion/independent confirmation or automatic next phase"
+}

@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "checked": [
+    {
+      "role": "cal",
+      "source": "ml/accurate_posterior.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/report_accurate_posterior.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/posterior_numerics.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/support_augmentation.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/report_resplit_energy.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/resplit_energy.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/latent_transfer_diagnostics.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "cal",
+      "source": "ml/audited_features.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/accurate_posterior.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/report_accurate_posterior.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/posterior_numerics.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/support_augmentation.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/report_resplit_energy.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/resplit_energy.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/latent_transfer_diagnostics.py",
+      "matches_actual_payload": true
+    },
+    {
+      "role": "test",
+      "source": "ml/audited_features.py",
+      "matches_actual_payload": true
+    }
+  ],
+  "reference_unchanged_from_stage88": true,
+  "method": "byte equality, no SHA"
+}

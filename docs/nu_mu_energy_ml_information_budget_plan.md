@@ -1062,3 +1062,16 @@ GH32 PIT/quantile/log-density超限132/231/159（N552），最大.024986898/.140
 **下一唯一stage89购买全既有cal11612＋test13189的准确推断/配对风险证据，0fit/校准优化/ROOT/新样本。** 主参考cal512=172.797432CPU秒，.337494984秒/例；24801外推8370.213102CPU秒（非实测）。先≤40固定cal实际包QA，再冻结≤2并发Condor/各1CPU3000MB5400s、累计CPU10800s/紧凑20MB；保存原b/T/名义prior，完整缺失6/5及困难/高端/K保留。反向参考只作固定小QA，主自适应逐事件认证，不续节点或架构网格。
 
 配对GH32→准确及准确→同split direct/传统，全低E/困难/双向tail、coverage/PIT/NLL及500incoming条件区间交付；source95仍不可估、旧test仍开发，无晋升或新blind宣称。不能据子集五点目标改校准、按test选谱或把推断精度当训练修复。未执行，详见[请求](../workbook/stage88_energy_ml/followup_input_request.json)；历史§1–49、stage54后缀、1016K及解除旧K生产时限政策保留，真实响应/interaction/FSI/材料/Calo/接受度/背景与独立确认未冒称完成。
+
+
+## 51. stage89：完整准确推断已交付，下一信息项是训练/校准梯度
+
+[stage89报告](../workbook/2026-11-04_stage89_full-accurate-posterior.md)对完整cal11612/test13189执行冻结自适应参考，0fit/新校准/网络forward/ROOT。24801全部认证，missing6/5与K/困难侧均保留；最大quad误差6.445630e−11、root残差1.999632e−10。GH32 PIT/quantile/log-density超限6075/10636/7403，最大.039168732/.218637202/3.732729847，数值问题真实存在，不能再用GH32局部误差当物理不确定度。
+
+准确test最低能/第二低能/all/同低pz真高能/high-y log-RMSE .169296/.231281/.326783/.828213/.807754；传统前两层.145661/.247937、direct总体.287491。第二低能相对GH32条件比.993461 [.989105,.996818]有小收益，all/high-y小幅变差；最低能/传统条件上端1.442100、all/direct1.160113、同低pz真高能/direct1.340732，联合门槛仍失败，尾部仍恶化。整体coverage68.819244%/90.951065%不替代PITmean.522152区间排除.5或高端22.343750%/59.947917%欠覆盖。source95仍未测、旧test仅对新fit留出且已研究，500incoming条件区间不覆盖source/parent/refit/cal/response/研究选择；继续既有部署。
+
+全cal GH32 training-prior NLL−.063295544复现旧校准目标至1.387779e−17，准确−.086449009；test名义NLL−.020506873→−.043037457。推断校正没有优化b/T，也不能消除未认证的32点训练梯度偏差；尚未分解先验/损失/真实响应，不能据本结果宣称数据无关或信息极限。
+
+两Condor9667192一次exit0/无重试，remote8937CPU秒/wall累计9010秒，peak≤202.093750MiB；已计外层8967.13CPU秒<10800，metadata等及物理EOS I/O未全测。5816数值独立复核含2016旧基线值，最大差4.263256e−14；原参考/两个实际包源逐字闭合。紧凑≤20MB以storage.json实测为准，传输包清理、NPZ不入Git；原stage54五项只读、后缀逐字保留。
+
+**唯一下一stage90购买可微准确marginal likelihood的值与梯度认证，0fit/校准优化/新test/ROOT，无新样本前置。** 原stage88固定40train/512cal、保存head与原权重/身份，在b0/T1训练点和原b/T校准点，只比较truth密度及15head/bT导数；独立自适应参考和双步差分，量GH32梯度误差及−joint−.25marginal贡献。≤40cal实际包计时QA后冻结单一实现与容差：值1e−6、梯度绝对1e−4＋相对1e−3，参考误差另列；不通过则交具体缺口，不续节点/架构网格。建议≤1Condor1CPU3000MB/1800CPU与wall秒/20MB，实测收益/成本未测。最终head/有限子集不能证明全训练轨迹或完整cal最优；可复用loss认证后才另冻一次同模型训练/校准合同，本轮不执行。见[请求](../workbook/stage89_energy_ml/followup_input_request.json)。历史§1–50、原stage54及K1016/解除旧生产时限保持，真实系统学和独立确认不冒称完成。

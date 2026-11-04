@@ -1,32 +1,31 @@
-# 下一轮执行 Prompt：stage89 全既有cal/test的准确后验推断与配对评价，0fit
+# 下一轮执行 Prompt：stage90 可微准确marginal likelihood与梯度认证，0fit
 
-先读`AGENTS.md`、路线§70、信息预算§50、[stage88实际报告](../workbook/2026-11-04_stage88_posterior-numerical-audit.md)、[实际数值QA](../workbook/stage88_energy_ml/audit_reference_QA.json)、[资源与失败恢复](../workbook/stage88_energy_ml/resources.json)及[下一输入/验收](../workbook/stage88_energy_ml/followup_input_request.json)。**唯一任务：现成stage87后验在完整cal11612＋test13189的一次准确推断与配对评价；0新能量fit/校准优化/ROOT/生成，无新样本前置。**
+先读`AGENTS.md`、路线§71、信息预算§51、[stage89实际报告](../workbook/2026-11-04_stage89_full-accurate-posterior.md)、[全量数值表](../workbook/stage89_energy_ml/numerical_summary.tsv)、[全cal闭合](../workbook/stage89_energy_ml/closeout_validation.json)和[输入/验收](../workbook/stage89_energy_ml/followup_input_request.json)。**唯一任务：在保存的固定head上认证一个可微准确marginal log-likelihood及其梯度，0能量fit/校准优化/网络forward/新test评价/ROOT/生成，无新样本前置。**
 
-## 1. 已测证据与冻结边界
+## 1. 已测结论与边界
 
-stage88固定552train/cal已经独立认证参考：CDF两向差6.616929e−14、log-density差7.666686e−10、tail界4.253165e−19。GH32 PIT/quantile/log-density超限132/231/159，GH256仍6/29/20；不再提高节点扫描。固定512cal NLL GH32/参考−.124483590/−.130228601，五点差分未优化。cal子集log-RMSE .312583173→.314381109、低pz真高E13条.850516317→.876315710，不能把准确积分预称能量改善或修复训练loss；低E9条不代表全体，missing/wave/Calo-invalid在该子集未覆盖。
+stage89原cal11612/test13189全部数值认证，缺失6/5和困难/K保留，0重试。GH32 PIT/quantile/log-density超限6075/10636/7403，最大.039168732/.218637202/3.732729847。准确test最低能/第二低能/all为.169296/.231281/.326783，同低pz真高能/high-y .828213/.807754；最低能仍差于传统.145661，总体/困难差于同split direct。第二低能/GH32条件收益小，all/high-y小幅变差，不晋升模型。总体coverage68.819244%/90.951065%不替代PIT偏移或高端22.343750%/59.947917%欠覆盖。
 
-stage88唯一Condor9667190全数值完成后JSON序列化exit1，原数组已零积分重算恢复、11055项验证通过；不是失败后重训/重提，数值核心与正式包相同。继续既有部署，旧stage87 GH32数字保持历史。原split/test对stage87拟合留出，但池已曝光，**不是新blind**；source/incoming连通块每角色3，source95不可估。
+完整cal GH32 training-prior NLL−.063295544复现旧目标至1.387779e−17，准确−.086449009；这说明目标值确实变了，**不说明原b/T已重新最优，也没量出训练梯度偏差**。推断积分已修，不能未经认证就重复原GH32训练或归因数据无关/信息上限。原split/test是已研究池，不是新blind；source95仍不可估，不能靠更多incoming draw补齐。
 
-## 2. 真实输入、算法和QA
+## 2. 固定输入和实施范围
 
-- 保存原`ml/artifacts/stage87/posterior_parameters.npz`的row/head/b/T，`predictions.npz`的同split direct/原后验/标签/pz/weight，`ntuples/energy_ml_stage87/split.npz`、原prior与calibration JSON；按pooled row联结，不把compact索引当全池索引。无需网络forward、读取ROOT或重建训练数据。
-- **唯一主数值定义为`ml/posterior_numerics.py`的自适应s参考**：相同解析r逆变换/能量Jacobian、分点、eps与normal尾界、safeguarded quantile解。原b=.011721733230708156/T=1.2001641697078562、名义ratio及主median全部固定；不按test选算法/积分阶/先验，不依据stage88五点目标改b/T。
-- 先≤40固定cal真实身份/单位/row和实际包计时QA，核CDF/quantile/log-density/边界；算法与容差在test计算前冻结。反向r-CDF/五点差分只作固定小QA，不逐事件重复；逐例主积分误差/尾界、CDF端点/归一化/单调性仍保存。不认证者保留标记及原因，不删事件。
+- `ml/artifacts/stage87/{posterior_parameters,predictions}.npz`与原`split.npz`，原stage88固定40train＋512cal等间隔row、role/weight/pz/truth；可直接复用`ntuples/energy_ml_stage88/input.npz`并逐项核对stage87。该552无missing/wave/Calo-invalid，不伪造覆盖。本任务不打开test作新的候选评价，不计算全量quantile或多个prior。
+- 训练点固定b=0/T=1；校准点固定b=.011721733230708156/T=1.2001641697078562。模型head/角色/名义prior不变；训练原−joint−.25marginal定义不变；训练/校准均使用原training-prior的raw marginal密度，nominal prior不进入这个优化目标。truth只用于监督目标审计，不变成部署输入。
+- 在truth能量处计算marginal log-density与对15个原head输出及b/T的梯度。建立**一种**可微准确实现，以未改动stage88自适应参考核值、独立双步长差分核导数及其不确定度；不得只因autograd能运行就认证。积分节点/截断边界的导数处理需要实际验证。
+- 原GH32值与梯度是被审计项，不再扫64/128/256挑节点。记录值/梯度误差分布、方向/尺度及其对原−joint−.25marginal loss的贡献；最终head点的误差不是整个训练轨迹的已知偏差，也不能据512cal判完整cal最优。
 
-## 3. 全量评价与统计
+## 3. 先QA、后冻结与资源
 
-一次覆盖全部cal11612/test13189，缺失6/5、未确认、fit失败、低pz真低E及真高E、high-y、高端全部保留。恢复原每key全部视图/总权重1；不按低pz硬切传统，不只复核stage88容易子集。
+≤40固定cal先做实际包/身份/单位/原GH32复现与精确值/双步导数QA、CPU/wall/RSS计时；无optimizer step。QA后冻结单一实现、样本/参数点和参考导数精度规则，建议log-density绝对误差≤1e−6、梯度|差|≤1e−4＋1e−3|参考|；参考差分误差另报，不达标不能静默放宽或只保留容易行。
 
-保存名义median/q05/q16/q84/q95/PIT/log-density及同一固定参数下training-prior NLL；只比较GH32→准确推断、准确→同split新direct/传统。两低E相对传统1.05、all/direct1.01、困难1.03、原七层总/正/负tail50差+2pp及同低pz真≥200保护不降；报告bias/R68、68/90coverage/宽度/PIT十箱/NLL，稀少missing/高端单列。精确CRPS积分未认证，不用旧近似证明通过，不自动扩展昂贵二维积分。
+正式建议≤1Condor、1CPU3000MB、MaxRuntime1800s、累计CPU1800s（含QA）、最终≤20,000,000bytes。按实际QA确认准入，重计算通过Condor；资源/导数通过率目前未测。避免逐节点/逐参数大网格和重复head/ROOT，先保存紧凑分块检查点，报告失败不重算已完成积分。若预算/精度无法交付，准确记录具体缺口和最小后续输入/实现，不自动扩大网格或提前训练。
 
-复用500component内incoming条件重抽样，seed2026110387+rolecode，完整key多视图及原权重保留；不宣称来源、parent相关、重训/cal估计、响应或研究选择覆盖。真正来源稳健/独立确认未提供，开发通过也不晋升。cal用于数值/目标诊断，不优化任何参数；test只交该冻结模型的固定诊断，不选赢家。
+## 4. 验收与交接
 
-## 4. 预算与交付
+完整固定552的值/梯度或明确未认证项、参考精度、原GH32闭合、原权重/角色、实际成本与紧凑产物交付；单一可微loss能复用或解释具体失败。只有数值认证后才提出一次同模型训练/校准的另冻合同，**stage90自身不fit、不优化b/T、不按test选先验/损失/模型、不自动进入stage91**。此阶段也不证明低能恢复、真实response认证或独立确认。
 
-主参考512cal实际172.797432CPU秒=.337494984秒/例，24801线性外推8370.213102CPU秒仅规划依据；实际全量、未覆盖状态与统计成本未测。QA后冻结≤2Condor/并发≤2，各1CPU/3000MB/MaxRuntime5400s，累计CPU≤10800s、最终紧凑≤20,000,000bytes。输入/输出去重、共享head只传必要角色，不保存逐节点大网格；500draw暂存在worker、独立验证后只留seed/指标。测CPU/wall/RSS、被积函数/CDF调用、逻辑与传输字节，未测物理I/O不冒称。预算或精度不够时先交实测缺口，不静默削成有利子集或自动扩大模型网格。
-
-写中文stage89 workbook实际报告，包含完整计数、风险/数值界/条件统计、失败尝试与资源、输出及下一具体任务，与代码/配置/紧凑证据本地Conventional Commit；不push、不自动执行stage90。原pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/Calo缺项、pz>50与困难侧保持；1016K继续使用，旧生产禁令/时限不恢复。原stage54五项只读，以下后缀逐字保留。
+写中文stage90 workbook，实际数值/单位/命令/资源/失败/下一输入与验收，与代码配置证据本地Conventional Commit，不push。原pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV/困难侧与已交付1016K保持，旧K生产时限不恢复。原stage54五项只读，以下后缀逐字保留。
 
 ## 保留的stage54 data占据支线
 

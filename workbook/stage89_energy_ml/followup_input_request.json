@@ -1,0 +1,68 @@
+{
+  "stage": 90,
+  "status": "proposed next stage, not executed",
+  "task": "certify differentiable accurate marginal log-likelihood and gradients on frozen saved heads; zero fitting",
+  "input_paths": [
+    "ml/artifacts/stage87/posterior_parameters.npz",
+    "ml/artifacts/stage87/predictions.npz",
+    "ntuples/energy_ml_stage87/split.npz",
+    "ntuples/energy_ml_stage88/input.npz",
+    "ml/posterior_numerics.py",
+    "ml/transfer_posterior.py",
+    "workbook/stage88_energy_ml/protocol.json",
+    "workbook/stage89_energy_ml/protocol.json",
+    "workbook/stage89_energy_ml/closeout_validation.json"
+  ],
+  "evidence": {
+    "fullcal_training_NLL_GH32": -0.06329554434838522,
+    "fullcal_training_NLL_accurate": -0.08644900884630023,
+    "test_accurate_lowE_RMSE": 0.1692955249538915,
+    "test_traditional_lowE_RMSE": 0.14566138607809218,
+    "test_lowE_traditional_upper95": 1.4421001835396043,
+    "test_all_direct_upper95": 1.1601132834195782,
+    "certified_rows": 24801
+  },
+  "samples": {
+    "train_N": 40,
+    "cal_N": 512,
+    "selection": "same deterministic stage88 evenly spaced rows, exact identity/weights; no test rows; fixed final trained head, not training trajectory",
+    "missing_note": "original fixed552 have no missing/wave/Calo-invalid; do not invent coverage"
+  },
+  "parameter_points": {
+    "train_b": 0.0,
+    "train_T": 1.0,
+    "cal_b": 0.011721733230708156,
+    "cal_T": 1.2001641697078562
+  },
+  "numerical_task": "Truth-energy marginal density only; build one differentiable accurate implementation. Certify values and all15 head gradients plus b/T using unchanged adaptive reference and independent two-step finite differences. Compare original GH32 values/gradients, including coefficient.25 contribution to negative joint-.25marginal training loss; no GH-order sweep or parameter optimization.",
+  "startup": "<=40 fixedcal actual payload/row/units and timed value/gradient QA before freezing implementation, tolerances and costs; no optimizer step, network forward, new test inference or ROOT. Do not silently loosen tolerance after seeing diagnostic results.",
+  "proposed_tolerances": {
+    "absolute_log_density": 1e-06,
+    "gradient_absolute": 0.0001,
+    "gradient_relative": 0.001,
+    "formula": "abs(error)<=absolute+relative*abs(reference); independently state reference derivative uncertainty"
+  },
+  "proposed_limits": {
+    "Condor_jobs": 1,
+    "max_concurrency": 1,
+    "CPUs_per_job": 1,
+    "memory_MB_per_job": 3000,
+    "MaxRuntime_s": 1800,
+    "cumulative_CPU_s": 1800,
+    "retained_bytes": 20000000,
+    "energy_fits": 0,
+    "calibration_optimizations": 0,
+    "new_test_evaluations": 0,
+    "ROOT_reads": 0
+  },
+  "acceptance": [
+    "exact saved row/head/role/weight joins and GH32 original likelihood reproduction",
+    "all specified value/head/bT gradient errors, reference precision and actual CPU/wall/RSS reported, including failures; no favorable-only subset",
+    "document certified differentiable loss or precise gap and cost; final-head/sample gradient audit cannot prove full training bias correction or fullcal optimum",
+    "no selecting model/prior/pz switch, no changing split or dropping difficult cases; no deployment promotion or independent confirmation",
+    "propose a separately frozen single original-model fit/calibration contract only after numerical certification; do not execute it during stage90"
+  ],
+  "retained_boundaries": "pz0-only first-power momentum, px/py/q/p/bends allowed; raw11 typed NaN and legitimate negative raw/Calo missing; pz>50GeV/difficult sides; delivered1016K retained, old K limits not restored; stage54 suffix/five paths read-only",
+  "final": "Chinese workbook with actual value/gradient and cost evidence, local Conventional Commit, no push or automatic next phase; no new-sample prerequisite",
+  "likelihood_prior": "training-prior raw marginal for training/calibration; nominal reweighting is not part of this objective"
+}

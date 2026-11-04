@@ -1,0 +1,102 @@
+{
+  "roles": [
+    {
+      "role": "cal",
+      "remote_CPU_s": 5175.0,
+      "remote_wall_s": 5221.0,
+      "exit_code": 0,
+      "starts": 1,
+      "script": {
+        "role": "cal",
+        "new_fits": 0,
+        "new_ROOT_reads": 0,
+        "wall_s": 5215.080351763405,
+        "CPU_s": 5172.9400627410005,
+        "peak_RSS_MiB": 186.3515625
+      },
+      "inference": {
+        "wall_s": 5193.569977512583,
+        "CPU_s": 5151.6058782909995,
+        "peak_RSS_MiB": 81.6953125
+      }
+    },
+    {
+      "role": "test",
+      "remote_CPU_s": 3762.0,
+      "remote_wall_s": 3789.0,
+      "exit_code": 0,
+      "starts": 1,
+      "script": {
+        "role": "test",
+        "new_fits": 0,
+        "new_ROOT_reads": 0,
+        "wall_s": 3783.7529966738075,
+        "CPU_s": 3761.107859188,
+        "peak_RSS_MiB": 202.09375
+      },
+      "inference": {
+        "wall_s": 3760.627135096118,
+        "CPU_s": 3738.1483268389998,
+        "peak_RSS_MiB": 83.7109375
+      }
+    }
+  ],
+  "remote_CPU_s": 8937.0,
+  "remote_wall_sum_s": 9010.0,
+  "outer_commands": [
+    {
+      "command": "stage89_closeout",
+      "CPU_s": 3.51,
+      "peak_RSS_KiB": 135976.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/closeout_accurate_posterior.py\"\n\tUser time (seconds): 2.35\n\tSystem time (seconds): 1.16\n\tPercent of CPU this job got: 56%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:06.26\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 135976\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 4\n\tMinor (reclaiming a frame) page faults: 77793\n\tVoluntary context switches: 31969\n\tInvoluntary context switches: 543\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 256\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "stage89_collect_cal",
+      "CPU_s": 1.62,
+      "peak_RSS_KiB": 75516.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/accurate_posterior.py collect --role cal --result /tmp/stage89_cal.tar.gz\"\n\tUser time (seconds): 0.81\n\tSystem time (seconds): 0.81\n\tPercent of CPU this job got: 29%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:05.59\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 75516\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 2\n\tMinor (reclaiming a frame) page faults: 62191\n\tVoluntary context switches: 29379\n\tInvoluntary context switches: 98\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "stage89_collect_test",
+      "CPU_s": 1.6099999999999999,
+      "peak_RSS_KiB": 75108.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/accurate_posterior.py collect --role test --result /tmp/stage89_test.tar.gz\"\n\tUser time (seconds): 0.78\n\tSystem time (seconds): 0.83\n\tPercent of CPU this job got: 31%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:05.21\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 75108\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 634\n\tMinor (reclaiming a frame) page faults: 61738\n\tVoluntary context switches: 30479\n\tInvoluntary context switches: 232\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "stage89_qa",
+      "CPU_s": 13.77,
+      "peak_RSS_KiB": 138076.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/accurate_posterior.py qa\"\n\tUser time (seconds): 12.83\n\tSystem time (seconds): 0.94\n\tPercent of CPU this job got: 79%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:17.43\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 138076\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 667\n\tMinor (reclaiming a frame) page faults: 74152\n\tVoluntary context switches: 30236\n\tInvoluntary context switches: 545\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "stage89_reporting_smoke",
+      "CPU_s": 1.9,
+      "peak_RSS_KiB": 139744.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh /tmp/stage89_reporting_smoke.py\"\n\tUser time (seconds): 1.13\n\tSystem time (seconds): 0.77\n\tPercent of CPU this job got: 44%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:04.33\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 139744\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 9\n\tMinor (reclaiming a frame) page faults: 73350\n\tVoluntary context switches: 28875\n\tInvoluntary context switches: 103\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 192\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "stage89_submit",
+      "CPU_s": 4.84,
+      "peak_RSS_KiB": 162992.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/accurate_posterior.py submit\"\n\tUser time (seconds): 3.42\n\tSystem time (seconds): 1.42\n\tPercent of CPU this job got: 52%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:09.19\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 162992\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 19\n\tMinor (reclaiming a frame) page faults: 129333\n\tVoluntary context switches: 45815\n\tInvoluntary context switches: 473\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 9680\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "stage89_test_plot",
+      "CPU_s": 2.88,
+      "peak_RSS_KiB": 108540.0,
+      "exit_code": 0,
+      "full_time_output": "\tCommand being timed: \"bash /tmp/stage69_python.sh -\"\n\tUser time (seconds): 2.03\n\tSystem time (seconds): 0.85\n\tPercent of CPU this job got: 53%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:05.43\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 108540\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 87\n\tMinor (reclaiming a frame) page faults: 67560\n\tVoluntary context switches: 28336\n\tInvoluntary context switches: 196\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 256\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    }
+  ],
+  "measured_outer_CPU_s": 30.129999999999995,
+  "measured_accounted_CPU_s": 8967.13,
+  "CPU_budget_s": 10800,
+  "scope": "outer timing includes QA/submit/smoke/collect/plot/closeout, overlaps internal same-process timings so not added twice; metadata, monitoring, documentation, static validation and XRootD client commands not fully timed",
+  "physical_EOS_IO": "未测量"
+}
