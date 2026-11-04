@@ -1,0 +1,12 @@
+{
+ "reason":"batch metadata QA: same original merge REC not persisted; official REC schema lacks CKFTrackCollectionMergeWithoutIFT. No original track/TSOS match is asserted.",
+ "fallback":"PHYS collection-level SpacePoints relative to original leading-track endpoint chord; never call this cluster association, noise or hadron activity",
+ "centers_mm":[-1860.15,47.4,1237.4,2427.4],"layer_offsets_mm":[-31.5,0,31.5],"z_tolerance_mm":10,
+ "reference":"straight endpoint chord from original saved leading x0/y0/z0 to x1/y1/z1, geometric summary only, no helical trajectory or pulls; evaluate only points between the two z endpoints",
+ "features":"per station total SP entries, per downstream plane total, outside 10mm, outside 50mm, RMS radius(mm); longitudinal outside10 growth station3-station1 and first active downstream plane. No coordinate deduplication is treated as unique hit ID",
+ "association_fields":"associated unique clusters/SP, remaining-by-ID, TSOS references, SP constituent references, active-channel denominators and actual fit covariance all missing",
+ "pilot_min_support":"at least20 L and20 H separately in original train and cal in observed 50<pz0<100 domain, regardless of native availability; original full 2048 denominator retained",
+ "classifier":"exactly two XGBoost hist classifiers, seed2026110499 depth2 trees100 eta.05 min_child_weight10 lambda10 nthread1, no early stopping; A62 + masks + original status + common availability, Bsame + collection family/masks; NaN native; no source/run/event feature",
+ "QA":"original40 flagged train/cal identities, actual PHYS collection reads only these identities; 0fit. Batch by source,8 processes, inner threads1",
+ "native_scope":"alternative official REC metadata only; no native event payload without exact original correspondence"
+}

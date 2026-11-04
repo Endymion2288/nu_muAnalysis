@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/pool/condor/dir_508963/nu_mu_stage99.4d8QZO/ml/stage99_breport.py", line 2, in <module>
+    if __name__=='__main__':main(False)
+                            ~~~~^^^^^^^
+  File "/pool/condor/dir_508963/nu_mu_stage99.4d8QZO/ml/stage99_activity.py", line 90, in main
+    model=xgb.XGBClassifier(n_estimators=100,max_depth=2,learning_rate=.05,min_child_weight=10,reg_lambda=10,random_state=2026110499,n_jobs=1,tree_method='hist',objective='binary:logistic',eval_metric='logloss');model.fit(xx[tr],target[tr]);newfits+=1;q=model.predict_proba(xx[cal])[:,1].astype(float);pred.append(q);train_predictions.append(model.predict_proba(xx[tr])[:,1].astype(float));model.save_model(O/f'B_classifier_{name}.json')
+                                                                                                                                                                                                                                                                                                                                                                                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/lib/python3.13/site-packages/xgboost/sklearn.py", line 903, in save_model
+    meta["_estimator_type"] = self._get_type()
+                              ~~~~~~~~~~~~~~^^
+  File "/cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/lib/python3.13/site-packages/xgboost/sklearn.py", line 894, in _get_type
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: `_estimator_type` undefined.  Please use appropriate mixin to define estimator type.

@@ -1,0 +1,20 @@
+{
+  "numerical_validation": "validation.json; completed in batch before closeout",
+  "post_validation_changes": [
+    "event/model artifact routing to ignored directories",
+    "guards against repeating scalar/classifier fits",
+    "resource column naming correction",
+    "stdlib packaging and byte-equality collector",
+    "PDF to SVG conversion",
+    "lossless native/PHYS schema metadata deduplication"
+  ],
+  "scientific_algorithms_changed_after_validation": false,
+  "python_AST_passed": true,
+  "bash_syntax_passed": true,
+  "history_append_only_verified": true,
+  "stage54_suffix_byte_equal": true,
+  "no_local_CERN_setup": true,
+  "new_energy_fits": 0,
+  "classifier_fits": 2,
+  "scalar_calibrations": 1
+}

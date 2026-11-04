@@ -1,0 +1,578 @@
+{
+  "passed": true,
+  "identities": 40,
+  "rows": [
+    5483,
+    5484,
+    5485,
+    5486,
+    5488,
+    5489,
+    5490,
+    5491,
+    5493,
+    5494,
+    5495,
+    5496,
+    5497,
+    5498,
+    5499,
+    5500,
+    5501,
+    5502,
+    5503,
+    5504,
+    5505,
+    5506,
+    5507,
+    5508,
+    5509,
+    5510,
+    5511,
+    5512,
+    5513,
+    5514,
+    5515,
+    5516,
+    5517,
+    5518,
+    5519,
+    5521,
+    5522,
+    5523,
+    5524,
+    5525
+  ],
+  "schema": {
+    "ntuples/energy_ml_stage94/evaluation_input.npz": {
+      "row": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      },
+      "role": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int8"
+      },
+      "weight": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "key_id": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      },
+      "group": {
+        "shape": [
+          71376
+        ],
+        "dtype": "<U17"
+      },
+      "block": {
+        "shape": [
+          71376
+        ],
+        "dtype": "<U80"
+      },
+      "component": {
+        "shape": [
+          71376
+        ],
+        "dtype": "<U5"
+      },
+      "truth_E_GeV": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "pz": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "y_lepton": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "confirmed": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "label_physical": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "input_missing": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "fit_failure": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "wave_invalid": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "calo_invalid": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "negative_valid_raw": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "origin": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int16"
+      },
+      "origin_row": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      },
+      "X_calo": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      },
+      "X_activity": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      }
+    },
+    "ntuples/energy_ml_stage94/cal_partition.npz": {
+      "row": {
+        "shape": [
+          11612
+        ],
+        "dtype": "int64"
+      },
+      "subrole": {
+        "shape": [
+          11612
+        ],
+        "dtype": "int8"
+      },
+      "weight": {
+        "shape": [
+          11612
+        ],
+        "dtype": "float64"
+      }
+    },
+    "ml/artifacts/stage94/MDN_heads.npz": {
+      "row": {
+        "shape": [
+          24801
+        ],
+        "dtype": "int64"
+      },
+      "E_2026110494": {
+        "shape": [
+          24801,
+          9
+        ],
+        "dtype": "float32"
+      },
+      "E_2026110495": {
+        "shape": [
+          24801,
+          9
+        ],
+        "dtype": "float32"
+      },
+      "E_2026110496": {
+        "shape": [
+          24801,
+          9
+        ],
+        "dtype": "float32"
+      }
+    },
+    "ml/artifacts/stage94/point_predictions.npz": {
+      "row": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      },
+      "A_2026110494": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "B_2026110494": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "C_2026110494": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "D_2026110494": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "E_2026110494": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "E_2026110495": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "E_2026110496": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "B_2026110495": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "B_2026110496": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "E_ensemble": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      },
+      "B_ensemble": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float32"
+      }
+    },
+    "ml/artifacts/stage87/predictions.npz": {
+      "direct_raw": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "direct_cal": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "bounded_raw": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "bounded_cal": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_raw": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_training_median": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_median": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_flat_median": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_pressure_median": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_q05": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_q16": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_q84": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_q95": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_pit": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_ESS_fraction": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "posterior_nominal_logscore": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "truth_E_GeV": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "y_lepton": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "confirmed": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "pz": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      },
+      "input_missing": {
+        "shape": [
+          71376
+        ],
+        "dtype": "bool"
+      },
+      "row": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int64"
+      },
+      "role": {
+        "shape": [
+          71376
+        ],
+        "dtype": "int8"
+      },
+      "weight": {
+        "shape": [
+          71376
+        ],
+        "dtype": "float64"
+      }
+    },
+    "ntuples/energy_ml_stage92/predictions_cal.npz": {
+      "row": {
+        "shape": [
+          11612
+        ],
+        "dtype": "int64"
+      },
+      "completed_N": {
+        "shape": [],
+        "dtype": "int64"
+      },
+      "accurate_quantiles": {
+        "shape": [
+          11612,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "accurate_PIT": {
+        "shape": [
+          11612
+        ],
+        "dtype": "float64"
+      },
+      "accurate_logscore": {
+        "shape": [
+          11612
+        ],
+        "dtype": "float64"
+      },
+      "accurate_training_logscore": {
+        "shape": [
+          11612
+        ],
+        "dtype": "float64"
+      },
+      "accurate_F": {
+        "shape": [
+          11612,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "accurate_ESS_fraction": {
+        "shape": [
+          11612
+        ],
+        "dtype": "float64"
+      },
+      "numerical_certified": {
+        "shape": [
+          11612
+        ],
+        "dtype": "bool"
+      }
+    },
+    "ntuples/energy_ml_stage92/predictions_test.npz": {
+      "row": {
+        "shape": [
+          13189
+        ],
+        "dtype": "int64"
+      },
+      "completed_N": {
+        "shape": [],
+        "dtype": "int64"
+      },
+      "accurate_quantiles": {
+        "shape": [
+          13189,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "accurate_PIT": {
+        "shape": [
+          13189
+        ],
+        "dtype": "float64"
+      },
+      "accurate_logscore": {
+        "shape": [
+          13189
+        ],
+        "dtype": "float64"
+      },
+      "accurate_training_logscore": {
+        "shape": [
+          13189
+        ],
+        "dtype": "float64"
+      },
+      "accurate_F": {
+        "shape": [
+          13189,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "accurate_ESS_fraction": {
+        "shape": [
+          13189
+        ],
+        "dtype": "float64"
+      },
+      "numerical_certified": {
+        "shape": [
+          13189
+        ],
+        "dtype": "bool"
+      }
+    }
+  },
+  "decoded_vs_saved_point_max": 6.096973512725867e-07,
+  "transform_mean_max": 1.7763568394002505e-15,
+  "independent_cdf_max": 0.0,
+  "pz_edges_GeV": [
+    50.0,
+    60.0,
+    70.0,
+    80.0,
+    90.0,
+    100.0
+  ],
+  "X_reference_mass": [
+    0.1802701991889154,
+    0.1882446020307729,
+    0.2037341804649785,
+    0.2135399478288921,
+    0.21421107048644109
+  ],
+  "CPU_s": 1.6002424939999997,
+  "wall_s": 2.1210559401661158,
+  "peak_RSS_MiB": 125.7421875
+}

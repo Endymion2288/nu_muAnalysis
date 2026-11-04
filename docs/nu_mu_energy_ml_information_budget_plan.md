@@ -1194,3 +1194,16 @@ B购买**真实相对μ活动**：原2048train/cal一incoming一视图/24source�
 相对独立μ控制的条件秩/残差是物理表示备选，但若只用旧62确定变换不买新信息；stage52/85的100–1000GeV/tag/trigger条件不能拿来认证50–100GeV或Veto低信号效率。HGPflow的真实关联思想、DeepCore的track/cascade分解、Cal-PIT及2026FSI研究只作为方法依据，项目收益均未测，详见报告。旧密度/重权/专家和辅助标签阴性不重新包装；相同incoming非同interaction不得造多视图正对。
 
 stage99 A≤900CPU秒/B含可行pilot与报告≤13500CPU秒/总14400CPU秒/native实际读10GB/最终20MB是拟议准入上限，≤40QA实测后冻结；大读取HTCondor按source/内线程1/最多2并发，A/B不互为前置，不占GPU做稀疏I/O、不存原生副本。原最终点风险1.05/1.01/1.03和八层三向tail≤2pp不变，概率PIT按总体/X组；source95/真实response/系统效应/最终未开发确认仍未测。历史§1–59、stage54逐字后缀/K支持保持，执行见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 61. stage99：工作点和概率产品已有收益，collection增量预算尚欠可审计A输出
+
+[stage99报告](../workbook/2026-11-04_stage99_energy-ambiguity-and-activity.md)交付§60的A：同低pz、固定train/cal X格标准化后，direct/E94/stage92 AUC=.975092/.976727/.973852，pz-only=.519382；强排序已测，不能把当前问题称为完全无辨别力。E94 cal_select名义2%阈值在开发test实际L误判4.754309 [1.121885,10.158808]%、H识别91.725663 [88.527104,95.006203]%，阈值稳定性/支持不足，不能给NP总体保证或用test重选gate。完整2/5/10%、逐格ROC/区间和连续风险保持，八层最终点/尾门槛不被分类目标替换。
+
+E94最低能修正平方.050087735、交叉+.004886017，风险增加.054973752；同低pz真高E风险减少3.113340137。是已有输出的精确损失解释，不是信息界。唯一cal_post T=1.08691603355，旧b固定、点完全不变，test NLL−.107503598→−.120703623、68/90coverage62.602337/86.253883→67.110928/89.394777%；X条件仍有偏。已经买到一个有限概率产品，不继续温度/先验网格，不自动执行NLL checkpoint新训练，更不宣称低能点恢复。
+
+B购买了实际collection测量：2048完整train/cal身份、1923可读/125原缺源，42维每面SP与leading端点弦线相对活动；原K和缺源摘要全留。原scratch生产REC未持久化，同名官方REC版本不同且无原track/TSOS闭合，真实关联/协方差/有效读出仍缺。替代量仅collection几何，不是唯一ID排除、noise或强子能量，不能靠同名branch补物理含义。没有新test载荷/风险、重建或原生副本。
+
+低容量classifier支持为train L/H65/82、cal20/46；各格实际fit一次，但A保存接口失败导致预测丢失，只保留B。B单格logscore .346455633、Brier .101254665、AUC .929891304不回答增量；**B−A未测量，不把程序缺口归成物理无信息。** 已修直接Booster保存并先落盘预测，剩余Bfit复用小表、没有重复A/ROOT。全阶段含失败任务外层136.27CPU秒，接口请求775439164bytes，600项旧控制与B6项复核通过；嵌套计时不重复相加、物理EOS网络流量未测，紧凑≤20MB/旧缓存与stage54保持。
+
+下一笔预算只补丢失的A：同原62/status/availability、原队列角色/seed/100树，一次A fit，复用B保存预测，0B/能量重训、ROOT/native/test风险或新T。≤40身份0optimizer先核输入及保存接口，建议1Condor2CPU6GB/CPU300秒/最终20MB，再交cal paired score/Brier/工作点与500incoming条件区间。无支持增量停止collection族扩展；有迹象亦需真实引用/response及强BDT能量合同另审，不能自动GNN或独立确认。当前尚未执行stage100，历史§1–60及原支持/最终门槛不改，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。

@@ -1,0 +1,66 @@
+{
+  "removed_duplicate_packages_and_archives": [
+    {
+      "path": "software/energy-ml-stage99-bfinish.tar.gz",
+      "bytes": 35534733
+    },
+    {
+      "path": "software/energy-ml-stage99-bqa.tar.gz",
+      "bytes": 934155
+    },
+    {
+      "path": "software/energy-ml-stage99-breport.tar.gz",
+      "bytes": 35265313
+    },
+    {
+      "path": "software/energy-ml-stage99-nativeqa.tar.gz",
+      "bytes": 510641
+    },
+    {
+      "path": "software/energy-ml-stage99-qa.tar.gz",
+      "bytes": 19549801
+    },
+    {
+      "path": "software/energy-ml-stage99-report.tar.gz",
+      "bytes": 19558434
+    },
+    {
+      "path": "software/energy-ml-stage99-validate.tar.gz",
+      "bytes": 20785102
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_bfinish.tar.gz",
+      "bytes": 241357
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_bqa.tar.gz",
+      "bytes": 3719
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_breport.tar.gz",
+      "bytes": 233490
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_nativeqa.tar.gz",
+      "bytes": 7267
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_qa.tar.gz",
+      "bytes": 1823
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_report.tar.gz",
+      "bytes": 105010
+    },
+    {
+      "path": "ntuples/energy_ml_stage99/result_validate.tar.gz",
+      "bytes": 494981
+    }
+  ],
+  "removed_bytes": 133225826,
+  "all_seven_archive_collections_byte_equal": true,
+  "retained_shared_prior_caches": true,
+  "stage54_untouched": true,
+  "metadata_column_correction": "root_payload_bytes was an unmeasured placeholder; renamed native_event_payload_bytes=0 because no REC event payload was read",
+  "artifact_routing": "event tables->ntuples/energy_ml_stage99; trained booster->ml/artifacts/stage99; compact report summaries remain workbook"
+}

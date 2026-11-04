@@ -1,0 +1,31 @@
+{
+  "collection_measurement_complete": true,
+  "paired_information_comparison_complete": false,
+  "N": 2048,
+  "unique_incoming": 2048,
+  "collection_readable": 1923,
+  "statuses": {
+    "ok": 1923,
+    "source_unavailable": 125
+  },
+  "native_exact_available": 0,
+  "real_ID_association_available": 0,
+  "classifier_fit_count_total": 2,
+  "completed_fits": [
+    "A (output lost during serialization)",
+    "B (retained)"
+  ],
+  "retained_classifier_cells": [
+    "B"
+  ],
+  "A_refits": 0,
+  "source_reextraction": 0,
+  "new_energy_fits": 0,
+  "requested_bytes": 627934214,
+  "native_event_payload_bytes": 0,
+  "physical_network_bytes": "unmeasured",
+  "minimum_missing_pilot_product": "A predictions from one separately authorized fixed fit, matched to retained B; no further ROOT extraction required",
+  "finish_CPU_s": 0.7565296720000001,
+  "finish_wall_s": 0.7674994250119198,
+  "peak_RSS_MiB": 293.00390625
+}

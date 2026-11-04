@@ -2122,3 +2122,20 @@ stage99 B把原native提取聚焦为**相对μ的未归属cluster/SP活动、横
 A不等B的native入口，B不等A概率优化。拟议A≤900CPU秒，B含pilot/报告≤13500CPU秒，总≤14400CPU秒/native实际读取10GB/最终20MB，先≤40train/cal实测QA后冻结；成本/收益/功效均未测。批量native走HTCondor按源分片、内线程1/最多2并发，不存native副本/逐hit云。无法交付新载荷或统计量没有可支持增量时停止该工程扩展，给真实缺失产品/风险前沿，不无限转网络。
 
 最终目标不改：两低能/传统上95≤1.05、all/direct≤1.01、≥200/困难≤1.03、原八层三向tail上差≤2pp；概率可靠性按明确总体/X组，不要求真值组PIT均匀。开发增量和最终联合通过分开记，不以概率尺度改善替代点目标。继续保留真实response/interaction/FSI/材料/Calo/接受度/背景和未开发确认；历史§1–79、stage54逐字后缀/全部K支持不改。下一执行见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 81. stage99：已测强排序与尺度改善；collection交付，配对pilot因保存失败尚缺A
+
+[stage99报告](../workbook/2026-11-04_stage99_energy-ambiguity-and-activity.md)按§80执行两个独立工作包；0新能量网络/forward/后验积分/ROOT重建或生成。原stage87角色/同incoming权重/cal子分区、全部1016新增K、pz0-only/raw11/status/typed NaN与困难侧保持。全部计算/事件QA在HTCondor完成，当前终端不恢复CERN栈。
+
+A用真实保存的stage92 `accurate_F`乘原nominal prior质量，以及stage94解析MDN和旧点输出，完成固定50<pz0<100 GeV内四分数诊断。五个10GeV格的参考质量仅train/cal X冻结，test五格均共同支持；L183/H297/中间179。标准化test AUC pz/direct/E94/stage92=.519382/.975092/.976727/.973852；E94归一pAUC(FPR≤.1)=.899069 [.855216,.941189]。但cal_select名义2%阈值q=.608844825的test实际低能误判4.754309 [1.121885,10.158808]%、高能识别91.725663 [88.527104,95.006203]%；不是总体NP保证/新部署gate，也不等于原tail门槛。逐格ROC/区间、2/5/10%全部工作点、中间能量与阈值区域的连续风险均交付，研究池test/cal复用、source与阈值估计限制保留。
+
+精确分解E94最低能E[c²]/2E[e0c]/风险增量=.050087735/+.004886017/+.054973752；同低pz真高E为2.644748833/−5.758088969/−3.113340137，逐例残差≤1.421086e−14。量化修正权衡，不作因果分账或Bayes界。原cal_post唯一T优化成功4iter/12eval，T=1.08691603355、旧b=.0211537082794固定，未触边；保存点逐位不变。test NLL−.107503598→−.120703623，配对差95%[−.015639933,−.010692396]；68/90coverage62.602337/86.253883→67.110928/89.394777%，meanPIT .497919730 [.492919214,.503147610]。X_pz100–200与X_activity0的PIT仍有偏，真E/y组不强求均匀；不是完整校准认证或低能点恢复。原点风险/最终8层RMSE和三向tail门槛不变，不晋升。
+
+B精确22个生产manifest/worker和官方reco日志证明：原d32b0ff3 scratch REC只发布PHYS后清理；merge在ntuple阶段临时构造，不能仅因REC无merge branch判轨迹不同。已知同名官方6d6ab70b REC不满足原production/track/index/TSOS闭合，未跨源硬接。真实measurement/SP constituent ID、关联唯一活动、actual covariance与有效读出分母仍未测。完成可行PHYS collection替代：原2048身份/24source，1923可读/125缺源（π28、K97），0join失败/可读空集合，单轨迹1770；42维每站/面SP和原leading端点弦线相对活动，10/50mm及单位/支持/mask冻结。几何弦线不是拟合轨迹/关联排除，纵向量仅可见支持，不认noise/强子或独立粒子。
+
+原train L/H65/82、cal20/46满足pilot支持。**实际A/B各fit一次，但A在XGBoost sklearn保存接口报`_estimator_type`错误后预测未落盘；B−A增量未测量，不是物理阴性结论。** 修复直接Booster保存并先持久化预测，只用剩余B一次fit，无A重训/重复ROOT。B单格cal logscore .346455633 [.252028743,.462819455]、Brier .101254665 [.061707997,.150646988]，名义2%train阈值cal H38/46、L0/20；零误判不能认证2%总体界。没有配对证据，不扩完整角色/强BDT能量实验/GNN。
+
+独立600项旧输出/恒等式最大差1.776357e−15，B单格6项score/区间闭合，保存点/解析均值/T²方差与温度梯度检查通过。七任务外层已计136.27CPU秒（A32.50/B103.77），含失败fit、不重复相加嵌套timing；B提取65.70CPU/22.74wall秒、8进程平均2.889核，单核对照未测。ROOT接口请求775439164bytes，真实网络流量未测、native event payload0。紧凑最终≤20MB按storage实测，归档去重、训练模型和事件小表不入Git，stage54保持。
+
+**下一stage100仅补A产物，不是扩工程或新能量训练。** 同2048/原62/冻结seed和100树，只允许A一次fit，复用已保留B66个cal预测；≤40身份0optimizer QA先核输入与Booster保存/预测持久化，再报配对score/Brier、既定低误判和500incoming区间。0B重训/ROOT/native/test风险/新T/能量fit，建议≤1Condor2CPU6GB/300CPU秒/紧凑20MB，未执行。验收先补可审计配对证据；无支持增量停止该collection族扩展，有迹象也不跳过真实引用/response或最终联合门槛。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；历史§1–80/K政策/stage54后缀保持。

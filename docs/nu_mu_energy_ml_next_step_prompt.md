@@ -1,54 +1,39 @@
-# 下一轮执行 Prompt：stage99 能量歧义、概率产品与真实关联活动
+# 下一轮执行 Prompt：stage100 仅补齐丢失的A信息classifier与配对证据
 
-先读AGENTS.md、[stage98研究复盘](../workbook/2026-11-04_stage98_research-reassessment.md)、修订路线§80、信息计划§60和stage94–97报告。stage94九fit、stage96/97各两fit均已完成，不重跑。stage98现为研究报告，原native-only计划尚未执行；本轮执行编号stage99，做下面两个独立工作包，不让native入口阻塞已有输出的诊断。**在有环境的节点执行；当前本地终端不恢复CERN环境或复现事件。** 无新能量网络/生成/重建，无架构seed网格，不自动进入stage100。
+先读AGENTS.md、[stage99报告](../workbook/2026-11-04_stage99_energy-ambiguity-and-activity.md)、路线§81、信息计划§61及stage98研究复盘。stage99 A已完成，B collection已测；A classifier在已完成fit后因XGBoost sklearn保存失败丢预测，B classifier保留。**本轮只补这一个A，不重做stage99两个fit、T优化、ROOT或能量实验；不自动进入stage101。计算和QA在有环境的batch节点，当前本地终端不恢复CERN栈/复现事件。**
 
-## 1. 已测依据与固定边界
+## 1. 固定事实与研究边界
 
-stage94 E集成最低能/all/低pz真高E=.276027/.289843/.671125，stage92=.165630/.326058/.826918；传统最低能.145661、direct总体.287491。stage96/97新增几何和联合消息全体B/A区间含1；stage95最低能81可读例全单轨迹，已有候选替换μ-pz oracle仅2例改善，不是ν能量信息上限。不把“尚未推广”等同于没有研究结论，也不继续几何深宽扩展。
+stage99共同pz支持test的direct/E94/stage92 AUC=.975092/.976727/.973852，但E94名义2%cal_select阈值实际L误判4.754309 [1.121885,10.158808]%、H识别91.725663%。低E风险增量.054973752，低pz真高E风险减少3.113340137，是修正权衡，不是Bayes界。唯一T=1.08691603355已使test NLL/coverage改善，点不变；不续温度/先验/局部校准，也不自动新NLL checkpoint训练。
 
-原stage87兼容池、角色/隔离/同incoming总权重1保持：train/cal/test46575/11612/13189、唯一incoming37556/10811/12125；全部1016新增K和missing21/6/5/困难侧/高端/尾保留。cal_select5443、cal_post5746，423退出select仍全cal报告。test是已研究池留出，所有结论标开发，source95未测；不从test选择阈值/输入/checkpoint/prior。
+B原2048 incoming/24source，1923 PHYS可读/125历史删源，1770单轨迹；实际原生ID/covariance/active readout未测。42维PHYS collection几何相对原端点弦线族已经提取，缺源/K身份和原62均保持；弦线不是拟合轨迹，SP entries不是唯一cluster/粒子，纵向量仅被支持的可见部分，不认noise/强子。原REC scratch只发布PHYS后清理、merge在ntuple阶段临时生成；同名官方6d6ab70b REC不等于原d32b0ff3 track/TSOS。不要重新定位扫描/重建、强配hitSet或造pull。
 
-一次方动量pz0-only，既有px/py/q/p/弯折、raw11/status、合法负raw、typed NaN和Calo缺项不改，不加p0/p1/pz1或旧禁用动量比。原stage54后缀逐字保留，但其实际完成状态以stage85条件活动报告为准，不默认重做noise控制。
+两格各已实际fit一次。9667677的A在save_model报`_estimator_type undefined`，没有保留可用A预测；9667683只完成剩余B，改为`get_booster().save_model`且先持久化预测。B cal N66/L20/H46、logscore .346455633 [ .252028743,.462819455 ]、Brier .101254665 [.061707997,.150646988]，AUC .929891304；这些不能替代B−A。0/20低能误判及bootstrap[0,0]不能认证2%总体保证。
 
-## 2. 工作包A：只用保存输出，完成决策诊断和一个概率后处理
+原stage87 split/同incoming总权重1、train/cal/test46575/11612/13189及唯一37556/10811/12125、全部1016新增K和missing21/6/5/困难侧保持。一次方动量pz0-only，允许原px/py/q/p/弯折；raw11/status、合法负raw/charge与module_eta −1、typed NaN/Calo缺项、pz>50GeV不改。test是开发池，不是新blind；source95/重训/校准估计/response/研究选择区间仍未覆盖。最终原1.05/1.01/1.03与八层三向tail+2pp不改。
 
-读取已保存cal/test的点输出、标签/角色/权重及stage94 E三seed MDN head/旧ensemble offset；stage92只复用确实保存的准确CDF边界质量。没有保存的质量明确缺口，不为此再积分/网络forward/ROOT，也不按test补模型。
+## 2. 唯一实验：一次冻结A，和已保留B做配对
 
-先冻结四个分数：pz-only、原direct点输出、E的H/L质量比、stage92保存质量比。在观测50<pz0<100内定义诊断L=真E50–100、H=真E≥200，分数q=P(H|X)/[P(L|X)+P(H|X)]；100–200仍保留全部能量风险、在二类诊断中单列。部署输入无truth；分母0保留未定义。pz标准化格只由train/cal X预先确定，空格不补，无新谱选择。
+输入：
 
-交ROC/partial ROC及2%/5%/10%名义低能误判工作点的高能识别率、实际支持/条件区间、各分数的完整风险；阈值只由cal_select定义一次，不在test选赢家，不将其部署成新gate。当前cal已用于选模/offset且来源相关，不能声称NP总体保证。iid149/299低能校准支持是2%/1%错误率的数学示例，当前select/post最低能85/97不能bootstrap复制变大。工作点与原tail≤+2pp/RMSE门槛不是同一量。
+- 原`ntuples/energy_ml_stage95/cohort.json`、原事件/候选身份表；2048一incoming一视图，只有原train/cal。
+- `ntuples/energy_ml_stage99/{B_collection_features,B_identities,B_classifier_predictions}.tsv`及`ml/artifacts/stage99/B_classifier_B.json`；不覆盖B。
+- 原62缓存stage55 dataset/stage56 readout和stage70/81/82/83 support；`ml/configs/audited_features.json`。
+- `ml/stage99_bfinish.py`是B实际baseline和标签/角色/threshold实现；`workbook/stage99_energy_ml/{activity_contract,B_failure,B_complete,B_class_support}.json/tsv`及metrics/ROC工作点。
 
-同时对旧点输出做精确损失分解：m=log(pz0/.8)，c=预测logE−m，e0=m−logEtrue，分别给各低能/同低pz高能/总体的E[c²]、2E[e0c]及风险增量，逐例恒等式闭合；仅已有结果解释，不冒称因果或信息下界。其他全风险层原样保留。
+A输入严格匹配B中共同分支：62 audited值、62 missing mask、原status_other一列、PHYS collection可用一列、exact native可用0一列，共127列。B再加42值/42mask；本轮不改A定义、B输入/模型/预测。所有2048身份保留可用性报告，classifier域为观测50<pz0<100且诊断L=真50≤E<100、H=真E≥200；中间100–200只在支持分母保留。原train L/H65/82、cal20/46必须闭合，不按truth重选队列/来源；truth只标签。
 
-概率工作固定stage94 E分布和旧点offset b，只拟合一个T>0：Z′=m_E(X)+b+T[Z−m_E(X)]，其中m_E是未校准MDN的mean logE。全部seed/分量按同一变换，权重不变。保持原点预测m_E+b完全不变，只在原cal_post上优化weighted NLL。事前固定T∈[0.5,3]、从1单次有界优化，不续温度/先验/局部网格；边界命中如实报告。校准前后都报完整cal/test NLL、宽度、十箱PIT、68/90coverage和stage94原X组，不能用真E组PIT均匀性当后验要求，不把区间改善冒称低能点恢复。
+唯一A XGBoost hist：seed2026110499、depth2、100trees、eta.05、min_child_weight10、lambda10、nthread1；原train147拟合，cal66评价。无earlystop/超参/seed/重启动，无B再fit或原stage99 A/T重跑。先≤40原flagged train/cal身份0optimizer QA核62/NaN/status/角色/incoming与序列，利用现有B booster做load/predict/save往返核保存接口，不能为QA另fit。完整A fit后**先写预测并确认可回读，再保存Booster**；不用有兼容问题的sklearn save_model，失败保留可恢复产物。
 
-已有曲线表明E三seed的point-best65/90/65与NLL-best50/25/35不同；这里只引用曲线，不虚构未保存早期checkpoint预测，不重训。若后续确需NLL选模，另冻最多一条训练轨迹，本轮不自动执行。
+交A/B同cal支持的logscore/Brier、B−A配对差及500component内incoming条件区间、ROC/partial ROC；2/5/10%阈值各仅在对应模型的train L上定义严格score>t，cal只评价，复核B原工作点不变。报告实际FPR/TPR、原始计数/来源/独立incoming与区间，cal L20/4source不能认证2%总体保证；不按cal结果改classifier或test选赢家。程序独立复核预测分数/区间和原B值，明确只有一个新增A fit、0B refit。
 
-## 3. 工作包B：原生引用服务于相对μ活动，交付可行时直接做两格信息pilot
+## 3. 资源、判断与交付
 
-使用stage95原2048不同train/cal incoming、一视图/24source及原身份表、已知production链。原PHYS1923可读/125临时删除不改；stage96全池1044候选缺源不混同本队列125。只沿精确PHYS→REC/ESD已知配置/日志定位，不猜merge序号或run/event跨源匹配，不扫全EOS、不重建补删源，不丢既有K摘要。
+建议≤1Condor2CPU6GB、阶段CPU≤300秒/紧凑最终≤20MB，QA实测后准入；小树/缓存处理不用GPU、无ROOT/native事件读取，不占8核做单线程小fit。共用原缓存，不留逐hit/原生副本，不保留重复传输包。不恢复整个历史Athena环境；LCG109 batch已有XGBoost/NumPy。
 
-先≤40固定train/cal身份QA，覆盖原来源/观测pz/状态而不按真E/y/误差挑样。核原track筛选/index、TSOS/measurement真实ID、SP组成cluster引用、collection有效分母和实际covariance/单位。hitSet是层覆盖且已测不等长，不能代替真实ID；单位covariance不能造pull。优先已有匹配Calypso构建，仅新导出源码确需改时编译，不恢复整套历史栈。
+验收首先是原支持/输入闭合、A可靠持久化、B预测逐位不变和配对统计完成。只有支持的配对证据才讨论信息增量，不能把B单格或A保存失败当物理结论；无证据即停止这族collection工程扩展。若出现增量，仍须另冻完整角色与强BDT能量消融合同、说明geometry和真实关联缺口，不能本轮自动执行。严格低误判支持/真实响应/独立未开发确认仍缺，不因小pilot宣称最终通过。
 
-冻结一族紧凑活动摘要：每station/面关联唯一cluster/SP与其余活动数；其余活动相对leading的横向分布/纵向增长和有效读出支持；可核误差尺度作质量解释。单轨迹事件同样提取。SP/cluster不重复计能量、共享ID不等于重复粒子，不据此删候选；未归属不是noise/强子标签，geometry不是通道响应，无truth输入或硬Calo电荷分配。没有可靠引用就给可做collection级测量和具体未测项，不强配数组。
-
-对原完整2048身份队列保留native不可定位/联结失败/空集合/缺collection的不同状态，按原source/component/X/单多轨迹交真实分母。既有truth只另表诊断，不按标签重选队列。只保留紧凑活动摘要，不留逐hit点云或REC/RDO/xAOD副本。
-
-若一族输入实际交付且原train/cal两类支持允许，在同阶段完成恰两个预注册信息classifier fit：A=原62摘要＋共同native可用状态，B=同A＋这一族活动及其值mask。两格同seed2026110499、固定低容量BDT（拟议depth2/100树、eta.05、min_child_weight10、lambda10；在读取新cal目标结果前冻结）、无cal调参/早停/补seed。使用原队列train训练、cal评价，同incoming一视图；truth L/H仅标签，pz50–100作为共同观测研究域，所有原队列身份在可用性/支持报告中保留。不能把共同缺源状态造成的差异当新活动收益，不能把此配额队列当自然flux。
-
-报两格条件log-score/Brier、低误判率识别及支持/条件区间，原角色/来源/incoming不可交叉泄漏。无法支持某工作点写不可认证，不给零错误总体保证；类别不足或native失败时不强行fit，交已完成物理测量和确切缺口。没有test native载荷/新test风险。小pilot只判断是否值得扩完整输入，不称完整能量收益、物理信息极限或部署通过。
-
-独立μ控制的条件秩/残差可列下一方案，但stage52/85主要100–1000GeV/tag/trigger条件不能无验证外推50–100GeV；同62的确定变换不新增观测。先交真实关联活动，不为μ控制再起无期限前置。
-
-## 4. 资源、判断和最终交付
-
-A无需等待B，B无需等待A。≤40实际包QA先核数学/身份/输出和CPU/wall/RSS/真实读取成本再冻结资源；不用SHA。拟议A≤900CPU秒，B含可行pilot/报告≤13500CPU秒，总≤14400CPU秒/native实际读取≤10GB/紧凑最终≤20MB。native批量走HTCondor按source分片，内线程1，独立源足够时用8CPU、最多2并发；不占GPU做I/O，不重复扫描/保留大中间文件，实际请求/read/物理网络口径分清。成本与新收益均未测，不据预算缩成有利样本或自动加资源。
-
-决策必须具体：已有概率排序可用但尺度偏则交概率产品/决策缺口；排序只在高误判率下有效则支持购买新活动，但不是Bayes界；B有可支持信息增量才下一轮扩完整角色并在强BDT做匹配两格能量消融；B无可交付新载荷或该统计族无增量则停止本工程扩展，列最小缺失产品/实际风险前沿，不续GNN深宽/seed。概率产品和信息pilot不能替代最终点目标。
-
-原最终门槛保留：两低E/传统上95≤1.05、all/direct≤1.01、≥200/困难≤1.03，原八层总/正/负tail差上端≤2pp；当前A的点输出恒定，不能因此声称新能量门槛改善。开发增量与最终联合通过分开记，source95/interaction/FSI/材料/Calo/接受度/背景/真实response及未开发确认仍待测。
-
-先写中文stage99 workbook，说明实际样本/选择/单位/输入/命令、详细数值/区间、失败与资源、程序/物理解释、产物和下一最小任务；未测写“未测量”。再报告/代码/紧凑证据本地Conventional Commit，不push、不自动执行stage100。保持历史正文及以下stage54后缀逐字不变。
+先写中文stage100 workbook（实际数值/单位/输入/命令/资源/失败/产物/下一最小任务，未测标明），再代码/报告/紧凑证据本地Conventional Commit，不push，不自动stage101。模型和逐事件预测放忽略目录。保持历史正文和以下stage54后缀逐字不变，其实际状态沿stage85，不能默认重做noise支线。
 
 ## 保留的stage54 data占据支线
 
