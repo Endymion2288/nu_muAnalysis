@@ -1,0 +1,29 @@
+[
+  {
+    "pod": "nu-mu-energy-stage102-fit-wj5p5",
+    "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+    "phase": "Succeeded",
+    "resources": {
+      "limits": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      },
+      "requests": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      }
+    },
+    "state": {
+      "terminated": {
+        "containerID": "containerd://7b1524e4c62e643ff345388c905ad358cdbe4dcc21fbff3249e877729d836be5",
+        "exitCode": 0,
+        "finishedAt": "2026-11-04T21:38:29Z",
+        "reason": "Completed",
+        "startedAt": "2026-11-04T21:38:14Z"
+      }
+    },
+    "restarts": 0
+  }
+]

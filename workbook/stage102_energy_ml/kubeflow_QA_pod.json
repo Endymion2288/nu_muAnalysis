@@ -1,0 +1,29 @@
+[
+  {
+    "pod": "nu-mu-energy-stage102-qa-sqwv6",
+    "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+    "phase": "Failed",
+    "resources": {
+      "limits": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      },
+      "requests": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      }
+    },
+    "state": {
+      "terminated": {
+        "containerID": "containerd://7f903753c4a0ac98f8f78042c10c79490694bb1c426be14350c0830f17951040",
+        "exitCode": 2,
+        "finishedAt": "2026-11-04T21:34:21Z",
+        "reason": "Error",
+        "startedAt": "2026-11-04T21:34:06Z"
+      }
+    },
+    "restarts": 0
+  }
+]

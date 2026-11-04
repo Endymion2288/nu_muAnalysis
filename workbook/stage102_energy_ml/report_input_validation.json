@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "eval_rows": 24801,
+  "new_fits": 0,
+  "new_calibration_optimizations": 0,
+  "saved_points_preserved": true,
+  "original_row_role_weights_exact": true,
+  "post_subrole_weights_retained": true,
+  "roles": {
+    "cal": {
+      "N": 11612,
+      "incoming": 10811,
+      "weight_sum": 10811.0
+    },
+    "cal_post": {
+      "N": 5746,
+      "incoming": 5539,
+      "weight_sum": 5539.0
+    },
+    "test": {
+      "N": 13189,
+      "incoming": 12125,
+      "weight_sum": 12125.0
+    }
+  },
+  "all_CDF_density_checks": [
+    {
+      "check": "decoded_mean_vs_float32_saved_point",
+      "model": "P",
+      "max_abs_error": 8.876250223721627e-07
+    },
+    {
+      "check": "independent_scipy_density_CDF_all_events",
+      "model": "P_raw",
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "check": "independent_scipy_density_CDF_all_events",
+      "model": "P_oldb",
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "check": "decoded_mean_vs_float32_saved_point",
+      "model": "N",
+      "max_abs_error": 9.87971892740802e-07
+    },
+    {
+      "check": "independent_scipy_density_CDF_all_events",
+      "model": "N_raw",
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "check": "independent_scipy_density_CDF_all_events",
+      "model": "N_oldb",
+      "max_abs_error": 1.7763568394002505e-15
+    }
+  ],
+  "wall_s": 6.089304027991602,
+  "CPU_s": 5.649224815,
+  "peak_RSS_MiB": 222.5546875
+}

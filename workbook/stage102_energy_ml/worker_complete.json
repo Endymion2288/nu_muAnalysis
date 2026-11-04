@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "new_training_trajectories": 1,
+  "optimizer_steps": 4370,
+  "stopped_epoch": 95,
+  "checkpoints": {
+    "P": 65,
+    "N": 50
+  },
+  "state_reload_exact": true,
+  "prediction_persistence_exact": true,
+  "test_after_selection": true,
+  "rows": 24801,
+  "train_N": 46575,
+  "cal_N": 11612,
+  "test_N": 13189,
+  "normalization_state_equal": true,
+  "new_offset_or_T_optimizations": 0,
+  "GPU": "NVIDIA H100 NVL MIG 3g.47gb",
+  "torch": "2.10.0",
+  "CUDA": "12.5",
+  "GPU_peak_allocated_MiB": 93.81884765625,
+  "wall_s": 12.166050011001062,
+  "CPU_s": 10.173332963,
+  "peak_RSS_MiB": 1583.53515625
+}

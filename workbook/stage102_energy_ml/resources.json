@@ -1,0 +1,71 @@
+{
+  "limit_CPU_s": 1800,
+  "successful_outer_worker_CPU_s": 47.767027,
+  "successful_outer_workers": {
+    "QA2": {
+      "exit_code": 0,
+      "CPU_s": 2.9549030000000003,
+      "wall_s": 3.3253433360077906,
+      "peak_RSS_KiB": 1194500,
+      "scope": "child process inclusive imports and descendants"
+    },
+    "fit": {
+      "exit_code": 0,
+      "CPU_s": 11.912123999999999,
+      "wall_s": 14.224980589991901,
+      "peak_RSS_KiB": 1621540,
+      "scope": "child process inclusive imports and descendants"
+    },
+    "report": {
+      "CPU_s": 32.9,
+      "wall_s": 14.88,
+      "peak_RSS_KiB": 292992
+    }
+  },
+  "failed_QA1": {
+    "optimizer_steps": 0,
+    "CPU_s": null,
+    "main_container_wall_s": 15,
+    "hard_CPU_limit": 22,
+    "conservative_CPU_allowance_s": 374,
+    "allowance_method": "22 CPUs * (15 measured timestamp seconds + 2 seconds rounding allowance); bound, not measured usage"
+  },
+  "counted_outer_plus_failed_allowance_CPU_s": 421.767027,
+  "budget_scope": "Successful Python worker outer process including imports/descendants; failed QA main container conservative cap. Untimed packaging/shell/platform/full-session CPU not measured; do not claim exact total.",
+  "maximum_stage_jobs_concurrent": 1,
+  "training_trajectories": 1,
+  "report_processes": 8,
+  "inner_threads": 1,
+  "planned_GPU": {
+    "CPU": 2,
+    "memory_MB": 6000
+  },
+  "actual_fit_and_failed_QA_pods": {
+    "CPU": 22,
+    "memory": "63G",
+    "GPU": "H100 NVL MIG3g.47gb"
+  },
+  "actual_QA2_Pod_CPU_memory": null,
+  "CPU_report": {
+    "original_memory_request_MB": 8000,
+    "site_request_and_provisioned_memory_MB": 24000,
+    "CPUs": 8,
+    "scheduler_CPU_s": 34.0,
+    "scheduler_wall_s": 21.0,
+    "starts": 1,
+    "exit_code": 0
+  },
+  "effective_report_child_CPUs": 3.364170694281959,
+  "speedup_against_serial": null,
+  "physical_EOS_bytes": null,
+  "cancelled_GPU_Condor": {
+    "job": "9667721.0",
+    "starts": 0
+  },
+  "GPU_batch_jobs": [
+    "nu-mu-energy-stage102-qa",
+    "nu-mu-energy-stage102-qa2",
+    "nu-mu-energy-stage102-fit"
+  ],
+  "CPU_report_job": "9667745.0"
+}

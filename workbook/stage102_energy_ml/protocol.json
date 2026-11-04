@@ -1,0 +1,135 @@
+{
+  "stage": 102,
+  "status": "frozen proposal for next user-invoked stage; not executed in stage101",
+  "origin_commit": "9c9991b",
+  "question": "Within one unchanged NLL-trained residual-MDN trajectory, does selecting by validation NLL instead of point-MSE improve out-of-selection probability scores, and what point-risk tradeoff results?",
+  "scope": {
+    "new_training_trajectories_max": 1,
+    "checkpoint_count_max": 2,
+    "new_seeds": 0,
+    "new_samples": 0,
+    "ROOT_or_native_reads": 0,
+    "B_classifier_refits": 0,
+    "other_energy_model_fits": 0,
+    "offset_optimizations": 0,
+    "T_optimizations": 0,
+    "architecture_or_loss_changes": 0,
+    "automatic_followup": false
+  },
+  "inputs": {
+    "base_implementation": "ml/compare_energy_architectures.py: representation/make/decode/objective and original fit loop",
+    "audited_rules": "ml/configs/audited_features.json",
+    "original_split": "ntuples/energy_ml_stage87/split.npz",
+    "cohort_reconstruction": "ml/retrain_accurate_posterior.py: reconstruct",
+    "original_cal_partition": "ntuples/energy_ml_stage94/cal_partition.npz",
+    "saved_preprocessing": "workbook/stage94_energy_ml/preprocessing.json",
+    "saved_X_groups": [
+      "workbook/stage94_energy_ml/X_calo_groups.json",
+      "workbook/stage94_energy_ml/X_activity_groups.json"
+    ],
+    "old_comparator_payloads": "stage87 original direct/bounded predictions; stage94 seed2026110494 point checkpoint and compact heads/predictions only for fixed read-only controls; no old model retraining",
+    "legacy_probability_reference": "stage99 mean-preserving T ensemble summaries as unmatched context only"
+  },
+  "population": {
+    "compatible_records": 89033,
+    "train_records": 46575,
+    "cal_records": 11612,
+    "test_records": 13189,
+    "quarantined_records": 17657,
+    "train_incoming": 37556,
+    "cal_incoming": 10811,
+    "test_incoming": 12125,
+    "cal_select_records": 5443,
+    "cal_select_incoming": 5272,
+    "cal_post_records": 5746,
+    "cal_post_incoming": 5539,
+    "purged_select_records": 423,
+    "K_added_records_retained": 1016,
+    "input_missing_train_cal_test": [
+      21,
+      6,
+      5
+    ],
+    "weights": "Original stage87 per-incoming view weights; original stage94 subrole-renormalized weights for cal_select/cal_post; purged423 remain full-cal evaluation"
+  },
+  "features": {
+    "summary_values": 62,
+    "missing_masks": 62,
+    "status_columns": [
+      "wave_invalid",
+      "fit_failure",
+      "calo_invalid"
+    ],
+    "input_dimensions": 127,
+    "note": "Use original stage94 E input, not stage100 status/availability columns despite equal dimension. train-only typed transforms/median/IQR/no clip; compare state to saved original before use.",
+    "physics": "pz0-only first-power momentum; retain px/py/q/p/bends,raw11/status,typed NaN,legal negative raw/charge/module_eta=-1,Calo missing,pz>50GeV,K and difficult/tail support"
+  },
+  "training": {
+    "cell": "E",
+    "seed": 2026110494,
+    "reason_seed": "Original first seed; chosen before new results, no best-seed selection",
+    "network": "2x64 SiLU,9-head,3 Normal residual MDN around log(pz0/0.8),sigma=.05+softplus",
+    "declared_parameters": 12937,
+    "precision": "Original float32/no AMP/no TF32",
+    "optimizer": "Adam lr.001 original defaults/no decay,clip10",
+    "batch": 1024,
+    "permutation": "numpy default_rng(seed) original permutation each epoch",
+    "loss": "Original incoming-weighted marginal logE NLL only",
+    "max_epochs": 300,
+    "validation_every_epochs": 5,
+    "stopping": "Original point-MSE best with patience30; NLL checkpoint selection never changes stop time or gradients. Optimize once, not two fits.",
+    "history_scope": "NLL-best only over logged checkpoints before original point-based stopping, not full-horizon optimum"
+  },
+  "checkpoints": {
+    "P": "strict minimum raw cal_select point-MSE, earlier epoch on ties",
+    "N": "strict minimum raw cal_select NLL, earlier epoch on ties",
+    "persistence": "one-attempt ledger before optimizer; atomically save selected states and epoch/score records during trajectory; read back states and save all final predictions before statistics. Recovery may report/reload persisted results, never refit automatically.",
+    "test_access": "Freeze both epoch/state choices and protocol before test features are loaded or forwarded; no test stopping/selection/gate"
+  },
+  "calibration": {
+    "primary": "None: compare raw logE densities and raw mean-logE points; b=0,T=1 both checkpoints",
+    "secondary": "One pre-existing translation b=0.02017839294662559 from stage94 seed494 applied identically to both checkpoints and all their mixture means; no new offset fitting; label old fixed b with parameter-estimation limits",
+    "forbidden": "Do not apply ensemble b or ensemble T to single-seed outputs; do not refit b/T or choose raw/shifted winner"
+  },
+  "evaluation": {
+    "primary": "Paired raw NLL(N)-NLL(P) on original cal_post, subrole incoming weights; upper conditional95<0 supports probability checkpoint increment",
+    "bootstrap": "500 component-stratified incoming draws, fixed predictions/checkpoints; original incoming_draws algorithm, seed2026110389 for cal/cal_post and2026110390 for test; cal_post subset uses its subrole weights",
+    "roles": "Report full cal11612,cal_post5746,and developed test13189; evaluate both frozen states even if primary is null. No invented blind claim.",
+    "probability": "Both raw and predeclared old-fixed-b: NLL,68/90 coverage and widths,meanPIT,10-bin PIT reliability,original X groups,truth/difficult strata labeled diagnostic; analytic Gaussian-mixture CDF and deterministic inverse CDF, no stage92 integration",
+    "points": "Mean logE then exp to GeV; full original8 strata RMSE ratios and total/positive/negative tail50; paired N/P differences plus unchanged traditional/direct controls. No gate/abstention/deletion.",
+    "primary_scope": "cal_post has historical reuse; conditional intervals omit source/refit/parameter-estimation/research-selection/response uncertainties. test is developed and secondary; no test-picked policy."
+  },
+  "final_energy_gates": {
+    "E50_100_vs_traditional_upper95": 1.05,
+    "E100_200_vs_traditional_upper95": 1.05,
+    "all_vs_direct_upper95": 1.01,
+    "E200plus_and_difficult_vs_direct_upper95": 1.03,
+    "tail_total_positive_negative_vs_direct_upper95_pp": 2,
+    "strata": [
+      "E50_100",
+      "E100_200",
+      "all",
+      "E200_inf",
+      "pz50_100",
+      "pz50_100_trueE200",
+      "high_y",
+      "unconfirmed"
+    ],
+    "promotion": "No automatic promotion; report original joint pass separately from primary probability result"
+  },
+  "QA_and_resources": {
+    "execution": "Numerical QA/training/inference/statistics/plots only on HTCondor or already-authorized available GPU batch platform; no local CERN stack restoration. No jobs submitted in stage101.",
+    "QA": "Original fixed40 train/cal identities via qa_rows,including21train/6cal missing;0optimizer. Verify keys/weights/subroles/transforms,legal signed values,CPU/GPU forward/VJP and independent mixture NLL/CDF checks; measure batch1024 cost before admission.",
+    "QA_tolerances": "Original stage94 MDN head central finite-difference max<1e-7 in float64; independent log-density max<1e-12; float32 CPU/GPU max logE difference<=1e-5; state reload/predictions exact on same device. Quantile CDF residual<1e-10,all outputs finite. No post-hoc tolerance relaxation.",
+    "control": "Check old seed494 saved model/head against saved point outputs on fixed QA support within original3e-6 decoded-mean tolerance; use exact saved train preprocessing. Same new P trajectory need not bit-replay old GPU/platform; quantify differences and do not call those checkpoint effects.",
+    "fit_resources": "At most1GPU,2CPU6000MB,inner threads1,task wall<=600s incl QA. GPU admitted by actual availability and small-package timing,not token assumptions.",
+    "report_resources": "8CPU8000MB requested,up to8 process workers/inner threads1 with shared loaded arrays and exact common draws; at most1concurrent stage job; actual site allocation separately recorded; no serial speedup claim without matching measurement",
+    "total_CPU_limit_s": 1800,
+    "retained_bytes_limit": 20000000,
+    "failure": "Stop and preserve state/row/head for nonfinite,input/QA mismatch,unsupported platform or budget rejection; no event deletion,tolerance lowering,automatic resubmission or second trajectory"
+  },
+  "exit": "Complete report of primary probability result and all energy protections; null/harmful result ends this checkpoint-selection experiment without extra seed,alternate loss/local calibration or collection expansion. Supported probability result alone does not certify low-E recovery or trigger promotion.",
+  "execution_start_commit": "3e2f7df",
+  "execution_status": "completed: one trajectory, P65/N50; cal_post raw probability primary supported; all point joint gates failed; no promotion or automatic followup",
+  "initial_execution_status": "stage102 QA submitted; fit has not begun"
+}

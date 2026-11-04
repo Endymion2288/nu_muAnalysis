@@ -1,0 +1,27 @@
+{
+  "primary": {
+    "candidate": "N_raw",
+    "reference": "P_raw",
+    "role": "cal_post",
+    "stratum": "all",
+    "N": 5746,
+    "incoming": 5539,
+    "weight_sum": 5539.0,
+    "NLL_delta": -0.006808016235748058,
+    "low95": -0.011119209614618118,
+    "high95": -0.0018552400968840884,
+    "primary": true
+  },
+  "primary_supported": true,
+  "conditional_only": true,
+  "point_joint_pass": {
+    "P_raw": false,
+    "N_raw": false,
+    "P_oldb": false,
+    "N_oldb": false
+  },
+  "promotion": false,
+  "new_fits": 0,
+  "new_b_T_optimizations": 0,
+  "action": "complete this checkpoint comparison; no automatic seed/loss/local-calibration/collection extension"
+}

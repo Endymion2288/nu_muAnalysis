@@ -1,0 +1,7 @@
+{
+  "condor_QA": 9667721,
+  "condor_QA_starts": 0,
+  "reason": "GPU matching no immediately willing slot; move zero-start QA to working authorized Kubeflow",
+  "kubeflow_GPU_resource": "nvidia.com/mig-3g.47gb:1",
+  "CPU_memory": "Reuse proven cluster-admitted GPU-only template; site injects CPU/memory, record actual Pod requests/allocation. Torch/BLAS remain1thread; original planned2CPU6000MB is not claimed as actual Kubeflow allocation."
+}

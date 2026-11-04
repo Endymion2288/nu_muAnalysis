@@ -1,0 +1,40 @@
+{
+  "job": "nu-mu-energy-stage102-qa2",
+  "status": {
+    "completionTime": "2026-11-04T21:36:45Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-04T21:36:45Z",
+        "lastTransitionTime": "2026-11-04T21:36:45Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-04T21:36:45Z",
+        "lastTransitionTime": "2026-11-04T21:36:45Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-04T21:36:31Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  },
+  "containers": [
+    {
+      "name": "qa",
+      "resources": {
+        "limits": {
+          "nvidia.com/mig-3g.47gb": "1"
+        }
+      }
+    }
+  ],
+  "note": "Pod no longer retained; job template/status only, not proof of actual Pod allocation"
+}

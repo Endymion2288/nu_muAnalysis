@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/tmp/nu_mu_stage102.Kt74zY/ml/stage102_qa.py", line 118, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/nu_mu_stage102.Kt74zY/ml/stage102_qa.py", line 109, in main
+    save(OUT/'QA.json', result)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/nu_mu_stage102.Kt74zY/ml/support_augmentation.py", line 29, in save
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False)+'\n')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc13-opt/lib/python3.13/pathlib/_local.py", line 555, in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc13-opt/lib/python3.13/pathlib/_abc.py", line 651, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc13-opt/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nu_mu_stage102.Kt74zY/workbook/stage102_energy_ml/QA.json'
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc13-opt/lib/python3.13/pathlib/_local.py", line 555, in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc13-opt/lib/python3.13/pathlib/_abc.py", line 651, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc13-opt/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'workbook/stage102_energy_ml/time_qa.json'
+tar: workbook/stage102_energy_ml: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors

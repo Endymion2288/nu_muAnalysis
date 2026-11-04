@@ -1,0 +1,260 @@
+{
+  "limit_bytes": 20000000,
+  "removed_transport_archives": [
+    {
+      "path": "software/energy-ml-stage102-qa1.tar.gz",
+      "bytes": 48277542
+    },
+    {
+      "path": "software/energy-ml-stage102-qa.tar.gz",
+      "bytes": 48283300
+    },
+    {
+      "path": "software/energy-ml-stage102-fit.tar.gz",
+      "bytes": 48280301
+    },
+    {
+      "path": "software/energy-ml-stage102-report.tar.gz",
+      "bytes": 17757781
+    },
+    {
+      "path": "ntuples/energy_ml_stage102/result_qa.tar.gz",
+      "bytes": 5444
+    },
+    {
+      "path": "ntuples/energy_ml_stage102/result_fit.tar.gz",
+      "bytes": 1944661
+    },
+    {
+      "path": "ntuples/energy_ml_stage102/result_report.tar.gz",
+      "bytes": 2113851
+    }
+  ],
+  "removed_bytes": 166662880,
+  "original_shared_inputs_retained": true,
+  "Stage54_untouched": true,
+  "models_and_event_arrays_ignored": true,
+  "physical_EOS_IO_bytes": null,
+  "note": "Logical file bytes, not allocated storage or physical I/O. Retained manifest finalized after documentation checks.",
+  "retained_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 2090
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage102.sub",
+      "bytes": 919
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage102_fit_kubeflow.json",
+      "bytes": 1198
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage102_qa_kubeflow.json",
+      "bytes": 1196
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage102_report.sub",
+      "bytes": 676
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage102.sh",
+      "bytes": 2473
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "bytes": 191407
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "bytes": 10531
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "bytes": 323833
+    },
+    {
+      "path": "ml/artifacts/stage102/N.pt",
+      "bytes": 54221
+    },
+    {
+      "path": "ml/artifacts/stage102/P.pt",
+      "bytes": 54221
+    },
+    {
+      "path": "ml/artifacts/stage102/heads.npz",
+      "bytes": 1866841
+    },
+    {
+      "path": "ml/package_stage102.py",
+      "bytes": 4711
+    },
+    {
+      "path": "ml/stage102_common.py",
+      "bytes": 1888
+    },
+    {
+      "path": "ml/stage102_fit.py",
+      "bytes": 8222
+    },
+    {
+      "path": "ml/stage102_qa.py",
+      "bytes": 5662
+    },
+    {
+      "path": "ml/stage102_report.py",
+      "bytes": 18041
+    },
+    {
+      "path": "workbook/2026-11-04_stage102_dual-checkpoint-evaluation.md",
+      "bytes": 19637
+    },
+    {
+      "path": "workbook/stage102_energy_ml/PIT.tsv",
+      "bytes": 235845
+    },
+    {
+      "path": "workbook/stage102_energy_ml/QA.json",
+      "bytes": 1322
+    },
+    {
+      "path": "workbook/stage102_energy_ml/QA1_failure.txt",
+      "bytes": 2674
+    },
+    {
+      "path": "workbook/stage102_energy_ml/admission.json",
+      "bytes": 218
+    },
+    {
+      "path": "workbook/stage102_energy_ml/checkpoint_comparison.pdf",
+      "bytes": 20798
+    },
+    {
+      "path": "workbook/stage102_energy_ml/checkpoint_comparison.svg",
+      "bytes": 50708
+    },
+    {
+      "path": "workbook/stage102_energy_ml/condor_QA_cancelled.json",
+      "bytes": 199
+    },
+    {
+      "path": "workbook/stage102_energy_ml/condor_report.json",
+      "bytes": 494
+    },
+    {
+      "path": "workbook/stage102_energy_ml/decision.json",
+      "bytes": 668
+    },
+    {
+      "path": "workbook/stage102_energy_ml/delivery_validation.json",
+      "bytes": 901
+    },
+    {
+      "path": "workbook/stage102_energy_ml/fit_started.json",
+      "bytes": 218
+    },
+    {
+      "path": "workbook/stage102_energy_ml/gates.tsv",
+      "bytes": 3849
+    },
+    {
+      "path": "workbook/stage102_energy_ml/independent_gate_checks.tsv",
+      "bytes": 6867
+    },
+    {
+      "path": "workbook/stage102_energy_ml/kubeflow_QA2_job.json",
+      "bytes": 1081
+    },
+    {
+      "path": "workbook/stage102_energy_ml/kubeflow_QA2_pod.json",
+      "bytes": 234
+    },
+    {
+      "path": "workbook/stage102_energy_ml/kubeflow_QA_pod.json",
+      "bytes": 694
+    },
+    {
+      "path": "workbook/stage102_energy_ml/kubeflow_fit_pod.json",
+      "bytes": 702
+    },
+    {
+      "path": "workbook/stage102_energy_ml/learning.tsv",
+      "bytes": 2292
+    },
+    {
+      "path": "workbook/stage102_energy_ml/old_controls.tsv",
+      "bytes": 43972
+    },
+    {
+      "path": "workbook/stage102_energy_ml/packaging_validation.json",
+      "bytes": 5460
+    },
+    {
+      "path": "workbook/stage102_energy_ml/paired_points.tsv",
+      "bytes": 270493
+    },
+    {
+      "path": "workbook/stage102_energy_ml/paired_probability.tsv",
+      "bytes": 21986
+    },
+    {
+      "path": "workbook/stage102_energy_ml/platform.json",
+      "bytes": 445
+    },
+    {
+      "path": "workbook/stage102_energy_ml/points.tsv",
+      "bytes": 172036
+    },
+    {
+      "path": "workbook/stage102_energy_ml/probability.tsv",
+      "bytes": 113967
+    },
+    {
+      "path": "workbook/stage102_energy_ml/protocol.json",
+      "bytes": 9113
+    },
+    {
+      "path": "workbook/stage102_energy_ml/report_complete.json",
+      "bytes": 308
+    },
+    {
+      "path": "workbook/stage102_energy_ml/report_input_validation.json",
+      "bytes": 1462
+    },
+    {
+      "path": "workbook/stage102_energy_ml/resources.json",
+      "bytes": 2094
+    },
+    {
+      "path": "workbook/stage102_energy_ml/selected.json",
+      "bytes": 343
+    },
+    {
+      "path": "workbook/stage102_energy_ml/storage.json",
+      "bytes": 6188
+    },
+    {
+      "path": "workbook/stage102_energy_ml/time_fit.json",
+      "bytes": 173
+    },
+    {
+      "path": "workbook/stage102_energy_ml/time_qa.json",
+      "bytes": 173
+    },
+    {
+      "path": "workbook/stage102_energy_ml/time_report.txt",
+      "bytes": 805
+    },
+    {
+      "path": "workbook/stage102_energy_ml/validation.json",
+      "bytes": 492
+    },
+    {
+      "path": "workbook/stage102_energy_ml/worker_complete.json",
+      "bytes": 618
+    }
+  ],
+  "retained_bytes": 3547659,
+  "retained_file_count": 54,
+  "transport_archives_retained": 0
+}

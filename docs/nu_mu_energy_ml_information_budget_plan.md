@@ -1227,3 +1227,14 @@ B购买了实际collection测量：2048完整train/cal身份、1923可读/125原
 唯一下一stage102恰一条原E seed2026110494训练，原62typed/角色/cal子分区/incoming权重/全部K与missing/物理政策不改；同轨迹分别持久化point-MSE-best与NLL-best，原point patience30/每5验证/max300仍控制停止，0新架构/loss/seed网格。cal_post raw配对NLL上95<0为唯一概率证据；原全cal/开发test和八层点/尾保护都交，不自动晋升、test不择epoch。0新b/T拟合，唯一辅助是原seed494旧固定b同施加两格，不借ensemble变换。
 
 先原40 train/cal含21/6missing的0optimizer实际包QA和成本，再准入1GPU batch2CPU6GB/任务wall600秒及8CPU8GB统计/最多1并发、内线程1，阶段CPU1800秒/最终20MB拟议封顶。GPU现状/token/新成本未测，引用原fit7.984613wall秒不作保证；不恢复本地环境、ROOT或保存原生副本。失败保留state不自动第二fit；阴性则结束checkpoint比较，不续seed/loss/局部校准或当前collection族。具体输入/QA门槛/500draw/退出见[合同](../workbook/stage101_energy_ml/stage102_contract.json)及[Prompt](nu_mu_energy_ml_next_step_prompt.md)。本轮未执行stage102，历史§1–62/原最终1.05/1.01/1.03与八层三向tail+2pp/stage54/K支持保持，source/refit/参数估计/研究选择/真实response与独立确认仍缺。
+
+
+## 64. stage102：概率保存准则的预算已兑现，不再自动追加训练
+
+[stage102实际报告](../workbook/2026-11-04_stage102_dual-checkpoint-evaluation.md)用唯一原E seed494轨迹同时保存P65/N50，原point停止95epochs/4370steps，0新b/T/其他模型/ROOT/native。原角色/incoming权重/cal子分区、全部K/missing、原E127维status、pz0-only一次方动量/raw11/typed NaN和完整困难支持保持。先固定40 QA，持久化state/预测/选择后再开test；不是两个fit或旧50轮权重的虚构恢复。
+
+购买的问题已有答案：cal_post raw NLL差−.006808016 [−.011119210,−.001855240]，同轨迹按NLL选模有条件概率增量；开发test raw差−.010204774 [−.013522582,−.006804995]。但共同旧固定b辅助区间含0，不能泛化到任意后处理。N raw覆盖/宽度改善而总体及若干X组仍失配。最低能点N/P=1.038134 [1.019380,1.061752]恶化，N最低能.281532对传统.145661；总体N/P区间含1，high-y有条件改善，四种输出均未过原1.05/1.01/1.03与八层三向尾+2pp联合保护。不晋升，也不以概率收益代替点目标。
+
+GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，修复后QA和唯一fit成功；实际失败QA/fit Pod22CPU63G/H100 MIG3g.47gb，计划2CPU6GB与实际分开，QA2实际Pod分配未留存。8CPU报告实际24GB/内线程1，首start exit0，报告外层32.90CPU/14.88wall秒，child窗口平均3.364171核，无单核速度比。成功独立外层合计47.767027CPU秒；失败QA实耗未测，保守容器cap预留374CPU秒，已计+预留421.767027<1800，非精确全会话CPU。960旧标量max0、128独立区间max4.884981e−15；源码/缓存核对后归档去重、紧凑≤20MB见storage，EOS物理流量未测，Stage54资产保持。
+
+本笔预算完成并结束checkpoint对照，不再购买seed/loss/局部校准或同collection族。下一Stage103仅一次终态交接表：输入既有提交汇总/部署/缺失持久产品，0事件或模型载荷/fit/推断/积分/新风险/原生定位。验收逐项回指最低两能区、主体和困难风险、概率总体/X可靠性及真实ID/TSOS/SP组成/covariance/有效读出/response与独立确认缺口，列停止与重开条件，不自动再排研究链。文档工作无需GPU或事件batch预算，本轮未执行，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–63/全部K/Stage54后缀及原最终门槛保持；source/refit/参数估计/研究选择/系统不确定度仍未覆盖。

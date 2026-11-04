@@ -2165,3 +2165,18 @@ stage99唯一T已使集成test NLL−.107503598→−.120703623、coverage改善
 主比较为原cal_post上raw NLL(N)−NLL(P)上条件95<0，500component内incoming、checkpoint固定；完整cal/cal_post/开发test一次报告两格概率/原八层RMSE及三向tail，不拿test选epoch/gate。0新b/T优化，raw b0/T1为主；唯一辅助为两格同施加原seed494旧b=.02017839294662559，无新拟合，不套ensemble b/T或据test挑raw/shifted。概率增量和最终点联合门槛分开，不自动晋升。旧cal复用/source/refit/系统/研究选择和独立确认限制保留。
 
 拟议≤1GPU batch2CPU6000MB/含QA wall600秒；报告申请8CPU8000MB、至多8进程/内线程1、共享数组/相同draw、总并发1；阶段CPU1800秒/最终20MB，QA实测准入，新成本/GPU令牌状态未测。旧seed494 fit7.984613wall秒是历史参考，不是成本保证。不准入或阴性则保留证据并结束本checkpoint实验，不加seed/loss/局部校准。报告/路线/信息计划/Prompt本地提交，stage54历史后缀和五项保持；本轮不执行stage102，详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage101_energy_ml/stage102_contract.json)。历史§1–82/原1.05/1.01/1.03与八层tail+2pp和真实response/系统要求不改。
+
+
+## 84. stage102：同轨迹NLL选模有概率增量，最低能点风险进一步恶化；结束本对照
+
+[stage102实际报告](../workbook/2026-11-04_stage102_dual-checkpoint-evaluation.md)完成唯一原E seed2026110494轨迹、95epochs/4370steps，P=point-best65、N=NLL-best50；原point patience30/每5验证/max300和优化不改，原子保存/回读后先冻结两选择再载入test。原89033兼容池、46575/11612/13189角色、17657隔离、cal_select5443/post5746/purged423及incoming权重保持，全部1016新增K/missing21/6/5/困难尾支持不删。原E62typed+62mask+wave_invalid/fit_failure/calo_invalid=127维，不混Stage100 availability；pz0-only一次方动量/允许px-py-q/p-弯折、raw11/typed NaN/合法负raw及Calo缺项/pz>50GeV保持，0新ROOT/native/生成/重建，0新b/T或其他fit。
+
+主cal_post raw NLL(N)−NLL(P)=**−.006808016 [−.011119210,−.001855240]**，达到事前上95<0；完整cal/开发test raw差−.007873952/−.010204774，区间也排除0。固定旧seed494 b=.02017839294662559共同施加的辅助cal_post差+.001816898 [−.002673025,+.006848055]，test差−.002719175 [−.005966229,+.000559106]均含0，不从test择raw/shifted，不套ensemble b/T。N raw test68/90coverage65.633952/88.156289%，比P65.104742/87.563162改善且logE宽度.437290/.753369→.452013/.783883；meanPIT .527202→.515219，但新区间[.509975,.519963]仍排除.5，覆盖上95仍低于名义，X_pz≥200/activity1/2仍偏。真E/y层PIT只作诊断，不要求均匀。
+
+**点目标没有恢复。** 最低真能50–100GeV P/N raw log-RMSE .271191/.281532，对传统.145661；N/P=1.038134 [1.019380,1.061752]有恶化证据。总体.293615/.293792，比值1.000605 [.997995,1.003194]含1；high-y .630169→.621585，比值.986379 [.978476,.994649]有条件改善。N raw最低能/传统上95=2.312052、all/direct=1.030372、低pz真高E=1.055120、high-y=1.048157，均失败；低pz真高E总/正/负尾差direct上95=+4.268601/+1.240318/+4.626078pp，high-y负尾+5.500774pp。四种预定raw/旧b输出均未联合通过，不晋升，继续既有部署；概率收益不等于低能恢复，也不证明训练数据唯一原因或信息上限。
+
+固定40含missing QA/完整24801记录独立density-CDF/原点回读通过；960旧控制标量max0，独立500incoming主区间差8.500145e−17、128原RMSE/三尾区间差max4.884981e−15。所有数值在batch；GPU Condor9667721零start后删除，首Kubeflow QA因缺输出目录保存失败，修复只重复0optimizer QA，唯一fit成功，不掩盖失败或重训。失败QA/fit Pod实际22CPU63G/H100 MIG3g.47gb，非计划2CPU6GB；QA2 Pod已清理，实际CPU/内存未测，不据同模板推断。torch1线程，fit allocated GPU峰93.818848MiB。8CPU报告9667745首次exit0，原申请8GB实际24GB，8process/内线程1；外层32.90CPU/14.88wall秒，child/window3.364171核，单核加速比未测。
+
+成功QA2/fit/report独立外层合计47.767027CPU秒，失败QA CPU未测，按22核×(15+2秒)保守容器预留374CPU秒，已计+预留421.767027<1800；shell/平台/全会话CPU未测，不称精确总量。归档字节核验后去重、模型/head忽略、最终≤20MB按storage实测，物理EOS流量未测。source/refit/旧参数估计/研究选择/真实response与未开发确认限制保留，原门槛不改。
+
+**结束本checkpoint选择实验，不续seed/loss/局部校准或当前collection族。** 下一次按路线继续时，仅Stage103有界终态交接整合：用已提交Stage92/94/96/97/99/100/102汇总及部署/产品缺口，0事件/模型载荷/fit/forward/积分/新风险/原生定位；形成现行部署、点风险与概率产物、真实ID/TSOS/SP组成/covariance/有效读出和response缺口的可回指交接表，列明确停止及另冻实验的重开条件。验收为一次最终交付，不再生成无限研究/训练链，本轮未执行。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；历史§1–83、信息计划/stage54后缀与五项/K政策保持，真实interaction/FSI/材料/Calo/接受度/背景与独立确认未认证。
