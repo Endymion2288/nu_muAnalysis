@@ -1,0 +1,43 @@
+stage	role	stratum	model	metric	value	low95	high95	unit	N	incoming	source	source_key	status
+99	test	all	traditional	log_RMSE	0.5571899699197073			dimensionless	13189	12125	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=all;model=traditional	引用已有汇总；非新测量
+99	test	all	direct_cal	log_RMSE	0.2874912363762959			dimensionless	13189	12125	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=all;model=direct_cal	引用已有汇总；非新测量
+99	test	all	E94_ensemble	log_RMSE	0.28984262019519813			dimensionless	13189	12125	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=all;model=E94_ensemble	引用已有汇总；非新测量
+99	test	all	posterior92	log_RMSE	0.3260582084377621			dimensionless	13189	12125	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=all;model=posterior92	引用已有汇总；非新测量
+99	test	E50_100	traditional	log_RMSE	0.14566138607809218			dimensionless	183	183	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E50_100;model=traditional	引用已有汇总；非新测量
+99	test	E50_100	direct_cal	log_RMSE	0.2826443432138452			dimensionless	183	183	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E50_100;model=direct_cal	引用已有汇总；非新测量
+99	test	E50_100	E94_ensemble	log_RMSE	0.27602715703767605			dimensionless	183	183	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E50_100;model=E94_ensemble	引用已有汇总；非新测量
+99	test	E50_100	posterior92	log_RMSE	0.16563047329172706			dimensionless	183	183	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E50_100;model=posterior92	引用已有汇总；非新测量
+99	test	E100_200	traditional	log_RMSE	0.2479369852672039			dimensionless	856	851	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E100_200;model=traditional	引用已有汇总；非新测量
+99	test	E100_200	direct_cal	log_RMSE	0.24632876683885355			dimensionless	856	851	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E100_200;model=direct_cal	引用已有汇总；非新测量
+99	test	E100_200	E94_ensemble	log_RMSE	0.25150977789429363			dimensionless	856	851	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E100_200;model=E94_ensemble	引用已有汇总；非新测量
+99	test	E100_200	posterior92	log_RMSE	0.23284161655779204			dimensionless	856	851	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=E100_200;model=posterior92	引用已有汇总；非新测量
+99	test	pz50_100_trueE200	traditional	log_RMSE	1.887789515111577			dimensionless	297	297	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=pz50_100_trueE200;model=traditional	引用已有汇总；非新测量
+99	test	pz50_100_trueE200	direct_cal	log_RMSE	0.6581773340614371			dimensionless	297	297	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=pz50_100_trueE200;model=direct_cal	引用已有汇总；非新测量
+99	test	pz50_100_trueE200	E94_ensemble	log_RMSE	0.6711252616156123			dimensionless	297	297	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=pz50_100_trueE200;model=E94_ensemble	引用已有汇总；非新测量
+99	test	pz50_100_trueE200	posterior92	log_RMSE	0.8269178022766053			dimensionless	297	297	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=pz50_100_trueE200;model=posterior92	引用已有汇总；非新测量
+99	test	high_y	traditional	log_RMSE	1.6187994911072296			dimensionless	385	384	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=high_y;model=traditional	引用已有汇总；非新测量
+99	test	high_y	direct_cal	log_RMSE	0.6093945097492142			dimensionless	385	384	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=high_y;model=direct_cal	引用已有汇总；非新测量
+99	test	high_y	E94_ensemble	log_RMSE	0.6166753890981569			dimensionless	385	384	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=high_y;model=E94_ensemble	引用已有汇总；非新测量
+99	test	high_y	posterior92	log_RMSE	0.7816727203429807			dimensionless	385	384	workbook/stage99_energy_ml/point_risks.tsv	role=test;stratum=high_y;model=posterior92	引用已有汇总；非新测量
+102	test	all	P_raw	log_RMSE	0.2936146229214766	0.2867252438506519	0.2998602606580461	dimensionless	13189	12125	workbook/stage102_energy_ml/points.tsv	role=test;stratum=all;model=P_raw	引用已有汇总；非新测量
+102	test	all	N_raw	log_RMSE	0.2937922168327012	0.2867396192643608	0.3001964078086032	dimensionless	13189	12125	workbook/stage102_energy_ml/points.tsv	role=test;stratum=all;model=N_raw	引用已有汇总；非新测量
+102	test	E50_100	P_raw	log_RMSE	0.2711905056552563	0.226241474011447	0.320533983895947	dimensionless	183	183	workbook/stage102_energy_ml/points.tsv	role=test;stratum=E50_100;model=P_raw	引用已有汇总；非新测量
+102	test	E50_100	N_raw	log_RMSE	0.28153202560293206	0.23660962790464252	0.33209504270408624	dimensionless	183	183	workbook/stage102_energy_ml/points.tsv	role=test;stratum=E50_100;model=N_raw	引用已有汇总；非新测量
+102	test	E100_200	P_raw	log_RMSE	0.2463206572257045	0.23022717685690916	0.26298018417907304	dimensionless	856	851	workbook/stage102_energy_ml/points.tsv	role=test;stratum=E100_200;model=P_raw	引用已有汇总；非新测量
+102	test	E100_200	N_raw	log_RMSE	0.24802692868177023	0.2322206246140788	0.2640802640310887	dimensionless	856	851	workbook/stage102_energy_ml/points.tsv	role=test;stratum=E100_200;model=N_raw	引用已有汇总；非新测量
+102	test	pz50_100_trueE200	P_raw	log_RMSE	0.6773433766705751	0.6136703772250816	0.7457400625381	dimensionless	297	297	workbook/stage102_energy_ml/points.tsv	role=test;stratum=pz50_100_trueE200;model=P_raw	引用已有汇总；非新测量
+102	test	pz50_100_trueE200	N_raw	log_RMSE	0.676720058455737	0.6126540562143611	0.7458588328980713	dimensionless	297	297	workbook/stage102_energy_ml/points.tsv	role=test;stratum=pz50_100_trueE200;model=N_raw	引用已有汇总；非新测量
+102	test	high_y	P_raw	log_RMSE	0.630168508712718	0.578063202894126	0.6895958048594518	dimensionless	385	384	workbook/stage102_energy_ml/points.tsv	role=test;stratum=high_y;model=P_raw	引用已有汇总；非新测量
+102	test	high_y	N_raw	log_RMSE	0.6215848998702987	0.5699813968515051	0.6821453199752059	dimensionless	385	384	workbook/stage102_energy_ml/points.tsv	role=test;stratum=high_y;model=N_raw	引用已有汇总；非新测量
+102	cal_post	all	N_raw-P_raw	NLL_delta	-0.006808016235748058	-0.011119209614618118	-0.0018552400968840884	dimensionless	5746	5539	workbook/stage102_energy_ml/paired_probability.tsv	role=cal_post;stratum=all;candidate=N_raw;reference=P_raw	引用已有汇总；非新测量
+102	test	all	N_raw-P_raw	NLL_delta	-0.01020477350287835	-0.013522581517128322	-0.0068049950289442804	dimensionless	13189	12125	workbook/stage102_energy_ml/paired_probability.tsv	role=test;stratum=all;candidate=N_raw;reference=P_raw	引用已有汇总；非新测量
+102	test	all	N_raw/P_raw	RMSE_ratio	1.0006048537687176	0.9979952221586538	1.0031940925062084	dimensionless	13189	12125	workbook/stage102_energy_ml/paired_points.tsv	role=test;stratum=all;candidate=N_raw;reference=P_raw	引用已有汇总；非新测量
+102	test	E50_100	N_raw/P_raw	RMSE_ratio	1.038133783196754	1.0193803224008295	1.0617521122849656	dimensionless	183	183	workbook/stage102_energy_ml/paired_points.tsv	role=test;stratum=E50_100;candidate=N_raw;reference=P_raw	引用已有汇总；非新测量
+102	test	high_y	N_raw/P_raw	RMSE_ratio	0.9863788673604882	0.9784760978151021	0.9946486027235754	dimensionless	385	384	workbook/stage102_energy_ml/paired_points.tsv	role=test;stratum=high_y;candidate=N_raw;reference=P_raw	引用已有汇总；非新测量
+99	test	all	before	NLL	-0.10750359824366489	-0.1261289153796175	-0.08804918394485643	dimensionless	13189	12125	workbook/stage99_energy_ml/probability.tsv	role=test;stratum=all;stage=before	引用已有汇总；非新测量
+99	test	all	before	coverage68_pct	62.60233676975946	61.70745017182121	63.340113402061796	percent	13189	12125	workbook/stage99_energy_ml/probability.tsv	role=test;stratum=all;stage=before	引用已有汇总；非新测量
+99	test	all	before	coverage90_pct	86.25388316151202	85.6238144329896	86.78327147766322	percent	13189	12125	workbook/stage99_energy_ml/probability.tsv	role=test;stratum=all;stage=before	引用已有汇总；非新测量
+99	test	all	after	NLL	-0.12070362298690088	-0.1379265533177761	-0.10236912090505171	dimensionless	13189	12125	workbook/stage99_energy_ml/probability.tsv	role=test;stratum=all;stage=after	引用已有汇总；非新测量
+99	test	all	after	coverage68_pct	67.11092783505154	66.21421305841922	67.81475257731951	percent	13189	12125	workbook/stage99_energy_ml/probability.tsv	role=test;stratum=all;stage=after	引用已有汇总；非新测量
+99	test	all	after	coverage90_pct	89.39477663230242	88.83592783505149	89.86115120274908	percent	13189	12125	workbook/stage99_energy_ml/probability.tsv	role=test;stratum=all;stage=after	引用已有汇总；非新测量
+100	cal	L_vs_H	B-A	logscore_delta	0.0	0.0	0.0	dimensionless	66	66	workbook/stage100_energy_ml/paired.tsv	metric=logscore	引用已有汇总；非新测量

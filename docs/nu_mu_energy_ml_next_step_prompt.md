@@ -1,28 +1,46 @@
-# 下一轮执行 Prompt：Stage103 有界终态交接整合，不追加模型实验
+# 下一轮执行 Prompt：Stage104 固定概率表示的连续点决策实验
 
-先读AGENTS.md、路线§84、信息计划§64和[Stage102报告](../workbook/2026-11-04_stage102_dual-checkpoint-evaluation.md)。Stage102唯一MDN轨迹与双checkpoint对照已经完成，不得再次执行fit。**下一次用户按当前路线要求继续，仅做一次已有证据的终态交接整合；本Prompt不是新训练、校准、提取或部署授权。**
+先读AGENTS.md、[Stage103研究复盘](../workbook/2026-11-04_stage103_research-reset-and-decision-budget.md)、路线§85、信息计划§65和stage99/100/102。stage102双checkpoint、stage99温度、stage100配对与结构审计均已完成，不重做。用户新的研究请求覆盖旧Prompt“仅终态交接”的优先级；本轮只检验下面一个新假设，不自动开展关系预训练或后续阶段。
 
-## 1. 已完成的结论
+**在有实际环境的节点执行。当前本地终端不恢复CERN环境或复现事件。** 0新能量网络/分类器/ROOT/native/生成/重建、0网络forward/后验积分，0新offset/T/seed/架构或prior网格。读取保存head并做解析矩不等于模型forward。
 
-同轨迹P65/N50，原point停止95epochs/4370steps。原cal_post raw NLL(N)−NLL(P)=−.006808016 [−.011119210,−.001855240]，有条件概率增量；开发test raw差−.010204774 [−.013522582,−.006804995]。共同旧seed494固定b的辅助区间含0，不拿test择raw/shifted或套ensemble b/T。
+## 1. 研究问题与输入
 
-概率改善没有解决point风险：最低能P/N raw log-RMSE .271191/.281532，传统.145661，N/P=1.038134 [1.019380,1.061752]恶化；总体N/P区间含1、high-y有条件改善。四种预定输出均未联合通过，N raw总体meanPIT .515219 [.509975,.519963]、coverage65.633952/88.156289%及若干X组仍失配。不晋升，继续既有部署。结束checkpoint实验，不续seed/loss/局部校准/旧collection统计族。
+问题是：固定stage99已训练且做过一次尺度校准的q(logE|X)，改变连续点动作，能否降低两低能风险且保护总体/困难侧？这与温度点保持不同，也与旧stage68/73重训、stage78有限专家凸包不同；形式上仍与能量重权/先验倾斜有关，不声称新信息或无代价修复。
 
-## 2. 唯一任务、输入与验收
+输入仅保存缓存：stage94的`evaluation_input.npz`、`cal_partition.npz`、`ml/artifacts/stage94/{MDN_heads,point_predictions}.npz`，stage99的`calibration.json`、既存概率尺度源码和汇总，stage87同split `predictions.npz`及原身份/权重。具体路径与head解码见`ml/stage99_report.py`，只复用读入/解析过程，**不得调用会重新拟合T的main**。stage92/102仅作已提交结果参照，不重新forward或积分。没有实际head缓存时交精确缺失输入，不从工作簿汇总虚构事件分布。
 
-拟编号Stage103。只读已提交Stage92/94/96/97/99/100/102 workbook及汇总JSON/TSV、既有部署记录、Stage99/101精确产品缺口；不读事件NPZ/ROOT或模型/head载荷，不fit/forward/积分/重做统计/风险，不重新扫描EOS或定位原生文件，不启动Stage54支线或新batch作业。
+原89033兼容池、train/cal/test46575/11612/13189、唯一incoming37556/10811/12125、隔离17657不变。select5443/post5746，最低能85/97；423退出select仍保留完整cal。所有1016新增K、missing21/6/5、两低能/高端/困难与尾保留；不重分角色。原incoming总权重1，两个cal子角色用原subrole重归一权重。一次方动量pz0-only、允许原px/py/q/p/弯折、raw11/status/typed NaN/合法负raw和Calo缺项保持；不加p0/p1/pz1、truth输入或按真值部署gate。
 
-交付一份中文终态交接报告和一张紧凑可回指证据表，明确：现行部署是什么；哪些仅为开发点候选，哪些仅为概率产品；50–100/100–200/总体/低pz真高E/high-y的风险与原验收差距；总体/X组概率可靠性；真实data response/interaction/FSI/材料/Calo/接受度/背景、source/refit/研究选择及未开发确认缺口。引用原样本/角色/单位/区间和文件，不制造跨实验配对显著性或真值条件PIT要求，不把“最佳已试”称最优/信息界。
+## 2. 先冻结解析动作与唯一优化问题
 
-另交真实关联的最小持久产品与重开条件：原stage95身份/production/原track筛选闭合，measurement/cluster唯一ID和TSOS，SP constituent引用，实际covariance/坐标/单位/状态，各plane/module有效读出分母。原scratch REC已清理、官方同名不同production不能硬接；没有新产品就保持精确缺口，不重复metadata定位或以collection弦线冒充真实关联。未归属活动不等于noise/强子。
+q固定为stage99 E94三seed九Normal混合及原b/T，完整值直接读calibration.json，不用文档舍入值。以九分量共同的原mean logE为尺度中心，按stage99规则变换；不能各seed单独居中，也不套stage102单seed旧b。混合权重/密度不优化。
 
-验收为一次有限的交付整合与明确停止/另冻实验重开条件，**不自动生成再一个研究阶段或训练链**。若现有材料不足，标记未测量/未认证及所缺输入。最终两低能/传统上95≤1.05、all/direct≤1.01、≥200与困难≤1.03，八层总/正/负tail差上95≤+2pp保持；不得按test选gate或硬切传统。保持全部K、原角色/incoming权重、pz0-only一次方动量/允许px-py-q/p-弯折、raw11/status/typed NaN和合法负值政策。
+令t=ln(E/GeV)，I1=[ln50,ln100)、I2=[ln100,ln200)。对每例解析计算Pj=∫Ij q、Mj=∫Ij t q、m=∫t q。单Normal的P=Φ(β)−Φ(α)，M=μP+σ[φ(α)−φ(β)]，再按混合权重求和。输出解析aλ=(m+λ1M1+λ2M2)/(1+λ1P1+λ2P2)，实际点数组为**原保存点＋解析(aλ−a0)**，避免float64重解码改写旧float32点的末位。
 
-## 3. 资源、保存与提交
+λ=0必须逐位返回旧stage99点；全部X连续输出，允许负修正，不强制E≥重建pz、不截到truth能量范围、不拒绝困难事件。新的点是成本敏感动作，原q继续作为概率产品，两者分开命名；不把加权q宣布成新物理后验。high-y/未确认不由这两个能区矩完全描述，保留经验评价，不宣称解析满足其风险。
 
-仅文本/源码/已提交汇总整合，无GPU/事件batch/数值QA预算；全文文档工作CPU/物理I/O未测，不冒称零耗时。没有新事件模型副本；紧凑最终≤20MB，不动旧缓存和Stage54五项。若将来需要新计算，必须有具体的新证据、可验收问题和另冻合同，不能从本交接Prompt推导自动许可。
+只在原cal_select拟合λ1/λ2与辅助τ，最小化τ：两低能新MSE≤τ×同支持传统MSE。λ∈[0,100]²；匹配开发保护为新all MSE≤1.01²×旧E94，新≥200/低pz/低pz真≥200/high-y/未确认各≤1.03²×旧E94。这里保护旧E94是为了有λ0可行控制，**不替代最终对原direct和传统的门槛**。所有损失保留完整尾、不换Huber/裁残差或按cal补变量。
 
-先写中文Stage103 workbook（目标/工作/引用实际数字/未测/结论/停止或重开条件），再追加路线/信息预算并更新本Prompt，相关紧凑证据本地Conventional Commit，不push。历史正文只追加，保留以下Stage54后缀逐字不变。此Stage103尚未执行，本轮不自动启动。
+恰一次SLSQP，解析导数，起点λ=(0,0)、τ为当前两低能风险比最大值，ftol1e−9/maxiter200。事前固定，不从test换起点/bounds/算法/目标、重启或扫描λ网格。记录status/边界/可行残差，数值不成功则报告未定和已完成QA，不用中间解选test赢家；有限参数非凸问题不称全局证明。0新offset/T或第三权重。冻结λ后才评价完整开发test。
+
+## 3. QA后同阶段交完整点结果
+
+从原cal固定≤40身份（含全部6个cal缺失及select/post）做0优化QA：身份/角色/head的原变换、Pj范围与区间可加性、截断矩的独立解析算例、λ0点逐位不变、λ导数有限差分和实际CPU/wall/RSS。核原q均值/概率与stage99保存汇总，不重新拟合概率参数或为此全量重复概率表。原float32与解析float64差沿已有3e−6控制并单列；不事后改容差。本轮只需保存的cal head做QA，不能为补QA身份重开网络forward；stage94保存active角色，勿与stage102仅cal/test的head合同混用。若QA有程序错误，修复算术后再执行唯一优化，不能把失败当物理阴性。
+
+主开发证据：原cal_post上，两低能各新/旧E94 RMSE比的**最大值**，以500次共同component内incoming抽样给条件95%区间，上端<1才支持共同低能增量。两cal子角色权重保持原定义，cal_post不拟参数。全体/困难相对旧E94的保护、原传统/direct的最终验收分别交付，不拿平均AUC/NLL或单个低能改善替代。
+
+无论是否有利，按冻结策略一次性交完整cal和开发test的原八层：all、E50–100、E100–200、≥200、pz50–100、低pz真≥200、high-y、未确认；另保留高端/缺失/confirmed低transfer等旧诊断层。log-RMSE、bias/R68、总/正/负tail50和配对区间齐全，给相对传统/direct/原E94三种基准的清楚命名。使用原incoming重抽样规则、相同draw复用，不把来源/refit/校准/研究选择或真实response当已覆盖。
+
+原最终要求不改：两低能/传统RMSE比上95≤1.05，all/direct≤1.01，≥200及困难/direct≤1.03；八层三向tail50差上95≤+2pp。主开发增量不等于最终联合通过，cal/test已开发不能叫新blind。概率q不变，不宣称新coverage/NLL收益，点动作可以改变点风险。
+
+## 4. 预算、停止与交付
+
+拟议一次CPU批任务申请最多4CPU/6GB、进程内线程1；解析矩/两参数求解无需GPU，配对统计复用只读数组和同draw，最多4进程/1任务并发。阶段CPU≤900秒、任务wall≤900秒、紧凑最终≤20MB；≤40QA实测后准入，新成本/收益/功效未测。没有ROOT/native I/O或新事件副本；只保留两权重、配置、紧凑点输出及必要汇总，旧head/q/b/T只读复用，不生成大积分/500draw副本。
+
+给出明确结论：有开发点增量则记录改善与最终差距；无可行改善则结束这个固定q两参数动作族，不追加权重/局部校准/专家或重训。失败只限制该表示与动作族，不认证信息极限或否定关系预训练。stage103提出的全点关系/遮挡预训练、独立低能支持和真实response分别是另冻研究设计，不能由本Prompt自动连开。
+
+先写中文stage104 workbook，包含样本/选择/单位、输入与命令、实际λ/求解/风险区间/完整尾与程序及物理解释、资源/失败/未测量、产物和明确下一科学问题，再与代码/配置/紧凑证据本地Conventional Commit；不push、不自动stage105。历史路线只追加，stage54原后缀逐字保留，其实际完成状态以stage85为准，不重做历史noise支线。
 
 ## 保留的stage54 data占据支线
 

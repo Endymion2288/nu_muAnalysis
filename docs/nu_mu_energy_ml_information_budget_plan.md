@@ -1238,3 +1238,16 @@ B购买了实际collection测量：2048完整train/cal身份、1923可读/125原
 GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，修复后QA和唯一fit成功；实际失败QA/fit Pod22CPU63G/H100 MIG3g.47gb，计划2CPU6GB与实际分开，QA2实际Pod分配未留存。8CPU报告实际24GB/内线程1，首start exit0，报告外层32.90CPU/14.88wall秒，child窗口平均3.364171核，无单核速度比。成功独立外层合计47.767027CPU秒；失败QA实耗未测，保守容器cap预留374CPU秒，已计+预留421.767027<1800，非精确全会话CPU。960旧标量max0、128独立区间max4.884981e−15；源码/缓存核对后归档去重、紧凑≤20MB见storage，EOS物理流量未测，Stage54资产保持。
 
 本笔预算完成并结束checkpoint对照，不再购买seed/loss/局部校准或同collection族。下一Stage103仅一次终态交接表：输入既有提交汇总/部署/缺失持久产品，0事件或模型载荷/fit/推断/积分/新风险/原生定位。验收逐项回指最低两能区、主体和困难风险、概率总体/X可靠性及真实ID/TSOS/SP组成/covariance/有效读出/response与独立确认缺口，列停止与重开条件，不自动再排研究链。文档工作无需GPU或事件batch预算，本轮未执行，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–63/全部K/Stage54后缀及原最终门槛保持；source/refit/参数估计/研究选择/系统不确定度仍未覆盖。
+
+
+## 65. stage103：预算从概率重复对照转向点动作与真正不同的表示
+
+[stage103报告](../workbook/2026-11-04_stage103_research-reset-and-decision-budget.md)完成最新证据交接与新文献研究，0事件/模型载荷/训练/推断/ROOT/SHA/作业。用户新的创新研究请求覆盖§64仅终态交接安排；旧checkpoint、温度和42摘要族保持结束。新增42项可回指[证据](../workbook/stage103_energy_ml/evidence.tsv)，不计算新物理风险或功效。
+
+已购买的问题：stage102 NLL-best确有cal_post raw概率增量−.006808016 [−.011119210,−.001855240]，却使最低能点N/P=1.038134恶化；stage99 T只改概率，stage100浅树未采用新增几何列。这不再支持追加概率选模/校准预算。stage99强AUC未含过渡区且不计错误幅度；同低pz367高分例含6低能/88过渡/273高能，292低分例含177/91/24，不能直接硬gate。原传统最低能中央风险的1.05倍余量仅.002174767平方log量是数学例子，不是新性能。
+
+下一stage104购买固定q的点决策能力：原stage99 E94九Normal混合和旧b/T，两个低能区间的解析概率P/一阶矩M，两个λ控制aλ=(m+ΣλM)/(1+ΣλP)。q不变，另给代价动作，不宣称物理posterior已改良；旧保存点加解析差保证λ0控制。cal_select一次固定SLSQP最小化两低能/传统最坏MSE比，λ[0,100]²、all/困难对旧E94作匹配开发保护；原最终对传统/direct的八层RMSE与三向尾门槛不改。cal_post两低能新/旧最大RMSE比的条件上95<1为主开发增量，完整cal/test一次报告不择赢家。0新网络/offset/T/积分/ROOT/forward或专家gate，阴性结束两参数族，不开网格。与stage68/73/78和prior stress的联系/差别如实解释，不当新观测或信息界。
+
+≤40固定cal身份（含6个cal缺失）解析QA后1个CPU批任务可申请4CPU/6GB、线程1、最多4进程/同draw共享；CPU和wall≤900秒、最终20MB为拟议上限，新的成本/收益未测。现有输入完整则同阶段直接优化和评价，不先生成一串零训练阶段。当前终端不执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+另保留更有探索性的局部点关系＋遮挡预训练合同：全点逐面mean A、关系B、B预训练C，原62/强BDT/原角色保留，主整体C/A与B解释相互区分；无自动作业/既定GPU小时承诺。真实ID不是几何图运算前提，但缺ID不能伪造粒子/ghost监督；旧DeepSets和candidate消息不冒充已测这项组合。2026 FASERCal论文可借任务结构，不能迁移分类增益/量能输入/大模型成本。新生产条件到位才设计独立低能和过渡支持，提议密度/接受度与谱系须明确，不再随机扩文件。历史§1–64和stage54/全部K/原物理及最终门槛不变；真实response/系统与独立确认仍未测。
