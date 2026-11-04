@@ -1,0 +1,1547 @@
+{
+  "schemas": [
+    [
+      {
+        "branch": "run",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "eventID",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Track_pz0",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_px0",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_py0",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_x0",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_y0",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_z0",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_x1",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_y1",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_z1",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_charge",
+        "present": true,
+        "typename": "std::vector<int32_t>"
+      },
+      {
+        "branch": "Track_Chi2",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_nDoF",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_nLayers",
+        "present": true,
+        "typename": "std::vector<uint32_t>"
+      },
+      {
+        "branch": "Track_module_eta0",
+        "present": true,
+        "typename": "std::vector<int32_t>"
+      },
+      {
+        "branch": "Track_module_phi0",
+        "present": true,
+        "typename": "std::vector<int32_t>"
+      },
+      {
+        "branch": "Track_InStation0",
+        "present": true,
+        "typename": "std::vector<uint32_t>"
+      },
+      {
+        "branch": "Track_InStation1",
+        "present": true,
+        "typename": "std::vector<uint32_t>"
+      },
+      {
+        "branch": "Track_InStation2",
+        "present": true,
+        "typename": "std::vector<uint32_t>"
+      },
+      {
+        "branch": "Track_InStation3",
+        "present": true,
+        "typename": "std::vector<uint32_t>"
+      },
+      {
+        "branch": "Track_X_atVetoNu",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_Y_atVetoNu",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_X_atTrig",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_Y_atTrig",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_X_atCalo",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "Track_Y_atCalo",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "truth_pdg",
+        "present": true,
+        "typename": "std::vector<int32_t>"
+      },
+      {
+        "branch": "truth_px",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "truth_py",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "truth_pz",
+        "present": true,
+        "typename": "std::vector<double>"
+      },
+      {
+        "branch": "VetoNu0_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "VetoNu0_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "VetoNu1_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "VetoNu1_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Veto10_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Veto10_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Veto20_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Veto20_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Veto21_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Veto21_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Timing0_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Timing0_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Timing1_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Timing1_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Timing2_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Timing2_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Timing3_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Timing3_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Preshower0_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Preshower0_status",
+        "present": true,
+        "typename": "int32_t"
+      },
+      {
+        "branch": "Preshower1_raw_charge",
+        "present": true,
+        "typename": "float"
+      },
+      {
+        "branch": "Preshower1_status",
+        "present": true,
+        "typename": "int32_t"
+      }
+    ],
+    []
+  ],
+  "snapshots": {
+    "QA_schema.json": [
+      {
+        "source": "55:0",
+        "schema_id": 0
+      },
+      {
+        "source": "55:1",
+        "schema_id": 0
+      },
+      {
+        "source": "55:3",
+        "schema_id": 0
+      },
+      {
+        "source": "55:15",
+        "schema_id": 0
+      },
+      {
+        "source": "55:16",
+        "schema_id": 0
+      },
+      {
+        "source": "55:17",
+        "schema_id": 0
+      },
+      {
+        "source": "55:21",
+        "schema_id": 0
+      },
+      {
+        "source": "55:48",
+        "schema_id": 0
+      },
+      {
+        "source": "55:59",
+        "schema_id": 0
+      },
+      {
+        "source": "55:63",
+        "schema_id": 0
+      },
+      {
+        "source": "55:69",
+        "schema_id": 0
+      },
+      {
+        "source": "55:87",
+        "schema_id": 0
+      },
+      {
+        "source": "55:89",
+        "schema_id": 0
+      },
+      {
+        "source": "55:107",
+        "schema_id": 0
+      },
+      {
+        "source": "55:109",
+        "schema_id": 0
+      },
+      {
+        "source": "55:113",
+        "schema_id": 0
+      },
+      {
+        "source": "55:114",
+        "schema_id": 0
+      },
+      {
+        "source": "55:120",
+        "schema_id": 0
+      },
+      {
+        "source": "55:121",
+        "schema_id": 0
+      },
+      {
+        "source": "55:129",
+        "schema_id": 0
+      },
+      {
+        "source": "55:131",
+        "schema_id": 0
+      },
+      {
+        "source": "55:134",
+        "schema_id": 0
+      },
+      {
+        "source": "55:164",
+        "schema_id": 0
+      },
+      {
+        "source": "55:172",
+        "schema_id": 0
+      },
+      {
+        "source": "55:184",
+        "schema_id": 0
+      },
+      {
+        "source": "55:201",
+        "schema_id": 0
+      },
+      {
+        "source": "55:207",
+        "schema_id": 0
+      },
+      {
+        "source": "55:213",
+        "schema_id": 0
+      },
+      {
+        "source": "55:239",
+        "schema_id": 0
+      },
+      {
+        "source": "55:242",
+        "schema_id": 0
+      },
+      {
+        "source": "70:0",
+        "schema_id": 1
+      },
+      {
+        "source": "81:0",
+        "schema_id": 0
+      },
+      {
+        "source": "82:1",
+        "schema_id": 1
+      },
+      {
+        "source": "83:0",
+        "schema_id": 0
+      },
+      {
+        "source": "83:1",
+        "schema_id": 0
+      },
+      {
+        "source": "83:8",
+        "schema_id": 0
+      }
+    ],
+    "schema.json": [
+      {
+        "source": "55:1",
+        "schema_id": 0
+      },
+      {
+        "source": "55:3",
+        "schema_id": 0
+      },
+      {
+        "source": "55:5",
+        "schema_id": 0
+      },
+      {
+        "source": "55:2",
+        "schema_id": 0
+      },
+      {
+        "source": "55:4",
+        "schema_id": 0
+      },
+      {
+        "source": "55:0",
+        "schema_id": 0
+      },
+      {
+        "source": "55:6",
+        "schema_id": 0
+      },
+      {
+        "source": "55:7",
+        "schema_id": 0
+      },
+      {
+        "source": "55:13",
+        "schema_id": 0
+      },
+      {
+        "source": "55:9",
+        "schema_id": 0
+      },
+      {
+        "source": "55:14",
+        "schema_id": 0
+      },
+      {
+        "source": "55:8",
+        "schema_id": 0
+      },
+      {
+        "source": "55:10",
+        "schema_id": 0
+      },
+      {
+        "source": "55:15",
+        "schema_id": 0
+      },
+      {
+        "source": "55:11",
+        "schema_id": 0
+      },
+      {
+        "source": "55:12",
+        "schema_id": 0
+      },
+      {
+        "source": "55:18",
+        "schema_id": 0
+      },
+      {
+        "source": "55:16",
+        "schema_id": 0
+      },
+      {
+        "source": "55:17",
+        "schema_id": 0
+      },
+      {
+        "source": "55:20",
+        "schema_id": 0
+      },
+      {
+        "source": "55:19",
+        "schema_id": 0
+      },
+      {
+        "source": "55:21",
+        "schema_id": 0
+      },
+      {
+        "source": "55:23",
+        "schema_id": 0
+      },
+      {
+        "source": "55:22",
+        "schema_id": 0
+      },
+      {
+        "source": "55:24",
+        "schema_id": 0
+      },
+      {
+        "source": "55:25",
+        "schema_id": 0
+      },
+      {
+        "source": "55:26",
+        "schema_id": 0
+      },
+      {
+        "source": "55:27",
+        "schema_id": 0
+      },
+      {
+        "source": "55:29",
+        "schema_id": 0
+      },
+      {
+        "source": "55:31",
+        "schema_id": 0
+      },
+      {
+        "source": "55:30",
+        "schema_id": 0
+      },
+      {
+        "source": "55:28",
+        "schema_id": 0
+      },
+      {
+        "source": "55:33",
+        "schema_id": 0
+      },
+      {
+        "source": "55:32",
+        "schema_id": 0
+      },
+      {
+        "source": "55:34",
+        "schema_id": 0
+      },
+      {
+        "source": "55:38",
+        "schema_id": 0
+      },
+      {
+        "source": "55:36",
+        "schema_id": 0
+      },
+      {
+        "source": "55:35",
+        "schema_id": 0
+      },
+      {
+        "source": "55:37",
+        "schema_id": 0
+      },
+      {
+        "source": "55:40",
+        "schema_id": 0
+      },
+      {
+        "source": "55:41",
+        "schema_id": 0
+      },
+      {
+        "source": "55:39",
+        "schema_id": 0
+      },
+      {
+        "source": "55:42",
+        "schema_id": 0
+      },
+      {
+        "source": "55:44",
+        "schema_id": 0
+      },
+      {
+        "source": "55:43",
+        "schema_id": 0
+      },
+      {
+        "source": "55:46",
+        "schema_id": 0
+      },
+      {
+        "source": "55:47",
+        "schema_id": 0
+      },
+      {
+        "source": "55:45",
+        "schema_id": 0
+      },
+      {
+        "source": "55:48",
+        "schema_id": 0
+      },
+      {
+        "source": "55:50",
+        "schema_id": 0
+      },
+      {
+        "source": "55:51",
+        "schema_id": 0
+      },
+      {
+        "source": "55:49",
+        "schema_id": 0
+      },
+      {
+        "source": "55:52",
+        "schema_id": 0
+      },
+      {
+        "source": "55:55",
+        "schema_id": 0
+      },
+      {
+        "source": "55:53",
+        "schema_id": 0
+      },
+      {
+        "source": "55:54",
+        "schema_id": 0
+      },
+      {
+        "source": "55:56",
+        "schema_id": 0
+      },
+      {
+        "source": "55:57",
+        "schema_id": 0
+      },
+      {
+        "source": "55:58",
+        "schema_id": 0
+      },
+      {
+        "source": "55:60",
+        "schema_id": 0
+      },
+      {
+        "source": "55:59",
+        "schema_id": 0
+      },
+      {
+        "source": "55:62",
+        "schema_id": 0
+      },
+      {
+        "source": "55:63",
+        "schema_id": 0
+      },
+      {
+        "source": "55:61",
+        "schema_id": 0
+      },
+      {
+        "source": "55:64",
+        "schema_id": 0
+      },
+      {
+        "source": "55:66",
+        "schema_id": 0
+      },
+      {
+        "source": "55:67",
+        "schema_id": 0
+      },
+      {
+        "source": "55:70",
+        "schema_id": 0
+      },
+      {
+        "source": "55:71",
+        "schema_id": 0
+      },
+      {
+        "source": "55:69",
+        "schema_id": 0
+      },
+      {
+        "source": "55:73",
+        "schema_id": 0
+      },
+      {
+        "source": "55:68",
+        "schema_id": 0
+      },
+      {
+        "source": "55:65",
+        "schema_id": 0
+      },
+      {
+        "source": "55:74",
+        "schema_id": 0
+      },
+      {
+        "source": "55:75",
+        "schema_id": 0
+      },
+      {
+        "source": "55:72",
+        "schema_id": 0
+      },
+      {
+        "source": "55:76",
+        "schema_id": 0
+      },
+      {
+        "source": "55:77",
+        "schema_id": 0
+      },
+      {
+        "source": "55:78",
+        "schema_id": 0
+      },
+      {
+        "source": "55:80",
+        "schema_id": 0
+      },
+      {
+        "source": "55:83",
+        "schema_id": 0
+      },
+      {
+        "source": "55:85",
+        "schema_id": 0
+      },
+      {
+        "source": "55:81",
+        "schema_id": 0
+      },
+      {
+        "source": "55:79",
+        "schema_id": 0
+      },
+      {
+        "source": "55:82",
+        "schema_id": 0
+      },
+      {
+        "source": "55:86",
+        "schema_id": 0
+      },
+      {
+        "source": "55:84",
+        "schema_id": 0
+      },
+      {
+        "source": "55:87",
+        "schema_id": 0
+      },
+      {
+        "source": "55:89",
+        "schema_id": 0
+      },
+      {
+        "source": "55:88",
+        "schema_id": 0
+      },
+      {
+        "source": "55:91",
+        "schema_id": 0
+      },
+      {
+        "source": "55:94",
+        "schema_id": 0
+      },
+      {
+        "source": "55:90",
+        "schema_id": 0
+      },
+      {
+        "source": "55:93",
+        "schema_id": 0
+      },
+      {
+        "source": "55:97",
+        "schema_id": 0
+      },
+      {
+        "source": "55:95",
+        "schema_id": 0
+      },
+      {
+        "source": "55:92",
+        "schema_id": 0
+      },
+      {
+        "source": "55:96",
+        "schema_id": 0
+      },
+      {
+        "source": "55:99",
+        "schema_id": 0
+      },
+      {
+        "source": "55:98",
+        "schema_id": 0
+      },
+      {
+        "source": "55:103",
+        "schema_id": 0
+      },
+      {
+        "source": "55:100",
+        "schema_id": 0
+      },
+      {
+        "source": "55:104",
+        "schema_id": 0
+      },
+      {
+        "source": "55:105",
+        "schema_id": 0
+      },
+      {
+        "source": "55:102",
+        "schema_id": 0
+      },
+      {
+        "source": "55:101",
+        "schema_id": 0
+      },
+      {
+        "source": "55:112",
+        "schema_id": 0
+      },
+      {
+        "source": "55:108",
+        "schema_id": 0
+      },
+      {
+        "source": "55:109",
+        "schema_id": 0
+      },
+      {
+        "source": "55:107",
+        "schema_id": 0
+      },
+      {
+        "source": "55:106",
+        "schema_id": 0
+      },
+      {
+        "source": "55:111",
+        "schema_id": 0
+      },
+      {
+        "source": "55:113",
+        "schema_id": 0
+      },
+      {
+        "source": "55:114",
+        "schema_id": 0
+      },
+      {
+        "source": "55:115",
+        "schema_id": 0
+      },
+      {
+        "source": "55:110",
+        "schema_id": 0
+      },
+      {
+        "source": "55:118",
+        "schema_id": 0
+      },
+      {
+        "source": "55:117",
+        "schema_id": 0
+      },
+      {
+        "source": "55:119",
+        "schema_id": 0
+      },
+      {
+        "source": "55:116",
+        "schema_id": 0
+      },
+      {
+        "source": "55:120",
+        "schema_id": 0
+      },
+      {
+        "source": "55:122",
+        "schema_id": 0
+      },
+      {
+        "source": "55:121",
+        "schema_id": 0
+      },
+      {
+        "source": "55:128",
+        "schema_id": 0
+      },
+      {
+        "source": "55:124",
+        "schema_id": 0
+      },
+      {
+        "source": "55:123",
+        "schema_id": 0
+      },
+      {
+        "source": "55:126",
+        "schema_id": 0
+      },
+      {
+        "source": "55:127",
+        "schema_id": 0
+      },
+      {
+        "source": "55:125",
+        "schema_id": 0
+      },
+      {
+        "source": "55:130",
+        "schema_id": 0
+      },
+      {
+        "source": "55:129",
+        "schema_id": 0
+      },
+      {
+        "source": "55:131",
+        "schema_id": 0
+      },
+      {
+        "source": "55:132",
+        "schema_id": 0
+      },
+      {
+        "source": "55:133",
+        "schema_id": 0
+      },
+      {
+        "source": "55:134",
+        "schema_id": 0
+      },
+      {
+        "source": "55:135",
+        "schema_id": 0
+      },
+      {
+        "source": "55:136",
+        "schema_id": 0
+      },
+      {
+        "source": "55:138",
+        "schema_id": 0
+      },
+      {
+        "source": "55:137",
+        "schema_id": 0
+      },
+      {
+        "source": "55:139",
+        "schema_id": 0
+      },
+      {
+        "source": "55:140",
+        "schema_id": 0
+      },
+      {
+        "source": "55:143",
+        "schema_id": 0
+      },
+      {
+        "source": "55:141",
+        "schema_id": 0
+      },
+      {
+        "source": "55:142",
+        "schema_id": 0
+      },
+      {
+        "source": "55:144",
+        "schema_id": 0
+      },
+      {
+        "source": "55:145",
+        "schema_id": 0
+      },
+      {
+        "source": "55:148",
+        "schema_id": 0
+      },
+      {
+        "source": "55:147",
+        "schema_id": 0
+      },
+      {
+        "source": "55:146",
+        "schema_id": 0
+      },
+      {
+        "source": "55:149",
+        "schema_id": 0
+      },
+      {
+        "source": "55:150",
+        "schema_id": 0
+      },
+      {
+        "source": "55:151",
+        "schema_id": 0
+      },
+      {
+        "source": "55:152",
+        "schema_id": 0
+      },
+      {
+        "source": "55:153",
+        "schema_id": 0
+      },
+      {
+        "source": "55:157",
+        "schema_id": 0
+      },
+      {
+        "source": "55:155",
+        "schema_id": 0
+      },
+      {
+        "source": "55:154",
+        "schema_id": 0
+      },
+      {
+        "source": "55:158",
+        "schema_id": 0
+      },
+      {
+        "source": "55:159",
+        "schema_id": 0
+      },
+      {
+        "source": "55:156",
+        "schema_id": 0
+      },
+      {
+        "source": "55:161",
+        "schema_id": 0
+      },
+      {
+        "source": "55:160",
+        "schema_id": 0
+      },
+      {
+        "source": "55:163",
+        "schema_id": 0
+      },
+      {
+        "source": "55:162",
+        "schema_id": 0
+      },
+      {
+        "source": "55:164",
+        "schema_id": 0
+      },
+      {
+        "source": "55:165",
+        "schema_id": 0
+      },
+      {
+        "source": "55:166",
+        "schema_id": 0
+      },
+      {
+        "source": "55:167",
+        "schema_id": 0
+      },
+      {
+        "source": "55:169",
+        "schema_id": 0
+      },
+      {
+        "source": "55:168",
+        "schema_id": 0
+      },
+      {
+        "source": "55:172",
+        "schema_id": 0
+      },
+      {
+        "source": "55:170",
+        "schema_id": 0
+      },
+      {
+        "source": "55:173",
+        "schema_id": 0
+      },
+      {
+        "source": "55:171",
+        "schema_id": 0
+      },
+      {
+        "source": "55:176",
+        "schema_id": 0
+      },
+      {
+        "source": "55:174",
+        "schema_id": 0
+      },
+      {
+        "source": "55:175",
+        "schema_id": 0
+      },
+      {
+        "source": "55:178",
+        "schema_id": 0
+      },
+      {
+        "source": "55:177",
+        "schema_id": 0
+      },
+      {
+        "source": "55:181",
+        "schema_id": 0
+      },
+      {
+        "source": "55:179",
+        "schema_id": 0
+      },
+      {
+        "source": "55:182",
+        "schema_id": 0
+      },
+      {
+        "source": "55:180",
+        "schema_id": 0
+      },
+      {
+        "source": "55:184",
+        "schema_id": 0
+      },
+      {
+        "source": "55:186",
+        "schema_id": 0
+      },
+      {
+        "source": "55:183",
+        "schema_id": 0
+      },
+      {
+        "source": "55:185",
+        "schema_id": 0
+      },
+      {
+        "source": "55:187",
+        "schema_id": 0
+      },
+      {
+        "source": "55:188",
+        "schema_id": 0
+      },
+      {
+        "source": "55:192",
+        "schema_id": 0
+      },
+      {
+        "source": "55:190",
+        "schema_id": 0
+      },
+      {
+        "source": "55:191",
+        "schema_id": 0
+      },
+      {
+        "source": "55:194",
+        "schema_id": 0
+      },
+      {
+        "source": "55:189",
+        "schema_id": 0
+      },
+      {
+        "source": "55:193",
+        "schema_id": 0
+      },
+      {
+        "source": "55:195",
+        "schema_id": 0
+      },
+      {
+        "source": "55:198",
+        "schema_id": 0
+      },
+      {
+        "source": "55:197",
+        "schema_id": 0
+      },
+      {
+        "source": "55:199",
+        "schema_id": 0
+      },
+      {
+        "source": "55:196",
+        "schema_id": 0
+      },
+      {
+        "source": "55:201",
+        "schema_id": 0
+      },
+      {
+        "source": "55:202",
+        "schema_id": 0
+      },
+      {
+        "source": "55:203",
+        "schema_id": 0
+      },
+      {
+        "source": "55:200",
+        "schema_id": 0
+      },
+      {
+        "source": "55:205",
+        "schema_id": 0
+      },
+      {
+        "source": "55:204",
+        "schema_id": 0
+      },
+      {
+        "source": "55:207",
+        "schema_id": 0
+      },
+      {
+        "source": "55:206",
+        "schema_id": 0
+      },
+      {
+        "source": "55:209",
+        "schema_id": 0
+      },
+      {
+        "source": "55:208",
+        "schema_id": 0
+      },
+      {
+        "source": "55:211",
+        "schema_id": 0
+      },
+      {
+        "source": "55:210",
+        "schema_id": 0
+      },
+      {
+        "source": "55:212",
+        "schema_id": 0
+      },
+      {
+        "source": "55:213",
+        "schema_id": 0
+      },
+      {
+        "source": "55:214",
+        "schema_id": 0
+      },
+      {
+        "source": "55:216",
+        "schema_id": 0
+      },
+      {
+        "source": "55:219",
+        "schema_id": 0
+      },
+      {
+        "source": "55:217",
+        "schema_id": 0
+      },
+      {
+        "source": "55:215",
+        "schema_id": 0
+      },
+      {
+        "source": "55:220",
+        "schema_id": 0
+      },
+      {
+        "source": "55:218",
+        "schema_id": 0
+      },
+      {
+        "source": "55:225",
+        "schema_id": 0
+      },
+      {
+        "source": "55:221",
+        "schema_id": 0
+      },
+      {
+        "source": "55:222",
+        "schema_id": 0
+      },
+      {
+        "source": "55:224",
+        "schema_id": 0
+      },
+      {
+        "source": "55:226",
+        "schema_id": 0
+      },
+      {
+        "source": "55:223",
+        "schema_id": 0
+      },
+      {
+        "source": "55:227",
+        "schema_id": 0
+      },
+      {
+        "source": "55:231",
+        "schema_id": 0
+      },
+      {
+        "source": "55:230",
+        "schema_id": 0
+      },
+      {
+        "source": "55:232",
+        "schema_id": 0
+      },
+      {
+        "source": "55:228",
+        "schema_id": 0
+      },
+      {
+        "source": "55:229",
+        "schema_id": 0
+      },
+      {
+        "source": "55:233",
+        "schema_id": 0
+      },
+      {
+        "source": "55:239",
+        "schema_id": 0
+      },
+      {
+        "source": "55:235",
+        "schema_id": 0
+      },
+      {
+        "source": "55:236",
+        "schema_id": 0
+      },
+      {
+        "source": "55:234",
+        "schema_id": 0
+      },
+      {
+        "source": "55:240",
+        "schema_id": 0
+      },
+      {
+        "source": "55:237",
+        "schema_id": 0
+      },
+      {
+        "source": "55:238",
+        "schema_id": 0
+      },
+      {
+        "source": "55:242",
+        "schema_id": 0
+      },
+      {
+        "source": "55:241",
+        "schema_id": 0
+      },
+      {
+        "source": "55:243",
+        "schema_id": 0
+      },
+      {
+        "source": "55:244",
+        "schema_id": 0
+      },
+      {
+        "source": "55:245",
+        "schema_id": 0
+      },
+      {
+        "source": "55:246",
+        "schema_id": 0
+      },
+      {
+        "source": "70:0",
+        "schema_id": 1
+      },
+      {
+        "source": "55:247",
+        "schema_id": 0
+      },
+      {
+        "source": "55:248",
+        "schema_id": 0
+      },
+      {
+        "source": "82:0",
+        "schema_id": 1
+      },
+      {
+        "source": "82:1",
+        "schema_id": 1
+      },
+      {
+        "source": "82:2",
+        "schema_id": 1
+      },
+      {
+        "source": "55:250",
+        "schema_id": 0
+      },
+      {
+        "source": "55:249",
+        "schema_id": 0
+      },
+      {
+        "source": "55:251",
+        "schema_id": 0
+      },
+      {
+        "source": "55:253",
+        "schema_id": 0
+      },
+      {
+        "source": "55:252",
+        "schema_id": 0
+      },
+      {
+        "source": "81:0",
+        "schema_id": 0
+      },
+      {
+        "source": "83:1",
+        "schema_id": 0
+      },
+      {
+        "source": "83:2",
+        "schema_id": 0
+      },
+      {
+        "source": "81:1",
+        "schema_id": 0
+      },
+      {
+        "source": "83:3",
+        "schema_id": 0
+      },
+      {
+        "source": "83:4",
+        "schema_id": 0
+      },
+      {
+        "source": "83:5",
+        "schema_id": 0
+      },
+      {
+        "source": "83:0",
+        "schema_id": 0
+      },
+      {
+        "source": "83:6",
+        "schema_id": 0
+      },
+      {
+        "source": "83:9",
+        "schema_id": 0
+      },
+      {
+        "source": "83:7",
+        "schema_id": 0
+      },
+      {
+        "source": "83:10",
+        "schema_id": 0
+      },
+      {
+        "source": "83:8",
+        "schema_id": 0
+      },
+      {
+        "source": "83:11",
+        "schema_id": 0
+      },
+      {
+        "source": "83:12",
+        "schema_id": 0
+      },
+      {
+        "source": "83:13",
+        "schema_id": 0
+      },
+      {
+        "source": "83:15",
+        "schema_id": 0
+      },
+      {
+        "source": "83:14",
+        "schema_id": 0
+      },
+      {
+        "source": "83:16",
+        "schema_id": 0
+      },
+      {
+        "source": "83:19",
+        "schema_id": 0
+      },
+      {
+        "source": "83:17",
+        "schema_id": 0
+      },
+      {
+        "source": "83:18",
+        "schema_id": 0
+      }
+    ]
+  },
+  "original_bytes": {
+    "QA_schema.json": 206969,
+    "schema.json": 1679519
+  },
+  "lossless_source_rows_verified": true
+}

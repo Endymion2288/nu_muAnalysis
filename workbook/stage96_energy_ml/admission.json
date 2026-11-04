@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "QA_unique_incoming": 40,
+  "extraction_projected_CPU_s": 8028.803822866058,
+  "mean_QA_payload_CPU_s": 0.053748547131578873,
+  "mean_QA_fixed_source_CPU_s": 0.30492425570588244,
+  "extraction_projection": "2*(per_payload_CPU*expected_available_rows + per_file_fixed_CPU*available_files)+300; not a measured guarantee",
+  "GPU_projected_wall_s": 787.473942451179,
+  "GPU_projection": "slowest local 1024 F/B *46*300*2*5 +180; no optimizer trial",
+  "reserved_other_CPU_s": 2000,
+  "stage_CPU_cap_s": 21600,
+  "GPU_wall_cap_s": 7200
+}

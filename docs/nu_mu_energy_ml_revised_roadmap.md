@@ -2057,3 +2057,27 @@ QA固定40身份、37可读，实际8进程包四表与串行逐字一致；主C
 **下一stage96恰两fit，购买“同62摘要＋新候选/leading几何”相对关闭新增分支的配对能量证据。** 冻结一种小集合/关系表示：22维节点、5维leading-to-other边、无hitSet/truth/截断去重，typed缺失和缺源状态分开；先≤40固定train/cal QA核全源schema/排序不变性/梯度和实际CPU/GPU成本，再向原完整角色提取，不能丢已删除PHYS对应K或困难者（保留摘要＋缺候选标记）。两格同声明架构/初始化/目标/预算，A新增分支常数且不泄露实际数量/availability，B使用真实候选；这是有限输入消融，不称模型家族最优或所有有效容量因素完全隔离。原stage94 cal_select/post、train-only typed变换、weighted log-MSE/单offset、单seed固定，不再按test加seed/调gate。先冻结模型/方案再准备test候选，仅最终评价打开test诊断。保留原联合RMSE/双向尾门槛、概率量仅有定义才报，未达不晋升。
 
 拟议CPU阶段21600秒、1GPU并发/GPU任务累计wall7200秒/紧凑20MB，独立源分片足够时8CPU且每进程内线程1；全池提取/训练收益和成本未测，QA后准入，不自动加预算/缩有利子集。旧传统/direct/stage92/94预测复用，不恢复架构/reweight大扫描或数值链。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；本轮不执行stage96，历史§1–76、stage54后缀/五路径及全部K政策保持，真实response/interaction/FSI/材料/Calo/接受度/背景与最终未开发确认待完成。
+
+
+## 78. stage96：候选几何未恢复整体或最低能；下一次只检验同输入的联合编码
+
+[stage96实际报告](../workbook/2026-11-04_stage96_candidate-input-ablation.md)完成原71376视图的候选扩展与恰2fit，seed2026110496、各23809声明参数、A新增分支常数无数量/availability泄露、B真实候选/leading几何。原46575/11612/13189角色、17657隔离、incoming权重、stage94 cal_select/post、pz>50 GeV、pz0-only一次方动量/允许px-py-q/p-弯折、raw11/status/typed NaN/合法signed负值与全部1016新增K保持。280source中276可读，70332载荷/75220节点/4888边；stage70/82已删除临时PHYS的1044条保留摘要＋缺候选状态。原日志test_payload_records13189指请求行，实际可读test12833，已补明确更正，不重算模型。native leading差0 GeV、24440边值/排序/缺源/占位检查通过。
+
+|test log-RMSE|传统|direct|A offset|B offset|
+|---|---:|---:|---:|---:|
+|真50–100 GeV|.145661|.282644|.272854|.284603|
+|真100–200 GeV|.247937|.246329|.264460|.263812|
+|all|.557190|.287491|.295567|.295826|
+|低pz真≥200 GeV|1.887790|.658177|.669305|.662025|
+|high-y|1.618799|.609395|.634876|.617898|
+|未确认|1.638613|.551305|.555370|.547524|
+
+B/A全体1.000876 [.993406,1.007993]、最低能1.043060 [.995833,1.092824]，低pz真高E.989123 [.960046,1.023514]、high-y.973258 [.950323,1.001535]，没有确证主体/最低能改善。预定义多轨迹test850条/834incoming，.385150→.371944，比.965712 [.935322,.999559]，cal636条区间含1；不能当经多重比较控制或独立来源确认。缺候选test356条来自一个K source，B/A1.065842 [.999671,1.135015]，不删K或把差异全归因于缺源。B对stage94 C全体/困难有条件增量，但跨stage同时改seed/结构，不替代本轮B/A。
+
+两格均无联合通过。B最低能/传统上95=2.283229、all/direct=1.037263，低pz真高E/high-y=1.033521/1.043053；该低pz组总/正/负tail差direct上95=+5.315375/+3.400113/+3.934854pp。全局offset改善总体、加重最低能，raw/offset全交，不据test回选。点输出不编造PIT/coverage，源/重训/offset/系统/研究选择不确定度仍未覆盖，500incoming条件区间不是source95或新blind。继续既有部署，不晋升，也不宣布缺数据/信息极限或候选无用。
+
+提取Condor9667511、评价9667549均8CPU/申请8GB实际ad24GB、首次exit0/无重试；外层708.583553wall/4922.910304CPU秒、9.690446wall/23.686382CPU秒。提取平均child占用6.961480核，非8倍加速证明；源接口read748107242bytes、逻辑请求29795851543bytes，物理EOS网络流量未测。Kubeflow H100 NVL MIG3g.47gb首Pod成功42容器wall秒，外层41.040673wall/33.277536CPU秒；两fit170/95epochs、best140/65、12190steps，GPU allocated峰122.735352/231.593262MiB。已计独立外层＋QA5043.784222CPU秒，未全计会话，不与内层重复加。旧6496指标最大差0、checkpoint/offset/固定40重放通过，schema无损去重、包/manifest清理后最终≤20MB见storage.json，stage54五项只读。
+
+**唯一下一stage97恰两fit，复用本轮缓存检验同输入的逐候选—leading边联合编码，不重提取/生成/重建。** 两格均保留stage96 B的真实摘要、节点/边独立pool与metadata；额外同声明80→32→32消息模块（leading32＋备选32＋对应边16），mean/max后接原2×64 head。A消息分支常数，B真实逐边配对；不移除A原边际信息。是有限表示/容量消融，不是新探测器信息或完全容量隔离。动机是当前独立池化不保留候选和边的配对，非已证瓶颈；参照Interaction Networks arXiv:1612.00222，不迁移其物理模拟精度承诺。
+
+先原≤40train/cal 0optimizer实际包QA，核共同置换/配对敏感性/空缺/梯度与全padding成本；固定seed2026110497、原train-only变换、cal_select/post、weighted log-MSE/Adam/earlystop/单offset，最多2fit，不加seed或testgate。建议CPU7200秒/1GPU并发及累计任务wall3600秒/最终20MB，QA后准入，8CPU Condor完整原风险和三向tail配对；未达不续深宽/seed扫描，交真实关联读出缺口。收益/成本未测，本轮未执行stage97，见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–77/信息计划/stage54原后缀与全部K政策保持；真实response、interaction/FSI/材料/Calo/接受度/背景和未开发确认仍待证据。

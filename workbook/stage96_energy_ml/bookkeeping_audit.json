@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "support": [
+    {
+      "role": "train",
+      "requested_records": 46575,
+      "available_payload_records": 46230,
+      "unavailable_records": 345,
+      "single_records": 43750,
+      "multiple_records": 2480,
+      "empty_records": 0,
+      "candidate_nodes": 49274,
+      "leading_edges": 3044
+    },
+    {
+      "role": "cal",
+      "requested_records": 11612,
+      "available_payload_records": 11269,
+      "unavailable_records": 343,
+      "single_records": 10633,
+      "multiple_records": 636,
+      "empty_records": 0,
+      "candidate_nodes": 12048,
+      "leading_edges": 779
+    },
+    {
+      "role": "test",
+      "requested_records": 13189,
+      "available_payload_records": 12833,
+      "unavailable_records": 356,
+      "single_records": 11983,
+      "multiple_records": 850,
+      "empty_records": 0,
+      "candidate_nodes": 13898,
+      "leading_edges": 1065
+    }
+  ],
+  "legacy_extraction_test_payload_records": 13189,
+  "legacy_field_meaning": "requested test input rows including unavailable sources; not opened payloads",
+  "corrected_test_available_payload_records": 12833,
+  "correction": "Only future extraction counter names changed after production; frozen caches, fits and numerical results unchanged.",
+  "node_missing_values": {
+    "pz0_GeV": 0,
+    "px0_GeV": 0,
+    "py0_GeV": 0,
+    "charge": 0,
+    "chi2ndof": 0,
+    "nLayers": 0,
+    "nDoF": 0,
+    "x0_mm": 0,
+    "y0_mm": 0,
+    "z0_mm": 0,
+    "x1_mm": 0,
+    "y1_mm": 0,
+    "z1_mm": 0,
+    "module_eta0": 0,
+    "module_phi0": 0,
+    "station_mask": 0,
+    "veto_x_mm": 8,
+    "veto_y_mm": 8,
+    "timing_x_mm": 3,
+    "timing_y_mm": 3,
+    "calo_x_mm": 0,
+    "calo_y_mm": 0
+  },
+  "preserved_signed_values": {
+    "charge_minus_one": 48982,
+    "module_eta_minus_one": 37708,
+    "negative_px": 37641,
+    "negative_py": 37538
+  },
+  "nonphysical_positive_domain_values": 0,
+  "geometry_sentinel_values": 0,
+  "new_PHYS_reads": 0,
+  "new_fits": 0,
+  "new_predictions": 0
+}

@@ -1,0 +1,18 @@
+{"cell": "A", "seed": 2026110496, "epochs": 170, "best_epoch": 140, "optimizer_steps": 7820, "parameters": 23809, "GPU_peak_allocated_MiB": 122.7353515625, "wall_s": 22.115186351002194, "CPU_s": 19.318369722, "peak_single_process_RSS_MiB": 1597.84375}
+{"cell": "B", "seed": 2026110496, "epochs": 95, "best_epoch": 65, "optimizer_steps": 4370, "parameters": 23809, "GPU_peak_allocated_MiB": 231.59326171875, "wall_s": 10.287472973024705, "CPU_s": 10.226193267, "peak_single_process_RSS_MiB": 1597.84375}
+{
+  "passed": true,
+  "new_fits": 2,
+  "seed": 2026110496,
+  "train_N": 46575,
+  "cal_N": 11612,
+  "test_N": 13189,
+  "cal_offsets_before_test": true,
+  "torch_threads": 1,
+  "GPU": "NVIDIA H100 NVL MIG 3g.47gb",
+  "wall_s": 34.18160433601588,
+  "CPU_s": 31.266785045000002,
+  "peak_single_process_RSS_MiB": 1735.65625
+}
+
+{"mode": "fit", "exit_code": 0, "wall_s": 41.040673066017916, "CPU_s": 33.277536, "max_single_process_RSS_KiB": 1777312, "scope": "outer child scope includes its descendants; nested timings must not be added"}

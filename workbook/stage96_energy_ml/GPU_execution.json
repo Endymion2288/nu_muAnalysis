@@ -1,0 +1,31 @@
+{
+  "pod": "nu-mu-energy-stage96-fit-d4xdl",
+  "namespace": "xcheng",
+  "phase": "Succeeded",
+  "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+  "created": "2026-11-04T16:37:25Z",
+  "start": "2026-11-04T16:37:25Z",
+  "resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "container_state": {
+    "terminated": {
+      "containerID": "containerd://e5ce3f8b98ecd7fceeca15f1478edbb8952707e8c75aef29af27c3d514d92431",
+      "exitCode": 0,
+      "finishedAt": "2026-11-04T16:38:13Z",
+      "reason": "Completed",
+      "startedAt": "2026-11-04T16:37:31Z"
+    }
+  },
+  "restart_count": 0,
+  "image": "registry.cern.ch/mlops/lxplus-like:9"
+}

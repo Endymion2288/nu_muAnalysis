@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "unique_incoming": 40,
+  "new_fits": 0,
+  "optimizer_steps": 0,
+  "checks": [
+    {
+      "cell": "A",
+      "parameters": 23809,
+      "summary_dimensions": 127,
+      "node_input": 44,
+      "edge_input": 10,
+      "event_meta": 4,
+      "node_max": 1,
+      "edge_max": 1,
+      "batch1024_forward_backward_wall_s": 0.004045834764838219,
+      "loss": 0.6522489786148071,
+      "optimizer_steps": 0,
+      "finite_body_VJP": true,
+      "node_gradient_norm": 0.0
+    },
+    {
+      "cell": "B",
+      "parameters": 23809,
+      "summary_dimensions": 127,
+      "node_input": 44,
+      "edge_input": 10,
+      "event_meta": 4,
+      "node_max": 3,
+      "edge_max": 2,
+      "batch1024_forward_backward_wall_s": 0.004401985090225935,
+      "loss": 0.6523489356040955,
+      "optimizer_steps": 0,
+      "finite_body_VJP": true,
+      "node_gradient_norm": 0.0015238281339406967
+    }
+  ],
+  "permutation": [
+    {
+      "cell": "A",
+      "permutation_max_logE_delta": 0.0
+    },
+    {
+      "cell": "B",
+      "permutation_max_logE_delta": 0.0
+    }
+  ],
+  "control_has_no_new_information": true,
+  "empty_and_unavailable_finite": true,
+  "GPU": "Tesla T4",
+  "wall_s": 2.281212226022035,
+  "CPU_s": 1.4738082689999996,
+  "peak_single_process_RSS_MiB": 1121.78515625
+}

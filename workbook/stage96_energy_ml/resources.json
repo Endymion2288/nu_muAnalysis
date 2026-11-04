@@ -1,0 +1,80 @@
+{
+  "batch_outer_scopes": {
+    "extract": {
+      "mode": "extract",
+      "exit_code": 0,
+      "wall_s": 708.5835526920855,
+      "CPU_s": 4922.910304,
+      "max_single_process_RSS_KiB": 176560,
+      "scope": "outer child scope includes its descendants; nested timings must not be added"
+    },
+    "fit": {
+      "mode": "fit",
+      "exit_code": 0,
+      "wall_s": 41.040673066017916,
+      "CPU_s": 33.277536,
+      "max_single_process_RSS_KiB": 1777312,
+      "scope": "outer child scope includes its descendants; nested timings must not be added"
+    },
+    "report": {
+      "mode": "report",
+      "exit_code": 0,
+      "wall_s": 9.690446469991002,
+      "CPU_s": 23.686382,
+      "max_single_process_RSS_KiB": 223900,
+      "scope": "outer child scope includes its descendants; nested timings must not be added"
+    }
+  },
+  "separate_QA_outer_scopes": {
+    "QA_job.time": {
+      "user_CPU_s": 13.21,
+      "system_CPU_s": 0.88,
+      "CPU_s": 14.090000000000002
+    },
+    "checkpoint_QA.time": {
+      "user_CPU_s": 4.23,
+      "system_CPU_s": 2.06,
+      "CPU_s": 6.290000000000001
+    },
+    "extract_package_QA.time": {
+      "user_CPU_s": 13.35,
+      "system_CPU_s": 1.37,
+      "CPU_s": 14.719999999999999
+    },
+    "fit_package_QA.time": {
+      "user_CPU_s": 7.83,
+      "system_CPU_s": 2.81,
+      "CPU_s": 10.64
+    },
+    "model_QA.time": {
+      "user_CPU_s": 4.44,
+      "system_CPU_s": 2.31,
+      "CPU_s": 6.75
+    },
+    "report_QA.time": {
+      "user_CPU_s": 4.12,
+      "system_CPU_s": 1.84,
+      "CPU_s": 5.96
+    },
+    "report_package_QA.time": {
+      "user_CPU_s": 4.05,
+      "system_CPU_s": 1.41,
+      "CPU_s": 5.46
+    }
+  },
+  "measured_disjoint_CPU_s": 5043.784222,
+  "CPU_cap_s": 21600,
+  "GPU_task_outer_wall_s": 41.040673066017916,
+  "GPU_task_container_wall_s": 42,
+  "GPU_task_wall_cap_s": 7200,
+  "GPU_concurrency": 1,
+  "extraction_child_average_cores": 6.961480173775034,
+  "report_child_average_cores": 4.0970957691360494,
+  "nested_times_not_added": true,
+  "complete_single_core_speedup": "未测量",
+  "unmetered": "Initial manifest/freeze, metadata, transfers, some audit/plot/housekeeping and syntax checks; total session CPU is not exactly measured.",
+  "physical_EOS_network_bytes": "未测量",
+  "simultaneous_total_peak_RSS": "未测量",
+  "summarizer_wall_s": 0.31551338406279683,
+  "summarizer_CPU_s": 0.194383316
+}

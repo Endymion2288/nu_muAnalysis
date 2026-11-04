@@ -1151,3 +1151,16 @@ GPU全部工作实际112.157179wall秒/82.837277CPU秒，CPU统计4核实际并�
 下一stage96只购买一次**同架构两格新增候选信息消融**：A同62 typed摘要＋常数新增分支（无数量/availability泄露），B同摘要＋冻结候选节点/leading几何。原split/权重/K、stage94 cal_select-post、单seed、weighted log-MSE/共同cal_post单offset，最多2fit，不加模型/seed/testgate。候选缺源事件保留摘要及显式缺候选状态，先≤40 train/cal QA和成本准入再扩原完整角色；test候选输入只在协议/模型冻结后准备，不按test诊断调整。最小集合/边池化先行，GNN/attention后置；有效容量并非由相同声明参数量自动完全控制，报告这一限制。
 
 拟议阶段CPU21600秒/GPU任务累计wall7200秒且1GPU并发/最终20MB，批量按源8CPU、内线程1，GPU有实际优势再用授权batch平台；不是新成本已测保证。全样本风险、两低E/传统≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03与原双向尾+2pp、500incoming条件区间和成本共同验收，稀少missing/source95/研究开发选择限制保留。不能因4个恢复例少就停止整个几何信息分支，也不能承诺能恢复最低能。阶段后续详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)，本轮不执行，历史§1–56和stage54/K支持不改。
+
+
+## 58. stage96：候选边际输入消融完成，下一预算用于既有配对关系的有限表示验证
+
+[stage96报告](../workbook/2026-11-04_stage96_candidate-input-ablation.md)恰2fit完成原完整角色；70332/71376载荷可读、75220候选/4888边，1044已删除源的事件保留摘要及availability，不丢全部1016新增K。原pz0-only/raw/status/typed NaN/合法signed值、原split/权重/cal子分区/困难侧保持。native leading差0、24440几何对照通过；请求test13189而实际可读12833，原计数命名更正而不重训。
+
+A/B test最低能.272854/.284603（传统.145661）、all .295567/.295826（direct.287491）、低pz真高E.669305/.662025、high-y.634876/.617898。B/A all1.000876 [.993406,1.007993]、最低能1.043060 [.995833,1.092824]、high-y.973258 [.950323,1.001535]；未确证主体/最低能增量。多轨迹850条/834incoming比.965712 [.935322,.999559]仅局部条件迹象，cal含1，单seed及多组选择限制保留。B最低能/传统上95=2.283229、all/direct=1.037263；困难三向tail失败，两格无联合通过、不晋升。
+
+8CPU提取实际child平均6.961480核，外层708.583553wall/4922.910304CPU秒；8CPU评价9.690446wall/23.686382CPU秒。H100 NVL MIG3g.47gb共2fit/12190steps/42容器wall秒、外层33.277536CPU秒；已计独立worker和QA5043.784222CPU秒，不是全会话精确总量。6496旧控制值最大差0、checkpoint和offset闭合；schema无损去重、归档/重复manifest清理，紧凑≤20MB按storage.json。真实网络流量/全并发RSS/source95/完整重训系统学与最终未开发确认未测。
+
+下一stage97只购买一次**同输入联合编码方案**的证据。当前节点与边独立池化不保留逐备选关联；不能从负结果断言关系无用，也不直接认定该限制是低能瓶颈。两格都保留B真实边际输入，新增同声明80→32→32消息分支，A常数、B拼接leading/备选/对应边，pool后2×64 head。它改变表示与有效容量，不是新增传感器信息，不能做完全单因子容量声明或把效应全解释为primary替换。有限2fit，seed2026110497、原cal/typed/目标/优化及单offset不变，无网格/加seed/testgate。
+
+输入仅本轮候选/原40QA、stage94摘要/cal子分区和原缓存/旧控制，0新ROOT/生成/重建。先≤40 train/cal实际包0optimizer核身份/对应关系/置换/空缺/梯度和CPU/GPU成本，QA后准入CPU7200秒/1GPU累计任务wall3600秒/最终20MB；完整批量统计用8CPU Condor。验收原全部风险/8层RMSE/正负总tail门槛和500incoming条件区间，仍无联合收益不自动续关系深宽/seed扫描，交真实读出/协方差缺口。方法依据Interaction Networks已在stage96核阅，可行性限于小消息模块；收益与新成本未测。本轮未执行stage97，详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)，历史§1–57及stage54/K政策不变。

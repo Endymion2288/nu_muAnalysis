@@ -1,0 +1,339 @@
+{
+  "final_retention_cap_bytes": 20000000,
+  "total_logical_bytes": 8900690,
+  "scope": "All Stage96 caches/models/workbook/code/config/report; conservatively includes full shared docs and gitignore. Previous-stage shared caches, site logs and Git object storage excluded.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1976
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_candidate_ablation.sub",
+      "bytes": 743
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_candidate_ablation_kubeflow.json",
+      "bytes": 1207
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_candidate_ablation.sh",
+      "bytes": 2023
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "bytes": 175044
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "bytes": 14873
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "bytes": 300165
+    },
+    {
+      "path": "ml/artifacts/stage96/A.pt",
+      "bytes": 99137
+    },
+    {
+      "path": "ml/artifacts/stage96/B.pt",
+      "bytes": 99137
+    },
+    {
+      "path": "ml/artifacts/stage96/predictions.npz",
+      "bytes": 1214973
+    },
+    {
+      "path": "ml/artifacts/stage96/started.txt",
+      "bytes": 39
+    },
+    {
+      "path": "ml/collect_candidate_ablation.py",
+      "bytes": 2213
+    },
+    {
+      "path": "ml/package_candidate_ablation.py",
+      "bytes": 4722
+    },
+    {
+      "path": "ml/prepare_candidate_ablation.py",
+      "bytes": 14588
+    },
+    {
+      "path": "ml/qa_candidate_report.py",
+      "bytes": 2708
+    },
+    {
+      "path": "ml/report_candidate_ablation.py",
+      "bytes": 14029
+    },
+    {
+      "path": "ml/summarize_candidate_ablation.py",
+      "bytes": 7912
+    },
+    {
+      "path": "ml/time_candidate_worker.py",
+      "bytes": 1045
+    },
+    {
+      "path": "ml/train_candidate_ablation.py",
+      "bytes": 18453
+    },
+    {
+      "path": "ml/validate_candidate_input.py",
+      "bytes": 4481
+    },
+    {
+      "path": "ntuples/energy_ml_stage96/QA_candidates.npz",
+      "bytes": 4684
+    },
+    {
+      "path": "ntuples/energy_ml_stage96/candidates.npz",
+      "bytes": 5764025
+    },
+    {
+      "path": "workbook/2026-11-04_stage96_candidate-input-ablation.md",
+      "bytes": 26715
+    },
+    {
+      "path": "workbook/stage96_energy_ml/GPU_execution.json",
+      "bytes": 806
+    },
+    {
+      "path": "workbook/stage96_energy_ml/QA_extraction.json",
+      "bytes": 459
+    },
+    {
+      "path": "workbook/stage96_energy_ml/QA_identities.json",
+      "bytes": 6521
+    },
+    {
+      "path": "workbook/stage96_energy_ml/QA_job.time",
+      "bytes": 788
+    },
+    {
+      "path": "workbook/stage96_energy_ml/QA_performance.json",
+      "bytes": 17522
+    },
+    {
+      "path": "workbook/stage96_energy_ml/admission.json",
+      "bytes": 556
+    },
+    {
+      "path": "workbook/stage96_energy_ml/before_test.json",
+      "bytes": 127
+    },
+    {
+      "path": "workbook/stage96_energy_ml/bookkeeping_audit.json",
+      "bytes": 1998
+    },
+    {
+      "path": "workbook/stage96_energy_ml/candidate_ablation.svg",
+      "bytes": 91151
+    },
+    {
+      "path": "workbook/stage96_energy_ml/checkpoint_QA.json",
+      "bytes": 340
+    },
+    {
+      "path": "workbook/stage96_energy_ml/checkpoint_QA.time",
+      "bytes": 790
+    },
+    {
+      "path": "workbook/stage96_energy_ml/cleanup.json",
+      "bytes": 1234
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extract_collection.json",
+      "bytes": 871
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extract_history.json",
+      "bytes": 8353
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extract_job.json",
+      "bytes": 228
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extract_package_QA.json",
+      "bytes": 812
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extract_package_QA.time",
+      "bytes": 789
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extract_submission.json",
+      "bytes": 174
+    },
+    {
+      "path": "workbook/stage96_energy_ml/extraction.json",
+      "bytes": 489
+    },
+    {
+      "path": "workbook/stage96_energy_ml/final_validation.json",
+      "bytes": 452
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit.stdout",
+      "bytes": 1035
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit_A.json",
+      "bytes": 274
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit_B.json",
+      "bytes": 273
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit_collection.json",
+      "bytes": 1691
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit_job.json",
+      "bytes": 224
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit_package_QA.json",
+      "bytes": 18636
+    },
+    {
+      "path": "workbook/stage96_energy_ml/fit_package_QA.time",
+      "bytes": 794
+    },
+    {
+      "path": "workbook/stage96_energy_ml/followup_input_request.json",
+      "bytes": 1673
+    },
+    {
+      "path": "workbook/stage96_energy_ml/gates.tsv",
+      "bytes": 1989
+    },
+    {
+      "path": "workbook/stage96_energy_ml/independent_checks.tsv",
+      "bytes": 5001
+    },
+    {
+      "path": "workbook/stage96_energy_ml/input_support.json",
+      "bytes": 1417
+    },
+    {
+      "path": "workbook/stage96_energy_ml/input_validation.json",
+      "bytes": 805
+    },
+    {
+      "path": "workbook/stage96_energy_ml/learning_A.tsv",
+      "bytes": 3003
+    },
+    {
+      "path": "workbook/stage96_energy_ml/learning_B.tsv",
+      "bytes": 1775
+    },
+    {
+      "path": "workbook/stage96_energy_ml/metrics.tsv",
+      "bytes": 323725
+    },
+    {
+      "path": "workbook/stage96_energy_ml/model_QA.json",
+      "bytes": 1293
+    },
+    {
+      "path": "workbook/stage96_energy_ml/model_QA.time",
+      "bytes": 790
+    },
+    {
+      "path": "workbook/stage96_energy_ml/offsets.tsv",
+      "bytes": 108
+    },
+    {
+      "path": "workbook/stage96_energy_ml/paired.tsv",
+      "bytes": 303239
+    },
+    {
+      "path": "workbook/stage96_energy_ml/performance.json",
+      "bytes": 139244
+    },
+    {
+      "path": "workbook/stage96_energy_ml/preparation.json",
+      "bytes": 255
+    },
+    {
+      "path": "workbook/stage96_energy_ml/preprocessing.json",
+      "bytes": 9685
+    },
+    {
+      "path": "workbook/stage96_energy_ml/protocol.json",
+      "bytes": 2698
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_QA.json",
+      "bytes": 371
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_QA.time",
+      "bytes": 777
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_collection.json",
+      "bytes": 2219
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_completion.json",
+      "bytes": 691
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_history.json",
+      "bytes": 8314
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_job.json",
+      "bytes": 225
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_package_QA.json",
+      "bytes": 17621
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_package_QA.time",
+      "bytes": 795
+    },
+    {
+      "path": "workbook/stage96_energy_ml/report_submission.json",
+      "bytes": 176
+    },
+    {
+      "path": "workbook/stage96_energy_ml/resources.json",
+      "bytes": 2388
+    },
+    {
+      "path": "workbook/stage96_energy_ml/schema_catalog.json",
+      "bytes": 27582
+    },
+    {
+      "path": "workbook/stage96_energy_ml/source_support.tsv",
+      "bytes": 16387
+    },
+    {
+      "path": "workbook/stage96_energy_ml/sources.json",
+      "bytes": 85563
+    },
+    {
+      "path": "workbook/stage96_energy_ml/storage.json",
+      "bytes": 8055
+    },
+    {
+      "path": "workbook/stage96_energy_ml/validation.json",
+      "bytes": 226
+    },
+    {
+      "path": "workbook/stage96_energy_ml/worker_completion.json",
+      "bytes": 321
+    }
+  ],
+  "cleanup": "cleanup.json",
+  "schema_compaction": "schema_catalog.json",
+  "source_data_in_Git": false,
+  "no_ROOT_or_xAOD_retained": true
+}

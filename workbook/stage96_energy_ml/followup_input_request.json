@@ -1,0 +1,39 @@
+{
+  "next_stage": 97,
+  "status": "prepared_not_executed",
+  "objective": "Same-input marginal candidate branches plus a bounded paired node-edge message ablation",
+  "new_samples_required": false,
+  "new_PHYS_reads": 0,
+  "new_MC_or_reconstruction": 0,
+  "maximum_fits": 2,
+  "seed": 2026110497,
+  "inputs": [
+    "ntuples/energy_ml_stage96/candidates.npz",
+    "ntuples/energy_ml_stage96/QA_candidates.npz",
+    "workbook/stage96_energy_ml/preprocessing.json",
+    "ntuples/energy_ml_stage87/split.npz",
+    "ntuples/energy_ml_stage94/cal_partition.npz",
+    "workbook/stage94_energy_ml/preprocessing.json",
+    "original compatible source caches and saved controls"
+  ],
+  "roles": {
+    "train": 46575,
+    "cal": 11612,
+    "test": 13189,
+    "quarantine": 17657
+  },
+  "required_QA": "Original <=40 train/cal identities, no optimizer; edge alignment, joint permutation invariance, constant added-message control, synthetic pairing sensitivity where needed, missing/empty finite VJP, actual full-padding package cost",
+  "limits_proposed_not_yet_admitted": {
+    "CPU_s": 7200,
+    "GPU_task_wall_s": 3600,
+    "GPU_concurrency": 1,
+    "retained_bytes": 20000000
+  },
+  "acceptance": "Complete original point-risk and three-sign tails, eight frozen gates, paired 500 component-incoming conditional draws, controls/checkpoints/offsets/resources/storage; no compulsory promotion",
+  "unresolved_evidence": [
+    "source/retraining/offset/systematic uncertainty",
+    "real response and interaction/FSI/material/Calo/acceptance/background",
+    "actual hit identity, per-track readout association and measured covariance",
+    "genuinely undeveloped confirmation"
+  ]
+}

@@ -1,48 +1,48 @@
-# 下一轮执行 Prompt：stage96 冻结候选几何的两格匹配输入消融
+# 下一轮执行 Prompt：stage97 同输入的候选—边联合编码消融
 
-先读AGENTS.md、[stage95报告](../workbook/2026-11-04_stage95_track-candidate-information.md)、修订路线§77、信息计划§57、stage93研究复盘与stage94 cal协议。**stage95信息测量完成；本轮恰两fit检验新增轨迹候选/leading几何。不要重复stage95小队列测量，不自动执行stage97。** 下方stage54为保留历史支线，stage85已完成条件活动控制，不因此重做。
+先读AGENTS.md、[stage96报告](../workbook/2026-11-04_stage96_candidate-input-ablation.md)、修订路线§78、信息计划§58、stage93复盘和stage94 cal协议。**stage96恰两fit及完整评价已完成，不得重跑；本轮只做一次同输入的有限联合表示消融，恰两fit，不自动执行stage98。** stage54历史支线保留，stage85条件活动控制已完成，不默认重做。
 
-## 1. 已测依据与问题
+## 1. 已测依据及唯一问题
 
-stage95固定2048个不同train/cal incoming、一视图，24source中22可读，1923事件/2110候选/227边。125个源载荷因历史临时PHYS清理不可用，原摘要/身份/K支持不丢。多轨迹153，leading未确认132，其中4个备选primary确认；最低真E50–100GeV的81个可读者均单轨迹。换leading已确认机会有限，不表示次级轨迹几何对Eν无用或达到信息极限。μ-pz truth oracle只改善2例，不是ν能量oracle。source/X富集队列不当自然flux，matching未确认不能当物理无μ。
+stage96原71376条全保留，70332可读、1044缺候选源保留摘要；75220节点/4888 leading边。A新增分支常数、B实际候选/几何，test总体log-RMSE .295567/.295826，B/A1.000876 [.993406,1.007993]。最低真E50–100为.272854/.284603、传统.145661；两格无联合通过。多轨迹test850条/834incoming，.385150→.371944，比.965712 [.935322,.999559]，cal对应区间含1。单seed/预定义多组条件区间不能称总体或经多重比较控制的发现；不按test补seed。
 
-Track_hitSet是层/面覆盖24bit，实际52事件与保存track不等长，不是共享hit ID。禁止按位交/截断强配构造共享hit或重复判据。Calo/VetoNu/Timing共同参考面z=2760/−3112/0mm，坐标有效2110/2108/2109；没有逐轨迹实测协方差或通道读出关联。保留22维节点＋5维leading-to-other几何边的`track_candidates_leading_geometry_v1`，见stage95 representation/source_semantics。当前表以原index存储，consumer按有效pz0降序/index稳定排序，保留所有无效候选与mask，无截断去重；原端点可不同z。
+当前节点与边分别编码、各自mean/max pool，没有逐备选保留候选状态和对应leading边的联合消息。这个结构限制已经确认，但并未证明是物理风险瓶颈；两轨迹时边际pool未必丢配对信息，仍可能比较非线性归纳偏好。**本轮回答：保留全部相同边际输入后，增加正确配对的联合消息能否改善原联合点风险？** 不是新探测器信息采购，不将任何增量全归因于primary替换或信息因果；有效容量因素仍需说明。
 
-本轮回答：**在同62 typed摘要、同模型声明结构/目标/预算/后处理下，新增候选和leading几何是否改善能量风险，尤其最低能与低pz真高E/high-y？** 不用truth gate选备选，不把集合分支效果全归因为primary替换。
+方法参照[Interaction Networks, arXiv:1612.00222](https://arxiv.org/abs/1612.00222)，stage96已在线核阅。论文是关系物理模拟，不是本探测器性能承诺；只取聚合前联合编码的思想，不做预训练、大型Transformer或深度/宽度网格。
 
-## 2. 输入扩展与先行QA
+## 2. 输入、来源与不可改变的合同
 
-复用stage87 89033兼容池、46575train/11612cal/13189test/17657隔离及incoming总权重，stage94既定cal_select5443/cal_post5746/冲突423仍全cal报告。全部1016新增K、missing21/6/5、低能/低pz/未确认/high-y/高端/尾保持，不重划角色、不新MC或reconstruction。主体pz0>50GeV；一次方动量只pz0，允许px/py/q/p/弯折，不加p0/p1/pz1或动量比。raw11/status、合法负raw、typed NaN、Calo缺项合同不改。
+复用原stage87兼容89033池、46575train/11612cal/13189test/17657隔离和incoming总权重；原stage94 source/incoming不交的select5443、post5746，冲突423仍全cal报告。全部1016新增K、missing21/6/5、低pz/真高E/high-y/未确认/高端完整保留，无新样本前置。主体reco pz0>50GeV，一次方动量仅pz0，允许px/py/q/p/弯折；不加p0/p1/pz1或其比。raw11/status、合法signed负值、typed NaN和Calo缺项保持。
 
-从既有完整source清单按精确source/entry/incoming联结向原完整角色扩候选输入；只遍历已知清单，不递归扫EOS。stage70/82临时PHYS删除的来源保留原摘要及candidate_available=False，不能将其当0轨迹/替换来源/丢K；其他源schema差异如实标缺。每个原事件重建视图保持原行和incoming权重，不能把所有轨迹当独立训练事例。truth只另表作最终诊断，不进特征、候选排序/选择或超参准入。
+直接用`ntuples/energy_ml_stage96/candidates.npz`、`QA_candidates.npz`及stage94摘要预处理；原split/兼容缓存和cal分区按原row核身份。已有紧凑节点float32原生leading最大相对量化误差5.912586e−8，不误认错配。稀疏边与规范排序后nodes[1:]逐项对应，由保存cache几何复核过；无hitSet/truth/截断去重。
 
-先冻结≤40个不同train/cal incoming（原QA可复用，跨新来源需预先整体给定名单，总计≤40），覆盖新增source schema、低pz与missing/失败；若所有来源不能逐一覆盖，说明按schema/production分组覆盖及残余风险，生产worker仍逐源核schema/联结。核typed占位和合法负数、raw/status/leading pz闭合、空与缺集合、候选重排不变性/leading边对齐、batch前向反向finite和实际CPU/GPU成本。仅forward/backward QA，0optimizer试训；不得先看候选test或能量诊断调模型。原小队列有样本不代表全源全部字段可用。
+stage70 28条π、stage82全部1016新增K的临时PHYS已删除，候选不可用1044条（345/343/356）必须保留原摘要及缺源状态，不能替换来源/当空/丢K/恢复旧K生产时限。stage96计数命名更正已见bookkeeping_audit：13189为请求test输入，实际打开12833载荷；不重复提取。共有3966个多轨迹记录，分别2480/636/850，实际可读空集合0；仍要支持未来空集合。
 
-两格模型/特征/资源和评价协议在新test候选载荷准备前冻结。完整test候选仅作为最终评价输入；test真值/预测/分层诊断到两fit及cal后处理固定后才打开。原研究池不是新blind，不能宣称独立最终确认。
+本轮0ROOT读取/新MC/重建，无需重新打提取包。manifest是raw/status重复已清理，可从原缓存重建；本轮不需重建它。旧stage87/92/94/96预测与offset复用，不再训练旧控制。test是开发过的研究池，本轮fit留出不能称新blind。
 
-## 3. 恰两fit与冻结表示
+## 3. 恰两fit，冻结一种联合表示
 
-固定一个seed2026110496，两格使用同声明参数量、初始化规则、训练与后处理：A仅62摘要且新增分支恒定，B同摘要＋真实候选/几何。A用固定dummy集合/掩码和常数availability/count，禁止通过padding形状、缺源标记、pool分母等泄露真实新信息。B区分candidate unavailable、真实空和逐值missing，不拿truth代替缺值。同结构不自动证明有效容量完全一致；报告实际参数/梯度和限制，不称家族最优。
+两格都保留stage96 B的真实62 typed摘要、22节点/5边各自编码/mean-max池化/leading embedding及4个metadata。节点44→32SiLU→32SiLU，边10→16SiLU→16SiLU；原train-only变换和summary127维状态直接复用，不按新cal/test重估归一化。全部边际输入对两格一致。
 
-唯一小模型：节点22值＋22缺失mask，共享2×32 SiLU编码；masked mean/max和leading表示；5边值＋5mask，经2×16 SiLU编码后masked mean/max；联合原62摘要typed输入（沿stage94预处理）、availability/empty/count，接2×64 SiLU点回归head。没有边时pool固定0且mask显式，B保留所有候选、leading到其他候选稀疏边。A新增分支输入恒定但保留相同计算图/声明结构；QA后在未看新cal风险前记录精确维数/参数，不能因评价表现修改结构。
+只新增一个消息模块：拼接leading节点32维、备选节点32维、该备选对应leading边16维，共80→32SiLU→32SiLU；对真实边masked mean/max共64维，再与原259维一起接2×64SiLU→1 logE head。无递归message passing/attention/深度扫描，不改点目标。A消息模块用固定一个全0输入/固定有效mask，因此输出恒定且不随真实边或配对变化；B用真实逐备选配对，无边或缺源时联合pool为0，原metadata仍保留状态。两格原节点/边pool和metadata都仍真实可变，区别仅新增联合分支。A不能通过新增分支的padding形状、分母等额外泄露联合内容；原边际信息本来就在两格中，不声称A无候选信息。
 
-新正域pz0用log、非负计数/距离log1p、signed连续asinh、离散identity和独立缺失mask；尺度/中位/IQR只train拟合，复用stage94摘要typed规则、不任意截断。边距离不是显著性，x0/y0端点距离不冒充同面距离；hitSet/true matching/真E/y都不进模型。输入类别规则在QA后、cal候选风险前冻结，保留精确配置。
+同声明结构、seed2026110497/初始化规则/优化器与预算，QA后在新cal风险前记录精确参数量。恒定对真实消息分支的有效容量不同，不称容量完全隔离或家族最优；B/A是有限联合编码方案增量。原stage96只作为旧控制，本轮两fit才能构成同轮对照。
 
-两格都incomingweighted log-MSE、Adam lr.001/default betas/无decay、clip10、batch1024、NumPy seeded permutation，最多300epochs/每5轮cal_select验证/patience30epoch，按cal_select点MSE选checkpoint。仅两fit，无额外seed/预训练/warmstart/候选扫描；训练曲线train/cal objective和点误差保存。原cal_post只一次全局log-offset，raw/offset分列，不能按真值分箱校准或test选gate/offset。旧传统/direct/stage92/stage94预测复用，不重训旧控制。若QA发现schema无法交付，就报告可交付输入和缺口，不开始不匹配训练。
+incomingweighted log-MSE、Adam lr.001/default betas/no decay、clip10、batch1024，每epoch同seed一次NumPy permutation；max300epochs/每5轮原cal_select点MSE/strict min/patience30epoch。各自停止，不保证同更新次数。原cal_post各一次weighted mean(logtruth−point) offset，raw/offset分列。最多2fit，无额外seed/warmstart/预训练/模型扫描，test不得选checkpoint/gate/偏移。两个fit及偏移固定后才产生新test预测与诊断；冻结前不打开新的test风险。
 
-## 4. 并行、成本与完整验收
+## 4. 固定40 QA、GPU/CPU与完整验收
 
-批量候选提取/评价必须HTCondor；足够独立source分片申请8CPU、内线程1，单文件复用basket/范围缓存，避免每个进程重复全文件打开。stage95实际37.848wall/159.512childCPU秒仅为1923载荷小队列，不能直接承诺全池成本。先≤40实际包QA计时/内存/字节，冻结全源投影与准入；拟议阶段CPU≤21600秒、GPU任务累计wall≤7200秒/1GPU并发、紧凑最终≤20MB。没有实测优势的提取不用GPU；两fit优先授权GPU batch（HTCondor GPU或Kubeflow，使用仍有效的用户令牌），不重用过期凭证或无限排队。记录站点改写的实际资源，不能把分配核数当使用核数。
+原stage96的40个不同train/cal incoming，不新增身份或按能量误差/候选多寡重选。0optimizer QA核既有row和边到备选对齐、共同置换不变、改变候选—边配对能使非退化B联合表示改变、A新增分支恒定、缺源/空/全mask前向反向finite和全body/关系模块梯度。若真实40无≥3候选，不为展示配对敏感性换名单；可仅从同40张量构造明确标记的有限合成配对例做代数检查，不把它作为物理样本/风险结果。head零初始化时使用QA非零head核VJP，正式训练仍原零weight初始化，不继承QA状态。
 
-默认完整原train/cal/test；资源不准入则交真实已完成状态/输入与具体缺口，不自动删困难者/缩有利子集/加预算。节点表只保留紧凑数值/掩码/稀疏边，不存逐hit点云或ROOT/xAOD副本；共享原缓存不复制，完成后清传输重复归档。统计按role/stratum有足够独立任务时4–8CPU复用incoming draws，报告单核/多核实际成本；只有限小QA和轻量保存表核验在交互节点。
+按全输入max10节点/9边padding同40测实际CPU/GPU F/B、导入/传输/同步/内存，实际包逐源文件和数值QA后冻结资源。仅建议阶段CPU≤7200秒、1GPU并发/GPU任务累计wall≤3600秒、最终紧凑≤20MB；收益/新成本未测，stage96的42秒容器时间只是参考。拟合优先已授权GPU batch平台，用仍有效令牌，不复制/记录凭证；大批评价必须HTCondor、78个独立任务用8CPU/每process BLAS1线程、fork只读共享draw，不把分配核数当实际占用。
 
-完整cal/test报同一预测的低E50–100/100–200、all、≥200、低pz、低pz真高E/high-y/未确认/高端/missing与全部正负tail。保留原两低能/传统比上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03、原七层加低pz真高E的双向tail差上端≤2pp；两格配对500component内incoming条件重抽（同incoming多视图一起移动），报告条件限制/source95未测/单seed不含重训分布。另给新增信息A/B差、可用/不可用来源与单/多候选的事前X组支持，不能用事后分组挑主模型。点回归无概率密度，不编造PIT/coverage；可复用旧概率诊断但不冒充新分布输出。
+完整原cal/test：两低E50–100/100–200、all、≥200、reco低pz、同低pz真高E、high-y、未确认、高端和missing；各source/component、候选可用/缺源、单/多候选及原X组分母和风险。原八层RMSE门槛：低E对传统上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03；原各层总/正/负tail对direct差上95≤+2pp，不能仅交平均误差。500component内incoming配对重抽，同incoming多视图一起移动；记录source95未测/单seed/重训和offset/系统/研究选择不覆盖，缺源test只有一个source不可单独认证。点回归不编造density/PIT/coverage。
 
-成功是一次可复核的新增信息对照及完整风险/成本结论，不要求GNN收益或强行晋升。最低能/困难未联合通过就继续既有部署，不能因4个恢复例少就取消整个关系信息实验，也不能从负结果断言信息极限。真实response、interaction/FSI/材料/Calo/接受度/背景与最终未开发确认仍待完成。
+独立核配对聚合/实际表区间和旧控制、checkpoint/offset、完整行/权重/K与typed缺失闭合。记录真实wall/CPU/GPU allocated峰与适用范围、8核实际占用、未测量项，嵌套时间不加。成功标准是一次完整可复核的同输入表示比较，不要求强行晋升；仍无联合收益就交明确结论和真正关联读出/协方差输入缺口，不自动续消息深度/宽度/seed扫描。
 
 ## 5. 交付
 
-先写中文stage96 workbook，记录精确输入/身份/来源/选择/缺源、配置与命令、两fit曲线/参数、全部数值/单位/区间/图表、联结和程序验证、实际资源/I/O/保留字节、失败/未测项和下一具体任务。再与代码/紧凑manifest和表图本地Conventional Commit，不push、不自动进入stage97。历史路线/信息计划仅追加，保留下方stage54后缀逐字和原五项工作树。
+先写中文stage97 workbook：目标、原输入/配置/命令、实际两fit曲线/参数、全分层及尾/区间/图、程序与物理解释边界、实际资源和保留字节、失败/未测项、下一具体任务及验收。模型/缓存只EOS留最小结果，去重传输归档/重复JSON，不复制旧共享缓存。再与代码/配置/紧凑证据本地Conventional Commit，不push、不自动进入stage98。路线/信息计划历史仅追加，下方stage54后缀逐字和五项工作树保持。
 
 ## 保留的stage54 data占据支线
 

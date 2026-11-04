@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "mode": "extract",
+  "archive_bytes": 10539966,
+  "existing_byte_equal": [
+    "workbook/stage96_energy_ml/sources.json",
+    "workbook/stage96_energy_ml/protocol.json",
+    "workbook/stage96_energy_ml/admission.json",
+    "workbook/stage96_energy_ml/preparation.json",
+    "workbook/stage96_energy_ml/QA_extraction.json",
+    "workbook/stage96_energy_ml/QA_performance.json",
+    "workbook/stage96_energy_ml/QA_identities.json",
+    "workbook/stage96_energy_ml/model_QA.json",
+    "workbook/stage96_energy_ml/input_support.json",
+    "ntuples/energy_ml_stage96/manifest.npz"
+  ],
+  "new_files": [
+    "workbook/stage96_energy_ml/performance.json",
+    "workbook/stage96_energy_ml/schema.json",
+    "workbook/stage96_energy_ml/extraction.json",
+    "workbook/stage96_energy_ml/extract_job.json",
+    "ntuples/energy_ml_stage96/candidates.npz"
+  ]
+}

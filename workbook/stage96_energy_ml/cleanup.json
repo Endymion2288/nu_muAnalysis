@@ -1,0 +1,42 @@
+{
+  "removed_duplicates": [
+    {
+      "path": "software/energy-ml-candidates-stage96-extract.tar.gz",
+      "bytes": 4943895,
+      "removal": "exact local path"
+    },
+    {
+      "path": "software/energy-ml-candidates-stage96-fit.tar.gz",
+      "bytes": 42746401,
+      "removal": "exact local path"
+    },
+    {
+      "path": "software/energy-ml-candidates-stage96-report.tar.gz",
+      "bytes": 25232468,
+      "removal": "exact local path"
+    },
+    {
+      "path": "ntuples/energy_ml_stage96/result_extract.tar.gz",
+      "bytes": 10539966,
+      "removal": "exact local path"
+    },
+    {
+      "path": "ntuples/energy_ml_stage96/result_fit.tar.gz",
+      "bytes": 1384629,
+      "removal": "exact local path"
+    },
+    {
+      "path": "ntuples/energy_ml_stage96/result_report.tar.gz",
+      "bytes": 307822,
+      "removal": "exact local path"
+    },
+    {
+      "path": "ntuples/energy_ml_stage96/manifest.npz",
+      "bytes": 5010943,
+      "removal": "exact local path"
+    }
+  ],
+  "shared_previous_stage_caches_preserved": true,
+  "manifest_rebuild": "ml/prepare_candidate_ablation.py prepare, from original frozen caches; no PHYS required",
+  "schema_compaction": "schema_catalog.json is lossless QA/main catalog"
+}

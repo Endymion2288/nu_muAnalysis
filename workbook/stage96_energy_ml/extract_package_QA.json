@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "archive_bytes": 4943895,
+  "source_byte_equal": [
+    "ml/prepare_candidate_ablation.py",
+    "ml/track_candidate_information.py",
+    "ml/time_candidate_worker.py"
+  ],
+  "QA_unique_incoming": 40,
+  "processes": 8,
+  "saved_arrays_equal_to_serial": true,
+  "worker": {
+    "passed": true,
+    "records": 40,
+    "available_N": 38,
+    "sources": 36,
+    "candidate_nodes": 41,
+    "leading_edges": 3,
+    "processes": 8,
+    "source_CPU_s": 12.364281577,
+    "child_CPU_s": 12.505042,
+    "source_read_bytes": 18613870,
+    "logical_requested_bytes": 20570828,
+    "truth_target_payload_branches": 0,
+    "new_fits": 0,
+    "test_payload_records": 0,
+    "wall_s": 2.076687457971275,
+    "CPU_s": 0.10553162599999999,
+    "peak_single_process_RSS_MiB": 86.34765625
+  },
+  "new_fits": 0
+}
