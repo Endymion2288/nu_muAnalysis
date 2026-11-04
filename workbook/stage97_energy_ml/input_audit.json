@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "support": [
+    {
+      "role": 1,
+      "N": 46575,
+      "incoming": 37556,
+      "available": 46230,
+      "unavailable": 345,
+      "single": 43750,
+      "multiple": 2480,
+      "additional_K": 317
+    },
+    {
+      "role": 2,
+      "N": 11612,
+      "incoming": 10811,
+      "available": 11269,
+      "unavailable": 343,
+      "single": 10633,
+      "multiple": 636,
+      "additional_K": 343
+    },
+    {
+      "role": 3,
+      "N": 13189,
+      "incoming": 12125,
+      "available": 12833,
+      "unavailable": 356,
+      "single": 11983,
+      "multiple": 850,
+      "additional_K": 356
+    }
+  ],
+  "quarantine": 17657,
+  "edge_correspondence_comparisons": 24440,
+  "edge_max_absolute_difference": [
+    7.3713060260161e-06,
+    1.2802824585378403e-05,
+    3.505974120798783e-05,
+    8.138286877734657e-09,
+    0.0
+  ],
+  "first_power_momentum": "pz0-only",
+  "scintillator_fitted_charge_features": 0,
+  "raw11_status_preserved": true,
+  "preserved_charge_minus_one": 48982,
+  "preserved_module_eta_minus_one": 37708,
+  "new_PHYS_reads": 0,
+  "new_fits": 0,
+  "new_predictions": 0,
+  "wall_s": 0.29835329530760646,
+  "CPU_s": 0.267087152,
+  "peak_single_process_RSS_MiB": 149.4375
+}

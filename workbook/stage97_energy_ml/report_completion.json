@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "new_fits": 2,
+  "roles": {
+    "1": 46575,
+    "2": 11612,
+    "3": 13189
+  },
+  "processes": 8,
+  "tasks": 78,
+  "parallel_wall_s": 7.526823969004909,
+  "child_CPU_s": 23.515661,
+  "metric_rows": 2016,
+  "paired_rows": 1296,
+  "bootstrap_repeats": 500,
+  "point_tail_joint_pass": {
+    "A_cal": false,
+    "B_cal": false
+  },
+  "uncertainty": "component incoming conditional; shared views move together, no source/retraining/systematic/research-selection coverage",
+  "probability_metrics": "not defined for point-only outputs",
+  "model_promotion": false,
+  "wall_s": 9.379419674980454,
+  "CPU_s": 5.9987088,
+  "peak_single_process_RSS_MiB": 305.37109375
+}

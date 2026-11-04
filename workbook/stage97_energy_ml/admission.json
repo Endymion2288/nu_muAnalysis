@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "GPU_projected_wall_s": 1143.2631428539753,
+  "CPU_projected_s": 2143.2631428539753,
+  "projection_rule": "slowest local padded1024 end-to-end GPU F/B*46*300*2*5+180; reserve1000CPU for evaluation/QA; estimate not guarantee",
+  "CPU_cap_s": 7200,
+  "GPU_task_wall_cap_s": 3600,
+  "retained_cap_bytes": 20000000
+}

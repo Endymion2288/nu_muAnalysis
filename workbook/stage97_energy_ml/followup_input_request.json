@@ -1,0 +1,29 @@
+{
+  "next_stage": 98,
+  "status": "prepared_not_executed",
+  "objective": "Measure deployable native track-cluster/spacepoint associations and real covariance; no more geometry architecture grid",
+  "new_samples_required": false,
+  "new_energy_fits": 0,
+  "new_MC_or_reconstruction": 0,
+  "new_test_payload_or_risk": 0,
+  "inputs": [
+    "Stage95 frozen2048 unique train/cal incoming and24sources",
+    "Exact production metadata/logs linking PHYS to original REC/ESD",
+    "Matched existing Calypso build and actual TSOS/measurement/cluster/SP/covariance collections"
+  ],
+  "QA_max_unique_incoming": 40,
+  "limits_proposed_not_admitted": {
+    "CPU_s": 14400,
+    "actual_input_bytes": 10000000000,
+    "retained_bytes": 20000000,
+    "maximum_condor_concurrency": 2,
+    "source_processes": 8
+  },
+  "acceptance": "Actual association/covariance support and compact distributions with all frozen denominators, or all feasible measurements plus exact source/collection/identity gaps; no metadata-only substitute, no forced links",
+  "unresolved": [
+    "Actual native file/identity availability",
+    "True association and fitted covariance support",
+    "New input energy benefit",
+    "Real response/systematics/source95 and undeveloped confirmation"
+  ]
+}

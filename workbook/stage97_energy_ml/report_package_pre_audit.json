@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "archive_bytes": 25482835,
+  "code_files_byte_equal": [
+    "ml/audited_features.py",
+    "ml/batched_posterior.py",
+    "ml/compare_energy_architectures.py",
+    "ml/differentiable_posterior.py",
+    "ml/joint_candidate_common.py",
+    "ml/latent_transfer_diagnostics.py",
+    "ml/posterior_numerics.py",
+    "ml/prepare_candidate_ablation.py",
+    "ml/qa_joint_report.py",
+    "ml/report_joint_candidates.py",
+    "ml/report_resplit_energy.py",
+    "ml/resplit_energy.py",
+    "ml/retrain_accurate_posterior.py",
+    "ml/support_augmentation.py",
+    "ml/time_joint_worker.py",
+    "ml/track_candidate_information.py",
+    "ml/train_candidate_ablation.py",
+    "ml/train_joint_candidates.py",
+    "ml/transfer_posterior.py",
+    "ml/validate_latent_transfer.py",
+    "ml/validate_resplit_energy.py"
+  ],
+  "identities": 40,
+  "optimizer_steps": 0,
+  "result": {
+    "passed": true,
+    "unique_incoming": 40,
+    "mixed_original_train_cal": true,
+    "new_test_payload": 0,
+    "new_fits": 0,
+    "synthetic_points_only": true,
+    "processes": 8,
+    "tasks": 8,
+    "serial_parallel_identical": true,
+    "event_space_interval_max_difference": 2.220446049250313e-16,
+    "serial_wall_s": 0.10179630061611533,
+    "parallel_wall_s": 0.06864388287067413
+  }
+}

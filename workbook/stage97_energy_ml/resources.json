@@ -1,0 +1,70 @@
+{
+  "measured_disjoint_CPU_s": 85.851401,
+  "batch_outer_scopes": {
+    "fit": {
+      "mode": "fit",
+      "exit_code": 0,
+      "wall_s": 24.33465429401258,
+      "CPU_s": 23.460535,
+      "max_single_process_RSS_KiB": 1774664,
+      "scope": "outer child scope includes its descendants; nested timings must not be added"
+    },
+    "report": {
+      "mode": "report",
+      "exit_code": 0,
+      "wall_s": 13.17548424200504,
+      "CPU_s": 31.090866,
+      "max_single_process_RSS_KiB": 312700,
+      "scope": "outer child scope includes its descendants; nested timings must not be added"
+    }
+  },
+  "separate_QA_outer_scopes": {
+    "checkpoint_QA.time": {
+      "user_CPU_s": 3.95,
+      "system_CPU_s": 1.92,
+      "CPU_s": 5.87
+    },
+    "fit_package_QA.time": {
+      "user_CPU_s": 6.25,
+      "system_CPU_s": 2.2,
+      "CPU_s": 8.45
+    },
+    "input_audit.time": {
+      "user_CPU_s": 0.95,
+      "system_CPU_s": 0.7,
+      "CPU_s": 1.65
+    },
+    "model_QA.time": {
+      "user_CPU_s": 4.57,
+      "system_CPU_s": 2.07,
+      "CPU_s": 6.640000000000001
+    },
+    "report_QA.time": {
+      "user_CPU_s": 1.14,
+      "system_CPU_s": 0.72,
+      "CPU_s": 1.8599999999999999
+    },
+    "report_package_QA.time": {
+      "user_CPU_s": 2.53,
+      "system_CPU_s": 0.92,
+      "CPU_s": 3.4499999999999997
+    },
+    "report_package_pre_audit.time": {
+      "user_CPU_s": 2.43,
+      "system_CPU_s": 0.95,
+      "CPU_s": 3.38
+    }
+  },
+  "CPU_cap_s": 7200,
+  "GPU_concurrency": 1,
+  "GPU_task_outer_wall_s": 24.33465429401258,
+  "GPU_task_container_wall_s": 25.0,
+  "GPU_task_wall_cap_s": 3600,
+  "report_child_average_cores": 3.124247504237689,
+  "report_parallel_wall_scope": "pool launch through aggregate checks and plot; not pure pool-only benchmark",
+  "unmetered": "First fixed40 QA before CPU/GPU agreement was added, freeze/metadata/collection/some audits and plotting/housekeeping; not exact whole-session CPU.",
+  "nested_times_not_added": true,
+  "complete_training_CPU_GPU_speedup": "未测量",
+  "physical_EOS_network_bytes": "未测量",
+  "simultaneous_total_peak_RSS": "未测量"
+}

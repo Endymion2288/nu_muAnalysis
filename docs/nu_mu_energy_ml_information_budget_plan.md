@@ -1164,3 +1164,16 @@ A/B test最低能.272854/.284603（传统.145661）、all .295567/.295826（dire
 下一stage97只购买一次**同输入联合编码方案**的证据。当前节点与边独立池化不保留逐备选关联；不能从负结果断言关系无用，也不直接认定该限制是低能瓶颈。两格都保留B真实边际输入，新增同声明80→32→32消息分支，A常数、B拼接leading/备选/对应边，pool后2×64 head。它改变表示与有效容量，不是新增传感器信息，不能做完全单因子容量声明或把效应全解释为primary替换。有限2fit，seed2026110497、原cal/typed/目标/优化及单offset不变，无网格/加seed/testgate。
 
 输入仅本轮候选/原40QA、stage94摘要/cal子分区和原缓存/旧控制，0新ROOT/生成/重建。先≤40 train/cal实际包0optimizer核身份/对应关系/置换/空缺/梯度和CPU/GPU成本，QA后准入CPU7200秒/1GPU累计任务wall3600秒/最终20MB；完整批量统计用8CPU Condor。验收原全部风险/8层RMSE/正负总tail门槛和500incoming条件区间，仍无联合收益不自动续关系深宽/seed扫描，交真实读出/协方差缺口。方法依据Interaction Networks已在stage96核阅，可行性限于小消息模块；收益与新成本未测。本轮未执行stage97，详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)，历史§1–57及stage54/K政策不变。
+
+
+## 59. stage97：既有几何的联合编码未显增量，下一预算购买真实引用/误差信息
+
+[stage97报告](../workbook/2026-11-04_stage97_joint-candidate-ablation.md)完成同真实边际输入的常数/正确联合消息两格，各31553参数、seed2026110497，2fit/6440steps；原split/权重/K/raw/typed/pz0-only与全部困难侧保持，0新ROOT/MC/重建。test最低能A/B .300780/.297487（传统.145661）、all .296267/.296744（direct.287491）、低pz真高E .684707/.681645（direct.658177）。B/A总体1.001610 [.999258,1.004056]、最低能.989053 [.971480,1.004474]、多轨迹1.009286 [.992612,1.025452]，cal多轨迹含1，没有确证联合表示收益。
+
+两格8个RMSE门槛全失败、仅all/≥200三向tail通过；B最低能/传统上95=2.421954、all/direct=1.040687，困难负tail差上端仍>+2pp。不晋升，不因cal最低能下降追加seed/gate，不延长几何消息深宽网格；单seed、有效容量/优化、来源/系统及研究选择限制仍在，负结果不是信息极限或关系家族无用的证据。
+
+原40 CPU/T4 QA/包QA、预处理逐字、24440边值、8512旧控制指标max0、实际320区间端点独立复核max3.552714e−15、checkpoint/offset闭合。H100 NVL MIG3g.47gb首Pod25容器wall秒；fit/report外层CPU23.460535/31.090866秒，8CPU评价child/window3.124248核，已计独立范围85.851401CPU秒，非全会话总量。保留字节按storage≤20MB、重复传输包清理，旧共享缓存/stage54只读；物理EOS流量、source95、全重训/真实response/最终未开发确认未测。
+
+下一stage98只购买一次**真实原生轨迹—cluster/SP引用及协方差可部署信息**。stage95已核hitSet非ID/52例不对齐、现有传播单位covariance非拟合误差；联合几何编码没有自动补出这些缺口。复用stage95固定2048train/cal不同incoming/24source，精确生产链定位原REC/ESD，≤40QA先核身份/原track筛选/measurement ID/SP组成/实际covariance及单位和成本，再冻一种关联计数/真实共享ID比例/未归属活动与可核误差尺度。无可靠ID/covariance明示缺口，不伪pull、truth输入、noise标签或硬Calo分配，不重建补删源、不丢K。
+
+0能量fit/新MC/重建/test载荷或风险，独立source足够时8CPU Condor/内线程1/最多2并发；建议CPU14400秒/实际读输入10GB/紧凑20MB，QA后准入。交实际可用率/关联及误差分布与完整来源/X分母，或完成可做部分后精确缺失产品，不以metadata清单代替测量；无新样本前置，不递归扫EOS。新输入收益/成本未测，本轮未执行stage98，后续能量消融另冻协议，见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–58及stage54/K政策保持。

@@ -1,0 +1,38 @@
+{
+  "stage": 97,
+  "seed": 2026110497,
+  "new_fits_exactly": 2,
+  "frozen_before_test_payload": true,
+  "architecture": "Stage96 B real marginal nodes/edges/summary/meta in both cells; added80->32SiLU->32SiLU messages,mean/max64;323->64SiLU->64SiLU->1",
+  "parameters": 31553,
+  "A": "constant one-dummy added-message branch; all original marginal inputs retained",
+  "B": "leading32+corresponding secondary32+edge16, then masked message pool; no edges ->0",
+  "capacity_limit": "same declared architecture is not identical effective function capacity",
+  "input": "same Stage96 cache, no PHYS/truth/hitSet/new information",
+  "preprocessing": "byte-identical Stage96 frozen train-only node/edge/count/summary state",
+  "loss": "incomingweighted logMSE",
+  "optimizer": "Adam lr.001/default betas/no decay/clip10",
+  "batch": 1024,
+  "max_epochs": 300,
+  "validation_every": 5,
+  "patience": 30,
+  "checkpoint": "strict minimum original Stage94 cal_select weighted pointMSE",
+  "postprocessing": "one original cal_post weighted mean log-offset per cell; raw/offset reported",
+  "roles": {
+    "train": 46575,
+    "cal": 11612,
+    "test": 13189,
+    "quarantine": 17657
+  },
+  "additional_K_retained": 1016,
+  "constraints": "pz0-only first-power momentum; px/py/qOverP/bends allowed; raw11/status; typed NaN and legitimate signed values",
+  "test": "new predictions only after both fits and offsets fixed; developed pool, not blind",
+  "limits": {
+    "CPU_s": 7200,
+    "GPU_task_wall_s": 3600,
+    "GPU_concurrency": 1,
+    "retained_bytes": 20000000
+  },
+  "evaluation": "original8RMSE and total/positive/negative tail gates;500 component-incoming conditional draws; source95/systematics/retraining not covered",
+  "model_promotion": false
+}

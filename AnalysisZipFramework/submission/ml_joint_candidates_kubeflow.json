@@ -1,0 +1,50 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "nu-mu-energy-stage97-fit",
+    "namespace": "xcheng",
+    "labels": {
+      "analysis-stage": "nu-mu-energy-97"
+    }
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 3600,
+    "template": {
+      "metadata": {
+        "labels": {
+          "mount-eos": "true",
+          "mount-cvmfs": "true",
+          "home": "eos"
+        }
+      },
+      "spec": {
+        "serviceAccountName": "default-editor",
+        "restartPolicy": "Never",
+        "nodeSelector": {
+          "nvidia.com/gpu.product": "NVIDIA-H100-NVL"
+        },
+        "containers": [
+          {
+            "name": "fit",
+            "image": "registry.cern.ch/mlops/lxplus-like:9",
+            "imagePullPolicy": "IfNotPresent",
+            "command": [
+              "bash",
+              "-lc"
+            ],
+            "args": [
+              "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/submission/run_ml_joint_candidates.sh fit"
+            ],
+            "resources": {
+              "limits": {
+                "nvidia.com/mig-3g.47gb": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
