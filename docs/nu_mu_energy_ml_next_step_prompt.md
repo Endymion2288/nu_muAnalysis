@@ -1,39 +1,32 @@
-# 下一轮执行 Prompt：stage100 仅补齐丢失的A信息classifier与配对证据
+# 下一轮执行 Prompt：stage101 有界研究复盘，不自动延长collection或训练
 
-先读AGENTS.md、[stage99报告](../workbook/2026-11-04_stage99_energy-ambiguity-and-activity.md)、路线§81、信息计划§61及stage98研究复盘。stage99 A已完成，B collection已测；A classifier在已完成fit后因XGBoost sklearn保存失败丢预测，B classifier保留。**本轮只补这一个A，不重做stage99两个fit、T优化、ROOT或能量实验；不自动进入stage101。计算和QA在有环境的batch节点，当前本地终端不恢复CERN栈/复现事件。**
+先读AGENTS.md、路线§82、信息计划§62、[stage100报告](../workbook/2026-11-04_stage100_paired-activity-information.md)、stage98研究修订和stage99实际报告。本轮是研究判断阶段；不再补A，不重做B，不自动开始新能量实验。
 
-## 1. 固定事实与研究边界
+## 1. 已确认事实
 
-stage99共同pz支持test的direct/E94/stage92 AUC=.975092/.976727/.973852，但E94名义2%cal_select阈值实际L误判4.754309 [1.121885,10.158808]%、H识别91.725663%。低E风险增量.054973752，低pz真高E风险减少3.113340137，是修正权衡，不是Bayes界。唯一T=1.08691603355已使test NLL/coverage改善，点不变；不续温度/先验/局部校准，也不自动新NLL checkpoint训练。
+Stage100恰一次替补A，旧B不变；原2048 train/cal incoming/24source，train L/H65/82、cal20/46。A127维/B211维；42新增collection值在train/cal均已填充且有变化，B的51次分裂却全部用原SpacePoints/Veto10_raw_charge/Veto20_raw_charge。两格100树执行完全相同，2048预测逐位相同，cal logscore .346455633/Brier .101254665、配对差0[0,0]。名义2%train阈值cal L0/20、H38/46，不认证总体2%误判。
 
-B原2048 incoming/24source，1923 PHYS可读/125历史删源，1770单轨迹；实际原生ID/covariance/active readout未测。42维PHYS collection几何相对原端点弦线族已经提取，缺源/K身份和原62均保持；弦线不是拟合轨迹，SP entries不是唯一cluster/粒子，纵向量仅被支持的可见部分，不认noise/强子。原REC scratch只发布PHYS后清理、merge在ntuple阶段临时生成；同名官方6d6ab70b REC不等于原d32b0ff3 track/TSOS。不要重新定位扫描/重建、强配hitSet或造pull。
+按事前规则停止当前PHYS collection摘要族扩展，不放松正则、加树/seed、扩提取或转GNN来追分；这不是新活动无信息或物理上限的证明。原生measurement/cluster ID、SP组成、原track/TSOS/actual covariance及有效读出仍缺；原scratch REC未持久化，同名官方REC未闭合。不要重扫EOS/重建/强配hitSet或造pull。
 
-两格各已实际fit一次。9667677的A在save_model报`_estimator_type undefined`，没有保留可用A预测；9667683只完成剩余B，改为`get_booster().save_model`且先持久化预测。B cal N66/L20/H46、logscore .346455633 [ .252028743,.462819455 ]、Brier .101254665 [.061707997,.150646988]，AUC .929891304；这些不能替代B−A。0/20低能误判及bootstrap[0,0]不能认证2%总体保证。
+stage99已有强排序与概率产品：E94名义2%工作点开发test实际低能误判4.754309%、H识别91.725663%，最低能修正风险增量+.054973752；唯一T=1.08691603355改善NLL/coverage但点不变。stage94 E三seed point-best65/90/65与记录NLL最低50/25/35尚有目标差异，不证明继续训练或NLL checkpoint能解除point风险。stage96/97几何/联合消息主体条件区间含1；这些旧路线不重包装成新架构发现。
 
-原stage87 split/同incoming总权重1、train/cal/test46575/11612/13189及唯一37556/10811/12125、全部1016新增K和missing21/6/5/困难侧保持。一次方动量pz0-only，允许原px/py/q/p/弯折；raw11/status、合法负raw/charge与module_eta −1、typed NaN/Calo缺项、pz>50GeV不改。test是开发池，不是新blind；source95/重训/校准估计/response/研究选择区间仍未覆盖。最终原1.05/1.01/1.03与八层三向tail+2pp不改。
+## 2. 本阶段唯一任务与输入
 
-## 2. 唯一实验：一次冻结A，和已保留B做配对
+只读已提交Markdown、曲线/汇总TSV/JSON、源码和原论文，不读NPZ/ROOT或模型/逐事件载荷，不运行任何fit、网络forward、分类推断、概率优化、积分、native定位/提取或HTCondor/Kubeflow任务。无需恢复CERN环境。文献研究可检索网络，引用原文并解释当前小样本、条件误判、目标与响应边界，不移植他处性能。
 
-输入：
+具体输入：stage94学习曲线/point与概率选择记录；stage98研究报告；stage99已提交probability/PIT/point_risks/loss_decomposition/工作点汇总及原生来源缺口；stage100指标/结构审计、冻结协议和停止决定。保留既有source/X支持和研究选择限制，不重新估计分数或从test选gate。
 
-- 原`ntuples/energy_ml_stage95/cohort.json`、原事件/候选身份表；2048一incoming一视图，只有原train/cal。
-- `ntuples/energy_ml_stage99/{B_collection_features,B_identities,B_classifier_predictions}.tsv`及`ml/artifacts/stage99/B_classifier_B.json`；不覆盖B。
-- 原62缓存stage55 dataset/stage56 readout和stage70/81/82/83 support；`ml/configs/audited_features.json`。
-- `ml/stage99_bfinish.py`是B实际baseline和标签/角色/threshold实现；`workbook/stage99_energy_ml/{activity_contract,B_failure,B_complete,B_class_support}.json/tsv`及metrics/ROC工作点。
+必须交付：
 
-A输入严格匹配B中共同分支：62 audited值、62 missing mask、原status_other一列、PHYS collection可用一列、exact native可用0一列，共127列。B再加42值/42mask；本轮不改A定义、B输入/模型/预测。所有2048身份保留可用性报告，classifier域为观测50<pz0<100且诊断L=真50≤E<100、H=真E≥200；中间100–200只在支持分母保留。原train L/H65/82、cal20/46必须闭合，不按truth重选队列/来源；truth只标签。
+1. 用现有证据区分概率checkpoint/训练目标未对齐与真正新增载荷缺失两条假设，明确已测和未测。固定均值的概率尺度变换不改变point风险；排序好不自动保证低误判工作点和联合能量风险。
+2. 核阅相关原论文的可行方法和假设；不要求任意新模型名称或制造正结果，不从pilot阴性推导Bayes上限。
+3. 至多提出一个下一阶段的具体可执行合同，或明确现有证据下的停止/所需产品条件。若拟议固定MDN轨迹同时保存NLL-best/point-best，须说明其购买的问题、输入/角色/训练次数/主比较/验收与资源上限，并承认point收益未证；本轮不执行。若需真实产品，列精确最小产品与关联证明，不以新样本或全环境重建作默认前置。
 
-唯一A XGBoost hist：seed2026110499、depth2、100trees、eta.05、min_child_weight10、lambda10、nthread1；原train147拟合，cal66评价。无earlystop/超参/seed/重启动，无B再fit或原stage99 A/T重跑。先≤40原flagged train/cal身份0optimizer QA核62/NaN/status/角色/incoming与序列，利用现有B booster做load/predict/save往返核保存接口，不能为QA另fit。完整A fit后**先写预测并确认可回读，再保存Booster**；不用有兼容问题的sklearn save_model，失败保留可恢复产物。
+## 3. 物理与交付边界
 
-交A/B同cal支持的logscore/Brier、B−A配对差及500component内incoming条件区间、ROC/partial ROC；2/5/10%阈值各仅在对应模型的train L上定义严格score>t，cal只评价，复核B原工作点不变。报告实际FPR/TPR、原始计数/来源/独立incoming与区间，cal L20/4source不能认证2%总体保证；不按cal结果改classifier或test选赢家。程序独立复核预测分数/区间和原B值，明确只有一个新增A fit、0B refit。
+原split/同incoming权重、全部1016新增K、缺源/困难/尾支持、pz>50GeV保持。第一幂动量只用pz0，允许原px/py/q/p/弯折；raw11/status/typed NaN、合法负raw/charge及module_eta=-1/Calo缺项保持。原两低能/传统上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03和八层三向tail上差≤2pp不变。旧test已开发，source/refit/阈值估计/response/研究选择和未开发确认未因bootstrap闭合。
 
-## 3. 资源、判断与交付
-
-建议≤1Condor2CPU6GB、阶段CPU≤300秒/紧凑最终≤20MB，QA实测后准入；小树/缓存处理不用GPU、无ROOT/native事件读取，不占8核做单线程小fit。共用原缓存，不留逐hit/原生副本，不保留重复传输包。不恢复整个历史Athena环境；LCG109 batch已有XGBoost/NumPy。
-
-验收首先是原支持/输入闭合、A可靠持久化、B预测逐位不变和配对统计完成。只有支持的配对证据才讨论信息增量，不能把B单格或A保存失败当物理结论；无证据即停止这族collection工程扩展。若出现增量，仍须另冻完整角色与强BDT能量消融合同、说明geometry和真实关联缺口，不能本轮自动执行。严格低误判支持/真实响应/独立未开发确认仍缺，不因小pilot宣称最终通过。
-
-先写中文stage100 workbook（实际数值/单位/输入/命令/资源/失败/产物/下一最小任务，未测标明），再代码/报告/紧凑证据本地Conventional Commit，不push，不自动stage101。模型和逐事件预测放忽略目录。保持历史正文和以下stage54后缀逐字不变，其实际状态沿stage85，不能默认重做noise支线。
+研究阶段验收为中文stage101报告：现有数值注明来自哪个阶段，不冒称新测量；证据/论文适用边界、具体下一合同或停止条件、未测量项目清楚。报告后追加路线/信息计划记录，本地Conventional Commit，不push，不自动执行后续实验。保留模型/事件缓存和原Stage54五项，历史正文只追加；以下Stage54后缀必须逐字保持。
 
 ## 保留的stage54 data占据支线
 

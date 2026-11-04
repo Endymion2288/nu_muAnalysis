@@ -2139,3 +2139,16 @@ B精确22个生产manifest/worker和官方reco日志证明：原d32b0ff3 scratch
 独立600项旧输出/恒等式最大差1.776357e−15，B单格6项score/区间闭合，保存点/解析均值/T²方差与温度梯度检查通过。七任务外层已计136.27CPU秒（A32.50/B103.77），含失败fit、不重复相加嵌套timing；B提取65.70CPU/22.74wall秒、8进程平均2.889核，单核对照未测。ROOT接口请求775439164bytes，真实网络流量未测、native event payload0。紧凑最终≤20MB按storage实测，归档去重、训练模型和事件小表不入Git，stage54保持。
 
 **下一stage100仅补A产物，不是扩工程或新能量训练。** 同2048/原62/冻结seed和100树，只允许A一次fit，复用已保留B66个cal预测；≤40身份0optimizer QA先核输入与Booster保存/预测持久化，再报配对score/Brier、既定低误判和500incoming区间。0B重训/ROOT/native/test风险/新T/能量fit，建议≤1Condor2CPU6GB/300CPU秒/紧凑20MB，未执行。验收先补可审计配对证据；无支持增量停止该collection族扩展，有迹象也不跳过真实引用/response或最终联合门槛。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；历史§1–80/K政策/stage54后缀保持。
+
+
+## 82. stage100：A配对补齐，固定B完全未使用新增活动摘要；停止本族扩展
+
+[stage100报告](../workbook/2026-11-04_stage100_paired-activity-information.md)仅新增一次A classifier fit，原2048 train/cal incoming/24source、train L/H65/82与cal20/46闭合，0B/能量fit/新T/ROOT/native/test评价。A127维、B211维；62 typed值/raw11/status/pz0-only一次方动量与允许px-py-q/p-弯折、合法负值/NaN、原pz>50 GeV、125缺源及全部K/困难侧保持。QA原40/24source通过，先预测原子落盘回读再保存原生Booster；旧B字节和保存cal预测不变。
+
+A/B cal logscore均.346455633、Brier均.101254665、AUC均.929891304、pAUC(FPR≤.1面积/.1)均.847826087；所有配对差及500component内incoming条件区间均0[0,0]。名义2/5/10%阈值各仅train L确定，cal低能误判0/20、1/20、2/20，高能识别38/46、38/46、40/46；0/20及退化bootstrap不认证2%总体误判。没有source/refit/阈值估计/response或研究选择覆盖。主证据logscore B−A上95<0未达，不能以B单格AUC替代新增信息。
+
+零训练结构审计排除整个新增分支被置常数/漏接：42新值train/cal全部非恒定且有有限支持，mask变化42/13；但B的51个分裂只使用SpacePoints26、Veto10_raw_charge19、Veto20_raw_charge6次。两格100棵树执行dump和base score相同，原2048 train/cal预测逐位相同。固定模型未选择新增变量是实测机制，不是物理信息界；小样本/正则/已有量关联的因果份额未测，真实ID/TSOS/SP组成/actual covariance与有效读出仍缺。
+
+旧B44项复现、独立sklearn/显式incoming展开与阈值90项通过，max1.110223e−16。四Condor任务均首次exit0，最多1并发、实际2CPU6000MB/线程1，无GPU；独立外层23.80CPU秒<300，Condor25秒不同口径不相加。fit核心.048707CPU秒为嵌套子计时，非全会话成本；EOS物理流量未测。挂载listing滞后用XRootD已存在返回包回收，无重跑。归档核验去重、紧凑≤20MB见storage，模型/事件表不入Git；stage54五项和Prompt后缀保持。
+
+**按事前规则停止本collection摘要族工程扩展，继续既有部署；不自动完整提取/强BDT能量/GNN/加seed/放松正则或Stage101。** 下一最小stage101仅有界研究复盘：读stage94/98–100已提交曲线/汇总与原论文，0事件/模型载荷、fit/积分/原生定位，区分概率checkpoint目标未对齐与真实新增载荷缺口，至多提出一个另冻的可验收合同或停止条件。概率变换点不变不能解决point风险；最终原1.05/1.01/1.03与八层三向tail+2pp门槛不改。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)，本轮未执行stage101，历史§1–81不改；真实response/系统与独立确认仍未认证。

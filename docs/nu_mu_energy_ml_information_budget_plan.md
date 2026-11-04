@@ -1207,3 +1207,14 @@ B购买了实际collection测量：2048完整train/cal身份、1923可读/125原
 低容量classifier支持为train L/H65/82、cal20/46；各格实际fit一次，但A保存接口失败导致预测丢失，只保留B。B单格logscore .346455633、Brier .101254665、AUC .929891304不回答增量；**B−A未测量，不把程序缺口归成物理无信息。** 已修直接Booster保存并先落盘预测，剩余Bfit复用小表、没有重复A/ROOT。全阶段含失败任务外层136.27CPU秒，接口请求775439164bytes，600项旧控制与B6项复核通过；嵌套计时不重复相加、物理EOS网络流量未测，紧凑≤20MB/旧缓存与stage54保持。
 
 下一笔预算只补丢失的A：同原62/status/availability、原队列角色/seed/100树，一次A fit，复用B保存预测，0B/能量重训、ROOT/native/test风险或新T。≤40身份0optimizer先核输入及保存接口，建议1Condor2CPU6GB/CPU300秒/最终20MB，再交cal paired score/Brier/工作点与500incoming条件区间。无支持增量停止collection族扩展；有迹象亦需真实引用/response及强BDT能量合同另审，不能自动GNN或独立确认。当前尚未执行stage100，历史§1–60及原支持/最终门槛不改，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 62. stage100：补齐配对证据，collection摘要扩展预算结束
+
+[stage100实际报告](../workbook/2026-11-04_stage100_paired-activity-information.md)完成唯一A替补fit，复用原B模型/66cal预测；0B重训/能量fit/新T/ROOT/native/test风险。原2048 incoming/24source、147train/66cal与125缺源分母闭合，原62 typed/raw/status/pz0-only和全部K保持。40身份0optimizer QA/保存接口核验后才fit，预测先持久化、原生Booster回读逐位闭合，无重复A尝试。
+
+新增42值及42mask实际进入B211维；42值在train/cal全部有变化，B却0个新增列分裂，两格100树执行相同，51次分裂仅SpacePoints及两Veto raw charge。原2048 train/cal预测逐位相同。cal logscore .346455633、Brier .101254665、AUC .929891304两格相同，B−A及500条件区间均0；名义2%train阈值cal L0/20、H38/46。没有达到主logscore上95<0，不支持本pilot新增摘要增量；不是物理信息界，也不能从20低能/4source认证2%总体误判。
+
+本笔预算交付的是配对缺口和同分机制，**停止当前collection统计族扩展**，不继续放松正则/加树/seed、扩大提取或能量网络。真实关联、TSOS/ID/covariance/有效读出缺口仍与现有几何摘要不同。旧B44项和独立90项max1.110223e−16通过；四Condor首次exit0、最多1并发/2CPU6GB，外层23.80CPU秒<300；GPU收益/物理EOS流量未测，紧凑≤20MB按storage。模型/事件表忽略、重复包去重、原stage54只读。
+
+下一预算只购买有界研究判断：stage101读既有stage94/98–100曲线/统计与原论文，0fit/事件或模型载荷/积分/原生定位，比较概率checkpoint目标与新增真实载荷两条假设的现有证据；交至多一个另冻可验收合同或停止条件，不自动新训练。概率点保持变换不冒称point改善，最终两低E/传统1.05、all/direct1.01、≥200及困难1.03和八层三向tail+2pp不变。source/重训/阈值估计/研究选择/真实response/系统/未开发确认仍缺；历史§1–61保持，执行见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "new_fits": 0,
+  "optimizer_steps": 0,
+  "ROOT_reads": 0,
+  "original_train_cal_only": true,
+  "N": 2048,
+  "shared_input_equal": true,
+  "model_dimensions": {
+    "A": 127,
+    "B": 211
+  },
+  "trees": {
+    "A": 100,
+    "B": 100
+  },
+  "total_splits": {
+    "A": 51,
+    "B": 51
+  },
+  "B_added_feature_splits": 0,
+  "tree_dump_exact_equal": true,
+  "raw_tree_differing_fields": {
+    "tree_param": 100
+  },
+  "base_score_equal": true,
+  "all_2048_predictions_bit_equal": true,
+  "max_abs_prediction_difference": 0.0,
+  "activity_input": {
+    "train": {
+      "varying_values": 42,
+      "varying_masks": 42,
+      "populated_values": 42
+    },
+    "cal": {
+      "varying_values": 42,
+      "varying_masks": 13,
+      "populated_values": 42
+    }
+  },
+  "availability": {
+    "train": 139,
+    "cal": 66
+  },
+  "interpretation": "Fixed-model mechanism only; no extra feature was selected if B_added_feature_splits=0. Nonconstant input does not guarantee predictive information or prove an information bound.",
+  "wall_s": 1.090654970961623,
+  "CPU_s": 1.0769679709999997,
+  "peak_RSS_MiB": 301.55078125
+}

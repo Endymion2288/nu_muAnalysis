@@ -1,0 +1,17 @@
+{
+  "QA_passed": true,
+  "QA_CPU_s": 1.008878546,
+  "QA_wall_s": 1.0356037320161704,
+  "QA_peak_RSS_MiB": 280.921875,
+  "fit_CPU_budget_s": 60,
+  "report_validation_CPU_budget_s": 180,
+  "total_CPU_limit_s": 300,
+  "cpus": 2,
+  "requested_memory_MB": 6000,
+  "concurrent_jobs": 1,
+  "new_fits_allowed": 1,
+  "B_fits_allowed": 0,
+  "ROOT_reads_allowed": 0,
+  "projection_scope": "40-identity QA measured;147-row100-tree2-depth fit and66-row500-draw paired evaluation padded under240 CPU seconds; this is a projection, not measured fit cost",
+  "protocol_note": "information-evidence criterion appended after QA packaging but before reading QA results or new A targets; QA input protocol retained byte-exact as protocol_QA.json"
+}

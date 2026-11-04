@@ -1,0 +1,38 @@
+{
+  "input_packages_removed": [
+    {
+      "path": "software/energy-ml-stage100-qa.tar.gz",
+      "bytes": 36785879,
+      "original_B_and_cohort_byte_equal": true,
+      "worker_code_byte_equal": true
+    },
+    {
+      "path": "software/energy-ml-stage100-fit.tar.gz",
+      "bytes": 36790960,
+      "original_B_and_cohort_byte_equal": true,
+      "worker_code_byte_equal": true
+    },
+    {
+      "path": "software/energy-ml-stage100-validate.tar.gz",
+      "bytes": 36803990,
+      "original_B_and_cohort_byte_equal": true,
+      "worker_code_byte_equal": true
+    },
+    {
+      "path": "software/energy-ml-stage100-audit.tar.gz",
+      "bytes": 36806403,
+      "original_B_and_cohort_byte_equal": true,
+      "worker_code_byte_equal": true
+    }
+  ],
+  "returned_packages_removed": [
+    "result_qa.tar.gz",
+    "result_fit.tar.gz",
+    "result_validate.tar.gz",
+    "result_audit.tar.gz"
+  ],
+  "all_results_collected": true,
+  "original_shared_inputs_preserved": true,
+  "temporary_local_transfers_removed": true,
+  "stage54_untouched": true
+}

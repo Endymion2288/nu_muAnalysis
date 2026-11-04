@@ -1,0 +1,16 @@
+{
+ "stage":100,"starting_commit":"3d10d1e","scope":"one replacement A information-classifier fit, compare with frozen B; no energy fit, ROOT/native, test, B fit, new T or new sample",
+ "cohort":"stage95 original2048 incoming, one view, train/cal only; keep125 unavailable and original K summaries",
+ "QA":"original first40 qa-flagged identities in existing cohort order; 0 optimizer; old B Booster load/predict/save roundtrip; verify sequence,62 typed values and127 shared columns",
+ "input_A":"62 audited values +62 missing masks +status_other +PHYS availability +exact-native availability zero =127",
+ "input_B":"A +42 stage99 saved collection values +42 masks =211, QA/inference only",
+ "classifier":{"seed":2026110499,"max_depth":2,"n_estimators":100,"learning_rate":0.05,"min_child_weight":10,"reg_lambda":10,"n_jobs":1,"tree_method":"hist","objective":"binary:logistic","eval_metric":"logloss","early_stopping":false,"fit_count_max":1},
+ "domain":"50<pz0<100GeV; L true50<=E<100GeV, H trueE>=200GeV; truth labels only; mid-energy remains full cohort denominator",
+ "support":{"train_L":65,"train_H":82,"cal_L":20,"cal_H":46},
+ "threshold":"each model train L only, strict score>t; lowest observed L score with empirical FPR<=alpha, ties unsplit","alphas":[0.02,0.05,0.1],
+ "bootstrap":"500 component-stratified incoming draws, seed2026110499 identical to stage99 B; predictions/thresholds fixed, no source/refit/parameter/research-selection coverage",
+ "metrics":["logscore","Brier","ROC","pAUC FPR<=.1 divided by.1","actual low-FPR and high-energy recognition with support and conditional intervals","paired B-minus-A differences"],
+ "interpretation":"paired conditional evidence only; no supported gain stops extension of this collection family; no automatic full extraction/energy model or stage101; no NP population guarantee from cal20 L/4sources",
+ "resource_limits":{"concurrent_jobs":1,"cpus":2,"memory_MB":6000,"total_CPU_s":300,"retained_bytes":20000000},
+ "persist":"fit once then immediately atomically write and read back predictions, then save raw Booster; report/validation can resume without refit"
+}
