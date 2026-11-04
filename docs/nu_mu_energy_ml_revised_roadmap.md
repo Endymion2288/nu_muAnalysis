@@ -2152,3 +2152,16 @@ A/B cal logscore均.346455633、Brier均.101254665、AUC均.929891304、pAUC(FPR
 旧B44项复现、独立sklearn/显式incoming展开与阈值90项通过，max1.110223e−16。四Condor任务均首次exit0，最多1并发、实际2CPU6000MB/线程1，无GPU；独立外层23.80CPU秒<300，Condor25秒不同口径不相加。fit核心.048707CPU秒为嵌套子计时，非全会话成本；EOS物理流量未测。挂载listing滞后用XRootD已存在返回包回收，无重跑。归档核验去重、紧凑≤20MB见storage，模型/事件表不入Git；stage54五项和Prompt后缀保持。
 
 **按事前规则停止本collection摘要族工程扩展，继续既有部署；不自动完整提取/强BDT能量/GNN/加seed/放松正则或Stage101。** 下一最小stage101仅有界研究复盘：读stage94/98–100已提交曲线/汇总与原论文，0事件/模型载荷、fit/积分/原生定位，区分概率checkpoint目标未对齐与真实新增载荷缺口，至多提出一个另冻的可验收合同或停止条件。概率变换点不变不能解决point风险；最终原1.05/1.01/1.03与八层三向tail+2pp门槛不改。见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)，本轮未执行stage101，历史§1–81不改；真实response/系统与独立确认仍未认证。
+
+
+## 83. stage101：概率checkpoint缺口与真实活动缺口分开，下一次只做同轨迹双保存
+
+[stage101研究报告](../workbook/2026-11-04_stage101_checkpoint-and-information-reassessment.md)只读原stage94/98–100曲线/汇总/源码并核阅五篇原论文，0事件或模型载荷/NPZ/ROOT/推断/训练/积分/定位/作业。stage94 E确为NLL训练、point-MSE选唯一checkpoint；三seed point-best65/90/65，对应已记录NLL最低50/25/35，后者权重没有独立保存。是具体选模缺口，不是已测早期test收益或继续epochs的理由。六行原曲线证据、文献索引和唯一合同已交付，stage102尚未执行。
+
+stage99唯一T已使集成test NLL−.107503598→−.120703623、coverage改善且宽度增加，mean logE/点逐位不变，因此不能恢复点RMSE/尾。X_pz100–200和X_activity0仍有PIT偏；总体校准不认证条件校准，强AUC/0低误判经验计数不认证NP总体界。stage10042新值有效但B全部51分裂只用原三列、2048预测与A相等，停止collection摘要族扩展不变；没有物理信息界或真实活动无用的结论。原ID/TSOS/SP组成/covariance/有效读出缺口精确保留，不重扫或重建补源。
+
+**唯一下一stage102为一条原E MDN轨迹，同seed2026110494/62typed/原角色/权重/优化，分别保存P=point-MSE-best和N=NLL-best。** 原每5验证/point patience30/max300停止不改，NLL不影响训练停止；先40固定train/cal含missing的0optimizer QA后准入。预测和state可靠落盘/回读，fit ledger只允许一次，无失败自动重训。原stage94 E127维状态不同于stage100 availability输入，不因同维数混用；原全部K/pz0-only一次方动量/px-py-q/p-弯折/raw11/status/typed NaN/合法负值/pz>50/困难支持保持。
+
+主比较为原cal_post上raw NLL(N)−NLL(P)上条件95<0，500component内incoming、checkpoint固定；完整cal/cal_post/开发test一次报告两格概率/原八层RMSE及三向tail，不拿test选epoch/gate。0新b/T优化，raw b0/T1为主；唯一辅助为两格同施加原seed494旧b=.02017839294662559，无新拟合，不套ensemble b/T或据test挑raw/shifted。概率增量和最终点联合门槛分开，不自动晋升。旧cal复用/source/refit/系统/研究选择和独立确认限制保留。
+
+拟议≤1GPU batch2CPU6000MB/含QA wall600秒；报告申请8CPU8000MB、至多8进程/内线程1、共享数组/相同draw、总并发1；阶段CPU1800秒/最终20MB，QA实测准入，新成本/GPU令牌状态未测。旧seed494 fit7.984613wall秒是历史参考，不是成本保证。不准入或阴性则保留证据并结束本checkpoint实验，不加seed/loss/局部校准。报告/路线/信息计划/Prompt本地提交，stage54历史后缀和五项保持；本轮不执行stage102，详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage101_energy_ml/stage102_contract.json)。历史§1–82/原1.05/1.01/1.03与八层tail+2pp和真实response/系统要求不改。

@@ -1,0 +1,64 @@
+{
+  "scope": "primary-paper research only, no transferred performance claims",
+  "references": [
+    {
+      "id": "R1",
+      "authors": "Tilmann Gneiting; Adrian E. Raftery",
+      "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+      "version": "JASA102(477),359–378(2007)",
+      "url": "https://doi.org/10.1198/016214506000001437",
+      "full_text": "https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf",
+      "read_sections": "Introduction;4.1 density scoring;9 optimum score estimation",
+      "finding": "Logarithmic score targets predictive density; calibration and sharpness are joint evaluation concerns. Point loss and density loss answer different questions.",
+      "applicability": "Use raw NLL to select a probability checkpoint; no theorem says it improves finite-sample truth-stratum RMSE or all physics gates.",
+      "retrieval": "Full PDF read via pdftotext; Crossref exact DOI metadata verified. Broad Crossref title search returned report DOIs; final citation uses verified JASA DOI."
+    },
+    {
+      "id": "R2",
+      "authors": "Biprateep Dey et al.",
+      "title": "Towards Instance-Wise Calibration: Local Amortized Diagnostics and Reshaping of Conditional Densities (LADaR)",
+      "version": "arXiv2205.14568v8,21October2025",
+      "url": "https://arxiv.org/abs/2205.14568v8",
+      "full_text": "https://arxiv.org/pdf/2205.14568",
+      "read_sections": "2 Related Work;3 Methodology;3.1 Cal-PIT",
+      "finding": "Marginal calibration does not imply conditional calibration; Cal-PIT learns a conditional PIT map using calibration data covering feature support.",
+      "applicability": "Stage99 X-group residuals motivate diagnostics, but local recalibration would introduce a new learned mapping and assumptions. It is not a cost-free mean-preserving transform and is not the next experiment.",
+      "retrieval": "Unversioned HTML404; abstract and full latest PDF read successfully; no result inferred from failed HTML."
+    },
+    {
+      "id": "R3",
+      "authors": "Xin Tong; Yang Feng; Jingyi Jessica Li",
+      "title": "Neyman-Pearson classification algorithms and NP receiver operating characteristics",
+      "version": "Science Advances4(2),eaao1659(2018)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5804623/",
+      "read_sections": "Umbrella algorithm;NP-ROC bands;Discussion",
+      "finding": "Type-I control uses left-out class0 order statistics and an iid homogeneity assumption; small class0 support limits achievable control.",
+      "applicability": "AUC and0/20 cal errors do not establish2% population FPR. Current thresholds trained on training L and repeatedly used calibration/source dependence do not satisfy the cited guarantee.",
+      "retrieval": "Full primary journal article read at PMC."
+    },
+    {
+      "id": "R4",
+      "authors": "Joachim Kopp; Pedro Machado; Margot MacMahon; Ivan Martinez-Soler",
+      "title": "Improving Neutrino Energy Reconstruction with Machine Learning",
+      "version": "arXiv2405.15867v3",
+      "url": "https://arxiv.org/abs/2405.15867v3",
+      "full_text": "https://arxiv.org/html/2405.15867",
+      "read_sections": "Setup/observable final state;neutron reconstruction scenarios;wrong-interaction-model comparison",
+      "finding": "Visible-final-state correlations can recover some missing energy in the studied LArTPC setting; changing interaction models still induces reconstruction bias.",
+      "applicability": "Supports seeking real visible activity and preserving response/interaction uncertainty. Different detector,energy,inputs and containment prevent transferring DUNE performance to FASER.",
+      "retrieval": "Full arXiv HTML read; headerv3,18April2025; rendered manuscript also contains a different internal date, so no publication-date claim based on that internal field."
+    },
+    {
+      "id": "R5",
+      "authors": "Nilotpal Kakati et al.",
+      "title": "HGPflow: Extending Hypergraph Particle Flow to Collider Event Reconstruction",
+      "version": "arXiv2410.23236v3,1May2025",
+      "url": "https://arxiv.org/abs/2410.23236v3",
+      "full_text": "https://arxiv.org/html/2410.23236v3",
+      "read_sections": "Introduction;2.1 HGPflow;target definitions",
+      "finding": "Uses tracks/calorimeter objects and an incidence structure; calorimeter incidence targets refer to particle contributions to cluster energy.",
+      "applicability": "Shows why real associations and resolved payload matter. PHYS SpacePoint counts/endpoint chords are neither particle-level targets nor constituent energies. Does not justify another geometry network without product support.",
+      "retrieval": "Abstract and full arXiv HTML read."
+    }
+  ]
+}

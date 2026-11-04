@@ -1,32 +1,42 @@
-# 下一轮执行 Prompt：stage101 有界研究复盘，不自动延长collection或训练
+# 下一轮执行 Prompt：stage102 一次原MDN训练轨迹，分别保存概率与点checkpoint
 
-先读AGENTS.md、路线§82、信息计划§62、[stage100报告](../workbook/2026-11-04_stage100_paired-activity-information.md)、stage98研究修订和stage99实际报告。本轮是研究判断阶段；不再补A，不重做B，不自动开始新能量实验。
+先读AGENTS.md、路线§83、信息计划§63、[stage101研究报告](../workbook/2026-11-04_stage101_checkpoint-and-information-reassessment.md)和[stage102冻结合同](../workbook/stage101_energy_ml/stage102_contract.json)，再核stage94原实现/协议。stage101只做研究，下一实验尚未执行。**本轮最多一条训练轨迹，两个checkpoint，不是两个fit；不重做五格九fit或stage99 T/classifier，不自动后续实验。**
 
-## 1. 已确认事实
+## 1. 研究问题与固定事实
 
-Stage100恰一次替补A，旧B不变；原2048 train/cal incoming/24source，train L/H65/82、cal20/46。A127维/B211维；42新增collection值在train/cal均已填充且有变化，B的51次分裂却全部用原SpacePoints/Veto10_raw_charge/Veto20_raw_charge。两格100树执行完全相同，2048预测逐位相同，cal logscore .346455633/Brier .101254665、配对差0[0,0]。名义2%train阈值cal L0/20、H38/46，不认证总体2%误判。
+原E以NLL训练却按point MSE保存；三个seed旧point-best65/90/65，已记录NLL最低50/25/35，早期权重未独立保留。stage99唯一T改善概率但保持mean logE/点不变，不能改善低能点RMSE。stage10042新值有效但B没有使用新列，当前collection族停止；不是物理信息极限。
 
-按事前规则停止当前PHYS collection摘要族扩展，不放松正则、加树/seed、扩提取或转GNN来追分；这不是新活动无信息或物理上限的证明。原生measurement/cluster ID、SP组成、原track/TSOS/actual covariance及有效读出仍缺；原scratch REC未持久化，同名官方REC未闭合。不要重扫EOS/重建/强配hitSet或造pull。
+本次问题仅为：同一不变MDN训练轨迹，NLL选模相对point选模在out-of-selection支持上有何概率收益和点代价？不承诺低能恢复。原低能传统/direct/E94为.145661/.282644/.276027，全体direct/E94为.287491/.289843，联合风险仍未通过。
 
-stage99已有强排序与概率产品：E94名义2%工作点开发test实际低能误判4.754309%、H识别91.725663%，最低能修正风险增量+.054973752；唯一T=1.08691603355改善NLL/coverage但点不变。stage94 E三seed point-best65/90/65与记录NLL最低50/25/35尚有目标差异，不证明继续训练或NLL checkpoint能解除point风险。stage96/97几何/联合消息主体条件区间含1；这些旧路线不重包装成新架构发现。
+## 2. 输入、训练、可靠保存
 
-## 2. 本阶段唯一任务与输入
+严格使用合同的原stage87角色89033兼容记录、train/cal/test46575/11612/13189、17657隔离、incoming权重；原stage94 cal_partition select5443/post5746/purged423（后者仍完整cal评价）。全1016新增K/missing21/6/5/困难支持保持，无新样本/ROOT/native读取/生成/重建。
 
-只读已提交Markdown、曲线/汇总TSV/JSON、源码和原论文，不读NPZ/ROOT或模型/逐事件载荷，不运行任何fit、网络forward、分类推断、概率优化、积分、native定位/提取或HTCondor/Kubeflow任务。无需恢复CERN环境。文献研究可检索网络，引用原文并解释当前小样本、条件误判、目标与响应边界，不移植他处性能。
+原stage94 E62typed值+62mask+wave_invalid/fit_failure/calo_invalid=127维，用原train-only preprocessing E状态；不要混入stage100 status/availability。pz0-only第一幂动量，允许px/py/q/p/弯折、raw11/status/typed NaN及合法负raw/charge/module_eta=-1/Calo缺项/pz>50GeV不改。源码 `ml/compare_energy_architectures.py` 是make/decode/objective和原训练循环依据，其他模型不重训。
 
-具体输入：stage94学习曲线/point与概率选择记录；stage98研究报告；stage99已提交probability/PIT/point_risks/loss_decomposition/工作点汇总及原生来源缺口；stage100指标/结构审计、冻结协议和停止决定。保留既有source/X支持和研究选择限制，不重新估计分数或从test选gate。
+唯一seed2026110494、原12937参数2x64SiLU/三Normal residual MDN around log(pz0/.8)、sigma=.05+softplus、float32/noAMP/noTF32、Adam lr.001/default/no decay/clip10、batch1024/原numpy permutation/incoming NLL。每5验证，原point-MSE patience30、最多300epochs仍控制停止；NLL准则只保存、不改梯度/停止。P取raw cal_select point-MSE严格最小，N取raw NLL严格最小，ties保留早轮；不预定50/65为新最佳。NLL-best仅是原point停止前已记录轮次中的最佳。
 
-必须交付：
+fit前one-attempt ledger；训练中原子持久化两state/epoch/score，结束回读并先保存预测后统计。0自动第二轨迹/seed/模型重启；失败能零训练回收/报告已存结果，不能悄悄重fit。两checkpoint选择和协议冻结前不载入/forward test。
 
-1. 用现有证据区分概率checkpoint/训练目标未对齐与真正新增载荷缺失两条假设，明确已测和未测。固定均值的概率尺度变换不改变point风险；排序好不自动保证低误判工作点和联合能量风险。
-2. 核阅相关原论文的可行方法和假设；不要求任意新模型名称或制造正结果，不从pilot阴性推导Bayes上限。
-3. 至多提出一个下一阶段的具体可执行合同，或明确现有证据下的停止/所需产品条件。若拟议固定MDN轨迹同时保存NLL-best/point-best，须说明其购买的问题、输入/角色/训练次数/主比较/验收与资源上限，并承认point收益未证；本轮不执行。若需真实产品，列精确最小产品与关联证明，不以新样本或全环境重建作默认前置。
+## 3. 主要比较与完整风险
 
-## 3. 物理与交付边界
+0新offset/T/局部校准优化。主比较两raw分布和mean logE点，b0/T1。唯一固定辅助为两格共同应用旧seed494 b=.02017839294662559，平移点和分量均值；无新拟合、不套ensemble b/T、不据test在raw/shifted中选赢家。stage99三seedT集成仅历史上下文，不当匹配优越性对照。
 
-原split/同incoming权重、全部1016新增K、缺源/困难/尾支持、pz>50GeV保持。第一幂动量只用pz0，允许原px/py/q/p/弯折；raw11/status/typed NaN、合法负raw/charge及module_eta=-1/Calo缺项保持。原两低能/传统上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03和八层三向tail上差≤2pp不变。旧test已开发，source/refit/阈值估计/response/研究选择和未开发确认未因bootstrap闭合。
+唯一主证据：原cal_post上raw NLL(N)−raw NLL(P)的500component内incoming配对条件95%上端<0；原subrole权重，cal/cal_post seed2026110389，test2026110390，按原incoming_draws。cal_post已历史复用，source/refit/参数/研究选择/response区间不覆盖。
 
-研究阶段验收为中文stage101报告：现有数值注明来自哪个阶段，不冒称新测量；证据/论文适用边界、具体下一合同或停止条件、未测量项目清楚。报告后追加路线/信息计划记录，本地Conventional Commit，不push，不自动执行后续实验。保留模型/事件缓存和原Stage54五项，历史正文只追加；以下Stage54后缀必须逐字保持。
+主结果无论正负，完整交cal11612/cal_post5746/开发test13189两格raw及旧固定b：NLL、68/90coverage/宽度、meanPIT/十箱可靠性、原X组及真值/困难诊断；解析Normal-mixture CDF/逆CDF，不重开stage92积分。真E/y组不要求PIT均匀。mean logE后exp为点能量，交原八层全部RMSE及总/正/负tail50与500配对区间/传统/direct旧控制。0test择epoch/gate/拒绝预测/删事件。
+
+两低E/传统上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03、八层三向tail差上95≤2pp不改。概率主证据、点保护和最终联合通过分别记录，0自动晋升。当前test是开发池，不是新blind；同轨迹N/P也不是两个独立重训确认。
+
+## 4. QA、batch资源与交付
+
+数值QA/fit/推断/统计/画图全部在batch，不恢复本地CERN栈。先原qa_rows固定40 train/cal（21train/6cal missing）0optimizer实际包核身份/权重/原cal子角色/原变换/signed值、CPU/GPU forward/VJP/独立MDN密度/CDF及state回读；合同明确数值门槛，禁止事后放宽。记录实际batch1024成本后才准入。旧seed494保存model/head只读QA核原输出；新P跨平台不保证逐位复现旧P，量化差异，不把它归因checkpoint。
+
+拟议最多1GPU batch/2CPU6000MB/内线程1、含QA任务wall≤600秒；报告申请8CPU8000MB/最多8进程、内线程1、共享已加载数组/同draw，阶段最多1并发，累计CPU≤1800秒/最终≤20MB。记录申请与站点实际、外层CPU/wall/峰内存/GPU allocated peak，嵌套计时不重复相加。GPU现状/token有效性和新成本未测，不能假定旧10h令牌仍有效；用可用的已授权GPU batch平台实测准入。
+
+不准入、非finite、输入/QA不闭合或预算失败则保留state/row/head及精确问题，0自动重训/删事件/降容差/无限延长。无确证概率增量则结束本checkpoint比较，不追加seed/loss/局部校准或collection族；有概率收益也不自动扩新载荷或宣布低能恢复。
+
+先写中文stage102 workbook（真实数值/支持/输入/命令/校验/资源/失败/未测/下一最小任务），再相关代码/配置/紧凑证据本地Conventional Commit，不push，不自动下一阶段。模型/head/逐事件表放忽略目录，去重传输包、不保存原生副本。历史正文只追加，原Stage54五项及以下后缀逐字保持。
 
 ## 保留的stage54 data占据支线
 

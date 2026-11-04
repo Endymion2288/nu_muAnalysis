@@ -1218,3 +1218,12 @@ B购买了实际collection测量：2048完整train/cal身份、1923可读/125原
 本笔预算交付的是配对缺口和同分机制，**停止当前collection统计族扩展**，不继续放松正则/加树/seed、扩大提取或能量网络。真实关联、TSOS/ID/covariance/有效读出缺口仍与现有几何摘要不同。旧B44项和独立90项max1.110223e−16通过；四Condor首次exit0、最多1并发/2CPU6GB，外层23.80CPU秒<300；GPU收益/物理EOS流量未测，紧凑≤20MB按storage。模型/事件表忽略、重复包去重、原stage54只读。
 
 下一预算只购买有界研究判断：stage101读既有stage94/98–100曲线/统计与原论文，0fit/事件或模型载荷/积分/原生定位，比较概率checkpoint目标与新增真实载荷两条假设的现有证据；交至多一个另冻可验收合同或停止条件，不自动新训练。概率点保持变换不冒称point改善，最终两低E/传统1.05、all/direct1.01、≥200及困难1.03和八层三向tail+2pp不变。source/重训/阈值估计/研究选择/真实response/系统/未开发确认仍缺；历史§1–61保持，执行见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 63. stage101：下一笔预算只购买概率checkpoint选择的同轨迹对照
+
+[stage101复盘](../workbook/2026-11-04_stage101_checkpoint-and-information-reassessment.md)0事件/模型载荷/推断/fit/积分/ROOT/原生定位/作业，仅原曲线/汇总/源码和五篇原论文。已有三seed NLL最低轮次早于point-best，原权重仅保留point-best，故out-of-selection概率效果未测。stage99 T概率收益已成立但mean logE/点不变，不再购买更多温度；stage100摘要族阴性/树未选择新列也不授权扩大提取或弱化正则。两条机制分开：可闭合的选模问题与仍缺原生ID/TSOS/SP constituent/covariance/active读出产品。
+
+唯一下一stage102恰一条原E seed2026110494训练，原62typed/角色/cal子分区/incoming权重/全部K与missing/物理政策不改；同轨迹分别持久化point-MSE-best与NLL-best，原point patience30/每5验证/max300仍控制停止，0新架构/loss/seed网格。cal_post raw配对NLL上95<0为唯一概率证据；原全cal/开发test和八层点/尾保护都交，不自动晋升、test不择epoch。0新b/T拟合，唯一辅助是原seed494旧固定b同施加两格，不借ensemble变换。
+
+先原40 train/cal含21/6missing的0optimizer实际包QA和成本，再准入1GPU batch2CPU6GB/任务wall600秒及8CPU8GB统计/最多1并发、内线程1，阶段CPU1800秒/最终20MB拟议封顶。GPU现状/token/新成本未测，引用原fit7.984613wall秒不作保证；不恢复本地环境、ROOT或保存原生副本。失败保留state不自动第二fit；阴性则结束checkpoint比较，不续seed/loss/局部校准或当前collection族。具体输入/QA门槛/500draw/退出见[合同](../workbook/stage101_energy_ml/stage102_contract.json)及[Prompt](nu_mu_energy_ml_next_step_prompt.md)。本轮未执行stage102，历史§1–62/原最终1.05/1.01/1.03与八层三向tail+2pp/stage54/K支持保持，source/refit/参数估计/研究选择/真实response与独立确认仍缺。
