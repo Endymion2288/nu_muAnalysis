@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "archive_bytes": 967302,
+  "source_byte_equal": [
+    "ml/track_candidate_information.py",
+    "ml/report_track_candidates.py",
+    "ml/closeout_track_candidates.py"
+  ],
+  "identities": 40,
+  "new_source_payload_reads": 0,
+  "validation": {
+    "passed": true,
+    "available_N": 37,
+    "candidate_tracks": 43,
+    "pairs": 6,
+    "multitrack_N": 6,
+    "leading_unconfirmed_N": 8,
+    "recovered_primary_N": 0,
+    "candidate_count_histogram": {
+      "1": 31,
+      "2": 6
+    },
+    "finite_candidate_fields": {
+      "pz0_GeV": 43,
+      "px0_GeV": 43,
+      "py0_GeV": 43,
+      "charge": 43,
+      "chi2ndof": 43,
+      "nLayers": 43,
+      "nDoF": 43,
+      "x0_mm": 43,
+      "y0_mm": 43,
+      "z0_mm": 43,
+      "x1_mm": 43,
+      "y1_mm": 43,
+      "z1_mm": 43,
+      "module_eta0": 43,
+      "module_phi0": 43,
+      "station_mask": 43,
+      "veto_x_mm": 43,
+      "veto_y_mm": 43,
+      "timing_x_mm": 43,
+      "timing_y_mm": 43,
+      "calo_x_mm": 43,
+      "calo_y_mm": 43
+    },
+    "hitset_24bit_events": 37,
+    "primary_matching_tracks": 29,
+    "source_event_payload_reads": 0,
+    "new_fits": 0,
+    "test_payload_records": 0,
+    "original_X_boundaries": "stage94 X_calo_groups.json / X_activity_groups.json; no refit or reselection",
+    "uncertainty": "500 incoming draws conditional on frozen source/X quota; zero-success bootstrap is not a population upper bound",
+    "wall_s": 0.038506828248500824,
+    "CPU_s": 0.03431523600000008,
+    "peak_RSS_MiB": 84.59375
+  }
+}

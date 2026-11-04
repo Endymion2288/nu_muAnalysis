@@ -1,0 +1,20 @@
+{
+  "production_calypso_git": "d32b0ff3",
+  "inspected_file": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+  "source_retrieval": "git -C /eos/home-x/xcheng/FASER/calypso show d32b0ff3:PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+  "hitset": "24-bit station/layer/side coverage; bit23-(station*6+layer*2+side); not cluster/strip identities",
+  "hitset_alignment": "pushed before station1/2/3 and endpoint filters; no forced alignment",
+  "endpoint": "first/last saved TrackParameters; endpoint transverse distance is not common-plane distance when z differs",
+  "extrapolation": {
+    "VetoNu_z_mm": -3112,
+    "Timing_Trig_z_mm": 0,
+    "Calo_z_mm": 2760,
+    "start": "upstream for VetoNu/Trig; downstream for Calo",
+    "hypothesis": "muon",
+    "failed_placeholder": 999999,
+    "covariance": "unit diagonal in propagation setup; not measured per-track fit covariance",
+    "interpretation": "coordinates at common reference plane, not detector channel/hit matching or significance"
+  },
+  "truth": "MC-only matching PDG/barcode and parent PDG/barcode must match primary muon; truthHitRatio separately diagnosed",
+  "deployable": "Track states/quality/geometry and raw scintillator/status are defined for data; data transfer performance not measured"
+}

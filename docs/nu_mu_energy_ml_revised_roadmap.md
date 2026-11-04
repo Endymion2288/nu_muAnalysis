@@ -2042,3 +2042,18 @@ E解析概率的全体68/90coverage62.602337%/86.253883%，meanPIT .491100702 [.
 Kubeflow H100 MIG3g.47gb实际全部worker外层112.157179wall秒/82.837277CPU秒，最大allocated peak222.694336MiB；平台22CPU分配下torch1线程。CPU统计实际4核/4process、每process BLAS1线程、fork只读共享/按role-stratum分片；成功Condor9667473为80remote-wall秒/223CPU秒，83任务并行段39.138680秒/151.100112childCPU秒、实占3.860634核。完整单核加速比未测。缺传递依赖、错误hold备注实际eviction、同名归档上传失败均留证并计成本；报告重跑不重训/选模型。14992个独立算术/区间/尾值最大差7.105427e−14，旧3024基线值最大差1.421085e−14，checkpoint/offset/选择记录通过；精简存储及资源见实际JSON。source95、重训全分布、真实response/systematics、独立确认仍未测。
 
 **继续既有部署；下一stage95按stage93“五格无联合收益”分支，转可部署全轨迹候选及hit/外推关联的信息合同和紧凑可用性测量，先不追加能量fit。** 先≤40固定train/cal身份核真实PHYS载荷/单位/状态/track-hit与外推关联，复用已知source和split，不递归扫描或新生成；随后固定来源覆盖的候选小批量、按源4–8CPU Condor并行，保留完整选择、不挑有利事例。交真实分母/有效率/重复和共享hit/候选可区分性，真值关联只有可核时作oracle诊断，不作为输入；冻结一种新关系摘要及后续匹配输入对照。不能把stage19普通全SP Deep Sets当新方案，不恢复reweight/gate/架构大扫描或stage88–91链。收益与成本尚未测，详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；本阶段未执行stage95，历史§1–75和stage54后缀保持。
+
+
+## 77. stage95：可部署候选几何已核实；已确认换leading机会稀少，下一轮做同结构信息消融
+
+[stage95实际报告](../workbook/2026-11-04_stage95_track-candidate-information.md)完成固定2048个train/cal不同incoming、一粒子一视图、24source的紧凑测量，0能量fit/新MC/重建/test载荷。原stage87角色/权重、全部K和困难支持、pz0-only一次方动量/允许px-py-q/p-弯折、raw11/typed NaN不变。π/K/charm冻结716/682/650，低pz192/52/40；22源1923身份可读，stage70/82实际临时PHYS已删除导致125行载荷不可用，身份保留不替换，已有摘要仍可用。首次QA误沿stage82旧bck路径缺truth_barcode，核生产脚本后修正来源而非猜匹配。
+
+历史生产d32b0ff3源码确认Track_hitSet是24位station/layer/side覆盖掩码，不是击中ID，且在轨迹筛选前push；完整测量实际52/1923长度不对齐。不能截断强配或把位交集称共享hit；真实共享hit/重复率未测。2110候选、227两两边；Calo/VetoNu/Timing共同参考面z=2760/−3112/0mm，有效2110/2108/2109，全部三下游站标记有效。无可靠逐轨迹协方差/读出关联，不构造显著性或硬分配Calo电荷。原端点可不同z，其横向距离不叫共同面距离。
+
+多轨迹153/1923=7.956318%，固定source/X配额500incoming条件95%[6.760270,9.127665]%；leading未确认132，其中备选确认4（占全体.208008% [.052002,.416017]、未确认者3.030303% [.737689,5.952012]）。真E50–100GeV可读81例全单轨迹；低pz真高E124例多轨迹28/未确认80/恢复1，high-y112例29/77/1。不能把未确认当已证错选或无物理μ；现有可换候选的直接支持有限，不等于次级几何对Eν无用。全可读μ-pz log-RMSE .483590902→保留leading或选已确认候选的truth oracle .483329547，仅2例改善；不是ν能量收益上限。候选来源mix富集且缺源，不外推自然flux概率；零成功bootstrap不是总体上限。原cal X分组/来源/真值诊断及缺失分母完整交表，source95/系统/独立确认未测。
+
+QA固定40身份、37可读，实际8进程包四表与串行逐字一致；主Condor9667502首次exit0，申请8CPU/8GB、站点ad24GB，44.02worker-wall/164.13CPU秒。提取37.848114wall/159.512283childCPU秒，实际平均4.214537核；完整单核加速比未测。64MiB/进程范围LRU后源接口read84402917bytes（非物理EOS网络流量），逻辑请求933784306bytes。补充9667503申请1CPU、站点3CPU/9GB，4.07wall/2.01CPU秒；681距离、身份/计数/leading/oracle和独立汇总通过。raw负读数1265个保留；紧凑存储及完整资源见报告，传输archive去重，不存ROOT/xAOD。
+
+**下一stage96恰两fit，购买“同62摘要＋新候选/leading几何”相对关闭新增分支的配对能量证据。** 冻结一种小集合/关系表示：22维节点、5维leading-to-other边、无hitSet/truth/截断去重，typed缺失和缺源状态分开；先≤40固定train/cal QA核全源schema/排序不变性/梯度和实际CPU/GPU成本，再向原完整角色提取，不能丢已删除PHYS对应K或困难者（保留摘要＋缺候选标记）。两格同声明架构/初始化/目标/预算，A新增分支常数且不泄露实际数量/availability，B使用真实候选；这是有限输入消融，不称模型家族最优或所有有效容量因素完全隔离。原stage94 cal_select/post、train-only typed变换、weighted log-MSE/单offset、单seed固定，不再按test加seed/调gate。先冻结模型/方案再准备test候选，仅最终评价打开test诊断。保留原联合RMSE/双向尾门槛、概率量仅有定义才报，未达不晋升。
+
+拟议CPU阶段21600秒、1GPU并发/GPU任务累计wall7200秒/紧凑20MB，独立源分片足够时8CPU且每进程内线程1；全池提取/训练收益和成本未测，QA后准入，不自动加预算/缩有利子集。旧传统/direct/stage92/94预测复用，不恢复架构/reweight大扫描或数值链。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；本轮不执行stage96，历史§1–76、stage54后缀/五路径及全部K政策保持，真实response/interaction/FSI/材料/Calo/接受度/背景与最终未开发确认待完成。

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "archive_bytes": 792699,
+  "existing_byte_equal": [
+    "workbook/stage95_energy_ml/X_groups.tsv",
+    "workbook/stage95_energy_ml/profiles.tsv",
+    "ntuples/energy_ml_stage95/cohort.json",
+    "ntuples/energy_ml_stage95/events.tsv",
+    "ntuples/energy_ml_stage95/candidates.tsv",
+    "ntuples/energy_ml_stage95/relations.tsv",
+    "ntuples/energy_ml_stage95/truth_diagnostics.tsv"
+  ],
+  "new_files": [
+    "workbook/stage95_energy_ml/closeout.time",
+    "workbook/stage95_energy_ml/X_profiles.tsv",
+    "workbook/stage95_energy_ml/pair_distributions.tsv",
+    "workbook/stage95_energy_ml/closeout_validation.json"
+  ],
+  "collection_note": "EOS FUSE mount briefly could not stat uploaded archive; xrdcp exact known return path succeeded, no job rerun"
+}

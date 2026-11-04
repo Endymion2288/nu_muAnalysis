@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cpus": 8,
+  "processes": 8,
+  "threads_per_process": 1,
+  "memory_MB": 8000,
+  "wall_cap_s": 1800,
+  "CPU_stage_cap_s": 21600,
+  "projected_conservative_CPU_s": 2245.217813919135,
+  "projection_scope": "small cached QA parent CPU per available row *2048*4 +120; not a measured full-job guarantee",
+  "QA_identities": 40,
+  "new_fits": 0,
+  "selection_and_identity_frozen": true,
+  "raw_cache_bytes_per_process": 67108864,
+  "final_bytes_cap": 20000000
+}

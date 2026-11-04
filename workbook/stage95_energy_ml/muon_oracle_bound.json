@@ -1,0 +1,37 @@
+{
+  "full_available_N": 1923,
+  "oracle_definition": "per event min(abs(log(pz_leading/pz_true_mu)), abs(log(pz_truth_matched_candidate/pz_true_mu))); leading fallback if no match; no truth input deployable",
+  "leading_mu_pz_log_RMSE": 0.4835909022116801,
+  "leading_or_matched_oracle_mu_pz_log_RMSE": 0.48332954691045116,
+  "improved_incoming_N": 2,
+  "neutrino_energy_gain": "未测量",
+  "truth_hit_ratio": {
+    "all": {
+      "N": 2110,
+      "minimum": 0.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "maximum": 1.0,
+      "below_half_N": 10
+    },
+    "primary_confirmed": {
+      "N": 1796,
+      "minimum": 0.6,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "maximum": 1.0,
+      "below_half_N": 0
+    },
+    "not_primary_confirmed": {
+      "N": 314,
+      "minimum": 0.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "maximum": 1.0,
+      "below_half_N": 10
+    }
+  }
+}

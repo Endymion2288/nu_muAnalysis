@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "actual_archive_bytes": 516383,
+  "source_byte_equal": [
+    "ml/track_candidate_information.py",
+    "ml/report_track_candidates.py"
+  ],
+  "identities": 40,
+  "processes": 8,
+  "all_selected_outputs_byte_equal_to_serial": [
+    "events.tsv",
+    "candidates.tsv",
+    "relations.tsv",
+    "truth_diagnostics.tsv"
+  ],
+  "worker": {
+    "passed": true,
+    "QA": false,
+    "requested_records": 40,
+    "unique_incoming": 40,
+    "available_records": 37,
+    "sources": 24,
+    "processes": 8,
+    "requested_bytes": 19966193,
+    "requested_requests": 125,
+    "source_read_bytes": 16639947,
+    "source_read_requests": 2247,
+    "byte_cache_hits": 343,
+    "source_CPU_s": 9.431236761,
+    "child_CPU_s": 9.571555,
+    "tracks": 43,
+    "relations": 6,
+    "shared_hit_identity_available": false,
+    "new_fits": 0,
+    "test_payload_records": 0,
+    "wall_s": 1.4309479868970811,
+    "CPU_s": 0.062242776000000055,
+    "peak_RSS_MiB": 81.140625
+  },
+  "report_validation": {
+    "passed": true,
+    "events": 40,
+    "available_events": 37,
+    "candidate_rows": 43,
+    "pair_rows": 6,
+    "independent_distance_checks": 18,
+    "max_leading_pz_delta_GeV": 0.0,
+    "max_oracle_log_difference": 0.0,
+    "identity_and_roles_checked": true,
+    "raw_input_truth_key_checks": "extractor exact native-MeV four-vector/run/event/source-entry",
+    "one_incoming_one_view": true,
+    "test_event_payloads": 0,
+    "new_fits": 0,
+    "wall_s": 0.11999220307916403,
+    "CPU_s": 0.08805237700000001,
+    "peak_RSS_MiB": 85.26953125
+  },
+  "new_fits": 0,
+  "QA_only_package_N_overridden_to40": true
+}

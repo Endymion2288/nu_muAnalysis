@@ -1,0 +1,82 @@
+{
+  "stage_CPU_cap_s": 21600,
+  "final_retention_cap_bytes": 20000000,
+  "extraction": {
+    "requested_cpus": 8,
+    "site_ad_cpus": 8,
+    "requested_memory_MB": 8000,
+    "site_ad_memory_MB": 24000,
+    "remote_wall_s": 48.0,
+    "Condor_CPU_s": 164.0,
+    "worker_outer_wall_s": 44.02,
+    "worker_outer_CPU_s": 164.13,
+    "max_single_process_RSS_KiB": 131644,
+    "pool_wall_s": 37.848114190011984,
+    "pool_child_CPU_s": 159.512283,
+    "pool_parent_CPU_s": 0.3125421570000001,
+    "mean_child_cores": 4.214537141776402,
+    "payload_events_per_s": 50.80834385422232,
+    "complete_single_core_speedup": "未测量",
+    "sum_simultaneous_process_peak_RSS": "未测量"
+  },
+  "closeout": {
+    "cluster": 9667503,
+    "requested_cpus": 1,
+    "site_ad_cpus": 3,
+    "requested_memory_MB": 8000,
+    "site_ad_memory_MB": 9000,
+    "remote_wall_s": 9.0,
+    "Condor_CPU_s": 3.0,
+    "worker_outer_wall_s": 4.07,
+    "worker_outer_CPU_s": 2.01,
+    "max_single_process_RSS_KiB": 108476
+  },
+  "batch_worker_outer_total_CPU_s": 166.14,
+  "batch_remote_total_CPU_s": 167.0,
+  "QA": {
+    "passed": true,
+    "QA": true,
+    "requested_records": 40,
+    "unique_incoming": 40,
+    "available_records": 37,
+    "sources": 24,
+    "processes": 1,
+    "requested_bytes": 19966193,
+    "requested_requests": 125,
+    "source_read_bytes": 16639947,
+    "source_read_requests": 2247,
+    "byte_cache_hits": 343,
+    "source_CPU_s": 9.528181609,
+    "child_CPU_s": 1.0209549999999998,
+    "tracks": 43,
+    "relations": 6,
+    "shared_hit_identity_available": false,
+    "new_fits": 0,
+    "test_payload_records": 0,
+    "wall_s": 9.938697601202875,
+    "CPU_s": 9.598762099,
+    "peak_RSS_MiB": 142.5703125
+  },
+  "package_QA_outer": {
+    "wall_s": 9.55,
+    "CPU_s": 13.89,
+    "max_RSS_KiB": 117648
+  },
+  "failed_provenance_QA_outer": {
+    "wall_s": 23.51,
+    "CPU_s": 10.63,
+    "max_RSS_KiB": 135708
+  },
+  "IO": {
+    "logical_Uproot_bytes": 933784306,
+    "logical_Uproot_requests": 2011,
+    "source_interface_read_bytes": 84402917,
+    "source_interface_read_calls": 12864,
+    "byte_cache_hits": 116176,
+    "physical_EOS_network_bytes": "未测量"
+  },
+  "accounting": "QA/import/plot/local preparation and small saved-table audit not all individually timed; no exact all-session CPU total. Nested worker/pool/source scopes must not be summed.",
+  "new_fits": 0,
+  "GPU_jobs": 0,
+  "test_payload_records": 0
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "distinct_QA_identities": 40,
+  "output_byte_equal": [
+    "QA_events.tsv",
+    "QA_candidates.tsv",
+    "QA_relations.tsv",
+    "QA_truth_diagnostics.tsv"
+  ],
+  "uncached_QA_wall_s": 11.498038731981069,
+  "cached_QA_wall_s": 10.456598863005638,
+  "logical_Uproot_requested_bytes": 19966193,
+  "source_interface_read_bytes": 16639947,
+  "byte_cache_hits": 343,
+  "source_backend_changed": true,
+  "physical_EOS_network_read_bytes": "未测量",
+  "cache_bytes_per_process_max": 67108864,
+  "single_small_QA_not_bulk_speedup": true
+}

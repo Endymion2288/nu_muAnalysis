@@ -1,0 +1,14 @@
+{
+  "phase": "fixed40 QA before bulk, no fits",
+  "failure": "required truth_barcode missing on an inherited bck PHYS path",
+  "cause": "stage82 source metadata records an older bck input, but all three cached K extractions used fresh RDO->reco->ntuple in temporary scratch; those PHYS were removed",
+  "evidence": "AnalysisZipFramework/submission/run_ml_k_support.sh; workbook/stage82_energy_ml/k1_production_validation.txt and cleanup.json",
+  "repair": "mark actual stage82 per-track payload unavailable; retain frozen incoming/source cohort, no replacement/reconstruction; source70 temporary PHYS likewise unavailable",
+  "distinct_QA_limit": 40,
+  "frozen_cohort_identity_unchanged": true,
+  "final_available_source_count": 22,
+  "unavailable": [
+    "70:0",
+    "82:2"
+  ]
+}

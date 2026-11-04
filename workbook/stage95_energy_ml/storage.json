@@ -1,0 +1,248 @@
+{
+  "final_retention_cap_bytes": 20000000,
+  "removed_duplicates": [
+    {
+      "path": "workbook/stage95_energy_ml/QA_schema.tsv",
+      "bytes": 60697
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout.stdout",
+      "bytes": 0
+    },
+    {
+      "path": "software/energy-ml-track-candidates-stage95.tar.gz",
+      "bytes": 516383
+    },
+    {
+      "path": "software/energy-ml-track-candidates-stage95-closeout.tar.gz",
+      "bytes": 967302
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/result.tar.gz",
+      "bytes": 810035
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/closeout_result.tar.gz",
+      "bytes": 792699,
+      "removal": "exact known path via xrdfs due FUSE metadata visibility"
+    },
+    {
+      "path": "/tmp/stage95_closeout_return.tar.gz",
+      "bytes": 792699
+    }
+  ],
+  "QA_schema_byte_equal_to": "schema.tsv",
+  "policy": "keep compact selected numerical tables and aggregates; no ROOT/xAOD or copied shared source caches",
+  "retained_files": [
+    {
+      "path": "workbook/stage95_energy_ml/QA.json",
+      "bytes": 576
+    },
+    {
+      "path": "workbook/stage95_energy_ml/QA_before_bytecache.json",
+      "bytes": 497
+    },
+    {
+      "path": "workbook/stage95_energy_ml/QA_performance.tsv",
+      "bytes": 2869
+    },
+    {
+      "path": "workbook/stage95_energy_ml/QA_performance_before_bytecache.tsv",
+      "bytes": 2407
+    },
+    {
+      "path": "workbook/stage95_energy_ml/X_groups.tsv",
+      "bytes": 20407
+    },
+    {
+      "path": "workbook/stage95_energy_ml/X_profiles.tsv",
+      "bytes": 11090
+    },
+    {
+      "path": "workbook/stage95_energy_ml/admission.json",
+      "bytes": 477
+    },
+    {
+      "path": "workbook/stage95_energy_ml/bytecache_QA.json",
+      "bytes": 556
+    },
+    {
+      "path": "workbook/stage95_energy_ml/candidate_information.svg",
+      "bytes": 69311
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout.time",
+      "bytes": 1085
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout_collection.json",
+      "bytes": 780
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout_history.json",
+      "bytes": 8166
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout_package_QA.json",
+      "bytes": 1522
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout_submission.json",
+      "bytes": 208
+    },
+    {
+      "path": "workbook/stage95_energy_ml/closeout_validation.json",
+      "bytes": 1254
+    },
+    {
+      "path": "workbook/stage95_energy_ml/cohort_support.tsv",
+      "bytes": 231
+    },
+    {
+      "path": "workbook/stage95_energy_ml/collection.json",
+      "bytes": 1209
+    },
+    {
+      "path": "workbook/stage95_energy_ml/conditional_intervals.tsv",
+      "bytes": 58807
+    },
+    {
+      "path": "workbook/stage95_energy_ml/extraction.json",
+      "bytes": 591
+    },
+    {
+      "path": "workbook/stage95_energy_ml/history.json",
+      "bytes": 8305
+    },
+    {
+      "path": "workbook/stage95_energy_ml/identities.tsv",
+      "bytes": 162141
+    },
+    {
+      "path": "workbook/stage95_energy_ml/initial_QA_failure.time",
+      "bytes": 827
+    },
+    {
+      "path": "workbook/stage95_energy_ml/job.stdout",
+      "bytes": 2522
+    },
+    {
+      "path": "workbook/stage95_energy_ml/job.time",
+      "bytes": 960
+    },
+    {
+      "path": "workbook/stage95_energy_ml/muon_oracle_bound.json",
+      "bytes": 938
+    },
+    {
+      "path": "workbook/stage95_energy_ml/oracle_diagnostic.json",
+      "bytes": 284
+    },
+    {
+      "path": "workbook/stage95_energy_ml/package_QA.json",
+      "bytes": 1619
+    },
+    {
+      "path": "workbook/stage95_energy_ml/package_QA.time",
+      "bytes": 782
+    },
+    {
+      "path": "workbook/stage95_energy_ml/pair_distributions.tsv",
+      "bytes": 559
+    },
+    {
+      "path": "workbook/stage95_energy_ml/performance.tsv",
+      "bytes": 2902
+    },
+    {
+      "path": "workbook/stage95_energy_ml/preparation.json",
+      "bytes": 226
+    },
+    {
+      "path": "workbook/stage95_energy_ml/profiles.tsv",
+      "bytes": 9433
+    },
+    {
+      "path": "workbook/stage95_energy_ml/provenance_correction.json",
+      "bytes": 781
+    },
+    {
+      "path": "workbook/stage95_energy_ml/report_completion.json",
+      "bytes": 283
+    },
+    {
+      "path": "workbook/stage95_energy_ml/representation.json",
+      "bytes": 1179
+    },
+    {
+      "path": "workbook/stage95_energy_ml/resources.json",
+      "bytes": 2422
+    },
+    {
+      "path": "workbook/stage95_energy_ml/schema.tsv",
+      "bytes": 60697
+    },
+    {
+      "path": "workbook/stage95_energy_ml/source_semantics.json",
+      "bytes": 1277
+    },
+    {
+      "path": "workbook/stage95_energy_ml/sources.tsv",
+      "bytes": 5108
+    },
+    {
+      "path": "workbook/stage95_energy_ml/storage.json",
+      "bytes": 6025
+    },
+    {
+      "path": "workbook/stage95_energy_ml/submission.json",
+      "bytes": 292
+    },
+    {
+      "path": "workbook/stage95_energy_ml/validation.json",
+      "bytes": 541
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/QA_candidates.tsv",
+      "bytes": 14280
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/QA_events.tsv",
+      "bytes": 6799
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/QA_relations.tsv",
+      "bytes": 635
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/QA_truth_diagnostics.tsv",
+      "bytes": 794
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/candidates.tsv",
+      "bytes": 687080
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/cohort.json",
+      "bytes": 2287346
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/events.tsv",
+      "bytes": 327108
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/recovered_primary.tsv",
+      "bytes": 336
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/relations.tsv",
+      "bytes": 20781
+    },
+    {
+      "path": "ntuples/energy_ml_stage95/truth_diagnostics.tsv",
+      "bytes": 36464
+    }
+  ],
+  "retained_total_bytes": 3833769,
+  "retained_MiB": 3.6561670303344727
+}

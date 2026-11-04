@@ -1138,3 +1138,16 @@ E固定3seed最低能/第二低能/全体/低pz真高E/high-y为.276027/.251510/
 GPU全部工作实际112.157179wall秒/82.837277CPU秒，CPU统计4核实际并行段3.860634核占用，独立审计14992值及3024旧基线闭合；导入、eviction、回传失败均如实留证。旧pz0/raw/NaN、原split和incoming权重、K支持/困难组保持，表图/紧凑产物齐全，详见resources/storage.json。现有开发池、单seed控制和固定来源的500incoming区间不覆盖source/重训/系统/研究选择。
 
 下一stage95只购买一次**轨迹候选及真实关联**的新信息证据：现有已知PHYS源和train/cal身份→≤40载荷/单位/关联QA→冻结来源覆盖的小批量紧凑提取，按源4–8CPU Condor、每进程1线程。测候选/共享hit/重复/几何一致性和可部署分母；核得真值对应才给leading误选与candidate oracle诊断，不能假定配置列等于实际payload。以冻结一种紧凑关系摘要和后续匹配输入消融作为验收；本阶段不训GNN或再次扫现有62列。没有可核关联则明确缺口及可测替代，不凭未知宣称信息极限。新收益、系统效应和最终未开发确认未测，见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–55及stage54后缀不改。
+
+
+## 57. stage95：候选信息预算已落实，下一笔只做一次同结构输入消融
+
+[stage95报告](../workbook/2026-11-04_stage95_track-candidate-information.md)固定2048不同train/cal incoming、24source，1923载荷可读/125因历史临时PHYS删除不可读，身份和原全部K摘要/权重保持，无test载荷/fit/新生成或重建。实际2110轨迹、227边；多轨迹153/1923=7.956318%条件95%[6.760270,9.127665]%，备选primary恢复4/1923=.208008% [.052002,.416017]。最低真E81可读者均单轨迹；低pz真高E/high-y多轨迹较多，但恢复各仅1例。μ-pz嵌套truth oracle .483590902→.483329547不是Eν收益承诺。样本有来源/X配额富集及125缺源，不能当flux分布或信息极限；truth matching不完备和接受度/重建原因未分离。
+
+真实生产源码和52/1923实际长度不对齐证明hitSet不可作共享hit身份；本轮不购买伪共享边。确认可部署的是候选pz0/允许px-py、端点/质量/层与VetoNu/Timing/Calo共同面外推；Calo2110/2110有效，外推坐标不等于通道电荷关联/实测协方差。冻22维节点＋5维leading关联边，typed NaN/availability/空集合不同，truth分表不进入输入，无截断/去重。原raw负数1265读数保留，pz0-only和完整困难侧保持。
+
+固定40QA实际包8进程与串行四表逐字闭合；主8CPU Condor9667502外层44.02wall/164.13CPU秒，提取段实际平均4.214537核，完整单核加速未测。源接口读取84402917bytes、逻辑Uproot933784306bytes、物理EOS网络字节未测；不把请求差当网络节省。补原cal X组/独立计数的9667503申请1CPU、站点配置3CPU，外层4.07wall/2.01CPU秒。失败来源QA/小表JSON修复/FUSE回传可见性如实留证；最终紧凑字节/资源见storage/resources，原历史缓存和stage54保持。
+
+下一stage96只购买一次**同架构两格新增候选信息消融**：A同62 typed摘要＋常数新增分支（无数量/availability泄露），B同摘要＋冻结候选节点/leading几何。原split/权重/K、stage94 cal_select-post、单seed、weighted log-MSE/共同cal_post单offset，最多2fit，不加模型/seed/testgate。候选缺源事件保留摘要及显式缺候选状态，先≤40 train/cal QA和成本准入再扩原完整角色；test候选输入只在协议/模型冻结后准备，不按test诊断调整。最小集合/边池化先行，GNN/attention后置；有效容量并非由相同声明参数量自动完全控制，报告这一限制。
+
+拟议阶段CPU21600秒/GPU任务累计wall7200秒且1GPU并发/最终20MB，批量按源8CPU、内线程1，GPU有实际优势再用授权batch平台；不是新成本已测保证。全样本风险、两低E/传统≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03与原双向尾+2pp、500incoming条件区间和成本共同验收，稀少missing/source95/研究开发选择限制保留。不能因4个恢复例少就停止整个几何信息分支，也不能承诺能恢复最低能。阶段后续详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)，本轮不执行，历史§1–56和stage54/K支持不改。
