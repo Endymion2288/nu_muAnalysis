@@ -1,0 +1,145 @@
+{
+  "measured_outer_CPU_s": 18575.201691000002,
+  "limit_CPU_s": 32400,
+  "local_outer_timers": [
+    {
+      "phase": "stage92_closeout",
+      "user_CPU_s": 2.78,
+      "system_CPU_s": 4.18,
+      "peak_RSS_KiB": 135252.0,
+      "CPU_s": 6.959999999999999,
+      "timer": "/tmp/stage92_closeout.time"
+    },
+    {
+      "phase": "stage92_collect_cal",
+      "user_CPU_s": 0.12,
+      "system_CPU_s": 0.35,
+      "peak_RSS_KiB": 19040.0,
+      "CPU_s": 0.47,
+      "timer": "/tmp/stage92_collect_cal.time"
+    },
+    {
+      "phase": "stage92_collect_fit",
+      "user_CPU_s": 0.62,
+      "system_CPU_s": 0.37,
+      "peak_RSS_KiB": 57352.0,
+      "CPU_s": 0.99,
+      "timer": "/tmp/stage92_collect_fit.time"
+    },
+    {
+      "phase": "stage92_collect_test",
+      "user_CPU_s": 0.12,
+      "system_CPU_s": 0.42,
+      "peak_RSS_KiB": 19408.0,
+      "CPU_s": 0.54,
+      "timer": "/tmp/stage92_collect_test.time"
+    },
+    {
+      "phase": "stage92_final_head_QA",
+      "user_CPU_s": 4.26,
+      "system_CPU_s": 2.08,
+      "peak_RSS_KiB": 1122844.0,
+      "CPU_s": 6.34,
+      "timer": "/tmp/stage92_final_head_QA.time"
+    },
+    {
+      "phase": "stage92_inference_QA",
+      "user_CPU_s": 17.15,
+      "system_CPU_s": 0.81,
+      "peak_RSS_KiB": 99868.0,
+      "CPU_s": 17.959999999999997,
+      "timer": "/tmp/stage92_inference_QA.time"
+    },
+    {
+      "phase": "stage92_manifest",
+      "user_CPU_s": 2.88,
+      "system_CPU_s": 1.31,
+      "peak_RSS_KiB": 465592.0,
+      "CPU_s": 4.1899999999999995,
+      "timer": "/tmp/stage92_manifest.time"
+    },
+    {
+      "phase": "stage92_repackage",
+      "user_CPU_s": 8.06,
+      "system_CPU_s": 2.72,
+      "peak_RSS_KiB": 1116804.0,
+      "CPU_s": 10.780000000000001,
+      "timer": "/tmp/stage92_repackage.time"
+    },
+    {
+      "phase": "stage92_startup",
+      "user_CPU_s": 4.22,
+      "system_CPU_s": 2.05,
+      "peak_RSS_KiB": 1133604.0,
+      "CPU_s": 6.27,
+      "timer": "/tmp/stage92_startup.time"
+    },
+    {
+      "phase": "stage92_submit_fit",
+      "user_CPU_s": 7.96,
+      "system_CPU_s": 2.93,
+      "peak_RSS_KiB": 1116796.0,
+      "CPU_s": 10.89,
+      "timer": "/tmp/stage92_submit_fit.time"
+    },
+    {
+      "phase": "stage92_submit_inference",
+      "user_CPU_s": 3.72,
+      "system_CPU_s": 1.31,
+      "peak_RSS_KiB": 111412.0,
+      "CPU_s": 5.03,
+      "timer": "/tmp/stage92_submit_inference.time"
+    }
+  ],
+  "Kubeflow_fit_outer": {
+    "user_CPU_s": 57.163561,
+    "system_CPU_s": 1.19813,
+    "CPU_s": 58.361691,
+    "wall_s": 88.51623826200375,
+    "peak_RSS_KiB": 1211772,
+    "exit_code": 0,
+    "timed_out": false,
+    "scope": "outer worker subprocess incl imports/initialQA/fit/cal; excludes prior container/CVMFS/preflight startup and OAuth sidecars; no duplicate internal timing"
+  },
+  "CPU_workers": [
+    {
+      "role": "cal",
+      "user_CPU_s": 9006.62,
+      "system_CPU_s": 30.24,
+      "peak_RSS_KiB": 168424.0,
+      "CPU_s": 9036.86,
+      "timer": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage92_energy_ml/cal/job.time",
+      "Condor_user_CPU_s": 9007.0,
+      "Condor_system_CPU_s": 31.0,
+      "worker": {
+        "wall_s": 9336.811242801981,
+        "CPU_s": 9035.330080784,
+        "peak_RSS_MiB": 164.4765625
+      }
+    },
+    {
+      "role": "test",
+      "user_CPU_s": 9391.37,
+      "system_CPU_s": 18.19,
+      "peak_RSS_KiB": 184040.0,
+      "CPU_s": 9409.560000000001,
+      "timer": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage92_energy_ml/test/job.time",
+      "Condor_user_CPU_s": 9392.0,
+      "Condor_system_CPU_s": 19.0,
+      "worker": {
+        "wall_s": 9511.324344669993,
+        "CPU_s": 9408.341352866,
+        "peak_RSS_MiB": 179.7265625
+      }
+    }
+  ],
+  "not_double_counted": "worker internal CPU, training/calibration/trajectory/QA subtimers, Condor rounded CPU not summed again",
+  "unmeasured": "platform admission/preflight/OAuth/container startup CPU and some early development/metadata/docs/monitoring/static checks; physical EOS IO; GPU allocated/physical peak memory",
+  "GPU": "NVIDIA H100 NVL MIG3g.47gb",
+  "GPU_allocation": {
+    "CPUs": 22,
+    "memory": "63G",
+    "torch_CPU_threads": 1
+  },
+  "logical_bytes_not_physical_IO": true
+}

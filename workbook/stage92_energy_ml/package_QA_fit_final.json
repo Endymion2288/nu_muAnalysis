@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "output": "{\"passed\": true, \"identities\": 40, \"train_missing\": 21, \"cal_missing\": 6, \"optimizer_steps\": 0, \"max_network_parameter_gradient_CPU_CUDA_difference\": 0.0, \"CPU_CUDA_loss_difference\": 8.881784197001252e-16, \"GPU\": \"Tesla T4\", \"torch\": \"2.10.0\", \"cuda\": \"12.5\", \"scope\": \"original initialization fullnetwork; headweightzero implies initialbodygradientzero, no claim alltrajectory guarantee\", \"adaptive_score_cost\": {\"wall_s\": 1.2049226299859583, \"CPU_s\": 1.1884100300000005, \"peak_RSS_MiB\": 1037.1953125}, \"wall_s\": 1.3651901152916253, \"CPU_s\": 1.3456848039999998, \"peak_RSS_MiB\": 1060.3828125}\nactualpayload fixed40 identities and fullnetwork CPU/CUDA gradients passed, zero optimizer\n",
+  "archive_bytes": 45510659,
+  "source_byte_equal": true,
+  "job_held_unstarted_during_correction": true
+}

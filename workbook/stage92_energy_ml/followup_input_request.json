@@ -1,0 +1,46 @@
+{
+  "stage": 93,
+  "status": "proposed next stage; not executed",
+  "task": "one accurate fixed-prior sensitivity of current saved posterior, original training/flat/pressure ratios; no fitting or selection",
+  "evidence": {
+    "stage92_all_certified": 24801,
+    "stage92_lowE_logRMSE": 0.16563047329172706,
+    "traditional": 0.14566138607809218,
+    "lowE_gate_upper95": 1.411172145243967,
+    "all_direct_upper95": 1.1554510540203722,
+    "meanPIT": 0.5274895597660134
+  },
+  "input_paths": [
+    "ntuples/energy_ml_stage92/input_cal.npz",
+    "ntuples/energy_ml_stage92/input_test.npz",
+    "ntuples/energy_ml_stage92/predictions_cal.npz",
+    "ntuples/energy_ml_stage92/predictions_test.npz",
+    "ml/artifacts/stage92/posterior_parameters.npz",
+    "workbook/stage87_energy_ml/prior.json",
+    "ml/posterior_numerics.py"
+  ],
+  "new_fits": 0,
+  "new_calibration": 0,
+  "new_network_forward": 0,
+  "new_ROOT": 0,
+  "main_prior": "nominal remains frozen; no deployment selection",
+  "sensitivity_priors": [
+    "training",
+    "flat",
+    "pressure"
+  ],
+  "algorithm": "unchanged adaptiveReference; reuse certified F/raw density for binmass,PIT,NLL,ESS; shared per-event cache for exact quantile roots; all role identities retained",
+  "QA": "fixed40cal all6missing+identityordered fill; actualpayload values/identities/weights/cost before freeze; nominal/training closure; no risk selection",
+  "limits": {
+    "Condor_jobs": 2,
+    "CPUs_each": 1,
+    "memory_MB_each": 3000,
+    "wall_and_CPU_s_each": 19800,
+    "cumulative_CPU_s": 43200,
+    "retained_bytes": 20000000
+  },
+  "admission": "QA actual cost projection incl safety and reporting must fit caps; else bin/PIT/NLL/ESS deliverable plus explicit missing quantile risk, no favorable subset/no extra budget automatic",
+  "acceptance": "original lowE/traditional upper95<=1.05, all/direct<=1.01 and difficult<=1.03, total/positive/negative tail<=2pp, coverage/PIT/width/ESS/NLL and500componentincoming draws; source95 unavailable, research test not newblind",
+  "scope": "pz0-only firstpower; px/py/q/p/bends allowed; raw11/typedNaN/legalnegative/Calo missing; pz>50;K1016/no oldKlimits; preserve originalstage54fivepaths/suffix",
+  "finish": "Chinese measured stage93report + localConventionalCommit; no push, no new ratio/grid/test selection/model promotion; no automatic nextstage"
+}

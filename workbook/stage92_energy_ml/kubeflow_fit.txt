@@ -1,0 +1,9 @@
+frozen torch/CUDA runtime verified
+{"passed": true, "identities": 40, "train_missing": 21, "cal_missing": 6, "optimizer_steps": 0, "max_network_parameter_gradient_CPU_CUDA_difference": 0.0, "CPU_CUDA_loss_difference": 8.881784197001252e-16, "GPU": "NVIDIA H100 NVL MIG 3g.47gb", "torch": "2.10.0", "cuda": "12.5", "scope": "original initialization fullnetwork; headweightzero implies initialbodygradientzero, no claim alltrajectory guarantee", "adaptive_score_cost": {"wall_s": 8.211015762994066, "CPU_s": 0.7628920519999998, "peak_RSS_MiB": 1009.33984375}, "wall_s": 10.751400739012752, "CPU_s": 0.8640085219999998, "peak_RSS_MiB": 1039.48046875}
+{"epoch": 25, "optimizer_steps": 1150, "train_loss": 3.819538897585696, "wall_s": 28.259862239006907, "CPU_s": 11.316475628, "peak_RSS_MiB": 1150.3359375}
+{"epoch": 50, "optimizer_steps": 2300, "train_loss": 3.743086890228131, "wall_s": 37.11303971899906, "CPU_s": 20.123650657, "peak_RSS_MiB": 1150.3359375}
+{"epoch": 75, "optimizer_steps": 3450, "train_loss": 3.7024132839032062, "wall_s": 45.99007207498653, "CPU_s": 28.959810276, "peak_RSS_MiB": 1150.3359375}
+{"epoch": 100, "optimizer_steps": 4600, "train_loss": 3.6684322533970217, "wall_s": 54.86785487199086, "CPU_s": 37.797938427999995, "peak_RSS_MiB": 1150.3359375}
+{"epoch": 125, "optimizer_steps": 5750, "train_loss": 3.6457918994664533, "wall_s": 63.703323330002604, "CPU_s": 46.588165389, "peak_RSS_MiB": 1150.3359375}
+{"epoch": 150, "optimizer_steps": 6900, "train_loss": 3.6234369257787393, "wall_s": 72.68977166200057, "CPU_s": 55.533058812, "peak_RSS_MiB": 1150.3359375}
+outer timer {"user_CPU_s": 57.163561, "system_CPU_s": 1.19813, "CPU_s": 58.361691, "wall_s": 88.51623826200375, "peak_RSS_KiB": 1211772, "exit_code": 0, "timed_out": false, "scope": "outer worker subprocess incl imports/initialQA/fit/cal; excludes prior container/CVMFS/preflight startup and OAuth sidecars; no duplicate internal timing"}

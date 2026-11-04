@@ -1,0 +1,36 @@
+{
+  "policy": "validate-cpu-memory-resources: Resources are allocated automatically. Please remove any CPU or memory allocations.",
+  "events": [
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-2zsdz was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-vnhdr was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-q5vzk was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-g6pzj was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-ht4db was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-sm9zd was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    },
+    {
+      "reason": "FailedCreate",
+      "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage92-fit-4wff5 was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n"
+    }
+  ],
+  "created_training_pods": 0,
+  "optimizer_steps": 0,
+  "correction": "remove manualCPU/memory resourcefields as service requires; oneGPU retained; process and stageCPU/wall caps unchanged; actualallocatedCPU/RAM will be recorded, not claimed2CPU6GB"
+}

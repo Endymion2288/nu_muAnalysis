@@ -1,0 +1,118 @@
+{
+  "name": "nu-mu-energy-stage92-fit-f2pbv",
+  "phase": "Failed",
+  "container_statuses": [
+    {
+      "allocatedResources": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      },
+      "containerID": "containerd://deba4caa9f47936a32349682538ccf01b68158210ea28a6a69af2b33225e4d3e",
+      "image": "registry.cern.ch/mlops/lxplus-like:9",
+      "imageID": "registry.cern.ch/mlops/lxplus-like@sha256:74c2ccb623c091720aed958415b7ae64e9021a69c94670d77db1b8567474e608",
+      "lastState": {},
+      "name": "fit",
+      "ready": false,
+      "resources": {
+        "limits": {
+          "cpu": "22",
+          "memory": "63G",
+          "nvidia.com/mig-3g.47gb": "1"
+        },
+        "requests": {
+          "cpu": "22",
+          "memory": "63G",
+          "nvidia.com/mig-3g.47gb": "1"
+        }
+      },
+      "restartCount": 0,
+      "started": false,
+      "state": {
+        "terminated": {
+          "containerID": "containerd://deba4caa9f47936a32349682538ccf01b68158210ea28a6a69af2b33225e4d3e",
+          "exitCode": 127,
+          "finishedAt": "2026-11-04T10:45:42Z",
+          "reason": "Error",
+          "startedAt": "2026-11-04T10:43:46Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 1399,
+          "supplementalGroups": [
+            1399
+          ],
+          "uid": 180107
+        }
+      },
+      "volumeMounts": [
+        {
+          "mountPath": "/shared",
+          "name": "shared"
+        },
+        {
+          "mountPath": "/usr/bin/containerssh-agent",
+          "name": "agent-binary-volume",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/etc/group",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/shadow",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/passwd",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/sudoers.d/user",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/eos",
+          "name": "eos"
+        },
+        {
+          "mountPath": "/cvmfs",
+          "name": "cvmfs"
+        },
+        {
+          "mountPath": "/scratch",
+          "name": "local-scratch"
+        },
+        {
+          "mountPath": "/dev/shm",
+          "name": "dshm"
+        },
+        {
+          "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+          "name": "kube-api-access-7rm85",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/var/token",
+          "name": "oauth2-token"
+        },
+        {
+          "mountPath": "/tmp/oauthtk_180107",
+          "name": "inj-oauth2-tokens"
+        }
+      ]
+    }
+  ],
+  "archive_members": [
+    "workbook/stage92_energy_ml",
+    "workbook/stage92_energy_ml/protocol.json",
+    "workbook/stage92_energy_ml/kubeflow_gpu.txt",
+    "ml/artifacts/stage92"
+  ],
+  "optimizer_steps": 0,
+  "reason": "documented lxplus-like container lacks /usr/bin/time; failure before fit-worker command, no startedmarker",
+  "correction": "replace missing GNU time with Python standard-library subprocess/resource timer; frozen worker/model unchanged"
+}

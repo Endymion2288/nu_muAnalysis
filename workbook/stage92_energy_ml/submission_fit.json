@@ -1,0 +1,18 @@
+{
+  "cluster": 9667316,
+  "result": "9667316.0 - 9667316.0\n",
+  "actual_ads": [
+    {
+      "ClusterId": 9667316,
+      "MaxRuntime": 5400,
+      "ProcId": 0,
+      "RequestCpus": 2,
+      "RequestGpus": 1,
+      "RequestMemory": 6000,
+      "RequireGPUs": "/Expr(GlobalMemoryMb >= 8192 && regexp(\"T4|A100|H100|H200|L4\",DeviceName))/"
+    }
+  ],
+  "wall_s": 11.567891409620643,
+  "CPU_s": 1.7897152790000002,
+  "peak_RSS_MiB": 429.9921875
+}

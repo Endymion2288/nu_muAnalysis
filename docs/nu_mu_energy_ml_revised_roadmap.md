@@ -1989,3 +1989,20 @@ train40的−joint−.25marginal对head输出梯度差L2 median/p95 .000697047/2
 QA固定40＝全部21train missing＋6cal missing＋原stage90train前13（去重按固定顺序补足），0optimizer核完整网络VJP；初始/每25epochs与未改stage90自适应score同门槛核值/head导数，所有batch finite/tail准入。失败保存row/head并停，不删事件/回退GH32/选中途checkpoint/自动重训。小包QA后资源上限≤1GPU Condor2CPU6GB/wall5400s/CPU7200s，另≤2完整准确推断CPU Condor各1CPU3GB/CPU与wall10800s、并发≤2，阶段含QA/报告CPU32400s/最终20MB；是上限不是实测保证。训练后≤40固定cal实际准确推断计时再准入CPU任务；参考原stage89两任务8937CPU秒，不无限延长。
 
 主推断必须原stage88/89自适应Reference/newbT/原nominal median，全cal11612/test13189含缺失/高端/困难侧；不能用未修正GH32宣布新模型收益。复用旧同split传统/direct/bounded及stage89准确旧后验，交原两低E1.05/all1.01/≥200和低pz等困难1.03/七层双向tail+2pp、68/90coverage/PIT/十箱可靠性/NLL/宽度/ESS与500component内incoming条件配对区间。CRPS16×32旧近似只作命名诊断，准确CRPS未认证；prior stress用准确CDF、不可按test选谱。每角色3块/source95不可估、研究池test非新blind，不自动晋升。物理收益/训练全轨迹/完整cal准确最优/真实response与interaction/FSI/材料/Calo/接受度/背景和独立确认均未测。stage92尚未执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage91_energy_ml/followup_input_request.json)；历史§1–72及独立支持协议保持。
+
+
+## 74. stage92：准确loss重训及全cal闭合完成，最低能和困难侧仍未联合恢复
+
+[stage92报告](../workbook/2026-11-04_stage92_accurate-loss-retraining.md)按原stage87 89033兼容池/46575train/11612cal/13189test/17657隔离、41族85维输入及missing21/6/5完成唯一posterior从头150epochs/6900steps；CPU原float32网络/joint/Adam和原float32监督保持，GPU执行stage91 float64 marginal。全1016K、pz0-only一次方动量、px/py/q/p/弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV与所有困难侧保持；无新样本/ROOT/生成/重建，无direct/bounded重训/扫描/earlystop。
+
+用户授权Kubeflow后，未启动Condor9667316先hold后删除（0start），实际H100 NVL MIG3g.47gb一次fit成功。自动分配22CPU/63G但torch仍1CPU线程；手动资源被拒、fullGPU未调度、首容器缺time导致worker前exit127均留证，不能称无平台失败或多次fit。成功worker含import/rebuild/QA/fit/cal外层58.361691CPU/88.516238wall秒，peak1211772KiB；GPU peak未测。固定40初始/每25epochs共280事件/4760坐标通过，最大值5.329071e−15/梯度7.105427e−14；中间完整head未另存，不认证全轨迹。最终学习后非零body梯度CPU/CUDA完整VJP差0。全cal单L-BFGS-B原初值成功9iter/12eval，b=.008897185083/T=1.041332484110，终点梯度−3.845830e−6/+4.052400e−7。
+
+两Condor9667339完整cal/test均首次exit0、24801/24801准确Reference认证/precisionflag0/missing6/5保留，最大quad7.872539e−11/root1.999806e−10。完整cal raw NLL−.09852936350783348与优化器差4.738487e−12；6832算术值含2044旧基线复现，最大差4.263256e−14。CPU评价外层9036.86/9409.56CPU秒、9339/9513wall秒，≤10800；完整阶段/字节以resources/storage实测为准，32400CPU/20MB封顶，归档去重后仅保留紧凑模型/head/预测/证据，不把逻辑字节当物理I/O。
+
+准确新test最低能/第二低能/all/低pz真高E/high-y/未确认log-RMSE **.165630/.232842/.326058/.826918/.781673/.665024**；旧准确对应.169296/.231281/.326783/.828213/.807754/.688945，新/旧各条件区间均含1。最低能传统.145661，条件上95 **1.411172>1.05**；第二低能/传统上端1.001808通过，但all/direct上端1.155451、低pz真高E1.325036、高-y1.337601仍失败。低pz真高E total/positive/negative tail差direct上端+16.822348/+4.816155/+14.337707pp；全体tail保护不替代困难侧失败。最低能bias+7.209845%/正tail3.278689%，校准角色最低能.243608反而高于旧.235912，不能用点值小幅改善宣布成功。
+
+新全体68/90coverage66.861856%/89.494433%，meanPIT .527489560 [.522613371,.532034475]排除.5；最低能PIT .329238，低pz真高E .633521方向相反，高-y coverage下限61.659419%/82.816629%失败；3200–6400GeV coverage18.784722%/51.901042%，missing5稀少不认证。名义NLL旧−.043037457→新−.047697998是点值改善，不替代联合风险。**继续既有部署：数值修复可执行且完成，不等于低能恢复/信息极限/真实response闭合。** 同时修复训练/cal积分，未分别隔离；单seed不含重训方差，source95/新blind/response/systematics/准确CRPS未测，500incoming区间仍有既有条件限制。
+
+**唯一下一stage93：当前保存head在stage87事前固定training/flat/lowE×4 prior上的准确敏感性，0fit/新校准/网络forward/ROOT。** 这是stage85 Phase C的有界实验；原GH32 stress未认证，本轮名义PIT在两侧反向且数值修复未解风险，先量谱权衡，不再随机补样或模型扫描。复用本轮cal/test完整输入、准确F/rawdensity/newbT与原prior ratios；主nominal不改，三stress不能看test选赢家。bin mass/PIT/NLL/ESS代数复用准确F，quantile沿未改Reference、共享事件cache并认证，不能用GH32风险代替。
+
+先≤40固定cal（6missing＋身份顺序补足）实际包数值/成本QA，再冻结准入≤2Condor各1CPU3GB/CPU与wall19800秒、阶段43200CPU秒/20MB拟议封顶；成本/收益未测。投影不准入则交准确bin/PIT/NLL/ESS和quantile风险缺口，不加预算/删事件或称完整风险完成。完整cal11612/test13189三prior风险/原门槛/尾/coverage/PIT/宽度/ESS与500条件区间全报，source95与p(x|E)不变假设限制保留，不晋升。见[合同](../workbook/stage92_energy_ml/followup_input_request.json)及[Prompt](nu_mu_energy_ml_next_step_prompt.md)；本阶段不执行stage93，历史§1–73和stage54后缀保持。

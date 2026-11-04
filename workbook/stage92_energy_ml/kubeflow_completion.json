@@ -1,0 +1,199 @@
+{
+  "job_name": "nu-mu-energy-stage92-fit",
+  "job_uid": "3895e512-7618-4348-8bb3-d8a64c699646",
+  "status": {
+    "completionTime": "2026-11-04T10:50:05Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-04T10:50:05Z",
+        "lastTransitionTime": "2026-11-04T10:50:05Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-04T10:50:05Z",
+        "lastTransitionTime": "2026-11-04T10:50:05Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-04T10:48:23Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  },
+  "pod_name": "nu-mu-energy-stage92-fit-9tjpz",
+  "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+  "container_statuses": [
+    {
+      "allocatedResources": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      },
+      "containerID": "containerd://6eea67ad2d80cc49dfe0fefd648ed129510ca9925858998f21f872a2b12d856d",
+      "image": "registry.cern.ch/mlops/lxplus-like:9",
+      "imageID": "registry.cern.ch/mlops/lxplus-like@sha256:74c2ccb623c091720aed958415b7ae64e9021a69c94670d77db1b8567474e608",
+      "lastState": {},
+      "name": "fit",
+      "ready": false,
+      "resources": {
+        "limits": {
+          "cpu": "22",
+          "memory": "63G",
+          "nvidia.com/mig-3g.47gb": "1"
+        },
+        "requests": {
+          "cpu": "22",
+          "memory": "63G",
+          "nvidia.com/mig-3g.47gb": "1"
+        }
+      },
+      "restartCount": 0,
+      "started": false,
+      "state": {
+        "terminated": {
+          "containerID": "containerd://6eea67ad2d80cc49dfe0fefd648ed129510ca9925858998f21f872a2b12d856d",
+          "exitCode": 0,
+          "finishedAt": "2026-11-04T10:50:01Z",
+          "reason": "Completed",
+          "startedAt": "2026-11-04T10:48:29Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 1399,
+          "supplementalGroups": [
+            1399
+          ],
+          "uid": 180107
+        }
+      },
+      "volumeMounts": [
+        {
+          "mountPath": "/etc/group",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/shadow",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/passwd",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/sudoers.d/user",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/shared",
+          "name": "shared"
+        },
+        {
+          "mountPath": "/usr/bin/containerssh-agent",
+          "name": "agent-binary-volume",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/eos",
+          "name": "eos"
+        },
+        {
+          "mountPath": "/cvmfs",
+          "name": "cvmfs"
+        },
+        {
+          "mountPath": "/scratch",
+          "name": "local-scratch"
+        },
+        {
+          "mountPath": "/dev/shm",
+          "name": "dshm"
+        },
+        {
+          "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+          "name": "kube-api-access-nhpbr",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/var/token",
+          "name": "oauth2-token"
+        },
+        {
+          "mountPath": "/tmp/oauthtk_180107",
+          "name": "inj-oauth2-tokens"
+        }
+      ]
+    }
+  ],
+  "resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "init_statuses": [
+    {
+      "name": "agent-injector",
+      "state": {
+        "terminated": {
+          "containerID": "containerd://0f64e2e560b8102310ceb528bd8d346c3e2bd2f47d84a166a21d9ad857dae9af",
+          "exitCode": 0,
+          "finishedAt": "2026-11-04T10:48:25Z",
+          "reason": "Completed",
+          "startedAt": "2026-11-04T10:48:25Z"
+        }
+      }
+    },
+    {
+      "name": "oauth2-refresh-bootstrap-0",
+      "state": {
+        "terminated": {
+          "containerID": "containerd://cc7a43b761239bd44d868b56f67f702aa6a36e356511ee915c1096cfaa7b18c9",
+          "exitCode": 0,
+          "finishedAt": "2026-11-04T10:48:26Z",
+          "reason": "Completed",
+          "startedAt": "2026-11-04T10:48:26Z"
+        }
+      }
+    },
+    {
+      "name": "oauth2-refresh-bootstrap-180107",
+      "state": {
+        "terminated": {
+          "containerID": "containerd://cc8449626f82c2b2ca4129dc6ee87c918a6bb86cf10119bef90ad5b60062ac01",
+          "exitCode": 0,
+          "finishedAt": "2026-11-04T10:48:27Z",
+          "reason": "Completed",
+          "startedAt": "2026-11-04T10:48:27Z"
+        }
+      }
+    },
+    {
+      "name": "oauth2-sidecar",
+      "state": {
+        "terminated": {
+          "containerID": "containerd://988a0280af9dfdf2ff2157fd21d6773acb4f719ba31848412b2aaacbd98f27c0",
+          "exitCode": 0,
+          "finishedAt": "2026-11-04T10:50:01Z",
+          "reason": "Completed",
+          "startedAt": "2026-11-04T10:48:28Z"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "AST": true,
+  "shell_syntax": true,
+  "strict_JSON": true,
+  "all_TSV_widths": true,
+  "full_inference_and_report_validation": "complete_validation.json",
+  "actual_package_byte_validation": "precloseout_source_validation.json",
+  "reference_sources_unchanged": true,
+  "append_only_roadmap_and_information": true,
+  "stage54_prompt_suffix_byte_identical": true,
+  "protected_stage54_paths_not_edited_or_staged": [
+    "AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub",
+    "AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh",
+    "ml/prepare_tracker_occupancy.py",
+    "ntuples/energy_ml_stage54/",
+    "workbook/stage54_energy_ml/"
+  ],
+  "full_cal_test_certified": 24801,
+  "actual_fits": 1,
+  "epochs": 150,
+  "optimizer_steps": 6900,
+  "calibration_iterations": 9,
+  "new_blind": false,
+  "model_promotion": false,
+  "source95": false,
+  "no_push": true
+}

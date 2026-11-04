@@ -1,0 +1,155 @@
+{
+  "name": "nu-mu-energy-stage92-fit-f2pbv",
+  "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+  "phase": "Running",
+  "resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "conditions": [
+    {
+      "lastProbeTime": null,
+      "lastTransitionTime": "2026-11-04T10:43:43Z",
+      "observedGeneration": 1,
+      "status": "True",
+      "type": "PodReadyToStartContainers"
+    },
+    {
+      "lastProbeTime": null,
+      "lastTransitionTime": "2026-11-04T10:43:46Z",
+      "observedGeneration": 1,
+      "status": "True",
+      "type": "Initialized"
+    },
+    {
+      "lastProbeTime": null,
+      "lastTransitionTime": "2026-11-04T10:43:47Z",
+      "observedGeneration": 1,
+      "status": "True",
+      "type": "Ready"
+    },
+    {
+      "lastProbeTime": null,
+      "lastTransitionTime": "2026-11-04T10:43:47Z",
+      "observedGeneration": 1,
+      "status": "True",
+      "type": "ContainersReady"
+    },
+    {
+      "lastProbeTime": null,
+      "lastTransitionTime": "2026-11-04T10:43:41Z",
+      "observedGeneration": 1,
+      "status": "True",
+      "type": "PodScheduled"
+    }
+  ],
+  "container_statuses": [
+    {
+      "allocatedResources": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      },
+      "containerID": "containerd://deba4caa9f47936a32349682538ccf01b68158210ea28a6a69af2b33225e4d3e",
+      "image": "registry.cern.ch/mlops/lxplus-like:9",
+      "imageID": "registry.cern.ch/mlops/lxplus-like@sha256:74c2ccb623c091720aed958415b7ae64e9021a69c94670d77db1b8567474e608",
+      "lastState": {},
+      "name": "fit",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "22",
+          "memory": "63G",
+          "nvidia.com/mig-3g.47gb": "1"
+        },
+        "requests": {
+          "cpu": "22",
+          "memory": "63G",
+          "nvidia.com/mig-3g.47gb": "1"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-11-04T10:43:46Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 1399,
+          "supplementalGroups": [
+            1399
+          ],
+          "uid": 180107
+        }
+      },
+      "volumeMounts": [
+        {
+          "mountPath": "/shared",
+          "name": "shared"
+        },
+        {
+          "mountPath": "/usr/bin/containerssh-agent",
+          "name": "agent-binary-volume",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/etc/group",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/shadow",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/passwd",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/etc/sudoers.d/user",
+          "name": "passwdgroup"
+        },
+        {
+          "mountPath": "/eos",
+          "name": "eos"
+        },
+        {
+          "mountPath": "/cvmfs",
+          "name": "cvmfs"
+        },
+        {
+          "mountPath": "/scratch",
+          "name": "local-scratch"
+        },
+        {
+          "mountPath": "/dev/shm",
+          "name": "dshm"
+        },
+        {
+          "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+          "name": "kube-api-access-7rm85",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/var/token",
+          "name": "oauth2-token"
+        },
+        {
+          "mountPath": "/tmp/oauthtk_180107",
+          "name": "inj-oauth2-tokens"
+        }
+      ]
+    }
+  ]
+}

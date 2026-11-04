@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "identities": 40,
+  "certified_N": 40,
+  "reverse_CDF_difference": 2.7755575615628914e-15,
+  "reverse_log_density_difference": 2.0747681352893563e-10,
+  "primary_inference": {
+    "wall_s": 16.32504270784557,
+    "CPU_s": 16.096056314000002,
+    "peak_RSS_MiB": 97.52734375
+  },
+  "projected_test_CPU_s": 5307.272168133651,
+  "admission": "projected40cal mean*testN*1.2+120reportsec <=10800; projection not guarantee",
+  "wall_s": 17.176364169921726,
+  "CPU_s": 16.430809706999998,
+  "peak_RSS_MiB": 97.52734375
+}

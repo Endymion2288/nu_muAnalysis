@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "identities": 40,
+  "train_missing": 21,
+  "cal_missing": 6,
+  "optimizer_steps": 0,
+  "max_network_parameter_gradient_CPU_CUDA_difference": 0.0,
+  "CPU_CUDA_loss_difference": 8.881784197001252e-16,
+  "GPU": "NVIDIA H100 NVL MIG 3g.47gb",
+  "torch": "2.10.0",
+  "cuda": "12.5",
+  "scope": "original initialization fullnetwork; headweightzero implies initialbodygradientzero, no claim alltrajectory guarantee",
+  "adaptive_score_cost": {
+    "wall_s": 8.211015762994066,
+    "CPU_s": 0.7628920519999998,
+    "peak_RSS_MiB": 1009.33984375
+  },
+  "wall_s": 10.751400739012752,
+  "CPU_s": 0.8640085219999998,
+  "peak_RSS_MiB": 1039.48046875
+}

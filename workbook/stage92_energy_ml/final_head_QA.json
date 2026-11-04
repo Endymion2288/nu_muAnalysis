@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "N": 40,
+  "coordinates": 680,
+  "new_optimizer_steps": 0,
+  "new_test_evaluations": 0,
+  "max_value_error": 5.329070518200751e-15,
+  "max_gradient_error": 6.750155989720952e-14,
+  "max_error_plus_reference_uncertainty_over_tolerance": 0.001184538233549587,
+  "complete_network_parameter_gradient_max_CPU_CUDA_difference": 0.0,
+  "learned_body_gradient_L2": 16.1460018157959,
+  "CPU_CUDA_loss_difference": 0.0,
+  "local40_vs_saved2048_forward_head_max_difference": 0.0,
+  "interpretation": "saved activeheads exactly reused for score audit; localforward differences from float32 CPU/GEMM batch do not replace predictions; learnedbody VJP at same localhead checked acrossdevices",
+  "wall_s": 1.64821445196867,
+  "CPU_s": 1.443245455,
+  "peak_RSS_MiB": 1070.4453125
+}

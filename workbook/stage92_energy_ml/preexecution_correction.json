@@ -1,0 +1,8 @@
+{
+  "scope": "beforeworkerexecution, singlejob held while idle NumJobStarts0; no optimizer or model started",
+  "reason": "preserve exact original numpy float64 incoming normalization then float32cast; avoid normalizing weights after float32cast",
+  "original_implementation": "tr=np.flatnonzero(d['role']==1);td={k:v[tr] for k,v in d.items()};t=tensors(td);t['w']/=t['w'].mean();xx=torch.tensor(x[tr])",
+  "corrected_implementation": "tr=np.flatnonzero(d['role']==1);td={k:v[tr] for k,v in d.items()};t=tensors(td)\n    t['w']=torch.tensor(d['weight'][tr]/d['weight'][tr].mean(),dtype=torch.float32)\n    xx=torch.tensor(x[tr])",
+  "also": "preserve currentbatch identities/head for gradient/resource failures as well as loss failures; no integrator change",
+  "no_resubmission": true
+}

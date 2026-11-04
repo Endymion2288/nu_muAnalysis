@@ -1099,3 +1099,16 @@ GH32349/552事例至少一导数不达标、2414/9384坐标失败，最大37.427
 QA后上限1GPU任务2CPU6GB/wall5400s/CPU7200s＋2CPU准确推断任务各1CPU3GB/CPU与wall10800s，最多2并发、累计CPU32400s/紧凑20MB；训练后固定≤40cal准确推断实际包计时再确认预算。资源上限参考本轮吞吐/原stage89实际8937CPU秒，不是新训练已测成本；预算不够就保留明确状态，不无限延长或再次fit。
 
 新主结果必须自适应Reference、固定nominal/newbT/median，全cal11612/test13189；与stage89准确旧posterior及传统/direct/bounded原预测做500component-incoming条件配对，原低E/总体/≥200/困难/双向tail和coverage/PIT门槛不变，高端/缺失不能省略。旧CRPS近似不冒称准确；prior stress仅准确CDF命名诊断，不据test选主谱。source95仍未测、研究池非新blind，真实物理收益/response/systematics与独立确认不冒称完成，不自动晋升。stage92尚未执行，详见[合同](../workbook/stage91_energy_ml/followup_input_request.json)；历史§1–52及原stage54/K解除政策保持。
+
+
+## 54. stage92：训练/校准求积已修复，下一项量准确prior的风险权衡
+
+[stage92报告](../workbook/2026-11-04_stage92_accurate-loss-retraining.md)唯一原模型150epochs/6900steps、全cal原L-BFGS-B成功；GPU训练按用户授权迁Kubeflow H100 MIG3g.47gb，一次实际fit，0旧direct/bounded refit。完整角色/权重/归一化/prior复原，missing21/6/5/K1016/所有困难侧保留；初始及每25epochs固定40共280事件/4760导数通过，最大值5.329071e−15/梯度7.105427e−14，最终非零body VJP跨设备差0，中间完整head未另存而不称全轨迹证明。
+
+完整cal/test24801自适应Reference全部认证，最大quad7.872539e−11/root1.999806e−10/flag0；newb=.008897185083/T=1.041332484110，完整cal raw NLL−.09852936350783348与优化器差4.738487e−12。6832算术核验含2044旧基线值，最大差4.263256e−14。训练外层58.361691CPU秒/88.516238wall秒，CPU评价9036.86/9409.56CPU秒、9339/9513wall秒；阶段32400CPU秒/20MB实测清单见resources/storage。平台拒绝/未调度/缺time预worker失败留证，GPU peak/preflight等未完整测，分配22CPU63G不冒充实际使用。
+
+最低能新log-RMSE.165630较旧准确.169296略低，但传统.145661，条件上端1.411172失败；第二低能.232842/传统上端1.001808通过。全体.326058/direct上端1.155451、低pz真高E.826918/1.325036与高-y.781673/1.337601失败，困难侧双向tail上差仍超2pp。各新/旧条件区间含1，不能归因小幅物理收益。全体coverage66.861856%/89.494433%，meanPIT.527489560区间排除.5；最低能PIT.329238、低pz真高E.633521，高端仍严重欠覆盖。名义NLL−.047697998相对旧−.043037457的点值改善不能替代联合门槛。继续既有部署，无新blind/source95/response闭合/信息极限宣称；训练/cal数值贡献未分别隔离，单seed/refit和真实系统学未测。
+
+**下一唯一stage93购买原三个固定stress谱的准确风险/可靠性敏感性，0fit/校准优化/网络/ROOT。** stage85 Phase C和stage87原training/flat/lowE×4 ratios已事前定义，旧GH32 stress不合本轮准确认证；先测先验与低E/困难两侧权衡，不续随机扩样、seed/结构或prior网格。输入本轮完整cal/test/head/newbT/准确F/rawdensity、stage87 prior/split/weights和缓存基线。bin/PIT/NLL/ESS代数复用，三谱quantile沿未改Reference求根共享cache；固定nominal主输出、不按test选stress。≤40固定cal（含6missing、身份顺序）实际包QA后按计时冻结/准入2Condor各1CPU3GB/CPU和wall≤19800秒、总43200CPU秒/20MB拟议封顶；成本/收益未测，投影不够则交已可测bin/PIT/NLL/ESS及quantile缺口，不自动加预算或以有利子集代完整风险。
+
+验收完整11612cal/13189test三谱数值认证、原低能/全体/困难/双向tail/coverage/PIT门槛及500incoming条件区间/ESS/宽度/NLL；source95不可估、研究池非新blind、p(x|E)不变未经证实均明确，不晋升模型。不自动执行stage93。详见[合同](../workbook/stage92_energy_ml/followup_input_request.json)，历史§1–53、stage54五路径/后缀及K解除政策保持。

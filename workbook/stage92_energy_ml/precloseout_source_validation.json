@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "actual_archives": [
+    {
+      "archive": "software/energy-ml-retrain-stage92-fit.tar.gz",
+      "compared_files": 13,
+      "all_byte_equal": true
+    },
+    {
+      "archive": "software/energy-ml-retrain-stage92-cal.tar.gz",
+      "compared_files": 11,
+      "all_byte_equal": true
+    },
+    {
+      "archive": "software/energy-ml-retrain-stage92-test.tar.gz",
+      "compared_files": 11,
+      "all_byte_equal": true
+    }
+  ],
+  "unchanged_original_files": [
+    "ml/batched_posterior.py",
+    "ml/differentiable_posterior.py",
+    "ml/posterior_numerics.py",
+    "ml/accurate_posterior.py",
+    "ml/transfer_posterior.py",
+    "ml/audited_features.py",
+    "ml/configs/audited_features.json"
+  ],
+  "method": "byte comparison, no SHA",
+  "numerical_reruns": 0
+}

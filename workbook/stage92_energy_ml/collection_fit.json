@@ -1,0 +1,33 @@
+{
+  "platform": "Kubeflow",
+  "phase": "fit",
+  "exit_code": 0,
+  "restarts": 0,
+  "archive_bytes": 4101364,
+  "added": [
+    "workbook/stage92_energy_ml/kubeflow_gpu.txt",
+    "workbook/stage92_energy_ml/reconstruction.json",
+    "workbook/stage92_energy_ml/startup_scores.tsv",
+    "workbook/stage92_energy_ml/startup_QA.json",
+    "workbook/stage92_energy_ml/checkpoint_025.tsv",
+    "workbook/stage92_energy_ml/training.tsv",
+    "workbook/stage92_energy_ml/trajectory_resources.json",
+    "workbook/stage92_energy_ml/checkpoint_050.tsv",
+    "workbook/stage92_energy_ml/checkpoint_075.tsv",
+    "workbook/stage92_energy_ml/checkpoint_100.tsv",
+    "workbook/stage92_energy_ml/checkpoint_125.tsv",
+    "workbook/stage92_energy_ml/checkpoint_150.tsv",
+    "workbook/stage92_energy_ml/fit_status.json",
+    "workbook/stage92_energy_ml/calibration_initial_QA.tsv",
+    "workbook/stage92_energy_ml/calibration_evaluations.tsv",
+    "workbook/stage92_energy_ml/posterior_calibration.json",
+    "workbook/stage92_energy_ml/calibration_final_QA.tsv",
+    "workbook/stage92_energy_ml/fit_total_resources.json",
+    "workbook/stage92_energy_ml/fit_outer_resources.json",
+    "ml/artifacts/stage92/started.txt",
+    "ml/artifacts/stage92/posterior.pt",
+    "ml/artifacts/stage92/posterior_parameters.npz",
+    "ntuples/energy_ml_stage92/startup_heads.npz"
+  ],
+  "no_fit_rerun": true
+}

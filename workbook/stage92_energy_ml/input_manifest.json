@@ -1,0 +1,48 @@
+{
+  "input_files": [
+    {
+      "path": "ntuples/energy_ml_stage55/dataset.npz",
+      "logical_bytes": 25505895
+    },
+    {
+      "path": "ntuples/energy_ml_stage56/readout.npz",
+      "logical_bytes": 6194961
+    },
+    {
+      "path": "ntuples/energy_ml_stage70/support.npz",
+      "logical_bytes": 26623
+    },
+    {
+      "path": "ntuples/energy_ml_stage81/support.npz",
+      "logical_bytes": 238417
+    },
+    {
+      "path": "ntuples/energy_ml_stage82/support.npz",
+      "logical_bytes": 534176
+    },
+    {
+      "path": "ntuples/energy_ml_stage83/support.npz",
+      "logical_bytes": 2098931
+    }
+  ],
+  "QA_40_origins": {
+    "55": 38,
+    "82": 1,
+    "83": 1
+  },
+  "QA_components": {
+    "charm": 2,
+    "k": 18,
+    "pi": 20
+  },
+  "QA_truth_energy_range_GeV": [
+    62.579001264344804,
+    1982.1000292567016
+  ],
+  "QA_pz_range_GeV": [
+    56.00306640625,
+    2298.4445
+  ],
+  "new_test_evaluations": 0,
+  "physical_EOS_IO_bytes": "未测量"
+}

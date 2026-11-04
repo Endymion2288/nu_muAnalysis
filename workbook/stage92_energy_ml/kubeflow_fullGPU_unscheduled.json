@@ -1,0 +1,30 @@
+{
+  "name": "nu-mu-energy-stage92-fit-wjt5k",
+  "phase": "Pending",
+  "node": null,
+  "conditions": [
+    {
+      "lastProbeTime": null,
+      "lastTransitionTime": "2026-11-04T10:41:40Z",
+      "message": "0/49 nodes are available: 1 Insufficient cpu, 1 Insufficient memory, 15 node(s) had untolerated taint(s), 2 Insufficient nvidia.com/gpu, 2 node(s) were unschedulable, 30 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/49 nodes are available: 2 No preemption victims found for incoming pod, 47 Preemption is not helpful for scheduling.",
+      "observedGeneration": 1,
+      "reason": "Unschedulable",
+      "status": "False",
+      "type": "PodScheduled"
+    }
+  ],
+  "allocated": {
+    "limits": {
+      "cpu": "46",
+      "memory": "127G",
+      "nvidia.com/gpu": "1"
+    },
+    "requests": {
+      "cpu": "46",
+      "memory": "127G",
+      "nvidia.com/gpu": "1"
+    }
+  },
+  "actual_training_containers_started": 0,
+  "correction": "use documented single H10047GB MIG flavor, sameCUDAarchitecture, smaller automaticCPU/RAM allocation; no training duplication"
+}

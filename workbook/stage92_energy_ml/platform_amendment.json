@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-04T10:39:31.331812+00:00",
+  "authority": "User explicitly supplies CERN CondorGPU/MLtraining docs and authorizes configured Kubeflow with10h token",
+  "docs": [
+    "https://batchdocs.web.cern.ch/gpu/index.html",
+    "https://ml.docs.cern.ch/ml/training/",
+    "https://ml.docs.cern.ch/environments/",
+    "https://ml.docs.cern.ch/#available-flavors"
+  ],
+  "read": true,
+  "decision": "replace unstarted CondorGPU submission with one Kubeflow batchJob; originalpayloadcode/model/split/seed/loss/epochs/calibration and resourcecaps unchanged; no duplicate optimizer run",
+  "condor_cluster": 9667316,
+  "kubernetes_context": "ml-prod",
+  "namespace": "xcheng",
+  "job": "nu-mu-energy-stage92-fit",
+  "GPU": "one H100NVL; namespaceNvidia quota0/1 before submission",
+  "image": "registry.cern.ch/mlops/lxplus-like:9 (Alma9), original CVMFS LCG109_cuda torch2.10.0/CUDA12.5; startup verifies",
+  "limits": "maincontainer2CPU6000MB1GPU, activeDeadline5400s, same7000/7100CPUlimits; cumulative32400CPU/final20MB unchanged",
+  "credentials": "existing kubectl config used without logging tokens; no credential files copied into artifacts",
+  "Condor_docs_note": "GPU property commands recommended over device-name constraints; future submissions should use compatible capability/memory where available; currentV100excluded because this build lacks sm70",
+  "resource_amendment": "CERN ML service prohibits CPU/memory fields and allocates GPU flavor resources (docs H10046CPU127GB). Remove those fields, retain oneGPU, originalprocessCPU/wall/thread and stage32400CPU budget; record allocated versus actualusage explicitly. User platform authorization applies; no extra optimizer run."
+}

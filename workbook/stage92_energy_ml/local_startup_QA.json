@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "identities": 40,
+  "train_missing": 21,
+  "cal_missing": 6,
+  "optimizer_steps": 0,
+  "max_network_parameter_gradient_CPU_CUDA_difference": 0.0,
+  "CPU_CUDA_loss_difference": 8.881784197001252e-16,
+  "GPU": "Tesla T4",
+  "torch": "2.10.0",
+  "cuda": "12.5",
+  "scope": "original initialization fullnetwork; headweightzero implies initialbodygradientzero, no claim alltrajectory guarantee",
+  "adaptive_score_cost": {
+    "wall_s": 1.3000382487662137,
+    "CPU_s": 1.2107493570000005,
+    "peak_RSS_MiB": 1048.46484375
+  },
+  "wall_s": 1.553834998048842,
+  "CPU_s": 1.3713467589999997,
+  "peak_RSS_MiB": 1077.12109375
+}

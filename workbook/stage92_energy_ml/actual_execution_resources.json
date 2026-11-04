@@ -1,0 +1,14 @@
+{
+  "historical_proposal": "maincontainer2CPU6000MB1GPU, activeDeadline5400s, same7000/7100CPUlimits; cumulative32400CPU/final20MB unchanged",
+  "actual_completion_evidence": "kubeflow_completion.json",
+  "allocated_CPUs": 22,
+  "allocated_memory": "63G",
+  "GPU": "NVIDIA H100 NVL MIG3g.47gb",
+  "torch_CPU_threads": 1,
+  "actual_fit_count": 1,
+  "successful_job_restarts": 0,
+  "stage_CPU_cap_s": 32400,
+  "final_retained_cap_bytes": 20000000,
+  "allocated_GPU_memory_peak": "未测量",
+  "physical_GPU_memory_peak": "未测量"
+}
