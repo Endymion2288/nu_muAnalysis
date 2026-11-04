@@ -1,34 +1,56 @@
-# 下一轮执行 Prompt：stage93 固定三prior的准确敏感性，0新训练
+# 下一轮执行 Prompt：stage94 输入、表示、架构与能量目标的五格实验
 
-先读AGENTS.md、路线§74、信息计划§54、[stage92报告](../workbook/2026-11-04_stage92_accurate-loss-retraining.md)、[合同](../workbook/stage92_energy_ml/followup_input_request.json)、stage85研究复盘Phase C、stage87原prior.json及本轮完整cal/test输入/准确预测。**唯一任务：当前新posterior保存head/newbT，在原training/flat/pressure三个事前固定prior上做准确风险与可靠性敏感性；nominal主输出保持，不选新部署。** 0fit/校准优化/网络forward/ROOT/生成/重建/新样本，无seed/结构/ratio/clip网格。
+先读 AGENTS.md、[stage93 研究报告](../workbook/2026-11-04_stage93_research-reassessment.md)、修订路线 §75、信息计划 §55、stage87/92 报告，以及当前 split/weights/审计特征实现。**本轮任务是在有运行环境的节点完成一轮有限、可归因的模型比较；当前没有运行环境的本地终端不训练、不推断事件。** stage93 已用于研究复盘；旧 stage92 JSON 中“三 prior stress 唯一先行、0fit”不再约束本轮优先级，历史产物不改。不要重复数值认证链或自动进入下一阶段。
 
-## 1. 已测和问题
+## 1. 要回答的物理问题
 
-stage92唯一150epochs/6900steps、原完整cal单次优化完成，H100 MIG训练外层58.361691CPU/88.516238wall秒。初始化/每25epochs固定40通过，完整准确cal11612/test13189全部认证、missing6/5保留；b=.008897185083/T=1.041332484110，完整cal目标闭合4.738487e−12。平台失败与未启动Condor取消证据均留，不能声称多次fit或无平台失败。
+当前后验不是已证最优：2×64、41 项观测/85 输入、单 seed、固定 150epochs，训练目标为 joint+.25marginal NLL，点输出为 median；BDT 用 62 项输入。stage92 最低能传统/direct/后验 log-RMSE 为 .145661/.282644/.165630，但 all/direct/后验 .287491/.326058，低 pz 真高能 .658177/.826918，high-y .609395/.781673。准确 loss 修复的新/旧主要区间含 1，不能再默认积分是主瓶颈。
 
-新test两低E/all/低pz真高E/high-y log-RMSE .165630/.232842/.326058/.826918/.781673；最低能传统.145661，条件上端1.411172失败，第二低能1.001808通过，全体/direct1.155451及困难侧/双向tail失败。各新/旧条件区间含1；全体coverage66.861856%/89.494433%，meanPIT .527489560区间不含.5，真低E PIT .329238、低pz真高E .633521方向相反。NLL点值改善不替代联合门槛，cal最低能反向变差。数值修复不是信息极限/真实response或独立确认。
+本轮区分输入、表示、架构方案及能量输出路线的影响，争取同时改善低能与困难侧。没有新独立样本不阻塞开发；新 test 是已研究池对本次 fit 的留出，不叫 blind，不据 test 选择 checkpoint、模型、prior、变换或 seed。
 
-本轮回答：在固定条件后验下，原谱prior改变多少低E/困难侧风险、coverage/PIT和支持ESS，是否存在原目标的权衡？旧GH32 stress不是本轮准确结果，不能据其选谱或直接复述成新测量。
+## 2. 固定输入和校准/选择边界
 
-## 2. 输入和固定实现
+复用 stage87 89033 兼容记录、原 split/隔离/每 incoming 总权重 1；outer train/cal/test 保持 46575/11612/13189，唯一 incoming37556/10811/12125。missing21/6/5、全部1016新增K、高端、未确认、高-y、低pz真高E和所有尾完整保留。旧14435缺raw/status者不以fitted charge填回，无ROOT/新生成/重建/随机扩样。
 
-读取`ntuples/energy_ml_stage92/input_{cal,test}.npz`和`predictions_{cal,test}.npz`、`ml/artifacts/stage92/posterior_parameters.npz`、stage87 prior.json/split/weights、缓存传统/direct/bounded及stage92名义预测。不得调用会提交/fit或覆盖旧阶段的入口。角色/row/key/weight逐项对齐，cal11612/test13189、missing6/5、高端/困难侧全保留，不改split或隔离。
+保持 raw11、typed NaN、合法负raw、Calo缺项和状态掩码；一次方动量仅pz0，允许既有px/py/q/p/弯折，不加p0/p1/pz1或历史禁用动量比。恢复62输入只用现有审计列，不偷偷引入truth或不部署变量。62对41的新增族逐项列出。
 
-只用原prior.json中的training/flat/pressure ratios（已含原cap），固定nominal仍主输出；不重估谱、加新ratio或按test挑prior。复用已认证F和training-prior logdensity，代数得到mass/norm/PIT/NLL/ESS，先复现nominal/training原值。三谱quantile必须沿未改`posterior_numerics.Reference`自适应CDF和原求根/残差认证，可共享每事件Reference缓存、省去重复F计算，准确nominal quantile只作初始猜测。无未修正GH32主结果，禁止为GPU迁移另写未认证CDF；这阶段CPU参考可能更合适。原模型/prior语义不变，不用loss score冒充CDF。
+看新候选指标前，将原cal按source分成cal_select/post，incoming冲突按事前优先级purge，记录用途、支持、隔离与子集权重；不按能量风险选择source。新子集人数/低能功效未测，先交付实际支持。outer cal全体仍保留作报告；不能声称它是独立确认。若无法可靠分开，预注册固定epochs，用完整cal做一次后处理，取消earlystop和候选选择，不借test补位。
 
-## 3. QA和资源准入
+有有效cal_select时，事前冻结最大300epochs、每5轮验证、patience30epochs及含两个低能和困难侧保护的排序；相同MLP臂使用相同optimizer规则。MDN用marginal NLL训练，同时记录NLL和对齐点风险，checkpoint规则预先固定。超参数是有界比较配置，不声称已最优。各点模型只在cal_post拟合一次共同定义的全局log-offset；MDN密度与点输出一起平移，报告校准前后。缓存BDT可用已存cal预测计算同样offset，不重训；原样传统/direct和同后处理对照分列，原风险门槛仍按原样控制。
 
-先冻结≤40cal身份：全部6missing＋cal身份原顺序补足40，不按风险选择。核schema/row/units/weights、保存F和rawdensity复用闭合、nominal/training闭合、三谱CDF/quantile/root/tail/单调性，至少固定独立反向控制；原stage89容差不放宽。实际完整包计时后再冻结批量算法/manifest/protocol。
+## 3. 五格主实验，最多九个新网络fit
 
-建议≤2CPU Condor（完整cal/test各一），1CPU/3000MB，各CPU和wall≤19800秒、阶段QA/报告累计CPU≤43200秒/最终≤20000000 bytes。所有上限待QA实际成本准入，收益/成本尚未测；投影含裕度与报告，不将stage92首40均值低估当保证。不能准入则先交完整准确bin/PIT/NLL/ESS和quantile风险明确缺口，不能声称完整median评价，不自动加资源/拆有利子集/删事件。大批量通过batch，只在交互做小QA；GPU只在已有对应数值认证且实际更快时使用。
+|格|输入/预处理|模型和训练目标|回答|
+|---|---|---|---|
+|A|41，当前median/IQR±20与掩码|2×64 SiLU，weighted log-MSE|点回归控制|
+|B|62，与A相同规则|同A主干/目标|补齐输入是否有效|
+|C|62，train-only typed log/log1p/asinh与掩码|同A主干/目标|数值表示是否有效|
+|D|与C相同|TabM、weighted log-MSE；首轮不额外加embedding|结构方案是否有效|
+|E|与C相同|同C主干，3分量residual logE MDN、marginal NLL|直接能量概率路线是否有效|
 
-## 4. 评价、解释和交付
+C的变换按变量物理域定义；正量、计数、有符号量分别处理，尺度仅从train得，报告变换和饱和率，不把合法负raw变0，不删尾。首轮不叠加数值embedding，否则不能归因C/D差异。复用ml/train_tabular.py已有TabM实现，重接当前loader/权重/特征，禁止复活旧fitted-charge输入。报告参数量与计算差异，不冒称等容量。
 
-三个原stress均报完整cal/test的log-RMSE/bias/R68/总正负tail50、68/90coverage/PIT十箱/quantile可靠性/NLL/宽度/ESS/ratio cap；与固定nominal逐身份配对，同时保留原传统/direct/bounded门槛。原两低E/传统上95≤1.05、all/direct≤1.01、≥200/低pz/低pz真高E/high-y/未确认≤1.03，七层及额外低pz真高E双向tail上差≤2pp不变；coverage下限≥名义−5pp、meanPIT区间含.5，稀少不认证。500component内incoming条件draw；source95不可估/3块每角色/研究池test已开发，不以事件数冒充独立生产。准确CRPS仍未认证不声称完成。
+E预测u=log(Eν/GeV)−log[(pz0/.8)/GeV]的3分量Normal混合，用analytic mean/CDF/density；点能量为exp(mean logE)，不是mean E。不要强迫Eν≥reco pz，不按低pz硬切传统，不加zero-transfer点质量。E/C同时改变输出族与loss，不单独归因其中一项。
 
-即使某谱单层改善也不选赢家/晋升。prior shift依赖p(x|E)不变未验证，ESS并非独立物理事件数；当前没有response/interaction/FSI/材料/Calo/接受度/背景闭合或独立确认。若权衡持续，下一阶段另冻可辨识response/决策目标，不能继续prior网格。本轮中文stage93实际报告先行，再代码/配置/表图本地Conventional Commit，不push、不自动开始下一阶段。
+最多5个预注册单seed主fit；如有可靠cal_select，在打开新test前至多选2格各加2seed，总≤9新网络fit，seed和集成规则事前固定。没有有效cal_select则停在固定五格，test只报告开发探索，不事后补幸运seed。此次不加FT-Transformer/GNN/大预训练/辅助权重或prior网格。
 
-一次方动量仅pz0，允许px/py/q/p/弯折；raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV/困难两侧/全部1016K和解除旧K生产时限保持。原stage54五项只读不暂存，以下后缀逐字保留。
+## 4. 固定后验读出诊断与概率解释
+
+可同时用stage92保存head/newbT、同名义prior比较median与exp(E[logE|x])，0新网络fit。stage76的旧score密度mean-log结果不是当前posterior的结果。新增moment只核自身固定小cal误差、尾界和成本；已有CDF认证不自动认证moment，不重开stage88–91。若成本不合适，此诊断不阻塞五格；不以training prior的简化矩冒充nominal重权后的矩。
+
+正确后验PIT要求在X及X定义组中均匀，不一般要求在真E/y分组均匀。保留旧真值分组表/物理风险；后续看明确目标谱/权重下的总体完整PIT及cal预定义pz、Calo、活动、质量/缺失等X组，不能用真值组PIT不含.5单独否决后验。固定真E频率coverage若需要另建response区间，不靠本轮后验自动保证。此修正不意味着旧模型通过。
+
+原三prior的准确bin/PIT/NLL/ESS可代数复用为诊断，不需要先做三谱全量quantile重积分；不按test选新谱。stage85的tracker data/MC条件活动已交付，缺active-channel/quiet触发不能反求纯noise，不重做此默认支线；stage73固定重权有低能收益和困难侧代价，不续边际权重网格。
+
+## 5. QA、验收、资源和交付
+
+先≤40固定train/cal记录，覆盖已有missing/status，检查schema、单位、权重、梯度/输出和实际计时，再冻结批量实现/资源。只核新增数学与接线，复用旧认证核。大批量通过现成配置的batch服务，优先现有环境，不在本地恢复CERN栈。拟议≤1GPU并发、GPU任务wall累计≤2h、CPU累计≤6h、最终紧凑≤20MB；实际吞吐/显存/收益未测，QA后准入，不把stage92的训练时间当新模型保证。不静默缩样/删困难者或重复大I/O，不留事件/逐hit副本。
+
+交付train/cal_select学习曲线、参数量、单seed及固定集成、全部cal/test配对。分层含50–100/100–200GeV、all、≥200、低pz、低pz真高E、high-y、未确认、高端、missing；点指标log-RMSE/median bias/R68/总正负tail50，概率指标NLL/宽度/总体及X组PIT与coverage，500incoming条件配对和seed波动，source95不可估及开发池限制明确。
+
+保留原点风险门槛：两低E/传统条件上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03，原七层加低pz真高E双向tail差上端≤2pp。不能用解释修正、核心变窄或一个好能箱替代联合目标；若只取得B−A/C−B/D−C/E−C的稳定增量，仍应写清研究结论，而不是只有“未通过”。所有新收益、功效、资源和真实系统效应无实测时写“未测量”。
+
+先写中文stage94 workbook，给出实际样本、配置/命令、数值、成本/失败、图表/产物、程序和物理解释及下一最小任务，再本地Conventional Commit，不push、不自动执行下一阶段。历史stage54后缀逐字保留；其“尚未完成”是历史文字，当前完成状态以stage85 tracker报告为准，不因此重复执行。
 
 ## 保留的stage54 data占据支线
 
