@@ -1,0 +1,28 @@
+{
+  "optimizer_calls_allowed": 1,
+  "x0": [
+    0.0,
+    0.0,
+    2.7427820707724
+  ],
+  "method": "SLSQP",
+  "bounds": [
+    [
+      0,
+      100
+    ],
+    [
+      0,
+      100
+    ],
+    [
+      null,
+      null
+    ]
+  ],
+  "ftol": 1e-09,
+  "maxiter": 200,
+  "fit_role": "cal_select",
+  "constraint_jacobian_finite_difference_max": 1.021414064439341e-10,
+  "test_risks_evaluated": false
+}

@@ -1,0 +1,151 @@
+{
+  "limit_bytes": 20000000,
+  "removed_transport_archives": [
+    {
+      "path": "software/energy-ml-stage104.tar.gz",
+      "bytes": 16705385
+    },
+    {
+      "path": "ntuples/energy_ml_stage104/result.tar.gz",
+      "bytes": 359216
+    }
+  ],
+  "removed_transport_bytes": 17064601,
+  "models_and_head_inputs_reused_read_only": true,
+  "original_shared_caches_retained": true,
+  "point_array_ignored": "ntuples/energy_ml_stage104/points.npz",
+  "physical_EOS_IO_bytes": null,
+  "note": "Retained logical bytes include code/config, full changed documents and unique Stage104 outputs; no physical block/traffic inference.",
+  "retained_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 2118
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 4997
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage104.sub",
+      "bytes": 677
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage104.sh",
+      "bytes": 905
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "bytes": 196698
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "bytes": 11651
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "bytes": 331676
+    },
+    {
+      "path": "ml/package_stage104.py",
+      "bytes": 3431
+    },
+    {
+      "path": "ml/stage104_decision.py",
+      "bytes": 21570
+    },
+    {
+      "path": "ntuples/energy_ml_stage104/points.npz",
+      "bytes": 289123
+    },
+    {
+      "path": "workbook/2026-11-04_stage104_fixed-density-point-decision.md",
+      "bytes": 18145
+    },
+    {
+      "path": "workbook/stage104_energy_ml/QA.json",
+      "bytes": 1799
+    },
+    {
+      "path": "workbook/stage104_energy_ml/complete.json",
+      "bytes": 260
+    },
+    {
+      "path": "workbook/stage104_energy_ml/condor_history.json",
+      "bytes": 428
+    },
+    {
+      "path": "workbook/stage104_energy_ml/decision.json",
+      "bytes": 505
+    },
+    {
+      "path": "workbook/stage104_energy_ml/delivery_validation.json",
+      "bytes": 719
+    },
+    {
+      "path": "workbook/stage104_energy_ml/gates.tsv",
+      "bytes": 1008
+    },
+    {
+      "path": "workbook/stage104_energy_ml/independent_gate_checks.tsv",
+      "bytes": 1504
+    },
+    {
+      "path": "workbook/stage104_energy_ml/old_controls.tsv",
+      "bytes": 57808
+    },
+    {
+      "path": "workbook/stage104_energy_ml/optimization.json",
+      "bytes": 1300
+    },
+    {
+      "path": "workbook/stage104_energy_ml/optimization_started.json",
+      "bytes": 393
+    },
+    {
+      "path": "workbook/stage104_energy_ml/packaging_validation.json",
+      "bytes": 774
+    },
+    {
+      "path": "workbook/stage104_energy_ml/paired.tsv",
+      "bytes": 73166
+    },
+    {
+      "path": "workbook/stage104_energy_ml/point_action.pdf",
+      "bytes": 17154
+    },
+    {
+      "path": "workbook/stage104_energy_ml/point_action.svg",
+      "bytes": 39894
+    },
+    {
+      "path": "workbook/stage104_energy_ml/points.tsv",
+      "bytes": 96260
+    },
+    {
+      "path": "workbook/stage104_energy_ml/protocol.json",
+      "bytes": 9634
+    },
+    {
+      "path": "workbook/stage104_energy_ml/resources.json",
+      "bytes": 978
+    },
+    {
+      "path": "workbook/stage104_energy_ml/storage.json",
+      "bytes": 3651
+    },
+    {
+      "path": "workbook/stage104_energy_ml/submission_cleanup.json",
+      "bytes": 9757
+    },
+    {
+      "path": "workbook/stage104_energy_ml/time.txt",
+      "bytes": 804
+    },
+    {
+      "path": "workbook/stage104_energy_ml/validation.json",
+      "bytes": 773
+    }
+  ],
+  "retained_file_count": 32,
+  "retained_bytes": 1199560
+}

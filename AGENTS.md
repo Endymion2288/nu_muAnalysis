@@ -58,6 +58,10 @@ GPU，但大批量数据必须通过 HTCondor 提交。CVMFS 已提供所需软�
 工具通常已经编译好；优先使用与实际配置匹配的现成构建，只有源码变化时才重新
 构建。真实 data 和 MC 位于 `/eos/experiment/faser`。
 
+本项目后续 HTCondor 提交目录统一使用 `~/condor/nu_muAnalysis/<stage或任务名>/`，
+不再在 home 根目录创建 `nu_mu_stage*`。清理旧提交目录前核对当前队列引用；保留
+必要的紧凑审计记录，不删除其他项目的目录或正在使用的文件。
+
 ## 阶段记录与提交
 
 每个阶段完成后必须先在仓库根目录 `workbook/` 写中文 Markdown 阶段报告，再将

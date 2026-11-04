@@ -1,0 +1,38 @@
+{
+  "job": "9667779.0",
+  "submission_directory": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage104",
+  "requested": {
+    "CPUs": 4,
+    "memory_MB": 6000,
+    "wall_limit_s": 900
+  },
+  "actual": {
+    "CPUs": 4,
+    "memory_MB": 12000,
+    "GPUs": 0,
+    "starts": 1,
+    "exit_code": 0
+  },
+  "outer_worker": {
+    "CPU_s": 11.51,
+    "wall_s": 9.14,
+    "peak_RSS_KiB": 303244,
+    "source": "GNU time includes imports and descendants"
+  },
+  "scheduler": {
+    "CPU_s": 12.0,
+    "wall_s": 14.0,
+    "BytesRecvd": 16705483.0,
+    "BytesSent": 767.0
+  },
+  "CPU_budget_s": 900,
+  "CPU_budget_pass": true,
+  "wall_budget_pass": true,
+  "processes": 4,
+  "inner_threads": 1,
+  "maximum_project_stage_concurrency": 1,
+  "single_core_speedup": null,
+  "physical_EOS_bytes": null,
+  "numerical_work_local": false,
+  "scope": "Worker and scheduler timings are different scopes, not summed. Local packaging/cleanup/documentation/full-session resource usage unmeasured."
+}

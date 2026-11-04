@@ -1251,3 +1251,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 ≤40固定cal身份（含6个cal缺失）解析QA后1个CPU批任务可申请4CPU/6GB、线程1、最多4进程/同draw共享；CPU和wall≤900秒、最终20MB为拟议上限，新的成本/收益未测。现有输入完整则同阶段直接优化和评价，不先生成一串零训练阶段。当前终端不执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
 
 另保留更有探索性的局部点关系＋遮挡预训练合同：全点逐面mean A、关系B、B预训练C，原62/强BDT/原角色保留，主整体C/A与B解释相互区分；无自动作业/既定GPU小时承诺。真实ID不是几何图运算前提，但缺ID不能伪造粒子/ghost监督；旧DeepSets和candidate消息不冒充已测这项组合。2026 FASERCal论文可借任务结构，不能迁移分类增益/量能输入/大模型成本。新生产条件到位才设计独立低能和过渡支持，提议密度/接受度与谱系须明确，不再随机扩文件。历史§1–64和stage54/全部K/原物理及最终门槛不变；真实response/系统与独立确认仍未测。
+
+
+## 66. stage104：固定表示的动作预算已测，单层收益不足以继续加权重
+
+[stage104实际报告](../workbook/2026-11-04_stage104_fixed-density-point-decision.md)固定Stage99原三seed概率产品，只做一次cal_select两权重SLSQP，6iter/6eval，λ1=1.0063561679887905/λ2=0；原b/T、角色/incoming/cal分区/K/missing/物理政策保持。λ0逐位旧点，权重冻结再评价test，0网络/ROOT/forward/积分/新校准。q NLL旧值闭合，不把新点称新后验或概率增量。
+
+主cal_post两低能新/旧E94最大RMSE比.995441212 [.985996354,1.006171246]，未达到共同改善。开发test最低能.276027→.219374，比.794756 [.744096,.837934]有增量，但第二低能比1.007148 [.997245,1.016604]未确证改善；低pz真高E .671125→.694919，比1.035454 [1.027605,1.044591]受损、总/负尾上升。仅降低最低能不能替代原最终两低E/传统、主体/direct及困难/三尾联合要求，jointFalse，不晋升。cal_select保护活跃未自动迁移到留出侧。
+
+40cal含6missing QA、1260旧标量max1.421085e−14、主区间独立差7.771561e−16及32最终区间差3.330669e−15均通过。唯一Condor9667779首start/exit0，4CPU原6GB实际12GB、4process/线程1/0GPU；外层11.51CPU/9.14wall秒<900，单核加速比/物理EOS流量/全会话开销未测。核字节去重包、只保留三列点表与紧凑证据≤20MB见storage。用户授权home清理：69旧spool/21072432逻辑bytes删除，4审计小文件保留；新spool统一 `~/condor/nu_muAnalysis/<stage>/`，其他项目及仓库Stage54资产保持。
+
+本预算结束两参数族，不继续温度/专家/权重或密度重训。它只限制当前q+动作族，不是信息界。下一笔若继续，只买Stage103局部点关系/遮挡路线的有限可行性和一次性三格合同：原train/cal≤40真实PHYS几何/完整无截断点/缺源/成本，0test或能量fit，不自动扩大提取。A逐面mean/B局部关系/C同B加train-only遮挡任务匹配强direct控制，资源与验收由实际小QA另冻；不可交付则精确结束，不再递归找旧REC。收益/新成本未测，本轮不执行stage105，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–65/原最终1.05/1.01/1.03与三向tail+2pp/全部K保持，cal复用与旧T估计、source/refit/研究选择/真实response/独立确认未被条件区间覆盖。

@@ -1,0 +1,64 @@
+{
+  "success": true,
+  "status": 0,
+  "message": "Optimization terminated successfully",
+  "x": [
+    1.0063561679887905,
+    0.0,
+    1.5615605284577692
+  ],
+  "lambda_weights": [
+    1.0063561679887905,
+    0.0
+  ],
+  "tau": 1.5615605284577692,
+  "iterations": 6,
+  "evaluations": 6,
+  "jacobian_evaluations": 6,
+  "constraints": [
+    {
+      "stratum": "E50_100",
+      "residual": -4.1810999107383395e-13
+    },
+    {
+      "stratum": "E100_200",
+      "residual": 0.22700710836918514
+    },
+    {
+      "stratum": "all",
+      "residual": 0.019537761387792507
+    },
+    {
+      "stratum": "E200_inf",
+      "residual": 0.05284016150732751
+    },
+    {
+      "stratum": "pz50_100",
+      "residual": 0.05965586817484203
+    },
+    {
+      "stratum": "pz50_100_trueE200",
+      "residual": 3.1086244689504383e-15
+    },
+    {
+      "stratum": "high_y",
+      "residual": 0.03764430470763336
+    },
+    {
+      "stratum": "unconfirmed",
+      "residual": 0.04683341102032479
+    }
+  ],
+  "min_feasible_residual": -4.1810999107383395e-13,
+  "boundary_hit": [
+    false,
+    true
+  ],
+  "optimizer_calls": 1,
+  "no_test_selection": true,
+  "selection_frozen": true,
+  "initial_tau": 2.7427820707724,
+  "wall_s": 0.06594394496642053,
+  "CPU_s": 0.05881222000000008,
+  "peak_RSS_MiB": 141.80078125
+}

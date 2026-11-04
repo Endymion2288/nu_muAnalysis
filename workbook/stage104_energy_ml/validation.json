@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "old_scalar_checks": 1260,
+  "old_scalar_max": 1.4210854715202004e-14,
+  "primary_independent_max": 7.771561172376096e-16,
+  "independent_gate_checks": 32,
+  "independent_gate_max": 3.3306690738754696e-15,
+  "full_cal_post_q_NLL": -0.18355027162618612,
+  "old_q_NLL_difference": 2.7755575615628914e-17,
+  "decoded_saved_logE_max": 1.3800035674194078e-06,
+  "zero_point_bit_exact": true,
+  "persisted_points_exact": true,
+  "test_after_weight_freeze": true,
+  "roles": {
+    "cal": {
+      "N": 11612,
+      "incoming": 10811,
+      "weight_sum": 10811.0
+    },
+    "cal_post": {
+      "N": 5746,
+      "incoming": 5539,
+      "weight_sum": 5539.0
+    },
+    "test": {
+      "N": 13189,
+      "incoming": 12125,
+      "weight_sum": 12125.0
+    }
+  }
+}
