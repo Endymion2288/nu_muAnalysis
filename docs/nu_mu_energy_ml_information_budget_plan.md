@@ -1177,3 +1177,20 @@ A/B test最低能.272854/.284603（传统.145661）、all .295567/.295826（dire
 下一stage98只购买一次**真实原生轨迹—cluster/SP引用及协方差可部署信息**。stage95已核hitSet非ID/52例不对齐、现有传播单位covariance非拟合误差；联合几何编码没有自动补出这些缺口。复用stage95固定2048train/cal不同incoming/24source，精确生产链定位原REC/ESD，≤40QA先核身份/原track筛选/measurement ID/SP组成/实际covariance及单位和成本，再冻一种关联计数/真实共享ID比例/未归属活动与可核误差尺度。无可靠ID/covariance明示缺口，不伪pull、truth输入、noise标签或硬Calo分配，不重建补删源、不丢K。
 
 0能量fit/新MC/重建/test载荷或风险，独立source足够时8CPU Condor/内线程1/最多2并发；建议CPU14400秒/实际读输入10GB/紧凑20MB，QA后准入。交实际可用率/关联及误差分布与完整来源/X分母，或完成可做部分后精确缺失产品，不以metadata清单代替测量；无新样本前置，不递归扫EOS。新输入收益/成本未测，本轮未执行stage98，后续能量消融另冻协议，见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–58及stage54/K政策保持。
+
+
+## 60. stage98：不再仅购买更多几何，购买任务工作点、概率目标与相对μ活动
+
+[stage98研究复盘](../workbook/2026-11-04_stage98_research-reassessment.md)只引用stage94–97结果/已存曲线并检索文献，没有执行物理计算。它覆盖§59唯一native-only前置，原计划未执行；下一实际stage99为两个独立工作包，最多一个T标量概率后处理和可行时两个低容量信息classifier fit，0新能量网络/生成/重建。后续预算不恢复几何消息深宽/seed网格，也不重做stage94九fit或stage88–92数值链。
+
+已买到的信息：62输入比41总体有有限增量；TabM/直接MDN比匹配MLP有主体/第二低能增量，但stage94 E最低能.276027对传统.145661、all.289843对direct.287491，难与stage92最低能.165630/all.326058联合。stage96/97全体新增输入/联合消息B/A区间含1，后者多轨迹也无增量。stage95最低能81可读全单轨迹、仅2例μ-pz候选oracle改善，使单纯换leading的优先级降低，但不是ν能量信息上限。当前首要缺口是低能与同pz高能的可辨别活动，而不是再提供一个架构名称。
+
+A购买**决策工作点和概率产物**：用保存点输出及实际可用的CDF/MDN head给固定H/L分数，在观测pz50–100内报2/5/10%名义低能误判下的高能识别/支持/条件区间，以及E[c²+2e0c]点损失分解。只诊断，不选test阈值/部署gate；旧classifier平均BCE增益不回答这个问题，分数无效也不证明Bayes界。当前反复使用的cal和研究池test、source相关不能套NP总体保证；iid最小149/299低能者是2%/1%错误率数学示例，不是本项目功效，新select/post最低能85/97不能复制变大。
+
+另有尚未对齐的训练目标：stage94 E三seed点best65/90/65，已记录NLL最小在50/25/35；不能把点checkpoint欠coverage当概率方法已经最优。对E保存分布只在cal_post拟合一个T：Z′=m+b+T(Z−m)，旧b固定，均值与点输出不变，解析变换全部分量。交原/新NLL、总体及X组PIT/coverage/宽度和严格点不变检查；这只是概率产品，不能宣传低能RMSE改善。未来至多一条固定训练轨迹分存NLL/point最佳checkpoint，不因本次研究自动重训。
+
+B购买**真实相对μ活动**：原2048train/cal一incoming一视图/24source，精确native联结、≤40QA，实际cluster/SP引用/唯一ID分母及可核误差；冻结未归属活动、横向/纵向结构与读出支持一族，不只给μ covariance。单轨迹也保留，无ID不伪共享、不将未归属认noise，不重建补临时删源或丢K。实际可用时同阶段恰两格固定低容量classifier：62 vs62+一族，源/incoming角色不动，给条件score/任务工作点/支持；不借test风险调输入。pilot只是新增信息测量，有支持增量后才购买完整角色提取及强BDT两格能量实验，不自动GNN。无可交付输入或pilot不足明确缺口并停止扩展。
+
+相对独立μ控制的条件秩/残差是物理表示备选，但若只用旧62确定变换不买新信息；stage52/85的100–1000GeV/tag/trigger条件不能拿来认证50–100GeV或Veto低信号效率。HGPflow的真实关联思想、DeepCore的track/cascade分解、Cal-PIT及2026FSI研究只作为方法依据，项目收益均未测，详见报告。旧密度/重权/专家和辅助标签阴性不重新包装；相同incoming非同interaction不得造多视图正对。
+
+stage99 A≤900CPU秒/B含可行pilot与报告≤13500CPU秒/总14400CPU秒/native实际读10GB/最终20MB是拟议准入上限，≤40QA实测后冻结；大读取HTCondor按source/内线程1/最多2并发，A/B不互为前置，不占GPU做稀疏I/O、不存原生副本。原最终点风险1.05/1.01/1.03和八层三向tail≤2pp不变，概率PIT按总体/X组；source95/真实response/系统效应/最终未开发确认仍未测。历史§1–59、stage54逐字后缀/K支持保持，执行见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
