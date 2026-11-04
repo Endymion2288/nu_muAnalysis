@@ -1,30 +1,38 @@
-# 下一轮执行 Prompt：stage91 批量准确score loss与执行成本认证，0fit
+# 下一轮执行 Prompt：stage92 一次原posterior准确loss重训、原cal校准与完整配对评价
 
-先读`AGENTS.md`、路线§72、信息预算§52、[stage90报告](../workbook/2026-11-04_stage90_differentiable-likelihood-gradients.md)、[完整数值证据](../workbook/stage90_energy_ml/audit_summary.json)、[梯度汇总](../workbook/stage90_energy_ml/parameter_summary.tsv)、[实测速率](../workbook/stage90_energy_ml/benchmark.json)与[后续合同](../workbook/stage90_energy_ml/followup_input_request.json)。**唯一任务：同一准确score likelihood的批量CPU/GPU实现、数值保真与训练执行成本认证，0能量fit/校准优化/网络forward/新test评价/ROOT/生成。**
+先读`AGENTS.md`、路线§73、信息预算§53、[stage91报告](../workbook/2026-11-04_stage91_batched-likelihood-gpu.md)、[冻结数值实现](../ml/batched_posterior.py)、[完整552认证](../workbook/stage91_energy_ml/numerics.tsv)、[实际GPU吞吐](../workbook/stage91_energy_ml/throughput.tsv)、[下一合同](../workbook/stage91_energy_ml/followup_input_request.json)及stage87原protocol/normalization/prior/split、stage89完整准确评价代码与报告。**唯一任务：一次原posterior从头150epochs＋原完整cal单b/T准确优化，然后完整准确cal/test配对评价；不得重训direct/bounded/扫seed/架构/先验。** 无新样本/ROOT/生成/重建，无新blind或自动晋升。
 
-## 1. 已测证据和范围
+## 1. 已测与未测
 
-stage90固定40train＋512cal的值/9384导数全部独立认证，最大值差1.776357e−15、梯度差7.962786e−11；GH32349事例/2414坐标失败，旧autograd自身与numpy差分闭合，近似积分梯度偏差是已确认程序因素。train上尾head监督差可与总loss导数同量级，但没量完整网络权重/150epochs轨迹或能量因果份额。cal512有限子集导数非0不证明全cal未达最优。
+stage91 CPU/CUDA×batch256/1024各552/552事例、9384/9384坐标通过原1e−6值与1e−4＋1e−3梯度容差（含参考误差）；最大值2.835953694e−12、梯度7.324036932e−10。初始response-only20σ大区间失败后，冻结前按高斯单位尺度加整数分点，同GL32，原失败保留。H100 MIG2g.24gb真实batch1024密度/VJP167203.601325记录/秒，端到端较CPU2线程快28.795653倍；原6986250次仅密度外推41.782892秒，未含网络/joint/Adam/cal/CDF/排队，非完整训练或保证。
 
-现有CPUfloat64 scalar score VJP每例约.016753099CPU秒，原46575×150仅密度外推117041.335秒（非实测训练）；不能直接复用旧预算启动fit。先做批量可执行loss，再另冻单次原模型fit。继续既有部署，不把数值认证当低能恢复/response闭合/新blind确认，无新样本前置。
+固定552最终head不能证明初始化/训练全轨迹或missing精度。GH32梯度偏差已识别，但对低能/困难侧的风险份额仍未测。保持既有部署，不因数值成功宣传物理收益。
 
-## 2. 输入与单一实现
+## 2. 输入重建和唯一训练
 
-- `ntuples/energy_ml_stage90/{input,audit_values}.npz`和`workbook/stage90_energy_ml/audit_gradients.tsv/protocol.json`；原固定552身份、角色、head、权重、truth/pz、独立参考/参考不确定度均保留。train用b0/T1、cal用原b/T；raw training-prior marginal，loss−joint−.25marginal，不加nominal prior到优化目标。无需重复9384差分或打开test。
-- 拟议**一种**分段Gauss–Legendre32张量score积分，原standardized-s响应split/尾界与物理模型保持；先小QA再冻结最终实现，不做GH阶数/节点/架构/先验网格。积分内解析score支持head15及b/T，不能只因autograd能跑就认证。移动分点是数值工具，一阶梯度处理需与保存独立参考闭合。
-- 检查原float32网络head到float64积分、再传回float32 head梯度的桥接；本阶段仅叶张量/VJP，不运行网络/optimizer。支持非均匀上游权重、共享b/T及批量padding/mask，避免漏成分/错误归一化。CPU/GPU（实际可用才报告）值/导数均需验证，不伪称当前scalar接口支持CUDA/高阶梯度。
+读取原stage55+56、stage70/81/82/83现有支持缓存，在stage92自己的路径重建89033兼容池；不要直接调用会写stage87的prepare。与`ntuples/energy_ml_stage87/split.npz`逐项核对origin/row/group/key/role/weight，保留原46575train/11612cal/13189test与17657quarantine，missing21/6/5及K1016。不重新分割、不激活隔离样本、不修改旧模型或缓存。
 
-## 3. QA、预算、性能与验收
+同41特征、train-only median/IQR/NaN flags和wave/fit/Calo flags、85维输入，与原normalization逐项闭合；原合法负raw/typed NaN/缺项总NaN不变。原CPU float32 Network、原seed2026110387初始化/2×64SiLU、Adam lr.001默认/无weightdecay、clip10、batch1024/150epochs/原numpy permutation及incoming权重不变；从头初始化，不能warmstart旧posterior。原float32监督张量构造保持，再交float64积分。只将原marginal GH32替换成本轮冻结GL32 score，−joint−.25marginal、trainb0/T1与rawtrainingprior保持，不在优化中加nominal prior。
 
-≤40固定cal实际包身份/单位/值/VJP与实测成本QA，随后冻结单一实现与容差：log-density绝对误差≤1e−6，梯度|差|＋stage90参考不确定度≤1e−4＋1e−3|参考|；全552保留，无容易子集/困难cut/事后降精度。若单一实现不能通过，交具体失败/最小改进，不自动扫阶或训练。
+保留CPU1线程原网络/joint/optimizer，让GPU执行float64积分，自动传回float32 head梯度；先验证跨设备完整网络参数VJP，禁用AMP/TF32。无需让小MLP所有算子迁移GPU而另改初始化/optimizer路径；GPU积分已实测包括head输入/梯度返回开销。不声称新轨迹与旧训练逐bit相同。
 
-固定batch256/1024，测CPU与可用GPU的完整node构造/传输/同步/forward＋backward及peak内存，用确定重复计时，不挑物理赢家；包括float32/64桥接误差，输出真正可训练的资源预测与范围。QA后建议≤1Condor/≤2CPU6GB、可用时1GPU、MaxRuntime与阶段CPU1800秒、紧凑20MB；GPU真实准入/成本目前未测，按QA确认资源，不临时无限扩大。全数组与吞吐批任务通过Condor；不得保存逐节点大网格/重复head模型。
+## 3. 数值控制和原cal一次校准
 
-交付数值全通过且实测较scalar明显加速的可复用loss或明确缺口；随后提出**一次原posterior固定seed/150epochs＋原cal一次b/T优化**的独立合同/执行预算，同split direct/bounded旧预测复用，不重训基线、不换feature/prior/风险门槛。stage91本身0fit，不提前执行该合同或自动进入stage92。最终head点认证仍不保证所有训练中间head，后续训练需要明确数值失败策略和预算，不能静默降级GH32。
+QA固定40条＝全部21train missing＋6cal missing＋stage90固定train前13，去重后按原固定train顺序补足，不按风险挑样。初始化和每25epochs核同40保存head的值/15head导数与未改stage90自适应score，原1e−6及1e−4＋1e−3容差并报告参考误差；不是重复9384差分或认证所有中间head。所有batch必须密度/loss/梯度finite和tail准入；失败/预算耗尽保存row/head/日志并停，不删事件、不回退GH32、不挑中途checkpoint、不自动重训或加阶。
 
-## 4. 阶段交付
+完整cal11612唯一L-BFGS-B，原初值(0,1)、b[-.2,.2]/T[.5,2]/maxiter100和其他原默认，incomingweighted准确raw NLL与解析b/T导数；记success/nit/nfev/终点梯度，禁止多起点/test校准。固定cal初始/终点独立数值QA，最终完整cal目标与Reference汇总一致到1e−6，否则不得声称校准完成。
 
-中文stage91 workbook记录实际数值/全部失败、真实CPU/GPU/RSS/吞吐与计量范围、输入产物/下一单次fit验收；本地Conventional Commit，不push。原pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV/困难侧与已交付1016K保持，旧K生产时限不恢复。原stage54五项只读，以下后缀逐字保留。
+## 4. 资源与完整评价
+
+≤40实际包身份/单位/完整网络VJP/数值和成本QA，0optimizer后冻结：≤1GPU Condor，2CPU/6000MB/1兼容GPU（当前torch无sm70，禁V100）、wall5400秒/CPU7200秒；含重建/唯一训练/cal/head。训练后≤40固定cal准确Reference计时QA，再准入≤2CPU Condor（全cal/test各1，1CPU/3000MB/CPU与wall10800秒、并发≤2）。阶段QA/报告合计CPU≤32400秒/最终≤20000000bytes；是封顶不是实测保证，不无限延长。大批量必须Condor，交互只小QA。记录实际GPU/torch/CUDA、CPU/wall/RSS/torchallocated和计量边界；清理重复归档/重建feature大中间文件，保留紧凑head/必要失败与最终模型。
+
+新模型完整cal11612/test13189主评价使用**未改stage88/89自适应Reference CDF/quantiles、newbT、原nominal prior/median**，不能用未修正GH32宣布收益。复用stage87同split direct/bounded/传统与stage89准确旧posterior，逐身份配对；原两低E/传统upper95≤1.05、all/direct≤1.01、≥200/低pz/低pz真高能/high-y/未确认≤1.03，七层及额外低pz真高能total/positive/negative tail50上差≤2pp全部保留。交log-RMSE/bias/R68/尾、68/90coverage/PIT十箱可靠性/NLL/宽度/ESS，含missing5/6及高端不省略；500component-incoming条件配对区间，source95不可估/3块角色/历史研究池test非新blind，不能自动晋升。
+
+CRPS16×32旧近似只作命名诊断，准确CRPS未认证不冒称完成；预定prior stress如计算用相同准确CDF，不按test选prior。不自动追加模型或进入stage93。物理无收益也须交完整失败/可识别边界及明确下一任务。
+
+## 5. 交付
+
+中文stage92 workbook实际报告先行，再代码/配置/紧凑表图一起本地Conventional Commit，不push。原pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV/所有困难侧、1016K与解除旧K生产时限保持；原stage54五项只读，下面后缀逐字保留。
 
 ## 保留的stage54 data占据支线
 

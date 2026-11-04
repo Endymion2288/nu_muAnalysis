@@ -1086,3 +1086,16 @@ GH32349/552事例至少一导数不达标、2414/9384坐标失败，最大37.427
 唯一9667276.0首次exit0，remote840CPU/856wall秒、worker833.771225CPU秒/263.851563MiB，已计外层890.68CPU秒<1800，部分早期开发/metadata与物理EOS I/O未全计量。65688数值独立复核差0、实际包原数值核逐字闭合；原552缺失状态覆盖未测。4cal当前scalarCPUfloat64 VJP .016753099秒/例，原46575×150仅密度粗外推117041.335CPU秒，不是实测训练成本，不能直接按旧训练预算启动。紧凑20MB实测清单、传输包去重，stage54五项/后缀与K1016/解除旧时限保持。
 
 **下一唯一stage91购买同一score积分的批量CPU/GPU数值保真和执行成本，0fit/新校准/test/ROOT。** 拟议单一分段GL32张量实现，响应split与density/score模型保持，≤40固定cal实际包计时QA后冻结，不扫描GH阶/模型/先验；全552复用本轮已保存参考与同容差，检查移动分点、一阶VJP、float64积分/原float32 head梯度传递。固定batch256/1024测node构造/传输/同步/forward-backward和内存，GPU可用性/成本尚未测。建议QA后≤1Condor/≤2CPU6GB/可用时1GPU、CPU与wall1800秒/20MB；不达标交具体缺口，不放宽门槛/删困难事例。只有实际成本/数值准入后才交一次原posterior150epochs＋原cal单b/T的单次fit合同，旧direct/bounded不重训，本轮不执行。见[请求](../workbook/stage90_energy_ml/followup_input_request.json)。source95、训练轨迹/真正能量收益/完整响应和独立确认未测；历史§1–51及独立支持协议保持。
+
+
+## 53. stage91：准确loss GPU成本已实测，下一信息项是一次同模型重训的完整风险
+
+[stage91报告](../workbook/2026-11-04_stage91_batched-likelihood-gpu.md)用原40train/512cal、原b/T与保存独立参考，完成同一score likelihood的分段GL32 CPU/CUDA float64积分、一阶float32head VJP；0fit/校准优化/网络/test/ROOT。初始response-only分点34/40通过，6值/2坐标失败，均有20σ包络区间；保留失败后在冻结前增加标准化整数包络分点，≤1σ，不换阶数/容差/模型/样本。完整CPU/CUDA×两batch每组552/9384全认证，最大值2.835953694e−12、梯度7.324036932e−10、含参考不确定度/容差.140596798；CPU/GPU及batch闭合。缺失状态及全训练轨迹数值覆盖仍未测。
+
+实际唯一9667300.0 H100 MIG2g.24gb首次exit0，2CPU6GB/1GPU，remote7CPU/27execute-wall秒，workerpeak1671.171875MiB；独立40968项flags/值复核汇总差0。batch256/1024端到端GPU .002574557/.006124270wall秒，较CPU2线程快19.830751/28.795653倍；后者167203.601325记录/秒、torchallocatedpeak425.679688MiB。含节点/传输/同步/VJP，6986250次仅密度外推41.782892秒，**不是完整训练/cal/推断成本**，不以数字精度宣称低能恢复。localT4小QA也实际加速；兼容CUDA构建不含sm70，V100不准入。最终留存/已计外层CPU见storage/resources，物理EOS I/O与部分metadata未测，stage54保留。
+
+**下一唯一stage92购买一次固定原posterior150epochs＋全cal单b/T准确优化和完整准确cal/test风险证据**，不重训缓存direct/bounded，不改split/feature/prior/seed/网络/Adam/joint/epochs。现有89033兼容池按stage87原split重建，missing21/6/5与1016K保留；CPU1线程原float32网络/joint/optimizer，GPU新float64 marginal，跨设备完整梯度先QA。固定40（21train missing＋6cal missing＋原train13）初始/每25epochs独立自适应score检查；所有batch数值finite/tail准入，失败保留身份并停止，不降级GH32/删行/挑checkpoint/自动重训。全cal一次L-BFGS-B原初值/bounds/max100与rawtrainingpriorNLL，最终与Reference完整cal目标闭合1e−6。
+
+QA后上限1GPU任务2CPU6GB/wall5400s/CPU7200s＋2CPU准确推断任务各1CPU3GB/CPU与wall10800s，最多2并发、累计CPU32400s/紧凑20MB；训练后固定≤40cal准确推断实际包计时再确认预算。资源上限参考本轮吞吐/原stage89实际8937CPU秒，不是新训练已测成本；预算不够就保留明确状态，不无限延长或再次fit。
+
+新主结果必须自适应Reference、固定nominal/newbT/median，全cal11612/test13189；与stage89准确旧posterior及传统/direct/bounded原预测做500component-incoming条件配对，原低E/总体/≥200/困难/双向tail和coverage/PIT门槛不变，高端/缺失不能省略。旧CRPS近似不冒称准确；prior stress仅准确CDF命名诊断，不据test选主谱。source95仍未测、研究池非新blind，真实物理收益/response/systematics与独立确认不冒称完成，不自动晋升。stage92尚未执行，详见[合同](../workbook/stage91_energy_ml/followup_input_request.json)；历史§1–52及原stage54/K解除政策保持。

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "Python_syntax_files": [
+    "ml/batched_posterior.py",
+    "ml/audit_batched_posterior.py",
+    "ml/report_batched_posterior.py",
+    "workbook/stage91_energy_ml/startup_initial_source.py"
+  ],
+  "bash_syntax": true,
+  "tables": {
+    "events.tsv": {
+      "rows": 552,
+      "columns": 8
+    },
+    "gradients.tsv": {
+      "rows": 9384,
+      "columns": 11
+    },
+    "numerics.tsv": {
+      "rows": 4,
+      "columns": 16
+    },
+    "partition_geometry.tsv": {
+      "rows": 40,
+      "columns": 6
+    },
+    "role_summary.tsv": {
+      "rows": 8,
+      "columns": 7
+    },
+    "throughput.tsv": {
+      "rows": 2,
+      "columns": 9
+    }
+  },
+  "complete_records": 552,
+  "gradient_coordinates_per_method": 9384,
+  "methods": 4,
+  "coordinate_comparisons": 37536,
+  "independent_flags_and_values": 40968,
+  "original_reference_and_GH32_unchanged": [
+    "ml/differentiable_posterior.py",
+    "ml/posterior_numerics.py",
+    "ml/transfer_posterior.py",
+    "ml/audit_posterior_gradients.py"
+  ],
+  "actual_payload_source_and_protocol_identity": true,
+  "roadmap_and_information_append_only": true,
+  "stage54_suffix_byte_identical": true,
+  "protected_paths_not_modified_or_staged": [
+    "AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub",
+    "AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh",
+    "ml/prepare_tracker_occupancy.py",
+    "ntuples/energy_ml_stage54/",
+    "workbook/stage54_energy_ml/"
+  ],
+  "new_energy_fits": 0,
+  "new_calibration_optimizations": 0,
+  "new_network_forwards": 0,
+  "new_test_evaluations": 0,
+  "no_ROOT_reads": true,
+  "single_job_once_exit0": true,
+  "measured_accounted_CPU_s": 38.489999999999995,
+  "plot_inspected": true,
+  "independent_confirmation": false,
+  "next_stage": "92 proposed; not executed",
+  "strict_JSON_files_parsed": 23
+}

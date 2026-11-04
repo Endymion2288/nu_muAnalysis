@@ -1,0 +1,31 @@
+{
+  "all552_certified": true,
+  "all_VJP_controls": true,
+  "scope": "fixed552 finalhead only; no training trajectory/physics/test confirmation",
+  "cross_device_batch": [
+    {
+      "method": "cpu_256",
+      "max_value_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "method": "cpu_1024",
+      "max_value_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "method": "cuda_256",
+      "max_value_difference": 1.1102230246251565e-15,
+      "max_gradient_difference": 2.1316282072803006e-14
+    },
+    {
+      "method": "cuda_1024",
+      "max_value_difference": 1.1102230246251565e-15,
+      "max_gradient_difference": 2.1316282072803006e-14
+    }
+  ],
+  "deployment": "retain existing deployment",
+  "new_fits": 0,
+  "new_calibration": 0,
+  "new_test_evaluations": 0
+}

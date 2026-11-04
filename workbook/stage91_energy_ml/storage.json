@@ -1,0 +1,238 @@
+{
+  "final_logical_bytes": 2918044,
+  "limit_bytes": 20000000,
+  "within_limit": true,
+  "includes_self": true,
+  "includes_full_modified_docs": true,
+  "excludes": "originalinputs/oldstages and protectedstage54, /tmp staging and AFSspool logs; no leftoverstage91 transferarchives; not physicalEOSstorage/I/O",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1868
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_batched_posterior.sub",
+      "bytes": 779
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_batched_posterior.sh",
+      "bytes": 1221
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "bytes": 159924
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "bytes": 12621
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "bytes": 277768
+    },
+    {
+      "path": "ml/audit_batched_posterior.py",
+      "bytes": 13610
+    },
+    {
+      "path": "ml/batched_posterior.py",
+      "bytes": 6576
+    },
+    {
+      "path": "ml/report_batched_posterior.py",
+      "bytes": 7458
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/cpu_1024.npz",
+      "bytes": 79105
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/cpu_256.npz",
+      "bytes": 79105
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/cuda_1024.npz",
+      "bytes": 79101
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/cuda_256.npz",
+      "bytes": 79101
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/initial_qa_cpu.npz",
+      "bytes": 6450
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/initial_qa_cpu_vjp.npz",
+      "bytes": 2581
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/initial_qa_cuda.npz",
+      "bytes": 6449
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/initial_qa_cuda_vjp.npz",
+      "bytes": 2581
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/input.npz",
+      "bytes": 261589
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/qa_cpu.npz",
+      "bytes": 6428
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/qa_cpu_vjp.npz",
+      "bytes": 2586
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/qa_cuda.npz",
+      "bytes": 6426
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/qa_cuda_vjp.npz",
+      "bytes": 2586
+    },
+    {
+      "path": "ntuples/energy_ml_stage91/qa_input.npz",
+      "bytes": 22015
+    },
+    {
+      "path": "workbook/2026-11-04_stage91_batched-likelihood-gpu.md",
+      "bytes": 14966
+    },
+    {
+      "path": "workbook/stage91_energy_ml/VJP_controls.json",
+      "bytes": 1403
+    },
+    {
+      "path": "workbook/stage91_energy_ml/batched_likelihood.svg",
+      "bytes": 92040
+    },
+    {
+      "path": "workbook/stage91_energy_ml/benchmark.json",
+      "bytes": 3441
+    },
+    {
+      "path": "workbook/stage91_energy_ml/collection.json",
+      "bytes": 627
+    },
+    {
+      "path": "workbook/stage91_energy_ml/condor.txt",
+      "bytes": 2462
+    },
+    {
+      "path": "workbook/stage91_energy_ml/decisions.json",
+      "bytes": 821
+    },
+    {
+      "path": "workbook/stage91_energy_ml/events.tsv",
+      "bytes": 52619
+    },
+    {
+      "path": "workbook/stage91_energy_ml/final_validation.json",
+      "bytes": 1842
+    },
+    {
+      "path": "workbook/stage91_energy_ml/followup_input_request.json",
+      "bytes": 4900
+    },
+    {
+      "path": "workbook/stage91_energy_ml/gradients.tsv",
+      "bytes": 1581383
+    },
+    {
+      "path": "workbook/stage91_energy_ml/history.json",
+      "bytes": 1498
+    },
+    {
+      "path": "workbook/stage91_energy_ml/independent_validation.json",
+      "bytes": 554
+    },
+    {
+      "path": "workbook/stage91_energy_ml/job.time",
+      "bytes": 866
+    },
+    {
+      "path": "workbook/stage91_energy_ml/local_QA_benchmark.json",
+      "bytes": 2021
+    },
+    {
+      "path": "workbook/stage91_energy_ml/numerics.tsv",
+      "bytes": 947
+    },
+    {
+      "path": "workbook/stage91_energy_ml/package_QA.json",
+      "bytes": 144
+    },
+    {
+      "path": "workbook/stage91_energy_ml/partition_diagnosis.json",
+      "bytes": 2147
+    },
+    {
+      "path": "workbook/stage91_energy_ml/partition_geometry.tsv",
+      "bytes": 2569
+    },
+    {
+      "path": "workbook/stage91_energy_ml/protocol.json",
+      "bytes": 3312
+    },
+    {
+      "path": "workbook/stage91_energy_ml/references.json",
+      "bytes": 427
+    },
+    {
+      "path": "workbook/stage91_energy_ml/report_resources.json",
+      "bytes": 97
+    },
+    {
+      "path": "workbook/stage91_energy_ml/resources.json",
+      "bytes": 7760
+    },
+    {
+      "path": "workbook/stage91_energy_ml/role_summary.tsv",
+      "bytes": 616
+    },
+    {
+      "path": "workbook/stage91_energy_ml/source_identity.json",
+      "bytes": 269
+    },
+    {
+      "path": "workbook/stage91_energy_ml/startup_QA.json",
+      "bytes": 3440
+    },
+    {
+      "path": "workbook/stage91_energy_ml/startup_initial_QA.json",
+      "bytes": 3445
+    },
+    {
+      "path": "workbook/stage91_energy_ml/startup_initial_source.py",
+      "bytes": 6155
+    },
+    {
+      "path": "workbook/stage91_energy_ml/storage.json",
+      "bytes": 5651
+    },
+    {
+      "path": "workbook/stage91_energy_ml/submission.json",
+      "bytes": 445
+    },
+    {
+      "path": "workbook/stage91_energy_ml/table_formatting.json",
+      "bytes": 113
+    },
+    {
+      "path": "workbook/stage91_energy_ml/throughput.tsv",
+      "bytes": 675
+    },
+    {
+      "path": "workbook/stage91_energy_ml/transfer_cleanup.json",
+      "bytes": 373
+    },
+    {
+      "path": "workbook/stage91_energy_ml/worker_resources.json",
+      "bytes": 88
+    }
+  ]
+}

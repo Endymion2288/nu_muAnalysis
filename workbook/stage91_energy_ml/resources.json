@@ -1,0 +1,74 @@
+{
+  "remote_CPU_s": 7.0,
+  "remote_execute_wall_s": 27.0,
+  "remote_slot_busy_wall_s": 29,
+  "queue_to_execute_wall_s": 1061,
+  "worker": {
+    "wall_s": 9.18808058200375,
+    "CPU_s": 3.958526316,
+    "peak_RSS_MiB": 1671.171875
+  },
+  "outer": [
+    {
+      "command": "QA",
+      "CPU_s": 5.13,
+      "elapsed_wall": "0:13.94",
+      "peak_RSS_KiB": 1062568,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"bash /tmp/stage91_python.sh ml/audit_batched_posterior.py qa\"\n\tUser time (seconds): 3.21\n\tSystem time (seconds): 1.92\n\tPercent of CPU this job got: 36%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:13.94\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 1062568\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 496\n\tMinor (reclaiming a frame) page faults: 146079\n\tVoluntary context switches: 61840\n\tInvoluntary context switches: 2257\n\tSwaps: 0\n\tFile system inputs: 32\n\tFile system outputs: 8\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "QA_partition_fix",
+      "CPU_s": 5.2,
+      "elapsed_wall": "0:09.90",
+      "peak_RSS_KiB": 1092312,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"bash /tmp/stage91_python.sh ml/audit_batched_posterior.py qa\"\n\tUser time (seconds): 3.21\n\tSystem time (seconds): 1.99\n\tPercent of CPU this job got: 52%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:09.90\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 1092312\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 20\n\tMinor (reclaiming a frame) page faults: 178794\n\tVoluntary context switches: 61380\n\tInvoluntary context switches: 501\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 8\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "local_benchmark",
+      "CPU_s": 4.78,
+      "elapsed_wall": "0:08.24",
+      "peak_RSS_KiB": 1091556,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"bash /tmp/stage91_python.sh -\"\n\tUser time (seconds): 3.00\n\tSystem time (seconds): 1.78\n\tPercent of CPU this job got: 57%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:08.24\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 1091556\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 20\n\tMinor (reclaiming a frame) page faults: 171537\n\tVoluntary context switches: 51821\n\tInvoluntary context switches: 418\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 8\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "submit",
+      "CPU_s": 9.12,
+      "elapsed_wall": "0:41.08",
+      "peak_RSS_KiB": 1070576,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"bash /tmp/stage91_python.sh ml/audit_batched_posterior.py submit\"\n\tUser time (seconds): 6.30\n\tSystem time (seconds): 2.82\n\tPercent of CPU this job got: 22%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:41.08\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 1070576\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 7\n\tMinor (reclaiming a frame) page faults: 207553\n\tVoluntary context switches: 101704\n\tInvoluntary context switches: 1404\n\tSwaps: 0\n\tFile system inputs: 880\n\tFile system outputs: 736\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "geometry",
+      "CPU_s": 1.12,
+      "elapsed_wall": "0:03.26",
+      "peak_RSS_KiB": 58176,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"bash /tmp/stage91_python.sh /tmp/stage91_partition_geometry.py\"\n\tUser time (seconds): 0.58\n\tSystem time (seconds): 0.54\n\tPercent of CPU this job got: 34%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:03.26\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 58176\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 3\n\tMinor (reclaiming a frame) page faults: 38165\n\tVoluntary context switches: 19848\n\tInvoluntary context switches: 54\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "collect",
+      "CPU_s": 0.15000000000000002,
+      "elapsed_wall": "0:00.95",
+      "peak_RSS_KiB": 17920,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"python3 /tmp/stage91_collect.py\"\n\tUser time (seconds): 0.08\n\tSystem time (seconds): 0.07\n\tPercent of CPU this job got: 16%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.95\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 17920\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 7440\n\tVoluntary context switches: 830\n\tInvoluntary context switches: 10\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 632\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    {
+      "command": "report",
+      "CPU_s": 5.99,
+      "elapsed_wall": "0:13.92",
+      "peak_RSS_KiB": 489908,
+      "exit_code": 0,
+      "time_output": "\tCommand being timed: \"bash /tmp/stage91_python.sh ml/report_batched_posterior.py\"\n\tUser time (seconds): 4.58\n\tSystem time (seconds): 1.41\n\tPercent of CPU this job got: 43%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:13.92\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 489908\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 3048\n\tMinor (reclaiming a frame) page faults: 97917\n\tVoluntary context switches: 69270\n\tInvoluntary context switches: 750\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 184\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    }
+  ],
+  "measured_outer_CPU_s": 31.489999999999995,
+  "measured_accounted_CPU_s": 38.489999999999995,
+  "CPU_budget_s": 1800,
+  "scope": "remote and outerusrtime includes startup/subprocesses; internalworker/QA/report timings overlap and are not added; environment/pool/networkreference/staticvalidation/docs/monitoring and closeoutmetadata not fully timed, physicalEOS I/O unmeasured; Condor sampledRSS191MiB understates ownusrtimepeak1671.17MiB",
+  "initial_QA_process_exit0_but_numerically_failed": true
+}

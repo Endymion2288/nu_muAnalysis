@@ -1,0 +1,71 @@
+{
+  "stage": 91,
+  "starting_commit": "3325e31ccfb3475a111852902792a2c73f09ead7",
+  "frozen_utc": "2026-11-04T09:37:54.978799+00:00",
+  "scope": "same552 savedfinal40train/512cal, no fitting/calibration/optimizer/network/newtest/ROOT",
+  "method": "single fixedGL32 per interval; original standardized-s response/mass splits plus all integer normal-envelope anchors within[-L,L], L from original10..16 tail rule; analytic Gaussian score VJP, not solver/node derivative",
+  "startup_correction": "initial response-only partition failed6/40 values,2 coordinates; fixed envelope unit-scale partition before freezing, sameGL32/order/model/tolerances; initialsource and allfailedQA retained, no grid or candidate selection by test",
+  "tolerances": {
+    "absolute_log_density": 1e-06,
+    "gradient_absolute": 0.0001,
+    "gradient_relative": 0.001,
+    "criterion": "abs(error)+stage90reference_uncertainty<=absolute+relative*abs(reference)"
+  },
+  "reference": "saved stage90 independent adaptive/dualstepFD at samehead/row/roles/weights; no recomputation of9384FD",
+  "parameter_points": {
+    "train": {
+      "b": 0.0,
+      "T": 1.0
+    },
+    "cal": {
+      "b": 0.011721733230708156,
+      "T": 1.2001641697078562
+    }
+  },
+  "prior": "raw training-prior marginal, negativejoint-.25marginal, nominal prior not added",
+  "execution": {
+    "backends": [
+      "cpu",
+      "cuda"
+    ],
+    "numerical_batches": [
+      256,
+      1024
+    ],
+    "benchmark_batches": [
+      256,
+      1024
+    ],
+    "benchmark_warmups": 1,
+    "benchmark_repeats": 5,
+    "benchmark_includes": "nodeconstruction,host/device/returntransfers,synchronization,value/scoreintegration,backward; CPU2torchthreads, no network/optimizer",
+    "input_dtype": "originalfloat32 head leaf, internalfloat64, castreturnheadgradient; b/Tfloat64shared"
+  },
+  "local_GPU": {
+    "torch": "2.10.0",
+    "torch_cuda": "12.5",
+    "cuda_available": true,
+    "GPU": "Tesla T4",
+    "CPU_threads": 1,
+    "GPU_properties": "_CudaDeviceProperties(name='Tesla T4', major=7, minor=5, total_memory=14920MB, multi_processor_count=40, uuid=beedd88b-2073-88b9-bab6-1182a5f3d389, pci_bus_id=9, pci_device_id=0, pci_domain_id=0, L2_cache_size=4MB)"
+  },
+  "QA_fixed_cal_N": 40,
+  "QA_passed": true,
+  "QA_max_gradient_difference": 2.7075008901533693e-11,
+  "limits": {
+    "Condor_jobs": 1,
+    "CPUs": 2,
+    "memory_MB": 6000,
+    "GPUs": 1,
+    "MaxRuntime_s": 1800,
+    "worker_CPU_soft_s": 1500,
+    "worker_CPU_hard_s": 1520,
+    "worker_wall_s": 1700,
+    "cumulative_CPU_s": 1800,
+    "retained_bytes": 20000000
+  },
+  "GPU_admission": "torch build sm75/80/86/89/90, no sm70; >=8192MB and T4/A100/H100/H200/L4 family, includes eligibleMIG; no Capability predicate because some pool ads omit it",
+  "unknowns": "full552 precision, actualCondorGPU/speed and entiretrainingtrajectory stability unmeasured before worker; no claim density tail bounds gradient tails or fixedquadrature globally",
+  "stop": "onefullpassperbackend/batch and fixedbenchmarks only, no fit/no promotion/no automatic nextphase; numerical failures preserveallrows and gaps",
+  "protected": "pz0-only firstpower momentum; px/py/q/p/bends allowed;raw11/typedNaN/Calo missing/pz>50/difficultcases/K1016 retained; stage54fivepaths/suffix unchanged; oldKlimits not restored"
+}

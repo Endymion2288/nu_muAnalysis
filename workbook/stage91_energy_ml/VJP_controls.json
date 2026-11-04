@@ -1,0 +1,62 @@
+[
+  {
+    "device": "cpu",
+    "N": 40,
+    "passed": true,
+    "head_leaf_dtype": "torch.float32",
+    "integral_dtype": "torch.float64",
+    "head_exact_cast_difference": 0.0,
+    "shared_b_difference": 0.0,
+    "shared_T_difference": 0.0,
+    "b_gradient": 6.640837860423641,
+    "T_gradient": -1.192165924806994
+  },
+  {
+    "device": "cpu",
+    "passed": true,
+    "recomputed_node_derivative_checks": 34,
+    "max_difference": 5.687755821881524e-12,
+    "rows": [
+      {
+        "row": 5483,
+        "max_difference": 4.1668890560231375e-12,
+        "passed": true
+      },
+      {
+        "row": 5507,
+        "max_difference": 5.687755821881524e-12,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "device": "cuda",
+    "N": 40,
+    "passed": true,
+    "head_leaf_dtype": "torch.float32",
+    "integral_dtype": "torch.float64",
+    "head_exact_cast_difference": 0.0,
+    "shared_b_difference": 0.0,
+    "shared_T_difference": 0.0,
+    "b_gradient": 6.6408378604236376,
+    "T_gradient": -1.192165924806994
+  },
+  {
+    "device": "cuda",
+    "passed": true,
+    "recomputed_node_derivative_checks": 34,
+    "max_difference": 6.069034164113418e-12,
+    "rows": [
+      {
+        "row": 5483,
+        "max_difference": 6.069034164113418e-12,
+        "passed": true
+      },
+      {
+        "row": 5507,
+        "max_difference": 6.022016219020543e-12,
+        "passed": true
+      }
+    ]
+  }
+]

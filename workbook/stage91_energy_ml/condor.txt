@@ -1,0 +1,47 @@
+000 (9667300.000.000) 11/04 10:38:36 Job submitted from host: <188.185.125.71:9618?addrs=188.185.125.71-9618+[2001-1458-d00-4a--100-15e]-9618&alias=bigbird28.cern.ch&noUDP&sock=schedd_2223555_5c71>
+...
+040 (9667300.000.000) 11/04 10:56:16 Started transferring input files
+	Transferring to host: <188.185.190.15:9618?addrs=188.185.190.15-9618+[2001-1458-d03-b--100-66]-9618&alias=b9pgpun208.cern.ch&noUDP&sock=slot1_1_9753_9ee6_654>
+...
+040 (9667300.000.000) 11/04 10:56:17 Finished transferring input files
+...
+001 (9667300.000.000) 11/04 10:56:17 Job executing on host: <188.185.190.15:9618?addrs=188.185.190.15-9618+[2001-1458-d03-b--100-66]-9618&alias=b9pgpun208.cern.ch&noUDP&sock=startd_8981_cc26>
+	SlotName: slot1_1@b9pgpun208.cern.ch
+	AvailableGPUs = { GPUs_MIG_87497330_41dc_5419_a8ef_05edd9e94345 }
+	CondorScratchDir = "/pool/condor/dir_198071"
+	Cpus = 2
+	Disk = 308224
+	GPUs = 1
+	GPUs_MIG_87497330_41dc_5419_a8ef_05edd9e94345 = [ Id = "MIG-87497330-41dc-5419-a8ef-05edd9e94345"; DeviceName = "NVIDIA H100L-2-24C MIG 2g.24gb"; DeviceUuid = "MIG-87497330-41dc-5419-a8ef-05edd9e94345"; ComputeUnits = 32; GlobalMemoryMb = 21547 ]
+	Memory = 6000
+...
+006 (9667300.000.000) 11/04 10:56:26 Image size of job updated: 194596
+	191  -  MemoryUsage of job (MB)
+	194596  -  ResidentSetSize of job (KB)
+...
+006 (9667300.000.000) 11/04 10:56:44 Image size of job updated: 765852
+	191  -  MemoryUsage of job (MB)
+	194600  -  ResidentSetSize of job (KB)
+...
+040 (9667300.000.000) 11/04 10:56:44 Started transferring output files
+...
+040 (9667300.000.000) 11/04 10:56:44 Finished transferring output files
+...
+005 (9667300.000.000) 11/04 10:56:44 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:04, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:04, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	4378  -  Run Bytes Sent By Job
+	294202  -  Run Bytes Received By Job
+	4378  -  Total Bytes Sent By Job
+	294202  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :        0        2         2
+	   Disk (KB)            :      621   307200    308224
+	   GPUs                 :                 1         1 "MIG-87497330-41dc-5419-a8ef-05edd9e94345"
+	   Memory (MB)          :      191     6000      6000
+	   TimeExecute (s)      :       27
+	   TimeSlotBusy (s)     :       29
+...

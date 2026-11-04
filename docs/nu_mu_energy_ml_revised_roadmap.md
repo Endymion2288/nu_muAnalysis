@@ -1972,3 +1972,20 @@ train40的−joint−.25marginal对head输出梯度差L2 median/p95 .000697047/2
 唯一Condor9667276.0首次exit0/无重试，1CPU3000MB1800s，remote840CPU/856wall秒；worker833.771225CPU秒/263.851563MiB。score被积函数392133、参考25551477次，完整独立保存数组65688数值/全部身份与flags复核最大差0；原数值核心/GH32与起点不变、实际包逐字核对。含已计外层890.68CPU秒<1800，首个float32开发失败及metadata等未全计量、物理EOS I/O未测；两前置失败已如实说明。四cal两次forward/backward测当前scalar .016753099CPU秒/例，对原46575×150粗外推仅密度117041.335CPU秒（32.511482h），非实测训练或上界；CPUfloat64接口不能直接代替原float32网络。紧凑≤20MB见storage.json、包去重、原stage54五项和后缀不改。
 
 **继续既有部署；唯一下一stage91为同一score loss批量CPU/GPU实现、数值保真和训练成本认证，0fit/校准优化/新test。** 拟议单一分段Gauss–Legendre32张量求积沿用响应split/尾界/模型，先≤40固定cal实际包QA，再冻结实现/资源；不是GH节点/架构/先验网格。复用本552独立参考，不重算9384差分；同容差全量值/梯度认证、float64积分与原float32网络导数桥接、非均匀VJP/sharedbT/移动分点导数检查。固定batch256/1024测CPU及可用GPU的完整node构造/传输/同步/forward-backward与peak，当前CUDA可用性/成本未测。QA后建议≤1Condor/≤2CPU6GB/可用时1GPU、CPU与wall1800秒/紧凑20MB；数值不达标不能删事件/降容差/无界扫阶。验收可实际执行的一次原posterior150epochs＋原cal一个b/T优化合同，direct/bounded旧基线不重训，资源未准入不提前fit。本轮未执行stage91，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[输入请求](../workbook/stage90_energy_ml/followup_input_request.json)。真实响应、interaction/FSI/材料/Calo/接受度/背景、source95与独立确认仍未认证，历史§1–71及独立支持协议不改。
+
+
+## 73. stage91：批量CPU/GPU准确loss全部通过，GPU实际可用；下一次固定重训准入
+
+[stage91实际报告](../workbook/2026-11-04_stage91_batched-likelihood-gpu.md)完成同一standardized-s解析score密度的一种分段GL32张量实现，0fit/校准优化/optimizer/网络forward/新test/ROOT。原40train＋512cal身份/head/权重、trainb0/T1与cal原b/T、raw training-prior marginal/−joint−.25marginal均不变。原pz0-only一次方动量/允许px-py-q/p-弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50/困难侧、全部1016K保留，不恢复旧K生产时限。
+
+初始response-only分点仅34/40QA认证，6条值/2坐标失败，最大值8.036210433e−5、梯度.004571326903；CPU/CUDA一致，6失败均有跨高斯中心20σ区间。冻结前保留原失败代码/数组，按高斯标准化单位尺度加入整数包络分点，区间≤1σ，仍同GL32/响应质量边界/10–16σ尾规则，无阶数/模型/先验网格或降容差。修正40QA和实际包通过后冻结；首2QA移动分点34坐标双步检查最大6.069034164e−12，float32head→float64积分→float32 VJP及共享b/T/非均匀upstream通过。
+
+唯一Condor9667300.0首次exit0/无重试，实际2CPU6GB/1 **H100 MIG 2g.24gb**。CPU/CUDA×batch256/1024四组每组**552/552、9384/9384坐标**全通过：最大值差2.835953694e−12、梯度差7.324036932e−10，含参考不确定度/容差最大.140596798；CPU/CUDA值/梯度差≤1.110223025e−15/2.131628207e−14，两batch差0。独立保存数组40968项flags/值复核，汇总差0；不是全训练轨迹数学保证，原552无missing/wave/Calo-invalid，其数值覆盖仍未测。
+
+正式1warmup＋5重复中位端到端CPU2线程/GPU batch256为.051055399/.002574557wall秒（19.830751倍），1024为.176352353/.006124270秒（**28.795653倍，167203.601325记录/秒**），含节点构造/输入返回传输/同步/forward-backward。GPU allocated peak104.706543/425.679688MiB，非context/物理峰；本地40QA T4也较CPU1线程快6.93倍。6986250次事件仅GPU密度/VJP外推41.782892秒，不含网络/joint/Adam/cal/CDF推断或排队，非完整训练成本/上界。remote7CPU/27execute-wall秒、slotbusy29秒，worker3.958526CPU秒/9.188081wall秒/1671.171875MiB；含启动/usrtime4.40user＋2.67sys，不能重复相加，外层详见resources.json。密度尾界不认证score尾或全域GL误差；紧凑≤20MB按storage.json，原数值核与正式包逐字一致、重复包去重、stage54五项/后缀只读保留。
+
+**继续既有部署；唯一下一stage92为一次原posterior从头150epochs＋原完整cal单次b/T优化，并完整准确cal/test配对评价。** 无新样本前置，不重训direct/bounded。按原stage87 split重建现有89033兼容缓存，46575/11612/13189角色、17657隔离、key/weight、41特征/train-only归一化及missing21/6/5全部闭合；不覆盖stage87。CPU1线程保留原float32网络/joint/Adam初始化、seed2026110387、numpy permutation、lr.001/batch1024/150epochs/clip10，GPU执行已认证float64 marginal，一阶跨设备返回float32；原float32监督张量保持，无AMP/TF32/warmstart/earlystop/seed扫描。全cal唯一L-BFGS-B(0,1)、原bounds/maxiter100和raw NLL，记录成功/梯度，禁止多起点/test校准。
+
+QA固定40＝全部21train missing＋6cal missing＋原stage90train前13（去重按固定顺序补足），0optimizer核完整网络VJP；初始/每25epochs与未改stage90自适应score同门槛核值/head导数，所有batch finite/tail准入。失败保存row/head并停，不删事件/回退GH32/选中途checkpoint/自动重训。小包QA后资源上限≤1GPU Condor2CPU6GB/wall5400s/CPU7200s，另≤2完整准确推断CPU Condor各1CPU3GB/CPU与wall10800s、并发≤2，阶段含QA/报告CPU32400s/最终20MB；是上限不是实测保证。训练后≤40固定cal实际准确推断计时再准入CPU任务；参考原stage89两任务8937CPU秒，不无限延长。
+
+主推断必须原stage88/89自适应Reference/newbT/原nominal median，全cal11612/test13189含缺失/高端/困难侧；不能用未修正GH32宣布新模型收益。复用旧同split传统/direct/bounded及stage89准确旧后验，交原两低E1.05/all1.01/≥200和低pz等困难1.03/七层双向tail+2pp、68/90coverage/PIT/十箱可靠性/NLL/宽度/ESS与500component内incoming条件配对区间。CRPS16×32旧近似只作命名诊断，准确CRPS未认证；prior stress用准确CDF、不可按test选谱。每角色3块/source95不可估、研究池test非新blind，不自动晋升。物理收益/训练全轨迹/完整cal准确最优/真实response与interaction/FSI/材料/Calo/接受度/背景和独立确认均未测。stage92尚未执行，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[合同](../workbook/stage91_energy_ml/followup_input_request.json)；历史§1–72及独立支持协议保持。

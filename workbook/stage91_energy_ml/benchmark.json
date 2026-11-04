@@ -1,0 +1,110 @@
+{
+  "environment": {
+    "torch": "2.10.0",
+    "torch_cuda": "12.5",
+    "cuda_available": true,
+    "GPU": "NVIDIA H100L-2-24C MIG 2g.24gb",
+    "CPU_threads": 2,
+    "GPU_properties": "_CudaDeviceProperties(name='NVIDIA H100L-2-24C MIG 2g.24gb', major=9, minor=0, total_memory=24362MB, multi_processor_count=32, uuid=ab75d184-d799-11f1-8371-98eb8d3cfbf1, pci_bus_id=6, pci_device_id=0, pci_domain_id=0, L2_cache_size=60MB)"
+  },
+  "measurements": [
+    {
+      "device": "cpu",
+      "batch": 256,
+      "repeats": 5,
+      "warmup_repeats": 1,
+      "wall_s": [
+        0.04997196400654502,
+        0.05236326000158442,
+        0.051954615002614446,
+        0.05058080200251425,
+        0.05105539900250733
+      ],
+      "CPU_s": [
+        0.09845489300000043,
+        0.10458957099999999,
+        0.10313819400000046,
+        0.09937495200000068,
+        0.10060001699999965
+      ],
+      "median_wall_s": 0.05105539900250733,
+      "median_events_per_wall_s": 5014.161185723528,
+      "GPU_peak_allocated_MiB": 0,
+      "scope": "includes node construction/transfer/sync/forward/backward/output transfer; fixed repeatedcal heads only, no network or optimizer"
+    },
+    {
+      "device": "cpu",
+      "batch": 1024,
+      "repeats": 5,
+      "warmup_repeats": 1,
+      "wall_s": [
+        0.17750525600422407,
+        0.16983117799827596,
+        0.176352353002585,
+        0.1762558819973492,
+        0.17693738199886866
+      ],
+      "CPU_s": [
+        0.3515946769999996,
+        0.3370886259999999,
+        0.35100021900000034,
+        0.3497747870000003,
+        0.35127619400000043
+      ],
+      "median_wall_s": 0.176352353002585,
+      "median_events_per_wall_s": 5806.5570578748675,
+      "GPU_peak_allocated_MiB": 0,
+      "scope": "includes node construction/transfer/sync/forward/backward/output transfer; fixed repeatedcal heads only, no network or optimizer"
+    },
+    {
+      "device": "cuda",
+      "batch": 256,
+      "repeats": 5,
+      "warmup_repeats": 1,
+      "wall_s": [
+        0.003062217998376582,
+        0.002702569996472448,
+        0.002574557001935318,
+        0.002548937001847662,
+        0.002570898002886679
+      ],
+      "CPU_s": [
+        0.002812243999999353,
+        0.0024547259999998516,
+        0.0024897560000001207,
+        0.0023119359999999034,
+        0.0023305090000000916
+      ],
+      "median_wall_s": 0.002574557001935318,
+      "median_events_per_wall_s": 99434.58226310874,
+      "GPU_peak_allocated_MiB": 104.70654296875,
+      "scope": "includes node construction/transfer/sync/forward/backward/output transfer; fixed repeatedcal heads only, no network or optimizer"
+    },
+    {
+      "device": "cuda",
+      "batch": 1024,
+      "repeats": 5,
+      "warmup_repeats": 1,
+      "wall_s": [
+        0.006135448995337356,
+        0.0061251229999470524,
+        0.00607999500061851,
+        0.006124270003056154,
+        0.006121669001004193
+      ],
+      "CPU_s": [
+        0.005801604000000182,
+        0.005584605999999326,
+        0.005389212999999948,
+        0.0053359600000000285,
+        0.005207361000000077
+      ],
+      "median_wall_s": 0.006124270003056154,
+      "median_events_per_wall_s": 167203.60132538248,
+      "GPU_peak_allocated_MiB": 425.6796875,
+      "scope": "includes node construction/transfer/sync/forward/backward/output transfer; fixed repeatedcal heads only, no network or optimizer"
+    }
+  ],
+  "new_fits": 0,
+  "new_test_evaluations": 0
+}

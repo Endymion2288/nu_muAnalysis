@@ -1,0 +1,56 @@
+{
+  "scope": "partition geometry from saved40cal heads only; zero new integrations or point/order scans",
+  "initial_failed_rows": [
+    {
+      "row": 5507,
+      "initial_value_error": 8.167751192722505e-06,
+      "initial_certified": false,
+      "response_only_max_interval_sigma": 20.0,
+      "response_only_max_interval_touching_central6sigma": 20.0,
+      "fixed_envelope_max_interval_sigma": 1.0
+    },
+    {
+      "row": 5558,
+      "initial_value_error": 4.657322654677554e-05,
+      "initial_certified": false,
+      "response_only_max_interval_sigma": 20.0,
+      "response_only_max_interval_touching_central6sigma": 20.0,
+      "fixed_envelope_max_interval_sigma": 1.0
+    },
+    {
+      "row": 5581,
+      "initial_value_error": 1.9102513146740385e-05,
+      "initial_certified": false,
+      "response_only_max_interval_sigma": 20.0,
+      "response_only_max_interval_touching_central6sigma": 20.0,
+      "fixed_envelope_max_interval_sigma": 1.0
+    },
+    {
+      "row": 5709,
+      "initial_value_error": 1.5860877948525864e-06,
+      "initial_certified": false,
+      "response_only_max_interval_sigma": 20.0,
+      "response_only_max_interval_touching_central6sigma": 20.0,
+      "fixed_envelope_max_interval_sigma": 1.0
+    },
+    {
+      "row": 6587,
+      "initial_value_error": 8.036210432882385e-05,
+      "initial_certified": false,
+      "response_only_max_interval_sigma": 20.0,
+      "response_only_max_interval_touching_central6sigma": 20.0,
+      "fixed_envelope_max_interval_sigma": 1.0
+    },
+    {
+      "row": 7727,
+      "initial_value_error": 4.692117550331165e-06,
+      "initial_certified": false,
+      "response_only_max_interval_sigma": 20.0,
+      "response_only_max_interval_touching_central6sigma": 20.0,
+      "fixed_envelope_max_interval_sigma": 1.0
+    }
+  ],
+  "max_response_only_interval_sigma": 20.0,
+  "fixed_envelope_max_interval_sigma": 1.0,
+  "interpretation": "large standardized-normal envelope intervals existed under response-only geometry; fixed integer anchors bound every interval width by1 while retaining response/mass points; no claim this alone gives global quadrature guarantee"
+}

@@ -1,0 +1,121 @@
+{
+  "passed": false,
+  "environment": {
+    "torch": "2.10.0",
+    "torch_cuda": "12.5",
+    "cuda_available": true,
+    "GPU": "Tesla T4",
+    "CPU_threads": 1,
+    "GPU_properties": "_CudaDeviceProperties(name='Tesla T4', major=7, minor=5, total_memory=14920MB, multi_processor_count=40, uuid=beedd88b-2073-88b9-bab6-1182a5f3d389, pci_bus_id=9, pci_device_id=0, pci_domain_id=0, L2_cache_size=4MB)"
+  },
+  "fixed_cal_N": 40,
+  "numerics": [
+    {
+      "device": "cpu",
+      "N": 40,
+      "batch": 256,
+      "certified_N": 34,
+      "failed_values_N": 6,
+      "failed_coordinates_N": 2,
+      "max_value_error": 8.036210432882385e-05,
+      "max_gradient_error": 0.004571326902567563,
+      "max_gradient_error_plus_uncertainty_over_tolerance": 1.9725432147841362,
+      "max_density_tail_bound": 1.0093132678272505e-22,
+      "intervals_min": 10,
+      "intervals_max": 16,
+      "GPU_peak_allocated_MiB": 0,
+      "wall_s": 0.25191831728443503,
+      "CPU_s": 0.020645283000000347,
+      "peak_RSS_MiB": 428.0703125
+    },
+    {
+      "device": "cuda",
+      "N": 40,
+      "batch": 256,
+      "certified_N": 34,
+      "failed_values_N": 6,
+      "failed_coordinates_N": 2,
+      "max_value_error": 8.036210432882385e-05,
+      "max_gradient_error": 0.004571326902572892,
+      "max_gradient_error_plus_uncertainty_over_tolerance": 1.9725432147841362,
+      "max_density_tail_bound": 1.0093132678272505e-22,
+      "intervals_min": 10,
+      "intervals_max": 16,
+      "GPU_peak_allocated_MiB": 3.55224609375,
+      "wall_s": 4.197840086184442,
+      "CPU_s": 0.5515534689999999,
+      "peak_RSS_MiB": 992.76171875
+    }
+  ],
+  "controls": [
+    {
+      "device": "cpu",
+      "N": 40,
+      "passed": false,
+      "head_leaf_dtype": "torch.float32",
+      "integral_dtype": "torch.float64",
+      "head_exact_cast_difference": 0.0,
+      "shared_b_difference": 0.0,
+      "shared_T_difference": 0.0,
+      "b_gradient": 6.643169818436835,
+      "T_gradient": -1.1922297242669557
+    },
+    {
+      "device": "cpu",
+      "passed": false,
+      "recomputed_node_derivative_checks": 34,
+      "max_difference": 0.0007215147988924031,
+      "rows": [
+        {
+          "row": 5483,
+          "max_difference": 6.373618750679845e-11,
+          "passed": true
+        },
+        {
+          "row": 5507,
+          "max_difference": 0.0007215147988924031,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "device": "cuda",
+      "N": 40,
+      "passed": false,
+      "head_leaf_dtype": "torch.float32",
+      "integral_dtype": "torch.float64",
+      "head_exact_cast_difference": 0.0,
+      "shared_b_difference": 0.0,
+      "shared_T_difference": 0.0,
+      "b_gradient": 6.643169818436849,
+      "T_gradient": -1.1922297242669557
+    },
+    {
+      "device": "cuda",
+      "passed": false,
+      "recomputed_node_derivative_checks": 34,
+      "max_difference": 0.0007215147959316881,
+      "rows": [
+        {
+          "row": 5483,
+          "max_difference": 6.632670790041392e-11,
+          "passed": true
+        },
+        {
+          "row": 5507,
+          "max_difference": 0.0007215147959316881,
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "CPU_GPU": {
+    "max_value_difference": 9.992007221626409e-16,
+    "max_gradient_difference": 8.881784197001252e-15
+  },
+  "new_fits": 0,
+  "new_test_evaluations": 0,
+  "wall_s": 4.737735876813531,
+  "CPU_s": 0.8002417589999999,
+  "peak_RSS_MiB": 1009.41796875
+}

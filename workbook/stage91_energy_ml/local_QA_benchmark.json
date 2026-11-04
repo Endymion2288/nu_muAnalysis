@@ -1,0 +1,63 @@
+{
+  "environment": {
+    "torch": "2.10.0",
+    "torch_cuda": "12.5",
+    "cuda_available": true,
+    "GPU": "Tesla T4",
+    "CPU_threads": 1,
+    "GPU_properties": "_CudaDeviceProperties(name='Tesla T4', major=7, minor=5, total_memory=14920MB, multi_processor_count=40, uuid=beedd88b-2073-88b9-bab6-1182a5f3d389, pci_bus_id=9, pci_device_id=0, pci_domain_id=0, L2_cache_size=4MB)"
+  },
+  "measurements": [
+    {
+      "device": "cpu",
+      "batch": 40,
+      "repeats": 5,
+      "warmup_repeats": 1,
+      "wall_s": [
+        0.029047805815935135,
+        0.01971701579168439,
+        0.032244748901575804,
+        0.03049163892865181,
+        0.029709429945796728
+      ],
+      "CPU_s": [
+        0.02868617699999998,
+        0.01944707800000023,
+        0.03189224700000004,
+        0.030091326999999612,
+        0.029379860000000146
+      ],
+      "median_wall_s": 0.029709429945796728,
+      "median_events_per_wall_s": 1346.3738642235098,
+      "GPU_peak_allocated_MiB": 0,
+      "scope": "includes node construction/transfer/sync/forward/backward/output transfer; fixed repeatedcal heads only, no network or optimizer"
+    },
+    {
+      "device": "cuda",
+      "batch": 40,
+      "repeats": 5,
+      "warmup_repeats": 1,
+      "wall_s": [
+        0.005340546369552612,
+        0.004442926961928606,
+        0.004195899702608585,
+        0.004198840819299221,
+        0.004284904804080725
+      ],
+      "CPU_s": [
+        0.005289424999999959,
+        0.004391779000000096,
+        0.004153336999999979,
+        0.004158767000000285,
+        0.004237212999999684
+      ],
+      "median_wall_s": 0.004284904804080725,
+      "median_events_per_wall_s": 9335.096537478741,
+      "GPU_peak_allocated_MiB": 16.36962890625,
+      "scope": "includes node construction/transfer/sync/forward/backward/output transfer; fixed repeatedcal heads only, no network or optimizer"
+    }
+  ],
+  "unique_fixed_cal_N": 40,
+  "scope": "small QA only, full552 and requested256/1024 benchmarks reserved for Condor",
+  "new_fits": 0
+}
