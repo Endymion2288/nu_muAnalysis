@@ -2214,3 +2214,14 @@ stage99唯一T有概率增量、点不变；stage102同轨迹P65/N50主cal_post 
 **按退出条件结束固定q两参数动作族，不加权重/局部温度/专家或重训。** 结果支持某种单层决策改进及真实风险取舍，不支持共同恢复、全局最优或信息界。cal_post仅对本次λ选择留出，旧T已用过它；source/refit/参数估计/研究选择/真实response与未开发确认仍缺。原1.05/1.01/1.03和八层三向tail+2pp不改。
 
 下一最小stage105如被后续路线调用，仅Stage103另冻探索分支的有界可行性QA与三格合同：原Stage95固定train/cal身份/精确PHYS及Stage19读取器，batch≤40核逐面SP坐标/单位/无截断/缺源/局部邻接成本，0test/能量fit；交A逐面mean/B局部跨层/C同B加train-only遮挡任务的实际输入、完整角色保留、资源和匹配验收合同。几何邻边不是真实ID，不把旧REC缺失设为绝对前置；不能交付则列精确缺口，不续无新线索metadata扫描。不自动全量提取或三格训练，收益/规模/成本未测，本轮未执行；见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–85/全部K与原政策保持，真实ID/TSOS/SP组成/covariance/有效读出和interaction/FSI/材料/Calo/接受度/背景另保留。
+
+
+## 87. stage105：完整点几何与遮挡隔离通过；冻结一次性三格，尚无能量收益证据
+
+[stage105实际报告](../workbook/2026-11-05_stage105_point-relation-feasibility.md)执行§86的有界可行性，不训练/预训练/读test或全量提取。原Stage95 qa40incoming/24source不换人，37原可读均成功，70:0一条pi和82:2两条K已删PHYS保留分母。7branch/run-event/leading pz0与点数对齐，pz差0GeV；5718全点/56822有向边，单事件max1117点/11856边，无截断去重、0未映射、名义层z残差max6.400048828mm、float32损失0mm（仅此QA）。同站相邻层双向XY k8近邻，E≤16N，不跨磁铁；独立近邻距离差0mm、37事件排序完全一致。隐藏面先去除再构图，原62标量/总数/隐藏矩不入预训练；隐藏XY/点数改动后可见输入完全不变，36非空/1空目标、257格计数守恒、0overflow。不是有效readout、纯noise、真实粒子ID/ghost或response核验，完整空事件/真实sentinel/overflow发生率未测。
+
+唯一Condor9667789首start/exit0、4CPU申请6GB站点12GB、线程1/0GPU；pilot4身份1.823183CPU/2.924049wall秒和301738接口bytes后准入，完整外层17.35CPU/15.16wall秒，峰135212KiB，接口请求3823241/底层read3569873bytes。未测物理EOS流量/单核加速比；不把内外层时间重复相加。源CPU含暴力核验，不能直接认证完整提取或GPU预算。紧凑证据/输入包字节核验/去重见storage，全部Stage54资产与后缀保持。
+
+**唯一下一stage106按[冻结合同](../workbook/stage105_energy_ml/experiment_contract.json)恰3能量fit+1预训练，不扫seed/深宽。** A=共同audited62＋完整点逐面mean独立编码，B=真实同站邻层消息，C=同B并先train-only遮挡面Poisson257格计数任务20epoch；主C/A，B解释，不拿弱A胜出替代强Stage87 direct62。10→32→32点、68→32→32消息/64→32→32残差两共享轮，12面mean384＋meta26＋标量127→64→64→1；A消息只读固定零向量，B/C相同架构。原角色46575/11612/13189、incoming/原cal_select/post/全部1016K/缺标量/typed负值/pz>50GeV和pz0-only保持。原历史70332可读/1044缺PHYS按角色345/343/356，未来显式标量fallback+geometry_missing保留，不称本轮全池SP测量。
+
+先相同40train/cal做0optimizer的正常提取/CPU-GPU接线与微批成本QA；有效batch256、无截断ragged/微批16384node或262144edge、超大单事件不fit就停。单seed2026110506，各最多200epoch、每5epoch cal_select logMSE选/耐心30，原cal_post单offset，raw/offset均交；三个checkpoint/offset冻结后才提取test坐标。拟CPU21600秒、1GPU并发/累计任务wall7200秒、临时坐标≤512MB/最终20MB；实测factor3保守投影和真实显存准入，不通过不训练、不增加预算/丢困难者。主cal_post两低能C/A最大RMSE比上95<1；原完整八层/三向tail、1.05/1.01/1.03和全部层相对direct的tail差上95≤2pp不变。模型收益/全量成本/系统效应未测，开发test/source/refit/研究选择限制保持；下一Prompt只在后续调用执行，不自动stage106。

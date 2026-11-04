@@ -1,0 +1,116 @@
+{
+  "limit_bytes": 20000000,
+  "files": [
+    {
+      "path": "ml/stage105_point_feasibility.py",
+      "logical_bytes": 17058
+    },
+    {
+      "path": "ml/package_stage105.py",
+      "logical_bytes": 3070
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage105.sh",
+      "logical_bytes": 823
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage105.sub",
+      "logical_bytes": 677
+    },
+    {
+      "path": "workbook/2026-11-05_stage105_point-relation-feasibility.md",
+      "logical_bytes": 19329
+    },
+    {
+      "path": "workbook/stage105_energy_ml/admission.json",
+      "logical_bytes": 564
+    },
+    {
+      "path": "workbook/stage105_energy_ml/complete.json",
+      "logical_bytes": 1022
+    },
+    {
+      "path": "workbook/stage105_energy_ml/condor_history.json",
+      "logical_bytes": 480
+    },
+    {
+      "path": "workbook/stage105_energy_ml/events.tsv",
+      "logical_bytes": 7634
+    },
+    {
+      "path": "workbook/stage105_energy_ml/experiment_contract.json",
+      "logical_bytes": 13098
+    },
+    {
+      "path": "workbook/stage105_energy_ml/graph_cost.svg",
+      "logical_bytes": 38111
+    },
+    {
+      "path": "workbook/stage105_energy_ml/identities.json",
+      "logical_bytes": 18074
+    },
+    {
+      "path": "workbook/stage105_energy_ml/packaging_validation.json",
+      "logical_bytes": 230
+    },
+    {
+      "path": "workbook/stage105_energy_ml/planes.tsv",
+      "logical_bytes": 21820
+    },
+    {
+      "path": "workbook/stage105_energy_ml/protocol.json",
+      "logical_bytes": 3115
+    },
+    {
+      "path": "workbook/stage105_energy_ml/schema.tsv",
+      "logical_bytes": 5703
+    },
+    {
+      "path": "workbook/stage105_energy_ml/source_performance.tsv",
+      "logical_bytes": 2000
+    },
+    {
+      "path": "workbook/stage105_energy_ml/time.txt",
+      "logical_bytes": 813
+    },
+    {
+      "path": "workbook/stage105_energy_ml/validation.json",
+      "logical_bytes": 787
+    }
+  ],
+  "retained_logical_bytes_excluding_this_manifest": 154408,
+  "spool_files": [
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage105/worker.sh",
+      "logical_bytes": 823
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage105/logs/9667789.0.log",
+      "logical_bytes": 2149
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage105/logs/9667789.0.out",
+      "logical_bytes": 1958
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage105/logs/9667789.0.err",
+      "logical_bytes": 0
+    }
+  ],
+  "spool_bytes": 4930,
+  "removed_transport": [
+    {
+      "path": "software/energy-ml-stage105.tar.gz",
+      "logical_bytes": 11024
+    },
+    {
+      "path": "ntuples/energy_ml_stage105/result.tar.gz",
+      "logical_bytes": 20753
+    }
+  ],
+  "no_point_cloud_retained": true,
+  "physical_allocated_storage_unmeasured": true,
+  "this_manifest_bytes": 3000,
+  "stage_and_spool_bytes": 162338,
+  "passed": true
+}

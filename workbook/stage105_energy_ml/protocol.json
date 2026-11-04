@@ -1,0 +1,75 @@
+{
+  "stage": 105,
+  "scope": "Fixed original Stage95 QA identities; geometry feasibility only; 0 fit/pretraining/test payload/full extraction",
+  "geometry": {
+    "station_centers_mm": [
+      -1860.15,
+      47.4,
+      1237.4,
+      2427.4
+    ],
+    "layer_offsets_mm": [
+      -31.5,
+      0,
+      31.5
+    ],
+    "maximum_layer_distance_mm": 10,
+    "reference": "ml/configs/spatial.yaml; FASERNU-04 SCTTopLevel-02; verify observed z residuals"
+  },
+  "limits": {
+    "condor_jobs": 1,
+    "cpus": 4,
+    "requested_memory_MB": 6000,
+    "inner_threads": 1,
+    "CPU_s": 900,
+    "wall_s": 900,
+    "input_requested_bytes": 1000000000,
+    "final_bytes": 20000000,
+    "parent_CPU_hard_s": 180,
+    "each_child_CPU_hard_s": 170,
+    "payload_timeout_s": 850
+  },
+  "identities": {
+    "reference": "Stage95 cohort.qa exact 40, entries from QA_events.tsv",
+    "N": 40,
+    "sources": 24,
+    "historically_readable": 37,
+    "historically_unavailable": 3,
+    "replacement": false,
+    "test": false
+  },
+  "branches": [
+    "run",
+    "eventID",
+    "SpacePoints",
+    "SpacePoint_x",
+    "SpacePoint_y",
+    "SpacePoint_z",
+    "Track_pz0"
+  ],
+  "point_policy": "All points retained without deduplication/truncation. Signed x/y=-1/-999 not blindly removed. Nonfinite, all xyz=-999, abs coordinate=999999 or unsupported z flagged; no graph silently dropping them.",
+  "edge_policy": {
+    "k": 8,
+    "distance": "XY Euclidean mm",
+    "neighbors": "directed both ways between adjacent nominal layers within each station only",
+    "bound": "E<=16N",
+    "cross_station": false,
+    "truth_association": false
+  },
+  "mask_QA": {
+    "hidden_plane": "3 + original row % 9; all nine nominal downstream planes allowed including empty observed collections",
+    "target": "257 observed-count bins: 16x16 XY cells of 25 mm on [-200,200)^2, plus overflow",
+    "visible_input": "Visible coordinates/plane identities/edges/counts only; none of the original62 scalars, total point count, hidden count/moments or labels",
+    "probe": "Alter hidden XY and append two hidden points; visible inputs must be byte-exact unchanged"
+  },
+  "admission": "Pilot first source with path, original QA entries only; conservative CPU/wall factor5 +30s, bytes factor3; fixed40 expansion only if below caps. Shared pre-read byte cap and CPU hard caps apply.",
+  "acceptance": [
+    "37/40 original identities readable, all 40 accounted for; no new unexplained missing source",
+    "7 branches align; exact run/event and |delta leading pz0|<0.0002GeV",
+    "Every readable original point finite and mapped within10mm; no points truncated",
+    "Every edge station/adjacent-plane valid and nearest-distance brute-force max error<1e-10mm",
+    "Permutation exact; masked coordinates/count perturbation leaves visible input exact; target sum exact",
+    "Measured costs within stated caps; complete summary required"
+  ],
+  "physics_limit": "Observed SpacePoint collection counts, not active-strip efficiency, pure noise, unique particles, or track association. True geometry conditions/readout/TSOS/covariance remain unverified."
+}

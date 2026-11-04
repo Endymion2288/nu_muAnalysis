@@ -1262,3 +1262,16 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 40cal含6missing QA、1260旧标量max1.421085e−14、主区间独立差7.771561e−16及32最终区间差3.330669e−15均通过。唯一Condor9667779首start/exit0，4CPU原6GB实际12GB、4process/线程1/0GPU；外层11.51CPU/9.14wall秒<900，单核加速比/物理EOS流量/全会话开销未测。核字节去重包、只保留三列点表与紧凑证据≤20MB见storage。用户授权home清理：69旧spool/21072432逻辑bytes删除，4审计小文件保留；新spool统一 `~/condor/nu_muAnalysis/<stage>/`，其他项目及仓库Stage54资产保持。
 
 本预算结束两参数族，不继续温度/专家/权重或密度重训。它只限制当前q+动作族，不是信息界。下一笔若继续，只买Stage103局部点关系/遮挡路线的有限可行性和一次性三格合同：原train/cal≤40真实PHYS几何/完整无截断点/缺源/成本，0test或能量fit，不自动扩大提取。A逐面mean/B局部关系/C同B加train-only遮挡任务匹配强direct控制，资源与验收由实际小QA另冻；不可交付则精确结束，不再递归找旧REC。收益/新成本未测，本轮不执行stage105，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–65/原最终1.05/1.01/1.03与三向tail+2pp/全部K保持，cal复用与旧T估计、source/refit/研究选择/真实response/独立确认未被条件区间覆盖。
+
+
+## 67. stage105已购买几何可行性；下一预算只买一次完整点关系＋遮挡方案的能量增量
+
+[stage105报告](../workbook/2026-11-05_stage105_point-relation-feasibility.md)：原40固定train/cal、24source/37可读+3已知缺源不替换，5718点全部保留/56822局部边，max1117点/11856边、z名义层残差≤6.400049mm、0未映射。k8同站邻层双向图独立近邻距离差0、排序与隐藏XY/数量扰动的可见输入隔离37/37通过，36非空/1空隐藏目标。没有真实active读出/ID/TSOS/covariance/ghost结论，也没有测能量风险、完整空事件或真实sentinel/overflow支持。
+
+唯一Condor9667789、4CPU原6GB实际12GB、线程1、0GPU/fit/pretrain/testpayload；pilot4后同作业准入，外层17.35CPU/15.16wall秒、接口请求3823241/底层read3569873bytes、峰RSS135212KiB，0重试。该源成本包含昂贵暴力对照，正常全池提取/GPU成本仍未测，不外推成保证；无单核加速比/物理网络量。最终紧凑产物≤20MB见storage，打包字节核验后去重，spool统一~/condor/nu_muAnalysis/stage105/。
+
+下一stage106唯一合同为[experiment_contract.json](../workbook/stage105_energy_ml/experiment_contract.json)：A全点逐面mean/B小型同站跨层消息/C同B加train-only20epoch遮挡257格Poisson计数预训练，主整体C/A、B解释；不把现有Stage19普通mean当新信息，不用弱A取代强Stage87 direct62。原audited62/127变换/角色/权重/cal_select/post/全部K和missing保持，已知1044缺源用原标量＋geometry_missing，不丢K。原始全部点/计数不截断，visible-only预训练彻底排除62标量/总数/隐藏矩，名义面不是已核active面，0粒子伪标签。
+
+先同40身份0optimizer实际正常提取/空缺invalid合成/CPU-GPU梯度、置换、无跨事件边、遮挡泄漏和成本QA，再完整train/cal输入规模审计；有效256的无截断微批，CPU≤21600秒、GPU并发1/累计任务wall≤7200秒、临时坐标≤512MB/最终≤20MB，以实测保守投影和显存≤75%准入，超限在optimizer前停止、不缩成有利子集。单seed2026110506、恰3监督fit≤200epoch/每5epoch cal_select pointMSE/耐心30，原cal_post单offset；固定20epoch预训练无cal/test无标签，额外计算和有效容量限制明确。三checkpoint/offset冻结后才开test坐标，完整raw/offset和原八层尾一次交付。
+
+主cal_post两低能C/A最大RMSE比条件95上端<1只认证该方案增量；最终两低能/传统≤1.05、all/direct≤1.01、其余/direct≤1.03及八层三向tail均相对direct差上95≤2pp保持。条件incoming500draw不覆盖source/refit/offset估计/研究选择/真实response或新blind。未过就记录有限结论、结束该合同，不自动追加seed/深宽/遮挡任务或回到温度/专家/权重族；本轮未执行stage106，收益/全量成本未测。历史§1–66和Stage54后缀保持。
