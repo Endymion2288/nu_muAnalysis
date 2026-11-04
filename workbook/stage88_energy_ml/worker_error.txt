@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/pool/condor/dir_2126569/nu_mu_numerics88.mIuj4V/ml/audit_posterior_integration.py", line 312, in <module>
+    else:globals()[a.action]()
+         ~~~~~~~~~~~~~~~~~~~^^
+  File "/pool/condor/dir_2126569/nu_mu_numerics88.mIuj4V/ml/audit_posterior_integration.py", line 195, in run
+    summarize(d,method,refs,check)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/pool/condor/dir_2126569/nu_mu_numerics88.mIuj4V/ml/audit_posterior_integration.py", line 217, in summarize
+    save(OUT/'decisions.json',dict(reference_agreement=check['max_CDF_s_r']<1e-7 and check['max_logdensity_s_r']<1e-6,
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        numerical_convergence_limits=dict(CDF_abs=1e-4,quantile_abs_logE=1e-3,log_density_abs=1e-3),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        deployment='retain existing deployment; no fitting or test-risk/model/prior selection',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        scope='deterministic train/cal subset; numerical checks, not source statistics or physical uncertainty',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        training32_bias_repaired=False))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pool/condor/dir_2126569/nu_mu_numerics88.mIuj4V/ml/support_augmentation.py", line 29, in save
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False)+'\n')
+                    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc15-opt/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc15-opt/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc15-opt/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/cvmfs/sft.cern.ch/lcg/releases/Python/3.13.11-41c2c/x86_64-el9-gcc15-opt/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable

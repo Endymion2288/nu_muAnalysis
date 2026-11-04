@@ -1911,3 +1911,25 @@ prepare9666913/fit9667100均一次exit0、零重试，1CPU3000MB/各MaxRuntime36
 **继续既有部署，结束本固定五fit比较；唯一下一stage88为现成后验积分收敛与推断性能审计，0fit/ROOT/生成，无新样本前置。** 首40cal的max|PIT32−64|=.039193110、|64−128|=.012998450，主32不变，后验quantile/logscore尚不能称数值收敛。先≤40现成cal计时QA，冻结独立确定性参考/容差/数据范围，再≤1Condor1CPU3000MB/CPU1800s/wall1800s/紧凑20MB；用保存head在train/cal比较CDF/PIT/quantile/log-density与固定cal目标的数值敏感性，评估CDF复用，不能按test选节点、重校准/重训或把准确推断等同修复32点训练loss。实际成本/改善未测，尚未执行stage88，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[后续输入](../workbook/stage87_energy_ml/followup_input_request.json)。
 
 真实响应、interaction/FSI/材料/Calo/接受度/背景与将来的真正未开发确认仍需证据；没有新样本不阻止现有样本的有界数值研究。原stage54后缀与五项工作保持，K旧禁令/时限不恢复；历史§1–68及独立支持协议保留。
+
+
+## 70. stage88：积分误差确实存在，GH256仍未全部收敛；准确推断不等于能量恢复
+
+[stage88实际报告](../workbook/2026-11-04_stage88_posterior-numerical-audit.md)完成现成head的40train＋512cal固定等间隔552记录审计，0fit/新校准/ROOT/生成/测试风险。先原40cal实际计时及包QA，再冻结32/64/128/唯一额外256节点和名义prior、原b/T。两个独立参考方向：自适应s积分/解析r逆变换，以及反向r-CDF/两固定步长五点密度差分；有解析截断尾界，不将最大节点数当truth。
+
+552主/反向最大CDF差6.616929e−14、log-density差7.666686e−10，reverse quantile残差2.122311e−10、tail上界4.253165e−19，552全部通过交叉精度、端点/单调性。固定子集无missing/wave-invalid/Calo-invalid，相关精度未测；低E仅9/48，低pz真高E13/high-y10，不冒充全cal/test或物理独立样本。原raw/pz0/typed NaN/困难侧和K支持不变。
+
+| 方法，N552 | PIT最大差/超1e−4 N | quantile最大logE差/超1e−3 N | log-density最大差/超1e−3 N |
+|---|---|---|---|
+|GH32|.024986898/132|.140877741/231|1.807812933/159|
+|GH64|.016473238/77|.063327523/170|1.285612945/104|
+|GH128|.007214501/28|.040179716/83|.569465493/55|
+|GH256|.000885997/6|.011344660/29|.375060500/20|
+
+GH32能箱CDF还有316/552超限，256仍48/552；不能继续节点扫描或只看整体coverage。局部数值宽度R>=5的40例全部GH32 quantile超限，R<.5仅2/147，与宽transfer/窄r的分辨不足相符；它只是附加数值诊断，不能变成物理cut/删除规则。固定512cal原b/T的training-prior NLL GH32/参考−.124483590/−.130228601，五点目标非恒定差，未优化；不以子集斜率判全cal收敛。cal512 log-RMSE .312583173→.314381109、低pz真高E13条.850516317→.876315710，说明准确积分并不保证风险改善，也未修复32点训练/校准优化近似；低E9条结果不用于宣布恢复。
+
+缓存latent节点、共用bin CDF、prior quantile映射回raw CDF，在40cal四prior旧/新计算1.184682/.138549 CPU秒，数值差4.218847e−15；这是同精度加速，非物理改善。唯一Condor9667190完成全部数值和5固定cal点后，NumPy bool JSON输出失败exit1，明确不记exit0；无重提。保留全部数组和失败证据，只修元数据并本地恢复报告，额外积分0，11055项独立复核最大差3.209238e−17，原GH32保存值/身份闭合。remote919CPU秒/932wall秒，script918.13CPU秒/929.63wall秒/267.039063MiB；含已测外层启动/失败/恢复/报告998.29CPU秒<1800，初始metadata等未全计量。数值实现/冻结protocol与正式包逐字核对，原模型/主GH32历史不改；包去重、紧凑存储见storage.json，物理EOS I/O未测量。
+
+**继续既有部署；唯一下一stage89是完整既有cal11612＋test13189的一次准确后验推断与配对评价，0fit/新校准/ROOT/生成，无新样本前置。** 冻结本自适应s算法、原b/T/名义prior和主median，复用旧同split direct/传统预测，全保留缺失6/5条、困难/高端及K。先≤40固定cal实际包计时核身份/精度，后≤2Condor/并发≤2、各1CPU3000MB/MaxRuntime5400s、累计CPU10800s/留存20MB。cal512主参考172.797432CPU秒=.337494984秒/例，24801线性外推8370.213102CPU秒仅预算依据，实际未测；不逐事件重复昂贵反向积分，只在固定小QA交叉核验，逐例误差/端点仍保存。
+
+原低E1.05/总体1.01/困难1.03和双向tail+2pp、68/90coverage/PIT/NLL完整交付；GH32→准确及准确→新split direct/传统配对，500component内incoming条件区间，不补齐source95（每角色3连通块），旧test不是新blind。不得按test选节点/先验、从五点cal挑b/T、重训、pz硬切或删数值困难；准确CRPS/训练loss偏差未认证，系统学/最终确认仍需独立证据。未执行stage89，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[输入请求](../workbook/stage88_energy_ml/followup_input_request.json)。原stage54五项/后缀和K解除政策保持，历史§1–69及独立支持协议保留。

@@ -1,0 +1,74 @@
+{
+  "stage": 88,
+  "starting_commit": "fc2cfacdec4150242963514295a26e1002eddef9",
+  "frozen_utc": "2026-11-03T23:44:35Z",
+  "scope": "saved stage87 heads only; train/cal deterministic numerical audit, zero fits/ROOT/generation/test-risk selection",
+  "train_N": 40,
+  "cal_N": 512,
+  "selection": "each role np.linspace(0,Nrole-1,Nselected,dtype=int), selected in original active row order; no energy/loss selection",
+  "orders": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "main_prior": "nominal; all4 priors only benchmarked against old implementation on first40 cal",
+  "reference": {
+    "primary": "adaptive s integral, analytic r inverse for CDF and density",
+    "crosscheck": "independent adaptive r CDF, density 5point finite difference h=.001/.0005; direct inverse-density form abandoned due endpoint conditioning in startup",
+    "epsabs": 1e-10,
+    "epsrel": 1e-10,
+    "reverse_eps": 2e-11,
+    "normal_tail": "L starts10, increases<=16 until analytic CDF/density bound tail<=eps/10",
+    "precision_floor": "quad convergence flags retained; primary integral error estimate must<1e-9; reverse derivative errors separately reported; log-density comparisons below density1e-7 are not certified",
+    "acceptance": {
+      "CDF_abs": 0.0001,
+      "quantile_abs_logE": 0.001,
+      "log_density_abs": 0.001
+    },
+    "cross_agreement": {
+      "CDF_abs": 1e-07,
+      "log_density_abs": 1e-06
+    }
+  },
+  "fixed_calibration_points": [
+    {
+      "delta_b": 0,
+      "delta_T": 0
+    },
+    {
+      "delta_b": -0.01,
+      "delta_T": 0
+    },
+    {
+      "delta_b": 0.01,
+      "delta_T": 0
+    },
+    {
+      "delta_b": 0,
+      "delta_T": -0.05
+    },
+    {
+      "delta_b": 0,
+      "delta_T": 0.05
+    }
+  ],
+  "calibration_scope": "same512cal only, incoming weights; compare fixed training-prior NLL, do not optimize or call this fullcal estimate",
+  "QA_measured_CPU_s": 49.77048998,
+  "QA_reference_CPU_s": 46.020367422,
+  "planned_CPU_s_extrapolation": 635.0810704236,
+  "resource_basis": "40cal cost suggests~635CPU s for552 reference+crosschecks; five fixed cal-density points and validation add unmeasured overhead, strict total budget includes startup",
+  "limits": {
+    "jobs": 1,
+    "cpus": 1,
+    "memory_MB": 3000,
+    "Condor_MaxRuntime_s": 1800,
+    "worker_CPU_soft_s": 1650,
+    "worker_CPU_hard_s": 1680,
+    "worker_wall_timeout_s": 1740,
+    "cumulative_CPU_s": 1800,
+    "retained_bytes": 20000000
+  },
+  "stop": "do not extend nodes, optimize b/T, train, use test risk, choose prior or delete numerically difficult events; report unsupported reference if crosscheck fails",
+  "preserved": "stage54 suffix/five paths read-only; existing pz0/raw/typed-NaN model and pz>50 selection unchanged; delivered K retained"
+}

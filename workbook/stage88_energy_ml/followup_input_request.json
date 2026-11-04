@@ -1,0 +1,55 @@
+{
+  "stage": 89,
+  "status": "proposed next stage, not executed",
+  "task": "frozen accurate posterior inference on full existing cal/test, no fitting or calibration/prior choice",
+  "input_paths": [
+    "ml/artifacts/stage87/posterior_parameters.npz",
+    "ml/artifacts/stage87/predictions.npz",
+    "ntuples/energy_ml_stage87/split.npz",
+    "workbook/stage87_energy_ml/prior.json",
+    "workbook/stage87_energy_ml/posterior_calibration.json",
+    "ml/posterior_numerics.py",
+    "workbook/stage88_energy_ml/protocol.json",
+    "workbook/stage88_energy_ml/audit_reference_QA.json"
+  ],
+  "samples": {
+    "cal_N": 11612,
+    "test_N": 13189,
+    "total_N": 24801,
+    "cal_missing_N": 6,
+    "test_missing_N": 5,
+    "scope": "previously studied research pool, test held out from stage87 new fits, not independent blind"
+  },
+  "numerical_policy": "stage88 adaptive s reference only, same analytic inverse, eps/tail bounds and safeguarded quantile solve; stored b=.011721733230708156,T=1.2001641697078562 and nominal ratios unchanged. Use reverse CDF/finite-difference only for fixed <=40 QA identities, not all events. No GH node winner selection.",
+  "output_policy": "nominal median/q05/q16/q84/q95/PIT/log-density and raw training-prior fixed NLL; reuse existing traditional and same-split direct predictions; no neural forward needed, no other prior/seed/architecture/epoch/grid",
+  "measured_cost": {
+    "primary_cal_subset_N": 512,
+    "primary_cal_CPU_s": 172.79743188000054,
+    "CPU_s_per_case": 0.33749498414062606,
+    "projected_full_cal_test_CPU_s": 8370.213101671667,
+    "meaning": "linear extrapolation only, not actual full-run time; excludes extra QA/paired bootstrap/reporting and unseen-condition cost"
+  },
+  "proposed_limits": {
+    "Condor_jobs": 2,
+    "max_concurrency": 2,
+    "CPUs_per_job": 1,
+    "memory_MB_per_job": 3000,
+    "MaxRuntime_s_per_job": 5400,
+    "cumulative_CPU_s": 10800,
+    "retained_bytes": 20000000,
+    "energy_fits": 0,
+    "ROOT_reads": 0,
+    "generation": 0
+  },
+  "startup": "freeze algorithm and nominal prior before any test calculation; <=40 fixed cal identities for timed actual payload/units/row checks, then freeze final resources. If projection or precision fails, report gap before full run; do not drop difficult events or silently shrink subset.",
+  "acceptance": [
+    "all11612cal and13189test included, original per-key weights/all views intact; no cross-role source/incoming overlap",
+    "numerical errors/endpoint/monotonicity/tail checks; keep noncertified events flagged, never remove to improve scores",
+    "paired fixed-prediction GH32 vs accurate and accurate vs same-split direct/traditional, all original lowE/difficult/tail protections, 68/90 coverage/PIT, sparse missing/highend separately",
+    "500 within-component incoming conditional draws, same seed recipe, source95 still unmeasured (3 connected blocks per role); no independent or response uncertainty claim",
+    "no refit of b/T or energy model, no selecting flat/pressure prior or pz hard switch, no model promotion on overall coverage alone",
+    "separate corrected inference from unchanged32-point training/calibration optimization; exact CRPS convergence remains unmeasured unless separately budgeted"
+  ],
+  "final": "Chinese stage89 report with actual costs/coverage/risks, compact results and local Conventional Commit, no push or automatic next stage",
+  "retained_boundaries": "pz0-only first-power momentum; allowpx/py/q/p/bends; raw11/typed NaN/Calo missing; pz>50GeV and all difficult cases;1016K retained, old K production restrictions not reinstated; original stage54 suffix/five paths read-only"
+}

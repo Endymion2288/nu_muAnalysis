@@ -1049,3 +1049,16 @@ stage85 按保留 stage54 协议测量共同 collection、active-channel 分母�
 实际1prepare＋1fit Condor9666913/9667100，各一次exit0；1CPU3000MB/3600s，remoteCPU总614s，fit脚本598.556685CPU秒/612.990433wall秒/1090.003906MiB，前置小样本与实际包检查通过。7560指标、1728配对区间端点、1152coverage/PIT端点独立复核最大差2.273737e−13，回读精度范围和失败启动成本详见报告。紧凑模型/全head/split留存、包去重，20,000,000byte上限按storage.json实测，物理EOS I/O未测。
 
 **下一唯一stage88购买数值精度/推断成本证据，0新fit/ROOT/样本。** 40cal maxPIT32–64 .039193110、64–128 .012998450，当前GH32未认证收敛，不用它证明物理原因。保存head/calibration/prior/split/原缓存可在train/cal零训练比较独立参考CDF、PIT/quantile/log-density和固定cal目标；先≤40计时QA，再冻结确定性范围/容差与≤1Condor1CPU3000MB/1800CPU秒/wall1800秒/20MB预算。不按test选积分节点/先验，不优化cal参数，不将推断精度改善宣称消除训练近似偏差。尚未执行，收益与实际资源未测；输入/验收提议见[请求](../workbook/stage87_energy_ml/followup_input_request.json)。历史§1–48、stage54后缀与K解除政策保留，真实响应和后续未开发确认不冒称完成。
+
+
+## 50. stage88：先认证数值后再量完整风险，禁止把收敛误差当物理不确定度
+
+[stage88报告](../workbook/2026-11-04_stage88_posterior-numerical-audit.md)以固定40train/512cal、保存head及原b/T/名义prior完成552数值审计，0fit/新校准/ROOT/test。独立s积分/反向r-CDF差分的最大CDF差6.616929e−14、log-density差7.666686e−10，quantile残差2.122311e−10、tail界4.253165e−19，端点与单调性通过，552全部交叉认证；没有missing/wave/Calo-invalid，不能外推其精度。
+
+GH32 PIT/quantile/log-density超限132/231/159（N552），最大.024986898/.140877741/1.807812933；GH256仍6/29/20，最大.000885997/.011344660/.375060500，不能简单选大节点当truth。宽transfer/窄response的局部分辨率诊断支持一条程序机制，不能据此做事件cut或宣称信息极限。固定512cal NLL GH32/参考−.124483590/−.130228601，五点目标差随b/T变化但没有优化。cal log-RMSE .312583173→.314381109、低pz真高E13条.850516317→.876315710；准确推断不保证风险改善，训练32点loss/先验/真实响应未分解，低E9条不足总体结论。
+
+40cal四prior缓存实现1.184682→.138549CPU秒且差4.218847e−15。唯一Condor9667190全数值完成后因NumPy bool JSON失败exit1，未伪称成功/重提；零积分重算恢复报告，11055项独立复核最大差3.209238e−17，数值代码/协议与正式包一致。remote919CPU秒/932wall秒、267.039063MiB，已记外层+remote998.29CPU秒<1800，未完整计量的metadata/物理EOS I/O明确未测；紧凑NPZ不入Git、包去重，stage54原工作只读。
+
+**下一唯一stage89购买全既有cal11612＋test13189的准确推断/配对风险证据，0fit/校准优化/ROOT/新样本。** 主参考cal512=172.797432CPU秒，.337494984秒/例；24801外推8370.213102CPU秒（非实测）。先≤40固定cal实际包QA，再冻结≤2并发Condor/各1CPU3000MB5400s、累计CPU10800s/紧凑20MB；保存原b/T/名义prior，完整缺失6/5及困难/高端/K保留。反向参考只作固定小QA，主自适应逐事件认证，不续节点或架构网格。
+
+配对GH32→准确及准确→同split direct/传统，全低E/困难/双向tail、coverage/PIT/NLL及500incoming条件区间交付；source95仍不可估、旧test仍开发，无晋升或新blind宣称。不能据子集五点目标改校准、按test选谱或把推断精度当训练修复。未执行，详见[请求](../workbook/stage88_energy_ml/followup_input_request.json)；历史§1–49、stage54后缀、1016K及解除旧K生产时限政策保留，真实响应/interaction/FSI/材料/Calo/接受度/背景与独立确认未冒称完成。

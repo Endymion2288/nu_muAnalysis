@@ -1,0 +1,11 @@
+{
+  "reference_agreement": true,
+  "numerical_convergence_limits": {
+    "CDF_abs": 0.0001,
+    "quantile_abs_logE": 0.001,
+    "log_density_abs": 0.001
+  },
+  "deployment": "retain existing deployment; no fitting or test-risk/model/prior selection",
+  "scope": "deterministic train/cal subset; numerical checks, not source statistics or physical uncertainty",
+  "training32_bias_repaired": false
+}

@@ -1,0 +1,38 @@
+{
+  "records": [
+    {
+      "attempt": 1,
+      "success": false,
+      "CPU_s": 5.13,
+      "raw_time": "Command exited with non-zero status 1\n\tCommand being timed: \"bash /tmp/stage69_python.sh ml/audit_posterior_integration.py qa\"\n\tUser time (seconds): 4.31\n\tSystem time (seconds): 0.82\n\tPercent of CPU this job got: 65%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:07.90\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 139308\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 20\n\tMinor (reclaiming a frame) page faults: 76393\n\tVoluntary context switches: 29103\n\tInvoluntary context switches: 519\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+    },
+    {
+      "attempt": 2,
+      "success": false,
+      "CPU_s": 5.09,
+      "raw_time": "Command exited with non-zero status 1\n\tCommand being timed: \"bash /tmp/stage69_python.sh ml/audit_posterior_integration.py qa\"\n\tUser time (seconds): 4.27\n\tSystem time (seconds): 0.82\n\tPercent of CPU this job got: 67%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:07.52\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 139080\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 1\n\tMinor (reclaiming a frame) page faults: 76842\n\tVoluntary context switches: 24908\n\tInvoluntary context switches: 732\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+    },
+    {
+      "attempt": 3,
+      "success": false,
+      "CPU_s": 10.17,
+      "raw_time": "Command exited with non-zero status 1\n\tCommand being timed: \"bash /tmp/stage69_python.sh ml/audit_posterior_integration.py qa\"\n\tUser time (seconds): 9.35\n\tSystem time (seconds): 0.82\n\tPercent of CPU this job got: 79%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:12.72\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 139096\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 1\n\tMinor (reclaiming a frame) page faults: 77716\n\tVoluntary context switches: 28927\n\tInvoluntary context switches: 548\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+    },
+    {
+      "attempt": 4,
+      "success": true,
+      "CPU_s": 51.660000000000004,
+      "raw_time": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/audit_posterior_integration.py qa\"\n\tUser time (seconds): 50.31\n\tSystem time (seconds): 1.35\n\tPercent of CPU this job got: 91%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:56.58\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 278288\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 111179\n\tVoluntary context switches: 81697\n\tInvoluntary context switches: 1250\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 8\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    }
+  ],
+  "measured_outer_CPU_s": 72.05000000000001,
+  "scope": "four startup commands including failures; inner QA times overlap, not added; AST/read/authoring overhead unmeasured",
+  "submit_outer_CPU_s": 2.95,
+  "measured_startup_and_submit_CPU_s": 75.00000000000001,
+  "submit_time_raw": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/audit_posterior_integration.py submit\"\n\tUser time (seconds): 1.79\n\tSystem time (seconds): 1.16\n\tPercent of CPU this job got: 47%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:06.30\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 139384\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 98798\n\tVoluntary context switches: 37605\n\tInvoluntary context switches: 384\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 496\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+  "report_recovery_outer_CPU_s": 1.69,
+  "report_recovery_time_raw": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/audit_posterior_integration.py recover-report\"\n\tUser time (seconds): 0.95\n\tSystem time (seconds): 0.74\n\tPercent of CPU this job got: 41%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:04.13\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 79932\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 4\n\tMinor (reclaiming a frame) page faults: 60788\n\tVoluntary context switches: 24878\n\tInvoluntary context switches: 712\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+  "array_report_outer_CPU_s": 2.6,
+  "array_report_time_raw": "\tCommand being timed: \"bash /tmp/stage69_python.sh ml/report_posterior_numerics.py\"\n\tUser time (seconds): 1.74\n\tSystem time (seconds): 0.86\n\tPercent of CPU this job got: 49%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:05.29\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 109884\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 1\n\tMinor (reclaiming a frame) page faults: 68032\n\tVoluntary context switches: 28734\n\tInvoluntary context switches: 272\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+  "recorded_outer_plus_remote_CPU_s": 998.29
+}
