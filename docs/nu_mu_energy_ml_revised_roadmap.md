@@ -2027,3 +2027,18 @@ outer train/cal/test和incoming总权重沿stage87。看新结果前source分cal
 stage85已完成各2048 data/MC条件活动控制，缺active-channel/quiet触发无法反求纯noise，不再默认重做；stage73重权确有低能增益但困难侧受损，不再续边际权重网格；stage86严格zero transfer=0，不引入零点质量。真实data迁移和nominal MC内风险分开解释。没有新独立样本不是停止开发的前置；source95仍不可估，500incoming条件区间和单seed不能充当最终确认。
 
 下一阶段验收完整学习曲线、五格配对及seed波动、低能/总体/≥200/困难/高端/missing与全部正负tail；原点风险上端1.05/1.01/1.03与tail差≤2pp保留，未达联合门槛仍可报告可归因的研究增量。拟议≤1GPU并发、GPU任务wall累计≤2h/CPU累计≤6h/紧凑20MB，先固定≤40 train/cal QA实际计时才冻结；资源/收益均未测量，大批量走已配置batch。若五格仍无联合收益，转向轨迹候选/关联信息或明确的可辨识物理目标，不无限延长gate/reweight/数值链。详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；历史§1–74、stage54原后缀/K支持政策保持，interaction/FSI/材料/Calo/接受度/背景、真实response与最终未开发确认仍待完成。
+
+
+## 76. stage94：五格九fit交付可归因增量，最低能未恢复；下一笔转轨迹候选与关联信息
+
+[stage94实际报告](../workbook/2026-11-04_stage94_architecture-comparison.md)完成stage93预注册A41/raw MLP、B62/raw MLP、C62/typed MLP、D同C TabM、E同C residual logE MDN；五个主seed2026110494，cal_select在新test forward前选E/B各补495/496，共9fit/52440steps。原89033池、46575/11612/13189角色、17657隔离、incoming权重、pz>50 GeV、pz0-only一次方动量/允许px-py-q/p-弯折、raw11/typed NaN/合法负raw/Calo缺项、1016新增K保留，无新生成/ROOT/重建。cal按source分select5443/5272incoming与post5746/5539，冲突423条退出选择但仍全cal报告；各格只post一次全局offset。
+
+test全体A/B/C/D/E log-RMSE **.305048/.301516/.299024/.294126/.292090**；B/A条件配对比.988424 [.980350,.996793]，D/C .983620 [.976472,.992437]，E/C .976812 [.969200,.985863]，有本次拟合总体增量；C/B .991734 [.982294,1.000676]尚含1。D/C、E/C在100–200 GeV分别.930478 [.900531,.969729]、.948239 [.913108,.986323]，最低能均未确证改善。A/C/D仅单seed；D参数28608对C12417，E/C同时改变输出族/目标/residual参数化，不作单因素或家族最优声明。
+
+固定E三seed的最低能/第二低能/全体/低pz真高能/high-y为 **.276027/.251510/.289843/.671125/.616675**；原传统最低能.145661、原direct全体.287491、stage92最低能/全体.165630/.326058。E改善stage92主体与困难侧，却显著损失低能优势：相对stage92最低能比1.666524 [1.478641,1.953064]，全体.888929 [.871284,.902770]。11候选均未过联合门槛；E最低能/传统上95=2.249753，all/direct=1.015960>1.01，低pz真高能=1.046307>1.03；其总/正/负tail差direct上端+4.493944/+2.712061/+3.628938 pp。共同postoffset direct不能解释失败。E全局offset改善总体点误差、加重低能，raw/offset均完整报告，不据test回选。
+
+E解析概率的全体68/90coverage62.602337%/86.253883%，meanPIT .491100702 [.485794,.496036]，十箱两端过量；X低pz组coverage57.582418%/84.124111%。概率目标是incoming经验谱，无额外nominal reweight。真E/y组PIT只作真值条件描述，不能单独要求均匀。整体及X组仍失配，不以较好NLL或解释修正晋升。
+
+Kubeflow H100 MIG3g.47gb实际全部worker外层112.157179wall秒/82.837277CPU秒，最大allocated peak222.694336MiB；平台22CPU分配下torch1线程。CPU统计实际4核/4process、每process BLAS1线程、fork只读共享/按role-stratum分片；成功Condor9667473为80remote-wall秒/223CPU秒，83任务并行段39.138680秒/151.100112childCPU秒、实占3.860634核。完整单核加速比未测。缺传递依赖、错误hold备注实际eviction、同名归档上传失败均留证并计成本；报告重跑不重训/选模型。14992个独立算术/区间/尾值最大差7.105427e−14，旧3024基线值最大差1.421085e−14，checkpoint/offset/选择记录通过；精简存储及资源见实际JSON。source95、重训全分布、真实response/systematics、独立确认仍未测。
+
+**继续既有部署；下一stage95按stage93“五格无联合收益”分支，转可部署全轨迹候选及hit/外推关联的信息合同和紧凑可用性测量，先不追加能量fit。** 先≤40固定train/cal身份核真实PHYS载荷/单位/状态/track-hit与外推关联，复用已知source和split，不递归扫描或新生成；随后固定来源覆盖的候选小批量、按源4–8CPU Condor并行，保留完整选择、不挑有利事例。交真实分母/有效率/重复和共享hit/候选可区分性，真值关联只有可核时作oracle诊断，不作为输入；冻结一种新关系摘要及后续匹配输入对照。不能把stage19普通全SP Deep Sets当新方案，不恢复reweight/gate/架构大扫描或stage88–91链。收益与成本尚未测，详见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)；本阶段未执行stage95，历史§1–75和stage54后缀保持。

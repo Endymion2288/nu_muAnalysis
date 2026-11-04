@@ -1,0 +1,20 @@
+universe = vanilla
+repository = /eos/user/x/xcheng/FASER/nu_muAnalysis
+spool = /afs/cern.ch/user/x/xcheng/nu_mu_stage94
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/report_v1.sh
+transfer_input_files = root://eoshome-x.cern.ch/$(repository)/software/energy-ml-architecture-report-stage94.tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 4
+request_memory = 12000MB
+request_disk = 400MB
+max_retries = 0
++MaxRuntime = 1800
++NuMuStage = "energy-ml-architectures-stage94"
+log = $(spool)/logs/$(ClusterId).$(ProcId).log
+output = $(spool)/logs/$(ClusterId).$(ProcId).out
+error = $(spool)/logs/$(ClusterId).$(ProcId).err
+queue 1

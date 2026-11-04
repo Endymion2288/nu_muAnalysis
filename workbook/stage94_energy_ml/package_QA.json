@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "archive_bytes": 48253081,
+  "source_files_byte_equal": [
+    "ml/compare_energy_architectures.py",
+    "ml/time_architecture_worker.py",
+    "ml/retrain_accurate_posterior.py",
+    "ml/transfer_posterior.py",
+    "ml/resplit_energy.py",
+    "ml/audited_features.py",
+    "ml/latent_transfer_diagnostics.py",
+    "ml/support_augmentation.py",
+    "ml/batched_posterior.py",
+    "ml/differentiable_posterior.py",
+    "ml/posterior_numerics.py",
+    "ml/configs/audited_features.json"
+  ],
+  "output": {
+    "MDN_head_gradient_finite_difference_max": 1.9380275162461658e-10,
+    "passed": true,
+    "identities": 40,
+    "missing_train": 21,
+    "missing_cal": 6,
+    "new_optimizer_steps": 0,
+    "checks": [
+      {
+        "batch1024_forward_backward_wall_s": 0.0013866052031517029,
+        "cell": "A",
+        "N": 40,
+        "input_dimensions": 85,
+        "parameters": 9729,
+        "loss": 0.7364614009857178,
+        "forward_backward_wall_s": 0.0017860839143395424,
+        "optimizer_steps": 0
+      },
+      {
+        "batch1024_forward_backward_wall_s": 0.0013174689374864101,
+        "cell": "B",
+        "N": 40,
+        "input_dimensions": 127,
+        "parameters": 12417,
+        "loss": 0.7364614009857178,
+        "forward_backward_wall_s": 0.0015549501404166222,
+        "optimizer_steps": 0
+      },
+      {
+        "batch1024_forward_backward_wall_s": 0.0013073831796646118,
+        "cell": "C",
+        "N": 40,
+        "input_dimensions": 127,
+        "parameters": 12417,
+        "loss": 0.7364614009857178,
+        "forward_backward_wall_s": 0.001506689004600048,
+        "optimizer_steps": 0
+      },
+      {
+        "batch1024_forward_backward_wall_s": 0.0038451524451375008,
+        "cell": "D",
+        "N": 40,
+        "input_dimensions": 127,
+        "parameters": 28608,
+        "loss": 40.3587760925293,
+        "forward_backward_wall_s": 0.00497320294380188,
+        "optimizer_steps": 0
+      },
+      {
+        "batch1024_forward_backward_wall_s": 0.0023827841505408287,
+        "cell": "E",
+        "N": 40,
+        "input_dimensions": 127,
+        "parameters": 12937,
+        "loss": 0.7128788828849792,
+        "forward_backward_wall_s": 0.0027183680795133114,
+        "optimizer_steps": 0
+      }
+    ],
+    "MDN_density_independent_max_difference": 4.440892098500626e-16,
+    "wall_s": 3.1724252197891474,
+    "CPU_s": 2.5324111289999998,
+    "peak_RSS_MiB": 1207.6796875
+  }
+}

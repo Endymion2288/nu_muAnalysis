@@ -1,0 +1,38 @@
+{
+  "stage": 94,
+  "seed": 2026110494,
+  "extra_seeds": [
+    2026110495,
+    2026110496
+  ],
+  "cells": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "cal_partition_valid": true,
+  "max_epochs": 300,
+  "validation_every": 5,
+  "patience_epochs": 30,
+  "fixed_epochs_without_select": 300,
+  "optimizer": "Adam lr.001 default/no decay/clip10 all cells; TabM k32 2x64 ReLU no embedding/dropout0; others2x64SiLU; batch1024 numpy seeded permutation",
+  "losses": "A-D incomingweighted per-member logMSE; E threeNormal residual MDN marginal NLL sigma=.05+softplus, point=meanlogE",
+  "representations": "A41/B62 raw trainmedianIQR clip20; C/D/E62 typed positive log,nonnegative/count log1p,signed asinh except discrete identity; trainmedianabs scales,medianIQR no cap; same masks/status",
+  "checkpoint": "weighted cal_select point logMSE minimum every5, improve strictly, patience30; E selection by same point risk, NLL also logged",
+  "extra_selection": "before any newtest forward/risk; primary cal_select raw points: lexicographic worst RMSE ratio normalized by original gate limits, then mean of normalized ratios, then allMSE; max2cells each2seeds; no valid select => zeroextras",
+  "offsets": "one cal_post weighted mean logtruth-point residual each raw model/ensemble; MDN all mixturemeans translated by sameoffset. Original baseline raw and oldcal and samepostoffset variants separate",
+  "input": "same46575/11612/13189 and17657 quarantine; incomingweights,all1016K,missing21/6/5 retained",
+  "reliability": "incoming targetempirical weights; E models trained same weights, no nominalprior reinterpretation. Overall and Xgroups fixed from cal inputs/status only; truthstrata diagnostic, no truthPIT uniformity gate",
+  "limits": {
+    "GPU_concurrency": 1,
+    "GPU_task_wall_s": 7200,
+    "cumulative_CPU_s": 21600,
+    "retained_bytes": 20000000
+  },
+  "CPU_parallelism": "user authorizes more CPU cores; reporting processes4, BLASthreads1, roles/layers partitioned; preserve exact draws. GPU worker CPUthreads1 avoids oversubscription",
+  "newfit_count_max": 9,
+  "test_scope": "developed pool heldout from newfits; no newblind/source95/promotion",
+  "posterior_moment": "optional not required; not executed by main five-cell worker"
+}

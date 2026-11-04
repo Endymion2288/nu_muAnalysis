@@ -1,0 +1,147 @@
+{
+  "job": "nu-mu-energy-stage94-fit",
+  "uid": "d3a82dfa-4f1e-4d56-9deb-0ad809341a61",
+  "status": {
+    "completionTime": "2026-11-04T14:37:00Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-04T14:37:00Z",
+        "lastTransitionTime": "2026-11-04T14:37:00Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-04T14:37:00Z",
+        "lastTransitionTime": "2026-11-04T14:37:00Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-04T14:34:51Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  },
+  "pod": "nu-mu-energy-stage94-fit-d55rp",
+  "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+  "container_status": {
+    "allocatedResources": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "containerID": "containerd://028a9c11691e59bc17dee58ad77d072b0c70410ca0fdd16e5802df7ff5fb5bc3",
+    "image": "registry.cern.ch/mlops/lxplus-like:9",
+    "imageID": "registry.cern.ch/mlops/lxplus-like@sha256:74c2ccb623c091720aed958415b7ae64e9021a69c94670d77db1b8567474e608",
+    "lastState": {},
+    "name": "fit",
+    "ready": false,
+    "resources": {
+      "limits": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      },
+      "requests": {
+        "cpu": "22",
+        "memory": "63G",
+        "nvidia.com/mig-3g.47gb": "1"
+      }
+    },
+    "restartCount": 0,
+    "started": false,
+    "state": {
+      "terminated": {
+        "containerID": "containerd://028a9c11691e59bc17dee58ad77d072b0c70410ca0fdd16e5802df7ff5fb5bc3",
+        "exitCode": 0,
+        "finishedAt": "2026-11-04T14:36:55Z",
+        "reason": "Completed",
+        "startedAt": "2026-11-04T14:34:57Z"
+      }
+    },
+    "user": {
+      "linux": {
+        "gid": 1399,
+        "supplementalGroups": [
+          1399
+        ],
+        "uid": 180107
+      }
+    },
+    "volumeMounts": [
+      {
+        "mountPath": "/shared",
+        "name": "shared"
+      },
+      {
+        "mountPath": "/usr/bin/containerssh-agent",
+        "name": "agent-binary-volume",
+        "readOnly": true,
+        "recursiveReadOnly": "Disabled"
+      },
+      {
+        "mountPath": "/etc/group",
+        "name": "passwdgroup"
+      },
+      {
+        "mountPath": "/etc/shadow",
+        "name": "passwdgroup"
+      },
+      {
+        "mountPath": "/etc/passwd",
+        "name": "passwdgroup"
+      },
+      {
+        "mountPath": "/etc/sudoers.d/user",
+        "name": "passwdgroup"
+      },
+      {
+        "mountPath": "/eos",
+        "name": "eos"
+      },
+      {
+        "mountPath": "/cvmfs",
+        "name": "cvmfs"
+      },
+      {
+        "mountPath": "/scratch",
+        "name": "local-scratch"
+      },
+      {
+        "mountPath": "/dev/shm",
+        "name": "dshm"
+      },
+      {
+        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+        "name": "kube-api-access-zq94d",
+        "readOnly": true,
+        "recursiveReadOnly": "Disabled"
+      },
+      {
+        "mountPath": "/var/token",
+        "name": "oauth2-token"
+      },
+      {
+        "mountPath": "/tmp/oauthtk_180107",
+        "name": "inj-oauth2-tokens"
+      }
+    ]
+  },
+  "resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  }
+}

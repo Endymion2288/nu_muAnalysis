@@ -1,0 +1,64 @@
+{
+  "MDN_head_gradient_finite_difference_max": 1.9380275162461658e-10,
+  "passed": true,
+  "identities": 40,
+  "missing_train": 21,
+  "missing_cal": 6,
+  "new_optimizer_steps": 0,
+  "checks": [
+    {
+      "batch1024_forward_backward_wall_s": 0.0013160817325115204,
+      "cell": "A",
+      "N": 40,
+      "input_dimensions": 85,
+      "parameters": 9729,
+      "loss": 0.7364614009857178,
+      "forward_backward_wall_s": 0.0016412660479545593,
+      "optimizer_steps": 0
+    },
+    {
+      "batch1024_forward_backward_wall_s": 0.0012227189727127552,
+      "cell": "B",
+      "N": 40,
+      "input_dimensions": 127,
+      "parameters": 12417,
+      "loss": 0.7364614009857178,
+      "forward_backward_wall_s": 0.0014641936868429184,
+      "optimizer_steps": 0
+    },
+    {
+      "batch1024_forward_backward_wall_s": 0.0012179319746792316,
+      "cell": "C",
+      "N": 40,
+      "input_dimensions": 127,
+      "parameters": 12417,
+      "loss": 0.7364614009857178,
+      "forward_backward_wall_s": 0.0013628359884023666,
+      "optimizer_steps": 0
+    },
+    {
+      "batch1024_forward_backward_wall_s": 0.0036734850145876408,
+      "cell": "D",
+      "N": 40,
+      "input_dimensions": 127,
+      "parameters": 28608,
+      "loss": 40.3587760925293,
+      "forward_backward_wall_s": 0.004031790886074305,
+      "optimizer_steps": 0
+    },
+    {
+      "batch1024_forward_backward_wall_s": 0.002304749097675085,
+      "cell": "E",
+      "N": 40,
+      "input_dimensions": 127,
+      "parameters": 12937,
+      "loss": 0.7128788828849792,
+      "forward_backward_wall_s": 0.0026191980578005314,
+      "optimizer_steps": 0
+    }
+  ],
+  "MDN_density_independent_max_difference": 4.440892098500626e-16,
+  "wall_s": 3.36876932810992,
+  "CPU_s": 2.56303333,
+  "peak_RSS_MiB": 1207.86328125
+}

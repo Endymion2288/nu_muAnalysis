@@ -1127,3 +1127,14 @@ QA后上限1GPU任务2CPU6GB/wall5400s/CPU7200s＋2CPU准确推断任务各1CPU3
 保留两低能/传统上95≤1.05、all/direct≤1.01、≥200及困难/direct≤1.03、原七层加低pz真高E双向tail差上端≤2pp的点风险门槛。概率可靠性应看明确目标权重下的总体完整PIT及X分组，不要求真E/y分组PIT自动均匀；固定真E coverage若是要求，需要频率学response区间。旧表保持，不能靠解释修正宣布旧模型通过。Cal-PIT、能量优先分解p(z,f|x)=p(z|x)p(f|z,x)、spline/NGBoost作为后续有条件方法，文献与新增收益均未测的边界见报告。
 
 下一阶段拟议资源≤1GPU并发/GPU任务wall累计2h/CPU累计6h/最终20MB，先固定≤40 train/cal实际包QA再冻结；新吞吐、收益、功效和资源均未测量，不自动缩样删困难者。先不购买大型Transformer或大规模预训练；五格不能建立联合收益时，再购买多轨迹候选、hit共享和veto/Calo几何关联的紧凑信息，需先证实际payload可用并另冻动量定义。stage19普通全SP Deep Sets阴性不等于否定关联信息；2026 FASERCAL关系预训练不是现有探测器现成解决方案。data/MC条件活动/纯noise不可辨识和nominal MC回归问题分开处理，stage85已完成控制不再默认重做。历史§1–54、原stage54后缀及K支持政策保持，下一执行见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+
+## 56. stage94：现有摘要的学习增量已测，下一信息预算用于候选与关联
+
+[stage94报告](../workbook/2026-11-04_stage94_architecture-comparison.md)实际完成5格主fit及cal_select事前选E/B补seed，总9fit。62对41输入改善全体log-RMSE .305048→.301516，条件配对比95% [.980350,.996793]；typed表示单独区间含1；TabM/MDN相对同typed MLP总体条件增量成立，但没有建立最低能/困难层联合收益。不能说现有模型已最优，也不能说换架构完全无用。
+
+E固定3seed最低能/第二低能/全体/低pz真高E/high-y为.276027/.251510/.289843/.671125/.616675；最低能传统.145661、全体direct.287491。其最低能/传统与all/direct的上95为2.249753/1.015960，困难tail也失败；相对stage92总体/困难改善伴随最低能显著损失。11候选无联合通过，不晋升或据test加seed。全局offset改善点总风险、加重低能；E总体68/90coverage62.602337%/86.253883%，总体及X组仍需可靠性工作，真E/y PIT继续仅描述。
+
+GPU全部工作实际112.157179wall秒/82.837277CPU秒，CPU统计4核实际并行段3.860634核占用，独立审计14992值及3024旧基线闭合；导入、eviction、回传失败均如实留证。旧pz0/raw/NaN、原split和incoming权重、K支持/困难组保持，表图/紧凑产物齐全，详见resources/storage.json。现有开发池、单seed控制和固定来源的500incoming区间不覆盖source/重训/系统/研究选择。
+
+下一stage95只购买一次**轨迹候选及真实关联**的新信息证据：现有已知PHYS源和train/cal身份→≤40载荷/单位/关联QA→冻结来源覆盖的小批量紧凑提取，按源4–8CPU Condor、每进程1线程。测候选/共享hit/重复/几何一致性和可部署分母；核得真值对应才给leading误选与candidate oracle诊断，不能假定配置列等于实际payload。以冻结一种紧凑关系摘要和后续匹配输入消融作为验收；本阶段不训GNN或再次扫现有62列。没有可核关联则明确缺口及可测替代，不凭未知宣称信息极限。新收益、系统效应和最终未开发确认未测，见[下一Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–55及stage54后缀不改。

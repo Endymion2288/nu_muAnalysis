@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/pool/condor/dir_3132632/nu_mu_stage94_report.fo6G6g/ml/report_energy_architectures.py", line 14, in <module>
+    from report_resplit_energy import strata,metrics,incoming_draws,wquantile
+  File "/pool/condor/dir_3132632/nu_mu_stage94_report.fo6G6g/ml/report_resplit_energy.py", line 8, in <module>
+    from resplit_energy import OUT,ART,CACHE
+  File "/pool/condor/dir_3132632/nu_mu_stage94_report.fo6G6g/ml/resplit_energy.py", line 13, in <module>
+    from latent_transfer_diagnostics import check_x, response
+ModuleNotFoundError: No module named 'latent_transfer_diagnostics'

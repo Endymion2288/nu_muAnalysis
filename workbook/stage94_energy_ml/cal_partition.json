@@ -1,0 +1,58 @@
+{
+  "valid": true,
+  "assignment": {
+    "pi:00240-00249": 1,
+    "pi:00270-00279": 1,
+    "pi:00340-00349": 1,
+    "pi:00470-00479": 2,
+    "pi:00200-00209": 2,
+    "pi:00420-00429": 2,
+    "pi:00480-00489": 2,
+    "k:00680-00689": 1,
+    "k:00220-00229": 1,
+    "k:00580-00589": 1,
+    "k:00090-00099": 1,
+    "k:00650-00659": 1,
+    "k:00480-00489": 2,
+    "k:00280-00289": 2,
+    "k:00600-00609": 2,
+    "k:00240-00249": 2,
+    "k:00620-00629": 2,
+    "charm:00050-00059": 1,
+    "charm:00130-00139": 2
+  },
+  "counts": [
+    {
+      "role": "purged_select",
+      "N": 423,
+      "incoming": 389,
+      "groups": 9,
+      "E50_100": 1,
+      "E100_200": 4,
+      "lowpz_trueE200": 11,
+      "missing": 0
+    },
+    {
+      "role": "cal_select",
+      "N": 5443,
+      "incoming": 5272,
+      "groups": 9,
+      "E50_100": 85,
+      "E100_200": 418,
+      "lowpz_trueE200": 135,
+      "missing": 1
+    },
+    {
+      "role": "cal_post",
+      "N": 5746,
+      "incoming": 5539,
+      "groups": 10,
+      "E50_100": 97,
+      "E100_200": 482,
+      "lowpz_trueE200": 138,
+      "missing": 5
+    }
+  ],
+  "eligibility": "each >=2000 incoming, >=50 E50_100, >=150 E100_200, >=50 lowpztruehighE; partition assignment uses only source/component/seed, thresholds support not risk",
+  "source_blocks_not_independent": "source-disjoint and exactincoming-disjoint only; shared parent/source correlations and outercal developmental status remain"
+}

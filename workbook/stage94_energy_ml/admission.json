@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "local_GPU": "Tesla T4",
+  "unique_QA": 40,
+  "optimizer_steps": 0,
+  "worst9fits_projected_wall_s": 2461.234194058925,
+  "projection_scope": "worst local batch F/B *46*300*9*5 +180; includes conservative multiplier, not measured training guarantee",
+  "GPU_wall_cap_s": 7200,
+  "CPU_cap_s": 21600,
+  "reporting_CPU_processes": 4,
+  "reporting_threads_per_process": 1,
+  "platform": "user-authorized existing Kubeflow H100 MIG3g.47gb; automatic22CPU63G allocation, torch1thread; same stage limits"
+}

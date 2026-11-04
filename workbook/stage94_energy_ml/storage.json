@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "parts": [
+    {
+      "path": "ml/artifacts/stage94",
+      "files": 12,
+      "logical_bytes": 5823188
+    },
+    {
+      "path": "ntuples/energy_ml_stage94",
+      "files": 2,
+      "logical_bytes": 2062451
+    },
+    {
+      "path": "workbook/stage94_energy_ml",
+      "files": 74,
+      "logical_bytes": 3368585
+    }
+  ],
+  "retained_logical_bytes_before_this_manifest": 11254224,
+  "limit_bytes": 20000000,
+  "removed_duplicate_archives": [
+    {
+      "path": "software/energy-ml-architectures-stage94.tar.gz",
+      "bytes": 48253081
+    },
+    {
+      "path": "software/energy-ml-architecture-report-stage94.tar.gz",
+      "bytes": 19672827
+    },
+    {
+      "path": "software/energy-ml-architecture-report-stage94-import-failure.tar.gz",
+      "bytes": 19565250
+    },
+    {
+      "path": "ntuples/energy_ml_stage94/result_fit.tar.gz",
+      "bytes": 12138190
+    },
+    {
+      "path": "ntuples/energy_ml_stage94/result_report.tar.gz",
+      "bytes": 936835
+    }
+  ],
+  "removed_bytes": 100566183,
+  "scope": "stage94 model/point/cal-test-head/cache/report tables and metadata; excludes shared original inputs and Git internal storage; figures retained, no ROOT/xAOD/event-hit copies",
+  "other_stage_paths_unchanged": true
+}

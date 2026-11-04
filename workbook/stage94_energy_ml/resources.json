@@ -1,0 +1,112 @@
+{
+  "GPU_worker_outer": {
+    "exit_code": 0,
+    "CPU_s": 82.837277,
+    "wall_s": 112.15717867901549,
+    "peak_RSS_KiB": 1839624,
+    "scope": "worker child including imports, reconstruction, all fits/validation/finalforward; not container/CVMFS/OAuth startup"
+  },
+  "Condor_report_success": {
+    "cluster": 9667473,
+    "remote_CPU_s": 223.0,
+    "remote_wall_s": 80.0,
+    "CPU_request": 4,
+    "memory_request_MB": 12000,
+    "starts": 1
+  },
+  "report_parallel": {
+    "tasks": 83,
+    "processes": 4,
+    "child_CPU_s": 151.100112,
+    "parallel_wall_s": 39.13867982602096,
+    "average_child_cores": 3.8606338453843962,
+    "not_measured_bulk_speedup": true
+  },
+  "audit_parallel": {
+    "processes": 4,
+    "child_CPU_s": 49.283592999999996,
+    "wall_s": 13.959240522002801,
+    "average_child_cores": 3.530535412891434
+  },
+  "Condor_CPU_including_import_failure_eviction_transfer_failure_s": 525.0,
+  "recorded_local_timers": [
+    {
+      "timer": "stage94_QA.time",
+      "CPU_s": 7.53,
+      "wall_hms": "0:14.51",
+      "peak_RSS_KiB": 1268540,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_QA_final.time",
+      "CPU_s": 7.300000000000001,
+      "wall_hms": "0:12.04",
+      "peak_RSS_KiB": 1271796,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_collectFit.time",
+      "CPU_s": 1.4,
+      "wall_hms": "0:02.46",
+      "peak_RSS_KiB": 51744,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_collectReport.time",
+      "CPU_s": 0.18,
+      "wall_hms": "0:01.27",
+      "peak_RSS_KiB": 17496,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_package.time",
+      "CPU_s": 3.0700000000000003,
+      "wall_hms": "0:05.56",
+      "peak_RSS_KiB": 20384,
+      "exit_code": 1
+    },
+    {
+      "timer": "stage94_package_final.time",
+      "CPU_s": 9.75,
+      "wall_hms": "0:15.54",
+      "peak_RSS_KiB": 1271948,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_protocol.time",
+      "CPU_s": 4.63,
+      "wall_hms": "0:09.56",
+      "peak_RSS_KiB": 476064,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_reportQA.time",
+      "CPU_s": 6.33,
+      "wall_hms": "0:14.19",
+      "peak_RSS_KiB": 551876,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_reportRepair.time",
+      "CPU_s": 7.91,
+      "wall_hms": "0:15.98",
+      "peak_RSS_KiB": 59248,
+      "exit_code": 0
+    },
+    {
+      "timer": "stage94_submitReport.time",
+      "CPU_s": 1.31,
+      "wall_hms": "0:02.86",
+      "peak_RSS_KiB": 26880,
+      "exit_code": 0
+    }
+  ],
+  "recorded_local_timer_CPU_s": 49.41,
+  "recorded_fit_plus_Condor_plus_local_timer_CPU_s": 657.2472769999999,
+  "scope": "recorded timed work only; lightweight shell, import-only final package check, collection/edit/document checks not all individually timed; nested worker, stage fit summaries, reporting/audit and usrtime CPU must not be added again",
+  "GPU_task_wall_cap_s": 7200,
+  "CPU_stage_cap_s": 21600,
+  "physical_EOS_read_bytes": "\u672a\u6d4b\u91cf",
+  "GPU_context_or_physical_peak": "\u672a\u6d4b\u91cf",
+  "bulk_same_workload_serial_speedup": "\u672a\u6d4b\u91cf"
+}

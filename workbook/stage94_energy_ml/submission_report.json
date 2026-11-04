@@ -1,0 +1,21 @@
+{
+  "cluster": 9667460,
+  "result": "9667460.0 - 9667460.0\n",
+  "CPUs": 4,
+  "processes": 4,
+  "BLAS_threads_each": 1,
+  "memory_MB": 12000,
+  "wall_limit_s": 1800,
+  "archive_bytes": 19672827,
+  "code_byte_equal": [
+    "ml/report_energy_architectures.py",
+    "ml/report_resplit_energy.py",
+    "ml/resplit_energy.py",
+    "ml/support_augmentation.py",
+    "ml/audited_features.py"
+  ],
+  "QA40": "report_startup_QA.json",
+  "transitive_dependency_corrected": true,
+  "independent_validation_in_same_job": true,
+  "report_eviction_then_release": true
+}
