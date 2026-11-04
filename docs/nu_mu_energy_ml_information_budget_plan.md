@@ -1075,3 +1075,14 @@ GH32 PIT/quantile/log-density超限132/231/159（N552），最大.024986898/.140
 两Condor9667192一次exit0/无重试，remote8937CPU秒/wall累计9010秒，peak≤202.093750MiB；已计外层8967.13CPU秒<10800，metadata等及物理EOS I/O未全测。5816数值独立复核含2016旧基线值，最大差4.263256e−14；原参考/两个实际包源逐字闭合。紧凑≤20MB以storage.json实测为准，传输包清理、NPZ不入Git；原stage54五项只读、后缀逐字保留。
 
 **唯一下一stage90购买可微准确marginal likelihood的值与梯度认证，0fit/校准优化/新test/ROOT，无新样本前置。** 原stage88固定40train/512cal、保存head与原权重/身份，在b0/T1训练点和原b/T校准点，只比较truth密度及15head/bT导数；独立自适应参考和双步差分，量GH32梯度误差及−joint−.25marginal贡献。≤40cal实际包计时QA后冻结单一实现与容差：值1e−6、梯度绝对1e−4＋相对1e−3，参考误差另列；不通过则交具体缺口，不续节点/架构网格。建议≤1Condor1CPU3000MB/1800CPU与wall秒/20MB，实测收益/成本未测。最终head/有限子集不能证明全训练轨迹或完整cal最优；可复用loss认证后才另冻一次同模型训练/校准合同，本轮不执行。见[请求](../workbook/stage89_energy_ml/followup_input_request.json)。历史§1–50、原stage54及K1016/解除旧生产时限保持，真实系统学和独立确认不冒称完成。
+
+
+## 52. stage90：训练/校准梯度的数值偏差已识别，下一成本项是批量可执行loss
+
+[stage90报告](../workbook/2026-11-04_stage90_differentiable-likelihood-gradients.md)在固定40train/512cal最终head、trainb0/T1和cal原b/T完成0fit/校准优化/网络forward/test/ROOT的score积分审计。先4cal实际包QA再冻结，原Reference双步差分核值/17坐标，552/9384全部通过，最大值差1.776357e−15、梯度差7.962786e−11，参考不确定度另列，不宣称密度尾界认证所有梯度尾或训练轨迹。
+
+GH32349/552事例至少一导数不达标、2414/9384坐标失败，最大37.427121；旧GH32 autograd/numpy差分自身闭合至4.860701e−11，问题是求积近似。trainhead监督上尾差可与总loss梯度同量级，但没有网络Jacobian/全部训练轨迹或物理低能因果份额。cal512 b/T准确导数−.225396542/+.078842712与GH32−.199055627/+.044483847不同，有限子集不能证明全cal未达最优。raw NLL与stage88闭合，原模型/角色/特征/先验不变，无新test指标或晋升。
+
+唯一9667276.0首次exit0，remote840CPU/856wall秒、worker833.771225CPU秒/263.851563MiB，已计外层890.68CPU秒<1800，部分早期开发/metadata与物理EOS I/O未全计量。65688数值独立复核差0、实际包原数值核逐字闭合；原552缺失状态覆盖未测。4cal当前scalarCPUfloat64 VJP .016753099秒/例，原46575×150仅密度粗外推117041.335CPU秒，不是实测训练成本，不能直接按旧训练预算启动。紧凑20MB实测清单、传输包去重，stage54五项/后缀与K1016/解除旧时限保持。
+
+**下一唯一stage91购买同一score积分的批量CPU/GPU数值保真和执行成本，0fit/新校准/test/ROOT。** 拟议单一分段GL32张量实现，响应split与density/score模型保持，≤40固定cal实际包计时QA后冻结，不扫描GH阶/模型/先验；全552复用本轮已保存参考与同容差，检查移动分点、一阶VJP、float64积分/原float32 head梯度传递。固定batch256/1024测node构造/传输/同步/forward-backward和内存，GPU可用性/成本尚未测。建议QA后≤1Condor/≤2CPU6GB/可用时1GPU、CPU与wall1800秒/20MB；不达标交具体缺口，不放宽门槛/删困难事例。只有实际成本/数值准入后才交一次原posterior150epochs＋原cal单b/T的单次fit合同，旧direct/bounded不重训，本轮不执行。见[请求](../workbook/stage90_energy_ml/followup_input_request.json)。source95、训练轨迹/真正能量收益/完整响应和独立确认未测；历史§1–51及独立支持协议保持。

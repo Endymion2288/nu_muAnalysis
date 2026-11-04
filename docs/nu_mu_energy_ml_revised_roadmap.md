@@ -1957,3 +1957,18 @@ GH32 PIT>1e−4、任一quantile logE>1e−3、log-density>1e−3差合**6075/10
 两Condor9667192.0/.1均一次exit0，无重试/恢复；实际1CPU3000MB5400s，remote5175＋3762=**8937CPU秒**、execute wall5221/3789秒；脚本peak186.351563/202.093750MiB。准确推断5151.605878/3738.148327CPU秒，吞吐2.254054/3.528217记录/CPU秒；584311新CDF调用、365134434被积函数计算。已计外层合8967.13CPU秒<10800，metadata等未全计时，物理EOS I/O未测。5816项独立指标/区间复核含2016旧基线值，最大差4.263256e−14；全cal目标闭合。紧凑最终≤20MB按storage.json实测，传输包去重、NPZ不入Git、原stage54只读。
 
 **继续既有部署；唯一下一stage90为保存head上的可微准确marginal likelihood及梯度认证，0fit/校准优化/新test评价。** 全量结果已证明仅修推断不足，但尚未量化32点训练/校准的梯度误差；不能直接归因为缺数据、先验或信息极限。复用stage88固定40train＋512cal，在训练点b0/T1与校准原b/T，只算truth density及15head/bT导数；先≤40cal实际包计时与独立自适应/双步差分QA，再冻结一种可微实现，目标log-density误差≤1e−6、梯度≤1e−4＋1e−3|参考|，参考误差另报。不扫描GH节点/模型/先验、不优化参数、不再重复全量quantile。建议≤1Condor1CPU3000MB/CPU与wall1800s/紧凑20MB，QA后才准入；成本/导数收益未测，失败交具体缺口。验收可复用认证loss或明确未认证项，后续单次同模型重训/校准另冻合同，本轮未执行stage90，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[输入请求](../workbook/stage89_energy_ml/followup_input_request.json)。真实响应/interaction/FSI/材料/Calo/接受度/背景与真正未开发确认仍需证据；原stage54后缀和K解除政策、历史§1–70及独立支持协议不改。
+
+
+## 72. stage90：准确可微loss值/9384导数全部通过；GH32梯度偏差已实测
+
+[stage90报告](../workbook/2026-11-04_stage90_differentiable-likelihood-gradients.md)复用stage88固定40train＋512cal保存head、原权重/角色/真值，0fit/校准优化/网络forward/新test/ROOT/生成。train用b0/T1，cal用原b=.011721733230708156/T=1.2001641697078562，只审计training-prior raw marginal。原552无missing/wave/Calo-invalid，相关数值覆盖未测；原pz0-only一次方动量/允许px-py-q/p-弯折/raw11/typed NaN/Calo缺项/pz>50/困难侧及全部1016K支持保持，不恢复旧K生产时限。
+
+新自适应score积分解析Gaussian导数，PyTorch CPUfloat64一阶VJP支持非均匀upstream/共享bT汇总；分区是数值工具，不对求积器分支求导。原stage88 Reference逐参数双步h1e−4/5e−5差分＋Richardson独立认证，参考不确定度含步差与quad误差传播。先4固定cal/68导数QA/实际包，后冻结单一实现与值1e−6、梯度1e−4＋1e−3|参考|门槛，无事后放宽。**552/552事例、9384/9384坐标全部通过**，最大值差1.776357e−15、导数差7.962786e−11，参考不确定度最大1.408596e−5且≤容差.140597。密度尾界不冒称梯度严格尾界；这是固定点独立数值认证，不是全训练轨迹数学保证。
+
+GH32原密度复现numpy最大差1.067202e−14，同4cal旧autograd/numpy双步差分最大差4.860701e−11，排除自动微分本身不一致。**GH32梯度失败349/552事例、2414/9384坐标**（train30/40、207/680；cal319/512、2207/8704），最大误差37.427121/31.280986；值误差>1e−6计38/40、424/512。train原raw NLL GH32/准确−.149931212/−.186490944，cal−.124483590/−.130228601与stage88中心值闭合。
+
+train40的−joint−.25marginal对head输出梯度差L2 median/p95 .000697047/2.928563260，相对准确总loss导数范数差p95 1.048319926；原权重平均head导数差L2 .526722733、方向cosine .930826110。是head导数，不是已乘网络Jacobian的权重梯度，也不是150epochs的更新偏差。cal512 NLL b/T准确导数−.225396542/+.078842712，GH32−.199055627/+.044483847；子集点不要求stationary，不能据此判完整cal最优或优化b/T。低E/high-y样本仍少，不以此宣布低能恢复或单一原因；已确认32点近似是一个程序因素，物理因果份额未测。
+
+唯一Condor9667276.0首次exit0/无重试，1CPU3000MB1800s，remote840CPU/856wall秒；worker833.771225CPU秒/263.851563MiB。score被积函数392133、参考25551477次，完整独立保存数组65688数值/全部身份与flags复核最大差0；原数值核心/GH32与起点不变、实际包逐字核对。含已计外层890.68CPU秒<1800，首个float32开发失败及metadata等未全计量、物理EOS I/O未测；两前置失败已如实说明。四cal两次forward/backward测当前scalar .016753099CPU秒/例，对原46575×150粗外推仅密度117041.335CPU秒（32.511482h），非实测训练或上界；CPUfloat64接口不能直接代替原float32网络。紧凑≤20MB见storage.json、包去重、原stage54五项和后缀不改。
+
+**继续既有部署；唯一下一stage91为同一score loss批量CPU/GPU实现、数值保真和训练成本认证，0fit/校准优化/新test。** 拟议单一分段Gauss–Legendre32张量求积沿用响应split/尾界/模型，先≤40固定cal实际包QA，再冻结实现/资源；不是GH节点/架构/先验网格。复用本552独立参考，不重算9384差分；同容差全量值/梯度认证、float64积分与原float32网络导数桥接、非均匀VJP/sharedbT/移动分点导数检查。固定batch256/1024测CPU及可用GPU的完整node构造/传输/同步/forward-backward与peak，当前CUDA可用性/成本未测。QA后建议≤1Condor/≤2CPU6GB/可用时1GPU、CPU与wall1800秒/紧凑20MB；数值不达标不能删事件/降容差/无界扫阶。验收可实际执行的一次原posterior150epochs＋原cal一个b/T优化合同，direct/bounded旧基线不重训，资源未准入不提前fit。本轮未执行stage91，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)/[输入请求](../workbook/stage90_energy_ml/followup_input_request.json)。真实响应、interaction/FSI/材料/Calo/接受度/背景、source95与独立确认仍未认证，历史§1–71及独立支持协议不改。

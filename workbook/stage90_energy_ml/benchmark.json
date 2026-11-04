@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "method": "GH32",
+      "N": 4,
+      "repetitions": 2,
+      "forward_backward_CPU_s": [
+        0.0065677460000004295,
+        0.0034079070000001543
+      ],
+      "CPU_s_per_event_mean": 0.001246956625000073,
+      "optimizer_steps": 0,
+      "network_forwards": 0
+    },
+    {
+      "method": "adaptive_score",
+      "N": 4,
+      "repetitions": 2,
+      "forward_backward_CPU_s": [
+        0.06823505400000007,
+        0.06578973499999963
+      ],
+      "CPU_s_per_event_mean": 0.016753098624999962,
+      "optimizer_steps": 0,
+      "network_forwards": 0
+    }
+  ],
+  "nominal_training_event_evaluations": 6986250,
+  "projected_scalar_density_forward_backward_CPU_s": 117041.33526890598,
+  "projection_scope": "4 fixed finalcal heads, CPUfloat64 scalar-integral VJP, excludes network/joint/preprocessing/validation/calibration; not measured training runtime or a guaranteed bound",
+  "zero_fits": true,
+  "wall_s": 0.16218401212245226,
+  "CPU_s": 0.15027563099999997,
+  "peak_RSS_MiB": 260.6953125
+}

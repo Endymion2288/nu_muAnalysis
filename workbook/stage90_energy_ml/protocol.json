@@ -1,0 +1,56 @@
+{
+  "stage": 90,
+  "starting_commit": "5df6db34211a292c15fc6fcfecdad7147c8460a0",
+  "frozen_utc": "2026-11-04T08:55:26.446379+00:00",
+  "scope": "fixed stage88 evenly spaced40train/512cal, saved heads only; no optimizer/network/test/ROOT",
+  "method": "adaptive standardized-s Gaussian score vector integration, epsabs/epsrel1e-10, normal tail >=10sigma, original response split points; head15 and b/T first derivatives; no differentiation of adaptive solver",
+  "parameter_points": {
+    "train": {
+      "b": 0.0,
+      "T": 1.0
+    },
+    "cal": {
+      "b": 0.011721733230708156,
+      "T": 1.2001641697078562
+    }
+  },
+  "prior": "raw training-prior marginal only; original negative joint-.25marginal",
+  "finite_difference": {
+    "source": "unchanged stage88 Reference, independently perturbed head/b/T",
+    "central_steps": [
+      0.0001,
+      5e-05
+    ],
+    "estimator": "(4*d_half-d_full)/3",
+    "uncertainty": "abs(d_half-d_full)/3+(4*noise_half+noise_full)/3; noise propagated Reference relative density error estimates",
+    "reference_resolved": "uncertainty <= tolerance/4"
+  },
+  "tolerances": {
+    "absolute_log_density": 1e-06,
+    "gradient_absolute": 0.0001,
+    "gradient_relative": 0.001,
+    "gradient_pass": "abs(candidate-reference)+reference_uncertainty<=1e-4+1e-3*abs(reference)"
+  },
+  "limits": {
+    "Condor_jobs": 1,
+    "CPUs": 1,
+    "memory_MB": 3000,
+    "MaxRuntime_s": 1800,
+    "worker_CPU_soft_s": 1600,
+    "worker_CPU_hard_s": 1620,
+    "worker_wall_s": 1700,
+    "cumulative_CPU_s": 1800,
+    "retained_bytes": 20000000
+  },
+  "QA": {
+    "fixed_cal_N": 4,
+    "CPU_s": 4.003422842,
+    "max_gradient_error": 1.0993261856384606e-11,
+    "VJP_max_difference": 0.0,
+    "projected552_CPU_s": 506.655204864,
+    "projection_only": true
+  },
+  "derivative_limits": "CPU float64 first-order VJP only; no observation/higher-order gradient; density tail bound not claimed as gradient tail bound, independent FD at audited points; finite final-head sample not entire trajectory",
+  "stop": "one full pass, retain unresolved cases/checkpoints, no tolerance relaxation/GH node sweep/prior/model/optimizer; no automatic next stage",
+  "protected": "pz0-only first-power momentum; allowpx/py/q/p/bends;raw11/typedNaN/Calo missing/pz>50/difficult cases/K1016 kept; no old K limit reinstatement; stage54 five paths and prompt suffix read-only"
+}

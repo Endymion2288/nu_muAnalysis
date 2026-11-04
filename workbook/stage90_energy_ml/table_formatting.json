@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "path": "workbook/stage90_energy_ml/audit_events.tsv",
+      "rows": 552,
+      "all_named_cell_values_unchanged": true
+    },
+    {
+      "path": "workbook/stage90_energy_ml/qa_events.tsv",
+      "rows": 4,
+      "all_named_cell_values_unchanged": true
+    }
+  ],
+  "change": "move empty error column to first position to avoid trailingtab; numerical fields and status text unchanged",
+  "new_integrations": 0
+}

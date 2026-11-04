@@ -1,0 +1,55 @@
+{
+  "stage": 91,
+  "status": "proposed next stage, not executed",
+  "task": "batch the same accurate score likelihood on CPU/GPU and certify numerical preservation and executable training cost; zero fitting",
+  "input_paths": [
+    "ntuples/energy_ml_stage90/input.npz",
+    "ntuples/energy_ml_stage90/audit_values.npz",
+    "workbook/stage90_energy_ml/audit_gradients.tsv",
+    "workbook/stage90_energy_ml/protocol.json",
+    "workbook/stage90_energy_ml/benchmark.json",
+    "ml/differentiable_posterior.py",
+    "ml/artifacts/stage87/posterior_parameters.npz",
+    "workbook/stage87_energy_ml/protocol.json",
+    "ml/artifacts/stage87/bounded.pt",
+    "ml/artifacts/stage87/posterior.pt"
+  ],
+  "evidence": {
+    "certified_rows": 552,
+    "certified_coordinates": 9384,
+    "max_gradient_difference": 7.962785986137533e-11,
+    "GH32_gradient_failed_coordinates": 2414,
+    "GH32_gradient_failed_events": 349,
+    "scalar_forward_backward_CPU_s_per_event": 0.016753098624999962,
+    "projected_150epoch_density_CPU_s": 117041.33526890598,
+    "projection": "4 fixed finalcal heads only, excludes network/joint/etc, not measured training runtime"
+  },
+  "candidate": "One deterministic segmented Gauss-Legendre32 tensor score integration using original standardized-s response split points/tail limits; same density/score model, no GH-order or architecture/prior grid. QA before freezing final implementation. Retain unresolved cases rather than favorable-only selection.",
+  "numerical_definition": "reuse saved stage90 independent references and uncertainties on same40train/512cal and b0/T1 train / original b/T cal; do not repeat9384 finite differences. values abs1e-6; gradient abs1e-4+relative1e-3 with reference uncertainty; singleimplementation must pass all specified points.",
+  "startup": "<=40 fixedcal actual-payload/identity, sharedbT/nonuniformupstream VJP, moving-node derivative consistency and float64integral/float32network gradient bridge; timing/peak and actual CPU/GPU availability before freezing resource contract. No optimizer/network model forward needed.",
+  "benchmark": "fixed batch256 and1024, CPU and GPU if available; include constructing/masking nodes, transfers/synchronization and forward/backward; deterministic repetitions, no selecting physics winner; compare scalar. GPU availability/time and fullcost currently unmeasured.",
+  "proposed_limits": {
+    "Condor_jobs": 1,
+    "max_concurrency": 1,
+    "CPUs_per_job": 2,
+    "memory_MB_per_job": 6000,
+    "GPUs_if_available": 1,
+    "cumulative_CPU_s": 1800,
+    "MaxRuntime_s": 1800,
+    "retained_bytes": 20000000,
+    "new_fits": 0,
+    "new_calibration": 0,
+    "new_test_evaluations": 0,
+    "ROOT_reads": 0
+  },
+  "acceptance": [
+    "same552 values/gradients meet stage90 tolerances with reference uncertainty; all role/row/weight and original head semantics unchanged",
+    "CPU/GPU value/VJP consistency and actual batch throughput/memory measured including node/transfer overhead; no unmeasured CUDA claims",
+    "float64 integration and originalfloat32 head backprop bridge verified; no newfeature/status/cuts/prior/loss/model",
+    "deliver clearly budgeted single originalposterior150epoch plus originalcal onebTfit contract only after cost/numeric admission; direct/bounded cached baselines not retrained; do not execute that fit within stage91",
+    "failure must preserve whole sample and report exact numeric/performance gap without lowering tolerances or automatically scanning nodes"
+  ],
+  "interpretation": "stage90 score VJP was certified at fixedfinal552 only, not every training head/trajectory. Physics gain/fullcal accurate optimum/response/source95/independent confirmation remain unmeasured.",
+  "retained_boundaries": "pz0-only firstpower momentum; px/py/q/p/bends allowed; raw11/typed NaN/validnegative raw/Calo missing; pz>50/difficult cases and1016K retained, oldKlimits not restored; stage54five paths/suffix read-only",
+  "final": "Chinese workbook actual evidence/risks/costs, local Conventional Commit without push or automatic subsequent stage"
+}

@@ -1,31 +1,30 @@
-# 下一轮执行 Prompt：stage90 可微准确marginal likelihood与梯度认证，0fit
+# 下一轮执行 Prompt：stage91 批量准确score loss与执行成本认证，0fit
 
-先读`AGENTS.md`、路线§71、信息预算§51、[stage89实际报告](../workbook/2026-11-04_stage89_full-accurate-posterior.md)、[全量数值表](../workbook/stage89_energy_ml/numerical_summary.tsv)、[全cal闭合](../workbook/stage89_energy_ml/closeout_validation.json)和[输入/验收](../workbook/stage89_energy_ml/followup_input_request.json)。**唯一任务：在保存的固定head上认证一个可微准确marginal log-likelihood及其梯度，0能量fit/校准优化/网络forward/新test评价/ROOT/生成，无新样本前置。**
+先读`AGENTS.md`、路线§72、信息预算§52、[stage90报告](../workbook/2026-11-04_stage90_differentiable-likelihood-gradients.md)、[完整数值证据](../workbook/stage90_energy_ml/audit_summary.json)、[梯度汇总](../workbook/stage90_energy_ml/parameter_summary.tsv)、[实测速率](../workbook/stage90_energy_ml/benchmark.json)与[后续合同](../workbook/stage90_energy_ml/followup_input_request.json)。**唯一任务：同一准确score likelihood的批量CPU/GPU实现、数值保真与训练执行成本认证，0能量fit/校准优化/网络forward/新test评价/ROOT/生成。**
 
-## 1. 已测结论与边界
+## 1. 已测证据和范围
 
-stage89原cal11612/test13189全部数值认证，缺失6/5和困难/K保留，0重试。GH32 PIT/quantile/log-density超限6075/10636/7403，最大.039168732/.218637202/3.732729847。准确test最低能/第二低能/all为.169296/.231281/.326783，同低pz真高能/high-y .828213/.807754；最低能仍差于传统.145661，总体/困难差于同split direct。第二低能/GH32条件收益小，all/high-y小幅变差，不晋升模型。总体coverage68.819244%/90.951065%不替代PIT偏移或高端22.343750%/59.947917%欠覆盖。
+stage90固定40train＋512cal的值/9384导数全部独立认证，最大值差1.776357e−15、梯度差7.962786e−11；GH32349事例/2414坐标失败，旧autograd自身与numpy差分闭合，近似积分梯度偏差是已确认程序因素。train上尾head监督差可与总loss导数同量级，但没量完整网络权重/150epochs轨迹或能量因果份额。cal512有限子集导数非0不证明全cal未达最优。
 
-完整cal GH32 training-prior NLL−.063295544复现旧目标至1.387779e−17，准确−.086449009；这说明目标值确实变了，**不说明原b/T已重新最优，也没量出训练梯度偏差**。推断积分已修，不能未经认证就重复原GH32训练或归因数据无关/信息上限。原split/test是已研究池，不是新blind；source95仍不可估，不能靠更多incoming draw补齐。
+现有CPUfloat64 scalar score VJP每例约.016753099CPU秒，原46575×150仅密度外推117041.335秒（非实测训练）；不能直接复用旧预算启动fit。先做批量可执行loss，再另冻单次原模型fit。继续既有部署，不把数值认证当低能恢复/response闭合/新blind确认，无新样本前置。
 
-## 2. 固定输入和实施范围
+## 2. 输入与单一实现
 
-- `ml/artifacts/stage87/{posterior_parameters,predictions}.npz`与原`split.npz`，原stage88固定40train＋512cal等间隔row、role/weight/pz/truth；可直接复用`ntuples/energy_ml_stage88/input.npz`并逐项核对stage87。该552无missing/wave/Calo-invalid，不伪造覆盖。本任务不打开test作新的候选评价，不计算全量quantile或多个prior。
-- 训练点固定b=0/T=1；校准点固定b=.011721733230708156/T=1.2001641697078562。模型head/角色/名义prior不变；训练原−joint−.25marginal定义不变；训练/校准均使用原training-prior的raw marginal密度，nominal prior不进入这个优化目标。truth只用于监督目标审计，不变成部署输入。
-- 在truth能量处计算marginal log-density与对15个原head输出及b/T的梯度。建立**一种**可微准确实现，以未改动stage88自适应参考核值、独立双步长差分核导数及其不确定度；不得只因autograd能运行就认证。积分节点/截断边界的导数处理需要实际验证。
-- 原GH32值与梯度是被审计项，不再扫64/128/256挑节点。记录值/梯度误差分布、方向/尺度及其对原−joint−.25marginal loss的贡献；最终head点的误差不是整个训练轨迹的已知偏差，也不能据512cal判完整cal最优。
+- `ntuples/energy_ml_stage90/{input,audit_values}.npz`和`workbook/stage90_energy_ml/audit_gradients.tsv/protocol.json`；原固定552身份、角色、head、权重、truth/pz、独立参考/参考不确定度均保留。train用b0/T1、cal用原b/T；raw training-prior marginal，loss−joint−.25marginal，不加nominal prior到优化目标。无需重复9384差分或打开test。
+- 拟议**一种**分段Gauss–Legendre32张量score积分，原standardized-s响应split/尾界与物理模型保持；先小QA再冻结最终实现，不做GH阶数/节点/架构/先验网格。积分内解析score支持head15及b/T，不能只因autograd能跑就认证。移动分点是数值工具，一阶梯度处理需与保存独立参考闭合。
+- 检查原float32网络head到float64积分、再传回float32 head梯度的桥接；本阶段仅叶张量/VJP，不运行网络/optimizer。支持非均匀上游权重、共享b/T及批量padding/mask，避免漏成分/错误归一化。CPU/GPU（实际可用才报告）值/导数均需验证，不伪称当前scalar接口支持CUDA/高阶梯度。
 
-## 3. 先QA、后冻结与资源
+## 3. QA、预算、性能与验收
 
-≤40固定cal先做实际包/身份/单位/原GH32复现与精确值/双步导数QA、CPU/wall/RSS计时；无optimizer step。QA后冻结单一实现、样本/参数点和参考导数精度规则，建议log-density绝对误差≤1e−6、梯度|差|≤1e−4＋1e−3|参考|；参考差分误差另报，不达标不能静默放宽或只保留容易行。
+≤40固定cal实际包身份/单位/值/VJP与实测成本QA，随后冻结单一实现与容差：log-density绝对误差≤1e−6，梯度|差|＋stage90参考不确定度≤1e−4＋1e−3|参考|；全552保留，无容易子集/困难cut/事后降精度。若单一实现不能通过，交具体失败/最小改进，不自动扫阶或训练。
 
-正式建议≤1Condor、1CPU3000MB、MaxRuntime1800s、累计CPU1800s（含QA）、最终≤20,000,000bytes。按实际QA确认准入，重计算通过Condor；资源/导数通过率目前未测。避免逐节点/逐参数大网格和重复head/ROOT，先保存紧凑分块检查点，报告失败不重算已完成积分。若预算/精度无法交付，准确记录具体缺口和最小后续输入/实现，不自动扩大网格或提前训练。
+固定batch256/1024，测CPU与可用GPU的完整node构造/传输/同步/forward＋backward及peak内存，用确定重复计时，不挑物理赢家；包括float32/64桥接误差，输出真正可训练的资源预测与范围。QA后建议≤1Condor/≤2CPU6GB、可用时1GPU、MaxRuntime与阶段CPU1800秒、紧凑20MB；GPU真实准入/成本目前未测，按QA确认资源，不临时无限扩大。全数组与吞吐批任务通过Condor；不得保存逐节点大网格/重复head模型。
 
-## 4. 验收与交接
+交付数值全通过且实测较scalar明显加速的可复用loss或明确缺口；随后提出**一次原posterior固定seed/150epochs＋原cal一次b/T优化**的独立合同/执行预算，同split direct/bounded旧预测复用，不重训基线、不换feature/prior/风险门槛。stage91本身0fit，不提前执行该合同或自动进入stage92。最终head点认证仍不保证所有训练中间head，后续训练需要明确数值失败策略和预算，不能静默降级GH32。
 
-完整固定552的值/梯度或明确未认证项、参考精度、原GH32闭合、原权重/角色、实际成本与紧凑产物交付；单一可微loss能复用或解释具体失败。只有数值认证后才提出一次同模型训练/校准的另冻合同，**stage90自身不fit、不优化b/T、不按test选先验/损失/模型、不自动进入stage91**。此阶段也不证明低能恢复、真实response认证或独立确认。
+## 4. 阶段交付
 
-写中文stage90 workbook，实际数值/单位/命令/资源/失败/下一输入与验收，与代码配置证据本地Conventional Commit，不push。原pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV/困难侧与已交付1016K保持，旧K生产时限不恢复。原stage54五项只读，以下后缀逐字保留。
+中文stage91 workbook记录实际数值/全部失败、真实CPU/GPU/RSS/吞吐与计量范围、输入产物/下一单次fit验收；本地Conventional Commit，不push。原pz0-only一次方动量、允许px/py/q/p/弯折、raw11/typed NaN/合法负raw/Calo缺项、pz>50GeV/困难侧与已交付1016K保持，旧K生产时限不恢复。原stage54五项只读，以下后缀逐字保留。
 
 ## 保留的stage54 data占据支线
 
