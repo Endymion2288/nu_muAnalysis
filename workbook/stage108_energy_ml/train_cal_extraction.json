@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "mode": "train_extract",
+  "records": 58187,
+  "sources": 239,
+  "available": 57499,
+  "missing": 688,
+  "total_original_points": 12146928,
+  "max_original_points": 10618,
+  "invalid_original_points": 0,
+  "max_native_pz_difference_GeV": 0.0,
+  "float32_loss_mm": 0.0,
+  "source_CPU_s": 734.154227041,
+  "payload_CPU_s": 675.0201662419995,
+  "edge_build_CPU_s": 96.10456525999962,
+  "interface_requested_bytes": 3399056255,
+  "source_read_bytes": 1399741924,
+  "cached_coordinate_bytes": 66061470,
+  "total_coordinate_cache_bytes": 66061470,
+  "role_records": {
+    "1": 46575,
+    "2": 11612,
+    "3": 0
+  },
+  "test_payload_records": 0,
+  "optimizer_steps": 0,
+  "CPU_s": 9.180027474,
+  "wall_s": 128.11558844300453,
+  "peak_RSS_MiB": 561.2109375,
+  "invalid_geometry_events": 0
+}

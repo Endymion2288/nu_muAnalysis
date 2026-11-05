@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "fit_Job_completed_UTC": "2026-11-05T00:41:12Z",
+  "checkpoints_and_offsets_marker": "workbook/stage108_energy_ml/before_test.json",
+  "test_submission_after_completed_fit": true,
+  "correct_test_mode_verified": true,
+  "CPU_jobs": [
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage108/worker.sh train_extract",
+      "ClusterId": 9667814,
+      "CompletionDate": 1793838474,
+      "ExitCode": 0,
+      "JobStartDate": 1793838337,
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "QDate": 1793838199,
+      "TransferInput": "root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-stage108-train_extract.tar.gz"
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage108/worker.sh train_extract",
+      "ClusterId": 9667832,
+      "CompletionDate": 1793839569,
+      "ExitCode": 0,
+      "JobStartDate": 1793839383,
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "QDate": 1793839327,
+      "TransferInput": "root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-stage108-train_extract.tar.gz"
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage108/worker.sh test_extract",
+      "ClusterId": 9667833,
+      "CompletionDate": 1793839750,
+      "ExitCode": 0,
+      "JobStartDate": 1793839688,
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "QDate": 1793839634,
+      "TransferInput": "root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-stage108-test_extract.tar.gz"
+    },
+    {
+      "Args": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage108/worker.sh report",
+      "ClusterId": 9667835,
+      "CompletionDate": 1793839993,
+      "ExitCode": 0,
+      "JobStartDate": 1793839976,
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "QDate": 1793839974,
+      "TransferInput": "root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-stage108-report.tar.gz"
+    }
+  ],
+  "infer_container": {
+    "exitCode": 0,
+    "finishedAt": "2026-11-05T00:51:40Z",
+    "reason": "Completed",
+    "startedAt": "2026-11-05T00:51:18Z"
+  },
+  "scope": "job chronology + frozen marker required by extractor; all model/package inputs compared byte-exact during collection"
+}

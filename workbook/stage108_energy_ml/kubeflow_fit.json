@@ -1,0 +1,43 @@
+{
+  "job": "nu-mu-energy-stage108-fit",
+  "pod": "nu-mu-energy-stage108-fit-v99hd",
+  "phase": "JobComplete",
+  "pod_deleted_before_terminal_resource_snapshot": true,
+  "template_resource_request": {
+    "limits": {
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "actual_Pod_CPU_memory_resources": "未测量；未保留被GC前的JSON，不从infer推断",
+  "GPU_container_wall_s": null,
+  "GPU_wall_charged_s": 693.0,
+  "wall_charge_scope": "conservative full Job interval incl scheduling/init/sidecar overhead; actual container duration unavailable",
+  "job_status": {
+    "completionTime": "2026-11-05T00:41:12Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-05T00:41:12Z",
+        "lastTransitionTime": "2026-11-05T00:41:12Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-05T00:41:12Z",
+        "lastTransitionTime": "2026-11-05T00:41:12Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-05T00:29:39Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  },
+  "restart_count": "not retained in terminal JSON; observed running wide output0, no replacement pod observed",
+  "optimizer_retry": false
+}

@@ -1,0 +1,50 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "nu-mu-energy-stage108-infer",
+    "namespace": "xcheng",
+    "labels": {
+      "analysis-stage": "nu-mu-energy-108"
+    }
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 600,
+    "template": {
+      "metadata": {
+        "labels": {
+          "mount-eos": "true",
+          "mount-cvmfs": "true",
+          "home": "eos"
+        }
+      },
+      "spec": {
+        "serviceAccountName": "default-editor",
+        "restartPolicy": "Never",
+        "nodeSelector": {
+          "nvidia.com/gpu.product": "NVIDIA-H100-NVL"
+        },
+        "containers": [
+          {
+            "name": "infer",
+            "image": "registry.cern.ch/mlops/lxplus-like:9",
+            "imagePullPolicy": "IfNotPresent",
+            "command": [
+              "bash",
+              "-lc"
+            ],
+            "args": [
+              "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/submission/run_ml_stage108.sh infer"
+            ],
+            "resources": {
+              "limits": {
+                "nvidia.com/mig-3g.47gb": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

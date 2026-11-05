@@ -1,0 +1,96 @@
+{
+  "independent_outer_CPU_s": 2774.638062,
+  "previous_stage106_107_CPU_s": 36.04871,
+  "combined_outer_CPU_s": 2810.686772,
+  "stage108_GPU_wall_charged_s": 715.0,
+  "previous_GPU_container_wall_s": 19,
+  "combined_GPU_wall_charged_s": 734.0,
+  "outer_windows": {
+    "train_extract": {
+      "mode": "train_extract",
+      "exit_code": 0,
+      "wall_s": 129.85949614702258,
+      "CPU_s": 745.1487870000001,
+      "peak_single_process_RSS_KiB": 574680,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "fit": {
+      "mode": "fit",
+      "exit_code": 0,
+      "wall_s": 680.5362848889781,
+      "CPU_s": 674.2662789999999,
+      "peak_single_process_RSS_KiB": 9236712,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "test_extract": {
+      "mode": "test_extract",
+      "exit_code": 0,
+      "wall_s": 54.86850586300716,
+      "CPU_s": 282.54073,
+      "peak_single_process_RSS_KiB": 242924,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "infer": {
+      "mode": "infer",
+      "exit_code": 0,
+      "wall_s": 20.372336853004526,
+      "CPU_s": 19.562547000000002,
+      "peak_single_process_RSS_KiB": 2872432,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "report": {
+      "mode": "report",
+      "exit_code": 0,
+      "wall_s": 9.203727998014074,
+      "CPU_s": 23.851183,
+      "peak_single_process_RSS_KiB": 335176,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "duplicate_train_extract": {
+      "mode": "train_extract",
+      "exit_code": 0,
+      "wall_s": 179.7006396241486,
+      "CPU_s": 1029.268536,
+      "peak_single_process_RSS_KiB": 598700,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    }
+  },
+  "CPU_limit_s": 21600,
+  "GPU_task_wall_limit_s": 10800,
+  "CPU_within_limit": true,
+  "GPU_within_limit": true,
+  "CPU_task_request": {
+    "cpus": 8,
+    "memory_MB": 8000,
+    "site_memory_MB": 24000,
+    "inner_threads": 1
+  },
+  "GPU_infer_site_resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "GPU_fit_site_CPU_memory": "未测量：终态Pod已GC，未保留早期资源JSON",
+  "GPU_recorded_supervised_phase_allocated_peak_MiB": 5204.97265625,
+  "GPU_peak_scope": "maximum recorded supervised A/B/C peak; allocator reset each phase; pretraining/whole-container absolute peak not measured",
+  "extraction_interface_bytes": 7560151910,
+  "extraction_underlying_read_bytes": 3096898324,
+  "measured_point_records": 71376,
+  "point_coordinate_cache_bytes": 83221613,
+  "not_double_counted": "source/inner/profile/calculation windows and Condor integer counters not added to independent outer timings",
+  "unmeasured": [
+    "physical EOS network",
+    "GPU utilization/busy time",
+    "whole GPU fit absolute allocator peak including pretraining",
+    "platform/edit/packaging/full session CPU",
+    "single-core speedup comparison",
+    "fit Pod actual CPU/memory and exact container wall"
+  ]
+}

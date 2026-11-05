@@ -1,0 +1,30 @@
+{
+  "checkpoints_and_offsets_frozen": true,
+  "new_fits": 3,
+  "pretraining_runs": 1,
+  "pretraining_epochs": 20,
+  "seed": 2026110506,
+  "new_test_predictions": 0,
+  "test_payload_records": 0,
+  "train_cal_records": 58187,
+  "offsets": [
+    {
+      "cell": "A",
+      "offset_logE": 0.012895421744291997,
+      "cal_post_records": 5746
+    },
+    {
+      "cell": "B",
+      "offset_logE": 0.0076305353360386595,
+      "cal_post_records": 5746
+    },
+    {
+      "cell": "C",
+      "offset_logE": -0.023060013940051218,
+      "cal_post_records": 5746
+    }
+  ],
+  "CPU_s": 672.0213190759999,
+  "wall_s": 677.7565223330166,
+  "peak_RSS_MiB": 9020.2265625
+}

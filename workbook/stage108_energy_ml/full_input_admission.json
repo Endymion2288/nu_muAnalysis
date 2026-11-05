@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "train_cal_records": 58187,
+  "train_records": 46575,
+  "role_records": {
+    "1": 46575,
+    "2": 11612
+  },
+  "available": 57499,
+  "missing": 688,
+  "original_points": 12146928,
+  "effective_points": 12146928,
+  "directed_edges": 122821859,
+  "max_points": 10618,
+  "max_edges": 116238,
+  "largest_QA_row": 44249,
+  "resident_plus_largest_event_GPU_peak_MiB": 5096.23681640625,
+  "node_factor_over_QA": 1.4326244570122284,
+  "edge_factor_over_QA": 1.4554887669573295,
+  "projected_GPU_task_wall_s": 9495.337187591109,
+  "projected_total_CPU_s": 17734.079217089748,
+  "cold_cost": {
+    "CPU_s": 84.12080541099999,
+    "wall_s": 84.41188155900454,
+    "peak_RSS_MiB": 9020.2265625
+  },
+  "GPU_cap_s": 10800,
+  "CPU_cap_s": 21600,
+  "test_payload_records": 0,
+  "optimizer_steps": 0,
+  "CPU_s": 0.17998089200000322,
+  "wall_s": 2.2127313209930435,
+  "peak_RSS_MiB": 9020.2265625
+}

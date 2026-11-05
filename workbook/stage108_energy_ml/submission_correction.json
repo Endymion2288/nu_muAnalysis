@@ -1,0 +1,10 @@
+{
+  "duplicate_job": "9667832.0",
+  "requested_mode": "test_extract",
+  "actual_mode": "train_extract",
+  "cause": "submit-file assignment overrides ordinary CLI macro assignment",
+  "correction": "condor_submit -append stage108_mode=test_extract; inspect actual Args and TransferInput before execution",
+  "optimizer_and_test_steps": 0,
+  "model_states_unchanged": true,
+  "no_automatic_fit_retry": true
+}

@@ -1,0 +1,53 @@
+{
+  "job": "nu-mu-energy-stage108-infer",
+  "pod": "nu-mu-energy-stage108-infer-v2hk5",
+  "phase": "Succeeded",
+  "resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "restart_count": 0,
+  "terminated": {
+    "exitCode": 0,
+    "finishedAt": "2026-11-05T00:51:40Z",
+    "reason": "Completed",
+    "startedAt": "2026-11-05T00:51:18Z"
+  },
+  "GPU_container_wall_s": 22.0,
+  "GPU_wall_charged_s": 22.0,
+  "wall_charge_scope": "measured container",
+  "job_status": {
+    "completionTime": "2026-11-05T00:51:45Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-05T00:51:45Z",
+        "lastTransitionTime": "2026-11-05T00:51:45Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-05T00:51:45Z",
+        "lastTransitionTime": "2026-11-05T00:51:45Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-05T00:51:13Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

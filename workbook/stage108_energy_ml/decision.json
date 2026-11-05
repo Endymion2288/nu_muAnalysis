@@ -1,0 +1,25 @@
+{
+  "primary": {
+    "statistic": "max of E50_100 and E100_200 RMSE C_cal/A_cal",
+    "role": "cal_post",
+    "point": 1.0855321356960415,
+    "low95": 1.0539956385565994,
+    "high95": 1.1512415099728839,
+    "supported": false,
+    "bootstrap_replicates": 500,
+    "conditional_only": true
+  },
+  "final_joint_pass": {
+    "A_raw": false,
+    "A_cal": false,
+    "B_raw": false,
+    "B_cal": false,
+    "C_raw": false,
+    "C_cal": false
+  },
+  "promotion": false,
+  "new_supervised_fits": 3,
+  "pretraining_runs": 1,
+  "no_automatic_followup": true,
+  "source_refit_systematic_independent_confirmation": false
+}

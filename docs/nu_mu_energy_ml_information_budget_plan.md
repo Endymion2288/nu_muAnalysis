@@ -1297,3 +1297,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 原最慢任务620epoch×182×3+600和旧提取reserve8118.720840CPU秒不换，完整train/cal冷投影849.334837CPU/892.155104GPU任务wall秒及两阶段QA实耗补计后，[最终准入](../workbook/stage107_energy_ml/final_admission.json)GPU7435.695189s>7200、CPU14900.267009s<21600，仍False；不因接近而删成本/挑计时。**结束这一次实现尝试，0fit/预训练更新/全池提取/test风险/晋升。** 速率收益不等于能量收益，保守拒绝不等于训练必要成本下界或信息界。523/536文件字节核验后去重/点云删除，最终≤20MB，Stage54保持。
 
 [完成审计](../workbook/stage107_energy_ml/completion_audit.tsv)新增真实加权微批证据及资源stop，整体低能/困难/尾门槛、独立支持与真实response/interaction/FSI/材料/Calo/接受度/背景/locked来源仍未交付。原1.05/1.01/1.03和八层三向tail相对direct上95≤2pp不改，无默认第二实现/计时/seed网格或Stage108；后续需明确具体可交付输入/另冻执行条件，不重写计划代替物理进展。历史§1–68/Stage54后缀保持。
+
+
+## 70. stage108：用明确新执行预算完成三格能量证据，固定C方案未获收益
+
+[stage108](../workbook/2026-11-05_stage108_full-point-relation-comparison.md)在持续用户目标下事前另冻内部执行预算GPU3h/CPU6h（原2h拒绝历史不改），科学比较/全部物理门槛原样，复用Stage107输入实现/测速，不开实现或模型网格。完整71376记录实测70332几何可用/1044缺源、15317515点、0invalid/pz差0GeV/float32损失0mm；全部K/原角色和变量政策不变。train/cal122821859边，完整规模/冷构建及最大事件显存5096.236816MiB准入，GPU/CPU保守投影9495.337188/17734.079217秒。40例真实训练循环无更新适配和checkpoint/点回读通过。
+
+恰一次46230可读train、20epoch/3620step预训练，三监督55/55/50epoch，best25/25/20，原单cal_post offset冻结后才test。C_cal/A_cal共同低能主统计1.085532136 [1.053995639,1.151241510]失败；C/B两cal低能区间均高于1，Poisson loss下降不替代能量收益。B/A test两低能.941363 [.912611,.965639]/.972888 [.957446,.988274]有局部改善，但cal_post单组仍含1，test低pz真高能1.012767 [1.002106,1.022744]有损失，总体含1。最低能B_cal.273792对传统.145661，所有六raw/cal原最终联合False，不晋升、不称信息界/充分数据/全部预训练无用。
+
+完整cal/post/test原500incoming统计，840旧标量max0；主区间独立差2.220446e−16、192gate区间max4.440892e−15。实际独立CPU2774.638062秒包含一次误重复train提取1029.268536秒（submit宏默认覆盖，`-append`修正、无重训），连106/107共2810.686772<21600。GPUfit Pod终态GC，精确容器/CPU/内存未保留，按Job693秒保守计；infer22秒，含旧阶段共734<10800。supervised记录峰5204.972656MiB非wholefit绝对峰；物理流量/全会话/GPUbusy未测。字节核验去重后保留三head和一紧凑点表/曲线/风险/图，≤20MB，Stage54保持。
+
+这笔预算已真正买到三格能量比较及有限负结论，固定方案结束；不再列“尚无三格风险”为当前缺口，也不自动追加seed/深宽/遮挡任务/正则。原最终1.05/1.01/1.03与八层相对direct三尾+2pp、真实系统和独立确认仍未达，[完成审计](../workbook/stage108_energy_ml/completion_audit.tsv)保留整体未完成。下一步需真实独立低能/过渡及同pz高E支持/谱系提议密度、实际DAQ/quiet、incoming可联结的interaction/FSI/材料/Calo/接受度/背景变体和locked来源；旧重分/模板/条件活动不能替代。不重写无限计划或恢复无新线索metadata链。历史§1–69/Stage54后缀不改。

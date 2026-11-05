@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "primary_max_abs_error": 2.220446049250313e-16,
+  "gate_checks": 192,
+  "gate_max_abs_error": 4.440892098500626e-15,
+  "old_scalar_checks": 840,
+  "old_scalar_max_abs_error": 0.0,
+  "roles": {
+    "cal": {
+      "records": 11612,
+      "incoming": 10811,
+      "weight_sum": 10811.0
+    },
+    "cal_post": {
+      "records": 5746,
+      "incoming": 5539,
+      "weight_sum": 5539.0
+    },
+    "test": {
+      "records": 13189,
+      "incoming": 12125,
+      "weight_sum": 12125.0
+    }
+  },
+  "saved_points_preserved": true,
+  "no_new_fit_or_calibration": true
+}
