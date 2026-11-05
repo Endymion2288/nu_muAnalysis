@@ -2238,3 +2238,16 @@ stage99唯一T有概率增量、点不变；stage102同轨迹P65/N50主cal_post 
 两实际包1131077/37190609bytes核516/530文件逐字节后去重，QA坐标与传输副本删除、紧凑≤20MB见storage，spool统一~/condor/nu_muAnalysis/stage106/。中文报告/[逐项完成审计](../workbook/stage106_energy_ml/completion_audit.tsv)明确：Stage104有限动作实验完成但联合未过、105可行性完成、106资源stop完成；真正能量恢复、新独立低能/过渡与同pz高E支持、真实response/interaction/FSI/材料/Calo/接受度/背景与未开发来源确认仍未交付，**整个持续目标不能标complete**。已做Stage85条件活动不能反求active-channel/pure-noise变体，旧500incoming条件区间不覆盖source/refit/系统/研究选择。
 
 当前合同结束，没有默认Stage107训练/深宽/seed/重做QA或旧REC搜索。后续只有明确新合同/准入条件或真实新支持/读出/系统变体/locked来源交付时才按原物理验收继续，不能无声放宽1.05/1.01/1.03与八层相对direct三向tail上95≤2pp。没有新样本不是否定全部开发的原理，资源stop也不是低能无解；当前具体合同和终点缺口分开保留。详见更新Prompt；历史§1–87、Stage54后缀/五资产和全部K/输入/角色政策保持。
+
+
+## 89. stage107：一次GPU驻留输入修复保持等价，批成本下降但原准入仍拒绝
+
+[stage107报告](../workbook/2026-11-05_stage107_resident-point-preparation.md)按本次持续推进请求另冻一次保持科学定义的工程实现，Stage106拒绝历史不改。整个Stage106科学合同原样嵌入，不改样本/架构/seed/隐藏面/epoch/权重或门槛；只将逐事件CPU遮挡准备改为静态点/边驻留GPU、批量移除隐藏面。原40train/cal、24source、37可读+3缺源、5718全点/最大1117、0invalid、pz差0GeV/float32损失0mm保持；原typed62/127、pz0-only一次方动量及允许px/py/q/p/弯折、raw11/合法signed负值、pz>50GeV、全部K/缺源和原角色不变，0test载荷。
+
+正常40模型入口及epoch1/7/20各28个可读train遮挡输入/目标逐位一致，隐藏XY/数量扰动无可见泄漏，边不跨事件。实际incoming/logE的原批与强制600node/6000edge微批梯度max差1.192093e−7，train-only Poisson为2.793968e−9；输出差0/5.960464e−8，均通过，无optimizer。这补齐小QA真实加权梯度证据，不认证完整训练/checkpoint/offset。
+
+H100 MIG有效256 A/B/遮挡wall中位7.976036/13.832497/17.501300ms（warmup后3次、含组批/传输/F/B/回传）；原遮挡43.922181ms，独立窗口比约2.51，不是完整训练加速测量。冷构建.194621900CPU/.204434004wall秒，整个数值QA allocated峰358.577637MiB。唯一8CPU Condor9667807首exit0、申请8GB站点24GB；唯一Kubeflow首Podexit0/restart0、实际22CPU63G/1MIG/线程1。独立外层13.766793CPU秒，GPU容器7秒；接口3823241/底层read3569873bytes，物理流量/GPUbusy/全会话成本未测。
+
+**仍按原规则停止本次单一工程尝试。** 原最慢任务×182×620×3+600、旧提取reserve8118.720840CPU秒保持，另计完整train/cal冷构建投影849.334837CPU/892.155104GPU任务wall秒及两阶段实际QA成本，最终GPU7435.695189秒>7200、CPU14900.267009秒<21600。不删冷成本/改公式/重测选快窗口或扩大预算；保守外推不是实测训练耗时或计算下界。0fit/预训练运行更新/全池提取/test风险/晋升，三格C/A和最终能量恢复未测量，不作物理阴性结论。
+
+523/536输入文件收集字节核验后包与QA点云去重，最终≤20MB见storage；收集后收紧入口只许QA，数值代码不变。中文报告/紧凑证据和本地commit，Stage54五项及后缀保持。[完成审计](../workbook/stage107_energy_ml/completion_audit.tsv)继续明确整体目标未完成。当前无默认Stage108或第二实现/计时/seed网格；新任务需具体可交付输入或明确另冻执行条件。原最终1.05/1.01/1.03与八层相对direct三向tail上95≤2pp、真实response/系统及独立确认要求不变，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。历史§1–88保持。

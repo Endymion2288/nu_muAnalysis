@@ -1,0 +1,164 @@
+{
+  "files": [
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage107.sub",
+      "logical_bytes": 739
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage107_qa_kubeflow.json",
+      "logical_bytes": 1195
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage107.sh",
+      "logical_bytes": 2050
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "logical_bytes": 204255
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "logical_bytes": 11051
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "logical_bytes": 340990
+    },
+    {
+      "path": "ml/package_stage107.py",
+      "logical_bytes": 3628
+    },
+    {
+      "path": "ml/stage107_device_data.py",
+      "logical_bytes": 5246
+    },
+    {
+      "path": "ml/stage107_extract.py",
+      "logical_bytes": 362
+    },
+    {
+      "path": "ml/stage107_qa.py",
+      "logical_bytes": 9065
+    },
+    {
+      "path": "ml/time_stage107.py",
+      "logical_bytes": 912
+    },
+    {
+      "path": "workbook/2026-11-05_stage107_resident-point-preparation.md",
+      "logical_bytes": 10723
+    },
+    {
+      "path": "workbook/stage107_energy_ml/QA_extraction.json",
+      "logical_bytes": 798
+    },
+    {
+      "path": "workbook/stage107_energy_ml/QA_schema.tsv",
+      "logical_bytes": 4925
+    },
+    {
+      "path": "workbook/stage107_energy_ml/QA_source_cost.tsv",
+      "logical_bytes": 3153
+    },
+    {
+      "path": "workbook/stage107_energy_ml/admission.json",
+      "logical_bytes": 367
+    },
+    {
+      "path": "workbook/stage107_energy_ml/completion_audit.tsv",
+      "logical_bytes": 5195
+    },
+    {
+      "path": "workbook/stage107_energy_ml/condor_history.json",
+      "logical_bytes": 277
+    },
+    {
+      "path": "workbook/stage107_energy_ml/decision.json",
+      "logical_bytes": 869
+    },
+    {
+      "path": "workbook/stage107_energy_ml/final_admission.json",
+      "logical_bytes": 630
+    },
+    {
+      "path": "workbook/stage107_energy_ml/kubeflow_qa.json",
+      "logical_bytes": 689
+    },
+    {
+      "path": "workbook/stage107_energy_ml/model_QA.json",
+      "logical_bytes": 2732
+    },
+    {
+      "path": "workbook/stage107_energy_ml/protocol.json",
+      "logical_bytes": 17155
+    },
+    {
+      "path": "workbook/stage107_energy_ml/resources.json",
+      "logical_bytes": 1658
+    },
+    {
+      "path": "workbook/stage107_energy_ml/time_qa.json",
+      "logical_bytes": 226
+    },
+    {
+      "path": "workbook/stage107_energy_ml/time_qa_extract.json",
+      "logical_bytes": 234
+    },
+    {
+      "path": "workbook/stage107_energy_ml/transport_validation.json",
+      "logical_bytes": 33822
+    },
+    {
+      "path": "workbook/stage107_energy_ml/validation.json",
+      "logical_bytes": 776
+    }
+  ],
+  "spool_files": [
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage107/logs/9667807.0.err",
+      "logical_bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage107/logs/9667807.0.log",
+      "logical_bytes": 2150
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage107/logs/9667807.0.out",
+      "logical_bytes": 1604
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage107/worker.sh",
+      "logical_bytes": 2104
+    }
+  ],
+  "removed": [
+    {
+      "path": "software/energy-ml-stage107-qa_extract.tar.gz",
+      "logical_bytes": 1142633
+    },
+    {
+      "path": "software/energy-ml-stage107-qa.tar.gz",
+      "logical_bytes": 37199682
+    },
+    {
+      "path": "ntuples/energy_ml_stage107/result_qa_extract.tar.gz",
+      "logical_bytes": 40142
+    },
+    {
+      "path": "ntuples/energy_ml_stage107/result_qa.tar.gz",
+      "logical_bytes": 1655
+    },
+    {
+      "path": "ntuples/energy_ml_stage107/QA_coordinates.npz",
+      "logical_bytes": 36876
+    }
+  ],
+  "no_point_cloud_or_edges_retained": true,
+  "limit_bytes": 20000000,
+  "physical_allocated_bytes_unmeasured": true,
+  "file_bytes": 663722,
+  "spool_bytes": 5858,
+  "this_manifest_bytes": 4173,
+  "total_retained_logical_bytes": 673753,
+  "passed": true
+}

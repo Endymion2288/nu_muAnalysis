@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scientific_contract_exact_stage106": true,
+  "QA_program_checks_passed": true,
+  "admission_and_stop_consistent": true,
+  "optimizer_and_test_payload_zero": true,
+  "new_code_AST": [
+    "ml/package_stage107.py",
+    "ml/stage107_device_data.py",
+    "ml/stage107_extract.py",
+    "ml/stage107_qa.py",
+    "ml/time_stage107.py"
+  ],
+  "post_collection_QA_entry_guards": "restricted packaging, timer, extraction, shell modes to qa/qa_extract after rejection; numerical device/model/QA code unchanged; no numerical rerun",
+  "original_Stage54_suffix_reference": "54e7f58",
+  "original_Stage54_suffix_preserved": true,
+  "unmeasured": "full-role point inputs, complete fit/offset/test pipeline, energy risks and real systematic/independent confirmation"
+}

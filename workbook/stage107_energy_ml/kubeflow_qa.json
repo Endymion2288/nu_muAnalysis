@@ -1,0 +1,31 @@
+{
+  "job": "nu-mu-energy-stage107-qa",
+  "pod": "nu-mu-energy-stage107-qa-xzkgn",
+  "phase": "Succeeded",
+  "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+  "requested_container": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "allocated": {
+    "cpu": "22",
+    "memory": "63G",
+    "nvidia.com/mig-3g.47gb": "1"
+  },
+  "restart_count": 0,
+  "terminated": {
+    "exitCode": 0,
+    "finishedAt": "2026-11-05T00:13:31Z",
+    "reason": "Completed",
+    "startedAt": "2026-11-05T00:13:24Z"
+  },
+  "GPU_container_wall_s": 7.0
+}

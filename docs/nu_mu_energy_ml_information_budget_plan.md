@@ -1286,3 +1286,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 [admission](../workbook/stage106_energy_ml/admission.json) False：正常提取保守CPU8118.720840s含1000reserve，最慢批×182×620×3+600估计GPU任务wall15468.536715s>7200、hostCPU14573.877056s，总CPU22692.597896s>21600。固定最坏投影不是全训练实耗或必要预算下界，不能事后换公式/少epoch/丢高活动者制造通过。按合同停止，0optimizer/fit/预训练更新/全池提取/test载荷或风险；C/A主证据与原最终门槛未测，不称关系无用/信息界。核实际516/530文件字节后包/QA点云去重，紧凑≤20MB见storage，Stage54五项保持。
 
 [完成审计](../workbook/stage106_energy_ml/completion_audit.tsv)区分有限实验/准入stop完成和物理目标未完成。当前无默认后继训练或metadata链；原两低能1.05、all1.01、其他困难1.03及八层相对direct三尾+2pp不变。独立低能/过渡与同pz真高E支持的实际谱系/提议密度/产额、有效DAQ/quiet控制、有依据的interaction/FSI/材料/Calo/接受度/背景变体和未开发locked来源仍缺；旧开发test与incoming区间不能覆盖source/refit/系统/研究选择。持续目标保留active，不能据停止条款宣布整个路线图已完成；有明确新输入/另冻可执行条件时再推进，不自动重开本合同或生产。历史§1–67及Stage54后缀保留。
+
+
+## 69. stage107：一次保持定义的准备优化有实测速率收益，仍未购买到能量比较
+
+[stage107](../workbook/2026-11-05_stage107_resident-point-preparation.md)在本次续作下冻结一次GPU驻留准备实现，科学Stage106合同逐项原样，原拒绝历史保留。原40/24source/37+3/5718全点、typed62/127/角色/全部K和物理政策不改。正常40、遮挡epoch1/7/20各28可读train的模型入口/目标逐位一致；实际incoming强制拆微批梯度max1.192093e−7/Poisson2.793968e−9通过，隐藏XY/数量无可见泄漏。只认证这个小QA，0optimizer/完整规模/checkpoint/offset验证。
+
+一次H100 MIG有效256 A/B/遮挡wall7.976036/13.832497/17.501300ms，旧遮挡43.922181ms，独立窗口比约2.51；冷构建.194621900CPU/.204434004wall秒单独计。整个数值QA allocated峰358.577637MiB。唯一8CPU Condor9667807和GPU Pod首次成功，申请CPU8GB站点24GB/GPU平台22CPU63G1MIG、线程1；独立外层13.766793CPU秒、GPU容器7秒，非全会话成本。
+
+原最慢任务620epoch×182×3+600和旧提取reserve8118.720840CPU秒不换，完整train/cal冷投影849.334837CPU/892.155104GPU任务wall秒及两阶段QA实耗补计后，[最终准入](../workbook/stage107_energy_ml/final_admission.json)GPU7435.695189s>7200、CPU14900.267009s<21600，仍False；不因接近而删成本/挑计时。**结束这一次实现尝试，0fit/预训练更新/全池提取/test风险/晋升。** 速率收益不等于能量收益，保守拒绝不等于训练必要成本下界或信息界。523/536文件字节核验后去重/点云删除，最终≤20MB，Stage54保持。
+
+[完成审计](../workbook/stage107_energy_ml/completion_audit.tsv)新增真实加权微批证据及资源stop，整体低能/困难/尾门槛、独立支持与真实response/interaction/FSI/材料/Calo/接受度/背景/locked来源仍未交付。原1.05/1.01/1.03和八层三向tail相对direct上95≤2pp不改，无默认第二实现/计时/seed网格或Stage108；后续需明确具体可交付输入/另冻执行条件，不重写计划代替物理进展。历史§1–68/Stage54后缀保持。

@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "equality": [
+    {
+      "epoch": null,
+      "events": 40,
+      "exact": true
+    },
+    {
+      "epoch": 1,
+      "events": 28,
+      "exact": true
+    },
+    {
+      "epoch": 7,
+      "events": 28,
+      "exact": true
+    },
+    {
+      "epoch": 20,
+      "events": 28,
+      "exact": true
+    }
+  ],
+  "hidden_coordinate_count_input_exact": true,
+  "weighted_gradients": [
+    {
+      "pretrain": false,
+      "events": 40,
+      "real_incoming_weights": true,
+      "forced_microbatch_gradient_max_abs": 1.1920928955078125e-07,
+      "output_max_abs": 0.0
+    },
+    {
+      "pretrain": true,
+      "events": 28,
+      "real_incoming_weights": true,
+      "forced_microbatch_gradient_max_abs": 2.7939677238464355e-09,
+      "output_max_abs": 5.960464477539063e-08
+    }
+  ],
+  "profile": [
+    {
+      "cell": "A",
+      "device": "cuda",
+      "batch": 256,
+      "forward_backward_wall_s": 0.007976035994943231,
+      "CPU_s": 0.007932767999999868,
+      "timing_wall_s": [
+        0.009403456992004067,
+        0.007983738963957876,
+        0.007976035994943231,
+        0.007867821026593447
+      ],
+      "timing_CPU_s": [
+        0.00925237400000034,
+        0.007948009000000145,
+        0.007932767999999868,
+        0.007829193000000068
+      ]
+    },
+    {
+      "cell": "B",
+      "device": "cuda",
+      "batch": 256,
+      "forward_backward_wall_s": 0.013832497003022581,
+      "CPU_s": 0.013763595999999989,
+      "timing_wall_s": [
+        0.014461739046964794,
+        0.013995777000673115,
+        0.013832497003022581,
+        0.013801080989651382
+      ],
+      "timing_CPU_s": [
+        0.014377687999999722,
+        0.013922156000000019,
+        0.013763595999999989,
+        0.013749986000000103
+      ]
+    },
+    {
+      "cell": "pretraining",
+      "device": "cuda",
+      "batch": 256,
+      "forward_backward_wall_s": 0.017501300026196986,
+      "CPU_s": 0.01741747199999999,
+      "timing_wall_s": [
+        0.018031270010396838,
+        0.017498539004009217,
+        0.017681042023468763,
+        0.017501300026196986
+      ],
+      "timing_CPU_s": [
+        0.017937588999999754,
+        0.01739559700000015,
+        0.017601321999999975,
+        0.01741747199999999
+      ]
+    }
+  ],
+  "cold_cost": {
+    "CPU_s": 0.19462190000000001,
+    "wall_s": 0.20443400397198275,
+    "peak_RSS_MiB": 603.7265625
+  },
+  "GPU_allocated_peak_MiB": 358.57763671875,
+  "peak_scope": "maximum since before resident construction across entire numerical QA",
+  "GPU": "NVIDIA H100 NVL MIG 3g.47gb",
+  "device_memory_MiB": 47488.0,
+  "optimizer_steps": 0,
+  "new_fits": 0,
+  "test_payload_records": 0,
+  "CPU_s": 1.255150941,
+  "wall_s": 2.102828355971724,
+  "peak_RSS_MiB": 1336.3828125
+}

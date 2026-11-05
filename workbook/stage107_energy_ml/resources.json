@@ -1,0 +1,56 @@
+{
+  "independent_outer_CPU_s": 13.766793,
+  "outer_windows": {
+    "qa_extract": {
+      "mode": "qa_extract",
+      "exit_code": 0,
+      "wall_s": 7.961871925042942,
+      "CPU_s": 10.533633,
+      "peak_single_process_RSS_KiB": 88964,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "qa": {
+      "mode": "qa",
+      "exit_code": 0,
+      "wall_s": 5.124188789981417,
+      "CPU_s": 3.23316,
+      "peak_single_process_RSS_KiB": 1395680,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    }
+  },
+  "GPU_container_wall_s": 7.0,
+  "previous_stage106_CPU_s": 22.281917,
+  "previous_stage106_GPU_container_wall_s": 12,
+  "combined_measured_outer_CPU_s": 36.04871,
+  "combined_GPU_container_wall_s": 19.0,
+  "CPU_request": {
+    "cpus": 8,
+    "memory_MB": 8000,
+    "site_memory_MB": 24000,
+    "processes": 8,
+    "inner_threads": 1
+  },
+  "GPU_site_resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "torch_threads": 1,
+  "GPU_allocated_peak_MiB": 358.57763671875,
+  "peak_scope": "maximum since before resident construction across entire numerical QA",
+  "unmeasured": [
+    "physical EOS network bytes",
+    "GPU busy time/utilization",
+    "full session/platform/packaging CPU",
+    "full input scale",
+    "actual full training resources"
+  ],
+  "timing_rule": "outer windows inclusive of imports and child processes; never add nested source/main/profile windows"
+}

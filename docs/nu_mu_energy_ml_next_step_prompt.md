@@ -1,31 +1,29 @@
-# 当前交接 Prompt：Stage106 资源停止后的未完成证据与继续条件
+# 当前交接 Prompt：Stage107等价准备优化后的资源停止与未完成目标
 
-先读AGENTS.md、路线§88、信息计划§68、[Stage106实际报告](../workbook/2026-11-05_stage106_point-model-resource-admission.md)、[decision.json](../workbook/stage106_energy_ml/decision.json)和[逐项完成审计](../workbook/stage106_energy_ml/completion_audit.tsv)，以及Stage103 §5–7。用户持续目标仍是完成现有规划，**整体目标尚未完成**；不能把完成有限QA/stop改成达成能量重建或独立物理确认。
+先读AGENTS.md、路线§89、信息计划§69、[Stage107报告](../workbook/2026-11-05_stage107_resident-point-preparation.md)、[最终准入](../workbook/stage107_energy_ml/final_admission.json)、[完成审计](../workbook/stage107_energy_ml/completion_audit.tsv)，以及Stage103 §5–7。Stage106拒绝历史保持。整体目标尚未完成，不把QA/停止/工程速度收益写成能量恢复。
 
-## 1. 已完成和未完成的区别
+## 1. 当前实际状态
 
-Stage104固定q两权重动作唯一优化/原风险完成，共同两低能及最终联合未过，该族结束。Stage105原40中37可读、5718全点/56822局部边、可见输入隔离完成。Stage106实际8CPU提取QA和H100 NVL MIG3g.47gb CPU/GPU接线均首次成功：90242参数，CPU/GPU max差4.768372e−7、置换/同初始化/无跨事件边/遮挡泄漏/合成空缺invalid/overflow通过，独立外层22.281917CPU秒。
+Stage104固定q两参数动作已结束，共同/最终门槛未过。Stage105全点几何可行性完成。Stage106正常CPU/GPU接线通过、原资源拒绝。Stage107按本次续作另冻一次保持科学定义的实现：静态点/边驻留GPU后批量去隐藏面，科学合同原样，不改原模型/角色/权重/seed/隐藏面/epoch和物理门槛。
 
-固定准入投影GPU任务wall15468.536715s>7200、总CPU22692.597896s>21600（正常提取估计8118.720840s已含reserve）；GPU计时窗口allocated峰361.045898MiB，不是显存失败。最慢批的统一最坏外推较保守，不代表真实全训练必需15469秒或计算下界。按冻结stop已在optimizer前结束，**0fit、0预训练更新、0完整提取、0test载荷/风险/晋升**。三格C/A、B解释、学习轨迹/offset/最终gate均未测。QA诊断平方输出不等于完整真实incomingweighted训练验证；未执行的条件trainer不是已交付模型。
+原40train/cal、24source、37可读/3缺源、5718点保持。正常40和epoch1/7/20各28可读train入口/目标逐位一致；实际incoming强制拆微批梯度max差1.192093e−7/Poisson2.793968e−9，无跨事件边/隐藏XY及数量泄漏。有效256 A/B/遮挡wall7.976036/13.832497/17.501300ms，旧遮挡43.922181ms，仅独立小QA窗口。冷构建CPU.194621900/wall.204434004秒，数值QA allocated峰358.577637MiB。8CPU Condor9667807及H100 MIG Pod首次成功，独立外层13.766793CPU秒/GPU容器7秒。
 
-## 2. 没有新输入时的边界
+原最慢任务×182×620×3+600，加旧提取reserve、冷构建全train/cal投影及两阶段实际QA成本，最终GPU7435.695189秒>7200、CPU14900.267009秒<21600。准入False，结束本次单一工程尝试；没有忽略冷成本、重测选快窗口或改预算。保守投影不是全训练必要成本下界。0监督fit/预训练运行更新/完整提取/test载荷风险/晋升；C/A、B解释、收敛/offset/最终gate未测量。完整trainer未认证，不把小样本梯度QA泛化。
 
-不默认启动Stage107/新fit、重做相同QA、改成更有利成本公式/少epoch/样本、加预算/seed/深宽/遮挡任务，也不回到固定q权重/温度/专家、collection浅树或旧REC无新线索搜索。当前合同已结束，不能按旧Stage106 Prompt再启动。没有新样本不是一切开发都应停止的原理；这里是具体冻结合同的资源退出及尚未认证的物理终点。
+## 2. 后续任务边界与验收入口
 
-持续目标的完成必须有当前权威证据支持；原低能/总体/困难和完整双向尾未达、真实系统与独立确认缺失，不能标complete。若当前确无可独立推进的任务，精确报告实际缺口并保留未完成目标；不要用重复状态或重写计划替代进展。
+无默认Stage108/第二实现、计时/seed/架构网格、加预算/改公式/少epoch/删困难者。只完成本次工程尝试，未否定无新样本时的所有开发可能。若用户提供明确新规划或另冻可执行条件，按实际输入、科学比较、资源/停止和物理验收先冻结，再batch小QA准入；不能无声重启失败合同。也不回到固定q/T/专家/collection族或无新线索旧REC/EOS搜索。
 
-## 3. 有明确新输入/规划时怎样继续
+仍需逐项交付：
 
-优先按completion_audit.tsv逐项核交付，而非重新列模型清单：
+1. **独立支持**：新source/incoming谱系、提议密度/权重、原选择/接受度、pilot实际选中产额；真50–100/100–200GeV、同低pz真≥200/high-y反例与高端控制，验收无旧池重复并保留真正未开发locked确认。现有1016新增K已使用，不把重新拆池/seed当新blind；数量/功效未测不硬造。
+2. **真实response**：实际IOV/逐事件DAQ有效mask/coverage、无偏quiet/random或等效校准及PHYS身份联结。Stage85已做2048data+2048MC条件活动，110592是名义分母；缺新输入时不重做或反推纯noise/1σ变体，100–1000GeV单μ不认证低能ν shower。
+3. **系统与选择**：可与原incoming联结、尺度有依据的interaction/FSI/材料/Calo/读出变体和原选择分母/接受度/背景；在固定模型上评价完整风险、尾与选择迁移。旧模板/prior重权不是认证。
+4. **独立确认**：未开发locked source与谱系、source/refit/参数估计/研究选择/真实系统依据。当前开发test和500incoming条件区间不能替代。
 
-1. 新source/incoming生成谱系及与现有池不重叠，真50–100/100–200GeV、同pz真≥200/high-y反例和高端控制，原接受度/提议密度与权重、pilot选中产额/成本、真正未开发locked确认角色。现有7720增补/1016K已入池，不重复叫新独立支持；无实际产额不硬造样本量或功效。
-2. 实际IOV/逐事件DAQ有效mask/coverage、无偏quiet/random trigger或等效校准及PHYS身份联结。Stage85已完成2048data+2048MC条件活动，110592是名义非active分母；缺口未变时不重复测条件活动或用raw比值/noise-on/off全差造1σ变体，100–1000GeV单μ不认证50–100GeV ν/shower。
-3. 原incoming可联结的有依据interaction/FSI、材料/输运、Calo/读出等变体及原选择分母、接受度/背景，之后才能认证真实系统与选择迁移；旧模板/prior重权不是这些变体。
-4. 若用户明确修订资源/准入或提供另冻可执行实现合同，先冻结新的科学比较、成本与停止条件，在真实batch小QA后才准入；不能无声重开失败合同。原C/A主比较与强Stage87 direct62、角色/权重/cal子分区、全部K/缺源/typed规则以及原最终门槛必须保持。生产或新任务范围以实际新规划为准，不自行扩成大网格。
+原政策：pz0>50GeV、一次方动量仅pz0、允许原px/py/q/p/弯折，raw11/status/typed NaN和合法signed负值/Calo缺项；保留46575/11612/13189、17657隔离、全部1016K、missing21/6/5和缺源view。几何边不是真实ID/ghost。原两低能/传统RMSE比上95≤1.05、all/direct≤1.01、其余五层/direct≤1.03，八层总/正/负tail50差相对direct上95≤+2pp不变。
 
-原输入政策：pz0>50GeV、一次方动量仅pz0、允许原px/py/q/p/弯折，raw11/status/typed NaN和合法signed负值/Calo缺项；保留原46575/11612/13189、17657隔离、1016新增K、missing21/6/5和全部缺源view。边只是几何邻近，不是真实ID/ghost。原两低能/传统RMSE比上95≤1.05，all/direct≤1.01，其余五层/direct≤1.03；八层总/正/负tail50均相对direct差上95≤+2pp。开发test不是新blind，500incoming条件区间不覆盖source/refit/offset估计/研究选择/真实response。
-
-所有数值/事件工作在batch，GPU适用则实测使用；批量独立CPU源分片合理多核/内线程1，计实际请求和站点资源及CPU/wall/接口bytes/RSS/GPU峰。spool统一~/condor/nu_muAnalysis/，最终紧凑、去重，不保存逐hit中间文件。先中文阶段报告、再相关代码/配置/紧凑证据本地Conventional Commit，不push；历史只追加。以下Stage54后缀逐字保留，五资产不动，实际完成状态以Stage85为准，不自动重做noise支线。
+所有数值/事件工作在batch，GPU适用则实测，批量CPU合理多核/内线程1；spool统一~/condor/nu_muAnalysis/。计实际资源/CPU/wall/接口bytes/RSS/GPU峰，不重复加嵌套计时，不把申请核数当加速比。保持紧凑去重，先中文报告再本地Conventional Commit，不push；历史仅追加。以下Stage54后缀逐字保留，五资产不动；实际状态以Stage85为准，不自动重做noise支线。
 
 ## 保留的stage54 data占据支线
 
