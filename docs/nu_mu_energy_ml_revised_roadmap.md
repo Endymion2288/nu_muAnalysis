@@ -2432,3 +2432,12 @@ GENIE/Pythia6 200300–311、G4 200104–115/213–215及相应2024变体提前�
 GENIE按真实p6 float持久化核入射/顶点/主μ，527 selected全部回接、523有W；direct失败而传统通过的5+8条全W≥3 GeV，不能统一归于低W。原HITS多数沉积祖先unknown；实际VetoNu中心−3122.5/−3101.5mm及[-20,1200)ns直方图覆盖已测，JEFF/ENDF窗外能量比例19.021%/17.915%，不等于中子标签、真实迟到电荷或部署增益。oracle→代理能量增量仍未测，准确持久化缺口已交，按Stage118验收例外结束该实现，同时交另一物理分支。
 
 下一阶段：优先在已知大池认证200131–136 producer和200187/188同K输入/旧曝光家族，按可核独立低能支持与实测成本冻结下一规模；不以52条增量失败启动架构/树/种子网格，也不先全量新G4。对JEFF最低箱环境信号核完整同末态/材料/数字化条件与父通过失败；只有完整祖先和匹配实际读出交付后再做预定oracle→代理→连续风险。所需输入/验收详见报告§7；既有大池未穷尽，上游/独立支持仍缺时才冻已知proposal的新GENIE小pilot。新确认保持锁定，真实系统/背景/接受度和原1.05/1.01/1.03、八层三尾+2pp不改。历史§1–100和Stage54资产/后缀保持。
+
+
+## 102. stage120：producer 认证门未通过，200187/188 K 输入确认同源，暂停扩样购买
+
+[Stage120报告](../workbook/2026-11-05_stage120_provenance-gate-and-k-lineage.md)按§101先做样本身份门审计，只读12个目标run的目录元数据和Stage119保留日志，不读取事件数组、不训练、不推理、不生成新GENIE/G4。200131–136的下游产品目录存在，但六个`log/s0014`均为0个日志，producer/EVNT entry/seed/parent仍未认证；不能把文件数量当独立训练支持。200187与200188的generator日志都明确指向同一个`epos-k-1-24-xing-100iab.EVNT.pool.root`，因此c1/c2文件名和不同run号不足以证明独立K家族。
+
+成功审计任务9668991 exit0，目录快照12/12存在；失败的9668988仅因worker路径未布置而exit127，没有执行科学工作。新的身份门为`expansion_producer_certified=false`、`k_200187_188_independent_certified=false`。在取得原始生成子作业、EVNT entry/skip、seed、release、geometry/calibration及parent/incoming映射前，不扩大训练N、不开放reserved、不启动全量新G4/GENIE；JEFF最低能区只能保留Stage119的条件环境信号，不能改写成同末态因果。
+
+下一阶段输入和验收已具体化：六个扩样run逐文件建立可核parent身份及旧曝光交集，200187/188取得分块和seed/entry证据；身份门通过后才进行JEFF最低能同parent、材料/深度、完整末态和数字化条件的成对响应核查。原pz0/raw11/status/typed NaN/signed/Calo缺失、全部K、角色和最终门槛保持，历史§1–101与Stage54资产/后缀不改。

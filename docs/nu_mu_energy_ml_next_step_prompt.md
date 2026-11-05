@@ -1,3 +1,17 @@
+# 当前执行入口：Stage120 身份门未通过，先获取 producer / parent 证据
+
+先读 [Stage120报告](../workbook/2026-11-05_stage120_provenance-gate-and-k-lineage.md)、路线§102、信息预算§82和 [Stage119报告](../workbook/2026-11-05_stage119_support-curve-and-response-mechanisms.md)。Stage120只做目录/保留日志审计：200131–136六个log目录为空，producer身份未认证；200187/188日志的Input File相同，不能把K c2称独立家族。不要因目录文件数、不同run号或文件名继续扩大训练N。
+
+下一阶段只接受下列输入：
+
+1. 200131–136每个被纳入文件的producer子作业、EVNT输入、entry/skip、seed、release、geometry/calibration和parent/incoming映射；必须同时给出与旧曝光的逐文件/逐parent交集。验收是可核的独立家族和低能支持，不能只给目录计数。
+2. 200187/188的job分块、seed和entry范围。若无法证明独立重放，将两者视为同一K家族的响应诊断，不纳入新增训练或确认N。
+3. 只有身份门通过后，才对JEFF最低能共同支持做同parent、材料/深度、完整GENIE末态和数字化条件成对核查，并同时保留父通过/失败与实际读出风险。当前条件环境比不是中子库因果或正式1σ。
+
+身份门未通过期间不重训、不增加树/seed、不开放reserved、不全量新G4/GENIE。一次方动量仍只用pz0，px/py、q/p、弯折允许；raw11、status、typed NaN、合法signed负值、Calo缺失和原cut/pz>50保持。最终1.05/1.01/1.03及八层三向tail+2pp、真实系统/背景/接受度和独立确认要求不变。所有事件和统计计算走HTCondor；先中文workbook，再本地Conventional Commit，不push。
+
+## Stage119历史入口（原文保留）
+
 # 当前执行入口：Stage119联合实验完成，下一步核独立低能支持和响应归因
 
 先读[Stage119完整报告](../workbook/2026-11-05_stage119_support-curve-and-response-mechanisms.md)、路线§101、信息预算§81及[完成/缺口清单](../workbook/stage119_energy_ml/requirements.tsv)。下面Stage118及更早入口均为历史；其“本轮不计算”已经被用户继续推进的授权覆盖，本阶段已实际计算并完成本地阶段提交。

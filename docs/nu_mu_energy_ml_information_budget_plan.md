@@ -1432,3 +1432,10 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 物理预算交了固定模型跨环境能量风险及选择迁移、p6精确关联的527 selected W/FSI组成、真实几何时窗和partial ancestry。JEFF共同最低箱有环境信号，尚非同末态因果；Pythia最低箱无共同支持。多数HITS沉积缺祖先，oracle不能点识别，未以unknown造非mu/中子监督。窗外沉积机会不当部署能量增益。该输入缺口按Stage118例外交付，已完成另一可做物理分支，不无限metadata前置。
 
 下一预算先买可核独立低能家族和JEFF响应归因：producer/EVNT entry/seed、旧全曝光、材料/数字化与完整祖先→实际读出；各自的验收是有效支持、父迁移、双侧连续风险。原新reserved只6个最低箱incoming、候选失败且谱系不全，零预测并不开确认。功效表为少量开发代理的条件规划，零discordance不等于所需N=0；不报通用必需样本量。真实系统、独立确认与原最终目标仍未完成，历史§1–80不改。
+
+
+## 82. stage120：身份审计先于下一笔样本预算
+
+[Stage120报告](../workbook/2026-11-05_stage120_provenance-gate-and-k-lineage.md)实际审计了200131–136、200184–189的下游目录和保留producer日志。200131–136虽各有phy/rdo/rec目录，但六个log目录都为空，producer release、EVNT entry/skip、seed和parent链未测；文件计数不能换算独立selected支持。200187/188的generator日志都指向同一个`epos-k-1-24-xing-100iab.EVNT.pool.root`，所以c2命名不买到独立K训练N。Stage120成功任务仅2CPU/4GB、4s wall，未读取事件、不训练、不推理。
+
+下一笔预算冻结为身份输入：六个扩样run逐文件的producer/EVNT/entry/seed/release/geometry/calibration/parent-incoming证据，以及200187/188的分块和seed/entry。身份门通过后才购买JEFF最低能同parent、材料/深度、完整末态和数字化条件的成对响应归因；身份门未通过时不重训、不加树/seed、不开放reserved、不启动全量新G4/GENIE。原特征和最终风险门槛保持，历史§1–81不改。

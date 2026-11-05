@@ -1,0 +1,25 @@
+{
+  "stage": 120,
+  "provenance_job": 9668991,
+  "passed": true,
+  "producer_gate": false,
+  "k_independence_gate": false,
+  "scientific_event_reads": 0,
+  "model_forwards": 0,
+  "fits": 0,
+  "new_training_N": 0,
+  "reserved_forwards": 0,
+  "required_next_inputs": [
+    "200131-136 producer job/EVNT/entry/seed/release/geometry/calibration/parent mapping",
+    "200187/188 chunk and seed/entry identity",
+    "old-exposure parent/incoming intersection"
+  ],
+  "validation": [
+    "JSON transport member exact byte check",
+    "Python AST",
+    "bash -n",
+    "12 EOS directory snapshots"
+  ],
+  "resources": "workbook/stage120_energy_ml/condor_resources.json",
+  "transport": "workbook/stage120_energy_ml/provenance_transport.json"
+}
