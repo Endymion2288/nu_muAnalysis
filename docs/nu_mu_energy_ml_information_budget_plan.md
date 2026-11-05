@@ -1275,3 +1275,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 先同40身份0optimizer实际正常提取/空缺invalid合成/CPU-GPU梯度、置换、无跨事件边、遮挡泄漏和成本QA，再完整train/cal输入规模审计；有效256的无截断微批，CPU≤21600秒、GPU并发1/累计任务wall≤7200秒、临时坐标≤512MB/最终≤20MB，以实测保守投影和显存≤75%准入，超限在optimizer前停止、不缩成有利子集。单seed2026110506、恰3监督fit≤200epoch/每5epoch cal_select pointMSE/耐心30，原cal_post单offset；固定20epoch预训练无cal/test无标签，额外计算和有效容量限制明确。三checkpoint/offset冻结后才开test坐标，完整raw/offset和原八层尾一次交付。
 
 主cal_post两低能C/A最大RMSE比条件95上端<1只认证该方案增量；最终两低能/传统≤1.05、all/direct≤1.01、其余/direct≤1.03及八层三向tail均相对direct差上95≤2pp保持。条件incoming500draw不覆盖source/refit/offset估计/研究选择/真实response或新blind。未过就记录有限结论、结束该合同，不自动追加seed/深宽/遮挡任务或回到温度/专家/权重族；本轮未执行stage106，收益/全量成本未测。历史§1–66和Stage54后缀保持。
+
+
+## 68. stage106已测实际H100成本并触发原停止；不把预算拒绝当物理阴性
+
+[stage106实测](../workbook/2026-11-05_stage106_point-model-resource-admission.md)：原40train/cal/24source、37可读/3缺源保持，5718全点/0无效，typed62/127与90242声明参数接线。CPU/GPU差4.768372e−7、置换差0、B/C初值、无跨事件边、visible-only过滤/重构与隐藏坐标/数量泄漏、合成空缺/−999/overflow通过；真实加权训练微批/完整规模及checkpoint/offset未验证，QA诊断不是能量风险。
+
+唯一8CPU Condor9667791首start/exit0（8GB请求/站点24GB）与H100 NVL MIG3g.47gb首Pod/0restart/exit0，Torch线程1/平台22CPU63G1MIG，实用了GPU。有效256前后向CPU A/B82.522742/946.125649ms、GPU A/B/遮挡8.839163/15.010071/43.922181ms，含组装/传输/回传；记录窗口显存峰361.045898MiB，完整QA/全输入峰未测。独立外层14.710458+7.571459=22.281917CPU秒，分别7.961974/10.625068wall秒，GPU容器12wall秒；源/内层不再相加。接口请求3823241/底层read3569873bytes，物理网络和设备利用率未测。
+
+[admission](../workbook/stage106_energy_ml/admission.json) False：正常提取保守CPU8118.720840s含1000reserve，最慢批×182×620×3+600估计GPU任务wall15468.536715s>7200、hostCPU14573.877056s，总CPU22692.597896s>21600。固定最坏投影不是全训练实耗或必要预算下界，不能事后换公式/少epoch/丢高活动者制造通过。按合同停止，0optimizer/fit/预训练更新/全池提取/test载荷或风险；C/A主证据与原最终门槛未测，不称关系无用/信息界。核实际516/530文件字节后包/QA点云去重，紧凑≤20MB见storage，Stage54五项保持。
+
+[完成审计](../workbook/stage106_energy_ml/completion_audit.tsv)区分有限实验/准入stop完成和物理目标未完成。当前无默认后继训练或metadata链；原两低能1.05、all1.01、其他困难1.03及八层相对direct三尾+2pp不变。独立低能/过渡与同pz真高E支持的实际谱系/提议密度/产额、有效DAQ/quiet控制、有依据的interaction/FSI/材料/Calo/接受度/背景变体和未开发locked来源仍缺；旧开发test与incoming区间不能覆盖source/refit/系统/研究选择。持续目标保留active，不能据停止条款宣布整个路线图已完成；有明确新输入/另冻可执行条件时再推进，不自动重开本合同或生产。历史§1–67及Stage54后缀保留。

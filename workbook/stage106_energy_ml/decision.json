@@ -1,0 +1,26 @@
+{
+  "stage": 106,
+  "decision": "stop_before_optimizer_under_frozen_resource_contract",
+  "program_checks_passed": true,
+  "resource_admitted": false,
+  "new_supervised_fits": 0,
+  "pretraining_runs": 0,
+  "optimizer_steps": 0,
+  "test_payload_records": 0,
+  "full_coordinate_extraction": false,
+  "new_point_risk_measured": false,
+  "promotion": false,
+  "broader_roadmap_achieved": false,
+  "goal_status_to_preserve": "active",
+  "scientific_conclusion": "Full-point local/visible-only model is wired on measured QA; resource admission rejected. No evidence about its energy benefit or an information limit.",
+  "unmeasured": [
+    "full-train/cal input scale",
+    "full actual fit/GPU cost",
+    "weighted real-training microbatch equivalence",
+    "checkpoints/offsets",
+    "C/A B/A C/B energy risks",
+    "source/refit/systematics",
+    "new independent confirmation"
+  ],
+  "next": "No automatic resource/seed/depth/task/epoch change or repeated QA. Preserve outstanding physical-input and independent-confirmation requirements in completion_audit.tsv."
+}

@@ -2225,3 +2225,16 @@ stage99唯一T有概率增量、点不变；stage102同轨迹P65/N50主cal_post 
 **唯一下一stage106按[冻结合同](../workbook/stage105_energy_ml/experiment_contract.json)恰3能量fit+1预训练，不扫seed/深宽。** A=共同audited62＋完整点逐面mean独立编码，B=真实同站邻层消息，C=同B并先train-only遮挡面Poisson257格计数任务20epoch；主C/A，B解释，不拿弱A胜出替代强Stage87 direct62。10→32→32点、68→32→32消息/64→32→32残差两共享轮，12面mean384＋meta26＋标量127→64→64→1；A消息只读固定零向量，B/C相同架构。原角色46575/11612/13189、incoming/原cal_select/post/全部1016K/缺标量/typed负值/pz>50GeV和pz0-only保持。原历史70332可读/1044缺PHYS按角色345/343/356，未来显式标量fallback+geometry_missing保留，不称本轮全池SP测量。
 
 先相同40train/cal做0optimizer的正常提取/CPU-GPU接线与微批成本QA；有效batch256、无截断ragged/微批16384node或262144edge、超大单事件不fit就停。单seed2026110506，各最多200epoch、每5epoch cal_select logMSE选/耐心30，原cal_post单offset，raw/offset均交；三个checkpoint/offset冻结后才提取test坐标。拟CPU21600秒、1GPU并发/累计任务wall7200秒、临时坐标≤512MB/最终20MB；实测factor3保守投影和真实显存准入，不通过不训练、不增加预算/丢困难者。主cal_post两低能C/A最大RMSE比上95<1；原完整八层/三向tail、1.05/1.01/1.03和全部层相对direct的tail差上95≤2pp不变。模型收益/全量成本/系统效应未测，开发test/source/refit/研究选择限制保持；下一Prompt只在后续调用执行，不自动stage106。
+
+
+## 88. stage106：真实GPU接线通过但固定资源拒绝；三格能量增量未测，原物理终点仍未完成
+
+[stage106实际报告](../workbook/2026-11-05_stage106_point-model-resource-admission.md)按§87执行零优化器准入。原40train/cal身份31/9、24source、37可读+3已知缺源不替换，5718全点/最大1117、0无效点，native pz0差0GeV、float32损失0mm。原typed62/127输入、90242声明参数的独立逐面mean A/真实同站邻层B/C接线，CPU/GPU max logE差4.768372e−7，点/事件置换差0；B/C初值精确同、边无跨事件、隐藏面去除后重构与可见边过滤精确同、隐藏XY/数量扰动无可见泄漏，合成empty/missing/−999/overflow通过。诊断平方输出非实际incomingweighted训练，完整加权微批/最大规模/checkpoint/offset未验证。
+
+唯一8CPU Condor9667791（申请8GB、站点24GB）及H100 NVL MIG3g.47gb Kubeflow首Pod/exit0/无重试，线程1；GPU平台实际22CPU/63G/1MIG。有效256 CPU A/B为82.522742/946.125649ms，GPU A/B/遮挡为8.839163/15.010071/43.922181ms（warmup后3次中位，含pack/传输/F/B/回传，非纯kernel），GPU计时窗口allocated峰361.045898MiB。完整外层提取14.710458CPU/7.961974wall秒、GPU QA7.571459CPU/10.625068wall秒，独立合计22.281917CPU秒；容器12wall秒，不重复加嵌套计时。接口3823241/底层read3569873bytes；物理网络、GPUbusy及全会话成本未测。
+
+**资源准入False，按原stop在任何optimizer前停止。** 正常提取/280source/70332历史可读factor3+1000reserve估计8118.720840CPU秒；最慢批×ceil(46575/256)×620×3+600为15468.536715GPU任务wall秒>7200，hostCPU14573.877056加提取为22692.597896CPU秒>21600。这个冻结最坏任务外推较保守，不是实测全训练需要15469秒或信息/算力下界；未事后换阶段加权公式/少epoch/预算/有利子样本。0fit/预训练更新/完整提取/test风险/晋升，C/A、B解释和原最终八层三尾全部**未测量**。没有据QA loss/梯度宣布物理收益或否定方案。
+
+两实际包1131077/37190609bytes核516/530文件逐字节后去重，QA坐标与传输副本删除、紧凑≤20MB见storage，spool统一~/condor/nu_muAnalysis/stage106/。中文报告/[逐项完成审计](../workbook/stage106_energy_ml/completion_audit.tsv)明确：Stage104有限动作实验完成但联合未过、105可行性完成、106资源stop完成；真正能量恢复、新独立低能/过渡与同pz高E支持、真实response/interaction/FSI/材料/Calo/接受度/背景与未开发来源确认仍未交付，**整个持续目标不能标complete**。已做Stage85条件活动不能反求active-channel/pure-noise变体，旧500incoming条件区间不覆盖source/refit/系统/研究选择。
+
+当前合同结束，没有默认Stage107训练/深宽/seed/重做QA或旧REC搜索。后续只有明确新合同/准入条件或真实新支持/读出/系统变体/locked来源交付时才按原物理验收继续，不能无声放宽1.05/1.01/1.03与八层相对direct三向tail上95≤2pp。没有新样本不是否定全部开发的原理，资源stop也不是低能无解；当前具体合同和终点缺口分开保留。详见更新Prompt；历史§1–87、Stage54后缀/五资产和全部K/输入/角色政策保持。

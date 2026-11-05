@@ -1,0 +1,200 @@
+{
+  "stage": 106,
+  "status": "Frozen prospective contract; no Stage106 execution in Stage105. Conditional on Stage105 geometry acceptance and new zero-optimizer CPU/GPU cost QA.",
+  "question": "Does the complete local-point relation plus masked-plane scheme C improve paired energy risk over the full-point per-plane mean A? B explains relation versus pretraining.",
+  "seed": 2026110506,
+  "supervised_fits_exactly": 3,
+  "pretraining_runs_exactly": 1,
+  "cells": {
+    "A": "Independent point encoding and per-plane mean; constant cross-node message",
+    "B": "Same point encoding with true local adjacent-layer messages",
+    "C": "Identical architecture to B, geometry encoder initialized by train-only masked-plane pretraining"
+  },
+  "data": {
+    "active_records": 71376,
+    "roles": {
+      "train": 46575,
+      "cal": 11612,
+      "test": 13189
+    },
+    "quarantine_excluded": 17657,
+    "split": "original Stage87, never reassign incoming or views",
+    "incoming_weight": "Original per-incoming total1, original Stage94 cal subrole weights",
+    "cal_select_records": 5443,
+    "cal_post_records": 5746,
+    "cal_not_select_records": 423,
+    "new_K_preserved": 1016,
+    "known_unavailable_geometry": {
+      "train": 345,
+      "cal": 343,
+      "test": 356
+    },
+    "historical_readable_geometry": 70332,
+    "historical_missing_geometry": 1044,
+    "coverage_reference": "workbook/stage96_energy_ml/input_support.json; not new Stage105 full-role SP measurement"
+  },
+  "scalar": {
+    "features": "Exact audited62 in ml/configs/audited_features.json; representation C and frozen Stage94 C train-only state",
+    "dimensions": 127,
+    "preprocessing": "ml/compare_energy_architectures.py:representation, workbook/stage94_energy_ml/preprocessing.json[C]; no refit on cal/test",
+    "momentum": "pz0 only first-power momentum; original px/py, q/p and bends allowed; no p0/p1/pz1 or ln(p0/p1)",
+    "charge_missing": "raw11/status, typed NaN, physical signed negatives and Calo policies unchanged"
+  },
+  "geometry": {
+    "reference": "workbook/stage105_energy_ml/protocol.json",
+    "point_transform": [
+      "asinh(x_mm/100)",
+      "asinh(y_mm/100)",
+      "station onehot4",
+      "layer onehot3",
+      "z residual/10mm"
+    ],
+    "node_dimensions": 10,
+    "coordinates": "float32, canonical plane/x/y/z; exact duplicates retained",
+    "point_selection": "Every observed point, no max-N truncation, no deduplication, no true-energy filtering",
+    "edges": "k=8 XY nearest in both directions on each pair of adjacent layers within each of4 stations; E<=16N; no inter-station edges",
+    "edge_features": [
+      "asinh(dx_mm/100)",
+      "asinh(dy_mm/100)",
+      "dz_mm/31.5",
+      "log1p(XY_distance_mm/100)"
+    ],
+    "missing": "Source unavailable or any nonfinite/unmapped point: retain original event/scalars/count and explicit geometry_missing; zero geometry embedding, no partial graph/drop/replacement. Store invalid reason/count in compact QA; stop on new systematic schema/identity failures. Empty available collection separate from missing.",
+    "interpretation": "PHYS collection, not active-readout efficiency, unique particles, association or noise labels"
+  },
+  "architecture": {
+    "point_encoder": "10->32 SiLU->32 SiLU",
+    "messages": "[h_destination32,h_source32,edge4]68->32 SiLU->32 SiLU; incoming mean per destination, zero when no edges",
+    "update": "[h32,mean_message32]64->32 SiLU->32; residual h+=update; two rounds sharing message/update weights",
+    "A_message": "Evaluate same message MLP on one fixed zero68 vector, broadcast result to every node; no edges/true neighbor inputs. All nodes and plane means remain real.",
+    "pool": "Mean32 separately for12 nominal planes; empty plane zero; concatenate384",
+    "geometry_metadata": "log1p(count)12 + nonempty12 + available1 + available_empty_collection1 =26; zeroed embedding and explicit missing state for unavailable",
+    "energy_head": "[scalar127,plane_embedding384,geometry_meta26]537->64 SiLU->64 SiLU->1",
+    "energy_output": "Natural log(E/GeV); final head zero weights, bias train incomingweighted mean logE; no output clamp or E>=pz constraint",
+    "initialization": "Torch seed2026110506; named module initialization order identical A/B/C, B/C bit-exact before pretraining; after pretraining transfer only C point/message/update weights, discard pretraining head. Reset all untouched supervised modules and row shuffle to same seed.",
+    "capacity_limit": "Same declared parameters is not identical effective capacity; C has extra compute. Primary C/A tests entire scheme, not pure geometry or pure compute cause."
+  },
+  "pretraining": {
+    "roles": "Train role1 only; unavailable geometry has no target and no pretraining loss, retained in supervised fit. No cal/test, including unlabeled.",
+    "epochs": 20,
+    "checkpoint": "Fixed final epoch20; no cal/test selection or extra restart",
+    "mask": "Exactly one of nine nominal downstream planes3..11 per event per epoch; seeded deterministic choice independent of point count, validity/activity or target. Nominal plane is not a verified active-readout plane. Empty observed targets permitted.",
+    "input": "Remove hidden plane first, then build visible graph and visible-only counts/metadata. No original62 scalars, global total/counts/moments, hidden count or truth; hidden plane onehot12 allowed. No normalization fitted using hidden event summaries.",
+    "target": "Observed hidden-plane 257-bin count vector, 16x16 XY grid25mm in[-200,200)^2 plus overflow; no target clipping. Original train data only.",
+    "decoder": "[visible pooled384,visible-only meta26,hidden plane onehot12]422->64 SiLU->257; softplus+1e-6 positive Poisson rates",
+    "loss": "Per-event mean over257 of(rate-count*log(rate)); incomingweighted mean over available train. Omitting log(count!) is constant; no energy/particle labels or target derived mask weights.",
+    "optimizer": "Adam lr0.001 betas(0.9,0.999) eps1e-8 weight_decay0; clip gradient global norm10; no dropout/scheduler",
+    "diagnostics": "Fixed train-only loss/count consistency; no energy inference. Loss descent not proof of downstream risk gain.",
+    "mask_rng": "hidden=int(numpy.random.default_rng(numpy.random.SeedSequence([2026110506, epoch_1_based, int(key_id)])).integers(3,12)); no point-dependent RNG calls before this choice"
+  },
+  "supervised": {
+    "target": "Natural log(E/GeV), incomingweighted squared error; all original rows and full residual tails",
+    "optimizer": "Adam lr0.001 betas(0.9,0.999) eps1e-8 weight_decay0; clip global norm10; no dropout/scheduler",
+    "effective_batch_events": 256,
+    "batching": "Same seeded row permutation per epoch. Ragged disjoint union, no cross-event edges; microbatches <=16384nodes and262144edges, accumulate weighted numerator gradients divided by exact full effective256 weight. Oversized individual event singleton, never truncate; if unprocessable stop entire contract.",
+    "max_epochs": 200,
+    "validation_every_epochs": 5,
+    "patience_epochs": 30,
+    "selection": "Strict minimum original cal_select incomingweighted logMSE; earliest tie, one checkpoint per cell, no subgroup/test selection",
+    "postprocessing": "Exactly one cal_post incomingweighted mean(logtruth-pred) offset per cell after checkpoint frozen; both raw/offset always reported",
+    "test": "Read only identity metadata beforehand. Extract test coordinates only after all3 checkpoints/offsets frozen; then once full original test inference/risk. No test activity statistics for training admission.",
+    "no_retry": "No new seed, architecture, extra epochs, objective, masking schedule, pretraining selection, temperature, density or expert actions from results"
+  },
+  "cost_QA": {
+    "identities": "Same fixed40 Stage105 train/cal identities, no replacements; synthetic empty/missing/invalid probes allowed",
+    "optimizer_steps": 0,
+    "CPU_GPU": "Finite forward/backward, all gradients, disjoint/event and point permutation, no cross-event edges, hidden XY/count leakage, empty/missing finite, exact B/C initialization; CPU/GPU max logE delta<=3e-6",
+    "batch_cost": "One warmup plus3 measured end-to-end F/B repetitions including transfer/result copy for effective256 over repeated fixed40; measure CPU/GPU peak and wall, graph build, pretraining decoder; no optimizer step",
+    "admission": "Conservative projected full-train epoch cost*620(total3*200+20)*3 plus600s must fit7200 GPU-task wall; extrapolate from measured QA and later full train/cal input-count totals, never shrink difficult sample. Include microbatch and geometry CPU, reserve1000CPU for evaluation. If projected costs fail, stop before optimizer; do not refit budget.",
+    "extraction_admission": "The Stage105 source CPU14.219627093s includes full brute-force neighbor validation and cannot certify21600s full extraction budget. Same fixed40 operational extractor QA, without quadratic brute-force repeat, must separately measure basket+node+edge CPU and bytes. Conservatively extrapolate to all known280 sources and70332 previously readable records, factor3 +1000CPU reserve; both extraction+GPU host CPU and full-risk work must remain <=21600CPU s. Reject before full extraction if not admitted."
+  },
+  "resources": {
+    "CPU_s_total": 21600,
+    "GPU_task_wall_s_total": 7200,
+    "GPU_concurrency": 1,
+    "CPU_extract_evaluate_cpus": 8,
+    "CPU_memory_MB_requested": 8000,
+    "inner_threads": 1,
+    "GPU": "Use existing Kubeflow H100/MIG or HTCondor CUDA GPU selected by actual zero-step QA. One device, no GPU scan.",
+    "temporary_coordinate_cache_bytes": 512000000,
+    "retained_final_bytes": 20000000,
+    "storage": "One ephemeral float32 coordinate ragged cache split by role, no saved edge/hit/truth copies. Compute edges on demand; remove transport and coordinate cache after byte/identity QA. Keep checkpoints/3point outputs/config/tables only; no draw-level bootstrap.",
+    "GPU_memory_admission": "New zero-step batch QA peak <=75% of actual device memory; full train/cal counts audit before optimizer, no test input count used. Stop instead of dropping/truncating oversized events."
+  },
+  "evaluation": {
+    "controls": [
+      "traditional pz0/0.8",
+      "same-split Stage87 direct62 saved predictions"
+    ],
+    "primary": "Original cal_post max(RMSE_C/RMSE_A on E50_100,E100_200); paired conditional95 upper<1 supports common low-energy increment, not final acceptance",
+    "explanatory": [
+      "B/A",
+      "C/B"
+    ],
+    "strata": [
+      "all",
+      "E50_100",
+      "E100_200",
+      "E200_inf",
+      "pz50_100",
+      "pz50_100_trueE200",
+      "high_y",
+      "unconfirmed"
+    ],
+    "additional": "Original missing/high-end/confirmed low-transfer and existing X layers; geometry missing separately, no dropping K",
+    "metrics": [
+      "log_RMSE",
+      "median_bias_pct",
+      "mean_bias_pct",
+      "R68_pct",
+      "tail50_pct",
+      "positive_tail50_pct",
+      "negative_tail50_pct"
+    ],
+    "bootstrap": "Reuse original component-stratified incoming500 paired draws, cal_seed2026110389/test_seed2026110390, reference Stage104. cal_post does not fit further parameters.",
+    "final_RMSE_upper95": {
+      "two_lowE_vs_traditional": 1.05,
+      "all_vs_direct": 1.01,
+      "remaining_five_strata_vs_direct": 1.03
+    },
+    "final_tail_difference_upper95_pp": 2,
+    "final_tail_reference": "Stage87 direct_cal in every one of all8 strata, all total/positive/negative signs; same original Stage104 gate. Traditional is RMSE lowE reference only.",
+    "scope": "Point output, no density/PIT/NLL/coverage claims. Developer test repeatedly used; intervals conditional on model/source/offset, no source/refit/research-selection/system or new blind confirmation."
+  },
+  "stop": [
+    "QA failure/new systematic input mismatch or invalid-coordinate support prevents declared model",
+    "Fixed full-role coverage including1044 known missing cannot be preserved",
+    "Measured/projected resources exceed caps without truncation",
+    "One complete3fit comparison lacks primary improvement or final joint acceptance: record mechanism increment if present, no automatic extra seed/depth/pretraining run. Continue original deployment; scientific conclusion limited to this scheme."
+  ],
+  "literature": [
+    "Stage19 full point means are prior work, no novelty claim",
+    "https://arxiv.org/abs/1612.00222",
+    "https://arxiv.org/abs/2604.07037v2; inspiration only, no true-particle voxel labels or transferred performance claim"
+  ],
+  "automatic_next_stage": false,
+  "stage105_measured_reference": {
+    "QA_complete": "workbook/stage105_energy_ml/complete.json",
+    "readable_N": 37,
+    "requested_N": 40,
+    "points": 5718,
+    "directed_edges": 56822,
+    "max_points": 1117,
+    "max_edges": 11856,
+    "maximum_z_residual_mm": 6.400048828124909,
+    "outer_CPU_s": 17.35,
+    "outer_wall_s": 15.16,
+    "interface_requested_bytes": 3823241,
+    "fit_GPU_cost": "Unmeasured; Stage105 has no Torch model/optimizer or full extraction measurement."
+  },
+  "execution": {
+    "origin_commit": "da6f620",
+    "frozen_before_stage106_payload": true,
+    "normal_extraction_QA": "Same40 and7branches; no brute force; edges timed separately",
+    "input_request_ceiling_bytes": 10000000000,
+    "coordinate_float32_absolute_tolerance_mm": 0.002,
+    "edge_cache": "RAM memoization only on demand per event; no persisted edges; hidden-plane removal filters original adjacency edges exactly since nominal adjacency unchanged",
+    "geometry_validity": "Original Stage105 plane/sentinel rules; any invalid point makes entire event geometry_missing, all original points/counts retained in coordinate audit",
+    "cost_projection": "QA per-event operational payload CPU*70332 + non-payload per-sourceCPU*280, factor3+1000reserve. GPU slowest batch F/B*ceil(46575/256)*620*3+600. Projected extraction+GPU-host CPU<=21600."
+  }
+}

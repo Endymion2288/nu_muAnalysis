@@ -1,0 +1,35 @@
+{
+  "pod": "nu-mu-energy-stage106-qa-svltl",
+  "uid": "85f38be6-00f0-48ee-bb65-75b65b5d929e",
+  "phase": "Succeeded",
+  "node": "ml-004-h100-001-uusckqrqfxt3-node-0",
+  "startTime": "2026-11-04T23:48:39Z",
+  "resources": {
+    "limits": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    },
+    "requests": {
+      "cpu": "22",
+      "memory": "63G",
+      "nvidia.com/mig-3g.47gb": "1"
+    }
+  },
+  "container_statuses": [
+    {
+      "name": "qa",
+      "restartCount": 0,
+      "state": {
+        "terminated": {
+          "containerID": "containerd://fc1e921565a6ebedcf53f63b32c9daa75e68e58dc3a3d17fedc88db172023414",
+          "exitCode": 0,
+          "finishedAt": "2026-11-04T23:48:57Z",
+          "reason": "Completed",
+          "startedAt": "2026-11-04T23:48:45Z"
+        }
+      },
+      "image": "registry.cern.ch/mlops/lxplus-like:9"
+    }
+  ]
+}

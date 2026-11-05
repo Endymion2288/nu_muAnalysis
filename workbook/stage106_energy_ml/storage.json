@@ -1,0 +1,164 @@
+{
+  "files": [
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage106.sub",
+      "logical_bytes": 739
+    },
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage106_qa_kubeflow.json",
+      "logical_bytes": 1195
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage106.sh",
+      "logical_bytes": 2105
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_information_budget_plan.md",
+      "logical_bytes": 202113
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "logical_bytes": 11562
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "logical_bytes": 338123
+    },
+    {
+      "path": "ml/package_stage106.py",
+      "logical_bytes": 4487
+    },
+    {
+      "path": "ml/stage106_geometry.py",
+      "logical_bytes": 10917
+    },
+    {
+      "path": "ml/stage106_model.py",
+      "logical_bytes": 7238
+    },
+    {
+      "path": "ml/stage106_qa.py",
+      "logical_bytes": 9203
+    },
+    {
+      "path": "ml/stage106_train.py",
+      "logical_bytes": 10239
+    },
+    {
+      "path": "ml/time_stage106.py",
+      "logical_bytes": 943
+    },
+    {
+      "path": "workbook/2026-11-05_stage106_point-model-resource-admission.md",
+      "logical_bytes": 17241
+    },
+    {
+      "path": "workbook/stage106_energy_ml/QA_extraction.json",
+      "logical_bytes": 809
+    },
+    {
+      "path": "workbook/stage106_energy_ml/QA_schema.tsv",
+      "logical_bytes": 4925
+    },
+    {
+      "path": "workbook/stage106_energy_ml/QA_source_cost.tsv",
+      "logical_bytes": 3208
+    },
+    {
+      "path": "workbook/stage106_energy_ml/admission.json",
+      "logical_bytes": 382
+    },
+    {
+      "path": "workbook/stage106_energy_ml/completion_audit.tsv",
+      "logical_bytes": 4528
+    },
+    {
+      "path": "workbook/stage106_energy_ml/condor_history.json",
+      "logical_bytes": 377
+    },
+    {
+      "path": "workbook/stage106_energy_ml/decision.json",
+      "logical_bytes": 1064
+    },
+    {
+      "path": "workbook/stage106_energy_ml/kubeflow_qa.json",
+      "logical_bytes": 892
+    },
+    {
+      "path": "workbook/stage106_energy_ml/model_QA.json",
+      "logical_bytes": 6124
+    },
+    {
+      "path": "workbook/stage106_energy_ml/protocol.json",
+      "logical_bytes": 13961
+    },
+    {
+      "path": "workbook/stage106_energy_ml/resources.json",
+      "logical_bytes": 2032
+    },
+    {
+      "path": "workbook/stage106_energy_ml/time_qa.json",
+      "logical_bytes": 237
+    },
+    {
+      "path": "workbook/stage106_energy_ml/time_qa_extract.json",
+      "logical_bytes": 234
+    },
+    {
+      "path": "workbook/stage106_energy_ml/transport_validation.json",
+      "logical_bytes": 19985
+    },
+    {
+      "path": "workbook/stage106_energy_ml/validation.json",
+      "logical_bytes": 944
+    }
+  ],
+  "spool_files": [
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage106/logs/9667791.0.err",
+      "logical_bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage106/logs/9667791.0.log",
+      "logical_bytes": 2150
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage106/logs/9667791.0.out",
+      "logical_bytes": 1615
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage106/worker.sh",
+      "logical_bytes": 2105
+    }
+  ],
+  "removed": [
+    {
+      "path": "software/energy-ml-stage106-qa_extract.tar.gz",
+      "logical_bytes": 1131077
+    },
+    {
+      "path": "software/energy-ml-stage106-qa.tar.gz",
+      "logical_bytes": 37190609
+    },
+    {
+      "path": "ntuples/energy_ml_stage106/result_qa_extract.tar.gz",
+      "logical_bytes": 40128
+    },
+    {
+      "path": "ntuples/energy_ml_stage106/result_qa.tar.gz",
+      "logical_bytes": 2340
+    },
+    {
+      "path": "ntuples/energy_ml_stage106/QA_coordinates.npz",
+      "logical_bytes": 36876
+    }
+  ],
+  "limit_bytes": 20000000,
+  "no_point_cloud_or_edges_retained": true,
+  "physical_allocated_bytes_unmeasured": true,
+  "file_bytes": 675807,
+  "spool_bytes": 5870,
+  "this_manifest_bytes": 4149,
+  "total_retained_logical_bytes": 685826,
+  "passed": true
+}

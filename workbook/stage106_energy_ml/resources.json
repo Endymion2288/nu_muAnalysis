@@ -1,0 +1,56 @@
+{
+  "independent_outer_CPU_s": 22.281917,
+  "outer_windows": {
+    "qa_extract": {
+      "mode": "qa_extract",
+      "exit_code": 0,
+      "wall_s": 7.961973572149873,
+      "CPU_s": 14.710458,
+      "peak_single_process_RSS_KiB": 95664,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    },
+    "qa": {
+      "mode": "qa",
+      "exit_code": 0,
+      "wall_s": 10.625067532004323,
+      "CPU_s": 7.571458999999999,
+      "peak_single_process_RSS_KiB": 1828316,
+      "scope": "inclusive child plus its descendants, including imports; do not add nested timers"
+    }
+  },
+  "stage_limits": {
+    "CPU_s": 21600,
+    "GPU_task_wall_s": 7200,
+    "retained_bytes": 20000000
+  },
+  "GPU_container_wall_s": 12,
+  "GPU_allocated_device": "H100 NVL MIG 3g.47gb",
+  "GPU_peak_allocated_MiB": 361.0458984375,
+  "CPU_extraction_request": {
+    "cpus": 8,
+    "memory_MB_requested": 8000,
+    "site_memory_MB": 24000,
+    "inner_threads": 1
+  },
+  "GPU_site_request": {
+    "cpus": 22,
+    "memory": "63G",
+    "mig_3g_47gb": 1,
+    "torch_CPU_threads": 1
+  },
+  "not_double_counted": "source sums, inner QA times, Condor integer CPU and container wall are nested/different windows; not summed again",
+  "unmeasured": "physical EOS network IO, GPU utilization/device compute busy time, full-session/platform admission/editing/packaging CPU, full extraction/training cost",
+  "admission_projection": {
+    "passed": false,
+    "projected_GPU_task_wall_s": 15468.536714958027,
+    "projected_GPU_host_CPU_s": 14573.877055920208,
+    "projected_extraction_plus_reserve_CPU_s": 8118.7208401971475,
+    "projected_total_CPU_s": 22692.597896117353,
+    "GPU_peak_allocated_MiB": 361.0458984375,
+    "GPU_limit_s": 7200,
+    "CPU_limit_s": 21600,
+    "projection_heuristic": true,
+    "optimizer_steps": 0
+  },
+  "GPU_allocated_peak_scope": "Maximum of the last measured repetition window of each GPU branch; worker resets per repetition. Not whole-container absolute peak; that is unmeasured."
+}

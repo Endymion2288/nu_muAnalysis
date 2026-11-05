@@ -1,0 +1,24 @@
+{
+  "python_AST": [
+    "ml/stage106_geometry.py",
+    "ml/stage106_model.py",
+    "ml/stage106_qa.py",
+    "ml/stage106_train.py",
+    "ml/package_stage106.py",
+    "ml/time_stage106.py"
+  ],
+  "shell_syntax": true,
+  "JSON_TSV_structure": true,
+  "all_original_scientific_contract_fields_preserved": true,
+  "program_measured_checks_pass_resource_rejects": true,
+  "optimizer_full_extraction_test_and_checkpoint_absent": true,
+  "roadmap_and_information_history_prefix_exact": true,
+  "Stage54_suffix_byte_exact": true,
+  "Markdown": {
+    "local_links": 23,
+    "tables": 5,
+    "passed": true
+  },
+  "new_scope_limits": "No local model/event/physics calculation; no validation of full training, weighted real-gradient equivalence, checkpoints, offsets, risk, full input scale or scientific final acceptance",
+  "GPU_memory_scope": "Reported per-branch final-repetition allocated peak only; entire container/full-input maximum unmeasured"
+}
