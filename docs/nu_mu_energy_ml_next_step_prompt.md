@@ -1,30 +1,48 @@
-# 当前交接：Stage110固定关系差已完整评估，主比较与最终联合未过
+# 当前交接：执行 Stage112 已有 PHYS 的选择与响应机制实验
 
-先读AGENTS.md、路线§92、信息计划§72、[Stage110实际报告](../workbook/2026-11-05_stage110_bdt-anchored-relation-transfer.md)、[选择](../workbook/stage110_energy_ml/selection.json)、[decision](../workbook/stage110_energy_ml/decision.json)及[完成审计](../workbook/stage110_energy_ml/completion_audit.tsv)。Stage109§4的实验已完成，不能再当待执行任务。Stage104动作、Stage108三格/遮挡和本固定差方向均结束。
+先读 AGENTS.md、路线§93、信息计划§73、[Stage111研究报告](../workbook/2026-11-05_stage111_selection-response-reassessment.md)、[冻结合同](../workbook/stage111_energy_ml/experiment_contract.json)、[六源manifest](../workbook/stage111_energy_ml/source_manifest.json)和[Stage110实际报告](../workbook/2026-11-05_stage110_bdt-anchored-relation-transfer.md)。用户明确要求“没有新输入，请重新研究并制定下一实验”；Stage111已完成研究设计，**Stage112尚未执行**。后续用户按路线继续时，执行下述一次实验；不是再复盘或重做Stage110。
 
-## 1. 已交付与允许的结论
+## 1. 科学问题与边界
 
-原71376 active、46575/11612/13189角色、17657隔离、全部1016新增K和缺标量21/6/5、缺几何345/343/356保留。fα=Stage87 direct_cal+α·geometry_available·(B_raw−A_raw)，只取Stage108 raw差、无新offset、缺几何/α0逐位回原强点。40cal QA含6缺标量/5缺几何及解析退化例通过；唯一cal_select解析求解选α1、可行[0,1]、六开发保护不活跃，冻结落盘回读后才test差分。上界活跃不授权扩α。
+其余名义MC cuts保持，reco pz0>50 GeV在多大程度上改变了低能样本的传统估计器风险、真实能量转移和μ纵向响应？此前Stage73只对已选事件作分解，没有共同父分母。测量选择效应不能独自解释模型失败，且确定选择在完整X的选中支持内不改变p(t|X)。
 
-主cal_post max两低能new/f0=1.001249542 [.988791330,1.027119908]，未支持共同改善。test最低能.282644→.274991，比.972924 [.948277,.995675]有局部用途；第二低能.246329→.243557，比.988748 [.972972,1.004560]含1。最低能仍弱于传统.145661；all .287491→.288039，区间含1；cal_post all有退步。test低pz真高E .658177→.662660但区间含1，不声称显著恶化。
+原Stage110主cal_post最坏两低能比1.001249542 [.988791330,1.027119908]未通过，test最低能局部收益准确保留、最终jointFalse；不扩α。Stage108三格/遮挡及旧门控/重权结束。0新模型fit/forward/offset/温度或阈值优化，0生产/重建/谱toy/广泛EOS搜索；不对pz≤50做无支持的BDT外推。模型收益和新效应仍未测。
 
-最终jointFalse：两低能/传统上95=2.262071713/1.059345213>1.05；其他六层RMSE通过，high-y总/负尾差direct上95+2.975030/+3.013768pp>+2。负尾差区间含0，不能称证明超过2pp。完整cal/post/test八层及高端/missing/geometry_missing/confirmed低transfer/X诊断、bias/R68/三向尾、C/D/A与实际风险差均已交付；主区间独立差0，40区间max1.776357e−15，840旧控制max1.421085e−14。不晋升，继续原部署；差包含标量重学习/优化，不是纯几何或信息界。
+## 2. 输入与人口定义
 
-唯一Condor9668033首start/exit0，4CPU/申请6GB站点12GB/0GPU/4worker内线程1；GNU外层15.39CPU/7.96wall秒、RSS283924KiB。内部计时不与外层相加，单核加速比/物理EOS流量/全会话CPU未测。18运输输入核原字节后去重；唯一新点表在忽略的ntuples/energy_ml_stage110/points.npz。全部数值在batch，本地仅标准库文本/字节/打包操作。
+严格使用manifest的六个完整PHYS，π/K/charm×历史train/cal各一源；数值最小(origin,source_index)事前规则，无可读性/产额/效应筛选或替换。六源stat存在、逻辑275663702bytes，schema/entries/产额未测。其为便利PHYS父分母，不能称GENIE/输运/full incoming接受度或自然flux。
 
-## 2. 停止条件与重开输入
+G0=所有有效名义MC cuts去掉reco LeadTrack_pz0>50，保留truth νpz>50、拟合电荷、质量/几何/有效requires。G+=G0且正有限pz和Eν；S50=G0且pz0>50，S100只历史对照。不改旧选择/角色/隔离/全部K。完整PHYS和G0中无效/未知/无轨迹分别计数，NaN不补0。
 
-**没有自动Stage111。** 不重训A/B/C、不换计数遮挡任务/seed/深宽/正则、不续T/offset/固定q权重，也不扩α符号/范围/局部系数/C或更多专家。单组收益准确保留，主阴性结束这个方向，不把有限负结论推广到所有可训练残差。
+batch只按合同白名单读Stage87 split身份字段；test>cal>train，已知test-key仅保留完整cutflow计数而隔离主要开发对比，不读取test-only PHYS/特征/预测/风险。source+entry核run/event；旧隔离不被source角色覆盖，新父entry只diagnostic-only、不加入训练集。incoming为精确原生MeV四元组代理，不冒充真实独立谱系。
 
-Stage109另列的主要投入目前仍需实际交付，不由本次Prompt授权提交新生产或对外发消息：
+每源内eligible incoming全部父视图权重合1，选择前冻结、不在幸存者重分；主端点六源等权不是物理flux。源/角色/支持/冲突/未知和record-weighted控制完整交付。
 
-1. 新独立source/parent和可执行生成接口、提议密度/纳入概率；真50–100/100–200GeV、同低reco pz真≥200/high-y及自然高端，按transfer、z/材料/几何分层。先pilot给selected产额/选择失败分母/ESS，验收不重复旧池、不删困难者、源在生产前分训练/校准/locked。实际路径和产额未交付。
-2. 相同生成/输运历史上、有IOV/有效DAQ/quiet依据与物理尺度的读出/校准变体，并留紧凑measurement→cluster→SP组成引用；另做匹配incoming/靶核/顶点的generator比较。两种配对目的不同，不能硬当同末态或正式1σ。Stage85既有条件活动不认证纯噪声/active分母，不再重复同控制或无目标扫EOS/旧REC。
-3. 原最终能量与八层三尾要求、interaction/FSI/材料/Calo/接受度/背景依据、新未开发locked来源及完整source/refit/研究选择/参数不确定度确认。开发test与cal_post有历史用途，500incoming条件区间不替代它们。
+## 3. 一次比较与输出
 
-只有具体新输入或用户明确另冻科学问题时才安排可失败完整比较。原pz0>50GeV、一次方动量仅pz0、允许px/py/q/p/弯折、raw11/status/typed NaN/合法负值/Calo缺项、全部K和原角色保持。两低能/传统上95≤1.05、all/direct≤1.01、其他五层/direct≤1.03，八层三向tail50差direct上95≤+2pp保持。阶段实验完成与项目物理终点未达分开记录，不自动重复状态审计作为新阶段。
+真[50,100)/[100,200)GeV各报一个预定主端点：六源平均的传统pz0/0.8 **S50∩G+减G+ log-MSE差**；0.8固定，不拟合offset。任一来源任一边无支持，该六源主端点不可估，不丢源重归一。两箱均报，效应正负/零都可完成。
 
-后续真实工作仍在batch，适用时GPU、CPU合理多核内线程1，spool统一~/condor/nu_muAnalysis/<stage>/；先中文实际报告再本地Conventional Commit，无push。Stage54五资产和以下历史后缀保持，实际状态以Stage85为准，不自动重做noise支线。
+同子集唯一真主μ有效时：r=ln(pz0/Eμ_vertex)、u=ln(Eμ_vertex/Eν)、c=ln0.8，逐例e=r+u−c及完整六项平方分解，交叉项保留。r含角度/材料/参考面/错leading，不等于纯tracker分辨率。主风险保留未确认/主μ未知；分解缺支持单报。
+
+完整cutflow/独立fail和unknown、native-invalid-through-cut影子审计、两侧RMSE/偏差/R68/总正负tail50、incoming/权重和/ESS、truth transfer/y<.2、主μ有效和确认率、顶点z/radius及固定E/pz箱和原八层/高端/困难/未知状态。不clip非物理truth ratio来改善曲线。
+
+固定seed2026110512、500次全键Poisson(1) cluster共同乘数bootstrap，两选择成对、源/视图权重固定，同键跨源共用乘数。percentile95区间至少475有效draw才报；不能重抽到够数。仅条件于六源，不覆盖source/refit/研究选择/系统/新blind；不拿两源/成分冒充外推认证。
+
+## 4. 必须一起完成的程序核验与资源
+
+优先用现有匹配build，显式配置路径并存有效requires/aux/校准和实际命令。最高pz0 leading保持；adapt truth_diagnostics空轨迹/空真值/多候选路径，一entry一记录，不用flatten压短。SafeAt NaN、非负/count的−1/−999/unsigned-wrap、合法signed raw/charge sign/module_eta，以及fallback−1234“无需fallback”分清。原模型typed62/raw11/status/Calo缺失传递保持；旧Veto/Timing/Preshower切选仍有fitted charge，本轮记录其失效影响，不能未经标定换成raw同阈值。
+
+单阶段内完成≤40真实QA：六源各最前4entry，加原Stage105六源记录按row最多16条、去重不补；合成empty/unknown/sentinel另核。schema/entry完整metadata先读，每源≤20000、总≤120000，否则不截前缀。原生S50完整成员与独立掩码完全一致；旧缓存只核交集、不是完整selected父分母；native pz差0GeV、truth E相对差≤1e−12、逐例分解≤1e−12/汇总≤1e−10。
+
+单HTCondor6CPU/12000MB/6worker、内线程1、0GPU；spool ~/condor/nu_muAnalysis/stage112/。CPU≤3600s/wall≤900s/接口≤2GiB/临时≤128MiB/最终≤20MB。QA实际成本和完整branch/basket/entries作factor3保守投影，另留CPU300s/wall120s/接口128MiB；预算不通过交具体缺口，不循环更换规则。只读必要标量、truth和关联向量、复用basket，不保存SP/波形/xAOD；紧凑暂存后去重，外层CPU/wall/RSS和真实请求bytes实测，不混加嵌套计时、不把逻辑大小当物理网络。
+
+## 5. 停止与交付
+
+一次完整六源测量后结束，零/反向效应同样有效；缺源/schema/aux/闭合/资源不达交精确原因，不替换源/延长metadata阶段/自动加预算。若invalid-through-cut存在，保留原生结果和数量，另冻修正合同，不能先修后称风险变好。结果可量化选择组成并指导未来双侧支持，不能自动改cut/训练/扩源/生产/晋升。
+
+先写中文Stage112实际workbook及紧凑汇总/图/验证/资源，再本地Conventional Commit，无push。Stage111研究已完成不再重复。原两低能/传统上95≤1.05、all/direct≤1.01、其他五层/direct≤1.03，八层三向tail差direct上95≤+2pp保持；真实response/interaction/FSI/材料/Calo/接受度/背景及新独立确认仍待交付，整体项目未完成。
+
+Stage54五资产和以下历史后缀保持，noise支线实际状态以Stage85为准，不自动重做。
 
 ## 保留的stage54 data占据支线
 

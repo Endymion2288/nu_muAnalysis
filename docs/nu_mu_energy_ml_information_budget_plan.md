@@ -1330,3 +1330,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 实际Condor9668033单start/exit0；申请4CPU/6GB、站点12GB、0GPU、4worker内线程1。GNU外层15.39CPU/7.96wall秒、RSS283924KiB，低于各900秒；完整92角色/非空层任务，4worker pool2.909437wall秒/child11.219111CPU秒不再加外层。单核加速比/物理EOS流量/全会话CPU未测。18文件逐字节核运输、删包与运输副本，保留紧凑表图/唯一点表见storage。主区间独立差0、40gate/对照区间max1.776357e−15、840旧标量max1.421085e−14，真实差与fallback/回读通过。
 
 这笔小预算回答了强表格核心上已有功能差的用途；没有买到共同恢复，不扩大α/局部系数/新专家或自动residual训练。Stage109双侧(E/transfer/z)独立支持及真实pilot产额、有效DAQ/quiet与有依据配对变体、匹配incoming的generator/FSI/材料/Calo/接受度/背景和新locked确认仍未交付。没有具体新输入或明确另冻合同就结束本方向，不重复旧三格/遮挡或无目标metadata扫描；原最终门槛与source/refit/研究选择限制不变，历史§1–71及Stage54保持。
+
+
+## 73. stage111：下一笔预算买选择分母与响应测量，不买新架构网格
+
+[Stage111复盘](../workbook/2026-11-05_stage111_selection-response-reassessment.md)按用户“无新输入，重新研究并制定下一实验”完成研究设计。Stage110局部test收益、主比较及最终joint失败不改；旧固定差/三格/门控/重权不重开。本轮0ROOT/事件载荷/fit/forward/作业，55项证据复制自旧汇总；七项primary文献用于辨别先验、选择、支持和残差训练假设，不能替代项目测量。
+
+拟唯一Stage112投入现有六个完整PHYS：π/K/charm各两个历史train/cal来源，按固定Stage105来源最小数值ID选择，无产额/availability筛选或替换；逻辑stat275663702bytes不是真实I/O。预算单6CPU/12000MB Condor、6worker内线程1/0GPU，CPU3600s/wall900s、接口2GiB、临时128MiB、最终20MB；≤40真实QA后同阶段完整≤120000父entry测量。完整schema/entry/产额/成本仍未测；factor3实际QA/basket投影加reserve不通过即交精确缺项，不扩大预算/截前缀/拆工程阶段。
+
+购买的问题是：其他名义MC切选固定，去reco pz0门槛的G0中，正pz可定义总体G+与S50的传统pz0/0.8低能log-MSE差，以及真transfer和μ纵向响应的变化。两真E箱/六源等权端点固定，incoming视图权重在选择前冻结；任一源无支持则主端点不可估而不删源。完整cutflow/无效/未知、原生S50与独立掩码闭合、signed平方交叉项和全部困难层为验收；负、零、反向结果均完成研究。raw模型输入与legacy fitted-charge cuts分清，不直接换阈值；无轨迹/typed占位/合法负值不混为零或静默过滤。
+
+该PHYS便利分母不认证GENIE/G4全接受度、自然flux或50GeV背景；固定X后的条件分布不因确定选择凭空改变。500共同incoming乘数区间不覆盖source/refit/研究选择/系统/新blind。Stage112尚未执行，不自动训练或部署。原角色/全部K/typed62/raw11/pz0-only政策、最终1.05/1.01/1.03与八层三尾+2pp、真实系统和新独立支持长期要求不变。合同及确切输入见[Stage111产物](../workbook/stage111_energy_ml/experiment_contract.json)，历史§1–72和Stage54保持。

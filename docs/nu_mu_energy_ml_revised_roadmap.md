@@ -2300,3 +2300,20 @@ fα=原Stage87 direct_cal+α·geometry_available·(Stage108 B_raw−A_raw)，缺
 唯一4CPU Condor9668033首start/exit0，无重试；申请6GB、站点12GB、0GPU、4worker/内线程1。GNU外层15.39CPU/7.96wall秒、RSS283924KiB；内部pool2.909437wall秒/child11.219111CPU秒是嵌套口径不相加。18文件运输原字节核验后去重，紧凑证据及唯一忽略点表见storage，≤20MB；物理流量/单核加速比/全会话CPU未测，Stage54五项/Prompt后缀不动。中文报告先写，本地commit无push。
 
 **本次固定方向完成并结束，不自动Stage111、扩α符号/上界/局部系数/C/专家或residual训练。** [完成审计](../workbook/stage110_energy_ml/completion_audit.tsv)区分已兑现的实验与未达到的最终项目目标。Stage109双侧独立支持/pilot、同末态有依据读出变体/匹配初态generator及locked确认仍需实际输入，不由本次授权提交生产；当前路径/产额/真实系统未交付，不能把重复研究状态当进展。有限方向阴性不是所有残差/信息界。原1.05/1.01/1.03及八层相对direct三向tail≤+2pp保持，条件区间不认证source/refit/α及offset估计/研究选择/真实系统或新blind。见[当前交接](nu_mu_energy_ml_next_step_prompt.md)，历史§1–91保持。
+
+
+## 93. stage111：无新输入后的重新研究，先测已有PHYS选择分母与传统低能优势
+
+[Stage111研究报告](../workbook/2026-11-05_stage111_selection-response-reassessment.md)回应用户明确“没有新输入，请重新研究并制定下一实验”，据此另冻新科学问题；Stage110固定方向、Stage108三格/遮挡、既有门控/重权仍结束。复核Stage59/68/73/78/104/108–110和HEP标定先验、FASER能谱测量、协变量漂移、BGNN/GrowNet与响应学习primary文献，交[55项原值证据](../workbook/stage111_energy_ml/evidence.tsv)和[引用/适用限制](../workbook/stage111_energy_ml/literature.tsv)。0新事件载荷/ROOT/模型/forward/fit/批任务或生产；本轮只研究与制定下一实验。
+
+Stage110最低能test局部改善仍成立，但主cal_post最坏比1.001249542 [.988791330,1.027119908]和原最终联合未过；不能扩α或据此宣布所有残差无用。新的可测缺口是Stage73已明确未测的**选择前后共同分母**。不是再做一次selected误差分解，也不预断选择是唯一原因。
+
+唯一拟Stage112按[冻结合同](../workbook/stage111_energy_ml/experiment_contract.json)读取[六个精确PHYS](../workbook/stage111_energy_ml/source_manifest.json)：Stage105固定来源中π/K/charm×历史train/cal各取最小数值(origin,source_index)，不按可读性/产额/效应挑选或替换。六文件stat存在，逻辑275663702bytes；内容schema/entry/产额/新效应/功效/成本未测。便利来源不代表全部flux，PHYS分母不等于生成/输运接受度。
+
+G0保留所有有效名义MC切选，仅去reco pz0>50；保留truth νpz>50、fitted-charge/质量/几何/实际requires。G+为可定义正pz和正Eν；S50=G0且pz0>50，S100仅历史对照。主要两端点为真[50,100)/[100,200)GeV中，固定传统pz0/0.8的S50−G+ log-MSE差，先每源incoming归一、视图权重选择前固定，再六源等权；任一源空支持则该主端点不可估，不删源重归一。辅助真transfer、主μ/leading关联、r=ln(pz0/Eμ_vertex)、u=ln(Eμ_vertex/Eν)及完整signed交叉项、原八层/高端/困难/失配和占位值去向。固定500incoming-cluster Poisson共同乘数区间只条件于六源，不认证source/refit/研究选择/系统或新blind。
+
+原生切选与独立掩码成员须闭合；无轨迹/真值未知/非物理值留分母，SafeAt的NaN、typed−1/−999、合法signed负值和fallback−1234控制值分清。模型raw11已使用，但旧切选仍有fitted charge；本轮只审计，不能直接把同阈值换raw。低于50GeV不forward模型、不报无支持的preselection ML比较。选择是完整X的确定函数时，选中支持内p(t|X,S)=p(t|X)；边缘富集不证明固定X后的条件改变或信息界。
+
+下一次调用在同一Stage112完成≤40真实QA和六文件测量，单Condor6CPU/12GB、6worker内线程1/0GPU、CPU≤3600s/wall≤900s、接口≤2GiB/临时128MiB/最终20MB；每源≤20000、合计≤120000父entry，真实QA和完整basket元数据factor3加reserve准入，不截有利前缀。已知test-key仅身份隔离计数，不读test-only源/预测或测试风险，原Stage87角色/隔离/全部K不改。效应为零或反向同样完成机制检验；缺输入/闭合/资源失败交具体缺口，不续metadata阶段或改预算循环。
+
+Stage112本轮未执行；不自动训练/改cut/扩样本/提交生产/晋升。新测量仅为选择组成、响应与未来双侧支持提供定量依据，不能独自解释模型低能失败或认证50GeV背景。原1.05/1.01/1.03与八层三向tail差direct上95≤+2pp、真实response/interaction/FSI/材料/Calo/接受度/背景和独立确认要求保持。[当前Prompt](nu_mu_energy_ml_next_step_prompt.md)改为这个具体实验；历史§1–92及Stage54五资产/后缀保持。

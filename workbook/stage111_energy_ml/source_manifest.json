@@ -1,0 +1,90 @@
+{
+  "stage": 111,
+  "proposed_experiment_stage": 112,
+  "reference": "workbook/stage105_energy_ml/identities.json",
+  "selection": "minimum numeric (origin, source_index) per component pi/k/charm and historical role train/cal among fixed Stage105 sources; no availability/yield/outcome filtering or replacement",
+  "files": [
+    {
+      "source": "55:4",
+      "origin": 55,
+      "source_index": 4,
+      "component": "pi",
+      "group": "pi:00040-00049",
+      "role": 1,
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200082/FaserMC-MC24_Genie_epos_pi-200082-00040-00049-s0014-merge-PHYS.root",
+      "availability": "existing_PHYS",
+      "historical_role": "train",
+      "exists_at_design": true,
+      "logical_bytes_at_design": 28456305
+    },
+    {
+      "source": "55:164",
+      "origin": 55,
+      "source_index": 164,
+      "component": "pi",
+      "group": "pi:00420-00429",
+      "role": 2,
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200093/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_pi-200093-00420-00429-s0014-merge-PHYS.root",
+      "availability": "existing_PHYS",
+      "historical_role": "cal",
+      "exists_at_design": true,
+      "logical_bytes_at_design": 29633994
+    },
+    {
+      "source": "55:84",
+      "origin": 55,
+      "source_index": 84,
+      "component": "k",
+      "group": "k:00440-00449",
+      "role": 1,
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200083/FaserMC-MC24_Genie_epos_k-200083-00440-00449-s0014-merge-PHYS.root",
+      "availability": "existing_PHYS",
+      "historical_role": "train",
+      "exists_at_design": true,
+      "logical_bytes_at_design": 47597205
+    },
+    {
+      "source": "55:67",
+      "origin": 55,
+      "source_index": 67,
+      "component": "k",
+      "group": "k:00220-00229",
+      "role": 2,
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200083/FaserMC-MC24_Genie_epos_k-200083-00220-00229-s0014-merge-PHYS.root",
+      "availability": "existing_PHYS",
+      "historical_role": "cal",
+      "exists_at_design": true,
+      "logical_bytes_at_design": 47550580
+    },
+    {
+      "source": "55:116",
+      "origin": 55,
+      "source_index": 116,
+      "component": "charm",
+      "group": "charm:00030-00039",
+      "role": 1,
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200089/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00030-00039-s0014-merge-PHYS.root",
+      "availability": "existing_PHYS",
+      "historical_role": "train",
+      "exists_at_design": true,
+      "logical_bytes_at_design": 60966291
+    },
+    {
+      "source": "55:118",
+      "origin": 55,
+      "source_index": 118,
+      "component": "charm",
+      "group": "charm:00050-00059",
+      "role": 2,
+      "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200089/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00050-00059-s0014-merge-PHYS.root",
+      "availability": "existing_PHYS",
+      "historical_role": "cal",
+      "exists_at_design": true,
+      "logical_bytes_at_design": 61459327
+    }
+  ],
+  "total_logical_bytes": 275663702,
+  "metadata_only": true,
+  "ROOT_schema_entries_yield_and_physical_IO": "unmeasured",
+  "diagnostic_parent_scope": "six saved reconstructed PHYS files, not generator or transport acceptance"
+}
