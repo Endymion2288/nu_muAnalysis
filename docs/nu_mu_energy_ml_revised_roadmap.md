@@ -2347,3 +2347,20 @@ QA发现4个(source,cut)的非负域invalid而native reduced<30pC单项pass：55
 新任务6CPU申请12GB站点18GB/内线程1/0GPU，GNU67.03CPU/25.91wall秒/RSS648868KiB，112+113连首失败累计136.36CPU/50.71wall秒。新接口40935572byte，含首次失败上界累计94323758byte；不称物理网络。20输入原字节核验后运输包去重，完整紧凑证据/图/原生日志保留，[完成审计](../workbook/stage113_energy_ml/completion_audit.tsv)区分已完成测量与未达项目目标；Stage54五资产/后缀和历史§1–94保持。
 
 下一科学任务优先在Stage105既有完整train/cal来源上事前固定父分母，量π/K/charm×角色单元的低能支持/组成与风险；先另冻单元/来源层统计定义、相关incoming、资源与不足判据，不按结果挑源/补到显著，也不替换本次单文件端点。并沿匹配producer核reduced/raw合法signed域/status/sentinel，之后才能另定切选敏感性。所需既有输入/验收详见报告§7；扩展产额/功效/成本未测，不自动作业/训练/改cut/新生产。原最终1.05/1.01/1.03和八层三向tail≤+2pp、真实系统及独立确认要求不改，整体能量目标未完成。条件区间不覆盖source/refit/研究选择/真实系统或新blind；[当前交接](nu_mu_energy_ml_next_step_prompt.md)已换为实测完成状态。
+
+
+## 96. stage114：回到能量学习，先测逐通道测量状态与强基线残差，保留相对时序物理分支
+
+[Stage114研究复盘](../workbook/2026-11-05_stage114_measurement-state-and-risk-research-reset.md)只读最新Stage113/历史汇总、源码和原始论文；0事件/模型载荷、fit/forward/ROOT/作业/SHA。Stage113六源60000父行native闭合没有改变模型；最低能两个charm零支持不可估，第二低能ΔMSE−.09447554689537985但309/500完整draw，仍无CI。选择伴随部分来源transfer组成变化，不是统一低能原因或信息极限。Stage113§5误排表以原invalid_native_pass_counts.tsv为准，不改历史报告；负reduced的合法域/占位仍需producer，现行feature配置其实已为signed。
+
+新请求要求科研推进，故本节修订§95“扩分母优先”的顺序：**下一实际实验Stage115为同split强Stage87 direct固定的残差学习＋逐通道状态消融**，不把所有稀有单元都有CI设成能量学习前置。原角色46575/11612/13189、incoming权重、全部K/缺失/困难者、pz0>50、pz0-only一次方动量及允许px/py/q/p/弯折、raw11/typed NaN/合法signed/Calo缺项保持。旧stage54 data控制已Stage85完成，保留历史后缀不等于重做。
+
+静态证据：62列只以status清洗；Stage94为62值＋62mask＋三个事件级any flag，未逐通道输入overflow/threshold/fit/wave状态。Stage79旧2048样本Veto10/20/21 overflow为861/872/835，不是现行最低能饱和率。上游现有readout/support缓存保有status，可按origin/origin_row回接；本轮未测全角色availability，不据此宣称新信息或错误原因。
+
+拟议两臂同容量：A=62＋三个旧flag＋status_available，共66；B唯一主候选再加11×4布尔状态，共110。四状态为bit4、bit1、16|32、8|128|256，非互斥，未知保留NaN，不改旧charge。两臂各一次固定8棵depth3/min_child_weight200残差规则字典、≤64叶基，冻结后输出f0+Φθ，θ可正负、零θ精确保留f0。train一次最小化两低能最坏MSE/传统，all/其余五层保护1.01²/1.03²；八层正负平方hinge越界幅度不超过f0，第二次固定求解最小修正平方，不加offset/局部门控。固定字典风险凸，但软件success不等于严格最优证书；soft-tail不是tail率保护的替代。不同于Stage78三专家凸包、Stage68乘法dual或Stage110固定α差，不称新探测器信息。
+
+主cal_post两低能最坏B/f0 RMSE比上95<1，并交B/A同端点；只有B/A有支持才称状态族增量。锁定后一次完整开发test、原八层/三向尾和最终1.05/1.01/1.03及+2pp仍全部交，不从A/B择赢家。不达则结束本有限两臂，不续字典/seed/位子集网格，也不推断所有方法无解。拟议一个CPU批任务4CPU/8GB、内线程1/0GPU、CPU≤1800s/wall≤900s/最终20MB，QA并入；实际成本/收益/功效未测，本阶段不执行。完整设计与边界见报告§4及[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+更具物理动机的后续是VetoNu相对时间：FASER论文给出中子迟发及reduced积分窗，CALICE及2026-10-30的calorimetry预印本支持研究时间信息及其响应依赖；不能搬用不同探测器的分辨率。若两路确共享加性时钟，差分可抵消绝对时钟，但当前时基、offset/传播/time walk/fit fallback仍未校准，弱信号和缺失必须保留；不是Stage80已做peak/width的重命名。方向/横向平衡是Stage67未执行旧分支，需要可部署强子轴，不将SP弦线/固定短段动量代入真实平衡。
+
+既有Stage105允许来源的完整父分母扩展及精确producer核查改为解释支线：事前声明项目参考总体和混合权重，六成分角色单元分层报告；有非零目标权重却无支持仍不可估，不能事后丢charm或改写Stage113。旧selected重读不产生新训练样本，unknown仍diagnostic，不扫EOS。真实response/interaction/FSI/材料/Calo/接受度/背景与独立确认缺口保持。历史§1–95及Stage54原资产/后缀保持；本阶段仅文档本地提交、不push。

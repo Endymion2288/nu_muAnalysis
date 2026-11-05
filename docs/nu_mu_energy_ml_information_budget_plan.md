@@ -1363,3 +1363,16 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 全父mask差0，e恒等式/汇总/独立incoming bootstrap差分别8.881784e−16/3.552714e−15/2.220446e−16。原角色/隔离/全部K与pz0/raw11政策未改。负reduced通过native<30在全量实际存在，channel计数及首40例已交；例中小负值/status0不足以证明sentinel，producer signed/pedestal定义未核，不能全转NaN/修cut。fit/raw状态与均值另表，模型raw输入和legacy fitted cuts继续分清。
 
 当前信息预算已购买到测量，未购买到足够charm低能支持、来源不确定度、ML改善、真实response/interaction/系统或独立确认。下一明确任务是在已有Stage105允许train/cal来源集合上预冻完整父分母、六成分角色单元及来源层统计定义，测低能/同pz高E支持和条件风险；先冻相关incoming处理、资源与无支持规则，不挑产额/补到显著，不改本阶段端点。并据匹配producer核电荷合法signed域/占位/status，核实后才定选择敏感性。输入/验收见报告§7，本轮未执行扩源/训练/生产；扩展产额/功效/成本未测。原最终1.05/1.01/1.03和八层三尾差direct上95≤+2pp不改，整个项目仍未完成。历史§1–74、Stage54资产/后缀保持。
+
+
+## 76. stage114：下一笔预算购买测量状态的预测增量，停止以更多审计替代能量结果
+
+[Stage114复盘](../workbook/2026-11-05_stage114_measurement-state-and-risk-research-reset.md)依据Stage113完整结果调整投入：六源固定等权端点在最低能不可估，不代表全部现有能量研究必须停等charm。选择组成有局部证据、native一致，但新模型收益0；不再把原60000父行/36QA重做当进展。后续完整来源测量须声明项目参考总体/来源层不确定度，原六源端点不反写，未知父行不自动入训练。
+
+发现一个尚未被匹配消融回答的现有观测：通道测量状态。62列以status清洗、Stage94仅三个事件any flag；原缓存仍有逐通道status。Stage79旧样本约四成Veto overflow只是动机，不能外推最低能。逐通道overflow/threshold/fit/wave四状态可区分读数解释，但条件增量、跨来源可迁移性与完整availability未测，合法signed不改。
+
+下一唯一实际Stage115：固定同split强direct；A66/B110同小规则残差字典与凸风险头，B主候选。≤64叶方向可signed修正，避免整体重学f0；两低能最坏相对传统MSE、全体/困难保护和单侧错误幅度共同约束。soft-tail不认证实际tail率，数值解不认证泛化/信息上限。cal_post主最坏B/f0及B/A配对风险各交，锁定后一次完整开发test与原八层三尾，不择赢家/seed/字典网格；失败结束固定两臂。train残差不是OOF，已有cal/test也不是新blind。
+
+拟议一任务4CPU/8GB、内线程1/0GPU、CPU1800s/wall900s/最终20MB，QA并入；收益、功效与实际成本未测，不在无环境终端运行。读原始事件、固定模型forward及正式求解仅在未来batch端；本阶段0事件/模型载荷/训练/作业/SHA。
+
+后续信息预算优先于换大架构的是VetoNu相对延时的有限消融：须同采集时基、通道/路径/time-walk控制、fit可靠性和完整缺失支持，共同时钟抵消是有条件代数事实，当前时间未因此被认证。它不同于Stage80峰宽族；论文中钨迟发/铜单强子信息阶梯仅为动机。强子方向约束为未完成旧分支，真实关联/动量流不足时不套公式。真实response/材料/interaction/FSI/Calo/接受度/背景和独立支持仍待交付；原最终门槛、历史§1–75及Stage54资产/后缀不改。
