@@ -1,0 +1,95 @@
+[36mINFO	int main(int, char**):110 Running in MC mode: GRL, BCID and trigger cuts will be skipped.[0m
+[36mINFO	int main(int, char**):172 Run number:  200089[0m
+[36mINFO	int main(int, char**):174 Output file: /pool/condor/dir_2630550/tmp/stage112_l6emet0s/native.root[0m
+[36mINFO	int main(int, char**):178 Enabling multithreading with 1 threads.[0m
+[36mINFO	int main(int, char**):187 File config: /pool/condor/dir_2630550/tmp/stage112_l6emet0s/files.yaml[0m
+[36mINFO	int main(int, char**):188 GRL config:  /pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml[0m
+[36mINFO	int main(int, char**):189 Output config: /pool/condor/dir_2630550/tmp/stage112_l6emet0s/output.yaml[0m
+[36mINFO	int main(int, char**):190 Definitions config: /pool/condor/dir_2630550/tmp/stage112_l6emet0s/definitions.yaml[0m
+[36mINFO	int main(int, char**):191 Cuts config:   /pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml[0m
+[36mINFO	ConfigUtils::DefinitionsConfig ConfigUtils::readDefinitionsConfig(const std::string&):249 Reading definitions config from /pool/condor/dir_2630550/tmp/stage112_l6emet0s/definitions.yaml...[0m
+[36mINFO	ConfigUtils::DefinitionsConfig ConfigUtils::readDefinitionsConfig(const std::string&):283 Read definitions config: 25 definitions.[0m
+[36mINFO	ConfigUtils::SelectionConfig ConfigUtils::readSelectionConfig(const std::string&):210 Reading selection (cuts and histograms) config from /pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml...[0m
+[36mINFO	ConfigUtils::SelectionConfig ConfigUtils::readSelectionConfig(const std::string&):242 Read selection config: 30 cuts, 0 histograms (0 before the first cut).[0m
+[36mINFO	ConfigUtils::GRLConfig ConfigUtils::readGRLConfig(const std::string&):37 Reading GRL config from /pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml...[0m
+[36mINFO	ConfigUtils::GRLConfig ConfigUtils::readGRLConfig(const std::string&):45 Read GRL config: 3 JSON files, 3 CSV files.[0m
+[36mINFO	ConfigUtils::FileConfig ConfigUtils::readFileConfig(const std::string&):51 Reading file config from /pool/condor/dir_2630550/tmp/stage112_l6emet0s/files.yaml...[0m
+[36mINFO	ConfigUtils::FileConfig ConfigUtils::readFileConfig(const std::string&):91 Read file config: 1 runs.[0m
+[36mINFO	ConfigUtils::OutputColumnsConfig ConfigUtils::readOutputColumnsConfig(const std::string&):97 Reading output columns config from /pool/condor/dir_2630550/tmp/stage112_l6emet0s/output.yaml...[0m
+[36mINFO	ConfigUtils::OutputColumnsConfig ConfigUtils::readOutputColumnsConfig(const std::string&):117 Output columns config: save_all_input_columns=0, save_all_defined_columns=0, keep: 3 (+0 MC, +0 data), drop: 0[0m
+[36mINFO	int main(int, char**):251 Found 1 main files and 0 aux files for run 200089[0m
+[36mINFO	void Analysis::addMainFiles(TString, std::vector<TString>):70 Adding 1 main files to chain:[0m
+[36mINFO	void Analysis::addMainFiles(TString, std::vector<TString>):72 Adding main file: /pool/condor/dir_2630550/tmp/stage112_l6emet0s/native_input.root[0m
+[36mINFO	std::unordered_map<int, float> GRLUtils::getRunNumberLumiDict(const std::vector<TString>&):41 Parsing GRL CSV file /cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2022_physics.csv for run luminosities...[0m
+[36mINFO	std::unordered_map<int, float> GRLUtils::getRunNumberLumiDict(const std::vector<TString>&):41 Parsing GRL CSV file /cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2023_physics.csv for run luminosities...[0m
+[36mINFO	std::unordered_map<int, float> GRLUtils::getRunNumberLumiDict(const std::vector<TString>&):41 Parsing GRL CSV file /cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.csv for run luminosities...[0m
+[36mINFO	GRLUtils::GRLTimes GRLUtils::readGRLTimes(const std::vector<TString>&):88 Parsing GRL JSON file /cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2022_physics.json for good and excluded times...[0m
+[36mINFO	GRLUtils::GRLTimes GRLUtils::readGRLTimes(const std::vector<TString>&):88 Parsing GRL JSON file /cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2023_physics.json for good and excluded times...[0m
+[36mINFO	GRLUtils::GRLTimes GRLUtils::readGRLTimes(const std::vector<TString>&):88 Parsing GRL JSON file /cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json for good and excluded times...[0m
+[36mINFO	GRLUtils::GRLTimes GRLUtils::readGRLTimes(const std::vector<TString>&):106 Read 500 good (stable) periods and 765 excluded periods from the GRL.[0m
+[36mINFO	void Analysis::setupVetoCompatibility():690 No Veto11 branches in the input (Veto11 was not read out in 2022-2023): 3 Veto11_* columns will fall back to the Veto10_* values if used. A warning is printed at the end if they are.[0m
+[36mINFO	void Analysis::BuildDataFrame():449 Reduced charge source: branches in the input NTuple.[0m
+[36mINFO	void Analysis::applyDefinitions():363 Defined 25 columns from /pool/condor/dir_2630550/tmp/stage112_l6emet0s/definitions.yaml (0 skipped for this sample / reduced charge source; use -v for details).[0m
+[36mINFO	void Analysis::BuildDataFrame():468 Added 30 columns: 25 /pool/condor/dir_2630550/tmp/stage112_l6emet0s/definitions.yaml, 3 Veto compatibility (Veto11 fallback), 2 built-in.[0m
+[36mINFO	void Analysis::applySelection():372 Applying selection from /pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml...[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):789 Skipping cut for MC: Colliding[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):789 Skipping cut for MC: Trigger[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):789 Skipping cut for MC: Good times[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):789 Skipping cut for MC: Excluded times[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Remove CaloNu PMT region (truth) ((!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT))[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: CC events only (is_cc)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: nu_mu only (abs(SafeAt(truth_pdg, 0)) == 14)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: In Faser Nu Box or Lead Block (decay_box || decay_lead)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Truth dec r < 100 mm (truth_dec_r < 100)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Truth pz > 50 GeV (truth_pz_nu > 50)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: At least one long track (longTracks > 0)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):789 Skipping cut for MC: CaloNu status cleaning[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Veto20 and Veto21 charge > 40 pC (Veto20_charge > 40 && Veto21_charge > 40)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Timing Station Charge > 20 pC (hitsTiming)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Preshower Charge > 2.5 pC (Preshower0_charge > 2.5 && Preshower1_charge > 2.5)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Track pz > 50 GeV (LeadTrack_pz0 > 50)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Leading track has at >= 7 layers (LeadTrack_nLayers >= 7)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Track nDoF >= 9 (LeadTrack_nDoF >= 9)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Leading track has chi2/ndof < 15 (LeadTrack_Chi2_NDF < 15)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Track R at max radius < 95 mm (LeadTrack_r_atMaxRadius < 95)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Track R at IFT < 95 mm (LeadTrack_rIFT < 95)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Track rVetoNu < 120 mm (LeadTrack_rVetoNu < 120)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: Leading track theta < 25 mrad (LeadTrack_Theta < 25)[0m
+[36mINFO	void Analysis::applySelection():379 Skipping cut: Sanity cut to remove events with missing aux data (requires aux_reduced_charge, reduced charge source is input NTuple)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: VetoNu0 reduced charge < 30 pC (VetoNu0_reduced_charge < 30)[0m
+[36mINFO	void Analysis::applyCut(std::string, std::string, DataType):793 Applying cut: VetoNu1 reduced charge < 30 pC (VetoNu1_reduced_charge < 30)[0m
+[36mINFO	void Analysis::applySelection():379 Skipping cut: VetoNu0 raw charge < 40 pC (fallback to raw charge if reduced charge invalid) (requires aux_reduced_charge, reduced charge source is input NTuple)[0m
+[36mINFO	void Analysis::applySelection():379 Skipping cut: VetoNu1 raw charge < 40 pC (fallback to raw charge if reduced charge invalid) (requires aux_reduced_charge, reduced charge source is input NTuple)[0m
+[36mINFO	void Analysis::applySelection():379 Skipping cut: VetoNu0 raw charge < 40 pC (requires no_reduced_charge, reduced charge source is input NTuple)[0m
+[36mINFO	void Analysis::applySelection():379 Skipping cut: VetoNu1 raw charge < 40 pC (requires no_reduced_charge, reduced charge source is input NTuple)[0m
+[36mINFO	void Analysis::applySelection():388 Booked 0 histograms (0 skipped for this sample / reduced charge source; use -v for details).[0m
+[36mINFO	void Analysis::Run(TString):844 Saving snapshot to /pool/condor/dir_2630550/tmp/stage112_l6emet0s/native.root...[0m
+[36mINFO	std::vector<std::__cxx11::basic_string<char> > Analysis::selectOutputColumns():771 Saving 5 of 126 columns to nt (config: /pool/condor/dir_2630550/tmp/stage112_l6emet0s/output.yaml). Use -v to list them.[0m
+[36mINFO	void Analysis::Run(TString):863 Running the event loop: writing 5 columns to nt and 22 columns to eventID_pass...[0m
+[36mINFO	void Analysis::Run(TString):898 MC run 200089 has no GRL lumi. Setting lumi to -1.[0m
+[36mINFO	void Analysis::Run(TString):904 Total integrated luminosity for this job: -1 /pb[0m
+[36mINFO	void Analysis::Run(TString):911 Saved metadata tree with 1 run(s).[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Remove CaloNu PMT region (truth), All: 10000, Passed: 10000, Efficiency: 100[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: CC events only, All: 10000, Passed: 7538, Efficiency: 75.38[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: nu_mu only, All: 7538, Passed: 3596, Efficiency: 47.705[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: In Faser Nu Box or Lead Block, All: 3596, Passed: 1374, Efficiency: 38.2091[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Truth dec r < 100 mm, All: 1374, Passed: 576, Efficiency: 41.9214[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Truth pz > 50 GeV, All: 576, Passed: 572, Efficiency: 99.3056[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: At least one long track, All: 572, Passed: 342, Efficiency: 59.7902[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Veto20 and Veto21 charge > 40 pC, All: 342, Passed: 342, Efficiency: 100[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Timing Station Charge > 20 pC, All: 342, Passed: 342, Efficiency: 100[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Preshower Charge > 2.5 pC, All: 342, Passed: 342, Efficiency: 100[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Track pz > 50 GeV, All: 342, Passed: 327, Efficiency: 95.614[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Leading track has at >= 7 layers, All: 327, Passed: 320, Efficiency: 97.8593[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Track nDoF >= 9, All: 320, Passed: 303, Efficiency: 94.6875[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Leading track has chi2/ndof < 15, All: 303, Passed: 303, Efficiency: 100[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Track R at max radius < 95 mm, All: 303, Passed: 219, Efficiency: 72.2772[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Track R at IFT < 95 mm, All: 219, Passed: 217, Efficiency: 99.0868[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Track rVetoNu < 120 mm, All: 217, Passed: 216, Efficiency: 99.5392[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: Leading track theta < 25 mrad, All: 216, Passed: 211, Efficiency: 97.6852[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: VetoNu0 reduced charge < 30 pC, All: 211, Passed: 190, Efficiency: 90.0474[0m
+[36mINFO	void Analysis::Run(TString):929 Cut: VetoNu1 reduced charge < 30 pC, All: 190, Passed: 181, Efficiency: 95.2632[0m
+[36mINFO	void Analysis::Run(TString):934 Wrote cutflow tree[0m
+[36mINFO	void Analysis::Run(TString):964 Wrote eventID_pass tree with 10000 entries.[0m
+[36mINFO	void Analysis::Run(TString):974 Total event loop runs: 1[0m
+[36mINFO	int main(int, char**):277 Analysis completed successfully.[0m

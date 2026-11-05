@@ -1,0 +1,2270 @@
+[
+  {
+    "source": "55:4",
+    "phase": "full113",
+    "full_parent_entries": 10000,
+    "read_entries": 10000,
+    "branch_count": 67,
+    "selected_compressed_bytes": 3771906,
+    "requested_source_bytes": 3835675,
+    "underlying_source_read_bytes": 3835675,
+    "exact_request_cache_hits": 0,
+    "read_wall_s": 1.986145544797182,
+    "read_CPU_s": 0.790859605,
+    "decode_CPU_s": 0.2248889100000001,
+    "native": {
+      "requested_bytes": 2925441,
+      "returned_bytes": 2925441,
+      "calls": 19,
+      "native_CPU_s": 8.82,
+      "native_wall_s": 9.23,
+      "native_RSS_KiB": 643860.0,
+      "local_input_bytes": 3204931,
+      "temporary_bytes": 3324347,
+      "actual_command": [
+        "/usr/bin/time",
+        "-f",
+        "%U %S %e %M",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/cost.txt",
+        "strace",
+        "-qq",
+        "-s",
+        "0",
+        "-yy",
+        "-e",
+        "trace=read,pread64",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/reads.txt",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/build/analysis",
+        "--isMC",
+        "-r",
+        "200082",
+        "-j",
+        "1",
+        "--file-config",
+        "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/files.yaml",
+        "--definitions-config",
+        "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/output.yaml",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/native.root"
+      ],
+      "definitions": {
+        "Definitions": {
+          "truth_dec_r": {
+            "expression": "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))",
+            "data_type": "ASIMOV"
+          },
+          "is_cc": {
+            "expression": "Contains(abs(truth_pdg), {11, 13, 15})",
+            "data_type": "ASIMOV"
+          },
+          "decay_box": {
+            "expression": "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "decay_lead": {
+            "expression": "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "inCaloNuPMT": {
+            "expression": "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+          },
+          "truth_pz_nu": {
+            "expression": "SafeAt(truth_pz, 0) / 1000",
+            "data_type": "ASIMOV"
+          },
+          "Timing_charge_bottom": {
+            "expression": "Timing0_charge + Timing1_charge"
+          },
+          "Timing_charge_top": {
+            "expression": "Timing2_charge + Timing3_charge"
+          },
+          "Timing_charge_total": {
+            "expression": "Timing_charge_top + Timing_charge_bottom"
+          },
+          "LeadTrack_Idx": {
+            "expression": "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+          },
+          "Track_rVetoNu": {
+            "expression": "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+          },
+          "Lead_Track_Y_atTrig": {
+            "expression": "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+          },
+          "hitsTiming": {
+            "expression": "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) || (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) || (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+          },
+          "Track_rIFT": {
+            "expression": "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+          },
+          "Track_Theta": {
+            "expression": "Theta(Track_px0, Track_py0, Track_pz0)"
+          },
+          "LeadTrack_pz0": {
+            "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+          },
+          "LeadTrack_Theta": {
+            "expression": "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+          },
+          "LeadTrack_nLayers": {
+            "expression": "SafeAt(Track_nLayers, LeadTrack_Idx)"
+          },
+          "LeadTrack_nDoF": {
+            "expression": "SafeAt(Track_nDoF, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2": {
+            "expression": "SafeAt(Track_Chi2, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2_NDF": {
+            "expression": "LeadTrack_Chi2 / LeadTrack_nDoF"
+          },
+          "LeadTrack_rVetoNu": {
+            "expression": "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+          },
+          "LeadTrack_r_atMaxRadius": {
+            "expression": "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+          },
+          "LeadTrack_rIFT": {
+            "expression": "SafeAt(Track_rIFT, LeadTrack_Idx)"
+          },
+          "ML_truth_E_GeV": {
+            "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0",
+            "data_type": "MC"
+          }
+        }
+      },
+      "effective_file_config": {
+        "runs": {
+          "200082": {
+            "data_paths": [
+              "/pool/condor/dir_2630550/tmp/stage112_jgb2zsmq/native_input.root"
+            ],
+            "waveform_paths": []
+          }
+        }
+      },
+      "effective_output_config": {
+        "nt": {
+          "save_all_input_columns": false,
+          "save_all_defined_columns": false,
+          "keep": [
+            "LeadTrack_Idx",
+            "LeadTrack_pz0",
+            "ML_truth_E_GeV"
+          ]
+        }
+      },
+      "reduced_source": "native; no aux/calibration substitution",
+      "pre_reserved_input_bytes": 77127712
+    },
+    "worker_wall_s": 12.120486797764897,
+    "worker_self_CPU_s": 1.671612733,
+    "worker_RSS_KiB": 127952,
+    "native_mask_differences": 0,
+    "native_pz_max_difference_GeV": 0,
+    "native_selected_N": 360,
+    "cuts": [
+      {
+        "name": "Remove CaloNu PMT region (truth)",
+        "expression": "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)",
+        "requires": [],
+        "passed": 10000,
+        "failed": 0,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 10000
+      },
+      {
+        "name": "CC events only",
+        "expression": "is_cc",
+        "requires": [],
+        "passed": 7587,
+        "failed": 2413,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7587
+      },
+      {
+        "name": "nu_mu only",
+        "expression": "abs(SafeAt(truth_pdg, 0)) == 14",
+        "requires": [],
+        "passed": 9998,
+        "failed": 2,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7585
+      },
+      {
+        "name": "In Faser Nu Box or Lead Block",
+        "expression": "decay_box || decay_lead",
+        "requires": [],
+        "passed": 4158,
+        "failed": 5842,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 3175
+      },
+      {
+        "name": "Truth dec r < 100 mm",
+        "expression": "truth_dec_r < 100",
+        "requires": [],
+        "passed": 2401,
+        "failed": 7599,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1542
+      },
+      {
+        "name": "Truth pz > 50 GeV",
+        "expression": "truth_pz_nu > 50",
+        "requires": [],
+        "passed": 9262,
+        "failed": 738,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1472
+      },
+      {
+        "name": "At least one long track",
+        "expression": "longTracks > 0",
+        "requires": [],
+        "passed": 1563,
+        "failed": 8437,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 729
+      },
+      {
+        "name": "Veto20 and Veto21 charge > 40 pC",
+        "expression": "Veto20_charge > 40 && Veto21_charge > 40",
+        "requires": [],
+        "passed": 3855,
+        "failed": 6145,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 729
+      },
+      {
+        "name": "Timing Station Charge > 20 pC",
+        "expression": "hitsTiming",
+        "requires": [],
+        "passed": 1559,
+        "failed": 8441,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 729
+      },
+      {
+        "name": "Preshower Charge > 2.5 pC",
+        "expression": "Preshower0_charge > 2.5 && Preshower1_charge > 2.5",
+        "requires": [],
+        "passed": 4885,
+        "failed": 5115,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 728
+      },
+      {
+        "name": "Track pz > 50 GeV",
+        "expression": "LeadTrack_pz0 > 50",
+        "requires": [],
+        "passed": 1335,
+        "failed": 8665,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 673
+      },
+      {
+        "name": "Leading track has at >= 7 layers",
+        "expression": "LeadTrack_nLayers >= 7",
+        "requires": [],
+        "passed": 1501,
+        "failed": 8499,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 668
+      },
+      {
+        "name": "Track nDoF >= 9",
+        "expression": "LeadTrack_nDoF >= 9",
+        "requires": [],
+        "passed": 1428,
+        "failed": 8572,
+        "unknown": 8444,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 646
+      },
+      {
+        "name": "Leading track has chi2/ndof < 15",
+        "expression": "LeadTrack_Chi2_NDF < 15",
+        "requires": [],
+        "passed": 1535,
+        "failed": 8465,
+        "unknown": 8448,
+        "unknown_native_pass": 7,
+        "cumulative_pass": 646
+      },
+      {
+        "name": "Track R at max radius < 95 mm",
+        "expression": "LeadTrack_r_atMaxRadius < 95",
+        "requires": [],
+        "passed": 710,
+        "failed": 9290,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 425
+      },
+      {
+        "name": "Track R at IFT < 95 mm",
+        "expression": "LeadTrack_rIFT < 95",
+        "requires": [],
+        "passed": 813,
+        "failed": 9187,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 418
+      },
+      {
+        "name": "Track rVetoNu < 120 mm",
+        "expression": "LeadTrack_rVetoNu < 120",
+        "requires": [],
+        "passed": 944,
+        "failed": 9056,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 415
+      },
+      {
+        "name": "Leading track theta < 25 mrad",
+        "expression": "LeadTrack_Theta < 25",
+        "requires": [],
+        "passed": 1117,
+        "failed": 8883,
+        "unknown": 8437,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 391
+      },
+      {
+        "name": "VetoNu0 reduced charge < 30 pC",
+        "expression": "VetoNu0_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9540,
+        "failed": 460,
+        "unknown": 432,
+        "unknown_native_pass": 432,
+        "cumulative_pass": 369
+      },
+      {
+        "name": "VetoNu1 reduced charge < 30 pC",
+        "expression": "VetoNu1_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9472,
+        "failed": 528,
+        "unknown": 396,
+        "unknown_native_pass": 396,
+        "cumulative_pass": 360
+      }
+    ]
+  },
+  {
+    "source": "55:164",
+    "phase": "full113",
+    "full_parent_entries": 10000,
+    "read_entries": 10000,
+    "branch_count": 67,
+    "selected_compressed_bytes": 3749037,
+    "requested_source_bytes": 3813933,
+    "underlying_source_read_bytes": 3813933,
+    "exact_request_cache_hits": 0,
+    "read_wall_s": 1.2459526062011719,
+    "read_CPU_s": 0.837765251,
+    "decode_CPU_s": 0.2532558589999998,
+    "native": {
+      "requested_bytes": 2905987,
+      "returned_bytes": 2905987,
+      "calls": 19,
+      "native_CPU_s": 7.779999999999999,
+      "native_wall_s": 8.71,
+      "native_RSS_KiB": 639244.0,
+      "local_input_bytes": 3180357,
+      "temporary_bytes": 3300557,
+      "actual_command": [
+        "/usr/bin/time",
+        "-f",
+        "%U %S %e %M",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/cost.txt",
+        "strace",
+        "-qq",
+        "-s",
+        "0",
+        "-yy",
+        "-e",
+        "trace=read,pread64",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/reads.txt",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/build/analysis",
+        "--isMC",
+        "-r",
+        "200093",
+        "-j",
+        "1",
+        "--file-config",
+        "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/files.yaml",
+        "--definitions-config",
+        "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/output.yaml",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/native.root"
+      ],
+      "definitions": {
+        "Definitions": {
+          "truth_dec_r": {
+            "expression": "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))",
+            "data_type": "ASIMOV"
+          },
+          "is_cc": {
+            "expression": "Contains(abs(truth_pdg), {11, 13, 15})",
+            "data_type": "ASIMOV"
+          },
+          "decay_box": {
+            "expression": "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "decay_lead": {
+            "expression": "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "inCaloNuPMT": {
+            "expression": "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+          },
+          "truth_pz_nu": {
+            "expression": "SafeAt(truth_pz, 0) / 1000",
+            "data_type": "ASIMOV"
+          },
+          "Timing_charge_bottom": {
+            "expression": "Timing0_charge + Timing1_charge"
+          },
+          "Timing_charge_top": {
+            "expression": "Timing2_charge + Timing3_charge"
+          },
+          "Timing_charge_total": {
+            "expression": "Timing_charge_top + Timing_charge_bottom"
+          },
+          "LeadTrack_Idx": {
+            "expression": "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+          },
+          "Track_rVetoNu": {
+            "expression": "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+          },
+          "Lead_Track_Y_atTrig": {
+            "expression": "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+          },
+          "hitsTiming": {
+            "expression": "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) || (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) || (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+          },
+          "Track_rIFT": {
+            "expression": "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+          },
+          "Track_Theta": {
+            "expression": "Theta(Track_px0, Track_py0, Track_pz0)"
+          },
+          "LeadTrack_pz0": {
+            "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+          },
+          "LeadTrack_Theta": {
+            "expression": "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+          },
+          "LeadTrack_nLayers": {
+            "expression": "SafeAt(Track_nLayers, LeadTrack_Idx)"
+          },
+          "LeadTrack_nDoF": {
+            "expression": "SafeAt(Track_nDoF, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2": {
+            "expression": "SafeAt(Track_Chi2, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2_NDF": {
+            "expression": "LeadTrack_Chi2 / LeadTrack_nDoF"
+          },
+          "LeadTrack_rVetoNu": {
+            "expression": "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+          },
+          "LeadTrack_r_atMaxRadius": {
+            "expression": "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+          },
+          "LeadTrack_rIFT": {
+            "expression": "SafeAt(Track_rIFT, LeadTrack_Idx)"
+          },
+          "ML_truth_E_GeV": {
+            "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0",
+            "data_type": "MC"
+          }
+        }
+      },
+      "effective_file_config": {
+        "runs": {
+          "200093": {
+            "data_paths": [
+              "/pool/condor/dir_2630550/tmp/stage112_39_2lz3n/native_input.root"
+            ],
+            "waveform_paths": []
+          }
+        }
+      },
+      "effective_output_config": {
+        "nt": {
+          "save_all_input_columns": false,
+          "save_all_defined_columns": false,
+          "keep": [
+            "LeadTrack_Idx",
+            "LeadTrack_pz0",
+            "ML_truth_E_GeV"
+          ]
+        }
+      },
+      "reduced_source": "native; no aux/calibration substitution",
+      "pre_reserved_input_bytes": 76761808
+    },
+    "worker_wall_s": 10.814095498993993,
+    "worker_self_CPU_s": 1.6651088969999999,
+    "worker_RSS_KiB": 127956,
+    "native_mask_differences": 0,
+    "native_pz_max_difference_GeV": 0,
+    "native_selected_N": 323,
+    "cuts": [
+      {
+        "name": "Remove CaloNu PMT region (truth)",
+        "expression": "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)",
+        "requires": [],
+        "passed": 10000,
+        "failed": 0,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 10000
+      },
+      {
+        "name": "CC events only",
+        "expression": "is_cc",
+        "requires": [],
+        "passed": 7613,
+        "failed": 2387,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7613
+      },
+      {
+        "name": "nu_mu only",
+        "expression": "abs(SafeAt(truth_pdg, 0)) == 14",
+        "requires": [],
+        "passed": 9999,
+        "failed": 1,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7613
+      },
+      {
+        "name": "In Faser Nu Box or Lead Block",
+        "expression": "decay_box || decay_lead",
+        "requires": [],
+        "passed": 4018,
+        "failed": 5982,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 3045
+      },
+      {
+        "name": "Truth dec r < 100 mm",
+        "expression": "truth_dec_r < 100",
+        "requires": [],
+        "passed": 2310,
+        "failed": 7690,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1465
+      },
+      {
+        "name": "Truth pz > 50 GeV",
+        "expression": "truth_pz_nu > 50",
+        "requires": [],
+        "passed": 9274,
+        "failed": 726,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1393
+      },
+      {
+        "name": "At least one long track",
+        "expression": "longTracks > 0",
+        "requires": [],
+        "passed": 1493,
+        "failed": 8507,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 668
+      },
+      {
+        "name": "Veto20 and Veto21 charge > 40 pC",
+        "expression": "Veto20_charge > 40 && Veto21_charge > 40",
+        "requires": [],
+        "passed": 3727,
+        "failed": 6273,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 668
+      },
+      {
+        "name": "Timing Station Charge > 20 pC",
+        "expression": "hitsTiming",
+        "requires": [],
+        "passed": 1491,
+        "failed": 8509,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 668
+      },
+      {
+        "name": "Preshower Charge > 2.5 pC",
+        "expression": "Preshower0_charge > 2.5 && Preshower1_charge > 2.5",
+        "requires": [],
+        "passed": 4929,
+        "failed": 5071,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 668
+      },
+      {
+        "name": "Track pz > 50 GeV",
+        "expression": "LeadTrack_pz0 > 50",
+        "requires": [],
+        "passed": 1272,
+        "failed": 8728,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 619
+      },
+      {
+        "name": "Leading track has at >= 7 layers",
+        "expression": "LeadTrack_nLayers >= 7",
+        "requires": [],
+        "passed": 1430,
+        "failed": 8570,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 613
+      },
+      {
+        "name": "Track nDoF >= 9",
+        "expression": "LeadTrack_nDoF >= 9",
+        "requires": [],
+        "passed": 1367,
+        "failed": 8633,
+        "unknown": 8517,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 591
+      },
+      {
+        "name": "Leading track has chi2/ndof < 15",
+        "expression": "LeadTrack_Chi2_NDF < 15",
+        "requires": [],
+        "passed": 1464,
+        "failed": 8536,
+        "unknown": 8523,
+        "unknown_native_pass": 10,
+        "cumulative_pass": 591
+      },
+      {
+        "name": "Track R at max radius < 95 mm",
+        "expression": "LeadTrack_r_atMaxRadius < 95",
+        "requires": [],
+        "passed": 672,
+        "failed": 9328,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 390
+      },
+      {
+        "name": "Track R at IFT < 95 mm",
+        "expression": "LeadTrack_rIFT < 95",
+        "requires": [],
+        "passed": 766,
+        "failed": 9234,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 387
+      },
+      {
+        "name": "Track rVetoNu < 120 mm",
+        "expression": "LeadTrack_rVetoNu < 120",
+        "requires": [],
+        "passed": 885,
+        "failed": 9115,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 380
+      },
+      {
+        "name": "Leading track theta < 25 mrad",
+        "expression": "LeadTrack_Theta < 25",
+        "requires": [],
+        "passed": 1073,
+        "failed": 8927,
+        "unknown": 8507,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 355
+      },
+      {
+        "name": "VetoNu0 reduced charge < 30 pC",
+        "expression": "VetoNu0_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9548,
+        "failed": 452,
+        "unknown": 372,
+        "unknown_native_pass": 372,
+        "cumulative_pass": 330
+      },
+      {
+        "name": "VetoNu1 reduced charge < 30 pC",
+        "expression": "VetoNu1_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9478,
+        "failed": 522,
+        "unknown": 393,
+        "unknown_native_pass": 393,
+        "cumulative_pass": 323
+      }
+    ]
+  },
+  {
+    "source": "55:84",
+    "phase": "full113",
+    "full_parent_entries": 10000,
+    "read_entries": 10000,
+    "branch_count": 67,
+    "selected_compressed_bytes": 3844848,
+    "requested_source_bytes": 3924608,
+    "underlying_source_read_bytes": 3924608,
+    "exact_request_cache_hits": 0,
+    "read_wall_s": 1.273592570796609,
+    "read_CPU_s": 0.872069786,
+    "decode_CPU_s": 0.29982915600000015,
+    "native": {
+      "requested_bytes": 2969784,
+      "returned_bytes": 2969784,
+      "calls": 19,
+      "native_CPU_s": 8.67,
+      "native_wall_s": 9.44,
+      "native_RSS_KiB": 641896.0,
+      "local_input_bytes": 3266918,
+      "temporary_bytes": 3387479,
+      "actual_command": [
+        "/usr/bin/time",
+        "-f",
+        "%U %S %e %M",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/cost.txt",
+        "strace",
+        "-qq",
+        "-s",
+        "0",
+        "-yy",
+        "-e",
+        "trace=read,pread64",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/reads.txt",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/build/analysis",
+        "--isMC",
+        "-r",
+        "200083",
+        "-j",
+        "1",
+        "--file-config",
+        "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/files.yaml",
+        "--definitions-config",
+        "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/output.yaml",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/native.root"
+      ],
+      "definitions": {
+        "Definitions": {
+          "truth_dec_r": {
+            "expression": "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))",
+            "data_type": "ASIMOV"
+          },
+          "is_cc": {
+            "expression": "Contains(abs(truth_pdg), {11, 13, 15})",
+            "data_type": "ASIMOV"
+          },
+          "decay_box": {
+            "expression": "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "decay_lead": {
+            "expression": "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "inCaloNuPMT": {
+            "expression": "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+          },
+          "truth_pz_nu": {
+            "expression": "SafeAt(truth_pz, 0) / 1000",
+            "data_type": "ASIMOV"
+          },
+          "Timing_charge_bottom": {
+            "expression": "Timing0_charge + Timing1_charge"
+          },
+          "Timing_charge_top": {
+            "expression": "Timing2_charge + Timing3_charge"
+          },
+          "Timing_charge_total": {
+            "expression": "Timing_charge_top + Timing_charge_bottom"
+          },
+          "LeadTrack_Idx": {
+            "expression": "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+          },
+          "Track_rVetoNu": {
+            "expression": "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+          },
+          "Lead_Track_Y_atTrig": {
+            "expression": "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+          },
+          "hitsTiming": {
+            "expression": "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) || (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) || (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+          },
+          "Track_rIFT": {
+            "expression": "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+          },
+          "Track_Theta": {
+            "expression": "Theta(Track_px0, Track_py0, Track_pz0)"
+          },
+          "LeadTrack_pz0": {
+            "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+          },
+          "LeadTrack_Theta": {
+            "expression": "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+          },
+          "LeadTrack_nLayers": {
+            "expression": "SafeAt(Track_nLayers, LeadTrack_Idx)"
+          },
+          "LeadTrack_nDoF": {
+            "expression": "SafeAt(Track_nDoF, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2": {
+            "expression": "SafeAt(Track_Chi2, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2_NDF": {
+            "expression": "LeadTrack_Chi2 / LeadTrack_nDoF"
+          },
+          "LeadTrack_rVetoNu": {
+            "expression": "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+          },
+          "LeadTrack_r_atMaxRadius": {
+            "expression": "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+          },
+          "LeadTrack_rIFT": {
+            "expression": "SafeAt(Track_rIFT, LeadTrack_Idx)"
+          },
+          "ML_truth_E_GeV": {
+            "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0",
+            "data_type": "MC"
+          }
+        }
+      },
+      "effective_file_config": {
+        "runs": {
+          "200083": {
+            "data_paths": [
+              "/pool/condor/dir_2630550/tmp/stage112_9pf_bg2o/native_input.root"
+            ],
+            "waveform_paths": []
+          }
+        }
+      },
+      "effective_output_config": {
+        "nt": {
+          "save_all_input_columns": false,
+          "save_all_defined_columns": false,
+          "keep": [
+            "LeadTrack_Idx",
+            "LeadTrack_pz0",
+            "ML_truth_E_GeV"
+          ]
+        }
+      },
+      "reduced_source": "native; no aux/calibration substitution",
+      "pre_reserved_input_bytes": 78294784
+    },
+    "worker_wall_s": 11.747449032962322,
+    "worker_self_CPU_s": 1.8802186650000001,
+    "worker_RSS_KiB": 128908,
+    "native_mask_differences": 0,
+    "native_pz_max_difference_GeV": 0,
+    "native_selected_N": 357,
+    "cuts": [
+      {
+        "name": "Remove CaloNu PMT region (truth)",
+        "expression": "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)",
+        "requires": [],
+        "passed": 10000,
+        "failed": 0,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 10000
+      },
+      {
+        "name": "CC events only",
+        "expression": "is_cc",
+        "requires": [],
+        "passed": 7662,
+        "failed": 2338,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7662
+      },
+      {
+        "name": "nu_mu only",
+        "expression": "abs(SafeAt(truth_pdg, 0)) == 14",
+        "requires": [],
+        "passed": 7870,
+        "failed": 2130,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 6035
+      },
+      {
+        "name": "In Faser Nu Box or Lead Block",
+        "expression": "decay_box || decay_lead",
+        "requires": [],
+        "passed": 4070,
+        "failed": 5930,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 2433
+      },
+      {
+        "name": "Truth dec r < 100 mm",
+        "expression": "truth_dec_r < 100",
+        "requires": [],
+        "passed": 2181,
+        "failed": 7819,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1113
+      },
+      {
+        "name": "Truth pz > 50 GeV",
+        "expression": "truth_pz_nu > 50",
+        "requires": [],
+        "passed": 9963,
+        "failed": 37,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1111
+      },
+      {
+        "name": "At least one long track",
+        "expression": "longTracks > 0",
+        "requires": [],
+        "passed": 1492,
+        "failed": 8508,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 679
+      },
+      {
+        "name": "Veto20 and Veto21 charge > 40 pC",
+        "expression": "Veto20_charge > 40 && Veto21_charge > 40",
+        "requires": [],
+        "passed": 4009,
+        "failed": 5991,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 679
+      },
+      {
+        "name": "Timing Station Charge > 20 pC",
+        "expression": "hitsTiming",
+        "requires": [],
+        "passed": 1488,
+        "failed": 8512,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 679
+      },
+      {
+        "name": "Preshower Charge > 2.5 pC",
+        "expression": "Preshower0_charge > 2.5 && Preshower1_charge > 2.5",
+        "requires": [],
+        "passed": 5630,
+        "failed": 4370,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 678
+      },
+      {
+        "name": "Track pz > 50 GeV",
+        "expression": "LeadTrack_pz0 > 50",
+        "requires": [],
+        "passed": 1318,
+        "failed": 8682,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 646
+      },
+      {
+        "name": "Leading track has at >= 7 layers",
+        "expression": "LeadTrack_nLayers >= 7",
+        "requires": [],
+        "passed": 1404,
+        "failed": 8596,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 638
+      },
+      {
+        "name": "Track nDoF >= 9",
+        "expression": "LeadTrack_nDoF >= 9",
+        "requires": [],
+        "passed": 1324,
+        "failed": 8676,
+        "unknown": 8516,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 615
+      },
+      {
+        "name": "Leading track has chi2/ndof < 15",
+        "expression": "LeadTrack_Chi2_NDF < 15",
+        "requires": [],
+        "passed": 1459,
+        "failed": 8541,
+        "unknown": 8521,
+        "unknown_native_pass": 8,
+        "cumulative_pass": 615
+      },
+      {
+        "name": "Track R at max radius < 95 mm",
+        "expression": "LeadTrack_r_atMaxRadius < 95",
+        "requires": [],
+        "passed": 694,
+        "failed": 9306,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 437
+      },
+      {
+        "name": "Track R at IFT < 95 mm",
+        "expression": "LeadTrack_rIFT < 95",
+        "requires": [],
+        "passed": 737,
+        "failed": 9263,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 432
+      },
+      {
+        "name": "Track rVetoNu < 120 mm",
+        "expression": "LeadTrack_rVetoNu < 120",
+        "requires": [],
+        "passed": 904,
+        "failed": 9096,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 429
+      },
+      {
+        "name": "Leading track theta < 25 mrad",
+        "expression": "LeadTrack_Theta < 25",
+        "requires": [],
+        "passed": 1158,
+        "failed": 8842,
+        "unknown": 8508,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 411
+      },
+      {
+        "name": "VetoNu0 reduced charge < 30 pC",
+        "expression": "VetoNu0_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9328,
+        "failed": 672,
+        "unknown": 483,
+        "unknown_native_pass": 483,
+        "cumulative_pass": 377
+      },
+      {
+        "name": "VetoNu1 reduced charge < 30 pC",
+        "expression": "VetoNu1_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9224,
+        "failed": 776,
+        "unknown": 426,
+        "unknown_native_pass": 426,
+        "cumulative_pass": 357
+      }
+    ]
+  },
+  {
+    "source": "55:67",
+    "phase": "full113",
+    "full_parent_entries": 10000,
+    "read_entries": 10000,
+    "branch_count": 67,
+    "selected_compressed_bytes": 3851133,
+    "requested_source_bytes": 3930669,
+    "underlying_source_read_bytes": 3930669,
+    "exact_request_cache_hits": 0,
+    "read_wall_s": 1.501753754913807,
+    "read_CPU_s": 0.940296928,
+    "decode_CPU_s": 0.33986070199999996,
+    "native": {
+      "requested_bytes": 2974303,
+      "returned_bytes": 2974303,
+      "calls": 19,
+      "native_CPU_s": 7.67,
+      "native_wall_s": 8.17,
+      "native_RSS_KiB": 642740.0,
+      "local_input_bytes": 3271695,
+      "temporary_bytes": 3395122,
+      "actual_command": [
+        "/usr/bin/time",
+        "-f",
+        "%U %S %e %M",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_610igm0w/cost.txt",
+        "strace",
+        "-qq",
+        "-s",
+        "0",
+        "-yy",
+        "-e",
+        "trace=read,pread64",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_610igm0w/reads.txt",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/build/analysis",
+        "--isMC",
+        "-r",
+        "200083",
+        "-j",
+        "1",
+        "--file-config",
+        "/pool/condor/dir_2630550/tmp/stage112_610igm0w/files.yaml",
+        "--definitions-config",
+        "/pool/condor/dir_2630550/tmp/stage112_610igm0w/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2630550/tmp/stage112_610igm0w/output.yaml",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_610igm0w/native.root"
+      ],
+      "definitions": {
+        "Definitions": {
+          "truth_dec_r": {
+            "expression": "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))",
+            "data_type": "ASIMOV"
+          },
+          "is_cc": {
+            "expression": "Contains(abs(truth_pdg), {11, 13, 15})",
+            "data_type": "ASIMOV"
+          },
+          "decay_box": {
+            "expression": "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "decay_lead": {
+            "expression": "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "inCaloNuPMT": {
+            "expression": "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+          },
+          "truth_pz_nu": {
+            "expression": "SafeAt(truth_pz, 0) / 1000",
+            "data_type": "ASIMOV"
+          },
+          "Timing_charge_bottom": {
+            "expression": "Timing0_charge + Timing1_charge"
+          },
+          "Timing_charge_top": {
+            "expression": "Timing2_charge + Timing3_charge"
+          },
+          "Timing_charge_total": {
+            "expression": "Timing_charge_top + Timing_charge_bottom"
+          },
+          "LeadTrack_Idx": {
+            "expression": "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+          },
+          "Track_rVetoNu": {
+            "expression": "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+          },
+          "Lead_Track_Y_atTrig": {
+            "expression": "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+          },
+          "hitsTiming": {
+            "expression": "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) || (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) || (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+          },
+          "Track_rIFT": {
+            "expression": "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+          },
+          "Track_Theta": {
+            "expression": "Theta(Track_px0, Track_py0, Track_pz0)"
+          },
+          "LeadTrack_pz0": {
+            "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+          },
+          "LeadTrack_Theta": {
+            "expression": "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+          },
+          "LeadTrack_nLayers": {
+            "expression": "SafeAt(Track_nLayers, LeadTrack_Idx)"
+          },
+          "LeadTrack_nDoF": {
+            "expression": "SafeAt(Track_nDoF, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2": {
+            "expression": "SafeAt(Track_Chi2, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2_NDF": {
+            "expression": "LeadTrack_Chi2 / LeadTrack_nDoF"
+          },
+          "LeadTrack_rVetoNu": {
+            "expression": "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+          },
+          "LeadTrack_r_atMaxRadius": {
+            "expression": "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+          },
+          "LeadTrack_rIFT": {
+            "expression": "SafeAt(Track_rIFT, LeadTrack_Idx)"
+          },
+          "ML_truth_E_GeV": {
+            "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0",
+            "data_type": "MC"
+          }
+        }
+      },
+      "effective_file_config": {
+        "runs": {
+          "200083": {
+            "data_paths": [
+              "/pool/condor/dir_2630550/tmp/stage112_610igm0w/native_input.root"
+            ],
+            "waveform_paths": []
+          }
+        }
+      },
+      "effective_output_config": {
+        "nt": {
+          "save_all_input_columns": false,
+          "save_all_defined_columns": false,
+          "keep": [
+            "LeadTrack_Idx",
+            "LeadTrack_pz0",
+            "ML_truth_E_GeV"
+          ]
+        }
+      },
+      "reduced_source": "native; no aux/calibration substitution",
+      "pre_reserved_input_bytes": 78395344
+    },
+    "worker_wall_s": 10.748482154682279,
+    "worker_self_CPU_s": 1.987696857,
+    "worker_RSS_KiB": 128524,
+    "native_mask_differences": 0,
+    "native_pz_max_difference_GeV": 0,
+    "native_selected_N": 341,
+    "cuts": [
+      {
+        "name": "Remove CaloNu PMT region (truth)",
+        "expression": "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)",
+        "requires": [],
+        "passed": 10000,
+        "failed": 0,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 10000
+      },
+      {
+        "name": "CC events only",
+        "expression": "is_cc",
+        "requires": [],
+        "passed": 7562,
+        "failed": 2438,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7562
+      },
+      {
+        "name": "nu_mu only",
+        "expression": "abs(SafeAt(truth_pdg, 0)) == 14",
+        "requires": [],
+        "passed": 7920,
+        "failed": 2080,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 5998
+      },
+      {
+        "name": "In Faser Nu Box or Lead Block",
+        "expression": "decay_box || decay_lead",
+        "requires": [],
+        "passed": 4121,
+        "failed": 5879,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 2470
+      },
+      {
+        "name": "Truth dec r < 100 mm",
+        "expression": "truth_dec_r < 100",
+        "requires": [],
+        "passed": 2214,
+        "failed": 7786,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1107
+      },
+      {
+        "name": "Truth pz > 50 GeV",
+        "expression": "truth_pz_nu > 50",
+        "requires": [],
+        "passed": 9971,
+        "failed": 29,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1102
+      },
+      {
+        "name": "At least one long track",
+        "expression": "longTracks > 0",
+        "requires": [],
+        "passed": 1542,
+        "failed": 8458,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 640
+      },
+      {
+        "name": "Veto20 and Veto21 charge > 40 pC",
+        "expression": "Veto20_charge > 40 && Veto21_charge > 40",
+        "requires": [],
+        "passed": 3991,
+        "failed": 6009,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 640
+      },
+      {
+        "name": "Timing Station Charge > 20 pC",
+        "expression": "hitsTiming",
+        "requires": [],
+        "passed": 1539,
+        "failed": 8461,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 640
+      },
+      {
+        "name": "Preshower Charge > 2.5 pC",
+        "expression": "Preshower0_charge > 2.5 && Preshower1_charge > 2.5",
+        "requires": [],
+        "passed": 5714,
+        "failed": 4286,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 640
+      },
+      {
+        "name": "Track pz > 50 GeV",
+        "expression": "LeadTrack_pz0 > 50",
+        "requires": [],
+        "passed": 1374,
+        "failed": 8626,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 607
+      },
+      {
+        "name": "Leading track has at >= 7 layers",
+        "expression": "LeadTrack_nLayers >= 7",
+        "requires": [],
+        "passed": 1464,
+        "failed": 8536,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 602
+      },
+      {
+        "name": "Track nDoF >= 9",
+        "expression": "LeadTrack_nDoF >= 9",
+        "requires": [],
+        "passed": 1384,
+        "failed": 8616,
+        "unknown": 8466,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 579
+      },
+      {
+        "name": "Leading track has chi2/ndof < 15",
+        "expression": "LeadTrack_Chi2_NDF < 15",
+        "requires": [],
+        "passed": 1518,
+        "failed": 8482,
+        "unknown": 8472,
+        "unknown_native_pass": 8,
+        "cumulative_pass": 579
+      },
+      {
+        "name": "Track R at max radius < 95 mm",
+        "expression": "LeadTrack_r_atMaxRadius < 95",
+        "requires": [],
+        "passed": 680,
+        "failed": 9320,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 401
+      },
+      {
+        "name": "Track R at IFT < 95 mm",
+        "expression": "LeadTrack_rIFT < 95",
+        "requires": [],
+        "passed": 739,
+        "failed": 9261,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 396
+      },
+      {
+        "name": "Track rVetoNu < 120 mm",
+        "expression": "LeadTrack_rVetoNu < 120",
+        "requires": [],
+        "passed": 909,
+        "failed": 9091,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 395
+      },
+      {
+        "name": "Leading track theta < 25 mrad",
+        "expression": "LeadTrack_Theta < 25",
+        "requires": [],
+        "passed": 1202,
+        "failed": 8798,
+        "unknown": 8458,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 383
+      },
+      {
+        "name": "VetoNu0 reduced charge < 30 pC",
+        "expression": "VetoNu0_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9300,
+        "failed": 700,
+        "unknown": 463,
+        "unknown_native_pass": 463,
+        "cumulative_pass": 352
+      },
+      {
+        "name": "VetoNu1 reduced charge < 30 pC",
+        "expression": "VetoNu1_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9210,
+        "failed": 790,
+        "unknown": 491,
+        "unknown_native_pass": 491,
+        "cumulative_pass": 341
+      }
+    ]
+  },
+  {
+    "source": "55:116",
+    "phase": "full113",
+    "full_parent_entries": 10000,
+    "read_entries": 10000,
+    "branch_count": 67,
+    "selected_compressed_bytes": 3795389,
+    "requested_source_bytes": 3889351,
+    "underlying_source_read_bytes": 3889351,
+    "exact_request_cache_hits": 0,
+    "read_wall_s": 7.412085665389895,
+    "read_CPU_s": 0.848607561,
+    "decode_CPU_s": 0.3026358479999999,
+    "native": {
+      "requested_bytes": 2925550,
+      "returned_bytes": 2925550,
+      "calls": 19,
+      "native_CPU_s": 7.45,
+      "native_wall_s": 7.84,
+      "native_RSS_KiB": 648868.0,
+      "local_input_bytes": 3220507,
+      "temporary_bytes": 3337033,
+      "actual_command": [
+        "/usr/bin/time",
+        "-f",
+        "%U %S %e %M",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/cost.txt",
+        "strace",
+        "-qq",
+        "-s",
+        "0",
+        "-yy",
+        "-e",
+        "trace=read,pread64",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/reads.txt",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/build/analysis",
+        "--isMC",
+        "-r",
+        "200089",
+        "-j",
+        "1",
+        "--file-config",
+        "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/files.yaml",
+        "--definitions-config",
+        "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/output.yaml",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/native.root"
+      ],
+      "definitions": {
+        "Definitions": {
+          "truth_dec_r": {
+            "expression": "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))",
+            "data_type": "ASIMOV"
+          },
+          "is_cc": {
+            "expression": "Contains(abs(truth_pdg), {11, 13, 15})",
+            "data_type": "ASIMOV"
+          },
+          "decay_box": {
+            "expression": "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "decay_lead": {
+            "expression": "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "inCaloNuPMT": {
+            "expression": "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+          },
+          "truth_pz_nu": {
+            "expression": "SafeAt(truth_pz, 0) / 1000",
+            "data_type": "ASIMOV"
+          },
+          "Timing_charge_bottom": {
+            "expression": "Timing0_charge + Timing1_charge"
+          },
+          "Timing_charge_top": {
+            "expression": "Timing2_charge + Timing3_charge"
+          },
+          "Timing_charge_total": {
+            "expression": "Timing_charge_top + Timing_charge_bottom"
+          },
+          "LeadTrack_Idx": {
+            "expression": "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+          },
+          "Track_rVetoNu": {
+            "expression": "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+          },
+          "Lead_Track_Y_atTrig": {
+            "expression": "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+          },
+          "hitsTiming": {
+            "expression": "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) || (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) || (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+          },
+          "Track_rIFT": {
+            "expression": "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+          },
+          "Track_Theta": {
+            "expression": "Theta(Track_px0, Track_py0, Track_pz0)"
+          },
+          "LeadTrack_pz0": {
+            "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+          },
+          "LeadTrack_Theta": {
+            "expression": "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+          },
+          "LeadTrack_nLayers": {
+            "expression": "SafeAt(Track_nLayers, LeadTrack_Idx)"
+          },
+          "LeadTrack_nDoF": {
+            "expression": "SafeAt(Track_nDoF, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2": {
+            "expression": "SafeAt(Track_Chi2, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2_NDF": {
+            "expression": "LeadTrack_Chi2 / LeadTrack_nDoF"
+          },
+          "LeadTrack_rVetoNu": {
+            "expression": "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+          },
+          "LeadTrack_r_atMaxRadius": {
+            "expression": "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+          },
+          "LeadTrack_rIFT": {
+            "expression": "SafeAt(Track_rIFT, LeadTrack_Idx)"
+          },
+          "ML_truth_E_GeV": {
+            "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0",
+            "data_type": "MC"
+          }
+        }
+      },
+      "effective_file_config": {
+        "runs": {
+          "200089": {
+            "data_paths": [
+              "/pool/condor/dir_2630550/tmp/stage112_5g43ht36/native_input.root"
+            ],
+            "waveform_paths": []
+          }
+        }
+      },
+      "effective_output_config": {
+        "nt": {
+          "save_all_input_columns": false,
+          "save_all_defined_columns": false,
+          "keep": [
+            "LeadTrack_Idx",
+            "LeadTrack_pz0",
+            "ML_truth_E_GeV"
+          ]
+        }
+      },
+      "reduced_source": "native; no aux/calibration substitution",
+      "pre_reserved_input_bytes": 77503440
+    },
+    "worker_wall_s": 16.21474196575582,
+    "worker_self_CPU_s": 1.783417839,
+    "worker_RSS_KiB": 126420,
+    "native_mask_differences": 0,
+    "native_pz_max_difference_GeV": 0,
+    "native_selected_N": 204,
+    "cuts": [
+      {
+        "name": "Remove CaloNu PMT region (truth)",
+        "expression": "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)",
+        "requires": [],
+        "passed": 10000,
+        "failed": 0,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 10000
+      },
+      {
+        "name": "CC events only",
+        "expression": "is_cc",
+        "requires": [],
+        "passed": 7526,
+        "failed": 2474,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7526
+      },
+      {
+        "name": "nu_mu only",
+        "expression": "abs(SafeAt(truth_pdg, 0)) == 14",
+        "requires": [],
+        "passed": 4656,
+        "failed": 5344,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 3507
+      },
+      {
+        "name": "In Faser Nu Box or Lead Block",
+        "expression": "decay_box || decay_lead",
+        "requires": [],
+        "passed": 3769,
+        "failed": 6231,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1347
+      },
+      {
+        "name": "Truth dec r < 100 mm",
+        "expression": "truth_dec_r < 100",
+        "requires": [],
+        "passed": 1871,
+        "failed": 8129,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 582
+      },
+      {
+        "name": "Truth pz > 50 GeV",
+        "expression": "truth_pz_nu > 50",
+        "requires": [],
+        "passed": 9975,
+        "failed": 25,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 582
+      },
+      {
+        "name": "At least one long track",
+        "expression": "longTracks > 0",
+        "requires": [],
+        "passed": 966,
+        "failed": 9034,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 359
+      },
+      {
+        "name": "Veto20 and Veto21 charge > 40 pC",
+        "expression": "Veto20_charge > 40 && Veto21_charge > 40",
+        "requires": [],
+        "passed": 3749,
+        "failed": 6251,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 359
+      },
+      {
+        "name": "Timing Station Charge > 20 pC",
+        "expression": "hitsTiming",
+        "requires": [],
+        "passed": 966,
+        "failed": 9034,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 359
+      },
+      {
+        "name": "Preshower Charge > 2.5 pC",
+        "expression": "Preshower0_charge > 2.5 && Preshower1_charge > 2.5",
+        "requires": [],
+        "passed": 5452,
+        "failed": 4548,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 359
+      },
+      {
+        "name": "Track pz > 50 GeV",
+        "expression": "LeadTrack_pz0 > 50",
+        "requires": [],
+        "passed": 787,
+        "failed": 9213,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 345
+      },
+      {
+        "name": "Leading track has at >= 7 layers",
+        "expression": "LeadTrack_nLayers >= 7",
+        "requires": [],
+        "passed": 886,
+        "failed": 9114,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 343
+      },
+      {
+        "name": "Track nDoF >= 9",
+        "expression": "LeadTrack_nDoF >= 9",
+        "requires": [],
+        "passed": 814,
+        "failed": 9186,
+        "unknown": 9038,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 326
+      },
+      {
+        "name": "Leading track has chi2/ndof < 15",
+        "expression": "LeadTrack_Chi2_NDF < 15",
+        "requires": [],
+        "passed": 937,
+        "failed": 9063,
+        "unknown": 9044,
+        "unknown_native_pass": 4,
+        "cumulative_pass": 326
+      },
+      {
+        "name": "Track R at max radius < 95 mm",
+        "expression": "LeadTrack_r_atMaxRadius < 95",
+        "requires": [],
+        "passed": 475,
+        "failed": 9525,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 253
+      },
+      {
+        "name": "Track R at IFT < 95 mm",
+        "expression": "LeadTrack_rIFT < 95",
+        "requires": [],
+        "passed": 478,
+        "failed": 9522,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 247
+      },
+      {
+        "name": "Track rVetoNu < 120 mm",
+        "expression": "LeadTrack_rVetoNu < 120",
+        "requires": [],
+        "passed": 568,
+        "failed": 9432,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 244
+      },
+      {
+        "name": "Leading track theta < 25 mrad",
+        "expression": "LeadTrack_Theta < 25",
+        "requires": [],
+        "passed": 716,
+        "failed": 9284,
+        "unknown": 9034,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 235
+      },
+      {
+        "name": "VetoNu0 reduced charge < 30 pC",
+        "expression": "VetoNu0_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9206,
+        "failed": 794,
+        "unknown": 513,
+        "unknown_native_pass": 513,
+        "cumulative_pass": 217
+      },
+      {
+        "name": "VetoNu1 reduced charge < 30 pC",
+        "expression": "VetoNu1_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9111,
+        "failed": 889,
+        "unknown": 445,
+        "unknown_native_pass": 445,
+        "cumulative_pass": 204
+      }
+    ]
+  },
+  {
+    "source": "55:118",
+    "phase": "full113",
+    "full_parent_entries": 10000,
+    "read_entries": 10000,
+    "branch_count": 67,
+    "selected_compressed_bytes": 3811742,
+    "requested_source_bytes": 3905249,
+    "underlying_source_read_bytes": 3905249,
+    "exact_request_cache_hits": 0,
+    "read_wall_s": 1.427280543372035,
+    "read_CPU_s": 1.001944539,
+    "decode_CPU_s": 0.3288994730000001,
+    "native": {
+      "requested_bytes": 2935022,
+      "returned_bytes": 2935022,
+      "calls": 19,
+      "native_CPU_s": 6.85,
+      "native_wall_s": 7.46,
+      "native_RSS_KiB": 638812.0,
+      "local_input_bytes": 3229069,
+      "temporary_bytes": 3345575,
+      "actual_command": [
+        "/usr/bin/time",
+        "-f",
+        "%U %S %e %M",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/cost.txt",
+        "strace",
+        "-qq",
+        "-s",
+        "0",
+        "-yy",
+        "-e",
+        "trace=read,pread64",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/reads.txt",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/build/analysis",
+        "--isMC",
+        "-r",
+        "200089",
+        "-j",
+        "1",
+        "--file-config",
+        "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/files.yaml",
+        "--definitions-config",
+        "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2630550/nu_mu_stage113.fyBQs9/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/output.yaml",
+        "-o",
+        "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/native.root"
+      ],
+      "definitions": {
+        "Definitions": {
+          "truth_dec_r": {
+            "expression": "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))",
+            "data_type": "ASIMOV"
+          },
+          "is_cc": {
+            "expression": "Contains(abs(truth_pdg), {11, 13, 15})",
+            "data_type": "ASIMOV"
+          },
+          "decay_box": {
+            "expression": "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "decay_lead": {
+            "expression": "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))",
+            "data_type": "ASIMOV"
+          },
+          "inCaloNuPMT": {
+            "expression": "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+          },
+          "truth_pz_nu": {
+            "expression": "SafeAt(truth_pz, 0) / 1000",
+            "data_type": "ASIMOV"
+          },
+          "Timing_charge_bottom": {
+            "expression": "Timing0_charge + Timing1_charge"
+          },
+          "Timing_charge_top": {
+            "expression": "Timing2_charge + Timing3_charge"
+          },
+          "Timing_charge_total": {
+            "expression": "Timing_charge_top + Timing_charge_bottom"
+          },
+          "LeadTrack_Idx": {
+            "expression": "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+          },
+          "Track_rVetoNu": {
+            "expression": "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+          },
+          "Lead_Track_Y_atTrig": {
+            "expression": "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+          },
+          "hitsTiming": {
+            "expression": "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) || (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) || (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+          },
+          "Track_rIFT": {
+            "expression": "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+          },
+          "Track_Theta": {
+            "expression": "Theta(Track_px0, Track_py0, Track_pz0)"
+          },
+          "LeadTrack_pz0": {
+            "expression": "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+          },
+          "LeadTrack_Theta": {
+            "expression": "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+          },
+          "LeadTrack_nLayers": {
+            "expression": "SafeAt(Track_nLayers, LeadTrack_Idx)"
+          },
+          "LeadTrack_nDoF": {
+            "expression": "SafeAt(Track_nDoF, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2": {
+            "expression": "SafeAt(Track_Chi2, LeadTrack_Idx)"
+          },
+          "LeadTrack_Chi2_NDF": {
+            "expression": "LeadTrack_Chi2 / LeadTrack_nDoF"
+          },
+          "LeadTrack_rVetoNu": {
+            "expression": "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+          },
+          "LeadTrack_r_atMaxRadius": {
+            "expression": "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+          },
+          "LeadTrack_rIFT": {
+            "expression": "SafeAt(Track_rIFT, LeadTrack_Idx)"
+          },
+          "ML_truth_E_GeV": {
+            "expression": "std::sqrt(std::pow(SafeAt(truth_px,0),2) + std::pow(SafeAt(truth_py,0),2) + std::pow(SafeAt(truth_pz,0),2) + std::pow(SafeAt(truth_m,0),2)) / 1000.0",
+            "data_type": "MC"
+          }
+        }
+      },
+      "effective_file_config": {
+        "runs": {
+          "200089": {
+            "data_paths": [
+              "/pool/condor/dir_2630550/tmp/stage112_l6emet0s/native_input.root"
+            ],
+            "waveform_paths": []
+          }
+        }
+      },
+      "effective_output_config": {
+        "nt": {
+          "save_all_input_columns": false,
+          "save_all_defined_columns": false,
+          "keep": [
+            "LeadTrack_Idx",
+            "LeadTrack_pz0",
+            "ML_truth_E_GeV"
+          ]
+        }
+      },
+      "reduced_source": "native; no aux/calibration substitution",
+      "pre_reserved_input_bytes": 77765088
+    },
+    "worker_wall_s": 9.94930881075561,
+    "worker_self_CPU_s": 2.019306331,
+    "worker_RSS_KiB": 130436,
+    "native_mask_differences": 0,
+    "native_pz_max_difference_GeV": 0,
+    "native_selected_N": 181,
+    "cuts": [
+      {
+        "name": "Remove CaloNu PMT region (truth)",
+        "expression": "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)",
+        "requires": [],
+        "passed": 10000,
+        "failed": 0,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 10000
+      },
+      {
+        "name": "CC events only",
+        "expression": "is_cc",
+        "requires": [],
+        "passed": 7538,
+        "failed": 2462,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 7538
+      },
+      {
+        "name": "nu_mu only",
+        "expression": "abs(SafeAt(truth_pdg, 0)) == 14",
+        "requires": [],
+        "passed": 4743,
+        "failed": 5257,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 3596
+      },
+      {
+        "name": "In Faser Nu Box or Lead Block",
+        "expression": "decay_box || decay_lead",
+        "requires": [],
+        "passed": 3810,
+        "failed": 6190,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 1374
+      },
+      {
+        "name": "Truth dec r < 100 mm",
+        "expression": "truth_dec_r < 100",
+        "requires": [],
+        "passed": 1870,
+        "failed": 8130,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 576
+      },
+      {
+        "name": "Truth pz > 50 GeV",
+        "expression": "truth_pz_nu > 50",
+        "requires": [],
+        "passed": 9981,
+        "failed": 19,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 572
+      },
+      {
+        "name": "At least one long track",
+        "expression": "longTracks > 0",
+        "requires": [],
+        "passed": 1032,
+        "failed": 8968,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 342
+      },
+      {
+        "name": "Veto20 and Veto21 charge > 40 pC",
+        "expression": "Veto20_charge > 40 && Veto21_charge > 40",
+        "requires": [],
+        "passed": 3808,
+        "failed": 6192,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 342
+      },
+      {
+        "name": "Timing Station Charge > 20 pC",
+        "expression": "hitsTiming",
+        "requires": [],
+        "passed": 1031,
+        "failed": 8969,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 342
+      },
+      {
+        "name": "Preshower Charge > 2.5 pC",
+        "expression": "Preshower0_charge > 2.5 && Preshower1_charge > 2.5",
+        "requires": [],
+        "passed": 5469,
+        "failed": 4531,
+        "unknown": 0,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 342
+      },
+      {
+        "name": "Track pz > 50 GeV",
+        "expression": "LeadTrack_pz0 > 50",
+        "requires": [],
+        "passed": 846,
+        "failed": 9154,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 327
+      },
+      {
+        "name": "Leading track has at >= 7 layers",
+        "expression": "LeadTrack_nLayers >= 7",
+        "requires": [],
+        "passed": 957,
+        "failed": 9043,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 320
+      },
+      {
+        "name": "Track nDoF >= 9",
+        "expression": "LeadTrack_nDoF >= 9",
+        "requires": [],
+        "passed": 880,
+        "failed": 9120,
+        "unknown": 8972,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 303
+      },
+      {
+        "name": "Leading track has chi2/ndof < 15",
+        "expression": "LeadTrack_Chi2_NDF < 15",
+        "requires": [],
+        "passed": 998,
+        "failed": 9002,
+        "unknown": 8977,
+        "unknown_native_pass": 4,
+        "cumulative_pass": 303
+      },
+      {
+        "name": "Track R at max radius < 95 mm",
+        "expression": "LeadTrack_r_atMaxRadius < 95",
+        "requires": [],
+        "passed": 459,
+        "failed": 9541,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 219
+      },
+      {
+        "name": "Track R at IFT < 95 mm",
+        "expression": "LeadTrack_rIFT < 95",
+        "requires": [],
+        "passed": 458,
+        "failed": 9542,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 217
+      },
+      {
+        "name": "Track rVetoNu < 120 mm",
+        "expression": "LeadTrack_rVetoNu < 120",
+        "requires": [],
+        "passed": 576,
+        "failed": 9424,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 216
+      },
+      {
+        "name": "Leading track theta < 25 mrad",
+        "expression": "LeadTrack_Theta < 25",
+        "requires": [],
+        "passed": 762,
+        "failed": 9238,
+        "unknown": 8968,
+        "unknown_native_pass": 0,
+        "cumulative_pass": 211
+      },
+      {
+        "name": "VetoNu0 reduced charge < 30 pC",
+        "expression": "VetoNu0_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9167,
+        "failed": 833,
+        "unknown": 494,
+        "unknown_native_pass": 494,
+        "cumulative_pass": 190
+      },
+      {
+        "name": "VetoNu1 reduced charge < 30 pC",
+        "expression": "VetoNu1_reduced_charge < 30",
+        "requires": [
+          "reduced_charge"
+        ],
+        "passed": 9071,
+        "failed": 929,
+        "unknown": 473,
+        "unknown_native_pass": 473,
+        "cumulative_pass": 181
+      }
+    ]
+  }
+]

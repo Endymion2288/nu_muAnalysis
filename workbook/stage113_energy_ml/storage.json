@@ -1,0 +1,180 @@
+{
+  "retained": [
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage113.sub",
+      "bytes": 678
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage113.sh",
+      "bytes": 1165
+    },
+    {
+      "path": "ml/stage113_measure.py",
+      "bytes": 7175
+    },
+    {
+      "path": "ml/stage113_supervise.py",
+      "bytes": 3119
+    },
+    {
+      "path": "ml/package_stage113.py",
+      "bytes": 3371
+    },
+    {
+      "path": "workbook/2026-11-05_stage113_selection-response-measurement.md",
+      "bytes": 18114
+    },
+    {
+      "path": "workbook/stage113_energy_ml/55_116_full113_native.log",
+      "bytes": 13563
+    },
+    {
+      "path": "workbook/stage113_energy_ml/55_118_full113_native.log",
+      "bytes": 13565
+    },
+    {
+      "path": "workbook/stage113_energy_ml/55_164_full113_native.log",
+      "bytes": 13567
+    },
+    {
+      "path": "workbook/stage113_energy_ml/55_4_full113_native.log",
+      "bytes": 13574
+    },
+    {
+      "path": "workbook/stage113_energy_ml/55_67_full113_native.log",
+      "bytes": 13568
+    },
+    {
+      "path": "workbook/stage113_energy_ml/55_84_full113_native.log",
+      "bytes": 13572
+    },
+    {
+      "path": "workbook/stage113_energy_ml/complete.json",
+      "bytes": 1697
+    },
+    {
+      "path": "workbook/stage113_energy_ml/completion_audit.tsv",
+      "bytes": 1611
+    },
+    {
+      "path": "workbook/stage113_energy_ml/condor_history.json",
+      "bytes": 338
+    },
+    {
+      "path": "workbook/stage113_energy_ml/cutflow.tsv",
+      "bytes": 10554
+    },
+    {
+      "path": "workbook/stage113_energy_ml/decomposition.tsv",
+      "bytes": 82573
+    },
+    {
+      "path": "workbook/stage113_energy_ml/document_validation.json",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage113_energy_ml/identity_audit.json",
+      "bytes": 2369
+    },
+    {
+      "path": "workbook/stage113_energy_ml/invalid_native_pass_counts.tsv",
+      "bytes": 1724
+    },
+    {
+      "path": "workbook/stage113_energy_ml/invalid_native_pass_examples.tsv",
+      "bytes": 7096
+    },
+    {
+      "path": "workbook/stage113_energy_ml/measurement_validation.json",
+      "bytes": 400
+    },
+    {
+      "path": "workbook/stage113_energy_ml/package.json",
+      "bytes": 1062
+    },
+    {
+      "path": "workbook/stage113_energy_ml/primary.tsv",
+      "bytes": 417
+    },
+    {
+      "path": "workbook/stage113_energy_ml/protocol.json",
+      "bytes": 4657
+    },
+    {
+      "path": "workbook/stage113_energy_ml/resources.json",
+      "bytes": 731
+    },
+    {
+      "path": "workbook/stage113_energy_ml/risk.tsv",
+      "bytes": 91742
+    },
+    {
+      "path": "workbook/stage113_energy_ml/scintillator_audit.tsv",
+      "bytes": 48899
+    },
+    {
+      "path": "workbook/stage113_energy_ml/selection_risk.svg",
+      "bytes": 52718
+    },
+    {
+      "path": "workbook/stage113_energy_ml/source_audit.json",
+      "bytes": 69835
+    },
+    {
+      "path": "workbook/stage113_energy_ml/source_primary.tsv",
+      "bytes": 1110
+    },
+    {
+      "path": "workbook/stage113_energy_ml/submission.json",
+      "bytes": 422
+    },
+    {
+      "path": "workbook/stage113_energy_ml/support.tsv",
+      "bytes": 985
+    },
+    {
+      "path": "workbook/stage113_energy_ml/time.txt",
+      "bytes": 812
+    },
+    {
+      "path": "workbook/stage113_energy_ml/transport_validation.json",
+      "bytes": 117
+    },
+    {
+      "path": "workbook/stage113_energy_ml/validate.py",
+      "bytes": 7321
+    },
+    {
+      "path": "workbook/stage113_energy_ml/validity.tsv",
+      "bytes": 11850
+    },
+    {
+      "path": "workbook/stage113_energy_ml/variables.tsv",
+      "bytes": 297995
+    },
+    {
+      "path": "workbook/stage113_energy_ml/watchdog.json",
+      "bytes": 529
+    },
+    {
+      "path": "workbook/stage113_energy_ml/text_normalization.json",
+      "bytes": 523
+    }
+  ],
+  "retained_bytes_excluding_inventory": 815890,
+  "maximum_final_bytes": 20971520,
+  "removed_after_byte_exact_validation": [
+    {
+      "path": "software/energy-ml-stage113.tar.gz",
+      "bytes": 2241286
+    },
+    {
+      "path": "ntuples/energy_ml_stage113/result.tar.gz",
+      "bytes": 169527
+    }
+  ],
+  "temporary_native_files_sum_upper_bound_bytes": 20090113,
+  "temporary_native_ROOT_and_syscall_traces": "cleaned by worker contexts; no parent event payload retained",
+  "spool": "~/condor/nu_muAnalysis/stage113; compact worker/submission/logs retained",
+  "stage54_and_other_projects": "untouched"
+}

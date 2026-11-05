@@ -1,0 +1,53 @@
+{
+  "status": "measurement_complete",
+  "source_count": 6,
+  "parent_entries": 60000,
+  "original_QA_repeated": false,
+  "new_fits": 0,
+  "new_forwards": 0,
+  "original_science_selection_roles_and_weights_preserved": true,
+  "outcome": {
+    "primary": {
+      "E50_100": {
+        "stratum": "E50_100",
+        "delta_MSE": null,
+        "low95": null,
+        "high95": null,
+        "valid_draws": 0,
+        "sources": 6,
+        "missing_sources": "55:116,55:118",
+        "estimable": false,
+        "unit": "squared natural-log error",
+        "scope": "six fixed sources; incoming conditional, no source/refit/system/research-selection coverage"
+      },
+      "E100_200": {
+        "stratum": "E100_200",
+        "delta_MSE": -0.09447554689537985,
+        "low95": null,
+        "high95": null,
+        "valid_draws": 309,
+        "sources": 6,
+        "missing_sources": "none",
+        "estimable": true,
+        "unit": "squared natural-log error",
+        "scope": "six fixed sources; incoming conditional, no source/refit/system/research-selection coverage"
+      }
+    },
+    "validation": {
+      "passed": true,
+      "source_count": 6,
+      "bootstrap_draws": 500,
+      "seed": 2026110512,
+      "max_event_identity_error": 8.881784197001252e-16,
+      "max_aggregate_closure_error": 3.552713678800501e-15,
+      "independent_key_aggregation_bootstrap_max_abs": 2.220446049250313e-16,
+      "complete_native_mask_differences": 0,
+      "no_source_renormalization_or_replacement": true,
+      "no_cut_or_model_change": true
+    },
+    "conditional_only": true,
+    "new_model_benefit": "not measured",
+    "source_or_full_acceptance": "not measured"
+  },
+  "promotion": false
+}

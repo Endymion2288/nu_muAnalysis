@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "stop": null,
+  "worker_exit": 0,
+  "monitored_CPU_s": 67.0,
+  "monitored_wall_s": 25.731921549886465,
+  "CPU_stop_threshold_s": 3470.67,
+  "wall_stop_threshold_s": 825,
+  "maximum_observed_process_count": 26,
+  "counter_probe": {
+    "reaped_child_counted": true,
+    "before_CPU_s": 0.08,
+    "after_CPU_s": 0.12
+  },
+  "method": "sum live tree own+reaped-child CPU, each dead subtree accounted in its nearest live ancestor; proc snapshot races covered by60CPU s reserve; GNU final total authoritative"
+}
