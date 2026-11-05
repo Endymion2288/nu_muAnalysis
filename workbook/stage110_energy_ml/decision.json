@@ -1,0 +1,22 @@
+{
+  "alpha": 1.0,
+  "primary": {
+    "statistic": "max of E50_100 and E100_200 transfer/direct_cal RMSE ratios",
+    "role": "cal_post",
+    "point": 1.0012495421450176,
+    "low95": 0.9887913304373466,
+    "high95": 1.0271199077902056,
+    "supported": false,
+    "bootstrap_replicates": 500,
+    "conditional_only": true
+  },
+  "final_joint_pass": false,
+  "promotion": false,
+  "fixed_direction_finished": true,
+  "new_network_fits": 0,
+  "new_offsets": 0,
+  "new_forwards": 0,
+  "analytic_coefficients_fitted": 1,
+  "no_automatic_followup": true,
+  "source_refit_research_selection_systematic_independent_confirmation": false
+}

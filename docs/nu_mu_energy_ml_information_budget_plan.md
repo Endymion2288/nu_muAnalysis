@@ -1319,3 +1319,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 拟Stage110唯一一维方向：原Stage87 direct_cal + α·geometry_available·(Stage108 B_raw−A_raw)，α[0,1]、无新offset，α0/缺几何逐位回原点。只读持久预测与原身份/cal分区，不读checkpoint或SP；差不是纯几何或正交残差，与旧组合的联系如实记录。cal_select风险三系数C/D/A，解析约束区间+两二次上包络候选点求全局最小；两低能各自相对f0的最坏风险，all/其他五层保护1.01/1.03，原最终传统/direct门槛不改。cal_post主最坏两低能比条件上95<1，完整旧cal/test八层/尾无择优。≤40cal QA后1个4CPU/6GB任务、线程1、CPU/wall各≤900秒、最终20MB为拟议上限，新收益/实耗未测；输入缺失不forward补齐。一次结果直接交付，阴性结束该方向，阳性不自动训练，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
 
 更大投入留给E/transfer/z的双侧独立模拟支持及实际选择产额，记录提议密度/纳入概率/ESS，原自然谱与高端/困难对照和新locked来源保留。按同末态读出与匹配初态generator两种配对隔离机制；真实scale/mask/无偏控制没有时，不先训练nuisance去相关或随意drop hit。新生产携带紧凑cluster/SP组成引用，比寻找已删REC有信息价值。外部BGNN/GrowNet、主动模拟及材料效应论文不提供本项目收益/预算保证。历史§1–70/Stage54及全部K政策保留，当前真实response/interaction/FSI/材料/Calo/接受度/背景、source/refit/研究选择和独立确认仍未认证。
+
+
+## 72. stage110：15.39 CPU秒完成一次强基线锚定的功能增量检验
+
+[Stage110](../workbook/2026-11-05_stage110_bdt-anchored-relation-transfer.md)复用Stage108 A/B raw与Stage87 direct_cal点表，无新网络/forward/ROOT/SP/offset/GPU。原全部角色/K/缺源/困难及变量政策保持；40cal算术和解析QA后，同一4CPU任务完成唯一α与完整风险，不拆准入阶段。有限二次候选精确选α1、可行[0,1]、六开发保护不活跃；不因上界活跃事后扩域。
+
+主cal_post两低能最大new/f0比1.001249542 [.988791330,1.027119908]，上95未<1。开发test最低能.282644→.274991、比.972924 [.948277,.995675]有局部收益，但第二低能区间含1；最低能仍弱于传统.145661。all比1.001906 [.999313,1.004233]，cal_post all比1.007421 [1.003666,1.011621]有退步，困难尾保护未恢复。原最终两低能/传统上95=2.262071713/1.059345213、高y总/负尾差direct上95=2.975030/3.013768pp，jointFalse、不晋升。
+
+实际Condor9668033单start/exit0；申请4CPU/6GB、站点12GB、0GPU、4worker内线程1。GNU外层15.39CPU/7.96wall秒、RSS283924KiB，低于各900秒；完整92角色/非空层任务，4worker pool2.909437wall秒/child11.219111CPU秒不再加外层。单核加速比/物理EOS流量/全会话CPU未测。18文件逐字节核运输、删包与运输副本，保留紧凑表图/唯一点表见storage。主区间独立差0、40gate/对照区间max1.776357e−15、840旧标量max1.421085e−14，真实差与fallback/回读通过。
+
+这笔小预算回答了强表格核心上已有功能差的用途；没有买到共同恢复，不扩大α/局部系数/新专家或自动residual训练。Stage109双侧(E/transfer/z)独立支持及真实pilot产额、有效DAQ/quiet与有依据配对变体、匹配incoming的generator/FSI/材料/Calo/接受度/背景和新locked确认仍未交付。没有具体新输入或明确另冻合同就结束本方向，不重复旧三格/遮挡或无目标metadata扫描；原最终门槛与source/refit/研究选择限制不变，历史§1–71及Stage54保持。

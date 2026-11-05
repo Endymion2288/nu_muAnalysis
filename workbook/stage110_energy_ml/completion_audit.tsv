@@ -1,0 +1,20 @@
+requirement	deliverable	status	evidence_relative_to_stage110	finding
+Stage109§4/Prompt§1	原缓存真实可用/仅指定列/原身份和权重	completed	input_validation.json;transport_validation.json	71376 active原样，18运输文件核原字节；无checkpoint/head/ROOT
+Prompt§1	原角色/K/quarantine/标量及几何缺源	completed	input_validation.json	46575/11612/13189、17657隔离、1016新增K、21/6/5与345/343/356保持
+Prompt§1	cal subroles和incoming权重	completed	input_validation.json;report_validation.json	5443/5746/423，子角色独立归一；完整cal原权重
+Prompt§2	事前冻结方向/公式/范围/容差	completed	protocol.json;selection.json	f0+alpha*available*(B_raw-A_raw)，alpha[0,1]；1e-10/1e-12
+Prompt§3	40固定cal含6标量缺失/几何缺源/select/post	completed	QA.json	40身份，6标量缺失/5几何缺源；alpha0与fallback逐字节
+Prompt§3	解析交叉/相切/无改善/二次退化与平方展开	completed	QA.json	7已知例与空区间/稳定根；平方差max2.0816681711721685e-17
+Prompt§2	唯一全局解析alpha/系数/可行区间/候选和活跃约束	completed	selection.json;select_coefficients.tsv	alpha1、可行[0,1]，六保护不活跃，目标.979013525097458，无优化器/网格
+Prompt§2	选择保存/回读后才test差分和风险	completed	selection.json;report_validation.json;../../ml/stage110_transfer.py	fit只cal_select，main在fit返回后才direction(d)与test评价
+Prompt§3	主500共同incoming max两低能配对CI	completed_negative	decision.json;independent_checks.tsv	1.0012495421450176[.9887913304373466,1.0271199077902056]，上95未<1
+Prompt§3	完整cal/post/test八层和诊断/三向尾/两参考配对CI	completed	points.tsv;paired.tsv	92非空角色/层；原高端/missing/geometry_missing/confirmed低transfer/X均保留
+Prompt§3	每层C/D/A和实际风险变化	completed	select_coefficients.tsv;risk_coefficients.tsv	原权重；展开与直接误差匹配，无按test换策略
+Prompt§3	最终八层RMSE/尾联合门槛	evaluated_not_achieved	gates.tsv;decision.json	两低能上95失败、high-y总/负尾保护失败；不晋升
+Prompt§3	原控制/独立数值验证/点表回读	completed	report_validation.json;old_controls.tsv	840旧数max1.4210854715202004e-14、40区间max1.7763568394002505e-15、主差0
+Prompt§4	1个4CPU批任务/内线程1/CPU与wall900秒	completed	resources.json;condor_history.json;time.txt	9668033首start exit0；15.39CPU/7.96wall秒；站点12GB记录
+Prompt§4	紧凑<=20MB/去重/原输入不动	completed	storage.json;transport_validation.json	运输包与结果包核字节后删除，唯一紧凑点表忽略
+Prompt§4	中文报告/更新路线交接/本地commit	completed_before_commit	../2026-11-05_stage110_bdt-anchored-relation-transfer.md	报告已先写，路线只追加，Stage54后缀和五资产保持，无push
+Prompt§4	阴性结束固定方向/不自动Stage111或额外训练生产	completed_stop	decision.json;../../docs/nu_mu_energy_ml_next_step_prompt.md	本一维功能方向结束，不扩alpha或换C/局部系数
+Stage109§5/7	双侧独立生产/pilot和新locked确认	external_input_not_delivered_not_authorized_this_stage	../2026-11-05_stage109_research-after-relation-results.md	具体需求保留；不把旧重分叫新blind，不提交生产
+Stage109§5/7	真实DAQ/quiet/读出与generator等系统变体	external_input_not_delivered_not_authorized_this_stage	../2026-11-05_stage109_research-after-relation-results.md	无物理变体输入，不反推纯噪声或1sigma

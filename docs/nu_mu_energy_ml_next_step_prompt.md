@@ -1,56 +1,30 @@
-# 下一轮执行 Prompt：Stage110 强BDT上的固定关系差检验
+# 当前交接：Stage110固定关系差已完整评估，主比较与最终联合未过
 
-先读AGENTS.md、[Stage109研究复盘](../workbook/2026-11-05_stage109_research-after-relation-results.md)、路线§91、信息计划§71，以及Stage104/108报告。Stage104固定q动作、Stage108完整三格及计数遮挡已完成，不能因新研究请求重新训练它们。本轮只检验下述一个问题，不自动开展新模拟/response/GNN残差训练。
+先读AGENTS.md、路线§92、信息计划§72、[Stage110实际报告](../workbook/2026-11-05_stage110_bdt-anchored-relation-transfer.md)、[选择](../workbook/stage110_energy_ml/selection.json)、[decision](../workbook/stage110_energy_ml/decision.json)及[完成审计](../workbook/stage110_energy_ml/completion_audit.tsv)。Stage109§4的实验已完成，不能再当待执行任务。Stage104动作、Stage108三格/遮挡和本固定差方向均结束。
 
-**在有实际环境的节点执行；当前本地终端不复现物理结果。** 0新网络/分类器/网络optimizer step/模型forward/checkpoint或head读取、0ROOT/SP/native/生成/重建/新offset/T/积分/GPU。不创建一串单独准入阶段：原缓存可用时，≤40cal算术QA后同一CPU任务直接交唯一α和完整预定风险。
+## 1. 已交付与允许的结论
 
-## 1. 问题与输入
+原71376 active、46575/11612/13189角色、17657隔离、全部1016新增K和缺标量21/6/5、缺几何345/343/356保留。fα=Stage87 direct_cal+α·geometry_available·(B_raw−A_raw)，只取Stage108 raw差、无新offset、缺几何/α0逐位回原强点。40cal QA含6缺标量/5缺几何及解析退化例通过；唯一cal_select解析求解选α1、可行[0,1]、六开发保护不活跃，冻结落盘回读后才test差分。上界活跃不授权扩α。
 
-问题：保留原Stage87强BDT后，Stage108 A→B的已保存功能变化能否共同降低两低能风险，而不是要求一个完整GNN从头替代强BDT？差包含关系、标量重学习和优化，不能宣称纯几何信息或因果效应。它与专家组合有关；不同于Stage78旧U/F/μ的simplex，也不是重开Stage104固定q代价权重。
+主cal_post max两低能new/f0=1.001249542 [.988791330,1.027119908]，未支持共同改善。test最低能.282644→.274991，比.972924 [.948277,.995675]有局部用途；第二低能.246329→.243557，比.988748 [.972972,1.004560]含1。最低能仍弱于传统.145661；all .287491→.288039，区间含1；cal_post all有退步。test低pz真高E .658177→.662660但区间含1，不声称显著恶化。
 
-输入为：
+最终jointFalse：两低能/传统上95=2.262071713/1.059345213>1.05；其他六层RMSE通过，high-y总/负尾差direct上95+2.975030/+3.013768pp>+2。负尾差区间含0，不能称证明超过2pp。完整cal/post/test八层及高端/missing/geometry_missing/confirmed低transfer/X诊断、bias/R68/三向尾、C/D/A与实际风险差均已交付；主区间独立差0，40区间max1.776357e−15，840旧控制max1.421085e−14。不晋升，继续原部署；差包含标量重学习/优化，不是纯几何或信息界。
 
-- `ml/artifacts/stage108/predictions.npz`：按row保存全部71376 active行、`A_raw`、`B_raw`、`geometry_available`；读取schema参见`ml/stage108_train.py`的infer保存与`ml/stage108_report.py`联结。不得从C/各cal版本选更有利方向。
-- `ml/artifacts/stage87/predictions.npz`：强`direct_cal`及身份；冻结原offset，沿Stage108 reporter读取，不直接运行要求rich旧格式的Stage87 report。
-- `ntuples/energy_ml_stage94/{evaluation_input,cal_partition}.npz`、`ntuples/energy_ml_stage87/split.npz`及已有身份/权重/原风险层定义；只复用标量/身份，勿调用会重训的main。
+唯一Condor9668033首start/exit0，4CPU/申请6GB站点12GB/0GPU/4worker内线程1；GNU外层15.39CPU/7.96wall秒、RSS283924KiB。内部计时不与外层相加，单核加速比/物理EOS流量/全会话CPU未测。18运输输入核原字节后去重；唯一新点表在忽略的ntuples/energy_ml_stage110/points.npz。全部数值在batch，本地仅标准库文本/字节/打包操作。
 
-当前终端未核真实事件缓存可读性。执行节点若缺某点表，交准确路径/列/角色缺口，不用汇总制造逐事件差，也不为补缓存重新forward/提取。不要重新扫描EOS/旧REC。
+## 2. 停止条件与重开输入
 
-保持89033兼容、17657隔离、46575/11612/13189原角色；incoming37556/10811/12125、全部1016K及missing21/6/5、geometry缺源345/343/356不变。cal_select5443/post5746、另423退出select仍完整cal；两个子角色按原subrole权重重归一，完整cal用原权重。所有high-y/未确认/高端/正负尾不删。
+**没有自动Stage111。** 不重训A/B/C、不换计数遮挡任务/seed/深宽/正则、不续T/offset/固定q权重，也不扩α符号/范围/局部系数/C或更多专家。单组收益准确保留，主阴性结束这个方向，不把有限负结论推广到所有可训练残差。
 
-原pz0>50GeV，一次方动量pz0-only、允许原px/py/q/p/弯折；raw11/status/typed NaN/合法signed负读数及Calo缺项政策保持。真E/y/确认标签只能定义训练风险与评价层，不能作部署gate或输入。
+Stage109另列的主要投入目前仍需实际交付，不由本次Prompt授权提交新生产或对外发消息：
 
-## 2. 先冻结方向，恰一个解析α
+1. 新独立source/parent和可执行生成接口、提议密度/纳入概率；真50–100/100–200GeV、同低reco pz真≥200/high-y及自然高端，按transfer、z/材料/几何分层。先pilot给selected产额/选择失败分母/ESS，验收不重复旧池、不删困难者、源在生产前分训练/校准/locked。实际路径和产额未交付。
+2. 相同生成/输运历史上、有IOV/有效DAQ/quiet依据与物理尺度的读出/校准变体，并留紧凑measurement→cluster→SP组成引用；另做匹配incoming/靶核/顶点的generator比较。两种配对目的不同，不能硬当同末态或正式1σ。Stage85既有条件活动不认证纯噪声/active分母，不再重复同控制或无目标扫EOS/旧REC。
+3. 原最终能量与八层三尾要求、interaction/FSI/材料/Calo/接受度/背景依据、新未开发locked来源及完整source/refit/研究选择/参数不确定度确认。开发test与cal_post有历史用途，500incoming条件区间不替代它们。
 
-所有值均为自然log(E/GeV)。令f0为原`direct_cal`，d=geometry_available×(`B_raw`−`A_raw`)，fα=f0+αd，α∈[0,1]。缺几何或α0显式复制旧f0，逐位保留；不裁d、不截输出、不强制E≥pz、不按truth能量或低pz切换。差保留raw定义，不减均值/拟新offset；不把(1,α,−α)组合称为有限专家凸平均。
+只有具体新输入或用户明确另冻科学问题时才安排可失败完整比较。原pz0>50GeV、一次方动量仅pz0、允许px/py/q/p/弯折、raw11/status/typed NaN/合法负值/Calo缺项、全部K和原角色保持。两低能/传统上95≤1.05、all/direct≤1.01、其他五层/direct≤1.03，八层三向tail50差direct上95≤+2pp保持。阶段实验完成与项目物理终点未达分开记录，不自动重复状态审计作为新阶段。
 
-在原cal_select一次求解，对每层按原权重得到C=mean[(f0−t)^2]、D=mean[(f0−t)d]、A=mean[d²]，R(α)=C+2αD+α²A。最小化两低能各自R/C的最大值；all R≤1.01²C，其余≥200/低pz/低pz真≥200/high-y/未确认五层R≤1.03²C。原f0是匹配开发保护参考，原最终两低能对传统目标保持。
-
-保护不等式与[0,1]交成可行区间，α0必可行。用稳定二次根和退化线性/常数分支求边界；只检查可行端点、两目标二次函数的区间内顶点/交点，选目标最小、并列取较小α。不使用SLSQP、网格、多起点或事后允许负α/放宽bounds；这是有限一维问题的全局求解，不是所有reco策略的界。冻结数值容差：风险/可行性absolute1e−10、目标并列1e−12；若数值QA不通过先修算术，不把它写成物理阴性。
-
-先保存方向、定义、角色和验收，再只用cal_select目标求α；保存α/三系数/可行区间/候选点及活跃约束后，才计算或查看test差分诊断与风险。共享压缩列可以载入内存，不为阻止列解压而复制/改写缓存；冻结前不得做test α扫描或风险诊断。Stage108 A/B的checkpoint曾用cal_select，f0及offset有历史cal用途；本次不能称重新获得整管道独立性。
-
-## 3. QA、主比较和完整结果
-
-≤40个固定cal身份含全部6个标量缺失及若干geometry_missing、select/post；不按新误差挑例。核row/key/role/weight联结、差的log单位和raw定义、全部几何缺源仍在、α0/缺几何逐位回f0。独立解析小算例覆盖交叉/切触/空额外改进/二次退化；直接展开小样本平方误差对照三系数公式，误差≤1e−10。不做模型接线/梯度QA或扩大计时网格。
-
-主开发证据为cal_post上两低能`max(RMSE_fα/RMSE_f0)`，500次共同component内incoming抽样，逐draw先取最大再给条件95%区间，上端<1才支持共同低能增量。cal/cal_post seed2026110389、test2026110390，复用原draw定义但不保存draw副本。α0时主统计应精确1。cal_post不拟α/offset。
-
-固定α后一次报告完整cal/cal_post/开发test八层：all、E50–100、E100–200、≥200、pz50–100、低pz真≥200、high-y、未确认；保留原高端/missing/geometry_missing/confirmed低transfer和X诊断层。交log-RMSE、bias/R68、总/正/负tail50、相对传统与direct的配对区间。各层列C/D/A及实际风险变化，区分共同改善、单侧收益和困难代价；不只交一张α选择表。
-
-原最终不改：两低能/传统RMSE比上95≤1.05，all/direct≤1.01，其余五层/direct≤1.03；八层总/正/负tail50相对direct差上95≤+2pp。两低能改善不是最终联合通过；tail非二次量，不能由MSE约束推导已通过。无论结果有利或α为0，都完整交付，不依据test选raw/cal/C或重拟方向。
-
-所有区间固定旧模型/来源/offset/本α与研究选择，不涵盖完整source/parent、refit/参数估计/研究选择和真实系统；旧cal/test已开发，不叫新blind，不自动晋升。
-
-## 4. 资源、停止与交付
-
-QA后最多1个4CPU/6000MB的CPU batch，最多4process、内线程1，共享只读数组和相同draw；CPU和wall各≤900秒，最终≤20MB是拟议上限，新实耗/收益/功效未测。spool统一`~/condor/nu_muAnalysis/stage110/`。没有ROOT/native I/O、GPU或模型副本，不为了提高核占用重复计算。没有真实缓存则只交缺口，不重建一串环境/前置阶段。
-
-无增量就结束此固定方向，不扩α符号/局部系数、加入C或更多专家；单组增量如实记录，不称零进展；共同增量也只支持另冻一次强BDT+可训练残差比较，本轮不自动执行。阴性不能否定所有残差模型或认证信息界。
-
-Stage109的E/transfer/z双侧独立支持、同末态真实读出变体和匹配初态generator研究是另一个生产/物理设计，不由本Prompt自动授权作业。最小外部输入是合法新source/parent及已知提议密度/选择产额，或有物理尺度的实际响应变体；缺输入不无目标扫描EOS。
-
-先写中文Stage110 workbook，记录输入/原角色、实际α及三系数/约束、完整风险/条件区间/尾、程序与物理解释、真实CPU/wall/RSS/产物和未测量项，再与代码/配置/紧凑证据本地Conventional Commit。不push，不自动Stage111。路线只追加，Stage54后缀及原资产保持，实际状态以Stage85为准，不重做noise支线。
+后续真实工作仍在batch，适用时GPU、CPU合理多核内线程1，spool统一~/condor/nu_muAnalysis/<stage>/；先中文实际报告再本地Conventional Commit，无push。Stage54五资产和以下历史后缀保持，实际状态以Stage85为准，不自动重做noise支线。
 
 ## 保留的stage54 data占据支线
 

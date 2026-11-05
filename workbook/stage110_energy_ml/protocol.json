@@ -1,0 +1,74 @@
+{
+  "stage": 110,
+  "frozen_before_any_event_array_execution": true,
+  "origin_commit": "6d4be9d",
+  "authorization": "Latest user roadmap Stage109 and roadmap section91; execute the single Stage110 saved-output experiment.",
+  "inputs": [
+    "ml/artifacts/stage108/predictions.npz",
+    "ml/artifacts/stage87/predictions.npz",
+    "ntuples/energy_ml_stage94/evaluation_input.npz",
+    "ntuples/energy_ml_stage94/cal_partition.npz",
+    "ntuples/energy_ml_stage87/split.npz"
+  ],
+  "base": "Stage87 direct_cal, original offset unchanged",
+  "direction": "geometry_available * (B_raw - A_raw), Stage108 natural log(E/GeV)",
+  "action": "f0 + alpha*d; bit-exact f0 at alpha0 and geometry_missing",
+  "alpha_bounds": [
+    0,
+    1
+  ],
+  "fit": "cal_select only, minimize max of two low-energy R(alpha)/C; exact finite endpoints/vertices/intersections; ties choose smaller alpha",
+  "protection": {
+    "all": 1.01,
+    "E200_inf": 1.03,
+    "pz50_100": 1.03,
+    "pz50_100_trueE200": 1.03,
+    "high_y": 1.03,
+    "unconfirmed": 1.03
+  },
+  "tolerance": {
+    "risk_and_feasibility_absolute": 1e-10,
+    "objective_tie": 1e-12
+  },
+  "primary": "cal_post max(two low-energy RMSE transfer/direct_cal), common500 component incoming draws; upper95<1",
+  "bootstrap": {
+    "repeats": 500,
+    "cal_seed": 2026110389,
+    "cal_post_seed": 2026110389,
+    "test_seed": 2026110390,
+    "scope": "conditional fixed model/alpha/offset/source; no source/refit/research-selection/system coverage"
+  },
+  "final_gates": {
+    "low_vs_traditional_upper95": 1.05,
+    "all_vs_direct_upper95": 1.01,
+    "other_five_vs_direct_upper95": 1.03,
+    "all_eight_three_tail50_delta_upper95_pp": 2
+  },
+  "roles": {
+    "train": 46575,
+    "cal": 11612,
+    "test": 13189,
+    "cal_select": 5443,
+    "cal_post": 5746,
+    "cal_not_select": 423,
+    "quarantined": 17657,
+    "newK": 1016
+  },
+  "policy": "pz0>50GeV; first-power momentum only pz0; original px/py,q/p,bends allowed; raw11/status/typed NaN/signed negatives/Calo missing; all K/views/difficult tails preserved",
+  "exclusions": "zero new network fit/forward/checkpoint/head/ROOT/SP/native/offset/T/GPU/generation/reconstruction; no C/cal direction choice, local coefficient, clipping, truth gate or test selection",
+  "resources": {
+    "tasks": 1,
+    "requested_CPUs": 4,
+    "requested_memory_MB": 6000,
+    "max_processes": 4,
+    "inner_threads": 1,
+    "CPU_s": 900,
+    "wall_s": 900,
+    "retained_bytes": 20000000,
+    "spool": "~/condor/nu_muAnalysis/stage110/"
+  },
+  "QA": "40 deterministic cal identities including all6 scalar missing, geometry missing/select/post; analytic known cases; direct square formula <=1e-10; alpha0/fallback bit exact",
+  "freeze_order": "Save and read selection before test differences/risks; no extra optimizer or grid",
+  "stop": "One coefficient and complete risks regardless of sign; no automatic Stage111, retrain, alpha sign extension, local coefficient or more experts; no promotion",
+  "long_term": "New independent bilateral support/pilot and justified paired response/generator inputs remain separate, no new production authorized by this stage"
+}

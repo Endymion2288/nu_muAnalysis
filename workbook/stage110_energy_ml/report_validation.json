@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "primary_independent_max_abs_error": 0.0,
+  "interval_checks": 40,
+  "interval_max_abs_error": 1.7763568394002505e-15,
+  "old_scalar_checks": 840,
+  "old_scalar_max_abs_error": 1.4210854715202004e-14,
+  "roles": {
+    "cal": {
+      "records": 11612,
+      "incoming": 10811,
+      "weight_sum": 10811.0
+    },
+    "cal_post": {
+      "records": 5746,
+      "incoming": 5539,
+      "weight_sum": 5539.0
+    },
+    "test": {
+      "records": 13189,
+      "incoming": 12125,
+      "weight_sum": 12125.0
+    }
+  },
+  "saved_point_readback_bit_exact": true,
+  "geometry_fallback_bit_exact": true,
+  "selected_before_test_difference": true,
+  "no_new_offset_or_model": true
+}

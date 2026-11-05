@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "roles": [
+    {
+      "role": 1,
+      "records": 46575,
+      "incoming": 37556,
+      "input_missing": 21,
+      "geometry_missing": 345
+    },
+    {
+      "role": 2,
+      "records": 11612,
+      "incoming": 10811,
+      "input_missing": 6,
+      "geometry_missing": 343
+    },
+    {
+      "role": 3,
+      "records": 13189,
+      "incoming": 12125,
+      "input_missing": 5,
+      "geometry_missing": 356
+    }
+  ],
+  "compatible_records": 89033,
+  "quarantined_records": 17657,
+  "all_active_rows_joined": true,
+  "new_K_preserved": 1016,
+  "cal_select": 5443,
+  "cal_post": 5746,
+  "cal_purged_from_select_only": 423,
+  "point_columns": [
+    "row",
+    "A_raw",
+    "B_raw",
+    "geometry_available"
+  ],
+  "no_checkpoint_or_head_read": true,
+  "no_test_difference_or_risk_evaluated": true
+}
