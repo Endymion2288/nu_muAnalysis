@@ -1,0 +1,80 @@
+{
+  "stage": 115,
+  "frozen_utc": "2026-11-05T11:56:28.421934+00:00",
+  "starting_commit": "522f6dbbfca9e5776d4d9622eb77c99e1778a851",
+  "authority": "Current user updated roadmap Stage114 and explicitly requests continued execution; perform bounded Stage115 A/B, no new research-only stage.",
+  "question": "Does per-channel measurement state add held-out energy-risk benefit over common readout/flags in a protected residual on frozen strong BDT?",
+  "seed": 2026110515,
+  "population": {
+    "split": "Stage87 unchanged",
+    "active": 71376,
+    "train": 46575,
+    "cal": 11612,
+    "test": 13189,
+    "quarantine": 17657,
+    "new_K": 1016,
+    "incoming_weights": "original within-role incoming proxy view weights; no target-dependent resampling",
+    "cal_partition": "original Stage94 select/post; neither used to fit heads",
+    "baseline": "cached Stage87 direct_cal all active rows including train; zero new baseline fits/forwards; in-sample train residuals, not OOF"
+  },
+  "features": {
+    "A": "typed62 + original wave_invalid/fit_failure/calo_invalid + shared status_available=66",
+    "B": "A + 11 channels x 4 nonexclusive booleans=110",
+    "bits": {
+      "overflow": 4,
+      "threshold_failed": 1,
+      "fit_failure": 48,
+      "wave_invalid": 392
+    },
+    "unknown": "nonfinite/noninteger/negative/status>511 => channel NaN; common all11 known bit; no selected row removed",
+    "rules": "pz0 only first-power momentum; px/py/q/p/bends allowed; raw11/status/typed NaN/signed reduced/Calo missing unchanged; no ROOT/fitted fallback"
+  },
+  "dictionary": {
+    "arms": [
+      "A",
+      "B"
+    ],
+    "trees": 8,
+    "max_depth": 3,
+    "min_child_weight": 200,
+    "eta": 0.04,
+    "reg_lambda": 10,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "tree_method": "hist",
+    "threads": 1,
+    "objective": "weighted train MSE of logtruth-f0",
+    "leaf_basis": "all leaf indicators <=64; weighted Gram eigenmodes >1e-10*max eigenvalue; equivalent span modulo numerical null modes, train-only transform"
+  },
+  "head": {
+    "primary": "min tau, low-E MSE/traditional MSE <=tau; all/f0<=1.01^2, other5/f0<=1.03^2",
+    "tails": "all8 layers, mean_w max(e-ln1.5,0)^2 and max(ln0.5-e,0)^2 <= frozen f0 train value",
+    "secondary": "min global train mean correction^2, tau<=first tau+1e-8",
+    "solver": "existing scipy SLSQP analytic Jacobians, max200/ftol1e-10 each; exactly2 solves/arm, no solver installation/grid",
+    "numerical": "constraint scales max(baseline risk,1e-4); max normalized feasibility violation1e-7; zero residual feasible; independent prediction-space check",
+    "KKT": "nonnegative active-set NNLS diagnostics at normalized slack>=-1e-6; report stationarity/complementarity; no rigorous dual bound or unqualified optimality claim",
+    "unsuccessful_status": "report actual status/KKT; evaluate fixed result only if finite/feasible. Infeasible stops, no alternative or selected partial arm"
+  },
+  "evaluation": {
+    "primary": "cal_post max(two low-E RMSE B/f0); B/A same endpoint required to attribute state benefit; A/f0 diagnostic",
+    "bootstrap": "original component-stratified incoming multinomial500, cal/post seed2026110389,test2026110390, paired; >=475 valid required",
+    "test": "both arms theta persisted before any test forward/risk; once full developed-test report; original8 plus missing/state/high-end",
+    "gates": "two low-E/traditional upper95<=1.05; all/f0<=1.01; other5/f0<=1.03; all8 total/positive/negative tail50 differences vs f0 upper95<=+2pp",
+    "limits": "conditional incoming only; no source/parent/refit/research-selection/true-systems/newblind guarantee; no A/B winner or offset selection"
+  },
+  "resources": {
+    "max_jobs": 1,
+    "request_cpus": 4,
+    "request_memory_MB": 8000,
+    "inner_threads": 1,
+    "request_gpus": 0,
+    "total_CPU_s": 1800,
+    "total_task_wall_s": 900,
+    "supervisor_CPU_stop_s": 1740,
+    "supervisor_wall_stop_s": 840,
+    "external_timeout_s": 880,
+    "final_bytes": 20971520,
+    "spool": "~/condor/nu_muAnalysis/stage115/"
+  },
+  "stop": "no automatic retries, hyperparameters, seed/state subset, source expansion, production, cut change or next experiment; finish with results or precise measured failure"
+}

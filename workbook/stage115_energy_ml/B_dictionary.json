@@ -1,0 +1,23 @@
+{
+  "arm": "B",
+  "tree_params": {
+    "max_depth": 3,
+    "eta": 0.04,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 200,
+    "reg_lambda": 10,
+    "tree_method": "hist",
+    "nthread": 1,
+    "objective": "reg:squarederror",
+    "seed": 2026110515,
+    "base_score": -0.025135357974598052,
+    "boost_from_average": 0
+  },
+  "trees": 8,
+  "leaf_indicators": 52,
+  "rank": 45,
+  "train_rows": 46575,
+  "train_only_dictionary": true,
+  "in_sample_f0_residuals_not_OOF": true
+}

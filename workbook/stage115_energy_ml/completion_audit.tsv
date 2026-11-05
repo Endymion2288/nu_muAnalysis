@@ -1,0 +1,16 @@
+requirement	status	evidence	limitation
+fixed_stage87_population_and_roles	complete	input_validation.json; 71376 active, 17657 quarantined, 1016 new K	no new independent support or split
+status_origin_join_and_missing	complete	origin/origin_row plus incoming/run/event/group; all 71376 known	availability is conditional on existing audited cohort
+66_110_matched_arms	complete	input_validation.json; common-prefix and per-bit QA	no feature/seed/capacity scan
+baseline_fixed	complete	cached Stage87 direct_cal includes train; 0 baseline fits/forwards	in-sample training residual, not OOF; calibrated baseline already developed
+two_small_rule_dictionaries	complete	8 trees each, depth3, min_child_weight200; 52 leaves/rank45	no formal proof all available state information exploited
+four_predeclared_convex_solves	complete	primary/secondary JSON for A/B; all success, feasible	approximate KKT only; formal dual bound unmeasured
+hinge_and_risk_constraints	complete	independent train prediction-space verification	soft-tail is not actual rate or held-out guarantee
+both_frozen_before_test	complete	fits_frozen.json then infer_arm; points reload exact	developed test, not new blind
+primary_cal_post_and_B_A	complete_negative	B/f0 worst 1.024843205547326 [1.0058712848637628,1.0508710279789928]; B/A1[1,1]	no common gain, no state increment under this fixed experiment
+full_test_and_original_eight_gates	complete_failed	gates.tsv, metrics.tsv, paired.tsv; A/B joint False	lowE/traditional, all/direct and several tail protections fail
+independent_interval_and_control_validation	complete	40 test pairs, 3 primary pairs; 504 old scalar values exact	conditional incoming intervals omit source/refit/research-selection/real-system effects
+actual_resources_and_storage	complete	accounting.json; 73.72 CPU s, 42.38 wall s; transport_validation.json	physical network and whole process tree peak unmeasured
+Stage115_fixed_two_arms	complete	complete.json; report; no promotion	no automatic tree/seed/state subset retry or next experiment
+final_energy_project_goal	unmet	A/B final_joint False	original 1.05/1.01/1.03 and eight-layer three-tail +2 pp unchanged
+real_response_systematics_independent_confirmation	undelivered	no production or real response variation	requires real detector/interaction/FSI/material/Calo/acceptance/background and independent confirmation

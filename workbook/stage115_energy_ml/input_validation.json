@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "active_rows": 71376,
+  "quarantined": 17657,
+  "train": 46575,
+  "cal": 11612,
+  "test": 13189,
+  "all_new_K": 1016,
+  "status_available": 71376,
+  "status_missing": 0,
+  "joins": [
+    {
+      "origin": 55,
+      "rows": 63656,
+      "join": "origin,origin_row; incoming/run/event/group checked"
+    },
+    {
+      "origin": 70,
+      "rows": 28,
+      "join": "origin,origin_row; incoming/run/event/group checked"
+    },
+    {
+      "origin": 81,
+      "rows": 742,
+      "join": "origin,origin_row; incoming/run/event/group checked"
+    },
+    {
+      "origin": 82,
+      "rows": 1016,
+      "join": "origin,origin_row; incoming/run/event/group checked"
+    },
+    {
+      "origin": 83,
+      "rows": 5934,
+      "join": "origin,origin_row; incoming/run/event/group checked"
+    }
+  ],
+  "baseline": "saved Stage87 direct_cal including train; no new forwards",
+  "status_order": [
+    "VetoNu0",
+    "VetoNu1",
+    "Veto10",
+    "Veto20",
+    "Veto21",
+    "Timing0",
+    "Timing1",
+    "Timing2",
+    "Timing3",
+    "Preshower0",
+    "Preshower1"
+  ],
+  "bits": {
+    "overflow": 4,
+    "threshold_failed": 1,
+    "fit_failure": 48,
+    "wave_invalid": 392
+  },
+  "feature_dimensions": {
+    "A": 66,
+    "B": 110
+  },
+  "unknown_status": "NaN per channel; common all-channel availability",
+  "new_split": false,
+  "new_ROOT": false
+}

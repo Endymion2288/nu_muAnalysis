@@ -1,0 +1,59 @@
+{
+  "status": "experiment_complete",
+  "active_records": 71376,
+  "formal_rule_dictionaries": 2,
+  "head_solves": 4,
+  "baseline_fits": 0,
+  "baseline_forwards": 0,
+  "new_split": false,
+  "new_ROOT": false,
+  "both_arms_frozen_before_test_forward_and_risk": true,
+  "decision": {
+    "primary": [
+      {
+        "candidate": "B",
+        "reference": "direct_cal",
+        "role": "cal_post",
+        "statistic": "max of two low-energy RMSE ratios",
+        "point": 1.024843205547326,
+        "low95": 1.0058712848637628,
+        "high95": 1.0508710279789928,
+        "supported": false,
+        "valid_draws": 500,
+        "independent_interval_max_abs": 2.220446049250313e-16
+      },
+      {
+        "candidate": "B",
+        "reference": "A",
+        "role": "cal_post",
+        "statistic": "max of two low-energy RMSE ratios",
+        "point": 1.0,
+        "low95": 1.0,
+        "high95": 1.0,
+        "supported": false,
+        "valid_draws": 500,
+        "independent_interval_max_abs": 0.0
+      },
+      {
+        "candidate": "A",
+        "reference": "direct_cal",
+        "role": "cal_post",
+        "statistic": "max of two low-energy RMSE ratios",
+        "point": 1.024843205547326,
+        "low95": 1.0058712848637628,
+        "high95": 1.0508710279789928,
+        "supported": false,
+        "valid_draws": 500,
+        "independent_interval_max_abs": 2.220446049250313e-16
+      }
+    ],
+    "final_joint": {
+      "A": false,
+      "B": false
+    },
+    "state_increment_supported": false,
+    "primary_candidate": "B",
+    "promotion": false,
+    "interval_scope": "500 incoming-within-component conditional draws; excludes source/parent/refit/research-selection/real systems; developed cal/test, not blind"
+  }
+}

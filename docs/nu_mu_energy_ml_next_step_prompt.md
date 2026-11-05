@@ -1,45 +1,36 @@
-# 当前交接：Stage114研究修正，下一步做测量状态消融与强BDT锚定残差
+# 当前交接：Stage115测量状态/强BDT残差两臂结束，下一问题转固定相对时序
 
-先读AGENTS.md、路线§96、信息计划§76及[Stage114报告](../workbook/2026-11-05_stage114_measurement-state-and-risk-research-reset.md)，尤其§3–4；再读Stage113/110、Stage78/68及Stage79/80。**本Prompt供具备环境的后续执行端使用；Stage114只做文献/已有结果复盘，没有运行实验。** 下一阶段应交付能量结果，不再写一轮无实验的综述或单独QA阶段。
+先读AGENTS.md、路线§97、信息计划§77、[Stage115实测报告](../workbook/2026-11-05_stage115_measurement-state-residual.md)、[原Stage114设计](../workbook/2026-11-05_stage114_measurement-state-and-risk-research-reset.md)§5以及[主端点](../workbook/stage115_energy_ml/primary.tsv)/[门槛](../workbook/stage115_energy_ml/gates.tsv)。**Stage115已完成，不重复作业或继续其树/seed/状态子集网格。** 原Stage110固定差、Stage108三格/遮挡与旧门控/重权均结束。本次用户授权的下一阶段已兑现为实际能量结果，不需另做无实验研究阶段。
 
-## 1. 现状与科学问题
+## 1. 最新实际结果
 
-Stage113已完成六源60000父行20cut/native闭合；50–100 GeV两个charm来源零支持，100–200 GeVΔMSE=−.09447554689537985但309/500完整draw，按原规则无CI。它不是模型改善或统一失败原因。Stage110固定差转移、Stage108固定三格和Stage104固定密度动作均结束，不重做或延长网格。Stage113正文§5误排表，channel计数引用其原TSV；小负reduced不是坏事件证据，现行配置已允许signed，不据此修cut。
+唯一Condor9668138首start/exit0。原71376 active（train/cal/test46575/11612/13189）、17657隔离、全部1016新增K和原incoming视图权重保持。origin/origin_row回接原62/11路status，incoming/run/event/group核验；全部状态可用、缺状态0，原62缺项21/6/5不删。原Stage87 direct_cal缓存含train，0新基线fit/forward，无ROOT/生产/换split/cut。
 
-**下一Stage115只回答：逐通道测量状态是否比原读数/mask和汇总状态提供额外信息，使强BDT上的小残差同时改善两个低能组并保住困难侧？** 不是继续平谱重权、再组合三个专家或重学整个GNN。
+A原62+三flag+共同availability=66，B增11×4位=110。每臂8棵depth3/min_child_weight200、原eta.04/λ10/固定seed2026110515，52叶/rank45；固定字典signed残差和四次预定凸解已实际完成。主τ2.032000317154125、次修正平方.0023840304354885724，124/151迭代均success；主/次最大归一化违反1.073e−12/1.565e−11，近似KKT驻点1.441e−5/5.918e−6，无严格dual界或全局最佳宣称。主目标最低箱/all保护活跃，第二箱未活跃。
 
-## 2. 固定样本、基线和两个臂
+**B/f0主cal_post最坏两低能RMSE比1.024843205547326 [1.0058712848637628,1.0508710279789928]，失败；B/A1[1,1]，无受支持状态增量。** 最低箱cal .330275→.304464、test .282644→.270006有局部下降，但test传统.145661；第二箱test .246329→.252093，all .287491→.292520恶化。A/B目标及已报风险相同，不宣称独立核过逐行A/B完全相同，也未保存逐split特征使用表，不能把当前阴性归为所有状态冗余/信息界。状态非全常数，train Veto10/20/21 overflow19825/19174/18443（分母46575）。
 
-复用Stage87 split/input/身份、Stage94原cal_select/post和同split强direct_cal；用原Stage55/56 readout与70/81/82/83 support缓存按(origin,origin_row)回接11路status。不要只按run/event联结，不开ROOT/EOS扫源；缓存联结/availability QA并入本任务。未知状态保留NaN，不当0；所有缺失、全部1016新K、隔离和困难/高端完整保留。
+两臂/θ锁后才新test前向与风险，完整原八层/状态/缺项/高端/三尾已交。B test两低能/传统上95=2.247412/1.092172、all/f0=1.021024失败；低pz真高E总/负尾差上95+3.391598/+2.583281pp、high-y负尾+2.360973pp等失败，A/B joint均False。不以train平方hinge保护冒称实际尾率或留出保护。40test配对独立区间max1.421085e−14，三主2.220446e−16，504旧参考标量差0，500draw主端点全有效。
 
-train/cal/test=46575/11612/13189，每incoming视图权重和1；pz0>50 GeV，一次方动量仅pz0，允许原px/py/q/p/弯折，raw11/status/typed NaN/合法signed和Calo缺项政策保持。无新split、物理生产、切选、重建或fitted-charge回退。科研参照为同split Stage87 direct，不用可能接触过新test的旧F7预测混比较。
+## 2. 资源、产物与不变政策
 
-固定f0=原direct_cal log能量。必要的train f0预测只在batch补一次，不重训基线。两臂同容量、同seed、原incoming权重：
+4CPU申请8GB站点12GB，内线程1/0GPU，GNU73.72CPU/42.38wall秒/RSS515116KiB<1800/900；worker/两臂嵌套成本不重复相加。worker本地archive接口40315471byte，不是物理网络，整树峰/单核加速/全会话成本未测。21项输入原字节一致，运输副本核后删除；两小规则头和一个约1MB紧凑A/B点表保留于ml/artifacts/stage115，表/图/协议/资源于workbook/stage115_energy_ml，spool ~/condor/nu_muAnalysis/stage115/。完整[完成审计](../workbook/stage115_energy_ml/completion_audit.tsv)区分实验完成与项目未达。
 
-- A：原62＋wave_invalid/fit_failure/calo_invalid＋共同status_available，共66维。
-- B唯一主候选：同A再加11通道×4布尔量，共110维。四族为overflow bit4、threshold_failed bit1、fit_failure 16|32、wave_invalid 8|128|256，依据已审计producer语义。非互斥，不把status整数当连续值。
+一次方动量仅pz0，允许px/py/q/p/弯折，raw11/status/typed NaN/合法signed和Calo缺项、pz>50/原角色/全部K不变。负reduced已允许signed，不修cut/设通用NaN；不把fit坏与wave坏混同。unknown status是新增NaN/availability，不当正常零，弱/饱和/缺失事件不删。无新offset/主候选或阈值事后选择。Stage54原控制已在Stage85完成，保留旧资产/后缀，不据旧“未完成”措辞重跑。
 
-逐通道状态是新受测表示，不是已经证明的信息；旧62的NaN清洗完全不改。缺缓存不自动补EOS，显式记录并保留A/B missing路径。
+## 3. 下一有界新观测问题
 
-## 3. 一次有限学习与求解
+按Stage114§5，优先研究**VetoNu0/1相对一个事前固定Veto参考的时间族在给定电荷/状态/pz后是否增加连续能量风险信息**，区别于Stage80 peak/width。先另冻该科学合同/参考/两路差分/允许来源与预算，再同一任务内校准检查和一次匹配能量消融，不另拖成小QA/metadata阶段。不是再次扩Stage115字典或多状态头。
 
-按Stage114§4预先冻结完整实现：每臂在train目标t−f0上建立8棵depth3/min_child_weight200的规则字典，最多64叶基，其他树学习率/正则沿已有配置并固定一个seed，不扫参数。结构冻结后f=f0+Φθ，θ允许正负；零θ精确返回旧点。
+已知入口为ntuples/energy_ml_stage79/measurements.npz、Stage79生产证据与原PHYS精确producer，μ控制清单ml/configs/calonu_muon_files.tsv，及现行Stage87固定身份。Stage80 shape.npz只持久peak/width派生族，不能声称已有完整localtime。全池相对时序可用率/实际cost及匹配μ控制未测。只沿既知入口定位，不能扫全EOS/恢复旧REC/全部波形或新生产；如需已知PHYS定向读取，须在新合同列完整同split身份和资源，保留全样本missing路径。
 
-每臂一次主求解：min τ，两低能train MSE分别≤τ×传统MSE；all相对f0≤1.01²，原其余五层≤1.03²。原八层的正、负平方hinge尾损失各不得超过f0，阈值为ln1.5与ln0.5。第二次预定求解在τ≤τ*+1e−8下最小化train平均修正平方。固定字典问题凸；报告实际可行性、适用的KKT/界与数值缺口，不仅报success。不得把soft-tail当实际tail率保证；无新offset、局部gate、按真E推理或旧α方向扩展。
+必须证明两路共用可消的加性时基，并核通道常数/μ路径传播/time walk/fit fallback；trigger绝对时间无效不数学上否定共模差分，但不是校准证据。参考与窗口不得由test挑选；弱信号/overflow/无有效时间只新增NaN/availability，原能量仍预测，不用有效时间cut净化样本。若时基/μ控制可交付，再一个固定相对时间族与强基线匹配对照、头/输出先锁再cal_post/test全报告；验收为两个低能及困难/高端的配对能量风险、实际可用率/资源和原最终全部门槛。不以时间变异/可分类或truth时间oracle代替部署收益。若不可校准则交准确缺口并结束该实现，不硬造常数/1σ或称物理阴性。
 
-原始train拟合残差不是OOF，不冒称来源外泛化。所有truth标签只定义train目标/组或评价，不进入部署输入。采用现成环境，不为此安装求解器或制造长数值认证链；在同任务完成正常小样本/零修正/NaN/状态接线QA后进入完整任务，有实际错误则如实交付。
+父分母扩展/producer精确定义仍为解释支线，不因重新读取旧selected而称新训练支持，不改Stage113零charm/稀少draw端点，不以六稀有单元都能报CI作为能量学习前提。下个任务真实功效/效果/资源未测，本阶段不自动执行。
 
-## 4. 验收和终点
+## 4. 最终要求
 
-主cal_post两低能最坏B/f0 RMSE比及B/A同端点，原500incoming条件区间；前者上95<1才称共同低能改进，后者也有支持才称状态族增量。状态收益、残差策略收益与最终达标三件事分开。锁定两臂/求解结果后，一次报告完整开发test的八层、状态可用性/缺失、高端、bias/R68、实际正负总tail50和配对区间。
-
-最终标准仍为两低能/传统上95≤1.05、all/direct≤1.01、其余五层/direct≤1.03、八层三向tail差direct上95≤+2 pp。cal/test均已开发，区间不含source/parent/refit/研究选择/真实系统，不是新blind或joint全流程95%保证。不从A/B、raw/offset或不同seed事后换主候选。
-
-拟议唯一CPU批任务4CPU/8GB、内线程1/0GPU，CPU≤1800s/wall≤900s/最终紧凑≤20MB；QA和实际计时并入。它们是未测的上限，不是运行时间承诺。提交目录~/condor/nu_muAnalysis/stage115/；不保存新ROOT/xAOD或整套事件副本。无环境的当前终端不加载事件/模型或复现物理，不做SHA。无法提交时交可执行包和具体阻碍，不能冒写完成结果。
-
-无共同增量则结束这两个固定方案，不续树数/seed/位子集网格，不宣称信息极限。更具物理潜力的下一分支按Stage114§5研究少量VetoNu相对时间；需要同一时间基准与offset/传播/time-walk/fit控制，弱信号和缺失保留，不能直接投入未校准时间。扩已有父分母和精确producer定义仍可作解释任务，但不把六个稀有单元都有CI当这次缓存能量学习的前提，不改写Stage113端点或自动扩训练集。
-
-先中文workbook记录实际结果、输入/命令/资源/局限及一个具体下一任务，再本地Conventional Commit，不push，不自动开启再下一实验。Stage54历史控制已在Stage85完成，下面后缀按原文保留，不按其“未完成”旧措辞重跑。
+两低能RMSE/传统上95≤1.05、all/direct≤1.01、其他五层/direct≤1.03、八层总/正/负tail50差direct上95≤+2pp不改。真实response/interaction/FSI/材料/Calo/接受度/背景及新独立确认仍未交付，整体能量目标未完成。incoming条件CI不含source/parent/refit/研究选择/真实系统和新blind，不能以开发test重复改善冒称确认。每阶段先中文workbook，再本地Conventional Commit，不push；不自动新训练/生产或网格。
 
 ## 保留的stage54 data占据支线
 
