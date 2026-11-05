@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "run": 200131,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00000-00009-s0014-RDO.root",
+      "events": 40
+    },
+    {
+      "run": 200184,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-RDO.root",
+      "events": 40
+    },
+    {
+      "run": 200110,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-RDO.root",
+      "events": 40
+    }
+  ],
+  "cpus": 8,
+  "memory_MB": 24000,
+  "max_CPU_s": 3600,
+  "max_wall_s": 1800,
+  "reason": "Native REC conversion fails on missing trigger_time; rerun established d32 RDO pipeline, no missing-field fabrication"
+}

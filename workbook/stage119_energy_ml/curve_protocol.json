@@ -1,0 +1,48 @@
+{
+  "stage": 119,
+  "scales": [
+    330,
+    660,
+    1320
+  ],
+  "counts_unit": "new independent-incoming proxies within fixed common composition; GENIE parent certification incomplete",
+  "nesting": "within each canonical-family year/component/E/y/depth cell, same random order and exact1:2:4 counts; all views in same role/subset",
+  "baseline": {
+    "features": 62,
+    "seeds": [
+      2026110255,
+      2026110256,
+      2026110257
+    ],
+    "rounds": 400,
+    "xgboost": {
+      "max_depth": 5,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "reg:squarederror"
+    },
+    "initialization": "weighted mean training logE with boost_from_average disabled, same for all seeds",
+    "calibration": "one incoming-weighted mean cal log residual for ensemble"
+  },
+  "curve": "three new-only training sizes; one original fixed strong BDT policy, original full-cal offset; evaluate same new development and old full target",
+  "augmented": "one prespecified original full train + all new train deployment candidate, same policy, original cal offset; not called a fixed-composition quantity point",
+  "same_N_control": "one old-train control matched at max-curve N to component/E/y/depth common cells where supported; year/flux mismatch must remain explicit",
+  "source_gap": "only downstream support in expansion. No truth-z deployment gate. Unsupported strata kept for whole-target risk.",
+  "main_candidate": "augmented_cal; all curve raw/cal points mandatory, no candidate/size/seed selection by development risk",
+  "confirmation": "reserved proxy-family data extracted only; zero prediction/risk/fit; no new-blind claim without parent/old-all-exposure certification",
+  "gates": "original two-low/1.05 traditional; all1.01/direct; five other1.03/direct; eight total/positive/negative tail50 upper95 <=+2pp",
+  "bootstrap": "500 common incoming-cluster draws; conditional on available sources, refits/research-selection and real systems excluded",
+  "budgets": {
+    "cpus": 8,
+    "memory_MB": 24000,
+    "CPU_s": 21600,
+    "wall_s": 7200,
+    "GPU": 0
+  },
+  "model_outcomes_before_freeze": 0
+}

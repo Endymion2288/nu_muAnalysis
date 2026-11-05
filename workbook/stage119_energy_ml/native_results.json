@@ -1,0 +1,171 @@
+[
+  {
+    "task": {
+      "name": "merge_200131",
+      "type": "merge",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rec/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00000-00009-s0014-xAOD.root",
+      "events": 40
+    },
+    "command": [
+      "faser_ntuple_maker.py",
+      "--isMC",
+      "--geom",
+      "TI12MC04",
+      "--CKFTrackType",
+      "merge",
+      "--nevents",
+      "40",
+      "--outfile",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ntuples/energy_ml_stage119/merge_200131.root",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rec/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00000-00009-s0014-xAOD.root"
+    ],
+    "exitcode": 1,
+    "wall_s": 24.89493708597729
+  },
+  {
+    "task": {
+      "name": "merge_200184",
+      "type": "merge",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rec/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-xAOD.root",
+      "events": 40
+    },
+    "command": [
+      "faser_ntuple_maker.py",
+      "--isMC",
+      "--geom",
+      "TI12MC04",
+      "--CKFTrackType",
+      "merge",
+      "--nevents",
+      "40",
+      "--outfile",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ntuples/energy_ml_stage119/merge_200184.root",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rec/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-xAOD.root"
+    ],
+    "exitcode": 1,
+    "wall_s": 30.374521308986004
+  },
+  {
+    "task": {
+      "name": "merge_200110",
+      "type": "merge",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rec/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-xAOD.root",
+      "events": 40
+    },
+    "command": [
+      "faser_ntuple_maker.py",
+      "--isMC",
+      "--geom",
+      "TI12MC04",
+      "--CKFTrackType",
+      "merge",
+      "--nevents",
+      "40",
+      "--outfile",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ntuples/energy_ml_stage119/merge_200110.root",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rec/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-xAOD.root"
+    ],
+    "exitcode": 1,
+    "wall_s": 27.502724978956394
+  },
+  {
+    "task": {
+      "name": "hits_200184",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/sim/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-s0014-HITS.root",
+      "events": 1000
+    },
+    "command": [
+      "python",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ml/stage119_hits.py",
+      "--input",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/sim/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-s0014-HITS.root",
+      "--events",
+      "1000",
+      "--output",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/workbook/stage119_energy_ml/hits_200184_hits.json"
+    ],
+    "exitcode": 0,
+    "wall_s": 306.3107748540351
+  },
+  {
+    "task": {
+      "name": "hits_200110",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    "command": [
+      "python",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ml/stage119_hits.py",
+      "--input",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-master_dev-HITS.root",
+      "--events",
+      "1000",
+      "--output",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/workbook/stage119_energy_ml/hits_200110_hits.json"
+    ],
+    "exitcode": 0,
+    "wall_s": 336.3670239109779
+  },
+  {
+    "task": {
+      "name": "hits_200113",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    "command": [
+      "python",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ml/stage119_hits.py",
+      "--input",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-master_dev-HITS.root",
+      "--events",
+      "1000",
+      "--output",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/workbook/stage119_energy_ml/hits_200113_hits.json"
+    ],
+    "exitcode": 0,
+    "wall_s": 304.9085439009941
+  },
+  {
+    "task": {
+      "name": "hits_200300",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    "command": [
+      "python",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ml/stage119_hits.py",
+      "--input",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00000-master_dev-HITS.root",
+      "--events",
+      "1000",
+      "--output",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/workbook/stage119_energy_ml/hits_200300_hits.json"
+    ],
+    "exitcode": 0,
+    "wall_s": 309.7827248040121
+  },
+  {
+    "task": {
+      "name": "hits_200303",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    "command": [
+      "python",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/ml/stage119_hits.py",
+      "--input",
+      "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00000-master_dev-HITS.root",
+      "--events",
+      "1000",
+      "--output",
+      "/pool/condor/dir_3017397/nu_mu_stage119.sHT2mm/workbook/stage119_energy_ml/hits_200303_hits.json"
+    ],
+    "exitcode": 0,
+    "wall_s": 160.7643504809821
+  }
+]

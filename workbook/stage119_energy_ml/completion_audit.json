@@ -1,0 +1,29 @@
+{
+  "scientific_validation": "workbook/stage119_energy_ml/final_validation.json",
+  "scientific_validation_passed": true,
+  "bounded_stage118_package_complete": true,
+  "energy_target_achieved": false,
+  "oracle_proxy_energy_increment_measured": false,
+  "certified_independent_confirmation": false,
+  "new_reserved_forwards": 0,
+  "requirements": "workbook/stage119_energy_ml/requirements.tsv",
+  "source_validation": {
+    "python_AST_files": 52,
+    "shell_syntax_workers": 3,
+    "JSON_files_before_this_record": 177,
+    "local_links_in_report_and_new_doc_sections": 43,
+    "roadmap_HEAD_bytes_retained_as_prefix": true,
+    "information_budget_HEAD_bytes_retained_as_prefix": true,
+    "handoff_HEAD_bytes_retained_as_suffix": true,
+    "tracked_Stage54_changes": [],
+    "git_diff_cached_check_passed": true,
+    "TSV_formatting_preserves_every_parsed_field": true
+  },
+  "storage": "workbook/stage119_energy_ml/storage_cleanup.json",
+  "transport": "workbook/stage119_energy_ml/persisted_evidence.json",
+  "jobs": "workbook/stage119_energy_ml/condor_resources.json",
+  "report": "workbook/2026-11-05_stage119_support-curve-and-response-mechanisms.md",
+  "commit_policy": "report written before local Angular Conventional Commit; no push",
+  "scope": "no new experiment after finalcheck2; no additional fits, ROOT reads, or numerical statistics during archival and document checks",
+  "formatting": "workbook/stage119_energy_ml/formatting_normalization.json"
+}

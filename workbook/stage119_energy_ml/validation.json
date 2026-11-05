@@ -1,0 +1,35 @@
+{
+  "source_wide_weights_before_selection": true,
+  "native_QA": true,
+  "ghep": [
+    {
+      "input": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_Standard/EPOSLHC_pi/0/faser.0.ghep.root",
+      "read": false,
+      "error": "DeserializationError('expected 7120 bytes but cursor moved by 123 bytes (through TClonesArray)', <Chunk 0-8256>, Cursor(229, origin=-74, 1 refs: 147), {'breadcrumbs': (<genie::NtpMCEventRecord (version 1) at 0x14c89be6b380>, <genie::EventRecord (version 1) at 0x14c89be6ba10>, <genie::GHepRecord (version 2) at 0x14c89be6b770>, <TClonesArray at 0x14c89be6bb60>), 'TKey': <ReadOnlyKey gtree;1: TTree (seek pos 16144731) at 0x14c89bdef020>, 'in_TBranch': True, 'forth': <_thread._local object at 0x14c89beab290>}, '/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_Standard/EPOSLHC_pi/0/faser.0.ghep.root')"
+    },
+    {
+      "input": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_NUX/EPOSLHC_pi/0/faser.0.ghep.root",
+      "read": false,
+      "error": "DeserializationError('expected 6292 bytes but cursor moved by 117 bytes (through TClonesArray)', <Chunk 0-7428>, Cursor(223, origin=-74, 1 refs: 147), {'breadcrumbs': (<genie::NtpMCEventRecord (version 1) at 0x14c89bdddd10>, <genie::EventRecord (version 1) at 0x14c89bdde0d0>, <genie::GHepRecord (version 2) at 0x14c89bdde210>, <TClonesArray at 0x14c89bdde350>), 'TKey': <ReadOnlyKey gtree;1: TTree (seek pos 15873995) at 0x14c89b190600>, 'in_TBranch': True, 'forth': <_thread._local object at 0x14c89b1dd4e0>}, '/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_NUX/EPOSLHC_pi/0/faser.0.ghep.root')"
+    }
+  ],
+  "W_closure": [
+    {
+      "input": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_Standard/EPOSLHC_pi/0/faser.0.gfaser.root",
+      "DIS_status12_N": 195,
+      "W2_max_abs_difference_GeV2": 9.308109838457312e-13,
+      "W2_median_abs_difference_GeV2": 2.6645352591003757e-14,
+      "note": "comparison with GENIE status12 prefragmentation four-vector; not GHEP internal Kine.W certification"
+    },
+    {
+      "input": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_NUX/EPOSLHC_pi/0/faser.0.gfaser.root",
+      "DIS_status12_N": 204,
+      "W2_max_abs_difference_GeV2": 3.765876499528531e-13,
+      "W2_median_abs_difference_GeV2": 2.531308496145357e-14,
+      "note": "comparison with GENIE status12 prefragmentation four-vector; not GHEP internal Kine.W certification"
+    }
+  ],
+  "old_exposure_scope": "all persisted Stage55/70/81/82/87 incoming, including quarantine; not all historical preselection/gen parents",
+  "new_fits": 0,
+  "new_forwards": 0
+}

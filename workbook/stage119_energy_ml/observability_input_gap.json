@@ -1,0 +1,39 @@
+{
+  "stage": 119,
+  "oracle_proxy_energy_increment": "未测量：没有可认证、非退化且覆盖双侧的祖先标签；未将未知谱系填为非mu/中子，也未以真H或E作为新输入",
+  "evidence": [
+    "hits_coverage.tsv",
+    "window_coverage.tsv",
+    "genie_link.json",
+    "genie_failure_W_FSI.tsv",
+    "response_environment_contrasts.tsv"
+  ],
+  "measured": {
+    "VetoNu_200184_E_MeV": 26.218699438406475,
+    "VetoNu_200184_unknown_MeV": 25.874089,
+    "JEFF_VetoNu_E_MeV": 2313.1020076715467,
+    "JEFF_unknown_MeV": 2059.2123,
+    "JEFF_late_histogram_fraction": 0.19021190981534652
+  },
+  "missing": [
+    "persisted depositing-particle to full G4 ancestry, including recoil-proton neutron ancestors and unknown parents",
+    "matched full readout/time basis and detector volume mapping on that labeled cohort",
+    "nonmu boundary/escape record with first crossing, reentry and kinetic/total energy convention",
+    "complete GENIE channel/FSI interaction summary and historical parent lineage for independent confirmation"
+  ],
+  "available": "actual deposit totals, time-window acceptance, partial ancestry bounds; original raw/status readout; selected Pythia generator W/Q2 and pre/postFSI composition",
+  "scientific_limit": "conditional mechanism measurements delivered; neither full detector information bound nor oracle failure nor deployable energy gain claimed",
+  "next_input_contract": {
+    "parent_roles": "certify upstream EVNT/subjob/entry/seed across old exposure and every response view, then freeze train/dev/confirmation",
+    "truth": "persist ancestor link until generator root; explicitly retain unknown and zero",
+    "observable": "match real ADC/raw/reduced/status/time before proposing timing proxy",
+    "controls": "same-parent nominal vs one transport variant and reference mu/readout controls; no environment average called1sigma"
+  },
+  "generation_decision": "No new GENIE/G4 generation in Stage119. Large existing RDO pool not exhausted; first certify families/low-energy yield and buy independent support with known inclusion probabilities. Only if its upstream/independent support gap persists, freeze a new-parent proposal and perform bounded labeled replay.",
+  "conditional_proposal": {
+    "coverage": "true50-100,100-200, high-y true>=200 able to populate reco50-100, natural high end, both target depths",
+    "proposal": "a recorded mixture of four generator truth strata plus a natural component; mixture probabilities frozen before generation, record every proposal/rejection. No fixed sufficient N claimed from this pilot.",
+    "resources": "use measured RDO-reco cost and selected support to freeze next job budget; new GENIE and G4 CPU/event are未测量, require a small native pilot before scale-up",
+    "acceptance": "actual independent low-energy families, full parent denominator/probabilities, ancestry+real-readout match and full-target risk; no test-driven source replacement"
+  }
+}

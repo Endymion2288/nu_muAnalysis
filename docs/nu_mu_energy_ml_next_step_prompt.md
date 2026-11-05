@@ -1,3 +1,23 @@
+# 当前执行入口：Stage119联合实验完成，下一步核独立低能支持和响应归因
+
+先读[Stage119完整报告](../workbook/2026-11-05_stage119_support-curve-and-response-mechanisms.md)、路线§101、信息预算§81及[完成/缺口清单](../workbook/stage119_energy_ml/requirements.tsv)。下面Stage118及更早入口均为历史；其“本轮不计算”已经被用户继续推进的授权覆盖，本阶段已实际计算并完成本地阶段提交。
+
+实际结果：兼容生产63文件620947父→58064真值超集→11894 selected；扩样排旧后train1428（最低箱52）、dev287、reserved286。固定组成N/2N/4N330/660/1320的最低箱9/18/36，曲线有小模型数量效应，不能裁决原train940条已饱和。旧train+新增候选最低/第二箱 .280688/.244959，对direct .282644/.246329的区间都含1；相对传统 .145661/.247937和困难尾，原joint失败，继续保留原强direct。精确同N旧对照已纠错为1320，不重跑曲线或追加超参预算。
+
+固定环境已测名义/JEFF/ENDF和Standard/NUX；后者18000父全数字化再稀疏RDO重建，不能用已失败的稀疏digitization。JEFF共同最低箱direct/名义1.488752 [1.027589,2.165737]，尚有producer/材料/末态混合，不作1sigma或中子库因果；Pythia最低箱1/8且共同支持缺失。527 selected全部按真实p6 float入射/vertex/主μ回接，523有W，direct失败而传统通过的13条全W≥3。实际VetoNu时窗和多数祖先unknown已测，不能把窗外沉积或unknown当新中子标签/部署增益。oracle→代理风险仍未测，准确缺口见报告；不要重复把这点当“物理路线阴性”。
+
+下一有界科学任务按报告§7：
+
+1. 用已知输入认证200131–136 producer、200187/188 K同EVNT分块/重复和旧全部曝光的parent/subjob/entry/seed。按已知纳入率及实际独立低能/困难侧产额冻下一规模，大池未穷尽时不先全量新G4；上游或独立支持缺口持续才冻新GENIE proposal的小pilot。目录行数不是独立selected数，不从旧开发曝光造新blind。
+2. 对JEFF最低箱信号核完整同GENIE末态、材料/符号/深度和数字化条件；父通过/失败及实际raw/status/时序与固定模型两侧风险一起交。当前conditional matched states未全认证，不能只报共同selected或将环境差全部归中子。
+3. 完整祖先与实际匹配读出可交付后，才冻单一非退化oracle→同容量无特权对照→家族/来源留出代理→连续能量及三尾；zero/unknown/弱/饱和不删，真H/E不补答案。不在缺输入时继续同缓存树/seed/惩罚或换GNN名字。
+
+原89033身份/17657隔离、1016 K、pz0/raw11/signed/typed NaN/Calo缺失和原pz>50/fit-charge选择保持；新reserved零预测，HERMES保持能量迁移用途。原1.05/1.01/1.03和八层三尾+2pp、真实系统/接受度/背景及独立确认不改，逐事件目标仍未达。
+
+事件级证据已字节验证压缩至 `ntuples/energy_ml_stage119/persisted_evidence.tar.gz`，需要重现时先按 `workbook/stage119_energy_ml/persisted_evidence.json` 恢复原路径再打包；源与模型/紧凑缓存保留，运输包已去重。全科学计算走HTCondor，提交仍 `~/condor/nu_muAnalysis/<stage>/`，并行/CPU/GPU由实测瓶颈选；先中文workbook再Conventional Commit、不push。下方历史全文和Stage54资产/后缀保持，不据历史措辞重跑。
+
+## Stage118历史入口（原文保留）
+
 # 当前执行入口：Stage118库存与物理机制路线，研究完成、计算未启动
 
 先读[Stage118完整报告](../workbook/2026-11-05_stage118_mc-inventory-and-physics-strategy.md)、路线§100、信息预算§80。用户本轮要求研究思路与可用MC评估，不恢复环境、不运行训练/事件分析。本次只审阅已有结果和57页PDF，所有新增性能/产额/资源均未测量。以下Stage117及更早入口为历史，当前优先级由本段覆盖。

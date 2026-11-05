@@ -1,0 +1,838 @@
+{
+  "scope": "Stage119 workbook/cache/models, own Stage119 software transport and /tmp/nu_mu_stage119_transport only; Stage54 and other projects unchanged",
+  "before_files": 650,
+  "before_bytes": 1344191227,
+  "after_files_before_this_record": 519,
+  "after_bytes_before_this_record": 101841772,
+  "net_reduction_bytes_before_this_record": 1242349455,
+  "deleted_or_archived_files": 137,
+  "deleted_or_archived_bytes": 1248085725,
+  "retained_cache_bytes": 82667333,
+  "retained_models_bytes": 16634534,
+  "retained_failed_package": "software/energy-ml-stage119-sparseqa2.tar.gz (no passing collection; not removed)",
+  "deleted": [
+    {
+      "path": "ntuples/energy_ml_stage119/merge_200110.root",
+      "bytes": 727,
+      "evidence": "workbook/stage119_energy_ml/native_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/merge_200131.root",
+      "bytes": 727,
+      "evidence": "workbook/stage119_energy_ml/native_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/merge_200184.root",
+      "bytes": 727,
+      "evidence": "workbook/stage119_energy_ml/native_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiaqa_200300.root",
+      "bytes": 195033,
+      "evidence": "workbook/stage119_energy_ml/pythiaqa_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiaqa_200303.root",
+      "bytes": 224153,
+      "evidence": "workbook/stage119_energy_ml/pythiaqa_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiasparseqa2_200300.root",
+      "bytes": 119470,
+      "evidence": "workbook/stage119_energy_ml/pythiasparseqa2_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiasparseqa2_200303.root",
+      "bytes": 113405,
+      "evidence": "workbook/stage119_energy_ml/pythiasparseqa2_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/recoqa_200110.root",
+      "bytes": 233786,
+      "evidence": "workbook/stage119_energy_ml/recoqa_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/recoqa_200131.root",
+      "bytes": 236619,
+      "evidence": "workbook/stage119_energy_ml/recoqa_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/recoqa_200184.root",
+      "bytes": 205528,
+      "evidence": "workbook/stage119_energy_ml/recoqa_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/sparseqa2_200110.root",
+      "bytes": 113882,
+      "evidence": "workbook/stage119_energy_ml/sparseqa3_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/sparseqa2_200131.root",
+      "bytes": 130643,
+      "evidence": "workbook/stage119_energy_ml/sparseqa3_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/sparseqa2_200184.root",
+      "bytes": 112876,
+      "evidence": "workbook/stage119_energy_ml/sparseqa3_transport.json",
+      "verification": "current ROOT bytes equal collected result member; selection/typed62/sparse comparison evidence retained"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/fitcurve.tar.gz",
+      "bytes": 31100795,
+      "evidence": "ntuples/energy_ml_stage119/fitcurve_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/genielink3.tar.gz",
+      "bytes": 1765039,
+      "evidence": "ntuples/energy_ml_stage119/genielink3_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/preparecurve.tar.gz",
+      "bytes": 30325648,
+      "evidence": "ntuples/energy_ml_stage119/preparecurve_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/preparepythia.tar.gz",
+      "bytes": 1619814,
+      "evidence": "ntuples/energy_ml_stage119/preparepythia_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/pythiasparsecheck.tar.gz",
+      "bytes": 446819,
+      "evidence": "ntuples/energy_ml_stage119/pythiasparsecheck_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/pythiasparseqa2.tar.gz",
+      "bytes": 135284,
+      "evidence": "ntuples/energy_ml_stage119/pythiasparseqa2_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/reportcurve2.tar.gz",
+      "bytes": 28159023,
+      "evidence": "ntuples/energy_ml_stage119/reportcurve2_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/response.tar.gz",
+      "bytes": 55192934,
+      "evidence": "ntuples/energy_ml_stage119/response_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "/tmp/nu_mu_stage119_transport/window4.tar.gz",
+      "bytes": 81253,
+      "evidence": "ntuples/energy_ml_stage119/window4_result.tar.gz",
+      "verification": "exact byte equality with collected EOS result archive"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/controlfix_result.tar.gz",
+      "bytes": 25319437,
+      "evidence": "workbook/stage119_energy_ml/controlfix_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/extractqa_result.tar.gz",
+      "bytes": 523263,
+      "evidence": "workbook/stage119_energy_ml/extractqa_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/finalcheck2_result.tar.gz",
+      "bytes": 2082829,
+      "evidence": "workbook/stage119_energy_ml/finalcheck2_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/finalcheck_result.tar.gz",
+      "bytes": 558944,
+      "evidence": "workbook/stage119_energy_ml/finalcheck_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/fitcurve_result.tar.gz",
+      "bytes": 31100795,
+      "evidence": "workbook/stage119_energy_ml/fitcurve_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/genie_result.tar.gz",
+      "bytes": 11632,
+      "evidence": "workbook/stage119_energy_ml/genie_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/genielink2_result.tar.gz",
+      "bytes": 1538330,
+      "evidence": "workbook/stage119_energy_ml/genielink2_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/genielink3_result.tar.gz",
+      "bytes": 1765039,
+      "evidence": "workbook/stage119_energy_ml/genielink3_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/genielink_result.tar.gz",
+      "bytes": 1527960,
+      "evidence": "workbook/stage119_energy_ml/genielink_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/genieprobe_result.tar.gz",
+      "bytes": 515169,
+      "evidence": "workbook/stage119_energy_ml/genieprobe_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/mechanism_result.tar.gz",
+      "bytes": 2016647,
+      "evidence": "workbook/stage119_energy_ml/mechanism_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/native_result.tar.gz",
+      "bytes": 2009265,
+      "evidence": "workbook/stage119_energy_ml/native_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pilot_result.tar.gz",
+      "bytes": 46645721,
+      "evidence": "workbook/stage119_energy_ml/pilot_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/planpower_result.tar.gz",
+      "bytes": 3951432,
+      "evidence": "workbook/stage119_energy_ml/planpower_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/preparecurve_result.tar.gz",
+      "bytes": 30325648,
+      "evidence": "workbook/stage119_energy_ml/preparecurve_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/prepareproduction_result.tar.gz",
+      "bytes": 48680115,
+      "evidence": "workbook/stage119_energy_ml/prepareproduction_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/preparepythia_result.tar.gz",
+      "bytes": 1619814,
+      "evidence": "workbook/stage119_energy_ml/preparepythia_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/probe_result.tar.gz",
+      "bytes": 51788,
+      "evidence": "workbook/stage119_energy_ml/probe_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiaextractqa_result.tar.gz",
+      "bytes": 325702,
+      "evidence": "workbook/stage119_energy_ml/pythiaextractqa_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiapilot_result.tar.gz",
+      "bytes": 1531275,
+      "evidence": "workbook/stage119_energy_ml/pythiapilot_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiaqa_result.tar.gz",
+      "bytes": 322445,
+      "evidence": "workbook/stage119_energy_ml/pythiaqa_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiasparsecheck_result.tar.gz",
+      "bytes": 446819,
+      "evidence": "workbook/stage119_energy_ml/pythiasparsecheck_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiasparseqa2_result.tar.gz",
+      "bytes": 135284,
+      "evidence": "workbook/stage119_energy_ml/pythiasparseqa2_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/pythiasparseqa_result.tar.gz",
+      "bytes": 8203,
+      "evidence": "workbook/stage119_energy_ml/pythiasparseqa_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/recoqa_result.tar.gz",
+      "bytes": 519157,
+      "evidence": "workbook/stage119_energy_ml/recoqa_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/reportcurve2_result.tar.gz",
+      "bytes": 28159023,
+      "evidence": "workbook/stage119_energy_ml/reportcurve2_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/reportcurve_result.tar.gz",
+      "bytes": 28159575,
+      "evidence": "workbook/stage119_energy_ml/reportcurve_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/response_result.tar.gz",
+      "bytes": 55192934,
+      "evidence": "workbook/stage119_energy_ml/response_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/responsecontrast_result.tar.gz",
+      "bytes": 55409097,
+      "evidence": "workbook/stage119_energy_ml/responsecontrast_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/sparsecheck_result.tar.gz",
+      "bytes": 712793,
+      "evidence": "workbook/stage119_energy_ml/sparsecheck_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/sparseqa3_result.tar.gz",
+      "bytes": 205764,
+      "evidence": "workbook/stage119_energy_ml/sparseqa3_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/sparseqa_result.tar.gz",
+      "bytes": 5997,
+      "evidence": "workbook/stage119_energy_ml/sparseqa_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/summary_result.tar.gz",
+      "bytes": 50242,
+      "evidence": "workbook/stage119_energy_ml/summary_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/supportaudit2_result.tar.gz",
+      "bytes": 30337853,
+      "evidence": "workbook/stage119_energy_ml/supportaudit2_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/supportaudit_result.tar.gz",
+      "bytes": 30320437,
+      "evidence": "workbook/stage119_energy_ml/supportaudit_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/validate_result.tar.gz",
+      "bytes": 46629811,
+      "evidence": "workbook/stage119_energy_ml/validate_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/window2_result.tar.gz",
+      "bytes": 5109,
+      "evidence": "workbook/stage119_energy_ml/window2_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/window3_result.tar.gz",
+      "bytes": 5104,
+      "evidence": "workbook/stage119_energy_ml/window3_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/window4_result.tar.gz",
+      "bytes": 81253,
+      "evidence": "workbook/stage119_energy_ml/window4_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/window_result.tar.gz",
+      "bytes": 5093,
+      "evidence": "workbook/stage119_energy_ml/window_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "ntuples/energy_ml_stage119/windowreport_result.tar.gz",
+      "bytes": 2080810,
+      "evidence": "workbook/stage119_energy_ml/windowreport_transport.json",
+      "verification": "original collect compared every returned member with persisted bytes; passed transport record and archive size checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-controlfix.tar.gz",
+      "bytes": 34397946,
+      "evidence": "workbook/stage119_energy_ml/controlfix_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-extractqa.tar.gz",
+      "bytes": 1095438,
+      "evidence": "workbook/stage119_energy_ml/extractqa_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-finalcheck.tar.gz",
+      "bytes": 566921,
+      "evidence": "workbook/stage119_energy_ml/finalcheck_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-finalcheck2.tar.gz",
+      "bytes": 2089594,
+      "evidence": "workbook/stage119_energy_ml/finalcheck2_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-fitcurve.tar.gz",
+      "bytes": 34396075,
+      "evidence": "workbook/stage119_energy_ml/fitcurve_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-genie.tar.gz",
+      "bytes": 5308,
+      "evidence": "workbook/stage119_energy_ml/genie_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-genielink.tar.gz",
+      "bytes": 1536019,
+      "evidence": "workbook/stage119_energy_ml/genielink_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-genielink2.tar.gz",
+      "bytes": 1536997,
+      "evidence": "workbook/stage119_energy_ml/genielink2_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-genielink3.tar.gz",
+      "bytes": 1537360,
+      "evidence": "workbook/stage119_energy_ml/genielink3_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-genieprobe.tar.gz",
+      "bytes": 520697,
+      "evidence": "workbook/stage119_energy_ml/genieprobe_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-mechanism.tar.gz",
+      "bytes": 2013515,
+      "evidence": "workbook/stage119_energy_ml/mechanism_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-native.tar.gz",
+      "bytes": 10130,
+      "evidence": "workbook/stage119_energy_ml/native_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pilot.tar.gz",
+      "bytes": 27930351,
+      "evidence": "workbook/stage119_energy_ml/pilot_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-planpower.tar.gz",
+      "bytes": 3956629,
+      "evidence": "workbook/stage119_energy_ml/planpower_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-preparecurve.tar.gz",
+      "bytes": 42408902,
+      "evidence": "workbook/stage119_energy_ml/preparecurve_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-prepareproduction.tar.gz",
+      "bytes": 46601181,
+      "evidence": "workbook/stage119_energy_ml/prepareproduction_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-preparepythia.tar.gz",
+      "bytes": 1535145,
+      "evidence": "workbook/stage119_energy_ml/preparepythia_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-probe.tar.gz",
+      "bytes": 5370,
+      "evidence": "workbook/stage119_energy_ml/probe_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-production.tar.gz",
+      "bytes": 2667877,
+      "evidence": "workbook/stage119_energy_ml/production_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythia-production.tar.gz",
+      "bytes": 677131,
+      "evidence": "workbook/stage119_energy_ml/pythia_production_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythiaextractqa.tar.gz",
+      "bytes": 900395,
+      "evidence": "workbook/stage119_energy_ml/pythiaextractqa_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythiapilot.tar.gz",
+      "bytes": 9336,
+      "evidence": "workbook/stage119_energy_ml/pythiapilot_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythiaqa.tar.gz",
+      "bytes": 7623,
+      "evidence": "workbook/stage119_energy_ml/pythiaqa_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythiasparsecheck.tar.gz",
+      "bytes": 452158,
+      "evidence": "workbook/stage119_energy_ml/pythiasparsecheck_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythiasparseqa.tar.gz",
+      "bytes": 8162,
+      "evidence": "workbook/stage119_energy_ml/pythiasparseqa_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-pythiasparseqa2.tar.gz",
+      "bytes": 8182,
+      "evidence": "workbook/stage119_energy_ml/pythiasparseqa2_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-recoqa.tar.gz",
+      "bytes": 7804,
+      "evidence": "workbook/stage119_energy_ml/recoqa_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-reportcurve.tar.gz",
+      "bytes": 28275021,
+      "evidence": "workbook/stage119_energy_ml/reportcurve_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-reportcurve2.tar.gz",
+      "bytes": 28275552,
+      "evidence": "workbook/stage119_energy_ml/reportcurve2_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-response.tar.gz",
+      "bytes": 65225697,
+      "evidence": "workbook/stage119_energy_ml/response_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-responsecontrast.tar.gz",
+      "bytes": 65772111,
+      "evidence": "workbook/stage119_energy_ml/responsecontrast_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-sparsecheck.tar.gz",
+      "bytes": 712765,
+      "evidence": "workbook/stage119_energy_ml/sparsecheck_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-sparseqa.tar.gz",
+      "bytes": 8283,
+      "evidence": "workbook/stage119_energy_ml/sparseqa_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-sparseqa3.tar.gz",
+      "bytes": 8463,
+      "evidence": "workbook/stage119_energy_ml/sparseqa3_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-summary.tar.gz",
+      "bytes": 44497,
+      "evidence": "workbook/stage119_energy_ml/summary_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-supportaudit.tar.gz",
+      "bytes": 60343310,
+      "evidence": "workbook/stage119_energy_ml/supportaudit_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-supportaudit2.tar.gz",
+      "bytes": 60344123,
+      "evidence": "workbook/stage119_energy_ml/supportaudit2_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-validate.tar.gz",
+      "bytes": 74527578,
+      "evidence": "workbook/stage119_energy_ml/validate_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-window.tar.gz",
+      "bytes": 8224,
+      "evidence": "workbook/stage119_energy_ml/window_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-window2.tar.gz",
+      "bytes": 8604,
+      "evidence": "workbook/stage119_energy_ml/window2_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-window3.tar.gz",
+      "bytes": 8577,
+      "evidence": "workbook/stage119_energy_ml/window3_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-window4.tar.gz",
+      "bytes": 8563,
+      "evidence": "workbook/stage119_energy_ml/window4_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "software/energy-ml-stage119-windowreport.tar.gz",
+      "bytes": 2089754,
+      "evidence": "workbook/stage119_energy_ml/windowreport_transport.json",
+      "verification": "original source byte verification recorded before source edits/compaction; package byte count checked"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/condor_history.json",
+      "bytes": 4,
+      "evidence": "workbook/stage119_energy_ml/condor_userlogs.json",
+      "verification": "empty failed server-history query replaced by complete native userlog ledger"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/production_contract.json",
+      "bytes": 8539610,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_production_contract.json",
+      "bytes": 370211,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/fit_task_lock.json",
+      "bytes": 763725,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/window4.json",
+      "bytes": 771460,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/genie_identity_probe.json",
+      "bytes": 4886,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/same_N_correction_lock.json",
+      "bytes": 15679,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/schema_probe.json",
+      "bytes": 560619,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_200184_hits.json",
+      "bytes": 1648244,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_200110_hits.json",
+      "bytes": 1744297,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_200113_hits.json",
+      "bytes": 1744341,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_200300_hits.json",
+      "bytes": 1701159,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_200303_hits.json",
+      "bytes": 1710501,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_0.json",
+      "bytes": 257606,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_1.json",
+      "bytes": 258543,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_2.json",
+      "bytes": 258025,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_3.json",
+      "bytes": 252249,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_4.json",
+      "bytes": 254298,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_5.json",
+      "bytes": 255167,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_6.json",
+      "bytes": 247844,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_7.json",
+      "bytes": 248077,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_8.json",
+      "bytes": 247559,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_9.json",
+      "bytes": 257709,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_10.json",
+      "bytes": 257738,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_11.json",
+      "bytes": 258087,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_12.json",
+      "bytes": 253668,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_13.json",
+      "bytes": 254711,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_14.json",
+      "bytes": 254455,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_15.json",
+      "bytes": 247804,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_16.json",
+      "bytes": 247620,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_17.json",
+      "bytes": 248668,
+      "evidence": "workbook/stage119_energy_ml/persisted_evidence.json",
+      "verification": "archive member exact bytes verified before expanded JSON removal"
+    }
+  ],
+  "SHA_scans": 0
+}

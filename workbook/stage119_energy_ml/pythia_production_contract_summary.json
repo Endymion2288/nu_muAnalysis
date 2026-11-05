@@ -1,0 +1,343 @@
+{
+  "stage": 119,
+  "requests": [
+    {
+      "source": {
+        "index": 0,
+        "run": 200300,
+        "component": "pi",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00012-master_dev-HITS.root",
+        "pool_files": 570,
+        "file_probability": 0.005263157894736842,
+        "file_bytes": 1265812015,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00012-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 190
+    },
+    {
+      "source": {
+        "index": 1,
+        "run": 200300,
+        "component": "pi",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00201-master_dev-HITS.root",
+        "pool_files": 570,
+        "file_probability": 0.005263157894736842,
+        "file_bytes": 1101579776,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00201-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 166
+    },
+    {
+      "source": {
+        "index": 2,
+        "run": 200300,
+        "component": "pi",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00503-master_dev-HITS.root",
+        "pool_files": 570,
+        "file_probability": 0.005263157894736842,
+        "file_bytes": 1190361384,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00503-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 176
+    },
+    {
+      "source": {
+        "index": 3,
+        "run": 200301,
+        "component": "k",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200301/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_Standard-200301-00006-master_dev-HITS.root",
+        "pool_files": 760,
+        "file_probability": 0.003947368421052632,
+        "file_bytes": 2999527192,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200301/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_Standard-200301-00006-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 137
+    },
+    {
+      "source": {
+        "index": 4,
+        "run": 200301,
+        "component": "k",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200301/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_Standard-200301-00563-master_dev-HITS.root",
+        "pool_files": 760,
+        "file_probability": 0.003947368421052632,
+        "file_bytes": 3486871714,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200301/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_Standard-200301-00563-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 144
+    },
+    {
+      "source": {
+        "index": 5,
+        "run": 200301,
+        "component": "k",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200301/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_Standard-200301-00748-master_dev-HITS.root",
+        "pool_files": 760,
+        "file_probability": 0.003947368421052632,
+        "file_bytes": 3412366471,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200301/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_Standard-200301-00748-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 167
+    },
+    {
+      "source": {
+        "index": 6,
+        "run": 200302,
+        "component": "charm",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200302/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_Standard-200302-00028-master_dev-HITS.root",
+        "pool_files": 190,
+        "file_probability": 0.015789473684210527,
+        "file_bytes": 5729808891,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200302/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_Standard-200302-00028-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 81
+    },
+    {
+      "source": {
+        "index": 7,
+        "run": 200302,
+        "component": "charm",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200302/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_Standard-200302-00037-master_dev-HITS.root",
+        "pool_files": 190,
+        "file_probability": 0.015789473684210527,
+        "file_bytes": 4854370065,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200302/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_Standard-200302-00037-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 59
+    },
+    {
+      "source": {
+        "index": 8,
+        "run": 200302,
+        "component": "charm",
+        "environment": "Standard",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200302/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_Standard-200302-00085-master_dev-HITS.root",
+        "pool_files": 190,
+        "file_probability": 0.015789473684210527,
+        "file_bytes": 5492468127,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200302/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_Standard-200302-00085-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 74
+    },
+    {
+      "source": {
+        "index": 9,
+        "run": 200303,
+        "component": "pi",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00065-master_dev-HITS.root",
+        "pool_files": 570,
+        "file_probability": 0.005263157894736842,
+        "file_bytes": 1171994273,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00065-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 180
+    },
+    {
+      "source": {
+        "index": 10,
+        "run": 200303,
+        "component": "pi",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00339-master_dev-HITS.root",
+        "pool_files": 570,
+        "file_probability": 0.005263157894736842,
+        "file_bytes": 1221048769,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00339-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 202
+    },
+    {
+      "source": {
+        "index": 11,
+        "run": 200303,
+        "component": "pi",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00357-master_dev-HITS.root",
+        "pool_files": 570,
+        "file_probability": 0.005263157894736842,
+        "file_bytes": 1164358884,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00357-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 194
+    },
+    {
+      "source": {
+        "index": 12,
+        "run": 200304,
+        "component": "k",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200304/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_NUX-200304-00252-master_dev-HITS.root",
+        "pool_files": 760,
+        "file_probability": 0.003947368421052632,
+        "file_bytes": 3449668051,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200304/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_NUX-200304-00252-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 149
+    },
+    {
+      "source": {
+        "index": 13,
+        "run": 200304,
+        "component": "k",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200304/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_NUX-200304-00517-master_dev-HITS.root",
+        "pool_files": 760,
+        "file_probability": 0.003947368421052632,
+        "file_bytes": 3290290792,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200304/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_NUX-200304-00517-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 150
+    },
+    {
+      "source": {
+        "index": 14,
+        "run": 200304,
+        "component": "k",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200304/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_NUX-200304-00739-master_dev-HITS.root",
+        "pool_files": 760,
+        "file_probability": 0.003947368421052632,
+        "file_bytes": 3271048845,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200304/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_k_NUX-200304-00739-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 168
+    },
+    {
+      "source": {
+        "index": 15,
+        "run": 200305,
+        "component": "charm",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200305/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_NUX-200305-00035-master_dev-HITS.root",
+        "pool_files": 190,
+        "file_probability": 0.015789473684210527,
+        "file_bytes": 5499504658,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200305/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_NUX-200305-00035-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 72
+    },
+    {
+      "source": {
+        "index": 16,
+        "run": 200305,
+        "component": "charm",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200305/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_NUX-200305-00085-master_dev-HITS.root",
+        "pool_files": 190,
+        "file_probability": 0.015789473684210527,
+        "file_bytes": 5526627823,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200305/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_NUX-200305-00085-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 74
+    },
+    {
+      "source": {
+        "index": 17,
+        "run": 200305,
+        "component": "charm",
+        "environment": "NUX",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200305/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_NUX-200305-00125-master_dev-HITS.root",
+        "pool_files": 190,
+        "file_probability": 0.015789473684210527,
+        "file_bytes": 5386475971,
+        "kind": "hadronization"
+      },
+      "parent_N": 1000,
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200305/sim/master_dev/FaserMC-MC24_Genie_Powheg_pythia_charm_central_NUX-200305-00125-master_dev-HITS.root",
+      "incoming_conversion": "native HepMC double -> ntuple Float_t, exact after declared conversion",
+      "criterion": "all parents, original truth numu/pz/r/z conservative superset only",
+      "reconstructed_N": 54
+    }
+  ],
+  "scope": "18 uniformly frozen complete HITS parents, no source replacement",
+  "policies": "full official digitization of every frozen parent (preserve stream RNG), then proven exact sparse RDO reco/merge and actual payload-only01 representation",
+  "roles": "fixed-model mechanism environment only; zero energy fitting; HERMES held from energy development",
+  "resources": {
+    "jobs": 18,
+    "cpus_each": 1,
+    "memory_MB_each": 4000,
+    "disk_MB_each": 8000,
+    "wall_s_each": 28800,
+    "aggregate_CPU_s": 108000
+  },
+  "independence": "no assumption of equal row/event across tunes, no contribution to learning-curve N",
+  "sparse_digi_rejected": "9668438: stable identities but waveform/noise columns differ versus full-parent digitization; not equivalent. No sparse digitization in production.",
+  "event_level_evidence": "ntuples/energy_ml_stage119/persisted_evidence.tar.gz"
+}

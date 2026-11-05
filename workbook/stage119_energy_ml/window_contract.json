@@ -1,0 +1,51 @@
+{
+  "sources": [
+    {
+      "run": 200184,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/sim/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-s0014-HITS.root",
+      "bytes": 321013563
+    },
+    {
+      "run": 200110,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-master_dev-HITS.root",
+      "bytes": 1306252887
+    },
+    {
+      "run": 200113,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-master_dev-HITS.root",
+      "bytes": 1289566912
+    },
+    {
+      "run": 200300,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00000-master_dev-HITS.root",
+      "bytes": 1173575842
+    },
+    {
+      "run": 200303,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00000-master_dev-HITS.root",
+      "bytes": 1218480748
+    },
+    {
+      "run": 200306,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200306/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_HERMES-200306-00000-master_dev-HITS.root",
+      "bytes": 1251436377
+    },
+    {
+      "run": 200309,
+      "product": "sim",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200309/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_2021Global-200309-00000-master_dev-HITS.root",
+      "bytes": 1093482077
+    }
+  ],
+  "events": 7000,
+  "CPU_s": 3600,
+  "wall_s": 1800,
+  "source": "fixed first1000 HITS per diagnostic environment, no replacement",
+  "window": "official compiled header600 samples*2ns;10 presamples, no selected delay threshold"
+}

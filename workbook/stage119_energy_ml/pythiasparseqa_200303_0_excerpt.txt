@@ -1,0 +1,15 @@
+IOVDbSvc                                   INFO  bytes in ((      0.51 ))s
+IOVDbSvc                                   INFO Connection sqlite://;schema=mycool.db;dbname=OFLP200 : nConnect: 0 nFolders: 0 ReadTime: ((     0.00 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_SCT/OFLP200 : nConnect: 2 nFolders: 3 ReadTime: ((     0.15 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 4 nFolders: 3 ReadTime: ((     0.26 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 3 nFolders: 2 ReadTime: ((     0.05 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_TRIGGER/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.02 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_TDAQ/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.02 ))s
+ToolSvc                                    INFO Removing all tools created by ToolSvc
+FPEAuditor                                 INFO FPE summary for this job
+FPEAuditor                                 INFO  FPE OVERFLOWs  : 0
+FPEAuditor                                 INFO  FPE INVALIDs   : 0
+FPEAuditor                                 INFO  FPE DIVBYZEROs : 0
+ApplicationMgr                             INFO Application Manager Finalized successfully
+ApplicationMgr                             INFO Application Manager Terminated successfully
+Py:Athena            INFO Finish execution in 75.78879618644714 seconds

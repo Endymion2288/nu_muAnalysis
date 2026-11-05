@@ -1,0 +1,15 @@
+NtupleDumperAlg                           ERROR AthenaBaseComps/AthenaBaseComps/AthCommonDataStore.icc:43 (StatusCode AthCommonDataStore<PBASE>::sysInitialize() [with PBASE = AthCommonMsg<Gaudi::Algorithm>]): code FAILURE: PBASE::sysInitialize()
+AthAlgSeq                                 ERROR Unable to initialize Algorithm NtupleDumperAlg/NtupleDumperAlg
+AthAlgSeq                                 ERROR AthenaBaseComps/AthenaBaseComps/AthCommonDataStore.icc:43 (StatusCode AthCommonDataStore<PBASE>::sysInitialize() [with PBASE = AthCommonMsg<Gaudi::Sequence>]): code FAILURE: PBASE::sysInitialize()
+AthAllAlgSeq                              ERROR Unable to initialize Algorithm AthSequencer/AthAlgSeq
+AthAllAlgSeq                              ERROR AthenaBaseComps/AthenaBaseComps/AthCommonDataStore.icc:43 (StatusCode AthCommonDataStore<PBASE>::sysInitialize() [with PBASE = AthCommonMsg<Gaudi::Sequence>]): code FAILURE: PBASE::sysInitialize()
+AthAlgEvtSeq                              ERROR Unable to initialize Algorithm AthSequencer/AthAllAlgSeq
+AthAlgEvtSeq                              ERROR AthenaBaseComps/AthenaBaseComps/AthCommonDataStore.icc:43 (StatusCode AthCommonDataStore<PBASE>::sysInitialize() [with PBASE = AthCommonMsg<Gaudi::Sequence>]): code FAILURE: PBASE::sysInitialize()
+AthMasterSeq                              ERROR Unable to initialize Algorithm AthSequencer/AthAlgEvtSeq
+AthMasterSeq                              ERROR AthenaBaseComps/AthenaBaseComps/AthCommonDataStore.icc:43 (StatusCode AthCommonDataStore<PBASE>::sysInitialize() [with PBASE = AthCommonMsg<Gaudi::Sequence>]): code FAILURE: PBASE::sysInitialize()
+AthenaEventLoopMgr                        ERROR Unable to initialize Algorithm: AthMasterSeq
+AthenaEventLoopMgr                        ERROR Failed to initialize base class MinimalEventLoopMgr
+ServiceManager                            ERROR Unable to initialize Service: AthenaEventLoopMgr
+Py:ComponentAccumulator   ERROR Failed to initialize AppMgr
+Py:Athena            INFO Finish execution in 11.46702265739441 seconds
+Py:Athena            INFO Execution failed, return 1

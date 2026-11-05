@@ -1,0 +1,14 @@
+{
+  "environments": {
+    "ENDF": 2550,
+    "JEFF": 2379,
+    "NUX": 277,
+    "Standard": 250,
+    "nominal": 2572
+  },
+  "frozen_models": true,
+  "energy_fits": 0,
+  "held_environment": "HERMES not inferred",
+  "matching": "conditional E/y/z/component overlap, not randomized or certified full GENIE-family pairing",
+  "calibration": "same d32 reconstruction and one measured payload conversion03->01; original HITS/digitization producer differences remain explicit"
+}

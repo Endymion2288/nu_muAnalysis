@@ -1,0 +1,28 @@
+{
+  "hits": {
+    "matched_transport_parents": 1000,
+    "matching": "same documented EVNT, skip0, eventID, exact incoming, vertex, primary y; full GENIE record hash/transport seed not certified",
+    "interval_scope": "fixed first-source 1000 parents; row bootstrap, not flux/population/systematic uncertainty; reused incoming not independent new families",
+    "fraction": "[known_nonmu/E,(known_nonmu+unknown)/E]; no classification of absent ancestry",
+    "physical_claim": "sensitive deposition comparison only; no charge/time readout or energy-model conclusion"
+  },
+  "genie": {
+    "cost": [
+      {
+        "input": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_Standard/EPOSLHC_pi/0/faser.0.gfaser.root",
+        "requested_bytes": 10285234
+      },
+      {
+        "input": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_NUX/EPOSLHC_pi/0/faser.0.gfaser.root",
+        "requested_bytes": 10025817
+      }
+    ],
+    "scope": "one unfiltered generator subjob per tune, not selected PHYS; no claim matching old model failures",
+    "W": "(struck nucleon status11 + neutrino - primary charged muon)^2; primary mother is neutrino; GeV/c2",
+    "Q2": "-(neutrino-primary charged muon)^2; GeV2",
+    "channel": "not certified in gFaser; requires actual GHEP interaction summary",
+    "FSI": "GENIE status14 versus status1 composition, no invented per-particle correspondence"
+  },
+  "new_fits": 0,
+  "new_forwards": 0
+}

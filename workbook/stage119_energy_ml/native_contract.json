@@ -1,0 +1,61 @@
+{
+  "tasks": [
+    {
+      "name": "merge_200131",
+      "type": "merge",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rec/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00000-00009-s0014-xAOD.root",
+      "events": 40
+    },
+    {
+      "name": "merge_200184",
+      "type": "merge",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rec/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-xAOD.root",
+      "events": 40
+    },
+    {
+      "name": "merge_200110",
+      "type": "merge",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rec/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-xAOD.root",
+      "events": 40
+    },
+    {
+      "name": "hits_200184",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/sim/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-s0014-HITS.root",
+      "events": 1000
+    },
+    {
+      "name": "hits_200110",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    {
+      "name": "hits_200113",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    {
+      "name": "hits_200300",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00000-master_dev-HITS.root",
+      "events": 1000
+    },
+    {
+      "name": "hits_200303",
+      "type": "hits",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/sim/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00000-master_dev-HITS.root",
+      "events": 1000
+    }
+  ],
+  "workers": 4,
+  "cpus": 8,
+  "memory_MB": 24000,
+  "wall_s": 3600,
+  "CPU_s": 14400,
+  "scope": "bounded first canonical HITS files, diagnostic only; not random pool physics estimate; no training",
+  "ancestry": "missing parent not silently nonmu; no late threshold selected from outcomes",
+  "release": "prebuilt d32b0ff3",
+  "role": "undeclared parents not used as confirmation"
+}

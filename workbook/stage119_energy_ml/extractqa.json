@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "run": 200131,
+      "parents": 40,
+      "selected": 1,
+      "track_N": 11,
+      "forward_N": 2,
+      "source_requested_bytes": 54548,
+      "calibration": [
+        {
+          "module": 0,
+          "N": 3,
+          "median_MeV_per_pC": 4359.3134765625
+        },
+        {
+          "module": 1,
+          "N": 2,
+          "median_MeV_per_pC": 4359.31298828125
+        },
+        {
+          "module": 2,
+          "N": 2,
+          "median_MeV_per_pC": 4359.3134765625
+        },
+        {
+          "module": 3,
+          "N": 2,
+          "median_MeV_per_pC": 4359.31298828125
+        }
+      ],
+      "native_selection_independent_membership_exact": true
+    },
+    {
+      "run": 200184,
+      "parents": 40,
+      "selected": 1,
+      "track_N": 6,
+      "forward_N": 0,
+      "source_requested_bytes": 52756,
+      "calibration": [
+        {
+          "module": 0,
+          "N": 2,
+          "median_MeV_per_pC": 4359.31298828125
+        },
+        {
+          "module": 1,
+          "N": 1,
+          "median_MeV_per_pC": 4359.31298828125
+        },
+        {
+          "module": 2,
+          "N": 5,
+          "median_MeV_per_pC": 4359.31298828125
+        },
+        {
+          "module": 3,
+          "N": 1,
+          "median_MeV_per_pC": 4359.31298828125
+        }
+      ],
+      "native_selection_independent_membership_exact": true
+    },
+    {
+      "run": 200110,
+      "parents": 40,
+      "selected": 1,
+      "track_N": 4,
+      "forward_N": 3,
+      "source_requested_bytes": 53241,
+      "calibration": [
+        {
+          "module": 0,
+          "N": 2,
+          "median_MeV_per_pC": 4359.31298828125
+        },
+        {
+          "module": 1,
+          "N": 3,
+          "median_MeV_per_pC": 4359.31298828125
+        },
+        {
+          "module": 2,
+          "N": 1,
+          "median_MeV_per_pC": 4359.3134765625
+        }
+      ],
+      "native_selection_independent_membership_exact": true
+    }
+  ],
+  "new_fits": 0,
+  "new_forwards": 0
+}

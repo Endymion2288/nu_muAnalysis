@@ -1,0 +1,166 @@
+{
+  "results": [
+    {
+      "policy": "curve_1N",
+      "old_train_N": 0,
+      "new_train_N": 332,
+      "train_proxy_families": 330,
+      "weight_sum": 330.0,
+      "offset_log": 0.2267014150537654,
+      "CPU_s": 5.204584929,
+      "wall_s": 5.23548829369247,
+      "peak_worker_RSS_KiB": 261128,
+      "parameters": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257,
+        "base_score": 6.003002431806016,
+        "boost_from_average": 0
+      },
+      "rounds": 400,
+      "seeds": [
+        2026110255,
+        2026110256,
+        2026110257
+      ]
+    },
+    {
+      "policy": "curve_2N",
+      "old_train_N": 0,
+      "new_train_N": 665,
+      "train_proxy_families": 660,
+      "weight_sum": 660.0,
+      "offset_log": 0.20417152987494872,
+      "CPU_s": 7.611086715,
+      "wall_s": 7.6623931135982275,
+      "peak_worker_RSS_KiB": 261820,
+      "parameters": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257,
+        "base_score": 6.029547255212725,
+        "boost_from_average": 0
+      },
+      "rounds": 400,
+      "seeds": [
+        2026110255,
+        2026110256,
+        2026110257
+      ]
+    },
+    {
+      "policy": "curve_4N",
+      "old_train_N": 0,
+      "new_train_N": 1333,
+      "train_proxy_families": 1320,
+      "weight_sum": 1320.0,
+      "offset_log": 0.19851425838190032,
+      "CPU_s": 9.473852698,
+      "wall_s": 9.53694816865027,
+      "peak_worker_RSS_KiB": 262664,
+      "parameters": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257,
+        "base_score": 6.01662439270058,
+        "boost_from_average": 0
+      },
+      "rounds": 400,
+      "seeds": [
+        2026110255,
+        2026110256,
+        2026110257
+      ]
+    },
+    {
+      "policy": "augmented",
+      "old_train_N": 46575,
+      "new_train_N": 1428,
+      "train_proxy_families": 38970,
+      "weight_sum": 38970.0,
+      "offset_log": 0.028146639763809832,
+      "CPU_s": 27.130057637,
+      "wall_s": 27.347470499575138,
+      "peak_worker_RSS_KiB": 328652,
+      "parameters": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257,
+        "base_score": 6.179207358605596,
+        "boost_from_average": 0
+      },
+      "rounds": 400,
+      "seeds": [
+        2026110255,
+        2026110256,
+        2026110257
+      ]
+    },
+    {
+      "policy": "old_same_N_fixed",
+      "old_train_N": 1402,
+      "new_train_N": 0,
+      "train_proxy_families": 1320,
+      "weight_sum": 1320.0,
+      "offset_log": 0.19929132723249257,
+      "CPU_s": 7.762517594,
+      "wall_s": 7.813397912308574,
+      "peak_worker_RSS_KiB": 299852,
+      "parameters": {
+        "max_depth": 5,
+        "eta": 0.04,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "tree_method": "hist",
+        "nthread": 1,
+        "objective": "reg:squarederror",
+        "seed": 2026110257,
+        "base_score": 6.067599458646826,
+        "boost_from_average": 0
+      },
+      "rounds": 400,
+      "seeds": [
+        2026110255,
+        2026110256,
+        2026110257
+      ]
+    }
+  ],
+  "wall_s": 31.232935095205903,
+  "original_reference_cache_exact": true,
+  "new_reserved_forward_N": 0,
+  "old_quarantine_forward_N": 0,
+  "GPU": 0,
+  "control_correction": "old_same_N counted response-cell memberships, leading1316 unique families instead of1320. Use canonical-family cells and globally unique selection; no change to any curve or augmented fit.",
+  "correction_CPU_s": 7.762517594
+}

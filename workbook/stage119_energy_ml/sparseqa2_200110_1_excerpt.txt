@@ -1,0 +1,20 @@
+16:23:22    Acts::LayerA   ERROR     Layers are overlapping at: -1800.4. This should never happen. Please check your geometry description.
+16:23:22    Acts::LayerA   ERROR     Layers are overlapping at: -1778.9. This should never happen. Please check your geometry description.
+16:23:22    Acts::LayerA   ERROR     Layers are overlapping at: -1744.65. This should never happen. Please check your geometry description.
+16:23:22    Acts::LayerA   ERROR     Layers are overlapping at: -1630.4. This should never happen. Please check your geometry description.
+16:23:22    Acts::LayerA   ERROR     Layers are overlapping at: -1608.9. This should never happen. Please check your geometry description.
+IOVDbFolder                                INFO Folder /WAVE/DAQ/CableMapping (AttrListColl) db-read 1/1 objs/chan/bytes 32/32/805 ((     0.02 ))s
+IOVDbSvc                                   INFO  bytes in ((      0.08 ))s
+IOVDbSvc                                   INFO Connection sqlite://;schema=mycool.db;dbname=OFLP200 : nConnect: 0 nFolders: 0 ReadTime: ((     0.00 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_SCT/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.02 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 3 nFolders: 2 ReadTime: ((     0.04 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_TDAQ/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.02 ))s
+ToolSvc                                    INFO Removing all tools created by ToolSvc
+FPEAuditor                                 INFO FPE summary for this job
+FPEAuditor                                 INFO  FPE OVERFLOWs  : 0
+FPEAuditor                                 INFO  FPE INVALIDs   : 0
+FPEAuditor                                 INFO  FPE DIVBYZEROs : 0
+ApplicationMgr                             INFO Application Manager Finalized successfully
+ApplicationMgr                             INFO Application Manager Terminated successfully
+Py:Athena            INFO Finish execution in 12.188304662704468 seconds
+Py:Athena            INFO Execution succeeded

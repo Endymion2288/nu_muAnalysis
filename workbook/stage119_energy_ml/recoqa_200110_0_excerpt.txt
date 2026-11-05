@@ -1,0 +1,40 @@
+['xAOD::EventInfo#EventInfo', 'xAOD::TruthEventContainer#*', 'xAOD::TruthEventAuxContainer#*', 'xAOD::TruthVertexContainer#*', 'xAOD::TruthVertexAuxContainer#*', 'xAOD::TruthParticleContainer#*', 'xAOD::TruthParticleAuxContainer#*', 'xAOD::EventInfo#*', 'xAOD::EventAuxInfo#*', 'xAOD::FaserTriggerData#*', 'xAOD::FaserTriggerDataAux#*', 'FaserSiHitCollection#*', 'FaserSCT_RDO_Container#SCT_RDOs*', 'FaserSCT_SpacePointContainer#*', 'Tracker::FaserSCT_ClusterContainer#*', 'TrackCollection#CKFTrackCollection*', 'TrackCollection#SegmentFit*', 'xAOD::FaserEventInfo#*', 'xAOD::FaserEventInfoAux#*', 'McEventCollection#*', 'TrackerSimDataCollection#*', 'xAOD::WaveformHitContainer#*', 'xAOD::WaveformHitAuxContainer#*', 'xAOD::WaveformClock#*', 'xAOD::WaveformClockAuxInfo#*', 'xAOD::CalorimeterHitContainer#*', 'xAOD::CalorimeterHitAuxContainer#*', 'xAOD::EventAuxInfo#EventInfoAux.']
+IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-06 set from joboptions
+15:57:50    Acts::LayerA   ERROR     Layers are overlapping at: -1800.4. This should never happen. Please check your geometry description.
+15:57:50    Acts::LayerA   ERROR     Layers are overlapping at: -1778.9. This should never happen. Please check your geometry description.
+15:57:50    Acts::LayerA   ERROR     Layers are overlapping at: -1744.65. This should never happen. Please check your geometry description.
+15:57:50    Acts::LayerA   ERROR     Layers are overlapping at: -1630.4. This should never happen. Please check your geometry description.
+15:57:50    Acts::LayerA   ERROR     Layers are overlapping at: -1608.9. This should never happen. Please check your geometry description.
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV
+IOVDbFolder                                INFO HVS tag OFLCOND-FASER-06 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP
+15:58:02    KalmanFitter   ERROR     Target surface not reached due to path limit: SurfaceError:1 Global to local transformation failed: position not on surface.
+15:58:02    KalmanFitter   ERROR     Target surface not reached due to path limit: SurfaceError:1 Global to local transformation failed: position not on surface.
+15:58:02    KalmanFitter   ERROR     CombinatorialKalmanFilter failed: SurfaceError:1 Global to local transformation failed: position not on surface. with the initial parameters:
+15:58:02    KalmanFitter   ERROR     Target surface not reached due to path limit: SurfaceError:1 Global to local transformation failed: position not on surface.
+15:58:02    KalmanFitter   ERROR     Target surface not reached due to path limit: SurfaceError:1 Global to local transformation failed: position not on surface.
+15:58:02    KalmanFitter   ERROR     CombinatorialKalmanFilter failed: SurfaceError:1 Global to local transformation failed: position not on surface. with the initial parameters:
+IOVDbSvc                                   INFO Connection COOLOFL_SCT/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.03 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_TRIGGER/OFLP200 : nConnect: 2 nFolders: 4 ReadTime: ((     0.03 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 3 nFolders: 2 ReadTime: ((     0.05 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 4 nFolders: 3 ReadTime: ((     0.23 ))s
+IOVDbSvc                                   INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.03 ))s
+ToolSvc                                    INFO Removing all tools created by ToolSvc
+FPEAuditor                                 INFO FPE summary for this job
+FPEAuditor                                 INFO  FPE OVERFLOWs  : 4
+FPEAuditor                                 INFO  FPE INVALIDs   : 43
+FPEAuditor                                 INFO  FPE DIVBYZEROs : 0
+ApplicationMgr                             INFO Application Manager Finalized successfully
+ApplicationMgr                             INFO Application Manager Terminated successfully
+Listing sources of suppressed message:
+=====================================================
+ Message Source              |   Level |    Count
+-----------------------------+---------+-------------
+ Tracker::TrackerSpacePointFinder.TrackerSpacePointMakerTool| WARNING |     1845
+=====================================================
+Py:Athena            INFO Finish execution in 28.069687843322754 seconds
+Py:Athena            INFO Execution succeeded

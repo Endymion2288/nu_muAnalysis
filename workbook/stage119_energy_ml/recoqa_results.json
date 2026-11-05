@@ -1,0 +1,116 @@
+[
+  {
+    "task": {
+      "run": 200131,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00000-00009-s0014-RDO.root",
+      "events": 40
+    },
+    "steps": [
+      {
+        "command": [
+          "faser_reco.py",
+          "--isMC",
+          "--geom",
+          "TI12MC04",
+          "--nevents",
+          "40",
+          "input-RDO.root"
+        ],
+        "exitcode": 0
+      },
+      {
+        "command": [
+          "faser_ntuple_maker.py",
+          "--isMC",
+          "--geom",
+          "TI12MC04",
+          "--CKFTrackType",
+          "merge",
+          "--nevents",
+          "-1",
+          "--outfile",
+          "/pool/condor/dir_502772/nu_mu_stage119.h11Y3e/ntuples/energy_ml_stage119/recoqa_200131.root",
+          "input-xAOD.root"
+        ],
+        "exitcode": 0
+      }
+    ],
+    "wall_s": 41.413863662979566
+  },
+  {
+    "task": {
+      "run": 200184,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-RDO.root",
+      "events": 40
+    },
+    "steps": [
+      {
+        "command": [
+          "faser_reco.py",
+          "--isMC",
+          "--geom",
+          "TI12MC04",
+          "--nevents",
+          "40",
+          "input-RDO.root"
+        ],
+        "exitcode": 0
+      },
+      {
+        "command": [
+          "faser_ntuple_maker.py",
+          "--isMC",
+          "--geom",
+          "TI12MC04",
+          "--CKFTrackType",
+          "merge",
+          "--nevents",
+          "-1",
+          "--outfile",
+          "/pool/condor/dir_502772/nu_mu_stage119.h11Y3e/ntuples/energy_ml_stage119/recoqa_200184.root",
+          "input-xAOD.root"
+        ],
+        "exitcode": 0
+      }
+    ],
+    "wall_s": 38.443790612975135
+  },
+  {
+    "task": {
+      "run": 200110,
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-RDO.root",
+      "events": 40
+    },
+    "steps": [
+      {
+        "command": [
+          "faser_reco.py",
+          "--isMC",
+          "--geom",
+          "TI12MC04",
+          "--nevents",
+          "40",
+          "input-RDO.root"
+        ],
+        "exitcode": 0
+      },
+      {
+        "command": [
+          "faser_ntuple_maker.py",
+          "--isMC",
+          "--geom",
+          "TI12MC04",
+          "--CKFTrackType",
+          "merge",
+          "--nevents",
+          "-1",
+          "--outfile",
+          "/pool/condor/dir_502772/nu_mu_stage119.h11Y3e/ntuples/energy_ml_stage119/recoqa_200110.root",
+          "input-xAOD.root"
+        ],
+        "exitcode": 0
+      }
+    ],
+    "wall_s": 41.51187316497089
+  }
+]

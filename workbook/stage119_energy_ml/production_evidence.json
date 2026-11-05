@@ -1,0 +1,3745 @@
+[
+  {
+    "run": 200131,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/log/s0014",
+    "log_files": 0,
+    "evidence": []
+  },
+  {
+    "run": 200132,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/log/s0014",
+    "log_files": 0,
+    "evidence": []
+  },
+  {
+    "run": 200133,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/log/s0014",
+    "log_files": 0,
+    "evidence": []
+  },
+  {
+    "run": 200134,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/log/s0014",
+    "log_files": 0,
+    "evidence": []
+  },
+  {
+    "run": 200135,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/log/s0014",
+    "log_files": 0,
+    "evidence": []
+  },
+  {
+    "run": 200136,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/log/s0014",
+    "log_files": 0,
+    "evidence": []
+  },
+  {
+    "run": 200184,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/log/s0014",
+    "log_files": 2535,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/log/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Dec 1 17:18:08 CET 2025 - b9p16p0754.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200184"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/log/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Wed Dec 3 02:18:56 CET 2025 - b9g03p2461.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200184"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 226,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 700,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 718,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 721,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 722,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 730,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 731,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/log/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Dec 4 06:55:28 CET 2025 - b9p13p2679.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200184"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 427,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 428,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200185,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/log/s0014",
+    "log_files": 2535,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/log/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Dec 1 17:20:12 CET 2025 - b9p13p5626.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-1-24-xing-100iab.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200185"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/log/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Wed Dec 3 02:21:50 CET 2025 - b9g03p4186.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200185"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 226,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 700,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 718,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 721,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 722,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 730,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 731,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/log/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Dec 4 06:55:33 CET 2025 - b9p24p6664.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200185"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 427,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 428,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200186,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/log/s0014",
+    "log_files": 2314,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Wed Dec 3 02:33:32 CET 2025 - b9p18p1806.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200186"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Dec 4 20:55:57 CET 2025 - b9p13p4128.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200186"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 226,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 700,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 718,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 721,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 722,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 730,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 731,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 06:49:55 CET 2025 - b9p20p5902.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200186"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 427,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 428,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200187,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/log/s0014",
+    "log_files": 2288,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Wed Dec 3 09:14:50 CET 2025 - b9g03p5497.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-1-24-xing-100iab.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200187"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 00:50:14 CET 2025 - b9p17p8074.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200187"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 226,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 700,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 718,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 721,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 722,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 730,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 731,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 07:49:47 CET 2025 - b9g03p5829.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200187"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --backward"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 427,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 428,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200188,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/log/s0014",
+    "log_files": 2275,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Wed Dec 3 14:41:09 CET 2025 - b9p18p7489.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-1-24-xing-100iab.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200188"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 01:20:35 CET 2025 - b9g34p5473.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200188"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 226,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 700,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 718,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 721,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 722,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 730,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 731,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/log/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 07:53:40 CET 2025 - b9p17p5972.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200188"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --backward"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 427,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 428,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200189,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/log/s0014",
+    "log_files": 1651,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/log/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Dec 4 06:58:25 CET 2025 - b9p22p2838.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/powheg-pythia-charm-central-24-xing-100iab.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200189"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/log/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 08:20:59 CET 2025 - b9p18p1249.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/rdo/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200189"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 226,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 700,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 718,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 721,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 722,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 730,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 731,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/log/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri Dec 5 10:14:02 CET 2025 - b9p20p0398.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200189"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/cd9679e2] -- built on [2025-11-13T0847]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 427,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 428,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200082,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014",
+    "log_files": 728,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 10:21:01 CEST 2025 - b9p29p3403.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200082"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1426,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3019,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 13:49:11 CEST 2025 - b9g23p8424.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200082"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 148,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 621,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 639,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-01-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 642,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 643,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 650,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 651,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 652,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 14:21:01 CEST 2025 - b9g23p8424.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200082"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_epos_pi-200082-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --backward"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 408,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 417,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200083,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014",
+    "log_files": 988,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 10:22:19 CEST 2025 - b9p15p7661.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_epos_k-200083-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200083"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1426,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3019,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 17:03:28 CEST 2025 - b9p31p5609.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_epos_k-200083-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200083"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 148,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 621,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 639,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-01-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 642,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 643,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 650,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 651,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 652,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 17:51:22 CEST 2025 - b9g18p1082.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200083"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_epos_k-200083-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --backward"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 408,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 417,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200089,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014",
+    "log_files": 247,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-s0014-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 10:43:19 CEST 2025 - b9p31p4720.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-s0014-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200089"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1426,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3019,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-00009-s0014-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 20:53:00 CEST 2025 - b9p04p0698.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-00009-s0014-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200089"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 148,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 621,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 639,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-01-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 642,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 643,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 650,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 651,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 652,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat Aug 9 21:47:16 CEST 2025 - b9p13p3492.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rec/s0014"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/s0014/200089"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --backward"
+          },
+          {
+            "line": 74,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [pull origin master: Fast-forward/6d6ab70b] -- built on [2025-08-05T1957]"
+          },
+          {
+            "line": 85,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 408,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 417,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 418,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200110,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/log/master_dev",
+    "log_files": 1283,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/log/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat May 30 06:48:36 CEST 2026 - b9p29p4393.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200110"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --G4_phys=FTFP_BERT_HP --G4_neut=/afs/cern.ch/user/f/fasermc/Work/g4/JEFF-3.3"
+          },
+          {
+            "line": 637,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 843,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1160,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1428,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3068,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3069,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/log/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Jul 27 06:44:18 CEST 2026 - b9p21p4317.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200110"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 224,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 711,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 732,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 733,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 740,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 741,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 742,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/log/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Jul 30 04:56:54 CEST 2026 - b9p16p1181.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rec/master_dev"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200110"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 46,
+            "text": "faser_ntuple_maker.py /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rec/master_dev --slice 0 --files 1 --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 79,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 90,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 423,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 432,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 433,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200111,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/log/master_dev",
+    "log_files": 1749,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/log/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sun May 31 19:20:06 CEST 2026 - b9p08p2684.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200111"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --G4_phys=FTFP_BERT_HP --G4_neut=/afs/cern.ch/user/f/fasermc/Work/g4/JEFF-3.3"
+          },
+          {
+            "line": 637,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 843,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1160,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1428,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3068,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3069,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/log/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Jul 27 06:23:27 CEST 2026 - b9p23p8988.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200111"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 224,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 711,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 732,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 733,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 740,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 741,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 742,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/log/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Jul 30 04:57:01 CEST 2026 - b9p17p4939.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rec/master_dev"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200111"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 46,
+            "text": "faser_ntuple_maker.py /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rec/master_dev --slice 0 --files 1 --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 79,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 90,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 423,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 432,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 433,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200112,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/log/master_dev",
+    "log_files": 440,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/log/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat May 30 07:47:24 CEST 2026 - b9p06p9894.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200112"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --G4_phys=FTFP_BERT_HP --G4_neut=/afs/cern.ch/user/f/fasermc/Work/g4/JEFF-3.3"
+          },
+          {
+            "line": 637,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 843,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1160,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1428,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3068,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3069,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/log/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00000-00009-master_dev-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Tue Jul 28 22:24:31 CEST 2026 - b9p06p2399.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200112"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 224,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 711,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 732,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 733,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 740,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 741,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 742,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/log/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Jul 30 04:57:18 CEST 2026 - b9g18p3765.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rec/master_dev"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200112"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 46,
+            "text": "faser_ntuple_maker.py /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rec/master_dev --slice 0 --files 1 --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 79,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 90,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 423,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 432,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 433,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200113,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/log/master_dev",
+    "log_files": 1271,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/log/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Jun 15 16:12:44 CEST 2026 - b9p20p9012.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200113"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --G4_phys=FTFP_BERT_HP --G4_neut=/afs/cern.ch/user/f/fasermc/Work/g4/ENDF-VIII.0"
+          },
+          {
+            "line": 637,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 843,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1160,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1428,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3060,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3061,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/log/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-00009-master_dev-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Jul 27 07:14:56 CEST 2026 - b9p27p4324.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200113"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 224,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 711,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 732,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 733,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 740,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 741,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 742,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/log/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Jul 30 04:57:01 CEST 2026 - b9p17p4939.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rec/master_dev"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200113"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 46,
+            "text": "faser_ntuple_maker.py /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rec/master_dev --slice 0 --files 1 --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 79,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 90,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 423,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 432,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 433,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200114,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/log/master_dev",
+    "log_files": 1749,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/log/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat May 30 08:22:27 CEST 2026 - b9p25p9706.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200114"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --G4_phys=FTFP_BERT_HP --G4_neut=/afs/cern.ch/user/f/fasermc/Work/g4/ENDF-VIII.0"
+          },
+          {
+            "line": 637,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 843,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1160,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1428,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3060,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3061,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/log/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00000-00009-master_dev-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Jul 27 07:48:10 CEST 2026 - b9p29p6521.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200114"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 224,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 711,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 732,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 733,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 740,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 741,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 742,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/log/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Jul 30 04:57:11 CEST 2026 - b9p28p9898.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rec/master_dev"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200114"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 46,
+            "text": "faser_ntuple_maker.py /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rec/master_dev --slice 0 --files 1 --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 79,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 90,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 423,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 432,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 433,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200115,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/log/master_dev",
+    "log_files": 436,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/log/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Wed Jun 3 09:38:35 CEST 2026 - b9p29p6551.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200115"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --G4_phys=FTFP_BERT_HP --G4_neut=/afs/cern.ch/user/f/fasermc/Work/g4/ENDF-VIII.0"
+          },
+          {
+            "line": 637,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 843,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1160,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1428,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3060,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3061,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      },
+      {
+        "kind": "reco",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/log/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00000-00009-master_dev-RDO.rec.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon Jul 27 07:55:37 CEST 2026 - b9p04p0179.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "File: FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 3,
+            "text": "Filepath: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00000-00009-master_dev-RDO.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200115"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Remaining: --isMC --geom TI12MC04"
+          },
+          {
+            "line": 8,
+            "text": "lsetup               lsetup <tool1> [ <tool2> ...] (see lsetup -h):"
+          },
+          {
+            "line": 9,
+            "text": " lsetup asetup        (or asetup) to setup an Athena release"
+          },
+          {
+            "line": 10,
+            "text": " lsetup astyle        ATLAS style macros"
+          },
+          {
+            "line": 57,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 224,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 711,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 729,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to WAVE-Calibration-03-LG for folder /WAVE/Calibration/MIP_ref"
+          },
+          {
+            "line": 732,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 733,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          },
+          {
+            "line": 740,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Status-02 for folder /SCT/DCS/CHANSTAT"
+          },
+          {
+            "line": 741,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-HV-02 for folder /SCT/DCS/HV"
+          },
+          {
+            "line": 742,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to SCT-DCS-Temp-02 for folder /SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      {
+        "kind": "ntuple",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/log/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-0000-PHYS.ntp.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Thu Jul 30 04:57:03 CEST 2026 - b9p24p0247.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Directory: /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rec/master_dev"
+          },
+          {
+            "line": 3,
+            "text": "Slice: 0"
+          },
+          {
+            "line": 4,
+            "text": "NFiles: 1"
+          },
+          {
+            "line": 5,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 6,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200115"
+          },
+          {
+            "line": 7,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 8,
+            "text": "job: FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-0000-PHYS"
+          },
+          {
+            "line": 9,
+            "text": "Last: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 46,
+            "text": "faser_ntuple_maker.py /eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rec/master_dev --slice 0 --files 1 --geom TI12MC04 --isMC --merge 10 --CKFTrackType backward"
+          },
+          {
+            "line": 79,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/54a9026b] -- built on [2026-05-27T2318]"
+          },
+          {
+            "line": 90,
+            "text": "IOVDbSvc                                   INFO Global tag: OFLCOND-FASER-05 set from joboptions"
+          },
+          {
+            "line": 423,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 432,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 433,
+            "text": "IOVDbFolder                                INFO HVS tag OFLCOND-FASER-05 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200300,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/log/master_dev",
+    "log_files": 1140,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200300/log/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Fri May 8 14:35:20 CEST 2026 - b9p17p0523.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_Standard/EPOSLHC_pi/faser_filtered_pythiaStandard_EPOSLHC_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_EPOSLHC_pi_Standard-200300-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200300"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 638,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/b7436487] -- built on [2026-04-04T1621]"
+          },
+          {
+            "line": 844,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1161,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1429,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3022,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3023,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200303,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/log/master_dev",
+    "log_files": 1140,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200303/log/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Sat May 9 00:15:17 CEST 2026 - b9p29p9286.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_NUX/EPOSLHC_pi/faser_filtered_pythiaNUX_EPOSLHC_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_EPOSLHC_pi_NUX-200303-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200303"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 638,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/b7436487] -- built on [2026-04-04T1621]"
+          },
+          {
+            "line": 844,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1161,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1429,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3022,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3023,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200306,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200306/log/master_dev",
+    "log_files": 1140,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200306/log/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_HERMES-200306-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon May 11 12:13:09 CEST 2026 - b9g34p3570.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_HERMES/EPOSLHC_pi/faser_filtered_pythiaHERMES_EPOSLHC_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_EPOSLHC_pi_HERMES-200306-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200306"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/b7436487] -- built on [2026-04-04T1621]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 200309,
+    "log_directory": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200309/log/master_dev",
+    "log_files": 1120,
+    "evidence": [
+      {
+        "kind": "generator",
+        "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200309/log/master_dev/FaserMC-MC24_Genie_EPOSLHC_pi_2021Global-200309-00000-master_dev-HITS.sim.log",
+        "lines": [
+          {
+            "line": 1,
+            "text": "Mon May 11 12:13:23 CEST 2026 - b9p16p5837.cern.ch"
+          },
+          {
+            "line": 2,
+            "text": "Input File: /eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_2021Global/EPOSLHC_pi/faser_filtered_pythia2021Global_EPOSLHC_pi.EVNT.pool.root"
+          },
+          {
+            "line": 3,
+            "text": "Output File: FaserMC-MC24_Genie_EPOSLHC_pi_2021Global-200309-00000-master_dev-HITS.root"
+          },
+          {
+            "line": 4,
+            "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/master_dev"
+          },
+          {
+            "line": 5,
+            "text": "Output: /tmp/fasermc/mc24/master_dev/200309"
+          },
+          {
+            "line": 6,
+            "text": "Starting: /srv"
+          },
+          {
+            "line": 7,
+            "text": "Skip: 0"
+          },
+          {
+            "line": 8,
+            "text": "Nevts: 1000"
+          },
+          {
+            "line": 9,
+            "text": "Geom: "
+          },
+          {
+            "line": 10,
+            "text": "Remaining: --geom TI12MC04"
+          },
+          {
+            "line": 636,
+            "text": "Py:Athena            INFO using release [Calypso-22.0.49] [x86_64-el9-gcc13-opt] [master/b7436487] -- built on [2026-04-04T1621]"
+          },
+          {
+            "line": 842,
+            "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+          },
+          {
+            "line": 1159,
+            "text": "IOVDbSvc                         INFO Global tag: OFLCOND-FASER-04 set from joboptions"
+          },
+          {
+            "line": 1427,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to TRACKER-ALIGN-02 for folder /Tracker/Align"
+          },
+          {
+            "line": 3020,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Maps-03 for folder /GLOBAL/BField/Maps"
+          },
+          {
+            "line": 3021,
+            "text": "IOVDbFolder                      INFO HVS tag OFLCOND-FASER-04 resolved to GLOBAL-BField-Scale-03 for folder /GLOBAL/BField/Scales"
+          }
+        ]
+      }
+    ]
+  }
+]

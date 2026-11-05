@@ -1,0 +1,969 @@
+[
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+    "runs": [
+      200184
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 1945829,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 1945829,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 1634794
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-1-24-xing-100iab.EVNT.pool.root",
+    "runs": [
+      200185
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 1948419,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 1948419,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 1635710
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root",
+    "runs": [
+      200186
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 1777049,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 1777049,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 1617712
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-1-24-xing-100iab.EVNT.pool.root",
+    "runs": [
+      200187,
+      200188
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 1757298,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 1757298,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 1601373
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/powheg-pythia-charm-central-24-xing-100iab.EVNT.pool.root",
+    "runs": [
+      200189
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 1263234,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 1263234,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 1181141
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+    "runs": [
+      200082,
+      200110,
+      200113
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 559607,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 559607,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 509416
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+    "runs": [
+      200083,
+      200111,
+      200114
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 752808,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 752808,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 727651
+  },
+  {
+    "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+    "runs": [
+      200089,
+      200112,
+      200115
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 180947,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 180947,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 196084
+  },
+  {
+    "path": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_Standard/EPOSLHC_pi/faser_filtered_pythiaStandard_EPOSLHC_pi.EVNT.pool.root",
+    "runs": [
+      200300
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 561268,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 561268,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 521165
+  },
+  {
+    "path": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_NUX/EPOSLHC_pi/faser_filtered_pythiaNUX_EPOSLHC_pi.EVNT.pool.root",
+    "runs": [
+      200303
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 560611,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 560611,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 513714
+  },
+  {
+    "path": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_HERMES/EPOSLHC_pi/faser_filtered_pythiaHERMES_EPOSLHC_pi.EVNT.pool.root",
+    "runs": [
+      200306
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 560118,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 560118,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 556217
+  },
+  {
+    "path": "/eos/experiment/fasernu-data0/MC/Genie_files/genie_output_Pythia6tunes/Pythia6_2021Global/EPOSLHC_pi/faser_filtered_pythia2021Global_EPOSLHC_pi.EVNT.pool.root",
+    "runs": [
+      200309
+    ],
+    "exists": true,
+    "trees": {
+      "##Params": {
+        "entries": 4,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Shapes": {
+        "entries": 11,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "##Links": {
+        "entries": 14,
+        "branches": {
+          "db_string": "char*",
+          "index_ref": "int64_t"
+        }
+      },
+      "CollectionTree": {
+        "entries": 559909,
+        "branches": {
+          "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+          "EventInfo_p4_McEventInfo": "EventInfo_p4",
+          "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+          "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainer": {
+        "entries": 559909,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "POOLContainerForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaData": {
+        "entries": 1,
+        "branches": {
+          "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+          "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+          "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+          "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+          "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdr": {
+        "entries": 1,
+        "branches": {
+          "DataHeader": "DataHeader_p6",
+          "index_ref": "int64_t"
+        }
+      },
+      "MetaDataHdrForm": {
+        "entries": 1,
+        "branches": {
+          "DataHeaderForm": "DataHeaderForm_p6",
+          "index_ref": "int64_t"
+        }
+      }
+    },
+    "requested_bytes": 530457
+  }
+]

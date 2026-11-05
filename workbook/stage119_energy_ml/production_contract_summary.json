@@ -1,0 +1,1219 @@
+{
+  "stage": 119,
+  "requests": [
+    {
+      "source": {
+        "index": 0,
+        "run": 200131,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/phy/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00780-00789-s0014-PHYS.root",
+        "segment": "00780-00789",
+        "tag": "s0014",
+        "pool_files": 197,
+        "file_inclusion_probability": 0.015228426395939087,
+        "file_bytes": 26780126,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00780-00789-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 821
+    },
+    {
+      "source": {
+        "index": 1,
+        "run": 200131,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/phy/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00840-00849-s0014-PHYS.root",
+        "segment": "00840-00849",
+        "tag": "s0014",
+        "pool_files": 197,
+        "file_inclusion_probability": 0.015228426395939087,
+        "file_bytes": 27216965,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-00840-00849-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 819
+    },
+    {
+      "source": {
+        "index": 2,
+        "run": 200131,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/phy/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-01670-01679-s0014-PHYS.root",
+        "segment": "01670-01679",
+        "tag": "s0014",
+        "pool_files": 197,
+        "file_inclusion_probability": 0.015228426395939087,
+        "file_bytes": 26926595,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200131/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c0-200131-01670-01679-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 825
+    },
+    {
+      "source": {
+        "index": 3,
+        "run": 200132,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/phy/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c1-200132-01040-01049-s0014-PHYS.root",
+        "segment": "01040-01049",
+        "tag": "s0014",
+        "pool_files": 196,
+        "file_inclusion_probability": 0.015306122448979591,
+        "file_bytes": 26809255,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c1-200132-01040-01049-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 760
+    },
+    {
+      "source": {
+        "index": 4,
+        "run": 200132,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/phy/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c1-200132-01130-01139-s0014-PHYS.root",
+        "segment": "01130-01139",
+        "tag": "s0014",
+        "pool_files": 196,
+        "file_inclusion_probability": 0.015306122448979591,
+        "file_bytes": 26799275,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c1-200132-01130-01139-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 803
+    },
+    {
+      "source": {
+        "index": 5,
+        "run": 200132,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/phy/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c1-200132-01680-01689-s0014-PHYS.root",
+        "segment": "01680-01689",
+        "tag": "s0014",
+        "pool_files": 196,
+        "file_inclusion_probability": 0.015306122448979591,
+        "file_bytes": 27096683,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200132/rdo/s0014/FaserMC-MC24_Genie_epos_pi_100_iab_c1-200132-01680-01689-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 829
+    },
+    {
+      "source": {
+        "index": 6,
+        "run": 200133,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c0-200133-00030-00039-s0014-PHYS.root",
+        "segment": "00030-00039",
+        "tag": "s0014",
+        "pool_files": 176,
+        "file_inclusion_probability": 0.017045454545454544,
+        "file_bytes": 26148964,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c0-200133-00030-00039-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 792
+    },
+    {
+      "source": {
+        "index": 7,
+        "run": 200133,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c0-200133-00290-00299-s0014-PHYS.root",
+        "segment": "00290-00299",
+        "tag": "s0014",
+        "pool_files": 176,
+        "file_inclusion_probability": 0.017045454545454544,
+        "file_bytes": 51127139,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c0-200133-00290-00299-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 639
+    },
+    {
+      "source": {
+        "index": 8,
+        "run": 200133,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c0-200133-01540-01549-s0014-PHYS.root",
+        "segment": "01540-01549",
+        "tag": "s0014",
+        "pool_files": 176,
+        "file_inclusion_probability": 0.017045454545454544,
+        "file_bytes": 49943537,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200133/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c0-200133-01540-01549-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 575
+    },
+    {
+      "source": {
+        "index": 9,
+        "run": 200134,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c1-200134-00030-00039-s0014-PHYS.root",
+        "segment": "00030-00039",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 51643559,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c1-200134-00030-00039-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 643
+    },
+    {
+      "source": {
+        "index": 10,
+        "run": 200134,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c1-200134-01050-01059-s0014-PHYS.root",
+        "segment": "01050-01059",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 49938370,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c1-200134-01050-01059-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 592
+    },
+    {
+      "source": {
+        "index": 11,
+        "run": 200134,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c1-200134-01670-01679-s0014-PHYS.root",
+        "segment": "01670-01679",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 50525110,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200134/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c1-200134-01670-01679-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 619
+    },
+    {
+      "source": {
+        "index": 12,
+        "run": 200135,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c2-200135-00040-00049-s0014-PHYS.root",
+        "segment": "00040-00049",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 49852478,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c2-200135-00040-00049-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 567
+    },
+    {
+      "source": {
+        "index": 13,
+        "run": 200135,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c2-200135-00500-00509-s0014-PHYS.root",
+        "segment": "00500-00509",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 50552781,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c2-200135-00500-00509-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 579
+    },
+    {
+      "source": {
+        "index": 14,
+        "run": 200135,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/phy/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c2-200135-00520-00529-s0014-PHYS.root",
+        "segment": "00520-00529",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 50460205,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200135/rdo/s0014/FaserMC-MC24_Genie_epos_k_100_iab_c2-200135-00520-00529-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 540
+    },
+    {
+      "source": {
+        "index": 15,
+        "run": 200136,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/phy/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central_100_iab-200136-00620-00629-s0014-PHYS.root",
+        "segment": "00620-00629",
+        "tag": "s0014",
+        "pool_files": 133,
+        "file_inclusion_probability": 0.022556390977443608,
+        "file_bytes": 69455457,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central_100_iab-200136-00620-00629-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 296
+    },
+    {
+      "source": {
+        "index": 16,
+        "run": 200136,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/phy/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central_100_iab-200136-00890-00899-s0014-PHYS.root",
+        "segment": "00890-00899",
+        "tag": "s0014",
+        "pool_files": 133,
+        "file_inclusion_probability": 0.022556390977443608,
+        "file_bytes": 68288733,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central_100_iab-200136-00890-00899-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 294
+    },
+    {
+      "source": {
+        "index": 17,
+        "run": 200136,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/phy/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central_100_iab-200136-01060-01069-s0014-PHYS.root",
+        "segment": "01060-01069",
+        "tag": "s0014",
+        "pool_files": 133,
+        "file_inclusion_probability": 0.022556390977443608,
+        "file_bytes": 67544258,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200136/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central_100_iab-200136-01060-01069-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 287
+    },
+    {
+      "source": {
+        "index": 18,
+        "run": 200184,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00850-00859-s0014-PHYS.root",
+        "segment": "00850-00859",
+        "tag": "s0014",
+        "pool_files": 195,
+        "file_inclusion_probability": 0.015384615384615385,
+        "file_bytes": 30625651,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-00850-00859-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 771
+    },
+    {
+      "source": {
+        "index": 19,
+        "run": 200184,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-01540-01549-s0014-PHYS.root",
+        "segment": "01540-01549",
+        "tag": "s0014",
+        "pool_files": 195,
+        "file_inclusion_probability": 0.015384615384615385,
+        "file_bytes": 30371999,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-01540-01549-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 756
+    },
+    {
+      "source": {
+        "index": 20,
+        "run": 200184,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-01720-01729-s0014-PHYS.root",
+        "segment": "01720-01729",
+        "tag": "s0014",
+        "pool_files": 195,
+        "file_inclusion_probability": 0.015384615384615385,
+        "file_bytes": 30105879,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200184/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c0-200184-01720-01729-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 709
+    },
+    {
+      "source": {
+        "index": 21,
+        "run": 200185,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00110-00119-s0014-PHYS.root",
+        "segment": "00110-00119",
+        "tag": "s0014",
+        "pool_files": 195,
+        "file_inclusion_probability": 0.015384615384615385,
+        "file_bytes": 30925521,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-00110-00119-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 755
+    },
+    {
+      "source": {
+        "index": 22,
+        "run": 200185,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-01170-01179-s0014-PHYS.root",
+        "segment": "01170-01179",
+        "tag": "s0014",
+        "pool_files": 195,
+        "file_inclusion_probability": 0.015384615384615385,
+        "file_bytes": 30017280,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-01170-01179-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 732
+    },
+    {
+      "source": {
+        "index": 23,
+        "run": 200185,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-01850-01859-s0014-PHYS.root",
+        "segment": "01850-01859",
+        "tag": "s0014",
+        "pool_files": 195,
+        "file_inclusion_probability": 0.015384615384615385,
+        "file_bytes": 31061567,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200185/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_pi_100_iab_c1-200185-01850-01859-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 728
+    },
+    {
+      "source": {
+        "index": 24,
+        "run": 200186,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00060-00069-s0014-PHYS.root",
+        "segment": "00060-00069",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 54011044,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00060-00069-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 613
+    },
+    {
+      "source": {
+        "index": 25,
+        "run": 200186,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00160-00169-s0014-PHYS.root",
+        "segment": "00160-00169",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 53093973,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-00160-00169-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 612
+    },
+    {
+      "source": {
+        "index": 26,
+        "run": 200186,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-01490-01499-s0014-PHYS.root",
+        "segment": "01490-01499",
+        "tag": "s0014",
+        "pool_files": 178,
+        "file_inclusion_probability": 0.016853932584269662,
+        "file_bytes": 54437585,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200186/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c0-200186-01490-01499-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 596
+    },
+    {
+      "source": {
+        "index": 27,
+        "run": 200187,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00330-00339-s0014-PHYS.root",
+        "segment": "00330-00339",
+        "tag": "s0014",
+        "pool_files": 176,
+        "file_inclusion_probability": 0.017045454545454544,
+        "file_bytes": 53474066,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00330-00339-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 624
+    },
+    {
+      "source": {
+        "index": 28,
+        "run": 200187,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00530-00539-s0014-PHYS.root",
+        "segment": "00530-00539",
+        "tag": "s0014",
+        "pool_files": 176,
+        "file_inclusion_probability": 0.017045454545454544,
+        "file_bytes": 53740252,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-00530-00539-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 597
+    },
+    {
+      "source": {
+        "index": 29,
+        "run": 200187,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-01690-01699-s0014-PHYS.root",
+        "segment": "01690-01699",
+        "tag": "s0014",
+        "pool_files": 176,
+        "file_inclusion_probability": 0.017045454545454544,
+        "file_bytes": 53215267,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200187/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c1-200187-01690-01699-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 572
+    },
+    {
+      "source": {
+        "index": 30,
+        "run": 200188,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00090-00099-s0014-PHYS.root",
+        "segment": "00090-00099",
+        "tag": "s0014",
+        "pool_files": 175,
+        "file_inclusion_probability": 0.017142857142857144,
+        "file_bytes": 53223821,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00090-00099-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 610
+    },
+    {
+      "source": {
+        "index": 31,
+        "run": 200188,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00830-00839-s0014-PHYS.root",
+        "segment": "00830-00839",
+        "tag": "s0014",
+        "pool_files": 175,
+        "file_inclusion_probability": 0.017142857142857144,
+        "file_bytes": 52198243,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00830-00839-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 608
+    },
+    {
+      "source": {
+        "index": 32,
+        "run": 200188,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/phy/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00860-00869-s0014-PHYS.root",
+        "segment": "00860-00869",
+        "tag": "s0014",
+        "pool_files": 175,
+        "file_inclusion_probability": 0.017142857142857144,
+        "file_bytes": 55841272,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200188/rdo/s0014/FaserMC-MC24_Genie_24_xing_epos_k_100_iab_c2-200188-00860-00869-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 575
+    },
+    {
+      "source": {
+        "index": 33,
+        "run": 200189,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/phy/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00240-00249-s0014-PHYS.root",
+        "segment": "00240-00249",
+        "tag": "s0014",
+        "pool_files": 127,
+        "file_inclusion_probability": 0.023622047244094488,
+        "file_bytes": 70640600,
+        "kind": "expansion",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/rdo/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00240-00249-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 276
+    },
+    {
+      "source": {
+        "index": 34,
+        "run": 200189,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/phy/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00490-00499-s0014-PHYS.root",
+        "segment": "00490-00499",
+        "tag": "s0014",
+        "pool_files": 127,
+        "file_inclusion_probability": 0.023622047244094488,
+        "file_bytes": 68789761,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/rdo/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00490-00499-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 296
+    },
+    {
+      "source": {
+        "index": 35,
+        "run": 200189,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/phy/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00840-00849-s0014-PHYS.root",
+        "segment": "00840-00849",
+        "tag": "s0014",
+        "pool_files": 127,
+        "file_inclusion_probability": 0.023622047244094488,
+        "file_bytes": 67555531,
+        "kind": "expansion",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200189/rdo/s0014/FaserMC-MC24_Genie_24_xing_powheg_pythia_charm_central_100_iab-200189-00840-00849-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 315
+    },
+    {
+      "source": {
+        "index": 36,
+        "run": 200082,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/phy/s0014/FaserMC-MC24_Genie_epos_pi-200082-00220-00229-s0014-PHYS.root",
+        "segment": "00220-00229",
+        "tag": "s0014",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 24858980,
+        "kind": "nominal",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00220-00229-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1841
+    },
+    {
+      "source": {
+        "index": 37,
+        "run": 200082,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/phy/s0014/FaserMC-MC24_Genie_epos_pi-200082-00240-00249-s0014-PHYS.root",
+        "segment": "00240-00249",
+        "tag": "s0014",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 24628085,
+        "kind": "nominal",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00240-00249-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1875
+    },
+    {
+      "source": {
+        "index": 38,
+        "run": 200082,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/phy/s0014/FaserMC-MC24_Genie_epos_pi-200082-00530-00539-s0014-PHYS.root",
+        "segment": "00530-00539",
+        "tag": "s0014",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 25527361,
+        "kind": "nominal",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00530-00539-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1936
+    },
+    {
+      "source": {
+        "index": 39,
+        "run": 200083,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/phy/s0014/FaserMC-MC24_Genie_epos_k-200083-00060-00069-s0014-PHYS.root",
+        "segment": "00060-00069",
+        "tag": "s0014",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 43440222,
+        "kind": "nominal",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00060-00069-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1449
+    },
+    {
+      "source": {
+        "index": 40,
+        "run": 200083,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/phy/s0014/FaserMC-MC24_Genie_epos_k-200083-00080-00089-s0014-PHYS.root",
+        "segment": "00080-00089",
+        "tag": "s0014",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 44104781,
+        "kind": "nominal",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00080-00089-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1481
+    },
+    {
+      "source": {
+        "index": 41,
+        "run": 200083,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/phy/s0014/FaserMC-MC24_Genie_epos_k-200083-00510-00519-s0014-PHYS.root",
+        "segment": "00510-00519",
+        "tag": "s0014",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 44770481,
+        "kind": "nominal",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00510-00519-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1436
+    },
+    {
+      "source": {
+        "index": 42,
+        "run": 200089,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/phy/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00010-00019-s0014-PHYS.root",
+        "segment": "00010-00019",
+        "tag": "s0014",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 58609681,
+        "kind": "nominal",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00010-00019-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 770
+    },
+    {
+      "source": {
+        "index": 43,
+        "run": 200089,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/phy/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00060-00069-s0014-PHYS.root",
+        "segment": "00060-00069",
+        "tag": "s0014",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 58271666,
+        "kind": "nominal",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00060-00069-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 742
+    },
+    {
+      "source": {
+        "index": 44,
+        "run": 200089,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/phy/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00160-00169-s0014-PHYS.root",
+        "segment": "00160-00169",
+        "tag": "s0014",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 58807699,
+        "kind": "nominal",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00160-00169-s0014-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 755
+    },
+    {
+      "source": {
+        "index": 45,
+        "run": 200110,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/phy/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00330-00339-master_dev-PHYS.root",
+        "segment": "00330-00339",
+        "tag": "master_dev",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 28149810,
+        "kind": "transport_JEFF",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00330-00339-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1801
+    },
+    {
+      "source": {
+        "index": 46,
+        "run": 200110,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/phy/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00340-00349-master_dev-PHYS.root",
+        "segment": "00340-00349",
+        "tag": "master_dev",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 28356042,
+        "kind": "transport_JEFF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00340-00349-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1835
+    },
+    {
+      "source": {
+        "index": 47,
+        "run": 200110,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/phy/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00530-00539-master_dev-PHYS.root",
+        "segment": "00530-00539",
+        "tag": "master_dev",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 29069846,
+        "kind": "transport_JEFF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00530-00539-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1936
+    },
+    {
+      "source": {
+        "index": 48,
+        "run": 200111,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/phy/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-PHYS.root",
+        "segment": "00000-00009",
+        "tag": "master_dev",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 46421772,
+        "kind": "transport_JEFF",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1493
+    },
+    {
+      "source": {
+        "index": 49,
+        "run": 200111,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/phy/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00230-00239-master_dev-PHYS.root",
+        "segment": "00230-00239",
+        "tag": "master_dev",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 47292463,
+        "kind": "transport_JEFF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00230-00239-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1379
+    },
+    {
+      "source": {
+        "index": 50,
+        "run": 200111,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/phy/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00480-00489-master_dev-PHYS.root",
+        "segment": "00480-00489",
+        "tag": "master_dev",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 48802559,
+        "kind": "transport_JEFF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00480-00489-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1480
+    },
+    {
+      "source": {
+        "index": 51,
+        "run": 200112,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/phy/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00050-00059-master_dev-PHYS.root",
+        "segment": "00050-00059",
+        "tag": "master_dev",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 60777943,
+        "kind": "transport_JEFF",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00050-00059-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 770
+    },
+    {
+      "source": {
+        "index": 52,
+        "run": 200112,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/phy/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00150-00159-master_dev-PHYS.root",
+        "segment": "00150-00159",
+        "tag": "master_dev",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 61190360,
+        "kind": "transport_JEFF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00150-00159-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 767
+    },
+    {
+      "source": {
+        "index": 53,
+        "run": 200112,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/phy/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00180-00189-master_dev-PHYS.root",
+        "segment": "00180-00189",
+        "tag": "master_dev",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 5460095,
+        "kind": "transport_JEFF",
+        "probe": false
+      },
+      "parent_N": 947,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00180-00189-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 75
+    },
+    {
+      "source": {
+        "index": 54,
+        "run": 200113,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/phy/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00110-00119-master_dev-PHYS.root",
+        "segment": "00110-00119",
+        "tag": "master_dev",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 28456720,
+        "kind": "transport_ENDF",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00110-00119-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1858
+    },
+    {
+      "source": {
+        "index": 55,
+        "run": 200113,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/phy/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00340-00349-master_dev-PHYS.root",
+        "segment": "00340-00349",
+        "tag": "master_dev",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 28550887,
+        "kind": "transport_ENDF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00340-00349-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1835
+    },
+    {
+      "source": {
+        "index": 56,
+        "run": 200113,
+        "component": "pi",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/phy/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00360-00369-master_dev-PHYS.root",
+        "segment": "00360-00369",
+        "tag": "master_dev",
+        "pool_files": 56,
+        "file_inclusion_probability": 0.05357142857142857,
+        "file_bytes": 28218536,
+        "kind": "transport_ENDF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00360-00369-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1902
+    },
+    {
+      "source": {
+        "index": 57,
+        "run": 200114,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/phy/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00070-00079-master_dev-PHYS.root",
+        "segment": "00070-00079",
+        "tag": "master_dev",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 46181273,
+        "kind": "transport_ENDF",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00070-00079-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1475
+    },
+    {
+      "source": {
+        "index": 58,
+        "run": 200114,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/phy/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00530-00539-master_dev-PHYS.root",
+        "segment": "00530-00539",
+        "tag": "master_dev",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 46653198,
+        "kind": "transport_ENDF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00530-00539-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1416
+    },
+    {
+      "source": {
+        "index": 59,
+        "run": 200114,
+        "component": "k",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/phy/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00710-00719-master_dev-PHYS.root",
+        "segment": "00710-00719",
+        "tag": "master_dev",
+        "pool_files": 76,
+        "file_inclusion_probability": 0.039473684210526314,
+        "file_bytes": 47427383,
+        "kind": "transport_ENDF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00710-00719-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 1417
+    },
+    {
+      "source": {
+        "index": 60,
+        "run": 200115,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/phy/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00030-00039-master_dev-PHYS.root",
+        "segment": "00030-00039",
+        "tag": "master_dev",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 60246825,
+        "kind": "transport_ENDF",
+        "probe": true
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00030-00039-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 759
+    },
+    {
+      "source": {
+        "index": 61,
+        "run": 200115,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/phy/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00130-00139-master_dev-PHYS.root",
+        "segment": "00130-00139",
+        "tag": "master_dev",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 61550867,
+        "kind": "transport_ENDF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00130-00139-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 789
+    },
+    {
+      "source": {
+        "index": 62,
+        "run": 200115,
+        "component": "charm",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/phy/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00150-00159-master_dev-PHYS.root",
+        "segment": "00150-00159",
+        "tag": "master_dev",
+        "pool_files": 19,
+        "file_inclusion_probability": 0.15789473684210525,
+        "file_bytes": 61298542,
+        "kind": "transport_ENDF",
+        "probe": false
+      },
+      "parent_N": 10000,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00150-00159-master_dev-RDO.root",
+      "criterion": "conservative original truth nu_mu/pz>50/r<100/fiducial z superset; no reco/effect/model selection",
+      "reconstructed_N": 767
+    }
+  ],
+  "scope": "63 already uniformly frozen full parent files, no source replacement",
+  "policies": "official d32 reco then merge noIFT; original fitted-charge cuts, audited62 raw/status; original calibration representation only after payload validation",
+  "roles": "new-only highest available incoming proxy: fixed 70/15/15 train/development/reserved; all known old exposure excluded from new pool. Original roles unchanged. GENIE-parent and new blind certification pending.",
+  "role_seed": 2026110519,
+  "confirmation": "reserve only, no prediction/risk until final design and power; cannot claim independent blind with incomplete lineage",
+  "resources": {
+    "jobs": 63,
+    "cpus_each": 1,
+    "memory_MB_each": 3000,
+    "disk_MB_each": 8000,
+    "wall_s_each": 28800,
+    "aggregate_CPU_s": 252000,
+    "retained_selected_bytes": 60000000
+  },
+  "scale": "freeze N/2N/4N after compatible producer yield, before model outcomes; one original strong policy, fixed composition/common support",
+  "exclusions": "No low energy model-directed source additions; truth-rejected parents retained in denominator; sparse equivalence QA required before submit",
+  "event_level_evidence": "ntuples/energy_ml_stage119/persisted_evidence.tar.gz"
+}

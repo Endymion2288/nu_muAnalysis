@@ -1,0 +1,236 @@
+{
+  "purpose": "Git whitespace normalization only, no numerical recomputation",
+  "TSV_fields_exactly_equal_after_CSV_parsing": true,
+  "TSV_line_endings": "LF; terminal empty field quoted as empty string",
+  "log_excerpts": "trailing whitespace only stripped",
+  "original_archive": "ntuples/energy_ml_stage119/formatting_originals.tar.gz",
+  "original_archive_bytes": 241152,
+  "original_member_bytes_verified": true,
+  "files": [
+    {
+      "path": "workbook/stage119_energy_ml/compatible_production_cost.tsv",
+      "original_bytes": 11088,
+      "normalized_bytes": 10898
+    },
+    {
+      "path": "workbook/stage119_energy_ml/compatible_source_support.tsv",
+      "original_bytes": 55536,
+      "normalized_bytes": 54842
+    },
+    {
+      "path": "workbook/stage119_energy_ml/compatible_support.tsv",
+      "original_bytes": 5141,
+      "normalized_bytes": 5041
+    },
+    {
+      "path": "workbook/stage119_energy_ml/confirmation_plan.tsv",
+      "original_bytes": 7480,
+      "normalized_bytes": 7461
+    },
+    {
+      "path": "workbook/stage119_energy_ml/confirmation_power.tsv",
+      "original_bytes": 1996,
+      "normalized_bytes": 1986
+    },
+    {
+      "path": "workbook/stage119_energy_ml/curve_composition.tsv",
+      "original_bytes": 1781,
+      "normalized_bytes": 1718
+    },
+    {
+      "path": "workbook/stage119_energy_ml/curve_gates.tsv",
+      "original_bytes": 31663,
+      "normalized_bytes": 31422
+    },
+    {
+      "path": "workbook/stage119_energy_ml/curve_metrics.tsv",
+      "original_bytes": 86639,
+      "normalized_bytes": 86266
+    },
+    {
+      "path": "workbook/stage119_energy_ml/curve_paired.tsv",
+      "original_bytes": 207293,
+      "normalized_bytes": 206579
+    },
+    {
+      "path": "workbook/stage119_energy_ml/curve_reference_validation.tsv",
+      "original_bytes": 12550,
+      "normalized_bytes": 12297
+    },
+    {
+      "path": "workbook/stage119_energy_ml/curve_validation.tsv",
+      "original_bytes": 4879,
+      "normalized_bytes": 4830
+    },
+    {
+      "path": "workbook/stage119_energy_ml/genie_W_FSI.tsv",
+      "original_bytes": 3521,
+      "normalized_bytes": 3514
+    },
+    {
+      "path": "workbook/stage119_energy_ml/genie_failure_W_FSI.tsv",
+      "original_bytes": 10369,
+      "normalized_bytes": 10312
+    },
+    {
+      "path": "workbook/stage119_energy_ml/genie_selected_link_coverage.tsv",
+      "original_bytes": 609,
+      "normalized_bytes": 586
+    },
+    {
+      "path": "workbook/stage119_energy_ml/genie_selected_material.tsv",
+      "original_bytes": 9125,
+      "normalized_bytes": 9052
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_coverage.tsv",
+      "original_bytes": 8605,
+      "normalized_bytes": 8564
+    },
+    {
+      "path": "workbook/stage119_energy_ml/hits_transport.tsv",
+      "original_bytes": 1213,
+      "normalized_bytes": 1204
+    },
+    {
+      "path": "workbook/stage119_energy_ml/new_role_support.tsv",
+      "original_bytes": 413,
+      "normalized_bytes": 400
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pilot_support.tsv",
+      "original_bytes": 133762,
+      "normalized_bytes": 132438
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pilot_totals.tsv",
+      "original_bytes": 17344,
+      "normalized_bytes": 17091
+    },
+    {
+      "path": "workbook/stage119_energy_ml/production_cost.tsv",
+      "original_bytes": 15248,
+      "normalized_bytes": 14986
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythia_parent_support.tsv",
+      "original_bytes": 4078,
+      "normalized_bytes": 4023
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_common_support.tsv",
+      "original_bytes": 787,
+      "normalized_bytes": 776
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_contrast_validation.tsv",
+      "original_bytes": 3892,
+      "normalized_bytes": 3835
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_direct_traditional.tsv",
+      "original_bytes": 24469,
+      "normalized_bytes": 24374
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_environment_contrasts.tsv",
+      "original_bytes": 42428,
+      "normalized_bytes": 42285
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_matched_transport.tsv",
+      "original_bytes": 5573,
+      "normalized_bytes": 5532
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_metrics.tsv",
+      "original_bytes": 46890,
+      "normalized_bytes": 46701
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_parent_migration.tsv",
+      "original_bytes": 700,
+      "normalized_bytes": 696
+    },
+    {
+      "path": "workbook/stage119_energy_ml/response_parent_support.tsv",
+      "original_bytes": 12448,
+      "normalized_bytes": 12222
+    },
+    {
+      "path": "workbook/stage119_energy_ml/same_N_control.tsv",
+      "original_bytes": 512,
+      "normalized_bytes": 492
+    },
+    {
+      "path": "workbook/stage119_energy_ml/same_N_control_fixed.tsv",
+      "original_bytes": 512,
+      "normalized_bytes": 492
+    },
+    {
+      "path": "workbook/stage119_energy_ml/source_support.tsv",
+      "original_bytes": 14963,
+      "normalized_bytes": 14668
+    },
+    {
+      "path": "workbook/stage119_energy_ml/traditional_response.tsv",
+      "original_bytes": 40023,
+      "normalized_bytes": 39761
+    },
+    {
+      "path": "workbook/stage119_energy_ml/window_coverage.tsv",
+      "original_bytes": 3420,
+      "normalized_bytes": 3407
+    },
+    {
+      "path": "workbook/stage119_energy_ml/window_validation.tsv",
+      "original_bytes": 358,
+      "normalized_bytes": 347
+    },
+    {
+      "path": "workbook/stage119_energy_ml/merge_200110_log_excerpt.txt",
+      "original_bytes": 8133,
+      "normalized_bytes": 8127
+    },
+    {
+      "path": "workbook/stage119_energy_ml/merge_200131_log_excerpt.txt",
+      "original_bytes": 8113,
+      "normalized_bytes": 8107
+    },
+    {
+      "path": "workbook/stage119_energy_ml/merge_200184_log_excerpt.txt",
+      "original_bytes": 8163,
+      "normalized_bytes": 8157
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythiaqa_200303_1_excerpt.txt",
+      "original_bytes": 2905,
+      "normalized_bytes": 2904
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythiasparseqa_200300_2_excerpt.txt",
+      "original_bytes": 6061,
+      "normalized_bytes": 6060
+    },
+    {
+      "path": "workbook/stage119_energy_ml/pythiasparseqa_200303_2_excerpt.txt",
+      "original_bytes": 6061,
+      "normalized_bytes": 6060
+    },
+    {
+      "path": "workbook/stage119_energy_ml/recoqa_200110_0_excerpt.txt",
+      "original_bytes": 5283,
+      "normalized_bytes": 5280
+    },
+    {
+      "path": "workbook/stage119_energy_ml/recoqa_200131_0_excerpt.txt",
+      "original_bytes": 5341,
+      "normalized_bytes": 5336
+    },
+    {
+      "path": "workbook/stage119_energy_ml/recoqa_200184_0_excerpt.txt",
+      "original_bytes": 4274,
+      "normalized_bytes": 4273
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "geometry": "FASERNU-04",
+  "detector_centers_z_mm": {
+    "0:1": -3101.5,
+    "0:0": -3122.5
+  },
+  "events": 7000,
+  "window_ns": [
+    -20,
+    1200
+  ],
+  "source_scope": "fixed first1000 parents per source; not uniform population estimate",
+  "conclusion_scope": "actual geometry-corrected deposit histogram acceptance; no point-valued neutron ancestry label or deployed energy gain",
+  "extra_caveats": [
+    "convolution and waveform fitting can further alter accepted charge",
+    "zero deposition retained",
+    "unknown ancestry not classified",
+    "transport producer histories differ"
+  ]
+}

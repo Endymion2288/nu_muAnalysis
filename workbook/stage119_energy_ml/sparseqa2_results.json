@@ -1,0 +1,80 @@
+[
+  {
+    "run": 200131,
+    "command": [
+      "python",
+      "/pool/condor/dir_1566784/nu_mu_stage119.9DmV99/ml/stage119_sparse_reco.py",
+      "request.json"
+    ],
+    "exitcode": 0
+  },
+  {
+    "run": 200131,
+    "command": [
+      "faser_ntuple_maker.py",
+      "--isMC",
+      "--geom",
+      "TI12MC04",
+      "--CKFTrackType",
+      "merge",
+      "--nevents",
+      "-1",
+      "--outfile",
+      "/pool/condor/dir_1566784/nu_mu_stage119.9DmV99/ntuples/energy_ml_stage119/sparseqa2_200131.root",
+      "input-xAOD.root"
+    ],
+    "exitcode": 0
+  },
+  {
+    "run": 200184,
+    "command": [
+      "python",
+      "/pool/condor/dir_1566784/nu_mu_stage119.9DmV99/ml/stage119_sparse_reco.py",
+      "request.json"
+    ],
+    "exitcode": 0
+  },
+  {
+    "run": 200184,
+    "command": [
+      "faser_ntuple_maker.py",
+      "--isMC",
+      "--geom",
+      "TI12MC04",
+      "--CKFTrackType",
+      "merge",
+      "--nevents",
+      "-1",
+      "--outfile",
+      "/pool/condor/dir_1566784/nu_mu_stage119.9DmV99/ntuples/energy_ml_stage119/sparseqa2_200184.root",
+      "input-xAOD.root"
+    ],
+    "exitcode": 0
+  },
+  {
+    "run": 200110,
+    "command": [
+      "python",
+      "/pool/condor/dir_1566784/nu_mu_stage119.9DmV99/ml/stage119_sparse_reco.py",
+      "request.json"
+    ],
+    "exitcode": 0
+  },
+  {
+    "run": 200110,
+    "command": [
+      "faser_ntuple_maker.py",
+      "--isMC",
+      "--geom",
+      "TI12MC04",
+      "--CKFTrackType",
+      "merge",
+      "--nevents",
+      "-1",
+      "--outfile",
+      "/pool/condor/dir_1566784/nu_mu_stage119.9DmV99/ntuples/energy_ml_stage119/sparseqa2_200110.root",
+      "input-xAOD.root"
+    ],
+    "exitcode": 0
+  }
+]
