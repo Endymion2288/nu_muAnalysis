@@ -1,0 +1,22 @@
+{
+  "frozen_utc": "2026-11-05T10:32:17.748383+00:00",
+  "reason": "Programming error: installed uproot mktree expects explicit branch types, then extend; array-as-type failed before native cut/QA result, admission or endpoint measurement",
+  "first_job": 9668058,
+  "first_exit": 1,
+  "science_outcomes_observed": false,
+  "correction": "Use each Awkward array element datashape as branch schema and extend once; preserve all values/types, identities and native selection",
+  "maximum_jobs_revised_from": 1,
+  "maximum_jobs_revised_to": 2,
+  "no_automatic_retries": true,
+  "total_CPU_cap_s": 3600,
+  "total_wall_cap_s": 900,
+  "total_requested_byte_cap": 2147483648,
+  "first_cost_included": true,
+  "scientific_contract_unchanged": true,
+  "authority": "Routine implementation repair within user-authorized Stage112; no new scientific question, sample choice, effect-dependent selection, resource expansion or parameter scan",
+  "first_external_CPU_s": 8.09,
+  "first_external_wall_s": 6.32,
+  "first_peak_RSS_KiB": 79080,
+  "first_IO_actual": "unmeasured; bounded by the identical full six-source QA read replay before full extraction",
+  "budget_accounting": "charge first8.09CPU/6.32wall and conservative QA-read replay bound against original total caps"
+}

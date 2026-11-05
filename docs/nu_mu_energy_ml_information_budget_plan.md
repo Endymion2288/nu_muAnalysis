@@ -1341,3 +1341,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 购买的问题是：其他名义MC切选固定，去reco pz0门槛的G0中，正pz可定义总体G+与S50的传统pz0/0.8低能log-MSE差，以及真transfer和μ纵向响应的变化。两真E箱/六源等权端点固定，incoming视图权重在选择前冻结；任一源无支持则主端点不可估而不删源。完整cutflow/无效/未知、原生S50与独立掩码闭合、signed平方交叉项和全部困难层为验收；负、零、反向结果均完成研究。raw模型输入与legacy fitted-charge cuts分清，不直接换阈值；无轨迹/typed占位/合法负值不混为零或静默过滤。
 
 该PHYS便利分母不认证GENIE/G4全接受度、自然flux或50GeV背景；固定X后的条件分布不因确定选择凭空改变。500共同incoming乘数区间不覆盖source/refit/研究选择/系统/新blind。Stage112尚未执行，不自动训练或部署。原角色/全部K/typed62/raw11/pz0-only政策、最终1.05/1.01/1.03与八层三尾+2pp、真实系统和新独立支持长期要求不变。合同及确切输入见[Stage111产物](../workbook/stage111_energy_ml/experiment_contract.json)，历史§1–72和Stage54保持。
+
+
+## 74. stage112：69.33 CPU秒买到原生闭合QA，没有买到选择机制端点
+
+[Stage112报告](../workbook/2026-11-05_stage112_selection-response-audit.md)按六源合同执行：各10000父entry（metadata）/67branch，固定QA去重36≤40，20cut原生/独立掩码差0、pz差0GeV、truth单位与空轨迹/typed占位/合法负值通过。四个(source,cut)的非负域invalid reduced charge仍可通过native<30pC，未测具体值/status/最终S50影响，不能认定是能量失败原因或事件剔除理由。
+
+首次9668058因mktree类型接口错误在native前失败；预先记录实施修订后9668059首exit0、QA通过。两次提交、无自动重试；没有隐藏首次8.09CPU/6.32wall秒。第二次GNU61.24CPU/18.48wall秒，累计69.33/24.80；6CPU申请12GB站点18GB、0GPU/内线程1。实际源/native接口补跑28043817bytes，首次实际未保留，按相同确定QA前缀重放上界25344369合53388186bytes；物理网络/整树瞬时内存/全会话资源未测，嵌套native计时不加外层。两包16/17输入核原字节后清理运输副本，紧凑原生日志/失败记录/预算保留，Stage54不变。
+
+按原冻结公式小批decode CPU×N/n再factor3的投影14665.550938CPU/3371.318452wall秒拒绝全量；字节投影411896777未超。小Awkward调用含固定调度开销，不能据这个外推宣称实际全量必需该成本。本阶段按stop结束，两个低能端点、真实组成/分解/完整风险与500区间均未测；不是物理阴性，也不是能量目标完成。
+
+下一[Stage113合同](../workbook/stage112_energy_ml/next_execution_contract.json)不再买另一个计时/metadata阶段。复用通过的36例QA，科学定义/六源/角色K/权重/主端点/最终保护不变，一次完整测量，以实际进程树累计CPU/wall与共享请求上限监督。112+113共用原3600CPU/900任务wall秒/2GiB，扣已用及首失败I/O上界后余3530.67CPU/875.20wall秒/2094095462bytes；最多1个新6CPU/12GB任务，0GPU，临时128MiB/最终20MB。本轮未执行，不按结果改cap/换源/删难例，不报有利部分，不自动模型或生产。目标交全分母、完整native/身份闭合、两端点或精确无支持原因、r/u signed分解、固定500抽样与实际资源。真实系统/独立确认及原1.05/1.01/1.03、八层三尾+2pp仍未交付；历史§1–73保持。

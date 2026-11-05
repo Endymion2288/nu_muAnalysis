@@ -2317,3 +2317,18 @@ G0保留所有有效名义MC切选，仅去reco pz0>50；保留truth νpz>50、f
 下一次调用在同一Stage112完成≤40真实QA和六文件测量，单Condor6CPU/12GB、6worker内线程1/0GPU、CPU≤3600s/wall≤900s、接口≤2GiB/临时128MiB/最终20MB；每源≤20000、合计≤120000父entry，真实QA和完整basket元数据factor3加reserve准入，不截有利前缀。已知test-key仅身份隔离计数，不读test-only源/预测或测试风险，原Stage87角色/隔离/全部K不改。效应为零或反向同样完成机制检验；缺输入/闭合/资源失败交具体缺口，不续metadata阶段或改预算循环。
 
 Stage112本轮未执行；不自动训练/改cut/扩样本/提交生产/晋升。新测量仅为选择组成、响应与未来双侧支持提供定量依据，不能独自解释模型低能失败或认证50GeV背景。原1.05/1.01/1.03与八层三向tail差direct上95≤+2pp、真实response/interaction/FSI/材料/Calo/接受度/背景和独立确认要求保持。[当前Prompt](nu_mu_energy_ml_next_step_prompt.md)改为这个具体实验；历史§1–92及Stage54五资产/后缀保持。
+
+
+## 94. stage112：36例原生选择QA通过，冻结外推拒绝；完整物理端点仍未测
+
+[Stage112实际报告](../workbook/2026-11-05_stage112_selection-response-audit.md)执行§93的六源有界实验。六个精确π/K/charm×历史train/cal来源不换；ROOT metadata各10000、合60000父entry，67必要branch齐全。固定≤40真实QA按原规则去重为**36条（5/5/5/5/8/8）**，不是40条实测；20项有效native MC cuts/累积cutflow与独立掩码逐例相同、leading身份一致、pz差0GeV、truthE相对1e−12通过。空轨迹/空truth保行、多主μ未知、错长拒绝、typed−999/−1/NaN/uint-wrap和合法signed负值/charge sign、fallback−1234控制语义通过。未改cut/模型/角色/K政策，0fit/forward/test风险。
+
+QA发现4个(source,cut)的非负域invalid而native reduced<30pC单项pass：55:164的VetoNu0/1各1、55:67的VetoNu1一、55:116的VetoNu0一。不是四个独立incoming或四个最终S50；具体值/status/最终去向和全池发生率未保留/未测，不能说这是模型低能问题原因，也不能先删事件/换cut。模型typed清洗与native选择是不同路径，后续完整影子审计仍必要。
+
+第一次Condor9668058在uproot mktree把数组当类型的API错误处退出，任何native/准入/主端点前；写launch_amendment后修为显式schema再extend，最多两次提交且不增总预算。补跑9668059首start/exit0，QA后按冻结公式**admittedFalse**，无第三次提交/全量读取/统计。小批decode0.179–0.265CPU秒/5–8行被按N/n1250–2000线性放大，factor3+reserve投影14665.550938CPU/3371.318452wall秒>3600/900；字节投影411896777<2GiB。固定Python/Awkward调用开销并没有全批线性成本依据，这不是实测全量耗时或计算下界；本阶段拒绝历史不改写。
+
+两GNU外层CPU8.09+61.24=69.33秒、wall6.32+18.48=24.80秒，峰RSS79080/625752KiB（非整棵树并发总峰，后者未测）。两次均6CPU、descriptor12GB、站点18GB/0GPU、六worker内线程1；native嵌套时间不再相加。补跑接口实际28043817bytes；首次实际counter未保留，以同确定QA工作流前缀的完整重放25344369bytes作保守上界，合53388186bytes<2GiB，非物理网络测量。失败记录与成本保留；16/17输入原字节运输核验后去重，必要日志在~/condor/nu_muAnalysis/stage112/。Stage54五资产/后缀和其他项目作业不动。
+
+**Stage112完成QA和原冻结stop，未完成科学测量。** 两低能主端点/选择富集/r-u全分解、完整八层/三尾/500抽样、实际角色白名单联结与完整native成员闭合均未测，不以源码已写代替交付；项目能量目标仍未达。原1.05/1.01/1.03、八层三向tail差direct上95≤+2pp、真实response/系统/独立确认不变。
+
+为持续推进这项测量的下一步另冻[Stage113执行合同](../workbook/stage112_energy_ml/next_execution_contract.json)，**Stage112结束时尚未执行**。科学问题/六源/原角色K/端点/权重/500共同抽样完全保持，复用已经通过的36例QA，不续metadata/小批计时阶段；只把无完整批次依据的逐事件CPU外推准入，改为一次完整60000父entry的实际累计进程树CPU/wall watchdog与共享pre-read cap。与112共用原3600CPU/900任务wall秒/2GiB总预算，先扣69.33/24.80秒与53388186bytes上界，余3530.67CPU/875.20wall秒/2094095462bytes；最多一个新6CPU/12GB任务、内线程1/0GPU/临时128MiB/最终20MB。实际达cap、身份/native不闭合就交完整缺项，不报有利来源前缀、不扩预算或训练；结果为零/反向也交付。必须完成split白名单隔离和原八层/invalid影子审计，并留紧凑异常值/status/S50去向，不能根据异常删除困难者。详见[当前交接](nu_mu_energy_ml_next_step_prompt.md)；历史§1–93保持。

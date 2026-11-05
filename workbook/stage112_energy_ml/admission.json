@@ -1,0 +1,47 @@
+{
+  "CPU_s": 14665.550937670252,
+  "wall_s": 3371.318451762783,
+  "requested_bytes": 411896777,
+  "per_source": [
+    {
+      "source": "55:4",
+      "CPU_s": 732.5980053157324,
+      "wall_s": 735.2080053157323,
+      "bytes": 12364294
+    },
+    {
+      "source": "55:164",
+      "CPU_s": 973.9441859249017,
+      "wall_s": 976.0741859249017,
+      "bytes": 12295687
+    },
+    {
+      "source": "55:84",
+      "CPU_s": 907.7200899475114,
+      "wall_s": 910.4800899475114,
+      "bytes": 12583120
+    },
+    {
+      "source": "55:67",
+      "CPU_s": 1079.3861505875943,
+      "wall_s": 1081.6661505875943,
+      "bytes": 12601975
+    },
+    {
+      "source": "55:116",
+      "CPU_s": 570.5833889703399,
+      "wall_s": 572.74338897034,
+      "bytes": 12434743
+    },
+    {
+      "source": "55:118",
+      "CPU_s": 521.5884918106714,
+      "wall_s": 523.7684918106714,
+      "bytes": 12483802
+    }
+  ],
+  "full_parent_entries": 60000,
+  "measured_QA_CPU_s": 58.603247092,
+  "note": "fixed native setup plus complete compressed baskets and twice measured per-row decode (Python and native); input-byte envelope: source baskets + twice baskets for local native reads +1MiB/source, all factor3 plus frozen reserves; not QA-byte linear scaling; physical network not measured",
+  "admitted": false
+}

@@ -1,0 +1,160 @@
+{
+  "retained": [
+    {
+      "path": "AnalysisZipFramework/submission/ml_stage112.sub",
+      "bytes": 678
+    },
+    {
+      "path": "AnalysisZipFramework/submission/run_ml_stage112.sh",
+      "bytes": 1161
+    },
+    {
+      "path": "ml/package_stage112.py",
+      "bytes": 3278
+    },
+    {
+      "path": "ml/stage112_audit.py",
+      "bytes": 21095
+    },
+    {
+      "path": "ml/stage112_selection.py",
+      "bytes": 9370
+    },
+    {
+      "path": "ml/stage112_statistics.py",
+      "bytes": 15190
+    },
+    {
+      "path": "workbook/2026-11-05_stage112_selection-response-audit.md",
+      "bytes": 12592
+    },
+    {
+      "path": "workbook/stage112_energy_ml/55_116_QA_native.log",
+      "bytes": 13418
+    },
+    {
+      "path": "workbook/stage112_energy_ml/55_118_QA_native.log",
+      "bytes": 13415
+    },
+    {
+      "path": "workbook/stage112_energy_ml/55_164_QA_native.log",
+      "bytes": 13411
+    },
+    {
+      "path": "workbook/stage112_energy_ml/55_4_QA_native.log",
+      "bytes": 13415
+    },
+    {
+      "path": "workbook/stage112_energy_ml/55_67_QA_native.log",
+      "bytes": 13410
+    },
+    {
+      "path": "workbook/stage112_energy_ml/55_84_QA_native.log",
+      "bytes": 13411
+    },
+    {
+      "path": "workbook/stage112_energy_ml/QA.json",
+      "bytes": 73241
+    },
+    {
+      "path": "workbook/stage112_energy_ml/admission.json",
+      "bytes": 1298
+    },
+    {
+      "path": "workbook/stage112_energy_ml/attempt1_condor.json",
+      "bytes": 440
+    },
+    {
+      "path": "workbook/stage112_energy_ml/attempt1_failure.json",
+      "bytes": 3407
+    },
+    {
+      "path": "workbook/stage112_energy_ml/attempt1_package.json",
+      "bytes": 892
+    },
+    {
+      "path": "workbook/stage112_energy_ml/attempt1_time.txt",
+      "bytes": 835
+    },
+    {
+      "path": "workbook/stage112_energy_ml/attempt1_transport_validation.json",
+      "bytes": 115
+    },
+    {
+      "path": "workbook/stage112_energy_ml/complete.json",
+      "bytes": 86
+    },
+    {
+      "path": "workbook/stage112_energy_ml/completion_audit.tsv",
+      "bytes": 2431
+    },
+    {
+      "path": "workbook/stage112_energy_ml/condor_history.json",
+      "bytes": 473
+    },
+    {
+      "path": "workbook/stage112_energy_ml/document_validation.json",
+      "bytes": 943
+    },
+    {
+      "path": "workbook/stage112_energy_ml/launch_amendment.json",
+      "bytes": 1262
+    },
+    {
+      "path": "workbook/stage112_energy_ml/next_execution_contract.json",
+      "bytes": 3633
+    },
+    {
+      "path": "workbook/stage112_energy_ml/package.json",
+      "bytes": 949
+    },
+    {
+      "path": "workbook/stage112_energy_ml/protocol.json",
+      "bytes": 12232
+    },
+    {
+      "path": "workbook/stage112_energy_ml/qa_manifest.json",
+      "bytes": 1048
+    },
+    {
+      "path": "workbook/stage112_energy_ml/qa_sources.tsv",
+      "bytes": 494
+    },
+    {
+      "path": "workbook/stage112_energy_ml/resources.json",
+      "bytes": 1696
+    },
+    {
+      "path": "workbook/stage112_energy_ml/submission.json",
+      "bytes": 642
+    },
+    {
+      "path": "workbook/stage112_energy_ml/time.txt",
+      "bytes": 808
+    },
+    {
+      "path": "workbook/stage112_energy_ml/transport_validation.json",
+      "bytes": 116
+    },
+    {
+      "path": "workbook/stage112_energy_ml/validate.py",
+      "bytes": 7011
+    }
+  ],
+  "retained_bytes_excluding_inventory": 257896,
+  "maximum_final_bytes": 20971520,
+  "removed_after_transport_validation": [
+    {
+      "path": "software/energy-ml-stage112.tar.gz",
+      "bytes": 2233501
+    },
+    {
+      "path": "ntuples/energy_ml_stage112/result.tar.gz",
+      "bytes": 20690
+    }
+  ],
+  "first_attempt_archives": "overwritten by corrective attempt after original16-file transport byte validation; compact failure/time/package/history retained",
+  "QA_ROOT_and_syscall_traces": "temporary worker context, removed on completion; no event cache retained",
+  "spool": "~/condor/nu_muAnalysis/stage112; necessary compact worker and two-job logs retained",
+  "other_projects_and_stage54": "untouched"
+}

@@ -1,0 +1,14 @@
+item	status	evidence	artifact	limitation
+six_source_schema_entries	complete	6 sources ×10000 saved PHYS entries,67 required branches	QA.json	entry counts are metadata, not full event extraction
+fixed_QA_native_masks_units	complete	36 actual entries≤40,20 masks/source,0 native-independent differences,pz difference0GeV	QA.json	QA convenience identities are not selection efficiency denominator
+synthetic_empty_typed_values	complete	empty/multiple/alignment/NaN/-999/-1/unsigned wrap/signed/control checks pass	QA.json	does not certify all real placeholder conventions
+real_invalid_native_pass	partial	4 source-cut counts of invalid reduced charge pass upper cut	QA.json	not four independent events or four final S50; values/status/final membership unmeasured
+first_launch_API_failure	corrected	9668058 exit1; explicit mktree schema+extend passes9668059	launch_amendment.json	two submissions rather than originally one; all costs retained
+frozen_resource_admission	finished_rejected	CPU14665.550938s/wall3371.318452s exceed3600s/900s	admission.json	estimate not actual full cost; fixed Awkward call overhead scaled byN/n
+whole_parent_native_identity	unmeasured	full60000 native membership,split whitelist/quarantine/weights not run	complete.json	no identity payload fields read this turn
+two_primary_physics_endpoints	unmeasured	E50_100/E100_200 six-source traditional MSE changes not measured	complete.json	not a physical negative result
+full_decomposition_risk_bootstrap	unmeasured	r/u full signed terms,original8layers/3tails,500incoming draws not run	complete.json	statistics source written but full path not executed
+new_model_fits_forwards	not_performed	0 fits,0 forwards,0 cut/role changes,0 promotion	complete.json	no new energy performance evidence
+external_resource_accounting	complete_with_IO_bound	69.33CPU s/24.80task wall s;53388186byte conditional interface upper bound	resources.json	first exact counter and physical network unmeasured; nested times not added
+next_full_measurement_contract	frozen_not_executed	Stage113 one actual monitored full run; same science and combined original budgets	next_execution_contract.json	no new metadata/timing stage or automatic training
+final_project_physics_goal	not_achieved	original joint lowE/traditional,direct/protected tails and real systems/independent confirmation remain	../stage110_energy_ml/decision.json	current resource stop does not establish information bound

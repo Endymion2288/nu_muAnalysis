@@ -1,0 +1,238 @@
+{
+  "stage": 112,
+  "frozen_utc": "2026-11-05T10:29:12.951945+00:00",
+  "starting_commit": "1cf3ade8d4fb36ea0ff5549137252e452e4c84eb",
+  "user_authority": "用户按最新路线图要求推进下一阶段；执行Stage111冻结的Stage112，保持科学合同和资源上限",
+  "scientific_contract": {
+    "stage": 112,
+    "design_stage": 111,
+    "status": "frozen_design_not_executed",
+    "authority": "用户：没有新输入，请重新研究并制定下一实验；本轮研究设计，不执行Stage112",
+    "question": "How does the reconstructed pz0>50 GeV requirement, with all other nominal MC cuts held fixed, change traditional low-energy risk, truth transfer and longitudinal muon response in six saved PHYS parents?",
+    "source_manifest": "workbook/stage111_energy_ml/source_manifest.json",
+    "no_source_replacement": true,
+    "maximum_sources": 6,
+    "scope_limits": [
+      "saved reconstructed PHYS denominator only; no generator/transport acceptance",
+      "convenience sources from historical QA; no population representativeness claim",
+      "selection composition is not proof of a changed conditional at fixed full observables",
+      "no new fit, forward, offset, test prediction, source production, threshold optimization or promotion"
+    ],
+    "selection": {
+      "nominal_cuts": "AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+      "definitions": [
+        "AnalysisZipFramework/config/definitions.yaml",
+        "AnalysisZipFramework/config/ml_definitions.yaml"
+      ],
+      "typed_model_rules": "ml/configs/audited_features.json",
+      "G0": "all effective nominal MC cuts except LeadTrack_pz0>50; retain truth_pz_nu>50 and all fitted-charge, quality, geometry, effective requires cuts",
+      "Gplus": "G0 and finite pz0>0 and finite E_nu>0",
+      "S50": "G0 and LeadTrack_pz0>50; separately identify defined-error subset",
+      "S100": "G0 and LeadTrack_pz0>100; descriptive historical reference only",
+      "invalid_policy": "keep full native cutflow, independent cut fail/unknown counts and invalid-but-native-pass shadow counts; do not silently change nominal selection",
+      "raw_charge_policy": "models retain raw11/status; audit legacy fitted-charge cuts without changing thresholds or swapping to raw",
+      "no_track_or_unknown_truth": "one parent entry one record, explicit undefined/missing; never zero-impute or flatten away",
+      "fallback_minus1234": "intentional no-fallback-needed control value, not physical charge corruption",
+      "signed_negatives": "apply typed rules in declared units; retain legitimate negative raw readings, charge sign and module_eta; unknown conventions remain unknown",
+      "truth_out_of_domain": "retain and count E_mu/E_nu outside (0,1] or y outside [0,1); do not clip or silently redefine valid primary",
+      "leading": "highest reconstructed pz0, never truth-matched substitute"
+    },
+    "identity": {
+      "reference": "ntuples/energy_ml_stage87/split.npz",
+      "allowlist": [
+        "incoming",
+        "role",
+        "initial_role",
+        "origin",
+        "source",
+        "group",
+        "run",
+        "eventID"
+      ],
+      "incoming_key": "exact native (truth_pdg[0],truth_px[0],truth_py[0],truth_pz[0]) in MeV; proxy, not independent generator genealogy",
+      "priority": "test>cal>train; all known test-key parent views isolated from primary development contrast but counted in full parent cutflow",
+      "other_collisions": "retain original per-row quarantine where linked; count role collisions separately; never overwrite known role by source label",
+      "new_parent_entries": "diagnostic-only, no insertion in existing train/cal/test",
+      "join": "source+input_entry with checked native run/event, not global eventID",
+      "no_test_only_files_or_risks": true
+    },
+    "estimand": {
+      "traditional": "Ehat=pz0/0.8, fixed without refit",
+      "primary_truth_E_GeV": [
+        [
+          50,
+          100
+        ],
+        [
+          100,
+          200
+        ]
+      ],
+      "truth_bin_convention": "lower inclusive, upper exclusive",
+      "primary": "for each E bin: mean of six per-source [weighted MSE(log(Ehat/E_nu)) in (S50 intersect Gplus) minus that in Gplus]",
+      "primary_units": "squared natural-log energy error",
+      "weights": "within each source, each eligible incoming total parent-view weight1; freeze before Gplus/S50; source means combined with fixed1/6 each",
+      "undefined": "if either arm in any source lacks support, that six-source endpoint is not estimable; no drop-and-renormalize",
+      "support": [
+        "raw records",
+        "incoming keys",
+        "weight sum",
+        "ESS=(sum w)^2/sum(w^2)",
+        "primary-valid",
+        "confirmed",
+        "undefined"
+      ],
+      "secondary": [
+        "per-source and equal-source risk",
+        "record-weighted control",
+        "fixed S100",
+        "RMSE",
+        "median/mean relative bias",
+        "R68=(q84-q16)/2 of relative error",
+        "total/positive/negative tail50: abs(Ehat/E_nu-1)>0.5, >0.5, <-0.5",
+        "y_lepton and y<0.2",
+        "primary muon valid and leading confirmed fractions",
+        "vertex z/radius, pz and response",
+        "full parent and independent-cut fail/unknown counts"
+      ],
+      "decomposition": {
+        "population": "same subsets restricted to unique valid primary and finite positive E_mu_vertex; report counts excluded from decomposition but retained in primary risk",
+        "r": "ln(pz0/E_mu_vertex)",
+        "u": "ln(E_mu_vertex/E_nu)",
+        "c": "ln(0.8)",
+        "identity": "e=r+u-c",
+        "MSE_terms": [
+          "mean(r*r)",
+          "mean(u*u)",
+          "c*c",
+          "2*mean(r*u)",
+          "-2*c*mean(r)",
+          "-2*c*mean(u)"
+        ],
+        "interpretation": "r includes angle, material, reference-plane differences and wrong-leading effects, not pure tracker resolution",
+        "truth_definition": "same signed PDG/vertex definition as frozen_evaluation.truth_diagnostics: unique muon at incoming neutrino decay vertex within0.0001mm in each axis; barcode and parent barcode/PDG for leading confirmation; empty/multiple/misaligned explicit unknown"
+      },
+      "fixed_diagnostics": {
+        "truth_E_edges_GeV": [
+          50,
+          100,
+          200,
+          400,
+          800,
+          1600,
+          3200,
+          "infinity"
+        ],
+        "reco_positive_pz_bins_GeV": [
+          "(0,50]",
+          "(50,100]",
+          "(100,200]",
+          "(200,infinity)"
+        ],
+        "legacy_layers": "retain original eight strict mask definitions as additional table, not rebinned substitutes",
+        "unknown": "no leading, invalid pz, primary missing/multiple, unmatched, typed invalid, aux unavailable, nonphysical truth quantities all explicit"
+      }
+    },
+    "uncertainty": {
+      "method": "incoming-cluster Poisson(1) multiplier bootstrap; common key multiplier across sources and both arms, fixed source/view weights",
+      "draws": 500,
+      "seed": 2026110512,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "minimum_valid_draws": 475,
+      "invalid_draws": "count; no redraw-until-success; omit interval when below minimum",
+      "scope": "conditional on six fixed PHYS sources; no source/refit/research-selection/systematic/new-blind certification",
+      "two_primary_bins": "both reported without selecting the favorable one; descriptive intervals not model promotion tests"
+    },
+    "QA": {
+      "real_entries": "first4 entries per source (24), then at most16 original Stage105 records belonging to six sources sorted by row; deduplicate without replacement",
+      "maximum": 40,
+      "synthetic": [
+        "empty tracks",
+        "empty truth",
+        "multiple primary muons",
+        "misaligned vectors",
+        "-999",
+        "typed invalid -1",
+        "NaN",
+        "uint32 wrap",
+        "valid signed negatives",
+        "fallback control -1234"
+      ],
+      "checks": [
+        "native source/entry/run/event integrity",
+        "highest-pz leading identity",
+        "effective requires, aux and calibration configuration",
+        "complete native S50 membership equals independent masks",
+        "cached S50 intersection preserved; do not assume cache equals entire parent selection",
+        "all masks and invalid counts conserve full denominator",
+        "no test-key inclusion in primary",
+        "frozen weights before selection"
+      ],
+      "pz_difference_GeV": 0,
+      "truth_energy_rtol": 1e-12,
+      "event_decomposition_atol": 1e-12,
+      "aggregate_decomposition_atol": 1e-10,
+      "before_full_run": "check full six-file schema/entries and actual QA byte/timing/basket projection; no numerical outcome-based admission"
+    },
+    "resources": {
+      "backend": "HTCondor",
+      "spool": "~/condor/nu_muAnalysis/stage112/",
+      "maximum_jobs": 1,
+      "request_cpus": 6,
+      "request_memory_MB": 12000,
+      "workers": 6,
+      "inner_threads": 1,
+      "request_gpus": 0,
+      "max_entries_per_source": 20000,
+      "max_total_parent_entries": 120000,
+      "max_CPU_s": 3600,
+      "max_wall_s": 900,
+      "max_interface_requested_bytes": 2147483648,
+      "max_temporary_bytes": 134217728,
+      "max_final_bytes": 20971520,
+      "projection": "factor3 using measured QA and complete branch/basket and entry metadata, plus reserves; do not scale40-entry bytes as physical flux",
+      "reserve_CPU_s": 300,
+      "reserve_wall_s": 120,
+      "reserve_interface_bytes": 134217728,
+      "accounting": "external GNU CPU/wall/RSS, per-worker diagnostics, interface bytes and available ROOT bytes; do not add nested timing; physical network unmeasured unless instrumented",
+      "IO": "read only scalar/truth/leading-match branches; reuse baskets; stream compact scalar aggregates; no spacepoint/waveform/xAOD copies; delete temporary ROOT, row tables and transport duplicates"
+    },
+    "acceptance": [
+      "all six sources and original roles/K/invalid/tails accounted for",
+      "native selection and exact identity closure pass",
+      "both primary endpoints or exact non-estimability reasons reported",
+      "decomposition closes with signed cross terms and population counts",
+      "all fixed support/risk/uncertainty/resource tables delivered",
+      "zero or adverse mechanism effect still completes scientific test"
+    ],
+    "stop": [
+      "unavailable fixed source/schema/aux or inconsistent native selection: report precise missing item; no replacement",
+      "entries/resource admission fails: do not prefix truncate, enlarge budgets or start repeated QA loop",
+      "after one complete measurement: no automatic model, threshold, source or production follow-up"
+    ],
+    "final_project_gates_unchanged": {
+      "two_lowE_vs_traditional_upper95": 1.05,
+      "all_vs_direct_upper95": 1.01,
+      "other_five_vs_direct_upper95": 1.03,
+      "eight_layers_three_tail_deltas_vs_direct_upper95_pp": 2
+    },
+    "unmeasured": [
+      "source ROOT schema/entry count",
+      "preselection support/yield/efficiency",
+      "mechanism effect and statistical power",
+      "batch CPU/wall/RSS/throughput/interface and physical IO",
+      "new energy improvement",
+      "true response/systematic effects"
+    ]
+  },
+  "implementation": {
+    "native_reference": "existing build/analysis on type-preserving pruned local TTree containing all parent entries; unchanged relevant YAML definitions dependency closure; original nominal cuts and native reduced charge; no SP/waveform reads",
+    "source_IO": "monitored exact-range cache; source requested/underlying bytes distinct; native local input syscalls counted with strace -s0",
+    "bootstrap": "single seed 2026110512; 500 common incoming Poisson multipliers; record-space and aggregated-key implementations cross checked",
+    "resource_projection": "factor3: native QA setup once + 2*per-row independent decode CPU extrapolation + full compressed-basket I/O throughput estimate; bytes envelope3*branch payload+1MiB per source then factor3, plus original reserves and already measured QA read bytes; no outcome-dependent admission"
+  },
+  "no_science_or_threshold_change": true
+}

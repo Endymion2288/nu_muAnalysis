@@ -1,0 +1,30 @@
+{
+  "cluster": 9668058,
+  "proc": 0,
+  "submitted_utc": "2026-11-05T10:31:05.623285+00:00",
+  "request_cpus": 6,
+  "request_memory_MB": 12000,
+  "max_runtime_s": 900,
+  "max_retries": 0,
+  "spool": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage112",
+  "dry_run_verified": true,
+  "dry_run_fields": [
+    "Args",
+    "Iwd",
+    "RequestCpus",
+    "RequestMemory",
+    "MaxRuntime",
+    "TransferInput"
+  ],
+  "other_project_jobs_untouched": [
+    9668047,
+    9668048,
+    9668049,
+    9668050,
+    9668051
+  ],
+  "corrective_cluster": 9668059,
+  "submitted_jobs": 2,
+  "automatic_retries": 0,
+  "amendment": "launch_amendment.json"
+}

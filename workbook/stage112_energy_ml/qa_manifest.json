@@ -1,0 +1,73 @@
+{
+  "rule": "first4 entries/source + first16 Stage105 records from frozen six sources by row, deduplicate without replacement",
+  "sources": [
+    {
+      "source": "55:4",
+      "input_entries": [
+        0,
+        1,
+        2,
+        3,
+        1429
+      ]
+    },
+    {
+      "source": "55:164",
+      "input_entries": [
+        0,
+        1,
+        2,
+        3,
+        4968
+      ]
+    },
+    {
+      "source": "55:84",
+      "input_entries": [
+        0,
+        1,
+        2,
+        3,
+        8590
+      ]
+    },
+    {
+      "source": "55:67",
+      "input_entries": [
+        0,
+        1,
+        2,
+        3,
+        195
+      ]
+    },
+    {
+      "source": "55:116",
+      "input_entries": [
+        0,
+        1,
+        2,
+        3,
+        2758,
+        5257,
+        5643,
+        9876
+      ]
+    },
+    {
+      "source": "55:118",
+      "input_entries": [
+        0,
+        1,
+        2,
+        3,
+        1634,
+        2918,
+        5192,
+        9580
+      ]
+    }
+  ],
+  "entries": 36,
+  "test_only_sources": false
+}

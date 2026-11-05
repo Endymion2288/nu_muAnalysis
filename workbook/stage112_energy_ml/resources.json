@@ -1,0 +1,47 @@
+{
+  "scope": "two Condor task GNU external measurements; metadata accounting only, no local event calculations",
+  "attempts": [
+    {
+      "cluster": 9668058,
+      "CPU_s": 8.09,
+      "wall_s": 6.32,
+      "RSS_KiB": 79080,
+      "exit": 1,
+      "status": "uproot type API failure"
+    },
+    {
+      "cluster": 9668059,
+      "CPU_s": 61.24,
+      "wall_s": 18.48,
+      "RSS_KiB": 625752,
+      "exit": 0,
+      "status": "QA passed; frozen resource admission rejected"
+    }
+  ],
+  "total_CPU_s": 69.33,
+  "total_task_wall_s": 24.8,
+  "CPU_cap_s": 3600,
+  "wall_cap_s": 900,
+  "remaining_CPU_s": 3530.67,
+  "remaining_task_wall_s": 875.2,
+  "first_source_interface_actual": "unmeasured",
+  "first_source_interface_upper_bound_bytes": 25344369,
+  "second_task_source_and_native_interface_requested_bytes": 28043817,
+  "combined_source_and_native_requested_upper_bound_bytes": 53388186,
+  "source_and_native_cap_bytes": 2147483648,
+  "second_QA_source_underlying_read_bytes": 6867600,
+  "second_QA_native_local_returned_bytes": 1946701,
+  "accounting_limit": "second tiny synthetic reread included in shared upper via admission arithmetic but its underlying bytes counter was not separately retained; first bound uses identical deterministic QA prefix, not actual measurement",
+  "physical_network_IO": "unmeasured",
+  "single_core_speedup": "unmeasured",
+  "whole_session_CPU": "unmeasured",
+  "native_timing_nested_do_not_add": true,
+  "client_request_CPUs": 6,
+  "client_request_memory_MB": 12000,
+  "site_request_and_allocation_memory_MB": 18000,
+  "real_QA_entries": 36,
+  "real_QA_limit": 40,
+  "full_parent_metadata_entries": 60000,
+  "physics_endpoints": "unmeasured",
+  "GPU": 0
+}
