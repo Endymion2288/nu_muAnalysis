@@ -2270,3 +2270,18 @@ B/A有局部取舍：开发test两低能.941363 [.912611,.965639]/.972888 [.9574
 五包534/546/550/571/583文件收集字节核验；传输/坐标/重复点表去重，保留三checkpoint和一个紧凑最终点表、曲线/风险/图，≤20MB见storage。中文报告/本地commit，Stage54五项/Prompt后缀不变。
 
 **本固定关系＋遮挡方案结束，不自动Stage109或seed/深宽/任务/正则网格。** [完成审计](../workbook/stage108_energy_ml/completion_audit.tsv)现在把三格实验/完整风险记为完成、有数据阴性；最终低能/困难/尾未达、真实response/interaction/FSI/材料/Calo/接受度/背景及新独立支持/locked确认仍未交付，整体目标不标complete。后续需具体可交付输入或明确另冻科学问题，原1.05/1.01/1.03与八层相对direct三向tail上95≤2pp不变；不凭训练过拟合迹象或几例离群断言唯一原因。见[Prompt](nu_mu_energy_ml_next_step_prompt.md)，历史§1–89保持。
+
+
+## 91. stage109：关系结果之后，保留强BDT并转向歧义两侧的支持
+
+[Stage109研究复盘](../workbook/2026-11-05_stage109_research-after-relation-results.md)只读Stage104–108、旧机制结果及已存TSV/源码，检索primary论文；0训练/事件或head载荷/forward/ROOT/作业/SHA。新增[46项原值证据](../workbook/stage109_energy_ml/evidence.tsv)。用户新的研究请求覆盖§90仅交接安排，旧完整三格/遮挡任务和固定q动作仍结束，不重做或自动追加网格。
+
+Stage104最低能test从.276027降至.219374，却在同低pz真高E从.671125增至.694919；cal_select困难保护活跃、λ未碰上界，主两低能共同增量未支持。Stage108 C/A主cal_post最坏比1.085532 [1.053996,1.151242]，计数预训练降loss却损伤低能；raw C/B也退步，不只offset。B/A test两低能有局部下降而cal_post区间含1、困难侧变差。修正Stage103建议：不立即再投计数遮挡或扩大架构，亦不宣称关系/预训练信息界。
+
+新问题是：Stage108 A/B都从头重学标量映射、总体弱于强BDT，已有A→B功能方向能否补足保留的强基线？拟Stage110只用已保存点表，fα=f0+α·available·(B_raw−A_raw)，f0为Stage87 direct_cal、α∈[0,1]。0新网络/forward/ROOT/offset/概率产品。缺几何和α0逐位返回原f0，全部事件保留。差含关系、标量重学习和优化，不能当纯几何因果效应；与旧专家组合有关，但系数(1,α,−α)及新全点对照不同于Stage78的旧simplex，不包装成全新范式。
+
+原cal_select每层R(α)=C+2αD+α²A，最小化两低能各自相对f0风险的最大值；all/其他五层对f0的1.01/1.03开发保护，解析求可行区间及有限端点/顶点/交点，不用优化器或网格。主cal_post两低能新/f0最坏RMSE比的条件上95<1；固定α后完整cal/test旧八层风险与三向尾，原最终对传统/direct要求不改。拟≤40cal QA后同阶段一次4CPU/6GB批任务、线程1、CPU/wall≤900秒/紧凑20MB，新收益/成本/功效未测；缺缓存交准确缺项，不复跑模型。阴性结束一维方向，阳性只支持另冻混合残差学习，不自动训练/晋升，见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+长期主要投入改为按(Eν、transfer、z/材料/几何)覆盖低能/过渡/同低pz真高E的独立支持，保留自然谱/高端控制、已知提议概率/ESS及选择失败分母，先pilot真实产额而非随机扩K。配套真实同末态读出变体与匹配初态的generator比较，分别识别response与interaction，不能把两者混成等末态或正式1σ；新生产保留measurement/cluster/SP紧凑引用，不恢复已删scratch。
+
+文献借BGNN/GrowNet的强表格与关系分工，而非直接迁移节点任务；FASERCal语义标签/回归目标与当前任务不同；2026材料效应论文提示末态与非线性读出的交互，不外推其MeV数值。当前没有新增响应/生产或未开发locked确认；历史§1–90、Stage54后缀/资产、全部K和1.05/1.01/1.03及八层三向tail≤+2pp保持，条件区间不认证source/refit/研究选择/系统。

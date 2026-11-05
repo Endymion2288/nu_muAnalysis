@@ -1308,3 +1308,14 @@ GPU Condor0start后转已授权Kubeflow，首QA目录保存失败/0optimizer，�
 完整cal/post/test原500incoming统计，840旧标量max0；主区间独立差2.220446e−16、192gate区间max4.440892e−15。实际独立CPU2774.638062秒包含一次误重复train提取1029.268536秒（submit宏默认覆盖，`-append`修正、无重训），连106/107共2810.686772<21600。GPUfit Pod终态GC，精确容器/CPU/内存未保留，按Job693秒保守计；infer22秒，含旧阶段共734<10800。supervised记录峰5204.972656MiB非wholefit绝对峰；物理流量/全会话/GPUbusy未测。字节核验去重后保留三head和一紧凑点表/曲线/风险/图，≤20MB，Stage54保持。
 
 这笔预算已真正买到三格能量比较及有限负结论，固定方案结束；不再列“尚无三格风险”为当前缺口，也不自动追加seed/深宽/遮挡任务/正则。原最终1.05/1.01/1.03与八层相对direct三尾+2pp、真实系统和独立确认仍未达，[完成审计](../workbook/stage108_energy_ml/completion_audit.tsv)保留整体未完成。下一步需真实独立低能/过渡及同pz高E支持/谱系提议密度、实际DAQ/quiet、incoming可联结的interaction/FSI/材料/Calo/接受度/背景变体和locked来源；旧重分/模板/条件活动不能替代。不重写无限计划或恢复无新线索metadata链。历史§1–69/Stage54后缀不改。
+
+
+## 71. stage109：先测强基线上的已有功能方向，新增模拟预算按歧义设计
+
+[Stage109报告](../workbook/2026-11-05_stage109_research-after-relation-results.md)完成最新复盘及primary文献研究，0事件/模型载荷/训练/forward/ROOT/作业/SHA；[46项证据](../workbook/stage109_energy_ml/evidence.tsv)全部原值复制。新的用户研究请求覆盖§70仅交接优先级，不重开Stage108遮挡/三格或Stage104权重族。
+
+已购买结果：固定q动作在最低能有收益、困难侧受损；Stage108全15317515点及三格已完整运行，主C/A共同低能失败，计数预训练不能以降loss续预算。A/B/C总体均弱于强BDT，现有实验尚未隔离保留强基线后的增量。
+
+拟Stage110唯一一维方向：原Stage87 direct_cal + α·geometry_available·(Stage108 B_raw−A_raw)，α[0,1]、无新offset，α0/缺几何逐位回原点。只读持久预测与原身份/cal分区，不读checkpoint或SP；差不是纯几何或正交残差，与旧组合的联系如实记录。cal_select风险三系数C/D/A，解析约束区间+两二次上包络候选点求全局最小；两低能各自相对f0的最坏风险，all/其他五层保护1.01/1.03，原最终传统/direct门槛不改。cal_post主最坏两低能比条件上95<1，完整旧cal/test八层/尾无择优。≤40cal QA后1个4CPU/6GB任务、线程1、CPU/wall各≤900秒、最终20MB为拟议上限，新收益/实耗未测；输入缺失不forward补齐。一次结果直接交付，阴性结束该方向，阳性不自动训练，详见[Prompt](nu_mu_energy_ml_next_step_prompt.md)。
+
+更大投入留给E/transfer/z的双侧独立模拟支持及实际选择产额，记录提议密度/纳入概率/ESS，原自然谱与高端/困难对照和新locked来源保留。按同末态读出与匹配初态generator两种配对隔离机制；真实scale/mask/无偏控制没有时，不先训练nuisance去相关或随意drop hit。新生产携带紧凑cluster/SP组成引用，比寻找已删REC有信息价值。外部BGNN/GrowNet、主动模拟及材料效应论文不提供本项目收益/预算保证。历史§1–70/Stage54及全部K政策保留，当前真实response/interaction/FSI/材料/Calo/接受度/背景、source/refit/研究选择和独立确认仍未认证。
