@@ -1,0 +1,20 @@
+{
+  "arm": "OOF_stratified",
+  "chosen_trees": 4,
+  "candidates": [
+    {
+      "trees": 4,
+      "violation": 0.0038504696928272075,
+      "low_max": 1.6131339017260473,
+      "solve_ref": "OOF_stratified_dev4_solve.json"
+    },
+    {
+      "trees": 8,
+      "violation": 0.012642289567730725,
+      "low_max": 1.5477232305874975,
+      "solve_ref": "OOF_stratified_dev8_solve.json"
+    }
+  ],
+  "source_only_train_development": true,
+  "external_data_used": false
+}

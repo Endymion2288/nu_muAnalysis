@@ -1,0 +1,68 @@
+{
+  "stage": 117,
+  "scope": "Input gap for Stage116 physical work package B; no new production authorized/submitted in this stage",
+  "checked_exact_caches": "observability_cache_schema.json",
+  "existing_evidence": [
+    {
+      "path": "workbook/stage99_energy_ml/activity_contract.json",
+      "field": "association_fields",
+      "finding": "unique cluster/SP IDs, TSOS, constituents, active readout and fit covariance absent"
+    },
+    {
+      "path": "workbook/stage105_energy_ml/protocol.json",
+      "field": "branches",
+      "finding": "positions and track pz0 only, not particle lineage"
+    }
+  ],
+  "not_available_in_checked_caches": [
+    "sensitive energy deposits linked to G4 track/ancestor",
+    "primary-muon descendant versus non-muon energy-deposit tags",
+    "boundary crossings/escape directions and energies",
+    "independent generator/transport/replay family identity and inclusion probability for new pilot"
+  ],
+  "candidate_intermediate": {
+    "name": "nonmu_fraction_of_VetoNu_sensitive_deposit",
+    "status": "proposed, actual hit schema and volume mappings unverified",
+    "definition": "R=D_nonmu/(D_mu+D_nonmu) in the two actual VetoNu sensitive volumes; nonnegative deposited energies in MeV, no normalization by truth H/E",
+    "mu_lineage": "identified primary outgoing muon and all its G4 descendants, with parent ancestry; no track leading/confirmed/SP-distance proxy as truth",
+    "unknown": "unresolved ancestry/volume/deposit => unknown, zero denominator => separate no-deposition state; keep all events",
+    "limitation": "deposit composition is not total H visibility/efficiency, does not measure escaped or binding energy"
+  },
+  "required_delivery": {
+    "identity": [
+      "generator parent UUID",
+      "generation seed",
+      "G4 seed/replay family",
+      "digitization seed/replay family",
+      "source UUID and native entry",
+      "incoming key",
+      "frozen train/cal/confirmation role",
+      "selection denominator and proposal probability"
+    ],
+    "truth": [
+      "primary muon identity and complete ancestry flags",
+      "VetoNu0/1 exact volume IDs and deposited energy MeV by mu/nonmu/unresolved lineage",
+      "vertex xyz mm, region/material label",
+      "compact nonmu boundary energy/axis optional diagnostic, not required as oracle"
+    ],
+    "readout": "same pz0/raw11/reduced/signed/status/NaN and detector geometry/response semantics; no fitted fallback",
+    "support": [
+      "truth50-100 low transfer",
+      "truth100-200 transition",
+      "same reco pz50-100 and truth>=200/high-y",
+      "natural high end"
+    ],
+    "roles": "independent generator families and replay families fixed before reading outputs, original support not relabeled as independent",
+    "storage": "compact event summaries and ancestry aggregates, no retained xAOD"
+  },
+  "experiment": "one same-capacity oracle and deployable-proxy energy comparison; train-only source-held-out proxy fitting; matched no-privilege and shuffled-label controls if distillation used; all low-E/protection/tails and resources; no enlarging encoder until proxy energy increment",
+  "unmeasured": [
+    "new pilot selected yields",
+    "R coverage by role/energy/source",
+    "oracle energy gain",
+    "proxy prediction quality",
+    "proxy energy gain",
+    "new production CPU/event and I/O",
+    "system response and independent confirmation"
+  ]
+}

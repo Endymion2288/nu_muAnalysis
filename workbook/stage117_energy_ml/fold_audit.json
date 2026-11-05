@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "train_rows": 46575,
+  "train_connected_blocks": 3,
+  "source_groups": 91,
+  "source_and_incoming_disjoint_every_pair": true,
+  "nested_development_disjoint": true,
+  "all_original_train_rows_have_outer_validation": true,
+  "outer_validation_rows": [
+    14749,
+    15581,
+    16245
+  ],
+  "outer_fit_rows": [
+    27212,
+    26470,
+    25579
+  ],
+  "development_rows": 14749,
+  "discovery_rows": 27212,
+  "support_criterion": "each pair-side >=30 low50-100, >=100 low100-200; each component >=100 incoming and >=1 source",
+  "parent_scope": "canonical source group plus exact native incoming proxy; no new generator lineage family identity is present",
+  "target_used_for_assignment": false,
+  "weights": "recomputed within every fit/evaluation subset, sum1 per incoming",
+  "CPU_fits": 0,
+  "wall_s": 0.6291909366846085
+}

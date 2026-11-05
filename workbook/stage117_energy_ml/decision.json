@@ -1,0 +1,110 @@
+{
+  "primary": [
+    {
+      "candidate": "IS_ordinary",
+      "reference": "direct_cal",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 0.9939568795210487,
+      "low95": 0.9857907553429177,
+      "high95": 1.004276824238169,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 2.220446049250313e-16
+    },
+    {
+      "candidate": "IS_stratified",
+      "reference": "direct_cal",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 1.0271792712940828,
+      "low95": 1.006083305706152,
+      "high95": 1.0522449811430903,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 0.0
+    },
+    {
+      "candidate": "OOF_ordinary",
+      "reference": "direct_cal",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 1.0055084480909855,
+      "low95": 0.994871099399049,
+      "high95": 1.020584153032092,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 0.0
+    },
+    {
+      "candidate": "OOF_stratified",
+      "reference": "direct_cal",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 1.022397845061516,
+      "low95": 0.9992840274131566,
+      "high95": 1.04781644670155,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 4.440892098500626e-16
+    },
+    {
+      "candidate": "IS_stratified",
+      "reference": "IS_ordinary",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 1.0334243793242244,
+      "low95": 1.007186846692959,
+      "high95": 1.0638289828427232,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 2.220446049250313e-16
+    },
+    {
+      "candidate": "OOF_stratified",
+      "reference": "OOF_ordinary",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 1.0167968722715317,
+      "low95": 0.9923708019651427,
+      "high95": 1.0466330687147736,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 1.1102230246251565e-16
+    },
+    {
+      "candidate": "OOF_ordinary",
+      "reference": "IS_ordinary",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 1.0116218005106048,
+      "low95": 1.0028494411837787,
+      "high95": 1.032567121814249,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 2.220446049250313e-16
+    },
+    {
+      "candidate": "OOF_stratified",
+      "reference": "IS_stratified",
+      "role": "cal_post",
+      "statistic": "max of two low-energy RMSE ratios",
+      "point": 0.995345090807233,
+      "low95": 0.9635866929470404,
+      "high95": 1.0318177312440215,
+      "supported": false,
+      "valid_draws": 500,
+      "independent_interval_max_abs": 1.1102230246251565e-16
+    }
+  ],
+  "final_joint": {
+    "IS_ordinary": false,
+    "IS_stratified": false,
+    "OOF_ordinary": false,
+    "OOF_stratified": false
+  },
+  "risk_direction_increment_supported": false,
+  "primary_candidate": "OOF_stratified",
+  "promotion": false,
+  "interval_scope": "500 incoming-within-component conditional draws; excludes source/parent/refit/research-selection/real systems; developed cal/test, not blind"
+}

@@ -1,0 +1,9 @@
+candidate	reference	role	statistic	point	low95	high95	supported	valid_draws	independent_interval_max_abs
+IS_ordinary	direct_cal	cal_post	max of two low-energy RMSE ratios	0.9939568795210487	0.9857907553429177	1.004276824238169	False	500	2.220446049250313e-16
+IS_stratified	direct_cal	cal_post	max of two low-energy RMSE ratios	1.0271792712940828	1.006083305706152	1.0522449811430903	False	500	0.0
+OOF_ordinary	direct_cal	cal_post	max of two low-energy RMSE ratios	1.0055084480909855	0.994871099399049	1.020584153032092	False	500	0.0
+OOF_stratified	direct_cal	cal_post	max of two low-energy RMSE ratios	1.022397845061516	0.9992840274131566	1.04781644670155	False	500	4.440892098500626e-16
+IS_stratified	IS_ordinary	cal_post	max of two low-energy RMSE ratios	1.0334243793242244	1.007186846692959	1.0638289828427232	False	500	2.220446049250313e-16
+OOF_stratified	OOF_ordinary	cal_post	max of two low-energy RMSE ratios	1.0167968722715317	0.9923708019651427	1.0466330687147736	False	500	1.1102230246251565e-16
+OOF_ordinary	IS_ordinary	cal_post	max of two low-energy RMSE ratios	1.0116218005106048	1.0028494411837787	1.032567121814249	False	500	2.220446049250313e-16
+OOF_stratified	IS_stratified	cal_post	max of two low-energy RMSE ratios	0.995345090807233	0.9635866929470404	1.0318177312440215	False	500	1.1102230246251565e-16

@@ -1,0 +1,20 @@
+{
+  "arm": "OOF_ordinary",
+  "chosen_trees": 4,
+  "candidates": [
+    {
+      "trees": 4,
+      "violation": 0,
+      "low_max": 1.677955385450011,
+      "solve_ref": "OOF_ordinary_dev4_solve.json"
+    },
+    {
+      "trees": 8,
+      "violation": 0.017505381372941997,
+      "low_max": 1.604671827686715,
+      "solve_ref": "OOF_ordinary_dev8_solve.json"
+    }
+  ],
+  "source_only_train_development": true,
+  "external_data_used": false
+}

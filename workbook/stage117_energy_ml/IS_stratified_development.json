@@ -1,0 +1,20 @@
+{
+  "arm": "IS_stratified",
+  "chosen_trees": 4,
+  "candidates": [
+    {
+      "trees": 4,
+      "violation": 0.004279880807857853,
+      "low_max": 1.5643405145628446,
+      "solve_ref": "IS_stratified_dev4_solve.json"
+    },
+    {
+      "trees": 8,
+      "violation": 0.021078716631182548,
+      "low_max": 1.5136519709540643,
+      "solve_ref": "IS_stratified_dev8_solve.json"
+    }
+  ],
+  "source_only_train_development": true,
+  "external_data_used": false
+}

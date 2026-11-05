@@ -1,0 +1,77 @@
+{
+  "stage": 117,
+  "frozen_utc": "2026-11-05T13:06:32.337800+00:00",
+  "starting_commit": "5a811e7",
+  "authority": "User requests next stage under Stage116; authorized bounded cache method experiment A, no production B.",
+  "question": "Honest residuals and risk-aware direction discovery, matched 2x2 on original110 readout.",
+  "arms": [
+    "IS_ordinary",
+    "IS_stratified",
+    "OOF_ordinary",
+    "OOF_stratified"
+  ],
+  "folds": {
+    "seed": 2026110517,
+    "algorithm": "sorted component sources shuffled; round robin3; hold source fold and purge every matching incoming from fit; nested folds1/2 within purged outer0-fit",
+    "support": "each side >=30 low50-100 and >=100 low100-200, each component >=100 incoming and >=1 source",
+    "no_random_row_fallback": true,
+    "weights": "each subset sum1 per incoming; original final weights unchanged"
+  },
+  "baseline": {
+    "configuration": "Stage87 original62,3 seeds,400 rounds, original params; training-side mean log residual offset per ensemble",
+    "development": "outer0-fit in-sample and nested inner1/2 OOF; dev held source outer0",
+    "final": "saved full-train direct_raw with train-only offset vs actual three-fold OOF with fold-training-only offsets",
+    "deployment": "frozen original Stage87 direct_cal; no extra head offset; explicitly measure base distribution change",
+    "max_fold_models": 15
+  },
+  "direction": {
+    "trees": 8,
+    "capacity_candidates": [
+      4,
+      8
+    ],
+    "depth": 3,
+    "min_child_weight": 200,
+    "seed": 2026110517,
+    "params": "original eta.04 lambda10 subsample.8 hist nthread1",
+    "ordinary": "weighted residual MSE, initial correction0",
+    "stratified": "smoothmax of two MSE/traditional ratios T.1 +10*sum positive(protection normalized risk-limit)^2, including6 MSE and16 squared hinges; recompute group gradients at each round",
+    "curvature": "positive diagonal surrogate; drop nonlocal multiplier derivatives; gradient and Hessian rescaled together to total incoming weight each round"
+  },
+  "head": {
+    "method": "Stage115 RiskHead: min low-risk epigraph, all1.01 others1.03 and all8 two hinges; secondary min correction squared",
+    "solver": "2 SLSQP max250 ftol1e-10 per candidate, feasible normalized<=1e-7; approximate KKT, no certified global bound",
+    "maximum_head_solves": 24
+  },
+  "selection": {
+    "scope": "only held-source/incoming-purged outer0 inside original train",
+    "rule": "lexicographic maximum positive violation of six MSE ratios and24 actual tail differences+2pp; then max two low-E RMSE/traditional; then fewer trees",
+    "candidates_per_arm": 2,
+    "no_external_risk_before_lock": true,
+    "no_winner_across_arms": true
+  },
+  "mu_only": {
+    "models": 3,
+    "configuration": "original direct baseline parameters seeds rounds; input only original first14 track features plus q/p0,q/p1,bend_x,bend_y; same original train/weights",
+    "calibration": "one original cal mean log offset after model freeze, same as original direct; diagnostic attribution only"
+  },
+  "evaluation": {
+    "primary": "cal_post OOF_stratified/direct and OOF_stratified/OOF_ordinary max of two low-E ratios, upper95<1 both needed for supported improvement; all arms and factorial contrasts reported",
+    "bootstrap": "original500 incoming component draws seeds389/390; conditional developed evaluation, not blind",
+    "gates": "unchanged1.05/1.01/1.03 and all8 three actual tails upper95<=+2pp;1.05 noninferiority only",
+    "calibration": "median/mean relative bias,R68,tail amplitude, predictedE decile mean trueE/response; no posthoc offset for arms"
+  },
+  "resources": {
+    "probe_jobs": 1,
+    "formal_jobs": 1,
+    "probe_cpus": 2,
+    "formal_cpus": 8,
+    "memory_MB": 16000,
+    "CPU_total_s": 7200,
+    "wall_each_s": 3600,
+    "final_bytes": 20971520,
+    "GPU": 0,
+    "reason": "small hist trees and <=64leaf convex heads; process parallel CPU, no large dense GPU workload"
+  },
+  "stop": "exactly four arms plus fixed mu-only diagnostic, no test-driven variants; unsupported OOF reports exact limitation; no new ROOT, production or sample cut; all original roles,K and missing retained"
+}

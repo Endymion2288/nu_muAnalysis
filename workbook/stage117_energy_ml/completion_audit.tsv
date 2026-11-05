@@ -1,0 +1,13 @@
+requirement	result	evidence	limitation
+四臂同110输入与容量/保护	完成	protocol.json; arm_summary.tsv	当前有限字典，非信息界
+来源/incoming隔离及真实OOF	完成	fold_audit.json; source_folds.tsv; baseline_fits.json	原生parent UUID缺失，只认证记录的source/incoming
+训练内部开发锁定	完成	development_frontier.tsv; fits_frozen.json	开发样本仍是历史研究池
+原样本/K/缺失政策	完成	input_validation.json	没有新增独立生成事件
+实际分裂和梯度	完成	*_splits.tsv; *_direction_gradients.tsv	分层目标最低箱主导，状态split稀少不是信息缺失证明
+匹配μ-only归因对照	完成	baseline_fits.json; mu_calibration.json; metrics.tsv	不代表最优μ-only界
+全8层RMSE/实际三尾/幅度/校准	完成	gates.tsv; metrics.tsv; calibration.tsv	四臂共同验收均失败
+配对统计独立复核	完成	measurement_validation.json	incoming条件CI不含source/parent/refit/真实系统
+资源/清理/运输	完成	time.txt; probe_time.txt; cleanup.json	整树峰、物理网络、全会话成本未测
+物理工作包B	输入缺口已交	observability_input_gap.json; observability_cache_schema.json	未测oracle/代理/能量增量；未提交生产
+阶段A有限实验	完成	complete.json; decision.json	阴性结束，不追加test变种
+整体物理目标/独立确认/系统	未完成	gates.tsv; report §8	需要独立双侧样本、真实系统与接受度背景

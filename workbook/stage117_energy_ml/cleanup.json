@@ -1,0 +1,26 @@
+{
+  "transport_byte_checked_before_delete": true,
+  "no_live_stage117_jobs": true,
+  "removed": [
+    {
+      "path": "software/energy-ml-stage117-probe.tar.gz",
+      "bytes": 47487087
+    },
+    {
+      "path": "software/energy-ml-stage117-experiment.tar.gz",
+      "bytes": 47499167
+    },
+    {
+      "path": "ntuples/energy_ml_stage117/probe_result.tar.gz",
+      "bytes": 6715
+    },
+    {
+      "path": "ntuples/energy_ml_stage117/experiment_result.tar.gz",
+      "bytes": 2659516
+    }
+  ],
+  "removed_bytes": 97652485,
+  "retained_artifact_bytes": 2549628,
+  "Stage54_assets_untouched": true,
+  "spool": "~/condor/nu_muAnalysis/stage117/; compact worker and logs retained"
+}
