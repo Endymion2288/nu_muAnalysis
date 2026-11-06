@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "sources": 254,
+  "baseline62_exact_N": 81313,
+  "stage87_active_prediction_exact_N": 63656,
+  "new_fits": 0,
+  "initial_test_rows": 12527,
+  "test_rows": 12523,
+  "test_excluded_frozen_train_cal_incoming_rows": 4,
+  "initial_cal_rows": 12785,
+  "cal_rows": 10704,
+  "cal_excluded_rows": 2081,
+  "test_groups": 19,
+  "cal_groups": 19,
+  "bootstrap": "500 paired incoming Poisson draws, conditional on source mix; not source or systematic CI"
+}

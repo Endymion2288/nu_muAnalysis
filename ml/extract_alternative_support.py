@@ -18,7 +18,7 @@ from frozen_evaluation import truth_diagnostics
 from track_response import TRACK_BRANCHES, derive, configuration as track_configuration
 
 
-def extract(index, input_path, output, qa=False, source=None):
+def extract(index, input_path, output, qa=False, source=None, cuts_config=None, threads=1):
     start, cpu = time.perf_counter(), time.process_time()
     if source is None:
         source = json.loads((REPO/'ml/configs/alternative_support_pilot.json').read_text())['sources'][index]
@@ -33,9 +33,9 @@ def extract(index, input_path, output, qa=False, source=None):
         defs['Definitions'].update(yaml.safe_load((REPO/'AnalysisZipFramework/config/ml_definitions.yaml').read_text())['Definitions'])
         (tmp/'definitions.yaml').write_text(yaml.safe_dump(defs, sort_keys=False))
         (tmp/'files.yaml').write_text(yaml.safe_dump({'runs': {source['run']: {'data_paths': [str(input_path)], 'waveform_paths': []}}}))
-        command = [str(REPO/'build/analysis'), '--isMC', '-r', str(source['run']), '-j', '1',
+        command = [str(REPO/'build/analysis'), '--isMC', '-r', str(source['run']), '-j', str(threads),
                    '--file-config', str(tmp/'files.yaml'), '--definitions-config', str(tmp/'definitions.yaml'),
-                   '--cuts-config', str(REPO/'AnalysisZipFramework/config/ml_low_energy_cuts.yaml'),
+                   '--cuts-config', str(cuts_config or REPO/'AnalysisZipFramework/config/ml_low_energy_cuts.yaml'),
                    '--grl-config', str(REPO/'AnalysisZipFramework/config/grl_config.yaml'),
                    '--output-config', str(REPO/'AnalysisZipFramework/config/ml_output_columns.yaml'), '-o', str(tmp/'selected.root')]
         run = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)

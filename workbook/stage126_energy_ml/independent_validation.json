@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "only_changed_cut": [
+    "Truth dec r < 100 mm"
+  ],
+  "independent_arithmetic_checks": [
+    {
+      "selection": "pz50",
+      "role": "cal",
+      "radius_mm": 100,
+      "N": 10404,
+      "independent_RMSE": 0.27739463631135464
+    },
+    {
+      "selection": "pz50",
+      "role": "cal",
+      "radius_mm": 120,
+      "N": 10702,
+      "independent_RMSE": 0.2772410813334357
+    },
+    {
+      "selection": "pz50",
+      "role": "cal",
+      "radius_mm": 140,
+      "N": 10704,
+      "independent_RMSE": 0.27723572250416895
+    },
+    {
+      "selection": "pz50",
+      "role": "cal",
+      "radius_mm": 425,
+      "N": 10704,
+      "independent_RMSE": 0.27723572250416895
+    },
+    {
+      "selection": "pz50",
+      "role": "test",
+      "radius_mm": 100,
+      "N": 12231,
+      "independent_RMSE": 0.2897560895567558
+    },
+    {
+      "selection": "pz50",
+      "role": "test",
+      "radius_mm": 120,
+      "N": 12523,
+      "independent_RMSE": 0.2904703141857677
+    },
+    {
+      "selection": "pz50",
+      "role": "test",
+      "radius_mm": 140,
+      "N": 12523,
+      "independent_RMSE": 0.2904703141857677
+    },
+    {
+      "selection": "pz50",
+      "role": "test",
+      "radius_mm": 425,
+      "N": 12523,
+      "independent_RMSE": 0.2904703141857677
+    },
+    {
+      "selection": "pz50",
+      "role": "all_descriptive",
+      "radius_mm": 100,
+      "N": 81313,
+      "independent_RMSE": 0.2591914905377731
+    },
+    {
+      "selection": "pz50",
+      "role": "all_descriptive",
+      "radius_mm": 120,
+      "N": 83297,
+      "independent_RMSE": 0.2606043409605138
+    },
+    {
+      "selection": "pz50",
+      "role": "all_descriptive",
+      "radius_mm": 140,
+      "N": 83300,
+      "independent_RMSE": 0.26061029760936594
+    },
+    {
+      "selection": "pz50",
+      "role": "all_descriptive",
+      "radius_mm": 425,
+      "N": 83300,
+      "independent_RMSE": 0.26061029760936594
+    },
+    {
+      "selection": "pz100",
+      "role": "cal",
+      "radius_mm": 100,
+      "N": 9838,
+      "independent_RMSE": 0.26215544165356913
+    },
+    {
+      "selection": "pz100",
+      "role": "cal",
+      "radius_mm": 120,
+      "N": 10104,
+      "independent_RMSE": 0.2618763125640762
+    },
+    {
+      "selection": "pz100",
+      "role": "cal",
+      "radius_mm": 140,
+      "N": 10105,
+      "independent_RMSE": 0.2618876881695111
+    },
+    {
+      "selection": "pz100",
+      "role": "cal",
+      "radius_mm": 425,
+      "N": 10105,
+      "independent_RMSE": 0.2618876881695111
+    },
+    {
+      "selection": "pz100",
+      "role": "test",
+      "radius_mm": 100,
+      "N": 11617,
+      "independent_RMSE": 0.27300181473025703
+    },
+    {
+      "selection": "pz100",
+      "role": "test",
+      "radius_mm": 120,
+      "N": 11885,
+      "independent_RMSE": 0.27332644235547865
+    },
+    {
+      "selection": "pz100",
+      "role": "test",
+      "radius_mm": 140,
+      "N": 11885,
+      "independent_RMSE": 0.27332644235547865
+    },
+    {
+      "selection": "pz100",
+      "role": "test",
+      "radius_mm": 425,
+      "N": 11885,
+      "independent_RMSE": 0.27332644235547865
+    },
+    {
+      "selection": "pz100",
+      "role": "all_descriptive",
+      "radius_mm": 100,
+      "N": 77298,
+      "independent_RMSE": 0.24509742819057026
+    },
+    {
+      "selection": "pz100",
+      "role": "all_descriptive",
+      "radius_mm": 120,
+      "N": 79088,
+      "independent_RMSE": 0.24595063366539535
+    },
+    {
+      "selection": "pz100",
+      "role": "all_descriptive",
+      "radius_mm": 140,
+      "N": 79090,
+      "independent_RMSE": 0.24596060790482438
+    },
+    {
+      "selection": "pz100",
+      "role": "all_descriptive",
+      "radius_mm": 425,
+      "N": 79090,
+      "independent_RMSE": 0.24596060790482438
+    }
+  ],
+  "nested_counts_monotonic": true,
+  "exact_baseline_ratio_CI": true,
+  "new_training_calls": 0,
+  "max_radius_mm": 133.52804821500197
+}
