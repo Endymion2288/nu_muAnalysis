@@ -1,0 +1,74 @@
+{
+  "figures": [
+    {
+      "name": "migration_paper",
+      "caption": "Truth on x, reconstructed energy on y; conditional on selection. Column normalization follows PRD Eqs.(9\u201310) and internal note \u00a77.2. Absolute-energy projection, not the signed inverse-energy/rapidity 30\u00d730 matrix. Explicit overflow retained: \u22651000 GeV in paper bins, \u22656400 GeV in fine bins. Dots denote <0.05%; gray columns with dashes mean no truth support, distinct from zero migration probability."
+    },
+    {
+      "name": "migration_fine",
+      "caption": "Truth on x, reconstructed energy on y; conditional on selection. Column normalization follows PRD Eqs.(9\u201310) and internal note \u00a77.2. Absolute-energy projection, not the signed inverse-energy/rapidity 30\u00d730 matrix. Explicit overflow retained: \u22651000 GeV in paper bins, \u22656400 GeV in fine bins. Dots denote <0.05%; gray columns with dashes mean no truth support, distinct from zero migration probability."
+    },
+    {
+      "name": "continuous_density_direct",
+      "caption": "Unbinned Gaussian kernel density from every selected event, evaluated on a rendering grid; no analysis energy-bin counts. Density is with respect to dlog10(Etrue)dlog10(Ereco). Fixed bandwidth across tunes; white dashed line is exact response, dotted lines mark +50%/\u221250% response. Full-sample normalization; outside-view fractions recorded."
+    },
+    {
+      "name": "continuous_density_traditional",
+      "caption": "Unbinned Gaussian kernel density from every selected event, evaluated on a rendering grid; no analysis energy-bin counts. Density is with respect to dlog10(Etrue)dlog10(Ereco). Fixed bandwidth across tunes; white dashed line is exact response, dotted lines mark +50%/\u221250% response. Full-sample normalization; outside-view fractions recorded."
+    },
+    {
+      "name": "event_scatter",
+      "caption": "One point per selected view; no subsampling, energy bins or density smoothing. Point opacity is not a luminosity or incoming weight."
+    },
+    {
+      "name": "energy_profiles_direct",
+      "caption": "Relative error = Ereco/Etrue \u2212 1. R68 = (q84\u2212q16)/2, not RMS or relative sigma. Natural-log RMSE includes every selected primary event. Shading, where shown, is a 500-replicate conditional incoming bootstrap 95% interval; sparse cells remain visible."
+    },
+    {
+      "name": "energy_profiles_traditional",
+      "caption": "Relative error = Ereco/Etrue \u2212 1. R68 = (q84\u2212q16)/2, not RMS or relative sigma. Natural-log RMSE includes every selected primary event. Shading, where shown, is a 500-replicate conditional incoming bootstrap 95% interval; sparse cells remain visible."
+    },
+    {
+      "name": "robustness_overview",
+      "caption": "Native composition corrects the known QGSP file sampling. The second row uses the minimum common normalized component \u00d7 fine true-energy distribution; the third also controls coarse true y and vertex depth. Unknown y has its own retained category. Targets and fixed cell boundaries were defined before new model outcomes. Within-cell variations and production differences remain; unsupported cells are not extrapolated."
+    },
+    {
+      "name": "tune_contrasts",
+      "caption": "Reference JEFF33 is a comparison convention, not the training physics model. Shared incoming bootstrap multipliers retain known cross-tune dependence. Intervals do not include generator-parent/source certification, retraining, calibration estimation, response production, or full physical systematic uncertainties."
+    },
+    {
+      "name": "component_response",
+      "caption": "Separate \u03c0/K/charm unit-normalized energy response distributions. Histograms here are supplemental response diagnostics; the energy-energy heatmaps separately use continuous unbinned KDE."
+    },
+    {
+      "name": "migration_differences",
+      "caption": "Differences of the native primary truth-column migration matrices, on a shared symmetric color scale. Composition within coarse truth bins remains a possible contributor; these differences are not a calibrated systematic covariance."
+    },
+    {
+      "name": "component_migrations",
+      "caption": "Component-resolved direct62 migration probabilities. No averaging over a different \u03c0/K/charm mixture; dash denotes absent truth support, dot denotes <0.05%."
+    },
+    {
+      "name": "selection_efficiency",
+      "caption": "Unweighted production-view efficiencies by component, before any training-overlap exclusion or model prediction. Fiducial denominator follows the original cumulative truth cuts. QGSP uses the fixed uniform full-file sample; remaining tunes use all available RDO files. No independent-binomial interval is implied because incoming/source reuse is present."
+    },
+    {
+      "name": "feature_shift",
+      "caption": "62-feature medians and typed-missing fractions under the unchanged deployment preprocessing. Continuous-variable shifts are normalized to the training central-68% half-width; discrete/constant training columns with zero width are masked. Color saturation at \u00b12 is only a display choice; exact values and out-of-training-range fractions remain in feature_profiles.tsv. These diagnostics are not a causal transport attribution."
+    },
+    {
+      "name": "migration_quality",
+      "caption": "Stability is the diagonal truth-column probability; purity uses reconstructed-row normalization. Both are conditional on selection and native primary sample composition. Per-bin actual incoming support is in migration_quality.tsv; neither quantity alone measures unfolding accuracy or total selection efficiency."
+    },
+    {
+      "name": "paired_response_shift",
+      "caption": "Each exact incoming proxy contributes one mean log prediction per tune over its selected response views. Shift = 100 \u00d7 [exp(mean logE_tune \u2212 mean logE_JEFF33) \u2212 1]. Pairs must pass selection in both tunes and have no known train/cal overlap. Proxies are equally weighted here; the QGSP component mixture follows the sampled shared subset, without inverse-probability correction. This controls the incoming proxy and energy, but does not certify identical GENIE final state, vertex, G4/digitization seed or complete parent lineage. Selection effects are reported separately. Bands show event dispersion, not statistical uncertainty."
+    }
+  ],
+  "complete_source_inventory": true,
+  "KDE_worker_CPUs": 4,
+  "parallel_KDE_serial_64point_probe_exact": true,
+  "wall_s": 419.07435293804156,
+  "matrix_rendering": "Audited aggregate matrices.tsv; gray/dash unsupported columns distinguished from zero probability",
+  "profile_rendering": "Audited aggregate metrics.tsv; only supported truth-energy bins shown, \u22656400 GeV unsupported"
+}

@@ -1,0 +1,13 @@
+{
+  "reason": "Two tasks on the same worker b9p18p8103 remained at 6 and 2 user CPU seconds after >30 min, unlike completed peers; host/CVMFS I/O stall suspected, not a physics failure",
+  "removed_jobs": [
+    "9670195.46",
+    "9670197.57"
+  ],
+  "source_indices": [
+    46,
+    661
+  ],
+  "action": "resubmit identical frozen sources/package, exclude this worker; no outcome-based source replacement",
+  "timestamp_unix_s": 1793972425.1825514
+}

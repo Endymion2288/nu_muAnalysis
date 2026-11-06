@@ -1,0 +1,54 @@
+{
+  "stage87_reference_exact": true,
+  "stage87_test": {
+    "log_RMSE": 0.2874912363762959,
+    "mean_log_bias": -0.014677816116313034,
+    "median_bias_pct": 3.4853317394451544,
+    "R68_pct": 21.88116793849938,
+    "q16_pct": -21.139399935098194,
+    "q84_pct": 22.622935941900565,
+    "tail50_pct": 6.174158075601373,
+    "positive_tail50_pct": 3.3690721649484536,
+    "negative_tail50_pct": 2.8050859106529207
+  },
+  "new_model_fits": 0,
+  "new_calibration_fits": 0,
+  "complete_source_inventory": true,
+  "model_seeds": [
+    2026110255,
+    2026110256,
+    2026110257
+  ],
+  "offset_log": 0.025193690596001274,
+  "sources": 904,
+  "selected_N": 201874,
+  "primary_N": 74759,
+  "fit_overlap_N": 127115,
+  "common_component_energy_overlap_mass": 0.8730943623063273,
+  "bootstrap_replicates": 500,
+  "common_component_energy_y_depth_overlap_mass": 0.8145574799152475,
+  "source_dependence": [
+    {
+      "component": "pi",
+      "selected_sources": 324,
+      "incoming_linked_source_components": 1
+    },
+    {
+      "component": "k",
+      "selected_sources": 403,
+      "incoming_linked_source_components": 1
+    },
+    {
+      "component": "charm",
+      "selected_sources": 173,
+      "incoming_linked_source_components": 1
+    }
+  ],
+  "reference_inference_wall_s": 2.763283711974509,
+  "new_inference_wall_s": 6.014261231990531,
+  "new_inference_events_per_s": 33565.88485485291,
+  "bootstrap_scope": "joint incoming-proxy bootstrap, conditional on fixed model and supplied response mixture; not full parent/source/systematic uncertainty",
+  "wall_s": 77.24910700705368,
+  "CPU_s": 74.67778844200001,
+  "RSS_KiB": 775732
+}

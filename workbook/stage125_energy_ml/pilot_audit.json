@@ -1,0 +1,1558 @@
+{
+  "phase": "pilot",
+  "returned": 15,
+  "failed": 0,
+  "results": [
+    {
+      "index": 0,
+      "run": 200104,
+      "tune": "FTF_BIC",
+      "component": "pi",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8317,
+      "reco": {
+        "user_s": 13.91,
+        "system_s": 2.94,
+        "RSS_KiB": 1020772.0,
+        "CPU_s": 16.85
+      },
+      "ntuple": {
+        "user_s": 8.28,
+        "system_s": 2.35,
+        "RSS_KiB": 905164.0,
+        "CPU_s": 10.629999999999999
+      },
+      "extract": {
+        "user_s": 12.79,
+        "system_s": 1.92,
+        "RSS_KiB": 647776.0,
+        "CPU_s": 14.709999999999999
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 7,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 2
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 1
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 1
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 132,
+      "run": 200106,
+      "tune": "FTF_BIC",
+      "component": "charm",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8315,
+      "reco": {
+        "user_s": 16.94,
+        "system_s": 2.85,
+        "RSS_KiB": 1056204.0,
+        "CPU_s": 19.790000000000003
+      },
+      "ntuple": {
+        "user_s": 9.51,
+        "system_s": 2.26,
+        "RSS_KiB": 921056.0,
+        "CPU_s": 11.77
+      },
+      "extract": {
+        "user_s": 12.9,
+        "system_s": 1.61,
+        "RSS_KiB": 641948.0,
+        "CPU_s": 14.51
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 5,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 4
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 2
+        },
+        {
+          "module": 1,
+          "N": 1
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 151,
+      "run": 200107,
+      "tune": "FTFP_INCLXX",
+      "component": "pi",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8270,
+      "reco": {
+        "user_s": 14.44,
+        "system_s": 3.1,
+        "RSS_KiB": 1007848.0,
+        "CPU_s": 17.54
+      },
+      "ntuple": {
+        "user_s": 9.0,
+        "system_s": 2.4,
+        "RSS_KiB": 895648.0,
+        "CPU_s": 11.4
+      },
+      "extract": {
+        "user_s": 14.73,
+        "system_s": 1.88,
+        "RSS_KiB": 643076.0,
+        "CPU_s": 16.61
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 7,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 1,
+        "track_N": 3
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 1
+        },
+        {
+          "module": 2,
+          "N": 1
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 207,
+      "run": 200108,
+      "tune": "FTFP_INCLXX",
+      "component": "k",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8258,
+      "reco": {
+        "user_s": 13.36,
+        "system_s": 2.73,
+        "RSS_KiB": 1020656.0,
+        "CPU_s": 16.09
+      },
+      "ntuple": {
+        "user_s": 7.73,
+        "system_s": 2.06,
+        "RSS_KiB": 895280.0,
+        "CPU_s": 9.790000000000001
+      },
+      "extract": {
+        "user_s": 12.25,
+        "system_s": 1.63,
+        "RSS_KiB": 646400.0,
+        "CPU_s": 13.879999999999999
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 3,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 1
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 1
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 283,
+      "run": 200109,
+      "tune": "FTFP_INCLXX",
+      "component": "charm",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8330,
+      "reco": {
+        "user_s": 17.55,
+        "system_s": 2.87,
+        "RSS_KiB": 1064616.0,
+        "CPU_s": 20.42
+      },
+      "ntuple": {
+        "user_s": 9.1,
+        "system_s": 2.27,
+        "RSS_KiB": 911484.0,
+        "CPU_s": 11.37
+      },
+      "extract": {
+        "user_s": 12.01,
+        "system_s": 1.72,
+        "RSS_KiB": 647096.0,
+        "CPU_s": 13.73
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 5,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 2
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 2
+        },
+        {
+          "module": 1,
+          "N": 2
+        },
+        {
+          "module": 2,
+          "N": 3
+        },
+        {
+          "module": 3,
+          "N": 2
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 302,
+      "run": 200110,
+      "tune": "JEFF33",
+      "component": "pi",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8471,
+      "reco": {
+        "user_s": 13.72,
+        "system_s": 2.94,
+        "RSS_KiB": 1021568.0,
+        "CPU_s": 16.66
+      },
+      "ntuple": {
+        "user_s": 8.35,
+        "system_s": 2.11,
+        "RSS_KiB": 906700.0,
+        "CPU_s": 10.459999999999999
+      },
+      "extract": {
+        "user_s": 11.16,
+        "system_s": 1.51,
+        "RSS_KiB": 647236.0,
+        "CPU_s": 12.67
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 7,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 1
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 1
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 1
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 358,
+      "run": 200111,
+      "tune": "JEFF33",
+      "component": "k",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8335,
+      "reco": {
+        "user_s": 13.36,
+        "system_s": 3.14,
+        "RSS_KiB": 1015272.0,
+        "CPU_s": 16.5
+      },
+      "ntuple": {
+        "user_s": 7.98,
+        "system_s": 2.34,
+        "RSS_KiB": 896496.0,
+        "CPU_s": 10.32
+      },
+      "extract": {
+        "user_s": 12.68,
+        "system_s": 1.92,
+        "RSS_KiB": 643740.0,
+        "CPU_s": 14.6
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 3,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 1,
+        "track_N": 1
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 434,
+      "run": 200112,
+      "tune": "JEFF33",
+      "component": "charm",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8329,
+      "reco": {
+        "user_s": 19.62,
+        "system_s": 3.5,
+        "RSS_KiB": 1047576.0,
+        "CPU_s": 23.12
+      },
+      "ntuple": {
+        "user_s": 9.75,
+        "system_s": 2.41,
+        "RSS_KiB": 916148.0,
+        "CPU_s": 12.16
+      },
+      "extract": {
+        "user_s": 14.37,
+        "system_s": 1.99,
+        "RSS_KiB": 644968.0,
+        "CPU_s": 16.36
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 5,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 1
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 453,
+      "run": 200113,
+      "tune": "ENDFB8",
+      "component": "pi",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8307,
+      "reco": {
+        "user_s": 12.78,
+        "system_s": 2.83,
+        "RSS_KiB": 1025020.0,
+        "CPU_s": 15.61
+      },
+      "ntuple": {
+        "user_s": 8.14,
+        "system_s": 2.23,
+        "RSS_KiB": 907104.0,
+        "CPU_s": 10.370000000000001
+      },
+      "extract": {
+        "user_s": 12.53,
+        "system_s": 1.55,
+        "RSS_KiB": 650432.0,
+        "CPU_s": 14.08
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 7,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 3
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 1
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 1
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 509,
+      "run": 200114,
+      "tune": "ENDFB8",
+      "component": "k",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8252,
+      "reco": {
+        "user_s": 11.8,
+        "system_s": 2.42,
+        "RSS_KiB": 1021112.0,
+        "CPU_s": 14.22
+      },
+      "ntuple": {
+        "user_s": 7.29,
+        "system_s": 2.04,
+        "RSS_KiB": 905680.0,
+        "CPU_s": 9.33
+      },
+      "extract": {
+        "user_s": 10.75,
+        "system_s": 1.51,
+        "RSS_KiB": 648912.0,
+        "CPU_s": 12.26
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 3,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 1,
+        "track_N": 2
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 56,
+      "run": 200105,
+      "tune": "FTF_BIC",
+      "component": "k",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8248,
+      "reco": {
+        "user_s": 14.38,
+        "system_s": 2.86,
+        "RSS_KiB": 1019936.0,
+        "CPU_s": 17.240000000000002
+      },
+      "ntuple": {
+        "user_s": 8.21,
+        "system_s": 2.23,
+        "RSS_KiB": 904044.0,
+        "CPU_s": 10.440000000000001
+      },
+      "extract": {
+        "user_s": 11.24,
+        "system_s": 1.84,
+        "RSS_KiB": 645176.0,
+        "CPU_s": 13.08
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 3,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 1,
+        "track_N": 1
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 1
+        },
+        {
+          "module": 2,
+          "N": 1
+        },
+        {
+          "module": 3,
+          "N": 1
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 585,
+      "run": 200115,
+      "tune": "ENDFB8",
+      "component": "charm",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8364,
+      "reco": {
+        "user_s": 18.85,
+        "system_s": 2.83,
+        "RSS_KiB": 1057052.0,
+        "CPU_s": 21.68
+      },
+      "ntuple": {
+        "user_s": 9.78,
+        "system_s": 2.24,
+        "RSS_KiB": 919380.0,
+        "CPU_s": 12.02
+      },
+      "extract": {
+        "user_s": 11.5,
+        "system_s": 1.66,
+        "RSS_KiB": 645380.0,
+        "CPU_s": 13.16
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 5,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 1,
+        "track_N": 3
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 0
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 1
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 604,
+      "run": 200213,
+      "tune": "QGSP_BERT",
+      "component": "pi",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8171,
+      "parent": {
+        "user_s": 69.73,
+        "system_s": 8.31,
+        "RSS_KiB": 1487364.0,
+        "CPU_s": 78.04
+      },
+      "digi": {
+        "user_s": 82.62,
+        "system_s": 3.97,
+        "RSS_KiB": 1442236.0,
+        "CPU_s": 86.59
+      },
+      "reco": {
+        "user_s": 12.86,
+        "system_s": 2.63,
+        "RSS_KiB": 1014292.0,
+        "CPU_s": 15.489999999999998
+      },
+      "ntuple": {
+        "user_s": 8.19,
+        "system_s": 2.1,
+        "RSS_KiB": 907420.0,
+        "CPU_s": 10.29
+      },
+      "extract": {
+        "user_s": 11.99,
+        "system_s": 1.75,
+        "RSS_KiB": 642368.0,
+        "CPU_s": 13.74
+      },
+      "selected_N": 0,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 11,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 2
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 1
+        },
+        {
+          "module": 1,
+          "N": 1
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        11,
+        6,
+        6,
+        6,
+        6,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 704,
+      "run": 200214,
+      "tune": "QGSP_BERT",
+      "component": "k",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8164,
+      "parent": {
+        "user_s": 78.75,
+        "system_s": 9.31,
+        "RSS_KiB": 1526328.0,
+        "CPU_s": 88.06
+      },
+      "digi": {
+        "user_s": 104.37,
+        "system_s": 4.09,
+        "RSS_KiB": 1465624.0,
+        "CPU_s": 108.46000000000001
+      },
+      "reco": {
+        "user_s": 13.5,
+        "system_s": 2.8,
+        "RSS_KiB": 1012296.0,
+        "CPU_s": 16.3
+      },
+      "ntuple": {
+        "user_s": 7.24,
+        "system_s": 2.3,
+        "RSS_KiB": 908084.0,
+        "CPU_s": 9.54
+      },
+      "extract": {
+        "user_s": 12.96,
+        "system_s": 1.85,
+        "RSS_KiB": 646368.0,
+        "CPU_s": 14.81
+      },
+      "selected_N": 0,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 3,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 2
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 1
+        },
+        {
+          "module": 1,
+          "N": 1
+        },
+        {
+          "module": 2,
+          "N": 0
+        },
+        {
+          "module": 3,
+          "N": 0
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 804,
+      "run": 200215,
+      "tune": "QGSP_BERT",
+      "component": "charm",
+      "exitcode": 0,
+      "parent_N": 40,
+      "empty": false,
+      "selected_present": true,
+      "transport_bytes": 8778,
+      "parent": {
+        "user_s": 72.53,
+        "system_s": 7.9,
+        "RSS_KiB": 1609444.0,
+        "CPU_s": 80.43
+      },
+      "digi": {
+        "user_s": 117.5,
+        "system_s": 3.66,
+        "RSS_KiB": 1503496.0,
+        "CPU_s": 121.16
+      },
+      "reco": {
+        "user_s": 15.1,
+        "system_s": 2.68,
+        "RSS_KiB": 1043760.0,
+        "CPU_s": 17.78
+      },
+      "ntuple": {
+        "user_s": 9.52,
+        "system_s": 2.18,
+        "RSS_KiB": 911700.0,
+        "CPU_s": 11.7
+      },
+      "extract": {
+        "user_s": 12.89,
+        "system_s": 1.76,
+        "RSS_KiB": 647244.0,
+        "CPU_s": 14.65
+      },
+      "selected_N": 1,
+      "identity": {
+        "parent_N": 40,
+        "reconstructed_N": 5,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 0,
+        "track_N": 1
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 1
+        },
+        {
+          "module": 1,
+          "N": 0
+        },
+        {
+          "module": 2,
+          "N": 1
+        },
+        {
+          "module": 3,
+          "N": 1
+        }
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "cutflow_passed": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

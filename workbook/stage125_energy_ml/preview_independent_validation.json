@@ -1,0 +1,221 @@
+{
+  "passed": true,
+  "primary_train_cal_overlap": 0,
+  "source_input_weights_verified": true,
+  "row_space_checks": [
+    {
+      "tune": "FTF_BIC",
+      "scope": "primary",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTF_BIC",
+      "scope": "primary",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTF_BIC",
+      "scope": "standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTF_BIC",
+      "scope": "standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTF_BIC",
+      "scope": "fully_standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTF_BIC",
+      "scope": "fully_standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTFP_INCLXX",
+      "scope": "primary",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTFP_INCLXX",
+      "scope": "primary",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTFP_INCLXX",
+      "scope": "standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTFP_INCLXX",
+      "scope": "standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTFP_INCLXX",
+      "scope": "fully_standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "FTFP_INCLXX",
+      "scope": "fully_standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "JEFF33",
+      "scope": "primary",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "JEFF33",
+      "scope": "primary",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "JEFF33",
+      "scope": "standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "JEFF33",
+      "scope": "standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "JEFF33",
+      "scope": "fully_standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "JEFF33",
+      "scope": "fully_standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "ENDFB8",
+      "scope": "primary",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "ENDFB8",
+      "scope": "primary",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "ENDFB8",
+      "scope": "standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "ENDFB8",
+      "scope": "standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "ENDFB8",
+      "scope": "fully_standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "ENDFB8",
+      "scope": "fully_standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "QGSP_BERT",
+      "scope": "primary",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "QGSP_BERT",
+      "scope": "primary",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "QGSP_BERT",
+      "scope": "standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "QGSP_BERT",
+      "scope": "standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "QGSP_BERT",
+      "scope": "fully_standardized",
+      "model": "direct",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    },
+    {
+      "tune": "QGSP_BERT",
+      "scope": "fully_standardized",
+      "model": "traditional",
+      "checked_point_metrics": 3,
+      "checked_interval_bounds": 6
+    }
+  ],
+  "point_max_abs_delta": 1.7763568394002505e-14,
+  "CI_bound_max_abs_delta": 4.956035581926699e-13,
+  "all_truth_columns_normalized": true,
+  "wall_s": 7.292481260374188
+}

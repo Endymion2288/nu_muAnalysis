@@ -1,0 +1,10 @@
+{
+  "phase": "production",
+  "result": "9670203.0 - 9670203.1\n",
+  "indices": [
+    46,
+    661
+  ],
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage125\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage125/worker_1793972425499113940.sh $(source_index) production\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-stage125.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 3000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+NuMuStage = \"energy-ml-stage125\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage125/logs/$(ClusterId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage125/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage125/logs/$(ClusterId).$(ProcId).err\nrequirements = Machine != \"b9p18p8103.cern.ch\"\nqueue source_index in 46,661\n",
+  "package_bytes": 1614875
+}
