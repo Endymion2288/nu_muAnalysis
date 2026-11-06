@@ -1,0 +1,20 @@
+{
+  "jobs": 122,
+  "starts": 119,
+  "terminated": 119,
+  "idle_removed": 3,
+  "failed_terminated": 21,
+  "pending": 0,
+  "CPU_s_scheduler_rounded": 11506,
+  "aggregate_execute_wall_s": 18430,
+  "GNU_log_N": 133,
+  "largest_GNU_process_RSS_KiB": 2053044.0,
+  "GPU_jobs": 0,
+  "caveats": [
+    "scheduler CPU rounded to integer seconds; all starts/failures included",
+    "execute wall summed across parallel jobs is not session elapsed",
+    "GNU subprocess timings overlap scheduler job totals; not additive",
+    "GNU maxRSS is not concurrent process-tree aggregate peak",
+    "physical network traffic, speedup against single-core and GPU speedup not measured"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "N": 7501,
+  "features": {
+    "x": 62,
+    "B": 30,
+    "C": 27,
+    "D": 12
+  },
+  "reserved_predictions": 0,
+  "quarantine_predictions": 0,
+  "roles_preserved": true,
+  "joint": {
+    "2_A": false,
+    "2_B": false,
+    "2_C": false,
+    "2_D": false,
+    "3_A": false,
+    "3_B": false,
+    "3_C": false,
+    "3_D": false
+  },
+  "B_low_increment_supported": false,
+  "limitations": [
+    "developed conditional response cohort",
+    "only60 training lowest-bin records;20 development test records",
+    "incoming proxies not full GENIE ancestry",
+    "source/refit/research-selection/system uncertainty excluded",
+    "D covers actual persisted histories, producer termination not certified",
+    "not an information bound or independent confirmation"
+  ]
+}

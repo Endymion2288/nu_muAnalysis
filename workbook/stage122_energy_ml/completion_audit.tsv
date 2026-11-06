@@ -1,0 +1,9 @@
+requirement	status	measured_delivery	evidence	limitation
+R1	完成，独立性边界保留	27来源7501行；9源252重复父；原角色/隔离/reserved保持	support.tsv;replica_sampling_support.json;frozen_contract_summary.json	完整GENIE谱系/新blind未认证
+R2	完成，未支持稳定两低箱增量	固定A/B/C/D三seed；cal/test四臂joint均False	metrics.tsv;paired.tsv;gates.tsv	最低箱train50/test20 incoming；有限学习政策阴性不等于信息界
+R3	部分完成	D实际持久化窗外能量/风险已测；108来源探测器板时间记录	persisted_time_coverage.tsv;paired.tsv	原producer终止/physics constructors未认证；极晚时间物理/程序原因未分辨
+R4	完成安全定义诊断，原生secondary边界未闭合	252父16流；115 active父1840新视图；2父独立进程完全重放	replica_summary.json;replica_risk.tsv;replica_availability_and_selection_bounds.tsv	3父13额外hit视图；2视图原生选择未知；只改变VN/Pres
+R5	未执行，当前队列输入未认证	0 sameGENIE G4重复	final_validation.json	当前252父完整EVNT entry/末态未认证；下一阶段另冻完整身份小队列
+R6	条件未满足，未执行	环境最低箱train21/16/23、test3/14/3；B/A无稳定两箱增量	environment_support.tsv;paired.tsv	无环境2×2重训、无追加联合波形似然
+R7	有界补证完成，身份门未认证	12精确RDO各10000 entry；空TagInfo，无EVNT entry/seed/parent	metadata_supplement.json	本支线结束；不阻挡其他响应实验
+R8	阶段交付完成，整体目标未达	资源/存储/独立复算/中文报告及本地阶段提交	resource_summary.json;storage_summary.json;final_validation.json	真实data/MC ADC、系统/背景/接受度及独立确认未交付

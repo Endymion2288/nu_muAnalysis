@@ -1,0 +1,107 @@
+{
+  "stage": 122,
+  "authority": "User goal executes Stage121 all feasible tasks; research-only text is historical",
+  "frozen_utc": "2026-11-05T23:23:07.602327+00:00",
+  "sources": [
+    {
+      "run": 200082,
+      "environment": "nominal",
+      "hits": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/master_dev/FaserMC-MC24_Genie_epos_pi-200082-00000-master_dev-HITS.root",
+      "entry_start": 0,
+      "events": 40,
+      "sampling": "fixed first40 for implementation/random-stream QA only; no energy inference or representativeness claim"
+    }
+  ],
+  "pilot_replicas": [
+    0,
+    0,
+    1
+  ],
+  "purpose": "same HITS waveform digitization with full random state persistence; identical replica repeated for exact replay validation",
+  "geometry": "FASERNU-04",
+  "global_tag": "OFLCOND-FASER-04",
+  "channels": [
+    "VetoNu0",
+    "VetoNu1",
+    "Preshower0"
+  ],
+  "digitizer": {
+    "samples": 600,
+    "period_ns": 2,
+    "input_window_ns": [
+      -20,
+      1200
+    ]
+  },
+  "late_windows_ns": [
+    1200,
+    10000,
+    1000000
+  ],
+  "wave_statistics": {
+    "bins_ns": [
+      0,
+      40,
+      80,
+      160,
+      320,
+      640,
+      1200
+    ],
+    "baseline": "first20 actual ADC samples; signed residual; availability explicit"
+  },
+  "policies": "original pz0/raw62/status/typedNaN/signed/Calo/roles/K unchanged; reserved0 model forwards; no independent-N increment from replicas",
+  "requirements": [
+    {
+      "id": "R1",
+      "task": "freeze linked parent-HITS-readout cohort, both low bins/transition/high-y/natural controls and role locks",
+      "status": "pending"
+    },
+    {
+      "id": "R2",
+      "task": "same-cohort matched A/B/C continuous-energy risk and full tail evaluation",
+      "status": "pending"
+    },
+    {
+      "id": "R3",
+      "task": "D outside-window diagnostic with actual timing/termination support",
+      "status": "pending"
+    },
+    {
+      "id": "R4",
+      "task": "controlled sameHITS digitization replicas with exact stream replay and parent selection migration",
+      "status": "pending"
+    },
+    {
+      "id": "R5",
+      "task": "conditional sameGENIE G4 replicas if digitization insufficient to explain",
+      "status": "conditional"
+    },
+    {
+      "id": "R6",
+      "task": "conditional waveform likelihood or environment2x2 only after supported B gain/support",
+      "status": "conditional"
+    },
+    {
+      "id": "R7",
+      "task": "bounded old inventory metadata supplement independent of response work",
+      "status": "pending"
+    },
+    {
+      "id": "R8",
+      "task": "resources, data/MC deployability, invariants, report, local commit, completion audit",
+      "status": "pending"
+    }
+  ],
+  "pilot_resources": {
+    "jobs": 2,
+    "cpus_each": 2,
+    "memory_MB": 6000,
+    "wall_s_each": 1800,
+    "CPU_s_each": 1800,
+    "retained_MB": 30
+  },
+  "next_budget": "freeze cohort/replica scale after measured pilot, before new energy outcomes; no arbitrary time gate for K production",
+  "implementation": "official public tool called on transient HITS; same nonempty/empty semantics; full TRandom3 before/after; tool generation only, not full RDO selection",
+  "amendment": "First2 jobs failed at Cling missing HEPMC3 macro before any event; define HEPMC3 matching pinned build; same inputs/40/replicas retained. Macro in same declaration was not visible in ROOT autoload transaction; commit macro separately before Athena imports. First source only before scaling."
+}

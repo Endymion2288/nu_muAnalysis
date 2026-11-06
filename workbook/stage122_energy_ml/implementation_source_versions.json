@@ -1,0 +1,1056 @@
+{
+  "archive": "ntuples/energy_ml_stage122/implementation_sources.tar.gz",
+  "byte_verified": true,
+  "phase_sources": {
+    "energy-ml-stage122-candidates.tar.gz": [
+      {
+        "path": "ml/extract_alternative_support.py",
+        "snapshot": "source_0000/ml/extract_alternative_support.py",
+        "bytes": 7687
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      },
+      {
+        "path": "ml/frozen_evaluation.py",
+        "snapshot": "source_0002/ml/frozen_evaluation.py",
+        "bytes": 14832
+      },
+      {
+        "path": "ml/train_bdt.py",
+        "snapshot": "source_0003/ml/train_bdt.py",
+        "bytes": 12620
+      },
+      {
+        "path": "ml/track_response.py",
+        "snapshot": "source_0004/ml/track_response.py",
+        "bytes": 2584
+      },
+      {
+        "path": "ml/stage112_selection.py",
+        "snapshot": "source_0005/ml/stage112_selection.py",
+        "bytes": 9370
+      },
+      {
+        "path": "ml/configs/baseline.yaml",
+        "snapshot": "source_0006/ml/configs/baseline.yaml",
+        "bytes": 9168
+      },
+      {
+        "path": "ml/configs/track_response.yaml",
+        "snapshot": "source_0007/ml/configs/track_response.yaml",
+        "bytes": 1361
+      },
+      {
+        "path": "AnalysisZipFramework/config/cuts.yaml",
+        "snapshot": "source_0008/AnalysisZipFramework/config/cuts.yaml",
+        "bytes": 15266
+      },
+      {
+        "path": "AnalysisZipFramework/config/definitions.yaml",
+        "snapshot": "source_0009/AnalysisZipFramework/config/definitions.yaml",
+        "bytes": 7136
+      },
+      {
+        "path": "AnalysisZipFramework/config/file_config.yaml",
+        "snapshot": "source_0010/AnalysisZipFramework/config/file_config.yaml",
+        "bytes": 152744
+      },
+      {
+        "path": "AnalysisZipFramework/config/file_config_late_tracks.yaml",
+        "snapshot": "source_0011/AnalysisZipFramework/config/file_config_late_tracks.yaml",
+        "bytes": 152258
+      },
+      {
+        "path": "AnalysisZipFramework/config/grl_config.yaml",
+        "snapshot": "source_0012/AnalysisZipFramework/config/grl_config.yaml",
+        "bytes": 1446
+      },
+      {
+        "path": "AnalysisZipFramework/config/ml_audited_output_columns.yaml",
+        "snapshot": "source_0013/AnalysisZipFramework/config/ml_audited_output_columns.yaml",
+        "bytes": 1757
+      },
+      {
+        "path": "AnalysisZipFramework/config/ml_definitions.yaml",
+        "snapshot": "source_0014/AnalysisZipFramework/config/ml_definitions.yaml",
+        "bytes": 3029
+      },
+      {
+        "path": "AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "snapshot": "source_0015/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "bytes": 2724
+      },
+      {
+        "path": "AnalysisZipFramework/config/ml_output_columns.yaml",
+        "snapshot": "source_0016/AnalysisZipFramework/config/ml_output_columns.yaml",
+        "bytes": 1594
+      },
+      {
+        "path": "AnalysisZipFramework/config/output_columns.yaml",
+        "snapshot": "source_0017/AnalysisZipFramework/config/output_columns.yaml",
+        "bytes": 12759
+      },
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage119_sparse_reco.py",
+        "snapshot": "source_0019/ml/stage119_sparse_reco.py",
+        "bytes": 1150
+      },
+      {
+        "path": "ml/stage119_payload.py",
+        "snapshot": "source_0020/ml/stage119_payload.py",
+        "bytes": 1127
+      },
+      {
+        "path": "ml/stage122_replica_extract.py",
+        "snapshot": "source_0021/ml/stage122_replica_extract.py",
+        "bytes": 3615
+      }
+    ],
+    "energy-ml-stage122-cohort.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0022/ml/stage122_native.py",
+        "bytes": 8749
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0024/ml/stage122_saved.py",
+        "bytes": 2254
+      }
+    ],
+    "energy-ml-stage122-cohortmc.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0025/ml/stage122_native.py",
+        "bytes": 12519
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0026/ml/stage122_response.hxx",
+        "bytes": 5840
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      }
+    ],
+    "energy-ml-stage122-cohortpatch.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0028/ml/stage122_native.py",
+        "bytes": 10303
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      }
+    ],
+    "energy-ml-stage122-cohortqa.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0029/ml/stage122_native.py",
+        "bytes": 8569
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0024/ml/stage122_saved.py",
+        "bytes": 2254
+      }
+    ],
+    "energy-ml-stage122-cohortqa2.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0022/ml/stage122_native.py",
+        "bytes": 8749
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0024/ml/stage122_saved.py",
+        "bytes": 2254
+      }
+    ],
+    "energy-ml-stage122-compare.tar.gz": [
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0030/ml/stage122_compare.py",
+        "bytes": 13560
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-comparefix.tar.gz": [
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0033/ml/stage122_compare.py",
+        "bytes": 13807
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-comparemc.tar.gz": [
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-finalcheck.tar.gz": [
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0033/ml/stage122_compare.py",
+        "bytes": 13807
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      },
+      {
+        "path": "ml/stage122_finalcheck.py",
+        "snapshot": "source_0035/ml/stage122_finalcheck.py",
+        "bytes": 3551
+      }
+    ],
+    "energy-ml-stage122-finalcheckmc.tar.gz": [
+      {
+        "path": "ml/stage122_finalcheck.py",
+        "snapshot": "source_0036/ml/stage122_finalcheck.py",
+        "bytes": 8251
+      },
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0037/ml/stage122_replica_analysis.py",
+        "bytes": 21187
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-metadata.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_metadata.py",
+        "snapshot": "source_0038/ml/stage122_metadata.py",
+        "bytes": 1623
+      }
+    ],
+    "energy-ml-stage122-pilot.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0039/ml/stage122_native.py",
+        "bytes": 5634
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0040/ml/stage122_response.hxx",
+        "bytes": 3697
+      }
+    ],
+    "energy-ml-stage122-pilot2.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0039/ml/stage122_native.py",
+        "bytes": 5634
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0041/ml/stage122_response.hxx",
+        "bytes": 3783
+      }
+    ],
+    "energy-ml-stage122-pilot3.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0042/ml/stage122_native.py",
+        "bytes": 7612
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0043/ml/stage122_response.hxx",
+        "bytes": 4520
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0024/ml/stage122_saved.py",
+        "bytes": 2254
+      }
+    ],
+    "energy-ml-stage122-pilot4.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0022/ml/stage122_native.py",
+        "bytes": 8749
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0024/ml/stage122_saved.py",
+        "bytes": 2254
+      }
+    ],
+    "energy-ml-stage122-pilot5.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0028/ml/stage122_native.py",
+        "bytes": 10303
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0044/ml/stage122_reconstruct.hxx",
+        "bytes": 1826
+      }
+    ],
+    "energy-ml-stage122-prepare.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_prepare.py",
+        "snapshot": "source_0045/ml/stage122_prepare.py",
+        "bytes": 6262
+      }
+    ],
+    "energy-ml-stage122-recoqa.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0046/ml/stage122_native.py",
+        "bytes": 10195
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0047/ml/stage122_reconstruct.hxx",
+        "bytes": 1778
+      }
+    ],
+    "energy-ml-stage122-recoqa10.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0048/ml/stage122_native.py",
+        "bytes": 12548
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0026/ml/stage122_response.hxx",
+        "bytes": 5840
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recoqa2.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0028/ml/stage122_native.py",
+        "bytes": 10303
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0044/ml/stage122_reconstruct.hxx",
+        "bytes": 1826
+      }
+    ],
+    "energy-ml-stage122-recoqa3.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0050/ml/stage122_native.py",
+        "bytes": 10314
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0051/ml/stage122_reconstruct.hxx",
+        "bytes": 2010
+      }
+    ],
+    "energy-ml-stage122-recoqa4.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0050/ml/stage122_native.py",
+        "bytes": 10314
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recoqa5.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0052/ml/stage122_native.py",
+        "bytes": 10851
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recoqa6.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0053/ml/stage122_native.py",
+        "bytes": 10939
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recoqa7.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0054/ml/stage122_native.py",
+        "bytes": 11061
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recoqa8.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0055/ml/stage122_native.py",
+        "bytes": 11141
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recoqa9.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0056/ml/stage122_native.py",
+        "bytes": 12216
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0026/ml/stage122_response.hxx",
+        "bytes": 5840
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-recovald.tar.gz": [
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0057/ml/stage122_replica_analysis.py",
+        "bytes": 15948
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-recovald2.tar.gz": [
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0058/ml/stage122_replica_analysis.py",
+        "bytes": 17337
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-recovald3.tar.gz": [
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0059/ml/stage122_replica_analysis.py",
+        "bytes": 17648
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-referencemap.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0060/ml/stage122_native.py",
+        "bytes": 12629
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0061/ml/stage122_response.hxx",
+        "bytes": 6105
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-replaymc.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0055/ml/stage122_native.py",
+        "bytes": 11141
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0023/ml/stage122_response.hxx",
+        "bytes": 4955
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-replaymc2.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0056/ml/stage122_native.py",
+        "bytes": 12216
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0026/ml/stage122_response.hxx",
+        "bytes": 5840
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-replaymc3.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0048/ml/stage122_native.py",
+        "bytes": 12548
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0026/ml/stage122_response.hxx",
+        "bytes": 5840
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-replicaanalysis.tar.gz": [
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0059/ml/stage122_replica_analysis.py",
+        "bytes": 17648
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-replicaanalysis2.tar.gz": [
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0037/ml/stage122_replica_analysis.py",
+        "bytes": 21187
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ],
+    "energy-ml-stage122-replicaprep.tar.gz": [
+      {
+        "path": "ml/stage122_replica_prepare.py",
+        "snapshot": "source_0062/ml/stage122_replica_prepare.py",
+        "bytes": 3680
+      }
+    ],
+    "energy-ml-stage122-replicas.tar.gz": [
+      {
+        "path": "setup_env.sh",
+        "snapshot": "source_0018/setup_env.sh",
+        "bytes": 5245
+      },
+      {
+        "path": "ml/stage122_native.py",
+        "snapshot": "source_0025/ml/stage122_native.py",
+        "bytes": 12519
+      },
+      {
+        "path": "ml/stage122_response.hxx",
+        "snapshot": "source_0026/ml/stage122_response.hxx",
+        "bytes": 5840
+      },
+      {
+        "path": "ml/stage122_saved.py",
+        "snapshot": "source_0027/ml/stage122_saved.py",
+        "bytes": 2312
+      },
+      {
+        "path": "ml/stage122_reconstruct.hxx",
+        "snapshot": "source_0049/ml/stage122_reconstruct.hxx",
+        "bytes": 2152
+      }
+    ],
+    "energy-ml-stage122-roundtripdiag.tar.gz": [
+      {
+        "path": "ml/stage122_replica_analysis.py",
+        "snapshot": "source_0063/ml/stage122_replica_analysis.py",
+        "bytes": 18995
+      },
+      {
+        "path": "ml/stage122_compare.py",
+        "snapshot": "source_0034/ml/stage122_compare.py",
+        "bytes": 13879
+      },
+      {
+        "path": "ml/stage119_curve_common.py",
+        "snapshot": "source_0031/ml/stage119_curve_common.py",
+        "bytes": 2885
+      },
+      {
+        "path": "ml/stage119_reportcurve.py",
+        "snapshot": "source_0032/ml/stage119_reportcurve.py",
+        "bytes": 11055
+      },
+      {
+        "path": "ml/audited_features.py",
+        "snapshot": "source_0001/ml/audited_features.py",
+        "bytes": 4471
+      }
+    ]
+  }
+}

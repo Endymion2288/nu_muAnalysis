@@ -2454,3 +2454,20 @@ GENIE按真实p6 float持久化核入射/顶点/主μ，527 selected全部回接
 嵌套响应先同HITS重复digitization，必要时同GENIE末态重复G4，区分读出波动、输运波动和稳定偏差，父选择迁移全保留。重复视图不计独立N/不跨角色，不平均成现实中多次测量；TRandom3(0)/处理顺序和种子流须实际认证。足量支持后才做固定N的名义/变体训练×评价矩阵，区分迁移失配和环境内可重建性；核physics constructors/cuts/时间，不能把整physics-list变化全部归中子。
 
 若B有稳定增量，优先有限联合波形测量似然，传递弱信号时间/幅度不确定度与跨通道相关，不再只是给旧摘要换网络。定向父采样覆盖低能/过渡/高y困难侧/自然控制并记录纳入概率；真实确认另购独立家族，旧test与reserved用途不改。Stage121用风险恒等式与理想二项例子说明严控大幅误修正的难度，不给本项目通用充分N。原1.05/1.01/1.03、八层三尾+2pp、K/pz0/raw/signed/NaN和真实系统/背景/接受度保持。新结果/成本/功效未测，本轮只提交研究文件；历史§1–102和Stage54后缀保持。
+
+
+## 104. stage122：读出层级与可复现数字化已测，低能未联合恢复
+
+[Stage122报告](../workbook/2026-11-06_stage122_response-information-and-digitization.md)执行§103工作包，科学读取/训练/统计均走HTCondor。Stage119冻结27来源nominal/JEFF/ENDF×π/K/charm，原selected7501行，train/cal/开发test/隔离3454/1725/1882/440；最低箱train50、test20 incoming。原角色/全部1016 K/pz0-only一次方动量/raw11/status/typed NaN/signed/Calo缺失和pz>50及正式fit-charge选择保持，expansion reserved零预测。
+
+历史RDO旧ID布局经官方CableMapping→硬件channel联结，显式OFLP200/data20/FASERNU-04/OFLCOND-FASER-06；MC reduced时间差27.21/51.41 ns、35 ns窗及官方Veto2 channel6/7已认证。40父六维raw/reduced差0 pC、完整252父原选择闭合；2父跨进程ADC/完整随机状态完全相同。首轮错误ID、C窗外hit count泄漏、误用默认时间差/Veto参考的结果均降为程序诊断，费用全计，未放宽容差。
+
+同队列A62→B92联合波形→C119窗内沉积→D131窗外沉积，四臂各三seed固定政策，不调参/择赢家。开发test两低箱B/A=.990051 [.885922,1.132788]/.984493 [.916289,1.056657]；C/B=.980562 [.923046,1.028611]/1.061691 [.983765,1.139084]；D/C=1.007831 [.963674,1.050785]/.991194 [.970959,1.017137]。cal/test四臂原joint全False，B最低箱RMSE .335125、传统 .161656，继续原强f0。局部high-y C/B改善/cal最低箱D/C改善未跨角色复现。小支持下未分辨稳定时序增量，不称信息界；四臂与大池f0训练量不同。
+
+事前9源252父×16同HITS流，全选择分母保留；115 active父1840新视图＋115原控制，0新fit/reserved/隔离forward。最低/第二箱条件数字化方差占log-MSE=1.419037%/1.524472%，困难低pz真高E .846065%、high-y .652672%；多数误差持续，但只测VN/Pres数字化，非全探测器/输运或Bayes误差。安全双primary选择定义下观察零迁移；官方producer长度2数组遇secondary越界，3父13视图中2视图原生选择未知，source51 entry4386通过概率保守[.875,1]，其余两父由其他cuts失败，不称全官方链零迁移。
+
+D持久化时间覆盖108记录，极值−.682764263至4.315339342423439e35 ns；source45 JEFF VN0窗外52.3653%，实际physics constructors/终止未认证，不能当可收回迟到电荷或中子因果。R3完整时间解释、R5当前父完整GENIE输入未认证；R6环境支持/B增量条件未满足，未追加G4/2×2/似然。R7一次12精确RDO full metadata仍无parent/entry/seed，结束旧补证，不阻挡另一可核父队列。
+
+独立192项RMSE差0、115父方差复算差<4e−16。122提交/119执行/21失败全计CPU11506 s，聚合任务wall18430 s、max单进程RSS2053044 KiB、0GPU；事件缓存+模型103684329 bytes，清理219份冗余693206423 bytes。[完成审计](../workbook/stage122_energy_ml/completion_audit.tsv)明确未认证物理输入与已完成计算。整体目标/真实data–MC ADC、系统/背景/接受度及独立确认未完成，原1.05/1.01/1.03和八层三向tail差上95≤+2pp不变。
+
+下一阶段依[执行合同](../workbook/stage122_energy_ml/next_execution_contract.json)：有界闭合三个secondary父与source36/45/49时间/实际producer控制；另从已知精确pi0/K0 EVNT固定有限框冻结完整末态低能/高y两父，做2父×2 G4×2数字化真实pilot，先测成本再同阶段冻后续规模。新队列不冒充当前252父同末态或独立确认，不泛扫旧库存、不追加模型网格；输入缺口也须交具体失败与已测机制。新G4支持/成本/收益尚未测。本阶段本地提交、不push，历史§1–103与Stage54资产/后缀保持。

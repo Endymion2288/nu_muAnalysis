@@ -1,0 +1,23 @@
+	Command being timed: "timeout --signal=TERM --kill-after=10 1750 python -u ml/stage122_native.py --source 22 --contract workbook/stage122_energy_ml/cohortmc_contract.json --output ntuples/energy_ml_stage122/cohortmc_22.json.gz"
+	User time (seconds): 122.16
+	System time (seconds): 11.63
+	Percent of CPU this job got: 61%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:37.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1866108
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 21337
+	Minor (reclaiming a frame) page faults: 2040266
+	Voluntary context switches: 292009
+	Involuntary context switches: 77725
+	Swaps: 0
+	File system inputs: 1148640
+	File system outputs: 4920
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

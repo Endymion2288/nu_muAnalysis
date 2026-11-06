@@ -1,0 +1,23 @@
+	Command being timed: "timeout --signal=TERM --kill-after=10 3500 python -u ml/stage122_native.py --source 7 --contract workbook/stage122_energy_ml/replicas_contract.json --output ntuples/energy_ml_stage122/replicas_7.json.gz"
+	User time (seconds): 96.09
+	System time (seconds): 7.57
+	Percent of CPU this job got: 76%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1830000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 18586
+	Minor (reclaiming a frame) page faults: 1019654
+	Voluntary context switches: 345860
+	Involuntary context switches: 541
+	Swaps: 0
+	File system inputs: 167016
+	File system outputs: 13648
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,21 @@
+universe = vanilla
+spool = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage122
+phase = replicas
+jobs = 9
+initialdir = $(spool)
+executable = /bin/bash
+transfer_executable = False
+arguments = $(spool)/worker_$(phase).sh $(Process) $(phase)
+transfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/energy-ml-stage122-$(phase).tar.gz
+should_transfer_files = YES
+transfer_output_files = ""
+request_cpus = 2
+request_memory = 6000MB
+request_disk = 4000MB
+max_retries = 0
++MaxRuntime = 3600
++NuMuStage = "energy-ml-stage122"
+log = $(spool)/logs/$(ClusterId).$(ProcId).log
+output = $(spool)/logs/$(ClusterId).$(ProcId).out
+error = $(spool)/logs/$(ClusterId).$(ProcId).err
+queue $(jobs)

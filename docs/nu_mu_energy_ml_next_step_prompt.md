@@ -1,3 +1,23 @@
+# 当前执行入口：Stage122已交付，Stage123核producer/time并做完整末态输运pilot
+
+先读[Stage122完整报告](../workbook/2026-11-06_stage122_response-information-and-digitization.md)、路线§104、信息预算§84、[R1–R8审计](../workbook/stage122_energy_ml/completion_audit.tsv)及[下一执行合同](../workbook/stage122_energy_ml/next_execution_contract.json)。本段覆盖下面Stage121及更早入口的当前优先级，全部历史原文保留。
+
+Stage122已完成27来源7501行同队列A/B/C/D，train最低箱50、开发test20 incoming。B/A两低箱未稳定改善，C/D局部变化不跨角色复现，四臂cal/test原joint全False；保留原强f0，无新赢家。9来源252父×16同HITS流，115 active父1840新视图＋115原控制，0fit/reserved/隔离forward；最低两箱数字化方差/log-MSE约1.42%/1.52%，只能说明当前两组scint数字化不足解释大部分错误。小支持/有限模型阴性不称时序无用、Bayes误差或全探测器信息界。
+
+正确MC显式OFLP200/data20/FASERNU-04/OFLCOND-FASER-06；历史ID通过当前官方CableMapping→硬件channel回接；reduced MC时间差27.21/51.41 ns、35 ns窗，Veto2参考channel6/7。最终40父六维差0 pC、完整252父原选择闭合，2父跨进程ADC/状态一致；独立192 RMSE复算差0。旧错误ID/窗外hit-count/时间差/Veto参考结果只作实现诊断。protocol.json内pending/旧planning条件是历史，最终验收见completion_audit.tsv。
+
+下一Stage123在同一科学工作包推进：
+
+1. 对固定source51 entry4386、54:7875、57:8429，闭合安全detector/primary积分及secondary语义。官方长度2数组越界的3父13视图中，前一父有2视图原生选择未知，通过概率[.875,1]；后两父其他cuts失败。保留全部父/hit，不模拟UB或静默改正式cut；无secondary控制应闭合。安全定义下零迁移不能写成全官方链零迁移。
+2. 用现有source36/45/49精确记录核持久化时间/实际producer physics constructors、decay/kill/time cuts；max持久化4.3153e35 ns，原因未分辨，不删大值或称可回收迟到能量/中子。C/D风险已量；原G4终止未认证，不续事后时间分箱网格。
+3. 从合同内两个精确pi0/K0 EVNT入口、每文件最多前10000父的固定框，按truth和CRC32冻一低能/一高y父；认证完整末态/entry/转换，另起可追溯机制队列，不能冒充当前252父同GENIE。先2父×2 G4×2数字化pilot测成本与实际风险/选择；最多四任务、2CPU/8GB、wall各7200 s/总CPU28800 s、紧凑200 MB。先一真实父/流小样本闭合；成本后、扩展风险前同阶段冻后续规模。新支持/成本未测，不能按同HITS数字化速率外推G4。若缺精确输入/转换，交准确对象/字段/命令与已测producer/time结果，不泛扫EOS或无限metadata前置。
+
+科学读取/ROOT/重建/训练/forward/统计仍全部HTCondor，目录~/condor/nu_muAnalysis/stage123；本地仅代码/文本/stdlib打包运输。CPU多来源并行、内线程受控，有GPU适用任务时按实际工具/计时采用，不能编造加速比。Stage122122提交/119执行全计CPU11506 s，紧凑缓存+模型103684329 bytes，已删693206423 bytes重复副本；不重跑已通过计算。下一阶段不加模型网格，不开放reserved、不平均视图部署、不增独立N。旧池R7补证已结束，同EVNT文件不证明同entry，缺祖先不阻挡实际波形研究。
+
+原角色/全部1016 K/pz0-only一次方动量（允许px/py、q/p、弯折）/raw11/status/typed NaN/signed/Calo缺失与pz>50及正式fitted/reduced-charge cuts保持；最终两低箱/传统上95≤1.05、all/direct≤1.01、其余五层≤1.03、八层三向tail50差上95≤+2pp不改。真实data/MC ADC、系统/背景/接受度与独立确认仍未交，整体能量目标未达。完成先中文workbook再本地Conventional Commit，不push；Stage54五资产/历史后缀保持。
+
+## Stage121历史入口（原文保留）
+
 # 当前研究入口：Stage121读出信息与可控响应路线
 
 先读[Stage121完整研究报告](../workbook/2026-11-05_stage121_response-information-and-replica-strategy.md)、路线§103、信息预算§83，以及Stage119/120的实测证据。本轮用户只要求研究评估，无环境、不复现；0事件读取/训练/重放/作业。下面Stage120及之前入口保留为历史，当前优先级由本段覆盖。

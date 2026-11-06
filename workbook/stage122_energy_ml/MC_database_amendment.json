@@ -1,0 +1,8 @@
+{
+  "reason": "Match actual official faser_reco.py MC setup: explicit OFLP200 and data20, FASERNU-04/OFLCOND-FASER-06. Previous CONDBR3 default caused incompatible ID dictionary; prior native/digitization outputs are implementation diagnostics and cannot establish physical response. Re-read complete unchanged cohort after QA.",
+  "prior_results": "invalid for physical response interpretation",
+  "scope": "same frozen parents/roles/model policies and all sources; no effect-dependent sampling",
+  "new_MC_DB": "OFLP200",
+  "new_global_tag": "OFLCOND-FASER-06",
+  "causal_diagnosis_superseded": "See identifier_layout_amendment.json: explicit OFLP200 is necessary but not the unique source of ID mismatch. Official reco already uses the expanded current dictionary; old persisted id32 must join by hardware channel."
+}

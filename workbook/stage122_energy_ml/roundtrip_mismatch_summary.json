@@ -1,0 +1,43 @@
+{
+  "mismatches": [
+    {
+      "index": 1,
+      "case": 12,
+      "entry": 4622,
+      "feature": "VetoNu0_reduced_charge",
+      "computed": 0.0455322265625,
+      "reference": 0.06851562112569809,
+      "extra_VetoNu_hits": 0
+    },
+    {
+      "index": 1,
+      "case": 12,
+      "entry": 4622,
+      "feature": "VetoNu1_reduced_charge",
+      "computed": 0.2242431640625,
+      "reference": 0.23304687440395355,
+      "extra_VetoNu_hits": 0
+    },
+    {
+      "index": 6,
+      "case": 6,
+      "entry": 2610,
+      "feature": "VetoNu0_reduced_charge",
+      "computed": 0.052978515625,
+      "reference": 0.058085937052965164,
+      "extra_VetoNu_hits": 0
+    },
+    {
+      "index": 6,
+      "case": 6,
+      "entry": 2610,
+      "feature": "VetoNu1_reduced_charge",
+      "computed": -0.1168212890625,
+      "reference": -0.09437499940395355,
+      "extra_VetoNu_hits": 0
+    }
+  ],
+  "parents": 2,
+  "energy_forward_executed": false,
+  "next_check": "official CableMapping VetoID station==1; prior assumed reference [7,14] was not certified"
+}

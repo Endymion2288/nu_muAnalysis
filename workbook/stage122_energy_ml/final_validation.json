@@ -1,0 +1,24 @@
+{
+  "cross_process_replay_parents": 2,
+  "full_ADC_before_after_state_equal": true,
+  "stored_point_checks": 192,
+  "max_abs_RMSE_difference": 0.0,
+  "A_original_feature_prediction_array_equal": true,
+  "environment_2x2_gate": false,
+  "replica_independent_checks": {
+    "parent_checks": 115,
+    "risk_checks": 8,
+    "max_parent_abs": 3.9406683211701266e-16,
+    "max_risk_abs": 8.326672684688674e-17,
+    "quarantine_no_forward": true,
+    "distinct_parent_N": 252,
+    "streams_per_parent": 16,
+    "secondary_affected_parents": 3,
+    "secondary_views": 13,
+    "native_selection_uncertified_views": 2,
+    "caveat": "Replica selection/risk uses defined safe first-two-primary integrals; historical producer out-of-bounds secondary behavior is not certified. All parents retained; bounds include unknown paths."
+  },
+  "producer_G4_termination_certified": false,
+  "full_GENIE_replay_input_certified": false,
+  "real_data_MC_ADC_calibration_closed": false
+}

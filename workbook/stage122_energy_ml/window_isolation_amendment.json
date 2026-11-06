@@ -1,0 +1,5 @@
+{
+  "reason": "Correct C window isolation: existing total sensitive-hit count includes deposits outside window. Replace count and total-zero with log1p(sum in-window MeV) and in-window-zero. Three fixed slots/channel preserved, no source/role/hyperparameter or B change. Initial output retained; rerun fixed arms once as implementation correction, no model selection.",
+  "before_refit": true,
+  "initial_directory": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage122/comparison_initial"
+}

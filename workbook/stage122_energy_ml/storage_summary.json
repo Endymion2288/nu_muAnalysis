@@ -1,0 +1,29 @@
+{
+  "measurement": "regular-file stat sizes, decimal bytes; before final documentation additions; no filesystem allocation or dedup claim",
+  "folders": [
+    {
+      "path": "ntuples/energy_ml_stage122",
+      "files": 167,
+      "logical_bytes": 94431650
+    },
+    {
+      "path": "ml/artifacts/stage122",
+      "files": 17,
+      "logical_bytes": 9252679
+    },
+    {
+      "path": "workbook/stage122_energy_ml",
+      "files": 280,
+      "logical_bytes": 6510339
+    }
+  ],
+  "cache_and_model_bytes": 103684329,
+  "cohort_plus_replica_budget_bytes": 140000000,
+  "within_combined_budget": true,
+  "transport_and_obsolete_removed_bytes": 693206423,
+  "transport_and_obsolete_removed_files": 219,
+  "timing_duplicate_files_removed": 27,
+  "scope": "Only Stage122 generated copies. Original ROOT/HITS/RDO/EVNT, other projects, prior stages and Stage54 unchanged.",
+  "retained": "canonical cohort and replica gzip records; compact NPZ and BDTs; QA/replay/diagnostic evidence; byte-verified distinct implementation source archive",
+  "not_retained": "xAOD/RDO intermediates, redundant transport and software tar copies; rebuild software from manifests and versioned sources"
+}

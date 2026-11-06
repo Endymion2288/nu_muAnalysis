@@ -1,0 +1,73 @@
+{
+  "stage": 123,
+  "status": "plan_only_not_executed_in_Stage122",
+  "question": "固定完整GENIE末态后，输运实现是否改变持续低能上调/高y低可见错误；同时认证时间与安全producer边界",
+  "priority": [
+    "先闭合三额外hit父的有界producer路径，核持久化极晚时间与实际physics/time控制",
+    "从已知完整EVNT入口另冻两父，真实sameGENIE G4×digitization小pilot；不是继续扫描旧缺日志池",
+    "pilot后按实测成本在同阶段冻结可交付规模，给机制结果而非只有metadata"
+  ],
+  "producer_inputs": {
+    "source_revision": "d32b0ff3",
+    "boundary": "NtupleDumper length-two VetoNu array indexed by full container ordinal",
+    "frozen_cases": [
+      {
+        "source_index": 51,
+        "entry": 4386
+      },
+      {
+        "source_index": 54,
+        "entry": 7875
+      },
+      {
+        "source_index": 57,
+        "entry": 8429
+      }
+    ],
+    "acceptance": "保持全部hit/父与官方切选配置；安全按detector/primary身份计算，与全无secondary父闭合；含secondary路径逐例报告差值和原生未知，不模拟UB，不静默改主分析cut"
+  },
+  "time_inputs": {
+    "table": "persisted_time_coverage.tsv",
+    "exact_sources": [
+      36,
+      45,
+      49
+    ],
+    "acceptance": "按匹配producer配置核time单位/持久化float、实际physics constructors/decay与kill/time cuts；有精确producer证据才归因；不将大时间自动置NaN/删例/解释为可收集信号"
+  },
+  "evnt_inputs": [
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root"
+  ],
+  "parent_freeze": {
+    "scope": "仅上述两个明确入口；每文件至多前10000父entry的预定有限框；全末态与entry先认证，非当前252父同源证明",
+    "selection": "在该固定框按完整truth选择一真50–100GeV父及一E>=200GeV、y>=0.5且产生mu的pz在50–100GeV父；各层取CRC32(file,entry)最小，跨文件共同选，不按模型误差挑父；缺层记录未满足，不换来源",
+    "roles": "均仅机制诊断，历史曝光未知不称新独立训练/确认N；完整incoming/EVNT entry/parent/随机流身份记录，重复不跨角色"
+  },
+  "pilot": {
+    "parents": 2,
+    "G4_streams_per_parent": 2,
+    "digitization_streams_per_HITS": 2,
+    "request_cpus_per_job": 2,
+    "request_memory_MB": 8000,
+    "max_G4_jobs": 4,
+    "max_wall_s_per_job": 7200,
+    "max_aggregate_CPU_s": 28800,
+    "retained_bytes": 200000000,
+    "execution": "HTCondor ~/condor/nu_muAnalysis/stage123；先一个真实父/流小样本闭合再其余固定pilot；保留选择失败与实际成本，不存完整中间xAOD；不自动全量生产",
+    "scale_after_pilot": "实测CPU/父、读字节/有效支持后，同阶段事前另冻父数和G4/digitization重复数；不以同HITS读出速率估G4成本；不追加树/seed/似然网格"
+  },
+  "acceptance": [
+    "完整EVNT末态逐粒子与重放输入闭合；geometry/conditions/physics/产生cuts/终止策略明确；整个随机流可重复",
+    "报告父选择概率和所有失败路径、偏差/MSE/真实正负尾，分开G4与digitization条件波动及有限流限制",
+    "父数/视图数分开，禁止平均视图当部署能量；固定f0与原传统同队列对照，无模型晋升",
+    "原reserved零预测；原角色/K/pz0-only一次方动量/raw11/typedNaN/signed/Calo缺失及最终1.05/1.01/1.03与八层三向尾+2pp不改"
+  ],
+  "fallback": "精确入口或全末态转换不可用时，交具体缺对象/字段/命令与已完成producer/time结果；不泛扫EOS或续无限metadata阶段，不据此称全部G4不可做",
+  "not_measured": [
+    "新EVNT两层支持",
+    "sameGENIE G4成本/风险/方差",
+    "真实data/MC ADC闭合",
+    "后续规模与功效"
+  ]
+}

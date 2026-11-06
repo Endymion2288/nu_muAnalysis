@@ -1,0 +1,16 @@
+{
+  "producer_revision": "d32b0ff3",
+  "source": "PhysicsAnalysis/NtupleDumper/scripts/faser_ntuple_maker.py isMC branch",
+  "VetoVetoNuTimeDifference_ns": 27.21,
+  "PreshowerVetoNuTimeDifference_ns": 51.41,
+  "reducedChargeIntegrationTime_ns": 35,
+  "previous_QA_failure": {
+    "entry": 88,
+    "feature": "VetoNu0_reduced_charge",
+    "computed_pC": 0.011713867075741291,
+    "reference_pC": 0.0005468750023283064
+  },
+  "cause": "MC script overrides class timing defaults; not tuned from feature mismatch",
+  "tolerance_unchanged": true,
+  "QA_job": 9669266
+}

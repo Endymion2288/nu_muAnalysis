@@ -1,0 +1,37 @@
+{
+  "frozen_before_full_forward": true,
+  "model": "fixed Stage87 direct_cal,3savedseeds+unchangedsavedoffset;0fit",
+  "features_updated": [
+    "VetoNu0_raw_charge",
+    "VetoNu1_raw_charge",
+    "Preshower0_raw_charge",
+    "Preshower1_raw_charge",
+    "VetoNu0_reduced_charge",
+    "VetoNu1_reduced_charge"
+  ],
+  "nonvaried_features": "exact cohort canonical62 when available; failed-original candidates use native62 with same Calo03->01 representation",
+  "status": "WAVE_INVALID392 only for raw/reduced; signed values preserved; fit failures do not mask raw",
+  "replicas": 16,
+  "inference": "500 incoming-cluster draws within component; keep all16 per parent; parent sampling probability and file probability weights; developed roles reported separately",
+  "selection_denominator": "all252 sampled parents; others-cut failures retained without arbitrary energy forward; original-bank availability fixed",
+  "strata": "original eight where fields are defined, plus five frozen sampling categories/missing/upstream/highE; unknown matching of noncandidate parents not silently called unconfirmed",
+  "decomposition": "empirical population variance + squared mean log error = realized mean log squared error; unbiased16 variance also retained",
+  "limitations": [
+    "no independent parent N gain",
+    "no multi-view ensemble deployed",
+    "conditional historical readout-bank fluctuations only; tracker/calo/Veto/Timing fixed",
+    "finite16 digitization uncertainty and source/refit/system uncertainty not covered by parent intervals"
+  ],
+  "native_QA": {
+    "job": "9669266.0",
+    "parents": 40,
+    "max_abs_pC": 0,
+    "cross_process_parents": 2,
+    "full_ADC_state_and_reconstruction_equal": true
+  },
+  "MC_timing_ns": {
+    "Veto": 27.21,
+    "Preshower": 51.41,
+    "integration": 35
+  }
+}

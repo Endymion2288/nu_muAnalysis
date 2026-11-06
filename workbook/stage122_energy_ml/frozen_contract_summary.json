@@ -1,0 +1,1066 @@
+{
+  "cohort": {
+    "stage": 122,
+    "authority": "User goal executes Stage121 all feasible tasks; research-only text is historical",
+    "frozen_utc": "2026-11-05T23:23:07.602327+00:00",
+    "pilot_replicas": [],
+    "purpose": "same HITS waveform digitization with full random state persistence; identical replica repeated for exact replay validation",
+    "geometry": "FASERNU-04",
+    "global_tag": "OFLCOND-FASER-06",
+    "channels": [
+      "VetoNu0",
+      "VetoNu1",
+      "Preshower0"
+    ],
+    "digitizer": {
+      "samples": 600,
+      "period_ns": 2,
+      "input_window_ns": [
+        -20,
+        1200
+      ]
+    },
+    "late_windows_ns": [
+      1200,
+      10000,
+      1000000
+    ],
+    "wave_statistics": {
+      "bins_ns": [
+        0,
+        40,
+        80,
+        160,
+        320,
+        640,
+        1200
+      ],
+      "baseline": "first20 actual ADC samples; signed residual; availability explicit"
+    },
+    "policies": "original pz0/raw62/status/typedNaN/signed/Calo/roles/K unchanged; reserved0 model forwards; no independent-N increment from replicas",
+    "requirements": [
+      {
+        "id": "R1",
+        "task": "freeze linked parent-HITS-readout cohort, both low bins/transition/high-y/natural controls and role locks",
+        "status": "pending"
+      },
+      {
+        "id": "R2",
+        "task": "same-cohort matched A/B/C continuous-energy risk and full tail evaluation",
+        "status": "pending"
+      },
+      {
+        "id": "R3",
+        "task": "D outside-window diagnostic with actual timing/termination support",
+        "status": "pending"
+      },
+      {
+        "id": "R4",
+        "task": "controlled sameHITS digitization replicas with exact stream replay and parent selection migration",
+        "status": "pending"
+      },
+      {
+        "id": "R5",
+        "task": "conditional sameGENIE G4 replicas if digitization insufficient to explain",
+        "status": "conditional"
+      },
+      {
+        "id": "R6",
+        "task": "conditional waveform likelihood or environment2x2 only after supported B gain/support",
+        "status": "conditional"
+      },
+      {
+        "id": "R7",
+        "task": "bounded old inventory metadata supplement independent of response work",
+        "status": "pending"
+      },
+      {
+        "id": "R8",
+        "task": "resources, data/MC deployability, invariants, report, local commit, completion audit",
+        "status": "pending"
+      }
+    ],
+    "pilot_resources": {
+      "jobs": 2,
+      "cpus_each": 2,
+      "memory_MB": 6000,
+      "wall_s_each": 1800,
+      "CPU_s_each": 1800,
+      "retained_MB": 30
+    },
+    "next_budget": "freeze cohort/replica scale after measured pilot, before new energy outcomes; no arbitrary time gate for K production",
+    "scope": "all 27 already frozen nominal/JEFF/ENDF sources from Stage119; all selected parents retained incl quarantine; preselection denominator reused from Stage119, no independent-N or blind claim",
+    "resources": {
+      "jobs": 27,
+      "cpus_each": 2,
+      "memory_MB": 6000,
+      "wall_s_each": 1800,
+      "aggregate_CPU_s": 18000,
+      "final_bytes": 60000000
+    },
+    "sampling": "Stage119 uniform 3 sources/run with recorded probability; within chosen source all selected parents. No effect-dependent additions; original failed-parent counts retained.",
+    "roles": "Original quarantined run/event stays excluded; all known original incoming retain highest original active role. Previously developed response-only incoming assigned crc32 <70/<85/rest before new waveform. Shared incoming across environments never crosses roles; no Stage119 expansion/reserved used.",
+    "learning": {
+      "arms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "target": "continuous log E_GeV",
+      "policy": "Stage87 fixed3 seeds/400round/depth5/eta.04/minchild20/lambda10/hist CPU; same capacity; train only, one cal incoming-weighted offset; no tuning or winner",
+      "A": "original typed62",
+      "B": "A +3channels:6signed ADC integral bins, baseline mean/rms, saturation fraction, availability; fixed first20baseline. 0-40/40-80/80-160/160-320/320-640/640-1200ns; no weak/saturation veto",
+      "C": "B +7 in-window log1p(MeV) deposit bins, in-window log1p(total MeV), in-window zero bit per channel; no outside hit count",
+      "D": "C +sensitive deposits time<-20 and [1200,1e4),[1e4,1e6),>=1e6ns; log1p(MeV), actual persisted history only; producer termination not yet certified"
+    },
+    "inference": "Mechanism comparison only; 500 paired incoming draws within component, full eight layers and actual tails. Source/refit/research/system uncertainty excluded. Report insufficient support rather than promotion.",
+    "environment_2x2_gate": "At least100 train incoming and50 evaluation incoming in EACH low bin per environment; otherwise no2x2 fits",
+    "conditional_likelihood": "Only after B/A paired upper95<1 for both low bins on heldout response roles and actual tails not deteriorated; otherwise unresolved/unsupported, no automatic grid",
+    "execution_admission": "40 fixed selected parent native HITS/RDO/event/incoming/600ADC QA completed with exit0; pilot4 80parents exact serialized-state replay completed with exit0. Full27 frozen sources admitted without model outcomes.",
+    "amendment": "Match actual official faser_reco.py MC setup: explicit OFLP200 and data20, FASERNU-04/OFLCOND-FASER-06. Previous CONDBR3 default caused incompatible ID dictionary; prior native/digitization outputs are implementation diagnostics and cannot establish physical response. Re-read complete unchanged cohort after QA.",
+    "database_instance": "OFLP200",
+    "sources": [
+      {
+        "run": 200082,
+        "source_index": 36,
+        "environment": "nominal",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00220-00229-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00220-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00221-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00222-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00223-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00224-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00225-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00226-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00227-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00228-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00229-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 335
+      },
+      {
+        "run": 200082,
+        "source_index": 37,
+        "environment": "nominal",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00240-00249-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00240-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00241-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00242-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00243-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00244-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00245-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00246-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00247-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00248-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00249-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 357
+      },
+      {
+        "run": 200082,
+        "source_index": 38,
+        "environment": "nominal",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00530-00539-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00530-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00531-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00532-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00533-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00534-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00535-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00536-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00537-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00538-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00539-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 325
+      },
+      {
+        "run": 200083,
+        "source_index": 39,
+        "environment": "nominal",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00060-00069-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00060-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00061-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00062-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00063-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00064-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00065-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00066-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00067-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00068-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00069-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 344
+      },
+      {
+        "run": 200083,
+        "source_index": 40,
+        "environment": "nominal",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00080-00089-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00080-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00081-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00082-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00083-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00084-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00085-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00086-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00087-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00088-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00089-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 335
+      },
+      {
+        "run": 200083,
+        "source_index": 41,
+        "environment": "nominal",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00510-00519-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00510-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00511-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00512-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00513-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00514-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00515-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00516-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00517-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00518-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00519-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 334
+      },
+      {
+        "run": 200089,
+        "source_index": 42,
+        "environment": "nominal",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00010-00019-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00010-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00011-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00012-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00013-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00014-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00015-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00016-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00017-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00018-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00019-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 204
+      },
+      {
+        "run": 200089,
+        "source_index": 43,
+        "environment": "nominal",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00060-00069-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00060-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00061-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00062-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00063-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00064-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00065-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00066-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00067-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00068-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00069-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 165
+      },
+      {
+        "run": 200089,
+        "source_index": 44,
+        "environment": "nominal",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00160-00169-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00160-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00161-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00162-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00163-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00164-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00165-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00166-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00167-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00168-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00169-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 173
+      },
+      {
+        "run": 200110,
+        "source_index": 45,
+        "environment": "JEFF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00330-00339-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00330-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00331-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00332-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00333-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00334-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00335-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00336-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00337-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00338-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00339-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 323
+      },
+      {
+        "run": 200110,
+        "source_index": 46,
+        "environment": "JEFF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00340-00349-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00340-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00341-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00342-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00343-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00344-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00345-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00346-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00347-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00348-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00349-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 332
+      },
+      {
+        "run": 200110,
+        "source_index": 47,
+        "environment": "JEFF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00530-00539-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00530-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00531-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00532-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00533-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00534-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00535-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00536-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00537-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00538-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00539-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 337
+      },
+      {
+        "run": 200111,
+        "source_index": 48,
+        "environment": "JEFF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00001-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00002-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00003-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00004-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00005-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00006-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00007-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00008-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00009-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 331
+      },
+      {
+        "run": 200111,
+        "source_index": 49,
+        "environment": "JEFF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00230-00239-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00230-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00231-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00232-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00233-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00234-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00235-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00236-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00237-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00238-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00239-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 338
+      },
+      {
+        "run": 200111,
+        "source_index": 50,
+        "environment": "JEFF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00480-00489-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00480-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00481-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00482-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00483-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00484-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00485-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00486-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00487-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00488-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00489-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 340
+      },
+      {
+        "run": 200112,
+        "source_index": 51,
+        "environment": "JEFF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00050-00059-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00050-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00051-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00052-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00053-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00054-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00055-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00056-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00057-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00058-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00059-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 181
+      },
+      {
+        "run": 200112,
+        "source_index": 52,
+        "environment": "JEFF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00150-00159-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00150-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00151-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00152-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00153-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00154-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00155-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00156-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00157-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00158-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00159-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 182
+      },
+      {
+        "run": 200112,
+        "source_index": 53,
+        "environment": "JEFF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00180-00189-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00180-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00181-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00182-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00183-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00184-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00185-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00186-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00187-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00188-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00189-master_dev-HITS.root"
+        ],
+        "parent_N": 947,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 15
+      },
+      {
+        "run": 200113,
+        "source_index": 54,
+        "environment": "ENDF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00110-00119-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00110-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00111-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00112-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00113-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00114-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00115-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00116-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00117-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00118-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00119-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 330
+      },
+      {
+        "run": 200113,
+        "source_index": 55,
+        "environment": "ENDF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00340-00349-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00340-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00341-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00342-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00343-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00344-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00345-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00346-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00347-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00348-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00349-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 341
+      },
+      {
+        "run": 200113,
+        "source_index": 56,
+        "environment": "ENDF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00360-00369-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00360-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00361-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00362-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00363-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00364-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00365-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00366-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00367-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00368-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00369-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 337
+      },
+      {
+        "run": 200114,
+        "source_index": 57,
+        "environment": "ENDF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00070-00079-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00070-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00071-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00072-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00073-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00074-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00075-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00076-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00077-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00078-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00079-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 320
+      },
+      {
+        "run": 200114,
+        "source_index": 58,
+        "environment": "ENDF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00530-00539-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00530-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00531-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00532-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00533-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00534-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00535-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00536-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00537-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00538-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00539-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 333
+      },
+      {
+        "run": 200114,
+        "source_index": 59,
+        "environment": "ENDF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00710-00719-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00710-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00711-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00712-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00713-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00714-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00715-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00716-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00717-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00718-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00719-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 318
+      },
+      {
+        "run": 200115,
+        "source_index": 60,
+        "environment": "ENDF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00030-00039-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00030-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00031-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00032-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00033-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00034-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00035-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00036-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00037-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00038-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00039-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 191
+      },
+      {
+        "run": 200115,
+        "source_index": 61,
+        "environment": "ENDF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00130-00139-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00130-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00131-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00132-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00133-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00134-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00135-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00136-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00137-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00138-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00139-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 209
+      },
+      {
+        "run": 200115,
+        "source_index": 62,
+        "environment": "ENDF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00150-00159-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00150-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00151-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00152-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00153-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00154-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00155-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00156-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00157-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00158-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00159-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 171
+      }
+    ]
+  },
+  "replica": {
+    "stage": 122,
+    "authority": "User goal executes Stage121 all feasible tasks; research-only text is historical",
+    "frozen_utc": "2026-11-05T23:23:07.602327+00:00",
+    "pilot_replicas": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "purpose": "same HITS waveform digitization with full random state persistence; identical replica repeated for exact replay validation",
+    "geometry": "FASERNU-04",
+    "global_tag": "OFLCOND-FASER-06",
+    "channels": [
+      "VetoNu0",
+      "VetoNu1",
+      "Preshower0"
+    ],
+    "digitizer": {
+      "samples": 600,
+      "period_ns": 2,
+      "input_window_ns": [
+        -20,
+        1200
+      ]
+    },
+    "late_windows_ns": [
+      1200,
+      10000,
+      1000000
+    ],
+    "wave_statistics": {
+      "bins_ns": [
+        0,
+        40,
+        80,
+        160,
+        320,
+        640,
+        1200
+      ],
+      "baseline": "first20 actual ADC samples; signed residual; availability explicit"
+    },
+    "policies": "original pz0/raw62/status/typedNaN/signed/Calo/roles/K unchanged; reserved0 model forwards; no independent-N increment from replicas",
+    "requirements": [
+      {
+        "id": "R1",
+        "task": "freeze linked parent-HITS-readout cohort, both low bins/transition/high-y/natural controls and role locks",
+        "status": "pending"
+      },
+      {
+        "id": "R2",
+        "task": "same-cohort matched A/B/C continuous-energy risk and full tail evaluation",
+        "status": "pending"
+      },
+      {
+        "id": "R3",
+        "task": "D outside-window diagnostic with actual timing/termination support",
+        "status": "pending"
+      },
+      {
+        "id": "R4",
+        "task": "controlled sameHITS digitization replicas with exact stream replay and parent selection migration",
+        "status": "pending"
+      },
+      {
+        "id": "R5",
+        "task": "conditional sameGENIE G4 replicas if digitization insufficient to explain",
+        "status": "conditional"
+      },
+      {
+        "id": "R6",
+        "task": "conditional waveform likelihood or environment2x2 only after supported B gain/support",
+        "status": "conditional"
+      },
+      {
+        "id": "R7",
+        "task": "bounded old inventory metadata supplement independent of response work",
+        "status": "pending"
+      },
+      {
+        "id": "R8",
+        "task": "resources, data/MC deployability, invariants, report, local commit, completion audit",
+        "status": "pending"
+      }
+    ],
+    "pilot_resources": {
+      "jobs": 2,
+      "cpus_each": 2,
+      "memory_MB": 6000,
+      "wall_s_each": 1800,
+      "CPU_s_each": 1800,
+      "retained_MB": 30
+    },
+    "next_budget": "freeze cohort/replica scale after measured pilot, before new energy outcomes; no arbitrary time gate for K production",
+    "scope": "Nine predeclared existing response sources, three hashed parents per nonempty truth category x old pilot selected/fail. All sampled parent paths retained. Sixteen distinct digitization streams per same HITS, replica0 restored exactly once; no new independent parent N.",
+    "resources": {
+      "native_jobs": 9,
+      "candidate_reconstruction_jobs": 9,
+      "cpus_each": 2,
+      "memory_MB": 6000,
+      "wall_s_each": 3600,
+      "aggregate_CPU_s": 25000,
+      "retained_bytes": 80000000
+    },
+    "sampling": "Stage119 uniform 3 sources/run with recorded probability; within chosen source all selected parents. No effect-dependent additions; original failed-parent counts retained.",
+    "roles": "Original quarantined run/event stays excluded; all known original incoming retain highest original active role. Previously developed response-only incoming assigned crc32 <70/<85/rest before new waveform. Shared incoming across environments never crosses roles; no Stage119 expansion/reserved used.",
+    "learning": {
+      "arms": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "target": "continuous log E_GeV",
+      "policy": "Stage87 fixed3 seeds/400round/depth5/eta.04/minchild20/lambda10/hist CPU; same capacity; train only, one cal incoming-weighted offset; no tuning or winner",
+      "A": "original typed62",
+      "B": "A +3channels:6signed ADC integral bins, baseline mean/rms, saturation fraction, availability; fixed first20baseline. 0-40/40-80/80-160/160-320/320-640/640-1200ns; no weak/saturation veto",
+      "C": "B +actual sensitive deposit energy histogram [-20,0,40,80,160,320,640,1200)ns perchannel, log1p(MeV), channel hit count and zero bit",
+      "D": "C +sensitive deposits time<-20 and [1200,1e4),[1e4,1e6),>=1e6ns; log1p(MeV), actual persisted history only; producer termination not yet certified"
+    },
+    "inference": "Mechanism comparison only; 500 paired incoming draws within component, full eight layers and actual tails. Source/refit/research/system uncertainty excluded. Report insufficient support rather than promotion.",
+    "environment_2x2_gate": "At least100 train incoming and50 evaluation incoming in EACH low bin per environment; otherwise no2x2 fits",
+    "conditional_likelihood": "Only after B/A paired upper95<1 for both low bins on heldout response roles and actual tails not deteriorated; otherwise unresolved/unsupported, no automatic grid",
+    "execution_admission": "40 fixed selected parent native HITS/RDO/event/incoming/600ADC QA completed with exit0; pilot4 80parents exact serialized-state replay completed with exit0. Full27 frozen sources admitted without model outcomes.",
+    "reconstruct": true,
+    "role_policy": "Original incoming roles and quarantined identities retained; all views inherit parent, no repeat crosses fit/evaluation. No replica enters fitting.",
+    "reconstruction": "Original full RDO tracking/calo frozen per parent; only VetoNu/Preshower waveform-dependent summaries re-evaluated with official primary+secondary tools and original reduced-charge formula. Original waveform round-trip must match native reference first.",
+    "outputs": "Per-parent fixed Stage87 energy output variance/mean/MSE/bias/actual signed tails, no averaging as deployable point. Full parent selection pass/fail probability and preselection denominators; non-scint failures cannot migrate.",
+    "limitation": "Conditional waveform fluctuation only, SCT/calo/other scintillator responses fixed. Not total detector variance or Bayes error; full GENIE/G4 replicas conditional and separately need certified final-state replay input.",
+    "database_instance": "OFLP200",
+    "sources": [
+      {
+        "run": 200082,
+        "source_index": 36,
+        "environment": "nominal",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00220-00229-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00220-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00221-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00222-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00223-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00224-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00225-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00226-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00227-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00228-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00229-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 30
+      },
+      {
+        "run": 200083,
+        "source_index": 39,
+        "environment": "nominal",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00060-00069-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00060-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00061-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00062-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00063-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00064-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00065-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00066-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00067-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00068-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00069-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 28
+      },
+      {
+        "run": 200089,
+        "source_index": 42,
+        "environment": "nominal",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00010-00019-s0014-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00010-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00011-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00012-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00013-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00014-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00015-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00016-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00017-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00018-s0014-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00019-s0014-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 25
+      },
+      {
+        "run": 200110,
+        "source_index": 45,
+        "environment": "JEFF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00330-00339-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00330-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00331-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00332-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00333-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00334-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00335-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00336-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00337-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00338-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200110/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_JEFF33-200110-00339-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 30
+      },
+      {
+        "run": 200111,
+        "source_index": 48,
+        "environment": "JEFF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-00009-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00000-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00001-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00002-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00003-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00004-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00005-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00006-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00007-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00008-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200111/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_JEFF33-200111-00009-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 30
+      },
+      {
+        "run": 200112,
+        "source_index": 51,
+        "environment": "JEFF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00050-00059-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00050-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00051-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00052-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00053-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00054-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00055-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00056-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00057-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00058-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200112/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_JEFF33-200112-00059-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 27
+      },
+      {
+        "run": 200113,
+        "source_index": 54,
+        "environment": "ENDF",
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/rdo/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00110-00119-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00110-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00111-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00112-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00113-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00114-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00115-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00116-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00117-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00118-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200113/sim/master_dev/FaserMC-MC24_Genie_epos_pi_FTFP_BERT_HP_ENDFB8-200113-00119-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.05357142857142857,
+        "sampled_parent_N": 30
+      },
+      {
+        "run": 200114,
+        "source_index": 57,
+        "environment": "ENDF",
+        "component": "k",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/rdo/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00070-00079-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00070-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00071-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00072-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00073-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00074-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00075-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00076-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00077-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00078-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200114/sim/master_dev/FaserMC-MC24_Genie_epos_k_FTFP_BERT_HP_ENDFB8-200114-00079-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.039473684210526314,
+        "sampled_parent_N": 27
+      },
+      {
+        "run": 200115,
+        "source_index": 60,
+        "environment": "ENDF",
+        "component": "charm",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/rdo/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00030-00039-master_dev-RDO.root",
+        "hits": [
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00030-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00031-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00032-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00033-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00034-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00035-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00036-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00037-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00038-master_dev-HITS.root",
+          "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200115/sim/master_dev/FaserMC-MC24_Genie_powheg_pythia_charm_central_FTFP_BERT_HP_ENDFB8-200115-00039-master_dev-HITS.root"
+        ],
+        "parent_N": 10000,
+        "file_probability": 0.15789473684210525,
+        "sampled_parent_N": 25
+      }
+    ]
+  },
+  "execution_status_note": "Nested requirements are the historical pre-execution checklist. Final R1–R8 states are in completion_audit.tsv; actual configuration is OFLP200/data20/FASERNU-04/OFLCOND-FASER-06. protocol.json is original planning history, not the final configuration."
+}
