@@ -1,0 +1,8 @@
+{
+  "before_new_fits": true,
+  "previous_QA_failure": "16794 SP links recovered, 0 missing, 8 invalid strip IDs in40 parents; zero-invalid requirement incorrectly rejected persisted unknowns",
+  "historical_evidence": "Stage85 report section3: persisted short relative offsets overflow for wide clusters; decoded outside768 domain left unknown",
+  "repair": "separate invalid raw/cluster counters; keep all parent/cluster counts and original roles; unknown station cluster-unique count NaN; invalid RDO list resources included in unresolved-time fraction; no wrap/position/nearest-neighbor invention",
+  "feature_set": "unchanged frozen Z56 plus availability; no outcome-based selection",
+  "scope": "pilot4 repeats final interface once before cross-file/full extraction; pilot3 diagnostic logs distinguish native failure from persisted overflow"
+}

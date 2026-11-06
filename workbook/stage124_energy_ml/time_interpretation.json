@@ -1,0 +1,24 @@
+{
+  "scope": "bounded pinned-source and retained Stage122 evidence audit; no new EOS inventory scan or rebinning",
+  "historical_max_persisted_time_ns": 4.315339342423439e+35,
+  "historical_sources": [
+    36,
+    45,
+    49
+  ],
+  "source_revision": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "measured_new_time_records": 0,
+  "persistence": "ScintHit stores float m_meanTime; p1a converter copies float into/out of p6 persisted hit sequence. Large finite value is not alone a numeric sentinel proof.",
+  "physics_list_source": "FaserPhysicsListSvc dynamically registers PhysicsOptions and PhysicsDecay; NeutronTimeCut default0, command applied only if >0; exact active constructor tools/time kill settings of historical HITS not certified by these defaults.",
+  "certified_actual_historical_physics_constructors": false,
+  "certified_actual_historical_time_limit": false,
+  "neutron_cause_identified": false,
+  "recoverable_DAQ_energy_demonstrated": false,
+  "handling": "Do not delete/clamp very late values, equate time with neutron ancestry, or call it available late charge. Original C/D/window and selections retained. Record unresolved producer provenance; not a prerequisite of native tracker experiment.",
+  "needed_for_resolution": [
+    "historical HITS producer full configuration dump/jobOptions or reproducible generation provenance",
+    "actual registered physics/decay constructors and applied cuts/time commands",
+    "process/ancestry for late energy deposit; match sensitivity and readout timing"
+  ],
+  "new_G4_pilot": "not invoked: two new parents do not certify historical hit producer or estimate population variance; optional engineering entry remains"
+}

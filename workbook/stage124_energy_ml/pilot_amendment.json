@@ -1,0 +1,8 @@
+{
+  "phase": "first_native_pilot",
+  "job": "9669689.0",
+  "result": "failure_before_snapshot_execution",
+  "cause": "unrelated historical waveform xAOD aux lacks trigger_time required by current NtupleDumper conversion",
+  "change": "standalone tracker-only PoolRead+official MergeTrackCfg+observer with identical geometry/conditions; no waveform/selection/X edits; newpilot2 validates actual PRD/SP links",
+  "physics": "failure is a program/schema error, not a negative association result; count cost"
+}

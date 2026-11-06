@@ -1,0 +1,17 @@
+{
+  "before_all_energy_fits": true,
+  "failed_job": "9669703.19",
+  "batch": 20,
+  "case": {
+    "row": 40738,
+    "source_index": 125,
+    "run": 200089,
+    "event": 135794,
+    "entry": 5794,
+    "old_pz_GeV": 83060.584,
+    "REC_pz_GeV": 84494.216
+  },
+  "policy": "No tolerance relaxation or event deletion. Preserve X, parent and native raw/cluster/SP relations. If original PHYS leading identity cannot be certified in REC, mask only leading-dependent PRD counts, leading-TSOS covariance and q/p uncertainty toNaN; retain shared/unused general track resources. Frozen features/capacity/split/gates unchanged. Diagnose exact PHYS/native candidate parameters in Condor before interpretation.",
+  "failed_batch": "re-extract only failed batch under repair phase; successful exact-matching rows remain original immutable outputs",
+  "counts": "full PHYS/native count closure checked before any fit; count-mismatched objects treated absent rather than event deletion"
+}

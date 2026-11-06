@@ -1,0 +1,416 @@
+{
+  "inputs": [
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+      "exists": true,
+      "trees": {
+        "##Params": {
+          "entries": 4,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Shapes": {
+          "entries": 11,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Links": {
+          "entries": 14,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "CollectionTree": {
+          "entries": 1945829,
+          "branches": {
+            "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+            "EventInfo_p4_McEventInfo": "EventInfo_p4",
+            "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+            "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainer": {
+          "entries": 1945829,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainerForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaData": {
+          "entries": 1,
+          "branches": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdr": {
+          "entries": 1,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdrForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        }
+      },
+      "read_bytes": 1634794,
+      "file_bytes": 1437882051,
+      "wall_s": 0.5687915729940869
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-1-24-xing-100iab.EVNT.pool.root",
+      "exists": true,
+      "trees": {
+        "##Params": {
+          "entries": 4,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Shapes": {
+          "entries": 11,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Links": {
+          "entries": 14,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "CollectionTree": {
+          "entries": 1948419,
+          "branches": {
+            "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+            "EventInfo_p4_McEventInfo": "EventInfo_p4",
+            "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+            "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainer": {
+          "entries": 1948419,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainerForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaData": {
+          "entries": 1,
+          "branches": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdr": {
+          "entries": 1,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdrForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        }
+      },
+      "read_bytes": 1635710,
+      "file_bytes": 1439761517,
+      "wall_s": 0.4522956100408919
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root",
+      "exists": true,
+      "trees": {
+        "##Params": {
+          "entries": 4,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Shapes": {
+          "entries": 11,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Links": {
+          "entries": 14,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "CollectionTree": {
+          "entries": 1777049,
+          "branches": {
+            "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+            "EventInfo_p4_McEventInfo": "EventInfo_p4",
+            "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+            "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainer": {
+          "entries": 1777049,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainerForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaData": {
+          "entries": 1,
+          "branches": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdr": {
+          "entries": 1,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdrForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        }
+      },
+      "read_bytes": 1617712,
+      "file_bytes": 1427264269,
+      "wall_s": 0.6347671580151655
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-1-24-xing-100iab.EVNT.pool.root",
+      "exists": true,
+      "trees": {
+        "##Params": {
+          "entries": 4,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Shapes": {
+          "entries": 11,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Links": {
+          "entries": 14,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "CollectionTree": {
+          "entries": 1757298,
+          "branches": {
+            "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+            "EventInfo_p4_McEventInfo": "EventInfo_p4",
+            "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+            "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainer": {
+          "entries": 1757298,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainerForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaData": {
+          "entries": 1,
+          "branches": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdr": {
+          "entries": 1,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdrForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        }
+      },
+      "read_bytes": 1601373,
+      "file_bytes": 1411721866,
+      "wall_s": 0.4275917710037902
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/powheg-pythia-charm-central-24-xing-100iab.EVNT.pool.root",
+      "exists": true,
+      "trees": {
+        "##Params": {
+          "entries": 4,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Shapes": {
+          "entries": 11,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "##Links": {
+          "entries": 14,
+          "branches": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          }
+        },
+        "CollectionTree": {
+          "entries": 1263234,
+          "branches": {
+            "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+            "EventInfo_p4_McEventInfo": "EventInfo_p4",
+            "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+            "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainer": {
+          "entries": 1263234,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "POOLContainerForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaData": {
+          "entries": 1,
+          "branches": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdr": {
+          "entries": 1,
+          "branches": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          }
+        },
+        "MetaDataHdrForm": {
+          "entries": 1,
+          "branches": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          }
+        }
+      },
+      "read_bytes": 1181141,
+      "file_bytes": 1038438140,
+      "wall_s": 0.3701129920082167
+    }
+  ],
+  "scope": "exact Stage120 retained generator paths only; no directory scan, no event content read or parent association inferred",
+  "old_N0_definition": "old train two-low/hard incoming proxies and ESS; not certified independent GENIE families",
+  "feasible_native_X_XZ": "existing same-support old pool, original full scale; no independent N added",
+  "independent_2N_gate": "not_met: known old producers and historical exposure incomplete; Stage119 new train low52 is far below a940 increment. Native relation experiment proceeds independently.",
+  "expansion_decision": "no small9\u201336 rerun and no unverified sample count increase; exact EVNT metadata alone cannot certify original complete histories or predict selected yield/cost of new full G4",
+  "requirements_for_new_parent_purchase": [
+    "exact EVNT entry/full final state and parent identity from start",
+    "explicit old exposure intersection and independently locked confirmation families",
+    "record truth-directed sampling probability including hard/transition/natural controls",
+    "measure full G4/reco cost on actual new step before freezing old-scale ~2N; current cost unmeasured"
+  ],
+  "CPU_s": 2.24829509,
+  "wall_s": 3.2517505710129626,
+  "RSS_KiB": 144764,
+  "new_fit": 0,
+  "new_forward": 0,
+  "new_generation": 0
+}

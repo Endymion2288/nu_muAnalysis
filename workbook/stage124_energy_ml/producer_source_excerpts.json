@@ -1,0 +1,1940 @@
+[
+  {
+    "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+    "revision": "d32b0ff3",
+    "lines": [
+      {
+        "line": 433,
+        "text": "  m_tree->Branch(\"TAP\", &m_tap, \"TAP/I\");"
+      },
+      {
+        "line": 434,
+        "text": "  m_tree->Branch(\"inputBits\", &m_inputBits, \"inputBits/I\");"
+      },
+      {
+        "line": 435,
+        "text": "  m_tree->Branch(\"inputBitsNext\", &m_inputBitsNext, \"inputBitsNext/I\");"
+      },
+      {
+        "line": 436,
+        "text": ""
+      },
+      {
+        "line": 437,
+        "text": "  // WAVEFORMS"
+      },
+      {
+        "line": 438,
+        "text": "  // Now defined on first event so we can use cable mapping tool"
+      },
+      {
+        "line": 439,
+        "text": "  m_tree->Branch(\"VetoNu0_reduced_charge\", &m_vetonu_reduced_charge[0]);"
+      },
+      {
+        "line": 440,
+        "text": "  m_tree->Branch(\"VetoNu1_reduced_charge\", &m_vetonu_reduced_charge[1]);"
+      },
+      {
+        "line": 441,
+        "text": "  m_tree->Branch(\"ScintHit\", &m_scintHit);"
+      },
+      {
+        "line": 442,
+        "text": ""
+      },
+      {
+        "line": 443,
+        "text": ""
+      },
+      {
+        "line": 444,
+        "text": "  //TRACKER"
+      },
+      {
+        "line": 445,
+        "text": "  addBranch(\"nClusters0\",&m_station0Clusters);"
+      },
+      {
+        "line": 446,
+        "text": "  addBranch(\"nClusters1\",&m_station1Clusters);"
+      },
+      {
+        "line": 447,
+        "text": "  addBranch(\"nClusters2\",&m_station2Clusters);"
+      },
+      {
+        "line": 448,
+        "text": "  addBranch(\"nClusters3\",&m_station3Clusters);"
+      },
+      {
+        "line": 1588,
+        "text": "    std::list<int> preshowerChannels = m_wave_map[std::string(\"preshower\")];"
+      },
+      {
+        "line": 1589,
+        "text": "    preshowerLocalTime = get_mean_scintillator_time(preshowerChannels, *preshowerContainer);"
+      },
+      {
+        "line": 1590,
+        "text": "  }"
+      },
+      {
+        "line": 1591,
+        "text": "  if (std::isnan(vetoLocalTime) && std::isnan(preshowerLocalTime)) {"
+      },
+      {
+        "line": 1592,
+        "text": "    // Use raw/total charge if both veto and preshower are not available"
+      },
+      {
+        "line": 1593,
+        "text": "    std::list<int> vetoNuChannels = m_wave_map[std::string(\"vetonu\")];"
+      },
+      {
+        "line": 1594,
+        "text": "    size_t i = 0;"
+      },
+      {
+        "line": 1595,
+        "text": "    for (int channel : vetoNuChannels) {"
+      },
+      {
+        "line": 1596,
+        "text": "      m_vetonu_reduced_charge[i] = m_wave_raw_charge[channel];"
+      },
+      {
+        "line": 1597,
+        "text": "      i++;"
+      },
+      {
+        "line": 1598,
+        "text": "    }"
+      },
+      {
+        "line": 1599,
+        "text": "  } else {  // Calculate reduced charge"
+      },
+      {
+        "line": 1600,
+        "text": "    // expVetoNuLocalTime is the time where we expect the signal of a muon in the VetoNu"
+      },
+      {
+        "line": 1601,
+        "text": "    // station. This is calculated using the time in the veto or preshower station and the"
+      },
+      {
+        "line": 1602,
+        "text": "    // corresponding time-of-flight"
+      },
+      {
+        "line": 1603,
+        "text": "    float expVetoNuLocalTime;"
+      },
+      {
+        "line": 1604,
+        "text": "    if (!std::isnan(vetoLocalTime)) {"
+      },
+      {
+        "line": 1605,
+        "text": "      expVetoNuLocalTime = vetoLocalTime - m_veto_vetoNu_timeDiff;"
+      },
+      {
+        "line": 1606,
+        "text": "    } else {"
+      },
+      {
+        "line": 1607,
+        "text": "      expVetoNuLocalTime = preshowerLocalTime - m_preshower_vetoNu_timeDiff;"
+      },
+      {
+        "line": 1608,
+        "text": "    }"
+      },
+      {
+        "line": 1609,
+        "text": "    bool good_vetoNu_hit[2]{false, false};"
+      },
+      {
+        "line": 1610,
+        "text": "    for (size_t idx = 0; idx < vetoNuContainer->size(); idx++) {"
+      },
+      {
+        "line": 1611,
+        "text": "      const xAOD::WaveformHit *hit = vetoNuContainer->at(idx);"
+      },
+      {
+        "line": 1612,
+        "text": "      if (((hit->hit_status() & 2) == 0) || (good_vetoNu_hit[idx] == false)) {"
+      },
+      {
+        "line": 1613,
+        "text": "        good_vetoNu_hit[idx] = true;"
+      },
+      {
+        "line": 1614,
+        "text": "        std::vector<float> vetoNuTimeVector = hit->time_vector();"
+      },
+      {
+        "line": 1615,
+        "text": "        std::vector<float> vetoNuWaveVector = hit->wave_vector();"
+      },
+      {
+        "line": 1616,
+        "text": "        if (vetoNuTimeVector.size() != vetoNuWaveVector.size()) {"
+      },
+      {
+        "line": 1617,
+        "text": "          ATH_MSG_ERROR(\"Time and Wave vector have to have same size.\");"
+      },
+      {
+        "line": 1618,
+        "text": "          return StatusCode::FAILURE;"
+      },
+      {
+        "line": 1619,
+        "text": "        }"
+      },
+      {
+        "line": 1620,
+        "text": "        // Sum up the waveform values up to the expected local time plus a time window"
+      },
+      {
+        "line": 1621,
+        "text": "        // which covers the tail of the Crystall Ball function"
+      },
+      {
+        "line": 1622,
+        "text": "        m_vetonu_reduced_charge[idx] = 0;"
+      },
+      {
+        "line": 1623,
+        "text": "        for (size_t i = 0; i < vetoNuTimeVector.size(); i++) {"
+      },
+      {
+        "line": 1624,
+        "text": "          if (vetoNuTimeVector[i] < expVetoNuLocalTime + m_reducedChargeIntegrationTime) {"
+      },
+      {
+        "line": 1625,
+        "text": "            m_vetonu_reduced_charge[idx] += vetoNuWaveVector[i];"
+      },
+      {
+        "line": 1626,
+        "text": "          } else {"
+      },
+      {
+        "line": 1627,
+        "text": "            break;"
+      },
+      {
+        "line": 1628,
+        "text": "          }"
+      },
+      {
+        "line": 1629,
+        "text": "        }"
+      },
+      {
+        "line": 1630,
+        "text": "        // Calculate the charge in pC from the raw integral of the waveform by dividing"
+      },
+      {
+        "line": 1631,
+        "text": "        // by the 50 Ohm thermal resistance and 2ns time steps"
+      },
+      {
+        "line": 1632,
+        "text": "        m_vetonu_reduced_charge[idx] *= m_int_to_charge;"
+      },
+      {
+        "line": 1633,
+        "text": "      }"
+      },
+      {
+        "line": 1634,
+        "text": "    }"
+      },
+      {
+        "line": 1635,
+        "text": "  }"
+      },
+      {
+        "line": 1636,
+        "text": ""
+      },
+      {
+        "line": 1637,
+        "text": "  // loop over all reconstructed tracks and use only the tracks that have hits in all three tracking stations (excludes IFT)"
+      },
+      {
+        "line": 1638,
+        "text": "  // store track parameters at most upstream measurement and at most downstream measurement"
+      },
+      {
+        "line": 1639,
+        "text": "  // extrapolate track to all scintillator positions and store extrapolated position and angle"
+      },
+      {
+        "line": 1640,
+        "text": "  SG::ReadHandle<TrackCollection> trackCollection;"
+      },
+      {
+        "line": 1641,
+        "text": "  if (m_useIFT) {"
+      },
+      {
+        "line": 1642,
+        "text": "    SG::ReadHandle<TrackCollection> tc {m_trackCollection, ctx}; // use track collection that includes IFT"
+      },
+      {
+        "line": 2227,
+        "text": ""
+      },
+      {
+        "line": 2228,
+        "text": "      m_calibrated_nMIP[ii]=0;"
+      },
+      {
+        "line": 2229,
+        "text": "      m_calibrated_E_dep[ii]=0;"
+      },
+      {
+        "line": 2230,
+        "text": "      m_calibrated_E_EM[ii]=0;"
+      },
+      {
+        "line": 2231,
+        "text": "  }"
+      },
+      {
+        "line": 2232,
+        "text": "  for (unsigned int ii=0; ii<2; ii++) {"
+      },
+      {
+        "line": 2233,
+        "text": "    m_vetonu_reduced_charge[ii]=0;"
+      },
+      {
+        "line": 2234,
+        "text": "  }"
+      },
+      {
+        "line": 2235,
+        "text": ""
+      },
+      {
+        "line": 2236,
+        "text": "  m_scintHit = 0;"
+      },
+      {
+        "line": 2237,
+        "text": ""
+      },
+      {
+        "line": 2238,
+        "text": "  m_calo_total_nMIP=0;"
+      },
+      {
+        "line": 2239,
+        "text": "  m_calo_total_E_dep=0;"
+      },
+      {
+        "line": 2240,
+        "text": "  m_calo_total_fit_E_EM=0;"
+      },
+      {
+        "line": 2241,
+        "text": "  m_calo_total_raw_E_EM=0;"
+      }
+    ]
+  },
+  {
+    "path": "Simulation/G4Faser/G4FaserServices/src/FaserPhysicsListSvc.cxx",
+    "revision": "d32b0ff3",
+    "lines": [
+      {
+        "line": 1,
+        "text": "/*"
+      },
+      {
+        "line": 2,
+        "text": "  Copyright (C) 2002-2023 CERN for the benefit of the ATLAS collaboration"
+      },
+      {
+        "line": 3,
+        "text": "*/"
+      },
+      {
+        "line": 4,
+        "text": ""
+      },
+      {
+        "line": 5,
+        "text": "#include \"FaserPhysicsListSvc.h\""
+      },
+      {
+        "line": 6,
+        "text": ""
+      },
+      {
+        "line": 7,
+        "text": "#include \"G4VUserPhysicsList.hh\""
+      },
+      {
+        "line": 8,
+        "text": "#include \"G4StateManager.hh\""
+      },
+      {
+        "line": 9,
+        "text": "#include \"G4RunManager.hh\""
+      },
+      {
+        "line": 10,
+        "text": "#include \"G4EmParameters.hh\""
+      },
+      {
+        "line": 11,
+        "text": "#include \"G4UImanager.hh\""
+      },
+      {
+        "line": 12,
+        "text": "#include \"G4PhysListFactory.hh\""
+      },
+      {
+        "line": 13,
+        "text": "// #include \"G4AntiNeutron.hh\""
+      },
+      {
+        "line": 14,
+        "text": ""
+      },
+      {
+        "line": 15,
+        "text": "#include \"CLHEP/Units/PhysicalConstants.h\""
+      },
+      {
+        "line": 16,
+        "text": ""
+      },
+      {
+        "line": 17,
+        "text": "#include \"G4PhysicsLists/AtlasPhysListFactory.h\""
+      },
+      {
+        "line": 18,
+        "text": ""
+      },
+      {
+        "line": 19,
+        "text": "#include <limits>"
+      },
+      {
+        "line": 20,
+        "text": ""
+      },
+      {
+        "line": 21,
+        "text": "FaserPhysicsListSvc::FaserPhysicsListSvc(const std::string& name, ISvcLocator* pSvcLocator)"
+      },
+      {
+        "line": 22,
+        "text": "  : base_class(name,pSvcLocator)"
+      },
+      {
+        "line": 23,
+        "text": "{"
+      },
+      {
+        "line": 24,
+        "text": "}"
+      },
+      {
+        "line": 25,
+        "text": ""
+      },
+      {
+        "line": 26,
+        "text": ""
+      },
+      {
+        "line": 27,
+        "text": "StatusCode FaserPhysicsListSvc::initialize( )"
+      },
+      {
+        "line": 28,
+        "text": "{"
+      },
+      {
+        "line": 29,
+        "text": "  ATH_MSG_DEBUG(\"FaserPhysicsListSvc::initialize()\");"
+      },
+      {
+        "line": 30,
+        "text": "  if (m_phys_option.size())"
+      },
+      {
+        "line": 31,
+        "text": "    {"
+      },
+      {
+        "line": 32,
+        "text": "      ATH_MSG_INFO( \"Initializing list of \" <<  m_phys_option.size() << \" physics options\"  );"
+      },
+      {
+        "line": 33,
+        "text": "      CHECK( m_phys_option.retrieve() );"
+      },
+      {
+        "line": 34,
+        "text": "    }"
+      },
+      {
+        "line": 35,
+        "text": ""
+      },
+      {
+        "line": 36,
+        "text": "  if (m_phys_decay.size())"
+      },
+      {
+        "line": 37,
+        "text": "    {"
+      },
+      {
+        "line": 40,
+        "text": "    }"
+      },
+      {
+        "line": 41,
+        "text": ""
+      },
+      {
+        "line": 42,
+        "text": "  return StatusCode::SUCCESS;"
+      },
+      {
+        "line": 43,
+        "text": "}"
+      },
+      {
+        "line": 44,
+        "text": ""
+      },
+      {
+        "line": 45,
+        "text": ""
+      },
+      {
+        "line": 46,
+        "text": "void FaserPhysicsListSvc::CreatePhysicsList()"
+      },
+      {
+        "line": 47,
+        "text": "{"
+      },
+      {
+        "line": 48,
+        "text": "  ATH_MSG_DEBUG(\"FaserPhysicsListSvc::CreatePhysicsList()\");"
+      },
+      {
+        "line": 49,
+        "text": "  if (m_physicsListName.value() != \"\"){"
+      },
+      {
+        "line": 50,
+        "text": "    G4PhysListFactory factory;"
+      },
+      {
+        "line": 51,
+        "text": "    AtlasPhysListFactory Atlasfactory;"
+      },
+      {
+        "line": 52,
+        "text": "    if (factory.IsReferencePhysList(m_physicsListName.value()))"
+      },
+      {
+        "line": 53,
+        "text": "    {"
+      },
+      {
+        "line": 54,
+        "text": "      ATH_MSG_INFO(\"Creating Geant4 PhysicsList: \" << m_physicsListName.value());"
+      },
+      {
+        "line": 55,
+        "text": "      m_physicsList = factory.GetReferencePhysList(m_physicsListName.value());"
+      },
+      {
+        "line": 56,
+        "text": "    }"
+      },
+      {
+        "line": 57,
+        "text": "    else if (Atlasfactory.IsReferencePhysList(m_physicsListName.value()))"
+      },
+      {
+        "line": 58,
+        "text": "    {"
+      },
+      {
+        "line": 59,
+        "text": "      ATH_MSG_INFO(\"Creating ATLAS PhysicsList: \" << m_physicsListName.value());"
+      },
+      {
+        "line": 60,
+        "text": "      m_physicsList = Atlasfactory.GetReferencePhysList(m_physicsListName.value());"
+      },
+      {
+        "line": 61,
+        "text": "    }"
+      },
+      {
+        "line": 62,
+        "text": "  }"
+      },
+      {
+        "line": 63,
+        "text": ""
+      },
+      {
+        "line": 64,
+        "text": "  if (!m_physicsList)"
+      },
+      {
+        "line": 65,
+        "text": "    {"
+      },
+      {
+        "line": 66,
+        "text": "      ATH_MSG_ERROR(\"Unable to initialize physics List: \" << m_physicsList);"
+      },
+      {
+        "line": 67,
+        "text": "      throw \"PhysicsListInitializationError\";"
+      },
+      {
+        "line": 68,
+        "text": "    }"
+      },
+      {
+        "line": 69,
+        "text": "  // Call these as functions.  As this could be used as a base class, having"
+      },
+      {
+        "line": 70,
+        "text": "  //   these as separate functions lets someone who is inheriting from this use"
+      },
+      {
+        "line": 71,
+        "text": "  //   them..."
+      },
+      {
+        "line": 72,
+        "text": ""
+      },
+      {
+        "line": 73,
+        "text": "  // sort m_phys_option list"
+      },
+      {
+        "line": 74,
+        "text": "  std::vector<IPhysicsOptionTool*> sortedPhysicsOptions;"
+      },
+      {
+        "line": 75,
+        "text": "  sortedPhysicsOptions.reserve(m_phys_option.size());"
+      },
+      {
+        "line": 108,
+        "text": "      if (physOptTool->GetOptionType() == G4AtlasPhysicsOption::Type::UnknownType) {"
+      },
+      {
+        "line": 109,
+        "text": "        ATH_MSG_ERROR(physOptTool->name() << \"set as UnknownType. This tool will not be used to modify the physics list of this job.\");"
+      },
+      {
+        "line": 110,
+        "text": "      }"
+      },
+      {
+        "line": 111,
+        "text": "    }"
+      },
+      {
+        "line": 112,
+        "text": "  }"
+      },
+      {
+        "line": 113,
+        "text": ""
+      },
+      {
+        "line": 114,
+        "text": "  //Register physics options to the G4VModularPhysicsList"
+      },
+      {
+        "line": 115,
+        "text": "  for (auto& physOptTool: sortedPhysicsOptions)"
+      },
+      {
+        "line": 116,
+        "text": "    {"
+      },
+      {
+        "line": 117,
+        "text": "      ATH_MSG_DEBUG(\"Registering \" << physOptTool->name());"
+      },
+      {
+        "line": 118,
+        "text": "      m_physicsList->RegisterPhysics(physOptTool->GetPhysicsOption());"
+      },
+      {
+        "line": 119,
+        "text": "    }"
+      },
+      {
+        "line": 120,
+        "text": "  //Register decays to the G4VModularPhysicsList"
+      },
+      {
+        "line": 121,
+        "text": "  for (auto& physDecayTool: m_phys_decay)"
+      },
+      {
+        "line": 122,
+        "text": "    {"
+      },
+      {
+        "line": 123,
+        "text": "      ATH_MSG_DEBUG(\"Registering \" << physDecayTool->name());"
+      },
+      {
+        "line": 124,
+        "text": "      m_physicsList->RegisterPhysics(physDecayTool->GetPhysicsOption());"
+      },
+      {
+        "line": 125,
+        "text": "    }"
+      },
+      {
+        "line": 126,
+        "text": ""
+      },
+      {
+        "line": 127,
+        "text": "  //ConstructProcess();"
+      },
+      {
+        "line": 128,
+        "text": "  ATH_MSG_DEBUG(\"end of FaserPhysicsListSvc::CreatePhysicsList()\");"
+      },
+      {
+        "line": 129,
+        "text": "}"
+      },
+      {
+        "line": 130,
+        "text": ""
+      },
+      {
+        "line": 131,
+        "text": ""
+      },
+      {
+        "line": 132,
+        "text": "G4VUserPhysicsList* FaserPhysicsListSvc::GetPhysicsList()"
+      },
+      {
+        "line": 133,
+        "text": "{"
+      },
+      {
+        "line": 134,
+        "text": "  if (!m_physicsList) {"
+      },
+      {
+        "line": 135,
+        "text": "    this->CreatePhysicsList();"
+      },
+      {
+        "line": 136,
+        "text": "  }"
+      },
+      {
+        "line": 137,
+        "text": "  return m_physicsList;"
+      },
+      {
+        "line": 138,
+        "text": "}"
+      },
+      {
+        "line": 139,
+        "text": ""
+      },
+      {
+        "line": 140,
+        "text": ""
+      },
+      {
+        "line": 141,
+        "text": "void FaserPhysicsListSvc::SetPhysicsList()"
+      },
+      {
+        "line": 142,
+        "text": "{"
+      },
+      {
+        "line": 143,
+        "text": "  if(!m_physicsList) {"
+      },
+      {
+        "line": 144,
+        "text": "    this->CreatePhysicsList();"
+      },
+      {
+        "line": 145,
+        "text": "  }"
+      },
+      {
+        "line": 146,
+        "text": "  G4RunManager::GetRunManager()->SetUserInitialization(m_physicsList);"
+      },
+      {
+        "line": 147,
+        "text": "}"
+      },
+      {
+        "line": 148,
+        "text": ""
+      },
+      {
+        "line": 149,
+        "text": ""
+      },
+      {
+        "line": 150,
+        "text": "void FaserPhysicsListSvc::SetPhysicsOptions()"
+      },
+      {
+        "line": 151,
+        "text": "{"
+      },
+      {
+        "line": 152,
+        "text": "  if (!m_physicsList)"
+      },
+      {
+        "line": 153,
+        "text": "    {"
+      },
+      {
+        "line": 154,
+        "text": "      ATH_MSG_WARNING(\"Physics list not initialized before calling ConstructProcess()\");"
+      },
+      {
+        "line": 155,
+        "text": "      return;"
+      },
+      {
+        "line": 156,
+        "text": "    }"
+      },
+      {
+        "line": 157,
+        "text": ""
+      },
+      {
+        "line": 158,
+        "text": "  if(m_generalCut.value() > 0. && std::abs(m_generalCut.value())>std::numeric_limits<double>::epsilon())"
+      },
+      {
+        "line": 159,
+        "text": "    {"
+      },
+      {
+        "line": 160,
+        "text": "      m_physicsList->SetDefaultCutValue(m_generalCut.value());"
+      },
+      {
+        "line": 161,
+        "text": "    }"
+      },
+      {
+        "line": 162,
+        "text": ""
+      },
+      {
+        "line": 163,
+        "text": "  std::vector<std::string> g4commands;"
+      },
+      {
+        "line": 164,
+        "text": "  if (m_neutronTimeCut.value() > 0. && std::abs(m_neutronTimeCut.value())>std::numeric_limits<double>::epsilon())"
+      },
+      {
+        "line": 165,
+        "text": "    {"
+      },
+      {
+        "line": 166,
+        "text": "      std::ostringstream oss;"
+      },
+      {
+        "line": 167,
+        "text": "      oss<<\"/physics_engine/neutron/timeLimit \"<<m_neutronTimeCut.value()<<\" ns\";"
+      },
+      {
+        "line": 168,
+        "text": "      g4commands.push_back(oss.str());"
+      },
+      {
+        "line": 169,
+        "text": "    }"
+      },
+      {
+        "line": 170,
+        "text": ""
+      },
+      {
+        "line": 171,
+        "text": "  if (m_neutronEnergyCut.value() > 0. && std::abs(m_neutronEnergyCut.value())>std::numeric_limits<double>::epsilon())"
+      },
+      {
+        "line": 172,
+        "text": "    {"
+      },
+      {
+        "line": 173,
+        "text": "      std::ostringstream oss;"
+      },
+      {
+        "line": 174,
+        "text": "      oss<<\"/physics_engine/neutron/energyLimit \"<<m_neutronEnergyCut.value()<<\" MeV\";"
+      },
+      {
+        "line": 175,
+        "text": "      g4commands.push_back(oss.str());"
+      },
+      {
+        "line": 199,
+        "text": "//   }"
+      },
+      {
+        "line": 200,
+        "text": ""
+      },
+      {
+        "line": 201,
+        "text": "  return;"
+      },
+      {
+        "line": 202,
+        "text": "}"
+      },
+      {
+        "line": 203,
+        "text": ""
+      },
+      {
+        "line": 204,
+        "text": ""
+      },
+      {
+        "line": 205,
+        "text": "void FaserPhysicsListSvc::CommandLog(int returnCode, const std::string& commandString) const"
+      },
+      {
+        "line": 206,
+        "text": "{"
+      },
+      {
+        "line": 207,
+        "text": "  switch(returnCode) {"
+      },
+      {
+        "line": 208,
+        "text": "  case 0: { ATH_MSG_DEBUG(\"G4 Command: \" << commandString << \" - Command Succeeded\"); } break;"
+      },
+      {
+        "line": 209,
+        "text": "  case 100: { ATH_MSG_ERROR(\"G4 Command: \" << commandString << \" - Command Not Found!\"); } break;"
+      },
+      {
+        "line": 210,
+        "text": "  case 200: {"
+      },
+      {
+        "line": 211,
+        "text": "    auto* stateManager = G4StateManager::GetStateManager();"
+      },
+      {
+        "line": 212,
+        "text": "    ATH_MSG_DEBUG(\"G4 Command: \" << commandString << \" - Illegal Application State (\" <<"
+      },
+      {
+        "line": 213,
+        "text": "                    stateManager->GetStateString(stateManager->GetCurrentState()) << \")!\");"
+      }
+    ]
+  },
+  {
+    "path": "Simulation/G4Faser/G4FaserServices/src/FaserPhysicsListSvc.h",
+    "revision": "d32b0ff3",
+    "lines": [
+      {
+        "line": 3,
+        "text": "*/"
+      },
+      {
+        "line": 4,
+        "text": ""
+      },
+      {
+        "line": 5,
+        "text": "#ifndef G4FASERSERVICES_FASERPHYSICSLISTSVC_H"
+      },
+      {
+        "line": 6,
+        "text": "#define G4FASERSERVICES_FASERPHYSICSLISTSVC_H"
+      },
+      {
+        "line": 7,
+        "text": ""
+      },
+      {
+        "line": 8,
+        "text": "// Base classes"
+      },
+      {
+        "line": 9,
+        "text": "#include \"G4AtlasInterfaces/IPhysicsListSvc.h\""
+      },
+      {
+        "line": 10,
+        "text": "#include \"AthenaBaseComps/AthService.h\""
+      },
+      {
+        "line": 11,
+        "text": ""
+      },
+      {
+        "line": 12,
+        "text": ""
+      },
+      {
+        "line": 13,
+        "text": "#include \"G4AtlasInterfaces/IPhysicsOptionTool.h\""
+      },
+      {
+        "line": 14,
+        "text": "#include \"GaudiKernel/ToolHandle.h\""
+      },
+      {
+        "line": 15,
+        "text": ""
+      },
+      {
+        "line": 16,
+        "text": "// Classes that are returned"
+      },
+      {
+        "line": 17,
+        "text": "class G4VModularPhysicsList;"
+      },
+      {
+        "line": 18,
+        "text": "class G4VUserPhysicsList;"
+      },
+      {
+        "line": 19,
+        "text": ""
+      },
+      {
+        "line": 20,
+        "text": "// STL library"
+      },
+      {
+        "line": 21,
+        "text": "#include <string>"
+      },
+      {
+        "line": 22,
+        "text": ""
+      },
+      {
+        "line": 23,
+        "text": "class FaserPhysicsListSvc : public extends<AthService, IPhysicsListSvc>"
+      },
+      {
+        "line": 24,
+        "text": "{"
+      },
+      {
+        "line": 25,
+        "text": "public:"
+      },
+      {
+        "line": 26,
+        "text": "  // Standard constructor and destructor"
+      },
+      {
+        "line": 27,
+        "text": "  FaserPhysicsListSvc(const std::string& name, ISvcLocator* pSvcLocator);"
+      },
+      {
+        "line": 28,
+        "text": "  virtual ~FaserPhysicsListSvc() = default;"
+      },
+      {
+        "line": 29,
+        "text": ""
+      },
+      {
+        "line": 30,
+        "text": ""
+      },
+      {
+        "line": 31,
+        "text": "  virtual StatusCode initialize( ) override;"
+      },
+      {
+        "line": 32,
+        "text": "  // Base class methods from IPhysicsListSvc"
+      },
+      {
+        "line": 33,
+        "text": "  virtual void CreatePhysicsList() override;"
+      },
+      {
+        "line": 34,
+        "text": "  virtual G4VUserPhysicsList* GetPhysicsList() override;"
+      },
+      {
+        "line": 35,
+        "text": "  virtual void SetPhysicsList() override;"
+      },
+      {
+        "line": 36,
+        "text": "  virtual void SetPhysicsOptions() override;"
+      },
+      {
+        "line": 37,
+        "text": ""
+      },
+      {
+        "line": 38,
+        "text": "private:"
+      },
+      {
+        "line": 39,
+        "text": ""
+      },
+      {
+        "line": 40,
+        "text": "  /// This command prints a message about a G4Command depending on its returnCode"
+      },
+      {
+        "line": 41,
+        "text": "  void CommandLog(int returnCode, const std::string& commandString) const;"
+      },
+      {
+        "line": 42,
+        "text": ""
+      },
+      {
+        "line": 43,
+        "text": "  ToolHandleArray<IPhysicsOptionTool> m_phys_option{this, \"PhysOption\", {}, \"Tool handle array of physics options\" };"
+      },
+      {
+        "line": 44,
+        "text": "  ToolHandleArray<IPhysicsOptionTool> m_phys_decay{this, \"PhysicsDecay\", {}, \"Tool handle array of physics decays\"};"
+      },
+      {
+        "line": 45,
+        "text": "  G4VModularPhysicsList* m_physicsList{}; ///!< Handle on the physics list"
+      },
+      {
+        "line": 46,
+        "text": "  Gaudi::Property<std::string> m_physicsListName{this, \"PhysicsList\", \"FTFP_BERT\", \"Name for physics list\"};     ///!< Name for the physics list (property to be set in the tool)"
+      },
+      {
+        "line": 47,
+        "text": "  Gaudi::Property<double> m_neutronTimeCut{this, \"NeutronTimeCut\", 0, \"Time cut for neutron killer\"};           ///!< Time cut for neutrons (in the neutron killer process)"
+      },
+      {
+        "line": 48,
+        "text": "  Gaudi::Property<double> m_neutronEnergyCut{this, \"NeutronEnergyCut\", 0, \"Energy cut for neutron killer\"};         ///!< Energy cut for neutrons (in the neutron killer process)"
+      },
+      {
+        "line": 49,
+        "text": "  Gaudi::Property<double> m_generalCut{this, \"GeneralCut\", 0, \"General cut\"};               ///!< A general cut - this isn't normally used in our simulation"
+      },
+      {
+        "line": 50,
+        "text": "  Gaudi::Property<double> m_emMaxEnergy{this, \"EMMaxEnergy\", -1., \"Maximum energy for EM tables\"};              ///!< Maximum energy of the pre-calculated EM cross-section tables"
+      },
+      {
+        "line": 51,
+        "text": "  Gaudi::Property<double> m_emMinEnergy{this, \"EMMinEnergy\", -1., \"Minimum energy for EM tables\"};              ///!< Minimum energy of the pre-calculated EM cross-section tables"
+      },
+      {
+        "line": 52,
+        "text": "  /* --- ATLASSIM-3967 ---"
+      },
+      {
+        "line": 53,
+        "text": "     Old methods SetDEDXBinning and SetLambdaBinning are replaced in G4 10.4 by"
+      },
+      {
+        "line": 54,
+        "text": "     SetNumberOfBinsPerDecade which now controls both settings with the same"
+      },
+      {
+        "line": 55,
+        "text": "     value. Instead of changing the overall number of bins, user should"
+      }
+    ]
+  },
+  {
+    "path": "Scintillator/ScintSimEvent/ScintSimEvent/ScintHit.h",
+    "revision": "d32b0ff3",
+    "lines": [
+      {
+        "line": 32,
+        "text": "  //   time of energy deposition"
+      },
+      {
+        "line": 33,
+        "text": "  //   number of track which released this energy"
+      },
+      {
+        "line": 34,
+        "text": "  //"
+      },
+      {
+        "line": 35,
+        "text": "  ScintHit(const HepGeom::Point3D<double> &localStartPosition,"
+      },
+      {
+        "line": 36,
+        "text": "           const HepGeom::Point3D<double> &localEndPosition,"
+      },
+      {
+        "line": 37,
+        "text": "           const double energyLoss,"
+      },
+      {
+        "line": 38,
+        "text": "           const double meanTime,"
+      },
+      {
+        "line": 39,
+        "text": "           const int trackNumber,"
+      },
+      {
+        "line": 40,
+        "text": "           const unsigned int id);"
+      },
+      {
+        "line": 41,
+        "text": ""
+      },
+      {
+        "line": 42,
+        "text": "  ScintHit(const HepGeom::Point3D<double> &localStartPosition,"
+      },
+      {
+        "line": 43,
+        "text": "           const HepGeom::Point3D<double> &localEndPosition,"
+      },
+      {
+        "line": 44,
+        "text": "           const double energyLoss,"
+      },
+      {
+        "line": 45,
+        "text": "           const double meanTime,"
+      },
+      {
+        "line": 46,
+        "text": "           const int trackNumber,"
+      },
+      {
+        "line": 47,
+        "text": "           const int, const int, const int);"
+      },
+      {
+        "line": 48,
+        "text": "  // Constructor with parameters:"
+      },
+      {
+        "line": 49,
+        "text": "  //   local start position of the energy deposit"
+      },
+      {
+        "line": 50,
+        "text": "  //   local end position of the energy deposit"
+      },
+      {
+        "line": 51,
+        "text": "  //   deposited energy"
+      },
+      {
+        "line": 52,
+        "text": "  //   time of energy deposition"
+      },
+      {
+        "line": 53,
+        "text": "  //   link to particle which released this energy"
+      },
+      {
+        "line": 54,
+        "text": "  //"
+      },
+      {
+        "line": 55,
+        "text": "  ScintHit(const HepGeom::Point3D<double> &localStartPosition,"
+      },
+      {
+        "line": 56,
+        "text": "           const HepGeom::Point3D<double> &localEndPosition,"
+      },
+      {
+        "line": 57,
+        "text": "           const double energyLoss,"
+      },
+      {
+        "line": 58,
+        "text": "           const double meanTime,"
+      },
+      {
+        "line": 59,
+        "text": "           const HepMcParticleLink &track,"
+      },
+      {
+        "line": 60,
+        "text": "           const unsigned int id);"
+      },
+      {
+        "line": 61,
+        "text": ""
+      },
+      {
+        "line": 62,
+        "text": "  ScintHit(const HepGeom::Point3D<double> &localStartPosition,"
+      },
+      {
+        "line": 63,
+        "text": "           const HepGeom::Point3D<double> &localEndPosition,"
+      },
+      {
+        "line": 64,
+        "text": "           const double energyLoss,"
+      },
+      {
+        "line": 65,
+        "text": "           const double meanTime,"
+      },
+      {
+        "line": 66,
+        "text": "           const HepMcParticleLink &track,"
+      },
+      {
+        "line": 67,
+        "text": "           const int, const int, const int);"
+      },
+      {
+        "line": 68,
+        "text": "  // needed by athenaRoot"
+      },
+      {
+        "line": 69,
+        "text": "  ScintHit();"
+      },
+      {
+        "line": 70,
+        "text": ""
+      },
+      {
+        "line": 71,
+        "text": "  // Destructor:"
+      },
+      {
+        "line": 72,
+        "text": "  virtual ~ScintHit() = default; "
+      },
+      {
+        "line": 73,
+        "text": "  "
+      },
+      {
+        "line": 97,
+        "text": "  HepGeom::Point3D<double> localEndPosition() const;"
+      },
+      {
+        "line": 98,
+        "text": ""
+      },
+      {
+        "line": 99,
+        "text": "  // deposited energy:"
+      },
+      {
+        "line": 100,
+        "text": "  double energyLoss() const;"
+      },
+      {
+        "line": 101,
+        "text": ""
+      },
+      {
+        "line": 102,
+        "text": "  // time of energy deposition: FIXME name!"
+      },
+      {
+        "line": 103,
+        "text": "  double meanTime() const;"
+      },
+      {
+        "line": 104,
+        "text": ""
+      },
+      {
+        "line": 105,
+        "text": "  // Set the time of energy deposition: FIXME name!"
+      },
+      {
+        "line": 106,
+        "text": "  void setMeanTime(float meanTime);"
+      },
+      {
+        "line": 107,
+        "text": ""
+      },
+      {
+        "line": 108,
+        "text": "  // number of track which released this energy:"
+      },
+      {
+        "line": 109,
+        "text": "  int trackNumber() const;"
+      },
+      {
+        "line": 110,
+        "text": ""
+      },
+      {
+        "line": 111,
+        "text": "  // link to the particle generating the hit"
+      },
+      {
+        "line": 112,
+        "text": "  const HepMcParticleLink& particleLink() const;"
+      },
+      {
+        "line": 113,
+        "text": ""
+      },
+      {
+        "line": 114,
+        "text": "  // Veto, trigger or preshower?"
+      },
+      {
+        "line": 140,
+        "text": "  ///////////////////////////////////////////////////////////////////"
+      },
+      {
+        "line": 141,
+        "text": "private:"
+      },
+      {
+        "line": 142,
+        "text": ""
+      },
+      {
+        "line": 143,
+        "text": "  float m_stX, m_stY, m_stZ;"
+      },
+      {
+        "line": 144,
+        "text": "  float m_enX, m_enY, m_enZ;"
+      },
+      {
+        "line": 145,
+        "text": "  float m_energyLoss; // deposited energy"
+      },
+      {
+        "line": 146,
+        "text": "  float m_meanTime; // time of energy deposition"
+      },
+      {
+        "line": 147,
+        "text": "  HepMcParticleLink m_partLink;"
+      },
+      {
+        "line": 148,
+        "text": "  unsigned int m_ID;"
+      },
+      {
+        "line": 149,
+        "text": "public:"
+      },
+      {
+        "line": 150,
+        "text": "  // enum"
+      },
+      {
+        "line": 151,
+        "text": "  //   { xDep = 2, xPhi = 0, xEta = 1};"
+      },
+      {
+        "line": 152,
+        "text": "};"
+      },
+      {
+        "line": 153,
+        "text": ""
+      },
+      {
+        "line": 154,
+        "text": ""
+      },
+      {
+        "line": 163,
+        "text": ""
+      },
+      {
+        "line": 164,
+        "text": "inline double ScintHit::energyLoss() const"
+      },
+      {
+        "line": 165,
+        "text": "{"
+      },
+      {
+        "line": 166,
+        "text": "  return (double) m_energyLoss;"
+      },
+      {
+        "line": 167,
+        "text": "}"
+      },
+      {
+        "line": 168,
+        "text": ""
+      },
+      {
+        "line": 169,
+        "text": "inline double ScintHit::meanTime() const"
+      },
+      {
+        "line": 170,
+        "text": "{"
+      },
+      {
+        "line": 171,
+        "text": "  return (double) m_meanTime;"
+      },
+      {
+        "line": 172,
+        "text": "}"
+      },
+      {
+        "line": 173,
+        "text": ""
+      },
+      {
+        "line": 174,
+        "text": "inline void ScintHit::setMeanTime(float meanTime)"
+      },
+      {
+        "line": 175,
+        "text": "{"
+      },
+      {
+        "line": 176,
+        "text": "  m_meanTime=meanTime;"
+      },
+      {
+        "line": 177,
+        "text": "}"
+      },
+      {
+        "line": 178,
+        "text": ""
+      },
+      {
+        "line": 179,
+        "text": "inline const HepMcParticleLink& ScintHit::particleLink() const"
+      },
+      {
+        "line": 180,
+        "text": "{"
+      },
+      {
+        "line": 181,
+        "text": "  return m_partLink;"
+      },
+      {
+        "line": 182,
+        "text": "}"
+      },
+      {
+        "line": 183,
+        "text": ""
+      },
+      {
+        "line": 184,
+        "text": ""
+      },
+      {
+        "line": 186,
+        "text": "///////////////////////////////////////////////////////////////////"
+      },
+      {
+        "line": 187,
+        "text": "// open functions:"
+      },
+      {
+        "line": 188,
+        "text": "///////////////////////////////////////////////////////////////////"
+      },
+      {
+        "line": 189,
+        "text": ""
+      },
+      {
+        "line": 190,
+        "text": "inline float hitTime(const ScintHit& hit)"
+      },
+      {
+        "line": 191,
+        "text": "{"
+      },
+      {
+        "line": 192,
+        "text": "  return (float) hit.meanTime();"
+      },
+      {
+        "line": 193,
+        "text": "}"
+      },
+      {
+        "line": 194,
+        "text": ""
+      },
+      {
+        "line": 195,
+        "text": "#endif // SCINTSIMEVENT_SCINTHIT_H"
+      }
+    ]
+  },
+  {
+    "path": "Scintillator/ScintEventCnv/ScintSimEventTPCnv/src/ScintHits/ScintHitCollectionCnv_p1a.cxx",
+    "revision": "d32b0ff3",
+    "lines": [
+      {
+        "line": 143,
+        "text": "    HepGeom::Point3D<double> st = siHit->localStartPosition();"
+      },
+      {
+        "line": 144,
+        "text": "    HepGeom::Point3D<double> en = siHit->localEndPosition();"
+      },
+      {
+        "line": 145,
+        "text": ""
+      },
+      {
+        "line": 146,
+        "text": "    const double dx = st.x() - lastTransEnd.x();"
+      },
+      {
+        "line": 147,
+        "text": "    const double dy = st.y() - lastTransEnd.y();"
+      },
+      {
+        "line": 148,
+        "text": "    const double dz = st.z() - lastTransEnd.z();"
+      },
+      {
+        "line": 149,
+        "text": "    const double t = siHit->meanTime();"
+      },
+      {
+        "line": 150,
+        "text": ""
+      },
+      {
+        "line": 151,
+        "text": "    const double dRLast = sqrt(dx * dx + dy * dy + dz * dz);  // dR between end of previous hit and start of current one"
+      },
+      {
+        "line": 152,
+        "text": "    const double dTLast = fabs(t - lastT);"
+      },
+      {
+        "line": 153,
+        "text": ""
+      },
+      {
+        "line": 154,
+        "text": "    CLHEP::Hep3Vector direction(0.0, 0.0, 0.0);"
+      },
+      {
+        "line": 155,
+        "text": "    double theta = 0.0;"
+      },
+      {
+        "line": 156,
+        "text": "    double phi = 0.0;"
+      },
+      {
+        "line": 157,
+        "text": "    bool startNewString = false;"
+      },
+      {
+        "line": 186,
+        "text": ""
+      },
+      {
+        "line": 187,
+        "text": "      direction = CLHEP::Hep3Vector( en.x() - st.x(), en.y() - st.y(), en.z() - st.z() );"
+      },
+      {
+        "line": 188,
+        "text": ""
+      },
+      {
+        "line": 189,
+        "text": "      theta = direction.theta();"
+      },
+      {
+        "line": 190,
+        "text": "      phi = phicorr( direction.phi() );"
+      },
+      {
+        "line": 191,
+        "text": ""
+      },
+      {
+        "line": 192,
+        "text": "      persCont->m_hit1_meanTime.push_back(t);"
+      },
+      {
+        "line": 193,
+        "text": "      persCont->m_hit1_x0.push_back(st.x());"
+      },
+      {
+        "line": 194,
+        "text": "      persCont->m_hit1_y0.push_back(st.y());"
+      },
+      {
+        "line": 195,
+        "text": "      persCont->m_hit1_z0.push_back(st.z());"
+      },
+      {
+        "line": 196,
+        "text": "      persCont->m_hit1_theta.push_back(theta);"
+      },
+      {
+        "line": 197,
+        "text": "      persCont->m_hit1_phi.push_back(phi);"
+      },
+      {
+        "line": 198,
+        "text": ""
+      },
+      {
+        "line": 199,
+        "text": "      lastPersEnd = HepGeom::Point3D<double>(st.x(), st.y(), st.z());"
+      },
+      {
+        "line": 200,
+        "text": ""
+      },
+      {
+        "line": 282,
+        "text": ""
+      },
+      {
+        "line": 283,
+        "text": "    if (persCont->m_nHits[i]) {"
+      },
+      {
+        "line": 284,
+        "text": ""
+      },
+      {
+        "line": 285,
+        "text": "      const unsigned int start = endHit;"
+      },
+      {
+        "line": 286,
+        "text": "      endHit += persCont->m_nHits[i];"
+      },
+      {
+        "line": 287,
+        "text": ""
+      },
+      {
+        "line": 288,
+        "text": "      const double t0 = persCont->m_hit1_meanTime[i];"
+      },
+      {
+        "line": 289,
+        "text": "      const double theta0 = persCont->m_hit1_theta[i];"
+      },
+      {
+        "line": 290,
+        "text": "      const double phi0 = persCont->m_hit1_phi[i];"
+      },
+      {
+        "line": 291,
+        "text": "      HepGeom::Point3D<double> endLast(persCont->m_hit1_x0[i], persCont->m_hit1_y0[i], persCont->m_hit1_z0[i]);"
+      },
+      {
+        "line": 292,
+        "text": ""
+      },
+      {
+        "line": 293,
+        "text": "      for (unsigned int j = start; j < endHit; j++) {"
+      },
+      {
+        "line": 294,
+        "text": ""
+      },
+      {
+        "line": 295,
+        "text": "        if (j >= endBC + persCont->m_nBC[idxBC])"
+      },
+      {
+        "line": 296,
+        "text": "          endBC += persCont->m_nBC[idxBC++];"
+      },
+      {
+        "line": 304,
+        "text": "        const double eneLoss = (eneLoss_2b < m_2bMaximum) ? eneLoss_2b * m_persEneUnit : persCont->m_hitEne_4b[idxEne4b++];"
+      },
+      {
+        "line": 305,
+        "text": "        const double length = (hitLength_2b < m_2bMaximum) ? hitLength_2b * m_persLenUnit : persCont->m_hitLength_4b[idxLen4b++];"
+      },
+      {
+        "line": 306,
+        "text": ""
+      },
+      {
+        "line": 307,
+        "text": "        const double dTheta = (j > start) ? ((double)persCont->m_dTheta[angleCount] - m_2bHalfMaximum) * m_persAngUnit : 0.0;"
+      },
+      {
+        "line": 308,
+        "text": "        const double dPhi = (j > start) ? ((double)persCont->m_dPhi[angleCount] - m_2bHalfMaximum) * m_persAngUnit : 0.0;"
+      },
+      {
+        "line": 309,
+        "text": ""
+      },
+      {
+        "line": 310,
+        "text": "        const double meanTime = t0;"
+      },
+      {
+        "line": 311,
+        "text": "        const double theta = theta0 + dTheta;"
+      },
+      {
+        "line": 312,
+        "text": "        const double phi = phicorr(phi0 + dPhi);"
+      },
+      {
+        "line": 313,
+        "text": ""
+      },
+      {
+        "line": 314,
+        "text": "        CLHEP::Hep3Vector r(length, 0.0, 0.0);"
+      },
+      {
+        "line": 315,
+        "text": "        r.setTheta(theta);"
+      },
+      {
+        "line": 316,
+        "text": "        r.setPhi(phi);"
+      },
+      {
+        "line": 317,
+        "text": ""
+      },
+      {
+        "line": 318,
+        "text": "        HepGeom::Point3D<double> endThis( endLast + r );"
+      },
+      {
+        "line": 319,
+        "text": ""
+      },
+      {
+        "line": 320,
+        "text": "        HepMcParticleLink::PositionFlag flag = HepMcParticleLink::IS_EVENTNUM;"
+      },
+      {
+        "line": 321,
+        "text": "        if (persCont->m_mcEvtIndex[idxBC] == 0) {"
+      },
+      {
+        "line": 322,
+        "text": "          flag = HepMcParticleLink::IS_POSITION;"
+      },
+      {
+        "line": 323,
+        "text": "        }"
+      },
+      {
+        "line": 324,
+        "text": "        HepMcParticleLink partLink( persCont->m_barcode[idxBC], persCont->m_mcEvtIndex[idxBC], HepMcParticleLink::ExtendedBarCode::eventCollectionFromChar(persCont->m_evtColl[idxBC]), flag, ctx );"
+      },
+      {
+        "line": 325,
+        "text": "        transCont->Emplace( endLast, endThis, eneLoss, meanTime, partLink, persCont->m_id[idxId]);"
+      },
+      {
+        "line": 326,
+        "text": ""
+      },
+      {
+        "line": 327,
+        "text": "        endLast = endThis;"
+      },
+      {
+        "line": 328,
+        "text": ""
+      },
+      {
+        "line": 329,
+        "text": "        ++hitCount;"
+      },
+      {
+        "line": 330,
+        "text": "        if (j > start) ++angleCount;"
+      },
+      {
+        "line": 331,
+        "text": "      }"
+      },
+      {
+        "line": 332,
+        "text": "    }"
+      },
+      {
+        "line": 333,
+        "text": "  }"
+      }
+    ]
+  }
+]

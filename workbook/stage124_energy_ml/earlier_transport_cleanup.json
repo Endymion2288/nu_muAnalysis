@@ -1,0 +1,158 @@
+[
+  {
+    "path": "ntuples/energy_ml_stage124/engineering_0_result.tar.gz",
+    "bytes": 2471,
+    "verified_members": [
+      {
+        "path": "workbook/stage124_energy_ml/engineering_time.txt",
+        "bytes": 800,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/secondary_safe_closure.tsv",
+        "bytes": 5451,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/engineering_summary.json",
+        "bytes": 522,
+        "check": "exact byte equality"
+      }
+    ]
+  },
+  {
+    "path": "ntuples/energy_ml_stage124/pilot2_0_result.tar.gz",
+    "bytes": 12851,
+    "verified_members": [
+      {
+        "path": "ntuples/energy_ml_stage124/pilot2_0/native_log.txt",
+        "bytes": 27358,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot2_0/native_time.txt",
+        "bytes": 822,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot2_0/native.json.gz",
+        "bytes": 9526,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot2_0/exitcode.txt",
+        "bytes": 2,
+        "check": "exact byte equality"
+      }
+    ]
+  },
+  {
+    "path": "ntuples/energy_ml_stage124/pilot3_0_result.tar.gz",
+    "bytes": 13045,
+    "verified_members": [
+      {
+        "path": "ntuples/energy_ml_stage124/pilot3_0/native_log.txt",
+        "bytes": 28374,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot3_0/native_time.txt",
+        "bytes": 825,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot3_0/native.json.gz",
+        "bytes": 9522,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot3_0/exitcode.txt",
+        "bytes": 2,
+        "check": "exact byte equality"
+      }
+    ]
+  },
+  {
+    "path": "ntuples/energy_ml_stage124/pilot_0_result.tar.gz",
+    "bytes": 9716,
+    "verified_members": [
+      {
+        "path": "ntuples/energy_ml_stage124/pilot_0/native_log.txt",
+        "bytes": 68967,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot_0/native_time.txt",
+        "bytes": 853,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/pilot_0/exitcode.txt",
+        "bytes": 2,
+        "check": "exact byte equality"
+      }
+    ]
+  },
+  {
+    "path": "ntuples/energy_ml_stage124/prepare_0_result.tar.gz",
+    "bytes": 24762472,
+    "verified_members": [
+      {
+        "path": "workbook/stage124_energy_ml/protocol.json",
+        "bytes": 1855,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/prepare_time.txt",
+        "bytes": 804,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/native_contract.json",
+        "bytes": 13102702,
+        "check": "original contract subset unchanged; batch/resource annotations added later"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/preparation.json",
+        "bytes": 214,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/source_inventory.json",
+        "bytes": 142018,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/input.npz",
+        "bytes": 21464808,
+        "check": "exact byte equality"
+      }
+    ]
+  },
+  {
+    "path": "ntuples/energy_ml_stage124/support_0_result.tar.gz",
+    "bytes": 21135399,
+    "verified_members": [
+      {
+        "path": "workbook/stage124_energy_ml/support_time.txt",
+        "bytes": 798,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/sample_scale.tsv",
+        "bytes": 2976,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "workbook/stage124_energy_ml/sample_strategy.json",
+        "bytes": 13909,
+        "check": "exact byte equality"
+      },
+      {
+        "path": "ntuples/energy_ml_stage124/input.npz",
+        "bytes": 21464808,
+        "check": "exact byte equality"
+      }
+    ]
+  }
+]

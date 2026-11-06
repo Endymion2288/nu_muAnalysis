@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    "9669692.0",
+    "9669693.0"
+  ],
+  "reason": "small cached QA and three-parent engineering analysis are single-threaded; no Athena runtime/fit; reduce idle request from site3CPU9GB to1CPU3GB, same inputs/outputs",
+  "actual_ads": [
+    {
+      "ClusterId": 9669692,
+      "JobStatus": 1,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    },
+    {
+      "ClusterId": 9669693,
+      "JobStatus": 1,
+      "ProcId": 0,
+      "RequestCpus": 1,
+      "RequestMemory": 3000
+    }
+  ]
+}

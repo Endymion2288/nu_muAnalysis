@@ -1,0 +1,73 @@
+{
+  "row": 40738,
+  "run": 200089,
+  "event": 135794,
+  "cached_pz_GeV": 83060.584,
+  "current_PHYS_pz_GeV": 83060.584,
+  "REC_pz_GeV": 84494.216,
+  "PHYS_track_N": 1,
+  "REC_long_track_N": 1,
+  "current_PHYS_minus_REC_position_mm": {
+    "x": -9.918212890625e-05,
+    "y": 0.00121307373046875,
+    "z": 0.0
+  },
+  "PHYS": {
+    "Track_pz0": [
+      83060584.0
+    ],
+    "Track_px0": [
+      -322413.21875
+    ],
+    "Track_py0": [
+      -138789.21875
+    ],
+    "Track_x0": [
+      -81.9021987915039
+    ],
+    "Track_y0": [
+      -22.917678833007812
+    ],
+    "Track_z0": [
+      9.5
+    ],
+    "Track_charge": [
+      -1
+    ],
+    "Track_Chi2": [
+      55.11647033691406
+    ],
+    "Track_nDoF": [
+      13.0
+    ],
+    "Track_nLayers": [
+      9
+    ],
+    "longTracks": 1.0,
+    "input": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200089/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00130-00139-s0014-merge-PHYS.root"
+  },
+  "REC_merged_track_audit_columns": [
+    "pz_MeV",
+    "qOverP_MeVinv",
+    "x_mm",
+    "y_mm",
+    "z_mm",
+    "chi2",
+    "nDoF",
+    "measurement_N"
+  ],
+  "REC_merged_track_audit": [
+    [
+      84494216.0,
+      -1.1835023940220445e-08,
+      -81.902099609375,
+      -22.91889190673828,
+      9.5,
+      55.11650085449219,
+      13.0,
+      18.0
+    ]
+  ],
+  "scope": "exact same event directed interface audit; incomplete original measurement IDs/producer history, do not certify same leading track or diagnose cause from pz alone",
+  "handling": "all parent/X retained; unknown leading-specific Z fieldsNaN; no relaxed matching tolerance"
+}

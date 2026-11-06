@@ -1,0 +1,9 @@
+task	state	evidence	artifact
+R1 原生身份/关系	完成	280来源89033行；cluster/SP/longTracks全闭合；SP43557974/measurement1686057联结无缺；1cal leading接口未知保留NaN	native_coverage.tsv
+R2 匹配X/XZ能量	完成测量，主低能端点未通过	固定6个seed模型；X精确复现f0差0；test低箱XZ/X=.999412677/.994265678区间含1；all=.992806720	comparison_summary.json
+R3 八层保护/独立复算	完成	cal/test八层三尾和非低箱RMSE保护通过；两低箱/传统门失败；1936标量独立差<=2.842171e-14	validation_summary.json
+R4 有效扩样账	账已完成，接近2N未执行	原train最低926代理/ESS933.053；新增52；五EVNT只认证可读schema，不认证完整独立家族/旧曝光/新G4成本	sample_strategy.json
+R5 谱系/边界机制及新G4	条件支线未触发/未测量	当前tracker对象不提供完整敏感沉积祖先或固定边界初次外穿能流；无新oracle标签；两父pilot不是总体归因，未以缺历史祖先停止关联实验	time_interpretation.json
+R6 secondary安全定义	有限定义闭合，上游UB未认证	三父51视图14含secondary；channel-primary/first-two-safe最大差0pC；正式cuts不改；原两条未知及概率界保留	engineering_summary.json
+R7 历史极晚时间	有界源码审计完成，实际原因未认证	float持久化/默认timecut与动态constructor来源已记录；实际历史配置/过程祖先未获，未删大值/归中子/声称DAQ可回收	time_interpretation.json
+R8 资源/存储/中文报告/本地提交	完成；随本阶段本地提交	52作业全结束含4失败；无GPU/新生产/reserved forward；去重运输/临时包，历史与Stage54保持	resource_summary.json

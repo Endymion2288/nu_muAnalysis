@@ -1,0 +1,18 @@
+{
+  "first_batch_job": "9669699.0",
+  "remote_text_command": "condor_ssh_to_job 9669699.0 'tail -12 /pool/condor/dir_499297/nu_mu_stage124.*/result/native_log.txt'",
+  "observed": "NATIVE 0 300 ... NATIVE 0 1400",
+  "known_first_source_request_sizes": [
+    28,
+    388,
+    354,
+    340,
+    326,
+    321,
+    317,
+    310
+  ],
+  "interpretation": "native observer emitted1400 records; per-record run/event and pz assert precede each append, thus crossed four complete source boundaries. No energy models or risk results. First batch completes concurrently; full cohort object counts still required before any fit.",
+  "full_plan": "same37 frozen batches, dispatch remaining1..36; no parent/output-based source selection",
+  "worker": "remaining jobs receive separately named immutable worker; native source unchanged from final pilot4 and batch0"
+}

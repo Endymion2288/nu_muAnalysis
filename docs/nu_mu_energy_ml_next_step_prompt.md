@@ -1,3 +1,24 @@
+# 当前执行入口：Stage124原规模关联能量实验完成，下一步买可追溯独立支持
+
+先读[Stage124完整实测](../workbook/2026-11-06_stage124_native-association-energy.md)、路线§106、信息预算§86、[完成/缺口审计](../workbook/stage124_energy_ml/completion_audit.tsv)及[扩样账](../workbook/stage124_energy_ml/sample_strategy.json)。以下Stage123及更早入口完整保留为历史，不再照旧重跑。
+
+本轮已完成280 REC/RDO、原89033行真实strip/cluster/SP/PRD关联，全PHYS计数闭合；1cal leading-pz接口未知保留NaN、10688个越域strip ID保留未知，不删父/放宽匹配。原train/cal/开发test/隔离46575/11612/13189/17657、全部1016 K和reserved零预测保持。固定X62/XZ119各3seed400轮，X/f0预测差精确0。
+
+主结论：test两低箱log-RMSE XZ=.282478340/.244916238，传统=.145661386/.247936985；XZ/X=.999412677 [.979539244,1.024001700]、.994265678 [.981327591,1.007733216]，cal只第二箱改善，低能未共同复现。test all比.992806720 [.990084548,.995835898]有小增量；cal/test八层三尾/非低箱RMSE保护过，低箱/传统失败，joint均False，保留f0。1936独立标量差≤2.842171e−14。当前57维摘要＋固定树组合结束，不续GNN/邻域/seed/树/特征网格，不称原生观测全无效或理论信息界。
+
+下一计算Stage125应优先实际可追溯的新ν父支持与成本，不做又一轮旧模型调参：
+
+1. 精确输入为Stage124已读schema的五EVNT（epos-pi-0/-1、epos-k-0/-1、powheg-pythia-charm-central；完整路径见sample_strategy.json）、Stage119旧曝光合同与现成官方链。另在任何新风险前冻结有限pilot、预算、来源/角色/纳入概率和失败处理；实际解码完整末态/parent-entry-seed并比对旧曝光。若EVNT只有入射粒子，须从GENIE生成开始记录完整身份，不用p6 schema猜完整相互作用。不要泛扫已结束的旧目录/日志，不把旧证据缺失设为所有物理工作的全球前置。
+2. 测双低能、连续过渡、同pz高y/高E与自然高端支持和ESS，确认家族另锁；只有新的确需步骤才做完整G4/reco成本pilot。以实际CPU/I/O/RSS/选中与困难侧产额在同一工作包定接近N₀→约2N₀，继而交固定组成/政策的能量及尾风险；不能只交metadata/字段表或两父响应图。当前旧train最低940行/926代理/ESS933.053、第二4245/4100/4172.079、困难1086/1079/985.267；Stage119新增52/180/57，不是翻倍，独立完整家族仍未认证，新全链成本未测，不能宣布数量饱和。
+3. 有完整过程/祖先时开展Stage123下游μ/非μ谱系及固定边界首次外穿能流机制→可部署代理→全队列能量/尾；不用H/Eν当新信息，不以单粒子枪或同父重复增加νN。新两父G4只按需作工具/成本验证，不作总体方差或历史producer认证。
+4. secondary三父51视图（14含secondary）安全channel-primary/first-two差0 pC；官方UB、历史两条原生选择未知界仍保留。极晚4.3153e35 ns已核float持久化/源码默认，但真实历史physics constructors/time/过程仍未认证；仅在新精确producer证据出现时有界核因，不自动删大值/归中子/称可DAQ收回。1cal PHYS–REC差异已有定向诊断，未知不等于低能物理原因，不继续无限接口审计。
+
+科学读取/ROOT/重建/训练/forward/统计仍HTCondor，Stage125专用~/condor/nu_muAnalysis/stage125；本地只代码/文本结果/stdlib运输。Stage12452作业含4失败共5305 CPU秒、聚合wall14176秒、0GPU，紧凑事件+模型73523751 B，删477625121 B重复副本。原输入已与Stage119 old_input逐字节核对去重，若重放Stage124清单先按报告cp恢复，勿重做旧物理结果。依任务实际资源并行，GPU确适用时使用，不编造加速比；新G4成本不能按digitization速度外推。
+
+一次方动量仅pz0，允许px/py/q/p/弯折；raw11/status/typed NaN/合法signed/Calo缺失、pz>50与正式fitted/reduced cuts、全部K/原角色保持。最终两低箱/传统上95≤1.05、all/direct≤1.01、其余五层≤1.03、八层三向tail差≤+2pp保持，1.05仅非劣效；真正低能胜出/真实响应与系统/背景/接受度/独立确认仍必需。整体目标未达。完成阶段先中文workbook再本地Conventional Commit，不push，Stage54五资产与所有历史后缀只读。
+
+## Stage123历史入口（原文保留）
+
 # 当前研究入口：Stage123已评估，Stage124优先原生关联观测与有效扩样
 
 先读[Stage123完整报告](../workbook/2026-11-06_stage123_native-observables-and-sample-strategy.md)、路线§105、信息预算§85和[Stage122实测](../workbook/2026-11-06_stage122_response-information-and-digitization.md)。本轮用户只要求研究评估：0事件数组/ROOT读取、0训练/推理/重放/提交。Stage122旧JSON中Stage123仅计划未执行，本报告占用Stage123，下一实际计算编号Stage124；以下历史入口完整保留。
