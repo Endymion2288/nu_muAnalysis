@@ -1,0 +1,161 @@
+{
+  "phases": {
+    "coordinates": {
+      "cluster": 9670213,
+      "jobs": 8,
+      "cores_per_job": 4,
+      "CPU_s": 216.02,
+      "sum_analysis_wall_s": 130.32,
+      "allocated_core_utilization": 0.41440300798035606,
+      "max_Condor_memory_MB": 388,
+      "times": [
+        {
+          "user_CPU_s": 27.28,
+          "system_CPU_s": 2.36,
+          "wall_s": 16.3,
+          "max_process_RSS_KiB": 148840
+        },
+        {
+          "user_CPU_s": 21.64,
+          "system_CPU_s": 1.98,
+          "wall_s": 16.67,
+          "max_process_RSS_KiB": 163312
+        },
+        {
+          "user_CPU_s": 28.01,
+          "system_CPU_s": 2.73,
+          "wall_s": 21.41,
+          "max_process_RSS_KiB": 146956
+        },
+        {
+          "user_CPU_s": 25.3,
+          "system_CPU_s": 2.29,
+          "wall_s": 17.19,
+          "max_process_RSS_KiB": 134316
+        },
+        {
+          "user_CPU_s": 25.41,
+          "system_CPU_s": 2.29,
+          "wall_s": 15.5,
+          "max_process_RSS_KiB": 153708
+        },
+        {
+          "user_CPU_s": 24.08,
+          "system_CPU_s": 2.38,
+          "wall_s": 14.76,
+          "max_process_RSS_KiB": 128168
+        },
+        {
+          "user_CPU_s": 23.26,
+          "system_CPU_s": 2.13,
+          "wall_s": 14.14,
+          "max_process_RSS_KiB": 129728
+        },
+        {
+          "user_CPU_s": 22.82,
+          "system_CPU_s": 2.06,
+          "wall_s": 14.35,
+          "max_process_RSS_KiB": 125944
+        }
+      ],
+      "events": [
+        {
+          "proc": 6,
+          "exit_code": 0,
+          "execute_s": 16,
+          "memory_MB": 377,
+          "disk_KB": 12258,
+          "record": "005 (9670213.006.000) 11/06 15:13:55 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:23, Sys 0 00:00:02  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:23, Sys 0 00:00:02  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7582  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7582  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12258  1024000   1026798 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      377    12000     12000 \n\t   TimeExecute (s)      :       16                    \n\t   TimeSlotBusy (s)     :       19"
+        },
+        {
+          "proc": 7,
+          "exit_code": 0,
+          "execute_s": 16,
+          "memory_MB": 316,
+          "disk_KB": 12259,
+          "record": "005 (9670213.007.000) 11/06 15:13:55 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:23, Sys 0 00:00:02  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:23, Sys 0 00:00:02  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7589  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7589  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12259  1024000   1026082 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      316    12000     12000 \n\t   TimeExecute (s)      :       16                    \n\t   TimeSlotBusy (s)     :       19"
+        },
+        {
+          "proc": 4,
+          "exit_code": 0,
+          "execute_s": 18,
+          "memory_MB": 352,
+          "disk_KB": 12258,
+          "record": "005 (9670213.004.000) 11/06 15:13:56 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:25, Sys 0 00:00:03  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:25, Sys 0 00:00:03  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7827  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7827  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12258  1024000   1026905 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      352    12000     12000 \n\t   TimeExecute (s)      :       18                    \n\t   TimeSlotBusy (s)     :       20"
+        },
+        {
+          "proc": 5,
+          "exit_code": 0,
+          "execute_s": 17,
+          "memory_MB": 328,
+          "disk_KB": 12259,
+          "record": "005 (9670213.005.000) 11/06 15:13:56 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:24, Sys 0 00:00:03  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:24, Sys 0 00:00:03  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7808  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7808  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12259  1024000   1026894 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      328    12000     12000 \n\t   TimeExecute (s)      :       17                    \n\t   TimeSlotBusy (s)     :       20"
+        },
+        {
+          "proc": 0,
+          "exit_code": 0,
+          "execute_s": 18,
+          "memory_MB": 326,
+          "disk_KB": 12258,
+          "record": "005 (9670213.000.000) 11/06 15:13:57 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:27, Sys 0 00:00:03  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:27, Sys 0 00:00:03  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7821  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7821  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12258  1024000   1026755 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      326    12000     12000 \n\t   TimeExecute (s)      :       18                    \n\t   TimeSlotBusy (s)     :       21"
+        },
+        {
+          "proc": 1,
+          "exit_code": 0,
+          "execute_s": 19,
+          "memory_MB": 388,
+          "disk_KB": 12259,
+          "record": "005 (9670213.001.000) 11/06 15:13:57 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:22, Sys 0 00:00:02  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:22, Sys 0 00:00:02  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7834  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7834  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12259  1024000   1026777 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      388    12000     12000 \n\t   TimeExecute (s)      :       19                    \n\t   TimeSlotBusy (s)     :       21"
+        },
+        {
+          "proc": 3,
+          "exit_code": 0,
+          "execute_s": 19,
+          "memory_MB": 349,
+          "disk_KB": 12258,
+          "record": "005 (9670213.003.000) 11/06 15:13:58 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:25, Sys 0 00:00:03  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:25, Sys 0 00:00:03  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7826  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7826  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12258  1024000   1026885 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      349    12000     12000 \n\t   TimeExecute (s)      :       19                    \n\t   TimeSlotBusy (s)     :       22"
+        },
+        {
+          "proc": 2,
+          "exit_code": 0,
+          "execute_s": 24,
+          "memory_MB": 253,
+          "disk_KB": 12258,
+          "record": "005 (9670213.002.000) 11/06 15:14:03 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:28, Sys 0 00:00:03  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:28, Sys 0 00:00:03  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t7840  -  Run Bytes Sent By Job\n\t6176164  -  Run Bytes Received By Job\n\t7840  -  Total Bytes Sent By Job\n\t6176164  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        4         4 \n\t   Disk (KB)            :    12258  1024000   1026720 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      253    12000     12000 \n\t   TimeExecute (s)      :       24                    \n\t   TimeSlotBusy (s)     :       27"
+        }
+      ]
+    },
+    "scan": {
+      "cluster": 9670238,
+      "jobs": 1,
+      "cores_per_job": 8,
+      "CPU_s": 51.349999999999994,
+      "sum_analysis_wall_s": 22.2,
+      "allocated_core_utilization": 0.28913288288288286,
+      "max_Condor_memory_MB": 608,
+      "times": [
+        {
+          "user_CPU_s": 48.8,
+          "system_CPU_s": 2.55,
+          "wall_s": 22.2,
+          "max_process_RSS_KiB": 266184
+        }
+      ],
+      "events": [
+        {
+          "proc": 0,
+          "exit_code": 0,
+          "execute_s": 25,
+          "memory_MB": 608,
+          "disk_KB": 11872,
+          "record": "005 (9670238.000.000) 11/06 15:19:00 Job terminated.\n\t(1) Normal termination (return value 0)\n\t\tUsr 0 00:00:49, Sys 0 00:00:03  -  Run Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage\n\t\tUsr 0 00:00:49, Sys 0 00:00:03  -  Total Remote Usage\n\t\tUsr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage\n\t207  -  Run Bytes Sent By Job\n\t5959742  -  Run Bytes Received By Job\n\t207  -  Total Bytes Sent By Job\n\t5959742  -  Total Bytes Received By Job\n\tPartitionable Resources :    Usage  Request Allocated \n\t   Cpus                 :        0        8         8 \n\t   Disk (KB)            :    11872  1024000   1026808 \n\t   GPUs                 :                           0 \n\t   Memory (MB)          :      608    24000     24000 \n\t   TimeExecute (s)      :       25                    \n\t   TimeSlotBusy (s)     :       27"
+        }
+      ]
+    }
+  },
+  "new_fits": 0,
+  "new_model_forwards": 0,
+  "GPU_used": false,
+  "total_CPU_s": 267.37,
+  "uproot_requested_bytes": 305290644
+}

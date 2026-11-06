@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "source": 4,
+  "bounds_mm": [
+    -120,
+    120,
+    -115,
+    115
+  ],
+  "N": 340,
+  "selection": "pz100",
+  "exact_event_identity": true,
+  "wall_s": 10.871830602176487,
+  "command": [
+    "/eos/home-x/xcheng/FASER/nu_muAnalysis/build/analysis",
+    "--isMC",
+    "-r",
+    "200082",
+    "-j",
+    "2",
+    "--file-config",
+    "/tmp/xcheng/cuboid_native_lw7rkcly/files.yaml",
+    "--definitions-config",
+    "/tmp/xcheng/cuboid_native_lw7rkcly/definitions.yaml",
+    "--cuts-config",
+    "/tmp/xcheng/cuboid_native_lw7rkcly/cuts.yaml",
+    "--grl-config",
+    "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/grl_config.yaml",
+    "--output-config",
+    "/tmp/xcheng/cuboid_native_lw7rkcly/output.yaml",
+    "-o",
+    "/tmp/xcheng/cuboid_native_lw7rkcly/selected.root"
+  ]
+}

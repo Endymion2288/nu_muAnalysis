@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "rectangle_vs_circle125_xor_records": 0,
+  "baseline_circle100_events_removed": 0,
+  "independent_arithmetic": [
+    {
+      "selection": "pz100",
+      "policy": "circle100",
+      "N": 11617,
+      "independent_log_RMSE": 0.27300181473025703
+    },
+    {
+      "selection": "pz100",
+      "policy": "circle125",
+      "N": 11885,
+      "independent_log_RMSE": 0.27332644235547865
+    },
+    {
+      "selection": "pz100",
+      "policy": "rectangle_13529",
+      "N": 11885,
+      "independent_log_RMSE": 0.27332644235547865
+    },
+    {
+      "selection": "pz50",
+      "policy": "circle100",
+      "N": 12231,
+      "independent_log_RMSE": 0.2897560895567558
+    },
+    {
+      "selection": "pz50",
+      "policy": "circle125",
+      "N": 12523,
+      "independent_log_RMSE": 0.2904703141857677
+    },
+    {
+      "selection": "pz50",
+      "policy": "rectangle_13529",
+      "N": 12523,
+      "independent_log_RMSE": 0.2904703141857677
+    }
+  ],
+  "plateau": {
+    "pz100": {
+      "max_cal_N": 10105,
+      "full_yield_candidates": 2520,
+      "minimum_area_mm2": 55200,
+      "width_range_mm": [
+        240,
+        320
+      ],
+      "height_range_mm": [
+        230,
+        360
+      ]
+    },
+    "pz50": {
+      "max_cal_N": 10704,
+      "full_yield_candidates": 2520,
+      "minimum_area_mm2": 55200,
+      "width_range_mm": [
+        240,
+        320
+      ],
+      "height_range_mm": [
+        230,
+        360
+      ]
+    }
+  },
+  "geometry_replacement_only": true,
+  "delivered_config_histograms_preserved": true,
+  "new_fits": 0,
+  "new_model_forwards": 0
+}

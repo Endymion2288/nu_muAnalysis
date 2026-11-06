@@ -1,0 +1,165 @@
+{
+  "recommended": {
+    "selection": "pz100",
+    "budget_RMSE_ratio": 1.01,
+    "candidate_id": 13529,
+    "bounds_mm": [
+      -120,
+      120,
+      -115,
+      115
+    ],
+    "cal_N": 10105,
+    "cal_log_RMSE": 0.2618876881695111,
+    "cal_RMSE_ratio_high95": 1.0027178598131548,
+    "geometry": {
+      "candidate_id": 13529,
+      "cx": 0,
+      "cy": 0,
+      "hx": 120,
+      "hy": 115,
+      "width_mm": 240,
+      "height_mm": 230,
+      "aspect_width_over_height": 1.0434782608695652,
+      "area_mm2": 55200
+    }
+  },
+  "budgets": [
+    {
+      "selection": "pz100",
+      "budget_RMSE_ratio": 1.01,
+      "candidate_id": 13529,
+      "bounds_mm": [
+        -120,
+        120,
+        -115,
+        115
+      ],
+      "cal_N": 10105,
+      "cal_log_RMSE": 0.2618876881695111,
+      "cal_RMSE_ratio_high95": 1.0027178598131548
+    },
+    {
+      "selection": "pz100",
+      "budget_RMSE_ratio": 1.03,
+      "candidate_id": 13529,
+      "bounds_mm": [
+        -120,
+        120,
+        -115,
+        115
+      ],
+      "cal_N": 10105,
+      "cal_log_RMSE": 0.2618876881695111,
+      "cal_RMSE_ratio_high95": 1.0027178598131548
+    },
+    {
+      "selection": "pz100",
+      "budget_RMSE_ratio": 1.05,
+      "candidate_id": 13529,
+      "bounds_mm": [
+        -120,
+        120,
+        -115,
+        115
+      ],
+      "cal_N": 10105,
+      "cal_log_RMSE": 0.2618876881695111,
+      "cal_RMSE_ratio_high95": 1.0027178598131548
+    },
+    {
+      "selection": "pz50",
+      "budget_RMSE_ratio": 1.01,
+      "candidate_id": 13529,
+      "bounds_mm": [
+        -120,
+        120,
+        -115,
+        115
+      ],
+      "cal_N": 10704,
+      "cal_log_RMSE": 0.2772357225041689,
+      "cal_RMSE_ratio_high95": 1.0033424128626376
+    },
+    {
+      "selection": "pz50",
+      "budget_RMSE_ratio": 1.03,
+      "candidate_id": 13529,
+      "bounds_mm": [
+        -120,
+        120,
+        -115,
+        115
+      ],
+      "cal_N": 10704,
+      "cal_log_RMSE": 0.2772357225041689,
+      "cal_RMSE_ratio_high95": 1.0033424128626376
+    },
+    {
+      "selection": "pz50",
+      "budget_RMSE_ratio": 1.05,
+      "candidate_id": 13529,
+      "bounds_mm": [
+        -120,
+        120,
+        -115,
+        115
+      ],
+      "cal_N": 10704,
+      "cal_log_RMSE": 0.2772357225041689,
+      "cal_RMSE_ratio_high95": 1.0033424128626376
+    }
+  ],
+  "finalists": [
+    {
+      "selection": "pz100",
+      "candidate_id": 13529,
+      "cx": 0,
+      "cy": 0,
+      "hx": 120,
+      "hy": 115,
+      "width_mm": 240,
+      "height_mm": 230,
+      "aspect_width_over_height": 1.0434782608695652,
+      "area_mm2": 55200
+    },
+    {
+      "selection": "pz100",
+      "candidate_id": 15712,
+      "cx": 10,
+      "cy": -40,
+      "hx": 120,
+      "hy": 155,
+      "width_mm": 240,
+      "height_mm": 310,
+      "aspect_width_over_height": 0.7741935483870968,
+      "area_mm2": 74400
+    },
+    {
+      "selection": "pz50",
+      "candidate_id": 13529,
+      "cx": 0,
+      "cy": 0,
+      "hx": 120,
+      "hy": 115,
+      "width_mm": 240,
+      "height_mm": 230,
+      "aspect_width_over_height": 1.0434782608695652,
+      "area_mm2": 55200
+    },
+    {
+      "selection": "pz50",
+      "candidate_id": 19330,
+      "cx": 10,
+      "cy": 10,
+      "hx": 120,
+      "hy": 120,
+      "width_mm": 240,
+      "height_mm": 240,
+      "aspect_width_over_height": 1.0,
+      "area_mm2": 57600
+    }
+  ],
+  "scope": "exploratory cal-only grid selection; fixed finalists evaluated on already exposed test source groups; no retraining",
+  "objective": "maximum yield within conditional +1% RMSE upper budget, tie smallest area; other budgets and N/log-MSE proxy are alternatives"
+}
