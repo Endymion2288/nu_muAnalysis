@@ -1,3 +1,22 @@
+# 当前研究入口：Stage123已评估，Stage124优先原生关联观测与有效扩样
+
+先读[Stage123完整报告](../workbook/2026-11-06_stage123_native-observables-and-sample-strategy.md)、路线§105、信息预算§85和[Stage122实测](../workbook/2026-11-06_stage122_response-information-and-digitization.md)。本轮用户只要求研究评估：0事件数组/ROOT读取、0训练/推理/重放/提交。Stage122旧JSON中Stage123仅计划未执行，本报告占用Stage123，下一实际计算编号Stage124；以下历史入口完整保留。
+
+最新结论：Stage122三通道粗波形B/A两低箱未稳定改善，最低箱train50/test20 incoming，四臂joint全失败；固定f0的VN/Pres数字化条件方差仅占最低两箱log-MSE1.419037%/1.524472%，不是全噪声/输运/Bayes界。Stage119新增52/旧940、小曲线9/18/36没有测试原规模饱和。不再把旧输入调网络/树/seed/损失/门控或继续scint噪声优化作为默认主线。
+
+Stage124建议完成一个实际科学对照，不能只交metadata：
+
+1. 新观测Z限真实RDO/REC的strip/cluster唯一身份、SP到cluster联结、三位timebin和track实际measurement/可用协方差。复用Stage85已做的读出控制和Stage95身份经验，构造少数唯一测量/组合歧义/跨层一致性/纵向延续摘要；保留合并/共享、未归属与缺失，不真值清洗、不把hitSet当ID、短段100GeV当动量、SCT当模拟电荷或精密TOF。Stage95–97已有候选动量/几何、Stage108点关系不是新输入。
+2. 在同支持、同固定学习政策下用强X与X+Z一对模型测连续能量及实际三尾；原f0和传统保留，缺Z不删，truth仅诊断/训练监督。可用关联/匹配准确率或AUC不替代能量收益。不把小队列相对大池f0的差距当信息效应。
+3. 独立扩样按两个低箱/同pz高H困难侧的家族N、ESS、覆盖和纳入概率冻结，力争检验接近原规模N₀→约2N₀，不再用9→36推论940附近饱和；约2N仅设计跨度非充分N。若可恢复全Z，做输入×N的2×2；否则分别做同支持输入实验与原规模X扩样，不跨队列伪造因果。保留连续过渡/自然高端、原角色/全部1016 K；新确认家族单留，reserved不开。
+4. 新G4只在具体的下游μ谱系/非μ谱系与边界能流机制问题需要时启用。旧两父×2G4×2digi只是工程pilot，不能给总体归因；先测成本再冻结多父机制支持，不因缺旧完整家族而阻塞其他可做实验。secondary三父producer、source36/45/49极晚时间有界处理，不把巨大时间当可回收中子信息，不无限扫描旧metadata。
+
+Stage85已完成2048data+2048MC共同读出控制，纯noise参数不可识别；不重开统一噪声标定，不把大部分01X不接受的raw差归因于模型cluster。若Z缺失则报告精确对象/字段并转可独立执行的扩样；若足量Z对照无增量则结束此观测族，不续GNN/邻域/seed网格。若只有机制oracle改善，转可测代理，不反复旧X latent posterior。全过程真实data/MC和系统/接受度/背景与独立确认仍必要。
+
+一次方动量pz0、允许px/py/q/p/弯折、raw11/status/typed NaN/signed/Calo缺失、pz>50和正式fitted/reduced cuts保持。最终两低箱/传统上95≤1.05、all/direct≤1.01、其余五层≤1.03、八层三向tail差≤+2pp不变；1.05是非劣效，不等于赢传统。未来在有环境终端小QA测CPU/I/O/内存后冻结规模，科学计算走HTCondor，目录~/condor/nu_muAnalysis/stage124/。本轮新可用率/收益/功效/资源均未测，不直接执行。每阶段先中文workbook再本地Conventional Commit，不push；Stage54五资产和所有历史后缀只读保持。
+
+## Stage122历史入口（原文保留）
+
 # 当前执行入口：Stage122已交付，Stage123核producer/time并做完整末态输运pilot
 
 先读[Stage122完整报告](../workbook/2026-11-06_stage122_response-information-and-digitization.md)、路线§104、信息预算§84、[R1–R8审计](../workbook/stage122_energy_ml/completion_audit.tsv)及[下一执行合同](../workbook/stage122_energy_ml/next_execution_contract.json)。本段覆盖下面Stage121及更早入口的当前优先级，全部历史原文保留。
