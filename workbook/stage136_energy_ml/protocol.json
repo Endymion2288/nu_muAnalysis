@@ -1,0 +1,57 @@
+{
+  "stage": 136,
+  "question": "Does the selected-spectrum information gain survive measured finite response-MC statistics,without invented physical-system priors?",
+  "parallel_to": "Stage135 observer engineering; Stage132 section6 explicitly parallel",
+  "inputs": [
+    "ntuples/energy_ml_stage119/old_input.npz",
+    "ml/artifacts/stage129/depth_predictions.npz"
+  ],
+  "models": [
+    "traditional",
+    "direct62",
+    "joint_direct62_pz0"
+  ],
+  "truth_edges_GeV": [
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    "infinity"
+  ],
+  "energy_estimator_edges_GeV": [
+    0,
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400,
+    "infinity"
+  ],
+  "joint_pz0_edges_GeV": [
+    50,
+    100,
+    200,
+    400,
+    "infinity"
+  ],
+  "target": "selected E<200 fraction,all other six-simplex degrees free,Nselected1000",
+  "response_role": 2,
+  "reference_fraction_role": 3,
+  "MC_covariance": "actual unique incoming clusters in original stored precision; views within cluster weighted 1/multiplicity; sample covariance of per-family normalized response contributions divided by family count",
+  "finite_MC_information": "D^T (V_multinomial_data + sum phi_j^2 Cov_Rj)^\u22121 D; delete one observed-category coordinate to impose probability simplex; verify by explicit auxiliary-template Schur complement",
+  "MC_bootstrap_draws": 500,
+  "bootstrap_seed": 20261107136,
+  "scope": "local asymptotic selected-population precision; finite template auxiliary covariance measured,not real response-system prior; no newenergyfit or modelforward; no actualdata/acceptance/bg; empty cells may be nonregular",
+  "physical_constraints": "no invented gain/timing/flux/material priors; missing real inputs remain unmeasured",
+  "budget_CPU_s": 1800,
+  "request_CPUs": 4,
+  "request_memory_MB": 12000,
+  "reserved_forward": 0,
+  "promotion": false
+}

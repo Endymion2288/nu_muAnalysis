@@ -1,0 +1,21 @@
+{
+  "measured_finite_response_MC": true,
+  "physical_nuisance_constraints": false,
+  "actual_data_fit": false,
+  "acceptance_or_background_included": false,
+  "no_model_training_or_forward": true,
+  "reserved_forward": 0,
+  "incoming_dtype": "float64",
+  "validation": "independent explicit auxiliary Schur complement vs covariance sum",
+  "max_schur_abs_difference": 1.355147105641663e-10,
+  "coverage": "unmeasured; local asymptotic,empty cells may be nonregular",
+  "missing": [
+    "matched data exposure/GRL/background/acceptance",
+    "calibrated correlated detector/material/GENIE/FSI/flux nuisance constraints",
+    "certified independent generator families and refit/selection propagation"
+  ],
+  "CPU_s": 2.120589514,
+  "wall_s": 2.278167779033538,
+  "RSS_KiB": 154436,
+  "GPU": 0
+}

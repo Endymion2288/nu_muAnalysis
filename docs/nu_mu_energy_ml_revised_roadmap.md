@@ -2618,3 +2618,10 @@ Stage132§5.2必要机制补问以A+K/A固定3fit开展，不续代理网格；�
 
 
 同3002父/原角色/availability7/NaN，3固定能量fit，无新G4/ν，复用A/X/U/F/传统/f0与500draw。1460独立标量差≤4.97e−14，两joint仍失败，不作truth部署。1作业exit0，25schedulerCPU秒/30wall秒，0GPU。按[Stage132逐项清单](../workbook/stage132_energy_ml/execution_tracking.tsv)继续新能流/DAQ/μ辐射控制及物理精度，不把条件支线未触发说成完成全部目标。报告先于本地Conventional Commit，历史§1–112、Stage54资产保持。
+
+
+## 114. Stage136：并行物理精度线加入有限响应MC，真实系统仍缺
+
+[Stage136](../workbook/2026-11-07_stage136_finite-mc-spectrum-precision.md)执行Stage132§6并行任务，Stage135新observer pilot仍进行。原89033框中role2响应11612行/10811incoming，role3参考13189行；原模型冻结、0新fit/forward/G4、reserved零预测。七真E份额自由，Nselected1000，实测家族模板协方差后E<200份额σ：传统1.490009pp、direct1.235155pp、固定联合(Ehat,pz0)1.139170pp。相关性同一矩阵建模，未假定独立。已知响应控制复现Stage129，显式辅助Schur差≤1.36e−10；500家族draw留存。
+
+是局部selected MC条件收益，不是完整data精度或coverage认证：联合最低箱32/36格为空，稀疏边界轮廓、真实nuisance/背景/接受度/独立生成确认仍缺，不设虚构强prior。1作业exit0，3schedulerCPU秒/8wall秒，0GPU。报告先于本地Conventional Commit；原单事例目标、全部门、角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失和Stage54资产保持，整体goal未完成。
