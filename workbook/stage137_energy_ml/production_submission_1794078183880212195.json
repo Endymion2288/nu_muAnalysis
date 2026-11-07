@@ -1,0 +1,15 @@
+{
+  "result": "9674017.0 - 9674017.0",
+  "phase": "production",
+  "indices": [
+    0
+  ],
+  "cpus": 8,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage137\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage137/worker_1794078183880212195.sh production $(task_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage137/1794078183880212195/energy-ml-stage137.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 8\nrequest_memory = 24000MB\nrequest_disk = 12000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+NuMuStage = \"energy-ml-stage137\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage137/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage137/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage137/logs/$(ClusterId).$(ProcId).err\nmax_materialize = 24\nmax_idle = 24\nqueue task_index in 0\n",
+  "package": {
+    "path": "software/stage137/1794078183880212195/energy-ml-stage137.tar.gz",
+    "bytes": 9501955,
+    "file_count": 780
+  },
+  "full_manifest_backup": "ntuples/energy_ml_stage137/submission_manifests.json.gz"
+}

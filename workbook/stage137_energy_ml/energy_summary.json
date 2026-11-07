@@ -1,0 +1,31 @@
+{
+  "joint": {
+    "2_G": false,
+    "2_H": false,
+    "2_D": false,
+    "2_G_noEM": false,
+    "2_G_noCH": false,
+    "2_G_noNH": false,
+    "3_G": false,
+    "3_H": false,
+    "3_D": false,
+    "3_G_noEM": false,
+    "3_G_noCH": false,
+    "3_G_noNH": false
+  },
+  "mechanism_two_lowbins_cal_and_test_5pct": {
+    "G/A": false,
+    "H/A": true,
+    "D/AK": false,
+    "G_noEM/G": false,
+    "G_noCH/G": false,
+    "G_noNH/G": false,
+    "AK/A": false,
+    "A/X": false,
+    "F/U": true
+  },
+  "promotion": false,
+  "reserve_predictions": 0,
+  "independent_confirmation": false,
+  "scope": "same-support conditional oldselected/reselected cohort,HTinverse-inclusion target; fixedmodel,within samplingstratum\u00d7component incomingbootstrap; no source/refit/GENIE/system/researchselection or simultaneous95coverage"
+}

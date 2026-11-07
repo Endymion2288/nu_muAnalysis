@@ -1,3 +1,9 @@
+# 当前执行更新：Stage137正式边界分解完成；G有局部增量但未过双箱扩大门
+
+[Stage137正式结果](../workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md)完成4032父分解、18fit及6132独立标量复核。G/A test两低箱.945436/.982041，D/AK .978979/.951641，条件增量未达四项均至少5%的冻结门；H/A .757378/.701130，两低箱cal/test均满足机制门，直线几何未接受不等于完全不可测。12原joint均失败、无晋升。504job全部exit0，255604CPU秒/55309聚合wall秒/0GPU。Stage140完整覆盖结果收尾，Stage138/141单例DAQ/analog已闭合；一般来源/μ辐射、真实系统及独立确认仍缺，整体goal未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage141模拟响应到ADC闭合；Stage137/140正式结果继续
 
 [Stage141单例控制](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)以原实际kernel/校正时间/噪声流重建7200ADC，逐值0差；有限窗模拟电荷与signed raw的噪声/baseline口径明确分开。8schedulerCPU秒/42wall秒/0GPU，无新G4/训练。一般多根标签、Ecal及μ辐射尾未测量，不据单例外推。Stage137主机制与Stage140原3000toy仍在执行，整体goal未完成，原门/保留集保持。
@@ -2680,3 +2686,10 @@ Stage140仍完成原三表示×两场景×500toy，先固定18例测得121.61704
 [报告及实际通道表](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)验证原frame50单自然train父：7200ADC逐值0差，Veto/Trigger/Preshower各4路600点，VetoNu无HITS/无ADC默认不冒充测得零。原2ns/20oversample/10presample、真实CB/TOF/光传播和private随机流；780–980ns101点模拟积分在ADC前定义。Timing0模拟0而raw−.060278320pC/status1合法保留、不提供timing。本例无触底，不认证饱和下ADC来源相加或一般μ辐射尾。1jobexit0、8CPU秒/42wall秒/0GPU。
 
 Stage137能量机制后再按证据决定多根/自然μ辐射联合控制规模，Ecal/Birks来源标签未测；Stage140全冻结toy继续，不把数值修复或单例测量说成全部目标完成。原角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失及全部门保持，Stage87direct62仍参照。
+
+
+## 119. Stage137：几何接受有局部增量，较强oracle增量来自未接受量
+
+[正式报告](../workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md)复用12pilot，仅新增4020observer重放，不重复digi/reco，原4032父/3002selected/199NaN/全部K和角色保持。24192HITS对、全部旧字段精确、18fit一次执行、6132独立风险标量差≤4.9738e−14。G/A test两低箱.945436 [.918487,.972349]/.982041 [.938288,1.025045]；D/AK .978979 [.963505,.993014]/.951641 [.930442,.969902]，有小幅条件增量但未满足双箱5%扩大门；H/A .757378 [.651556,.854779]/.701130 [.606491,.793277]，cal亦通过机制门。直线ray未接受不等于真正不可见，不能称理论信息界。
+
+D/传统test最低箱.908385 [.768990,1.063567]、cal1.231296 [1.082538,1.379751]，全部12jointFalse。阶段按冻结政策不自动扩大同类G4/代理/网络网格；μ辐射与一般analog控制仍是明确缺口，不以此宣布所有观测无用。504job/504starts全部exit0，255604CPU秒/55309aggregatewall秒/0GPU，删33749459B重复archive、保留合并证据与模型。下一结合Stage140条件谱覆盖优先真实响应/逃逸辅助约束；若做小型新来源方法控制另冻输入成本，不自动启动自然ν大生产。整体goal和Stage87direct62及原门保持。
