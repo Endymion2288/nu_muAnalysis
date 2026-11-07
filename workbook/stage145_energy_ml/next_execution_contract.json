@@ -1,0 +1,27 @@
+{
+  "next_stage": 146,
+  "frozen_UTC": "2026-11-07T21:29:24.645947+00:00",
+  "question": "Are the nominal muon MC heldout tail alerts attached to actual muon-root generator families, rather than interpreting secondary truth PDG lists as extra roots?",
+  "HITS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/sim/s0012/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-HITS.root",
+  "PHYS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+  "score_models": "workbook/stage145_energy_ml/models.json",
+  "pilot_events": 64,
+  "max_events": 4096,
+  "protocol": "Original known HITS only; actual retained HepMC graph roots/parent completeness, run/event, root momentum/production position. Preserve missing/unknown/identity failures; no broad inventory hunt, no barcode-only ancestry.",
+  "workflow": "Small native truth pilot with real CPU/readbytes. Admit fixed full range only within measured300CPU budget. Match original MC controls by event and root identity; evaluate fixed saved score, no fit/threshold change; report mu-root/unknown heldout/overflow/highactivity denominators.",
+  "resources": {
+    "CPU_budget_s": 300,
+    "request_CPUs": 1,
+    "memory_MB": 4000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0
+  },
+  "new_G4": 0,
+  "new_energy_fits": 0,
+  "new_independent_nu": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "scope": "Actual PG-source/root control only; not population radiation-process labels, current d32nu/data calibration or complete track covariance/association.",
+  "overall_complete": false
+}

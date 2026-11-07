@@ -1,3 +1,9 @@
+# 当前执行更新：Stage145 μ联合留出控制完成，下一查真实初始根与尾部
+
+[Stage145报告](../workbook/2026-11-07_stage145_muon-joint-response-heldout-control.md)固定data8006/MC100012各4096条，选中2998/3612控制。Q15/Qshape30全体留出报警data18/768、33/768，MC26/878、25/878；MCoverflow为10/16、11/16，高活动6/6均报警，不能凭全体低比例认证辐射尾。只用point状态，covariance/生产匹配/data纯度未认证；truth列表全μ仅100例不等于其余有非μ初始根。χ²负占位值路径已修，实际受影响0/0，模型与留出表精确保持。2job全exit0、9CPU秒/22聚合wall秒/0GPU，无νfit/forward。下一Stage146沿已知PG HITS核实际根/身份/固定评分尾部，300CPU秒、无新G4，不扫模型或库存。原全部门/Stage137扩大门/Stage87和整体goal未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage144 Ecal DAQ闭合完成，转入μ联合尾部控制
 
 [Stage144报告](../workbook/2026-11-07_stage144_Ecal-DAQ-source-control.md)复用四父缓存，无新G4，9600可读ADC零差；Ecal实际780–930ns窗，须保留8几何PMT的噪声抽样后再比较4可读PMT。原Calo status三父/原完整private状态首父精确；frame2原selected参考缺失保持，原Calo raw未保留不冒充比较。三次程序失败全计，共587CPU秒/538聚合wall秒/0GPU，低于600预算，四父无Ecal触底/混合来源，不认证总体尾部或低能收益。下一Stage145固定两来源μ联合raw/shape留出控制，真实point/covariance/祖先及data纯度边界明确。原门/Stage137扩大门/Stage87和整体goal未完成状态保持。
@@ -2745,3 +2751,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [实测报告](../workbook/2026-11-07_stage144_Ecal-DAQ-source-control.md)在50/6/2/0四个原父的缓存SD修正持久化hit上完成9600可读ADC零差；真实Ecal raw窗780–930ns，与Scint不同。原50/6/0 Calo status精确，首父完整原private初末状态精确，原selected缺失2及原Calo raw参考未保留明确不伪造。官方先耗8几何PMT的噪声后去无cable通道，独立重算必须保留该顺序。三程序失败全计、六作业终态，587CPU秒/538聚合wall秒/0GPU，低于600预算；四控制文件回读合并631182B，删53.36MB重复运输。
 
 四父Ecal分别全μ/全非μ，未测Ecal混合/触底或总体μ辐射尾，也无能量fit/大自然ν生产。Stage145改用实际μ控制：固定data8006/MC100012各前4096条、两种raw联合评分，重建point条件、entry留出报警率、overflow/highactivity/低pz分层；不得把data比例或alltruthPDG列表当纯μ误报率认证。Stage137双箱5%门和原全体/尾部门、角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87及整体goal未完成状态保持。
+
+
+## 124. Stage145：实际μ联合raw控制与条件尾部
+
+[中文报告](../workbook/2026-11-07_stage145_muon-joint-response-heldout-control.md)执行固定Q15/Qshape30，两来源64条小测试后各4096条、point五变量+截距、固定OLS/协方差/95th校准，不扫模型。data选中2998/MC3612，留出可评分768/878；全体报警18/33及26/25，MCoverflow10/16、11/16，MC高活动6/6均报警。总体低比例不认证条件尾部；data为报警比例，MC原根未核也不冒充μFPR。100条truth列表全μ仅是列表定义，不把其余次级e/γ当独立根。负χ²占位值修复实际影响0/0，重算模型逐字段、16行结果逐字节精确。2job全exit0，9CPU秒/22聚合wall秒/0GPU，删61563B重复。
+
+下一[Stage146合同](../workbook/stage145_energy_ml/next_execution_contract.json)只沿已有MC100012 HITS单文件：先64条根/parent完整性/run-event/原根动量顶点及成本pilot，再在300CPU秒内最多4096条回接当前固定MC评分。未知/不匹配保留，不按barcode猜祖先、不扩扫库存，不重训/改阈值、不做新G4/νfit。宽能区、track covariance/真实关联、当前d32条件/data纯度未认证，原全部门和Stage1375%扩大门/Stage87/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/整体未完成状态保持。

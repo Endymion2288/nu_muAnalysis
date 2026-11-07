@@ -1,0 +1,40 @@
+[
+  {
+    "source": {
+      "kind": "data",
+      "run": 8006,
+      "input": "/eos/experiment/faser/data0/phys/2022_back/r0021/008006/Faser-Physics-008006-00000-00049-PHYS.root",
+      "production": "r0021, known repository file_config entry"
+    },
+    "missing": [],
+    "input_N": 4096,
+    "selected_muon_N": 2998,
+    "selected_pz50_100_N": 542,
+    "MC_truth_mu_only_N": null,
+    "selected_signed_charge_minus1_N": 0,
+    "raw_presence_rule": "finite positive baselineRMS plus noninvalid waveform; no-hit defaults excluded from measurement",
+    "read_bytes": 1789863,
+    "thread_CPU_s": 0.547812424,
+    "wall_s": 1.1137737960088998,
+    "RSS_KiB": 109792
+  },
+  {
+    "source": {
+      "kind": "MC_mu100GeV",
+      "run": 100012,
+      "input": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+      "production": "s0012-r0023; geometry/release compatibility not yet certified"
+    },
+    "missing": [],
+    "input_N": 4096,
+    "selected_muon_N": 3612,
+    "selected_pz50_100_N": 3140,
+    "MC_truth_mu_only_N": 100,
+    "selected_signed_charge_minus1_N": 0,
+    "raw_presence_rule": "finite positive baselineRMS plus noninvalid waveform; no-hit defaults excluded from measurement",
+    "read_bytes": 1715060,
+    "thread_CPU_s": 0.6654559830000001,
+    "wall_s": 1.72481186297955,
+    "RSS_KiB": 118476
+  }
+]

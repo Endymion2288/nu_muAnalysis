@@ -1,0 +1,4 @@
+{
+  "reason": "Static audit found negative chi2 (e.g. -1 placeholder) could pass chi2/ndof<10; require nonnegative finite chi2, as physical chi-square domain requires.",
+  "policy": "Same sources, entry bounds, split, readouts, OLS/covariance/thresholds. Re-evaluate only mandatory typed-domain repair; not candidate tuning. Retain initial results and measure affected count."
+}

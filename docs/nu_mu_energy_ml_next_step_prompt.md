@@ -1,3 +1,9 @@
+# 当前执行更新：Stage145 μ联合留出控制完成，下一查真实初始根与尾部
+
+[Stage145报告](../workbook/2026-11-07_stage145_muon-joint-response-heldout-control.md)固定data8006/MC100012各4096条，选中2998/3612控制。Q15/Qshape30全体留出报警data18/768、33/768，MC26/878、25/878；MCoverflow为10/16、11/16，高活动6/6均报警，不能凭全体低比例认证辐射尾。只用point状态，covariance/生产匹配/data纯度未认证；truth列表全μ仅100例不等于其余有非μ初始根。χ²负占位值路径已修，实际受影响0/0，模型与留出表精确保持。2job全exit0、9CPU秒/22聚合wall秒/0GPU，无νfit/forward。下一Stage146沿已知PG HITS核实际根/身份/固定评分尾部，300CPU秒、无新G4，不扫模型或库存。原全部门/Stage137扩大门/Stage87和整体goal未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage144 Ecal DAQ闭合完成，转入μ联合尾部控制
 
 [Stage144报告](../workbook/2026-11-07_stage144_Ecal-DAQ-source-control.md)复用四父缓存，无新G4，9600可读ADC零差；Ecal实际780–930ns窗，须保留8几何PMT的噪声抽样后再比较4可读PMT。原Calo status三父/原完整private状态首父精确；frame2原selected参考缺失保持，原Calo raw未保留不冒充比较。三次程序失败全计，共587CPU秒/538聚合wall秒/0GPU，低于600预算，四父无Ecal触底/混合来源，不认证总体尾部或低能收益。下一Stage145固定两来源μ联合raw/shape留出控制，真实point/covariance/祖先及data纯度边界明确。原门/Stage137扩大门/Stage87和整体goal未完成状态保持。

@@ -1,0 +1,50 @@
+{
+  "stage": 145,
+  "frozen_UTC": "2026-11-07T21:08:08.985766+00:00",
+  "question": "Can a fixed track-conditioned multichannel raw-response score be calibrated on held-out single-muon controls, including high-activity/overflow tails, and what scope limits prevent transfer?",
+  "sources": [
+    {
+      "kind": "data",
+      "run": 8006,
+      "input": "/eos/experiment/faser/data0/phys/2022_back/r0021/008006/Faser-Physics-008006-00000-00049-PHYS.root",
+      "production": "r0021, known repository file_config entry"
+    },
+    {
+      "kind": "MC_mu100GeV",
+      "run": 100012,
+      "input": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+      "production": "s0012-r0023; geometry/release compatibility not yet certified"
+    }
+  ],
+  "entry_stop": 4096,
+  "preflight_entries": 64,
+  "selection": "single fitted long track, pz50-2000GeV,>=7layers, chi2/ndof<10; control-only selection, original \u03bd cuts unchanged",
+  "split": "original entry modulo4:0/1 response fit,2 threshold calibration,3 heldout; no scan or threshold tuning",
+  "features": "Only log(pz0/GeV),x/y atVetoStation1,px0/pz0,py0/pz0 as reconstructed point-state. Never p0,p1,pz1. No fitted track covariance branch is certified: explicitly partial point conditioning.",
+  "readouts": "Signed raw charge of11 scintillator+4 Calo channels; signed rawcharge/rawpeak effective duration50Q/rawpeak (ns) as second fixed arm. No fitted charge/width or continuous timing.",
+  "typed": "finite -999/-9999/-99999 sentinels->NaN; signed charge -1 retained; positive rawpeak/baselineRMS required for shape/presence; WAVE_INVALID8|128|256 invalid; overflow/raw kept; status never gives nonzero timing",
+  "policies": [
+    "Q15:asinh(Q/1pC)",
+    "Qshape30:Q15 plus asinh((50Q/rawpeak)/10ns)"
+  ],
+  "method": "Multivariate ordinary least squares conditional mean; residual covariance (0.9 empirical+0.1 diagonal), no grid. Mahalanobis score; split-conformal95th rank ceil(.95*(ncal+1)). Original fitminmax state support only, missing/unscored events retained in denominator.",
+  "outputs": "Observed heldout alert count/N and Wilson95, all/overflow/high-activity(train sumQ99th)/pz50-100 groups, coverage/missing/rank/readbytes/CPU/RSS, puremu truth audit in MC. Data alert fraction is not FPR. No natural-nu scoring or energy fits.",
+  "limits": "One data run and one nominal100GeV MC file, split within file, no independent source certificate. No process radiation tags or track covariance. Local point-condition/pulse calibration only; old-X functions are representation, rawpeak already examined in Stage80, no new sensory-information claim. Not deployable calibration on current d32nu, not actual-background or full response certification.",
+  "resources": {
+    "CPU_budget_s": 120,
+    "request_CPUs": 4,
+    "memory_MB": 6000,
+    "MaxRuntime_s": 86400,
+    "GPU": 0
+  },
+  "new_G4": 0,
+  "new_energy_fits": 0,
+  "natural_nu_forward": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "stop": "One frozen two-source control. No proxy/network grid or broad production; failures/unsupported branches retained. Next depends on measured support/calibration and real matching/covariance inputs. Overall goal incomplete.",
+  "references": [
+    "https://arxiv.org/abs/2107.07511",
+    "https://arxiv.org/abs/1706.04965"
+  ]
+}

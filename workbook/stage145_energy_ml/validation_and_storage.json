@@ -1,0 +1,32 @@
+{
+  "typed_domain_repair": "negative chi2->NaN before selection",
+  "affected_negative_chi2_N": {
+    "data": 0,
+    "MC": 0
+  },
+  "models_exact_after_repair": true,
+  "heldout_table_bytes_exact_after_repair": true,
+  "source_capsule": "software/stage145/source_snapshots.tar.gz",
+  "source_capsule_bytes": 6004,
+  "removed_transport": [
+    {
+      "path": "software/stage145/1794085801557622854/energy-ml-stage145.tar.gz",
+      "bytes": 5818
+    },
+    {
+      "path": "software/stage145/1794086426568450854/energy-ml-stage145.tar.gz",
+      "bytes": 5874
+    },
+    {
+      "path": "ntuples/energy_ml_stage145/control_result.tar.gz",
+      "bytes": 24908
+    },
+    {
+      "path": "ntuples/energy_ml_stage145/typedqa_result.tar.gz",
+      "bytes": 24963
+    }
+  ],
+  "removed_transport_bytes": 61563,
+  "identical_initial_model_table_duplicates_removed": true,
+  "queue_empty_before_delete": true
+}
