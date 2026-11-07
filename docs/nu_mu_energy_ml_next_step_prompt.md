@@ -1,3 +1,9 @@
+# 当前执行更新：Stage146 μ根身份与固定评分尾部完成
+
+[Stage146报告](../workbook/2026-11-07_stage146_muon-root-identity-and-response-tails.md)核已知MC100012单HITS前4096条，172248个保留truth粒子全部连到μ根，缺父/重复/环均0；4096 PHYS逐run/event及根动量/顶点float32精确匹配。3612 selected中3512含非μtruth列表但仍为μ根，不可当独立其他根污染。原评分40项计数精确，μ根overflow报警10/16、11/16，高活动6/6；全体低比例不认证条件尾部。3job全exit0，145CPU秒/207聚合wall秒/0GPU，无新G4/fit。下一Stage147仅在同PHYS核记录的选中轨迹truth匹配/质量和pz偏差，60CPU秒、固定缓存评分，不冒充真实PRD/covariance或新观测。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage145 μ联合留出控制完成，下一查真实初始根与尾部
 
 [Stage145报告](../workbook/2026-11-07_stage145_muon-joint-response-heldout-control.md)固定data8006/MC100012各4096条，选中2998/3612控制。Q15/Qshape30全体留出报警data18/768、33/768，MC26/878、25/878；MCoverflow为10/16、11/16，高活动6/6均报警，不能凭全体低比例认证辐射尾。只用point状态，covariance/生产匹配/data纯度未认证；truth列表全μ仅100例不等于其余有非μ初始根。χ²负占位值路径已修，实际受影响0/0，模型与留出表精确保持。2job全exit0、9CPU秒/22聚合wall秒/0GPU，无νfit/forward。下一Stage146沿已知PG HITS核实际根/身份/固定评分尾部，300CPU秒、无新G4，不扫模型或库存。原全部门/Stage137扩大门/Stage87和整体goal未完成状态保持。

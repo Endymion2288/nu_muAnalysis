@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "input_N": 4096,
+  "selected_N": 3612,
+  "native_N": 4096,
+  "native_root_PDG_counts": {
+    "13": 2033,
+    "-13": 2063
+  },
+  "native_particle_N": 172248,
+  "native_missing_parent_edges": 0,
+  "native_duplicate_particle_ids": 0,
+  "native_cycle_or_blocked_N": 0,
+  "native_unit_values": [
+    [
+      "0",
+      "0"
+    ]
+  ],
+  "native_unique_run_event_N": 4096,
+  "PHYS_run_values": [
+    100012
+  ],
+  "PHYS_duplicate_run_event_entries": 0,
+  "native_run_values": [
+    100012
+  ],
+  "identity_reasons": {
+    "matched_retained_mu_root": 4096
+  },
+  "selected_identity_reasons": {
+    "matched_retained_mu_root": 3612
+  },
+  "matched_selected_with_nonmu_truth_N": 3512,
+  "fixed_score_reproduction": [
+    {
+      "policy": "Q15",
+      "group": "all",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Q15",
+      "group": "overflow",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Q15",
+      "group": "high_activity",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Q15",
+      "group": "pz50_100",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Qshape30",
+      "group": "all",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Qshape30",
+      "group": "overflow",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Qshape30",
+      "group": "high_activity",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    },
+    {
+      "policy": "Qshape30",
+      "group": "pz50_100",
+      "checks": {
+        "original_heldout_N": true,
+        "scored_N": true,
+        "alerts": true,
+        "missing_N": true,
+        "outside_range_N": true
+      }
+    }
+  ],
+  "extraction": {
+    "source": {
+      "kind": "MC_mu100GeV",
+      "run": 100012,
+      "input": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+      "production": "s0012-r0023; geometry/release compatibility not yet certified"
+    },
+    "missing": [],
+    "input_N": 4096,
+    "selected_muon_N": 3612,
+    "negative_chi2_placeholder_N": 0,
+    "selected_pz50_100_N": 3140,
+    "MC_truth_mu_only_N": 100,
+    "selected_signed_charge_minus1_N": 0,
+    "raw_presence_rule": "finite positive baselineRMS plus noninvalid waveform; no-hit defaults excluded from measurement",
+    "read_bytes": 1715060,
+    "thread_CPU_s": 0.47367676299999995,
+    "wall_s": 1.2613039970165119,
+    "RSS_KiB": 92160
+  },
+  "identity_read_bytes": 1315588,
+  "CPU_s": 12.156129108,
+  "wall_s": 13.251381744048558,
+  "RSS_KiB": 114360,
+  "fits": 0,
+  "new_G4": 0,
+  "reserved_forward": 0,
+  "radiation_process_certified": false,
+  "scope": "Observed PG retained mu-root control, not independently confirmed population FPR, G4 process classification or current nu/data transfer"
+}

@@ -1,0 +1,14 @@
+{
+  "admitted": true,
+  "mode": "Conditional job admission; full-range extension requires measured per-event gate after first64 within same execution",
+  "pilot_scheduler_CPU_s": 74.0,
+  "pilot_native_CPU_s": 64.77803259000001,
+  "pilot_N": 64,
+  "remaining_scheduler_CPU_s": 226.0,
+  "whole_pilot_scaling_is_not_valid": "Pilot includes one-time Athena/POOL initialization; per-event cost was not separately instrumented",
+  "native_process_CPU_cap_s": 191.0,
+  "setup_and_score_reserve_CPU_s": 35,
+  "extension": "At64: actual process CPU+3*observed CPU per interval after first event*(4096-64) must be below native cap; otherwise preserve incomplete output and do not extend",
+  "measured_cpu_guard": "Each event checks actual native process CPU cap; scheduler cumulative cap also retained",
+  "max_events": 4096
+}

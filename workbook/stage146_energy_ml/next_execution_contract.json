@@ -1,0 +1,35 @@
+{
+  "next_stage": 147,
+  "question": "Do the retained-mu-root response tail alerts use a reconstructed track recorded as matching a muon, and do recorded truth-hit quality or longitudinal momentum residuals diagnose a track-selection failure?",
+  "PHYS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+  "event_records": "ntuples/energy_ml_stage146/event_records.json.gz",
+  "score_models": "workbook/stage145_energy_ml/models.json",
+  "protocol": "Fixed original first4096 entries, same selection/split/score/threshold. First64 schema/vector alignment test, then fixed range. No new fits, transport or scoring; use exact cached Stage146 scores. Verify identities, selected entries and all original group count reproduction.",
+  "fields": [
+    "t_pdg",
+    "t_barcode",
+    "t_pdg_parent",
+    "t_barcode_parent",
+    "t_truthHitRatio",
+    "t_pz"
+  ],
+  "categories": "All original entries retained; recorded mu/nonmu/no association/rootunknown. t_barcode compared with exactly identified generator root only, never infer parentage by numeric barcode.",
+  "diagnostics": "Fixed all/overflow/high_activity/pz50_100 heldout counts/Wilson; recorded hit fraction median and <.8 counts (diagnostic only); pz0/matched truth pz-1 and compact original tail witnesses. No alternate reconstructed momentum input.",
+  "sentinel": "Existing typed rules; signed PDG/coordinates and raw -1 unchanged. t_truthHitRatio outside[0,1] unknown, no-match PDG0/nonpositive barcode unknown; no discarding parents from response denominator.",
+  "resources": {
+    "CPU_budget_s": 60,
+    "request_CPUs": 1,
+    "memory_MB": 4000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0
+  },
+  "interpretation": "Recorded ntuple truth matching only, not actual PRD uncertainty/covariance certification; no process class or causal radiation mechanism; not transferable to current nu/data. A match-quality association is not a new deployable observable.",
+  "new_G4": 0,
+  "new_energy_fits": 0,
+  "response_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "acceptance": "Report measured alignment/unknown and original denominators even for null/failed association. Do not tune threshold, scan model or widen production; preserve all Stage137 and original gates."
+}

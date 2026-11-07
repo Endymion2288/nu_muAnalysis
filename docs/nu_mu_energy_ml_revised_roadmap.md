@@ -1,3 +1,9 @@
+# 当前执行更新：Stage146 μ根身份与固定评分尾部完成
+
+[Stage146报告](../workbook/2026-11-07_stage146_muon-root-identity-and-response-tails.md)核已知MC100012单HITS前4096条，172248个保留truth粒子全部连到μ根，缺父/重复/环均0；4096 PHYS逐run/event及根动量/顶点float32精确匹配。3612 selected中3512含非μtruth列表但仍为μ根，不可当独立其他根污染。原评分40项计数精确，μ根overflow报警10/16、11/16，高活动6/6；全体低比例不认证条件尾部。3job全exit0，145CPU秒/207聚合wall秒/0GPU，无新G4/fit。下一Stage147仅在同PHYS核记录的选中轨迹truth匹配/质量和pz偏差，60CPU秒、固定缓存评分，不冒充真实PRD/covariance或新观测。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage145 μ联合留出控制完成，下一查真实初始根与尾部
 
 [Stage145报告](../workbook/2026-11-07_stage145_muon-joint-response-heldout-control.md)固定data8006/MC100012各4096条，选中2998/3612控制。Q15/Qshape30全体留出报警data18/768、33/768，MC26/878、25/878；MCoverflow为10/16、11/16，高活动6/6均报警，不能凭全体低比例认证辐射尾。只用point状态，covariance/生产匹配/data纯度未认证；truth列表全μ仅100例不等于其余有非μ初始根。χ²负占位值路径已修，实际受影响0/0，模型与留出表精确保持。2job全exit0、9CPU秒/22聚合wall秒/0GPU，无νfit/forward。下一Stage146沿已知PG HITS核实际根/身份/固定评分尾部，300CPU秒、无新G4，不扫模型或库存。原全部门/Stage137扩大门/Stage87和整体goal未完成状态保持。
@@ -2758,3 +2764,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [中文报告](../workbook/2026-11-07_stage145_muon-joint-response-heldout-control.md)执行固定Q15/Qshape30，两来源64条小测试后各4096条、point五变量+截距、固定OLS/协方差/95th校准，不扫模型。data选中2998/MC3612，留出可评分768/878；全体报警18/33及26/25，MCoverflow10/16、11/16，MC高活动6/6均报警。总体低比例不认证条件尾部；data为报警比例，MC原根未核也不冒充μFPR。100条truth列表全μ仅是列表定义，不把其余次级e/γ当独立根。负χ²占位值修复实际影响0/0，重算模型逐字段、16行结果逐字节精确。2job全exit0，9CPU秒/22聚合wall秒/0GPU，删61563B重复。
 
 下一[Stage146合同](../workbook/stage145_energy_ml/next_execution_contract.json)只沿已有MC100012 HITS单文件：先64条根/parent完整性/run-event/原根动量顶点及成本pilot，再在300CPU秒内最多4096条回接当前固定MC评分。未知/不匹配保留，不按barcode猜祖先、不扩扫库存，不重训/改阈值、不做新G4/νfit。宽能区、track covariance/真实关联、当前d32条件/data纯度未认证，原全部门和Stage1375%扩大门/Stage87/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/整体未完成状态保持。
+
+
+## 125. Stage146：真实μ初始根覆盖与联合响应尾部
+
+[Stage146实测](../workbook/2026-11-07_stage146_muon-root-identity-and-response-tails.md)完成64pilot及4096有界原生truth，172248保留粒子、μ−/μ+根2033/2063、缺父/重复/环0；PHYS全部run/event及根p3/xyz逐float32匹配，selected3612全为μ根。3512含非μtruth列表不可误作独立根污染。原固定评分40整数检查精确：all26/878、25/878，overflow10/16、11/16，高活动6/6；报警不能直接标为其他根。保留图不认证全部输运过程或总体FPR。3job全exit0、145CPU秒/207聚合wall秒/0GPU；事件文本精确合并400922B、删1112193B重复副本。
+
+下一[Stage147合同](../workbook/stage146_energy_ml/next_execution_contract.json)只诊断同PHYS记录的轨迹truth匹配/质量与pz0偏差，60CPU秒，无新G4/fit或阈值改变；真实PRD/covariance、currentproducer/data和总体过程仍缺。不续旧X网格或绕过Stage137双箱5%门大生产；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87和整体未完成状态保持。
