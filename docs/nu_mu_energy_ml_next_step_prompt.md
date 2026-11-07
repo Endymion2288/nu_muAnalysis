@@ -1,3 +1,9 @@
+# 当前执行更新：Stage151 实际conditions配对完成，共同raw／轨迹未随tag改变
+
+[Stage151报告](../workbook/2026-11-08_stage151_actual-conditions-paired-muon-control.md)完成原μ前4→64：真实04/06分别解析生效，实际map16/18路、共同16物理通道；1010合法raw对差全0pC、1024视图status/presence精确，4项baselineRMS差≤1.192093e−7mV单列。61同面reference/PRD/state/fullcovariance精确、3无leading保留；4pilot前缀及64初始/全部末RNG精确。切换tag没有恢复旧PHYS的Calo响应，旧map／随机流／release未认证，不把差当tracking bias或1σ。5start全部exit0、431CPU秒/577聚合wall秒/0GPU/0G4/0fit；事件文本2.162MB精确合并、删19.959MB重复。下一Stage152同一原μentry0→最多0–3的Ecal HITS→analog→ADC实际有限窗诊断，1000CPU秒/400pilot/100audit reserve，不重复SCT整链、不扫gain/time/seed。原门／Stage137扩大门／Stage87及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage150 Ecal overflow 有限支持审计完成，无父准入
 
 [Stage150报告](../workbook/2026-11-08_stage150_Ecal-overflow-support-audit.md)仅原4032父/2304role1，1708有status参考、596原未选中父仍未知；6832Calo视图status1/0/32为6512/318/2，overflow位0，候选0。按冻结合同不换父/扩库存/人工裁切，不执行G4；这不是总体无饱和结论，真实Ecal clipping方法仍未测量。1job exit0、5CPU秒/10wall秒/0GPU/0fit，删除23887349B运输。下一Stage151同一原μ前4→最多64做conditions04对已有06固定物理对照，明确input/current元数据和18vs15映射；1000CPU秒、实测准入，无G4/新ν/模型网格。原全部门/Stage137扩大门/Stage87及整体未完成保持。

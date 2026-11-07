@@ -1,0 +1,63 @@
+{
+  "steps": [
+    {
+      "phase": "full",
+      "step": "digi",
+      "wall_s": 167.61268140900938,
+      "GNU_CPU_s": 95.69000000000001,
+      "RSS_KiB": 1663276.0
+    },
+    {
+      "phase": "full",
+      "step": "reco",
+      "wall_s": 31.19556464299967,
+      "GNU_CPU_s": 27.61,
+      "RSS_KiB": 1144932.0
+    },
+    {
+      "phase": "full",
+      "step": "native",
+      "wall_s": 107.35949023799913,
+      "GNU_CPU_s": 99.72999999999999,
+      "RSS_KiB": 1965720.0
+    },
+    {
+      "phase": "full",
+      "step": "extract",
+      "wall_s": 7.034527349998825,
+      "GNU_CPU_s": 4.93,
+      "RSS_KiB": 117032.0
+    },
+    {
+      "phase": "pilot",
+      "step": "digi",
+      "wall_s": 99.3462437329581,
+      "GNU_CPU_s": 80.53,
+      "RSS_KiB": 1658356.0
+    },
+    {
+      "phase": "pilot",
+      "step": "reco",
+      "wall_s": 23.82587995310314,
+      "GNU_CPU_s": 20.54,
+      "RSS_KiB": 1141276.0
+    },
+    {
+      "phase": "pilot",
+      "step": "native",
+      "wall_s": 92.44990332005545,
+      "GNU_CPU_s": 84.5,
+      "RSS_KiB": 1920912.0
+    },
+    {
+      "phase": "pilot",
+      "step": "extract",
+      "wall_s": 4.661177408066578,
+      "GNU_CPU_s": 3.27,
+      "RSS_KiB": 106764.0
+    }
+  ],
+  "accounting": "Step GNU CPU is included in scheduler accounting; never add twice",
+  "GPU": 0,
+  "scientific_payload_statistics_computed_locally": false
+}

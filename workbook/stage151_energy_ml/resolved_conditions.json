@@ -1,0 +1,398 @@
+{
+  "nominal06": {
+    "digi": {
+      "source": "software/stage149/worker_logs.tar.gz:workbook/stage149_energy_ml/full/digi.log",
+      "global_tags": [
+        "OFLCOND-FASER-06"
+      ],
+      "folders": [
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DAQ-Calibration-ChipGain-02",
+          "folder": "/SCT/DAQ/Calibration/ChipGain"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DAQ-Calibration-Noise-02",
+          "folder": "/SCT/DAQ/Calibration/ChipNoise"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "TRACKER-ALIGN-02",
+          "folder": "/Tracker/Align"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "GLOBAL-BField-Maps-03",
+          "folder": "/GLOBAL/BField/Maps"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "GLOBAL-BField-Scale-03",
+          "folder": "/GLOBAL/BField/Scales"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DCS-Status-02",
+          "folder": "/SCT/DCS/CHANSTAT"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DCS-HV-02",
+          "folder": "/SCT/DCS/HV"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DCS-Temp-02",
+          "folder": "/SCT/DCS/MODTEMP"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "CableMapping-01",
+          "folder": "/WAVE/DAQ/CableMapping"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "WAVE-Digitization-04-LG",
+          "folder": "/WAVE/Digitization"
+        }
+      ]
+    },
+    "reco": {
+      "source": "software/stage149/worker_logs.tar.gz:workbook/stage149_energy_ml/full/reco.log",
+      "global_tags": [
+        "OFLCOND-FASER-06"
+      ],
+      "folders": [
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "TRACKER-ALIGN-02",
+          "folder": "/Tracker/Align"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "WAVE-Calibration-03-LG",
+          "folder": "/WAVE/Calibration/MIP_ref"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "GLOBAL-BField-Maps-03",
+          "folder": "/GLOBAL/BField/Maps"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "GLOBAL-BField-Scale-03",
+          "folder": "/GLOBAL/BField/Scales"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DCS-Status-02",
+          "folder": "/SCT/DCS/CHANSTAT"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DCS-HV-02",
+          "folder": "/SCT/DCS/HV"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "SCT-DCS-Temp-02",
+          "folder": "/SCT/DCS/MODTEMP"
+        }
+      ]
+    },
+    "native": {
+      "source": "software/stage149/worker_logs.tar.gz:workbook/stage149_energy_ml/full/native.log",
+      "global_tags": [
+        "OFLCOND-FASER-06"
+      ],
+      "folders": [
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "TRACKER-ALIGN-02",
+          "folder": "/Tracker/Align"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "GLOBAL-BField-Maps-03",
+          "folder": "/GLOBAL/BField/Maps"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "GLOBAL-BField-Scale-03",
+          "folder": "/GLOBAL/BField/Scales"
+        },
+        {
+          "global_tag": "OFLCOND-FASER-06",
+          "resolved_tag": "CableMapping-01",
+          "folder": "/WAVE/DAQ/CableMapping"
+        }
+      ]
+    }
+  },
+  "current04": {
+    "pilot": {
+      "digi": {
+        "source": "workbook/stage151_energy_ml/pilot/digi.log",
+        "global_tags": [
+          "OFLCOND-FASER-04"
+        ],
+        "folders": [
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DAQ-Calibration-ChipGain-02",
+            "folder": "/SCT/DAQ/Calibration/ChipGain"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DAQ-Calibration-Noise-02",
+            "folder": "/SCT/DAQ/Calibration/ChipNoise"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "TRACKER-ALIGN-02",
+            "folder": "/Tracker/Align"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Maps-03",
+            "folder": "/GLOBAL/BField/Maps"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Scale-03",
+            "folder": "/GLOBAL/BField/Scales"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Status-02",
+            "folder": "/SCT/DCS/CHANSTAT"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-HV-02",
+            "folder": "/SCT/DCS/HV"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Temp-02",
+            "folder": "/SCT/DCS/MODTEMP"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "CableMapping-00",
+            "folder": "/WAVE/DAQ/CableMapping"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "WAVE-Digitization-02-LG",
+            "folder": "/WAVE/Digitization"
+          }
+        ]
+      },
+      "reco": {
+        "source": "workbook/stage151_energy_ml/pilot/reco.log",
+        "global_tags": [
+          "OFLCOND-FASER-04"
+        ],
+        "folders": [
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "TRACKER-ALIGN-02",
+            "folder": "/Tracker/Align"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "WAVE-Calibration-02-LG",
+            "folder": "/WAVE/Calibration/MIP_ref"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Maps-03",
+            "folder": "/GLOBAL/BField/Maps"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Scale-03",
+            "folder": "/GLOBAL/BField/Scales"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Status-02",
+            "folder": "/SCT/DCS/CHANSTAT"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-HV-02",
+            "folder": "/SCT/DCS/HV"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Temp-02",
+            "folder": "/SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      "native": {
+        "source": "workbook/stage151_energy_ml/pilot/native.log",
+        "global_tags": [
+          "OFLCOND-FASER-04"
+        ],
+        "folders": [
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "TRACKER-ALIGN-02",
+            "folder": "/Tracker/Align"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Maps-03",
+            "folder": "/GLOBAL/BField/Maps"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Scale-03",
+            "folder": "/GLOBAL/BField/Scales"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "CableMapping-00",
+            "folder": "/WAVE/DAQ/CableMapping"
+          }
+        ]
+      }
+    },
+    "full": {
+      "digi": {
+        "source": "workbook/stage151_energy_ml/full/digi.log",
+        "global_tags": [
+          "OFLCOND-FASER-04"
+        ],
+        "folders": [
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DAQ-Calibration-ChipGain-02",
+            "folder": "/SCT/DAQ/Calibration/ChipGain"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DAQ-Calibration-Noise-02",
+            "folder": "/SCT/DAQ/Calibration/ChipNoise"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "TRACKER-ALIGN-02",
+            "folder": "/Tracker/Align"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Maps-03",
+            "folder": "/GLOBAL/BField/Maps"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Scale-03",
+            "folder": "/GLOBAL/BField/Scales"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Status-02",
+            "folder": "/SCT/DCS/CHANSTAT"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-HV-02",
+            "folder": "/SCT/DCS/HV"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Temp-02",
+            "folder": "/SCT/DCS/MODTEMP"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "CableMapping-00",
+            "folder": "/WAVE/DAQ/CableMapping"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "WAVE-Digitization-02-LG",
+            "folder": "/WAVE/Digitization"
+          }
+        ]
+      },
+      "reco": {
+        "source": "workbook/stage151_energy_ml/full/reco.log",
+        "global_tags": [
+          "OFLCOND-FASER-04"
+        ],
+        "folders": [
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "TRACKER-ALIGN-02",
+            "folder": "/Tracker/Align"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "WAVE-Calibration-02-LG",
+            "folder": "/WAVE/Calibration/MIP_ref"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Maps-03",
+            "folder": "/GLOBAL/BField/Maps"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Scale-03",
+            "folder": "/GLOBAL/BField/Scales"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Status-02",
+            "folder": "/SCT/DCS/CHANSTAT"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-HV-02",
+            "folder": "/SCT/DCS/HV"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "SCT-DCS-Temp-02",
+            "folder": "/SCT/DCS/MODTEMP"
+          }
+        ]
+      },
+      "native": {
+        "source": "workbook/stage151_energy_ml/full/native.log",
+        "global_tags": [
+          "OFLCOND-FASER-04"
+        ],
+        "folders": [
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "TRACKER-ALIGN-02",
+            "folder": "/Tracker/Align"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Maps-03",
+            "folder": "/GLOBAL/BField/Maps"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "GLOBAL-BField-Scale-03",
+            "folder": "/GLOBAL/BField/Scales"
+          },
+          {
+            "global_tag": "OFLCOND-FASER-04",
+            "resolved_tag": "CableMapping-00",
+            "folder": "/WAVE/DAQ/CableMapping"
+          }
+        ]
+      }
+    }
+  },
+  "scope": "Actual log-reported resolved tags; missing folders are not inferred; no numeric payload or physical uncertainty calculation"
+}

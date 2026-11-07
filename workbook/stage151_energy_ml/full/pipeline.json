@@ -1,0 +1,85 @@
+{
+  "phase": "full",
+  "N": 64,
+  "steps": [
+    {
+      "name": "digi",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/ml/stage149_digitize.py",
+        "/eos/experiment/faser/sim/mc24/particle_gun/100012/sim/s0012/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-HITS.root",
+        "64",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/workbook/stage151_energy_ml/full/seeds.json"
+      ],
+      "returncode": 0,
+      "wall_s": 167.61268140900938
+    },
+    {
+      "name": "reco",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/ml/stage149_reco.py",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/chain_full/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-RDO.root",
+        "64",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/workbook/stage151_energy_ml/full/reco_timing.json"
+      ],
+      "returncode": 0,
+      "wall_s": 31.19556464299967
+    },
+    {
+      "name": "native",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/ml/stage149_native.py",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/chain_full/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-xAOD.root",
+        "64",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/ntuples/energy_ml_stage151/full/native.json.gz",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/chain_full/ntuple.root"
+      ],
+      "returncode": 0,
+      "wall_s": 107.35949023799913
+    },
+    {
+      "name": "extract",
+      "command": [
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/afs/cern.ch/user/x/xcheng",
+        "USER=xcheng",
+        "PYTHONNOUSERSITE=1",
+        "NU_MU_NATIVE_CONTROL_STAGE=151",
+        "OMP_NUM_THREADS=1",
+        "OPENBLAS_NUM_THREADS=1",
+        "bash",
+        "-c",
+        "source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\npython \"$1/ml/stage149_extract.py\" \"$1\" \"$2\" \"$3\"",
+        "bash",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY",
+        "full",
+        "/pool/condor/dir_1770791/nu_mu_stage151.J66yeY/chain_full/ntuple.root"
+      ],
+      "returncode": 0,
+      "wall_s": 7.034527349998825
+    }
+  ],
+  "wall_s": 313.2095771890017,
+  "successful": true,
+  "peak_ROOT_bytes": 2173065,
+  "deleted_ROOT": [
+    {
+      "name": "FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-RDO.root",
+      "bytes": 723985
+    },
+    {
+      "name": "FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-xAOD.root",
+      "bytes": 1149977
+    },
+    {
+      "name": "ntuple.root",
+      "bytes": 299103
+    }
+  ],
+  "final_event_bytes": 193639,
+  "intermediate_ROOT_retained": false
+}

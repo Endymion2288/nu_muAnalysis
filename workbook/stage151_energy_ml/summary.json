@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "phase": "full",
+  "unique_original_parent_N": 64,
+  "current_identity": {
+    "passed": true,
+    "N": 64,
+    "new_selected_N": 61,
+    "old_selected_N": 61,
+    "leading_exact_N": 61,
+    "finite_covariance_N": 61,
+    "selected_finite_covariance_N": 61,
+    "PSD_N": 61,
+    "raw15_exact_N": 64,
+    "channels": 16,
+    "measured_readout_channel_views_N": 1010,
+    "readout_status": {
+      "1": 377,
+      "0": 642,
+      "4": 5
+    },
+    "full_same_surface_truth_pull_measured": false,
+    "association_probability_measured": false,
+    "metadata_limit": "Actual input metadata retained separately; flags do not certify input transport or data transfer",
+    "same_current_identity": "All long tracks, leading state and raw/status/baseline match at actual float32 ntuple precision",
+    "CPU_s": 2.461820608,
+    "wall_s": 2.727774632992805,
+    "ROOT_read_bytes": 1769169,
+    "RSS_KiB": 117032
+  },
+  "prefix_reproducibility": {
+    "N": 4,
+    "checks": [
+      {
+        "entry": 0,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      },
+      {
+        "entry": 1,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      },
+      {
+        "entry": 2,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      },
+      {
+        "entry": 3,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      }
+    ],
+    "passed": true
+  },
+  "tag_contrast": {
+    "common_physical_channels": 16,
+    "mapped04": 16,
+    "mapped06": 18,
+    "selected04_N": 61,
+    "selected06_N": 61
+  },
+  "CPU_s": 0.468811095,
+  "wall_s": 0.48806750774383545,
+  "RSS_KiB": 52840,
+  "new_G4": 0,
+  "fits": 0,
+  "reserved_forward": 0,
+  "calibrated_covariance_pull": false,
+  "overall_complete": false
+}

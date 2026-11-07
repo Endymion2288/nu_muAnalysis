@@ -8,13 +8,14 @@ import time
 from pathlib import Path
 
 root = Path.cwd()
+stage = int(os.environ.get('NU_MU_NATIVE_CONTROL_STAGE', '149'))
 phase = sys.argv[1]
 count = 4 if phase == 'pilot' else 64
-out = root/'workbook/stage149_energy_ml'/phase
-cache = root/'ntuples/energy_ml_stage149'/phase
+out = root/f'workbook/stage{stage}_energy_ml'/phase
+cache = root/f'ntuples/energy_ml_stage{stage}'/phase
 out.mkdir(parents=True, exist_ok=True)
 cache.mkdir(parents=True, exist_ok=True)
-plan = json.loads((root/'workbook/stage149_energy_ml/protocol.json').read_text())
+plan = json.loads((out.parent/'protocol.json').read_text())
 work = root/('chain_'+phase)
 work.mkdir()
 tick = time.perf_counter()
@@ -46,7 +47,7 @@ run('reco', [sys.executable, str(root/'ml/stage149_reco.py'), str(rdo), str(coun
 peak_size = run('native', [sys.executable, str(root/'ml/stage149_native.py'), str(rec), str(count),
                          str(cache/'native.json.gz'), str(work/'ntuple.root')])
 run('extract', ['env', '-i', 'PATH=/usr/bin:/bin', 'HOME='+os.environ['HOME'], 'USER='+os.environ.get('USER', 'xcheng'),
-    'PYTHONNOUSERSITE=1', 'OMP_NUM_THREADS=1', 'OPENBLAS_NUM_THREADS=1', 'bash', '-c',
+    'PYTHONNOUSERSITE=1', f'NU_MU_NATIVE_CONTROL_STAGE={stage}', 'OMP_NUM_THREADS=1', 'OPENBLAS_NUM_THREADS=1', 'bash', '-c',
     'source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\npython "$1/ml/stage149_extract.py" "$1" "$2" "$3"',
     'bash', str(root), phase, str(work/'ntuple.root')])
 size = sum(f.stat().st_size for f in cache.glob('*'))

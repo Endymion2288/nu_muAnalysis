@@ -2,6 +2,7 @@
 import csv
 import gzip
 import json
+import os
 import resource
 import sys
 import time
@@ -13,12 +14,13 @@ import numpy as np
 import uproot
 
 root, phase, ntuple = Path(sys.argv[1]), sys.argv[2], sys.argv[3]
-out, cache = root/'workbook/stage149_energy_ml'/phase, root/'ntuples/energy_ml_stage149'/phase
+stage = int(os.environ.get('NU_MU_NATIVE_CONTROL_STAGE', '149'))
+out, cache = root/f'workbook/stage{stage}_energy_ml'/phase, root/f'ntuples/energy_ml_stage{stage}'/phase
 plan = json.loads((out.parent/'protocol.json').read_text())
 with gzip.open(cache/'native.json.gz', 'rt') as stream:
     native = json.load(stream)
 seeds = json.loads((out/'seeds.json').read_text())
-with gzip.open(root/plan['old_identity_records'], 'rt') as stream:
+with gzip.open(root/plan.get('old_identity_records', 'ntuples/energy_ml_stage146/event_records.json.gz'), 'rt') as stream:
     capsule = json.load(stream)
 old_roots = json.loads(capsule['workbook/stage146_energy_ml/full_roots.json.gz'])
 old_ids = json.loads(capsule['workbook/stage146_energy_ml/identity_records.json.gz'])
@@ -43,7 +45,14 @@ with uproot.open(ntuple, array_cache=None) as file:
     read_bytes = int(file.file.source.num_requested_bytes)
 assert len(array) == count
 with uproot.open(plan['old_PHYS'], array_cache=None) as file:
-    old = file['nt'].arrays(['run', 'eventID', 'longTracks', 'Track_pz0', 'Track_Chi2', 'Track_nDoF', 'Track_nLayers'], entry_stop=count)
+    old_fields = ['run', 'eventID', 'longTracks', 'Track_pz0', 'Track_Chi2', 'Track_nDoF', 'Track_nLayers']
+    canonical = ['VetoNu0', 'VetoNu1', 'Veto10', 'Veto20', 'Veto21', 'Timing0', 'Timing1', 'Timing2', 'Timing3',
+                 'Preshower0', 'Preshower1']+[f'Calo{j}' for j in range(4)]
+    if stage == 151:
+        old_fields += [b for b in track_fields if b not in old_fields]
+        old_fields += [name+'_'+field for name in canonical for field in fields]
+    old_missing = sorted(set(old_fields)-set(file['nt'].keys()))
+    old = file['nt'].arrays([b for b in old_fields if b not in old_missing], entry_stop=count)
     old_read_bytes = int(file.file.source.num_requested_bytes)
 
 
@@ -136,6 +145,24 @@ for i, event in enumerate(native['records']):
 
 with gzip.open(cache/'paired.json.gz', 'wt') as stream:
     json.dump(records, stream, separators=(',', ':'), allow_nan=False)
+if stage == 151:
+    legacy = []
+    for i, value in enumerate(old):
+        pz = list(value.Track_pz0)
+        k = int(np.argmax(pz)) if pz else None
+        readout = {}
+        for name in canonical:
+            stored = {field: clean(float(value[name+'_'+field])) if name+'_'+field not in old_missing else None
+                      for field in fields}
+            status, rms = stored['status'], stored['baseline_rms']
+            present = status is not None and status >= 0 and rms is not None and rms > 0 and int(status) & (8|128|256) == 0
+            readout[name] = dict(stored=stored, present=bool(present),
+                                raw_charge_pC=stored['raw_charge'] if present else None)
+        legacy.append(dict(entry=i, run=int(value.run), event=int(value.eventID), selected=selected(value),
+            leading={name: clean(float(value[name][k])) if k is not None and name not in old_missing else None for name in track_fields},
+            readout=readout))
+    with gzip.open(cache/'legacy.json.gz', 'wt') as stream:
+        json.dump(dict(records=legacy, missing_branches=old_missing, old_random_streams='unknown'), stream, separators=(',', ':'), allow_nan=False)
 for name, rows in [('covariance', covariance_rows), ('charge', charge_rows)]:
     with (out/(name+'.tsv')).open('w') as stream:
         columns = list(dict.fromkeys(key for row in rows for key in row))

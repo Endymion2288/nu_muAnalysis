@@ -1,0 +1,34 @@
+{
+  "admitted": true,
+  "physical_pilot_passed": true,
+  "already_used_scheduler_CPU_s": 194.0,
+  "remaining_CPU_s": 806.0,
+  "factor": 3,
+  "costs": [
+    {
+      "step": "digi",
+      "CPU_s": 80.53,
+      "first_event_end_CPU_s": 75.005851084,
+      "post_first_3_CPU_s": 0.7400496409999988,
+      "factor3_affine64_CPU_s": 285.9929784599999
+    },
+    {
+      "step": "reco",
+      "CPU_s": 20.54,
+      "first_event_end_CPU_s": 17.486441218,
+      "post_first_3_CPU_s": 0.8334262179999996,
+      "factor3_affine64_CPU_s": 111.62557307999998
+    },
+    {
+      "step": "native",
+      "CPU_s": 84.5,
+      "first_event_end_CPU_s": 79.981720496,
+      "post_first_3_CPU_s": 0.13574270099999808,
+      "factor3_affine64_CPU_s": 261.6445620599999
+    }
+  ],
+  "full64_projected_CPU_s": 669.0731135999997,
+  "audit_reserve_CPU_s": 100,
+  "parent_cap": 64,
+  "overlapping_pilot_N": 4
+}

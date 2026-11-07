@@ -1,6 +1,7 @@
 """Observe the exact merged collection in the official current ntuple job."""
 import gzip
 import json
+import os
 import resource
 import shutil
 import sys
@@ -17,6 +18,10 @@ tick, cpu = time.perf_counter(), time.process_time()
 records = []
 original = ComponentAccumulator.run
 cable_mapping = []
+conditions = os.environ.get('NU_MU_CONTROL_CONDITIONS', 'OFLCOND-FASER-06')
+assert conditions in ['OFLCOND-FASER-04', 'OFLCOND-FASER-06']
+official_scope = {'__name__': '__main__'}
+configured = {}
 
 
 class Snapshot(PyAthena.Alg):
@@ -79,7 +84,8 @@ class Snapshot(PyAthena.Alg):
                 state_columns=['x_mm', 'y_mm', 'z_mm', 'px_MeV', 'py_MeV', 'pz0_MeV', 'charge', 'chi2', 'ndof'],
                 CPU_s=time.process_time()-cpu, wall_s=time.perf_counter()-tick,
                 ROOT_read_bytes=int(ROOT.TFile.GetFileBytesRead()),
-                RSS_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss), separators=(',', ':'))
+                RSS_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                configured_conditions=configured), separators=(',', ':'))
         with gzip.open(target, 'wt') as stream:
             stream.write(payload)
         assert len(records) == count
@@ -87,12 +93,18 @@ class Snapshot(PyAthena.Alg):
 
 
 def run(acc, *args, **kwargs):
+    flags = official_scope['configFlags']
+    configured.update(conditions=str(flags.IOVDb.GlobalTag), geometry=str(flags.GeoModel.FaserVersion))
+    assert configured['conditions'] == conditions and configured['geometry'] == 'FASERNU-04'
     acc.addEventAlgo(Snapshot('Stage149NativeState'))
     return original(acc, *args, **kwargs)
 
 
 ComponentAccumulator.run = run
 source = Path(shutil.which('faser_ntuple_maker.py')).read_text()
+if conditions != 'OFLCOND-FASER-06':
+    assert source.count('configFlags.lock()') == 1
+    source = source.replace('configFlags.lock()', f'configFlags.IOVDb.GlobalTag = {conditions!r}\nconfigFlags.lock()')
 sys.argv = ['faser_ntuple_maker.py', '--isMC', '--geom', 'TI12MC04', '--CKFTrackType', 'merge',
             '--nevents', str(count), '--outfile', ntuple, rec]
-exec(compile(source, 'stage149-official-ntuple.py', 'exec'), {'__name__': '__main__'})
+exec(compile(source, 'stage149-official-ntuple.py', 'exec'), official_scope)

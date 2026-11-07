@@ -1,5 +1,6 @@
 """Official prefix digitization with event-specific private waveform RNG seeds."""
 import json
+import os
 import re
 import resource
 import shutil
@@ -18,6 +19,10 @@ tick, cpu = time.perf_counter(), time.process_time()
 records = []
 original = ComponentAccumulator.run
 header = Path(__file__).with_name('stage129_rng.hxx')
+conditions = os.environ.get('NU_MU_CONTROL_CONDITIONS', 'OFLCOND-FASER-06')
+assert conditions in ['OFLCOND-FASER-04', 'OFLCOND-FASER-06']
+official_scope = {'__name__': '__main__'}
+configured = {}
 
 
 def serial(value):
@@ -78,7 +83,7 @@ class Seed(PyAthena.Alg):
         target.write_text(json.dumps(dict(records=records, CPU_s=time.process_time()-cpu,
             wall_s=time.perf_counter()-tick, ROOT_read_bytes=int(ROOT.TFile.GetFileBytesRead()),
             RSS_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
-            silicon_SeedOffset=2026110749, conditions='OFLCOND-FASER-06', geometry='FASERNU-04'),
+            silicon_SeedOffset=2026110749, conditions=configured['conditions'], geometry=configured['geometry']),
             separators=(',', ':'))+'\n')
         assert len(records) == count
         assert all(any(r['before'][d] != r['after'][d] for d in r['seeds']) for r in records)
@@ -92,6 +97,9 @@ class EndEvent(PyAthena.Alg):
 
 
 def run(acc, *args, **kwargs):
+    flags = official_scope['configFlags']
+    configured.update(conditions=str(flags.IOVDb.GlobalTag), geometry=str(flags.GeoModel.FaserVersion))
+    assert configured['conditions'] == conditions and configured['geometry'] == 'FASERNU-04'
     for detector in ['Calo', 'VetoNu', 'Veto', 'Trigger', 'Preshower']:
         tool = CompFactory.WaveformDigitisationTool('Stage122'+detector)
         acc.getEventAlgo(detector+'WaveformDigiAlg').WaveformDigitisationTool = tool
@@ -105,6 +113,6 @@ source = Path(shutil.which('faser_digi.py')).read_text()
 assert source.count('configFlags = initConfigFlags()') == 1
 source = source.replace('configFlags = initConfigFlags()',
                         'configFlags = initConfigFlags()\nconfigFlags.Random.SeedOffset = 2026110749')
-source = source.replace('OFLCOND-FASER-04', 'OFLCOND-FASER-06')
+source = source.replace('OFLCOND-FASER-04', conditions)
 sys.argv = ['faser_digi.py', '--geom', 'TI12MC04', '--nevts', str(count), source_path]
-exec(compile(source, 'stage149-official-digi.py', 'exec'), {'__name__': '__main__'})
+exec(compile(source, 'stage149-official-digi.py', 'exec'), official_scope)

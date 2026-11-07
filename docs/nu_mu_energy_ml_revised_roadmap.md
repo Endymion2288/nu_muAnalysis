@@ -1,3 +1,9 @@
+# 当前执行更新：Stage151 实际conditions配对完成，共同raw／轨迹未随tag改变
+
+[Stage151报告](../workbook/2026-11-08_stage151_actual-conditions-paired-muon-control.md)完成原μ前4→64：真实04/06分别解析生效，实际map16/18路、共同16物理通道；1010合法raw对差全0pC、1024视图status/presence精确，4项baselineRMS差≤1.192093e−7mV单列。61同面reference/PRD/state/fullcovariance精确、3无leading保留；4pilot前缀及64初始/全部末RNG精确。切换tag没有恢复旧PHYS的Calo响应，旧map／随机流／release未认证，不把差当tracking bias或1σ。5start全部exit0、431CPU秒/577聚合wall秒/0GPU/0G4/0fit；事件文本2.162MB精确合并、删19.959MB重复。下一Stage152同一原μentry0→最多0–3的Ecal HITS→analog→ADC实际有限窗诊断，1000CPU秒/400pilot/100audit reserve，不重复SCT整链、不扫gain/time/seed。原门／Stage137扩大门／Stage87及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage150 Ecal overflow 有限支持审计完成，无父准入
 
 [Stage150报告](../workbook/2026-11-08_stage150_Ecal-overflow-support-audit.md)仅原4032父/2304role1，1708有status参考、596原未选中父仍未知；6832Calo视图status1/0/32为6512/318/2，overflow位0，候选0。按冻结合同不换父/扩库存/人工裁切，不执行G4；这不是总体无饱和结论，真实Ecal clipping方法仍未测量。1job exit0、5CPU秒/10wall秒/0GPU/0fit，删除23887349B运输。下一Stage151同一原μ前4→最多64做conditions04对已有06固定物理对照，明确input/current元数据和18vs15映射；1000CPU秒、实测准入，无G4/新ν/模型网格。原全部门/Stage137扩大门/Stage87及整体未完成保持。
@@ -2823,3 +2829,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [Stage150报告](../workbook/2026-11-08_stage150_Ecal-overflow-support-audit.md)和[支持表](../workbook/stage150_energy_ml/support.tsv)给出2304训练父中1708有Calo status、596未知；6832视图无bit4，故无预定clipping父。不从未知父推断无饱和，不人工裁切替代、不扩大生产。1start/5CPU秒/10wall秒/0GPU，无G4/fit，Ecal真实clipping/总体响应继续开放。
 
 [下一冻结合同](../workbook/stage150_energy_ml/next_execution_contract.json)是Stage151实际conditions04/06配对μ控制：已知原HITS前4物理pilot，实测成本后最多64，同原seed/geometry/d32代码，比较实际mapping/raw/status/full covariance及旧PHYS同父；1000CPU秒/400pilot/100audit reserve、0G4/0fit。输入tag匹配不等于release/physics/data迁移已认证；固定tag差不是1σprior，不要求未知旧随机流raw精确。Stage149的3无leading/16无hit、完整covariance强相关和未校准边界保持。Stage87、所有原门、Stage137扩大门、cuts/K/角色/reserved不变，整体未完成。
+
+
+## 130. Stage151：条件差异的真实响应对照完成，转实际Ecal信号与时间窗诊断
+
+[Stage151报告](../workbook/2026-11-08_stage151_actual-conditions-paired-muon-control.md)与[完整配对](../workbook/stage151_energy_ml/comparison.json)给出64原父：04/06map16/18，06独有Preshower2/3；共同raw/status/presence无差，61条PRD/reference/state/fullcovariance全同；4项baselineRMS微差明确保留。原current-ntuple身份全通过，前4exact复现，全部5作业exit0计431CPU秒/577wall秒，无G4/ν/fit或模型晋升。当前相对旧PHYS的Calo差不能由本GlobalTag切换解释，也不能以未认证旧map/seed把旧PHYS当ground truth。输入tag匹配不认证release/输运/data或covariance覆盖。
+
+[下一冻结合同](../workbook/stage151_energy_ml/next_execution_contract.json)为Stage152：同一已知HITS原entry0真实Ecal control，身份/raw/status/privateRNG/成本通过后最多原0–3。只Ecal hit时间/SD修正信号、实际响应与8几何PMT噪声→4readableADC、780–930ns及fullacq模拟积分；1000CPU秒/400pilot/100audit reserve，3倍成本准入，无新G4、SCT重跑、fit、gain/time/seed扫描或人工clipping。不把少数控制当总体μ辐射校准。原§1–129与所有历史全文保持，Stage132其余外部约束/真实covariance校准/data/独立确认仍缺，原门和Stage137双箱5%扩大门及Stage87不变，整体goal未完成。
