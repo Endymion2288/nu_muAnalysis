@@ -1,5 +1,11 @@
 # νμ 能量研究路线修订：先识别信息缺口，再选择模型
 
+**2026-11-07 Stage132 当前研究入口：** [边界可测性研究复盘](../workbook/2026-11-07_stage132_boundary-observability-research.md)、本路线§111及[下一步入口](nu_mu_energy_ml_next_step_prompt.md)覆盖以下历史优先级。本轮只读workbook、静态实现和原始文献，0事件数组读取/物理重算/训练/推理/重放/作业，无SHA。Stage129三类观测、Stage130原规模N→2N、Stage131谱系/边界机制均已完成，不照旧入口重复执行。
+
+**主路线转向非μ出靶能流的可测成分与DAQ对应的联合响应。** Stage131 F/U两低箱cal/test都有明显条件增量，但U已含理想沉积/真值可用性，K含中性及全部出射方向，不等于可见H或已实现的X+K收益。P_mu只试了μ比例，边界监督代理尚未执行。先保留原7-fit/900CPU秒缓存随访，因本研究占用Stage132，将其顺延Stage133；之后按必要性做缓存机制定位及小型新能流/DAQ对齐pilot，避免无条件再跑4032父。真实μ联合响应要包含辐射尾，区别于已有cluster计数、点GNN和平均MIP相减。已有条件谱收益继续推进到有限MC和真实nuisance/接受度/背景；原事件目标、强f0、全部门及独立确认不变。
+
+### Stage128研究入口（原文保留）
+
 **2026-11-07 Stage128 当前研究入口：** [反应深度、严格Good Hit时序与饱和波形复盘](../workbook/2026-11-07_stage128_vertex-timing-saturation-research.md)、本路线§107及[下一步入口](nu_mu_energy_ml_next_step_prompt.md)覆盖以下历史优先级。Stage125五G4冻结评估、Stage126–127 truth几何优化均已完成；最新科学参照仍为Stage87 direct62，没有新模型取代它。本轮只读既有结果/源码/附件/论文，0事件数组/ROOT/NPZ读取、0训练/推理/重建/作业、无SHA。
 
 优先检验**下游Veto10/20/21的受约束饱和电荷恢复**，以原raw、官方CB和带不确定度恢复作测量对照，再交同支持能量及三尾；严格`status_i==0 && status_j==0`的校正相对时间独立消融，非0不提供timing、全事件保留。顶点z未入direct62，旧真z有条件增量，但单μ反推没有唯一顶点；先更新当前支持的真z/材料深度诊断，再决定多轨迹兼容度投入。Stage122三通道绝对粗窗不是下游Veto饱和或精细Δt实验，不能据其阴性关闭这两条支线。独立双侧支持、真实响应/系统和最终物理收益继续；结束默认旧输入架构/seed/几何网格。所有新可用率、收益和成本未测，未来Stage129先实测pilot再冻规模，本轮不执行。
@@ -2568,3 +2574,22 @@ F/传统最低箱cal1.272314 [1.115817,1.441918]、test .917930 [.780917,1.07567
 4964独立标量差≤5.329071e−14、72576原数组可重建；有限sentinel/正值域非法−1/Inf均0，3256个合法signed−1特征项保留。511attempt全终态、3失败全计652569CPU秒、aggregatewall116022秒、峰256请求CPU、0GPU。删405252441逻辑重复B，缓存+模型28708368B，另留3.750MBobserver；零hit私有随机流合法早退、Ecal/StoreGate和运输修正均记录，不重训18fit。先中文报告再本地提交，Stage54及历史§1–109/旧入口保持。
 
 下一按[Stage132合同](../workbook/stage131_energy_ml/next_execution_contract.json)只做现有缓存的边界监督部署检验：四个train-only source交叉拟合log1p(非μ出包络KE)代理＋B63原三seed能量臂，复用同支持冻结X/500draw，7fit/900CPU秒/4CPU12GB，无新G4和truth availability。不创造传感信息，明确为看到开发结果后的有限随访而非新blind；原八层/三尾和1.05/1.01/1.03不降。失败结束该X-only边界实现，不续旧X后验/架构/seed网格。真正独立确认、真实data/GRL/背景/接受度/相关系统完整精度仍缺，整体goal未完成，见[完成审计](../workbook/stage131_energy_ml/completion_audit.tsv)。
+
+
+## 111. Stage132：由边界真值增量转向可测信息与系统约束后的物理收益
+
+[Stage132完整研究报告](../workbook/2026-11-07_stage132_boundary-observability-research.md)复盘Stage129–131并检索原始文献。本轮无环境研究，0事件数组/ROOT/NPZ读取、0新风险计算/训练/推理/重建/G4/作业。历史§1–110及旧入口逐字保留。本报告占用Stage132；Stage131合同中未执行的边界代理顺延Stage133，旧合同JSON不改写。
+
+Stage129已完成受约束饱和恢复、严格双端status0时序、当前全支持真z/material与实际IFT。电荷验证改善未转成稳定能量增量；Q/X test两低箱1.005784/.992483，时序只第二箱局部改善且有offset敏感性。上游校准范围覆盖稀少，不称全部时间信息无用。真z/X all=.918212 [.910661,.926282]，实际IFT最低箱只有6/183可用，当前几何表示未补回。实测raw为780–980ns含端点、samples390:491，修正Stage128整600点假设；不改写历史。
+
+Stage130原规模同组成926→1852、4100→8200已完成，2N/N all约.9925/.9920，最低箱old/new=.989293/1.032741；augmented/传统最低箱1.910765/1.799716。不能继续把原规模翻倍列未测，也不直接投资普通4N；仍非理论训练饱和。全部K、角色和reserved零forward保持。
+
+Stage131 F/U test两低箱=.706057 [.632191,.786692]/.880740 [.766331,.994613]，cal同向；P_mu/X=.986502/1.001139，未测K代理。F/U以U的理想沉积和真值可用性为条件；K是实际靶包络首次外穿的非μ根非ν KE，含neutral和全部方向，不是H、可见E或Eν−Eμ。4032父fresh response选中3002，新独立ν N=0，12原joint全False。固定[0,1000)ns不是DAQ：test Veto/Trigger零沉积248/483，而all-time均非零。其成分比例变化限制L/P的外推，不指定尚未证实的runtime原因。
+
+下一顺序：先原合同7fit/900CPU秒的train-only三折log1p(K/GeV)代理+B63/X，Stage133执行、无新G4/无oracle availability/不重训X，阴性结束此X-only实现，不关闭新观测。必要时只补A+K/A区分理想沉积依赖，再按问题补U+z和U+z+K考察深度互补，均为开发机制诊断。主物理工作以最小observer分退出面、带电/EM/中性、几何接受和相对时间；这些字段现缓存没有，须新pilot，不声称可从聚合量恢复。all-time/固定窗缓存可做端点核查，但完整DAQ对齐需实际通道响应和时间约定；不扫窗挑赢家。
+
+可部署新观测优先校准真实μ条件下的多层联合残差和实际测量关联，包含μ辐射而非平均MIP相减。Stage124非leading/共享/未归属计数和Stage108关系已做，不重新包装；X-only变换不创造信息。仅当可响应能流有增量且控制闭合才扩大新仪器化/自然ν实验；如主要是不可见逃逸，转外部乳胶锚点和系统，而非总K代理网格。乳胶仅在真实匹配、误差与覆盖明确时作控制，不默认改变电子部署范围。
+
+Stage129已有Nselected1000、已知response条件谱精度：E<200份额σ传统1.452040pp、direct1.212661pp。下一步是有限MC、真实nuisance/接受度/背景后的精度，非重做已知response Fisher或立即上大SBI；INFERNO/抗nuisance压缩只作条件成熟后的方法参考。保留最低能单事例目标，1.05只非劣效，原1.05/1.01/1.03及八层三尾+2pp、独立确认和真实完整物理收益不降。
+
+新方案收益/支持/功效/CPU/I/O未测；既有Stage131全链CPU652569s而18能量fit仅54.666434292s，优先控制新增全链。未来批量HTCondor，Stage133目录~/condor/nu_muAnalysis/stage133/，先测新步骤pilot再冻规模，紧凑保留必要证据。原强Stage87direct62、pz0/raw11/status/typedNaN/signed/Calo缺失/原cuts、Stage54资产和全部历史保持。先中文workbook再本地Conventional Commit，不push；整体项目未完成。

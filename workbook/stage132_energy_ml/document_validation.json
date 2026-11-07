@@ -1,0 +1,132 @@
+{
+  "stage": 132,
+  "date": "2026-11-07",
+  "scope": "research documents only; no new event-array reads, physics calculations, fits, inference, simulation, reconstruction or batch jobs",
+  "physics_numbers": "quoted from completed Stage129-131 workbook results, not recomputed",
+  "historical_roadmap_text_exactly_retained": true,
+  "historical_next_step_prompt_exactly_retained": true,
+  "old_execution_contract_unchanged": true,
+  "pending_boundary_proxy_execution_stage": 133,
+  "original_goals_and_gates_retained": true,
+  "local_links_checked": [
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "2026-11-07_stage129_saturation-timing-material-energy.md"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "2026-11-07_stage130_full-depth-support-curve.md"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "2026-11-07_stage131_muon-lineage-and-boundary-energy.md"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "2026-11-06_stage123_native-observables-and-sample-strategy.md"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "2026-11-07_stage128_vertex-timing-saturation-research.md"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "/Users/aaaa/Downloads/FASER Waveform Reconstruction and Energy Calibration.pdf"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage129_energy_ml/chargecov_comparison.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage130_energy_ml/old_paired.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage130_energy_ml/new_paired.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage131_energy_ml/paired.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage131_energy_ml/support.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage131_energy_ml/deposit_coverage.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage131_energy_ml/lineage_summary.tsv"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage131_energy_ml/next_execution_contract.json"
+    },
+    {
+      "document": "workbook/2026-11-07_stage132_boundary-observability-research.md",
+      "target": "stage132_energy_ml/document_validation.json"
+    },
+    {
+      "document": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "target": "../workbook/2026-11-07_stage132_boundary-observability-research.md"
+    },
+    {
+      "document": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "target": "nu_mu_energy_ml_next_step_prompt.md"
+    },
+    {
+      "document": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "target": "../workbook/2026-11-07_stage132_boundary-observability-research.md"
+    },
+    {
+      "document": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "target": "../workbook/2026-11-07_stage132_boundary-observability-research.md"
+    },
+    {
+      "document": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "target": "../workbook/stage131_energy_ml/next_execution_contract.json"
+    }
+  ],
+  "markdown_fences_balanced_in_new_text": true,
+  "git_diff_check_passed": true,
+  "changed_files": [
+    "docs/nu_mu_energy_ml_next_step_prompt.md",
+    "docs/nu_mu_energy_ml_revised_roadmap.md",
+    "workbook/2026-11-07_stage132_boundary-observability-research.md",
+    "workbook/stage132_energy_ml/document_validation.json"
+  ],
+  "new_physics_gains_support_power_and_resource_measurements": "not measured",
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/1706.04965",
+      "used_for": "particle-flow measurement linking and muon response; body sections consulted"
+    },
+    {
+      "url": "https://arxiv.org/abs/1208.3430",
+      "used_for": "stochastic muon losses; abstract consulted; no FASER performance transfer"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1140/epjc/s10052-020-7631-5",
+      "used_for": "emulsion energy observables; section 4.3 consulted"
+    },
+    {
+      "url": "https://faser.web.cern.ch/briefing-20260325/",
+      "used_for": "2026 collaboration briefing on emulsion muon-neutrino energy; not a full methods paper"
+    },
+    {
+      "url": "https://arxiv.org/abs/1806.04743",
+      "used_for": "inference-aware optimization with nuisances; body consulted"
+    },
+    {
+      "url": "https://arxiv.org/abs/1903.01473",
+      "used_for": "nuisance-hardened compression; abstract consulted"
+    },
+    {
+      "url": "https://repository.cern/records/eg0mj-1ep53",
+      "used_for": "public conference-note abstract scope only; no unverified reconstruction details"
+    }
+  ]
+}

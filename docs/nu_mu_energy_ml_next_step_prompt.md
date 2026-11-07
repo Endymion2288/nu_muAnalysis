@@ -1,3 +1,21 @@
+# 当前研究入口：Stage132复盘完成，下一计算Stage133有限边界监督随访
+
+先读[Stage132研究报告](../workbook/2026-11-07_stage132_boundary-observability-research.md)、路线§111与[Stage131原合同](../workbook/stage131_energy_ml/next_execution_contract.json)。本轮无环境，只读既有报告/紧凑表/静态源码并检索论文，没有读取事件数组、计算新风险、训练、推理、重放或提交作业。Stage129–131均已完成，不依下方历史重跑。Stage131合同里的未执行Stage132代理顺延Stage133；旧JSON和所有历史入口原文保留。
+
+**当前判断：主问题是有用边界能流的可测性。** F/U cal/test双低箱都有明显增量，但U有理想沉积/真值可用性，K含全部方向与中性，不等于可见H或X端已获益；P_mu未测K代理。Stage129饱和/严格时序/实际IFT未修复低能，Stage130原规模翻倍已测，不能再把它们列为尚待首次执行的主线。强f0仍Stage87direct62，未有新晋升。
+
+下一有环境计算Stage133先保持原有限合同：Stage131 matched_input、固定X预测和bootstrap；train-only source三折log1p(非μ首次外穿KE/GeV)监督，B=X+预测量63维。4代理+3原能量fit=7，900CPU秒预算、4CPU12GB，无新G4/ν、无truth availability、不重训X。cal仅原全局offset。cal/test两低箱point≤.95且upper95<1，完整八层/三尾/原门，promotionFalse。这是开发结果引出的随访，不是新blind；阴性结束此X-only实现，禁止续模型/seed网格。该阴性不终结真正新观测研究。
+
+后续按报告分支，勿在Stage133里自动追加网格或全链：必要时同缓存补A+K/A区分理想沉积依赖；按明确问题做同支持z×K机制对照。主研究需新最小observer，把前向可响应能流与侧/后向、neutral分开，并建立G4hit→DAQ通道/采样/有限积分窗对应。当前cache有all-time和[0,1000)沉积，却无退出面/粒子类别/方向/时间明细；不能凭聚合量补出。固定窗Veto/Trigger覆盖问题限制谱系外推，具体原因未分辨；不扫描窗口对ν能量选优。
+
+候选新观测是包含μ辐射尾的校准联合响应、真实track/PRD空间归属与必要波形内容；不是再加Stage124已测计数、Stage108点关系或减平均MIP。若只是X的函数，只能称表示改进。任何连续timing仍双端原status==0且存在finite及校准有效，非0内部拟合平移不提供timing；原事件保留。实测raw是780–980ns含端点、samples390:491，不能沿用整600点假设。
+
+条件谱收益Stage129已量化；下一物理读数应加入有限MC、真实相关nuisance、接受度/背景，输入缺口明确标未测，不先重做已知response Fisher。独立确认另锁真实新家族，原reserved/新role4/隔离不开。最终单事例两低箱真正胜传统、1.05/1.01/1.03、八层三尾+2pp和完整物理收益不改，1.05只非劣效；所有新收益/功效/全链成本未测。
+
+未来批量HTCondor用~/condor/nu_muAnalysis/stage133/，先中文workbook再本地Conventional Commit、不push。Stage131已压缩清理，用merged/selected_extra/parent_evidence，不重跑旧collect/prepare/G4。新仪器化先小pilot闭合/实测成本后定规模，避免无条件再跑4032父。pz0/raw11/typedNaN/signed/Calo缺失/原cuts/全部K与角色、Stage54资产和以下历史入口保持。整体目标仍未完成。
+
+## Stage132历史计划入口（原文保留；该计算尚未执行，现顺延Stage133）
+
 # 当前执行入口：Stage131机制线完成，执行Stage132有限边界监督代理
 
 先读[Stage131报告](../workbook/2026-11-07_stage131_muon-lineage-and-boundary-energy.md)、路线§110和[合同](../workbook/stage131_energy_ml/next_execution_contract.json)。4032响应/18能量fit/20μ代理fit/4964复算/72576数组证明/511attempt清理均已完成。逐父/运输/原frame已删，使用merged+extra+parent_evidence；不要再collect或重跑Stage131 prepare/fit/G4。
