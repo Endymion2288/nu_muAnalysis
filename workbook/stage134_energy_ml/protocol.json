@@ -1,0 +1,53 @@
+{
+  "stage": 134,
+  "baseline": {
+    "features": 62,
+    "seeds": [
+      2026110255,
+      2026110256,
+      2026110257
+    ],
+    "rounds": 400,
+    "xgboost": {
+      "max_depth": 5,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "reg:squarederror"
+    },
+    "initialization": "weighted mean training logE with boost_from_average disabled, same for all seeds",
+    "calibration": "one incoming-weighted mean cal log residual for ensemble"
+  },
+  "policy": {
+    "question": "Is boundary K increment present without five ideal deposits?",
+    "design": "AK=A+same log1p(nonmu first-exit KE/GeV); preserve all3002 rows,availability,missingness,roles,weights and frozen A/X/U/F predictions; no deployment",
+    "total_fits": 3,
+    "budget_CPU_s": 900,
+    "request_CPUs": 4,
+    "request_memory_MB": 12000,
+    "main": "AK/A cal/test two lowbins point<=.95 and upper95<1; original joint and tails reported,promotionFalse",
+    "stop": "one fixed mechanism test; if positive,freeze only U+z and U+z+K; no oracle grid",
+    "interpretation": "adaptive development mechanism conditional on oracle availability; not deployable,causal or information bound"
+  },
+  "arms": [
+    "AK"
+  ],
+  "references": [
+    "A",
+    "X",
+    "U",
+    "F",
+    "direct_cal",
+    "traditional"
+  ],
+  "input_stage": 131,
+  "bootstrap": "reuse exact stage131 500 draws per role",
+  "scope": "adaptive finite development followup; not freshblind or independent confirmation",
+  "promotion": false,
+  "reserved_forward": 0,
+  "renumbering": "Stage132 section5.2 first mechanism followup"
+}

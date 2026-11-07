@@ -1,3 +1,11 @@
+# 当前执行入口：Stage134完成，Stage135最小可测能流与DAQ pilot
+
+**2026-11-07 Stage134 更新：** [不含理想沉积的边界机制](../workbook/2026-11-07_stage134_boundary-without-ideal-deposits.md)已完成3fit。AK/A cal/test最低箱0.687973/0.704447，表明最低箱K增量不依赖五项理想沉积；test第二箱0.905402 [0.777200,1.036741]未过固定双箱继续门，不自动追加z×K。下一Stage135转主研究小pilot：最小边界分解与DAQ对应，先闭合/测成本再定正式量。不是新部署；整体goal和原全部门保持。
+
+先读Stage132 §5.3–5.5及[执行清单](../workbook/stage132_energy_ml/execution_tracking.tsv)。不重跑Stage133/134或旧全链。Stage135先只用固定小自然train父检验新增observer分类/首次计数/几何接受/相对时间、非干涉及DAQ响应闭合，实测成本后才冻结正式量；保留靶外/未重选和缺失分母，不挑oracle最优父。不改原cuts/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失或原门，非0不给timing。整体goal继续。
+
+## Stage134之前入口（原文保留）
+
 # 当前执行入口：Stage133完成，按Stage132继续A+K机制与可测能流
 
 先读[Stage133实测](../workbook/2026-11-07_stage133_boundary-supervised-proxy.md)及[Stage132路线](../workbook/2026-11-07_stage132_boundary-observability-research.md)。原7fit已执行，B/X未达双低箱标准，不重跑或续代理网格；Stage87direct62仍参照。下一Stage134同缓存固定A+K/A三fit，隔离理想沉积依赖；按其结果决定同支持z×K。随后按小pilot冻结最小边界类别/面/接受/相对时间与DAQ响应对应，不无条件重跑4032父。整体goal保持，μ辐射控制/真实系统/有限MC/背景接受度及独立确认未完成。所有角色、全部K、pz0/raw11/status/typedNaN/signed/Calo缺失、正式cuts与原门不变。

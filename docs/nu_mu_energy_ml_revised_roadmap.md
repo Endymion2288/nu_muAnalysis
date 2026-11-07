@@ -1,5 +1,9 @@
 # νμ 能量研究路线修订：先识别信息缺口，再选择模型
 
+**2026-11-07 Stage134 更新：** [不含理想沉积的边界机制](../workbook/2026-11-07_stage134_boundary-without-ideal-deposits.md)已完成3fit。AK/A cal/test最低箱0.687973/0.704447，表明最低箱K增量不依赖五项理想沉积；test第二箱0.905402 [0.777200,1.036741]未过固定双箱继续门，不自动追加z×K。下一Stage135转主研究小pilot：最小边界分解与DAQ对应，先闭合/测成本再定正式量。不是新部署；整体goal和原全部门保持。
+
+### Stage133执行入口（原文保留）
+
 **2026-11-07 Stage133 执行更新：** [边界监督代理实测](../workbook/2026-11-07_stage133_boundary-supervised-proxy.md)已完成原7fit。B/X test两低箱0.963769 [0.926541,1.007304]、1.009502 [0.955762,1.065988]，最低箱B/传统1.322747 [1.140512,1.511036]；两joint失败，不晋升，结束此X-only实现。下一按Stage132先做A+K/A机制定位，再按条件做z×K；主研究为新能流分解与DAQ对应。整体目标未完成，原全部门保持。下方Stage132及更早研究入口作为历史保留。
 
 ### Stage132研究入口（原文保留）
@@ -2606,3 +2610,11 @@ Stage129已有Nselected1000、已知response条件谱精度：E<200份额σ传�
 3002父train/cal/test1708/653/641，无新ν/G4；4train-only source交叉代理+3原政策fit，X/f0/传统和500draw逐数组复用，无truth availability。876项独立复算最大差3.55e−14，非法sentinel/正域−1/Inf均0，reserved零forward。1作业exit0，scheduler26CPU秒/28wall秒，0GPU，低于900s预算；提交目录~/condor/nu_muAnalysis/stage133/。原pz0/raw11/status/typedNaN/signed/Calo缺失、正式cuts、全部K及角色保持。
 
 Stage132§5.2必要机制补问以A+K/A固定3fit开展，不续代理网格；其后按证据冻结z×K和新observer pilot，不能将总K称可见E。真正新观测、μ辐射联合控制、有限MC/真实相关nuisance及背景/接受度精度和独立确认仍待完成，见[逐项审计](../workbook/stage133_energy_ml/completion_audit.tsv)。Stage87direct62仍参照，1.05仅非劣效，原全部验收不降。
+
+
+## 113. Stage134：边界动能最低箱增量不依赖五项理想沉积，下一优先可测分解
+
+**2026-11-07 Stage134 更新：** [不含理想沉积的边界机制](../workbook/2026-11-07_stage134_boundary-without-ideal-deposits.md)已完成3fit。AK/A cal/test最低箱0.687973/0.704447，表明最低箱K增量不依赖五项理想沉积；test第二箱0.905402 [0.777200,1.036741]未过固定双箱继续门，不自动追加z×K。下一Stage135转主研究小pilot：最小边界分解与DAQ对应，先闭合/测成本再定正式量。不是新部署；整体goal和原全部门保持。
+
+
+同3002父/原角色/availability7/NaN，3固定能量fit，无新G4/ν，复用A/X/U/F/传统/f0与500draw。1460独立标量差≤4.97e−14，两joint仍失败，不作truth部署。1作业exit0，25schedulerCPU秒/30wall秒，0GPU。按[Stage132逐项清单](../workbook/stage132_energy_ml/execution_tracking.tsv)继续新能流/DAQ/μ辐射控制及物理精度，不把条件支线未触发说成完成全部目标。报告先于本地Conventional Commit，历史§1–112、Stage54资产保持。
