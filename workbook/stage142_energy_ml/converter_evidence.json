@@ -1,0 +1,32 @@
+{
+  "archive": "software/calypso-master-d32b0ff3-el9-gcc13.tar.gz",
+  "records": [
+    {
+      "source": "./src/Scintillator/ScintEventCnv/ScintSimEventTPCnv/src/ScintHits/ScintHitCollectionCnv_p1a.cxx",
+      "evidence": [
+        {
+          "line": 59,
+          "text": "const double ScintHitCollectionCnv_p1a::m_persEneUnit = 1.0e-5;"
+        },
+        {
+          "line": 60,
+          "text": "const double ScintHitCollectionCnv_p1a::m_persLenUnit = 1.0e-5;"
+        },
+        {
+          "line": 61,
+          "text": "const double ScintHitCollectionCnv_p1a::m_persAngUnit = 1.0e-5;"
+        },
+        {
+          "line": 310,
+          "text": "const double meanTime = t0;"
+        },
+        {
+          "line": 325,
+          "text": "transCont->Emplace( endLast, endThis, eneLoss, meanTime, partLink, persCont->m_id[idxId]);"
+        }
+      ],
+      "order": "transToPers loops each ordered input once;persToTrans iterates hit strings andwithin-string increasingindex once;compression shares firsttime withinstring,doesnotdrop orreorder",
+      "limitation": "raw positions/times are compressed;use persistent quantities forDAQ;root category transferred by index,not persistedbarcode alone"
+    }
+  ]
+}

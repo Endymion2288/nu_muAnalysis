@@ -1,0 +1,9 @@
+{
+  "frozen_UTC": "2026-11-07T20:27:52.742628+00:00",
+  "phase": "source_analog_control",
+  "admission": "requires successful newinstrumentation preflight,oldfields/sensitive snapshot exact,orderedhit IDs/barcodes",
+  "support": "sameparent50,new livehit ancestry fields;no extraG4 orenergyfit",
+  "checks": "sameprivate initial/finalstates andraw11/statusfloat32 exact;7200ADCexact;sourcegroups0mu/1nonmu/2unknown analogbefore noise;per-sample additivebound32float32epsilon*max(1,totalamplitude);reportwindowadditivityerror",
+  "CPU_budget_s": 600,
+  "scope": "oneparentmethodcontrol;doesnotcertify mixedsource orEcalDAQ ormu radiationtails"
+}

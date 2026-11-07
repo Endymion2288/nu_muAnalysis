@@ -1,0 +1,50 @@
+{
+  "original_event_files_B": 24230915,
+  "combined_event_records_B": 9035502,
+  "all12_event_payload_text_exact": true,
+  "removed_result_archives": [
+    {
+      "path": "ntuples/energy_ml_stage142/audit_result.tar.gz",
+      "B": 3717
+    },
+    {
+      "path": "ntuples/energy_ml_stage142/pilot_result.tar.gz",
+      "B": 9060154
+    },
+    {
+      "path": "ntuples/energy_ml_stage142/preflight_result.tar.gz",
+      "B": 3793122
+    },
+    {
+      "path": "ntuples/energy_ml_stage142/source_result.tar.gz",
+      "B": 17787
+    }
+  ],
+  "removed_archive_B": 12874780,
+  "all4jobs_terminal": true,
+  "max_saved_GNU_RSS_KiB": 1817292,
+  "retained_runtime_B": 3803113,
+  "restore": "Read event_records.json.gz mapping path->original JSON text;write plain .json directly or gzip text when path ends .gz. No ROOT production needed.",
+  "source_capsule": "software/stage142/source_snapshots.tar.gz",
+  "source_capsule_B": 79760,
+  "source_snapshot_members": 65,
+  "removed_input_packages": [
+    {
+      "path": "software/stage142/1794083059850815778/energy-ml-stage142.tar.gz",
+      "B": 6951897
+    },
+    {
+      "path": "software/stage142/1794083448430707664/energy-ml-stage142.tar.gz",
+      "B": 1156280
+    },
+    {
+      "path": "software/stage142/1794083662954311678/energy-ml-stage142.tar.gz",
+      "B": 10699205
+    },
+    {
+      "path": "software/stage142/1794084052106075082/energy-ml-stage142.tar.gz",
+      "B": 15987822
+    }
+  ],
+  "removed_input_package_B": 34795204
+}

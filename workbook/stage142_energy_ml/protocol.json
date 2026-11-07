@@ -1,0 +1,34 @@
+{
+  "stage": 142,
+  "phase": "bounded_ancestry_method_control",
+  "frozen_UTC": "2026-11-07T20:22:28.498482+00:00",
+  "question": "Does liveSensitive-hit index preserve mu/nonmu/unknown root attribution through persistentHITS and actual finitewindowDAQ analog signal?",
+  "preflight_index": 50,
+  "proposed_additional_indices": [
+    6,
+    2,
+    0
+  ],
+  "support": "existingStage135 natural trainparents only;preflight50 first;additional3 only after measured successful preflight and same-stage budget freeze;no riskbasedselection,no naturalnu expansion",
+  "instruments": "read actual transient Scint/Ecal hit immediately after SDProcessHits;append rootcategory/rootID/rootPDG/G4trackID and10actualhitfields in collectionorder;Ecal energy already officialBirks/nonuniformity corrected;unknown category preserved",
+  "validation": [
+    "all legacyobserver fields exact",
+    "sixpersistent HITSpairs closure",
+    "live/persistent perhit identity/time/position and quantization bound;never barcodeinfer ancestry",
+    "frame50 entire sensitive snapshot equal retainedStage135",
+    "sameoriginaldigitizer seed+EventID context raw11/statusfloat32 exact",
+    "total analog->ADC exact viaStage141;source analog additivity error measuredbefore noiseclip,never ADCsum"
+  ],
+  "resources": {
+    "preflight_CPU_budget_s": 3000,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0
+  },
+  "new_energy_fits": 0,
+  "reserved_forward": 0,
+  "scope": "finiteDAQ source-method control independent of failedStage1375pctexpansiongate;no newenergycandidate or automaticbroaderproduction;not mu radiationtail calibration",
+  "next": "measure preflight cost before extra3;general source labels and natural mu radiationcontrols only insofar actual availableinput supports;originalgates and overallgoal unchanged"
+}

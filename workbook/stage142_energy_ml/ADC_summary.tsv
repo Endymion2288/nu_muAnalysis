@@ -1,0 +1,17 @@
+index	detector	ADC_present	samples	clipped_samples	nonzero_status_channels	meaning
+50	VetoNu	False	0	0	0	no ADC/default,not measuredzero
+50	Veto	True	2400	0	0	actual ADC;nonzero status retains signedraw,no timing
+50	Trigger	True	2400	0	2	actual ADC;nonzero status retains signedraw,no timing
+50	Preshower	True	2400	0	2	actual ADC;nonzero status retains signedraw,no timing
+6	VetoNu	False	0	0	0	no ADC/default,not measuredzero
+6	Veto	True	2400	12	2	actual ADC;nonzero status retains signedraw,no timing
+6	Trigger	True	2400	0	0	actual ADC;nonzero status retains signedraw,no timing
+6	Preshower	True	2400	0	2	actual ADC;nonzero status retains signedraw,no timing
+2	VetoNu	False	0	0	0	no ADC/default,not measuredzero
+2	Veto	True	2400	142	4	actual ADC;nonzero status retains signedraw,no timing
+2	Trigger	True	2400	0	0	actual ADC;nonzero status retains signedraw,no timing
+2	Preshower	True	2400	0	2	actual ADC;nonzero status retains signedraw,no timing
+0	VetoNu	False	0	0	0	no ADC/default,not measuredzero
+0	Veto	True	2400	5	2	actual ADC;nonzero status retains signedraw,no timing
+0	Trigger	True	2400	0	2	actual ADC;nonzero status retains signedraw,no timing
+0	Preshower	True	2400	0	2	actual ADC;nonzero status retains signedraw,no timing

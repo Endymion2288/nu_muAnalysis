@@ -1,3 +1,9 @@
+# 当前执行更新：Stage142四父来源/DAQ控制完成，下一补VetoNu含信号覆盖
+
+[Stage142实测](../workbook/2026-11-07_stage142_live-ancestry-and-DAQ-source-control.md)在4个既有train父（含2个K）验证真实hit根谱系、持久化顺序与有限窗模拟来源：28800ADC零差，覆盖159触底采样；最大来源模拟积分加和差.001361557pC。三个selected父原raw11/status精确，高-y K父原selected参考缺失而保留。完全μ根的Veto也可大电荷/触底，不以平均MIP或大电荷直接判强子。4job全部exit0、668CPU秒/526聚合wall秒/0GPU。四父VetoNu均无HITS，Ecal只认证官方修正hit标签；μ辐射总体控制和真实系统/独立确认未完成。下一按最多2父/1000CPU秒合同补有信号VetoNu控制，先查train支持；原Stage1375%扩大门不绕过、不自动大生产，整体goal未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage137/140/141计算与验证完成，转入可追溯响应约束
 
 本轮完成[边界机制](../workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md)、[3000toy有限MC覆盖](../workbook/2026-11-07_stage140_finite-MC-profile-coverage.md)及[模拟响应到ADC控制](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)。G及D有局部能量增量、未过双箱5%扩大门，H的oracle增量更强；不自动扩大同类G4/模型网格。direct62条件谱区间仍比传统窄；联合nominal覆盖93.4% [90.8761%,95.2621%]，不能认证95%覆盖。7200ADC闭合只认证一个控制父，未完成一般来源/μ辐射尾、真实系统/背景/接受度/乳胶和独立确认。原全部门与Stage87direct62保持，整体goal未完成。
@@ -2706,3 +2712,10 @@ D/传统test最低箱.908385 [.768990,1.063567]、cal1.231296 [1.082538,1.379751
 [完整报告](../workbook/2026-11-07_stage140_finite-MC-profile-coverage.md)用修复后的EMwarmstart+约束梯度/受限解自由重启完成原3000toy，无改bin/种子/似然/删例。36长EM+梯度交叉目标差≤1.2958e−6，18pilot LR与正式完全同。nominal覆盖传统482/500=.964 [.943816,.977109]、direct476/500=.952 [.929573,.967535]、联合467/500=.934 [.908761,.952621]；人为stress分别484/476/466，stress不是同一真实物理变体。nominal Asimov95宽度5.846968/4.859313/4.466929pp，direct条件谱收益保留，联合更窄但不认证95%覆盖。点覆盖不等于uniform或actualdata认证。
 
 68job/68starts全部exit0，14802CPU秒/2851aggregatewall秒/0GPU，低于45000预算；3000逐例与六profile合并回读精确，删446290B重复archive。Stage139两失败及1448CPU保留其独立账。完成§6有限MC工作模型部分，真实相关辅助nuisance/曝光GRL/背景/全生成接受度及独立确认仍缺，不用虚构prior，不追加同点toy或阈值网格。结合Stage137与Stage138/141，下一工作需冻结可追溯来源/响应约束的小型新问题，不能绕过未达双箱5%门自动大生产。原最低能单事例目标/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失和最终门保持，整体goal未完成。
+
+
+## 121. Stage142：真实根谱系到DAQ的四父方法控制包含混合来源和截断
+
+[中文报告](../workbook/2026-11-07_stage142_live-ancestry-and-DAQ-source-control.md)新增实际SDhit索引/root类别；原所有旧字段闭合、frame50全敏感HITS精确重复。frame50/6/2/0分别Eν90.288/142.480/847.280/280.310GeV，后两者K全部保留，frame2原重选失败保留缺失参考。28800ADC逐值0差，159触底；来源模拟加和最大.001361557pC、均过事前浮点界，不相加clip后ADC。frame6Veto14全μ模拟1441.539544pC而raw1099.780547/status4；frame0Veto14非μ份额.816096但Preshower/Ecal全μ，说明大活动来源需联合控制，非总体分类效率认证。
+
+4job全部exit0、668CPU秒/526aggregatewall秒/0GPU，单次新C++build复用runtime；12份事件文本24.23MB合并9.04MB回读精确、删12.87MB结果archive，并核前阶段空队列删110.99MB旧运输包。VetoNu含信号及EcalDAQ/μ辐射总体仍未测，原角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失、原门和Stage87保持。下一[Stage143有限合同](../workbook/stage142_energy_ml/next_execution_contract.json)只从既有4032证据审计train有VetoNu信号支持，最多2父/1000CPU秒、先成本后准入第二父，无支持实测0则结束此控制输入；不自动扩大ν或重开旧X网格。整体目标和真实外部输入缺口保持。

@@ -1,3 +1,13 @@
+# 当前执行更新：Stage142四父来源/DAQ控制完成，下一补VetoNu含信号覆盖
+
+[Stage142实测](../workbook/2026-11-07_stage142_live-ancestry-and-DAQ-source-control.md)在4个既有train父（含2个K）验证真实hit根谱系、持久化顺序与有限窗模拟来源：28800ADC零差，覆盖159触底采样；最大来源模拟积分加和差.001361557pC。三个selected父原raw11/status精确，高-y K父原selected参考缺失而保留。完全μ根的Veto也可大电荷/触底，不以平均MIP或大电荷直接判强子。4job全部exit0、668CPU秒/526聚合wall秒/0GPU。四父VetoNu均无HITS，Ecal只认证官方修正hit标签；μ辐射总体控制和真实系统/独立确认未完成。下一按最多2父/1000CPU秒合同补有信号VetoNu控制，先查train支持；原Stage1375%扩大门不绕过、不自动大生产，整体goal未完成。
+
+以下保留此前入口原文。
+
+先读Stage142报告和next_execution_contract.json。Stage137的4032父/18fit、Stage140的3000toy、Stage138/141总响应与Stage142四父来源控制已完成，不重复。下一Stage143仅补已知缺口：在Condor审计既有4032证据中的train正VetoNu支持，冻结最多两父，首父测成本与实际DAQ来源闭合后再准入第二父；预算1000CPU秒、无应用短超时、K不删、原选择失败保留并显式参考缺失。若无支持，记录实际0、不泛扫旧库存。此为通道覆盖方法控制，不绕过Stage137双箱5%门或启动大自然ν生产，不训练旧X代理。μ辐射总体、真实系统/背景接受度/乳胶及独立确认仍需实际输入，不能标整体goal完成。
+
+## 此前入口（原文保留）
+
 # 当前执行更新：Stage137/140/141计算与验证完成，转入可追溯响应约束
 
 本轮完成[边界机制](../workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md)、[3000toy有限MC覆盖](../workbook/2026-11-07_stage140_finite-MC-profile-coverage.md)及[模拟响应到ADC控制](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)。G及D有局部能量增量、未过双箱5%扩大门，H的oracle增量更强；不自动扩大同类G4/模型网格。direct62条件谱区间仍比传统窄；联合nominal覆盖93.4% [90.8761%,95.2621%]，不能认证95%覆盖。7200ADC闭合只认证一个控制父，未完成一般来源/μ辐射尾、真实系统/背景/接受度/乳胶和独立确认。原全部门与Stage87direct62保持，整体goal未完成。

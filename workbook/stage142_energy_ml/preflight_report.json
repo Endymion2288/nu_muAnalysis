@@ -1,0 +1,135 @@
+{
+  "case": {
+    "row": 150041,
+    "source": 826,
+    "run": 200095,
+    "component": "pi",
+    "role": 1,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+    "entry": 82990,
+    "incoming": [
+      14.0,
+      -6.916692733764648,
+      8.872150421142578,
+      90288.0
+    ],
+    "truth_E_GeV": 90.28800070084446,
+    "old_reco_pz_GeV": 80.614109375,
+    "y": 0.006195447178858227,
+    "vertex_z_mm": -2816.870849609375,
+    "stratum": "E50_100",
+    "rank": "001bb02223d62b56",
+    "frame_index": 50,
+    "seed": 2026241750,
+    "inclusion_probability": 0.32841565105837073
+  },
+  "steps": [
+    {
+      "name": "sim",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_2156301/nu_mu_stage142.tuoFAW/ml/stage142_simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+        "FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "82990",
+        "-n",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 21.53735834301915
+    },
+    {
+      "name": "hitscheck",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_2156301/nu_mu_stage142.tuoFAW/ml/stage131_hitscheck.py",
+        "/pool/condor/dir_2156301/nu_mu_stage142.tuoFAW/chain_50/FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "/pool/condor/dir_2156301/nu_mu_stage142.tuoFAW/chain_50/lineage.jsonl",
+        "/pool/condor/dir_2156301/nu_mu_stage142.tuoFAW/workbook/stage142_energy_ml/parent_50_hitscheck.json",
+        "before",
+        "/pool/condor/dir_2156301/nu_mu_stage142.tuoFAW/ntuples/energy_ml_stage142/parent_50_qa_hits.json.gz"
+      ],
+      "returncode": 0,
+      "wall_s": 61.408923503011465
+    }
+  ],
+  "successful": true,
+  "legacy_fields_exact": true,
+  "frame50_sensitive_snapshot_exact": true,
+  "ordered_hit_validation": [
+    {
+      "collection": "VetoNuHits",
+      "hits": 0,
+      "max_energy_delta_MeV": 0,
+      "max_time_delta_ns": 0,
+      "max_position_delta_mm": 0,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      }
+    },
+    {
+      "collection": "VetoHits",
+      "hits": 50,
+      "max_energy_delta_MeV": 7.063150405883789e-06,
+      "max_time_delta_ns": 0.06498336791992188,
+      "max_position_delta_mm": 3.0517578125e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 50,
+        "1": 0,
+        "2": 0
+      }
+    },
+    {
+      "collection": "TriggerHits",
+      "hits": 14,
+      "max_energy_delta_MeV": 7.271766662597656e-06,
+      "max_time_delta_ns": 0.030452504754066467,
+      "max_position_delta_mm": 5.0067901611328125e-06,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 14,
+        "1": 0,
+        "2": 0
+      }
+    },
+    {
+      "collection": "PreshowerHits",
+      "hits": 20,
+      "max_energy_delta_MeV": 9.035691618919373e-06,
+      "max_time_delta_ns": 0.051604270935058594,
+      "max_position_delta_mm": 4.38690185546875e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 20,
+        "1": 0,
+        "2": 0
+      }
+    },
+    {
+      "collection": "EcalHits",
+      "hits": 258,
+      "max_energy_delta_MeV": 9.655952453613281e-06,
+      "max_time_delta_ns": 0.030676841735839844,
+      "max_position_delta_mm": 1.52587890625e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 258,
+        "1": 0,
+        "2": 0
+      }
+    }
+  ],
+  "wall_s": 82.96424178400775,
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "scope": "ancestry instrumentation only;needs nativeDAQ total/sourceanalog closure before extra parents"
+}

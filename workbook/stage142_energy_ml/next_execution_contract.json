@@ -1,0 +1,29 @@
+{
+  "next_stage": 143,
+  "frozen_UTC": "2026-11-07T20:47:19.369736+00:00",
+  "question": "Does the actual ancestry/analog method close on a VetoNu channel with genuine signal,uncovered by current4parents?",
+  "inputs": [
+    "ntuples/energy_ml_stage137/boundary_evidence.json.gz",
+    "ntuples/energy_ml_stage131/production_cases.json.gz",
+    "ntuples/energy_ml_stage131/matched_input.npz",
+    "software/stage142/observer-runtime.tar.gz"
+  ],
+  "support_audit": "HTCondor only;train role1 counts byoriginalstratum/selectedstatus for observed VetoNu alltimepositive;preserve allcases anddo not usecal/test or energy risks",
+  "selection": "atmost2trainpositiveVetoNu parents in original frameorder;no substitution by favorablecontrol;nonselectedreference explicitlymissing;if none,report actualzero andstop this exactinput control",
+  "steps": "audit support;freeze actualindices before replay;firstparent exactseed/basename livehit ancestry+sixHITS check+native private seeds/EventID/raw11/status whereavailable+totalADC/sourceanalog;actualCPU then admit second if withinbudget",
+  "acceptance": "originallegacy fields;originalraw/status float32 whenexisting;totalADC exact;sourceanalog32epsbound;strictstatus0timing;no fake measuredzero;actual CPU/RSS/I/O and retaineddenominator",
+  "resources": {
+    "CPU_budget_s": 1000,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0
+  },
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "stop": "boundedchannelcoverage only;Stage1375pctexpansiongate remainsfalse,no automaticbroadnu production orX-only network/proxy grid",
+  "remaining": "EcalDAQ andmu radiation population control needseparateactualinput/cost;realauxnuisance,dataGRL/background/acceptance/emulsion/independentconfirmation not supplied bythiscontrol;overallgoal notcomplete"
+}

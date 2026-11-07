@@ -1,0 +1,31 @@
+	Command being timed: "bash -c 
+        set -e
+        cmake -S ml/stage142_observer -B observer-build
+        cmake --build observer-build -j4
+        stage142_platform=$(find observer-build -mindepth 2 -maxdepth 2 -name setup.sh -print -quit)
+        test -n "$stage142_platform"
+        stage142_platform=${stage142_platform%/setup.sh}
+        tar --exclude="*.dbg" -czhf software/stage142/observer-runtime.tar.gz -C "$stage142_platform" lib python
+    "
+	User time (seconds): 28.92
+	System time (seconds): 20.03
+	Percent of CPU this job got: 64%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:15.81
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 961480
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5179
+	Minor (reclaiming a frame) page faults: 837823
+	Voluntary context switches: 1674612
+	Involuntary context switches: 1464
+	Swaps: 0
+	File system inputs: 2264
+	File system outputs: 782536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

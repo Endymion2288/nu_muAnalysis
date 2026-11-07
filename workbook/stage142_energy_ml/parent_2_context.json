@@ -1,0 +1,106 @@
+{
+  "original_producer_context": {
+    "run": 990131,
+    "lumiblock": 3,
+    "timestamp": 0
+  },
+  "geometry": "FASERNU-04",
+  "global_tag": "OFLCOND-FASER-06",
+  "conditions": {
+    "VetoNu": [
+      15650.0,
+      3.0,
+      0.004347825888544321,
+      -0.2800000011920929,
+      1000.0,
+      5.0,
+      800.0,
+      10420.0
+    ],
+    "Veto": [
+      15650.0,
+      3.0,
+      0.004347825888544321,
+      -0.3199999928474426,
+      9.0,
+      3.3499999046325684,
+      825.0,
+      8890.0
+    ],
+    "Trigger": [
+      15650.0,
+      3.0,
+      0.004347825888544321,
+      -0.42399999499320984,
+      6.139999866485596,
+      3.2100000381469727,
+      830.0,
+      6360.0
+    ],
+    "Preshower": [
+      15650.0,
+      3.0,
+      0.004347825888544321,
+      -0.3199999928474426,
+      1000.0,
+      4.0,
+      850.0,
+      530.0
+    ]
+  },
+  "channels": {
+    "VetoNu": [],
+    "Veto": [
+      14,
+      15,
+      6,
+      7
+    ],
+    "Trigger": [
+      9,
+      8,
+      11,
+      10
+    ],
+    "Preshower": [
+      12,
+      24,
+      13,
+      25
+    ]
+  },
+  "rng": {
+    "VetoNu": {
+      "seed": 650021000,
+      "seed_set": true,
+      "initial_state_characters": 5184,
+      "original_initial_state_comparison": "not_available",
+      "after_state_characters": 5184,
+      "after_original_exact": "not_available_for_this_parent"
+    },
+    "Veto": {
+      "seed": 650022000,
+      "seed_set": true,
+      "initial_state_characters": 5184,
+      "original_initial_state_comparison": "not_available",
+      "after_state_characters": 5184,
+      "after_original_exact": "not_available_for_this_parent"
+    },
+    "Trigger": {
+      "seed": 650023000,
+      "seed_set": true,
+      "initial_state_characters": 5184,
+      "original_initial_state_comparison": "not_available",
+      "after_state_characters": 5184,
+      "after_original_exact": "not_available_for_this_parent"
+    },
+    "Preshower": {
+      "seed": 650024000,
+      "seed_set": true,
+      "initial_state_characters": 5184,
+      "original_initial_state_comparison": "not_available",
+      "after_state_characters": 5184,
+      "after_original_exact": "not_available_for_this_parent"
+    }
+  }
+}
