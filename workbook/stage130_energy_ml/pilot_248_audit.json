@@ -1,0 +1,91 @@
+{
+  "phase": "pilot",
+  "index": 248,
+  "bytes": 7933,
+  "members": [
+    {
+      "name": "result/parent_log.txt",
+      "bytes": 1
+    },
+    {
+      "name": "result/request_summary.json",
+      "bytes": 893
+    },
+    {
+      "name": "result/payload.json",
+      "bytes": 1369
+    },
+    {
+      "name": "result/reco_time.txt",
+      "bytes": 781
+    },
+    {
+      "name": "result/ntuple_time.txt",
+      "bytes": 843
+    },
+    {
+      "name": "result/extract_log.txt",
+      "bytes": 4201
+    },
+    {
+      "name": "result/extract_time.txt",
+      "bytes": 867
+    },
+    {
+      "name": "result/selected.npz",
+      "bytes": 6348
+    },
+    {
+      "name": "result/identity.json",
+      "bytes": 159
+    },
+    {
+      "name": "result/exitcode.txt",
+      "bytes": 2
+    },
+    {
+      "name": "result/reco_excerpt.txt",
+      "bytes": 4094
+    },
+    {
+      "name": "result/ntuple_excerpt.txt",
+      "bytes": 2771
+    }
+  ],
+  "byte_roundtrip_verified": true,
+  "exitcode": 0,
+  "request_summary.json": {
+    "source": {
+      "index": 248,
+      "run": 200084,
+      "component": "pi",
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200084/rdo/s0014/FaserMC-MC24_Genie_qgsjet_pi-200084-00000-00009-s0014-RDO.root",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200084/phy/s0014/FaserMC-MC24_Genie_qgsjet_pi-200084-00000-00009-s0014-PHYS.root",
+      "phys_exists": true,
+      "segment": "00000-00009",
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "nominal": false,
+      "file_probability": 1.0,
+      "group": "pi:00000-00009",
+      "inherited_role": "train",
+      "old_locked": false,
+      "eligible": true
+    },
+    "parent_N": 40,
+    "rdo": "input-RDO.root",
+    "requested_bytes": 132994,
+    "full_parent_N": 10000,
+    "parent_schema_missing": [
+      "Track_isForward",
+      "truth_barcode"
+    ]
+  },
+  "identity.json": {
+    "parent_N": 40,
+    "reconstructed_N": 1,
+    "exact_run_event_incoming": true,
+    "all_sparse_entries_retained": true,
+    "forward_tracks": 0,
+    "track_N": 0
+  }
+}

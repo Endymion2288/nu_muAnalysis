@@ -1,0 +1,579 @@
+{
+  "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.sim.log",
+  "bytes": 2879619,
+  "wall_s": 0.5975726596079767,
+  "matches": [
+    {
+      "line": 2,
+      "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+    },
+    {
+      "line": 41,
+      "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+    },
+    {
+      "line": 43,
+      "text": "Starting digitization of epos_pi.EVNT.pool.root"
+    },
+    {
+      "line": 45,
+      "text": "Reconstructing 1000 events by command-line option"
+    },
+    {
+      "line": 89,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryEmulsion' from False to True"
+    },
+    {
+      "line": 90,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryVeto' from False to True"
+    },
+    {
+      "line": 91,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryTrigger' from False to True"
+    },
+    {
+      "line": 92,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryPreshower' from False to True"
+    },
+    {
+      "line": 94,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryVetoNu' from False to True"
+    },
+    {
+      "line": 95,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryFaserSCT' from False to True"
+    },
+    {
+      "line": 96,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryEcal' from False to True"
+    },
+    {
+      "line": 97,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryDipole' from False to True"
+    },
+    {
+      "line": 98,
+      "text": "Py:DetectorConfigFlags    INFO Toggling 'Detector.GeometryTrench' from False to True"
+    },
+    {
+      "line": 632,
+      "text": "Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root'"
+    },
+    {
+      "line": 634,
+      "text": "Py:MetaReader        INFO Current filenames: ['/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root']"
+    },
+    {
+      "line": 663,
+      "text": "Py:ComponentAccumulator    INFO ['ClassIDSvc', 'AlgContextSvc', 'AuditorSvc', 'StoreGateSvc', 'DetectorStore', 'HistoryStore', 'ConditionStore', 'MessageSvc', 'CoreDumpSvc', 'ExceptionSvc', 'EvtIdModifierSvc', 'AthenaEventLoopMgr', 'PoolSvc', 'AthenaPoolCnvSvc', 'EventPersistencySvc', 'MetaDataStore', 'AthenaPoolAddressProviderSvc', 'ProxyProviderSvc', 'EventSelector', 'GeoModelSvc', 'DetDescrCnvSvc', 'TagInfoMgr', 'NeutrinoGeometryDBSvc', 'FaserGeo2G4Svc', 'G4FaserGeometryNotifierSvc', 'ScintGeometryDBSvc', 'TrackerGeometryDBSvc', 'IOVDbSvc', 'CondSvc', 'InputMetaDataStore', 'MetaDataSvc', 'Athena::DelayedConditionsCleanerSvc', 'Athena::ConditionsCleanerSvc', 'CaloGeometryDBSvc', 'FaserFieldSvc', 'StandardField', 'DetectorGeometrySvc', 'AthRNGSvc', 'BarcodeSvc', 'FaserISF_TruthService', 'ISF_FaserInputConverter', 'G4UA::FaserUserActionSvc', 'FaserPhysicsListSvc']"
+    },
+    {
+      "line": 754,
+      "text": "Detector.GeometryAFP                     : [function]"
+    },
+    {
+      "line": 755,
+      "text": "Detector.GeometryALFA                    : [function]"
+    },
+    {
+      "line": 756,
+      "text": "Detector.GeometryBCM                     : [function]"
+    },
+    {
+      "line": 757,
+      "text": "Detector.GeometryBCMPrime                : [function]"
+    },
+    {
+      "line": 758,
+      "text": "Detector.GeometryBpipe                   : True"
+    },
+    {
+      "line": 759,
+      "text": "Detector.GeometryCSC                     : [function]"
+    },
+    {
+      "line": 760,
+      "text": "Detector.GeometryCalo                    : [function]"
+    },
+    {
+      "line": 761,
+      "text": "Detector.GeometryCavern                  : False"
+    },
+    {
+      "line": 762,
+      "text": "Detector.GeometryDipole                  : True"
+    },
+    {
+      "line": 763,
+      "text": "Detector.GeometryEcal                    : True"
+    },
+    {
+      "line": 764,
+      "text": "Detector.GeometryEmulsion                : True"
+    },
+    {
+      "line": 765,
+      "text": "Detector.GeometryFaserCalo               : True"
+    },
+    {
+      "line": 766,
+      "text": "Detector.GeometryFaserCavern             : True"
+    },
+    {
+      "line": 767,
+      "text": "Detector.GeometryFaserSCT                : True"
+    },
+    {
+      "line": 768,
+      "text": "Detector.GeometryForward                 : [function]"
+    },
+    {
+      "line": 769,
+      "text": "Detector.GeometryFwdRegion               : [function]"
+    },
+    {
+      "line": 770,
+      "text": "Detector.GeometryHGTD                    : [function]"
+    },
+    {
+      "line": 771,
+      "text": "Detector.GeometryID                      : [function]"
+    },
+    {
+      "line": 772,
+      "text": "Detector.GeometryITk                     : [function]"
+    },
+    {
+      "line": 773,
+      "text": "Detector.GeometryITkPixel                : [function]"
+    },
+    {
+      "line": 774,
+      "text": "Detector.GeometryITkStrip                : [function]"
+    },
+    {
+      "line": 775,
+      "text": "Detector.GeometryLAr                     : [function]"
+    },
+    {
+      "line": 776,
+      "text": "Detector.GeometryLucid                   : [function]"
+    },
+    {
+      "line": 777,
+      "text": "Detector.GeometryMBTS                    : [function]"
+    },
+    {
+      "line": 778,
+      "text": "Detector.GeometryMDT                     : [function]"
+    },
+    {
+      "line": 779,
+      "text": "Detector.GeometryMM                      : [function]"
+    },
+    {
+      "line": 780,
+      "text": "Detector.GeometryMagnet                  : [function]"
+    },
+    {
+      "line": 781,
+      "text": "Detector.GeometryMuon                    : [function]"
+    },
+    {
+      "line": 782,
+      "text": "Detector.GeometryNeutrino                : True"
+    },
+    {
+      "line": 783,
+      "text": "Detector.GeometryPLR                     : [function]"
+    },
+    {
+      "line": 784,
+      "text": "Detector.GeometryPixel                   : [function]"
+    },
+    {
+      "line": 785,
+      "text": "Detector.GeometryPreshower               : True"
+    },
+    {
+      "line": 786,
+      "text": "Detector.GeometryRPC                     : [function]"
+    },
+    {
+      "line": 787,
+      "text": "Detector.GeometrySCT                     : [function]"
+    },
+    {
+      "line": 788,
+      "text": "Detector.GeometryScintillator            : True"
+    },
+    {
+      "line": 789,
+      "text": "Detector.GeometryTGC                     : [function]"
+    },
+    {
+      "line": 790,
+      "text": "Detector.GeometryTRT                     : [function]"
+    },
+    {
+      "line": 791,
+      "text": "Detector.GeometryTile                    : [function]"
+    },
+    {
+      "line": 792,
+      "text": "Detector.GeometryTracker                 : True"
+    },
+    {
+      "line": 793,
+      "text": "Detector.GeometryTrench                  : True"
+    },
+    {
+      "line": 794,
+      "text": "Detector.GeometryTrigger                 : True"
+    },
+    {
+      "line": 795,
+      "text": "Detector.GeometryVeto                    : True"
+    },
+    {
+      "line": 796,
+      "text": "Detector.GeometryVetoNu                  : True"
+    },
+    {
+      "line": 797,
+      "text": "Detector.GeometryZDC                     : [function]"
+    },
+    {
+      "line": 798,
+      "text": "Detector.GeometrysTGC                    : [function]"
+    },
+    {
+      "line": 820,
+      "text": "Exec.SkipEvents                          : 0"
+    },
+    {
+      "line": 830,
+      "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+    },
+    {
+      "line": 852,
+      "text": "Input.Files                              : ['/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root']"
+    },
+    {
+      "line": 892,
+      "text": "Output.EVNTFileName                      : ''"
+    },
+    {
+      "line": 893,
+      "text": "Output.EVNT_TRFileName                   : ''"
+    },
+    {
+      "line": 906,
+      "text": "Output.doWriteEVNT                       : [function]"
+    },
+    {
+      "line": 919,
+      "text": "Random.SeedOffset                        : 0"
+    },
+    {
+      "line": 943,
+      "text": "Sim.FastCalo.ParamsInputFilename         : 'FastCaloSim/MC23/TFCSparam_AF3_MC23_Sep23.root'"
+    },
+    {
+      "line": 959,
+      "text": "Sim.G4Commands                           : ['/run/verbose 2']"
+    },
+    {
+      "line": 969,
+      "text": "Sim.ISF.UseTrackingGeometryCond          : False"
+    },
+    {
+      "line": 1008,
+      "text": "TrackingGeometry.MagneticFileMode        : 6"
+    },
+    {
+      "line": 1009,
+      "text": "TrackingGeometry.MaterialSource          : 'COOL'"
+    },
+    {
+      "line": 1186,
+      "text": "Domain[ROOT_All]                 INFO                           /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+    },
+    {
+      "line": 1187,
+      "text": "RootDatabase.open                INFO /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root File version:62812"
+    },
+    {
+      "line": 1195,
+      "text": "Domain[ROOT_All]                 INFO                           /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+    },
+    {
+      "line": 1196,
+      "text": "RootDatabase.open                INFO /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root File version:62812"
+    },
+    {
+      "line": 1203,
+      "text": "Domain[ROOT_All]                 INFO                           /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+    },
+    {
+      "line": 1204,
+      "text": "RootDatabase.open                INFO /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root File version:62812"
+    },
+    {
+      "line": 1240,
+      "text": "GeoMode...EmulsionDetectorTool   INFO Building Emulsion with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1242,
+      "text": "NeutrinoGeometryDBSvc            INFO GeometryDBSvc Initialized"
+    },
+    {
+      "line": 1256,
+      "text": "IdDictDetDescrCnv                INFO Dictionary Neutrino             version FASERNU-04-730       DetDescr tag NeutrinoIdentifier-01 file NeutrinoIdDictFiles/IdDictNeutrino_730.xml"
+    },
+    {
+      "line": 1271,
+      "text": "EmulsionGeoModel                 INFO  Version: Emulsion-02, Name: GEO, Layout: Development, Code Version: 1.00.00, Description: Baseline geometry"
+    },
+    {
+      "line": 1275,
+      "text": "GeoModelSvc.VetoDetectorTool     INFO Building Veto with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1277,
+      "text": "ScintGeometryDBSvc               INFO GeometryDBSvc Initialized"
+    },
+    {
+      "line": 1291,
+      "text": "VetoGeoModel                     INFO  Version: Veto-04, Name: GEO, Layout: Development, Code Version: 1.00.00, Description: Baseline geometry"
+    },
+    {
+      "line": 1295,
+      "text": "GeoModelSvc.VetoNuDetectorTool   INFO Building VetoNu with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1310,
+      "text": "VetoNuGeoModel                   INFO  Version: VetoNu-00, Name: GEO, Layout: Development, Code Version: 1.00.00, Description: Baseline geometry"
+    },
+    {
+      "line": 1314,
+      "text": "GeoModel...TriggerDetectorTool   INFO Building Trigger with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1330,
+      "text": "TriggerGeoModel                  INFO  Version: Trigger-04, Name: GEO, Layout: Development, Code Version: 1.00.00, Description: Baseline geometry"
+    },
+    {
+      "line": 1336,
+      "text": "GeoMod...PreshowerDetectorTool   INFO Building Preshower with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1351,
+      "text": "PreshowerGeoModel                INFO  Version: Preshower-04, Name: GEO, Layout: Development, Code Version: 1.00.00, Description: Baseline geometry"
+    },
+    {
+      "line": 1355,
+      "text": "GeoMod...FaserSCT_DetectorTool   INFO Building SCT with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1357,
+      "text": "TrackerGeometryDBSvc             INFO GeometryDBSvc Initialized"
+    },
+    {
+      "line": 1372,
+      "text": "SCT_GeoModel                     INFO  Version: SCT-04, Name: GEO, Layout: Final, Code Version: 3.06.00, Description: Atlas Geometry 2008"
+    },
+    {
+      "line": 1393,
+      "text": "GeoModelSvc.EcalDetectorTool     INFO Building Ecal with Version Tag: FASERNU-04 at Node: FASER"
+    },
+    {
+      "line": 1395,
+      "text": "CaloGeometryDBSvc                INFO GeometryDBSvc Initialized"
+    },
+    {
+      "line": 1409,
+      "text": "EcalGeoModel                     INFO  Version: Ecal-04, Name: GEO, Layout: Development, Code Version: 1.00.00, Description: Baseline geometry"
+    },
+    {
+      "line": 1416,
+      "text": "GeoModelSvc.TrenchDetectorTool   INFO Building Trench geometry version FASERNU-04"
+    },
+    {
+      "line": 1505,
+      "text": " * Final patch to Woodcock tracking - more robust against geometry clashes"
+    },
+    {
+      "line": 1533,
+      "text": "DetectorGeometrySvc              INFO   AlgTool: ToolSvc.G4FaserDetectorConstructionTool"
+    },
+    {
+      "line": 1989,
+      "text": "FaserPhysicsListSvc             DEBUG G4 Command: Trying in SetPhysicsOptions()"
+    },
+    {
+      "line": 1990,
+      "text": "FaserPhysicsListSvc             DEBUG G4 Command: /physics_engine/neutron/timeLimit 150 ns - Command Succeeded"
+    },
+    {
+      "line": 2707,
+      "text": "Index : 0     used in the geometry : Yes"
+    },
+    {
+      "line": 2714,
+      "text": "Index : 1     used in the geometry : Yes"
+    },
+    {
+      "line": 2721,
+      "text": "Index : 2     used in the geometry : Yes"
+    },
+    {
+      "line": 2728,
+      "text": "Index : 3     used in the geometry : Yes"
+    },
+    {
+      "line": 2735,
+      "text": "Index : 4     used in the geometry : Yes"
+    },
+    {
+      "line": 2742,
+      "text": "Index : 5     used in the geometry : Yes"
+    },
+    {
+      "line": 2749,
+      "text": "Index : 6     used in the geometry : Yes"
+    },
+    {
+      "line": 2756,
+      "text": "Index : 7     used in the geometry : Yes"
+    },
+    {
+      "line": 2763,
+      "text": "Index : 8     used in the geometry : Yes"
+    },
+    {
+      "line": 2770,
+      "text": "Index : 9     used in the geometry : Yes"
+    },
+    {
+      "line": 2777,
+      "text": "Index : 10     used in the geometry : Yes"
+    },
+    {
+      "line": 2784,
+      "text": "Index : 11     used in the geometry : Yes"
+    },
+    {
+      "line": 2791,
+      "text": "Index : 12     used in the geometry : Yes"
+    },
+    {
+      "line": 2798,
+      "text": "Index : 13     used in the geometry : Yes"
+    },
+    {
+      "line": 2805,
+      "text": "Index : 14     used in the geometry : Yes"
+    },
+    {
+      "line": 2812,
+      "text": "Index : 15     used in the geometry : Yes"
+    },
+    {
+      "line": 2819,
+      "text": "Index : 16     used in the geometry : Yes"
+    },
+    {
+      "line": 2826,
+      "text": "Index : 17     used in the geometry : Yes"
+    },
+    {
+      "line": 2833,
+      "text": "Index : 18     used in the geometry : Yes"
+    },
+    {
+      "line": 2840,
+      "text": "Index : 19     used in the geometry : Yes"
+    },
+    {
+      "line": 2847,
+      "text": "Index : 20     used in the geometry : Yes"
+    },
+    {
+      "line": 2854,
+      "text": "Index : 21     used in the geometry : Yes"
+    },
+    {
+      "line": 2861,
+      "text": "Index : 22     used in the geometry : Yes"
+    },
+    {
+      "line": 2868,
+      "text": "Index : 23     used in the geometry : Yes"
+    },
+    {
+      "line": 2875,
+      "text": "Index : 24     used in the geometry : Yes"
+    },
+    {
+      "line": 2882,
+      "text": "Index : 25     used in the geometry : Yes"
+    },
+    {
+      "line": 2889,
+      "text": "Index : 26     used in the geometry : Yes"
+    },
+    {
+      "line": 2896,
+      "text": "Index : 27     used in the geometry : Yes"
+    },
+    {
+      "line": 2903,
+      "text": "Index : 28     used in the geometry : Yes"
+    },
+    {
+      "line": 2910,
+      "text": "Index : 29     used in the geometry : Yes"
+    },
+    {
+      "line": 2917,
+      "text": "Index : 30     used in the geometry : Yes"
+    },
+    {
+      "line": 2926,
+      "text": "Start closing geometry."
+    },
+    {
+      "line": 2927,
+      "text": "G4GeometryManager::ReportVoxelStats -- Voxel Statistics"
+    },
+    {
+      "line": 2929,
+      "text": "    Total memory consumed for geometry optimisation:   416 kByte"
+    },
+    {
+      "line": 2930,
+      "text": "    Total CPU time elapsed for geometry optimisation: 0.02 seconds"
+    },
+    {
+      "line": 2950,
+      "text": "       1.45          6k         9       73        256         0.00    Ecal::_dd_Geometry_DownstreamRegion_Ecal_Modules_OutCellPb"
+    },
+    {
+      "line": 2951,
+      "text": "       1.36          5k         1       96        140         0.00    Ecal::_dd_Geometry_DownstreamRegion_Ecal_Modules_OutCell"
+    },
+    {
+      "line": 2960,
+      "text": "G4FaserAlg                       INFO retrieving the Detector Geometry Service"
+    },
+    {
+      "line": 2994,
+      "text": "Domain[ROOT_All]                 INFO                           /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+    },
+    {
+      "line": 2995,
+      "text": "RootDatabase.open                INFO /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root File version:62812"
+    }
+  ]
+}

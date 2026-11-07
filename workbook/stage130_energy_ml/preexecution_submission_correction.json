@@ -1,0 +1,20 @@
+{
+  "cluster": 9673426,
+  "wrong_indices": [
+    29,
+    60
+  ],
+  "expected": "support_pilot_contract.json uniform seeded choices",
+  "detected_status": "idle JobStatus1",
+  "action": "removed before execution;no science output;retain scheduler ledger",
+  "reason": "submission command used wrong explicit indices;now enforced contract validation in submitter",
+  "final_scheduler_reconciliation": {
+    "NumJobStarts": 1,
+    "RemoteUserCpu_s": 0.0,
+    "RemoteSysCpu_s": 0.0,
+    "RemoteWallClockTime_s": 4.0,
+    "JobStatus": 3,
+    "science_return_observed": false,
+    "interpretation": "initialidle snapshot does not prove zero scheduler starts; final ad records one4s start, no returned science product; all cost included"
+  }
+}

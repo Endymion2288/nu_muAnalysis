@@ -2542,3 +2542,16 @@ Stage122只测VetoNu0/1、Preshower0，且六个绝对窗0/40/80/160/320/640/120
 371attempt全终态，11失败/1取消，唯一CPU60633s、aggregate wall58634s、0GPU；两代恢复32168CPU秒超原30000预算7.23%，全计。核队列并逐字节回读后清理1762170218B，280JSON和141日志合并。报告先于本地Conventional Commit、不push，Stage54五资产保持。
 
 [完成审计](../workbook/stage129_energy_ml/completion_audit.tsv)与[Stage130执行合同](../workbook/stage129_energy_ml/next_execution_contract.json)明确：N₀约940→约2N₀、认证独立确认和完整系统/背景/接受度/物理精度仍未完成。下一步有界读原nominal200082 retained generator/simulation日志，追精确完整深度EVNT/GHEP/entry/seed；先测原选择产额/全链成本，再看风险前冻规模，不泛扫已结束的alternative metadata门。不降原1.05/1.01/1.03与八层三尾+2pp门，1.05仅非劣效，最终两低箱须真正胜传统。历史§1–107保持。
+
+
+## 109. Stage130：完整深度扩样与原规模N→2N已测，最低能尚未恢复
+
+[Stage130实测报告](../workbook/2026-11-07_stage130_full-depth-support-curve.md)沿200082精确retained日志找到22个完整深度EVNT，仅沿授权200080–101核对来源；继承原角色、排历史locked-test，固定全部666个alternative来源。16完整pilot后一次冻结650新增来源，最终π259/K358/charm49全部成功，6606398 PHYS父、222515 selected及222515实际EVNT entry/incoming闭合。无短应用timeout，scheduler86400s；K未因耗时删去。原GENIE seed/完整历史仍未认证，incoming代理不是blind证书，亦未阻挡实际能量实验。
+
+排旧曝光和跨角色视图后，新train/cal/开发test/关闭保留为82175/26309/26908/14496行；另72627隔离。最低/第二箱新增train1559/6551 incoming代理。原46575/11612/13189/17657角色、全部1016新增K、pz0一次方动量/raw11/status/typedNaN/signed/Calo缺失及原pz>50/正式cuts保持，原reserved、新role4及原隔离零预测。相同粗E/flux/crossing/component/y/depth组成先冻嵌套N₀/2N₀，两个低箱**926→1852、4100→8200**，全体37556→75112家族；终于达到原规模目标，不再是9→36小曲线。
+
+三固定政策各原3seed400轮depth5，合计9fit，不搜索。old/new test数量2N/N全体RMSE比.992522 [.989251,.995512]/.991957 [.989784,.994036]；最低箱.989293 [.949647,1.038089]/1.032741 [1.001957,1.066115]，没有稳定低能恢复。old-full+new-full augmented对f0全体.987375/.990589有小增量，但最低箱对传统仍1.910765 [1.624369,2.289924]/1.799716 [1.612699,2.004210]。old第二箱单独1.05非劣效不代表跨角色胜出；old/new低pz真高E负tail差上95+3.848277/+2.375160pp，12项joint全False，保留Stage87 direct62。数量与flux混合变化分开解释，不称信息界或普适N饱和。
+
+5616独立记录空间标量差≤3.197443e−14，f0重载差0，正值域非法/有限sentinel/Inf均0；合法charge=-1旧60712/新152313保留。全部92attempt终态、92starts、0失败/1移除，CPU582527s、aggregate executewall86622s、0GPU；production日历跨度3646s，实际调度区间峰432请求核，未超931226s预算。原尺度实验包wall171.71s，fit进程56.64s，昂贵部分仍为官方CPU链。逐数组回读后两轮删除538412080B重复，末态16文件无损打包，最终缓存+模型93856844B。报告/审计/图均已完成，本地Conventional Commit、不push，Stage54资产及历史§1–108保持。
+
+下一步按[Stage131合同](../workbook/stage130_energy_ml/next_execution_contract.json)推进Stage123尚未完成的μ谱系/非μ谱系与固定边界能流机制线：用保留完整末态和可执行pinned full-chain，有界核实际HITS/truth-link/G4接口，小pilot实测成本/选择迁移后同工作包冻结匹配支持的oracle/部署代理能量检验。拆分仅人工响应干预，不作自然训练或ADC相加，不用H/Eν恒等式。原GENIE历史缺口不重置为全部研究的全局前置，不重开旧X模型/seed/几何网格。原1.05/1.01/1.03、八层三尾+2pp不变，1.05仅非劣效。真正独立确认与真实data/背景/接受度/相关nuisance完整精度仍未测量，整体目标未完成。[完成审计](../workbook/stage130_energy_ml/completion_audit.tsv)明确区分已完成计算与未认证物理输入。

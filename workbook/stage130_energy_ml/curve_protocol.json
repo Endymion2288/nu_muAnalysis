@@ -1,0 +1,166 @@
+{
+  "stage": 130,
+  "scale_support": [
+    {
+      "energy_band": 0,
+      "old_N0_incoming": 926,
+      "curve_N0_incoming": 926,
+      "curve_N2_incoming": 1852,
+      "original_scale_reached": true
+    },
+    {
+      "energy_band": 1,
+      "old_N0_incoming": 4100,
+      "curve_N0_incoming": 4100,
+      "curve_N2_incoming": 8200,
+      "original_scale_reached": true
+    },
+    {
+      "energy_band": 2,
+      "old_N0_incoming": 32530,
+      "curve_N0_incoming": 32530,
+      "curve_N2_incoming": 65060,
+      "original_scale_reached": true
+    }
+  ],
+  "role_counts": [
+    {
+      "role": 0,
+      "E_low_GeV": 50,
+      "E_high_GeV": 100,
+      "records_N": 425,
+      "incoming_N": 416
+    },
+    {
+      "role": 0,
+      "E_low_GeV": 100,
+      "E_high_GeV": 200,
+      "records_N": 2229,
+      "incoming_N": 2060
+    },
+    {
+      "role": 0,
+      "E_low_GeV": 200,
+      "E_high_GeV": Infinity,
+      "records_N": 69973,
+      "incoming_N": 39814
+    },
+    {
+      "role": 1,
+      "E_low_GeV": 50,
+      "E_high_GeV": 100,
+      "records_N": 1578,
+      "incoming_N": 1559
+    },
+    {
+      "role": 1,
+      "E_low_GeV": 100,
+      "E_high_GeV": 200,
+      "records_N": 6756,
+      "incoming_N": 6551
+    },
+    {
+      "role": 1,
+      "E_low_GeV": 200,
+      "E_high_GeV": Infinity,
+      "records_N": 73841,
+      "incoming_N": 57113
+    },
+    {
+      "role": 2,
+      "E_low_GeV": 50,
+      "E_high_GeV": 100,
+      "records_N": 426,
+      "incoming_N": 425
+    },
+    {
+      "role": 2,
+      "E_low_GeV": 100,
+      "E_high_GeV": 200,
+      "records_N": 1797,
+      "incoming_N": 1789
+    },
+    {
+      "role": 2,
+      "E_low_GeV": 200,
+      "E_high_GeV": Infinity,
+      "records_N": 24086,
+      "incoming_N": 22316
+    },
+    {
+      "role": 3,
+      "E_low_GeV": 50,
+      "E_high_GeV": 100,
+      "records_N": 388,
+      "incoming_N": 388
+    },
+    {
+      "role": 3,
+      "E_low_GeV": 100,
+      "E_high_GeV": 200,
+      "records_N": 1810,
+      "incoming_N": 1799
+    },
+    {
+      "role": 3,
+      "E_low_GeV": 200,
+      "E_high_GeV": Infinity,
+      "records_N": 24710,
+      "incoming_N": 23005
+    },
+    {
+      "role": 4,
+      "E_low_GeV": 50,
+      "E_high_GeV": 100,
+      "records_N": 262,
+      "incoming_N": 261
+    },
+    {
+      "role": 4,
+      "E_low_GeV": 100,
+      "E_high_GeV": 200,
+      "records_N": 1121,
+      "incoming_N": 1088
+    },
+    {
+      "role": 4,
+      "E_low_GeV": 200,
+      "E_high_GeV": Infinity,
+      "records_N": 13113,
+      "incoming_N": 10177
+    }
+  ],
+  "seed": 20261107301,
+  "no_model_outcomes_before_freeze": true,
+  "original_scale_reached": true,
+  "quantity_effect": "N0/N2 within one fixed full-depth pooled flux/composition; not a pure old nominal flux extension",
+  "augmented_effect": "old-full train plus all new train; quantity and flux/mixture both change",
+  "canonical_family": "conservative float32 native incoming; first-view cell, all views retained together",
+  "rare_cells": "less than2 families excluded only from controlled curve; kept in augmented and evaluation pools",
+  "reserve_role": 4,
+  "reserve_predictions": 0,
+  "old_quarantine_predictions": 0,
+  "independence": "full original GENIE seed/history not certified; unobserved historical exposure remains a limitation",
+  "baseline": {
+    "features": 62,
+    "seeds": [
+      2026110255,
+      2026110256,
+      2026110257
+    ],
+    "rounds": 400,
+    "xgboost": {
+      "max_depth": 5,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "reg:squarederror"
+    },
+    "initialization": "weighted mean training logE with boost_from_average disabled, same for all seeds",
+    "calibration": "one incoming-weighted mean cal log residual for ensemble"
+  }
+}

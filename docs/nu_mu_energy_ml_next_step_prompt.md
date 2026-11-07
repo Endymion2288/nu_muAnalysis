@@ -1,3 +1,17 @@
+# 当前执行入口：Stage130完成，继续Stage131谱系与边界能流机制实验
+
+先读[Stage130报告](../workbook/2026-11-07_stage130_full-depth-support-curve.md)、路线§109及[下一执行合同](../workbook/stage130_energy_ml/next_execution_contract.json)。666来源含358 K全部完成，222515 selected逐例EVNT联结；原规模926→1852、4100→8200数量对照及9fit/独立复算已完成，禁止按下方历史入口重跑。
+
+最低箱仍未恢复：augmented/传统old/new test1.910765/1.799716，所有12项joint失败；全体小增益不是低能验收。保留Stage87 direct62，不追加同旧X网络/seed/数量网格，不把条件阴性当理论信息界。原角色、pz0/raw11/typedNaN/signed/Calo缺失/原cuts/全部K保持，原reserved、新role4及隔离均零预测。
+
+下一步推进Stage123第二机制线，先核已固定d32实际HITS/truth-link/G4接口能否标记下游μ谱系、非μ谱系活动和固定边界能流；使用Stage130精确EVNT路径/entry及`ntuples/energy_ml_stage130/pilot_complete_parents.tar.gz`中16份逐字节认证完整末态，可tarfile直接读取，不再生产旧metadata。Stage129 full-chain/privateRNG工程已完成，只补新仪器化必须的工程闭合。先冻结有限自然父框与纳入概率、小pilot测成本和选择迁移，再同工作包冻匹配支持X/X+oracle/可部署proxy的能量风险。分割模拟是人工响应干预，不能当自然ν训练或假设ADC可相加，不把H/Eν恒等式塞入oracle。历史GENIE FSI谱系仍flattened，不冒充恢复；也不将该缺口升级为所有可测研究的全局阻塞。
+
+真正独立确认、真实data曝光/GRL/背景/接受度及相关系统的完整物理精度尚未测量。原1.05/1.01/1.03与八层三尾+2pp不降，1.05仅非劣效；最终两低箱真正胜传统和独立确认仍必要。整体goal保持未完成。
+
+批量继续HTCondor，目录~/condor/nu_muAnalysis/stage131/；先测成本再冻规模，适当多核、GPU收益须实测。每阶段先中文workbook，再本地Conventional Commit，不push。Stage130已回读去重，原数组分片和运输已删，不能重新调用旧collect当新实验；使用合并缓存和紧凑证据。Stage54五资产及以下全部历史入口原文保留。
+
+## Stage129历史入口（原文保留）
+
 # 当前执行入口：Stage129完成，继续Stage130完整深度独立扩样
 
 先读[Stage129报告](../workbook/2026-11-07_stage129_saturation-timing-material-energy.md)、路线§108和[执行合同](../workbook/stage129_energy_ml/next_execution_contract.json)。三类观测、压力、条件谱、独立复算、21例全链和固定EVNT census已完成，不按下方旧Stage128入口重复执行。

@@ -1,0 +1,60 @@
+{
+  "run": 990129,
+  "database": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200_261030.db",
+  "resolved": "WAVE-Calibration-03-LG",
+  "payloads": {
+    "WAVE-Calibration-01-LG": [
+      {
+        "channel": 0,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07129999995231628
+      },
+      {
+        "channel": 1,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07129999995231628
+      },
+      {
+        "channel": 2,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07129999995231628
+      },
+      {
+        "channel": 3,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07129999995231628
+      }
+    ],
+    "WAVE-Calibration-03-LG": [
+      {
+        "channel": 0,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07569999992847443
+      },
+      {
+        "channel": 1,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07569999992847443
+      },
+      {
+        "channel": 2,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07569999992847443
+      },
+      {
+        "channel": 3,
+        "since": 0,
+        "until": 9223372036854775807,
+        "charge_ref": 0.07569999992847443
+      }
+    ]
+  },
+  "reuse_scope": "same immutable full-IOV calibration tags01/03; runs200084 and200085 independently read and exact payload equality verified; actual produced Calo E/charge checked per source"
+}

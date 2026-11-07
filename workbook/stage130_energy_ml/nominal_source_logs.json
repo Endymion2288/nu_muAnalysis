@@ -1,0 +1,224 @@
+[
+  {
+    "run": 200082,
+    "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.sim.log",
+    "bytes": 2879619,
+    "wall_s": 0.07848692405968904,
+    "evidence": [
+      {
+        "line": 2,
+        "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+      },
+      {
+        "line": 4,
+        "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+      },
+      {
+        "line": 41,
+        "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+      },
+      {
+        "line": 830,
+        "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+      },
+      {
+        "line": 842,
+        "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+      },
+      {
+        "line": 919,
+        "text": "Random.SeedOffset                        : 0"
+      },
+      {
+        "line": 44282,
+        "text": "/afs/cern.ch/work/f/fasermc/mc24/s0014/run/bin/submit_faser_simulate.sh: line 262:  5414 Aborted                 (core dumped) faser_simulate.py \"$infile\" \"$outfile\" -n \"$nevts\" --skip \"$skip_events\" \"$@\""
+      }
+    ],
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root"
+  },
+  {
+    "run": 200083,
+    "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-00000-s0014-HITS.sim.log",
+    "bytes": 2912142,
+    "wall_s": 0.13527431013062596,
+    "evidence": [
+      {
+        "line": 2,
+        "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root"
+      },
+      {
+        "line": 4,
+        "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+      },
+      {
+        "line": 41,
+        "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root FaserMC-MC24_Genie_epos_k-200083-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+      },
+      {
+        "line": 830,
+        "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+      },
+      {
+        "line": 842,
+        "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+      },
+      {
+        "line": 919,
+        "text": "Random.SeedOffset                        : 0"
+      },
+      {
+        "line": 44992,
+        "text": "/afs/cern.ch/work/f/fasermc/mc24/s0014/run/bin/submit_faser_simulate.sh: line 262:  5413 Aborted                 (core dumped) faser_simulate.py \"$infile\" \"$outfile\" -n \"$nevts\" --skip \"$skip_events\" \"$@\""
+      }
+    ],
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root"
+  },
+  {
+    "run": 200089,
+    "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-s0014-HITS.sim.log",
+    "bytes": 2889910,
+    "wall_s": 0.10524848522618413,
+    "evidence": [
+      {
+        "line": 2,
+        "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root"
+      },
+      {
+        "line": 4,
+        "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+      },
+      {
+        "line": 41,
+        "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+      },
+      {
+        "line": 830,
+        "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+      },
+      {
+        "line": 842,
+        "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+      },
+      {
+        "line": 919,
+        "text": "Random.SeedOffset                        : 0"
+      },
+      {
+        "line": 45082,
+        "text": "/afs/cern.ch/work/f/fasermc/mc24/s0014/run/bin/submit_faser_simulate.sh: line 262:  5412 Aborted                 (core dumped) faser_simulate.py \"$infile\" \"$outfile\" -n \"$nevts\" --skip \"$skip_events\" \"$@\""
+      }
+    ],
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root"
+  },
+  {
+    "run": 200093,
+    "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200093/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_pi-200093-00000-s0014-HITS.sim.log",
+    "bytes": 2811701,
+    "wall_s": 0.10465465625748038,
+    "evidence": [
+      {
+        "line": 2,
+        "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root"
+      },
+      {
+        "line": 4,
+        "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+      },
+      {
+        "line": 41,
+        "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_pi-200093-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+      },
+      {
+        "line": 830,
+        "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+      },
+      {
+        "line": 842,
+        "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+      },
+      {
+        "line": 919,
+        "text": "Random.SeedOffset                        : 0"
+      },
+      {
+        "line": 43242,
+        "text": "/afs/cern.ch/work/f/fasermc/mc24/s0014/run/bin/submit_faser_simulate.sh: line 260:  5629 Aborted                 (core dumped) faser_simulate.py \"$infile\" \"$outfile\" -n \"$nevts\" --skip \"$skip_events\" \"$@\""
+      }
+    ],
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root"
+  },
+  {
+    "run": 200094,
+    "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200094/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_k-200094-00000-s0014-HITS.sim.log",
+    "bytes": 2858156,
+    "wall_s": 0.14321370515972376,
+    "evidence": [
+      {
+        "line": 2,
+        "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root"
+      },
+      {
+        "line": 4,
+        "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+      },
+      {
+        "line": 41,
+        "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_epos_k-200094-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+      },
+      {
+        "line": 830,
+        "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+      },
+      {
+        "line": 842,
+        "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+      },
+      {
+        "line": 919,
+        "text": "Random.SeedOffset                        : 0"
+      },
+      {
+        "line": 44465,
+        "text": "/afs/cern.ch/work/f/fasermc/mc24/s0014/run/bin/submit_faser_simulate.sh: line 260:  5627 Aborted                 (core dumped) faser_simulate.py \"$infile\" \"$outfile\" -n \"$nevts\" --skip \"$skip_events\" \"$@\""
+      }
+    ],
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root"
+  },
+  {
+    "run": 200100,
+    "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200100/log/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_powheg_pythia_charm_central-200100-00000-s0014-HITS.sim.log",
+    "bytes": 2962084,
+    "wall_s": 0.11810466926544905,
+    "evidence": [
+      {
+        "line": 2,
+        "text": "Input File: /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root"
+      },
+      {
+        "line": 4,
+        "text": "Release: /afs/cern.ch/work/f/fasermc/mc24/s0014"
+      },
+      {
+        "line": 41,
+        "text": "faser_simulate.py /eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_powheg_pythia_charm_central-200100-00000-s0014-HITS.root -n 1000 --skip 0 --geom TI12MC04"
+      },
+      {
+        "line": 830,
+        "text": "GeoModel.FaserVersion                    : 'FASERNU-04'"
+      },
+      {
+        "line": 842,
+        "text": "IOVDb.GlobalTag                          : 'OFLCOND-FASER-04'"
+      },
+      {
+        "line": 919,
+        "text": "Random.SeedOffset                        : 0"
+      },
+      {
+        "line": 46492,
+        "text": "/afs/cern.ch/work/f/fasermc/mc24/s0014/run/bin/submit_faser_simulate.sh: line 260:  5413 Aborted                 (core dumped) faser_simulate.py \"$infile\" \"$outfile\" -n \"$nevts\" --skip \"$skip_events\" \"$@\""
+      }
+    ],
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root"
+  }
+]

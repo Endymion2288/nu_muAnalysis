@@ -1,0 +1,12 @@
+{
+  "environment": "LCG_109 x86_64-el9-gcc15-opt",
+  "measured_conversion": {
+    "float32": "float64",
+    "float64": "float64",
+    "int32": "float64"
+  },
+  "operation": "ak.to_numpy(ak.fill_none(ak.firsts(array), np.nan))",
+  "scope": "constructed primitive arrays only; no new event census",
+  "native_geometry": "RDFDefines.h FaserNuBox/LeadBlock float constants, includingfloat32\u22121769.65/\u22121619.65;Radius(double,double)",
+  "conclusion": "request arithmetic isfloat64 and z bounds use the samefloat32 constants as native geometry;no precision-driven request change made"
+}

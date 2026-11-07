@@ -1,0 +1,33 @@
+{
+  "source_contract": "production_contract.json",
+  "cluster": 9673446,
+  "UTC": "2026-11-07T13:53:23.746708+00:00",
+  "old_max_materialized": 12,
+  "new_max_materialized": 64,
+  "new_max_idle": 64,
+  "cpus_per_batch": 8,
+  "maximum_requested_concurrent_CPUs": 512,
+  "sampling_or_role_changes": false,
+  "model_fits_or_outcomes": 0,
+  "CPU_budget_s": 931226,
+  "CPU_budget_unchanged": true,
+  "reason": "Same frozen source list and CPU budget; bounded ramp12\u219232\u219264 after real successful returns; actual site slots and I/O determine speed, no linear speedup claim",
+  "commands": [
+    "condor_qedit 9673446 JobMaterializeLimit 32",
+    "condor_qedit 9673446 JobMaterializeMaxIdle 32",
+    "condor_qedit 9673446 JobMaterializeLimit 64",
+    "condor_qedit 9673446 JobMaterializeMaxIdle 64"
+  ],
+  "initial_amendment": {
+    "UTC": "2026-11-07T13:37:41.805519+00:00",
+    "new_max_materialized": 32,
+    "new_max_idle": 32,
+    "maximum_requested_concurrent_CPUs": 256
+  },
+  "observed_before_second_increase": {
+    "completed_sources": 140,
+    "selected_exact_parent_links": 48346,
+    "failed_sources": 0,
+    "actual_running_batches": 32
+  }
+}

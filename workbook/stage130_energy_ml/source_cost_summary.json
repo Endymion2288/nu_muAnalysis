@@ -1,0 +1,24 @@
+{
+  "nested_steps_CPU_s": 575424.9899999998,
+  "max_individual_GNU_RSS_KiB": 1820944.0,
+  "logical_read_counters": {
+    "PHYS_requested_uproot_B": 1397404332,
+    "selected_ntuple_requested_uproot_B": 501887074,
+    "production_parentmap_ROOT_B": 3856814604
+  },
+  "components": {
+    "pi": {
+      "sources": 259,
+      "nested_steps_CPU_s": 163367.7199999999
+    },
+    "k": {
+      "sources": 358,
+      "nested_steps_CPU_s": 379814.4699999995
+    },
+    "charm": {
+      "sources": 49,
+      "nested_steps_CPU_s": 32242.800000000007
+    }
+  },
+  "scope": "successful source steps only;pilotEVNT linkage separately measured;GNU childCPU is nested in scheduler total and never added;RSS is max individual process tree observation,not simultaneous job aggregate;full RDO/networkphysical I/O unmeasured"
+}

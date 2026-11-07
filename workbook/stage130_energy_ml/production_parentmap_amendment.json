@@ -1,0 +1,12 @@
+{
+  "source_contract": "production_contract.json",
+  "sampling_or_role_changes": false,
+  "model_fits_or_outcomes": 0,
+  "full_pilot_event_entry_incoming_exact_N": 4714,
+  "sparse_native_pilot_exact_N": 91,
+  "additional_step": "after every production extraction, read complete GENIE records at exact selected EVNTentries and require incoming equality; no truth fields added to model",
+  "reason": "certify actual full-depth parent path/entry without rereading all unselected EVNT entries for every file",
+  "runtime": "no application timeout; production scheduler MaxRuntime86400s to allow full K files; individual complete sources retained regardless of yield",
+  "CPU_budget_unchanged": true,
+  "budget_scope": "original931226s covers pilot-based1.5x cost reserve; actual all attempts separately accounted"
+}

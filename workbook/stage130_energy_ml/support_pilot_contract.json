@@ -1,0 +1,51 @@
+{
+  "stage": 130,
+  "seed": 2026110730,
+  "indices": [
+    27,
+    95,
+    279,
+    375,
+    382,
+    459,
+    508,
+    543,
+    608,
+    686,
+    841,
+    871,
+    991,
+    1022,
+    1063,
+    1102
+  ],
+  "selection": "one uniform file among eligible per alternative fluxrun;entire selected parent file,no replacement by yield/model outcome",
+  "inclusion_probabilities": {
+    "27": 0.02631578947368421,
+    "95": 0.016666666666666666,
+    "279": 0.02127659574468085,
+    "375": 0.015384615384615385,
+    "382": 0.02127659574468085,
+    "459": 0.01818181818181818,
+    "508": 0.1111111111111111,
+    "543": 0.0625,
+    "608": 0.027777777777777776,
+    "686": 0.016666666666666666,
+    "841": 0.021739130434782608,
+    "871": 0.015625,
+    "991": 0.022222222222222223,
+    "1022": 0.018518518518518517,
+    "1063": 0.125,
+    "1102": 0.0625
+  },
+  "cost": "2 preliminary40-parent compatible chains succeeded;full-parent yield and CPU unmeasured before this freeze",
+  "model_fits": 0,
+  "predictions": 0,
+  "resources": {
+    "cpus_each": 8,
+    "jobs": 2,
+    "memory_MB_each": 24000,
+    "aggregate_CPU_s_max": 128000,
+    "wall_each_s": 14400
+  }
+}

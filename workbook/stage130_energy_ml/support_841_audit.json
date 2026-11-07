@@ -1,0 +1,377 @@
+{
+  "phase": "support",
+  "index": 841,
+  "bytes": 102005,
+  "members": [
+    {
+      "name": "result/parent_log.txt",
+      "bytes": 1
+    },
+    {
+      "name": "result/request_summary.json",
+      "bytes": 952
+    },
+    {
+      "name": "result/payload.json",
+      "bytes": 1562
+    },
+    {
+      "name": "result/reco_time.txt",
+      "bytes": 788
+    },
+    {
+      "name": "result/ntuple_time.txt",
+      "bytes": 848
+    },
+    {
+      "name": "result/extract_log.txt",
+      "bytes": 4433
+    },
+    {
+      "name": "result/extract_time.txt",
+      "bytes": 868
+    },
+    {
+      "name": "result/selected.npz",
+      "bytes": 94246
+    },
+    {
+      "name": "result/identity.json",
+      "bytes": 169
+    },
+    {
+      "name": "result/source_qa.json",
+      "bytes": 6846
+    },
+    {
+      "name": "result/exitcode.txt",
+      "bytes": 2
+    },
+    {
+      "name": "result/reco_excerpt.txt",
+      "bytes": 43292
+    },
+    {
+      "name": "result/ntuple_excerpt.txt",
+      "bytes": 5447
+    }
+  ],
+  "byte_roundtrip_verified": true,
+  "exitcode": 0,
+  "request_summary.json": {
+    "source": {
+      "index": 841,
+      "run": 200095,
+      "component": "pi",
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200095/rdo/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_qgsjet_pi-200095-00230-00239-s0014-RDO.root",
+      "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200095/phy/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_qgsjet_pi-200095-00230-00239-s0014-PHYS.root",
+      "phys_exists": true,
+      "segment": "00230-00239",
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "nominal": false,
+      "file_probability": 1.0,
+      "group": "pi:00230-00239",
+      "inherited_role": "train",
+      "old_locked": false,
+      "eligible": true
+    },
+    "parent_N": 10000,
+    "rdo": "input-RDO.root",
+    "requested_bytes": 2091410,
+    "full_parent_N": 10000,
+    "parent_schema_missing": [
+      "Track_isForward",
+      "truth_barcode"
+    ]
+  },
+  "source_qa.json": {
+    "index": 841,
+    "selected_N": 303,
+    "parent_N": 10000,
+    "truth_superset_N": 1867,
+    "counts": {
+      "all": 303,
+      "E50_100": 8,
+      "E100_200": 42,
+      "lowpz_highE": 7,
+      "high_y": 6,
+      "highE": 33
+    },
+    "unique_incoming_N": 301,
+    "inherited_role": "train",
+    "schema_and_typed_domains_passed": true,
+    "model_fits": 0,
+    "predictions": 0,
+    "feature_metadata": {
+      "source": {
+        "index": 841,
+        "run": 200095,
+        "component": "pi",
+        "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200095/rdo/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_qgsjet_pi-200095-00230-00239-s0014-RDO.root",
+        "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200095/phy/s0014/FaserMC-MC24_Genie_24_xing_angle_wo_caloNu_qgsjet_pi-200095-00230-00239-s0014-PHYS.root",
+        "phys_exists": true,
+        "segment": "00230-00239",
+        "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+        "nominal": false,
+        "file_probability": 1.0,
+        "group": "pi:00230-00239",
+        "inherited_role": "train",
+        "old_locked": false,
+        "eligible": true
+      },
+      "qa": false,
+      "raw_N": 1867,
+      "selected_N": 303,
+      "features": [
+        "ML_mu_pz0_GeV",
+        "ML_mu_px0_GeV",
+        "ML_mu_py0_GeV",
+        "LeadTrack_charge",
+        "LeadTrack_Theta",
+        "LeadTrack_Chi2_NDF",
+        "LeadTrack_nDoF",
+        "LeadTrack_nLayers",
+        "LeadTrack_r_atMaxRadius",
+        "LeadTrack_rVetoNu",
+        "ML_mu_x0_mm",
+        "ML_mu_y0_mm",
+        "ML_mu_z0_mm",
+        "ML_mu_X_atVetoNu_mm",
+        "ML_mu_Y_atVetoNu_mm",
+        "ML_mu_X_atCalo_mm",
+        "ML_mu_Y_atCalo_mm",
+        "nClusters0",
+        "nClusters1",
+        "nClusters2",
+        "nClusters3",
+        "SpacePoints",
+        "TrackSegments",
+        "longTracks",
+        "VetoNu0_raw_charge",
+        "VetoNu1_raw_charge",
+        "Veto10_raw_charge",
+        "Veto20_raw_charge",
+        "Veto21_raw_charge",
+        "Timing0_raw_charge",
+        "Timing1_raw_charge",
+        "Timing2_raw_charge",
+        "Timing3_raw_charge",
+        "Preshower0_raw_charge",
+        "Preshower1_raw_charge",
+        "VetoNu0_reduced_charge",
+        "VetoNu1_reduced_charge",
+        "ML_calo0_E_EM_GeV",
+        "ML_calo1_E_EM_GeV",
+        "ML_calo2_E_EM_GeV",
+        "ML_calo3_E_EM_GeV",
+        "ML_calo_total_E_EM_GeV",
+        "ML_sp_mean_x_mm",
+        "ML_sp_rms_x_mm",
+        "ML_sp_mean_y_mm",
+        "ML_sp_rms_y_mm",
+        "ML_track_px1_GeV",
+        "ML_track_py1_GeV",
+        "ML_track_x1_mm",
+        "ML_track_y1_mm",
+        "ML_track_z1_mm",
+        "ML_track_qOverP0_GeVinv",
+        "ML_track_qOverP1_GeVinv",
+        "ML_track_span_z_mm",
+        "ML_track_bend_x",
+        "ML_track_bend_y",
+        "ML_track_chord_slope_x",
+        "ML_track_chord_slope_y",
+        "ML_track_module_eta0",
+        "ML_track_module_phi0",
+        "ML_track_z_atMaxRadius_mm",
+        "ML_event_SCT_error"
+      ],
+      "feature_version": "F7_pz0_raw_v1",
+      "cutflow_passed": [
+        1867,
+        1394,
+        1394,
+        1394,
+        1394,
+        1394,
+        653,
+        653,
+        653,
+        652,
+        595,
+        583,
+        569,
+        569,
+        363,
+        359,
+        356,
+        330,
+        312,
+        303
+      ],
+      "cutflow_names": [
+        "Remove CaloNu PMT region (truth)",
+        "CC events only",
+        "nu_mu only",
+        "In Faser Nu Box or Lead Block",
+        "Truth dec r < 100 mm",
+        "Truth pz > 50 GeV",
+        "At least one long track",
+        "Veto20 and Veto21 charge > 40 pC",
+        "Timing Station Charge > 20 pC",
+        "Preshower Charge > 2.5 pC",
+        "Track pz > 50 GeV",
+        "Leading track has at >= 7 layers",
+        "Track nDoF >= 9",
+        "Leading track has chi2/ndof < 15",
+        "Track R at max radius < 95 mm",
+        "Track R at IFT < 95 mm",
+        "Track rVetoNu < 120 mm",
+        "Leading track theta < 25 mrad",
+        "VetoNu0 reduced charge < 30 pC",
+        "VetoNu1 reduced charge < 30 pC"
+      ],
+      "requested_uproot_bytes": 858466,
+      "analysis_ROOT_requested_bytes": "\u672a\u6d4b\u91cf",
+      "all_raw_schema_present": true,
+      "all_raw_finite_N": {
+        "VetoNu0": 1867,
+        "VetoNu1": 1867,
+        "Veto10": 1867,
+        "Veto20": 1867,
+        "Veto21": 1867,
+        "Timing0": 1867,
+        "Timing1": 1867,
+        "Timing2": 1867,
+        "Timing3": 1867,
+        "Preshower0": 1867,
+        "Preshower1": 1867
+      },
+      "all_status_values": {
+        "VetoNu0": [
+          0,
+          1,
+          4
+        ],
+        "VetoNu1": [
+          0,
+          1,
+          4
+        ],
+        "Veto10": [
+          0,
+          1,
+          4,
+          36
+        ],
+        "Veto20": [
+          0,
+          1,
+          4,
+          36
+        ],
+        "Veto21": [
+          0,
+          1,
+          4,
+          36
+        ],
+        "Timing0": [
+          0,
+          1,
+          4,
+          32
+        ],
+        "Timing1": [
+          0,
+          1,
+          4,
+          32
+        ],
+        "Timing2": [
+          0,
+          1,
+          4
+        ],
+        "Timing3": [
+          0,
+          1,
+          4
+        ],
+        "Preshower0": [
+          0,
+          1,
+          4
+        ],
+        "Preshower1": [
+          0,
+          1,
+          4
+        ]
+      },
+      "actual_command": [
+        "/pool/condor/dir_2127484/nu_mu_stage130.HrPUUG/code/build/analysis",
+        "--isMC",
+        "-r",
+        "200095",
+        "-j",
+        "1",
+        "--file-config",
+        "/tmp/stage70_selection_xigjku66/files.yaml",
+        "--definitions-config",
+        "/tmp/stage70_selection_xigjku66/definitions.yaml",
+        "--cuts-config",
+        "/pool/condor/dir_2127484/nu_mu_stage130.HrPUUG/code/AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+        "--grl-config",
+        "/pool/condor/dir_2127484/nu_mu_stage130.HrPUUG/code/AnalysisZipFramework/config/grl_config.yaml",
+        "--output-config",
+        "/pool/condor/dir_2127484/nu_mu_stage130.HrPUUG/code/AnalysisZipFramework/config/ml_output_columns.yaml",
+        "-o",
+        "/tmp/stage70_selection_xigjku66/selected.root"
+      ],
+      "wall_s": 11.445083147962578,
+      "cpu_s": 1.2156376259999995,
+      "child_user_s": 7.76929,
+      "child_system_s": 0.8338059999999999,
+      "peak_parent_rss_MiB": 202.27734375,
+      "peak_analysis_rss_MiB": 637.56640625,
+      "unit_contract": "native MeV/mm; analysis momentum/E divided by1000; scintillator pC; incoming exact key in native MeV",
+      "parent_identity": {
+        "parent_N": 10000,
+        "reconstructed_N": 1867,
+        "exact_run_event_incoming": true,
+        "all_sparse_entries_retained": true,
+        "forward_tracks": 144,
+        "track_N": 736
+      },
+      "calibration": [
+        {
+          "module": 0,
+          "N": 69
+        },
+        {
+          "module": 1,
+          "N": 61
+        },
+        {
+          "module": 2,
+          "N": 92
+        },
+        {
+          "module": 3,
+          "N": 83
+        }
+      ],
+      "reference": "WAVE-Calibration-01-LG",
+      "conversion": "actual per-run COOL payload ratio once; no truth/residual scale"
+    }
+  },
+  "identity.json": {
+    "parent_N": 10000,
+    "reconstructed_N": 1867,
+    "exact_run_event_incoming": true,
+    "all_sparse_entries_retained": true,
+    "forward_tracks": 144,
+    "track_N": 736
+  }
+}
