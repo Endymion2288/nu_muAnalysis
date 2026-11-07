@@ -1,0 +1,16 @@
+{
+  "result": "9674493.0 - 9674493.0",
+  "phase": "control",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage147\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage147/worker_1794088308705488824.sh\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage147/1794088308705488824/energy-ml-stage147.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 4000MB\nrequest_disk = 2000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage147 CPU budget exceeded\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 60\n+NuMuStage = \"energy-ml-stage147\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage147/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage147/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage147/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage147/1794088308705488824/energy-ml-stage147.tar.gz",
+    "bytes": 410076,
+    "files": [
+      "ml/stage147_track_control.py",
+      "ml/stage145_mu_joint.py",
+      "workbook/stage147_energy_ml/protocol.json",
+      "workbook/stage146_energy_ml/heldout_by_root.tsv",
+      "ntuples/energy_ml_stage146/event_records.json.gz"
+    ]
+  }
+}

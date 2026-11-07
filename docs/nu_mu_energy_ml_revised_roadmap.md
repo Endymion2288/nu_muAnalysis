@@ -1,3 +1,9 @@
+# 当前执行更新：Stage147 μ根尾部的记录轨迹匹配诊断完成
+
+[Stage147报告](../workbook/2026-11-07_stage147_recorded-muon-track-tail-control.md)同MC100012前4096条，原身份/3612选中/评分分组计数精确。3612全部记录为μ匹配；878可评分留出均直接匹配已核初始μ根，记录hit ratio中位1且低于0.8数0。overflow10/16、11/16和高活动6/6报警不由记录的非μ轨迹误选解释。高活动pz0相对生产truth pz中位差−.141474，非同面不能称重建误差或已测能损。1job全exit0、4CPU秒/11wall秒/0GPU；不重训/改阈值，不认证真实PRD/covariance或data/ν迁移。下一Stage148最多一个既有train混合Ecal父、1000CPU秒，闭合实际来源/DAQ，不大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage146 μ根身份与固定评分尾部完成
 
 [Stage146报告](../workbook/2026-11-07_stage146_muon-root-identity-and-response-tails.md)核已知MC100012单HITS前4096条，172248个保留truth粒子全部连到μ根，缺父/重复/环均0；4096 PHYS逐run/event及根动量/顶点float32精确匹配。3612 selected中3512含非μtruth列表但仍为μ根，不可当独立其他根污染。原评分40项计数精确，μ根overflow报警10/16、11/16，高活动6/6；全体低比例不认证条件尾部。3job全exit0，145CPU秒/207聚合wall秒/0GPU，无新G4/fit。下一Stage147仅在同PHYS核记录的选中轨迹truth匹配/质量和pz偏差，60CPU秒、固定缓存评分，不冒充真实PRD/covariance或新观测。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
@@ -2771,3 +2777,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [Stage146实测](../workbook/2026-11-07_stage146_muon-root-identity-and-response-tails.md)完成64pilot及4096有界原生truth，172248保留粒子、μ−/μ+根2033/2063、缺父/重复/环0；PHYS全部run/event及根p3/xyz逐float32匹配，selected3612全为μ根。3512含非μtruth列表不可误作独立根污染。原固定评分40整数检查精确：all26/878、25/878，overflow10/16、11/16，高活动6/6；报警不能直接标为其他根。保留图不认证全部输运过程或总体FPR。3job全exit0、145CPU秒/207聚合wall秒/0GPU；事件文本精确合并400922B、删1112193B重复副本。
 
 下一[Stage147合同](../workbook/stage146_energy_ml/next_execution_contract.json)只诊断同PHYS记录的轨迹truth匹配/质量与pz0偏差，60CPU秒，无新G4/fit或阈值改变；真实PRD/covariance、currentproducer/data和总体过程仍缺。不续旧X网格或绕过Stage137双箱5%门大生产；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87和整体未完成状态保持。
+
+
+## 126. Stage147：μ根尾部不由记录的非μ轨迹误选解释
+
+[Stage147实测](../workbook/2026-11-07_stage147_recorded-muon-track-tail-control.md)固定MC100012原4096身份/3612选择和原分组计数精确。3612全部记录μ匹配，878可评分留出均直接根barcode匹配，记录hit ratio中位1且<.8数0；overflow10/16、11/16、高活动6/6报警仍在，不由此类误选解释。高活动pz0/生产truthpz−1中位−.141474，未认证同面，不作tracking bias或辐射因果结论。1job全exit0、4CPU秒/11wall秒/0GPU，无新G4/fit。真实PRD/covariance、宽能区及producer/data迁移仍缺，不扫本固定评分。
+
+下一[Stage148合同](../workbook/stage147_energy_ml/next_execution_contract.json)独立补§5.4的一个混合Ecal方法控制：仅现有4032证据role1内按frame顺序固定至多一个双根正响应父，先实际支持/成本，再旧字段/HITS和8-PMT噪声/4可读PMT/同有限窗来源闭合，1000累计CPU秒、无新build/独立ν/fit。无支持记录0；不同channel/time混合不冒充同窗混合，不替换父或扩大预算。非自然ν大生产，不绕过Stage1375%门；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87和整体未完成状态保持。

@@ -1,0 +1,28 @@
+{
+  "all_jobs_terminal": true,
+  "witness_text_exact": true,
+  "witness": {
+    "path": "ntuples/energy_ml_stage147/tail_witnesses.json.gz",
+    "bytes": 1196
+  },
+  "source_capsule": {
+    "path": "software/stage147/source_snapshots.tar.gz",
+    "bytes": 6185
+  },
+  "deleted": [
+    {
+      "path": "workbook/stage147_energy_ml/tail_witnesses.json",
+      "bytes": 11945
+    },
+    {
+      "path": "software/stage147/1794088308705488824/energy-ml-stage147.tar.gz",
+      "bytes": 410076
+    },
+    {
+      "path": "ntuples/energy_ml_stage147/control_result.tar.gz",
+      "bytes": 4425
+    }
+  ],
+  "deleted_bytes": 426446,
+  "scope": "Text compaction only; original HITS/PHYS and Stage146 event records untouched"
+}

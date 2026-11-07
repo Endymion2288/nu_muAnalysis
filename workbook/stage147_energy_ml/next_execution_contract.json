@@ -1,0 +1,34 @@
+{
+  "next_stage": 148,
+  "question": "Does source additivity and exact actual Ecal ADC closure hold on one existing natural train parent with both mu and other-root Ecal response, beyond the single-category Stage144 controls?",
+  "sources": [
+    "ntuples/energy_ml_stage131/production_cases.json.gz",
+    "ntuples/energy_ml_stage137/boundary_evidence.json.gz",
+    "ntuples/energy_ml_stage131/parent_evidence.json.gz",
+    "ntuples/energy_ml_stage131/matched_input.npz"
+  ],
+  "immutable_runtime": "software/stage142/observer-runtime.tar.gz",
+  "selection": "Audit only existing4032 evidence in Condor. Keep original role1 denominator and all components/K. Eligible iff summed Ecal all_MeV[0]>0 and all_MeV[1]>0. Fix first eligible original frame_index, atmost1 parent. No risk/energy/clip cut or replacement after response. Unknown/zero source stays unknown/zero.",
+  "support": "Report all role1 cells and eligible counts; if none, stop this input control with measured0, no inventory expansion.",
+  "workflow": "One exact old EVNT/entry/seed replay with existing read-only observer and pinned stack, no new build. Require original observer fields plus hit order/cardinality/ID and actual SD source labels closure. Then Ecal response with all8 PMT noise draws, compare4cabled PMTs and same actual780-930ns window. Report actual mixed-per-channel finite-window support, clipping and signed raw/status; do not assume all-time mixing implies same-channel-window mixing.",
+  "limits": "Same-parent fresh response not new independent nu. Original full private RNG comparison only if retained; original Calo raw not retained, never claim equality. Missing selected/reference retained. ADC sum not used as source label; source analog signals sum before rounding/noise/clipping.",
+  "admission": "Use existing measured source/DAQ costs. One parent only; keep explicit cumulative scheduler CPU guard, reserve>=300CPU seconds for Ecal and final audits before simulation extension; if actual remaining cost fails, report failed/incomplete control, never expand budget or replace parent.",
+  "resources": {
+    "CPU_budget_s": 1000,
+    "support_CPUs": 1,
+    "response_CPUs": 4,
+    "response_memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "max_parents": 1
+  },
+  "acceptance": "All actual readable Ecal ADC mismatch0, source analog addition within existing32float32eps bound, original reference status exact where retained. Explicitly report whether any same-channel window truly contains both positive source components; otherwise retain mixed-window gap. No population/process/FPR/calibration-transfer claim.",
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "response_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "remaining_mu_joint_gap": "Stage147 excludes recorded nonmu track selection as explanation here. Actual covariance/PRD uncertainty, wide and producer-matched mu controls, stochastic response and current nu/data applicability remain unmeasured; do not refit/threshold-scan old Q15/Qshape30 or claim source classifier."
+}

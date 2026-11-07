@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "pilot": {
+    "input_N": 64,
+    "missing": [],
+    "misaligned_event_N": {
+      "pdg": 0,
+      "barcode": 0,
+      "pdg_parent": 0,
+      "barcode_parent": 0,
+      "truthHitRatio": 0,
+      "pz": 0
+    },
+    "read_bytes": 211066,
+    "CPU_s": 0.34385167900000013,
+    "wall_s": 0.7722992159542628
+  },
+  "measured": {
+    "input_N": 4096,
+    "missing": [],
+    "misaligned_event_N": {
+      "pdg": 0,
+      "barcode": 0,
+      "pdg_parent": 0,
+      "barcode_parent": 0,
+      "truthHitRatio": 0,
+      "pz": 0
+    },
+    "read_bytes": 346857,
+    "CPU_s": 0.39610641,
+    "wall_s": 0.4812513079959899
+  },
+  "original_identity_exact": true,
+  "original_selection_exact": true,
+  "selected_N": 3612,
+  "classification_counts": {
+    "recorded_mu_match": 3612
+  },
+  "original_group_counts_exact": true,
+  "invalid_hit_ratio_N": 0,
+  "nonpositive_barcode_N": 0,
+  "CPU_s": 2.588953537,
+  "wall_s": 3.1253047549980693,
+  "RSS_KiB": 98044,
+  "energy_fits": 0,
+  "response_fits": 0,
+  "new_G4": 0,
+  "reserved_forward": 0,
+  "true_PRD_association_or_covariance_certified": false,
+  "scope": "Recorded ntuple truth match diagnostic only, not new sensor information, transported process classification, calibrated covariance or data/nu transfer"
+}
