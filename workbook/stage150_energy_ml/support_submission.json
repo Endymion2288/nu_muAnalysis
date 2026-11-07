@@ -1,0 +1,17 @@
+{
+  "result": "9674717.0 - 9674717.0",
+  "phase": "support",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage150\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794093372727178922.sh\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage150/worker_1794093372727178922.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage150/1794093372727178922/energy-ml-stage150.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage150 support CPU budget and response reserve\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 82\n+NuMuStage = \"energy-ml-stage150\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage150/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage150/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage150/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "CPU_allowance_s": 82,
+  "package": {
+    "path": "software/stage150/1794093372727178922/energy-ml-stage150.tar.gz",
+    "bytes": 23886068,
+    "files": [
+      "workbook/stage150_energy_ml/protocol.json",
+      "ml/stage150_support.py",
+      "ntuples/energy_ml_stage131/production_cases.json.gz",
+      "ntuples/energy_ml_stage131/matched_input.npz",
+      "ntuples/energy_ml_stage137/boundary_evidence.json.gz"
+    ]
+  }
+}

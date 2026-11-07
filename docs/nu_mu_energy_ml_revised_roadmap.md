@@ -1,3 +1,9 @@
+# 当前执行更新：Stage150 Ecal overflow 有限支持审计完成，无父准入
+
+[Stage150报告](../workbook/2026-11-08_stage150_Ecal-overflow-support-audit.md)仅原4032父/2304role1，1708有status参考、596原未选中父仍未知；6832Calo视图status1/0/32为6512/318/2，overflow位0，候选0。按冻结合同不换父/扩库存/人工裁切，不执行G4；这不是总体无饱和结论，真实Ecal clipping方法仍未测量。1job exit0、5CPU秒/10wall秒/0GPU/0fit，删除23887349B运输。下一Stage151同一原μ前4→最多64做conditions04对已有06固定物理对照，明确input/current元数据和18vs15映射；1000CPU秒、实测准入，无G4/新ν/模型网格。原全部门/Stage137扩大门/Stage87及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage149 真实 μ covariance／PRD／raw 配对控制完成
 
 [Stage149报告](../workbook/2026-11-08_stage149_native-covariance-and-raw-control.md)已完成原MC100012 HITS前4→64的当前官方数字化／重建控制。64父全部保留，61选中leading及full5×5 covariance/同新ntuple身份精确；18实际映射通道包含原raw15，64/64逐字段闭合。61 covariance正定且每条20非零offdiagonal，最大相关系数中位.941346；局部σ(logpz0)中位.023718、最大.394096，未校准pull/覆盖率。1097测量链接缺失0、2174clusters的5个共享归属不当关联概率。16无hit视图保留，245signed负raw保留，非0status无timing；旧输运conditions04/当前06差异明确。前4native/raw/RNG精确复现；含JSON/AFS失败6starts、497CPU秒/699聚合wall秒/0GPU；64不同原entry而非72独立，0新G4/ν/fit。事件压缩2245381B、无持久ROOT。下一Stage150仅既有train父Ecal overflow支持审计，非空才最多1同父clipping控制/1000CPU秒；原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
@@ -2810,3 +2816,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 以[Stage149报告](../workbook/2026-11-08_stage149_native-covariance-and-raw-control.md)及[完整审计](../workbook/stage149_energy_ml/summary.json)为准。既有μ HITS原前64条，无G4/fit；61当前leading全匹配、有限对称正定full5×5 covariance，3无leading父保留。18实际mapped channels覆盖合同15，64父raw/status/baseline精确；16无hit、245负signed raw保留。强相关最大绝对值中位.941346不是协方差已校准，局部σ(logpz0)最大.394096不当覆盖区间；1097测量真实链接缺失0、5共享cluster不当关联概率。原输入几何04相同而conditions04/current06及release不同，不认证ν/data迁移。前4状态/raw/RNG before-after精确，72执行只含64不同父；全部6次start及两次失败计入497CPU秒、699聚合wall秒。整体目标未完成。
 
 [下一合同](../workbook/stage149_energy_ml/next_execution_contract.json)冻结Stage150：先缓存审计原4032父role1实际calo_status的overflow支持，只取首个真实支持父、最多1同父G4/1000CPU秒，验证固定780–930ns Ecal窗与实际ADC删失。无支持则报告有限支持缺口，不扩库存、不用人工裁切替代、不按能量风险换例；模拟源线性加和只要求pre-ADC，不能在clipping后冒称可加。旧reference缺失仍unknown。真实covariance/pull校准、关联后验、宽能区/独立来源、乳胶、曝光GRL/背景/接受度、真实相关nuisance和独立确认继续开放；Stage87和全部原门、Stage137扩大门、原cuts/K/角色/reserved保持。
+
+
+## 129. Stage150：Ecal overflow 支持缺口已量化，下一检验实际conditions差异
+
+[Stage150报告](../workbook/2026-11-08_stage150_Ecal-overflow-support-audit.md)和[支持表](../workbook/stage150_energy_ml/support.tsv)给出2304训练父中1708有Calo status、596未知；6832视图无bit4，故无预定clipping父。不从未知父推断无饱和，不人工裁切替代、不扩大生产。1start/5CPU秒/10wall秒/0GPU，无G4/fit，Ecal真实clipping/总体响应继续开放。
+
+[下一冻结合同](../workbook/stage150_energy_ml/next_execution_contract.json)是Stage151实际conditions04/06配对μ控制：已知原HITS前4物理pilot，实测成本后最多64，同原seed/geometry/d32代码，比较实际mapping/raw/status/full covariance及旧PHYS同父；1000CPU秒/400pilot/100audit reserve、0G4/0fit。输入tag匹配不等于release/physics/data迁移已认证；固定tag差不是1σprior，不要求未知旧随机流raw精确。Stage149的3无leading/16无hit、完整covariance强相关和未校准边界保持。Stage87、所有原门、Stage137扩大门、cuts/K/角色/reserved不变，整体未完成。

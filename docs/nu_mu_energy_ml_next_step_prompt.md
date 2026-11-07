@@ -1,3 +1,9 @@
+# 当前执行更新：Stage150 Ecal overflow 有限支持审计完成，无父准入
+
+[Stage150报告](../workbook/2026-11-08_stage150_Ecal-overflow-support-audit.md)仅原4032父/2304role1，1708有status参考、596原未选中父仍未知；6832Calo视图status1/0/32为6512/318/2，overflow位0，候选0。按冻结合同不换父/扩库存/人工裁切，不执行G4；这不是总体无饱和结论，真实Ecal clipping方法仍未测量。1job exit0、5CPU秒/10wall秒/0GPU/0fit，删除23887349B运输。下一Stage151同一原μ前4→最多64做conditions04对已有06固定物理对照，明确input/current元数据和18vs15映射；1000CPU秒、实测准入，无G4/新ν/模型网格。原全部门/Stage137扩大门/Stage87及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage149 真实 μ covariance／PRD／raw 配对控制完成
 
 [Stage149报告](../workbook/2026-11-08_stage149_native-covariance-and-raw-control.md)已完成原MC100012 HITS前4→64的当前官方数字化／重建控制。64父全部保留，61选中leading及full5×5 covariance/同新ntuple身份精确；18实际映射通道包含原raw15，64/64逐字段闭合。61 covariance正定且每条20非零offdiagonal，最大相关系数中位.941346；局部σ(logpz0)中位.023718、最大.394096，未校准pull/覆盖率。1097测量链接缺失0、2174clusters的5个共享归属不当关联概率。16无hit视图保留，245signed负raw保留，非0status无timing；旧输运conditions04/当前06差异明确。前4native/raw/RNG精确复现；含JSON/AFS失败6starts、497CPU秒/699聚合wall秒/0GPU；64不同原entry而非72独立，0新G4/ν/fit。事件压缩2245381B、无持久ROOT。下一Stage150仅既有train父Ecal overflow支持审计，非空才最多1同父clipping控制/1000CPU秒；原全部门/Stage137扩大门/Stage87和整体未完成状态保持。

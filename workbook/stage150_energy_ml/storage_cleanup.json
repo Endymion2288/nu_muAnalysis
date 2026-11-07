@@ -1,0 +1,21 @@
+{
+  "all_jobs_terminal": true,
+  "no_new_transport_or_ROOT": true,
+  "source_capsule": {
+    "path": "software/stage150/source_snapshots.tar.gz",
+    "bytes": 5013
+  },
+  "deleted": [
+    {
+      "path": "software/stage150/1794093372727178922/energy-ml-stage150.tar.gz",
+      "bytes": 23886068
+    },
+    {
+      "path": "ntuples/energy_ml_stage150/support_result.tar.gz",
+      "bytes": 1281
+    }
+  ],
+  "deleted_bytes": 23887349,
+  "retained": "Compact support JSON/35-row TSV, scheduler/timing/source audit only",
+  "original_inputs_and_other_stages_untouched": true
+}
