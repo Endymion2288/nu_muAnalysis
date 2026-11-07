@@ -1,0 +1,15 @@
+{
+  "phase": "pilot",
+  "result": "9673457.0 - 9673457.0",
+  "indices": [
+    0
+  ],
+  "cpus": 4,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage131\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage131/worker_1794064132923081605.sh pilot $(task_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage131/1794064132923081605/energy-ml-stage131.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 12000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+NuMuStage = \"energy-ml-stage131\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage131/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage131/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage131/logs/$(ClusterId).$(ProcId).err\nqueue task_index in 0\n",
+  "package": {
+    "path": "software/stage131/1794064132923081605/energy-ml-stage131.tar.gz",
+    "bytes": 16471306,
+    "files_N": 747,
+    "full_inventory": "ntuples/energy_ml_stage131/submission_manifests.json.gz:pilot_submission_1794064132923081605.json"
+  }
+}

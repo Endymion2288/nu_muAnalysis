@@ -1,0 +1,9 @@
+{
+  "attempt": 9673759,
+  "exitcode": 0,
+  "issue": "Return filter parent_* also excluded parent_execution_steps.tsv and parent_yield_by_component.tsv aggregates.",
+  "fix": "Restrict exclusion to parent_[0-9]* individual-parent names; repeat audit-only transport, preserve all fitted models and risk tables.",
+  "scientific_results_changed": false,
+  "energy_refits": 0,
+  "all_attempt_cost_retained": true
+}

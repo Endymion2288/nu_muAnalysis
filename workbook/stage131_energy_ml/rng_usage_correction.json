@@ -1,0 +1,69 @@
+{
+  "failed_analysis_attempt": 9673747,
+  "failed_phase": "audit",
+  "cause": "Audit wrongly required all private RNG states to advance; official scintillator/calo algorithms return SUCCESS before random draws for an empty HITS collection.",
+  "fix": "Check advanced == (persistent detector HITS count>0),report both usage cases per detector,verify exact frozen seeds and uniqueness within namespace.",
+  "source_evidence": [
+    {
+      "path": "/tmp/nu_mu_stage53_runtime/src/Scintillator/ScintDigiAlgs/src/ScintWaveformDigiAlg.cxx",
+      "lines": [
+        {
+          "line": 71,
+          "text": "  if (scintHitHandle->size() == 0) {"
+        },
+        {
+          "line": 72,
+          "text": "    ATH_MSG_DEBUG(\"ScintHitCollection found with zero length!\");"
+        },
+        {
+          "line": 73,
+          "text": "    return StatusCode::SUCCESS;"
+        },
+        {
+          "line": 74,
+          "text": "  }"
+        },
+        {
+          "line": 75,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "path": "/tmp/nu_mu_stage53_runtime/src/Calorimeter/CaloDigiAlgs/src/CaloWaveformDigiAlg.cxx",
+      "lines": [
+        {
+          "line": 70,
+          "text": "  if (caloHitHandle->size() == 0) {"
+        },
+        {
+          "line": 71,
+          "text": "    ATH_MSG_DEBUG(\"CaloHitCollection found with zero length!\");"
+        },
+        {
+          "line": 72,
+          "text": "    return StatusCode::SUCCESS;"
+        },
+        {
+          "line": 73,
+          "text": "  }"
+        },
+        {
+          "line": 74,
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "unchanged": [
+    "all4032 responses",
+    "18 completed energy fits and models",
+    "cal offsets",
+    "energy predictions",
+    "500 bootstrap draws and risk tables",
+    "4964 independent checks",
+    "72576 source-array checks"
+  ],
+  "next": "HTCondor audit-only resume; do not rerun prepare/fit/evaluate/validate/compact",
+  "all_failed_attempt_cost_retained": true
+}

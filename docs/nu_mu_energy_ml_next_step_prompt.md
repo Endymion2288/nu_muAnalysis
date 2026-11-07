@@ -1,3 +1,15 @@
+# 当前执行入口：Stage131机制线完成，执行Stage132有限边界监督代理
+
+先读[Stage131报告](../workbook/2026-11-07_stage131_muon-lineage-and-boundary-energy.md)、路线§110和[合同](../workbook/stage131_energy_ml/next_execution_contract.json)。4032响应/18能量fit/20μ代理fit/4964复算/72576数组证明/511attempt清理均已完成。逐父/运输/原frame已删，使用merged+extra+parent_evidence；不要再collect或重跑Stage131 prepare/fit/G4。
+
+F/U cal/test两低箱均过5%机制方向，P_mu/X未恢复，P_mu未测边界KE代理。12原joint全False，保留Stage87direct62；固定G4窗不是DAQtime，oracle不是部署或信息界，新独立νN=0。
+
+Stage132输入全在Stage131 cache：matched_input、固定energy_predictions和bootstrap_draws。只新增train-only source三折log1p(nonmu首次出包络KE)代理及B=X+预测量63维；4代理+3原seed能量fit=7，900CPU秒、4CPU12GB、无新G4，不重复X，cal仅一offset。不得带truth availability/cal-test标签训练，X函数不创造传感信息。完整原8层/三尾/5%主目标交付，promotionFalse；是开发结果引出的有限随访，不是新blind。失败结束该X-only实现，不追加网格。
+
+原角色/全部K/pz0/raw11/typedNaN/signed/Calo缺失/正式cuts和reserved零forward保持；原1.05/1.01/1.03、八层三尾+2pp不降，1.05仅非劣效。独立确认和真实data/GRL/背景/接受度/相关nuisance完整精度仍需输入，整体goal未完成，但不阻塞现有缓存实验。HTCondor用~/condor/nu_muAnalysis/stage132/，每阶段先中文workbook再本地Conventional Commit，不push。Stage54五资产及以下历史入口原文保留。
+
+## Stage131历史入口（原文保留）
+
 # 当前执行入口：Stage130完成，继续Stage131谱系与边界能流机制实验
 
 先读[Stage130报告](../workbook/2026-11-07_stage130_full-depth-support-curve.md)、路线§109及[下一执行合同](../workbook/stage130_energy_ml/next_execution_contract.json)。666来源含358 K全部完成，222515 selected逐例EVNT联结；原规模926→1852、4100→8200数量对照及9fit/独立复算已完成，禁止按下方历史入口重跑。

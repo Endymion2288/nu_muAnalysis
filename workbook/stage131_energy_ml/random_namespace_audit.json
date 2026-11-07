@@ -1,0 +1,45 @@
+{
+  "pinned_commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "evidence": [
+    {
+      "path": "/tmp/nu_mu_stage53_runtime/bin/faser_simulate.py",
+      "lines": [
+        {
+          "line": 275,
+          "text": "    cfg.merge(G4FaserAlgCfg(configFlags, RandomStreamName=args.output))"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/nu_mu_stage53_runtime/src/Simulation/G4Faser/G4FaserAlg/src/G4FaserAlg.cxx",
+      "lines": [
+        {
+          "line": 361,
+          "text": "  ATHRNG::RNGWrapper* rngWrapper = m_rndmGenSvc->getEngine(this, m_randomStreamName);"
+        },
+        {
+          "line": 362,
+          "text": "  rngWrapper->setSeed( m_randomStreamName.toString(),  ctx);"
+        }
+      ]
+    },
+    {
+      "path": "ml/stage129_rng.hxx",
+      "lines": [
+        {
+          "line": 16,
+          "text": "TRandom3* Stage129PrivateRandom(const std::string& detector) {"
+        },
+        {
+          "line": 29,
+          "text": "    Stage129PrivateRandom(detector)->SetSeed(seed);"
+        }
+      ]
+    }
+  ],
+  "numeric_seed_cross_domain_overlaps": [
+    2026241751,
+    2026242751
+  ],
+  "interpretation": "Two numeric equalities between first preflight private TRandom3 seeds and other parents framework SeedOffsets; distinct engine/stream namespaces. Within G4 offsets and within all private waveform seeds individually no duplicate. No frozen parent or seed changed; full engine independence not inferred from numeric seeds alone."
+}

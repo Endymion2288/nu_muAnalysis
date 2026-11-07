@@ -1,0 +1,17 @@
+{
+  "pinned_runtime": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "observer_source": "ml/stage131_observer",
+  "build_command": "cmake -S ml/stage131_observer -B /tmp/nu_mu_stage131_observer_build; cmake --build /tmp/nu_mu_stage131_observer_build -j4",
+  "runtime_package": "software/stage131/observer-runtime.tar.gz",
+  "runtime_package_B": 3750314,
+  "changes": "one new observer component; existing detector/physics/reco libraries unmodified",
+  "compile_standard": "Athena-required C++20",
+  "noninterference": "measured: frame50 observer-on/off sensitive HITS exactly equal; see observer_noninterference.json",
+  "initial_runtime_package_B": 3742470,
+  "initial_noninterference_status": "to be measured in first pilot parent",
+  "engineering_corrections": [
+    "same-step official corrected EcalHit readout",
+    "retrieve StoreGate handle in tool initialize"
+  ],
+  "build_manifest_scope": "initial build command retained; package size and validation status updated to final successful production binary; no new build or physics execution"
+}

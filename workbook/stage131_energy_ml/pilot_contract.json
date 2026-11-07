@@ -1,0 +1,62 @@
+{
+  "stage": 131,
+  "frame_N": 114945,
+  "counts": {
+    "1:E100_200": 6551,
+    "1:E50_100": 1559,
+    "1:highE": 12208,
+    "1:high_y": 1476,
+    "1:lowpz_highE": 1565,
+    "1:transition": 41864,
+    "2:E100_200": 1789,
+    "2:E50_100": 425,
+    "2:highE": 6276,
+    "2:high_y": 633,
+    "2:lowpz_highE": 582,
+    "2:transition": 14825,
+    "3:E100_200": 1799,
+    "3:E50_100": 388,
+    "3:highE": 7200,
+    "3:high_y": 647,
+    "3:lowpz_highE": 611,
+    "3:transition": 14547
+  },
+  "pilot_indices": [
+    50,
+    70,
+    6,
+    21,
+    8,
+    63,
+    2,
+    15,
+    0,
+    1,
+    5,
+    12
+  ],
+  "sampling": "unique incoming float32 proxy; canonical first active source/row; hash order nuMu131; fixed2 train parents per6 disjoint strata",
+  "inclusion_probability": {
+    "E100_200": 0.0003052969012364525,
+    "E50_100": 0.0012828736369467607,
+    "highE": 0.000163826998689384,
+    "high_y": 0.0013550135501355014,
+    "lowpz_highE": 0.0012779552715654952,
+    "transition": 4.777374355054462e-05
+  },
+  "pilot_only": "cost/label completeness/migration; no model forward or fit; conditional on historical selected frame, not unbiased neutrino efficiency",
+  "roles": "inherited Stage130 roles;0/4 and all old reserved excluded; no historical locked-test",
+  "boundary": "actual EmulsionStationA logical envelope, first outward traversal per branch; suppress returns and daughters born after counted exit; transport KE separately from total energy; killed neutrino flow unmeasured",
+  "labels": "root-primary-muon descendants vs other roots vs unknown; sensitive SD depositedMeV, prompt[0,1000)ns and all-time; no ADC additive claim, no H/E_nu identity",
+  "pilot_resources": {
+    "cpus": 4,
+    "memory_MB": 12000,
+    "parents": 12,
+    "scheduler_wall_s": 86400,
+    "application_timeout": null,
+    "aggregate_CPU_budget_s": 30000
+  },
+  "later": "after cost/labels freeze matched same-support X/X+lineage-oracle/X+nonmu-boundary-oracle/proxy models; no new response risks before freeze",
+  "wall_s": 11.019710963009857,
+  "RSS_KiB": 182912
+}

@@ -1,0 +1,167 @@
+{
+  "reports": [
+    {
+      "target": 0,
+      "fold": 0,
+      "train_label_N": 690,
+      "predicted_N": 618,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 0,
+      "fold": 1,
+      "train_label_N": 735,
+      "predicted_N": 572,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 0,
+      "fold": 2,
+      "train_label_N": 745,
+      "predicted_N": 518,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 0,
+      "fold": "final",
+      "train_label_N": 1085,
+      "predicted_N": 1294,
+      "method": "frozen150tree",
+      "source_overlap_N": null
+    },
+    {
+      "target": 1,
+      "fold": 0,
+      "train_label_N": 315,
+      "predicted_N": 618,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 1,
+      "fold": 1,
+      "train_label_N": 319,
+      "predicted_N": 572,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 1,
+      "fold": 2,
+      "train_label_N": 334,
+      "predicted_N": 518,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 1,
+      "fold": "final",
+      "train_label_N": 484,
+      "predicted_N": 1294,
+      "method": "frozen150tree",
+      "source_overlap_N": null
+    },
+    {
+      "target": 2,
+      "fold": 0,
+      "train_label_N": 1090,
+      "predicted_N": 618,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 2,
+      "fold": 1,
+      "train_label_N": 1136,
+      "predicted_N": 572,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 2,
+      "fold": 2,
+      "train_label_N": 1190,
+      "predicted_N": 518,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 2,
+      "fold": "final",
+      "train_label_N": 1708,
+      "predicted_N": 1294,
+      "method": "frozen150tree",
+      "source_overlap_N": null
+    },
+    {
+      "target": 3,
+      "fold": 0,
+      "train_label_N": 1090,
+      "predicted_N": 618,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 3,
+      "fold": 1,
+      "train_label_N": 1136,
+      "predicted_N": 572,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 3,
+      "fold": 2,
+      "train_label_N": 1190,
+      "predicted_N": 518,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 3,
+      "fold": "final",
+      "train_label_N": 1708,
+      "predicted_N": 1294,
+      "method": "frozen150tree",
+      "source_overlap_N": null
+    },
+    {
+      "target": 4,
+      "fold": 0,
+      "train_label_N": 1090,
+      "predicted_N": 618,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 4,
+      "fold": 1,
+      "train_label_N": 1136,
+      "predicted_N": 572,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 4,
+      "fold": 2,
+      "train_label_N": 1190,
+      "predicted_N": 518,
+      "method": "frozen150tree",
+      "source_overlap_N": 0
+    },
+    {
+      "target": 4,
+      "fold": "final",
+      "train_label_N": 1708,
+      "predicted_N": 1294,
+      "method": "frozen150tree",
+      "source_overlap_N": null
+    }
+  ],
+  "wall_s": 4.909839621977881,
+  "cal_test_label_fit_N": 0,
+  "scope": "new G4 lineage supervision on existing measured X; no new sensor input and no truthavailability at deployment"
+}

@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "parents": 4032,
+  "selected_rows": 3002,
+  "source_arrays_verified": 72576,
+  "array_schemas": {
+    "x": {
+      "dtype": "float32",
+      "shape_tail": [
+        62
+      ]
+    },
+    "primary_p_GeV": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "primary_valid": {
+      "dtype": "bool",
+      "shape_tail": []
+    },
+    "primary_candidates": {
+      "dtype": "int64",
+      "shape_tail": []
+    },
+    "truth_E_GeV": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "y_lepton": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "confirmed": {
+      "dtype": "bool",
+      "shape_tail": []
+    },
+    "vertex_x_mm": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "vertex_y_mm": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "vertex_z_mm": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "run": {
+      "dtype": "int32",
+      "shape_tail": []
+    },
+    "eventID": {
+      "dtype": "int32",
+      "shape_tail": []
+    },
+    "input_entry": {
+      "dtype": "int64",
+      "shape_tail": []
+    },
+    "reco_pz_GeV": {
+      "dtype": "float64",
+      "shape_tail": []
+    },
+    "incoming": {
+      "dtype": "float64",
+      "shape_tail": [
+        4
+      ]
+    },
+    "raw_charge": {
+      "dtype": "float32",
+      "shape_tail": [
+        11
+      ]
+    },
+    "status": {
+      "dtype": "int32",
+      "shape_tail": [
+        11
+      ]
+    },
+    "calo_status": {
+      "dtype": "int32",
+      "shape_tail": [
+        4
+      ]
+    }
+  },
+  "source_to_matched_mapping": {
+    "reco_pz_GeV": "pz"
+  },
+  "source_selected_npz_B": 23403448,
+  "extra_npz_B": 43746,
+  "evidence_gzip_B": 4141938,
+  "fields_not_duplicated": [
+    "x",
+    "primary_p_GeV",
+    "primary_valid",
+    "truth_E_GeV",
+    "y_lepton",
+    "confirmed",
+    "vertex_z_mm",
+    "reco_pz_GeV",
+    "incoming",
+    "raw_charge",
+    "status",
+    "calo_status"
+  ],
+  "wall_s": 58.72513458202593,
+  "scope": "all original arrays reconstruct exactly from matched+extra in matchedframeorder; perparent original JSON string and reports preserved losslessly; NPZ ZIP container bytes not claimed identical"
+}

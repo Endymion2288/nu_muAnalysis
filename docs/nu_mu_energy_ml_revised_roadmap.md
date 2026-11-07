@@ -2555,3 +2555,16 @@ Stage122只测VetoNu0/1、Preshower0，且六个绝对窗0/40/80/160/320/640/120
 5616独立记录空间标量差≤3.197443e−14，f0重载差0，正值域非法/有限sentinel/Inf均0；合法charge=-1旧60712/新152313保留。全部92attempt终态、92starts、0失败/1移除，CPU582527s、aggregate executewall86622s、0GPU；production日历跨度3646s，实际调度区间峰432请求核，未超931226s预算。原尺度实验包wall171.71s，fit进程56.64s，昂贵部分仍为官方CPU链。逐数组回读后两轮删除538412080B重复，末态16文件无损打包，最终缓存+模型93856844B。报告/审计/图均已完成，本地Conventional Commit、不push，Stage54资产及历史§1–108保持。
 
 下一步按[Stage131合同](../workbook/stage130_energy_ml/next_execution_contract.json)推进Stage123尚未完成的μ谱系/非μ谱系与固定边界能流机制线：用保留完整末态和可执行pinned full-chain，有界核实际HITS/truth-link/G4接口，小pilot实测成本/选择迁移后同工作包冻结匹配支持的oracle/部署代理能量检验。拆分仅人工响应干预，不作自然训练或ADC相加，不用H/Eν恒等式。原GENIE历史缺口不重置为全部研究的全局前置，不重开旧X模型/seed/几何网格。原1.05/1.01/1.03、八层三尾+2pp不变，1.05仅非劣效。真正独立确认与真实data/背景/接受度/相关nuisance完整精度仍未测量，整体目标未完成。[完成审计](../workbook/stage130_energy_ml/completion_audit.tsv)明确区分已完成计算与未认证物理输入。
+
+
+## 110. Stage131：真实μ谱系与边界能流完成，边界oracle有条件增量，部署尚未成立
+
+[Stage131报告](../workbook/2026-11-07_stage131_muon-lineage-and-boundary-energy.md)完成pinned d32只读G4根谱系和实际EmulsionStationA包络首次外穿非μ非neutrino KE。4032固定父全部成功，3002重选，train/cal/开发test1708/653/641，K全部保留；原角色/旧1016K/pz0/raw11/typedNaN/signed/Calo缺失/正式cuts及reserved零预测不变。17.758亿记录tracks/109.497亿steps，unknown/missingbirth0，24192 detector-parent HITS闭合过。新增独立νN=0，是历史selected框fresh/reselected条件风险；GENIE/FSI历史和stack-killed neutrino能流仍未恢复。
+
+六臂18能量fit，20个固定train source-crossfitμ比例代理fit。L/U test两低箱.977156 [.959777,.994962]/.997501 [.967692,1.023001]，P_mu/X=.986502 [.965061,1.009293]/1.001139 [.965998,1.032856]，未达双箱5%恢复。**F/U=.706057 [.632191,.786692]/.880740 [.766331,.994613]，cal=.703812/.885643，两角色两低箱均达到机制方向。** F是含中性强子的出包络输运动能，不是可部署可见能量/H/Eν恒等式；totalE/闭合残差未入模，P_mu也未测边界代理。
+
+F/传统最低箱cal1.272314 [1.115817,1.441918]、test .917930 [.780917,1.075671]，不能称胜传统；cal/test all/f0上95=1.093956/1.088779。F/U test低pz真高E总尾差点−9.497pp、上95+7.559pp，high-y点−4.101pp、上95+7.272pp，稳定保护未建立。12原joint全False，保留Stage87direct62，1.05仅非劣效。globaltime[0,1000)ns不是DAQ对齐，veto/trigger窗内test标签393/158而alltime641/641；不追加all-time网格或当探测器信息界。
+
+4964独立标量差≤5.329071e−14、72576原数组可重建；有限sentinel/正值域非法−1/Inf均0，3256个合法signed−1特征项保留。511attempt全终态、3失败全计652569CPU秒、aggregatewall116022秒、峰256请求CPU、0GPU。删405252441逻辑重复B，缓存+模型28708368B，另留3.750MBobserver；零hit私有随机流合法早退、Ecal/StoreGate和运输修正均记录，不重训18fit。先中文报告再本地提交，Stage54及历史§1–109/旧入口保持。
+
+下一按[Stage132合同](../workbook/stage131_energy_ml/next_execution_contract.json)只做现有缓存的边界监督部署检验：四个train-only source交叉拟合log1p(非μ出包络KE)代理＋B63原三seed能量臂，复用同支持冻结X/500draw，7fit/900CPU秒/4CPU12GB，无新G4和truth availability。不创造传感信息，明确为看到开发结果后的有限随访而非新blind；原八层/三尾和1.05/1.01/1.03不降。失败结束该X-only边界实现，不续旧X后验/架构/seed网格。真正独立确认、真实data/GRL/背景/接受度/相关系统完整精度仍缺，整体goal未完成，见[完成审计](../workbook/stage131_energy_ml/completion_audit.tsv)。

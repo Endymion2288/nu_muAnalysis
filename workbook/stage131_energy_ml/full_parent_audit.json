@@ -1,0 +1,29 @@
+{
+  "parents_N": 4032,
+  "unique_exact_EVNT_file_entry_N": 4032,
+  "all_fixed_parents_complete": true,
+  "reselected_N": 3002,
+  "tracks": 1775802498,
+  "steps": 10949703638,
+  "unknown_root_tracks": 0,
+  "missing_birth": 0,
+  "outside_primary_tracks": 6733,
+  "primary_muon_multiplicity": {
+    "1": 4031,
+    "3": 1
+  },
+  "G4_seed_offsets_N": 4032,
+  "private_TRandom3_seeds_N": 20160,
+  "within_domain_numeric_seed_collisions_N": 0,
+  "cross_domain_equal_numeric_seed_values": [
+    2026241751,
+    2026242751
+  ],
+  "seed_scope": "G4 framework SeedOffset plus unique output-filename stream; waveform private TRandom3 with explicit state audit. Equal numeric values across these namespaces are not equal engine states; no global numeric-uniqueness claim",
+  "HITS_check_ROOT_read_B": 16252119537,
+  "scratch_ROOT_logical_B": 17258825072,
+  "transported_ROOT_B": 0,
+  "new_independent_neutrino_interactions_N": 0,
+  "reserved_forward_N": 0,
+  "scope": "successful fixed-parent calls only; failed attempts remain in scheduler ledger and failure archives; GNU child CPU is nested,never added to scheduler CPU; ROOT read covers HITS checker only,not full-chain I/O; scratch byte total is cumulative logical output,not physical EOS consumption"
+}
