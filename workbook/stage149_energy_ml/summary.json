@@ -1,0 +1,262 @@
+{
+  "phase": "full",
+  "independent_parent_N": 64,
+  "repeat_N": 4,
+  "failed_first_attempt_physical_prefix_N": 4,
+  "failed_infrastructure_attempt_physical_N": 0,
+  "unique_original_entries": 64,
+  "actual_physical_entry_executions": 72,
+  "duplicate_original_entry_executions": 8,
+  "current_summary": {
+    "passed": true,
+    "N": 64,
+    "new_selected_N": 61,
+    "old_selected_N": 61,
+    "leading_exact_N": 61,
+    "finite_covariance_N": 61,
+    "selected_finite_covariance_N": 61,
+    "PSD_N": 61,
+    "raw15_exact_N": 64,
+    "channels": 18,
+    "measured_readout_channel_views_N": 1136,
+    "readout_status": {
+      "1": 505,
+      "0": 642,
+      "4": 5
+    },
+    "full_same_surface_truth_pull_measured": false,
+    "association_probability_measured": false,
+    "metadata_limit": "Actual input metadata retained separately; flags do not certify input transport or data transfer",
+    "same_current_identity": "All long tracks, leading state and raw/status/baseline match at actual float32 ntuple precision",
+    "CPU_s": 1.571205624,
+    "wall_s": 1.7586315319640562,
+    "ROOT_read_bytes": 247243,
+    "RSS_KiB": 114676
+  },
+  "prefix_reproducibility": {
+    "N": 4,
+    "checks": [
+      {
+        "entry": 0,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      },
+      {
+        "entry": 1,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      },
+      {
+        "entry": 2,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      },
+      {
+        "entry": 3,
+        "native_exact": true,
+        "paired_exact": true,
+        "RNG_before_after_exact": true
+      }
+    ],
+    "passed": true
+  },
+  "raw_status_by_name": {
+    "Calo0": {
+      "1": 64
+    },
+    "Calo1": {
+      "0": 3,
+      "1": 61
+    },
+    "Calo2": {
+      "1": 64
+    },
+    "Calo3": {
+      "1": 64
+    },
+    "Preshower0": {
+      "0": 63,
+      "1": 1
+    },
+    "Preshower1": {
+      "0": 63,
+      "1": 1
+    },
+    "Preshower2": {
+      "1": 64
+    },
+    "Preshower3": {
+      "1": 64
+    },
+    "Timing0": {
+      "0": 36,
+      "1": 28
+    },
+    "Timing1": {
+      "0": 36,
+      "1": 28
+    },
+    "Timing2": {
+      "0": 31,
+      "1": 33
+    },
+    "Timing3": {
+      "0": 31,
+      "1": 33
+    },
+    "Veto10": {
+      "0": 63,
+      "4": 1
+    },
+    "Veto11": {
+      "0": 63,
+      "4": 1
+    },
+    "Veto20": {
+      "0": 62,
+      "4": 2
+    },
+    "Veto21": {
+      "0": 63,
+      "4": 1
+    },
+    "VetoNu0": {
+      "0": 64
+    },
+    "VetoNu1": {
+      "0": 64
+    }
+  },
+  "typed_QA": {
+    "signed_raw_charge_exact_minus1_N": 0,
+    "raw_charge_negative_N": 245,
+    "numeric_raw_sentinel_N": 0,
+    "positive_baselineRMS_minus1_N": 0,
+    "absent_native_channel_views_N": 16,
+    "missing_measured_raw_N": 16,
+    "nonzero_status_finite_native_localtime_N": 0,
+    "negative_leading_chi2_N": 0
+  },
+  "control_reference_z_mm_range": [
+    9.5,
+    44.970001220703125
+  ],
+  "selection_migration": {
+    "old0_new0": 3,
+    "old0_new1": 0,
+    "old1_new0": 0,
+    "old1_new1": 61
+  },
+  "selected_pz0_50_100_N": 57,
+  "sigma_basis": [
+    "loc1_mm",
+    "loc2_mm",
+    "phi_rad",
+    "theta_rad",
+    "qOverP_MeV^-1"
+  ],
+  "sigma_min": [
+    0.0101361441501068,
+    0.3742536628062289,
+    0.0038036537055158746,
+    2.4965079004402927e-05,
+    1.4373409836025732e-07
+  ],
+  "sigma_median": [
+    0.013131034132244077,
+    0.43140574144708543,
+    0.040122998171055684,
+    0.00020471418079913027,
+    2.456229354103555e-07
+  ],
+  "sigma_max": [
+    0.017827555772719272,
+    0.5177683642587445,
+    1.0240624536229654,
+    0.0007124003795669175,
+    4.1532146174202e-06
+  ],
+  "covariance_parameter_types": [
+    "N3Trk22CurvilinearParametersTILi5ENS_7ChargedENS_12PlaneSurfaceEEE"
+  ],
+  "leading_offdiagonal_nonzero_N": 1220,
+  "leading_max_abs_offdiagonal_correlation_min": 0.5604251783126869,
+  "leading_max_abs_offdiagonal_correlation_median": 0.9413460436219049,
+  "leading_max_abs_offdiagonal_correlation_max": 0.9851388800718525,
+  "tangent_N": 61,
+  "tangent_sigma_basis": [
+    "tx",
+    "ty",
+    "log(pz0)"
+  ],
+  "tangent_sigma_min": [
+    7.098560895561331e-05,
+    2.4953310441727466e-05,
+    0.013367491435441555
+  ],
+  "tangent_sigma_median": [
+    0.00027633618381135916,
+    3.930572514531305e-05,
+    0.02371784027188012
+  ],
+  "tangent_sigma_max": [
+    0.0012189222498691945,
+    0.0007986565272688101,
+    0.39409647595511765
+  ],
+  "surface_types": [
+    "N3Trk12PlaneSurfaceE"
+  ],
+  "native_clusters_N": 2174,
+  "native_measurements_N": 1097,
+  "missing_measurement_links_N": 0,
+  "missing_raw_strip_links_N": 0,
+  "invalidStrip_N": 0,
+  "cluster_ownership_columns": [
+    "leading_owned",
+    "other_owned",
+    "shared_by_multiple_tracks",
+    "unassigned"
+  ],
+  "ownership_sum_by_station": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      706.0
+    ],
+    [
+      357.0,
+      11.0,
+      5.0,
+      168.0
+    ],
+    [
+      353.0,
+      12.0,
+      0.0,
+      126.0
+    ],
+    [
+      353.0,
+      6.0,
+      0.0,
+      82.0
+    ]
+  ],
+  "new_G4": 0,
+  "energy_fits": 0,
+  "score_refits": 0,
+  "reserved_forward": 0,
+  "GPU": 0,
+  "covariance_calibration_measured": false,
+  "association_posterior_measured": false,
+  "data_transfer_certified": false,
+  "CPU_s": 0.11382497000000003,
+  "wall_s": 0.1288066040724516,
+  "RSS_KiB": 37584,
+  "overall_complete": false
+}

@@ -1,0 +1,67 @@
+{
+  "phase": "pilot",
+  "N": 4,
+  "steps": [
+    {
+      "name": "digi",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/ml/stage149_digitize.py",
+        "/eos/experiment/faser/sim/mc24/particle_gun/100012/sim/s0012/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-HITS.root",
+        "4",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/workbook/stage149_energy_ml/pilot/seeds.json"
+      ],
+      "returncode": 0,
+      "wall_s": 83.7739506997168
+    },
+    {
+      "name": "reco",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/ml/stage149_reco.py",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/chain_pilot/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-RDO.root",
+        "4",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/workbook/stage149_energy_ml/pilot/reco_timing.json"
+      ],
+      "returncode": 0,
+      "wall_s": 18.416562911123037
+    },
+    {
+      "name": "native",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/ml/stage149_native.py",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/chain_pilot/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-xAOD.root",
+        "4",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/ntuples/energy_ml_stage149/pilot/native.json.gz",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/chain_pilot/ntuple.root"
+      ],
+      "returncode": 0,
+      "wall_s": 78.28538277372718
+    },
+    {
+      "name": "extract",
+      "command": [
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/afs/cern.ch/user/x/xcheng",
+        "USER=xcheng",
+        "PYTHONNOUSERSITE=1",
+        "OMP_NUM_THREADS=1",
+        "OPENBLAS_NUM_THREADS=1",
+        "bash",
+        "-c",
+        "source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\npython \"$1/ml/stage149_extract.py\" \"$1\" \"$2\" \"$3\"",
+        "bash",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99",
+        "pilot",
+        "/pool/condor/dir_1575838/nu_mu_stage149.DVgd99/chain_pilot/ntuple.root"
+      ],
+      "returncode": 1,
+      "wall_s": 3.3806872628629208
+    }
+  ],
+  "wall_s": 183.8611977789551,
+  "successful": false
+}

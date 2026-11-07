@@ -1,3 +1,9 @@
+# 当前执行更新：Stage149 真实 μ covariance／PRD／raw 配对控制完成
+
+[Stage149报告](../workbook/2026-11-08_stage149_native-covariance-and-raw-control.md)已完成原MC100012 HITS前4→64的当前官方数字化／重建控制。64父全部保留，61选中leading及full5×5 covariance/同新ntuple身份精确；18实际映射通道包含原raw15，64/64逐字段闭合。61 covariance正定且每条20非零offdiagonal，最大相关系数中位.941346；局部σ(logpz0)中位.023718、最大.394096，未校准pull/覆盖率。1097测量链接缺失0、2174clusters的5个共享归属不当关联概率。16无hit视图保留，245signed负raw保留，非0status无timing；旧输运conditions04/当前06差异明确。前4native/raw/RNG精确复现；含JSON/AFS失败6starts、497CPU秒/699聚合wall秒/0GPU；64不同原entry而非72独立，0新G4/ν/fit。事件压缩2245381B、无持久ROOT。下一Stage150仅既有train父Ecal overflow支持审计，非空才最多1同父clipping控制/1000CPU秒；原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage148 自然混合 Ecal 来源／DAQ 方法控制完成
 
 [Stage148报告](../workbook/2026-11-07_stage148_mixed-Ecal-DAQ-source-control.md)在2304个train父中审计266个混合Ecal支持，事前固定原frame7（π、848.11GeV、原selected0保留）。实际1672μ/71其他根hits、2400可读ADC零差；通道0/1/2同780–930ns窗混合来源加和通过，最大积分差6.23498e−10pC。全部Calo status1，弱信号及signed负raw保留；固定raw窗含各来源完整采集信号≥99.9953%，不能归因于大量漏窗。无Ecal触底，旧参考及完整private状态缺失不冒充精确。4job全exit0、272CPU秒/477聚合wall秒/0GPU、1同父G4/0新独立ν/0fit。下一Stage149原PG HITS前4→最多64条真实state covariance/PRD/raw控制，先物理pilot和成本、3000CPU秒，无新G4/模型网格或自然ν大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。

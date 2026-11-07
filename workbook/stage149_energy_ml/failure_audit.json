@@ -1,0 +1,26 @@
+{
+  "attempt": "pilot",
+  "cluster": 9674618,
+  "physical_entries": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "scientific_steps_returncode": {
+    "digi": 0,
+    "reco": 0,
+    "native_process": 0,
+    "extract": 1
+  },
+  "native_finalize_error": "TypeError: Object of type string is not JSON serializable",
+  "effect": "Incomplete native JSON; no valid paired identity result from first attempt",
+  "fix": "Convert each actual cable-mapping C++ string to Python str; serialize JSON before opening output",
+  "same_original_prefix_repeated": true,
+  "replacements": 0,
+  "first_attempt_scheduler_CPU_s": 156,
+  "counted_within_pilot800_and_total3000": true,
+  "independent_N_added_by_repeat": 0,
+  "failed_native_process_exit_did_not_propagate_finalization_error": true,
+  "downstream_json_validation_detected_failure": true
+}

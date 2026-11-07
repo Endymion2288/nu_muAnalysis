@@ -1,0 +1,78 @@
+{
+  "pilot": {
+    "digi": {
+      "CPU_s": 66.578549712,
+      "wall_s": 119.64922781998757,
+      "ROOT_read_bytes": 34406596,
+      "RSS_KiB": 1711048,
+      "GNU_time": {
+        "user_CPU_s": "58.35",
+        "system_CPU_s": "12.27",
+        "max_RSS_KiB": "1711048"
+      }
+    },
+    "native": {
+      "CPU_s": 57.542703622999994,
+      "wall_s": 65.90023904596455,
+      "ROOT_read_bytes": 16520758,
+      "RSS_KiB": 1973088,
+      "GNU_time": {
+        "user_CPU_s": "52.82",
+        "system_CPU_s": "8.57",
+        "max_RSS_KiB": "1973088"
+      }
+    },
+    "reco": {
+      "GNU_time": {
+        "user_CPU_s": "13.04",
+        "system_CPU_s": "3.68",
+        "max_RSS_KiB": "1153656"
+      }
+    },
+    "extract": {
+      "GNU_time": {
+        "user_CPU_s": "2.12",
+        "system_CPU_s": "0.97",
+        "max_RSS_KiB": "107112"
+      }
+    }
+  },
+  "full": {
+    "digi": {
+      "CPU_s": 73.632910986,
+      "wall_s": 125.96236221899744,
+      "ROOT_read_bytes": 35364792,
+      "RSS_KiB": 1843576,
+      "GNU_time": {
+        "user_CPU_s": "70.17",
+        "system_CPU_s": "8.12",
+        "max_RSS_KiB": "1843576"
+      }
+    },
+    "native": {
+      "CPU_s": 73.245786306,
+      "wall_s": 79.06390643003397,
+      "ROOT_read_bytes": 17459284,
+      "RSS_KiB": 2062284,
+      "GNU_time": {
+        "user_CPU_s": "71.72",
+        "system_CPU_s": "5.74",
+        "max_RSS_KiB": "2065356"
+      }
+    },
+    "reco": {
+      "GNU_time": {
+        "user_CPU_s": "19.46",
+        "system_CPU_s": "2.42",
+        "max_RSS_KiB": "1143948"
+      }
+    },
+    "extract": {
+      "GNU_time": {
+        "user_CPU_s": "2.80",
+        "system_CPU_s": "0.58",
+        "max_RSS_KiB": "114676"
+      }
+    }
+  }
+}

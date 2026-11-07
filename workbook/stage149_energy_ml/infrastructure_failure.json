@@ -1,0 +1,10 @@
+{
+  "cluster": 9674657,
+  "exitcode": 126,
+  "message": "/bin/bash: AFS worker script: Connection timed out",
+  "scientific_entry_executions": 0,
+  "scheduler_CPU_s": 0,
+  "scheduler_wall_s": 4,
+  "fix": "Transfer immutable worker script to scratch, invoke by basename; retain AFS submission directory",
+  "same_full64_contract_and_budget": true
+}

@@ -1,0 +1,61 @@
+{
+  "admitted": true,
+  "physical_support": true,
+  "requested_raw15": [
+    "VetoNu0",
+    "VetoNu1",
+    "Veto10",
+    "Veto20",
+    "Veto21",
+    "Timing0",
+    "Timing1",
+    "Timing2",
+    "Timing3",
+    "Preshower0",
+    "Preshower1",
+    "Calo0",
+    "Calo1",
+    "Calo2",
+    "Calo3"
+  ],
+  "requested_raw15_support": true,
+  "actual_mapped_channels": 18,
+  "costs": [
+    {
+      "step": "digi",
+      "process_total_CPU_s": 70.62,
+      "first_event_end_CPU_s": 66.181830401,
+      "post_first_3_intervals_CPU_s": 0.3680592730000001,
+      "fixed_including_first_CPU_s": 70.251940727,
+      "affine_full64_CPU_s": 77.98118546,
+      "factor3_full64_CPU_s": 233.94355638000002
+    },
+    {
+      "step": "reco",
+      "process_total_CPU_s": 16.72,
+      "first_event_end_CPU_s": 14.162541835,
+      "post_first_3_intervals_CPU_s": 0.6909830469999996,
+      "fixed_including_first_CPU_s": 16.029016953,
+      "affine_full64_CPU_s": 30.53966093999999,
+      "factor3_full64_CPU_s": 91.61898281999997
+    },
+    {
+      "step": "native",
+      "process_total_CPU_s": 61.39,
+      "first_event_end_CPU_s": 57.473537134,
+      "post_first_3_intervals_CPU_s": 0.06754419800000022,
+      "fixed_including_first_CPU_s": 61.322455802,
+      "affine_full64_CPU_s": 62.740883960000005,
+      "factor3_full64_CPU_s": 188.22265188
+    }
+  ],
+  "factor": 3,
+  "full64_projected_CPU_s": 523.05519108,
+  "final_audit_reserve_CPU_s": 100,
+  "already_used_scheduler_CPU_s": 312.0,
+  "remaining_CPU_s": 2688.0,
+  "independent_parent_cap": 64,
+  "prefix_overlap_N": 4,
+  "new_G4": 0,
+  "energy_fits": 0
+}

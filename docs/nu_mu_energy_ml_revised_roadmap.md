@@ -1,3 +1,9 @@
+# 当前执行更新：Stage149 真实 μ covariance／PRD／raw 配对控制完成
+
+[Stage149报告](../workbook/2026-11-08_stage149_native-covariance-and-raw-control.md)已完成原MC100012 HITS前4→64的当前官方数字化／重建控制。64父全部保留，61选中leading及full5×5 covariance/同新ntuple身份精确；18实际映射通道包含原raw15，64/64逐字段闭合。61 covariance正定且每条20非零offdiagonal，最大相关系数中位.941346；局部σ(logpz0)中位.023718、最大.394096，未校准pull/覆盖率。1097测量链接缺失0、2174clusters的5个共享归属不当关联概率。16无hit视图保留，245signed负raw保留，非0status无timing；旧输运conditions04/当前06差异明确。前4native/raw/RNG精确复现；含JSON/AFS失败6starts、497CPU秒/699聚合wall秒/0GPU；64不同原entry而非72独立，0新G4/ν/fit。事件压缩2245381B、无持久ROOT。下一Stage150仅既有train父Ecal overflow支持审计，非空才最多1同父clipping控制/1000CPU秒；原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage148 自然混合 Ecal 来源／DAQ 方法控制完成
 
 [Stage148报告](../workbook/2026-11-07_stage148_mixed-Ecal-DAQ-source-control.md)在2304个train父中审计266个混合Ecal支持，事前固定原frame7（π、848.11GeV、原selected0保留）。实际1672μ/71其他根hits、2400可读ADC零差；通道0/1/2同780–930ns窗混合来源加和通过，最大积分差6.23498e−10pC。全部Calo status1，弱信号及signed负raw保留；固定raw窗含各来源完整采集信号≥99.9953%，不能归因于大量漏窗。无Ecal触底，旧参考及完整private状态缺失不冒充精确。4job全exit0、272CPU秒/477聚合wall秒/0GPU、1同父G4/0新独立ν/0fit。下一Stage149原PG HITS前4→最多64条真实state covariance/PRD/raw控制，先物理pilot和成本、3000CPU秒，无新G4/模型网格或自然ν大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
@@ -2797,3 +2803,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [Stage148实测](../workbook/2026-11-07_stage148_mixed-Ecal-DAQ-source-control.md)按冻结顺序从2304train父/266混合支持固定frame7，π、Eν848.110GeV、原selected0/参考缺失保留。旧observer精确，六HITS集合闭合，Ecal1672μ/71其他根hit；8几何PMT噪声流/4可读PMT的2400ADC零差、0触底。通道0/1/2同780–930ns窗混合来源加和通过，最大6.23498e−10pC；全部status1且有signed负raw，不认证强子判据。固定raw/fullacq信号比各非零来源≥.999953，未见histogram边界外hit，本例弱信号不能由大量漏窗解释。旧private全状态和原Calo raw缺失不冒充精确。4job全exit0、272CPU秒/477聚合wall秒/0GPU；删37147359B重复副本、事件文本659044B精确合并。
 
 下一[Stage149合同](../workbook/stage148_energy_ml/next_execution_contract.json)在已知MC100012原HITS上测真实state/covariance/PRD与raw：先前4条物理pilot，身份/数据/原生cov和实测成本通过后最多前64条，3000累计CPU秒、首pilot800秒，无新G4/fit/独立ν。记录实际simulation/current条件及未知，不以覆盖flags认证迁移；无同面truth不报pull，不重开旧Z57/Q阈值/网络网格。Ecalclipping/总体μ响应、宽能区/真实covariance校准/data及外部物理输入仍缺；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87及Stage1375%扩大门和整体未完成状态保持。
+
+
+## 128. Stage149：真实协方差／归属／读出配对控制已取得，校准边界保留
+
+以[Stage149报告](../workbook/2026-11-08_stage149_native-covariance-and-raw-control.md)及[完整审计](../workbook/stage149_energy_ml/summary.json)为准。既有μ HITS原前64条，无G4/fit；61当前leading全匹配、有限对称正定full5×5 covariance，3无leading父保留。18实际mapped channels覆盖合同15，64父raw/status/baseline精确；16无hit、245负signed raw保留。强相关最大绝对值中位.941346不是协方差已校准，局部σ(logpz0)最大.394096不当覆盖区间；1097测量真实链接缺失0、5共享cluster不当关联概率。原输入几何04相同而conditions04/current06及release不同，不认证ν/data迁移。前4状态/raw/RNG before-after精确，72执行只含64不同父；全部6次start及两次失败计入497CPU秒、699聚合wall秒。整体目标未完成。
+
+[下一合同](../workbook/stage149_energy_ml/next_execution_contract.json)冻结Stage150：先缓存审计原4032父role1实际calo_status的overflow支持，只取首个真实支持父、最多1同父G4/1000CPU秒，验证固定780–930ns Ecal窗与实际ADC删失。无支持则报告有限支持缺口，不扩库存、不用人工裁切替代、不按能量风险换例；模拟源线性加和只要求pre-ADC，不能在clipping后冒称可加。旧reference缺失仍unknown。真实covariance/pull校准、关联后验、宽能区/独立来源、乳胶、曝光GRL/背景/接受度、真实相关nuisance和独立确认继续开放；Stage87和全部原门、Stage137扩大门、原cuts/K/角色/reserved保持。

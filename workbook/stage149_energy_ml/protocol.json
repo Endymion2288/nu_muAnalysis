@@ -1,0 +1,42 @@
+{
+  "next_stage": 149,
+  "question": "Can the known muon-root control supply an actual reconstructed full state covariance and measurement ownership alongside raw response in the pinned current digitization/reconstruction chain, rather than treating a point estimate as exact?",
+  "HITS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/sim/s0012/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-HITS.root",
+  "old_PHYS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+  "old_identity_records": "ntuples/energy_ml_stage146/event_records.json.gz",
+  "pinned_stack": {
+    "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+    "geometry": "FASERNU-04",
+    "global_tag": "OFLCOND-FASER-06"
+  },
+  "parent_selection": "First4 original HITS entries0-3 pilot; only after native/raw/identity and measured cost admission, fixed first64 original entries0-63. No tail/risk selection, replacement prefix or inventory expansion. Preserve input parents and old/new selection failures. Pilot prefix overlaps full, never count68 independent events.",
+  "workflow": "Read actual input simulation/geometry/conditions metadata with native POOL. Reuse existing official digitizer/reconstructor/ntuple and native track/covariance APIs; no G4 or new full stack build. Capture actual new raw15/status/baseline presence plus selected leading native track state/full5x5 covariance, surface/type/units and TSOS-PRD/cluster ownership counts. Require same-current-REC/current-ntuple leading identity rather than comparing fresh reco pz exactly with old PHYS.",
+  "conditions_limit": "Record actual input simulation metadata and actual reconstruction conditions. Missing or different transport metadata remains explicitly unknown/mismatched: never certify current nu/data transport calibration by overriding flags. Conditional native measurements may still be reported; metadata is not a global stop for all research.",
+  "randomness": "Explicit event/run based waveform seeds (base720000000 +10000*original_event+1000*detector_index; detector order Calo,VetoNu,Veto,Trigger,Preshower), fixed silicon Random.SeedOffset2026110749, record actual seed behavior. Prefix0-3 reproducibility checked if full64 admitted; no independent-N claim from repeats.",
+  "measurements": "All input/run/event/root identities; actual native/current ntuple leading match and unknown; original/new control selection; finite/symmetric/PSD covariance support with actual units and surface, offdiagonal values, real measurement links/missing/shared counts, raw/status/typed sentinel coverage, CPU/readbytes/RSS/temporary size. Do not replace unknown association probabilities with pointer ownership counts.",
+  "same_surface_limit": "No generator-production pz comparison labeled as covariance pull or tracking bias. Only report truth residual/pull if actual same-surface truth provenance exists; otherwise explicitly unmeasured, no assumed straight-line exact truth or ad hoc covariance repair.",
+  "resources": {
+    "CPU_budget_s": 3000,
+    "pilot_CPU_allowance_s": 800,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "full_parent_cap": 64,
+    "temporary_ROOT_bytes_cap": 1073741824,
+    "final_event_bytes_cap": 8388608
+  },
+  "admission": "Complete4-event physical pilot, no metadata-only loop. Need actual raw and native identity closure with at least one selected muon having finite full covariance. Record initialization and post-first-event loop CPU; conservative factor3 affine projection plus final-audit reserve must fit remaining3000CPU seconds before full64. Otherwise report actual pilot and missing support/cost, do not expand budget, parent count or replace difficult inputs.",
+  "acceptance": "Concrete paired raw/state/covariance/ownership values and verified same-current identity/provenance, prefix reproducibility where executed, unknown/failure parents retained and compact audit. Not a new Z57 energy model, not a calibrated association posterior or population FPR, not independent source/data transfer.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "response_fits": 0,
+  "old_score_refits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "storage": "HTCondor only for scientific arrays/ROOT; submit ~/condor/nu_muAnalysis/stage149/. Keep compact event/state summaries and source audit; remove worker RDO/REC/ntuple intermediates after verified compact extraction. No persistent xAOD.",
+  "invariant": "Stage87direct62 and all original gates/Stage1375pct expansion gate remain; no automatic natural-nu production or proxy/network grid. pz0-only first power momentum, allowed px/py/qoverp/bending, raw11/typedNaN/legal signed/nonzero-status no timing/K/roles/reserved unchanged."
+}

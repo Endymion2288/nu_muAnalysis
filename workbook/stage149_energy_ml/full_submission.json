@@ -1,0 +1,26 @@
+{
+  "result": "9674657.0 - 9674657.0",
+  "phase": "full",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage149\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage149/worker_1794092133744631905.sh full\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage149/1794092133744631905/energy-ml-stage149.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage149 cumulative CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 2588.0\n+NuMuStage = \"energy-ml-stage149\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage149/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage149/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage149/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "CPU_allowance_s": 2588.0,
+  "package": {
+    "path": "software/stage149/1794092133744631905/energy-ml-stage149.tar.gz",
+    "bytes": 591731,
+    "files": [
+      "setup_env.sh",
+      "workbook/stage149_energy_ml/protocol.json",
+      "ntuples/energy_ml_stage146/event_records.json.gz",
+      "ml/stage149_pipeline.py",
+      "ml/stage149_digitize.py",
+      "ml/stage149_reco.py",
+      "ml/stage149_native.py",
+      "ml/stage149_native.hxx",
+      "ml/stage149_extract.py",
+      "ml/stage129_rng.hxx",
+      "ml/stage124_native.hxx",
+      "ml/stage149_audit.py",
+      "workbook/stage149_energy_ml/pilot",
+      "ntuples/energy_ml_stage149/pilot"
+    ]
+  }
+}
