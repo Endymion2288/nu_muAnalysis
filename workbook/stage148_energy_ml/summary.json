@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "parents": 1,
+  "train_support_parents": 2304,
+  "eligible_mixed_Ecal": 266,
+  "frame_index": 7,
+  "case": {
+    "row": 125500,
+    "source": 616,
+    "run": 200091,
+    "component": "pi",
+    "role": 1,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+    "entry": 412863,
+    "incoming": [
+      14.0,
+      -95.39541625976562,
+      41.194400787353516,
+      848110.0
+    ],
+    "truth_E_GeV": 848.1100063654857,
+    "old_reco_pz_GeV": 730.9504375,
+    "y": 0.21087079263968667,
+    "vertex_z_mm": -1730.965087890625,
+    "stratum": "transition",
+    "rank": "00046f1c80af5574",
+    "frame_index": 7,
+    "seed": 2026241707,
+    "inclusion_probability": 0.012230078348939423
+  },
+  "original_selected_reference_available": false,
+  "original_scint_raw11_status_exact": null,
+  "original_calo_status_exact": null,
+  "original_Calo_raw_charge_reference": "not retained; no original raw-charge equality claim",
+  "source_hit_N": 1743,
+  "source_hit_counts": {
+    "0": 1672,
+    "1": 71,
+    "2": 0
+  },
+  "source_corrected_hit_response_MeV": {
+    "0": 286.49807696577045,
+    "1": 31.75792270322563,
+    "2": 0
+  },
+  "Ecal_ADC_samples": 2400,
+  "Ecal_ADC_mismatch": 0,
+  "Ecal_clipped_samples": 0,
+  "Ecal_clipped_channels": [],
+  "mixed_finite_window_channels": [
+    1,
+    0,
+    2
+  ],
+  "Ecal_same_channel_window_mixed_certified": true,
+  "fixed_window_endpoints_recomputed": true,
+  "max_analog_sum_delta_ADC": 1.591979503778873e-08,
+  "max_window_sum_delta_pC": 6.234979893493531e-10,
+  "original_full_private_state_available": false,
+  "original_full_private_states_exact": null,
+  "Scint_ADC_samples": 7200,
+  "Scint_clipped_samples": 46,
+  "Scint_no_ADC_detectors": [
+    "VetoNu"
+  ],
+  "sensitive_HITS_validation": [
+    {
+      "collection": "VetoNuHits",
+      "hits": 0,
+      "max_energy_delta_MeV": 0,
+      "max_time_delta_ns": 0,
+      "max_position_delta_mm": 0,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      }
+    },
+    {
+      "collection": "VetoHits",
+      "hits": 2198,
+      "max_energy_delta_MeV": 9.864568710327148e-06,
+      "max_time_delta_ns": 0.9959030151367188,
+      "max_position_delta_mm": 7.104873657226562e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 19,
+        "1": 2179,
+        "2": 0
+      }
+    },
+    {
+      "collection": "TriggerHits",
+      "hits": 103,
+      "max_energy_delta_MeV": 8.568167686462402e-06,
+      "max_time_delta_ns": 0.019618898630142212,
+      "max_position_delta_mm": 1.52587890625e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 8,
+        "1": 95,
+        "2": 0
+      }
+    },
+    {
+      "collection": "PreshowerHits",
+      "hits": 52,
+      "max_energy_delta_MeV": 9.203329682350159e-06,
+      "max_time_delta_ns": 0.053760528564453125,
+      "max_position_delta_mm": 3.0517578125e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 23,
+        "1": 29,
+        "2": 0
+      }
+    },
+    {
+      "collection": "EcalHits",
+      "hits": 1743,
+      "max_energy_delta_MeV": 9.777462764759548e-06,
+      "max_time_delta_ns": 0.09105682373046875,
+      "max_position_delta_mm": 3.0517578125e-05,
+      "mapping": "same index,cardinality,ID/barcode;original converter preserves order;time/position are compressed,not required equal",
+      "categories": {
+        "0": 1672,
+        "1": 71,
+        "2": 0
+      }
+    }
+  ],
+  "scope": "One natural same-parent Ecal source/DAQ method control; not population radiation, data or incident-energy calibration",
+  "CPU_s": 6.450405274,
+  "wall_s": 84.67465833103051,
+  "RSS_KiB": 492860,
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "reserved_forward": 0
+}

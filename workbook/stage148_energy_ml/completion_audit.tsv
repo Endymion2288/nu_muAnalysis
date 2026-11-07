@@ -1,0 +1,11 @@
+requirement	status	evidence
+original role1 mixed support and fixed first parent	complete	support.json:4032input2304train266eligible,frame7,selected0retained
+actual SD ancestry and ordered hit transfer	complete_bounded	parent_7_report.json:legacyexact;6hitscheckcollections;Ecal1672mu71other0unknown
+actual Ecal ADC closure including uncabled PMT RNG	complete_bounded	parent_7_summary.json:8geometry4cabled2400ADC0delta
+same-channel original-window source signal sum	complete_bounded	channels0/1/2mixed;max6.234979893e-10pC;allstatus1notreadoutclassifier
+clipping and population calibration	not_certified	0Ecalclipped;oneparentonly;noFPR/data/gaincertification
+original selected raw/status and full RNG comparison	input_missing_preserved	originalselected0;raw/statusreferenceandcompleteprivateRNGunavailable;notmismatch
+fixed endpoints explain weak response	complete_bounded	parent_7_window_endpoints.json:raw/fullacq>=.999953;nohistogramoutsidehits;noGoodHittiming
+resource and storage policy	complete	4terminalexit0;272CPU477wall0GPU;exacttextcompaction;37147359Bdeleted
+new energy model or natural-nu expansion	not_triggered	0energyfit0newindependentnu;Stage137expansiongateunchanged
+full Stage132 physics and low-energy superiority	not_achieved	actualcovariancecalibration/data/background/acceptance/realauxiliaryandindependentconfirmationmissing

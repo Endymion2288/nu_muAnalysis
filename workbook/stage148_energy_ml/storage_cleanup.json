@@ -1,0 +1,64 @@
+{
+  "all_jobs_terminal": true,
+  "all_event_text_exact": true,
+  "merged_event_records": {
+    "path": "ntuples/energy_ml_stage148/event_records.json.gz",
+    "bytes": 659044
+  },
+  "source_capsule": {
+    "path": "software/stage148/source_snapshots.tar.gz",
+    "bytes": 29704
+  },
+  "deleted": [
+    {
+      "path": "workbook/stage148_energy_ml/parent_7_lineage.json",
+      "bytes": 1277137
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/parent_7_qa_hits.json.gz",
+      "bytes": 238317
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/parent_7_control.json.gz",
+      "bytes": 126150
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/parent_7_ecal_control.json.gz",
+      "bytes": 48287
+    },
+    {
+      "path": "software/stage148/1794089892307267189/energy-ml-stage148.tar.gz",
+      "bytes": 671061
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/audit_result.tar.gz",
+      "bytes": 3203
+    },
+    {
+      "path": "software/stage148/1794089416161099879/energy-ml-stage148.tar.gz",
+      "bytes": 1960353
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/ecal_result.tar.gz",
+      "bytes": 50331
+    },
+    {
+      "path": "software/stage148/1794088838487280022/energy-ml-stage148.tar.gz",
+      "bytes": 22812325
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/support_result.tar.gz",
+      "bytes": 1642
+    },
+    {
+      "path": "software/stage148/1794089037031875117/energy-ml-stage148.tar.gz",
+      "bytes": 9330860
+    },
+    {
+      "path": "ntuples/energy_ml_stage148/transport_result.tar.gz",
+      "bytes": 627693
+    }
+  ],
+  "deleted_bytes": 37147359,
+  "scope": "Text equality only, no scientific array computation/SHA; original EVNT and other stages untouched"
+}

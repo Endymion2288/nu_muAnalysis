@@ -1,3 +1,9 @@
+# 当前执行更新：Stage148 自然混合 Ecal 来源／DAQ 方法控制完成
+
+[Stage148报告](../workbook/2026-11-07_stage148_mixed-Ecal-DAQ-source-control.md)在2304个train父中审计266个混合Ecal支持，事前固定原frame7（π、848.11GeV、原selected0保留）。实际1672μ/71其他根hits、2400可读ADC零差；通道0/1/2同780–930ns窗混合来源加和通过，最大积分差6.23498e−10pC。全部Calo status1，弱信号及signed负raw保留；固定raw窗含各来源完整采集信号≥99.9953%，不能归因于大量漏窗。无Ecal触底，旧参考及完整private状态缺失不冒充精确。4job全exit0、272CPU秒/477聚合wall秒/0GPU、1同父G4/0新独立ν/0fit。下一Stage149原PG HITS前4→最多64条真实state covariance/PRD/raw控制，先物理pilot和成本、3000CPU秒，无新G4/模型网格或自然ν大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage147 μ根尾部的记录轨迹匹配诊断完成
 
 [Stage147报告](../workbook/2026-11-07_stage147_recorded-muon-track-tail-control.md)同MC100012前4096条，原身份/3612选中/评分分组计数精确。3612全部记录为μ匹配；878可评分留出均直接匹配已核初始μ根，记录hit ratio中位1且低于0.8数0。overflow10/16、11/16和高活动6/6报警不由记录的非μ轨迹误选解释。高活动pz0相对生产truth pz中位差−.141474，非同面不能称重建误差或已测能损。1job全exit0、4CPU秒/11wall秒/0GPU；不重训/改阈值，不认证真实PRD/covariance或data/ν迁移。下一Stage148最多一个既有train混合Ecal父、1000CPU秒，闭合实际来源/DAQ，不大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
@@ -2784,3 +2790,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [Stage147实测](../workbook/2026-11-07_stage147_recorded-muon-track-tail-control.md)固定MC100012原4096身份/3612选择和原分组计数精确。3612全部记录μ匹配，878可评分留出均直接根barcode匹配，记录hit ratio中位1且<.8数0；overflow10/16、11/16、高活动6/6报警仍在，不由此类误选解释。高活动pz0/生产truthpz−1中位−.141474，未认证同面，不作tracking bias或辐射因果结论。1job全exit0、4CPU秒/11wall秒/0GPU，无新G4/fit。真实PRD/covariance、宽能区及producer/data迁移仍缺，不扫本固定评分。
 
 下一[Stage148合同](../workbook/stage147_energy_ml/next_execution_contract.json)独立补§5.4的一个混合Ecal方法控制：仅现有4032证据role1内按frame顺序固定至多一个双根正响应父，先实际支持/成本，再旧字段/HITS和8-PMT噪声/4可读PMT/同有限窗来源闭合，1000累计CPU秒、无新build/独立ν/fit。无支持记录0；不同channel/time混合不冒充同窗混合，不替换父或扩大预算。非自然ν大生产，不绕过Stage1375%门；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87和整体未完成状态保持。
+
+
+## 127. Stage148：同通道／有限窗混合 Ecal 方法闭合，转真实μ状态
+
+[Stage148实测](../workbook/2026-11-07_stage148_mixed-Ecal-DAQ-source-control.md)按冻结顺序从2304train父/266混合支持固定frame7，π、Eν848.110GeV、原selected0/参考缺失保留。旧observer精确，六HITS集合闭合，Ecal1672μ/71其他根hit；8几何PMT噪声流/4可读PMT的2400ADC零差、0触底。通道0/1/2同780–930ns窗混合来源加和通过，最大6.23498e−10pC；全部status1且有signed负raw，不认证强子判据。固定raw/fullacq信号比各非零来源≥.999953，未见histogram边界外hit，本例弱信号不能由大量漏窗解释。旧private全状态和原Calo raw缺失不冒充精确。4job全exit0、272CPU秒/477聚合wall秒/0GPU；删37147359B重复副本、事件文本659044B精确合并。
+
+下一[Stage149合同](../workbook/stage148_energy_ml/next_execution_contract.json)在已知MC100012原HITS上测真实state/covariance/PRD与raw：先前4条物理pilot，身份/数据/原生cov和实测成本通过后最多前64条，3000累计CPU秒、首pilot800秒，无新G4/fit/独立ν。记录实际simulation/current条件及未知，不以覆盖flags认证迁移；无同面truth不报pull，不重开旧Z57/Q阈值/网络网格。Ecalclipping/总体μ响应、宽能区/真实covariance校准/data及外部物理输入仍缺；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87及Stage1375%扩大门和整体未完成状态保持。

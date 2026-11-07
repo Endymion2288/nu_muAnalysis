@@ -1,3 +1,9 @@
+# 当前执行更新：Stage148 自然混合 Ecal 来源／DAQ 方法控制完成
+
+[Stage148报告](../workbook/2026-11-07_stage148_mixed-Ecal-DAQ-source-control.md)在2304个train父中审计266个混合Ecal支持，事前固定原frame7（π、848.11GeV、原selected0保留）。实际1672μ/71其他根hits、2400可读ADC零差；通道0/1/2同780–930ns窗混合来源加和通过，最大积分差6.23498e−10pC。全部Calo status1，弱信号及signed负raw保留；固定raw窗含各来源完整采集信号≥99.9953%，不能归因于大量漏窗。无Ecal触底，旧参考及完整private状态缺失不冒充精确。4job全exit0、272CPU秒/477聚合wall秒/0GPU、1同父G4/0新独立ν/0fit。下一Stage149原PG HITS前4→最多64条真实state covariance/PRD/raw控制，先物理pilot和成本、3000CPU秒，无新G4/模型网格或自然ν大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage147 μ根尾部的记录轨迹匹配诊断完成
 
 [Stage147报告](../workbook/2026-11-07_stage147_recorded-muon-track-tail-control.md)同MC100012前4096条，原身份/3612选中/评分分组计数精确。3612全部记录为μ匹配；878可评分留出均直接匹配已核初始μ根，记录hit ratio中位1且低于0.8数0。overflow10/16、11/16和高活动6/6报警不由记录的非μ轨迹误选解释。高活动pz0相对生产truth pz中位差−.141474，非同面不能称重建误差或已测能损。1job全exit0、4CPU秒/11wall秒/0GPU；不重训/改阈值，不认证真实PRD/covariance或data/ν迁移。下一Stage148最多一个既有train混合Ecal父、1000CPU秒，闭合实际来源/DAQ，不大生产。原全部门/Stage137扩大门/Stage87和整体未完成状态保持。

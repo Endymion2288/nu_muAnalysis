@@ -1,0 +1,28 @@
+{
+  "result": "9674554.0 - 9674554.0",
+  "phase": "audit",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage148\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage148/worker_1794089892307267189.sh audit\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage148/1794089892307267189/energy-ml-stage148.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 4000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage148 CPU budget or reserved Ecal allowance reached\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 739.0\n+NuMuStage = \"energy-ml-stage148\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage148/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage148/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage148/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "remaining_CPU_s": 739.0,
+  "package": {
+    "path": "software/stage148/1794089892307267189/energy-ml-stage148.tar.gz",
+    "bytes": 671061,
+    "files": [
+      "workbook/stage148_energy_ml/protocol.json",
+      "ml/stage148_summarize.py",
+      "ml/stage148_window.py",
+      "ml/stage141_analog.hxx",
+      "setup_env.sh",
+      "workbook/stage148_energy_ml/support.json",
+      "workbook/stage148_energy_ml/parent_7_report.json",
+      "workbook/stage148_energy_ml/parent_7_hitscheck.json",
+      "workbook/stage148_energy_ml/parent_7_source_control.json",
+      "workbook/stage148_energy_ml/parent_7_source_analog_charge.tsv",
+      "workbook/stage148_energy_ml/parent_7_summary.json",
+      "workbook/stage148_energy_ml/parent_7_charge.tsv",
+      "workbook/stage148_energy_ml/parent_7_lineage.json",
+      "ntuples/energy_ml_stage148/parent_7_qa_hits.json.gz",
+      "ntuples/energy_ml_stage148/parent_7_control.json.gz",
+      "ntuples/energy_ml_stage148/parent_7_ecal_control.json.gz"
+    ]
+  }
+}

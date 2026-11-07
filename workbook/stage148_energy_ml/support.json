@@ -1,0 +1,52 @@
+{
+  "input_parents": 4032,
+  "train_parents": 2304,
+  "eligible_mixed_Ecal": 266,
+  "selected_indices": [
+    7
+  ],
+  "selected_controls": [
+    {
+      "frame_index": 7,
+      "case": {
+        "row": 125500,
+        "source": 616,
+        "run": 200091,
+        "component": "pi",
+        "role": 1,
+        "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+        "entry": 412863,
+        "incoming": [
+          14.0,
+          -95.39541625976562,
+          41.194400787353516,
+          848110.0
+        ],
+        "truth_E_GeV": 848.1100063654857,
+        "old_reco_pz_GeV": 730.9504375,
+        "y": 0.21087079263968667,
+        "vertex_z_mm": -1730.965087890625,
+        "stratum": "transition",
+        "rank": "00046f1c80af5574",
+        "frame_index": 7,
+        "seed": 2026241707,
+        "inclusion_probability": 0.012230078348939423
+      },
+      "Ecal_all_MeV": [
+        286.4980763943204,
+        31.75792175604147,
+        0
+      ],
+      "original_selected": 0
+    }
+  ],
+  "preflight_entries": 64,
+  "preflight_passed": true,
+  "CPU_s": 4.782803385,
+  "wall_s": 4.812227306887507,
+  "RSS_KiB": 303320,
+  "scope": "Original role1 only, no risk/clip/energy cut; first mixed all-time parent, not same-channel-window certification",
+  "new_G4": 0,
+  "new_energy_fits": 0,
+  "reserved_forward": 0
+}

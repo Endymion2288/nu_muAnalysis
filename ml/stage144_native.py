@@ -2,6 +2,7 @@
 import csv
 import gzip
 import json
+import os
 import resource
 import sys
 import time
@@ -20,17 +21,23 @@ from WaveformConditionsTools.WaveformDigitizationConfig import WaveformDigitizat
 from WaveformConditionsTools.WaveformCableMappingConfig import WaveformCableMappingCfg
 from WaveformConditionsTools.WaveformTimingConfig import WaveformTimingCfg
 
-OUT = Path('workbook/stage144_energy_ml')
-CACHE = Path('ntuples/energy_ml_stage144')
+STAGE = int(os.environ.get('NU_MU_ECAL_STAGE', '144'))
+OUT = Path(f'workbook/stage{STAGE}_energy_ml')
+CACHE = Path(f'ntuples/energy_ml_stage{STAGE}')
 index = int(sys.argv[1])
 plan = json.loads((OUT/'protocol.json').read_text())
 assert index in plan['indices']
 with gzip.open('ntuples/energy_ml_stage131/production_cases.json.gz', 'rt') as stream:
     case = next(row for row in json.load(stream) if row['frame_index'] == index)
-with gzip.open('ntuples/energy_ml_stage142/event_records.json.gz', 'rt') as stream:
-    retained = json.load(stream)
-snapshot = json.loads(retained[f'ntuples/energy_ml_stage142/parent_{index}_qa_hits.json.gz'])
-lineage = json.loads(retained[f'workbook/stage142_energy_ml/parent_{index}_lineage.json'])
+if plan.get('snapshot_layout') == 'separate':
+    with gzip.open(CACHE/f'parent_{index}_qa_hits.json.gz', 'rt') as stream:
+        snapshot = json.load(stream)
+    lineage = json.loads((OUT/f'parent_{index}_lineage.json').read_text())
+else:
+    with gzip.open('ntuples/energy_ml_stage142/event_records.json.gz', 'rt') as stream:
+        retained = json.load(stream)
+    snapshot = json.loads(retained[f'ntuples/energy_ml_stage142/parent_{index}_qa_hits.json.gz'])
+    lineage = json.loads(retained[f'workbook/stage142_energy_ml/parent_{index}_lineage.json'])
 assert case['role'] == 1
 seed = 650000000+10000*index
 if index == 50:
@@ -172,7 +179,11 @@ result = dict(passed=True, frame_index=index, ADC_samples=sum(len(row['adc']) fo
               wall_s=time.perf_counter()-tick, RSS_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
               new_G4=0, new_independent_nu=0, new_energy_fits=0, reserved_forward=0,
               scope='Ecal actual digital/source control, SD-corrected hits; not incident energy or data calibration; nonzero status gives no timing')
+if STAGE != 144:
+    result.update(mixed_finite_window_channels=[row['channel'] for row in charges if row['mu_root_pC'] > 0 and row['nonmu_root_pC'] > 0],
+                  clipped_channels=[row['channel'] for row in waves if any(value == 0 for value in row['adc'])],
+                  original_full_private_state_available=original is not None)
 (OUT/f'parent_{index}_summary.json').write_text(json.dumps(result, indent=2)+'\n')
-with gzip.open(CACHE/f'parent_{index}_control.json.gz', 'wt') as stream:
+with gzip.open(CACHE/f"parent_{index}_{plan.get('ecal_control_name', 'control')}.json.gz", 'wt') as stream:
     json.dump(records, stream, separators=(',', ':'))
 print(result, flush=True)

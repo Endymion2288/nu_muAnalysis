@@ -1,0 +1,17 @@
+{
+  "admitted": true,
+  "frame_index": 7,
+  "support_scheduler_CPU_s": 5.0,
+  "prior_equivalent_transport_CPU_s": [
+    164.0,
+    247.0
+  ],
+  "projection": "2*max prior same-runtime sim/hit-check/scint-source CPU +20setup",
+  "projected_CPU_s": 514.0,
+  "remaining_CPU_s": 995.0,
+  "reserved_Ecal_and_audit_CPU_s": 300,
+  "transport_scheduler_CPU_cap_s": 695.0,
+  "max_parents": 1,
+  "original_selected": 0,
+  "limitation": "Not guaranteed runtime prediction; cumulative actual CPU guard enforces allowance. No parent substitution or budget growth."
+}
