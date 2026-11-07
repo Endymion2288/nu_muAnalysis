@@ -1,3 +1,11 @@
+# 当前执行入口：Stage135仪器化pilot完成，冻结Stage137正式分解；DAQ控制并行
+
+**2026-11-07 Stage135 主线更新：** [最小能流仪器化pilot](../workbook/2026-11-07_stage135_boundary-instrumentation-pilot.md)12/12自然train父通过，72探测器-父HITS闭合、旧字段精确复现、首例on/off敏感HITS完全相同。11父有非μKE，5父有Ecal几何射线接受；低两层4父局部仅侧向，不以小样本关闭分支。1045schedulerCPU秒/650aggregatewall秒，0GPU。下一Stage137按实测成本冻结同支持几何接受/未接受/总K条件与粒子类消融；DAQ对齐和μ辐射控制继续独立推进。Stage136并行有限MC条件收益已测，完整物理目标未完成。
+
+先读[Stage135报告](../workbook/2026-11-07_stage135_boundary-instrumentation-pilot.md)与Stage132§5.3–5.5。新observer可用，但正式风险尚未执行；以既有4032自然父/3002selected同支持、原seed与basename精确回放G4，复用12pilot，必要HITS核对、避免重复digi/reco和X/A/AK训练。在新cal/test风险前冻结G=几何接受K、H=未接受K、D=总K+G，以及预定粒子类别必要性消融和成本/功效边界。不得称ray接受为可见能量，不以12pilot作自然比例/最终尾部认证。DAQ实际hit/硬件通道/响应核/采样/有限窗闭合和μ辐射控制独立推进，不把[0,1000)globaltime当DAQ。原角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/原cuts/验收保持。整体goal未完成。
+
+## Stage135之前入口（原文保留）
+
 # 当前执行入口：Stage134完成，Stage135最小可测能流与DAQ pilot
 
 **2026-11-07 Stage134 更新：** [不含理想沉积的边界机制](../workbook/2026-11-07_stage134_boundary-without-ideal-deposits.md)已完成3fit。AK/A cal/test最低箱0.687973/0.704447，表明最低箱K增量不依赖五项理想沉积；test第二箱0.905402 [0.777200,1.036741]未过固定双箱继续门，不自动追加z×K。下一Stage135转主研究小pilot：最小边界分解与DAQ对应，先闭合/测成本再定正式量。不是新部署；整体goal和原全部门保持。

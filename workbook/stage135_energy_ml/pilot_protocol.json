@@ -1,0 +1,57 @@
+{
+  "stage": 135,
+  "question": "Which boundary KE exits forward into real downstream geometrical ray acceptance,by particle class and relative event time?",
+  "scope": "engineering/physical pilot,no energy fitting or forward; no new independent neutrinos; reuse original Stage131 natural train parent and exact G4 seed+HITS filename",
+  "preflight_index": 50,
+  "remaining_indices": [
+    70,
+    6,
+    21,
+    8,
+    63,
+    2,
+    15,
+    0,
+    1,
+    5,
+    12
+  ],
+  "pilot_total_parents": 12,
+  "selection": "exact original first2 train parents per6 strata in old frozen hash order; no K/risk-based selection; preserve outside/missing and original reselection denominator",
+  "boundary": "actual G4Box EmulsionStationA,original branch-first outward count and descendant/return suppression; verify all legacy fields exactly",
+  "faces": [
+    "downstream global normal.z>0.5",
+    "upstream global normal.z<−0.5",
+    "side otherwise"
+  ],
+  "particle_classes": [
+    "electron/positron/photon",
+    "charged hadron (meson/baryon/nucleus)",
+    "neutral hadron (meson/baryon/nucleus)",
+    "other charged non-neutrino",
+    "other neutral non-neutrino"
+  ],
+  "root_scope": "only non-primary-muon-root and non-neutrino crossing; primary muon and ALL descendants excluded; preserve legacy neutrino/unknown flow categories",
+  "acceptance": "oriented ray-vs-actual downstream sensitive G4Box intersection,any Veto bit1,Ecal bit2; positive z direction and sensor downstream of crossing; geometric straight ray only,not transport/probability/efficiency/visible energy",
+  "time": "G4 global exit time minus earliest actual primary vertex t0; bins t<0,[0,1),[1,10),[10,100),[100,1000),[1000,infinity)ns; no arrival-time model input/no DAQ claim",
+  "outputs": "sparse face×class×geometric_acceptance×time bins: count,KE,totalE,KEweighted xyz/unitdirection/time; first64 deterministic crossing QA maximum perparent; KE and totalE separate; no Enu-derived closure feature",
+  "validation": [
+    "sum sparse bins equals original nonmu KE/totalE",
+    "all old observer fields exact vs original matched parent",
+    "persistent six-detector HITS closure",
+    "preflight sensitive HITS exact observer on/off",
+    "record actual sensor-box count,no silent nonbox approximation"
+  ],
+  "resources": {
+    "cpus": 4,
+    "memory_MB": 12000,
+    "CPU_budget_s": 30000,
+    "scheduler_wall_s": 86400,
+    "application_timeout": null,
+    "concurrent_parents_after_preflight": 4
+  },
+  "next": "only after preflight closure and measured CPU/I/O admit remaining11; after full pilot freeze new-label scientific support and DAQ controls before any new cal/test risks; no unconditional4032 repeat",
+  "DAQ_status": "not yet measured; this phase prepares boundary instrumentation only; next must align actual hit/channel/time-response kernels/raw-window and controls",
+  "promotion": false,
+  "reserved_forward": 0
+}

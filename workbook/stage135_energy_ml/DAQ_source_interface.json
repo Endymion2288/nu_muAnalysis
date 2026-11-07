@@ -1,0 +1,354 @@
+{
+  "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "files": [
+    {
+      "path": "Waveform/WaveDigiTools/src/WaveformDigitisationTool.cxx",
+      "lines": [
+        {
+          "line": 80,
+          "text": "WaveformDigitisationTool::fill_evst_hist(EvstHistMap& map, const Identifier& id, float time, float energy) const {"
+        },
+        {
+          "line": 125,
+          "text": "  kernel->SetParameter(0, digiCondTool->cb_alpha(ctx));"
+        },
+        {
+          "line": 126,
+          "text": "  kernel->SetParameter(1, digiCondTool->cb_n(ctx));"
+        },
+        {
+          "line": 127,
+          "text": "  kernel->SetParameter(2, digiCondTool->cb_sigma(ctx));"
+        },
+        {
+          "line": 128,
+          "text": "  kernel->SetParameter(3, digiCondTool->cb_mean(ctx));"
+        },
+        {
+          "line": 129,
+          "text": "  kernel->SetParameter(4, digiCondTool->cb_norm(ctx));"
+        },
+        {
+          "line": 200,
+          "text": "      value = std::round(baseline - signal);"
+        },
+        {
+          "line": 232,
+          "text": "  std::map<Identifier, float> time_of_flight;"
+        },
+        {
+          "line": 238,
+          "text": "    time_of_flight = create_tof_map(m_vetoID, m_vetoDetMan);"
+        },
+        {
+          "line": 241,
+          "text": "    time_of_flight = create_tof_map(m_vetoNuID, m_vetoNuDetMan);"
+        },
+        {
+          "line": 244,
+          "text": "    time_of_flight = create_tof_map(m_triggerID, m_triggerDetMan);"
+        },
+        {
+          "line": 247,
+          "text": "    time_of_flight = create_tof_map(m_preshowerID, m_preshowerDetMan);"
+        },
+        {
+          "line": 269,
+          "text": "      dtime = digiCondTool->trigger_time_slope(ctx) * (hit.localStartPosition().x()+hit.localEndPosition().x()) / 2.;"
+        },
+        {
+          "line": 271,
+          "text": "      tof = time_of_flight[id];"
+        },
+        {
+          "line": 274,
+          "text": "      fill_evst_hist(evst_hist, id, hit.meanTime()-dtime-tof, hit.energyLoss());"
+        },
+        {
+          "line": 277,
+          "text": "      tof = time_of_flight[id];"
+        },
+        {
+          "line": 278,
+          "text": "      fill_evst_hist(evst_hist, id, hit.meanTime()+dtime-tof, hit.energyLoss());"
+        },
+        {
+          "line": 287,
+          "text": "      tof = time_of_flight[id];"
+        },
+        {
+          "line": 291,
+          "text": "\tdtime = -digiCondTool->preshower_time_slope(ctx) * (hit.localStartPosition().y() + hit.localEndPosition().y()) / 2.;"
+        },
+        {
+          "line": 293,
+          "text": "\tdtime = 0.;"
+        },
+        {
+          "line": 295,
+          "text": "      fill_evst_hist(evst_hist, id, hit.meanTime()+dtime-tof, hit.energyLoss());  "
+        },
+        {
+          "line": 300,
+          "text": "\t\t  << \" t: \" << hit.meanTime()"
+        },
+        {
+          "line": 379,
+          "text": "      value = std::round(baseline - signal);"
+        },
+        {
+          "line": 411,
+          "text": "  std::map<Identifier, float> time_of_flight;"
+        },
+        {
+          "line": 414,
+          "text": "  time_of_flight = create_calo_tof_map(m_ecalID, m_caloDetMan);"
+        },
+        {
+          "line": 429,
+          "text": "    tof = time_of_flight[id];"
+        },
+        {
+          "line": 431,
+          "text": "    fill_evst_hist(evst_hist, id, hit.meanTime()-tof, hit.energyLoss());  "
+        },
+        {
+          "line": 435,
+          "text": "\t\t  << \" t: \" << hit.meanTime()"
+        },
+        {
+          "line": 474,
+          "text": "  std::map<Identifier, float> time_of_flight;"
+        },
+        {
+          "line": 480,
+          "text": "    time_of_flight[pmtid] = element->center().z() / CLHEP::c_light;"
+        },
+        {
+          "line": 482,
+          "text": "    ATH_MSG_DEBUG(\"Found TOF for \" << pmtid << \" = \" << time_of_flight[pmtid]);"
+        },
+        {
+          "line": 484,
+          "text": "  return time_of_flight;  "
+        },
+        {
+          "line": 490,
+          "text": "  std::map<Identifier, float> time_of_flight;"
+        },
+        {
+          "line": 496,
+          "text": "    time_of_flight[pmtid] = element->center().z() / CLHEP::c_light;"
+        },
+        {
+          "line": 498,
+          "text": "    ATH_MSG_DEBUG(\"Found TOF for \" << pmtid << \" = \" << time_of_flight[pmtid]);"
+        },
+        {
+          "line": 500,
+          "text": "  return time_of_flight;  "
+        },
+        {
+          "line": 555,
+          "text": "    for(unsigned int ih=1; int(ih) < h->GetNbinsX(); ih++) {"
+        },
+        {
+          "line": 597,
+          "text": "      dswave[i/over_samples()] += (dwave[i] / over_samples());"
+        },
+        {
+          "line": 618,
+          "text": "      int ivalue = std::round(baseline - signal);"
+        }
+      ]
+    },
+    {
+      "path": "Waveform/WaveDigiTools/src/WaveformDigitisationTool.h",
+      "lines": [
+        {
+          "line": 65,
+          "text": "  FloatProperty m_digitizerPeriod { this, \"DigitizerPeriod\", 2.0, \"Duration of one sample (in ns)\" };"
+        },
+        {
+          "line": 66,
+          "text": "  IntegerProperty m_digitizerSamples { this, \"DigitizerSamples\", 600, \"Number of digitizer samples\" };"
+        },
+        {
+          "line": 70,
+          "text": "  IntegerProperty m_overSamples { this, \"OverSamples\", 20, \"Oversampling of hit times compared to digitizer period\" };"
+        },
+        {
+          "line": 73,
+          "text": "  IntegerProperty  m_preSamples { this, \"PreSamples\", 10, \"Presamples for energy histogram\" };"
+        },
+        {
+          "line": 76,
+          "text": "  unsigned int digitizer_samples() const { return m_digitizerSamples; }"
+        },
+        {
+          "line": 77,
+          "text": "  float digitizer_period() const { return m_digitizerPeriod; }"
+        },
+        {
+          "line": 78,
+          "text": "  unsigned int over_samples() const { return m_overSamples; }"
+        },
+        {
+          "line": 79,
+          "text": "  unsigned int pre_samples() const {return m_preSamples; }"
+        }
+      ]
+    },
+    {
+      "path": "Simulation/ISF/ISF_Core/FaserISF_Services/src/FaserInputConverter.cxx",
+      "lines": [
+        {
+          "line": 344,
+          "text": "  const double pTime = pVertex->position().t() / Gaudi::Units::c_light;"
+        },
+        {
+          "line": 1168,
+          "text": "  G4PrimaryVertex *g4vertex = new G4PrimaryVertex(isp.position().x(),"
+        },
+        {
+          "line": 1171,
+          "text": "                                                  isp.timeStamp());"
+        }
+      ]
+    },
+    {
+      "path": "Scintillator/ScintG4/VetoG4_SD/src/VetoSensorSD.cxx",
+      "lines": [
+        {
+          "line": 48,
+          "text": "  double edep = aStep->GetTotalEnergyDeposit();"
+        },
+        {
+          "line": 49,
+          "text": "  if(edep==0.) {"
+        },
+        {
+          "line": 54,
+          "text": "  edep *= CLHEP::MeV;"
+        },
+        {
+          "line": 98,
+          "text": "  m_HitColl->Emplace(lP1,"
+        },
+        {
+          "line": 100,
+          "text": "                     edep,"
+        },
+        {
+          "line": 101,
+          "text": "                     aStep->GetPreStepPoint()->GetGlobalTime(),//use the global time. i.e. the time from the beginning of the event"
+        }
+      ]
+    },
+    {
+      "path": "Calorimeter/CaloG4/EcalG4_SD/src/EcalSensorSD.cxx",
+      "lines": [
+        {
+          "line": 114,
+          "text": "  //double ecorrected = edep;"
+        },
+        {
+          "line": 116,
+          "text": "  double ecorrected = edep * birkCorrection( particle , track->GetKineticEnergy(), material ) ;"
+        },
+        {
+          "line": 120,
+          "text": "  ecorrected *= localNonUniformity(lP1[0], lP1[1]) ;"
+        },
+        {
+          "line": 134,
+          "text": "  m_HitColl->Emplace(lP1,"
+        },
+        {
+          "line": 136,
+          "text": "                     ecorrected,"
+        },
+        {
+          "line": 137,
+          "text": "                     aStep->GetPreStepPoint()->GetGlobalTime(),//use the global time. i.e. the time from the beginning of the event"
+        }
+      ]
+    },
+    {
+      "path": "Scintillator/ScintDigiAlgs/src/ScintWaveformDigiAlg.cxx",
+      "lines": [
+        {
+          "line": 38,
+          "text": "  if (m_advancedTiming) {"
+        },
+        {
+          "line": 71,
+          "text": "  if (scintHitHandle->size() == 0) {"
+        },
+        {
+          "line": 93,
+          "text": "  if (m_advancedTiming) {"
+        },
+        {
+          "line": 108,
+          "text": "    int channel = m_mappingTool->getChannelMapping(w.first);"
+        }
+      ]
+    },
+    {
+      "path": "Scintillator/ScintDigiAlgs/python/ScintDigiAlgsConfig.py",
+      "lines": [
+        {
+          "line": 42,
+          "text": "    tool = CompFactory.WaveformDigitisationTool(name=source+\"WaveformDigtisationTool\")"
+        },
+        {
+          "line": 43,
+          "text": "    kwargs.setdefault(\"WaveformDigitisationTool\", tool)"
+        },
+        {
+          "line": 52,
+          "text": "    tool = CompFactory.WaveformDigiConditionsTool(name=source+\"CaloDigiConditionsTool\", Detector=source)"
+        },
+        {
+          "line": 53,
+          "text": "    kwargs.setdefault(\"DigiConditionsTool\", tool)"
+        }
+      ]
+    },
+    {
+      "path": "Waveform/WaveformConditions/WaveformConditionsTools/python/WaveformDigitizationConfig.py",
+      "lines": [
+        {
+          "line": 17,
+          "text": "    dbInstance = kwargs.get(\"dbInstance\", \"TRIGGER_OFL\")"
+        },
+        {
+          "line": 18,
+          "text": "    dbFolder = kwargs.get(\"dbFolder\", \"/WAVE/Digitization\")"
+        },
+        {
+          "line": 19,
+          "text": "    caloDigiTag = kwargs.get(\"digiTag\", \"\")"
+        },
+        {
+          "line": 22,
+          "text": "        acc.merge(addFolders(flags, dbFolder, dbInstance, className=\"CondAttrListCollection\", tag=caloDigiTag))"
+        },
+        {
+          "line": 24,
+          "text": "        acc.merge(addFolders(flags, dbFolder, dbInstance, className=\"CondAttrListCollection\"))"
+        }
+      ]
+    }
+  ],
+  "measured": false,
+  "interpretation": [
+    "HepMC position.t is converted by c_light before G4 primary timestamp",
+    "advanced digitization subtracts plane center.z/c and applies actual channel-local light correction",
+    "actual hist bins,finite600samples,20oversample and CBconditions matter for waveform response; not a globalprompt deposit window",
+    "clipping and stochastic baseline are nonlinear/nonadditive at ADC level; additive labels can only describe expected analog source response",
+    "DAQ attribution requires actual channel mapping and live IOV parameters,raw finite780\u2013980ns target,and control closure; no status!=0 arrival time"
+  ],
+  "next_required": "measure live hit/channel/condition/timing conventions and expected analog response vs official actual ADC/raw controls; static source alone is not closure"
+}

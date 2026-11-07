@@ -1,0 +1,241 @@
+{
+  "index": 50,
+  "case": {
+    "row": 150041,
+    "source": 826,
+    "run": 200095,
+    "component": "pi",
+    "role": 1,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+    "entry": 82990,
+    "incoming": [
+      14.0,
+      -6.916692733764648,
+      8.872150421142578,
+      90288.0
+    ],
+    "truth_E_GeV": 90.28800070084446,
+    "old_reco_pz_GeV": 80.614109375,
+    "y": 0.006195447178858227,
+    "vertex_z_mm": -2816.870849609375,
+    "stratum": "E50_100",
+    "rank": "001bb02223d62b56",
+    "frame_index": 50,
+    "seed": 2026241750,
+    "inclusion_probability": 0.32841565105837073
+  },
+  "successful": true,
+  "steps": [
+    {
+      "name": "sim",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/ml/stage135_simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+        "FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "82990",
+        "-n",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 39.07676922297105
+    },
+    {
+      "name": "hitscheck",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/ml/stage131_hitscheck.py",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/chain_50/FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/chain_50/lineage.jsonl",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/workbook/stage135_energy_ml/parent_50_hitscheck.json",
+        "before",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/ntuples/energy_ml_stage135/parent_50_qa_hits.json.gz"
+      ],
+      "returncode": 0,
+      "wall_s": 65.28306947898818
+    },
+    {
+      "name": "sim_unobserved",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/ml/stage135_simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+        "FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "82990",
+        "-n",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 31.337568307004403
+    },
+    {
+      "name": "noninterference",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/ml/stage131_hitscheck.py",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/chain_50/FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/chain_50/lineage.jsonl",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/workbook/stage135_energy_ml/parent_50_noninterference.json",
+        "after",
+        "/pool/condor/dir_3545965/nu_mu_stage135.b3Xhrr/ntuples/energy_ml_stage135/parent_50_qa_hits.json.gz"
+      ],
+      "returncode": 0,
+      "wall_s": 43.699200638977345
+    }
+  ],
+  "lineage": {
+    "event": 1,
+    "tracks": 37799,
+    "unknown_tracks": 0,
+    "missing_birth": 0,
+    "steps": 230832,
+    "primary_muons": 1,
+    "outside_primaries": 0,
+    "crossings": 2,
+    "calo_uncorrected_deposit_MeV": 61.00176572423187,
+    "calo_live_hits": 258,
+    "flow_KE_MeV": [
+      76521.89738715763,
+      0,
+      0,
+      0
+    ],
+    "flow_total_MeV": [
+      76627.55575865763,
+      0,
+      0,
+      0
+    ],
+    "envelopes": [
+      "Emulsion::EmulsionStationA",
+      "Emulsion::EmulsionStationA_absorber"
+    ],
+    "deposits": {
+      "ToolSvc.SensitiveDetectorMasterTool.EcalSensorSD": {
+        "all_MeV": [
+          61.16657845608643,
+          0,
+          0
+        ],
+        "prompt_MeV": [
+          61.16657845608643,
+          0,
+          0
+        ],
+        "steps": [
+          258,
+          0,
+          0
+        ]
+      },
+      "ToolSvc.SensitiveDetectorMasterTool.EmulsionSensorSD": {
+        "all_MeV": [
+          510.2964502494979,
+          28.954204041901388,
+          0
+        ],
+        "prompt_MeV": [
+          0.5080507213556429,
+          3.610669413942719,
+          0
+        ],
+        "steps": [
+          21224,
+          722,
+          0
+        ]
+      },
+      "ToolSvc.SensitiveDetectorMasterTool.PreshowerSensorSD": {
+        "all_MeV": [
+          8.233781428064558,
+          0,
+          0
+        ],
+        "prompt_MeV": [
+          8.233781428064558,
+          0,
+          0
+        ],
+        "steps": [
+          20,
+          0,
+          0
+        ]
+      },
+      "ToolSvc.SensitiveDetectorMasterTool.SctSensorSD": {
+        "all_MeV": [
+          2.3788162993220183,
+          0,
+          0
+        ],
+        "prompt_MeV": [
+          1.8165219782194015,
+          0,
+          0
+        ],
+        "steps": [
+          49,
+          0,
+          0
+        ]
+      },
+      "ToolSvc.SensitiveDetectorMasterTool.TriggerSensorSD": {
+        "all_MeV": [
+          2.5947307233177757,
+          0,
+          0
+        ],
+        "prompt_MeV": [
+          0,
+          0,
+          0
+        ],
+        "steps": [
+          14,
+          0,
+          0
+        ]
+      },
+      "ToolSvc.SensitiveDetectorMasterTool.VetoSensorSD": {
+        "all_MeV": [
+          18.407911997711654,
+          0,
+          0
+        ],
+        "prompt_MeV": [
+          0,
+          0,
+          0
+        ],
+        "steps": [
+          50,
+          0,
+          0
+        ]
+      }
+    },
+    "event_t0_ns": -9.39606976240001,
+    "geometry_sensor_boxes": 8,
+    "nonbox_envelope": 0,
+    "boundary_bins": [],
+    "crossing_qa": []
+  },
+  "legacy_fields_exact": true,
+  "original_selected_N": 1,
+  "bin_KE_and_total_closure": true,
+  "wall_s": 179.40859021100914,
+  "scratch_ROOT_logical_B": 388539,
+  "new_independent_neutrinos": 0,
+  "energy_fits": 0,
+  "intermediate_ROOT_retained": false
+}

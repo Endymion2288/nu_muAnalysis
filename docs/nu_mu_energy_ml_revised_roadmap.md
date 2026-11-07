@@ -1,5 +1,9 @@
 # νμ 能量研究路线修订：先识别信息缺口，再选择模型
 
+**2026-11-07 Stage135 主线更新：** [最小能流仪器化pilot](../workbook/2026-11-07_stage135_boundary-instrumentation-pilot.md)12/12自然train父通过，72探测器-父HITS闭合、旧字段精确复现、首例on/off敏感HITS完全相同。11父有非μKE，5父有Ecal几何射线接受；低两层4父局部仅侧向，不以小样本关闭分支。1045schedulerCPU秒/650aggregatewall秒，0GPU。下一Stage137按实测成本冻结同支持几何接受/未接受/总K条件与粒子类消融；DAQ对齐和μ辐射控制继续独立推进。Stage136并行有限MC条件收益已测，完整物理目标未完成。
+
+### Stage134执行入口（原文保留）
+
 **2026-11-07 Stage134 更新：** [不含理想沉积的边界机制](../workbook/2026-11-07_stage134_boundary-without-ideal-deposits.md)已完成3fit。AK/A cal/test最低箱0.687973/0.704447，表明最低箱K增量不依赖五项理想沉积；test第二箱0.905402 [0.777200,1.036741]未过固定双箱继续门，不自动追加z×K。下一Stage135转主研究小pilot：最小边界分解与DAQ对应，先闭合/测成本再定正式量。不是新部署；整体goal和原全部门保持。
 
 ### Stage133执行入口（原文保留）
@@ -2625,3 +2629,13 @@ Stage132§5.2必要机制补问以A+K/A固定3fit开展，不续代理网格；�
 [Stage136](../workbook/2026-11-07_stage136_finite-mc-spectrum-precision.md)执行Stage132§6并行任务，Stage135新observer pilot仍进行。原89033框中role2响应11612行/10811incoming，role3参考13189行；原模型冻结、0新fit/forward/G4、reserved零预测。七真E份额自由，Nselected1000，实测家族模板协方差后E<200份额σ：传统1.490009pp、direct1.235155pp、固定联合(Ehat,pz0)1.139170pp。相关性同一矩阵建模，未假定独立。已知响应控制复现Stage129，显式辅助Schur差≤1.36e−10；500家族draw留存。
 
 是局部selected MC条件收益，不是完整data精度或coverage认证：联合最低箱32/36格为空，稀疏边界轮廓、真实nuisance/背景/接受度/独立生成确认仍缺，不设虚构强prior。1作业exit0，3schedulerCPU秒/8wall秒，0GPU。报告先于本地Conventional Commit；原单事例目标、全部门、角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失和Stage54资产保持，整体goal未完成。
+
+
+## 115. Stage135：边界分解新observer已闭合，进入同支持可响应机制判别
+
+**2026-11-07 Stage135 主线更新：** [最小能流仪器化pilot](../workbook/2026-11-07_stage135_boundary-instrumentation-pilot.md)12/12自然train父通过，72探测器-父HITS闭合、旧字段精确复现、首例on/off敏感HITS完全相同。11父有非μKE，5父有Ecal几何射线接受；低两层4父局部仅侧向，不以小样本关闭分支。1045schedulerCPU秒/650aggregatewall秒，0GPU。下一Stage137按实测成本冻结同支持几何接受/未接受/总K条件与粒子类消融；DAQ对齐和μ辐射控制继续独立推进。Stage136并行有限MC条件收益已测，完整物理目标未完成。
+
+
+实际EmulsionStationA首次外穿/后代去重、三面/五粒子类/下游8敏感box射线接受/相对最早primary-t0均记录。独立分箱KE/totalE求和最大差1.34e−9/1.02e−8MeV；9原selected/12父保留，0新ν/模型fit/forward/digi/reco。几何接受不等于探测效率或可见E，globaltime描述不等于DAQ闭合；native neutron150ns限制保留。
+
+下一正式判别需在新风险前冻结规模/原模型政策/分母/比较和预算，复用12pilot、不盲重全链；G/H/D与预定粒子类消融回答可接受成分承载何种增量，不挑赢家。原Stage87direct62及全部验收保持，未认证独立确认、真实系统/背景/接受度/乳胶锚点仍缺。见[完成审计](../workbook/stage135_energy_ml/completion_audit.tsv)和[完整清单](../workbook/stage132_energy_ml/execution_tracking.tsv)。

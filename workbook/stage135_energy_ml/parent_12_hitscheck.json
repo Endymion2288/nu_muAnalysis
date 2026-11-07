@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "collection": "VetoNuHits",
+      "SD": [
+        "ToolSvc.SensitiveDetectorMasterTool.VetoNuSensorSD"
+      ],
+      "hits_N": 2,
+      "persistent_energy_MeV": 0.15054000169038773,
+      "observer_energy_MeV": 0.15054447220395428,
+      "abs_delta_MeV": 4.470513566556811e-06,
+      "tolerance_MeV": 1.0230108000338079e-05,
+      "passed": true
+    },
+    {
+      "collection": "VetoHits",
+      "SD": [
+        "ToolSvc.SensitiveDetectorMasterTool.VetoSensorSD"
+      ],
+      "hits_N": 17723,
+      "persistent_energy_MeV": 5037.514454586479,
+      "observer_energy_MeV": 5037.514456274189,
+      "abs_delta_MeV": 1.6877102098078467e-06,
+      "tolerance_MeV": 0.0913948028909173,
+      "passed": true
+    },
+    {
+      "collection": "TriggerHits",
+      "SD": [
+        "ToolSvc.SensitiveDetectorMasterTool.TriggerSensorSD"
+      ],
+      "hits_N": 121,
+      "persistent_energy_MeV": 26.959683375782333,
+      "observer_energy_MeV": 26.95968703745165,
+      "abs_delta_MeV": 3.661669317978067e-06,
+      "tolerance_MeV": 0.0006224919366751565,
+      "passed": true
+    },
+    {
+      "collection": "PreshowerHits",
+      "SD": [
+        "ToolSvc.SensitiveDetectorMasterTool.PreshowerSensorSD"
+      ],
+      "hits_N": 108,
+      "persistent_energy_MeV": 41.621048545406666,
+      "observer_energy_MeV": 41.621052508093534,
+      "abs_delta_MeV": 3.962686868419496e-06,
+      "tolerance_MeV": 0.0005591242097090814,
+      "passed": true
+    },
+    {
+      "collection": "EcalHits",
+      "SD": [
+        "ToolSvc.SensitiveDetectorMasterTool.EcalSensorSD"
+      ],
+      "hits_N": 1772,
+      "persistent_energy_MeV": 323.7667366376663,
+      "observer_energy_MeV": 323.76673476747897,
+      "abs_delta_MeV": 1.8701873614190845e-06,
+      "tolerance_MeV": 0.009101953347327534,
+      "passed": true
+    },
+    {
+      "collection": "SCT_Hits",
+      "SD": [
+        "ToolSvc.SensitiveDetectorMasterTool.SctSensorSD"
+      ],
+      "hits_N": 6140,
+      "persistent_energy_MeV": 338.1864961763531,
+      "observer_energy_MeV": 338.1864974459047,
+      "abs_delta_MeV": 1.269551603400032e-06,
+      "tolerance_MeV": 0.03138163729923527,
+      "passed": true
+    }
+  ],
+  "wall_s": 30.201019369007554,
+  "RSS_KiB": 1093148,
+  "read_bytes": 1754052
+}
