@@ -1,3 +1,9 @@
+# 当前执行更新：Stage141模拟响应到ADC闭合；Stage137/140正式结果继续
+
+[Stage141单例控制](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)以原实际kernel/校正时间/噪声流重建7200ADC，逐值0差；有限窗模拟电荷与signed raw的噪声/baseline口径明确分开。8schedulerCPU秒/42wall秒/0GPU，无新G4/训练。一般多根标签、Ecal及μ辐射尾未测量，不据单例外推。Stage137主机制与Stage140原3000toy仍在执行，整体goal未完成，原门/保留集保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage139数值故障已定位；Stage140完成原冻结覆盖实验
 
 [Stage139数值诊断](../workbook/2026-11-07_stage139_sparse-profile-numerical-diagnosis.md)确认原EM-only部分toy覆盖不可认证；解析梯度与受限解自由重启修复已知负LR，5例诊断不是全toy认证。4次尝试含2失败共1448CPU秒/564聚合wall秒/0GPU。Stage140保持原似然、输入、种子与3000toy，18例成本pilot已通过，随后冻结完整批量。Stage137正式边界分解继续；analog谱系、μ辐射联合控制、真实系统与独立确认仍缺，整体目标未完成。原门/角色/保留集保持。
@@ -2667,3 +2673,10 @@ Stage132§5.2必要机制补问以A+K/A固定3fit开展，不续代理网格；�
 [实际诊断报告](../workbook/2026-11-07_stage139_sparse-profile-numerical-diagnosis.md)使用10811 incoming代理整数辅助MC、七真E份额及selected N1000，零MC格允许正概率，无统计伪计数或虚构prior。EM正式实验遇direct stress toy150自由LL低于受限0.041080648，全部部分coverage降为诊断；没有删toy或改bin/种子。解析梯度加受限解自由重启后该例LR从−.082161296变为.219830840，自由LL改善.150997200；5例仅认证已知数值修复，不是全局最优证明。4job/4starts/2失败全计1448CPU秒、564aggregatewall秒、0GPU。
 
 Stage140仍完成原三表示×两场景×500toy，先固定18例测得121.617044科学CPU秒，再冻完整资源；所有3000toy及Asimov轮廓、数值复核、Wilson区间和完整账齐后才给覆盖结论。人为emptycell stress在各表示不同，非实测同一物理shift。真实nuisance/背景/接受度与生成家族独立性未认证，Stage136局部结果与原事件门保持；Stage137主线继续，整体goal未完成。
+
+
+## 118. Stage141：实际模拟响应经噪声取整截断可回到原ADC
+
+[报告及实际通道表](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)验证原frame50单自然train父：7200ADC逐值0差，Veto/Trigger/Preshower各4路600点，VetoNu无HITS/无ADC默认不冒充测得零。原2ns/20oversample/10presample、真实CB/TOF/光传播和private随机流；780–980ns101点模拟积分在ADC前定义。Timing0模拟0而raw−.060278320pC/status1合法保留、不提供timing。本例无触底，不认证饱和下ADC来源相加或一般μ辐射尾。1jobexit0、8CPU秒/42wall秒/0GPU。
+
+Stage137能量机制后再按证据决定多根/自然μ辐射联合控制规模，Ecal/Birks来源标签未测；Stage140全冻结toy继续，不把数值修复或单例测量说成全部目标完成。原角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失及全部门保持，Stage87direct62仍参照。

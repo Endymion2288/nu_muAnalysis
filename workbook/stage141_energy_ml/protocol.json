@@ -1,0 +1,20 @@
+{
+  "stage": 141,
+  "frozen_UTC": "2026-11-07T20:02:46.949620+00:00",
+  "question": "Can pinned timinghistogram/CrystalBall/oversampling analog response plus actualnoise stream reproduce retainedactual ADC before assigning source labels?",
+  "support": "same preexisting trainparent50 as Stage138;all downstream deposits mu-root;not general ancestry or mu radiation tail",
+  "inputs": [
+    "stage138 control0 actualwave/timing/conditions",
+    "stage131 exactprivate seeds"
+  ],
+  "method": "clone d32 convolve waveform: floatperhit correctedtime/energy;2ns20oversample10presamples;TH1 strictendpoint;floatproducts/doubleaccumulator;downsample;Gaussian floatbaseline fromsameTRandom3seed;round/clip;hardwarechannels originalidentifierorder;raw780-980ns101samples",
+  "admission": "all ADC samples exact;no tolerance relaxation;diagnose failure without traininglabels",
+  "limitations": "not ADC source addition;source contributions are analog before clipping/noise;no Ecal labeling or newfit;all timing statuspolicy unchanged",
+  "resources": {
+    "CPU_budget_s": 300,
+    "request_CPUs": 1,
+    "memory_MB": 4000,
+    "GPU": 0
+  },
+  "next": "only after exact closure andStage137 mechanism result decide broader ancestry/actual mu-radiation controls;no automatic fullG4 expansion"
+}

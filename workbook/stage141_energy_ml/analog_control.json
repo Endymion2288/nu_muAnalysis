@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "ADC_samples": 7200,
+  "ADC_mismatch": 0,
+  "detectors": [
+    {
+      "detector": "VetoNu",
+      "ADC_present": false,
+      "ADC_samples": 0,
+      "mismatch": 0,
+      "meaning": "no HITS/no ADC;raw0/status1 producer defaults"
+    },
+    {
+      "detector": "Veto",
+      "ADC_present": true,
+      "ADC_samples": 2400,
+      "mismatch": 0,
+      "meaning": "float analog+original Gaussian stream thenround/clip vsactual ADC"
+    },
+    {
+      "detector": "Trigger",
+      "ADC_present": true,
+      "ADC_samples": 2400,
+      "mismatch": 0,
+      "meaning": "float analog+original Gaussian stream thenround/clip vsactual ADC"
+    },
+    {
+      "detector": "Preshower",
+      "ADC_present": true,
+      "ADC_samples": 2400,
+      "mismatch": 0,
+      "meaning": "float analog+original Gaussian stream thenround/clip vsactual ADC"
+    }
+  ],
+  "window_ns": [
+    780,
+    980
+  ],
+  "inclusive_samples": 101,
+  "source_frame_index": 50,
+  "new_G4": 0,
+  "new_model_fit": 0,
+  "reserved_forward": 0,
+  "CPU_s": 6.060897629000001,
+  "wall_s": 33.938169903995,
+  "RSS_KiB": 687588,
+  "scope": "analog-method closure only;finitewindow truth charge differs from reconstructed signed raw by baseline/noise/clip;no source-fraction ADC additivity claim"
+}
