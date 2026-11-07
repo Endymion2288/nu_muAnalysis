@@ -1,0 +1,6 @@
+{
+  "reason": "First unresolved symbols are ScintReadoutGeometry RTTI/getDetectorElement; declaring helper before geometry initialization did not load implementation libraries. Later vector constructor errors cascade from failed JIT module.",
+  "fix": "Explicitly load Identifier,ScintIdentifier,ScintReadoutGeometry libraries before Cling declarations; retain exact physical checks and flat transport",
+  "earlier_container_diagnosis": "attempt1 automatic conversion symptom; this retry addresses first link failure",
+  "scientific_policy_changed": false
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "Snapshot and actual private RNG states now exact, but EVNT context lacks original HITS filename EventID override; COOL digitization/cable conditions invalid/mismatched; missing expected hardware channel4",
+  "source_evidence": "pinned d32 faser_simulate.py lines128-131: RunNumbers=[runnum],OverrideRunNumber=True,LumiBlockNumbers=[segnum+1],TimeStamps=[0]; basename990131-00050 gives990131/51/0",
+  "fix": "restore exact original producer EventID override for snapshot replay; retain raw/status tolerances",
+  "scientific_policy_changed": false
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "C++ helper used unsupported AtlasHitsVector.back();Cling diagnostic triggered PyAthena exception handling signal",
+  "first_error": "no member named back in AtlasHitsVector<ScintHit>",
+  "fix": "use official operator[];compile outside algorithm callback",
+  "scientific_risk_measured": false
+}

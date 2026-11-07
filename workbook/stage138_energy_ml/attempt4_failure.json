@@ -1,0 +1,6 @@
+{
+  "reason": "Actual valid conditions and RNG now reproduce, but frame50 VetoNuHits is empty; official algorithm produces NO VetoNu ADC, while NtupleDumper records raw=0/status=1 defaults; control incorrectly required all11 channels present",
+  "source_evidence": "pinned NtupleDumper ClearEvent: m_wave_raw_charge[ii]=0,m_wave_status[ii]=1; record exact no-hit defaults,distinct from measuredzero",
+  "fix": "for absent channel require original detector hits empty AND ADC absent AND target raw0/status1. Existing channels raw/status/window checks unchanged; no synthetic ADC/timing",
+  "scientific_policy_changed": false
+}

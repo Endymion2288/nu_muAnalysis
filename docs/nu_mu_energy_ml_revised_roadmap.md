@@ -1,3 +1,9 @@
+# 当前执行更新：Stage138 DAQ控制完成；Stage137正式机制与Stage139数值覆盖继续
+
+**2026-11-07 Stage138更新：** [实际DAQ控制](../workbook/2026-11-07_stage138_DAQ-control-and-time-convention.md)已闭合：同一父两个独立进程7200ADC逐值重复，原raw11/status含2路无ADC默认精确复现，9路有限窗积分独立复算差0pC。Veto18.407908094MeV全为负globaltime而校正hit约±0.033ns，固定global窗不能代表本例DAQ。547schedulerCPU秒/745aggregatewall秒/0GPU；μ辐射尾与一般analog归属未认证。Stage137正式4032父/18fit进行中；Stage139稀疏profile的EM边界优化需修复，部分toy覆盖不得当结论。整体goal未完成，原门/角色/保留集全部保持。
+
+以下保留此前路线原文。
+
 # νμ 能量研究路线修订：先识别信息缺口，再选择模型
 
 **2026-11-07 Stage135 主线更新：** [最小能流仪器化pilot](../workbook/2026-11-07_stage135_boundary-instrumentation-pilot.md)12/12自然train父通过，72探测器-父HITS闭合、旧字段精确复现、首例on/off敏感HITS完全相同。11父有非μKE，5父有Ecal几何射线接受；低两层4父局部仅侧向，不以小样本关闭分支。1045schedulerCPU秒/650aggregatewall秒，0GPU。下一Stage137按实测成本冻结同支持几何接受/未接受/总K条件与粒子类消融；DAQ对齐和μ辐射控制继续独立推进。Stage136并行有限MC条件收益已测，完整物理目标未完成。
@@ -2639,3 +2645,12 @@ Stage132§5.2必要机制补问以A+K/A固定3fit开展，不续代理网格；�
 实际EmulsionStationA首次外穿/后代去重、三面/五粒子类/下游8敏感box射线接受/相对最早primary-t0均记录。独立分箱KE/totalE求和最大差1.34e−9/1.02e−8MeV；9原selected/12父保留，0新ν/模型fit/forward/digi/reco。几何接受不等于探测效率或可见E，globaltime描述不等于DAQ闭合；native neutron150ns限制保留。
 
 下一正式判别需在新风险前冻结规模/原模型政策/分母/比较和预算，复用12pilot、不盲重全链；G/H/D与预定粒子类消融回答可接受成分承载何种增量，不挑赢家。原Stage87direct62及全部验收保持，未认证独立确认、真实系统/背景/接受度/乳胶锚点仍缺。见[完成审计](../workbook/stage135_energy_ml/completion_audit.tsv)和[完整清单](../workbook/stage132_energy_ml/execution_tracking.tsv)。
+
+
+## 116. Stage138：真实DAQ及signed raw控制已闭合，谱系标签仍需analog归属
+
+**2026-11-07 Stage138更新：** [实际DAQ控制](../workbook/2026-11-07_stage138_DAQ-control-and-time-convention.md)已闭合：同一父两个独立进程7200ADC逐值重复，原raw11/status含2路无ADC默认精确复现，9路有限窗积分独立复算差0pC。Veto18.407908094MeV全为负globaltime而校正hit约±0.033ns，固定global窗不能代表本例DAQ。547schedulerCPU秒/745aggregatewall秒/0GPU；μ辐射尾与一般analog归属未认证。Stage137正式4032父/18fit进行中；Stage139稀疏profile的EM边界优化需修复，部分toy覆盖不得当结论。整体goal未完成，原门/角色/保留集全部保持。
+
+本例9路actualraw与float32原ntuple精确一致，Timing0为−0.060278320pC/status1，合法signed读数保留且不提供timing；VetoNu无HITS/无ADC，对应ntuple raw0/status1默认，区别于测得零。恢复pinned producer的EventID990131/51/0并认证实际private RNG；Cling依赖/容器与错误读出假设的5失败全计。actualraw为780–980ns含端点101样本。Veto/Trigger负globaltime可经真实TOF/光传播/CB核形成脉冲，但单例不证明全历史producer原因或μ辐射尾外推。
+
+正式后按Stage132可响应机制结果决定新analog/μ控制规模；不得直接把all-time分数称DAQ分数或ADC线性相加。Stage136有限MC的局部精度保持既有结果，Stage139当前部分coverage因自由似然低于受限/EM初值差而暂无效，先修优化器再认证全冻结toy。真实nuisance/data/背景/接受度/乳胶和独立确认仍缺；原最低能目标和最终门不变，Stage87direct62不变。

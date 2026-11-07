@@ -1,3 +1,11 @@
+# 当前执行入口：Stage138控制完成，Stage137正式批与Stage139稀疏优化继续
+
+**2026-11-07 Stage138更新：** [实际DAQ控制](../workbook/2026-11-07_stage138_DAQ-control-and-time-convention.md)已闭合：同一父两个独立进程7200ADC逐值重复，原raw11/status含2路无ADC默认精确复现，9路有限窗积分独立复算差0pC。Veto18.407908094MeV全为负globaltime而校正hit约±0.033ns，固定global窗不能代表本例DAQ。547schedulerCPU秒/745aggregatewall秒/0GPU；μ辐射尾与一般analog归属未认证。Stage137正式4032父/18fit进行中；Stage139稀疏profile的EM边界优化需修复，部分toy覆盖不得当结论。整体goal未完成，原门/角色/保留集全部保持。
+
+先读Stage138报告、Stage137已冻结protocol/freeze_note与Stage139覆盖合同。Stage137生产已启动，复用12pilot，不重复submit/旧G4/digi/reco，待全部旧字段/HITS闭合后执行冻结18fit及独立验证；查精确cluster和有界history。Stage139覆盖初轮存在EM simplex边界驻留，正在有限数值repair，先验证可复活边界的约束梯度优化再按原toy全部认证，不删除失败toy、不按coverage择bin或prior。Stage138已完整闭合，不重跑控制；后续analog来源与μ辐射需另冻pilot/预算，完整物理和独立确认仍缺。所有角色/K/pz0/raw11/typedNaN/signed/Calo缺失/原cuts及原门保持。
+
+## 此前执行入口（原文保留）
+
 # 当前执行入口：Stage135仪器化pilot完成，冻结Stage137正式分解；DAQ控制并行
 
 **2026-11-07 Stage135 主线更新：** [最小能流仪器化pilot](../workbook/2026-11-07_stage135_boundary-instrumentation-pilot.md)12/12自然train父通过，72探测器-父HITS闭合、旧字段精确复现、首例on/off敏感HITS完全相同。11父有非μKE，5父有Ecal几何射线接受；低两层4父局部仅侧向，不以小样本关闭分支。1045schedulerCPU秒/650aggregatewall秒，0GPU。下一Stage137按实测成本冻结同支持几何接受/未接受/总K条件与粒子类消融；DAQ对齐和μ辐射控制继续独立推进。Stage136并行有限MC条件收益已测，完整物理目标未完成。

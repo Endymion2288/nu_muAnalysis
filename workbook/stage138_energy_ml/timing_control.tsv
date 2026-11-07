@@ -1,0 +1,5 @@
+detector	PMT_hit_contributions	energy_MeV	global0_1000_energy_MeV	global_negative_energy_MeV	corrected_hist_underflow_energy_MeV	min_global_ns	max_global_ns	min_corrected_ns	max_corrected_ns	scope
+VetoNu	0	0	0	0	0					Trigger duplicates one hit into2PMTs;corrected hit time is before CBconvolution,not arrival-time measurement
+Veto	50	18.40790809399914	0	18.40790809399914	0	-6.005382061004639	-5.301756858825684	-0.03325033187866211	0.032790184020996094	Trigger duplicates one hit into2PMTs;corrected hit time is before CBconvolution,not arrival-time measurement
+Trigger	28	5.189460005611181	0	5.189460005611181	0	-0.13863298296928406	-0.10818047821521759	-0.24442832171916962	0.2422032654285431	Trigger duplicates one hit into2PMTs;corrected hit time is before CBconvolution,not arrival-time measurement
+Preshower	20	8.233779934467748	8.233779934467748	0	0	8.581574440002441	9.615756034851074	-0.32355767488479614	0.5765877962112427	Trigger duplicates one hit into2PMTs;corrected hit time is before CBconvolution,not arrival-time measurement

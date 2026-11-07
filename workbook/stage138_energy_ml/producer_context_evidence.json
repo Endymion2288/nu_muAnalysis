@@ -1,0 +1,69 @@
+{
+  "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "static_source": true,
+  "files": {
+    "./bin/faser_simulate.py": [
+      {
+        "line": 128,
+        "text": "    configFlags.Input.RunNumbers = [ runnum ] "
+      },
+      {
+        "line": 129,
+        "text": "    configFlags.Input.OverrideRunNumber = True"
+      },
+      {
+        "line": 130,
+        "text": "    configFlags.Input.LumiBlockNumbers = [ (segnum+1) ]"
+      },
+      {
+        "line": 131,
+        "text": "    configFlags.Input.TimeStamps = [0]"
+      },
+      {
+        "line": 209,
+        "text": "    configFlags.addFlag(\"Input.InitialTimeStamp\", 0)     # To avoid autoconfig"
+      }
+    ],
+    "./bin/faser_digi.py": [
+      {
+        "line": 32,
+        "text": "parser.add_argument(\"--digiTag\", default=\"\","
+      },
+      {
+        "line": 68,
+        "text": "configFlags.IOVDb.DatabaseInstance = \"OFLP200\"   # Use MC conditions for now"
+      },
+      {
+        "line": 70,
+        "text": "configFlags.Input.ProjectName = \"mc20\""
+      },
+      {
+        "line": 179,
+        "text": "acc.merge(CaloWaveformDigitizationCfg(configFlags, digiTag=args.digiTag, AdvancedTiming=(not args.simpleTiming)))"
+      },
+      {
+        "line": 181,
+        "text": "from ScintDigiAlgs.ScintDigiAlgsConfig import ScintWaveformDigitizationCfg"
+      },
+      {
+        "line": 182,
+        "text": "acc.merge(ScintWaveformDigitizationCfg(configFlags, digiTag=args.digiTag, AdvancedTiming=(not args.simpleTiming)))"
+      }
+    ],
+    "./src/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx": [
+      {
+        "line": 262,
+        "text": "      m_wave_raw_charge[ch]=hit->raw_integral()/50;  // In pC"
+      },
+      {
+        "line": 2223,
+        "text": "      m_wave_raw_charge[ii]=0;"
+      },
+      {
+        "line": 2226,
+        "text": "      m_wave_status[ii]=1; // default = 1 means below threshold"
+      }
+    ]
+  },
+  "original_basename": "FaserMC-Stage131Nu-990131-00050-stage131-HITS.root"
+}

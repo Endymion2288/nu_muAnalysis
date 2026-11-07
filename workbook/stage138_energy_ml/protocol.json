@@ -1,0 +1,54 @@
+{
+  "stage": 138,
+  "frozen_UTC": "2026-11-07T19:10:45Z",
+  "case": {
+    "row": 150041,
+    "source": 826,
+    "run": 200095,
+    "component": "pi",
+    "role": 1,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+    "entry": 82990,
+    "incoming": [
+      14.0,
+      -6.916692733764648,
+      8.872150421142578,
+      90288.0
+    ],
+    "truth_E_GeV": 90.28800070084446,
+    "old_reco_pz_GeV": 80.614109375,
+    "y": 0.006195447178858227,
+    "vertex_z_mm": -2816.870849609375,
+    "stratum": "E50_100",
+    "rank": "001bb02223d62b56",
+    "frame_index": 50,
+    "seed": 2026241750,
+    "inclusion_probability": 0.32841565105837073
+  },
+  "question": "Can retained exact HITS snapshot reproduce actual private digitizer streams and signed raw11 in official DAQ convention?",
+  "support": "one preexisting natural train parent50; all downstream Scint/Ecal deposits mu-root; no new nu/no energy training,not radiation-tail coverage",
+  "inputs": [
+    "stage135 parent50 six-detector QA snapshot",
+    "stage131 pilot private RNG states",
+    "stage131 matched_input raw11/status",
+    "actual d32 tools+geometry+conditions"
+  ],
+  "protocol": [
+    "losslessly recreate every ScintHit field",
+    "official ScintWaveformDigiAlg+actual algorithm-owned tools,original seed for each detector",
+    "EVNT original entry supplies only event/IOV context; check final private states and raw11; do not assume context equivalent",
+    "original signed raw11/status float32 exact required",
+    "finite raw780-980ns including endpoints",
+    "two independent processes repeat full ADC/result exact",
+    "no timing input from nonzero status; no new timing or energy model",
+    "if failure investigate exact program/conditions; no tolerance relaxation"
+  ],
+  "budget_CPU_s": 1800,
+  "request_CPUs": 4,
+  "request_memory_MB": 12000,
+  "new_G4": 0,
+  "total_energy_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "next": "only after this control,freeze analogue response attribution with true kernel/geometry/finitewindow; broader mu-radiation control remains required"
+}
