@@ -1,3 +1,22 @@
+# 当前研究入口：Stage128复盘完成，下一工作包优先下游Veto饱和恢复
+
+先读[Stage128完整研究报告](../workbook/2026-11-07_stage128_vertex-timing-saturation-research.md)、路线§107及已完成的[Stage125](../workbook/2026-11-06_stage125_frozen-direct62-geant4-performance.md)/[Stage127](../workbook/2026-11-06_stage127_cuboid-cut-optimization.md)。下面Stage124及更早入口逐字保留为历史，不能再按旧标题重做已完成阶段。本轮用户要求无环境研究：0事件数组/ROOT/NPZ读取、0重算/训练/推理/重建/作业，无SHA；以下是未来有环境时的Stage129建议，当前不执行。
+
+科学参照仍为Stage87 direct62，三seed/400轮/固定offset。Stage125证实五G4整体优势保留，但五组最低能均劣于传统、高端负偏约−41%至−45%；不等于完整系统或等效性认证。Stage127横向truth工作点240×230 mm与材料union交集，pz100产额+2.3170%、test log-RMSE+0.1189%，z固定，没有重建顶点入模。保持强基线和已有选择成果，不默认继续旧输入架构/seed/几何网格。
+
+下一有环境科学工作包在看新风险前冻输入、有限pilot、训练/校准/留出和预算，完成可行部分的能量及尾部对照：
+
+1. **主实验：下游Veto10/20/21受约束饱和恢复。** Stage56三路overflow为38363/37102/35762（每路81313），官方CB曾有不稳定外推；VetoNu0/1当时无overflow。先回接真实ADC/status/官方fit及rail/增益/窗口条件，测两侧风险与边沿支持。用真实未饱和波形人工截断、来源留出比较raw/官方CB/带删失约束与模板不确定度的恢复；人工ADC截断不认证PMT模拟非线性。有限窗Q及区间/触顶样本比例/残差/可用标记加入原raw，保留实测部分，不整条平滑替换。之后同支持、同学习政策交X62/可用标记控制/X62+恢复族的连续能量和三尾；波形改善不能替代Eν收益。缺ADC时报告确切持久化层/支持，不能凭raw标量补出真实波形。
+2. **独立的便宜时序对照。** 明确上游VetoNu pair、下游层和同片PMT映射；严格两端status==0、存在且finite。任何非0均无可用到达时间/Δt，不用历史容许1/16/512的Good辅助量、不重标512；电荷/事件保留，Δt=NaN+pair-valid。用真实μ控制与run/channel条件校正时基、offset/光传播/timewalk/路径，测联合覆盖，再交X、X+valid、X+valid+校正Δt全事件消融，不扫pair/窗口。缺绝对clock不自动否定相对时间，但status0也不自动证明共同基准。非0饱和电荷拟合内部平移只作nuisance，不输出timing。same-prompt两下游TOF不直接测z或高能μ能量。
+3. **深度投入先有当前依据。** direct62的z0是首measurement位置；旧真z改善来自不同CaloNu支持，Stage51局部会聚未回推靶。先在当前audited62/普通几何完整支持检验真z/剩余λI、X0增量，再决定真实多track/IFT协方差及靶区兼容度。单μ与LOS交点无唯一顶点，短段名义100GeV不是强子动量。无早期轨迹者保留，不以z回归精度或GNN大小替代全队列能量收益。
+4. **独立双侧支持与系统继续。** 原最低箱940行/926 incoming代理，Stage119仅新增52，不以9→36小曲线宣布训练饱和；争取有纳入权重的N₀→约2N₀，并覆盖同低pz高E/high-y、过渡与自然高端。完整父/末态/entry/seed家族同role，新确认另锁，响应重复不计新νN，原reserved不开。G4级联、GENIE/FSI、flux及gain/clip/template/time响应分别检验；旧producer未知不成为已有窗内波形的无限前置。已有Stage125结果不重做；新G4仅按明确机制或新支持所需，先全链成本pilot再定规模。
+
+Stage122只用VN0/1、Pres0的绝对粗窗，未对齐脉冲/表征精细前后沿，未覆盖下游Veto饱和；其同HITS数字化方差也只变化VN/Pres。不能把小队列阴性或小随机方差称为全波形/全探测器信息上界，也不继续泛化降噪研究。各支线共享提取但可独立推进；不能连续只交metadata，不能以小子队列相对大池f0的差归因新增信息。全部新增可用率/能量收益/功效/CPU/I/O/RSS未测，先测实际pilot再冻正式规模，不按旧scalar或digitization速率外推。
+
+批量科学工作HTCondor目录~/condor/nu_muAnalysis/stage129/；按来源批读、受控多线程，只保存必要波形/紧凑摘要，避免xAOD/重复输出，GPU加速须实测。一次方动量仍只pz0、允许px/py/q/p/弯折，raw11/status/typed NaN/合法signed/Calo缺失、原fitted/reduced cuts/pz>50、全部K及角色不变。原两低箱/传统上95≤1.05、all/direct≤1.01、其余五层≤1.03、八层三向tail差上95≤+2pp保持；1.05只非劣效，最终两低箱真正胜出及真实系统/背景/接受度/独立确认和能谱收益仍必需。先中文workbook再本地Conventional Commit、不push；历史Stage54资产与以下所有旧后缀保留。
+
+## Stage124历史入口（原文保留）
+
 # 当前执行入口：Stage124原规模关联能量实验完成，下一步买可追溯独立支持
 
 先读[Stage124完整实测](../workbook/2026-11-06_stage124_native-association-energy.md)、路线§106、信息预算§86、[完成/缺口审计](../workbook/stage124_energy_ml/completion_audit.tsv)及[扩样账](../workbook/stage124_energy_ml/sample_strategy.json)。以下Stage123及更早入口完整保留为历史，不再照旧重跑。

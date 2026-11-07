@@ -1,0 +1,23 @@
+{
+  "stage": 128,
+  "date": "2026-11-07",
+  "scope": "文档验证；不含物理复现、事件数据读取、训练、推理或SHA校验",
+  "checks": {
+    "historical_next_step_complete_suffix_preserved": true,
+    "historical_roadmap_body_preserved": true,
+    "report_code_fences_balanced": true,
+    "report_has_goal_evidence_conclusion_next_inputs_acceptance": true,
+    "all_added_repository_links_resolve": true,
+    "git_diff_check_passed": true,
+    "only_expected_tracked_documents_changed": true
+  },
+  "added_local_link_occurrences_checked": 34,
+  "missing_links": [],
+  "artifacts": [
+    "workbook/2026-11-07_stage128_vertex-timing-saturation-research.md",
+    "docs/nu_mu_energy_ml_revised_roadmap.md",
+    "docs/nu_mu_energy_ml_next_step_prompt.md",
+    "workbook/stage128_energy_ml/document_validation.json"
+  ],
+  "physics_results": "全部引用既有workbook；本轮新增物理收益、覆盖率和执行成本未测量"
+}
