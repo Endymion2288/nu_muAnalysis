@@ -1,0 +1,16 @@
+{
+  "stage": 140,
+  "phase": "numerical_pilot",
+  "frozen_UTC": "2026-11-07T19:53:21.936871+00:00",
+  "scope": "Complete unchanged Stage139 likelihood experiment; no new physics estimator, bins, truth fractions, seeds, MC or data counts",
+  "cases": "3 representations x2 scenarios x indices [0,150,487] =18 predeclared cases",
+  "solver": "EM100 warmup only; reference/uniform analytic-gradient SLSQP; always free restart from constrained optimum; no zeroMC probability restriction or pseudocount likelihood",
+  "admission": "All numerical feasibility/success; known direct stress150 LR agreement <.001; measured CPU before formal budget",
+  "resources": {
+    "CPU_budget_s": 600,
+    "CPUs": 4,
+    "memory_MB": 12000,
+    "GPU": 0
+  },
+  "formal": "All original 3000 toys required; no failure dropping or partial coverage certification. Freeze formal resources after pilot."
+}

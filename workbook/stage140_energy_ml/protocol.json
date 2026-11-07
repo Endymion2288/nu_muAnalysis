@@ -1,0 +1,33 @@
+{
+  "stage": 140,
+  "phase": "complete_original_coverage",
+  "frozen_UTC": "2026-11-07T19:58:08.772960+00:00",
+  "admission": "18case pilot successful,known stress150 agreement2.03e-9;measured121.617043735 scientificCPU seconds",
+  "inherited_protocols": [
+    "workbook/stage139_energy_ml/protocol.json",
+    "workbook/stage139_energy_ml/coverage_protocol.json"
+  ],
+  "unchanged": "all10811MCproxies,7truthbins,3representations,2scenarios,N1000,500toys/group,seed202611071390(+100stress),original draw order,LRcutoff3.841458820694124;no newprior/bin/model or failedtoy drop",
+  "numerical": "EM100 warmup then analyticgradient SLSQP from reference/uniform;best objective;always free restart from fixed;allsolver success,feasibility<1e-7,freeLL>=fixedLL-1e-5;record multistart gaps,not global proof",
+  "batching": "60batches x50toys;8processes;save each completedtoy;6separate Asimov profile jobs;no repeat successfultoy on transport/summary errors",
+  "crosscheck": "prespecified toy0/150/487 for all6experiments;longEM100000+gradient dual starts andfixedrestart,compare free/fixed LLabs<.001;Asimov exactmaxabs<.001",
+  "cost_projection": {
+    "measured_pilot_mean_CPU_s": {
+      "traditional": 0.478941664,
+      "direct62": 0.5103302396666666,
+      "joint_direct62_pz0": 19.280235385500003
+    },
+    "formal_toys_projected_CPU_s": 20269.507289166668,
+    "scope": "projection,not measurement"
+  },
+  "resources": {
+    "CPU_budget_s": 45000,
+    "request_CPUs": 8,
+    "max_materialize": 12,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "GPU": 0
+  },
+  "outputs": "all3000toy solutions,pointwise coverage Wilson95,psi bias/RMS,Asimov profiles,widths,36objective crosschecks,fullscheduler accounting;not uniform/actualdata/realnuisance certification",
+  "stop": "complete original finite experiment only;no adaptive bins/prior/physicsestimator grid;any remaining numerical inadequacy reported;Stage87 andoriginalgates unchanged;overallgoal remains incomplete"
+}

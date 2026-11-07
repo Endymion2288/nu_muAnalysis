@@ -1,3 +1,13 @@
+# 当前执行更新：Stage137/140/141计算与验证完成，转入可追溯响应约束
+
+本轮完成[边界机制](../workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md)、[3000toy有限MC覆盖](../workbook/2026-11-07_stage140_finite-MC-profile-coverage.md)及[模拟响应到ADC控制](../workbook/2026-11-07_stage141_analog-to-ADC-control.md)。G及D有局部能量增量、未过双箱5%扩大门，H的oracle增量更强；不自动扩大同类G4/模型网格。direct62条件谱区间仍比传统窄；联合nominal覆盖93.4% [90.8761%,95.2621%]，不能认证95%覆盖。7200ADC闭合只认证一个控制父，未完成一般来源/μ辐射尾、真实系统/背景/接受度/乳胶和独立确认。原全部门与Stage87direct62保持，整体goal未完成。
+
+以下保留此前入口原文。
+
+先读上述三份实测报告与Stage132执行清单。Stage137的4032父/18fit和Stage140的3000toy已完成，不重复提交；Stage138/141的单例ADC控制亦不重跑。G/A、D/AK有局部增量但未过冻结双箱5%门，禁止自动扩大同类G4/代理/网络；H/A强oracle增量不是可测或理论不可见证明。若继续一般多根/Ecal来源及μ辐射控制，只做新问题明确、输入可核、成本pilot后冻结的有限方法控制，不自动启动自然ν大生产。真实匹配、data曝光GRL、背景、全生成接受度与相关系统辅助输入仍需认证；不可编prior/开放reserved或标整体goal完成。
+
+## 此前执行入口（原文保留）
+
 # 当前执行入口：Stage138控制完成，Stage137正式批与Stage139稀疏优化继续
 
 **2026-11-07 Stage138更新：** [实际DAQ控制](../workbook/2026-11-07_stage138_DAQ-control-and-time-convention.md)已闭合：同一父两个独立进程7200ADC逐值重复，原raw11/status含2路无ADC默认精确复现，9路有限窗积分独立复算差0pC。Veto18.407908094MeV全为负globaltime而校正hit约±0.033ns，固定global窗不能代表本例DAQ。547schedulerCPU秒/745aggregatewall秒/0GPU；μ辐射尾与一般analog归属未认证。Stage137正式4032父/18fit进行中；Stage139稀疏profile的EM边界优化需修复，部分toy覆盖不得当结论。整体goal未完成，原门/角色/保留集全部保持。

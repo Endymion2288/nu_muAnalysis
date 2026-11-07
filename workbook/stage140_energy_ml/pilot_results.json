@@ -1,0 +1,187 @@
+{
+  "results": [
+    {
+      "model": "traditional",
+      "scenario": "nominal_empirical",
+      "toy": 0,
+      "LR": 0.3518703688423557,
+      "psi_hat": 0.09470572206589992,
+      "start_LL_difference_fixed": 2.503111318219453e-08,
+      "CPU_s": 0.45576017,
+      "wall_s": 0.46756271802587435
+    },
+    {
+      "model": "traditional",
+      "scenario": "nominal_empirical",
+      "toy": 150,
+      "LR": 1.4453191919747042,
+      "psi_hat": 0.10390743955314671,
+      "start_LL_difference_fixed": 1.9274011719971895e-08,
+      "CPU_s": 0.55902023,
+      "wall_s": 0.5646575759747066
+    },
+    {
+      "model": "traditional",
+      "scenario": "nominal_empirical",
+      "toy": 487,
+      "LR": 0.03092780817678431,
+      "psi_hat": 0.08263654883381544,
+      "start_LL_difference_fixed": 1.1841621017083526e-09,
+      "CPU_s": 0.539419608,
+      "wall_s": 0.5454906799714081
+    },
+    {
+      "model": "traditional",
+      "scenario": "unseen_cell_stress",
+      "toy": 0,
+      "LR": 0.09725812121178024,
+      "psi_hat": 0.0900427253933544,
+      "start_LL_difference_fixed": 8.840288501232862e-10,
+      "CPU_s": 0.43454108100000005,
+      "wall_s": 0.442019384005107
+    },
+    {
+      "model": "traditional",
+      "scenario": "unseen_cell_stress",
+      "toy": 150,
+      "LR": 0.43435094141750596,
+      "psi_hat": 0.07483012446957266,
+      "start_LL_difference_fixed": 9.435098036192358e-09,
+      "CPU_s": 0.42587242200000003,
+      "wall_s": 0.4290253529907204
+    },
+    {
+      "model": "traditional",
+      "scenario": "unseen_cell_stress",
+      "toy": 487,
+      "LR": 0.6766400123342464,
+      "psi_hat": 0.09796352296059387,
+      "start_LL_difference_fixed": 7.297785487025976e-09,
+      "CPU_s": 0.45903647300000006,
+      "wall_s": 0.4631562629947439
+    },
+    {
+      "model": "direct62",
+      "scenario": "nominal_empirical",
+      "toy": 0,
+      "LR": 9.413131920155138e-06,
+      "psi_hat": 0.08531716234111127,
+      "start_LL_difference_fixed": 2.1460436983034015e-08,
+      "CPU_s": 0.3964837659999999,
+      "wall_s": 0.3999074649764225
+    },
+    {
+      "model": "direct62",
+      "scenario": "nominal_empirical",
+      "toy": 150,
+      "LR": 0.1570420250573079,
+      "psi_hat": 0.08034342589741808,
+      "start_LL_difference_fixed": 1.2101736501790583e-08,
+      "CPU_s": 0.49605647899999994,
+      "wall_s": 0.49937863199738786
+    },
+    {
+      "model": "direct62",
+      "scenario": "nominal_empirical",
+      "toy": 487,
+      "LR": 0.6568579134582251,
+      "psi_hat": 0.07518799821930611,
+      "start_LL_difference_fixed": 8.723873179405928e-09,
+      "CPU_s": 0.5275744379999999,
+      "wall_s": 0.5310273520299233
+    },
+    {
+      "model": "direct62",
+      "scenario": "unseen_cell_stress",
+      "toy": 0,
+      "LR": 1.8911618182864913,
+      "psi_hat": 0.06847868275149033,
+      "start_LL_difference_fixed": 7.961625669850037e-07,
+      "CPU_s": 0.4086889469999999,
+      "wall_s": 0.4120760819641873
+    },
+    {
+      "model": "direct62",
+      "scenario": "unseen_cell_stress",
+      "toy": 150,
+      "LR": 0.21983084200837766,
+      "psi_hat": 0.09122927876008312,
+      "start_LL_difference_fixed": 0.1966648749257729,
+      "CPU_s": 0.5914202890000001,
+      "wall_s": 0.5965060440357774
+    },
+    {
+      "model": "direct62",
+      "scenario": "unseen_cell_stress",
+      "toy": 487,
+      "LR": 0.9682958593657531,
+      "psi_hat": 0.07288139652505644,
+      "start_LL_difference_fixed": 2.8103386284783483e-09,
+      "CPU_s": 0.641757519,
+      "wall_s": 0.646190514031332
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "nominal_empirical",
+      "toy": 0,
+      "LR": 0.4550413842916896,
+      "psi_hat": 0.07761017940863622,
+      "start_LL_difference_fixed": 3.886452759616077e-08,
+      "CPU_s": 9.46664609,
+      "wall_s": 9.530668208026327
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "nominal_empirical",
+      "toy": 150,
+      "LR": 2.2812016777425015,
+      "psi_hat": 0.10232773884778283,
+      "start_LL_difference_fixed": 4.807952791452408e-08,
+      "CPU_s": 21.622913629,
+      "wall_s": 21.740161828987766
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "nominal_empirical",
+      "toy": 487,
+      "LR": 0.40509262554041925,
+      "psi_hat": 0.09313662349274154,
+      "start_LL_difference_fixed": 2.569292348167437,
+      "CPU_s": 20.996768922,
+      "wall_s": 21.161580360028893
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "unseen_cell_stress",
+      "toy": 0,
+      "LR": 0.02149289346925798,
+      "psi_hat": 0.08362307171715277,
+      "start_LL_difference_fixed": 2.3155735107138753e-09,
+      "CPU_s": 22.642073056,
+      "wall_s": 22.77285008900799
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "unseen_cell_stress",
+      "toy": 150,
+      "LR": 0.5888518016618036,
+      "psi_hat": 0.0945035018209452,
+      "start_LL_difference_fixed": 2.3370375856757164e-08,
+      "CPU_s": 19.662209683,
+      "wall_s": 19.775262374954764
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "unseen_cell_stress",
+      "toy": 487,
+      "LR": 0.03327410416022758,
+      "psi_hat": 0.08324676396935599,
+      "start_LL_difference_fixed": 2.3501343093812466e-09,
+      "CPU_s": 21.290800933000003,
+      "wall_s": 21.44133366603637
+    }
+  ],
+  "CPU_s": 121.61704373500001,
+  "wall_s": 44.19495180703234,
+  "scope": "numerical/cost pilot18 fixedtoys only; no formal coverage or actualdata certification"
+}
