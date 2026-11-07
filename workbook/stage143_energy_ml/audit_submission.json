@@ -1,0 +1,29 @@
+{
+  "result": "9674304.0 - 9674304.0",
+  "phase": "audit",
+  "cpus": 1,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage143\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage143/worker_1794085855958786934.sh\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage143/1794085855958786934/energy-ml-stage143.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 2000MB\nrequest_disk = 2000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+NuMuStage = \"energy-ml-stage143\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage143/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage143/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage143/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage143/1794085855958786934/energy-ml-stage143.tar.gz",
+    "bytes": 1100018,
+    "files": [
+      "ml/stage143_summarize.py",
+      "workbook/stage143_energy_ml/protocol.json",
+      "workbook/stage143_energy_ml/support.json",
+      "workbook/stage143_energy_ml/parent_1_report.json",
+      "workbook/stage143_energy_ml/parent_1_admission.json",
+      "workbook/stage143_energy_ml/parent_1_lineage.json",
+      "workbook/stage143_energy_ml/parent_1_source_control.json",
+      "workbook/stage143_energy_ml/parent_1_source_analog_charge.tsv",
+      "ntuples/energy_ml_stage143/parent_1_qa_hits.json.gz",
+      "ntuples/energy_ml_stage143/parent_1_control.json.gz",
+      "workbook/stage143_energy_ml/parent_5_report.json",
+      "workbook/stage143_energy_ml/parent_5_admission.json",
+      "workbook/stage143_energy_ml/parent_5_lineage.json",
+      "workbook/stage143_energy_ml/parent_5_source_control.json",
+      "workbook/stage143_energy_ml/parent_5_source_analog_charge.tsv",
+      "ntuples/energy_ml_stage143/parent_5_qa_hits.json.gz",
+      "ntuples/energy_ml_stage143/parent_5_control.json.gz"
+    ]
+  }
+}

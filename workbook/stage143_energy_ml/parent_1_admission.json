@@ -1,0 +1,13 @@
+{
+  "stage": 143,
+  "index": 1,
+  "admitted": true,
+  "frozen_UTC": "2026-11-07T20:54:05.972223+00:00",
+  "selection": "First original-frame-order train parent with positive VetoNu support; fixed by support contract before replay, no risk/source-fraction choice.",
+  "support": "support.json; 736/2304 train parents",
+  "budget": "1000 cumulative scheduler CPU seconds including support and subsequent audit; second parent requires first closure and measured cost.",
+  "runtime": "Reuse Stage142 observer-runtime.tar.gz; no C++ build; original producer seed and basename unchanged",
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "reserved_forward": 0
+}

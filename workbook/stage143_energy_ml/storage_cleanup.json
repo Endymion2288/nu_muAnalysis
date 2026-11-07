@@ -1,0 +1,47 @@
+{
+  "event_text_files": 6,
+  "event_files_before_bytes": 2694806,
+  "bundle": "ntuples/energy_ml_stage143/event_records.json.gz",
+  "bundle_bytes": 1086863,
+  "exact_text_roundtrip": true,
+  "restore": "gzip JSON maps original relative path to original JSON text. Restore .json.gz with gzip text writer, .json as text; no G4 required.",
+  "source_capsule": "software/stage143/source_snapshots.tar.gz",
+  "source_capsule_bytes": 37619,
+  "removed_transport": [
+    {
+      "path": "software/stage143/1794085855958786934/energy-ml-stage143.tar.gz",
+      "bytes": 1100018
+    },
+    {
+      "path": "software/stage143/1794084846097074207/energy-ml-stage143.tar.gz",
+      "bytes": 9330831
+    },
+    {
+      "path": "software/stage143/1794085276300307517/energy-ml-stage143.tar.gz",
+      "bytes": 9330819
+    },
+    {
+      "path": "software/stage143/1794084582962728363/energy-ml-stage143.tar.gz",
+      "bytes": 22811509
+    },
+    {
+      "path": "ntuples/energy_ml_stage143/support_result.tar.gz",
+      "bytes": 2796
+    },
+    {
+      "path": "ntuples/energy_ml_stage143/parent_1_result.tar.gz",
+      "bytes": 135969
+    },
+    {
+      "path": "ntuples/energy_ml_stage143/parent_5_result.tar.gz",
+      "bytes": 983392
+    },
+    {
+      "path": "ntuples/energy_ml_stage143/audit_result.tar.gz",
+      "bytes": 415715
+    }
+  ],
+  "removed_transport_bytes": 44111049,
+  "queue_empty_before_delete": true,
+  "accounting_recovery": "Cleanup log assembly had a Python stat_size call typo after successful merge/deletion. Sizes and exact original text recovered from unchanged /tmp transport copies and submission metadata; no scientific replay."
+}

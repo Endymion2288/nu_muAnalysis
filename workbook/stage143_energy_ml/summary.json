@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "train_support_parents": 2304,
+  "positive_VetoNu_parents": 736,
+  "controls": 2,
+  "indices": [
+    1,
+    5
+  ],
+  "ADC_samples": 16800,
+  "ADC_mismatch": 0,
+  "clipped_samples": 84,
+  "original_raw11_status_exact_parents": [
+    1,
+    5
+  ],
+  "original_selected_reference_missing_parents": [],
+  "original_full_private_state_comparison": "unavailable for these parents; original seed rule reproduced",
+  "max_window_sum_delta_pC": 4.6198148993426e-05,
+  "CPU_s": 0.18126102,
+  "wall_s": 0.18253020901465788,
+  "RSS_KiB": 23240,
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "scope": "VetoNu signal method coverage only; no low-energy performance, EcalDAQ, population radiation-tail or actual-data certification"
+}

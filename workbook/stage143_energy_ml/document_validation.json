@@ -1,0 +1,20 @@
+{
+  "stage": 143,
+  "UTC": "2026-11-07T21:18:30.022383+00:00",
+  "AST_files": [
+    "ml/stage142_pilot.py",
+    "ml/stage142_native_general.py",
+    "ml/stage142_control_general.py",
+    "ml/stage143_monitor.py",
+    "ml/stage143_response.py",
+    "ml/stage143_submit_response.py",
+    "ml/stage143_submit_support.py",
+    "ml/stage143_summarize.py",
+    "ml/stage143_support.py"
+  ],
+  "local_report_links": 10,
+  "scientific_validation": "summary.json and two source controls/hitscheck; all passed",
+  "transport_validation": "storage_cleanup.json exact text roundtrip",
+  "shell_syntax": "bash -n run_ml_stage143_response.sh",
+  "git_diff_check": "passed before commit"
+}

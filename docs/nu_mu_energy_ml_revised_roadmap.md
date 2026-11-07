@@ -1,3 +1,9 @@
+# 当前执行更新：Stage143含信号VetoNu来源控制完成，Ecal与μ联合控制继续
+
+[Stage143报告](../workbook/2026-11-07_stage143_VetoNu-signal-source-control.md)在2304个train父中审计736个正VetoNu支持，按原frame顺序固定1/5两父。16800ADC零差、84触底、原raw11/status精确；VetoNu分别为全非μ和混合来源，最大来源模拟积分差4.619815e−5pC。4job全部exit0、415CPU秒/552聚合wall秒/0GPU，无新ν/能量fit。两父均为charm中高能，仅认证通道方法，不冒充低能或总体辐射尾。紧凑证据已合并回读，删44.11MB重复运输。Stage144缓存Ecal控制及Stage145有限μ联合留出检验继续；Stage137扩大门/原全部门/Stage87和整体goal未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage142四父来源/DAQ控制完成，下一补VetoNu含信号覆盖
 
 [Stage142实测](../workbook/2026-11-07_stage142_live-ancestry-and-DAQ-source-control.md)在4个既有train父（含2个K）验证真实hit根谱系、持久化顺序与有限窗模拟来源：28800ADC零差，覆盖159触底采样；最大来源模拟积分加和差.001361557pC。三个selected父原raw11/status精确，高-y K父原selected参考缺失而保留。完全μ根的Veto也可大电荷/触底，不以平均MIP或大电荷直接判强子。4job全部exit0、668CPU秒/526聚合wall秒/0GPU。四父VetoNu均无HITS，Ecal只认证官方修正hit标签；μ辐射总体控制和真实系统/独立确认未完成。下一按最多2父/1000CPU秒合同补有信号VetoNu控制，先查train支持；原Stage1375%扩大门不绕过、不自动大生产，整体goal未完成。
@@ -2719,3 +2725,10 @@ D/传统test最低箱.908385 [.768990,1.063567]、cal1.231296 [1.082538,1.379751
 [中文报告](../workbook/2026-11-07_stage142_live-ancestry-and-DAQ-source-control.md)新增实际SDhit索引/root类别；原所有旧字段闭合、frame50全敏感HITS精确重复。frame50/6/2/0分别Eν90.288/142.480/847.280/280.310GeV，后两者K全部保留，frame2原重选失败保留缺失参考。28800ADC逐值0差，159触底；来源模拟加和最大.001361557pC、均过事前浮点界，不相加clip后ADC。frame6Veto14全μ模拟1441.539544pC而raw1099.780547/status4；frame0Veto14非μ份额.816096但Preshower/Ecal全μ，说明大活动来源需联合控制，非总体分类效率认证。
 
 4job全部exit0、668CPU秒/526aggregatewall秒/0GPU，单次新C++build复用runtime；12份事件文本24.23MB合并9.04MB回读精确、删12.87MB结果archive，并核前阶段空队列删110.99MB旧运输包。VetoNu含信号及EcalDAQ/μ辐射总体仍未测，原角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失、原门和Stage87保持。下一[Stage143有限合同](../workbook/stage142_energy_ml/next_execution_contract.json)只从既有4032证据审计train有VetoNu信号支持，最多2父/1000CPU秒、先成本后准入第二父，无支持实测0则结束此控制输入；不自动扩大ν或重开旧X网格。整体目标和真实外部输入缺口保持。
+
+
+## 122. Stage143：含信号VetoNu方法控制闭合
+
+[中文实测](../workbook/2026-11-07_stage143_VetoNu-signal-source-control.md)用train2304父支持审计736个正VetoNu，按原frame前两例1/5固定，无风险筛选。两父16800ADC零差，含84触底，原raw11/status精确；VetoNu5的frame1模拟22.904710pC全非μ，frame5VetoNu4模拟28.993645pC含非μ份额.966642184。两例Ecal皆μ根，不能用单层活动给整事件来源。最大来源加和差4.619815e−5pC过预定界，非0不提供timing；两父原完整private末状态不可得，不冒充精确比较。4job/4starts全exit0，415CPU秒/552聚合wall秒/0GPU，合并六份事件文本1.087MB、删44.11MB运输。
+
+Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实际全private状态/2400ADC/status通过后才准入三父；有限窗实测Ecal780–930ns，不能沿用闪烁体窗。Stage145进一步做实际μ控制的固定多层raw/shape联合响应与留出报警率，明确point状态/真实covariance、μ祖先/次级truth及data纯度边界。无新能量候选或大生产，不绕过Stage1375%门；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87及整体goal未完成状态保持。

@@ -1,3 +1,9 @@
+# 当前执行更新：Stage143含信号VetoNu来源控制完成，Ecal与μ联合控制继续
+
+[Stage143报告](../workbook/2026-11-07_stage143_VetoNu-signal-source-control.md)在2304个train父中审计736个正VetoNu支持，按原frame顺序固定1/5两父。16800ADC零差、84触底、原raw11/status精确；VetoNu分别为全非μ和混合来源，最大来源模拟积分差4.619815e−5pC。4job全部exit0、415CPU秒/552聚合wall秒/0GPU，无新ν/能量fit。两父均为charm中高能，仅认证通道方法，不冒充低能或总体辐射尾。紧凑证据已合并回读，删44.11MB重复运输。Stage144缓存Ecal控制及Stage145有限μ联合留出检验继续；Stage137扩大门/原全部门/Stage87和整体goal未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage142四父来源/DAQ控制完成，下一补VetoNu含信号覆盖
 
 [Stage142实测](../workbook/2026-11-07_stage142_live-ancestry-and-DAQ-source-control.md)在4个既有train父（含2个K）验证真实hit根谱系、持久化顺序与有限窗模拟来源：28800ADC零差，覆盖159触底采样；最大来源模拟积分加和差.001361557pC。三个selected父原raw11/status精确，高-y K父原selected参考缺失而保留。完全μ根的Veto也可大电荷/触底，不以平均MIP或大电荷直接判强子。4job全部exit0、668CPU秒/526聚合wall秒/0GPU。四父VetoNu均无HITS，Ecal只认证官方修正hit标签；μ辐射总体控制和真实系统/独立确认未完成。下一按最多2父/1000CPU秒合同补有信号VetoNu控制，先查train支持；原Stage1375%扩大门不绕过、不自动大生产，整体goal未完成。

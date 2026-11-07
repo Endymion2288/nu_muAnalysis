@@ -1,6 +1,7 @@
 """One retained HITS snapshot through real private digitizers; batch only."""
 import gzip
 import json
+import os
 import resource
 import sys
 import time
@@ -18,7 +19,8 @@ from WaveformConditionsTools.WaveformDigitizationConfig import WaveformDigitizat
 from WaveformConditionsTools.WaveformCableMappingConfig import WaveformCableMappingCfg
 from WaveformConditionsTools.WaveformTimingConfig import WaveformTimingCfg
 
-OUT=Path('workbook/stage142_energy_ml');CACHE=Path('ntuples/energy_ml_stage142')
+STAGE=int(os.environ.get('NU_MU_RESPONSE_STAGE','142'))
+OUT=Path(f'workbook/stage{STAGE}_energy_ml');CACHE=Path(f'ntuples/energy_ml_stage{STAGE}')
 index=int(sys.argv[1]);replica=0
 case=json.loads((OUT/f'parent_{index}_report.json').read_text())['case']
 lineage=json.loads((OUT/f'parent_{index}_lineage.json').read_text())

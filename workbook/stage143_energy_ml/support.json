@@ -1,0 +1,75 @@
+{
+  "train_parents": 2304,
+  "positive_VetoNu": 736,
+  "selected_indices": [
+    1,
+    5
+  ],
+  "selected_controls": [
+    {
+      "frame_index": 1,
+      "case": {
+        "row": 221645,
+        "source": 1102,
+        "run": 200101,
+        "component": "charm",
+        "role": 1,
+        "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+        "entry": 121051,
+        "incoming": [
+          14.0,
+          -90.64714813232422,
+          34.21811294555664,
+          668440.0
+        ],
+        "truth_E_GeV": 668.4400070221595,
+        "old_reco_pz_GeV": 413.30584375,
+        "y": 0.3305006261522533,
+        "vertex_z_mm": -2570.123046875,
+        "stratum": "transition",
+        "rank": "0001227a4cfd9398",
+        "frame_index": 1,
+        "seed": 2026241701,
+        "inclusion_probability": 0.012230078348939423
+      },
+      "original_selected": 1,
+      "VetoNu_response_MeV": 0.9019096211791293
+    },
+    {
+      "frame_index": 5,
+      "case": {
+        "row": 221108,
+        "source": 1098,
+        "run": 200101,
+        "component": "charm",
+        "role": 1,
+        "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+        "entry": 89315,
+        "incoming": [
+          14.0,
+          -485.8853759765625,
+          -243.158203125,
+          3169300.0
+        ],
+        "truth_E_GeV": 3169.300046573456,
+        "old_reco_pz_GeV": 2084.557625,
+        "y": 0.22547311086222876,
+        "vertex_z_mm": -2419.804443359375,
+        "stratum": "highE",
+        "rank": "0003707b1269211a",
+        "frame_index": 5,
+        "seed": 2026241705,
+        "inclusion_probability": 0.020969855832241154
+      },
+      "original_selected": 1,
+      "VetoNu_response_MeV": 1.141164654281554
+    }
+  ],
+  "scope": "role1 only;first atmost2originalframepositivecontrols;no risk/sourcefraction choice;not populationresponse/energy improvement",
+  "CPU_s": 4.193640691,
+  "wall_s": 4.263845280976966,
+  "RSS_KiB": 301040,
+  "no_new_G4": true,
+  "no_new_model_fit": true,
+  "reserved_forward": 0
+}

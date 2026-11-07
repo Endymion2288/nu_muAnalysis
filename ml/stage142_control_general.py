@@ -2,11 +2,13 @@
 import csv
 import gzip
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
-OUT=Path('workbook/stage142_energy_ml');CACHE=Path('ntuples/energy_ml_stage142')
+STAGE=int(os.environ.get('NU_MU_RESPONSE_STAGE','142'))
+OUT=Path(f'workbook/stage{STAGE}_energy_ml');CACHE=Path(f'ntuples/energy_ml_stage{STAGE}')
 
 def main():
     index=int(sys.argv[1])

@@ -9,7 +9,8 @@ import time
 from pathlib import Path
 from stage131_pilot import DATASETS
 
-ROOT=Path.cwd();OUT=ROOT/'workbook/stage142_energy_ml';CACHE=ROOT/'ntuples/energy_ml_stage142'
+STAGE=int(os.environ.get('NU_MU_RESPONSE_STAGE','142'))
+ROOT=Path.cwd();OUT=ROOT/f'workbook/stage{STAGE}_energy_ml';CACHE=ROOT/f'ntuples/energy_ml_stage{STAGE}'
 
 def worker(index):
     with gzip.open(ROOT/'ntuples/energy_ml_stage131/production_cases.json.gz','rt') as f:
