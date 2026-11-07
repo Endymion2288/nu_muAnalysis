@@ -1,0 +1,77 @@
+{
+  "stage": 133,
+  "baseline": {
+    "features": 62,
+    "seeds": [
+      2026110255,
+      2026110256,
+      2026110257
+    ],
+    "rounds": 400,
+    "xgboost": {
+      "max_depth": 5,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "reg:squarederror"
+    },
+    "initialization": "weighted mean training logE with boost_from_average disabled, same for all seeds",
+    "calibration": "one incoming-weighted mean cal log residual for ensemble"
+  },
+  "policy": {
+    "question": "Does train-only first-exit nonmu KE supervision yield a deployable finite-policy increment from measured X?",
+    "inputs": [
+      "Stage131 matched_input.npz",
+      "Stage131 fixed energy_predictions.npz and bootstrap_draws.npz",
+      "unchanged original62 feature policy/roles/weights/seeds"
+    ],
+    "design": "one boundary proxy label log1p(nonmu first-exit KE_GeV),train-only source-threefold crossfit plus final; one X+predicted-boundary arm B63,compare to already frozen same-support X62; no oracle availability at deployment; no new G4 or neutrino interactions",
+    "proxy": {
+      "rounds": 150,
+      "max_depth": 3,
+      "eta": 0.04,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "seed": 2026110732,
+      "fold": "source modulo3",
+      "fallback": "fewer20 labels or constant => trainmean,empty=>0",
+      "prediction": "clip nonnegative"
+    },
+    "energy": {
+      "seeds": [
+        2026110255,
+        2026110256,
+        2026110257
+      ],
+      "rounds": 400,
+      "max_depth": 5,
+      "policy": "exact Stage131 baseline including mean1trainweights; caloneglobaloffset",
+      "fit_N": 3
+    },
+    "total_fits": 7,
+    "budget_CPU_s": 900,
+    "request_CPUs": 4,
+    "request_memory_MB": 12000,
+    "main": "B/X cal/test two lowbins point<=.95 and upper95<1; original8layer/tail protections unchanged; promotionFalse regardless",
+    "stop": "one fixed labeled-target test only; no proxy round/depth/seed/input grid, no oldX posterior restart; failure ends this X-only boundary-supervision implementation",
+    "interpretation": "followup selected after Stage131 development risks,not preregistered beforeStage131 or a freshblind; derived X proxy cannot create sensor information; positive oracle alone is not deployment"
+  },
+  "arms": [
+    "B"
+  ],
+  "references": [
+    "X",
+    "direct_cal",
+    "traditional"
+  ],
+  "input_stage": 131,
+  "bootstrap": "reuse exact stage131 500 draws per role",
+  "scope": "adaptive finite development followup; not freshblind or independent confirmation",
+  "promotion": false,
+  "reserved_forward": 0,
+  "renumbering": "Stage132 is research reassessment; unexecuted historical Stage132 contract runs as Stage133"
+}

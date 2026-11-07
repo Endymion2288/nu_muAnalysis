@@ -1,0 +1,86 @@
+{
+  "proxy": [
+    {
+      "fold": 0,
+      "train_label_N": 1003,
+      "train_zero_label_N": 20,
+      "prediction_N": 618,
+      "train_weighted_mean_logKE": 2.2270747503555204,
+      "method": "fixed150tree",
+      "CPU_s": 0.49712549200000034,
+      "wall_s": 0.5053197760134935,
+      "cal_test_label_fit_N": 0
+    },
+    {
+      "fold": 1,
+      "train_label_N": 1056,
+      "train_zero_label_N": 20,
+      "prediction_N": 572,
+      "train_weighted_mean_logKE": 2.360412030665932,
+      "method": "fixed150tree",
+      "CPU_s": 0.4156497269999999,
+      "wall_s": 0.4206692446023226,
+      "cal_test_label_fit_N": 0
+    },
+    {
+      "fold": 2,
+      "train_label_N": 1107,
+      "train_zero_label_N": 24,
+      "prediction_N": 518,
+      "train_weighted_mean_logKE": 2.2580767506911315,
+      "method": "fixed150tree",
+      "CPU_s": 0.4018360579999998,
+      "wall_s": 0.40523657016456127,
+      "cal_test_label_fit_N": 0
+    },
+    {
+      "fold": "final",
+      "train_label_N": 1583,
+      "train_zero_label_N": 32,
+      "prediction_N": 1294,
+      "train_weighted_mean_logKE": 2.2834711133882344,
+      "method": "fixed150tree",
+      "CPU_s": 0.5558402719999993,
+      "wall_s": 0.5608483869582415,
+      "cal_test_label_fit_N": 0
+    }
+  ],
+  "energy": [
+    {
+      "seed": 2026110255,
+      "train_N": 1708,
+      "features": 63,
+      "CPU_s": 2.85332661,
+      "wall_s": 2.904984140768647,
+      "RSS_KiB": 128576,
+      "reload_exact": true
+    },
+    {
+      "seed": 2026110256,
+      "train_N": 1708,
+      "features": 63,
+      "CPU_s": 2.997520313,
+      "wall_s": 3.02787103690207,
+      "RSS_KiB": 129088,
+      "reload_exact": true
+    },
+    {
+      "seed": 2026110257,
+      "train_N": 1708,
+      "features": 63,
+      "CPU_s": 3.1186289950000003,
+      "wall_s": 3.168560503050685,
+      "RSS_KiB": 127016,
+      "reload_exact": true
+    }
+  ],
+  "offset": 0.005784322131603524,
+  "parent_CPU_s": 2.0247664979999995,
+  "wall_s": 5.226452652364969,
+  "actual_proxy_fits": 4,
+  "energy_fits": 3,
+  "X_retrained": false,
+  "GPU": 0,
+  "cal_only_one_global_ensemble_offset": true,
+  "reserved_forward": 0
+}

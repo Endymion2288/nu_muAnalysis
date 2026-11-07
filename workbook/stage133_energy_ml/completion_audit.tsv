@@ -1,0 +1,11 @@
+requirement	status	evidence
+seven fixed fits	complete	fits.json:4proxy+3energy; no Xrefit
+exact frozen references and bootstrap	complete	independent_validation.json
+full eight layers and three tails	complete	gates.tsv;paired.tsv
+independent numerical validation	complete	876 scalars;max3.55e-14
+scheduler and transport	complete	scheduler.json;transfer.json;exit0
+original joint gate	failed	energy_summary.json; no promotion
+X-only implementation stopping rule	complete	no additional proxy grid
+observable boundary instrumentation	pending	Stage132 section5.3
+DAQ-aligned response and muon controls	pending	Stage132 sections5.4-5.5
+full physics precision and independent confirmation	pending	missing real constraints and certified families

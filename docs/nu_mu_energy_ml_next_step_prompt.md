@@ -1,3 +1,9 @@
+# 当前执行入口：Stage133完成，按Stage132继续A+K机制与可测能流
+
+先读[Stage133实测](../workbook/2026-11-07_stage133_boundary-supervised-proxy.md)及[Stage132路线](../workbook/2026-11-07_stage132_boundary-observability-research.md)。原7fit已执行，B/X未达双低箱标准，不重跑或续代理网格；Stage87direct62仍参照。下一Stage134同缓存固定A+K/A三fit，隔离理想沉积依赖；按其结果决定同支持z×K。随后按小pilot冻结最小边界类别/面/接受/相对时间与DAQ响应对应，不无条件重跑4032父。整体goal保持，μ辐射控制/真实系统/有限MC/背景接受度及独立确认未完成。所有角色、全部K、pz0/raw11/status/typedNaN/signed/Calo缺失、正式cuts与原门不变。
+
+## Stage132历史入口（原文保留）
+
 # 当前研究入口：Stage132复盘完成，下一计算Stage133有限边界监督随访
 
 先读[Stage132研究报告](../workbook/2026-11-07_stage132_boundary-observability-research.md)、路线§111与[Stage131原合同](../workbook/stage131_energy_ml/next_execution_contract.json)。本轮无环境，只读既有报告/紧凑表/静态源码并检索论文，没有读取事件数组、计算新风险、训练、推理、重放或提交作业。Stage129–131均已完成，不依下方历史重跑。Stage131合同里的未执行Stage132代理顺延Stage133；旧JSON和所有历史入口原文保留。

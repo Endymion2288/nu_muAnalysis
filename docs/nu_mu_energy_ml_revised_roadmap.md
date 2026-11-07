@@ -1,5 +1,9 @@
 # νμ 能量研究路线修订：先识别信息缺口，再选择模型
 
+**2026-11-07 Stage133 执行更新：** [边界监督代理实测](../workbook/2026-11-07_stage133_boundary-supervised-proxy.md)已完成原7fit。B/X test两低箱0.963769 [0.926541,1.007304]、1.009502 [0.955762,1.065988]，最低箱B/传统1.322747 [1.140512,1.511036]；两joint失败，不晋升，结束此X-only实现。下一按Stage132先做A+K/A机制定位，再按条件做z×K；主研究为新能流分解与DAQ对应。整体目标未完成，原全部门保持。下方Stage132及更早研究入口作为历史保留。
+
+### Stage132研究入口（原文保留）
+
 **2026-11-07 Stage132 当前研究入口：** [边界可测性研究复盘](../workbook/2026-11-07_stage132_boundary-observability-research.md)、本路线§111及[下一步入口](nu_mu_energy_ml_next_step_prompt.md)覆盖以下历史优先级。本轮只读workbook、静态实现和原始文献，0事件数组读取/物理重算/训练/推理/重放/作业，无SHA。Stage129三类观测、Stage130原规模N→2N、Stage131谱系/边界机制均已完成，不照旧入口重复执行。
 
 **主路线转向非μ出靶能流的可测成分与DAQ对应的联合响应。** Stage131 F/U两低箱cal/test都有明显条件增量，但U已含理想沉积/真值可用性，K含中性及全部出射方向，不等于可见H或已实现的X+K收益。P_mu只试了μ比例，边界监督代理尚未执行。先保留原7-fit/900CPU秒缓存随访，因本研究占用Stage132，将其顺延Stage133；之后按必要性做缓存机制定位及小型新能流/DAQ对齐pilot，避免无条件再跑4032父。真实μ联合响应要包含辐射尾，区别于已有cluster计数、点GNN和平均MIP相减。已有条件谱收益继续推进到有限MC和真实nuisance/接受度/背景；原事件目标、强f0、全部门及独立确认不变。
@@ -2593,3 +2597,12 @@ Stage131 F/U test两低箱=.706057 [.632191,.786692]/.880740 [.766331,.994613]�
 Stage129已有Nselected1000、已知response条件谱精度：E<200份额σ传统1.452040pp、direct1.212661pp。下一步是有限MC、真实nuisance/接受度/背景后的精度，非重做已知response Fisher或立即上大SBI；INFERNO/抗nuisance压缩只作条件成熟后的方法参考。保留最低能单事例目标，1.05只非劣效，原1.05/1.01/1.03及八层三尾+2pp、独立确认和真实完整物理收益不降。
 
 新方案收益/支持/功效/CPU/I/O未测；既有Stage131全链CPU652569s而18能量fit仅54.666434292s，优先控制新增全链。未来批量HTCondor，Stage133目录~/condor/nu_muAnalysis/stage133/，先测新步骤pilot再冻规模，紧凑保留必要证据。原强Stage87direct62、pz0/raw11/status/typedNaN/signed/Calo缺失/原cuts、Stage54资产和全部历史保持。先中文workbook再本地Conventional Commit，不push；整体项目未完成。
+
+
+## 112. Stage133：边界监督代理未恢复双低箱，转向边界可测机制
+
+**2026-11-07 Stage133 执行更新：** [边界监督代理实测](../workbook/2026-11-07_stage133_boundary-supervised-proxy.md)已完成原7fit。B/X test两低箱0.963769 [0.926541,1.007304]、1.009502 [0.955762,1.065988]，最低箱B/传统1.322747 [1.140512,1.511036]；两joint失败，不晋升，结束此X-only实现。下一按Stage132先做A+K/A机制定位，再按条件做z×K；主研究为新能流分解与DAQ对应。整体目标未完成，原全部门保持。
+
+3002父train/cal/test1708/653/641，无新ν/G4；4train-only source交叉代理+3原政策fit，X/f0/传统和500draw逐数组复用，无truth availability。876项独立复算最大差3.55e−14，非法sentinel/正域−1/Inf均0，reserved零forward。1作业exit0，scheduler26CPU秒/28wall秒，0GPU，低于900s预算；提交目录~/condor/nu_muAnalysis/stage133/。原pz0/raw11/status/typedNaN/signed/Calo缺失、正式cuts、全部K及角色保持。
+
+Stage132§5.2必要机制补问以A+K/A固定3fit开展，不续代理网格；其后按证据冻结z×K和新observer pilot，不能将总K称可见E。真正新观测、μ辐射联合控制、有限MC/真实相关nuisance及背景/接受度精度和独立确认仍待完成，见[逐项审计](../workbook/stage133_energy_ml/completion_audit.tsv)。Stage87direct62仍参照，1.05仅非劣效，原全部验收不降。
