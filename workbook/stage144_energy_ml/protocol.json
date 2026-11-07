@@ -1,0 +1,43 @@
+{
+  "stage": 144,
+  "frozen_UTC": "2026-11-07T21:00:18.920008+00:00",
+  "question": "Does actual Ecal digitization close against ancestry-partitioned analog response using the retained official SD-corrected persistent hits?",
+  "indices": [
+    50,
+    6,
+    2,
+    0
+  ],
+  "selection": "All four Stage142 controls, frozen before Ecal response inspection. Preflight50 then admit remaining three only after actual closure/cost. Frame2 missing original selected reference retained.",
+  "inputs": [
+    "ntuples/energy_ml_stage142/event_records.json.gz",
+    "ntuples/energy_ml_stage131/production_cases.json.gz",
+    "ntuples/energy_ml_stage131/matched_input.npz",
+    "ntuples/energy_ml_stage131/pilot_private_rng_states.json.gz",
+    "pinned d32 official runtime"
+  ],
+  "acceptance": [
+    "Persistent CaloHit fields exactly reconstructed without additional Birks correction",
+    "Original run990131/lumiblockindex+1,seed rule and EventID context; frame50 full original initial/final RNG states exactly",
+    "Actual CaloWaveformDigiAlg; Ecal geometry centre TOF; production Calo reconstruction defaults; do not assume scintillator fit window",
+    "Total actual ADC integer exact vs independent pinned convolution/noise/round/clip",
+    "Source analog before clipping additivity <=32 float32 eps times max(1,total amplitude), fixed before execution",
+    "Original selected calo statuses exact where available; original Calo raw-charge reference not retained and explicitly unmeasured, no fabricated equality",
+    "Use actual Ecal finite integration window; nonzero status no timing; original signed raw retained"
+  ],
+  "resources": {
+    "CPU_budget_s": 600,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0
+  },
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "new_energy_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "scope": "Four-parent method closure only, not population mu-radiation tail or energy improvement. Stage137 dual-bin 5pct expansion gate remains false.",
+  "stop": "No new broad natural-nu production or old-X proxy/network grid. Investigate failures within frozen budget; never drop parent2 or K. Overall goal incomplete."
+}

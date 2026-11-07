@@ -1,0 +1,7 @@
+{
+  "cause": "Missing WaveformTimingCfg in standalone Ecal capture. Official reconstruction reads /WAVE/DAQ/Timing; native digitization and original frame50 RNG assertions reached before capture failed.",
+  "repair": "Merge official WaveformTimingCfg, as in previously validated scintillator control. No input/seed/likelihood/threshold/acceptance change.",
+  "scheduler_CPU_s": 81,
+  "scheduler_wall_s": 92,
+  "failure_counted": true
+}

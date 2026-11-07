@@ -1,0 +1,15 @@
+{
+  "stage": 144,
+  "UTC": "2026-11-07T21:25:29.097353+00:00",
+  "AST_files": [
+    "ml/stage144_driver.py",
+    "ml/stage144_native.py",
+    "ml/stage144_submit.py",
+    "ml/stage144_summarize.py"
+  ],
+  "local_report_links": 6,
+  "shell": "bash -n run_ml_stage144.sh",
+  "scientific": "summary.json; exactADC, originalstatus50/6/0, originalfullRNG50; three failures retained",
+  "storage": "storage_cleanup.json exact text roundtrip",
+  "git_diff_check": "passed before commit"
+}

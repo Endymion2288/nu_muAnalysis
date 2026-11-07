@@ -1,0 +1,25 @@
+{
+  "result": "9674290.0 - 9674290.0",
+  "phase": "preflight_rngmap",
+  "cpus": 4,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/worker_1794085610615842313.sh preflight_rngmap\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage144/1794085610615842313/energy-ml-stage144.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 4000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage144 remaining cumulative CPU budget exceeded\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 433.0\n+NuMuStage = \"energy-ml-stage144\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage144/1794085610615842313/energy-ml-stage144.tar.gz",
+    "bytes": 10539880,
+    "files": [
+      "ml/stage144_native.py",
+      "ml/stage144_ecal.hxx",
+      "ml/stage144_driver.py",
+      "ml/stage138_response.hxx",
+      "ml/stage129_rng.hxx",
+      "ml/stage129_official.hxx",
+      "ml/stage141_analog.hxx",
+      "setup_env.sh",
+      "workbook/stage144_energy_ml/protocol.json",
+      "ntuples/energy_ml_stage142/event_records.json.gz",
+      "ntuples/energy_ml_stage131/production_cases.json.gz",
+      "ntuples/energy_ml_stage131/pilot_private_rng_states.json.gz",
+      "ntuples/energy_ml_stage131/matched_input.npz"
+    ]
+  }
+}

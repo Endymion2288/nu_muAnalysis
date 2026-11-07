@@ -1,0 +1,17 @@
+{
+  "admitted": true,
+  "indices": [
+    6,
+    2,
+    0
+  ],
+  "frozen_UTC": "2026-11-07T21:16:14.695675+00:00",
+  "evidence": "Frame50 native2400ADC exact, original fullprivate states/status exact; all8 geometryPMT RNG draws restored,4cabledADC compared.",
+  "remaining_CPU_budget_s": 296,
+  "measured_success_scheduler_CPU_s": 96,
+  "projected_three_control_CPU_s": 288,
+  "projection": "3 times actual successful preflight plus a small stdlib audit fits remaining296; projection only, low headroom explicitly recorded; no new G4/build.",
+  "failures_included_CPU_s": 208,
+  "selection": "All three remaining predeclared Stage142parents, bothK andoriginalselectedmissing2retained; no source/risk selection",
+  "gates_unchanged": true
+}

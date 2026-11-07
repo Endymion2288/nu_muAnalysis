@@ -1,0 +1,22 @@
+{
+  "result": "9674373.0 - 9674373.0",
+  "phase": "audit",
+  "cpus": 1,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/worker_1794086362979865270.sh audit\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage144/1794086362979865270/energy-ml-stage144.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 3000MB\nrequest_disk = 4000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage144 remaining cumulative CPU budget exceeded\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 13.0\n+NuMuStage = \"energy-ml-stage144\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage144/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage144/1794086362979865270/energy-ml-stage144.tar.gz",
+    "bytes": 3554,
+    "files": [
+      "ml/stage144_summarize.py",
+      "workbook/stage144_energy_ml/protocol.json",
+      "workbook/stage144_energy_ml/parent_50_summary.json",
+      "workbook/stage144_energy_ml/parent_50_charge.tsv",
+      "workbook/stage144_energy_ml/parent_6_summary.json",
+      "workbook/stage144_energy_ml/parent_6_charge.tsv",
+      "workbook/stage144_energy_ml/parent_2_summary.json",
+      "workbook/stage144_energy_ml/parent_2_charge.tsv",
+      "workbook/stage144_energy_ml/parent_0_summary.json",
+      "workbook/stage144_energy_ml/parent_0_charge.tsv"
+    ]
+  }
+}

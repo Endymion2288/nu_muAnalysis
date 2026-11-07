@@ -1,3 +1,9 @@
+# 当前执行更新：Stage144 Ecal DAQ闭合完成，转入μ联合尾部控制
+
+[Stage144报告](../workbook/2026-11-07_stage144_Ecal-DAQ-source-control.md)复用四父缓存，无新G4，9600可读ADC零差；Ecal实际780–930ns窗，须保留8几何PMT的噪声抽样后再比较4可读PMT。原Calo status三父/原完整private状态首父精确；frame2原selected参考缺失保持，原Calo raw未保留不冒充比较。三次程序失败全计，共587CPU秒/538聚合wall秒/0GPU，低于600预算，四父无Ecal触底/混合来源，不认证总体尾部或低能收益。下一Stage145固定两来源μ联合raw/shape留出控制，真实point/covariance/祖先及data纯度边界明确。原门/Stage137扩大门/Stage87和整体goal未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage143含信号VetoNu来源控制完成，Ecal与μ联合控制继续
 
 [Stage143报告](../workbook/2026-11-07_stage143_VetoNu-signal-source-control.md)在2304个train父中审计736个正VetoNu支持，按原frame顺序固定1/5两父。16800ADC零差、84触底、原raw11/status精确；VetoNu分别为全非μ和混合来源，最大来源模拟积分差4.619815e−5pC。4job全部exit0、415CPU秒/552聚合wall秒/0GPU，无新ν/能量fit。两父均为charm中高能，仅认证通道方法，不冒充低能或总体辐射尾。紧凑证据已合并回读，删44.11MB重复运输。Stage144缓存Ecal控制及Stage145有限μ联合留出检验继续；Stage137扩大门/原全部门/Stage87和整体goal未完成状态保持。
@@ -2732,3 +2738,10 @@ D/传统test最低箱.908385 [.768990,1.063567]、cal1.231296 [1.082538,1.379751
 [中文实测](../workbook/2026-11-07_stage143_VetoNu-signal-source-control.md)用train2304父支持审计736个正VetoNu，按原frame前两例1/5固定，无风险筛选。两父16800ADC零差，含84触底，原raw11/status精确；VetoNu5的frame1模拟22.904710pC全非μ，frame5VetoNu4模拟28.993645pC含非μ份额.966642184。两例Ecal皆μ根，不能用单层活动给整事件来源。最大来源加和差4.619815e−5pC过预定界，非0不提供timing；两父原完整private末状态不可得，不冒充精确比较。4job/4starts全exit0，415CPU秒/552聚合wall秒/0GPU，合并六份事件文本1.087MB、删44.11MB运输。
 
 Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实际全private状态/2400ADC/status通过后才准入三父；有限窗实测Ecal780–930ns，不能沿用闪烁体窗。Stage145进一步做实际μ控制的固定多层raw/shape联合响应与留出报警率，明确point状态/真实covariance、μ祖先/次级truth及data纯度边界。无新能量候选或大生产，不绕过Stage1375%门；原全部门/角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87及整体goal未完成状态保持。
+
+
+## 123. Stage144：四父Ecal实际数字化与来源方法控制
+
+[实测报告](../workbook/2026-11-07_stage144_Ecal-DAQ-source-control.md)在50/6/2/0四个原父的缓存SD修正持久化hit上完成9600可读ADC零差；真实Ecal raw窗780–930ns，与Scint不同。原50/6/0 Calo status精确，首父完整原private初末状态精确，原selected缺失2及原Calo raw参考未保留明确不伪造。官方先耗8几何PMT的噪声后去无cable通道，独立重算必须保留该顺序。三程序失败全计、六作业终态，587CPU秒/538聚合wall秒/0GPU，低于600预算；四控制文件回读合并631182B，删53.36MB重复运输。
+
+四父Ecal分别全μ/全非μ，未测Ecal混合/触底或总体μ辐射尾，也无能量fit/大自然ν生产。Stage145改用实际μ控制：固定data8006/MC100012各前4096条、两种raw联合评分，重建point条件、entry留出报警率、overflow/highactivity/低pz分层；不得把data比例或alltruthPDG列表当纯μ误报率认证。Stage137双箱5%门和原全体/尾部门、角色/K/pz0/raw11/status/typedNaN/signed/Calo缺失/Stage87及整体goal未完成状态保持。

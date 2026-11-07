@@ -1,0 +1,62 @@
+{
+  "event_files": 4,
+  "event_before_bytes": 632278,
+  "bundle": "ntuples/energy_ml_stage144/event_records.json.gz",
+  "bundle_bytes": 631182,
+  "exact_text_roundtrip": true,
+  "restore": "original relative path -> original JSON text; gzip text writer restores .json.gz; no G4 or native replay needed.",
+  "source_capsule": "software/stage144/source_snapshots.tar.gz",
+  "source_capsule_bytes": 53746,
+  "removed": [
+    {
+      "path": "software/stage144/1794086362979865270/energy-ml-stage144.tar.gz",
+      "bytes": 3554
+    },
+    {
+      "path": "software/stage144/1794086174822437738/energy-ml-stage144.tar.gz",
+      "bytes": 10540704
+    },
+    {
+      "path": "software/stage144/1794085854455001078/energy-ml-stage144.tar.gz",
+      "bytes": 10539898
+    },
+    {
+      "path": "software/stage144/1794085382664580588/energy-ml-stage144.tar.gz",
+      "bytes": 10539609
+    },
+    {
+      "path": "software/stage144/1794085610615842313/energy-ml-stage144.tar.gz",
+      "bytes": 10539880
+    },
+    {
+      "path": "software/stage144/1794085219052459989/energy-ml-stage144.tar.gz",
+      "bytes": 10539580
+    },
+    {
+      "path": "ntuples/energy_ml_stage144/audit_result.tar.gz",
+      "bytes": 1938
+    },
+    {
+      "path": "ntuples/energy_ml_stage144/pilot_result.tar.gz",
+      "bytes": 622155
+    },
+    {
+      "path": "ntuples/energy_ml_stage144/preflight_idheader_result.tar.gz",
+      "bytes": 18795
+    },
+    {
+      "path": "ntuples/energy_ml_stage144/preflight_repair_result.tar.gz",
+      "bytes": 4217
+    },
+    {
+      "path": "ntuples/energy_ml_stage144/preflight_result.tar.gz",
+      "bytes": 4682
+    },
+    {
+      "path": "ntuples/energy_ml_stage144/preflight_rngmap_result.tar.gz",
+      "bytes": 3713
+    }
+  ],
+  "removed_transport_bytes": 53358725,
+  "queue_empty_before_delete": true
+}

@@ -1,3 +1,9 @@
+# 当前执行更新：Stage144 Ecal DAQ闭合完成，转入μ联合尾部控制
+
+[Stage144报告](../workbook/2026-11-07_stage144_Ecal-DAQ-source-control.md)复用四父缓存，无新G4，9600可读ADC零差；Ecal实际780–930ns窗，须保留8几何PMT的噪声抽样后再比较4可读PMT。原Calo status三父/原完整private状态首父精确；frame2原selected参考缺失保持，原Calo raw未保留不冒充比较。三次程序失败全计，共587CPU秒/538聚合wall秒/0GPU，低于600预算，四父无Ecal触底/混合来源，不认证总体尾部或低能收益。下一Stage145固定两来源μ联合raw/shape留出控制，真实point/covariance/祖先及data纯度边界明确。原门/Stage137扩大门/Stage87和整体goal未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage143含信号VetoNu来源控制完成，Ecal与μ联合控制继续
 
 [Stage143报告](../workbook/2026-11-07_stage143_VetoNu-signal-source-control.md)在2304个train父中审计736个正VetoNu支持，按原frame顺序固定1/5两父。16800ADC零差、84触底、原raw11/status精确；VetoNu分别为全非μ和混合来源，最大来源模拟积分差4.619815e−5pC。4job全部exit0、415CPU秒/552聚合wall秒/0GPU，无新ν/能量fit。两父均为charm中高能，仅认证通道方法，不冒充低能或总体辐射尾。紧凑证据已合并回读，删44.11MB重复运输。Stage144缓存Ecal控制及Stage145有限μ联合留出检验继续；Stage137扩大门/原全部门/Stage87和整体goal未完成状态保持。

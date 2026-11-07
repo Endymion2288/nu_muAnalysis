@@ -1,0 +1,8 @@
+{
+  "cause": "Standalone analog reconstruction omitted uncabled CaloNu geometry PMTs whose noise RNG is consumed before the official algorithm filters unknown cable channels.",
+  "evidence": "Official generate_calo_timing_waveforms creates the full EcalID PMT map; CaloWaveformDigiAlg filters only after digitization. Original frame50 private initial/final RNG and selected statuses passed before analog comparison failed.",
+  "repair": "Read all geometry PMT identifiers in actual std::map order for independent analog reconstruction; compare every actual cabled ADC and retain all source sums. No threshold or input change.",
+  "scheduler_CPU_s": 86,
+  "scheduler_wall_s": 114,
+  "failure_counted": true
+}
