@@ -1,0 +1,16 @@
+{
+  "stage": 129,
+  "experiment": "depth",
+  "input": "ntuples/energy_ml_stage119/old_input.npz",
+  "N": 89033,
+  "arms": {
+    "X": "unchanged audited62",
+    "Z": "X plus exact truth interaction_z_mm float32"
+  },
+  "purpose": "diagnostic oracle only, never deploy truth feature",
+  "learning": "exact Stage87 three400round ensemble and incoming weights, one per-arm cal offset",
+  "preflight": "train shape/name/schema/finite-z assertions before any fit; Stage124 matched X exact reproduction establishes reference implementation",
+  "evaluation": "all original eight layers plus highE 1600-3200/3200-6400; fixed500 component/incoming draws seed20261107129+role; no policy tuning",
+  "material": "remaining-lambdaI/X0 oracle separately requires exact geometry/material evidence; not approximated by z label",
+  "reserved_and_quarantine": "zero prediction"
+}

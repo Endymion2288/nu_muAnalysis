@@ -1,0 +1,35 @@
+{
+  "result": "9673379.0 - 9673379.0\n",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/worker_pressure_1794050721940689061.sh pressure $(source_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage129/1794050721940689061/energy-ml-stage129-pressure.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 6000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+NuMuStage = \"energy-ml-stage129\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).err\nqueue source_index in 0\n",
+  "package": {
+    "files": [
+      "ml/stage129_energy.py",
+      "ml/audited_features.py",
+      "ml/stage119_curve_common.py",
+      "ml/stage119_reportcurve.py",
+      "ml/configs/audited_features.json",
+      "ntuples/energy_ml_stage119/old_input.npz",
+      "ml/artifacts/stage87/predictions.npz",
+      "workbook/stage87_energy_ml/protocol.json",
+      "workbook/stage129_energy_ml/depth_protocol.json",
+      "ml/stage129_waveform.py",
+      "ml/stage129_recover.py",
+      "workbook/stage129_energy_ml/extraction_contract.json",
+      "workbook/stage129_energy_ml/formal_recovery_protocol.json",
+      "ntuples/energy_ml_stage129/controls.npz",
+      "ml/stage129_recovercov.py",
+      "ml/stage129_waveformcov.py",
+      "workbook/stage129_energy_ml/templates_cov.json",
+      "workbook/stage129_energy_ml/shape_covariance_amendment.json",
+      "ml/stage129_pressure.py",
+      "workbook/stage129_energy_ml/pressure_protocol.json",
+      "workbook/stage129_energy_ml/recovery_interval_policy.json"
+    ],
+    "indices": [
+      0
+    ],
+    "bytes": 37575482,
+    "path": "software/stage129/1794050721940689061/energy-ml-stage129-pressure.tar.gz"
+  },
+  "phase": "pressure"
+}

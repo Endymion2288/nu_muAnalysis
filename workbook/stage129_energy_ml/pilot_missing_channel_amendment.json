@@ -1,0 +1,11 @@
+{
+  "reason": "native RDO can omit a detector/channel without sensitive hits; first pilot wrongly required fixed list length",
+  "action": "keep all32 parent identities; pad only transport ADC with65535 and explicit boolean present; padding never physical observation",
+  "no_energy_outcomes": true,
+  "rerun_indices": [
+    0,
+    48,
+    113
+  ],
+  "cohort_and_selection_unchanged": true
+}

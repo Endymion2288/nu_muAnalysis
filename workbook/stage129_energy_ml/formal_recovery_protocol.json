@@ -1,0 +1,20 @@
+{
+  "frozen_before_full_recovery_or_energy_results": true,
+  "train_templates": "original role1 only, perrun/channel min50 then pooledchannel mean+2PC; no label",
+  "controls": "first8 per original cal/test source/channel, present unsaturated status0 peak>20 ADC; all eligible sources; no energy selection",
+  "artificial_rails": [
+    0.75,
+    0.5,
+    0.25
+  ],
+  "uncertainty": "fixed perchannel pooledrail 95th finite-sample calibration quantile of signed charge error/profile side halfwidth on role2 controls, minimum1; evaluated once on role3 source-held controls; nominal profiles not guaranteed calibrated",
+  "full_recovery": "actual rail-zero downstream waves only; unsaturated Q stays missing (old raw remains). Failures retain all parents, residual and availability flags; internal fitted shift never timing",
+  "resources": {
+    "cpus_per_batch": 4,
+    "memory_MB": 6000,
+    "max_wall_s": 7200,
+    "aggregate_recovery_CPU_budget_s": 30000,
+    "controls_CPU_budget_s": 5000
+  },
+  "energy": "X62 / 12 boolean availability features / plus each channel Q, lower-upper halfwidth, rail sample count and chi2; original Stage87 fixed policy. No joint timing-depth tuning"
+}

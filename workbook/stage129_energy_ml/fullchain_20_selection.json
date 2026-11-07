@@ -1,0 +1,47 @@
+{
+  "index": 20,
+  "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/powheg-pythia-charm-central-24-xing-100iab.EVNT.pool.root",
+  "EVNT_entry": 1000,
+  "incoming": [
+    14.0,
+    118.97053527832031,
+    159.4514923095703,
+    1061100.0
+  ],
+  "identity_incoming_exact": true,
+  "ntuple_N": 1,
+  "selected_N": 0,
+  "cuts": {
+    "Remove CaloNu PMT region (truth)": true,
+    "CC events only": true,
+    "nu_mu only": true,
+    "In Faser Nu Box or Lead Block": true,
+    "Truth dec r < 100 mm": true,
+    "Truth pz > 50 GeV": true,
+    "At least one long track": false,
+    "Veto20 and Veto21 charge > 40 pC": true,
+    "Timing Station Charge > 20 pC": false,
+    "Preshower Charge > 2.5 pC": true,
+    "Track pz > 50 GeV": false,
+    "Leading track has at >= 7 layers": false,
+    "Track nDoF >= 9": false,
+    "Leading track has chi2/ndof < 15": false,
+    "Track R at max radius < 95 mm": false,
+    "Track R at IFT < 95 mm": false,
+    "Track rVetoNu < 120 mm": false,
+    "Leading track theta < 25 mrad": false,
+    "VetoNu0 reduced charge < 30 pC": true,
+    "VetoNu1 reduced charge < 30 pC": true
+  },
+  "reco_pz_GeV": NaN,
+  "truth_E_GeV": 1061.1000186498757,
+  "stratum": "high_y",
+  "role": "engineering only; no fit/prediction",
+  "independent_training_added_N": 0,
+  "calo_status": {
+    "Calo0_status": 0,
+    "Calo1_status": 0,
+    "Calo2_status": 0,
+    "Calo3_status": 0
+  }
+}

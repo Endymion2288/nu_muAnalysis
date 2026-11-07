@@ -1,0 +1,128 @@
+{
+  "case": {
+    "index": 9,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root",
+    "entry": 684,
+    "event_number": 0,
+    "incoming": [
+      -14,
+      -6.541382789611816,
+      -5.84982442855835,
+      157890.0
+    ],
+    "stratum": "E100_200",
+    "source_index": 2,
+    "seed": 2026200700,
+    "prior_old_incoming_overlap": false,
+    "complete_record_cache": "ntuples/energy_ml_stage129/fullchain_generator_records.json"
+  },
+  "steps": [
+    {
+      "name": "sim",
+      "returncode": 0,
+      "wall_s": 28.511606639018282,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root",
+        "FaserMC-Stage129Nu-990129-00009-stage129-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "684",
+        "-n",
+        "1"
+      ]
+    },
+    {
+      "name": "validate_hits",
+      "returncode": 0,
+      "wall_s": 4.650290074001532,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "-c",
+        "import ROOT,sys; f=ROOT.TFile.Open(sys.argv[1]); assert f and not f.IsZombie(); assert f.Get(\"CollectionTree\").GetEntries()==1; f.Close()",
+        "FaserMC-Stage129Nu-990129-00009-stage129-HITS.root"
+      ]
+    },
+    {
+      "name": "digi",
+      "returncode": 0,
+      "wall_s": 54.988438742992,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1951071/nu_mu_stage129.7grH3F/ml/stage129_digitize.py",
+        "FaserMC-Stage129Nu-990129-00009-stage129-HITS.root",
+        "2026200701",
+        "/pool/condor/dir_1951071/nu_mu_stage129.7grH3F/workbook/stage129_energy_ml/fullchain_9_waveform_states.json"
+      ]
+    },
+    {
+      "name": "reco",
+      "returncode": 0,
+      "wall_s": 15.26950209500501,
+      "command": [
+        "faser_reco.py",
+        "--isMC",
+        "--geom",
+        "TI12MC04",
+        "--nevents",
+        "1",
+        "FaserMC-Stage129Nu-990129-00009-stage129-RDO.root"
+      ]
+    },
+    {
+      "name": "ntuple",
+      "returncode": 0,
+      "wall_s": 10.691412962973118,
+      "command": [
+        "faser_ntuple_maker.py",
+        "--isMC",
+        "--geom",
+        "TI12MC04",
+        "--CKFTrackType",
+        "merge",
+        "--nevents",
+        "1",
+        "--outfile",
+        "ntuple.root",
+        "FaserMC-Stage129Nu-990129-00009-stage129-xAOD.root"
+      ]
+    },
+    {
+      "name": "payload_frozen_reuse",
+      "returncode": 0,
+      "wall_s": 0.0005876579671166837,
+      "command": null,
+      "method": "read validated literal full-IOV COOL snapshot fullchain_fixed_payload.json"
+    },
+    {
+      "name": "extract",
+      "returncode": 0,
+      "wall_s": 16.979887099994812,
+      "command": [
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/afs/cern.ch/user/x/xcheng",
+        "USER=xcheng",
+        "PYTHONNOUSERSITE=1",
+        "OMP_NUM_THREADS=1",
+        "OPENBLAS_NUM_THREADS=1",
+        "bash",
+        "-c",
+        "source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\npython \"$1/ml/stage129_fullchainextract.py\" \"$1\" \"$2\" \"$3\"",
+        "bash",
+        "/pool/condor/dir_1951071/nu_mu_stage129.7grH3F",
+        "9",
+        "/pool/condor/dir_1951071/nu_mu_stage129.7grH3F/chain_9/ntuple.root"
+      ]
+    }
+  ],
+  "wall_s": 131.1035436000093,
+  "scope": "engineering selected-candidate cost/yield, not unbiased efficiency, not independent learning N; no model prediction",
+  "successful": true,
+  "intermediate_ROOT_retained": false
+}

@@ -1,0 +1,37 @@
+{
+  "frozen_before_stress": true,
+  "controls": "original heldcontrols i%32==0, middle artificialrail .5, alloriginalroles retained; no energy labels",
+  "wave_variants": [
+    "nominal",
+    "gain:0.05",
+    "gain:-0.05",
+    "width:0.1",
+    "width:-0.1",
+    "baseline:3",
+    "baseline:-3",
+    "shift:1",
+    "shift:-1",
+    "rail:10:known",
+    "rail:30:known",
+    "rail:10:misidentified",
+    "rail:30:misidentified"
+  ],
+  "time_offset_ns": [
+    -0.25,
+    0.25,
+    -1,
+    1
+  ],
+  "threshold_sigma": [
+    4,
+    6
+  ],
+  "threshold_scope": "conservative strictstatus0 pulse-quality veto only, cannot upgrade any originalbad hit; not a change of actualDAQ threshold",
+  "resources": {
+    "cpus": 4,
+    "memory_MB": 6000,
+    "CPU_budget_s": 5000
+  },
+  "scope": "controlled stresses; no detector-systematic probability assigned",
+  "energy_propagation": "frozen Q: recovered Q/interval gain +/-5% with X fixed; frozen T: upstream-group or Veto20 offsets +/-0.25/1ns plus conservative originalstatus0 pulsequality4/6sigma. No refit, no actual DAQ/cut/gain calibration claim"
+}

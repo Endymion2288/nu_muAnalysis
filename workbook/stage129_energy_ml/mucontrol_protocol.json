@@ -1,0 +1,46 @@
+{
+  "stage": 129,
+  "sources": [
+    {
+      "kind": "data",
+      "run": 7729,
+      "input": "/eos/experiment/faser/data0/phys/2022_back/r0021/007729/Faser-Physics-007729-00000-00010-PHYS.root",
+      "production": "r0021, known repository file_config entry"
+    },
+    {
+      "kind": "data",
+      "run": 8006,
+      "input": "/eos/experiment/faser/data0/phys/2022_back/r0021/008006/Faser-Physics-008006-00000-00049-PHYS.root",
+      "production": "r0021, known repository file_config entry"
+    },
+    {
+      "kind": "MC_mu100GeV",
+      "run": 100012,
+      "input": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root",
+      "production": "s0012-r0023; geometry/release compatibility not yet certified"
+    }
+  ],
+  "entry_stop": 4096,
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "pilot": "fixed first4096 entries each, no \u03bd energy labels or timing-output tuning",
+  "selection": "single fitted long track, pz50-2000GeV,>=7layers, chi2/ndof<10; control-only selection, original \u03bd cuts unchanged",
+  "strict": "exact status0, finite positive acquisition time, positive charge for timewalk; retain all control denominator counts",
+  "use": "test muon coverage and time/position/charge interfaces, then freeze calibration; data offsets never directly transplanted to unmatched MC"
+}

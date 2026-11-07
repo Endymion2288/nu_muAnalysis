@@ -1,0 +1,8 @@
+{
+  "failed_batch": "9673329.64",
+  "cause": "source258/259 Stage82 K supplies unmerged bck PHYS for scintillator scalars, while original X used merged tracks; leading pz need not close",
+  "policy": "run/event/entry identity remains mandatory; preserve all parents, X, ADC and scintillator values; unresolved leading extrapolated track values become NaN at unchanged strict tolerance",
+  "no_risk_selection": true,
+  "source257": "missing PHYS keeps scalar/time/track NaN while actual ADC retained",
+  "rerun_batch": 64
+}

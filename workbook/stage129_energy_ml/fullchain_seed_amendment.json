@@ -1,0 +1,5 @@
+{
+  "finding": "9673375 fullchain executed all steps and exact incoming, but Cling RawWaveform typeinfo missing; seed/state calls silently returned emptystrings. Cannot certify waveform seeds from thisattempt",
+  "fix": "load actual WaveRawEvent/ScintSimEvent/xAODFaserWaveform libraries before helper; require serialized before/afterstates >1000chars",
+  "action": "repeat case0 seed certification before remaining20cases; previousfullchain kept as engineeringattempt"
+}

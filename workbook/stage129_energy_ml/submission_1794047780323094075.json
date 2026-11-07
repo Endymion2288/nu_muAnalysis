@@ -1,0 +1,18 @@
+{
+  "result": "9673339.0 - 9673339.2\n",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/worker_mucontrol_1794047780323094075.sh mucontrol $(source_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage129/1794047780323094075/energy-ml-stage129-mucontrol.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 3000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+NuMuStage = \"energy-ml-stage129\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).err\nqueue source_index in 0,1,2\n",
+  "package": {
+    "files": [
+      "ml/stage129_mucontrol.py",
+      "workbook/stage129_energy_ml/mucontrol_protocol.json"
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "bytes": 2437,
+    "path": "software/stage129/1794047780323094075/energy-ml-stage129-mucontrol.tar.gz"
+  },
+  "phase": "mucontrol"
+}

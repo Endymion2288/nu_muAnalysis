@@ -1,0 +1,33 @@
+{
+  "frozen_before_candidate_charge_results": true,
+  "window_ns": [
+    780,
+    980
+  ],
+  "window_samples_inclusive": [
+    390,
+    490
+  ],
+  "template_model": "mean+2 real-shape PCs; source0 pilot templates, K/charm source-held control; full templates train only perchannel/run with>=50 pooled fallback",
+  "noise": "empirical stationary AR1, baseline mean uncertainty; irregular-edge exact AR1 GLS",
+  "censoring": "simultaneous Gaussian one-sided tube with Bonferroni family.025; not exact multivariate censored likelihood",
+  "shape_constraints": "PC coefficients within3trainingSD of amplitude; amplitude>=0; no charge cap",
+  "internal_shift_samples": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "uncertainty": "profileDeltaChi2=3.841458820694124 across admitted shifts plus conservative raw/baseline uncertainty; actual coverage measured; no blind confidence guarantee",
+  "availability": "two measured>5noise samples on each edge for clippedwave; >=8observed; optimize converged; chi2/ndof<=10; bounded profile. Failure retained NaN",
+  "pilot_minimum_controls": 8,
+  "formal_minimum_controls": 50,
+  "artificial_clipping_fractions": [
+    0.75,
+    0.5,
+    0.25
+  ],
+  "new_energy_fits": 0,
+  "no_arrival_time_from_nonzero_status": true
+}

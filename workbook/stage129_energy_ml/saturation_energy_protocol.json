@@ -1,0 +1,12 @@
+{
+  "frozen_before_energy": true,
+  "arms": [
+    "X62",
+    "V74: X plus3channels times present/rail/twoedges/available",
+    "Q89: V plus3channels times Q/calibrated_lowerhalf/calibrated_upperhalf/railcount/chi2"
+  ],
+  "interval_policy": "formal chargecheck role2 controlparent max acrossrails, fixed before energyfit; no testcalibration",
+  "measurement": "actual railzero only, uncut samples retained; no status or timing relabel",
+  "support": "all89033 parents, originalroles, quarantine zero predictions; Qmissing for unsaturated or failed, keep oldraw",
+  "learning": "exact Stage87 fixed3seed400rounds; calglobaloffset; no feature/seed grid"
+}

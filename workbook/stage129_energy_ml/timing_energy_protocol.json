@@ -1,0 +1,12 @@
+{
+  "reference": "pinned d32/FASERNU04/OFLCONDFASER06 promptmu HITS redigitization, original real8006 and oldMC controls separate. Data offsets not transferred",
+  "electronics": "MC digi subtracts centre.z/c, so prompt expected path is dz*(sqrt(1+tx2+ty2)-1)/c; actualstation/plate cable map, distinct planes notdoublePMT",
+  "calibration": "evenentry constant+meanx/100+meany/100+1/sqrt(qi)+1/sqrt(qj), oddentry validation. >=100 each, rank5, condition<1e6, |median|<.25ns and absres95<2ns; otherwise no pairdelta",
+  "application": "only oldstatus0 AND pinned replaystatus0 with actualADC presence, finitepositive time and charges, position/charge in observed calibration bounds. All invalid/newstatus!=0 deltasNaN, parent neverremoved",
+  "arms": "same full original X62 / X+4*(oldstrict,replaystrict,calibrationapplicable) / valid+4 corrected dt; Stage87 fixedfit/cal; no pairschosen by energy",
+  "resources": {
+    "cpus": 4,
+    "memory_MB": 6000,
+    "calibration_and_energy_CPU_s": 2000
+  }
+}

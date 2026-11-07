@@ -1,0 +1,16 @@
+{
+  "wall_s": 0.5819207057356834,
+  "actual_data_fit": false,
+  "selection": "unchanged original selected MC; no parent efficiency inferred",
+  "N_selected": 1000,
+  "missing_for_full_physics": [
+    "certified independent generator/response families",
+    "matched true-energy acceptance including rejected parents",
+    "real data exposure/GRL and background templates under identical selection",
+    "calibrated PMT/ADC response and gain/rail/timing nuisance constraints",
+    "GENIE interaction/FSI, flux and material uncertainties with correlations",
+    "finite response MC and refit/selection propagation"
+  ],
+  "repository_evidence": "existing spectrum_hardness.py/local_information and joint_response.py conditional multinomial templates; this job does not assert those cover the missing detector/physics inputs",
+  "scope": "quantifies feasible conditional spectrum information; original full physics precision target remains unmet"
+}

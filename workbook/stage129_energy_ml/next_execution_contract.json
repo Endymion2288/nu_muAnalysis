@@ -1,0 +1,28 @@
+{
+  "next_stage": 130,
+  "goal_complete": false,
+  "completed_stage": 129,
+  "baseline": "Stage87 fixed direct62",
+  "first_action": {
+    "input": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log",
+    "tags": [
+      "s0014",
+      "master_dev"
+    ],
+    "scope": "bounded retained producer log probe; no generic EOS search",
+    "purpose": "recover exact full-depth EVNT/GHEP path, producer settings, entry and seeds"
+  },
+  "pending": [
+    "N0~940 to approximately2N0 controlled curve",
+    "certified independent confirmation",
+    "full data/background/acceptance/nuisance physical precision"
+  ],
+  "guardrails": [
+    "pz0-only first-power momentum;px/py/qop/bending allowed",
+    "raw11;typedNaN;signed legal negatives;Calo missing",
+    "pz>50 and original fitted/reduced charge selection",
+    "all K and original roles;reserved zero predictions",
+    "no extra seed/network/geometry grid"
+  ],
+  "acceptance": "Actual independent low-energy support near original scale; matched difficult-side support; fixed mixture/roles/inclusion/ESS; full-chain measured cost before bulk production; original risk/tail thresholds unchanged"
+}

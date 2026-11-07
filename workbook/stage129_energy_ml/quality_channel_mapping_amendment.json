@@ -1,0 +1,5 @@
+{
+  "finding": "controlled quality stress originally assumed ADC order4,5,14,6,7; exact280 source summaries instead order4,5,6,7,14. Main measurement/timing already use ID mapping and are unaffected",
+  "fix": "explicit hardware-channel mapping in future extraction; existing cached peaknoise columns reorder[0,1,4,2,3], regenerate only quality4/6 model forwards and complete stress paired report",
+  "scope": "no new fit, no original energy experiment change, no offset or recoverygain stress change"
+}

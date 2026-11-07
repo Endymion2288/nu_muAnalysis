@@ -1,0 +1,89 @@
+{
+  "run": 990129,
+  "event": 8,
+  "detector_wave_counts": {
+    "Calo": 4,
+    "VetoNu": 0,
+    "Veto": 4,
+    "Trigger": 4,
+    "Preshower": 4
+  },
+  "ADC_samples": 9600,
+  "actual_ADC_repeat_exact": true,
+  "persisted_channels": {
+    "Calo": [
+      {
+        "id32": 3221225472,
+        "channel": 1
+      },
+      {
+        "id32": 3355443200,
+        "channel": 0
+      },
+      {
+        "id32": 3489660928,
+        "channel": 3
+      },
+      {
+        "id32": 3623878656,
+        "channel": 2
+      }
+    ],
+    "VetoNu": [],
+    "Veto": [
+      {
+        "id32": 1073741824,
+        "channel": 14
+      },
+      {
+        "id32": 1082130432,
+        "channel": 15
+      },
+      {
+        "id32": 1140850688,
+        "channel": 6
+      },
+      {
+        "id32": 1149239296,
+        "channel": 7
+      }
+    ],
+    "Trigger": [
+      {
+        "id32": 1207959552,
+        "channel": 9
+      },
+      {
+        "id32": 1212153856,
+        "channel": 8
+      },
+      {
+        "id32": 1216348160,
+        "channel": 11
+      },
+      {
+        "id32": 1220542464,
+        "channel": 10
+      }
+    ],
+    "Preshower": [
+      {
+        "id32": 1342177280,
+        "channel": 12
+      },
+      {
+        "id32": 1346371584,
+        "channel": 24
+      },
+      {
+        "id32": 1350565888,
+        "channel": 13
+      },
+      {
+        "id32": 1354760192,
+        "channel": 25
+      }
+    ]
+  },
+  "scope": "independent digitizer processes on sameHITS; response replication, no independentnu N"
+}

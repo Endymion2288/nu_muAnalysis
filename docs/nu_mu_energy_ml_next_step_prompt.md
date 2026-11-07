@@ -1,3 +1,15 @@
+# 当前执行入口：Stage129完成，继续Stage130完整深度独立扩样
+
+先读[Stage129报告](../workbook/2026-11-07_stage129_saturation-timing-material-energy.md)、路线§108和[执行合同](../workbook/stage129_energy_ml/next_execution_contract.json)。三类观测、压力、条件谱、独立复算、21例全链和固定EVNT census已完成，不按下方旧Stage128入口重复执行。
+
+Q/T/G均未通过原joint，保留Stage87 direct62；真z增量不作为可部署成果。严格status0、pz0一次方动量/raw11/typed NaN/signed/Calo缺失/原cuts/全部K及角色保持。原reserved不开。371attempt已终态，CPU60633s；完整原始资源/失败和清理记录见报告。
+
+继续有界查原nominal run200082的log/s0014与log/master_dev中少量精确retained生成/模拟日志，定位完整深度EVNT/GHEP/entry/seed。已知五下游EVNT固定327680记录只有272个最低箱重建前候选，不足原940增量；不能据此判全项目无输入。取得支持后先原cuts全链成本与产额pilot，再冻结N₀附近→约2N₀的受控曲线和新确认，覆盖两低箱与同低pz高E/high-y及自然控制。完整GENIE家族、真实data/背景/接受度和外部响应系统仍需实测。联合前向模型继续门未满足，不做旧表示seed/网络/几何网格。
+
+批量HTCondor用~/condor/nu_muAnalysis/stage130/。每阶段中文workbook+本地Conventional Commit、不push；Stage54五资产及以下全部旧入口保留。整体目标仍未完成。
+
+## Stage128历史入口（原文保留）
+
 # 当前研究入口：Stage128复盘完成，下一工作包优先下游Veto饱和恢复
 
 先读[Stage128完整研究报告](../workbook/2026-11-07_stage128_vertex-timing-saturation-research.md)、路线§107及已完成的[Stage125](../workbook/2026-11-06_stage125_frozen-direct62-geant4-performance.md)/[Stage127](../workbook/2026-11-06_stage127_cuboid-cut-optimization.md)。下面Stage124及更早入口逐字保留为历史，不能再按旧标题重做已完成阶段。本轮用户要求无环境研究：0事件数组/ROOT/NPZ读取、0重算/训练/推理/重建/作业，无SHA；以下是未来有环境时的Stage129建议，当前不执行。

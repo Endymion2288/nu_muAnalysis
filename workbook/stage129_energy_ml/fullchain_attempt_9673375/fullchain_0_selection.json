@@ -1,0 +1,41 @@
+{
+  "index": 0,
+  "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+  "EVNT_entry": 8,
+  "incoming": [
+    14.0,
+    -1.1559807062149048,
+    -6.16088342666626,
+    89327.0
+  ],
+  "identity_incoming_exact": true,
+  "ntuple_N": 1,
+  "selected_N": 0,
+  "cuts": {
+    "Remove CaloNu PMT region (truth)": true,
+    "CC events only": true,
+    "nu_mu only": true,
+    "In Faser Nu Box or Lead Block": true,
+    "Truth dec r < 100 mm": true,
+    "Truth pz > 50 GeV": true,
+    "At least one long track": true,
+    "Veto20 and Veto21 charge > 40 pC": true,
+    "Timing Station Charge > 20 pC": true,
+    "Preshower Charge > 2.5 pC": true,
+    "Track pz > 50 GeV": true,
+    "Leading track has at >= 7 layers": true,
+    "Track nDoF >= 9": true,
+    "Leading track has chi2/ndof < 15": true,
+    "Track R at max radius < 95 mm": false,
+    "Track R at IFT < 95 mm": true,
+    "Track rVetoNu < 120 mm": true,
+    "Leading track theta < 25 mrad": false,
+    "VetoNu0 reduced charge < 30 pC": true,
+    "VetoNu1 reduced charge < 30 pC": true
+  },
+  "reco_pz_GeV": 72.2616796875,
+  "truth_E_GeV": 89.32700021993784,
+  "stratum": "E50_100",
+  "role": "engineering only; no fit/prediction",
+  "independent_training_added_N": 0
+}

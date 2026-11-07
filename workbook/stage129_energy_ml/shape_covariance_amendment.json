@@ -1,0 +1,8 @@
+{
+  "trigger": "0/122769 actual saturatedwave recovery, p05chi2/ndof265-1702; native-control residualshape19-31per1000 vs noise3ADC, expected rail residual305-488ADC",
+  "correction": "add full measured train-only covariance left outside fixed2PC family; exact correlated GLS via Cholesky, three feasible-covariance updates per originalshift. No added PC/shift grid or changedchi2cut",
+  "uncertainty": "plug-in covariance, not exact likelihood; add marginal hidden-top covariance integral uncertainty; cal inflation and source-held testcoverage required",
+  "energy_exposure": "no saturation energy fit/risk has been computed",
+  "invariants": "strictstatus unchanged; allv1 failures preserved, no truth template or nominalp input",
+  "formal_interval_calibration": "perchannel control-parent max error/sidehalfwidth across three fixedrails, then ceil(.95*(nparents+1)) order, floor1, role2 only. Avoid counting three views as independent calibration parents; role3 source-bootstrap conditional coverage; no exact exchangeability claim"
+}

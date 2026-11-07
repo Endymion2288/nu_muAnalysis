@@ -1,0 +1,12 @@
+{
+  "HITS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/sim/s0012/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-HITS.root",
+  "events": 1024,
+  "selection": "first1024 fixed; unmodified hits, pinned d32 digitization/reconstruction FASERNU04 OFLCONDFASER06; separate real data closure, no transplant realoffset",
+  "purpose": "prompt mu calibration reference, producer conditions and cable map; repetitions do not add independentnuN",
+  "calibration": "even event entry train calibration, odd validate; geometric TOF, linear x/y optical terms plus inverse-sqrt raw timewalk, fullrank and validation checks; calibrated charge/position applicability limited to observed control range",
+  "resources": {
+    "cpus": 1,
+    "memory_MB": 4000,
+    "max_wall_s": 7200
+  }
+}

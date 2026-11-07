@@ -1,0 +1,44 @@
+{
+  "stage": 129,
+  "N": 89033,
+  "sources": 280,
+  "batches": 70,
+  "sources_per_batch": 4,
+  "selection": "all original cases including missing/overflow/quarantine; original roles unchanged; no prediction of quarantine/reserved",
+  "measured_pilot": "96 train parents,126 rail-zero waveforms all with acquisition leading/trailing support; ROOT requested12758259 B; 172.307399 CPU s in3 independent runtime startups",
+  "admission": "run/event identity of RDO and PHYS checked per event; full-acquisition raw sum is deliberately not required to equal finite producer-window raw. Exact original-tool window closure is separate pilot and is not used to change X/cuts",
+  "resources": {
+    "cpus_per_batch": 1,
+    "memory_MB": 3000,
+    "max_wall_s": 7200,
+    "aggregate_CPU_budget_s": 60000,
+    "retained_ADC_budget_bytes": 500000000,
+    "ROOT_requested_budget_bytes": 125000000000
+  },
+  "status": "frozen before new energy outcomes for saturation or timing",
+  "features": {
+    "SaturationValid": "per3 downstream channel: ADC present, rail flag, two-edge support, recovery available",
+    "Saturation": "valid controls plus same-W recoveredQ, profile lower/upper widths, rail count, nonclipped residual/mismatch. Raw62 preserved; invalid recovery NaN",
+    "TimingValid": "strict status0 both, finite nonnegative times and physically present ADC; all events retained",
+    "Timing": "valid controls plus calibrated fixedpair residuals only after independent mu-control calibration",
+    "Depth": "full-support Z oracle already separately frozen; material and deployment representation gated by actual geometry/covariance"
+  },
+  "recovery_policy": {
+    "window": "actual official conditions window verified in original-tool pilot; no arbitrary absolute ADC bins",
+    "template": "perchannel/run train-only real unsaturated status0 pulse template; pooledchannel fallback minimum50; mean plus2 shape PCs, coefficients within3trainingSD; fixed translation nuisance",
+    "noise": "baseline correlated covariance; GLS of observed edge and simultaneous one-sided Gaussian bounds for censored samples, not product of independent probabilities",
+    "uncertainty": "profile objective set and source/cal empirical coverage; unavailable or unbounded stays missing, no arbitrary Qcap",
+    "augmentation": "retain observed nonclipped samples and raw features; recover only missing top; no nonzero-status arrival-time feature",
+    "comparators": [
+      "same-W clipped raw",
+      "exact d32 official CB",
+      "constrained recovery"
+    ],
+    "artificial_rails": [
+      0.75,
+      0.5,
+      0.25
+    ],
+    "no_energy_labels_for_templates": true
+  }
+}

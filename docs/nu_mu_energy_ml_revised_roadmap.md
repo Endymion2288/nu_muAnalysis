@@ -2527,3 +2527,18 @@ secondary三父原+16重复共51视图（14含secondary），安全channel-prima
 Stage122只测VetoNu0/1、Preshower0，且六个绝对窗0/40/80/160/320/640/1200 ns未对齐脉冲，未专门表示前后沿；最低箱train50/test20 incoming，不能称完整波形信息极限。其同HITS方差只变化VN/Pres，不能约束下游Veto稳定截断偏差。下一阶段先以真实未饱和波形人工截断，比较raw/官方CB/受约束恢复和区间覆盖；这只验证ADC恢复，实际PMT/放大器失真另需独立参照。再同全支持比较X62、可用标记控制、X62+恢复Q/不确定度/平台/残差，交双低箱、困难侧和实际三尾。波形更好不等于Eν更好，不把全部观测替换成平滑预测。
 
 **未来Stage129的执行边界。** 在有环境终端按报告§9先小pilot测波形可回接/触顶边沿、严格pair覆盖和CPU/I/O/RSS，再在新风险前一次冻规模，完成可行的同支持能量对照；不连续只交metadata，不以某支缺输入阻塞其他支线。批量HTCondor用~/condor/nu_muAnalysis/stage129/，按来源批读、受控线程、紧凑保存，未测GPU收益不编造。独立扩样继续覆盖真低E及同低pz高E/high-y，当前940附近N₀→约2N₀仍未检验；响应重复不增独立N，原reserved不开。原pz0/raw11/status/typed NaN/signed/Calo缺失、正式选择、全部K与角色保持。原1.05/1.01/1.03及八层三向tail+2pp不变；1.05仅非劣效，最终两低箱真正优于传统、系统/背景/接受度和物理能谱收益仍必需。新收益/成本未测，本研究轮不提交任何作业。
+
+
+## 108. Stage129：三类观测与全链已完成，原规模扩样和完整物理目标继续
+
+[Stage129实测报告](../workbook/2026-11-07_stage129_saturation-timing-material-energy.md)完成原89033父的280来源ADC/scalar/真实IFT协方差回接，保持46575/11612/13189/17657角色、全部1016新增K、pz0/raw11/typed NaN/signed/Calo缺失及原pz>50和fit/reduced cuts，reserved/隔离零预测。官方raw实际为780–980ns含端点，纠正历史“全600点”的本批解释；显式channel映射，status严格0不重标。
+
+饱和恢复修复遗漏的train-only残余shape covariance后，83228/122769实际触顶波形可用；留出人工截断有条件coverage与raw/官方CB比较已交，不认证PMT真实非线性。固定Q/X test两低箱1.005784 [.975636,1.033263]/.992483 [.981652,1.003456]，最低箱Q/传统1.951644，joint全部False。严格prompt校准T/X两低箱1.012131/.992937，cal不复现；下游offset压力敏感。真z oracle test第二箱/全体.877265/.918212，材料只是同真z重表示；真实IFT G/X两低箱.987561/.997421，最低箱≥2段只有6/183，未稳定恢复。三线不晋升，不追加旧表示模型网格；联合前向模型的稳定可部署增量门未满足。
+
+12792独立配对标量max差2.842171e−14，X/f0差0；62列domain audit非法正值域−1和有限sentinel均0，合法signed charge−1的60712条保留。原始列顺序只影响附加quality4/6σ压力，已按ID修复两个固定forward，主实验不受影响。条件谱Nselected1000、已知response下E<200份额σ传统/direct/Q/T/G=1.45204/1.21266/1.21893/1.21584/1.20896pp；不是完整data精度或系统结论。
+
+固定21例真实EVNT→G4→digi→reco→原cuts全链全部成功，3选中、0新训练；非随机，3/21不作效率、最低0/2不停止分支。实际private RNG认证，跨进程9600 ADC逐值重复。native neutron timeLimit150ns，不称完整迟发模拟。五下游EVNT固定327680 census排旧11150，重建前最低/第二箱272/1059；TagInfo空，GENIE种子/完整旧生产史仍未认证。272上限不足940增量，不是“无新输入”或N饱和证据。
+
+371attempt全终态，11失败/1取消，唯一CPU60633s、aggregate wall58634s、0GPU；两代恢复32168CPU秒超原30000预算7.23%，全计。核队列并逐字节回读后清理1762170218B，280JSON和141日志合并。报告先于本地Conventional Commit、不push，Stage54五资产保持。
+
+[完成审计](../workbook/stage129_energy_ml/completion_audit.tsv)与[Stage130执行合同](../workbook/stage129_energy_ml/next_execution_contract.json)明确：N₀约940→约2N₀、认证独立确认和完整系统/背景/接受度/物理精度仍未完成。下一步有界读原nominal200082 retained generator/simulation日志，追精确完整深度EVNT/GHEP/entry/seed；先测原选择产额/全链成本，再看风险前冻规模，不泛扫已结束的alternative metadata门。不降原1.05/1.01/1.03与八层三尾+2pp门，1.05仅非劣效，最终两低箱须真正胜传统。历史§1–107保持。

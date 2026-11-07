@@ -1,0 +1,17 @@
+{
+  "EVNT": [
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-1-24-xing-100iab.EVNT.pool.root",
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-0-24-xing-100iab.EVNT.pool.root",
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-k-1-24-xing-100iab.EVNT.pool.root",
+    "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/powheg-pythia-charm-central-24-xing-100iab.EVNT.pool.root"
+  ],
+  "entries_per_file": 16,
+  "selection": "first16 fixed before contents; all particles and vertices persisted compactly, no energy fit",
+  "purpose": "measure fullGENIE content and interfaces for new fullchain; no independentN assertion or reserved exposure",
+  "resources": {
+    "cpus": 1,
+    "memory_MB": 4000,
+    "max_wall_s": 7200
+  }
+}

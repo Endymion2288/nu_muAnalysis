@@ -1,0 +1,39 @@
+{
+  "result": "9673384.0 - 9673384.0\n",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/worker_energystress_1794051088739534654.sh energystress $(source_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage129/1794051088739534654/energy-ml-stage129-energystress.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 8000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+NuMuStage = \"energy-ml-stage129\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).err\nqueue source_index in 0\n",
+  "package": {
+    "files": [
+      "ml/stage129_energy.py",
+      "ml/audited_features.py",
+      "ml/stage119_curve_common.py",
+      "ml/stage119_reportcurve.py",
+      "ml/configs/audited_features.json",
+      "ntuples/energy_ml_stage119/old_input.npz",
+      "ml/artifacts/stage87/predictions.npz",
+      "workbook/stage87_energy_ml/protocol.json",
+      "workbook/stage129_energy_ml/depth_protocol.json",
+      "ml/stage129_energystress.py",
+      "workbook/stage129_energy_ml/pressure_protocol.json",
+      "ntuples/energy_ml_stage129/saturation_features.npz",
+      "workbook/stage129_energy_ml/saturation_fits.json",
+      "ml/artifacts/stage129/saturation_Q_2026110255.ubj",
+      "ml/artifacts/stage129/saturation_Q_2026110256.ubj",
+      "ml/artifacts/stage129/saturation_Q_2026110257.ubj",
+      "ml/artifacts/stage129/saturation_X_prediction.npz",
+      "ml/artifacts/stage129/saturation_Q_prediction.npz",
+      "ntuples/energy_ml_stage129/timing_features.npz",
+      "workbook/stage129_energy_ml/timing_fits.json",
+      "ml/artifacts/stage129/timing_T_2026110255.ubj",
+      "ml/artifacts/stage129/timing_T_2026110256.ubj",
+      "ml/artifacts/stage129/timing_T_2026110257.ubj",
+      "ml/artifacts/stage129/timing_X_prediction.npz",
+      "ml/artifacts/stage129/timing_T_prediction.npz"
+    ],
+    "indices": [
+      0
+    ],
+    "bytes": 36850539,
+    "path": "software/stage129/1794051088739534654/energy-ml-stage129-energystress.tar.gz"
+  },
+  "phase": "energystress"
+}

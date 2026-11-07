@@ -1,0 +1,40 @@
+{
+  "experiment": "timingstress",
+  "N": 89033,
+  "roles": [
+    17657,
+    46575,
+    11612,
+    13189
+  ],
+  "baseline_max_abs_log_difference": 0.0,
+  "joint": {
+    "2_X": false,
+    "2_T": false,
+    "2_upstream-0.25ns": false,
+    "2_Veto20-0.25ns": false,
+    "2_upstream+0.25ns": false,
+    "2_Veto20+0.25ns": false,
+    "2_upstream-1.00ns": false,
+    "2_Veto20-1.00ns": false,
+    "2_upstream+1.00ns": false,
+    "2_Veto20+1.00ns": false,
+    "2_quality4sigma": false,
+    "2_quality6sigma": false,
+    "3_X": false,
+    "3_T": false,
+    "3_upstream-0.25ns": false,
+    "3_Veto20-0.25ns": false,
+    "3_upstream+0.25ns": false,
+    "3_Veto20+0.25ns": false,
+    "3_upstream-1.00ns": false,
+    "3_Veto20-1.00ns": false,
+    "3_upstream+1.00ns": false,
+    "3_Veto20+1.00ns": false,
+    "3_quality4sigma": false,
+    "3_quality6sigma": false
+  },
+  "quarantine_predictions": 0,
+  "reserved_predictions": 0,
+  "limits": "developed pool; conditional incoming bootstrap, not full GENIE/source/refit/system or independent confirmation"
+}

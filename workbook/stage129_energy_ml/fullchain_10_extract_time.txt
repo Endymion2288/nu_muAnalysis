@@ -1,0 +1,24 @@
+	Command being timed: "env -i PATH=/usr/bin:/bin HOME=/afs/cern.ch/user/x/xcheng USER=xcheng PYTHONNOUSERSITE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 bash -c source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh
+python "$1/ml/stage129_fullchainextract.py" "$1" "$2" "$3" bash /pool/condor/dir_1291450/nu_mu_stage129.EZrShs 10 /pool/condor/dir_1291450/nu_mu_stage129.EZrShs/chain_10/ntuple.root"
+	User time (seconds): 9.19
+	System time (seconds): 2.63
+	Percent of CPU this job got: 56%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:20.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 648092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8170
+	Minor (reclaiming a frame) page faults: 200294
+	Voluntary context switches: 51010
+	Involuntary context switches: 6372
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 512
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

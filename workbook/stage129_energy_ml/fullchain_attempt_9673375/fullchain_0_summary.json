@@ -1,0 +1,134 @@
+{
+  "case": {
+    "index": 0,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+    "entry": 8,
+    "event_number": 0,
+    "incoming": [
+      14,
+      -1.1559807062149048,
+      -6.16088342666626,
+      89327.0
+    ],
+    "stratum": "E50_100",
+    "source_index": 0,
+    "seed": 2026110700,
+    "prior_old_incoming_overlap": false,
+    "complete_record_cache": "ntuples/energy_ml_stage129/fullchain_generator_records.json"
+  },
+  "steps": [
+    {
+      "name": "sim",
+      "returncode": 0,
+      "wall_s": 33.8329785829992,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/fasernu_100_iab_downstream_samples/epos-pi-0-24-xing-100iab.EVNT.pool.root",
+        "FaserMC-Stage129Nu-990129-00000-stage129-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "8",
+        "-n",
+        "1"
+      ]
+    },
+    {
+      "name": "validate_hits",
+      "returncode": 0,
+      "wall_s": 4.689995713008102,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "-c",
+        "import ROOT,sys; f=ROOT.TFile.Open(sys.argv[1]); assert f and not f.IsZombie(); assert f.Get(\"CollectionTree\").GetEntries()==1; f.Close()",
+        "FaserMC-Stage129Nu-990129-00000-stage129-HITS.root"
+      ]
+    },
+    {
+      "name": "digi",
+      "returncode": 0,
+      "wall_s": 102.01746438798727,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_3301053/nu_mu_stage129.cWqbIg/ml/stage129_digitize.py",
+        "FaserMC-Stage129Nu-990129-00000-stage129-HITS.root",
+        "2026110701",
+        "/pool/condor/dir_3301053/nu_mu_stage129.cWqbIg/workbook/stage129_energy_ml/fullchain_0_waveform_states.json"
+      ]
+    },
+    {
+      "name": "reco",
+      "returncode": 0,
+      "wall_s": 15.865799422957934,
+      "command": [
+        "faser_reco.py",
+        "--isMC",
+        "--geom",
+        "TI12MC04",
+        "--nevents",
+        "1",
+        "FaserMC-Stage129Nu-990129-00000-stage129-RDO.root"
+      ]
+    },
+    {
+      "name": "ntuple",
+      "returncode": 0,
+      "wall_s": 11.373088909022044,
+      "command": [
+        "faser_ntuple_maker.py",
+        "--isMC",
+        "--geom",
+        "TI12MC04",
+        "--CKFTrackType",
+        "merge",
+        "--nevents",
+        "1",
+        "--outfile",
+        "ntuple.root",
+        "FaserMC-Stage129Nu-990129-00000-stage129-xAOD.root"
+      ]
+    },
+    {
+      "name": "payload",
+      "returncode": 0,
+      "wall_s": 14.822201433998998,
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_3301053/nu_mu_stage129.cWqbIg/ml/stage119_payload.py",
+        "--run",
+        "990129",
+        "--output",
+        "/pool/condor/dir_3301053/nu_mu_stage129.cWqbIg/workbook/stage129_energy_ml/fullchain_0_payload.json"
+      ]
+    },
+    {
+      "name": "extract",
+      "returncode": 0,
+      "wall_s": 21.286137104034424,
+      "command": [
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/afs/cern.ch/user/x/xcheng",
+        "USER=xcheng",
+        "PYTHONNOUSERSITE=1",
+        "OMP_NUM_THREADS=1",
+        "OPENBLAS_NUM_THREADS=1",
+        "bash",
+        "-c",
+        "source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\npython \"$1/ml/stage129_fullchainextract.py\" \"$1\" \"$2\" \"$3\"",
+        "bash",
+        "/pool/condor/dir_3301053/nu_mu_stage129.cWqbIg",
+        "0",
+        "/pool/condor/dir_3301053/nu_mu_stage129.cWqbIg/chain_0/ntuple.root"
+      ]
+    }
+  ],
+  "wall_s": 203.90687410504324,
+  "scope": "engineering selected-candidate cost/yield, not unbiased efficiency, not independent learning N; no model prediction",
+  "successful": true,
+  "intermediate_ROOT_retained": false
+}

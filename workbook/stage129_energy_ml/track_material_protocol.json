@@ -1,0 +1,14 @@
+{
+  "frozen_before_full_IFT_energy": true,
+  "pilot": "actual96 parents, native early-plane localcovariances available, segment pz nominal100GeV excluded",
+  "native": "all original89033, source280/70batches; Segments only stationmask1, >=5 PRD, ndof>0; all parents kept including noIFT",
+  "geometry": "mutually PRD-disjoint early IFT directions; no LOS/vertextruth used to choose tracks",
+  "compatibility": "uniform trialz[-3000,-1950] 64midpoints; GLS common transverse point with measured covariance and central-material Highland broadening at fixed nuisance p1/10/100GeV; each conditional profile retained, not chosen by energy. Shape width/minchi and mean remainingmaterial; not calibrated exactvertex probability",
+  "invariants": "no additional firstpower momentum or truth input, nominalsegment p removed; availability-only control and geometry-family same fullsupport Stage87 policy",
+  "resources": {
+    "cpus": 1,
+    "memory_MB": 4000,
+    "jobs": 70,
+    "aggregate_CPU_budget_s": 20000
+  }
+}

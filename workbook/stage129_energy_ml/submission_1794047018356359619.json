@@ -1,0 +1,18 @@
+{
+  "result": "9673324.0 - 9673324.0\n",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/worker_extract_1794047018356359619.sh extract $(source_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage129/1794047018356359619/energy-ml-stage129-extract.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 3000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+NuMuStage = \"energy-ml-stage129\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).err\nqueue source_index in 0\n",
+  "package": {
+    "files": [
+      "ml/stage129_extract.py",
+      "ml/stage122_saved.py",
+      "setup_env.sh",
+      "workbook/stage129_energy_ml/extraction_contract.json"
+    ],
+    "indices": [
+      0
+    ],
+    "bytes": 3617287,
+    "path": "software/stage129/1794047018356359619/energy-ml-stage129-extract.tar.gz"
+  },
+  "phase": "extract"
+}

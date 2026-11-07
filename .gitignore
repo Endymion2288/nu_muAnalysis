@@ -129,3 +129,14 @@ workbook/stage124_energy_ml/native_contract.json
 
 # Stage125 compact frozen-model tune evaluation caches.
 ntuples/energy_ml_stage125/
+
+# Stage129 event-level waveform caches and exact requests.
+ntuples/energy_ml_stage129/
+workbook/stage129_energy_ml/extraction_contract.json
+
+# Stage129 complete generator/control records remain local data.
+workbook/stage129_energy_ml/evntprobe_[0-9]*.json
+workbook/stage129_energy_ml/evntrange_[0-9]*.json
+workbook/stage129_energy_ml/muanchor.json
+workbook/stage129_energy_ml/templates.json
+workbook/stage129_energy_ml/templates_cov.json

@@ -1,0 +1,6 @@
+{
+  "issue": "two actual simulation startup attempts: obsolete unmounted G4LEDATA in environment; then Athena terminated and oneeventwritten, but CPython shutdown freeinvalidpointer abort134",
+  "correction": "explicit CVMFS Geant4-10.6-compatible data versions; exact final sys.exit(sc.isFailure()) replaced with flushed os._exit(sc.isFailure()) only after cfg.run returns and Athena finalizes, not ignoring134; independent HITS CollectionTreeN=1 before digi plus final nativeincoming closure",
+  "physics": "actual runtime sets neutron timeLimit150ns, recorded not inferred from older source defaults. No change to neutron time cut in engineering pilot",
+  "seed": "G4 offset plus unique stream filename and deterministic waveform RNG states recorded, no automatic GENIE independence claim"
+}

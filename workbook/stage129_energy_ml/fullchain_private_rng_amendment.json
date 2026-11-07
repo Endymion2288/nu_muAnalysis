@@ -1,0 +1,6 @@
+{
+  "finding": "9673388 all five serialized before/after states exactlyequal. Logs show both ToolSvc.Stage122Calo and CaloWaveformDigiAlg.Stage122Calo: seeded public clones were not used by private algorithm tool",
+  "fix": "retrieve exact algorithm-owned private tool via IAlgManager + owner-qualified ToolHandle, seed in AthBeginSeq execute after initialize, record state advancement. No unused publictools",
+  "effect": "previous completechains remain engineering only; no claim of explicit waveformseed or added independentN",
+  "second_ineffective_publictool_attempt": "9673390 (frozenpayload), allstate equality must not count certification"
+}

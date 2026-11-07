@@ -1,0 +1,49 @@
+{
+  "result": "9673388.0 - 9673388.0\n",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/worker_fullchainpilot_1794051758053110989.sh fullchainpilot $(source_index)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage129/1794051758053110989/energy-ml-stage129-fullchainpilot.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 1\nrequest_memory = 4000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+NuMuStage = \"energy-ml-stage129\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage129/logs/$(ClusterId).$(ProcId).err\nqueue source_index in 0\n",
+  "package": {
+    "files": [
+      "ml/extract_alternative_support.py",
+      "ml/audited_features.py",
+      "ml/frozen_evaluation.py",
+      "ml/train_bdt.py",
+      "ml/track_response.py",
+      "ml/stage112_selection.py",
+      "build/analysis",
+      "ml/configs/audited_features.json",
+      "ml/configs/baseline.yaml",
+      "ml/configs/track_response.yaml",
+      "AnalysisZipFramework/config/cuts.yaml",
+      "AnalysisZipFramework/config/definitions.yaml",
+      "AnalysisZipFramework/config/file_config.yaml",
+      "AnalysisZipFramework/config/file_config_late_tracks.yaml",
+      "AnalysisZipFramework/config/grl_config.yaml",
+      "AnalysisZipFramework/config/ml_audited_output_columns.yaml",
+      "AnalysisZipFramework/config/ml_definitions.yaml",
+      "AnalysisZipFramework/config/ml_low_energy_cuts.yaml",
+      "AnalysisZipFramework/config/ml_output_columns.yaml",
+      "AnalysisZipFramework/config/output_columns.yaml",
+      "AnalysisZipFramework/include/Analysis.h",
+      "AnalysisZipFramework/include/ConfigUtils.h",
+      "AnalysisZipFramework/include/GRLUtils.h",
+      "AnalysisZipFramework/include/InputUtils.h",
+      "AnalysisZipFramework/include/RDFDefines.h",
+      "AnalysisZipFramework/include/ReferenceCovarianceAudit.h",
+      "AnalysisZipFramework/include/TrackingTruthDiagnostic.h",
+      "setup_env.sh",
+      "ml/stage119_payload.py",
+      "ml/stage129_fullchain.py",
+      "ml/stage129_fullchainextract.py",
+      "ml/stage129_digitize.py",
+      "ml/stage122_response.hxx",
+      "workbook/stage129_energy_ml/fullchain_protocol.json",
+      "ml/stage129_fullchainpilot.py"
+    ],
+    "indices": [
+      0
+    ],
+    "bytes": 523451,
+    "path": "software/stage129/1794051758053110989/energy-ml-stage129-fullchainpilot.tar.gz"
+  },
+  "phase": "fullchainpilot"
+}
