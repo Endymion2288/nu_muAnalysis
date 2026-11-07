@@ -1,0 +1,202 @@
+{
+  "results": [
+    {
+      "model": "traditional",
+      "MC_families": 10811,
+      "MC_counts_per_truebin": [
+        182,
+        899,
+        2342,
+        3522,
+        2742,
+        1020,
+        104
+      ],
+      "zero_cells_per_truebin": [
+        7,
+        5,
+        3,
+        2,
+        1,
+        1,
+        3
+      ],
+      "Asimov_LR_at_truth": 0.0,
+      "Asimov_loglike_delta_vs_exact": -1.3828503142576665e-07,
+      "Asimov_iterations": [
+        17,
+        17
+      ],
+      "pilot_toys": [
+        {
+          "toy": 0,
+          "LR_at_true_psi": 0.0009180359229503665,
+          "free_iterations": 1160,
+          "fixed_iterations": 1166
+        },
+        {
+          "toy": 1,
+          "LR_at_true_psi": 0.25855752148345346,
+          "free_iterations": 449,
+          "fixed_iterations": 444
+        },
+        {
+          "toy": 2,
+          "LR_at_true_psi": 0.3793406417753431,
+          "free_iterations": 421,
+          "fixed_iterations": 404
+        },
+        {
+          "toy": 3,
+          "LR_at_true_psi": 0.051603257041278994,
+          "free_iterations": 286,
+          "fixed_iterations": 285
+        }
+      ],
+      "local_one_view_fisher": {
+        "observed_categories": 8,
+        "schur_max_abs_difference": 1.8189894035458565e-11,
+        "known_rank": 6,
+        "known_condition": 140.62031037055866,
+        "known_sigma_low_fraction_pp": 1.4509677697805647,
+        "finiteMC_rank": 6,
+        "finiteMC_condition": 144.90832565561996,
+        "finiteMC_sigma_low_fraction_pp": 1.4896855265583742
+      }
+    },
+    {
+      "model": "direct62",
+      "MC_families": 10811,
+      "MC_counts_per_truebin": [
+        182,
+        899,
+        2342,
+        3522,
+        2742,
+        1020,
+        104
+      ],
+      "zero_cells_per_truebin": [
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "Asimov_LR_at_truth": 2.3283064365386963e-10,
+      "Asimov_loglike_delta_vs_exact": -4.783796612173319e-07,
+      "Asimov_iterations": [
+        33,
+        33
+      ],
+      "pilot_toys": [
+        {
+          "toy": 0,
+          "LR_at_true_psi": 0.0077461857108573895,
+          "free_iterations": 405,
+          "fixed_iterations": 405
+        },
+        {
+          "toy": 1,
+          "LR_at_true_psi": 1.4356992325519968,
+          "free_iterations": 94,
+          "fixed_iterations": 83
+        },
+        {
+          "toy": 2,
+          "LR_at_true_psi": 0.01981112997600576,
+          "free_iterations": 272,
+          "fixed_iterations": 272
+        },
+        {
+          "toy": 3,
+          "LR_at_true_psi": 0.2431736722610367,
+          "free_iterations": 216,
+          "fixed_iterations": 216
+        }
+      ],
+      "local_one_view_fisher": {
+        "observed_categories": 7,
+        "schur_max_abs_difference": 8.731149137020111e-11,
+        "known_rank": 6,
+        "known_condition": 200.15894451912538,
+        "known_sigma_low_fraction_pp": 1.2145400865139722,
+        "finiteMC_rank": 6,
+        "finiteMC_condition": 215.90785727589233,
+        "finiteMC_sigma_low_fraction_pp": 1.2372767518907384
+      }
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "MC_families": 10811,
+      "MC_counts_per_truebin": [
+        182,
+        899,
+        2342,
+        3522,
+        2742,
+        1020,
+        104
+      ],
+      "zero_cells_per_truebin": [
+        32,
+        26,
+        25,
+        22,
+        21,
+        24,
+        29
+      ],
+      "Asimov_LR_at_truth": 0.0,
+      "Asimov_loglike_delta_vs_exact": -3.2326352084055543e-07,
+      "Asimov_iterations": [
+        151,
+        151
+      ],
+      "pilot_toys": [
+        {
+          "toy": 0,
+          "LR_at_true_psi": 1.4612720551667735,
+          "free_iterations": 91,
+          "fixed_iterations": 89
+        },
+        {
+          "toy": 1,
+          "LR_at_true_psi": 0.11377955225543701,
+          "free_iterations": 1974,
+          "fixed_iterations": 1952
+        },
+        {
+          "toy": 2,
+          "LR_at_true_psi": 2.0545384559591184,
+          "free_iterations": 299,
+          "fixed_iterations": 296
+        },
+        {
+          "toy": 3,
+          "LR_at_true_psi": 0.3822790210106177,
+          "free_iterations": 829,
+          "fixed_iterations": 830
+        }
+      ],
+      "local_one_view_fisher": {
+        "observed_categories": 18,
+        "schur_max_abs_difference": 7.457856554538012e-11,
+        "known_rank": 6,
+        "known_condition": 150.4971549242197,
+        "known_sigma_low_fraction_pp": 1.1230167386642862,
+        "finiteMC_rank": 6,
+        "finiteMC_condition": 161.62284679515136,
+        "finiteMC_sigma_low_fraction_pp": 1.140310246672709
+      }
+    }
+  ],
+  "CPU_s": 1.371408068,
+  "wall_s": 1.4077004940481856,
+  "RSS_KiB": 111904,
+  "no_regression_fit_or_forward": true,
+  "reserved_forward": 0,
+  "scope": "cost/convergence pilot only;4toys not coverage evidence;one deterministic view per incoming proxy,not full generator-family independence"
+}

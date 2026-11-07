@@ -1,0 +1,40 @@
+{
+  "stage": 139,
+  "phase": "pilot",
+  "frozen_UTC": "2026-11-07T19:22:06Z",
+  "question": "Does nonlinear finite-MC template profiling retain conditional precision and give calibrated LR coverage with sparse/zero cells?",
+  "inputs": [
+    "stage119 old_input roles2/3",
+    "stage129 frozen traditional and direct_cal predictions"
+  ],
+  "role_policy": "cal role2 response;test role3 reference fraction; no role4/reserved forward",
+  "family": "one deterministic first original row per exact float64 incoming proxy in role2; finite multinomial auxiliary working model; no certified GENIE-family independence; different response from Stage136 within-family averaged view",
+  "observables": [
+    "traditional9",
+    "direct62_9",
+    "joint_direct62_9xpz0_4"
+  ],
+  "truth_E_edges_GeV": [
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    "inf"
+  ],
+  "selected_N": 1000,
+  "parameter": "psi=f0+f1=selected E<200GeV fraction;7free truth fractions constrained to simplex",
+  "likelihood": "logL=sum d_k log(sum_t f_t q_tk)+sum m_tk log q_tk;row q simplexes and f simplex;exact nonnegative profiling;zero MC cells may have positive q;no invented nuisance prior",
+  "optimizer": "EM;positive .1 count only initializes q and never enters likelihood; absolute LL change1e-8,max20000iterations; all converged mandatory; fixed and free LL monotonic and exact Asimov maximum checked",
+  "pilot": "3 representations,4 nominal parametric toys each,plus Asimov; no coverage inference from4",
+  "next": "after actual convergence/cost pilot freeze formal nominal and finite unseen-cell stress scenarios,toy count,coverage precision and CPU budget; independently verify optimum;no truth model choice after coverage",
+  "resources": {
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "CPU_budget_s": 1800,
+    "GPU": 0
+  },
+  "scope": "conditional statistical experiment,not actualdata or real detector/GENIE nuisance/background/acceptance;no regression fit/forward/G4;promotion false"
+}

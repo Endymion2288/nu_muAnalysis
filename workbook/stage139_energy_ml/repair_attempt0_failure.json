@@ -1,0 +1,5 @@
+{
+  "reason": "analytic-gradient numpy division output accidentally inherited integer data dtype",
+  "fix": "cast count inputs to float before likelihood gradient arithmetic",
+  "no_scientific_result": true
+}

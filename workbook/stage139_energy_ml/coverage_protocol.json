@@ -1,0 +1,29 @@
+{
+  "stage": 139,
+  "phase": "coverage",
+  "frozen_UTC": "2026-11-07T19:26:41Z",
+  "admission_basis": "pilot exit0;12toy fits all converge,max1974iterations;Asimov exact max agreement<5e-7;GNU scientific1.3714CPU seconds",
+  "experiments": 6,
+  "toys_per_experiment": 500,
+  "toy_MCSE_at95pct": 0.009746794,
+  "nominal": "empirical oneview response from10811incoming proxies; fixed n_t=[182,899,2342,3522,2742,1020,104];same reference truth fractions as Stage136;Nselected1000",
+  "stress": "for each representation separately,move min(.05,3/n_t) probability pertruebin uniformly into its empty cells; artificial categorical sensitivity,not measured detector/physics variation or confidence set; no comparing stress as common physicaldata",
+  "toys": "independent auxiliary multinomial pertruebin at fixedn_t,independent selected-data multinomial; parameterpoint fixed reference psi.500 nominal+500 stress perrepresentation,no optionalstopping",
+  "inference": "full nonnegative MC response/simplex profiling with no pseudocount inlikelihood;LR cutoff chi2_1 .95=3.841458820694124;pointwise inclusion equivalently inverted interval coverage",
+  "numerical": "two fixed EM starts reference/uniform;max100000iterations;absolute LL tolerance1e-8;use greatest converged LL,record startdifferences;all calls must converge,no failedtoy drop;18 Asimov constrained SLSQP analyticgradient crosschecks |LLdifference|<.001",
+  "outputs": [
+    "pointwise coverage and Wilson95interval",
+    "empirical psi bias/RMS",
+    "nominal and stress Asimov profile widths,not toywidthaverage",
+    "convergence/cost and independentSLSQP",
+    "original single-event gates unchanged;no promotion"
+  ],
+  "stop": "finite sixexperiments only;any inadequacy reported,no binning/prior/estimator grid;unmeasured uniformcoverage,realphysicsnuisance/background/acceptance remain explicit",
+  "resources": {
+    "CPU_budget_s": 3000,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "wall_s": 7200,
+    "GPU": 0
+  }
+}

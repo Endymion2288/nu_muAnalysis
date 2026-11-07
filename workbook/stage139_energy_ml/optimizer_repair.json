@@ -1,0 +1,82 @@
+{
+  "results": [
+    {
+      "model": "direct62",
+      "scenario": "nominal_empirical",
+      "toy": 114,
+      "EM_LR": 0.08335918618104188,
+      "SLSQP_LR": 0.08335918395459885,
+      "free_LL_improvement": 6.253885658225045e-07,
+      "fixed_LL_improvement": 6.265017873374745e-07,
+      "CPU_s": 1.285887728,
+      "iterations": [
+        2,
+        2,
+        35
+      ]
+    },
+    {
+      "model": "direct62",
+      "scenario": "nominal_empirical",
+      "toy": 417,
+      "EM_LR": 0.09599656996579142,
+      "SLSQP_LR": 0.09599656595673878,
+      "free_LL_improvement": 3.181932697771117e-06,
+      "fixed_LL_improvement": 3.1839372240938246e-06,
+      "CPU_s": 1.708737336,
+      "iterations": [
+        2,
+        2,
+        32
+      ]
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "nominal_empirical",
+      "toy": 487,
+      "EM_LR": 0.40509261685292586,
+      "SLSQP_LR": 0.4050926322088344,
+      "free_LL_improvement": 5.120837158756331e-07,
+      "fixed_LL_improvement": 5.04405761603266e-07,
+      "CPU_s": 4.577949611,
+      "iterations": [
+        2,
+        2,
+        58
+      ]
+    },
+    {
+      "model": "joint_direct62_pz0",
+      "scenario": "nominal_empirical",
+      "toy": 344,
+      "EM_LR": 0.15149500232655555,
+      "SLSQP_LR": 0.15149496313097188,
+      "free_LL_improvement": 2.81317625194788e-07,
+      "fixed_LL_improvement": 3.0091541702859104e-07,
+      "CPU_s": 2.9522495000000006,
+      "iterations": [
+        2,
+        2,
+        60
+      ]
+    },
+    {
+      "model": "direct62",
+      "scenario": "unseen_cell_stress",
+      "toy": 150,
+      "EM_LR": -0.08216129606080358,
+      "SLSQP_LR": 0.21983083997838548,
+      "free_LL_improvement": 0.15099719963109237,
+      "fixed_LL_improvement": 1.1316114978399128e-06,
+      "CPU_s": 0.6722990840000005,
+      "iterations": [
+        46,
+        2,
+        46
+      ]
+    }
+  ],
+  "CPU_s": 11.290696308,
+  "wall_s": 11.381137774966192,
+  "scope": "numerical repair diagnostic only; no valid final coverage until every frozen toy is reevaluated"
+}

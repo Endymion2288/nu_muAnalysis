@@ -1,0 +1,17 @@
+{
+  "result": "9674112.0 - 9674112.0",
+  "phase": "repair",
+  "indices": [
+    0
+  ],
+  "cpus": 4,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage139\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage139/worker_1794080610649589372.sh\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage139/1794080610649589372/energy-ml-stage139.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 2000MB\nmax_retries = 0\n+MaxRuntime = 7200\n+PeriodicRemoveReason = \"Stage139 cumulative CPU budget 300 seconds exceeded\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 300\n+NuMuStage = \"energy-ml-stage139\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage139/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage139/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage139/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage139/1794080610649589372/energy-ml-stage139.tar.gz",
+    "bytes": 1309234,
+    "file_count": 800
+  },
+  "frozen_before_new_risks": true,
+  "total_fit_budget": 0,
+  "full_manifest_backup": "ntuples/energy_ml_stage139/submission_manifests.json.gz"
+}

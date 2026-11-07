@@ -1,0 +1,10 @@
+{
+  "valid_final_coverage": false,
+  "reason": "free EM objective below constrained objective for direct stress toy150 by .041080648; start LL differences up to2.5693 for nominaljoint; multiplicative updates can stick at simplex faces",
+  "all_3000_toys_preserved_by_seed": true,
+  "no_failed_toy_dropped": true,
+  "likelihood_or_statistics_policy_changed": false,
+  "next": "verify analytic-gradient constrained optimizer can revive zero faces; original coverage results provisional,reevaluate all frozen toys after numerical repair",
+  "CPU_s": 1430,
+  "CPU_budget_s": 3000
+}
