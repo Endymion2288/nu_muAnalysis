@@ -1,3 +1,11 @@
+# 当前执行更新：Stage168 取得完整EVNT记录数，物理归一化仍未知
+
+[Stage168报告](../workbook/2026-11-08_stage168_full-EVNT-denominator-headers.md)完成原22个EVNT固定路径header/有限metadata，合11229101条（nominal2944203/alternative8284898），四pilot/full精确；未读CollectionTree事例载荷。实际persistent McEventCollection_p6/FileMetaData/EventStreamInfo存在，读取的scalar只有POOL index_ref，物理weight/生成曝光未认证。原16log窗口15个在实际N内，index508请求90000+10000超EOF94877；原native已测scanned4877、selected91身份保持，不把请求当成功计数或尾段EOF当错误配对。C++ROOT四pilot N及另写schema/scalar、22映射/表、16命令范围全通过；3start均exit0、11CPU秒/30聚合wall秒、0live/G4/fit/forward，最终元数据177167B、删200552B重复，Stage54保持。
+
+[下一Stage169合同](../workbook/stage168_energy_ml/next_execution_contract.json)仅已存source_evidence与原16native summary，核原666来源实际处理计数、EOF与1134历史source范围声明；原16pilot及成本再全666，300CPU秒/2核4GB，无ROOT/事件数组/模型/新生产。条目数、范围声明和相等计数均不单独认证全生成接受度/归一化；本阶段opaque EVNT metadata支线有限结束，不自动native大扫描。真实data处理/DAQ亮度、namedweights/生成曝光/逐生成事例账目、背景/相关约束/乳胶/独立确认仍缺，Stage87/原全门和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage167 真实文件manifest完成，曝光仍未认证
 
 [Stage167报告](../workbook/2026-11-08_stage167_real-run-file-coverage.md)在两个固定目录取得16PHYS/778PhysicsRAW，声明编号0–777无重叠缺口；首尾/header逐文件通过、原3pilot及reference64精确，N合计14237355但未作内部去重/完整ν选择。端点包络53580秒；全部0份允许producer metadata，RAW另有Incomplete/Monitoring等非匹配名字只记录未读。文件名和端点不证明逐输入处理成功/DAQ活时间，850.979pb⁻¹整run查表不附给文件集合，曝光仍null。独立目录/range-set/原3逐分支和16行表精确；3start全exit0、14CPU秒/28聚合wall秒、0live/G4/fit/forward；最终元数据183226B，删94366B重复，Stage54保持。
@@ -3084,3 +3092,10 @@ content/M12 cal两低箱.990793[.977914,1.000999]/.998796[.995081,1.003146]，te
 [实测报告](../workbook/2026-11-08_stage167_real-run-file-coverage.md)与[证据表](../workbook/stage167_energy_ml/exposure_evidence.json)给16PHYS/778PhysicsRAW、0–777声明覆盖、N合计14237355和端点包络53580秒。全部没有允许producer metadata，另有Incomplete等非匹配名字未读，不能以命名覆盖认证处理完整、DAQ或曝光；官方整run850.979pb⁻¹和文件集合匹配亮度null分别保留。独立两目录/regex-range/前三文件逐分支/reference64及16行表通过，3job全exit0、14CPU秒/0live，元数据183226B、删除94366B重复，Stage54保持。
 
 [Stage168合同](../workbook/stage167_energy_ml/next_execution_contract.json)取得既有22EVNT实际生成N/schema和有限归一化metadata，pilot/成本后最多全22header；不读事件payload，不做未经加权/完整处理证明的acceptance比值、不重复有限MC toys或新G4。实际data处理账目/活时间/逐时间亮度和背景/全生成接受度/相关系统/乳胶/独立确认仍开放，Stage87与原全部门、整体未完成保持。历史§1–145及旧入口原文保留。
+
+
+## 147. Stage168：完整EVNT条目与真实EOF取得，未认证物理归一化/接受度
+
+[实测报告](../workbook/2026-11-08_stage168_full-EVNT-denominator-headers.md)、[分母证据](../workbook/stage168_energy_ml/denominator_evidence.json)给22完整EVNT11229101条，非独立相互作用或物理加权分母；persistent generator对象只记schema，scalar index_ref不是权重。16实际日志请求中15完全在N内，run200088的source508请求超94877 EOF，原native4877/selected91配对闭合；不篡改原Stage130计数。历史1134来源与完成666/有本项log证明16分别保留，650完成来源缺该逐窗口log证明不等于已证实失败。
+
+C++ROOT四pilot N、独立type/scalar和22表/映射/16边界验证通过，3job全exit0、11CPU秒、0live；紧凑元数据177167B，删200552B重复，Stage54保持。[Stage169合同](../workbook/stage168_energy_ml/next_execution_contract.json)只用已存666来源处理计数和原16native摘要，300CPU秒、2核4GB、无ROOT/事件数组，核请求/可用/实际和角色支持，不能以计数等同全生成接受度。实际data曝光背景、GENIE/flux归一化与相关辅助输入/乳胶/独立确认仍缺，Stage87/所有原门及整体未完成保持。历史§1–146及全部旧入口原文保留。

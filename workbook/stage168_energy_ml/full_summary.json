@@ -1,0 +1,3542 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "N": 440784,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15006495473139712,
+              15006495473139713,
+              15006495473139714,
+              15006495473139715
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 440784,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15006495473139712
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15006495473139712
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15006495473139712
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "N": 704816,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15689760345423872,
+              15689760345423873,
+              15689760345423874,
+              15689760345423875
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 704816,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15689760345423872
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15689760345423872
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15689760345423872
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "N": 559607,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              7792578208464896,
+              7792578208464897,
+              7792578208464898,
+              7792578208464899
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 559607,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              7792578208464896
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              7792578208464896
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              7792578208464896
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "N": 752808,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              14500677174689792,
+              14500677174689793,
+              14500677174689794,
+              14500677174689795
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 752808,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              14500677174689792
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              14500677174689792
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              14500677174689792
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "N": 548243,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8648908787941376,
+              8648908787941377,
+              8648908787941378,
+              8648908787941379
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 548243,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8648908787941376
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8648908787941376
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8648908787941376
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "N": 754423,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              329174883500032,
+              329174883500033,
+              329174883500034,
+              329174883500035
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 754423,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              329174883500032
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              329174883500032
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              329174883500032
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "N": 533501,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15523927363158016,
+              15523927363158017,
+              15523927363158018,
+              15523927363158019
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 533501,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15523927363158016
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15523927363158016
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              15523927363158016
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "N": 659758,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              16279394930655232,
+              16279394930655233,
+              16279394930655234,
+              16279394930655235
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 659758,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              16279394930655232
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              16279394930655232
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              16279394930655232
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "N": 94877,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8891595915001856,
+              8891595915001857,
+              8891595915001858,
+              8891595915001859
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 94877,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8891595915001856
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8891595915001856
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8891595915001856
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "N": 180947,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962062850392064,
+              2962062850392065,
+              2962062850392066,
+              2962062850392067
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 180947,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962062850392064
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962062850392064
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962062850392064
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "N": 463986,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              11117058989228032,
+              11117058989228033,
+              11117058989228034,
+              11117058989228035
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 463986,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              11117058989228032
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              11117058989228032
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              11117058989228032
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "N": 428832,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1281931773739008,
+              1281931773739009,
+              1281931773739010,
+              1281931773739011
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 428832,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1281931773739008
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1281931773739008
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1281931773739008
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "N": 703608,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1687419636154368,
+              1687419636154369,
+              1687419636154370,
+              1687419636154371
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 703608,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1687419636154368
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1687419636154368
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              1687419636154368
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "N": 541884,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6909597356916736,
+              6909597356916737,
+              6909597356916738,
+              6909597356916739
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 541884,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6909597356916736
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6909597356916736
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6909597356916736
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "N": 738614,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              46943992545280,
+              46943992545281,
+              46943992545282,
+              46943992545283
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 738614,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              46943992545280
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              46943992545280
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              46943992545280
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "N": 528046,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9709207364304896,
+              9709207364304897,
+              9709207364304898,
+              9709207364304899
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 528046,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9709207364304896
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9709207364304896
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9709207364304896
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "N": 744975,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9252480542048256,
+              9252480542048257,
+              9252480542048258,
+              9252480542048259
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 744975,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9252480542048256
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9252480542048256
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              9252480542048256
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "N": 512804,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6090229265989632,
+              6090229265989633,
+              6090229265989634,
+              6090229265989635
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 512804,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6090229265989632
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6090229265989632
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6090229265989632
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "N": 642977,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962105800065024,
+              2962105800065025,
+              2962105800065026,
+              2962105800065027
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 642977,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962105800065024
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962105800065024
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              2962105800065024
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "N": 89976,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6201808221372416,
+              6201808221372417,
+              6201808221372418,
+              6201808221372419
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 89976,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6201808221372416
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6201808221372416
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              6201808221372416
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "N": 170343,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              3736350964580352,
+              3736350964580353,
+              3736350964580354,
+              3736350964580355
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 170343,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              3736350964580352
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              3736350964580352
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              3736350964580352
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "N": 433292,
+      "CollectionTree_schema": {
+        "xAOD::FaserEventInfoAux_v1_FaserEventInfoAux.": "xAOD::FaserEventInfoAux_v1",
+        "EventInfo_p4_McEventInfo": "EventInfo_p4",
+        "McEventCollection_p6_BeamTruthEvent": "McEventCollection_p6",
+        "xAOD::FaserEventInfo_v1_FaserEventInfo": "xAOD::FaserEventInfo_v1",
+        "index_ref": "int64_t"
+      },
+      "top_level_keys": {
+        "##Params": "TTree",
+        "##Shapes": "TTree",
+        "##Links": "TTree",
+        "CollectionTree": "TTree",
+        "POOLContainer": "TTree",
+        "POOLContainerForm": "TTree",
+        "MetaData": "TTree",
+        "MetaDataHdr": "TTree",
+        "MetaDataHdrForm": "TTree"
+      },
+      "metadata": {
+        "##Params": {
+          "classname": "TTree",
+          "N": 4,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8011840583892992,
+              8011840583892993,
+              8011840583892994,
+              8011840583892995
+            ]
+          },
+          "omitted_branches": [
+            "db_string"
+          ]
+        },
+        "##Shapes": {
+          "classname": "TTree",
+          "N": 11,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "##Links": {
+          "classname": "TTree",
+          "N": 14,
+          "schema": {
+            "db_string": "char*",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "db_string",
+            "index_ref"
+          ]
+        },
+        "POOLContainer": {
+          "classname": "TTree",
+          "N": 433292,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeader",
+            "index_ref"
+          ]
+        },
+        "POOLContainerForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {},
+          "omitted_branches": [
+            "DataHeaderForm",
+            "index_ref"
+          ]
+        },
+        "MetaData": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+            "EventStreamInfo_p3_StreamEVGEN": "EventStreamInfo_p3",
+            "xAOD::FileMetaData_v1_FileMetaData": "xAOD::FileMetaData_v1",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN": "xAOD::EventFormat_v1",
+            "IOVMetaDataContainer_p1__TagInfo": "IOVMetaDataContainer_p1",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8011840583892992
+            ]
+          },
+          "omitted_branches": [
+            "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.",
+            "EventStreamInfo_p3_StreamEVGEN",
+            "xAOD::FileMetaData_v1_FileMetaData",
+            "xAOD::EventFormat_v1_EventFormatStreamEVGEN",
+            "IOVMetaDataContainer_p1__TagInfo"
+          ]
+        },
+        "MetaDataHdr": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeader": "DataHeader_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8011840583892992
+            ]
+          },
+          "omitted_branches": [
+            "DataHeader"
+          ]
+        },
+        "MetaDataHdrForm": {
+          "classname": "TTree",
+          "N": 1,
+          "schema": {
+            "DataHeaderForm": "DataHeaderForm_p6",
+            "index_ref": "int64_t"
+          },
+          "scalar_rows": {
+            "index_ref": [
+              8011840583892992
+            ]
+          },
+          "omitted_branches": [
+            "DataHeaderForm"
+          ]
+        }
+      },
+      "CollectionTree_payload_read": false,
+      "generator_weight_normalization_certified": false
+    }
+  ],
+  "timings": [
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "CPU_s": 0.285699045,
+      "wall_s": 0.7548983041197062,
+      "read_bytes": 412851,
+      "RSS_KiB": 40480
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "CPU_s": 0.265579944,
+      "wall_s": 0.7112386077642441,
+      "read_bytes": 695247,
+      "RSS_KiB": 41504
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "CPU_s": 0.244973226,
+      "wall_s": 0.7091575209051371,
+      "read_bytes": 509801,
+      "RSS_KiB": 42016
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "CPU_s": 0.361666282,
+      "wall_s": 0.8269323613494635,
+      "read_bytes": 728036,
+      "RSS_KiB": 42472
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "CPU_s": 0.20424889699999998,
+      "wall_s": 0.341583464294672,
+      "read_bytes": 497642,
+      "RSS_KiB": 45088
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "CPU_s": 0.29868656499999996,
+      "wall_s": 0.40777495317161083,
+      "read_bytes": 723946,
+      "RSS_KiB": 44064
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "CPU_s": 0.209161206,
+      "wall_s": 0.293630700558424,
+      "read_bytes": 488726,
+      "RSS_KiB": 43040
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "CPU_s": 0.25610752800000003,
+      "wall_s": 0.4299070816487074,
+      "read_bytes": 643060,
+      "RSS_KiB": 46056
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "CPU_s": 0.15579579699999996,
+      "wall_s": 0.22591114975512028,
+      "read_bytes": 113068,
+      "RSS_KiB": 43552
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "CPU_s": 0.15329142500000004,
+      "wall_s": 0.2565753757953644,
+      "read_bytes": 196469,
+      "RSS_KiB": 45600
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "CPU_s": 0.180655193,
+      "wall_s": 0.34895114228129387,
+      "read_bytes": 466506,
+      "RSS_KiB": 46112
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "CPU_s": 0.20858394800000002,
+      "wall_s": 0.466820303350687,
+      "read_bytes": 400395,
+      "RSS_KiB": 47592
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "CPU_s": 0.232867763,
+      "wall_s": 0.4320924263447523,
+      "read_bytes": 692259,
+      "RSS_KiB": 45704
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "CPU_s": 0.208912522,
+      "wall_s": 0.3950918260961771,
+      "read_bytes": 491659,
+      "RSS_KiB": 46424
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "CPU_s": 0.13546179400000002,
+      "wall_s": 0.22118372283875942,
+      "read_bytes": 711851,
+      "RSS_KiB": 47196
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "CPU_s": 0.11850346200000006,
+      "wall_s": 0.20689311251044273,
+      "read_bytes": 478915,
+      "RSS_KiB": 49756
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "CPU_s": 0.253519391,
+      "wall_s": 0.4160363767296076,
+      "read_bytes": 713428,
+      "RSS_KiB": 50520
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "CPU_s": 0.19826076699999984,
+      "wall_s": 0.3468121737241745,
+      "read_bytes": 470074,
+      "RSS_KiB": 48264
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "CPU_s": 0.249074809,
+      "wall_s": 0.31658180244266987,
+      "read_bytes": 625660,
+      "RSS_KiB": 48804
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "CPU_s": 0.11172265199999987,
+      "wall_s": 0.2568331118673086,
+      "read_bytes": 108200,
+      "RSS_KiB": 49756
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "CPU_s": 0.1206477749999999,
+      "wall_s": 0.21429960615932941,
+      "read_bytes": 185446,
+      "RSS_KiB": 50340
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "CPU_s": 0.18888767399999984,
+      "wall_s": 0.25403098203241825,
+      "read_bytes": 433479,
+      "RSS_KiB": 49800
+    }
+  ],
+  "pilot_exact": true,
+  "N_sum": 11229101,
+  "N_sum_is_independent_interactions": false,
+  "driver_CPU_s": 0.058264101999999984,
+  "wall_s": 2.3650575187057257,
+  "file_CPU_sum_s": 4.642307665,
+  "read_bytes": 10786718,
+  "logged_ranges_within_actual_N": false,
+  "weight_normalization_certified": false,
+  "complete_acceptance_certified": false,
+  "energy_fits": 0,
+  "model_forward": 0,
+  "new_G4": 0,
+  "promotion": false,
+  "overall_complete": false
+}

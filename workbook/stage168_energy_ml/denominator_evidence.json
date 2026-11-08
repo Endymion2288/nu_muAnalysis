@@ -1,0 +1,957 @@
+{
+  "actual_unique_EVNT_files": 22,
+  "generated_record_sum": 11229101,
+  "counts_by_run": [
+    {
+      "run": 200080,
+      "nominal": false,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "N": 440784
+    },
+    {
+      "run": 200081,
+      "nominal": false,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "N": 704816
+    },
+    {
+      "run": 200082,
+      "nominal": true,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "N": 559607
+    },
+    {
+      "run": 200083,
+      "nominal": true,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "N": 752808
+    },
+    {
+      "run": 200084,
+      "nominal": false,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "N": 548243
+    },
+    {
+      "run": 200085,
+      "nominal": false,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "N": 754423
+    },
+    {
+      "run": 200086,
+      "nominal": false,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "N": 533501
+    },
+    {
+      "run": 200087,
+      "nominal": false,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "N": 659758
+    },
+    {
+      "run": 200088,
+      "nominal": false,
+      "component": "charm",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "N": 94877
+    },
+    {
+      "run": 200089,
+      "nominal": true,
+      "component": "charm",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "N": 180947
+    },
+    {
+      "run": 200090,
+      "nominal": false,
+      "component": "charm",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "N": 463986
+    },
+    {
+      "run": 200091,
+      "nominal": false,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "N": 428832
+    },
+    {
+      "run": 200092,
+      "nominal": false,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "N": 703608
+    },
+    {
+      "run": 200093,
+      "nominal": true,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "N": 541884
+    },
+    {
+      "run": 200094,
+      "nominal": true,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "N": 738614
+    },
+    {
+      "run": 200095,
+      "nominal": false,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "N": 528046
+    },
+    {
+      "run": 200096,
+      "nominal": false,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "N": 744975
+    },
+    {
+      "run": 200097,
+      "nominal": false,
+      "component": "pi",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "N": 512804
+    },
+    {
+      "run": 200098,
+      "nominal": false,
+      "component": "k",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "N": 642977
+    },
+    {
+      "run": 200099,
+      "nominal": false,
+      "component": "charm",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "N": 89976
+    },
+    {
+      "run": 200100,
+      "nominal": true,
+      "component": "charm",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "N": 170343
+    },
+    {
+      "run": 200101,
+      "nominal": false,
+      "component": "charm",
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "N": 433292
+    }
+  ],
+  "nominal_record_sum": 2944203,
+  "alternative_record_sum": 8284898,
+  "logged_ranges_within_N": 15,
+  "logged_ranges_checked": 16,
+  "source_inventory_N": 1134,
+  "stage130_completed_source_N": 666,
+  "logged_proof_among_completed_source_N": 16,
+  "source_ranges_without_this_logproof": 1118,
+  "completed_sources_without_this_logproof": 650,
+  "scalar_metadata_branch_names": [
+    "index_ref"
+  ],
+  "actual_scalar_metadata_fields": [
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        15006495473139712,
+        15006495473139713,
+        15006495473139714,
+        15006495473139715
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        15006495473139712
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        15006495473139712
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        15006495473139712
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        15689760345423872,
+        15689760345423873,
+        15689760345423874,
+        15689760345423875
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        15689760345423872
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        15689760345423872
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        15689760345423872
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        7792578208464896,
+        7792578208464897,
+        7792578208464898,
+        7792578208464899
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        7792578208464896
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        7792578208464896
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        7792578208464896
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        14500677174689792,
+        14500677174689793,
+        14500677174689794,
+        14500677174689795
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        14500677174689792
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        14500677174689792
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        14500677174689792
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        8648908787941376,
+        8648908787941377,
+        8648908787941378,
+        8648908787941379
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        8648908787941376
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        8648908787941376
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        8648908787941376
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        329174883500032,
+        329174883500033,
+        329174883500034,
+        329174883500035
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        329174883500032
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        329174883500032
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/qgsjet_k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        329174883500032
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        15523927363158016,
+        15523927363158017,
+        15523927363158018,
+        15523927363158019
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        15523927363158016
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        15523927363158016
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        15523927363158016
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        16279394930655232,
+        16279394930655233,
+        16279394930655234,
+        16279394930655235
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        16279394930655232
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        16279394930655232
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/pythia_forward_k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        16279394930655232
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        8891595915001856,
+        8891595915001857,
+        8891595915001858,
+        8891595915001859
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        8891595915001856
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        8891595915001856
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        8891595915001856
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        2962062850392064,
+        2962062850392065,
+        2962062850392066,
+        2962062850392067
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        2962062850392064
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        2962062850392064
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_central.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        2962062850392064
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        11117058989228032,
+        11117058989228033,
+        11117058989228034,
+        11117058989228035
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        11117058989228032
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        11117058989228032
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_max.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        11117058989228032
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        1281931773739008,
+        1281931773739009,
+        1281931773739010,
+        1281931773739011
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        1281931773739008
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        1281931773739008
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        1281931773739008
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        1687419636154368,
+        1687419636154369,
+        1687419636154370,
+        1687419636154371
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        1687419636154368
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        1687419636154368
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        1687419636154368
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        6909597356916736,
+        6909597356916737,
+        6909597356916738,
+        6909597356916739
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        6909597356916736
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        6909597356916736
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        6909597356916736
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        46943992545280,
+        46943992545281,
+        46943992545282,
+        46943992545283
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        46943992545280
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        46943992545280
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/epos-k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        46943992545280
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        9709207364304896,
+        9709207364304897,
+        9709207364304898,
+        9709207364304899
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        9709207364304896
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        9709207364304896
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        9709207364304896
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        9252480542048256,
+        9252480542048257,
+        9252480542048258,
+        9252480542048259
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        9252480542048256
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        9252480542048256
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        9252480542048256
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        6090229265989632,
+        6090229265989633,
+        6090229265989634,
+        6090229265989635
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        6090229265989632
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        6090229265989632
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-pi.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        6090229265989632
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        2962105800065024,
+        2962105800065025,
+        2962105800065026,
+        2962105800065027
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        2962105800065024
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        2962105800065024
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        2962105800065024
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        6201808221372416,
+        6201808221372417,
+        6201808221372418,
+        6201808221372419
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        6201808221372416
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        6201808221372416
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-min.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        6201808221372416
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        3736350964580352,
+        3736350964580353,
+        3736350964580354,
+        3736350964580355
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        3736350964580352
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        3736350964580352
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-central.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        3736350964580352
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "tree": "##Params",
+      "branch": "index_ref",
+      "values": [
+        8011840583892992,
+        8011840583892993,
+        8011840583892994,
+        8011840583892995
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "tree": "MetaData",
+      "branch": "index_ref",
+      "values": [
+        8011840583892992
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "tree": "MetaDataHdr",
+      "branch": "index_ref",
+      "values": [
+        8011840583892992
+      ]
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/powheg-pythia-charm-max.EVNT.pool.root",
+      "tree": "MetaDataHdrForm",
+      "branch": "index_ref",
+      "values": [
+        8011840583892992
+      ]
+    }
+  ],
+  "unweighted_entry_counts_only": true,
+  "independent_interactions_certified": false,
+  "weighted_generator_normalization_certified": false,
+  "physical_flux_exposure_certified": false,
+  "complete_per_generated_event_processing_selection_accounting": false,
+  "full_generation_acceptance_certified": false,
+  "physics_precision_measured": false,
+  "decision": "Finite EVNT header acquisition complete. Do not divide selected by header totals as acceptance, invent weights/prior, expand directories or launch native full event scans automatically.",
+  "missing": [
+    "named generator weights and normalization/exposure with producer definitions",
+    "actual per-generated-event processing outcomes and common-selection acceptance",
+    "matched data exposure, backgrounds, real correlated auxiliary constraints and independent confirmation"
+  ]
+}

@@ -1,3 +1,11 @@
+# 当前执行更新：Stage168 取得完整EVNT记录数，物理归一化仍未知
+
+[Stage168报告](../workbook/2026-11-08_stage168_full-EVNT-denominator-headers.md)完成原22个EVNT固定路径header/有限metadata，合11229101条（nominal2944203/alternative8284898），四pilot/full精确；未读CollectionTree事例载荷。实际persistent McEventCollection_p6/FileMetaData/EventStreamInfo存在，读取的scalar只有POOL index_ref，物理weight/生成曝光未认证。原16log窗口15个在实际N内，index508请求90000+10000超EOF94877；原native已测scanned4877、selected91身份保持，不把请求当成功计数或尾段EOF当错误配对。C++ROOT四pilot N及另写schema/scalar、22映射/表、16命令范围全通过；3start均exit0、11CPU秒/30聚合wall秒、0live/G4/fit/forward，最终元数据177167B、删200552B重复，Stage54保持。
+
+[下一Stage169合同](../workbook/stage168_energy_ml/next_execution_contract.json)仅已存source_evidence与原16native summary，核原666来源实际处理计数、EOF与1134历史source范围声明；原16pilot及成本再全666，300CPU秒/2核4GB，无ROOT/事件数组/模型/新生产。条目数、范围声明和相等计数均不单独认证全生成接受度/归一化；本阶段opaque EVNT metadata支线有限结束，不自动native大扫描。真实data处理/DAQ亮度、namedweights/生成曝光/逐生成事例账目、背景/相关约束/乳胶/独立确认仍缺，Stage87/原全门和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage167 真实文件manifest完成，曝光仍未认证
 
 [Stage167报告](../workbook/2026-11-08_stage167_real-run-file-coverage.md)在两个固定目录取得16PHYS/778PhysicsRAW，声明编号0–777无重叠缺口；首尾/header逐文件通过、原3pilot及reference64精确，N合计14237355但未作内部去重/完整ν选择。端点包络53580秒；全部0份允许producer metadata，RAW另有Incomplete/Monitoring等非匹配名字只记录未读。文件名和端点不证明逐输入处理成功/DAQ活时间，850.979pb⁻¹整run查表不附给文件集合，曝光仍null。独立目录/range-set/原3逐分支和16行表精确；3start全exit0、14CPU秒/28聚合wall秒、0live/G4/fit/forward；最终元数据183226B，删94366B重复，Stage54保持。

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "Cpp_ROOT_pilot_counts_exact": 4,
+  "Uproot_pilot_schemas_scalar_metadata_exact": 4,
+  "reads": [
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_pi.EVNT.pool.root",
+      "Cpp_ROOT_read_bytes": 416523,
+      "Uproot_read_bytes": 412851
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/epos_pi.EVNT.pool.root",
+      "Cpp_ROOT_read_bytes": 509843,
+      "Uproot_read_bytes": 509801
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/sibyll_k.EVNT.pool.root",
+      "Cpp_ROOT_read_bytes": 695289,
+      "Uproot_read_bytes": 695247
+    },
+    {
+      "path": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/22_23_crossing_angle_distribution/powheg_pythia_charm_min.EVNT.pool.root",
+      "Cpp_ROOT_read_bytes": 113110,
+      "Uproot_read_bytes": 113068
+    }
+  ],
+  "literal_run_path_mapping_exact": 22,
+  "logged_bounds_independent_exact": 16,
+  "per_run_table_exact": 22,
+  "weight_normalization_certified": false,
+  "acceptance_certified": false,
+  "CollectionTree_payload_read": false
+}
