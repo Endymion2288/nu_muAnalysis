@@ -1,3 +1,9 @@
+# 当前执行更新：Stage155 实际持久化认证通过，取得真实非leading空间量
+
+[Stage155报告](../workbook/2026-11-08_stage155_persistence-aware-cluster-spatial-observables.md)完成原role1前4→40：实际REC两输入均tlp6、文件内streamer为TrackParameters_p2/vector<float>；697真实anchors的身份/同面/float32及邻数中点plane-box全通过。148非leading候选分布在22/40父，站1–3为63/29/56；另872在未测wafer，站0未知，不当物理零。独立dx闭合≤1.421086e−14mm、表示宽度≤7.704158e−6mm，距离变化不只是量化幅度；未认证writer模式、covariance、关联概率、FPR或能量收益。独立前4精确，4job全exit0、155CPU秒/222聚合wall秒/0GPU/G4/fit，13230B事件文本精确合并、删14508839B重复。下一[Stage156合同](../workbook/stage155_energy_ml/next_execution_contract.json)为已知MC100012原HITS前4→最多64的同定义μ空间控制，复用官方digi/reco/RNG，先配对current06实际状态/raw/schema及成本；3000CPU秒，无新G4/独立ν/能量fit，合法零活动不阻止准入。总体μ/data响应和留出FPR、全原ν风险需后续独立合同；Stage87/全部原门/Stage137双5%扩大门及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage154 几何往返闭合，离面精度门阻止候选，未扩大
 
 [Stage154报告](../workbook/2026-11-08_stage154_global-to-wafer-geometry-pilot.md)完成同原前4role1父：身份/旧计数精确，70真实PRD及measurement-detector变换全同，70二维COT明确记录。state往返≤1.464822e−14mm、PRD往返0，但54/70超冻结1e−6mm离面容差，16支持wafer上无非leading候选；站1/3各1未评分候选保留未知，不作物理零。小QA的GLOBAL坐标/离面区间与float32舍入相容，已查p2转换源码；旧REC实际persistent schema/全70原因尚未认证，未事后调容差。原成本模型2216.79CPU秒+100>剩1083且物理门False，未full40/fit。2job全exit0、119CPU秒/200聚合wall秒/0GPU/G4/新ν，2936B事件精确合并、删7225660B重复。下一Stage155先核真实persistent格式，显式float32区间几何pilot，首执行初始化与steady成本事前分开；不修covariance、不任意加半径、不自动fullpool/energyfit。Stage87/原门/Stage137扩大门/整体未完成保持。
@@ -2875,3 +2881,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [实测报告](../workbook/2026-11-08_stage154_global-to-wafer-geometry-pilot.md)和[支持表](../workbook/stage154_energy_ml/station_support.tsv)给出原role1前4父/70linked anchors，全部measurement-detector面相同、二维COT；state往返≤1.464822e−14mm、PRD往返0，54anchor超过冻结1e−6mm离面条件，16支持anchor上无非leading候选。站1/3各1同wafer候选因anchor不支持而未知，没有dx/FPR/能量风险或物理无信息结论。4父最大离面2.92969e−5–7.81250e−5mm；已保留QA与float32舍入相容，p2源码确认float位置机制，但旧REC实际schema/全70原因未认证，不能宣布全部偏差只为舍入。
 
 2job全部exit0、119CPU秒/200聚合wall秒/0GPU/G4/新ν/fit；事件文本2936B精确合并、删7.226MB重复。保留原首execute含lazyJIT的平均成本模型，full40预测2216.79+100>剩1083秒且物理门False，未full/调容差/抬预算；不是full40实测成本。[Stage155下一合同](../workbook/stage154_energy_ml/next_execution_contract.json)先认证同文件真实persistent参数格式，再以float32邻数中点区间显式处理表示不确定度，原前4→最多40/1200CPU秒/新成本模型事前分开首执行与steady；不使用未知基底covariance或任意larger radius。成功后仍需μ辐射/data控制和全原队列能量合同，失败结束该固定实现。Stage87/所有原门/Stage137双5%扩大门/角色/K及整体未完成保持，旧§1–132与所有旧入口原文保留。
+
+
+## 134. Stage155：保存格式与数值区间闭合，实际空间量已取得
+
+[中文实测报告](../workbook/2026-11-08_stage155_persistence-aware-cluster-spatial-observables.md)及[完整审计](../workbook/stage155_energy_ml/summary.json)确认实际旧REC的tlp6→p2/float格式。原40train身份/计数精确，697anchors全通过真实PRD/measurement-detector同面/float32/plane-box；467仍未过Stage154旧1e−6mm条件，不追认原门。新测148非leading位置、22非空父、站1–3各63/29/56候选，其他wafer与站0保持未知；dx最大57.396242mm，表示区间宽度最大7.704158e−6mm，原计数未保存此位置内容。独立点积与往返通过、前4独立复现精确；没有covariance归一化、关联后验、μ区分、FPR或能量改善认证。
+
+4job全exit0、155CPU秒/222聚合wall秒/0GPU/G4/新ν/fit；事件文本13230B回读精确，删14508839B重复，无持久ROOT。[Stage156冻结合同](../workbook/stage155_energy_ml/next_execution_contract.json)转同定义真实μ控制：既有MC100012原HITS前4→最多64，复用Stage149官方digi/reco及RNG，验证实际新REC格式、current06状态/covariance/PRD/raw及prefix；3000CPU秒、800pilot、150audit预留，以实际子进程GNU和post-first-event时序准入，合法零候选可通过。固定all/leading/pz0[50,100)GeV/status&4分层，非leading不直接叫误报；无新G4/能量fit或自动自然ν生产。后续μ/data联合响应和留出判别/FPR、全原ν能量风险另冻；真实校准/外部输入和独立确认仍缺。全部原门/Stage137双5%扩大门/Stage87/原角色/K保持，整体未完成；旧§1–133与所有旧入口原文保留。

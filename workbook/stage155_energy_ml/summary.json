@@ -1,0 +1,765 @@
+{
+  "passed": true,
+  "phase": "full",
+  "N": 40,
+  "original_identities_exact": true,
+  "leading_identity_known_N": 40,
+  "first_parent_repeat_exact": true,
+  "anchors": {
+    "total": 697,
+    "linked": 697,
+    "identifier_equal": 697,
+    "measurement": 697,
+    "measurement_detector_same": 697,
+    "valid": 697,
+    "dimension2_key3": 697,
+    "old_strict_off_plane": 467,
+    "exact_float32": 697,
+    "plane_compatible": 697
+  },
+  "diagnostics": {
+    "max_abs_normal_mm": {
+      "N": 40,
+      "min": 9.765625003866717e-06,
+      "max": 7.812500007276948e-05,
+      "distinct_N": 40
+    },
+    "max_state_roundtrip_mm": {
+      "N": 40,
+      "min": 7.944109290391274e-15,
+      "max": 1.5888218580782548e-14,
+      "distinct_N": 7
+    },
+    "max_PRD_roundtrip_mm": {
+      "N": 40,
+      "min": 0.0,
+      "max": 0.0,
+      "distinct_N": 1
+    },
+    "independent_dx_max_delta_mm": {
+      "N": 22,
+      "min": 0.0,
+      "max": 1.4210854715202004e-14,
+      "distinct_N": 13
+    },
+    "max_candidate_roundtrip_mm": {
+      "N": 22,
+      "min": 0.0,
+      "max": 0.0,
+      "distinct_N": 1
+    },
+    "max_normal_arithmetic_margin_mm": {
+      "N": 40,
+      "min": 6.972939572968962e-11,
+      "max": 7.006804095266439e-11,
+      "distinct_N": 4
+    },
+    "max_normal_interval_width_mm": {
+      "N": 40,
+      "min": 0.000244140625,
+      "max": 0.000244140625,
+      "distinct_N": 1
+    },
+    "max_state_locX_interval_width_mm": {
+      "N": 40,
+      "min": 2.5744311216158167e-07,
+      "max": 7.70415756079501e-06,
+      "distinct_N": 21
+    },
+    "max_candidate_dx_interval_width_mm": {
+      "N": 22,
+      "min": 3.146597578052024e-07,
+      "max": 7.70415756079501e-06,
+      "distinct_N": 16
+    }
+  },
+  "stations": [
+    {
+      "station": 0,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 3910,
+      "leadingOwned": 0,
+      "nonleading": 3910,
+      "offMeasuredWafer": 3910,
+      "onMeasuredWafer": 0,
+      "measuredWafers": 0,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "min_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "RMS_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 1,
+      "available_parent_N": 40,
+      "nonzero_candidate_parent_N": 11,
+      "clusters": 581,
+      "leadingOwned": 230,
+      "nonleading": 351,
+      "offMeasuredWafer": 288,
+      "onMeasuredWafer": 63,
+      "measuredWafers": 230,
+      "eligibleWafers": 230,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 63,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 40,
+          "min": 0,
+          "max": 29,
+          "distinct_N": 7
+        },
+        "mean_abs_dx_mm": {
+          "N": 11,
+          "min": 0.27492200415170487,
+          "max": 27.402826846760863,
+          "distinct_N": 11
+        },
+        "min_abs_dx_mm": {
+          "N": 11,
+          "min": 0.27492200415170487,
+          "max": 27.054599568093337,
+          "distinct_N": 11
+        },
+        "max_abs_dx_mm": {
+          "N": 11,
+          "min": 0.27492200415170487,
+          "max": 57.39624206030799,
+          "distinct_N": 11
+        },
+        "RMS_dx_mm": {
+          "N": 11,
+          "min": 0.27492200415170487,
+          "max": 28.413486010736595,
+          "distinct_N": 11
+        }
+      }
+    },
+    {
+      "station": 2,
+      "available_parent_N": 40,
+      "nonzero_candidate_parent_N": 9,
+      "clusters": 616,
+      "leadingOwned": 229,
+      "nonleading": 387,
+      "offMeasuredWafer": 358,
+      "onMeasuredWafer": 29,
+      "measuredWafers": 229,
+      "eligibleWafers": 229,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 29,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 40,
+          "min": 0,
+          "max": 13,
+          "distinct_N": 6
+        },
+        "mean_abs_dx_mm": {
+          "N": 9,
+          "min": 0.43613960329382984,
+          "max": 32.152983104559134,
+          "distinct_N": 9
+        },
+        "min_abs_dx_mm": {
+          "N": 9,
+          "min": 0.43613960329382984,
+          "max": 32.152983104559134,
+          "distinct_N": 9
+        },
+        "max_abs_dx_mm": {
+          "N": 9,
+          "min": 0.43613960329382984,
+          "max": 45.35794807562772,
+          "distinct_N": 9
+        },
+        "RMS_dx_mm": {
+          "N": 9,
+          "min": 0.43613960329382984,
+          "max": 32.152983104559134,
+          "distinct_N": 9
+        }
+      }
+    },
+    {
+      "station": 3,
+      "available_parent_N": 40,
+      "nonzero_candidate_parent_N": 11,
+      "clusters": 520,
+      "leadingOwned": 238,
+      "nonleading": 282,
+      "offMeasuredWafer": 226,
+      "onMeasuredWafer": 56,
+      "measuredWafers": 238,
+      "eligibleWafers": 238,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 56,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 40,
+          "min": 0,
+          "max": 18,
+          "distinct_N": 7
+        },
+        "mean_abs_dx_mm": {
+          "N": 11,
+          "min": 0.8334898829515467,
+          "max": 50.88425278456707,
+          "distinct_N": 11
+        },
+        "min_abs_dx_mm": {
+          "N": 11,
+          "min": 0.256825119441757,
+          "max": 50.88425278456707,
+          "distinct_N": 11
+        },
+        "max_abs_dx_mm": {
+          "N": 11,
+          "min": 1.013490188127328,
+          "max": 55.796139944038075,
+          "distinct_N": 11
+        },
+        "RMS_dx_mm": {
+          "N": 11,
+          "min": 0.8527048110840922,
+          "max": 50.88425278456707,
+          "distinct_N": 11
+        }
+      }
+    }
+  ],
+  "new_geometry_content_support": true,
+  "prefix_reproducibility": {
+    "N": 4,
+    "records_exact": true,
+    "QA_exact": true,
+    "checks": [
+      {
+        "entry": 19,
+        "exact": true
+      },
+      {
+        "entry": 52,
+        "exact": true
+      },
+      {
+        "entry": 59,
+        "exact": true
+      },
+      {
+        "entry": 62,
+        "exact": true
+      }
+    ]
+  },
+  "native_resources": {
+    "passed": true,
+    "schema_verified": true,
+    "phase": "full",
+    "N": 40,
+    "selected_input_role": 1,
+    "request_index": 0,
+    "REC": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rec/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-xAOD.root",
+    "PHYS": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200082/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-merge-PHYS.root",
+    "original_PHYS_branches": [
+      "run",
+      "eventID",
+      "longTracks",
+      "SpacePoints",
+      "Track_pz0",
+      "nClusters0",
+      "nClusters1",
+      "nClusters2",
+      "nClusters3"
+    ],
+    "geometry": "FASERNU-04",
+    "conditions": "OFLCOND-FASER-06",
+    "configured_tracker_only": true,
+    "native_support": true,
+    "leading_identity_known_N": 40,
+    "exact_old_count_N": 40,
+    "same_process_first_parent_repeat": true,
+    "CPU_s": 74.75543313200001,
+    "wall_s": 99.55348128499463,
+    "ROOT_read_bytes": 3986324,
+    "RSS_KiB": 1953544,
+    "event_bytes": 9864,
+    "event_CPU_s": [
+      43.249484845000005,
+      0.008433879000008915,
+      0.00519232300000283,
+      0.008235758999987297,
+      0.007694010999998113,
+      0.007508122000004391,
+      0.005593093999991083,
+      0.012310214999999403,
+      0.007452060999995069,
+      0.007150470999988556,
+      0.009112078000001134,
+      0.04538733799999761,
+      0.007520089999999868,
+      0.008008238000002166,
+      0.007424868999990508,
+      0.006501131000007376,
+      0.008022880000012833,
+      0.010981264999998075,
+      0.007784397999998305,
+      0.008412886000002118,
+      0.008384878000001095,
+      0.008174309000011704,
+      0.003951724999993189,
+      0.0164604670000017,
+      0.013335142999991945,
+      0.007149698999995735,
+      0.008237499000003368,
+      0.0068403519999975515,
+      0.00909929700000589,
+      0.0074816900000058695,
+      0.010293978000007087,
+      0.010618037000000413,
+      0.00785391799999502,
+      0.012418702000005055,
+      0.008011760000002255,
+      0.007837839999993435,
+      0.00846631900000716,
+      0.028649248999997212,
+      0.01564883800000416,
+      0.008096007000006011
+    ],
+    "calibrated_association_probability": false,
+    "calibrated_pull": false,
+    "new_G4": 0,
+    "fits": 0,
+    "reserved_forward": 0,
+    "overall_complete": false
+  },
+  "actual_schema": {
+    "verified": true,
+    "REC": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rec/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-xAOD.root",
+    "inspected_trees": [
+      "##Params",
+      "##Params",
+      "##Shapes",
+      "##Shapes",
+      "##Links",
+      "##Links",
+      "CollectionTree",
+      "POOLContainer",
+      "POOLContainerForm",
+      "POOLCollectionTree",
+      "MetaData",
+      "MetaDataHdr",
+      "MetaDataHdrForm"
+    ],
+    "actual_track_branches": [
+      {
+        "tree": "CollectionTree",
+        "name": "CKFTrackCollection",
+        "class_name": "Trk::TrackCollection_tlp6"
+      },
+      {
+        "tree": "CollectionTree",
+        "name": "CKFTrackCollectionBackward",
+        "class_name": "Trk::TrackCollection_tlp6"
+      },
+      {
+        "tree": "CollectionTree",
+        "name": "CKFTrackCollectionBackwardWithoutIFT",
+        "class_name": "Trk::TrackCollection_tlp6"
+      },
+      {
+        "tree": "CollectionTree",
+        "name": "CKFTrackCollectionWithoutIFT",
+        "class_name": "Trk::TrackCollection_tlp6"
+      },
+      {
+        "tree": "CollectionTree",
+        "name": "SegmentFit",
+        "class_name": "Trk::TrackCollection_tlp6"
+      },
+      {
+        "tree": "CollectionTree",
+        "name": "Segments",
+        "class_name": "Trk::TrackCollection_tlp6"
+      }
+    ],
+    "relevant_inputs": {
+      "CKFTrackCollectionWithoutIFT": [
+        {
+          "tree": "CollectionTree",
+          "name": "CKFTrackCollectionWithoutIFT",
+          "class_name": "Trk::TrackCollection_tlp6"
+        }
+      ],
+      "CKFTrackCollectionBackwardWithoutIFT": [
+        {
+          "tree": "CollectionTree",
+          "name": "CKFTrackCollectionBackwardWithoutIFT",
+          "class_name": "Trk::TrackCollection_tlp6"
+        }
+      ]
+    },
+    "on_file_streamers": [
+      {
+        "name": "Trk::TrackCollection_tlp6",
+        "version": 1,
+        "members": [
+          {
+            "name": "m_trackCollections",
+            "type": "vector<Trk::TrackCollection_p1>"
+          },
+          {
+            "name": "m_tracks",
+            "type": "vector<Trk::Track_p4>"
+          },
+          {
+            "name": "m_trackStates",
+            "type": "vector<Trk::TrackStateOnSurface_p3>"
+          },
+          {
+            "name": "m_pseudoMeasurementOnTrack",
+            "type": "vector<Trk::PseudoMeasurementOnTrack_p2>"
+          },
+          {
+            "name": "m_parameters",
+            "type": "vector<Trk::TrackParameters_p2>"
+          },
+          {
+            "name": "m_surfaces",
+            "type": "vector<Trk::Surface_p2>"
+          },
+          {
+            "name": "m_hepSymMatrices",
+            "type": "vector<Trk::HepSymMatrix_p1>"
+          },
+          {
+            "name": "m_matEffectsBases",
+            "type": "vector<Trk::MaterialEffectsBase_p1>"
+          },
+          {
+            "name": "m_energyLosses",
+            "type": "vector<Trk::EnergyLoss_p1>"
+          },
+          {
+            "name": "m_materialEffects",
+            "type": "vector<Trk::MaterialEffectsOnTrack_p2>"
+          },
+          {
+            "name": "m_estimatedBrems",
+            "type": "vector<Trk::EstimatedBremOnTrack_p1>"
+          },
+          {
+            "name": "m_fitQualities",
+            "type": "vector<Trk::FitQuality_p1>"
+          },
+          {
+            "name": "m_localDirections",
+            "type": "vector<Trk::LocalDirection_p1>"
+          },
+          {
+            "name": "m_localPositions",
+            "type": "vector<Trk::LocalPosition_p1>"
+          },
+          {
+            "name": "m_localParameters",
+            "type": "vector<Trk::LocalParameters_p1>"
+          },
+          {
+            "name": "m_trackerTrackExt",
+            "type": "Tracker::Track_tlp2*"
+          }
+        ]
+      },
+      {
+        "name": "Trk::TrackParameters_p2",
+        "version": 1,
+        "members": [
+          {
+            "name": "m_parameters",
+            "type": "vector<float>"
+          },
+          {
+            "name": "m_surfaceType",
+            "type": "unsigned char"
+          },
+          {
+            "name": "m_associatedDetElementId",
+            "type": "ULong64_t"
+          },
+          {
+            "name": "m_transform",
+            "type": "vector<float>"
+          },
+          {
+            "name": "m_errorMatrix",
+            "type": "TPObjRef"
+          }
+        ]
+      }
+    ],
+    "collection_parameter_member_type": "vector<Trk::TrackParameters_p2>",
+    "parameter_value_member_type": "vector<float>",
+    "pinned_converter": "d32 TrackCollectionCnv GUID3228B252-2C5D-11E8-B170-0800271C02BC -> TrackCollection_tlp6 -> TrackParametersCnv_p2; latter stores3globalposition+3momentum+charge for Curvilinear parameters",
+    "limitation": "Schema and native float32 equality establish a representation model; no historical alignment, fit covariance calibration or discarded pre-rounding position is certified."
+  },
+  "precision_QA_diagnostic": [
+    {
+      "entry": 19,
+      "wafer": "9835861586177163264",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 8.481350331732565e-14,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -4.768370733896219e-07,
+        4.768372430166286e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 19,
+      "wafer": "9844868785431904256",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -2.288817488982596e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -7.057189071013848e-07,
+        2.479554093048656e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 19,
+      "wafer": "10025012770526724096",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.051758710865652e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.6021727617259353e-06,
+        2.212524503899066e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 19,
+      "wafer": "10016005571271983104",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.8310545928297113e-06,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.7384032256422117e-06,
+        7.629403998278913e-08
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "9889904781705609216",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -2.670287119835306e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -7.438658701866557e-07,
+        2.0980844621959448e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "9898911980960350208",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 4.577637656768144e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.9073392526310798e-08,
+        9.346009238799396e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "10034019969781465088",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.220703031934914e-06,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.128051664747414e-06,
+        6.86645600877586e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "10043027169036206080",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 4.5776376569364935e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.4495848671188507e-06,
+        2.3651123985061495e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "9880897582450868224",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.0517587653278034e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -6.484984398734697e-07,
+        1.2588501929390303e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "9871890383196127232",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 7.629403687938857e-08,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -8.773802795268615e-07,
+        1.0299683532856385e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "10025012770526724096",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.051758658738322e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.6021727669386677e-06,
+        2.2125244986863323e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "10016005571271983104",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.8310545959385198e-06,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.73840322875102e-06,
+        7.629403687398022e-08
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "9880897582450868224",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.0517587362456683e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -6.484984427816834e-07,
+        1.258850190030817e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "9871890383196127232",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 7.629403617461597e-08,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -8.773802802316341e-07,
+        1.029968352580866e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "10025012770526724096",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.051758630595333e-07,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.602172769752967e-06,
+        2.2125244958720336e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "10016005571271983104",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.8310545965991352e-06,
+      "representation_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.7384032294116354e-06,
+        7.629403621336483e-08
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    }
+  ],
+  "precision_QA_scope": "At most4 QA parents and4anchors each; representation interval model is prospectively frozen, not detector resolution or covariance calibration.",
+  "calibrated_covariance": false,
+  "calibrated_association": false,
+  "population_muon_FPR_measured": false,
+  "CPU_s": 0.95210887,
+  "wall_s": 0.9575740192085505,
+  "RSS_KiB": 99236,
+  "new_G4": 0,
+  "fits": 0,
+  "promotion": false,
+  "overall_complete": false
+}

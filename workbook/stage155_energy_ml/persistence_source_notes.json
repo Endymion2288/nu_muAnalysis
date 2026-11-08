@@ -1,0 +1,26 @@
+{
+  "pinned_commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "actual_input_keys": [
+    "CKFTrackCollectionWithoutIFT",
+    "CKFTrackCollectionBackwardWithoutIFT"
+  ],
+  "actual_file_evidence": "pilot_schema.json and full_schema.json: named CollectionTree branches Trk::TrackCollection_tlp6; on-file streamer m_parameters vector<Trk::TrackParameters_p2>, then vector<float>.",
+  "pinned_chain": "Pinned d32 TrackCollectionCnv accepts p6 GUID3228B252-2C5D-11E8-B170-0800271C02BC; TrackCollectionCnv_tlp6 registers TrackParametersCnv_p2 and maps storage m_parameters. MergeTracksAlg names the two actual inputs. The actual raw POOL GUID token was not separately read.",
+  "float_value_converter": "Athena24.0.41 TrackParametersCnv_p2 source/header already actually read and archived in software/stage154/persistence_source_reference.tar.gz. It stores globalposition3/momentum3/charge for Curvilinear parameters.",
+  "source_capsule": "software/stage155/persistence_sources.tar.gz",
+  "capsule_bytes": 6406,
+  "files": [
+    "TrackCollectionCnv.cxx",
+    "TrackCollectionCnv_tlp5.cxx",
+    "TrackCollection_tlp5.h",
+    "pinned_d32/MergeTracksAlg.h",
+    "pinned_d32/TrackCollectionCnv.cxx",
+    "pinned_d32/TrackCollectionCnv_tlp6.cxx",
+    "pinned_d32/TrackCollectionCnv_tlp6.h",
+    "pinned_d32/TrackCollection_tlp6.h"
+  ],
+  "byte_equality": true,
+  "upstream_context": "Top-level upstream Atlas24.0.41 TrackCollectionCnv/tlp5 files were read as context; the FASER actual converter mapping uses pinned_d32 files, not upstream p7/tlp5.",
+  "limitations": "Round-to-nearest intervals are a specified representation model, not recovered pre-rounding positions or a certification of historical writer rounding mode/alignment. Covariance basis/transport and response/population FPR remain uncalibrated.",
+  "policies": "No original state/covariance repair, no arbitrary normal-distance radius or seed grid. Nonleading empty/invalid RDO lists are unknown, never repaired or dropped with their parent."
+}

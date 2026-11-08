@@ -1,0 +1,32 @@
+{
+  "result": "9674951.0 - 9674951.0",
+  "phase": "audit",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage155\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794100005686180776.sh audit\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage155/worker_1794100005686180776.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage155/1794100005686180776/energy-ml-stage155.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 8000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage155 cumulative CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 1047.0\n+NuMuStage = \"energy-ml-stage155\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage155/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage155/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage155/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "CPU_allowance_s": 1047.0,
+  "package": {
+    "path": "software/stage155/1794100005686180776/energy-ml-stage155.tar.gz",
+    "bytes": 3626542,
+    "files": [
+      "setup_env.sh",
+      "workbook/stage155_energy_ml/protocol.json",
+      "workbook/stage124_energy_ml/native_contract.json",
+      "ml/configs/low_energy_files.tsv",
+      "ml/stage155_native.py",
+      "ml/stage155_native.hxx",
+      "ml/stage155_audit.py",
+      "ml/stage153_native.hxx",
+      "ml/stage124_native.hxx",
+      "ml/stage155_schema.py",
+      "workbook/stage155_energy_ml/pilot_summary.json",
+      "workbook/stage155_energy_ml/pilot_time.txt",
+      "workbook/stage155_energy_ml/pilot_schema.json",
+      "ntuples/energy_ml_stage155/pilot.json.gz",
+      "workbook/stage155_energy_ml/scheduler_accounting.json",
+      "workbook/stage155_energy_ml/full_admission.json",
+      "workbook/stage155_energy_ml/full_summary.json",
+      "workbook/stage155_energy_ml/full_time.txt",
+      "workbook/stage155_energy_ml/full_schema.json",
+      "ntuples/energy_ml_stage155/full.json.gz"
+    ]
+  }
+}

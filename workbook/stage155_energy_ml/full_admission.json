@@ -1,0 +1,19 @@
+{
+  "admitted": true,
+  "physical_pilot_support": true,
+  "already_used_scheduler_CPU_s": 66.0,
+  "GNU_pilot_CPU_s": 62.49,
+  "last3_execute_CPU_s": [
+    0.006882228000002044,
+    0.0040264240000027485,
+    0.0059283160000020985
+  ],
+  "startup_and_first_event_CPU_s": 62.473163031999995,
+  "steady_event_CPU_s": 0.005612322666668963,
+  "full40_3x_affine_projected_CPU_s": 188.07613084800025,
+  "audit_reserve_CPU_s": 100,
+  "remaining_CPU_s": 1134.0,
+  "overlapping_pilot_N": 4,
+  "parent_cap": 40,
+  "limitation": "First event including lazy JIT retained in base; last3 event times estimate39 subsequent event costs. Prospective model, not a measured full runtime."
+}

@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "url": "https://gitlab.cern.ch/atlas/athena/-/raw/release/24.0.41/Tracking/TrkEventCnv/TrkEventAthenaPool/src/TrackCollectionCnv.cxx",
+      "access": "Full source read this stage as upstream context; actual FASER fork mapping read from pinned d32 sources instead.",
+      "feasibility": "Shows why actual persistent branch/schema and local converter mapping must be checked; no imported physics performance."
+    },
+    {
+      "url": "https://arxiv.org/abs/2106.13593",
+      "title": "A Common Tracking Software Project",
+      "access": "Stage153 abstract reference; not reread this stage",
+      "feasibility": "Geometry-aware tracking context only; no uncertainty or performance certification."
+    }
+  ],
+  "pinned_source_audit": "persistence_source_notes.json",
+  "previous_actual_position_converter": "workbook/stage154_energy_ml/persistence_precision_notes.json"
+}
