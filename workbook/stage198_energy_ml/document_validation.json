@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "scope": "Existing scalar/text citation validation only; no new experiment",
+  "starting_commit": "7e80d7e",
+  "energy_table_citations": [
+    {
+      "source": "workbook/stage186_energy_ml/energy_paired.tsv",
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "R",
+      "quote": "0.997730906 [0.984971550, 1.009262409]"
+    },
+    {
+      "source": "workbook/stage186_energy_ml/energy_paired.tsv",
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "R",
+      "quote": "0.998339792 [0.991194482, 1.006066591]"
+    },
+    {
+      "source": "workbook/stage189_energy_ml/composition_paired.tsv",
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "C",
+      "reference": "X",
+      "quote": "1.016564868 [1.007492308, 1.028268646]"
+    },
+    {
+      "source": "workbook/stage189_energy_ml/composition_paired.tsv",
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "C",
+      "reference": "X",
+      "quote": "0.998936946 [0.994305943, 1.003965259]"
+    },
+    {
+      "source": "workbook/stage191_energy_ml/ift_paired.tsv",
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "C",
+      "reference": "X",
+      "quote": "1.014804521 [0.989836728, 1.039204196]"
+    },
+    {
+      "source": "workbook/stage191_energy_ml/ift_paired.tsv",
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "C",
+      "reference": "X",
+      "quote": "0.986479458 [0.969642752, 0.999367692]"
+    }
+  ],
+  "historical_suffix_preserved": true,
+  "local_links_N": 18,
+  "Stage54_size_mtime_preserved_N": 12,
+  "physical_source_and_final_yield_unmeasured": true,
+  "user_deferral_preserved": true,
+  "new_scientific_CPU_s": 0,
+  "new_jobs_N": 0,
+  "new_energy_fits_N": 0,
+  "overall_complete": false,
+  "document_validation_process_CPU_s": 0.03051884099999999,
+  "document_validation_wall_s": 2.916043020784855
+}
