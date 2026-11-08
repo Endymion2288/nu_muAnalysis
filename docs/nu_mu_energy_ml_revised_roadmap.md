@@ -1,3 +1,13 @@
+# 当前执行更新：Stage176 原首父S0/出生源审计完成，完整重建不扩跑
+
+[Stage176报告](../workbook/2026-11-08_stage176_S0-birth-and-crossing-pilot.md)取得真实PlaneSurface中心/法向及唯一前向过面bracket；原raw11/status/pz0、旧谱系和ordered HITS保持，1345出生/4211步独立审计通过。本父Ecal附加SD响应来自S0后谱系，Trigger/Veto有面前谱系；全时SD不是同窗电荷或能损加回，不能推断总体。
+
+其余11的三倍完整GNU投影7070.91CPU秒超过pilot7000，未准入；不抬预算。3终态start含1程序失败共678CPU/831聚合wall秒/0live，保留1036179B事件摘要及3808184B runtime、清40589451B重复，Stage54保持。下一Stage178先核pinned curvilinear语义及原float32状态的严格面侧区间；通过实际native首父/出生/过面闭合才另冻同11父G4-only预算，省掉重复重建，缺/跨面区间仍unknown。不是将rounded面当exact或放宽Stage176成本门。
+
+Stage177固定均时表示已按阴性结束，Stage87/原全部门/角色/K不变；匹配同窗干预、真实高幅参考/双量程/弱信号backscatter、背景效率加权账目及独立输入仍需后续实测，整体目标未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage177 新Timing均时表示已重训，按原门未达标
 
 [Stage177报告](../workbook/2026-11-08_stage177_timing-mean-energy-content.md)完成X62/V66/T68共9新fit，X与Stage87精确0差；test T/V两低箱0.997941[0.991337,1.005005]、0.997533[0.992882,1.002306]，均未给出明确内容收益。T/传统最低箱1.945326，第二箱上95%=1.063122，两低箱原门未过；其他6层RMSE与8层三尾过门，所有cal/test joint仍false，冠军不改。
@@ -3231,3 +3241,8 @@ Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；
 [完整报告](../workbook/2026-11-08_stage177_timing-mean-energy-content.md)原89033角色保持，X/V/T9fit/3600轮，X精确Stage87，test T/V双低箱0.997941/0.997533且95%均含1；T/X1.002528/.996298。最低箱T/传统1.945326、第二箱点.989835但上95%=1.063122，两低箱原门失败，其他6层/8层三尾通过不能替代主门。全部jointfalse，此固定均时表示结束、不晋升、不扫窗/模型。
 
 9模型独立重载/全部active/offset精确，48标量差≤1.43e-14；原3×4096控制实际χ²/位置占位审计无污染，未来guard补强而cal不变。3start/170CPU/155wall秒/0live，保存12146630B模型预测、清131145585B重复、Stage54保持；无隔离/reserved预测或新G4。S0小机制与匹配读出干预继续，普通Timing阴性不代表所有波形无信息，真实系统与独立确认缺口保持。
+
+
+## 158. Stage176：实际S0与出生源首父通过，原完整链未扩11
+
+[中文报告](../workbook/2026-11-08_stage176_S0-birth-and-crossing-pilot.md)实际中心z17.4449996948mm、pz0=73.43665625GeV；主μ初始89.72862616GeV、前向过面步76.43704828→76.43697230GeV，拟合E73.43819739GeV差异不当总体修正。1345出生/4211步及hit分区独立闭合，旧raw/status/pz0/谱系精确。Ecal本父17.53132025MeV附加SD来自面后，Trigger/Veto有面前支持；非DAQ电荷。3start含1失败/678CPU/831wall秒/0live，清40589451B重复；原11因7070.91>7000成本门保持未测。下一先验证严格舍入包络与pinned curvilinear构造，成功才另冻省去重建的G4-only小实验。Stage87/原门与整体未完成保持，旧全文原样保留。

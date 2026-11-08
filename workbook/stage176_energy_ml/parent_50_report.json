@@ -1,0 +1,136 @@
+{
+  "index": 50,
+  "case": {
+    "row": 150041,
+    "source": 826,
+    "run": 200095,
+    "component": "pi",
+    "role": 1,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+    "entry": 82990,
+    "incoming": [
+      14.0,
+      -6.916692733764648,
+      8.872150421142578,
+      90288.0
+    ],
+    "truth_E_GeV": 90.28800070084446,
+    "old_reco_pz_GeV": 80.614109375,
+    "y": 0.006195447178858227,
+    "vertex_z_mm": -2816.870849609375,
+    "stratum": "E50_100",
+    "rank": "001bb02223d62b56",
+    "frame_index": 50,
+    "seed": 2026241750,
+    "inclusion_probability": 0.32841565105837073
+  },
+  "steps": [
+    {
+      "name": "sim",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/ml/stage176_simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/qgsjet-pi.EVNT.pool.root",
+        "FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "82990",
+        "-n",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 35.53818867506925
+    },
+    {
+      "name": "hitscheck",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/ml/stage131_hitscheck.py",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/chain_50/FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/chain_50/lineage.jsonl",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/workbook/stage176_energy_ml/parent_50_hitscheck.json",
+        "before",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/ntuples/energy_ml_stage176/parent_50_qa_hits.json.gz"
+      ],
+      "returncode": 0,
+      "wall_s": 46.469592308974825
+    },
+    {
+      "name": "digi",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/ml/stage129_digitize.py",
+        "FaserMC-Stage131Nu-990131-00050-stage131-HITS.root",
+        "2026241751",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/workbook/stage176_energy_ml/parent_50_rng.json"
+      ],
+      "returncode": 0,
+      "wall_s": 65.51757678389549
+    },
+    {
+      "name": "reco",
+      "command": [
+        "faser_reco.py",
+        "--isMC",
+        "--geom",
+        "TI12MC04",
+        "--nevents",
+        "1",
+        "FaserMC-Stage131Nu-990131-00050-stage131-RDO.root"
+      ],
+      "returncode": 0,
+      "wall_s": 16.033141144900583
+    },
+    {
+      "name": "ntuple",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/ml/stage176_ntuple.py",
+        "--isMC",
+        "--geom",
+        "TI12MC04",
+        "--CKFTrackType",
+        "merge",
+        "--nevents",
+        "1",
+        "--outfile",
+        "ntuple.root",
+        "FaserMC-Stage131Nu-990131-00050-stage131-xAOD.root"
+      ],
+      "returncode": 0,
+      "wall_s": 84.88756868895143
+    },
+    {
+      "name": "S0",
+      "command": [
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/afs/cern.ch/user/x/xcheng",
+        "USER=xcheng",
+        "PYTHONNOUSERSITE=1",
+        "OMP_NUM_THREADS=1",
+        "OPENBLAS_NUM_THREADS=1",
+        "bash",
+        "-c",
+        "source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\npython \"$1/ml/stage176_extract.py\" \"$1\" \"$2\" \"$3\"",
+        "bash",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn",
+        "/pool/condor/dir_1583178/nu_mu_stage176.G3dlUn/chain_50",
+        "50"
+      ],
+      "returncode": 0,
+      "wall_s": 6.184050044976175
+    }
+  ],
+  "successful": true,
+  "legacy_fields_exact": true,
+  "hit_partition_order_exact": true,
+  "wall_s": 255.3639759439975,
+  "scratch_ROOT_logical_B": 628578,
+  "new_independent_nu": 0,
+  "energy_fits": 0
+}

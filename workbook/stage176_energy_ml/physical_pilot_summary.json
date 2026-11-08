@@ -1,0 +1,146 @@
+{
+  "index": 50,
+  "native_S0_supported": true,
+  "surface": {
+    "collection_index": 0,
+    "xyz_mm": [
+      -30.248802185058594,
+      35.83030319213867,
+      17.44499969482422
+    ],
+    "px_py_pz_MeV": [
+      174.10108947753906,
+      -429.97698974609375,
+      73436.65625
+    ],
+    "surface_name": "Trk::PlaneSurface",
+    "surface_type": 4,
+    "normal": [
+      0.0023707181800638587,
+      -0.005854956276604482,
+      0.9999800493921417
+    ],
+    "center_mm": [
+      -30.248802185058594,
+      35.83030319213867,
+      17.44499969482422
+    ],
+    "covariance": [
+      [
+        0.00017843332898337394,
+        -0.0038523762486875057,
+        0.00027416693046689034,
+        1.0845411679838435e-06,
+        -2.7863915619263935e-09
+      ],
+      [
+        -0.0038523762486875057,
+        0.18072926998138428,
+        -0.01269429549574852,
+        -4.3290569010423496e-05,
+        1.0156738738942295e-07
+      ],
+      [
+        0.00027416693046689034,
+        -0.01269429549574852,
+        0.001514781964942813,
+        5.108942787046544e-06,
+        -1.1842102409787003e-08
+      ],
+      [
+        1.0845411679838435e-06,
+        -4.3290569010423496e-05,
+        5.108942787046544e-06,
+        1.818786898866165e-08,
+        -4.39908491578489e-11
+      ],
+      [
+        -2.7863915619263935e-09,
+        1.0156738738942295e-07,
+        -1.1842102409787003e-08,
+        -4.39908491578489e-11,
+        1.211146797002599e-13
+      ]
+    ]
+  },
+  "fitted_E_mu_S0_GeV": 73.43819739259703,
+  "actual_primary_initial_E_GeV": 89.7286261616183,
+  "crossings": [
+    {
+      "ordinal": 3663,
+      "forward": true,
+      "pre_post_signed_distance_mm": [
+        -0.14076101680465505,
+        0.1442441623469619
+      ],
+      "pre_post_total_energy_MeV": [
+        76437.04827720288,
+        76436.97230456947
+      ],
+      "pre_post_time_ns": [
+        0.05801518959784335,
+        0.058965865599303946
+      ]
+    }
+  ],
+  "birth_process_side_counts": {
+    "before_S0:muIoni:11": 1123,
+    "before_S0:muPairProd:11": 9,
+    "before_S0:muPairProd:-11": 9,
+    "before_S0:muBrems:22": 1,
+    "after_S0:muIoni:11": 203
+  },
+  "hit_source_partition": {
+    "EcalHits": {
+      "hit_counts": {
+        "primary_muon_direct": 95,
+        "after_S0": 163
+      },
+      "corrected_SD_response_MeV": {
+        "primary_muon_direct": 43.63525820598079,
+        "after_S0": 17.531320250105637
+      },
+      "all_hits": 258,
+      "all_time_not_DAQ_charge": true
+    },
+    "PreshowerHits": {
+      "hit_counts": {
+        "primary_muon_direct": 7,
+        "after_S0": 13
+      },
+      "corrected_SD_response_MeV": {
+        "primary_muon_direct": 6.462599360384047,
+        "after_S0": 1.7711819899268448
+      },
+      "all_hits": 20,
+      "all_time_not_DAQ_charge": true
+    },
+    "TriggerHits": {
+      "hit_counts": {
+        "primary_muon_direct": 7,
+        "before_S0": 7
+      },
+      "corrected_SD_response_MeV": {
+        "primary_muon_direct": 1.5651339460164309,
+        "before_S0": 1.0295967981219292
+      },
+      "all_hits": 14,
+      "all_time_not_DAQ_charge": true
+    },
+    "VetoHits": {
+      "hit_counts": {
+        "primary_muon_direct": 18,
+        "before_S0": 32
+      },
+      "corrected_SD_response_MeV": {
+        "primary_muon_direct": 12.764428332448006,
+        "before_S0": 5.643483589490643
+      },
+      "all_hits": 50,
+      "all_time_not_DAQ_charge": true
+    }
+  },
+  "original_selected_raw11_status_pz0_exact": true,
+  "scope": "One fixed natural train parent;all-time SD response,not same-window analog charge;no energy closure or population claim.",
+  "remaining11_not_admitted": true
+}

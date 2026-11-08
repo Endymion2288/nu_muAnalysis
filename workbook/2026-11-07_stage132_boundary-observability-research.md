@@ -192,3 +192,8 @@ Stage133 直接承接 [Stage131 冻结合同](stage131_energy_ml/next_execution_
 未来批量科学计算仍走 HTCondor，Stage133 使用 `~/condor/nu_muAnalysis/stage133/`。新仪器化仅构建需要的 observer，复用匹配现成软件；来源批读、受控多核，紧凑保存最终汇总和少量必要 QA，不重新保存大批 xAOD／逐父 HITS。先测新步骤成本再定规模，不用旧数字化速度外推全链。
 
 本阶段完成后先保存中文 workbook，再做本地 Conventional Commit，不 push。整体项目目标仍未完成。
+
+
+### Stage176 实测回填：首父S0与源出生位置
+
+[Stage176](2026-11-08_stage176_S0-birth-and-crossing-pilot.md)确认实际S0/过面步、1345出生和4211步独立审计。单父Ecal附加SD来自面后，不能把全μ根当面前辐射，也不是同窗电荷或能损加回。余11完整重建7070.91CPU秒超过7000门，未扩跑；下一先认证pinned curvilinear构造及原float32状态区间，再考虑同原父G4-only有限预算。总体能量收益/匹配同窗/真实条件/最终确认仍未达。

@@ -1,0 +1,211 @@
+{
+  "passed": true,
+  "all_terminal": true,
+  "failed_attempts": 1,
+  "successful_attempts": 2,
+  "failed_original_bytes_retained": true,
+  "unsubmitted_packaging_errors": [
+    {
+      "path": "software/stage176/1794135732037950465/energy-ml-stage176.tar.gz",
+      "bytes": 9361270,
+      "executed": false,
+      "reason": "Unsubmitted audit packaging stopped on incorrect cache directory; corrected before condor_submit."
+    }
+  ],
+  "source_logical_N": 72,
+  "source_unique_N": 34,
+  "deleted_bytes": 40589451,
+  "deleted": [
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage176/1794135750642870571/energy-ml-stage176.tar.gz",
+      "bytes": 9955500
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage176/audit_result.tar.gz",
+      "bytes": 1981
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage176/1794135144171640808/energy-ml-stage176.tar.gz",
+      "bytes": 9361268
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage176/preflight_repair_result.tar.gz",
+      "bytes": 762277
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage176/1794134312801580781/energy-ml-stage176.tar.gz",
+      "bytes": 5613285
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage176/preflight_result.tar.gz",
+      "bytes": 4342002
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/audit_time.txt",
+      "bytes": 750
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/build_time.txt",
+      "bytes": 1176
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_S0_time.txt",
+      "bytes": 1101
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_digi_time.txt",
+      "bytes": 1055
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_hitscheck_time.txt",
+      "bytes": 1288
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_noninterference_time.txt",
+      "bytes": 1292
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_ntuple_time.txt",
+      "bytes": 1028
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_reco_time.txt",
+      "bytes": 829
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_sim_time.txt",
+      "bytes": 1125
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_sim_unobserved_time.txt",
+      "bytes": 1123
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/preflight_repair_time.txt",
+      "bytes": 791
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/preflight_time.txt",
+      "bytes": 825
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/build.log",
+      "bytes": 26374
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_S0.log",
+      "bytes": 395740
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_digi.log",
+      "bytes": 71372
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_hitscheck.log",
+      "bytes": 778
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_noninterference.log",
+      "bytes": 778
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_ntuple.log",
+      "bytes": 66093
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_reco.log",
+      "bytes": 96550
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_sim.log",
+      "bytes": 248020
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage176_energy_ml/parent_50_sim_unobserved.log",
+      "bytes": 247870
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/worker_1794134312801580781.sh",
+      "bytes": 2359
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/preflight_1794134312801580781.sub",
+      "bytes": 1039
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/worker_1794135144171640808.sh",
+      "bytes": 2359
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/preflight_repair_1794135144171640808.sub",
+      "bytes": 1048
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/worker_1794135750642870571.sh",
+      "bytes": 2359
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/audit_1794135750642870571.sub",
+      "bytes": 1035
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676788.0.log",
+      "bytes": 2299
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676788.0.out",
+      "bytes": 7257
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676788.0.err",
+      "bytes": 706
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676831.0.log",
+      "bytes": 2144
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676831.0.out",
+      "bytes": 221
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676831.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676848.0.log",
+      "bytes": 3084
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676848.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage176/logs/9676848.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage176/1794135732037950465/energy-ml-stage176.tar.gz",
+      "bytes": 9361270
+    }
+  ],
+  "retained_event_and_summary_bytes": 1036179,
+  "observer_runtime_bytes": 3808184,
+  "scheduler_CPU_s": 678.0,
+  "scheduler_aggregate_wall_s": 831.0,
+  "starts": 3,
+  "live_N": 0,
+  "scheduler_RequestCpus": [
+    4
+  ],
+  "scheduler_RequestMemory_MB": [
+    12000
+  ],
+  "Stage54_preserved": true,
+  "queue_Iwd_checked": true,
+  "full_remaining11_admitted": false,
+  "new_independent_nu": 0,
+  "energy_fits": 0,
+  "GPU_jobs": 0,
+  "overall_complete": false
+}
