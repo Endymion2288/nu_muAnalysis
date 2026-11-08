@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "N": 8192,
+  "source_N": 780874,
+  "pairs": [
+    {
+      "module_key": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Lo_index": 0,
+      "Hi_index": 0,
+      "Lo_channel": 0,
+      "Hi_channel": 16
+    },
+    {
+      "module_key": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Lo_index": 1,
+      "Hi_index": 1,
+      "Lo_channel": 1,
+      "Hi_channel": 17
+    },
+    {
+      "module_key": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "Lo_index": 2,
+      "Hi_index": 2,
+      "Lo_channel": 2,
+      "Hi_channel": 18
+    },
+    {
+      "module_key": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "Lo_index": 3,
+      "Hi_index": 3,
+      "Lo_channel": 3,
+      "Hi_channel": 19
+    }
+  ],
+  "native4_scalar_comparisons": 128,
+  "prefix8192_exact": null,
+  "measure_CPU_s": 0.7061473349999999,
+  "loop_CPU_s": [
+    0.047041023000000015,
+    0.05695480900000005
+  ],
+  "startup_and_postprocess_CPU_s": 0.602155715,
+  "wall_s": 1.0823091734200716,
+  "ROOT_read_bytes": 2170231,
+  "RSS_KiB": 58368,
+  "support": [
+    {
+      "module": 0,
+      "N": 8192,
+      "finite_N": 8192,
+      "Lo_status0_N": 2521,
+      "Hi_status0_N": 164,
+      "paired_status0_N": 159,
+      "positive_highSNR_overlap_N": 53,
+      "Lo_nonzero_Hi_good_highSNR_N": 1,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1919.9830322265625,
+      "max_Hi_raw_peak_mV": 590.0450439453125
+    },
+    {
+      "module": 1,
+      "N": 8192,
+      "finite_N": 8192,
+      "Lo_status0_N": 2529,
+      "Hi_status0_N": 178,
+      "paired_status0_N": 168,
+      "positive_highSNR_overlap_N": 66,
+      "Lo_nonzero_Hi_good_highSNR_N": 6,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1916.499755859375,
+      "max_Hi_raw_peak_mV": 495.876220703125
+    },
+    {
+      "module": 2,
+      "N": 8192,
+      "finite_N": 8192,
+      "Lo_status0_N": 2326,
+      "Hi_status0_N": 126,
+      "paired_status0_N": 121,
+      "positive_highSNR_overlap_N": 47,
+      "Lo_nonzero_Hi_good_highSNR_N": 3,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1900.19677734375,
+      "max_Hi_raw_peak_mV": 498.8526611328125
+    },
+    {
+      "module": 3,
+      "N": 8192,
+      "finite_N": 8192,
+      "Lo_status0_N": 2456,
+      "Hi_status0_N": 179,
+      "paired_status0_N": 176,
+      "positive_highSNR_overlap_N": 66,
+      "Lo_nonzero_Hi_good_highSNR_N": 0,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1899.262451171875,
+      "max_Hi_raw_peak_mV": 107.3563232421875
+    }
+  ],
+  "relative_fits": [
+    {
+      "module": 0,
+      "fit_even_N": 20,
+      "validation_odd_N": 33,
+      "relative_Hi_over_Lo_scale": null,
+      "validation_relative_residual_quantiles": null
+    },
+    {
+      "module": 1,
+      "fit_even_N": 34,
+      "validation_odd_N": 32,
+      "relative_Hi_over_Lo_scale": null,
+      "validation_relative_residual_quantiles": null
+    },
+    {
+      "module": 2,
+      "fit_even_N": 17,
+      "validation_odd_N": 30,
+      "relative_Hi_over_Lo_scale": null,
+      "validation_relative_residual_quantiles": null
+    },
+    {
+      "module": 3,
+      "fit_even_N": 34,
+      "validation_odd_N": 32,
+      "relative_Hi_over_Lo_scale": null,
+      "validation_relative_residual_quantiles": null
+    }
+  ],
+  "absolute_amplitude_reference": false,
+  "target_MC_second_readout_available": false,
+  "interpretation": "Same-module real dual-readout support and conditional proportionality only; no absolute energy/PMT linearity/high-amplitude precision or \u03bd improvement certification.",
+  "overall_complete": false
+}

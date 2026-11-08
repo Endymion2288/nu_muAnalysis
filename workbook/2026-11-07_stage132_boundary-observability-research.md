@@ -202,3 +202,8 @@ Stage133 直接承接 [Stage131 冻结合同](stage131_energy_ml/next_execution_
 ### Stage178 回填：S0区间与源出生支持
 
 [Stage178](2026-11-08_stage178_rounding-enclosed-S0-and-G4-only-pilot.md)原12/9支持面/9过面步、9607出生，53353有理数核查及旧ordered HITS闭合；原lowpz_highE两父缺面，保持明确困难侧缺口。省重复重建后的G4-only共724CPU秒，无新能量fit/forward。下一同父actual-window信号/噪声/clip及源分解，不能把all-time SD或出生KE当修正；普通Ecal真实双读出另有限验证，整体未完成。
+
+
+### Stage180 回填：真实普通Ecal双量程支持
+
+[Stage180](2026-11-08_stage180_ordinary-Ecal-dual-range-support.md)取得同源780874例的实际4模块双路/固定重叠与相对响应。常比例有明显幅度依赖，原因未测；不将绝对参考/PMT线性/匹配MC第二路当已交付。独立full/标量通过、16CPU秒。下一同pulse/固定窗/选择与真实高幅参考需区分；整体能量与物理目标仍未完成。

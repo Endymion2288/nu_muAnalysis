@@ -1,3 +1,13 @@
+# 当前执行更新：Stage180 实际普通Ecal双读出支持已测，相对比例有幅度依赖
+
+[Stage180报告](../workbook/2026-11-08_stage180_ordinary-Ecal-dual-range-support.md)对已知run15838单PHYS完整780874例，四模块同实际mapping的Lo0–3/Hi16–19均有信号；固定两端status0/高SNR/正Q重叠5802/7489/4989/5850。even-only四固定比例约.03655–.03857，odd验证低幅大正尾，500–1000mV Lo箱中位−8.22%至−13.06%；单一比例不能描述全幅度，不把趋势直接归因PMT非线性或给绝对幅度真值。
+
+原8192精确、128原生标量及另一full重读/独立Python标量比例核查通过；3start全0、16CPU/86聚合wall秒/0live，原前缀631419B、清1995456B重复，Stage54保持。真实双读出存在不授权虚构原四路MC第二读出；同pulse/原窗/选择和高幅独立参考仍需区分，之后才考虑匹配新训练。
+
+主线Stage179首父实际9600ADC/raw11/status/RNG与源加和已通过，空VetoNu键程序修正计入原预算，余11三倍投影2688.18CPU秒通过门并提交；独立审计另严格匹配C++ float相减再round，原actual ADC与信号不变。原低pz高E缺面、Timing固定阴性、Stage87/所有原门/角色/K/reserved和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage178 同原12父的S0区间与G4-only审计完成
 
 [Stage178报告](../workbook/2026-11-08_stage178_rounding-enclosed-S0-and-G4-only-pilot.md)以pinned curvilinear语义和float32舍入包络省掉重复重建，原首父9767点与actual native面一致；三倍投影1832.16CPU秒通过新G4-only门。固定12父保留9个面支持、3个原重选失败未知；9607出生中5788前/1759后/2060未知，9个稳健过面步。53353有理数区间/源分区/ordered HITS审计通过。

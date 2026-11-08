@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "phase": "audit",
+  "N": 780874,
+  "source_N": 780874,
+  "pairs": [
+    {
+      "module_key": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Lo_index": 0,
+      "Hi_index": 0,
+      "Lo_channel": 0,
+      "Hi_channel": 16
+    },
+    {
+      "module_key": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Lo_index": 1,
+      "Hi_index": 1,
+      "Lo_channel": 1,
+      "Hi_channel": 17
+    },
+    {
+      "module_key": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "Lo_index": 2,
+      "Hi_index": 2,
+      "Lo_channel": 2,
+      "Hi_channel": 18
+    },
+    {
+      "module_key": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "Lo_index": 3,
+      "Hi_index": 3,
+      "Lo_channel": 3,
+      "Hi_channel": 19
+    }
+  ],
+  "native4_scalar_comparisons": 128,
+  "prefix8192_exact": true,
+  "measure_CPU_s": 2.643897549,
+  "loop_CPU_s": [
+    1.6594020900000002
+  ],
+  "startup_and_postprocess_CPU_s": 0.984505271,
+  "wall_s": 10.08088173402939,
+  "ROOT_read_bytes": 62064608,
+  "RSS_KiB": 229072,
+  "support": [
+    {
+      "module": 0,
+      "N": 780874,
+      "finite_N": 780874,
+      "Lo_status0_N": 239925,
+      "Hi_status0_N": 15515,
+      "paired_status0_N": 15069,
+      "positive_highSNR_overlap_N": 5802,
+      "Lo_nonzero_Hi_good_highSNR_N": 155,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1919.9830322265625,
+      "max_Hi_raw_peak_mV": 1221.518798828125
+    },
+    {
+      "module": 1,
+      "N": 780874,
+      "finite_N": 780874,
+      "Lo_status0_N": 239334,
+      "Hi_status0_N": 19635,
+      "paired_status0_N": 18600,
+      "positive_highSNR_overlap_N": 7489,
+      "Lo_nonzero_Hi_good_highSNR_N": 437,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1916.756103515625,
+      "max_Hi_raw_peak_mV": 1807.29052734375
+    },
+    {
+      "module": 2,
+      "N": 780874,
+      "finite_N": 780874,
+      "Lo_status0_N": 225084,
+      "Hi_status0_N": 13634,
+      "paired_status0_N": 13149,
+      "positive_highSNR_overlap_N": 4989,
+      "Lo_nonzero_Hi_good_highSNR_N": 159,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1900.362060546875,
+      "max_Hi_raw_peak_mV": 900.6282958984375
+    },
+    {
+      "module": 3,
+      "N": 780874,
+      "finite_N": 780874,
+      "Lo_status0_N": 236928,
+      "Hi_status0_N": 16228,
+      "paired_status0_N": 15631,
+      "positive_highSNR_overlap_N": 5850,
+      "Lo_nonzero_Hi_good_highSNR_N": 173,
+      "negative_raw_measurements_N": 0,
+      "explicit_minus999_N": 0,
+      "max_Lo_raw_peak_mV": 1899.4117431640625,
+      "max_Hi_raw_peak_mV": 843.3304443359375
+    }
+  ],
+  "relative_fits": [
+    {
+      "module": 0,
+      "fit_even_N": 2839,
+      "validation_odd_N": 2963,
+      "relative_Hi_over_Lo_scale": 0.03731299154396546,
+      "validation_relative_residual_quantiles": [
+        -0.15293045756776974,
+        -0.0036923324586082273,
+        5.861639807537068
+      ]
+    },
+    {
+      "module": 1,
+      "fit_even_N": 3751,
+      "validation_odd_N": 3738,
+      "relative_Hi_over_Lo_scale": 0.03856977031772797,
+      "validation_relative_residual_quantiles": [
+        -0.1917260832568422,
+        0.0021504143406205767,
+        12.018927296801781
+      ]
+    },
+    {
+      "module": 2,
+      "fit_even_N": 2464,
+      "validation_odd_N": 2525,
+      "relative_Hi_over_Lo_scale": 0.036550152565162045,
+      "validation_relative_residual_quantiles": [
+        -0.1298618888604537,
+        -0.004073779633224306,
+        0.7716356383086942
+      ]
+    },
+    {
+      "module": 3,
+      "fit_even_N": 2908,
+      "validation_odd_N": 2942,
+      "relative_Hi_over_Lo_scale": 0.03696259389424165,
+      "validation_relative_residual_quantiles": [
+        -0.14256667154717165,
+        -0.005461329673686399,
+        5.74011035069475
+      ]
+    }
+  ],
+  "absolute_amplitude_reference": false,
+  "target_MC_second_readout_available": false,
+  "interpretation": "Same-module real dual-readout support and conditional proportionality only; no absolute energy/PMT linearity/high-amplitude precision or \u03bd improvement certification.",
+  "overall_complete": false
+}
