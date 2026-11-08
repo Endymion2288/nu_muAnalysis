@@ -1,0 +1,511 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "N": 4,
+  "original_identities_exact": true,
+  "leading_identity_known_N": 4,
+  "first_parent_repeat_exact": true,
+  "anchors": {
+    "total": 70,
+    "linked": 70,
+    "identifier_equal": 70,
+    "measurement": 70,
+    "measurement_detector_same": 70,
+    "valid": 16,
+    "dimension2_key3": 70,
+    "off_plane": 54
+  },
+  "diagnostics": {
+    "max_abs_normal_mm": {
+      "N": 4,
+      "min": 2.9296875257071547e-05,
+      "max": 7.812500007227749e-05,
+      "distinct_N": 4
+    },
+    "max_state_roundtrip_mm": {
+      "N": 4,
+      "min": 7.944109290391274e-15,
+      "max": 1.464821375527116e-14,
+      "distinct_N": 3
+    },
+    "max_PRD_roundtrip_mm": {
+      "N": 4,
+      "min": 0.0,
+      "max": 0.0,
+      "distinct_N": 1
+    },
+    "independent_dx_max_delta_mm": {
+      "N": 0,
+      "min": null,
+      "max": null,
+      "distinct_N": 0
+    },
+    "max_candidate_roundtrip_mm": {
+      "N": 0,
+      "min": null,
+      "max": null,
+      "distinct_N": 0
+    }
+  },
+  "stations": [
+    {
+      "station": 0,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 34,
+      "leadingOwned": 0,
+      "nonleading": 34,
+      "offMeasuredWafer": 34,
+      "onMeasuredWafer": 0,
+      "measuredWafers": 0,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "min_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "RMS_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 1,
+      "available_parent_N": 4,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 30,
+      "leadingOwned": 24,
+      "nonleading": 6,
+      "offMeasuredWafer": 5,
+      "onMeasuredWafer": 1,
+      "measuredWafers": 24,
+      "eligibleWafers": 15,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 1,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 4,
+          "min": 0,
+          "max": 0,
+          "distinct_N": 1
+        },
+        "mean_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "min_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "RMS_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 2,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 27,
+      "leadingOwned": 24,
+      "nonleading": 3,
+      "offMeasuredWafer": 3,
+      "onMeasuredWafer": 0,
+      "measuredWafers": 24,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "min_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "RMS_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 3,
+      "available_parent_N": 1,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 26,
+      "leadingOwned": 22,
+      "nonleading": 4,
+      "offMeasuredWafer": 3,
+      "onMeasuredWafer": 1,
+      "measuredWafers": 22,
+      "eligibleWafers": 1,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidLocal": 0,
+      "unusableAnchorCandidates": 1,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "candidateRoundtripFailure": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 1,
+          "min": 0,
+          "max": 0,
+          "distinct_N": 1
+        },
+        "mean_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "min_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_abs_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "RMS_dx_mm": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    }
+  ],
+  "new_geometry_content_support": false,
+  "prefix_reproducibility": null,
+  "native_resources": {
+    "passed": true,
+    "phase": "pilot",
+    "N": 4,
+    "selected_input_role": 1,
+    "request_index": 0,
+    "REC": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rec/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-xAOD.root",
+    "PHYS": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200082/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-merge-PHYS.root",
+    "original_PHYS_branches": [
+      "run",
+      "eventID",
+      "longTracks",
+      "SpacePoints",
+      "Track_pz0",
+      "nClusters0",
+      "nClusters1",
+      "nClusters2",
+      "nClusters3"
+    ],
+    "geometry": "FASERNU-04",
+    "conditions": "OFLCOND-FASER-06",
+    "configured_tracker_only": true,
+    "native_support": false,
+    "leading_identity_known_N": 4,
+    "exact_old_count_N": 4,
+    "same_process_first_parent_repeat": true,
+    "CPU_s": 105.74838446999999,
+    "wall_s": 169.59867480001412,
+    "ROOT_read_bytes": 2433493,
+    "RSS_KiB": 1989116,
+    "event_bytes": 2859,
+    "event_CPU_s": [
+      69.60641954100001,
+      0.00878412499999115,
+      0.0044765450000028295,
+      0.007066166999990742
+    ],
+    "calibrated_association_probability": false,
+    "calibrated_pull": false,
+    "new_G4": 0,
+    "fits": 0,
+    "reserved_forward": 0,
+    "overall_complete": false
+  },
+  "precision_QA_diagnostic": [
+    {
+      "entry": 19,
+      "wafer": "9835861586177163264",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 8.481350331732565e-14,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -4.768370733896219e-07,
+        4.768372430166286e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 19,
+      "wafer": "9844868785431904256",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -2.288817488982596e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -7.057189071013848e-07,
+        2.479554093048656e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 19,
+      "wafer": "10025012770526724096",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.051758710865652e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.6021727617259353e-06,
+        2.212524503899066e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 19,
+      "wafer": "10016005571271983104",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.8310545928297113e-06,
+      "original_geometry_valid": false,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.7384032256422117e-06,
+        7.629403998278913e-08
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "9889904781705609216",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -2.670287119835306e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -7.438658701866557e-07,
+        2.0980844621959448e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "9898911980960350208",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 4.577637656768144e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.9073392526310798e-08,
+        9.346009238799396e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "10034019969781465088",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.220703031934914e-06,
+      "original_geometry_valid": false,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.128051664747414e-06,
+        6.86645600877586e-07
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 52,
+      "wafer": "10043027169036206080",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 4.5776376569364935e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.4495848671188507e-06,
+        2.3651123985061495e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "9880897582450868224",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.0517587653278034e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -6.484984398734697e-07,
+        1.2588501929390303e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "9871890383196127232",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 7.629403687938857e-08,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -8.773802795268615e-07,
+        1.0299683532856385e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "10025012770526724096",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.051758658738322e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.6021727669386677e-06,
+        2.2125244986863323e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 59,
+      "wafer": "10016005571271983104",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.8310545959385198e-06,
+      "original_geometry_valid": false,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.73840322875102e-06,
+        7.629403687398022e-08
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "9880897582450868224",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.0517587362456683e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -6.484984427816834e-07,
+        1.258850190030817e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "9871890383196127232",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 7.629403617461597e-08,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -8.773802802316341e-07,
+        1.029968352580866e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "10025012770526724096",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": 3.051758630595333e-07,
+      "original_geometry_valid": true,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -1.602172769752967e-06,
+        2.2125244958720336e-06
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    },
+    {
+      "entry": 62,
+      "wafer": "10016005571271983104",
+      "global_coordinates_exact_float32": true,
+      "actual_normal_mm": -1.8310545965991352e-06,
+      "original_geometry_valid": false,
+      "float32_rounding_compatible_normal_interval_mm": [
+        -3.7384032294116354e-06,
+        7.629403621336483e-08
+      ],
+      "exact_plane_compatible_with_float32_rounding": true
+    }
+  ],
+  "precision_QA_scope": "At most4 QA parents and4anchors each; does not change the frozen1e-6mm criterion or certify historical producer/schema.",
+  "calibrated_covariance": false,
+  "calibrated_association": false,
+  "population_muon_FPR_measured": false,
+  "CPU_s": 0.7683203570000001,
+  "wall_s": 0.7749685610178858,
+  "RSS_KiB": 96132,
+  "new_G4": 0,
+  "fits": 0,
+  "promotion": false,
+  "overall_complete": false
+}

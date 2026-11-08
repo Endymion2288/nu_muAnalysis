@@ -1,3 +1,9 @@
+# 当前执行更新：Stage154 几何往返闭合，离面精度门阻止候选，未扩大
+
+[Stage154报告](../workbook/2026-11-08_stage154_global-to-wafer-geometry-pilot.md)完成同原前4role1父：身份/旧计数精确，70真实PRD及measurement-detector变换全同，70二维COT明确记录。state往返≤1.464822e−14mm、PRD往返0，但54/70超冻结1e−6mm离面容差，16支持wafer上无非leading候选；站1/3各1未评分候选保留未知，不作物理零。小QA的GLOBAL坐标/离面区间与float32舍入相容，已查p2转换源码；旧REC实际persistent schema/全70原因尚未认证，未事后调容差。原成本模型2216.79CPU秒+100>剩1083且物理门False，未full40/fit。2job全exit0、119CPU秒/200聚合wall秒/0GPU/G4/新ν，2936B事件精确合并、删7225660B重复。下一Stage155先核真实persistent格式，显式float32区间几何pilot，首执行初始化与steady成本事前分开；不修covariance、不任意加半径、不自动fullpool/energyfit。Stage87/原门/Stage137扩大门/整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage153 原生同面支持审计完成，保存的 local state 不能直接与 cluster 相减
 
 [Stage153报告](../workbook/2026-11-08_stage153_native-cluster-surface-basis-pilot.md)完成原REC request0前40role1：原身份/pz0及cluster4/SP/longTracks全匹配，第一父精确重复。697真实PRD链接/identifier/Measurement均通过、完整covariance有限且loc1方差正，但一维locX及measurement/state同面均0；参数为curvilinear，不能因同为PlaneSurface就直接相减。站1–3同wafer非leading候选63/29/56真实存在，因anchor不支持而score全缺失；不是空间活动物理零，也没有r2/roundtrip数值认证或能量fit。2job全exit0、116CPU秒/156聚合wall秒/0GPU/G4/新ν；事件10812B精确合并、删7245092B重复。旧Stage124直接locX残差不再作物理pull证据，Stage87保持。下一Stage154另冻真实GLOBAL位置→wafer的几何闭合/未归一化dx pilot，前4→最多同40、1200CPU秒、无covariance修补/fullpool/fit；原全部门和Stage137扩大门/整体未完成保持。

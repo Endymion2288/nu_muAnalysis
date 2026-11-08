@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "url": "https://gitlab.cern.ch/atlas/athena/-/raw/release/24.0.41/Tracking/TrkEventCnv/TrkEventTPCnv/src/TrkParameters/TrackParametersCnv_p2.cxx",
+      "access": "Actual full source fetched and relevant createTransient/convertTransCurvilinearToPers bodies read this stage.",
+      "feasibility": "Concrete float storage mechanism for the bounded numerical-precision diagnostic; actual old schema/whole-cohort cause still unverified."
+    },
+    {
+      "url": "https://arxiv.org/abs/2106.13593",
+      "title": "A Common Tracking Software Project",
+      "access": "Abstract read in Stage153; no reread or full-paper formula claim this stage",
+      "feasibility": "Geometry-aware parameterization context only; no covariance calibration or imported performance."
+    }
+  ]
+}

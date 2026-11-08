@@ -1,0 +1,10 @@
+{
+  "source_url": "https://gitlab.cern.ch/atlas/athena/-/raw/release/24.0.41/Tracking/TrkEventCnv/TrkEventTPCnv/src/TrkParameters/TrackParametersCnv_p2.cxx",
+  "source_access": "Actual full source fetched and relevant createTransient/convertTransCurvilinearToPers bodies read this stage.",
+  "header": "/cvmfs/atlas.cern.ch/repo/sw/software/24.0/Athena/24.0.41/InstallArea/x86_64-el9-gcc13-opt/include/TrkEventTPCnv/TrkParameters/TrackParameters_p2.h",
+  "source_capsule": "software/stage154/persistence_source_reference.tar.gz",
+  "measured_static_semantics": "p2 m_parameters is vector<float>; converter writes global position3/momentum3/charge and reads size7 as CurvilinearParameters.",
+  "limitation": "Historical REC actual persistent branch/schema has not been directly certified. This code plus QA float32 compatibility does not prove every off-plane state is only rounding or that geometry/alignment/covariance is calibrated.",
+  "diagnostic": "Already bounded QA only: exact equality of global coordinates to float32 plus half-neighbor representable rounding intervals projected along wafer normal. No tolerance, mask, candidate definition or cost gate changed.",
+  "cost_limit": "First execute includes lazy PyROOT/Cling initialization (69.606419541CPU seconds), unlike next three .008784125/.004476545/.007066167. Original conservative mean-event admission was applied unchanged; do not retrospectively admit full40. Any future model should separate first-event startup prospectively."
+}

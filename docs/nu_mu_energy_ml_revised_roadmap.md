@@ -1,3 +1,9 @@
+# 当前执行更新：Stage154 几何往返闭合，离面精度门阻止候选，未扩大
+
+[Stage154报告](../workbook/2026-11-08_stage154_global-to-wafer-geometry-pilot.md)完成同原前4role1父：身份/旧计数精确，70真实PRD及measurement-detector变换全同，70二维COT明确记录。state往返≤1.464822e−14mm、PRD往返0，但54/70超冻结1e−6mm离面容差，16支持wafer上无非leading候选；站1/3各1未评分候选保留未知，不作物理零。小QA的GLOBAL坐标/离面区间与float32舍入相容，已查p2转换源码；旧REC实际persistent schema/全70原因尚未认证，未事后调容差。原成本模型2216.79CPU秒+100>剩1083且物理门False，未full40/fit。2job全exit0、119CPU秒/200聚合wall秒/0GPU/G4/新ν，2936B事件精确合并、删7225660B重复。下一Stage155先核真实persistent格式，显式float32区间几何pilot，首执行初始化与steady成本事前分开；不修covariance、不任意加半径、不自动fullpool/energyfit。Stage87/原门/Stage137扩大门/整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage153 原生同面支持审计完成，保存的 local state 不能直接与 cluster 相减
 
 [Stage153报告](../workbook/2026-11-08_stage153_native-cluster-surface-basis-pilot.md)完成原REC request0前40role1：原身份/pz0及cluster4/SP/longTracks全匹配，第一父精确重复。697真实PRD链接/identifier/Measurement均通过、完整covariance有限且loc1方差正，但一维locX及measurement/state同面均0；参数为curvilinear，不能因同为PlaneSurface就直接相减。站1–3同wafer非leading候选63/29/56真实存在，因anchor不支持而score全缺失；不是空间活动物理零，也没有r2/roundtrip数值认证或能量fit。2job全exit0、116CPU秒/156聚合wall秒/0GPU/G4/新ν；事件10812B精确合并、删7245092B重复。旧Stage124直接locX残差不再作物理pull证据，Stage87保持。下一Stage154另冻真实GLOBAL位置→wafer的几何闭合/未归一化dx pilot，前4→最多同40、1200CPU秒、无covariance修补/fullpool/fit；原全部门和Stage137扩大门/整体未完成保持。
@@ -2862,3 +2868,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [实测报告](../workbook/2026-11-08_stage153_native-cluster-surface-basis-pilot.md)和[审计表](../workbook/stage153_energy_ml/station_support.tsv)给出原request0前40train父、40身份/旧计数精确、第一父native精确重复。697leading测量真实链接全部通过、完整covariance有限且loc1方差正，但一维locX0、同面0；保存的curvilinear状态和硅片measurement虽都PlaneSurface却非同一变换/基底。站1–3的63/29/56个同wafer非leading候选因anchor不可用而保留未知，不作物理零。没有r2/同面roundtrip/动态范围认证、能量fit、关联概率、pull或FPR。旧Stage124未证同基底locX残差不能再作物理证据；历史能量结果原文不改，Stage87保留。
 
 2job/2starts全部exit0，116CPU秒/156聚合wall秒/0GPU/G4/新ν；10812B文本精确合并，删7.245MB重复，无持久ROOT。固定scaled-separation实现终态，不放松面匹配或原门。[下一Stage154合同](../workbook/stage153_energy_ml/next_execution_contract.json)是不同的几何问题：同原前4→最多40，实际GLOBAL状态位置映到真实wafer，验证plane距离/roundtrip/独立点积，只测未归一化dx，1200CPU秒/先成本准入；不修补或借用未知基底covariance。支持失败不换父/调容差，通过也不自动fullpool/fit；之后μ辐射/data控制及全原队列风险仍需独立冻结。Stage132其他校准/外部物理输入/独立确认缺口和全部原门、Stage137双5%扩大门/Stage87/角色/K保持，整体未完成。旧§1–131与旧入口全文保留。
+
+
+## 133. Stage154：全局位置的真实几何闭合已测，数值表示需先认证
+
+[实测报告](../workbook/2026-11-08_stage154_global-to-wafer-geometry-pilot.md)和[支持表](../workbook/stage154_energy_ml/station_support.tsv)给出原role1前4父/70linked anchors，全部measurement-detector面相同、二维COT；state往返≤1.464822e−14mm、PRD往返0，54anchor超过冻结1e−6mm离面条件，16支持anchor上无非leading候选。站1/3各1同wafer候选因anchor不支持而未知，没有dx/FPR/能量风险或物理无信息结论。4父最大离面2.92969e−5–7.81250e−5mm；已保留QA与float32舍入相容，p2源码确认float位置机制，但旧REC实际schema/全70原因未认证，不能宣布全部偏差只为舍入。
+
+2job全部exit0、119CPU秒/200聚合wall秒/0GPU/G4/新ν/fit；事件文本2936B精确合并、删7.226MB重复。保留原首execute含lazyJIT的平均成本模型，full40预测2216.79+100>剩1083秒且物理门False，未full/调容差/抬预算；不是full40实测成本。[Stage155下一合同](../workbook/stage154_energy_ml/next_execution_contract.json)先认证同文件真实persistent参数格式，再以float32邻数中点区间显式处理表示不确定度，原前4→最多40/1200CPU秒/新成本模型事前分开首执行与steady；不使用未知基底covariance或任意larger radius。成功后仍需μ辐射/data控制和全原队列能量合同，失败结束该固定实现。Stage87/所有原门/Stage137双5%扩大门/角色/K及整体未完成保持，旧§1–132与所有旧入口原文保留。
