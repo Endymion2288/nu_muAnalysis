@@ -1,0 +1,160 @@
+{
+  "source": "Calorimeter/CaloRecTools/src/CaloRecTool.cxx",
+  "pin": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "lines": [
+    {
+      "line": 269,
+      "text": "\n"
+    },
+    {
+      "line": 270,
+      "text": "  // Get the waveform hit attached to this calo hit\n"
+    },
+    {
+      "line": 271,
+      "text": "  const xAOD::WaveformHit* wave_hit = calo_hit->Hit(0);\n"
+    },
+    {
+      "line": 272,
+      "text": "  ATH_MSG_DEBUG(\"calo_hit in channel \" << wave_hit->channel() );\n"
+    },
+    {
+      "line": 273,
+      "text": "\n"
+    },
+    {
+      "line": 274,
+      "text": "  // Must set channel\n"
+    },
+    {
+      "line": 275,
+      "text": "  calo_hit->set_channel(wave_hit->channel());\n"
+    },
+    {
+      "line": 276,
+      "text": "  \n"
+    },
+    {
+      "line": 277,
+      "text": "  float MIPcharge_ref = getMIPcharge_ref(ctx, wave_hit->channel()); // get reference MIP charge from database\n"
+    },
+    {
+      "line": 278,
+      "text": "\n"
+    },
+    {
+      "line": 279,
+      "text": "  float charge = wave_hit->integral()/50.0; // divide by 50 ohms to get charge\n"
+    },
+    {
+      "line": 280,
+      "text": "  ATH_MSG_DEBUG(\"calo_hit filled has charge of \" << charge << \" pC\");\n"
+    },
+    {
+      "line": 281,
+      "text": "\n"
+    },
+    {
+      "line": 282,
+      "text": "  float gainRatio = 1.0;\n"
+    },
+    {
+      "line": 283,
+      "text": "  if (correct_gain) { // MC already has correct MIP charge stored in MIPcharge_ref, so only need to to HV extrapolation with reral data\n"
+    },
+    {
+      "line": 284,
+      "text": "    gainRatio = extrapolateHVgain(ctx, wave_hit->channel());\n"
+    },
+    {
+      "line": 285,
+      "text": "  }\n"
+    },
+    {
+      "line": 286,
+      "text": "  ATH_MSG_DEBUG(\"HV gain ratio = \" << gainRatio );\n"
+    },
+    {
+      "line": 287,
+      "text": "\n"
+    },
+    {
+      "line": 288,
+      "text": "  float Nmip = (charge * gainRatio) / MIPcharge_ref;\n"
+    },
+    {
+      "line": 289,
+      "text": "  ATH_MSG_DEBUG(\"Nmip = \" << Nmip );\n"
+    },
+    {
+      "line": 290,
+      "text": "  calo_hit->set_Nmip(Nmip); // set Nmip value\n"
+    },
+    {
+      "line": 291,
+      "text": "\n"
+    },
+    {
+      "line": 292,
+      "text": "  float E_dep = Nmip * m_MIP_sim_Edep[wave_hit->channel()];\n"
+    },
+    {
+      "line": 293,
+      "text": "  ATH_MSG_DEBUG(\"E_dep in MeV = \" << E_dep );\n"
+    },
+    {
+      "line": 294,
+      "text": "  calo_hit->set_E_dep(E_dep);  // set calibrated E_dep value\n"
+    },
+    {
+      "line": 295,
+      "text": "\n"
+    },
+    {
+      "line": 296,
+      "text": "  float E_EM = Nmip * m_EM_mu_Map[wave_hit->channel()];\n"
+    },
+    {
+      "line": 297,
+      "text": "  ATH_MSG_DEBUG(\"Em E in MeV = \" << E_EM );\n"
+    },
+    {
+      "line": 298,
+      "text": "  calo_hit->set_E_EM(E_EM);  // set calibrated E_EM value\n"
+    },
+    {
+      "line": 299,
+      "text": "\n"
+    },
+    {
+      "line": 300,
+      "text": "  float fit_to_raw_ratio = 1.0;\n"
+    },
+    {
+      "line": 301,
+      "text": "  if (wave_hit->integral() != 0.0) { // avoid possibility of division by zero error\n"
+    },
+    {
+      "line": 302,
+      "text": "    fit_to_raw_ratio = wave_hit->raw_integral() / wave_hit->integral();\n"
+    },
+    {
+      "line": 303,
+      "text": "  }\n"
+    },
+    {
+      "line": 304,
+      "text": "  calo_hit->set_fit_to_raw_ratio(fit_to_raw_ratio); // set fit-to-raw-ratio that can be used to take any of the calibrated values to what they would be if we used the raw integral instead of the fit integral\n"
+    },
+    {
+      "line": 305,
+      "text": "\n"
+    },
+    {
+      "line": 306,
+      "text": "}\n"
+    }
+  ],
+  "physical_basis": "X E_EM uses wave_hit integral (possibly fit); rawQ uses separate raw_integral. MC fixed channel calibration gives constant scalar between fittedQ and E_EM, but not between rawQ and fittedQ.",
+  "frozen_before_admission_and_new_energy_risk": "Pilot per-channel rawQ/E_EM span exceeds64float eps times maxabsratio, or validraw onfittedmissing. Valid raw range alone cannot establish additional amplitude. Sourcegetter distinct plus measurednonproportional amplitude required; no fit or gain applied."
+}

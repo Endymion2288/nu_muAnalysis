@@ -1,3 +1,11 @@
+# 当前执行更新：Stage163 普通Calo raw幅度未建立低能增量
+
+[Stage163报告](../workbook/2026-11-08_stage163_ordinary-calo-raw-energy.md)完成原71376active/全部K/三固定臂九fit；可读原PHYS70332，原Stage82临时merge不留存，误映射的两个旧bck候选被精确门拒绝后改为新增字段未知，1044父原X/角色保留。281308有效raw视图、113320合法负数、31raw有效而原fitted缺失；最低cal/test箱均无后者。content/M12 cal两低箱.990793/.998796，开发test1.006770[.998989,1.014749]/1.003566[.998652,1.009052]；最低test/传统1.951627[1.653734,2.308464]，正tail13.661202%对0%。原joint及Stage137双5%门False，原其他RMSE/尾保护通过不等于低能恢复，固定Q4结束。X62精确复现Stage87；285504独立标量域检查、9模型及3718风险标量通过，最大差2.84e−14。22提交/17start含3执行失败和5未启动撤销，全计438CPU秒/526聚合wall秒、0live/GPU/G4/新ν；26.38MB事件/新增数组/模型，删678.71MB重复，Stage54保持。
+
+[Stage164冻结合同](../workbook/stage163_energy_ml/next_execution_contract.json)只用既有3002缓存，以新的Stage137未接受H/A双箱5%支持，补AZ/AZH两臂6fit问真深度已知后H是否仍有条件增量。Stage134原总K未触发分支保持，非G/raw4/旧X网格；同199NaN/HT权重/原角色/K，复用A/H及500draw，900CPU秒/4核12GB、无ROOT/G4/新父。仅机制oracle，不等于可见能量或因果解释；真实data校准/GRL曝光/背景接受度/乳胶/相关系统/独立确认仍缺，Stage87/全部原门和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage162 已识别真实data的历史raw积分定义差异
 
 [Stage162报告](../workbook/2026-11-08_stage162_historical-dictionary-and-stored-window.md)完成原4保存窗口：96peak全同、8496sample有限，但当前signed积分0/96复现旧raw。历史源码指定的正采样积分另冻诊断96/96float32精确，17signed窗口实际为负、最大整流偏移1.12967285156pC；同名raw不能跨producer直接等同。旧字典被当前helper的新增label要求拒绝，native0，不扩64/调门/扫描布局。3start含一次初始化失败全计24CPU秒/59聚合wall秒，0live/GPU/G4/fit；事件6732B，源/日志/GNU精确归档、删202067B重复。没有证明该定义差异导致低能模型失败。
@@ -3005,3 +3013,14 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [中文报告](../workbook/2026-11-08_stage162_historical-dictionary-and-stored-window.md)、[内容审计](../workbook/stage162_energy_ml/summary.json)和[producer诊断](../workbook/stage162_energy_ml/producer_definition_summary.json)仅原4：96窗口/8496有限samples，peak96精确，76/101点保存重建窗而非全采集。当前signed积分0/96、差最大1.12967285156pC超过原累计精度界；历史正采样积分另冻后96/96float32精确，17signed窗口为负。原门仍失败，不将事后机制诊断当原准入；旧字典native因pinnedhelper新增VetoGm/Muon要求初始化失败，不扩64或改布局。不能把旧raw定义差解释为已测gain偏置、μ FPR或Stage87低能失败原因。
 
 3job/3starts全计24CPU秒/59聚合wall秒、0live/GPU/G4/ν/能量fit，两个JSON-only审计GNU0.06/0.05CPU秒而scheduler取整0。事件6732B，exact源码/日志/GNU补充归档保留原记录，删202067B重复，Stage54保持。下一[Stage163合同](../workbook/stage162_energy_ml/next_execution_contract.json)固定原89033/71376active全部K，对X62、X62+M12、X62+M12+普通Calo原producer rawQ4三臂做全原能量检验，先source/train-onlypilot及成本/身份/语义，最多9fit/12000CPU秒/4核16GB。Q15μ控制已经用过Calo raw，Stage47为理想沉积、Stage129为scint恢复；不重包已有控制或旧X网格。真实联合data/校准/外部物理输入及独立确认仍缺，原全门/Stage137双5%/Stage87/角色/K与整体未完成保持。旧§1–140及全部入口全文原样保留。
+
+
+## 142. Stage163：实测普通Calo raw未修复最低能，转深度与未接受能流的条件机制
+
+[中文报告](../workbook/2026-11-08_stage163_ordinary-calo-raw-energy.md)、[固定结果](../workbook/stage163_energy_ml/comparison_summary.json)和[独立审计](../workbook/stage163_energy_ml/validation_summary.json)保持89033原行/71376active/31714K。276个原PHYS可读、70332父raw11/pz0精确；Stage82旧bck误作原临时merge被拒绝，来源修复在首次能量fit前完成，原及修复manifest都精确保留。1044缺原PHYS父新增未知，完整raw70327，有效视图281308/合法负113320/有效raw而fitted缺31，两低箱cal/test后者0。原X62逐值复现Stage87、恰9fit无搜索；3718风险标量/285504域检查及9模型独立通过，最大2.842e−14。
+
+content/M12 cal两低箱.990793[.977914,1.000999]/.998796[.995081,1.003146]，test1.006770[.998989,1.014749]/1.003566[.998652,1.009052]；test最低/传统1.951627[1.653734,2.308464]，正tail13.661202%对0%，全体/传统.515928不能替代最低能。三臂两角色joint均False，content原其他六层RMSE及原八层三尾保护通过；另content/M12低pz真高E负尾上差2.058764pp仍未认证+2pp。Stage137双5%扩大门False，固定Q4实现结束，不推广为所有波形无用。
+
+22提交/17start全计438CPU秒/526聚合execute wall秒、0live/GPU/G4/新ν，含3执行失败及5未启动撤销；完整成功提取ROOT200943606B、187.968297内部CPU秒，sourcewall重叠3.753792不当受控加速比。事件/新数组/模型26383050B<64MiB，两份manifest及10份NPZ精确归档，删678712536B重复，actual源码/日志/GNU与Stage54保持。图仅从已验证TSV重排长轴标签，未在本地读事件或重算统计。
+
+[下一Stage164有限合同](../workbook/stage163_energy_ml/next_execution_contract.json)沿Stage132§5.2但使用新的Stage137 H/A双箱支持：同3002父，A+真z与A+真z+未接受H两臂恰6fit，既有A/H不重训；原3002角色/HT权重、199边界NaN、全部K及500draw相同。900累计CPU秒/4核12GB，零fit缓存QA后分析/独立审计，不ROOT/G4/新父、不改旧G/raw4模型族。报告H给定真z及z给定H的条件比、八层三尾和区间功效边界；有限学习下冗余不称因果/不可见信息界，无部署晋升。真实联合data/协方差增益时基/宽μ辐射尾、乳胶、曝光GRL/背景完整接受度、真实辅助系统及独立确认仍开放，Stage87/原全门/Stage137扩大门/整体goal active保持。旧§1–141及所有旧入口全文原样保留。

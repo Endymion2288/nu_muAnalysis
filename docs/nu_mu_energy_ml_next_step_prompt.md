@@ -1,3 +1,11 @@
+# 当前执行更新：Stage163 普通Calo raw幅度未建立低能增量
+
+[Stage163报告](../workbook/2026-11-08_stage163_ordinary-calo-raw-energy.md)完成原71376active/全部K/三固定臂九fit；可读原PHYS70332，原Stage82临时merge不留存，误映射的两个旧bck候选被精确门拒绝后改为新增字段未知，1044父原X/角色保留。281308有效raw视图、113320合法负数、31raw有效而原fitted缺失；最低cal/test箱均无后者。content/M12 cal两低箱.990793/.998796，开发test1.006770[.998989,1.014749]/1.003566[.998652,1.009052]；最低test/传统1.951627[1.653734,2.308464]，正tail13.661202%对0%。原joint及Stage137双5%门False，原其他RMSE/尾保护通过不等于低能恢复，固定Q4结束。X62精确复现Stage87；285504独立标量域检查、9模型及3718风险标量通过，最大差2.84e−14。22提交/17start含3执行失败和5未启动撤销，全计438CPU秒/526聚合wall秒、0live/GPU/G4/新ν；26.38MB事件/新增数组/模型，删678.71MB重复，Stage54保持。
+
+[Stage164冻结合同](../workbook/stage163_energy_ml/next_execution_contract.json)只用既有3002缓存，以新的Stage137未接受H/A双箱5%支持，补AZ/AZH两臂6fit问真深度已知后H是否仍有条件增量。Stage134原总K未触发分支保持，非G/raw4/旧X网格；同199NaN/HT权重/原角色/K，复用A/H及500draw，900CPU秒/4核12GB、无ROOT/G4/新父。仅机制oracle，不等于可见能量或因果解释；真实data校准/GRL曝光/背景接受度/乳胶/相关系统/独立确认仍缺，Stage87/全部原门和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage156 真实μ空间控制闭合，非leading本身不能标为其他根
 
 [Stage156报告](../workbook/2026-11-08_stage156_muon-native-spatial-control.md)完成原HITS前4→64：64根/current06状态/covariance/PRD/raw/RNG配对精确，61leading、3无leading保留，1063leading anchors全通过相同float32区间几何。站1–3分别39/34/25候选，43/64父非空；pz0[50,100)GeV组41/57非空，overflow只有3父/1非空。μ根加辐射/噪声控制本身有数十mm活动，不能把nonleading或大dx直接叫hadronic或FPR；逐cluster成因未测。前4跨作业精确，五作业含一次旧metadata字段审计失败全计361CPU秒/574聚合wall秒，0live/G4/能量fit；2155857B事件文本回读精确、删22261548B重复。下一[Stage157合同](../workbook/stage156_energy_ml/next_execution_contract.json)转真正联合响应/留出控制：同一已核4096μ根前缀，先128sequential/64suffix分块复现与成本，再准入64chunks/16job×4进程，60000CPU预算、初始最多4job并发；Q15与Q15+真实空间G6两个固定低维评分，不扫描，不forward自然ν。实际联合native data仍缺manifest，不假造data空间，不将有限留出误报当总体/data认证。全原ν能量比较另冻，原门/Stage137双5%扩大门/Stage87和整体未完成保持。

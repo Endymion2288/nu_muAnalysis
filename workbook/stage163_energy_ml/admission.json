@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "amplitude_nonproportional_support": [
+    {
+      "source_index": 0,
+      "module": 0,
+      "N": 40,
+      "ratio_span": 6.996315609428749e-05,
+      "float_rounding_bound": 1.6507959443856635e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 0,
+      "module": 1,
+      "N": 40,
+      "ratio_span": 4.392420371019664e-05,
+      "float_rounding_bound": 1.771821911411564e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 0,
+      "module": 2,
+      "N": 40,
+      "ratio_span": 2.3065505239205165e-05,
+      "float_rounding_bound": 1.648411740440281e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 0,
+      "module": 3,
+      "N": 40,
+      "ratio_span": 1.1279534617855897e-06,
+      "float_rounding_bound": 1.6570170791041505e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 255,
+      "module": 0,
+      "N": 40,
+      "ratio_span": 9.489487559126864e-06,
+      "float_rounding_bound": 1.648411740440281e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 255,
+      "module": 1,
+      "N": 40,
+      "ratio_span": 3.095646078344304e-11,
+      "float_rounding_bound": 1.648411740440281e-09,
+      "nonproportional": false
+    },
+    {
+      "source_index": 255,
+      "module": 2,
+      "N": 40,
+      "ratio_span": 2.8427800751702878e-05,
+      "float_rounding_bound": 1.7319584655339781e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 255,
+      "module": 3,
+      "N": 40,
+      "ratio_span": 9.68344429837711e-06,
+      "float_rounding_bound": 1.7222903103686349e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 260,
+      "module": 0,
+      "N": 40,
+      "ratio_span": 0.00012799084270920081,
+      "float_rounding_bound": 1.648411740440281e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 260,
+      "module": 1,
+      "N": 40,
+      "ratio_span": 2.8573825724489976e-05,
+      "float_rounding_bound": 1.6769562405372085e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 260,
+      "module": 2,
+      "N": 40,
+      "ratio_span": 4.001183100915226e-05,
+      "float_rounding_bound": 1.8948653757178135e-09,
+      "nonproportional": true
+    },
+    {
+      "source_index": 260,
+      "module": 3,
+      "N": 40,
+      "ratio_span": 5.604636164718813e-05,
+      "float_rounding_bound": 1.6965358007325904e-09,
+      "nonproportional": true
+    }
+  ],
+  "additional_amplitude_supported": true,
+  "admitted": true,
+  "measurement_support": true,
+  "independent4_exact": true,
+  "pilot_N": 148,
+  "measured_pilot_source_N": 3,
+  "available_active_sources": 278,
+  "all_active_sources": 280,
+  "known_unavailable_active_rows": 384,
+  "projected_branch_bytes": 249151261.34933728,
+  "projected_IO_wall_s": 1413.3791837523104,
+  "projected_full_3x_CPU_s": 945.634862676258,
+  "already_used_scheduler_CPU_s": 11.0,
+  "per_batch_CPU_allowance_s": 1311,
+  "audit_fit_reserve_CPU_s": 1500,
+  "CPU_budget_s": 12000,
+  "cost_model": {
+    "process_start_CPU_s": 3.975625656,
+    "max_source_start_CPU_s": 0.530112944,
+    "max_payload_CPU_per_entry": 4.965783918459791e-05,
+    "max_payload_CPU_per_requested_byte": 9.343822733004e-08,
+    "max_selected_branch_file_fraction": 0.02179134923196678
+  },
+  "caveat": "3x source-pilot throughput projection, not hard I/O or completion guarantee for unmeasured compression/latency. Fixed disjoint per-job CPU caps enforce aggregate budget; no redefined source fields."
+}

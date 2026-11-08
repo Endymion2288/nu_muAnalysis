@@ -1,0 +1,33 @@
+{
+  "job": "9675802.0",
+  "action": "remove only verified idle, unstarted admission job before executing known JSON type defect",
+  "verified_state": [
+    {
+      "ClusterId": 9675802,
+      "JobStatus": 1,
+      "NumJobStarts": 0
+    }
+  ],
+  "cause": "numpy finfo scalar can yield numpy.bool_ in per-source ratio support; JSON requires explicit Python float/bool",
+  "repair": "Cast float rounding bound and comparison boolean explicitly; no measurement/risk policy change",
+  "original_package_retained": true,
+  "documentation_correction": "Source line2226 explicitly default status1=below threshold, not WAVEFORM_MISSING. Correct field_mapping prose only; frozen known-status and RMS>0 representation unchanged.",
+  "source_mapping_repair": {
+    "pre_energy_fit": true,
+    "original_failed_batches": [
+      2,
+      3
+    ],
+    "unstarted_removed_batches": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "evidence": "source_repair_audit.json",
+    "audit_initial_failure": "empty Track_pz0 in rejected bck source; preserve unknown diagnostic pz, no producer substitution",
+    "unknown_original_active_N": 1044,
+    "unchanged": "all exact raw11/pz controls on available original sources, original X/roles/complete K, fit/evaluation/gates"
+  },
+  "terminal_archive_note": "Original immutable packages preserved through execution and byte-verified source/input/config snapshots archived before duplicate transports removed. Finalizer initial duplicated phase keyword affected local metadata only; corrected before deletion. No scientific rerun."
+}

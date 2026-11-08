@@ -1,0 +1,555 @@
+{
+  "all_jobs_terminal": true,
+  "source_and_logs_byte_equality": true,
+  "event_inputs_byte_equality": true,
+  "transport_checks": [
+    {
+      "phase": "admission_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "admission",
+      "unstarted_removed": true,
+      "result_archive_expected": false
+    },
+    {
+      "phase": "batch_00",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_01",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_02_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_02",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_03_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_03",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_04_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_04",
+      "unstarted_removed": true,
+      "result_archive_expected": false
+    },
+    {
+      "phase": "batch_05_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_05",
+      "unstarted_removed": true,
+      "result_archive_expected": false
+    },
+    {
+      "phase": "batch_06_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_06",
+      "unstarted_removed": true,
+      "result_archive_expected": false
+    },
+    {
+      "phase": "batch_07_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "batch_07",
+      "unstarted_removed": true,
+      "result_archive_expected": false
+    },
+    {
+      "phase": "fit",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "pilot",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "repeat",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "source_repair_retry",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "source_repair",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "validate",
+      "result_archive_exact": true
+    }
+  ],
+  "final_event_features_and_models_bytes": 26383050,
+  "limit_bytes": 67108864,
+  "archives": [
+    {
+      "path": "software/stage163/execution_audits.tar.gz",
+      "bytes": 1714
+    },
+    {
+      "path": "software/stage163/extraction_audits.tar.gz",
+      "bytes": 23912
+    },
+    {
+      "path": "software/stage163/source_snapshots.tar.gz",
+      "bytes": 1252348
+    },
+    {
+      "path": "software/stage163/source_tables.tar.gz",
+      "bytes": 19836
+    },
+    {
+      "path": "software/stage163/worker_logs.tar.gz",
+      "bytes": 31490
+    }
+  ],
+  "event_archives": [
+    {
+      "path": "ntuples/energy_ml_stage163/source_manifest.json.gz",
+      "bytes": 3258640
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/source_manifest_original.json.gz",
+      "bytes": 3258543
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/raw_inputs.tar.gz",
+      "bytes": 4397515
+    }
+  ],
+  "deleted": [
+    {
+      "path": "ntuples/energy_ml_stage163/pilot.npz",
+      "bytes": 9842
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/repeat.npz",
+      "bytes": 1649
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_00.npz",
+      "bytes": 535917
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_01.npz",
+      "bytes": 556139
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_02.npz",
+      "bytes": 549634
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_03.npz",
+      "bytes": 535191
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_04.npz",
+      "bytes": 604902
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_05.npz",
+      "bytes": 587881
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_06.npz",
+      "bytes": 542064
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_07.npz",
+      "bytes": 552593
+    },
+    {
+      "path": "software/stage163/1794117650271054347/energy-ml-stage163.tar.gz",
+      "bytes": 28046006
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/admission_repair_result.tar.gz",
+      "bytes": 2029
+    },
+    {
+      "path": "software/stage163/1794117582869711312/energy-ml-stage163.tar.gz",
+      "bytes": 28045963
+    },
+    {
+      "path": "software/stage163/1794117848053856837/energy-ml-stage163.tar.gz",
+      "bytes": 28034717
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_00_result.tar.gz",
+      "bytes": 536405
+    },
+    {
+      "path": "software/stage163/1794117860281689125/energy-ml-stage163.tar.gz",
+      "bytes": 28034735
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_01_result.tar.gz",
+      "bytes": 554470
+    },
+    {
+      "path": "software/stage163/1794118616665956940/energy-ml-stage163.tar.gz",
+      "bytes": 28039806
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_02_repair_result.tar.gz",
+      "bytes": 548041
+    },
+    {
+      "path": "software/stage163/1794117866080461459/energy-ml-stage163.tar.gz",
+      "bytes": 28034730
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_02_result.tar.gz",
+      "bytes": 1602
+    },
+    {
+      "path": "software/stage163/1794118622673065414/energy-ml-stage163.tar.gz",
+      "bytes": 28039813
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_03_repair_result.tar.gz",
+      "bytes": 534578
+    },
+    {
+      "path": "software/stage163/1794117871838840703/energy-ml-stage163.tar.gz",
+      "bytes": 28034733
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_03_result.tar.gz",
+      "bytes": 1600
+    },
+    {
+      "path": "software/stage163/1794118628412927743/energy-ml-stage163.tar.gz",
+      "bytes": 28039828
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_04_repair_result.tar.gz",
+      "bytes": 602268
+    },
+    {
+      "path": "software/stage163/1794118059205237065/energy-ml-stage163.tar.gz",
+      "bytes": 28037182
+    },
+    {
+      "path": "software/stage163/1794118634276967284/energy-ml-stage163.tar.gz",
+      "bytes": 28039835
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_05_repair_result.tar.gz",
+      "bytes": 585688
+    },
+    {
+      "path": "software/stage163/1794118065311352585/energy-ml-stage163.tar.gz",
+      "bytes": 28037186
+    },
+    {
+      "path": "software/stage163/1794118769718251802/energy-ml-stage163.tar.gz",
+      "bytes": 28039977
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_06_repair_result.tar.gz",
+      "bytes": 541762
+    },
+    {
+      "path": "software/stage163/1794118071125631634/energy-ml-stage163.tar.gz",
+      "bytes": 28037203
+    },
+    {
+      "path": "software/stage163/1794118775567269142/energy-ml-stage163.tar.gz",
+      "bytes": 28039970
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/batch_07_repair_result.tar.gz",
+      "bytes": 552651
+    },
+    {
+      "path": "software/stage163/1794118077197968885/energy-ml-stage163.tar.gz",
+      "bytes": 28037199
+    },
+    {
+      "path": "software/stage163/1794118978978253196/energy-ml-stage163.tar.gz",
+      "bytes": 41851589
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/fit_result.tar.gz",
+      "bytes": 9601347
+    },
+    {
+      "path": "software/stage163/1794117208326179317/energy-ml-stage163.tar.gz",
+      "bytes": 24765158
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/pilot_result.tar.gz",
+      "bytes": 3381921
+    },
+    {
+      "path": "software/stage163/1794117401456415781/energy-ml-stage163.tar.gz",
+      "bytes": 28031779
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/repeat_result.tar.gz",
+      "bytes": 2619
+    },
+    {
+      "path": "software/stage163/1794118387088731728/energy-ml-stage163.tar.gz",
+      "bytes": 31296672
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/source_repair_retry_result.tar.gz",
+      "bytes": 3371044
+    },
+    {
+      "path": "software/stage163/1794118230119557292/energy-ml-stage163.tar.gz",
+      "bytes": 31296183
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/source_repair_result.tar.gz",
+      "bytes": 866
+    },
+    {
+      "path": "software/stage163/1794119250969838724/energy-ml-stage163.tar.gz",
+      "bytes": 46906484
+    },
+    {
+      "path": "ntuples/energy_ml_stage163/validate_result.tar.gz",
+      "bytes": 91330
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_00_summary.json",
+      "bytes": 28939
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_01_summary.json",
+      "bytes": 28714
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_02_summary.json",
+      "bytes": 28703
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_03_summary.json",
+      "bytes": 28732
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_04_summary.json",
+      "bytes": 28989
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_05_summary.json",
+      "bytes": 28976
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_06_summary.json",
+      "bytes": 28665
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_07_summary.json",
+      "bytes": 28862
+    },
+    {
+      "path": "workbook/stage163_energy_ml/pilot_summary.json",
+      "bytes": 4017
+    },
+    {
+      "path": "workbook/stage163_energy_ml/repeat_summary.json",
+      "bytes": 1342
+    },
+    {
+      "path": "workbook/stage163_energy_ml/admission_repair_time.txt",
+      "bytes": 775
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_00_time.txt",
+      "bytes": 771
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_01_time.txt",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_02_repair_time.txt",
+      "bytes": 771
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_02_time.txt",
+      "bytes": 809
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_03_repair_time.txt",
+      "bytes": 771
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_03_time.txt",
+      "bytes": 807
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_04_repair_time.txt",
+      "bytes": 771
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_05_repair_time.txt",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_06_repair_time.txt",
+      "bytes": 769
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_07_repair_time.txt",
+      "bytes": 769
+    },
+    {
+      "path": "workbook/stage163_energy_ml/fit_time.txt",
+      "bytes": 766
+    },
+    {
+      "path": "workbook/stage163_energy_ml/pilot_time.txt",
+      "bytes": 767
+    },
+    {
+      "path": "workbook/stage163_energy_ml/repeat_time.txt",
+      "bytes": 763
+    },
+    {
+      "path": "workbook/stage163_energy_ml/source_repair_retry_time.txt",
+      "bytes": 786
+    },
+    {
+      "path": "workbook/stage163_energy_ml/source_repair_time.txt",
+      "bytes": 807
+    },
+    {
+      "path": "workbook/stage163_energy_ml/validate_time.txt",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_00_sources.tsv",
+      "bytes": 12562
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_01_sources.tsv",
+      "bytes": 12404
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_02_sources.tsv",
+      "bytes": 12398
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_03_sources.tsv",
+      "bytes": 12427
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_04_sources.tsv",
+      "bytes": 12612
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_05_sources.tsv",
+      "bytes": 12598
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_06_sources.tsv",
+      "bytes": 12361
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_07_sources.tsv",
+      "bytes": 12478
+    },
+    {
+      "path": "workbook/stage163_energy_ml/pilot_sources.tsv",
+      "bytes": 1570
+    },
+    {
+      "path": "workbook/stage163_energy_ml/repeat_sources.tsv",
+      "bytes": 593
+    },
+    {
+      "path": "workbook/stage163_energy_ml/admission_repair.log",
+      "bytes": 2900
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_00.log",
+      "bytes": 24137
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_01.log",
+      "bytes": 23930
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_02.log",
+      "bytes": 3431
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_02_repair.log",
+      "bytes": 23919
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_03.log",
+      "bytes": 3422
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_03_repair.log",
+      "bytes": 23948
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_04_repair.log",
+      "bytes": 24187
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_05_repair.log",
+      "bytes": 24174
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_06_repair.log",
+      "bytes": 23881
+    },
+    {
+      "path": "workbook/stage163_energy_ml/batch_07_repair.log",
+      "bytes": 24060
+    },
+    {
+      "path": "workbook/stage163_energy_ml/fit.log",
+      "bytes": 1027
+    },
+    {
+      "path": "workbook/stage163_energy_ml/pilot.log",
+      "bytes": 3331
+    },
+    {
+      "path": "workbook/stage163_energy_ml/repeat.log",
+      "bytes": 1164
+    },
+    {
+      "path": "workbook/stage163_energy_ml/source_repair.log",
+      "bytes": 515
+    },
+    {
+      "path": "workbook/stage163_energy_ml/source_repair_retry.log",
+      "bytes": 0
+    },
+    {
+      "path": "workbook/stage163_energy_ml/validate.log",
+      "bytes": 569
+    }
+  ],
+  "deleted_bytes": 678712536,
+  "no_persistent_ROOT": true,
+  "Stage54_size_mtime_preserved": true
+}

@@ -1,0 +1,67 @@
+{
+  "next_stage": 164,
+  "question": "Does geometrically unaccepted non-muon exit kinetic energy retain its two-low-bin information after the true interaction-depth coordinate is provided, or is this fixed-oracle gain largely redundant with depth?",
+  "basis": "Stage132 section5.2 calls for a depth/escape controlled mechanism followup when supported. Stage134 AK/A totalK second test bin did not trigger that branch and remains untriggered. Stage137 NEW H/A unacceptedKE instead passed the four cal/test low-bin 5pct point+CI criterion. Stage163 ordinary measuredraw4 failed to recover lowenergy; no extension of that model family. This is a new conditional mechanism question, not rescanning acceptedG, totalK, oldX or raw4.",
+  "inputs": [
+    "ntuples/energy_ml_stage131/matched_input.npz",
+    "ntuples/energy_ml_stage137/boundary_components.npz",
+    "ntuples/energy_ml_stage137/fit_matrix.npz",
+    "ntuples/energy_ml_stage137/bootstrap_draws.npz",
+    "ml/artifacts/stage137/energy_predictions.npz",
+    "workbook/stage137_energy_ml/protocol.json",
+    "ml/configs/audited_features.json"
+  ],
+  "cohort": "Exactly originalStage131 reselected3002 of4032 oldnaturalparents, roles1708/653/641, originalHT inclusion weights/allK, boundaryavailable2803/missing199 unchanged; no other89033 cohort or quarantine/reserved forward, no missing-parent deletion.",
+  "features": {
+    "A": "Existing X62+same7 oracle availability, frozen cached reference, no refit",
+    "H": "Existing A+log1p(geometricallyunaccepted KE/GeV), cached Stage137 reference, no refit",
+    "AZ": "A+the same finite vertex_z_mm truth column used in Stage129, one signed depth variable in mm; no z model or extraavailability",
+    "AZH": "AZ+the exact Stage137 unaccepted log1pKE column; preserve199NaN and valid zero"
+  },
+  "scientific_scope": "Truth oracle conditional information under one fixed finite learning policy, not causal/material decomposition, calibrated z measurement, true vertex posterior, visible energy or deployable candidate. Kept unaccepted does not mean absolutely unobservable.",
+  "pilot": "Before fits, zero-fit cache QA verifies exact original identity/order/roles/X62/availability, Stage137 Hmatrix/reference/bootstrap, input finitez and documented units; stop on mismatch, no model or risk-based source replacement.",
+  "fit": "Only AZ and AZH, originalStage137 three seeds and400round/depth5/hist/nthread1, original normalized HT train weights/weightedmeanbase_score/no boost_from_average, one independent role2 global offset per arm, exactly6fits once. Fork allocated4cores; do not fit a new A/H reference or scan z cuts/classes/loss/seed.",
+  "comparisons": [
+    [
+      "AZ",
+      "A"
+    ],
+    [
+      "AZH",
+      "AZ"
+    ],
+    [
+      "AZH",
+      "H"
+    ],
+    [
+      "AZH",
+      "A"
+    ]
+  ],
+  "evaluation": "Same originalStage137 cal/test masks, HTweights and exact500 originalbootstrap draws. Two true lowbins, original8protected strata and3tails, extra missing/highE/upstream, bias/R68/N/ESS. Independent scalar/row-space numerical and modelreload/reference checks, standalone table/plot. Do not combine percentages from Stage129/Stage163 different supports.",
+  "decision": "Report all four conditionalH ratios AZH/AZ. Point<=.95 andupper95<1 inbothbins/caltest plus protectedtails<=2pp supports residual5pct information under this policy. Intervals entirely above.95 may exclude that fixed5pct improvement; wide intervals are inconclusive. Neither result proves all H is depth, causality or detector information bounds. Report conditional z viaAZH/H without choosing a winner. Original joint1.05/1.01/1.03 and8x3tails remain separate and promotionalwaysFalse.",
+  "resources": {
+    "CPU_budget_s": 900,
+    "cache_QA_allowance_s": 100,
+    "analysis_allowance_s": 600,
+    "independent_audit_allowance_s": 200,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "max_active_jobs": 1,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_event_model_bytes_cap": 33554432,
+    "basis": "Stage13718 fixed fits measured45.531CPU_s; not a measured new execution cost or guarantee. Budget disjoint across failures/retries, no new G4/digi/reco/ROOT."
+  },
+  "execution": "HTCondor ~/condor/nu_muAnalysis/stage164/ for all arrays/fits/stats. Local text/scheduler/exactarchives/render alreadyvalidatedTSVs only. No rebuilding pinned Calypso or large production; preserve Stage54. Chinese report before ConventionalCommit, no push.",
+  "outstanding": "Actualdata joint purity/gain/time/covariance and broadmuon radiation calibration, emulsion anchors, real GRL/exposure/background/fullgenerationacceptance, correlated auxiliary nuisances and independent confirmation still missing. Do not repeat completed Stage136/140 finiteMC toys.",
+  "invariant": "Stage87/pz0-onlyfirstpower/allowedpx,py,qOverP,bending/raw11/typedNaN/legal signed/status0timing/CaloNaN/originalcuts/allK/roles/reserved/alloriginalgates/Stage137dual5pct unchanged.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "prerequisite": "Complete Stage163 Chinese report, terminal exact archives and Conventional Commit before Stage164 cache QA; no new heldout risk before frozen protocol.",
+  "vertex_semantics": "frozen_evaluation.truth_diagnostics uses first truth particle decay_z; original selected firsttruth neutrino and native parent identity already frozen. QA must confirm finite same column and source definition; no leading-track production z substitution."
+}

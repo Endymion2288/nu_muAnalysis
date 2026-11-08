@@ -1,0 +1,40 @@
+{
+  "scheduler_CPU_s": 438.0,
+  "scheduler_aggregate_wall_s": 526.0,
+  "starts": 17,
+  "submissions": 22,
+  "live_N": 0,
+  "removed_unstarted": [
+    9675802,
+    9675909,
+    9675908,
+    9675906,
+    9675904
+  ],
+  "executed_failures": [
+    9675860,
+    9675862,
+    9675934
+  ],
+  "submitted_request_CPUs": 4,
+  "submitted_memory_MB": 16000,
+  "scheduler_RequestCpus": [
+    6
+  ],
+  "scheduler_RequestMemory_MB": [
+    18000
+  ],
+  "scheduler_max_reported_ResidentSetSize_KiB": 250000,
+  "scheduler_MemoryUsage_unresolved_expression": true,
+  "full_parent_N": 71376,
+  "identity_exact_N": 70332,
+  "full_extraction_CPU_s": 187.968296722,
+  "full_extraction_aggregate_wall_s": 198.00351308472455,
+  "measured_source_wall_overlap": 3.7537917851079206,
+  "ROOT_read_bytes": 200943606,
+  "max_extraction_RSS_KiB": 283928,
+  "GPU_jobs": 0,
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "interpretation": "Measured source-thread wall overlap is not a matched serial speedup; nested GNU/process CPU is not added to scheduler total."
+}

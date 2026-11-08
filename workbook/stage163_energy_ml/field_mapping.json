@@ -1,0 +1,360 @@
+{
+  "pin": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+  "lines": [
+    {
+      "line": 136,
+      "text": "  // Figure out calorimeter\n"
+    },
+    {
+      "line": 137,
+      "text": "  if (m_calolo_channels.size() && !m_calohi_channels.size()) {\n"
+    },
+    {
+      "line": 138,
+      "text": "    // Only \"calo\" type found, 2022/23 configuration\n"
+    },
+    {
+      "line": 139,
+      "text": "    ATH_MSG_INFO(\"defineWaveBranches found \" << m_calolo_channels.size() << \" calo channels => 2022/23 configuration\");\n"
+    },
+    {
+      "line": 140,
+      "text": "    m_dual_gain = false;\n"
+    },
+    {
+      "line": 141,
+      "text": "    m_calo_channels = m_calolo_channels;\n"
+    },
+    {
+      "line": 142,
+      "text": "    m_calolo_channels.clear();\n"
+    },
+    {
+      "line": 143,
+      "text": "    addWaveBranches(\"Calo\", m_calo_channels);\n"
+    },
+    {
+      "line": 144,
+      "text": "    addCalibratedBranches(\"Calo\", m_calo_channels);\n"
+    },
+    {
+      "line": 145,
+      "text": "    addCaloSumBranches(\"Calo\");\n"
+    },
+    {
+      "line": 146,
+      "text": "  }\n"
+    },
+    {
+      "line": 147,
+      "text": "  else if (m_calolo_channels.size() && m_calohi_channels.size()) {\n"
+    },
+    {
+      "line": 148,
+      "text": "    // Both found, 2024/25 configuration (both defined)\n"
+    },
+    {
+      "line": 149,
+      "text": "    ATH_MSG_INFO(\"defineWaveBranches found \" << m_calolo_channels.size() << \" calo and \" << m_calohi_channels.size() << \" calo2 channels => 2024/25 configuration\");\n"
+    },
+    {
+      "line": 150,
+      "text": "    m_dual_gain = true;\n"
+    },
+    {
+      "line": 151,
+      "text": "    addWaveBranches(\"CaloLo\", m_calolo_channels);\n"
+    },
+    {
+      "line": 152,
+      "text": "    addWaveBranches(\"CaloHi\", m_calohi_channels);\n"
+    },
+    {
+      "line": 153,
+      "text": "    addCalibratedBranches(\"CaloLo\", m_calolo_channels);    \n"
+    },
+    {
+      "line": 154,
+      "text": "    addCalibratedBranches(\"CaloHi\", m_calohi_channels);\n"
+    },
+    {
+      "line": 155,
+      "text": "    addCaloSumBranches(\"CaloLo\");\n"
+    },
+    {
+      "line": 156,
+      "text": "    addCaloSumBranches(\"CaloHi\");\n"
+    },
+    {
+      "line": 157,
+      "text": "  }\n"
+    },
+    {
+      "line": 158,
+      "text": "  else {\n"
+    },
+    {
+      "line": 159,
+      "text": "    // Unknown configuration\n"
+    },
+    {
+      "line": 160,
+      "text": "    ATH_MSG_WARNING(\"defineWaveBranches found \" << m_calolo_channels.size() << \" calo channels and \" << m_calohi_channels.size() << \" calo2 channels!\");\n"
+    },
+    {
+      "line": 221,
+      "text": "    \n"
+    },
+    {
+      "line": 222,
+      "text": "    std::string base=name+std::to_string(i);\n"
+    },
+    {
+      "line": 223,
+      "text": "    addBranch(base+\"_triggertime\",&m_wave_triggertime[ch]);\n"
+    },
+    {
+      "line": 224,
+      "text": "    addBranch(base+\"_localtime\",&m_wave_localtime[ch]);\n"
+    },
+    {
+      "line": 225,
+      "text": "    addBranch(base+\"_bcidtime\",&m_wave_bcidtime[ch]);\n"
+    },
+    {
+      "line": 226,
+      "text": "    addBranch(base+\"_peak\",&m_wave_peak[ch]);\n"
+    },
+    {
+      "line": 227,
+      "text": "    addBranch(base+\"_width\",&m_wave_width[ch]);\n"
+    },
+    {
+      "line": 228,
+      "text": "    addBranch(base+\"_charge\",&m_wave_charge[ch]);\n"
+    },
+    {
+      "line": 229,
+      "text": "    addBranch(base+\"_tover\",&m_wave_overflow[ch]);\n"
+    },
+    {
+      "line": 230,
+      "text": "    addBranch(base+\"_raw_peak\",&m_wave_raw_peak[ch]);\n"
+    },
+    {
+      "line": 231,
+      "text": "    addBranch(base+\"_raw_charge\",&m_wave_raw_charge[ch]);\n"
+    },
+    {
+      "line": 232,
+      "text": "    addBranch(base+\"_baseline\",&m_wave_baseline_mean[ch]);\n"
+    },
+    {
+      "line": 233,
+      "text": "    addBranch(base+\"_baseline_rms\",&m_wave_baseline_rms[ch]);\n"
+    },
+    {
+      "line": 234,
+      "text": "    addBranch(base+\"_status\",&m_wave_status[ch]);\n"
+    },
+    {
+      "line": 235,
+      "text": "    ATH_MSG_DEBUG(\"Added \"  << base << \" ch \" << ch);\n"
+    },
+    {
+      "line": 236,
+      "text": "    \n"
+    },
+    {
+      "line": 237,
+      "text": "    // Also add the random histogram\n"
+    },
+    {
+      "line": 238,
+      "text": "    std::string hname = \"hRandomCharge\"+std::to_string(ch);\n"
+    },
+    {
+      "line": 239,
+      "text": "    base = name + std::to_string(i) + \" Ch\" + std::to_string(ch);\n"
+    },
+    {
+      "line": 240,
+      "text": "    std::string title = base+\" Charge from RandomEvents;charge (pC);Events/bin\";\n"
+    },
+    {
+      "line": 241,
+      "text": "    m_HistRandomCharge[ch] = new TH1F(hname.c_str(), title.c_str(), 100, -1.0, 1.0);\n"
+    },
+    {
+      "line": 246,
+      "text": "void NtupleDumperAlg::FillWaveBranches(const xAOD::WaveformHitContainer &wave, bool isMC) const {\n"
+    },
+    {
+      "line": 247,
+      "text": "  // ATH_MSG_DEBUG(\"FillWaveBranches called\");\n"
+    },
+    {
+      "line": 248,
+      "text": "  for (auto hit : wave) {\n"
+    },
+    {
+      "line": 249,
+      "text": "    if (!hit->secondary()) { // dont store secoondary hits as they can overwrite the primary hit\n"
+    },
+    {
+      "line": 250,
+      "text": "      int ch=hit->channel();\n"
+    },
+    {
+      "line": 251,
+      "text": "\n"
+    },
+    {
+      "line": 252,
+      "text": "      m_wave_localtime[ch]=hit->localtime();\n"
+    },
+    {
+      "line": 253,
+      "text": "      m_wave_bcidtime[ch] = hit->bcid_time(); // Now corrected for offsets\n"
+    },
+    {
+      "line": 254,
+      "text": "      // Not sure why this doesn't exist in MC...\n"
+    },
+    {
+      "line": 255,
+      "text": "      if (!isMC)\n"
+    },
+    {
+      "line": 256,
+      "text": "\tm_wave_triggertime[ch] = hit->trigger_time(); // + m_clock_phase;\n"
+    },
+    {
+      "line": 257,
+      "text": "      m_wave_peak[ch]=hit->peak();\n"
+    },
+    {
+      "line": 258,
+      "text": "      m_wave_width[ch]=hit->width();\n"
+    },
+    {
+      "line": 259,
+      "text": "      m_wave_charge[ch]=hit->integral()/50;  // In pC\n"
+    },
+    {
+      "line": 260,
+      "text": "\n"
+    },
+    {
+      "line": 261,
+      "text": "      m_wave_raw_peak[ch]=hit->raw_peak();\n"
+    },
+    {
+      "line": 262,
+      "text": "      m_wave_raw_charge[ch]=hit->raw_integral()/50;  // In pC\n"
+    },
+    {
+      "line": 263,
+      "text": "      m_wave_baseline_mean[ch]=hit->baseline_mean();\n"
+    },
+    {
+      "line": 264,
+      "text": "      m_wave_baseline_rms[ch]=hit->baseline_rms();\n"
+    },
+    {
+      "line": 265,
+      "text": "      m_wave_status[ch]=hit->hit_status();\n"
+    },
+    {
+      "line": 266,
+      "text": "\n"
+    },
+    {
+      "line": 267,
+      "text": "      // Check for overflows\n"
+    },
+    {
+      "line": 268,
+      "text": "      if (hit->overflow()) {  // Overflow\n"
+    },
+    {
+      "line": 2217,
+      "text": "      m_wave_peak[ii]=0;\n"
+    },
+    {
+      "line": 2218,
+      "text": "      m_wave_width[ii]=0;\n"
+    },
+    {
+      "line": 2219,
+      "text": "      m_wave_charge[ii]=0;\n"
+    },
+    {
+      "line": 2220,
+      "text": "      m_wave_overflow[ii]=0;\n"
+    },
+    {
+      "line": 2221,
+      "text": "      \n"
+    },
+    {
+      "line": 2222,
+      "text": "      m_wave_raw_peak[ii]=0;\n"
+    },
+    {
+      "line": 2223,
+      "text": "      m_wave_raw_charge[ii]=0;\n"
+    },
+    {
+      "line": 2224,
+      "text": "      m_wave_baseline_mean[ii]=0;\n"
+    },
+    {
+      "line": 2225,
+      "text": "      m_wave_baseline_rms[ii]=0;\n"
+    },
+    {
+      "line": 2226,
+      "text": "      m_wave_status[ii]=1; // default = 1 means below threshold\n"
+    },
+    {
+      "line": 2227,
+      "text": "\n"
+    },
+    {
+      "line": 2228,
+      "text": "      m_calibrated_nMIP[ii]=0;\n"
+    },
+    {
+      "line": 2229,
+      "text": "      m_calibrated_E_dep[ii]=0;\n"
+    },
+    {
+      "line": 2230,
+      "text": "      m_calibrated_E_EM[ii]=0;\n"
+    },
+    {
+      "line": 2231,
+      "text": "  }\n"
+    },
+    {
+      "line": 2232,
+      "text": "  for (unsigned int ii=0; ii<2; ii++) {\n"
+    },
+    {
+      "line": 2233,
+      "text": "    m_vetonu_reduced_charge[ii]=0;\n"
+    },
+    {
+      "line": 2234,
+      "text": "  }\n"
+    },
+    {
+      "line": 2235,
+      "text": "\n"
+    }
+  ],
+  "mapping": "isMC exactCalo0-3 branches; addWaveBranches raw_integral/50, no CaloLo/Hi alias",
+  "sentinels": "raw default0/status1 below-threshold, baselineRMS default0 makes raw invalid under frozen typed policy; no scalar -1 or -999 raw sentinel declared. Actual status and positive baselineRMS determine valid raw."
+}
