@@ -1,3 +1,11 @@
+# 当前执行更新：Stage169 原来源账目闭合，完整接受度仍未认证
+
+[Stage169报告](../workbook/2026-11-08_stage169_source-counter-and-EOF-accounting.md)完成原666来源/16native摘要及1134历史声明：实际parent6606398、truth-superset1048904、selected222515，666计数层级/QA/selected闭合。664个parent等于声明截EOF，另source652/1046各9999对10000，原因未测，不删父、不当EOF。12个尾段实际66400对请求120000；source508原4877仍精确。完成声明并集6606400，历史声明11229101，未被完成声明覆盖4622701不能全称物理拒绝。独立666行/16native/22run区间及分组全通过；3start均exit0、schedd0CPU秒/14聚合wall秒（GNU1.20CPU秒，非零成本）、0live/G4/fit/forward；最终239411B，删1414162B重复，Stage54保持。
+
+全未选身份/逐生成处理成功、物理权重/曝光/全生成接受度未认证，没有计算selected/N。下一项拟转Stage132真实联合读出：固定run15838已知RAW00400，以官方TLB解码作严格随机触发有限pilot，先核帧/CRC/原56 ADC reference/时间GRL/全硬件通道支持及成本，再决定联合控制合同；尚未执行，不把随机等同纯噪声、不自动全run或模型注入。Stage87/全部原门、角色/K/reserved及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage168 取得完整EVNT记录数，物理归一化仍未知
 
 [Stage168报告](../workbook/2026-11-08_stage168_full-EVNT-denominator-headers.md)完成原22个EVNT固定路径header/有限metadata，合11229101条（nominal2944203/alternative8284898），四pilot/full精确；未读CollectionTree事例载荷。实际persistent McEventCollection_p6/FileMetaData/EventStreamInfo存在，读取的scalar只有POOL index_ref，物理weight/生成曝光未认证。原16log窗口15个在实际N内，index508请求90000+10000超EOF94877；原native已测scanned4877、selected91身份保持，不把请求当成功计数或尾段EOF当错误配对。C++ROOT四pilot N及另写schema/scalar、22映射/表、16命令范围全通过；3start均exit0、11CPU秒/30聚合wall秒、0live/G4/fit/forward，最终元数据177167B、删200552B重复，Stage54保持。
@@ -3099,3 +3107,10 @@ content/M12 cal两低箱.990793[.977914,1.000999]/.998796[.995081,1.003146]，te
 [实测报告](../workbook/2026-11-08_stage168_full-EVNT-denominator-headers.md)、[分母证据](../workbook/stage168_energy_ml/denominator_evidence.json)给22完整EVNT11229101条，非独立相互作用或物理加权分母；persistent generator对象只记schema，scalar index_ref不是权重。16实际日志请求中15完全在N内，run200088的source508请求超94877 EOF，原native4877/selected91配对闭合；不篡改原Stage130计数。历史1134来源与完成666/有本项log证明16分别保留，650完成来源缺该逐窗口log证明不等于已证实失败。
 
 C++ROOT四pilot N、独立type/scalar和22表/映射/16边界验证通过，3job全exit0、11CPU秒、0live；紧凑元数据177167B，删200552B重复，Stage54保持。[Stage169合同](../workbook/stage168_energy_ml/next_execution_contract.json)只用已存666来源处理计数和原16native摘要，300CPU秒、2核4GB、无ROOT/事件数组，核请求/可用/实际和角色支持，不能以计数等同全生成接受度。实际data曝光背景、GENIE/flux归一化与相关辅助输入/乳胶/独立确认仍缺，Stage87/所有原门及整体未完成保持。历史§1–146及全部旧入口原文保留。
+
+
+## 148. Stage169：来源计数与EOF实测闭合，接受度不由计数认证
+
+[完整中文报告](../workbook/2026-11-08_stage169_source-counter-and-EOF-accounting.md)给原666账目6606398 parent/1048904 truth-superset/222515 selected、原16native合154877及22run独立区间验证。664/666 parent等于截EOF声明；K source652和1046各少1条，原因未测，原父/角色/总数保留。12个EOF来源实际66400对请求120000；完整历史1134声明并集11229101而完成666并集6606400，未声明覆盖4622701不能当拒绝率。未取得全未选身份、物理权重或全生成接受度，未计算selected/N。3终态start、GNU1.20CPU秒、schedd14聚合wall秒，最终239411B并删1414162B重复。Stage87、全部原门和整体未完成保持。
+
+下一问题为真实随机触发联合ADC控制：固定Stage43已知run15838 RAW00400和56条reference，先冻结有限pilot核官方TLB/帧/CRC、实际身份与ADC、GRL/时间及通道支持/成本，不另找更干净样本。阳性只允许再冻结有限联合统计；不证明纯noise/ν选择/完整校准、不做能量重训或注入，Stage136/140有限MC toys不重复。

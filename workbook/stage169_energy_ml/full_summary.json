@@ -1,0 +1,352 @@
+{
+  "passed": true,
+  "source_N": 666,
+  "historical_source_N": 1134,
+  "pilot16_exact": true,
+  "counters": {
+    "parent_N": 6606398,
+    "full_parent_N": 6606398,
+    "truth_superset_N": 1048904,
+    "selected_N": 222515,
+    "claim_requested_N": 6660000,
+    "claim_available_N": 6606400
+  },
+  "check_pass_N": {
+    "counts_nonnegative": 666,
+    "count_hierarchy": 666,
+    "parent_full_equal": 666,
+    "parent_qa_equal": 666,
+    "parent_claim_available_equal": 664,
+    "selected_table_equal": 666,
+    "selected_link_count_equal": 666
+  },
+  "discrepancies": [
+    {
+      "index": 652,
+      "run": 200092,
+      "component": "k",
+      "role": "train",
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+      "parent_N": 9999,
+      "full_parent_N": 9999,
+      "truth_superset_N": 1453,
+      "selected_N": 364,
+      "claim_start": 340000,
+      "claim_stop_exclusive": 350000,
+      "claim_requested_N": 10000,
+      "claim_available_N": 10000,
+      "claim_clipped_at_EOF": false,
+      "generator_N": 703608,
+      "filename_claim_only": true,
+      "qa_parent_N": 9999,
+      "linked_selected_N": 364,
+      "counts_nonnegative": true,
+      "count_hierarchy": true,
+      "parent_full_equal": true,
+      "parent_qa_equal": true,
+      "parent_claim_available_equal": false,
+      "selected_table_equal": true,
+      "selected_link_count_equal": true,
+      "actual_log_bounds": false,
+      "native_scanned_N": null,
+      "native_available_equal": null,
+      "native_selected_equal": null
+    },
+    {
+      "index": 1046,
+      "run": 200098,
+      "component": "k",
+      "role": "cal",
+      "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/pythia-forward-k.EVNT.pool.root",
+      "parent_N": 9999,
+      "full_parent_N": 9999,
+      "truth_superset_N": 1476,
+      "selected_N": 376,
+      "claim_start": 480000,
+      "claim_stop_exclusive": 490000,
+      "claim_requested_N": 10000,
+      "claim_available_N": 10000,
+      "claim_clipped_at_EOF": false,
+      "generator_N": 642977,
+      "filename_claim_only": true,
+      "qa_parent_N": 9999,
+      "linked_selected_N": 376,
+      "counts_nonnegative": true,
+      "count_hierarchy": true,
+      "parent_full_equal": true,
+      "parent_qa_equal": true,
+      "parent_claim_available_equal": false,
+      "selected_table_equal": true,
+      "selected_link_count_equal": true,
+      "actual_log_bounds": false,
+      "native_scanned_N": null,
+      "native_available_equal": null,
+      "native_selected_equal": null
+    }
+  ],
+  "EOF_clipped_completed_sources": [
+    44,
+    115,
+    378,
+    432,
+    498,
+    508,
+    617,
+    688,
+    870,
+    945,
+    997,
+    1071
+  ],
+  "native_scan_N": 154877,
+  "native_available_exact_N": 16,
+  "saved_total_checks": {
+    "parent": true,
+    "selected": true
+  },
+  "original_role_component_run_counts": {
+    "run": [
+      {
+        "run": 200080,
+        "sources": 38,
+        "parent_N": 370784,
+        "full_parent_N": 370784,
+        "truth_superset_N": 72598,
+        "selected_N": 13716,
+        "claim_requested_N": 380000,
+        "claim_available_N": 370784
+      },
+      {
+        "run": 200081,
+        "sources": 60,
+        "parent_N": 594816,
+        "full_parent_N": 594816,
+        "truth_superset_N": 88528,
+        "selected_N": 21373,
+        "claim_requested_N": 600000,
+        "claim_available_N": 594816
+      },
+      {
+        "run": 200084,
+        "sources": 47,
+        "parent_N": 470000,
+        "full_parent_N": 470000,
+        "truth_superset_N": 92785,
+        "selected_N": 16505,
+        "claim_requested_N": 470000,
+        "claim_available_N": 470000
+      },
+      {
+        "run": 200085,
+        "sources": 65,
+        "parent_N": 644423,
+        "full_parent_N": 644423,
+        "truth_superset_N": 91477,
+        "selected_N": 21487,
+        "claim_requested_N": 650000,
+        "claim_available_N": 644423
+      },
+      {
+        "run": 200086,
+        "sources": 47,
+        "parent_N": 463501,
+        "full_parent_N": 463501,
+        "truth_superset_N": 86210,
+        "selected_N": 16115,
+        "claim_requested_N": 470000,
+        "claim_available_N": 463501
+      },
+      {
+        "run": 200087,
+        "sources": 55,
+        "parent_N": 549758,
+        "full_parent_N": 549758,
+        "truth_superset_N": 82184,
+        "selected_N": 19656,
+        "claim_requested_N": 550000,
+        "claim_available_N": 549758
+      },
+      {
+        "run": 200088,
+        "sources": 9,
+        "parent_N": 84877,
+        "full_parent_N": 84877,
+        "truth_superset_N": 6318,
+        "selected_N": 1604,
+        "claim_requested_N": 90000,
+        "claim_available_N": 84877
+      },
+      {
+        "run": 200090,
+        "sources": 16,
+        "parent_N": 160000,
+        "full_parent_N": 160000,
+        "truth_superset_N": 12119,
+        "selected_N": 3013,
+        "claim_requested_N": 160000,
+        "claim_available_N": 160000
+      },
+      {
+        "run": 200091,
+        "sources": 36,
+        "parent_N": 358832,
+        "full_parent_N": 358832,
+        "truth_superset_N": 67972,
+        "selected_N": 12574,
+        "claim_requested_N": 360000,
+        "claim_available_N": 358832
+      },
+      {
+        "run": 200092,
+        "sources": 60,
+        "parent_N": 593607,
+        "full_parent_N": 593607,
+        "truth_superset_N": 88881,
+        "selected_N": 21308,
+        "claim_requested_N": 600000,
+        "claim_available_N": 593608
+      },
+      {
+        "run": 200095,
+        "sources": 46,
+        "parent_N": 458046,
+        "full_parent_N": 458046,
+        "truth_superset_N": 86719,
+        "selected_N": 14900,
+        "claim_requested_N": 460000,
+        "claim_available_N": 458046
+      },
+      {
+        "run": 200096,
+        "sources": 64,
+        "parent_N": 634975,
+        "full_parent_N": 634975,
+        "truth_superset_N": 92212,
+        "selected_N": 21460,
+        "claim_requested_N": 640000,
+        "claim_available_N": 634975
+      },
+      {
+        "run": 200097,
+        "sources": 45,
+        "parent_N": 442804,
+        "full_parent_N": 442804,
+        "truth_superset_N": 81491,
+        "selected_N": 15035,
+        "claim_requested_N": 450000,
+        "claim_available_N": 442804
+      },
+      {
+        "run": 200098,
+        "sources": 54,
+        "parent_N": 539999,
+        "full_parent_N": 539999,
+        "truth_superset_N": 81432,
+        "selected_N": 19399,
+        "claim_requested_N": 540000,
+        "claim_available_N": 540000
+      },
+      {
+        "run": 200099,
+        "sources": 8,
+        "parent_N": 79976,
+        "full_parent_N": 79976,
+        "truth_superset_N": 6065,
+        "selected_N": 1519,
+        "claim_requested_N": 80000,
+        "claim_available_N": 79976
+      },
+      {
+        "run": 200101,
+        "sources": 16,
+        "parent_N": 160000,
+        "full_parent_N": 160000,
+        "truth_superset_N": 11913,
+        "selected_N": 2851,
+        "claim_requested_N": 160000,
+        "claim_available_N": 160000
+      }
+    ],
+    "component": [
+      {
+        "component": "pi",
+        "sources": 259,
+        "parent_N": 2563967,
+        "full_parent_N": 2563967,
+        "truth_superset_N": 487775,
+        "selected_N": 88845,
+        "claim_requested_N": 2590000,
+        "claim_available_N": 2563967
+      },
+      {
+        "component": "k",
+        "sources": 358,
+        "parent_N": 3557578,
+        "full_parent_N": 3557578,
+        "truth_superset_N": 524714,
+        "selected_N": 124683,
+        "claim_requested_N": 3580000,
+        "claim_available_N": 3557580
+      },
+      {
+        "component": "charm",
+        "sources": 49,
+        "parent_N": 484853,
+        "full_parent_N": 484853,
+        "truth_superset_N": 36415,
+        "selected_N": 8987,
+        "claim_requested_N": 490000,
+        "claim_available_N": 484853
+      }
+    ],
+    "role": [
+      {
+        "role": "train",
+        "sources": 470,
+        "parent_N": 4649763,
+        "full_parent_N": 4649763,
+        "truth_superset_N": 738662,
+        "selected_N": 156318,
+        "claim_requested_N": 4700000,
+        "claim_available_N": 4649764
+      },
+      {
+        "role": "test",
+        "sources": 95,
+        "parent_N": 948046,
+        "full_parent_N": 948046,
+        "truth_superset_N": 150064,
+        "selected_N": 32147,
+        "claim_requested_N": 950000,
+        "claim_available_N": 948046
+      },
+      {
+        "role": "cal",
+        "sources": 101,
+        "parent_N": 1008589,
+        "full_parent_N": 1008589,
+        "truth_superset_N": 160178,
+        "selected_N": 34050,
+        "claim_requested_N": 1010000,
+        "claim_available_N": 1008590
+      }
+    ]
+  },
+  "load_resources": {
+    "CPU_s": 0.22520784600000004,
+    "wall_s": 0.24265240400563926,
+    "input_metadata_bytes": 1561586,
+    "RSS_KiB": 40364
+  },
+  "CPU_s": 0.33427228,
+  "wall_s": 0.36152354697696865,
+  "RSS_KiB": 40364,
+  "full_generated_acceptance_certified": false,
+  "normalization_certified": false,
+  "complete_unselected_identity_proven": false,
+  "energy_fits": 0,
+  "model_forward": 0,
+  "new_G4": 0,
+  "overall_complete": false,
+  "promotion": false
+}

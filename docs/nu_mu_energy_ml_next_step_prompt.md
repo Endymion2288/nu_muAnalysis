@@ -1,3 +1,11 @@
+# 当前执行更新：Stage169 原来源账目闭合，完整接受度仍未认证
+
+[Stage169报告](../workbook/2026-11-08_stage169_source-counter-and-EOF-accounting.md)完成原666来源/16native摘要及1134历史声明：实际parent6606398、truth-superset1048904、selected222515，666计数层级/QA/selected闭合。664个parent等于声明截EOF，另source652/1046各9999对10000，原因未测，不删父、不当EOF。12个尾段实际66400对请求120000；source508原4877仍精确。完成声明并集6606400，历史声明11229101，未被完成声明覆盖4622701不能全称物理拒绝。独立666行/16native/22run区间及分组全通过；3start均exit0、schedd0CPU秒/14聚合wall秒（GNU1.20CPU秒，非零成本）、0live/G4/fit/forward；最终239411B，删1414162B重复，Stage54保持。
+
+全未选身份/逐生成处理成功、物理权重/曝光/全生成接受度未认证，没有计算selected/N。下一项拟转Stage132真实联合读出：固定run15838已知RAW00400，以官方TLB解码作严格随机触发有限pilot，先核帧/CRC/原56 ADC reference/时间GRL/全硬件通道支持及成本，再决定联合控制合同；尚未执行，不把随机等同纯噪声、不自动全run或模型注入。Stage87/全部原门、角色/K/reserved及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage168 取得完整EVNT记录数，物理归一化仍未知
 
 [Stage168报告](../workbook/2026-11-08_stage168_full-EVNT-denominator-headers.md)完成原22个EVNT固定路径header/有限metadata，合11229101条（nominal2944203/alternative8284898），四pilot/full精确；未读CollectionTree事例载荷。实际persistent McEventCollection_p6/FileMetaData/EventStreamInfo存在，读取的scalar只有POOL index_ref，物理weight/生成曝光未认证。原16log窗口15个在实际N内，index508请求90000+10000超EOF94877；原native已测scanned4877、selected91身份保持，不把请求当成功计数或尾段EOF当错误配对。C++ROOT四pilot N及另写schema/scalar、22映射/表、16命令范围全通过；3start均exit0、11CPU秒/30聚合wall秒、0live/G4/fit/forward，最终元数据177167B、删200552B重复，Stage54保持。
