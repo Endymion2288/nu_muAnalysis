@@ -1,0 +1,348 @@
+{
+  "groups": [
+    {
+      "label": "MC100012",
+      "parents_N": 64,
+      "unique_primary_graph_N": 64,
+      "original_matched_supported_N": 19,
+      "any_primary_barcode_in_fitted_contributors_N": 61,
+      "original_pz50_100_N": 57,
+      "matched_supported_pz50_100_N": 17,
+      "invalid_deposits_N": 0,
+      "foreign_truth_pointer_deposits_N": 0,
+      "unknown_reason_flags_N": {
+        "some_strip_SDO_absent": 121,
+        "no_positive_stored_deposit": 114,
+        "known_primary_positive_also_present": 5
+      },
+      "unknown_reason_flags_overlap": true,
+      "pull": {
+        "pure_direct_primary": {
+          "N": 102,
+          "RMS": 1.595982347368529,
+          "median": 0.18761765435684163,
+          "abs95": 3.56384719034723,
+          "abs_le1_N": 65,
+          "abs_le3_N": 90
+        },
+        "mixed_direct_primary": {
+          "N": 0,
+          "RMS": null,
+          "median": null,
+          "abs95": null,
+          "abs_le1_N": 0,
+          "abs_le3_N": 0
+        },
+        "resolved_no_direct_primary": {
+          "N": 12,
+          "RMS": 45.11815440953733,
+          "median": -29.37697608904514,
+          "abs95": 77.41866330058406,
+          "abs_le1_N": 0,
+          "abs_le3_N": 0
+        },
+        "unknown": {
+          "N": 121,
+          "RMS": 57.70733868115687,
+          "median": 8.786845047350104,
+          "abs95": 103.3874806343398,
+          "abs_le1_N": 2,
+          "abs_le3_N": 10
+        }
+      },
+      "residual_mm": {
+        "pure_direct_primary": {
+          "N": 102,
+          "RMS": 1.6268653267591011,
+          "median": 0.05138990281916911,
+          "abs95": 4.681713455449805,
+          "abs_le1_N": 90,
+          "abs_le3_N": 90
+        },
+        "mixed_direct_primary": {
+          "N": 0,
+          "RMS": null,
+          "median": null,
+          "abs95": null,
+          "abs_le1_N": 0,
+          "abs_le3_N": 0
+        },
+        "resolved_no_direct_primary": {
+          "N": 12,
+          "RMS": 17.403080962362026,
+          "median": -10.848256954313323,
+          "abs95": 30.42713957348258,
+          "abs_le1_N": 0,
+          "abs_le3_N": 0
+        },
+        "unknown": {
+          "N": 121,
+          "RMS": 17.2548161087812,
+          "median": 3.468994554468061,
+          "abs95": 30.86021963868175,
+          "abs_le1_N": 9,
+          "abs_le3_N": 20
+        }
+      }
+    },
+    {
+      "label": "pi_0",
+      "parents_N": 32,
+      "unique_primary_graph_N": 32,
+      "original_matched_supported_N": 32,
+      "any_primary_barcode_in_fitted_contributors_N": 31,
+      "original_pz50_100_N": 3,
+      "matched_supported_pz50_100_N": 3,
+      "invalid_deposits_N": 0,
+      "foreign_truth_pointer_deposits_N": 0,
+      "unknown_reason_flags_N": {
+        "some_strip_SDO_absent": 669,
+        "no_positive_stored_deposit": 560,
+        "known_primary_positive_also_present": 11
+      },
+      "unknown_reason_flags_overlap": true,
+      "pull": {
+        "pure_direct_primary": {
+          "N": 139,
+          "RMS": 1.1049868502817133,
+          "median": -0.15240120517528197,
+          "abs95": 2.1137583258946138,
+          "abs_le1_N": 85,
+          "abs_le3_N": 137
+        },
+        "mixed_direct_primary": {
+          "N": 5,
+          "RMS": 1.5888807011708632,
+          "median": 0.5401132206172748,
+          "abs95": 2.5898329966059053,
+          "abs_le1_N": 3,
+          "abs_le3_N": 5
+        },
+        "resolved_no_direct_primary": {
+          "N": 333,
+          "RMS": 166.5586884826695,
+          "median": -6.33112388613295,
+          "abs95": 364.5905532248618,
+          "abs_le1_N": 2,
+          "abs_le3_N": 4
+        },
+        "unknown": {
+          "N": 669,
+          "RMS": 185.8508014808605,
+          "median": 65.86399908389419,
+          "abs95": 402.6347902737694,
+          "abs_le1_N": 9,
+          "abs_le3_N": 24
+        }
+      },
+      "residual_mm": {
+        "pure_direct_primary": {
+          "N": 139,
+          "RMS": 0.1302704893624106,
+          "median": -0.014591628949364832,
+          "abs95": 0.27132952272097016,
+          "abs_le1_N": 139,
+          "abs_le3_N": 139
+        },
+        "mixed_direct_primary": {
+          "N": 5,
+          "RMS": 0.13602605131568898,
+          "median": 0.052358030380155185,
+          "abs95": 0.22017544501696662,
+          "abs_le1_N": 5,
+          "abs_le3_N": 5
+        },
+        "resolved_no_direct_primary": {
+          "N": 333,
+          "RMS": 15.546341149638259,
+          "median": -0.5194080495842641,
+          "abs95": 33.67179541910547,
+          "abs_le1_N": 21,
+          "abs_le3_N": 65
+        },
+        "unknown": {
+          "N": 669,
+          "RMS": 19.317888049793222,
+          "median": 8.012690131332956,
+          "abs95": 42.312195727680816,
+          "abs_le1_N": 48,
+          "abs_le3_N": 137
+        }
+      }
+    },
+    {
+      "label": "k_48",
+      "parents_N": 32,
+      "unique_primary_graph_N": 32,
+      "original_matched_supported_N": 32,
+      "any_primary_barcode_in_fitted_contributors_N": 32,
+      "original_pz50_100_N": 2,
+      "matched_supported_pz50_100_N": 2,
+      "invalid_deposits_N": 0,
+      "foreign_truth_pointer_deposits_N": 0,
+      "unknown_reason_flags_N": {
+        "some_strip_SDO_absent": 977,
+        "known_primary_positive_also_present": 12,
+        "no_positive_stored_deposit": 777
+      },
+      "unknown_reason_flags_overlap": true,
+      "pull": {
+        "pure_direct_primary": {
+          "N": 169,
+          "RMS": 1.128491239832084,
+          "median": 0.33756235412125507,
+          "abs95": 2.0934012816679255,
+          "abs_le1_N": 100,
+          "abs_le3_N": 167
+        },
+        "mixed_direct_primary": {
+          "N": 6,
+          "RMS": 0.4412247676918409,
+          "median": 0.26426718394287324,
+          "abs95": 0.709200307061207,
+          "abs_le1_N": 6,
+          "abs_le3_N": 6
+        },
+        "resolved_no_direct_primary": {
+          "N": 846,
+          "RMS": 208.67469869886517,
+          "median": -3.4088584173650247,
+          "abs95": 441.1696913072291,
+          "abs_le1_N": 0,
+          "abs_le3_N": 7
+        },
+        "unknown": {
+          "N": 977,
+          "RMS": 210.91345200858353,
+          "median": 30.246091011608428,
+          "abs95": 443.9384687855517,
+          "abs_le1_N": 9,
+          "abs_le3_N": 19
+        }
+      },
+      "residual_mm": {
+        "pure_direct_primary": {
+          "N": 169,
+          "RMS": 0.14215128510605332,
+          "median": 0.04850213534650649,
+          "abs95": 0.3170129450836057,
+          "abs_le1_N": 169,
+          "abs_le3_N": 169
+        },
+        "mixed_direct_primary": {
+          "N": 6,
+          "RMS": 0.06314253792450379,
+          "median": 0.02392422133272465,
+          "abs95": 0.10128003034381106,
+          "abs_le1_N": 6,
+          "abs_le3_N": 6
+        },
+        "resolved_no_direct_primary": {
+          "N": 846,
+          "RMS": 19.698760961322204,
+          "median": -0.4188616789086792,
+          "abs95": 39.24696185836269,
+          "abs_le1_N": 27,
+          "abs_le3_N": 95
+        },
+        "unknown": {
+          "N": 977,
+          "RMS": 21.83872452214363,
+          "median": 3.6391176001293175,
+          "abs95": 45.257559335217614,
+          "abs_le1_N": 40,
+          "abs_le3_N": 104
+        }
+      }
+    },
+    {
+      "label": "charm_113",
+      "parents_N": 32,
+      "unique_primary_graph_N": 32,
+      "original_matched_supported_N": 32,
+      "any_primary_barcode_in_fitted_contributors_N": 30,
+      "original_pz50_100_N": 2,
+      "matched_supported_pz50_100_N": 2,
+      "invalid_deposits_N": 0,
+      "foreign_truth_pointer_deposits_N": 0,
+      "unknown_reason_flags_N": {
+        "some_strip_SDO_absent": 910,
+        "no_positive_stored_deposit": 738,
+        "known_primary_positive_also_present": 12
+      },
+      "unknown_reason_flags_overlap": true,
+      "pull": {
+        "pure_direct_primary": {
+          "N": 149,
+          "RMS": 17.660027729807766,
+          "median": -0.21187884400361387,
+          "abs95": 4.022772733463019,
+          "abs_le1_N": 82,
+          "abs_le3_N": 135
+        },
+        "mixed_direct_primary": {
+          "N": 20,
+          "RMS": 19.778657515138196,
+          "median": 0.14051138189162696,
+          "abs95": 7.436540424393479,
+          "abs_le1_N": 14,
+          "abs_le3_N": 18
+        },
+        "resolved_no_direct_primary": {
+          "N": 945,
+          "RMS": 155.448045282449,
+          "median": -9.343805327687585,
+          "abs95": 329.63994800361377,
+          "abs_le1_N": 10,
+          "abs_le3_N": 40
+        },
+        "unknown": {
+          "N": 910,
+          "RMS": 152.06904411738134,
+          "median": -12.538507384254004,
+          "abs95": 310.23971619615963,
+          "abs_le1_N": 15,
+          "abs_le3_N": 28
+        }
+      },
+      "residual_mm": {
+        "pure_direct_primary": {
+          "N": 149,
+          "RMS": 2.054346450665787,
+          "median": -0.03620743638230195,
+          "abs95": 0.6059238744805309,
+          "abs_le1_N": 143,
+          "abs_le3_N": 145
+        },
+        "mixed_direct_primary": {
+          "N": 20,
+          "RMS": 2.487807317730232,
+          "median": 0.02154112458748969,
+          "abs95": 1.03020121612569,
+          "abs_le1_N": 19,
+          "abs_le3_N": 19
+        },
+        "resolved_no_direct_primary": {
+          "N": 945,
+          "RMS": 18.69827287774971,
+          "median": -1.524420584091395,
+          "abs95": 38.416989097657826,
+          "abs_le1_N": 76,
+          "abs_le3_N": 190
+        },
+        "unknown": {
+          "N": 910,
+          "RMS": 18.572753026856496,
+          "median": -2.187677086633107,
+          "abs95": 37.6040376698562,
+          "abs_le1_N": 54,
+          "abs_le3_N": 152
+        }
+      }
+    }
+  ],
+  "cached_actual_SDO_contributor_checks_N": 11497,
+  "label_limit": "Truth graph/direct positive deposit class; not necessarily an exclusive correct muon hit. No-direct-primary can be a physical secondary/delta ray. Conditional measured cluster pulls are not unconditional covariance coverage or a data association error rate.",
+  "promotion": false,
+  "overall_complete": false
+}
