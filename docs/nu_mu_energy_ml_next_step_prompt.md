@@ -1,3 +1,9 @@
+# 当前执行更新：Stage170 原ADC/TLB回放通过，有限扫描被成本门挡住
+
+[Stage170报告](../workbook/2026-11-08_stage170_strict-random-joint-ADC-pilot.md)固定run15838 RAW00400原56，62720 ADC code及身份/board精确，56有效TLB、0严格随机；不推断全文件没有控制。完整GNU4.39CPU秒三倍投影1926.582857秒，原1200预算门False，未提交8192/pilot/audit。1start exit0、schedd8CPU秒/14wall秒/0live/G4/fit。静态发现reference NPZ在循环重复解压，单独耗时未测；下一先单次加载修正、同56精确复现和实测完整成本，再按预冻结预算门决定8192，不改物理选择或扩预算。随机纯度/联合校准及整体目标未完成，Stage87/原全门保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage169 原来源账目闭合，完整接受度仍未认证
 
 [Stage169报告](../workbook/2026-11-08_stage169_source-counter-and-EOF-accounting.md)完成原666来源/16native摘要及1134历史声明：实际parent6606398、truth-superset1048904、selected222515，666计数层级/QA/selected闭合。664个parent等于声明截EOF，另source652/1046各9999对10000，原因未测，不删父、不当EOF。12个尾段实际66400对请求120000；source508原4877仍精确。完成声明并集6606400，历史声明11229101，未被完成声明覆盖4622701不能全称物理拒绝。独立666行/16native/22run区间及分组全通过；3start均exit0、schedd0CPU秒/14聚合wall秒（GNU1.20CPU秒，非零成本）、0live/G4/fit/forward；最终239411B，删1414162B重复，Stage54保持。

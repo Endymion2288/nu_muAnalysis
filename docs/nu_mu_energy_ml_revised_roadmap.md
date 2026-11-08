@@ -1,3 +1,9 @@
+# 当前执行更新：Stage170 原ADC/TLB回放通过，有限扫描被成本门挡住
+
+[Stage170报告](../workbook/2026-11-08_stage170_strict-random-joint-ADC-pilot.md)固定run15838 RAW00400原56，62720 ADC code及身份/board精确，56有效TLB、0严格随机；不推断全文件没有控制。完整GNU4.39CPU秒三倍投影1926.582857秒，原1200预算门False，未提交8192/pilot/audit。1start exit0、schedd8CPU秒/14wall秒/0live/G4/fit。静态发现reference NPZ在循环重复解压，单独耗时未测；下一先单次加载修正、同56精确复现和实测完整成本，再按预冻结预算门决定8192，不改物理选择或扩预算。随机纯度/联合校准及整体目标未完成，Stage87/原全门保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage169 原来源账目闭合，完整接受度仍未认证
 
 [Stage169报告](../workbook/2026-11-08_stage169_source-counter-and-EOF-accounting.md)完成原666来源/16native摘要及1134历史声明：实际parent6606398、truth-superset1048904、selected222515，666计数层级/QA/selected闭合。664个parent等于声明截EOF，另source652/1046各9999对10000，原因未测，不删父、不当EOF。12个尾段实际66400对请求120000；source508原4877仍精确。完成声明并集6606400，历史声明11229101，未被完成声明覆盖4622701不能全称物理拒绝。独立666行/16native/22run区间及分组全通过；3start均exit0、schedd0CPU秒/14聚合wall秒（GNU1.20CPU秒，非零成本）、0live/G4/fit/forward；最终239411B，删1414162B重复，Stage54保持。
@@ -3114,3 +3120,8 @@ C++ROOT四pilot N、独立type/scalar和22表/映射/16边界验证通过，3job
 [完整中文报告](../workbook/2026-11-08_stage169_source-counter-and-EOF-accounting.md)给原666账目6606398 parent/1048904 truth-superset/222515 selected、原16native合154877及22run独立区间验证。664/666 parent等于截EOF声明；K source652和1046各少1条，原因未测，原父/角色/总数保留。12个EOF来源实际66400对请求120000；完整历史1134声明并集11229101而完成666并集6606400，未声明覆盖4622701不能当拒绝率。未取得全未选身份、物理权重或全生成接受度，未计算selected/N。3终态start、GNU1.20CPU秒、schedd14聚合wall秒，最终239411B并删1414162B重复。Stage87、全部原门和整体未完成保持。
 
 下一问题为真实随机触发联合ADC控制：固定Stage43已知run15838 RAW00400和56条reference，先冻结有限pilot核官方TLB/帧/CRC、实际身份与ADC、GRL/时间及通道支持/成本，不另找更干净样本。阳性只允许再冻结有限联合统计；不证明纯noise/ν选择/完整校准、不做能量重训或注入，Stage136/140有限MC toys不重复。
+
+
+## 149. Stage170：严格随机控制先验可用性，成本门未准入
+
+[报告](../workbook/2026-11-08_stage170_strict-random-joint-ADC-pilot.md)完成固定RAW00400原56逐身份/板/62720 ADC code精确，全部TLB有效、严格控制0；有限前缀不代表全run。GNU4.39CPU秒投影1926.58秒超过1200预算，8192与audit未执行；1终态start/8scheddCPU/14wall秒。重复NPZ解压需修正，但其独立因果开销未测；下一同输入单次解压后重新小样本计时并冻结成本准入，不增预算或放松物理选择。联合控制与完整物理目标仍未测，Stage87及全部原门保持。

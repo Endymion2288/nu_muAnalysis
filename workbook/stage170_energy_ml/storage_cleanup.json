@@ -1,0 +1,99 @@
+{
+  "all_jobs_terminal": true,
+  "source_logical_versions": 15,
+  "source_unique_versions": 14,
+  "exact_bytes_verified": true,
+  "live_queue_Iwd_checked": true,
+  "Stage54_size_mtime_preserved": true,
+  "final_event_bytes": 429481,
+  "final_event_files": [
+    {
+      "path": "ntuples/energy_ml_stage170/smoke_rows.jsonl.gz",
+      "bytes": 429481
+    }
+  ],
+  "deleted_bytes": 1052697,
+  "deleted": [
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage170/1794126765354778992/energy-ml-stage170.tar.gz",
+      "bytes": 613692
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage170/smoke_result.tar.gz",
+      "bytes": 430899
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage170_energy_ml/smoke_compile_time.txt",
+      "bytes": 809
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage170_energy_ml/smoke_time.txt",
+      "bytes": 760
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage170_energy_ml/smoke.log",
+      "bytes": 1228
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage170_energy_ml/smoke_compile.log",
+      "bytes": 603
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage170_energy_ml/smoke_reader.log",
+      "bytes": 55
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage170/worker_1794126765354778992.sh",
+      "bytes": 1481
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage170/smoke_1794126765354778992.sub",
+      "bytes": 1033
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage170/logs/9676533.0.log",
+      "bytes": 2137
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage170/logs/9676533.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage170/logs/9676533.0.err",
+      "bytes": 0
+    }
+  ],
+  "scheduler_CPU_s": 8.0,
+  "scheduler_aggregate_wall_s": 14.0,
+  "starts": 1,
+  "live_N": 0,
+  "energy_fits": 0,
+  "new_G4": 0,
+  "model_forward": 0,
+  "GPU_jobs": 0,
+  "scheduler_RequestMemory_MB": [
+    6000
+  ],
+  "archives": [
+    {
+      "path": "software/stage170/execution_audits.tar.gz",
+      "bytes": 682
+    },
+    {
+      "path": "software/stage170/official_headers.tar.gz",
+      "bytes": 36892
+    },
+    {
+      "path": "software/stage170/source_snapshots.tar.gz",
+      "bytes": 53928
+    },
+    {
+      "path": "software/stage170/terminal_spool.tar.gz",
+      "bytes": 1884
+    },
+    {
+      "path": "software/stage170/worker_logs.tar.gz",
+      "bytes": 994
+    }
+  ]
+}
