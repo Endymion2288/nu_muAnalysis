@@ -1,3 +1,11 @@
+# 当前执行更新：Stage171 取得严格随机25通道ADC控制，尚未校准联合误差
+
+[Stage171报告](../workbook/2026-11-08_stage171_cached-reference-random-ADC-pilot.md)单次reference解压修正后同56全硬件/原62720ADC精确，GNU1.05CPU秒三倍投影460.8秒过原门。固定8192 PhysicsTag内4严格TAP=TBP=16，均GRL、25实际通道0–23/31、280采样、status2/input0/0，不按幅度删。独立8192重读及60保留事例ADC、标量触发4例精确，审计metadata补完通过。5start含原smoke路径自比较失效及audit漏摘要exit1，均修正/全计17scheddCPU秒/44wall秒/0live；留1021640B、删16482236B，Stage170 reference精确恢复、Stage54保持。4控制不足以校准25维误差，不认证纯noise/全run。
+
+[下一Stage172合同](../workbook/stage171_energy_ml/next_execution_contract.json)固定已知RAW400–431前8192/文件，先400/401/成本、再4进程30文件、独立原2。2400CPU秒/4核8GB，只严格随机联合ADC固定signed窗口/全硬件协方差描述及CaloNu四路固定和方差比/1000file-block区间，不反演/造prior/模型注入，不开新目录或全run。Stage87/原全门、角色/K/reserved及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage170 原ADC/TLB回放通过，有限扫描被成本门挡住
 
 [Stage170报告](../workbook/2026-11-08_stage170_strict-random-joint-ADC-pilot.md)固定run15838 RAW00400原56，62720 ADC code及身份/board精确，56有效TLB、0严格随机；不推断全文件没有控制。完整GNU4.39CPU秒三倍投影1926.582857秒，原1200预算门False，未提交8192/pilot/audit。1start exit0、schedd8CPU秒/14wall秒/0live/G4/fit。静态发现reference NPZ在循环重复解压，单独耗时未测；下一先单次加载修正、同56精确复现和实测完整成本，再按预冻结预算门决定8192，不改物理选择或扩预算。随机纯度/联合校准及整体目标未完成，Stage87/原全门保持。
@@ -3125,3 +3133,10 @@ C++ROOT四pilot N、独立type/scalar和22表/映射/16边界验证通过，3job
 ## 149. Stage170：严格随机控制先验可用性，成本门未准入
 
 [报告](../workbook/2026-11-08_stage170_strict-random-joint-ADC-pilot.md)完成固定RAW00400原56逐身份/板/62720 ADC code精确，全部TLB有效、严格控制0；有限前缀不代表全run。GNU4.39CPU秒投影1926.58秒超过1200预算，8192与audit未执行；1终态start/8scheddCPU/14wall秒。重复NPZ解压需修正，但其独立因果开销未测；下一同输入单次解压后重新小样本计时并冻结成本准入，不增预算或放松物理选择。联合控制与完整物理目标仍未测，Stage87及全部原门保持。
+
+
+## 150. Stage171：严格随机联合ADC支持已确认，有限统计合同冻结
+
+[中文报告](../workbook/2026-11-08_stage171_cached-reference-random-ADC-pilot.md)完成同RAW8192前缀及独立重读，4严格随机控制为25硬件通道0–23/31、各280采样，原56/62720ADC及60保留事例精确。原NPZ路径错误和audit摘要漏传明确记录，终态5start/17CPU/44wall秒，留1021640B并删16482236B。4控制/4.13秒不足认证联合误差/纯noise，不能反演25维经验协方差或自动注入ν模型。
+
+[Stage172冻结](../workbook/stage171_energy_ml/next_execution_contract.json)固定原已知32文件400–431，各8192前缀，原400/401小pilot与成本、4进程其余30、原2独立验证。2400CPU秒/4核8GB，仅严格随机联合ADC固定窗口signed量/描述性协方差及两固定CaloNu和方差比/file-block区间，坏/缺失/超限明确、不按幅度删、无prior/fit/forward/G4/全run。新统计/纯度/迁移未测，Stage87及所有原门与整体未完成保持。

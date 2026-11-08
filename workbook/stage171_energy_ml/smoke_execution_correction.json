@@ -1,0 +1,9 @@
+{
+  "issue": "Stage171 initial worker output CACHE retained Stage170 path; stage170 smoke reference was overwritten before comparison. This reference check was self-comparison and is not certified.",
+  "corrected": "Recovered original Stage170 exact bytes from frozen smoke input package; kept new bytes in Stage171 cache; fix output path and rerun smoke within original 300CPU allowance.",
+  "original_Stage170_restored_bytes": 429481,
+  "initial_worker_exit": 0,
+  "initial_scheduler_CPU_s": 4,
+  "pilot_not_submitted": true,
+  "cumulative_budget_unchanged": true
+}

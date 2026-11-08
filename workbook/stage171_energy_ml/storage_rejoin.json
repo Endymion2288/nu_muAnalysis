@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "canonical": "pilot_rows.jsonl.gz",
+  "rejoin": {
+    "smoke_rows.jsonl.gz": {
+      "rows": 56,
+      "exact_prefix": true
+    },
+    "smoke_retry_rows.jsonl.gz": {
+      "rows": 56,
+      "exact_prefix": true
+    },
+    "audit_rows.jsonl.gz": {
+      "rows": 8192,
+      "exact_full": true
+    }
+  },
+  "all_hardware_ADC_and_metadata_equal": true
+}

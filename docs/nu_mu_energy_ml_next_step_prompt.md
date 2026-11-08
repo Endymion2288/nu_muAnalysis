@@ -1,3 +1,11 @@
+# 当前执行更新：Stage171 取得严格随机25通道ADC控制，尚未校准联合误差
+
+[Stage171报告](../workbook/2026-11-08_stage171_cached-reference-random-ADC-pilot.md)单次reference解压修正后同56全硬件/原62720ADC精确，GNU1.05CPU秒三倍投影460.8秒过原门。固定8192 PhysicsTag内4严格TAP=TBP=16，均GRL、25实际通道0–23/31、280采样、status2/input0/0，不按幅度删。独立8192重读及60保留事例ADC、标量触发4例精确，审计metadata补完通过。5start含原smoke路径自比较失效及audit漏摘要exit1，均修正/全计17scheddCPU秒/44wall秒/0live；留1021640B、删16482236B，Stage170 reference精确恢复、Stage54保持。4控制不足以校准25维误差，不认证纯noise/全run。
+
+[下一Stage172合同](../workbook/stage171_energy_ml/next_execution_contract.json)固定已知RAW400–431前8192/文件，先400/401/成本、再4进程30文件、独立原2。2400CPU秒/4核8GB，只严格随机联合ADC固定signed窗口/全硬件协方差描述及CaloNu四路固定和方差比/1000file-block区间，不反演/造prior/模型注入，不开新目录或全run。Stage87/原全门、角色/K/reserved及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage170 原ADC/TLB回放通过，有限扫描被成本门挡住
 
 [Stage170报告](../workbook/2026-11-08_stage170_strict-random-joint-ADC-pilot.md)固定run15838 RAW00400原56，62720 ADC code及身份/board精确，56有效TLB、0严格随机；不推断全文件没有控制。完整GNU4.39CPU秒三倍投影1926.582857秒，原1200预算门False，未提交8192/pilot/audit。1start exit0、schedd8CPU秒/14wall秒/0live/G4/fit。静态发现reference NPZ在循环重复解压，单独耗时未测；下一先单次加载修正、同56精确复现和实测完整成本，再按预冻结预算门决定8192，不改物理选择或扩预算。随机纯度/联合校准及整体目标未完成，Stage87/原全门保持。

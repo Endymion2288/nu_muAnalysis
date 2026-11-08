@@ -1,0 +1,58 @@
+{
+  "phase": "smoke",
+  "passed": true,
+  "physics_N": 56,
+  "raw_frames_through": 56,
+  "bytes_through": 470606,
+  "valid_single_TLB_N": 56,
+  "missing_bad_or_ambiguous_TLB_N": 0,
+  "strict_N": 0,
+  "retained_N": 56,
+  "timestamp_min_us": 1720473060859252,
+  "timestamp_max_us": 1720473060888811,
+  "trigger_TAP_TBP_counts": {
+    "6/6": 15,
+    "2/2": 8,
+    "15/15": 11,
+    "4/4": 17,
+    "1/1": 2,
+    "14/14": 2,
+    "7/7": 1
+  },
+  "event_status_counts": {
+    "2": 53,
+    "0": 3
+  },
+  "reference": {
+    "passed": true,
+    "N": 56,
+    "ADC_samples": 62720,
+    "max_ADC_difference": 0,
+    "unit": "ADC code",
+    "all_original_identity_and_board_fields_exact": true
+  },
+  "controls": {
+    "retained_strict_N": 0,
+    "controls": [],
+    "consistent_channels_and_lengths": false,
+    "feasible": false,
+    "pure_noise_certified": false,
+    "calibrated_joint_covariance": false
+  },
+  "prefix_exact": true,
+  "reader": {
+    "CPU_s": 0.09360299999999999,
+    "wall_s": 0.5667462139390409,
+    "RSS_KiB": 26112
+  },
+  "reference_CPU_s": 0.18522310899999994,
+  "stage170_all56_ADC_and_metadata_exact": true,
+  "python_CPU_s": 0.520388254,
+  "wall_s": 1.0525752590037882,
+  "RSS_KiB": 61464,
+  "new_G4": 0,
+  "energy_fits": 0,
+  "model_forward": 0,
+  "overall_complete": false,
+  "promotion": false
+}

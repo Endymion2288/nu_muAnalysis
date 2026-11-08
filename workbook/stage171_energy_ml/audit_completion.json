@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "earlier_worker_exit": 1,
+  "issue": "Missing pilot_summary.json in audit transfer, after successful exact second RAW replay.",
+  "correction": "Finish scalar evidence and rejoin from frozen already-read pilot/audit rows. No additional RAW read.",
+  "independent_replay_passed": true,
+  "control_feasible": true,
+  "new_RAW_reads": 0,
+  "overall_complete": false
+}
