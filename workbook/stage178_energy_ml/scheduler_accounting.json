@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "ClusterId": 9676872,
+      "CompletionDate": 1794136617,
+      "ExitBySignal": false,
+      "ExitCode": 0,
+      "JobStartDate": 1794136607,
+      "JobStatus": 4,
+      "MemoryUsage": "/Expr(((ResidentSetSize + 1023) / 1024))/",
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "RemoteSysCpu": 1.0,
+      "RemoteUserCpu": 1.0,
+      "RemoteWallClockTime": 10.0,
+      "RequestCpus": 4,
+      "RequestMemory": 12000,
+      "ResidentSetSize": 0
+    },
+    {
+      "ClusterId": 9676879,
+      "CompletionDate": 1794137212,
+      "ExitBySignal": false,
+      "ExitCode": 0,
+      "JobStartDate": 1794136792,
+      "JobStatus": 4,
+      "MemoryUsage": "/Expr(((ResidentSetSize + 1023) / 1024))/",
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "RemoteSysCpu": 151.0,
+      "RemoteUserCpu": 558.0,
+      "RemoteWallClockTime": 420.0,
+      "RequestCpus": 4,
+      "RequestMemory": 12000,
+      "ResidentSetSize": 1500000
+    },
+    {
+      "ClusterId": 9676900,
+      "CompletionDate": 1794137398,
+      "ExitBySignal": false,
+      "ExitCode": 0,
+      "JobStartDate": 1794137380,
+      "JobStatus": 4,
+      "MemoryUsage": "/Expr(((ResidentSetSize + 1023) / 1024))/",
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "RemoteSysCpu": 1.0,
+      "RemoteUserCpu": 12.0,
+      "RemoteWallClockTime": 18.0,
+      "RequestCpus": 4,
+      "RequestMemory": 12000,
+      "ResidentSetSize": 100000
+    }
+  ],
+  "live_N": 0,
+  "starts": 3,
+  "total_CPU_s": 724.0,
+  "total_execute_wall_s": 448.0,
+  "CPU_budget_s": 4500
+}

@@ -1,3 +1,13 @@
+# 当前执行更新：Stage178 同原12父的S0区间与G4-only审计完成
+
+[Stage178报告](../workbook/2026-11-08_stage178_rounding-enclosed-S0-and-G4-only-pilot.md)以pinned curvilinear语义和float32舍入包络省掉重复重建，原首父9767点与actual native面一致；三倍投影1832.16CPU秒通过新G4-only门。固定12父保留9个面支持、3个原重选失败未知；9607出生中5788前/1759后/2060未知，9个稳健过面步。53353有理数区间/源分区/ordered HITS审计通过。
+
+尤其原lowpz_highE两父8/63都无本次拟合面，困难侧机制仍未测，不能用9父替代分母或认定辐射修正有效。3start全exit0、724CPU/448聚合wall秒/0live；清68582320B重复，留18450330B必要事件支持，Stage54保持，无新ν/能量fit/forward或GPU。
+
+Stage179已冻同12父实际原窗的analog/噪声/基线/量化/clip及S0源对照，先首父闭合/成本后才11，复用HITS不重跑G4。Stage180有限核已知run15838普通Ecal实际双读出/模块对应/留出相对比例；不虚构MC第二读出或绝对幅度真值。Stage177固定Timing表示阴性、Stage87/所有原门/角色/K/reserved和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage176 原首父S0/出生源审计完成，完整重建不扩跑
 
 [Stage176报告](../workbook/2026-11-08_stage176_S0-birth-and-crossing-pilot.md)取得真实PlaneSurface中心/法向及唯一前向过面bracket；原raw11/status/pz0、旧谱系和ordered HITS保持，1345出生/4211步独立审计通过。本父Ecal附加SD响应来自S0后谱系，Trigger/Veto有面前谱系；全时SD不是同窗电荷或能损加回，不能推断总体。

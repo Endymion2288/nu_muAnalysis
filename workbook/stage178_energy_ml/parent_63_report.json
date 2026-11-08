@@ -1,0 +1,92 @@
+{
+  "index": 63,
+  "case": {
+    "row": 136346,
+    "source": 652,
+    "run": 200092,
+    "component": "k",
+    "role": 1,
+    "EVNT": "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+    "entry": 347225,
+    "incoming": [
+      -14.0,
+      7.999297142028809,
+      -7.053161144256592,
+      274720.0
+    ],
+    "truth_E_GeV": 274.7200002070032,
+    "old_reco_pz_GeV": 79.916390625,
+    "y": 0.8144751715128979,
+    "vertex_z_mm": -1992.563720703125,
+    "stratum": "lowpz_highE",
+    "rank": "002055e2e8e87e9c",
+    "frame_index": 63,
+    "seed": 2026241763,
+    "inclusion_probability": 0.1635782747603834
+  },
+  "steps": [
+    {
+      "name": "sim",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU/ml/stage176_simulate.py",
+        "/eos/experiment/faser/gen/MC24/Genie/2025_flux_files/24_crossing_angle_distribution/wo_caloNu/sibyll-k.EVNT.pool.root",
+        "FaserMC-Stage131Nu-990131-00063-stage131-HITS.root",
+        "--geom",
+        "TI12MC04",
+        "--G4_phys",
+        "FTFP_BERT",
+        "--skip",
+        "347225",
+        "-n",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 32.44824753503781
+    },
+    {
+      "name": "hitscheck",
+      "command": [
+        "/cvmfs/sft.cern.ch/lcg/releases/LCG_104d_ATLAS_7/Python/3.9.12/x86_64-el9-gcc13-opt/bin/python",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU/ml/stage131_hitscheck.py",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU/chain_63/FaserMC-Stage131Nu-990131-00063-stage131-HITS.root",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU/chain_63/lineage.jsonl",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU/workbook/stage178_energy_ml/parent_63_hitscheck.json",
+        "before",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU/ntuples/energy_ml_stage178/parent_63_qa_hits.json.gz"
+      ],
+      "returncode": 0,
+      "wall_s": 38.44088853802532
+    },
+    {
+      "name": "classify",
+      "command": [
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/afs/cern.ch/user/x/xcheng",
+        "USER=xcheng",
+        "PYTHONNOUSERSITE=1",
+        "OMP_NUM_THREADS=1",
+        "OPENBLAS_NUM_THREADS=1",
+        "bash",
+        "-c",
+        "source /cvmfs/sft.cern.ch/lcg/views/LCG_109/x86_64-el9-gcc15-opt/setup.sh\ncd \"$1\"\npython ml/stage178_classify.py \"$2\"",
+        "bash",
+        "/pool/condor/dir_40539/nu_mu_stage178.OxRlvU",
+        "63"
+      ],
+      "returncode": 0,
+      "wall_s": 1.7862255229847506
+    }
+  ],
+  "successful": true,
+  "legacy_fields_exact": true,
+  "ordered_hits_exact": true,
+  "wall_s": 74.18158649490215,
+  "scratch_ROOT_B": 2371366,
+  "digitization": false,
+  "reconstruction": false,
+  "energy_fits": 0,
+  "new_independent_nu": 0
+}

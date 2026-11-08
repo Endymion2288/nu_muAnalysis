@@ -1,0 +1,66 @@
+{
+  "stage": 178,
+  "parent_stage": 176,
+  "question": "Can rounded original fitted states certify S0 sides and enable fixed G4-only birth/crossing support without another full reconstruction?",
+  "sources": [
+    "ntuples/energy_ml_stage131/production_cases.json.gz",
+    "ntuples/energy_ml_stage131/parent_evidence.json.gz",
+    "ntuples/energy_ml_stage131/matched_input.npz",
+    "ntuples/energy_ml_stage176/parent_50_lineage.json.gz",
+    "ntuples/energy_ml_stage176/parent_50_qa_hits.json.gz",
+    "workbook/stage176_energy_ml/parent_50_S0.json",
+    "workbook/stage176_energy_ml/process_resources.json",
+    "software/stage176/observer-runtime.tar.gz",
+    "ml/configs/audited_features.json"
+  ],
+  "reference_index": 50,
+  "replay_indices": [
+    70,
+    6,
+    21,
+    8,
+    63,
+    2,
+    15,
+    0,
+    1,
+    5,
+    12
+  ],
+  "selection": "Exact old Stage131/135 first2train per6strata in fixed hash order; retain migrated/unknown parent. No tail/clip/source/error selection. Not representative exposure or new nu.",
+  "representation": "Enclose each original float32 state by neighboring-float midpoints; outward double rounding throughout. Momentum cells in GeV expand for division rounding then scale to MeV. Unknown/NaN/-999/missing state remains unknown. No extra p0/p1/pz1.",
+  "plane": "Ideal semantic sign p dot (r-center). Also enclose normalized momenta for native-normal validation; native50 actual xyz/momentum/normal must lie inside and every robust birth/step sign must agree. Crossing endpoints certified only if both signs robust; unknown endpoints preserved. No interpolation or nominal-z plane.",
+  "feasibility_acceptance": [
+    "pinned source semantics validated",
+    "native50 state and normal enclosed",
+    "every robust birth and primary-step endpoint agrees with actual native plane",
+    "both before and after robust births exist",
+    "all original12 and missing planes retained"
+  ],
+  "admission": "Only after passed feasibility; threefold11*(measured successful Stage176 sim+HITScheck CPU + complete feasibility CPU) <=3000 replay allowance; plus used schedulerCPU+1200audit <=4500 total. No reconstruction or budget relaxation.",
+  "replay": "Same exact original11 EVNT/entry/G4seed/HITSfilename/geometry/tag/physics; byte-identical Stage176 observer runtime. Preserve every old observer field and ordered HITS partition. Three independent single-thread chains on4cores. No digitization/reco/ntuple/new parents.",
+  "CPU_budget_s": 4500,
+  "phase_CPU_allowance_s": {
+    "feasibility": 300,
+    "replay": 3000,
+    "audit": 1200
+  },
+  "request_CPUs": 4,
+  "request_memory_MB": 12000,
+  "worker_processes": 3,
+  "max_jobs": 1,
+  "MaxRuntime_s": 86400,
+  "analysis": "Source-resolved all-time corrected SD response and actual-step energy brackets with finite plane intervals, not DAQ analog charge, radiative loss correction or energy improvement. Missing/reselected parent remains in original denominator.",
+  "preserve": "Stage87/all gates;pz0-only firstpower/raw11/typedNaN/signed/status0-only timing/Calo missing;pz>50GeV/K/roles/reserved/quarantine/Stage54",
+  "no": [
+    "new energy fits or forward",
+    "extra parents",
+    "automatic4032 replay",
+    "charge add-back",
+    "truth deployment",
+    "imputed missing plane",
+    "crossing interpolation"
+  ],
+  "overall_complete": false,
+  "promotion": false
+}

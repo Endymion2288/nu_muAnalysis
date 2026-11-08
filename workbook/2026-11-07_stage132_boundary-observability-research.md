@@ -197,3 +197,8 @@ Stage133 直接承接 [Stage131 冻结合同](stage131_energy_ml/next_execution_
 ### Stage176 实测回填：首父S0与源出生位置
 
 [Stage176](2026-11-08_stage176_S0-birth-and-crossing-pilot.md)确认实际S0/过面步、1345出生和4211步独立审计。单父Ecal附加SD来自面后，不能把全μ根当面前辐射，也不是同窗电荷或能损加回。余11完整重建7070.91CPU秒超过7000门，未扩跑；下一先认证pinned curvilinear构造及原float32状态区间，再考虑同原父G4-only有限预算。总体能量收益/匹配同窗/真实条件/最终确认仍未达。
+
+
+### Stage178 回填：S0区间与源出生支持
+
+[Stage178](2026-11-08_stage178_rounding-enclosed-S0-and-G4-only-pilot.md)原12/9支持面/9过面步、9607出生，53353有理数核查及旧ordered HITS闭合；原lowpz_highE两父缺面，保持明确困难侧缺口。省重复重建后的G4-only共724CPU秒，无新能量fit/forward。下一同父actual-window信号/噪声/clip及源分解，不能把all-time SD或出生KE当修正；普通Ecal真实双读出另有限验证，整体未完成。

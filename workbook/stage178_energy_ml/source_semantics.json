@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "path": "Tracking/Acts/FaserActsKalmanFilter/src/CreateTrkTrackTool.cxx",
+      "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+      "source_bytes": 6548,
+      "lines": [
+        {
+          "line": 119,
+          "text": "  const Amg::Vector3D& pos=actsParameter.position(gctx);"
+        },
+        {
+          "line": 124,
+          "text": "  Amg::Vector3D tmom(p * std::cos(tphi) * std::sin(ttheta), p * std::sin(tphi) * std::sin(ttheta), p * std::cos(ttheta));"
+        },
+        {
+          "line": 126,
+          "text": "  return std::make_unique<Trk::CurvilinearParameters>(pos,tmom,charge, cov);"
+        }
+      ]
+    },
+    {
+      "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+      "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+      "source_bytes": 100150,
+      "lines": [
+        {
+          "line": 1678,
+          "text": "    const Trk::TrackParameters* upstreamParameters = track->trackParameters()->front();"
+        },
+        {
+          "line": 1701,
+          "text": "    m_xup.push_back(upstreamParameters->position().x());"
+        },
+        {
+          "line": 1702,
+          "text": "    m_yup.push_back(upstreamParameters->position().y());"
+        },
+        {
+          "line": 1703,
+          "text": "    m_zup.push_back(upstreamParameters->position().z());"
+        },
+        {
+          "line": 1704,
+          "text": "    m_pxup.push_back(upstreamParameters->momentum().x());"
+        },
+        {
+          "line": 1705,
+          "text": "    m_pyup.push_back(upstreamParameters->momentum().y());"
+        },
+        {
+          "line": 1706,
+          "text": "    m_pzup.push_back(upstreamParameters->momentum().z());"
+        },
+        {
+          "line": 2030,
+          "text": "      return lhs->trackParameters()->front()->momentum().z() < rhs->trackParameters()->front()->momentum().z();"
+        },
+        {
+          "line": 2139,
+          "text": "    auto SegParameters = trackSeg->trackParameters()->front();"
+        },
+        {
+          "line": 2157,
+          "text": "    auto SegParameters = trackSeg->trackParameters()->front();"
+        }
+      ]
+    },
+    {
+      "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h",
+      "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+      "source_bytes": 27185,
+      "lines": [
+        {
+          "line": 322,
+          "text": "  mutable std::vector<double> m_xup;"
+        },
+        {
+          "line": 325,
+          "text": "  mutable std::vector<double> m_pxup;"
+        }
+      ]
+    },
+    {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/software/24.0/Athena/24.0.41/InstallArea/x86_64-el9-gcc13-opt/include/TrkParametersBase/CurvilinearParametersT.icc",
+      "source_bytes": 9027,
+      "lines": [
+        {
+          "line": 41,
+          "text": "  this->m_surface = S(this->m_position, curvilinearFrame());"
+        },
+        {
+          "line": 56,
+          "text": "  this->m_position = pos;"
+        },
+        {
+          "line": 78,
+          "text": "  this->m_surface = S(this->m_position, curvilinearFrame());"
+        },
+        {
+          "line": 104,
+          "text": "  this->m_position = pos;"
+        },
+        {
+          "line": 105,
+          "text": "  this->m_momentum = mom;"
+        },
+        {
+          "line": 108,
+          "text": "  m_surface = S(this->m_position, curvilinearFrame());"
+        },
+        {
+          "line": 234,
+          "text": "  CurvilinearUVT curvilinFrame(this->momentum().unit());"
+        },
+        {
+          "line": 298,
+          "text": "  m_surface = S(this->m_position, curvilinearFrame());"
+        }
+      ]
+    },
+    {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/software/24.0/Athena/24.0.41/InstallArea/x86_64-el9-gcc13-opt/include/TrkEventPrimitives/CurvilinearUVT.icc",
+      "source_bytes": 883,
+      "lines": [
+        {
+          "line": 8,
+          "text": "  : m_curvT(dir)"
+        },
+        {
+          "line": 37,
+          "text": "  return (m_curvT);"
+        }
+      ]
+    },
+    {
+      "path": "/cvmfs/atlas.cern.ch/repo/sw/software/24.0/Athena/24.0.41/InstallArea/x86_64-el9-gcc13-opt/include/TrkSurfaces/PlaneSurface.h",
+      "source_bytes": 10448,
+      "lines": [
+        {
+          "line": 91,
+          "text": "  PlaneSurface(const Amg::Vector3D& position, const CurvilinearUVT& curvUVT);"
+        }
+      ]
+    },
+    {
+      "path": "AnalysisZipFramework/config/ml_definitions.yaml",
+      "source_bytes": 3029,
+      "lines": [
+        {
+          "line": 7,
+          "text": "    expression: SafeAt(Track_px0, LeadTrack_Idx) / 1000.0"
+        },
+        {
+          "line": 16,
+          "text": "    expression: SafeAt(Track_x0, LeadTrack_Idx)"
+        }
+      ]
+    },
+    {
+      "path": "ml/extract_alternative_support.py",
+      "source_bytes": 7740,
+      "lines": [
+        {
+          "line": 66,
+          "text": "        old_x = np.column_stack([selected[k][order] for k in names] + [track[k] for k in extra]).astype('float32')"
+        },
+        {
+          "line": 76,
+          "text": "            fit = raw[detector+'_charge'][take].astype('float32')"
+        },
+        {
+          "line": 81,
+          "text": "        np.testing.assert_array_equal(x[:,0], dataset['reco_pz_GeV'].astype('float32'))"
+        }
+      ]
+    }
+  ],
+  "meaning": "The first fitted state is a curvilinear plane centered at fitted xyz, normal along fitted momentum. Ntuple double values become compact float32. Infer enclosing state boxes, never an exact recovered plane."
+}
