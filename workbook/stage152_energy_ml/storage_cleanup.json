@@ -1,0 +1,43 @@
+{
+  "all_jobs_terminal": true,
+  "event_text_equality": true,
+  "merged": {
+    "path": "ntuples/energy_ml_stage152/event_records.json.gz",
+    "bytes": 13560
+  },
+  "source_capsule": {
+    "path": "software/stage152/source_snapshots.tar.gz",
+    "bytes": 26759
+  },
+  "deleted": [
+    {
+      "path": "ntuples/energy_ml_stage152/pilot.json.gz",
+      "bytes": 13498
+    },
+    {
+      "path": "software/stage152/1794096430141871226/energy-ml-stage152.tar.gz",
+      "bytes": 2194145
+    },
+    {
+      "path": "ntuples/energy_ml_stage152/admission_result.tar.gz",
+      "bytes": 2034
+    },
+    {
+      "path": "software/stage152/1794096048520966434/energy-ml-stage152.tar.gz",
+      "bytes": 2177770
+    },
+    {
+      "path": "ntuples/energy_ml_stage152/pilot_result.tar.gz",
+      "bytes": 15450
+    }
+  ],
+  "deleted_bytes": 4402897,
+  "no_persistent_ROOT": true,
+  "original_inputs_and_other_stages_untouched": true,
+  "actual_worker_logs": {
+    "N": 6,
+    "path": "software/stage152/worker_logs.tar.gz",
+    "bytes": 6109,
+    "byte_equality": true
+  }
+}

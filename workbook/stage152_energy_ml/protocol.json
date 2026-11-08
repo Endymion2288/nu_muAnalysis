@@ -1,0 +1,31 @@
+{
+  "next_stage": 152,
+  "question": "For the unchanged first original muon parents, does the actual Ecal HITS-to-ADC chain explain the weak current finite-window raw response, and is a finite-window/time-convention loss present? This follows the measured tag04/06 contrast, not a gain or seed scan.",
+  "input_HITS": "/eos/experiment/faser/sim/mc24/particle_gun/100012/sim/s0012/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-HITS.root",
+  "paired_reference": "ntuples/energy_ml_stage151/event_records.json.gz",
+  "parent_selection": "Original entry0 actual physical pilot only; measured closure and cost before original entries0-3 at most. No tail/charge/energy/status selection or replacement. Reuse old/current same-parent references; no population or independently generated claim.",
+  "execution": "Reuse pinned d32/FASERNU-04 with OFLCOND-FASER-04 and original event context. Only Ecal digitization/reconstruction and compact actual hit timing/response extraction; no SCT/digi/reco full rerun, no G4. Same Calo private seed720000000+10000*event, preserve all8 geometry PMT noise draws before cable filtering. Capture actual payload, actual Ecal kernel and current ADC/raw/status plus initial/final RNG.",
+  "measurements": "Count actual persistent SD-corrected Ecal hits and encoded energyLoss in MeV; no second Birks correction. Record actual globaltime, center-z TOF and corrected time, identity and run/IOV. Independent pre-ADC kernel/noise/rounding/clipping reconstruction must match actual readable ADC. Report finite780-930ns analog pC, full acquisition analog pC and their ratio when defined, signal outside histogram support and baseline/noise contribution. Compare same-event reference current raw/status at float32 precision and private before/after exactly; old PHYS is descriptive only. Save all original no-hit/weak/nonzero-status outcomes.",
+  "physical_limits": "A small prefix is a method/time-window diagnosis, not calibration of gain or muon radiative population; encoded SD-corrected energyLoss is not incident energy or an independent amplitude reference. If raw-window/full-acquisition agrees, exclude only that mechanism for these measured parents; do not assert a unit/gain bug or old/current transport equivalence. No production-point pulls, fitted-charge inputs, forced old-PHYS equality, new timing for nonzero status, arbitrary time/gain/seed scans or artificial clipping.",
+  "resources": {
+    "CPU_budget_s": 1000,
+    "pilot_CPU_allowance_s": 400,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "parent_cap": 4,
+    "final_event_bytes_cap": 8388608,
+    "audit_reserve_CPU_s": 100
+  },
+  "admission": "Actual entry0 ADC/current-raw/status/identity/private-RNG closure required. Factor3 affine projection from measured initialization/event cost plus100CPU audit reserve must fit remaining cumulative1000CPU. Then at most original0-3; require pilot prefix repeat equality. No budget expansion or parent substitution. Missing closure produces measured failure and ends this fixed control.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "invariant": "Stage87direct62, original1.05/1.01/1.03/eight-layer-three-tail+2pp and Stage137 dual-low-bin5pct expansion gate unchanged. pz0-only first-power momentum/raw11/typedNaN/legal signed/status0 timing/Calo missing/allK/roles/reserved maintained. No natural-nu large production or old proxy/network grids.",
+  "storage": "Scientific arrays/ROOT/Cling only in HTCondor ~/condor/nu_muAnalysis/stage152/. Keep compact paired response and source audit; no persistent ROOT/HITS copies. Do not alter Stage149/151 evidence."
+}

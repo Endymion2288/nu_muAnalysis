@@ -1,3 +1,9 @@
+# 当前执行更新：Stage152 实际Ecal控制闭合，本例有限窗损失很小
+
+[Stage152报告](../workbook/2026-11-08_stage152_Ecal-HITS-window-diagnosis.md)完成已知μ原entry0：157 SD修正hit/48.329432MeV，2400ADC零差、同current04 raw/status/privateRNG精确；Calo2 finite/full=.999957391063、histogram外hit0，弱raw不能由本例大量漏窗解释。实际模拟信号.064892711495pC，baseline/噪声与取整后raw.04904296875pC；其他三路无hit但有ADC噪声，不填缺失或当沉积。3倍四父预测935.71CPU秒+100预留>剩878，未扩四例/预算；2start全部exit0、122CPU秒/152wall秒/0GPU/G4/fit，保留一父方法结果而非总体校准。事件文本13560B精确合并、删4402897B重复。下一Stage153只读原已知REC最多40train父，测真实同面cluster局部位置/拟合误差/PRD归属及固定scaled-separation摘要；无新G4/能量fit，不重开旧gain/time/seed追查，先物理基底/新内容/成本。原门/Stage137扩大门/Stage87及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage151 实际conditions配对完成，共同raw／轨迹未随tag改变
 
 [Stage151报告](../workbook/2026-11-08_stage151_actual-conditions-paired-muon-control.md)完成原μ前4→64：真实04/06分别解析生效，实际map16/18路、共同16物理通道；1010合法raw对差全0pC、1024视图status/presence精确，4项baselineRMS差≤1.192093e−7mV单列。61同面reference/PRD/state/fullcovariance精确、3无leading保留；4pilot前缀及64初始/全部末RNG精确。切换tag没有恢复旧PHYS的Calo响应，旧map／随机流／release未认证，不把差当tracking bias或1σ。5start全部exit0、431CPU秒/577聚合wall秒/0GPU/0G4/0fit；事件文本2.162MB精确合并、删19.959MB重复。下一Stage152同一原μentry0→最多0–3的Ecal HITS→analog→ADC实际有限窗诊断，1000CPU秒/400pilot/100audit reserve，不重复SCT整链、不扫gain/time/seed。原门／Stage137扩大门／Stage87及整体未完成保持。
@@ -2836,3 +2842,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [Stage151报告](../workbook/2026-11-08_stage151_actual-conditions-paired-muon-control.md)与[完整配对](../workbook/stage151_energy_ml/comparison.json)给出64原父：04/06map16/18，06独有Preshower2/3；共同raw/status/presence无差，61条PRD/reference/state/fullcovariance全同；4项baselineRMS微差明确保留。原current-ntuple身份全通过，前4exact复现，全部5作业exit0计431CPU秒/577wall秒，无G4/ν/fit或模型晋升。当前相对旧PHYS的Calo差不能由本GlobalTag切换解释，也不能以未认证旧map/seed把旧PHYS当ground truth。输入tag匹配不认证release/输运/data或covariance覆盖。
 
 [下一冻结合同](../workbook/stage151_energy_ml/next_execution_contract.json)为Stage152：同一已知HITS原entry0真实Ecal control，身份/raw/status/privateRNG/成本通过后最多原0–3。只Ecal hit时间/SD修正信号、实际响应与8几何PMT噪声→4readableADC、780–930ns及fullacq模拟积分；1000CPU秒/400pilot/100audit reserve，3倍成本准入，无新G4、SCT重跑、fit、gain/time/seed扫描或人工clipping。不把少数控制当总体μ辐射校准。原§1–129与所有历史全文保持，Stage132其余外部约束/真实covariance校准/data/独立确认仍缺，原门和Stage137双箱5%扩大门及Stage87不变，整体goal未完成。
+
+
+## 131. Stage152：实际Ecal弱读出已回到HITS／ADC，本例无明显有限窗损失
+
+[实测报告](../workbook/2026-11-08_stage152_Ecal-HITS-window-diagnosis.md)及[实际通道表](../workbook/stage152_energy_ml/pilot_channels.tsv)给出原μentry0的157hit/48.329432MeV、Calo2 finite780–930ns/full600sample=.999957391063、histogram排除0。独立2400ADC和current04 raw/status/privateRNG精确；raw噪声/取整分解差≤2.4303e−13pC。单例不能校准gain／辐射尾或解释全部旧PHYS差；四父成本门False，3倍预测935.71+100>剩878CPU秒，未绕过预算。2作业exit0、122CPU秒/152聚合wall秒、无新G4/fit/持久ROOT；证据13560B、删4.403MB重复。
+
+[Stage153冻结合同](../workbook/stage152_energy_ml/next_execution_contract.json)转回Stage132§5.5新测量：已知Stage124 request0原REC前最多40role1，真实同面/同基底cluster局部位置、正方差及leading真实PRD链接，固定局部scaled separation和排列无关摘要；1200CPU秒、无digi/reco/G4/能量fit，不看cal/test。拟合误差未校准，不把scaled separation当χ²覆盖、pull或关联后验。先证实新实际内容和成本，再另冻μ控制/全原队列能量工作；不自动扩大生产或旧模型网格。Stage132其余外部输入/真实系统/校准/data/独立确认仍缺，原所有门和Stage87保持，整体goal未完成。历史§1–130及所有旧入口原文保留。

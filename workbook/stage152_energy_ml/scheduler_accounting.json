@@ -1,0 +1,40 @@
+{
+  "jobs": [
+    {
+      "ClusterId": 9674827,
+      "CompletionDate": 1794096527,
+      "ExitBySignal": false,
+      "ExitCode": 0,
+      "JobStartDate": 1794096522,
+      "JobStatus": 4,
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "RemoteSysCpu": 0.0,
+      "RemoteUserCpu": 0.0,
+      "RemoteWallClockTime": 5.0,
+      "RequestCpus": 4,
+      "ResidentSetSize": 0
+    },
+    {
+      "ClusterId": 9674813,
+      "CompletionDate": 1794096359,
+      "ExitBySignal": false,
+      "ExitCode": 0,
+      "JobStartDate": 1794096212,
+      "JobStatus": 4,
+      "NumJobStarts": 1,
+      "ProcId": 0,
+      "RemoteSysCpu": 14.0,
+      "RemoteUserCpu": 108.0,
+      "RemoteWallClockTime": 147.0,
+      "RequestCpus": 4,
+      "ResidentSetSize": 5000
+    }
+  ],
+  "total_CPU_s": 122.0,
+  "total_execute_wall_s": 152.0,
+  "starts": 2,
+  "live_N": 0,
+  "completed_N": 2,
+  "CPU_budget_s": 1000
+}

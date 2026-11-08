@@ -1,0 +1,33 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1706.04965",
+      "title": "Particle-flow reconstruction and global event description with the CMS detector",
+      "access": "arXiv abstract read this stage; also cited in Stage132",
+      "feasibility": "Motivates measured track/cluster links and response resolution. FASER has different granularity; no imported performance or calibrated likelihood."
+    },
+    {
+      "url": "https://arxiv.org/abs/1703.06114",
+      "title": "Deep Sets",
+      "access": "arXiv abstract read this stage",
+      "feasibility": "Permutation invariant aggregation informs compact sums/moments. No new network is proposed; new information must come from retained positions/errors, not aggregation of old counts."
+    },
+    {
+      "url": "https://doi.org/10.1016/0168-9002(87)90887-4",
+      "title": "Application of Kalman filtering to track and vertex fitting",
+      "access": "Crossref exact DOI bibliographic record checked; full text not read this stage",
+      "feasibility": "Covariance/coordinate basis matters. Fitted-state self-inclusion and unknown error calibration prevent treating a scaled separation as a calibrated pull or association posterior."
+    },
+    {
+      "url": "https://doi.org/10.1088/0954-3899/34/12/n01",
+      "title": "Adaptive vertex fitting",
+      "access": "Crossref title/author/DOI metadata checked; full text not read this stage",
+      "feasibility": "A reference for residual-based robust weighting; not an adopted calibrated weighting algorithm."
+    }
+  ],
+  "excluded_lookup": {
+    "url": "https://arxiv.org/abs/physics/0702181",
+    "actual_title": "Building CMS Pixel Barrel Detectur Modules",
+    "reason": "Unrelated title; not cited as adaptive vertex fitting"
+  }
+}
