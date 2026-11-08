@@ -1,3 +1,11 @@
+# 当前执行更新：Stage159 实际data前缀配对缺口已定位，下一步有限源定位
+
+[Stage159报告](../workbook/2026-11-08_stage159_real-data-native-identity-pairing.md)实读run15838原REC前64及独立前4，124391/780874实际条目数，0/64严格配对；独立索引重算同0。native event1–64/time1720443680–82s在同run PHYS event787406–5939966/time1720449636–1720452640s之前，解释前缀覆盖缺口，不推断整份REC无交集或上游选择原因。实际TagInfo为FASERNU04/OFLCOND05/Athena24.0.41，确有WaveformHit容器；PHYS有CaloHi/Lo等raw分支，旧Calo0–3字段缺失，不自动映射、不认证原始ADC或gain/producer/纯度/data FPR。2start全exit0、177CPU秒/248聚合wall秒、0GPU/G4/fit，594B身份胶囊，精确归档后删75093B重复。
+
+[Stage160合同](../workbook/stage159_energy_ml/next_execution_contract.json)只用指定PHYS原前64新控制父集，有限探测同run REC00005–00008四路径及原00000首4reference实际首尾身份/metadata；候选来自event/旧entry数近6.3的启发式，绝不当已认证范围或entry映射。不加来源、不目录扫；唯一覆盖候选才1024成本pilot，通过2000CPU累计预算/200audit预留的三倍成本门才全源EventInfo索引，输出实际native entry，严格配对/未知/歧义与prefix精确验证。无detector/raw payload/ν forward/fit，Stage159原64不被替换；后续真实状态/PRD/raw及CaloHi/Lo mapping另冻，原Stage87/全门及整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage158 全原队列空间能量比较完成，最低能没有改善
 
 [Stage158报告](../workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md)完成原71376活动父、280 REC/37链/全部K的真实空间读取：原计数全闭合，71375 leading匹配，71370三站完整，已知row40738仍unknown。固定X62/X62+A3/X62+A3+G6恰9模型，X62逐值复现Stage87，149pilot/full及3288独立标量检查通过。内容/可用性控制的开发test两低箱为1.015321 [1.005710,1.024105]、0.997528 [0.992801,1.002389]；最低箱/传统1.970150 [1.677457,2.321940]，原联合门及Stage137双低箱5%扩大门False，cal unconfirmed总尾上差2.079023pp亦未认证。15start全exit0，5300CPU秒/3958聚合wall秒、0GPU/G4/新ν；事件13095013B精确合并，事件/新增数组/模型合计25770775B，删448564087B重复。固定摘要族结束，不续模型/距离网格，Stage87及整体未完成保持。
@@ -2939,3 +2947,14 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 15job/15start全exit0、0live、5300CPU秒/3958聚合execute wall秒/0GPU/G4/新ν；实测ROOT3,648,817,135B，37链内部4636.617782CPU秒，driver链wall重叠3.154331仅描述并发。提交4核16GB，CERN额外传输资源后Request6核18GB，未冒称已用科学核；MemoryUsage未求值表达式不当数值峰值。事件13095013B回读精确，新增数组/事件/模型25770775B<128MiB，删448564087B重复，实际源/完整审计/日志精确归档，原输入/Stage54保持。
 
 [下一Stage159冻结合同](../workbook/stage158_energy_ml/next_execution_contract.json)推进Stage132真实data缺口：已知run15838精确REC与合并PHYS，仅原0–63父和独立0–3身份重复，读取actual metadata/TagInfo/未过滤schema和EventInfo，再对完整PHYS run/event索引唯一匹配及matched raw15/pz0支持审计；600CPU秒/100audit预留/2核8GB/最多1job，无G4/重建/fit/自然ν或隔离forward。条目不同不混entry，未知/歧义保留，不以源名或runtime默认值认证producer、geometry、covariance或data FPR。之后同父实际native payload/控制纯度与校准另冻；宽能区/乳胶/GRL曝光/背景接受度/有限响应统计/真实相关nuisance/独立确认继续开放，Stage87/所有原门/原角色/K及整体goal active保持。旧§1–136及全部旧入口全文原样保留。
+
+
+## 138. Stage159：实际data前缀无配对有明确范围证据，真实读出schema已取得
+
+[中文报告](../workbook/2026-11-08_stage159_real-data-native-identity-pairing.md)、[实际源metadata](../workbook/stage159_energy_ml/native_metadata.json)及[独立诊断](../workbook/stage159_energy_ml/identity_diagnostic.json)给出run15838 REC124391/PHYS780874，原native0–63和独立0–3身份完全重复，固定0/64配对、64未匹配、0歧义。native event1–64/time1720443680–1720443682s全部在PHYS event787406–5939966/time1720449636–1720452640s之前，run相同，独立Counter重算0；不是以未知原因宣布程序/物理失败，也不将无匹配当无μ或无raw。整份REC交集、原生产选择仍未测。
+
+实际TagInfo=Athena24.0.41/FASERNU04/OFLCOND05；完整inventory有Veto/VN/Trigger/PS/Calo/Calo2/CaloNu WaveformHit及aux，不推断完整ADC samples。PHYS11scint raw存在而旧Calo0–3的16requested字段缺失，实际CaloHi/Lo/Nu raw命名需物理mapping认证，不拟合补位、不换父、不混entry/producer。matched raw/低pz/纯度/FPR/native covariance及联合响应仍未测。
+
+2job/2start全exit0、0live，177CPU秒/248聚合wall秒、0GPU/G4/ν/fit；申请2核8GB，CERN实际3核9GB；64身份+repeat缓存594B，源码/原生审计/GNU/日志字节回读相等，删75093B重复，无ROOT/波形复制或SHA，Stage54保持。旧Stage158阴性及所有原门不改。
+
+[下一Stage160合同](../workbook/stage159_energy_ml/next_execution_contract.json)用不同且明确标注的PHYS原前64控制父集，固定REC00005/00006/00007/00008四个候选与00000首4reference，先真实首尾metadata/EventInfo。近6.3的文件数只启发locator，不是事件范围证明；无唯一候选则有限结束、不加路径。唯一候选再前1024成本pilot，三倍startup+steady×实际N连同全部已用CPU/200audit须在2000CPU内才全源EventInfo scan；全量前1024须精确复现，输出严格身份到真实entry map及全部未知/歧义，禁止entry=event−1或event-only替代。2核8GB/最多1job，无detector/raw payload/G4/fit/自然ν或隔离forward。之后同源实际state/PRD/raw及CaloHi/Lo物理通道另冻；Stage132真实校准/宽能区/乳胶/曝光GRL/背景接受度/有限响应统计/真实nuisance/独立确认仍开放，Stage87/原全门/角色/K/整体goal active保持。旧§1–137和全部旧入口全文原样保留。

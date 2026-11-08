@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "native_parent_N": 64,
+  "native_entries": 124391,
+  "PHYS_entries": 780874,
+  "unique_pair_N": 0,
+  "missing_pair_N": 64,
+  "ambiguous_pair_N": 0,
+  "different_entry_N": 0,
+  "control_eligible_N": 0,
+  "control_eligible_pz50_100_N": 0,
+  "complete_raw15_N": 0,
+  "prefix4_independent_identity_exact": true,
+  "missing_requested_PHYS_branches": [
+    "Calo0_baseline_rms",
+    "Calo0_raw_charge",
+    "Calo0_raw_peak",
+    "Calo0_status",
+    "Calo1_baseline_rms",
+    "Calo1_raw_charge",
+    "Calo1_raw_peak",
+    "Calo1_status",
+    "Calo2_baseline_rms",
+    "Calo2_raw_charge",
+    "Calo2_raw_peak",
+    "Calo2_status",
+    "Calo3_baseline_rms",
+    "Calo3_raw_charge",
+    "Calo3_raw_peak",
+    "Calo3_status"
+  ],
+  "actual_native_waveform_branch_inventory": [
+    {
+      "name": "WaveformClockAux.",
+      "class_name": "xAOD::WaveformClockAuxInfo_v1"
+    },
+    {
+      "name": "FaserTriggerDataAux.",
+      "class_name": "xAOD::FaserTriggerDataAux_v1"
+    },
+    {
+      "name": "Calo2HitsAux.",
+      "class_name": "xAOD::CalorimeterHitAuxContainer_v1"
+    },
+    {
+      "name": "CaloHitsAux.",
+      "class_name": "xAOD::CalorimeterHitAuxContainer_v1"
+    },
+    {
+      "name": "CaloNuHitsAux.",
+      "class_name": "xAOD::CalorimeterHitAuxContainer_v1"
+    },
+    {
+      "name": "PreshowerHitsAux.",
+      "class_name": "xAOD::CalorimeterHitAuxContainer_v1"
+    },
+    {
+      "name": "Calo2WaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "CaloNuWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "CaloWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "PreshowerWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "TriggerWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "VetoNuWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "VetoWaveformHitsAux.",
+      "class_name": "xAOD::WaveformHitAuxContainer_v1"
+    },
+    {
+      "name": "WaveformClock",
+      "class_name": "xAOD::WaveformClock_v1"
+    },
+    {
+      "name": "FaserTriggerData",
+      "class_name": "xAOD::FaserTriggerData_v1"
+    },
+    {
+      "name": "Calo2Hits",
+      "class_name": "DataVector<xAOD::CalorimeterHit_v1>"
+    },
+    {
+      "name": "CaloHits",
+      "class_name": "DataVector<xAOD::CalorimeterHit_v1>"
+    },
+    {
+      "name": "CaloNuHits",
+      "class_name": "DataVector<xAOD::CalorimeterHit_v1>"
+    },
+    {
+      "name": "PreshowerHits",
+      "class_name": "DataVector<xAOD::CalorimeterHit_v1>"
+    },
+    {
+      "name": "Calo2WaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "CaloNuWaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "CaloWaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "PreshowerWaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "TriggerWaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "VetoNuWaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "VetoWaveformHits",
+      "class_name": "DataVector<xAOD::WaveformHit_v1>"
+    },
+    {
+      "name": "Calo2HitsAuxDyn.WaveformLinks",
+      "class_name": "vector<vector<ElementLink<DataVector<xAOD::WaveformHit_v1> > > >"
+    },
+    {
+      "name": "Calo2WaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    },
+    {
+      "name": "CaloHitsAuxDyn.WaveformLinks",
+      "class_name": "vector<vector<ElementLink<DataVector<xAOD::WaveformHit_v1> > > >"
+    },
+    {
+      "name": "CaloNuHitsAuxDyn.WaveformLinks",
+      "class_name": "vector<vector<ElementLink<DataVector<xAOD::WaveformHit_v1> > > >"
+    },
+    {
+      "name": "CaloNuWaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    },
+    {
+      "name": "CaloWaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    },
+    {
+      "name": "PreshowerHitsAuxDyn.WaveformLinks",
+      "class_name": "vector<vector<ElementLink<DataVector<xAOD::WaveformHit_v1> > > >"
+    },
+    {
+      "name": "PreshowerWaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    },
+    {
+      "name": "TriggerWaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    },
+    {
+      "name": "VetoNuWaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    },
+    {
+      "name": "VetoWaveformHitsAuxDyn.trigger_time",
+      "class_name": "vector<float>"
+    }
+  ],
+  "PHYS_read_bytes": 1734156,
+  "matched_read_blocks": 0,
+  "CPU_s": 1.3635453789999998,
+  "wall_s": 2.3528151059290394,
+  "RSS_KiB": 89044,
+  "new_G4": 0,
+  "energy_fits": 0,
+  "natural_nu_forward": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "limitations": [
+    "Exact event identity does not certify equal native/PHYS reconstruction or raw producer",
+    "No native detector payload read, no calibrated track covariance or association",
+    "No certified data muon purity, FPR, background, exposure or spectrum measurement"
+  ]
+}

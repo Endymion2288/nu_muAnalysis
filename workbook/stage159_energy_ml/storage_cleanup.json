@@ -1,0 +1,73 @@
+{
+  "all_jobs_terminal": true,
+  "source_logs_native_byte_equality": true,
+  "final_event_bytes": 594,
+  "limit_bytes": 8388608,
+  "archives": [
+    {
+      "path": "software/stage159/native_audits.tar.gz",
+      "bytes": 2480
+    },
+    {
+      "path": "software/stage159/source_snapshots.tar.gz",
+      "bytes": 26078
+    },
+    {
+      "path": "software/stage159/worker_logs.tar.gz",
+      "bytes": 3210
+    }
+  ],
+  "deleted": [
+    {
+      "path": "software/stage159/1794110079931478385/energy-ml-stage159.tar.gz",
+      "bytes": 11593
+    },
+    {
+      "path": "ntuples/energy_ml_stage159/audit_result.tar.gz",
+      "bytes": 9737
+    },
+    {
+      "path": "software/stage159/1794110626222402161/energy-ml-stage159.tar.gz",
+      "bytes": 15128
+    },
+    {
+      "path": "ntuples/energy_ml_stage159/identity_diagnostic_result.tar.gz",
+      "bytes": 6484
+    },
+    {
+      "path": "workbook/stage159_energy_ml/native_64.json",
+      "bytes": 14379
+    },
+    {
+      "path": "workbook/stage159_energy_ml/native_4.json",
+      "bytes": 6948
+    },
+    {
+      "path": "workbook/stage159_energy_ml/identity_diagnostic_time.txt",
+      "bytes": 770
+    },
+    {
+      "path": "workbook/stage159_energy_ml/native_4_time.txt",
+      "bytes": 770
+    },
+    {
+      "path": "workbook/stage159_energy_ml/native_64_time.txt",
+      "bytes": 777
+    },
+    {
+      "path": "workbook/stage159_energy_ml/pair_time.txt",
+      "bytes": 757
+    },
+    {
+      "path": "workbook/stage159_energy_ml/native_4.log",
+      "bytes": 1144
+    },
+    {
+      "path": "workbook/stage159_energy_ml/native_64.log",
+      "bytes": 6606
+    }
+  ],
+  "deleted_bytes": 75093,
+  "no_persistent_ROOT": true,
+  "original_inputs_other_stages_and_Stage54_untouched": true
+}

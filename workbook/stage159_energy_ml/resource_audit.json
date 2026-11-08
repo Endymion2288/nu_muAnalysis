@@ -1,0 +1,58 @@
+{
+  "scheduler_CPU_s": 177.0,
+  "scheduler_aggregate_wall_s": 248.0,
+  "starts": 2,
+  "failed_jobs": [],
+  "submitted_request_CPUs": 2,
+  "submitted_memory_MB": 8000,
+  "scheduler_RequestCpus": [
+    3
+  ],
+  "scheduler_RequestMemory_MB": [
+    9000
+  ],
+  "GNU_processes": [
+    {
+      "task": "identity_diagnostic",
+      "CPU_s": 2.1399999999999997,
+      "wall_s": 4.5,
+      "RSS_KiB": 311420
+    },
+    {
+      "task": "native_4",
+      "CPU_s": 82.22,
+      "wall_s": 95.53999999999999,
+      "RSS_KiB": 1568588
+    },
+    {
+      "task": "native_64",
+      "CPU_s": 85.07,
+      "wall_s": 125.98,
+      "RSS_KiB": 1539268
+    },
+    {
+      "task": "pair",
+      "CPU_s": 2.76,
+      "wall_s": 5.15,
+      "RSS_KiB": 89044
+    }
+  ],
+  "native_processes": [
+    {
+      "requested_prefix": 64,
+      "CPU_s": 80.05709072,
+      "wall_s": 115.89067296800204,
+      "ROOT_read_bytes": 10027694,
+      "RSS_KiB": 1539268
+    },
+    {
+      "requested_prefix": 4,
+      "CPU_s": 77.581632667,
+      "wall_s": 90.16970814601518,
+      "ROOT_read_bytes": 9985724,
+      "RSS_KiB": 1568588
+    }
+  ],
+  "GPU_jobs": 0,
+  "interpretation": "All attempts counted. GNU/native CPU nested inside scheduler CPU; no speedup claim."
+}
