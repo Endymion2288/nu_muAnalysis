@@ -2,6 +2,7 @@
 import argparse,json,subprocess,tarfile,tempfile,time
 from pathlib import Path
 from stage143_monitor import ATTR
+CPU_BUDGET_S=1200
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'workbook/stage192_energy_ml';CACHE=ROOT/'ntuples/energy_ml_stage192';SPOOL=Path.home()/'condor/nu_muAnalysis/stage192'
 def monitor():
  old=json.loads((OUT/'scheduler_accounting.json').read_text()) if (OUT/'scheduler_accounting.json').exists() else {};terminal={r['ClusterId']:r for r in old.get('jobs',[]) if r['JobStatus'] in [3,4]};rows=[]
@@ -11,7 +12,7 @@ def monitor():
   data=json.loads(subprocess.check_output(['condor_q',str(cluster),'-json','-attributes',','.join(ATTR)],text=True).strip() or '[]')
   if not data:data=json.loads(subprocess.check_output(['condor_history',str(cluster),'-limit','1','-json','-attributes',','.join(ATTR)],text=True).strip() or '[]')
   assert len(data)==1,'Unresolved original job; no duplicate submission';rows.extend(data)
- result=dict(jobs=rows,live_N=sum(r['JobStatus'] not in [3,4] for r in rows),starts=sum(r.get('NumJobStarts',0) for r in rows),total_CPU_s=sum(r.get('RemoteUserCpu',0)+r.get('RemoteSysCpu',0) for r in rows),total_execute_wall_s=sum(r.get('RemoteWallClockTime',0) for r in rows),CPU_budget_s=1200)
+ result=dict(jobs=rows,live_N=sum(r['JobStatus'] not in [3,4] for r in rows),starts=sum(r.get('NumJobStarts',0) for r in rows),total_CPU_s=sum(r.get('RemoteUserCpu',0)+r.get('RemoteSysCpu',0) for r in rows),total_execute_wall_s=sum(r.get('RemoteWallClockTime',0) for r in rows),CPU_budget_s=CPU_BUDGET_S)
  (OUT/'scheduler_accounting.json').write_text(json.dumps(result,indent=2)+'\n');print({k:v for k,v in result.items() if k!='jobs'},flush=True);return result
 def submit(phase):
  assert phase in ['pilot','pilot_repair','pilot_repair2','review','full','audit'] and not (OUT/f'{phase}_submission.json').exists();account=monitor();assert account['live_N']==0
@@ -53,7 +54,7 @@ queue 1
 def collect(phase):
  a=monitor();s=json.loads((OUT/f'{phase}_submission.json').read_text());j=next(r for r in a['jobs'] if r['ClusterId']==int(s['result'].split('.')[0]));assert j['JobStatus'] in [3,4]
  with tempfile.NamedTemporaryFile(suffix='.tar.gz') as tmp:
-  subprocess.run(['xrdcp','--silent','--force',f'root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage192/{phase}_result.tar.gz',tmp.name],check=True)
+  subprocess.run(['xrdcp','--silent','--force',f'root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/{CACHE.relative_to(ROOT)}/{phase}_result.tar.gz',tmp.name],check=True)
   with tarfile.open(tmp.name) as t:t.extractall(ROOT)
  print('COLLECTED',phase,j.get('ExitCode'));return j.get('ExitCode',1)
 if __name__=='__main__':

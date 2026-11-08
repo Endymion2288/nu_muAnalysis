@@ -1,3 +1,9 @@
+# 当前执行更新：Stage193 charm宽尾与原fit主μ贡献缺失相关
+
+[中文报告](../workbook/2026-11-08_stage193_IFT-parent-fit-support-accounting.md)固定原160缓存/16pilot、零新ROOT/G4/fit，完整五fit支持类×四deposit类逐父账目。charm原fit无主μbarcode的2父有9纯直接主μIFT候选，Σpull²=46262.420360826，占该类全来源0.995541388；29个仅存主μbarcode父134候选RMS1.219141183、1混合父6候选1.156508571。汇总17.66不能直接当正确主μfit误差覆盖失配；未删异常或把SDO不完整自动等同错轨，所有父/未知保持。
+
+1280项独立标量/原16重叠及192全N/RMS/分区闭合；3start全0、2调度CPU/18聚合wall秒、0live，成本投影17.66159394<100。下一Stage194独立1200CPU秒、同16/160，实际原fit-cluster strip的正权指针/SDO完整性；仅恢复原确定性merge，原cached index/pz0/charge/barcode必须精确，先pilot成本/支持才160，零新fit/IFT运输。191固定能量阴性与全部原门保持；B/D/E/F/真实物理谱仍需具体条件与独立输入，整体未完成。以下历史全文保留。
+
 # 当前执行更新：Stage192 实际主μ沉积链接完成，charm条件宽尾保留
 
 [中文报告](../workbook/2026-11-08_stage192_IFT-direct-primary-deposit-control.md)固定Stage188原16/160父及既有surface预测，实际SDO→TruthEvent指针归属/唯一主μ图、11497候选贡献集合及11806deposit flag/原16重叠全部通过。π/K纯直接主μpull RMS为1.104986850/1.128491240，charm仍17.660027730、abs95=4.022772733；不能用前两组认证coverage或把宽尾全归于次级/未知。160唯一主μ图齐全，原leading匹配且起始面支持115，所有未知/未匹配保留；无直接主μ可为真实次级/δ射线，未知不是自动noise。
