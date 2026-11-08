@@ -1,0 +1,526 @@
+{
+  "passed": true,
+  "phase": "full",
+  "real_parent_N": 64,
+  "original4_scalar_checks_N": 384,
+  "raw_support": {
+    "all_records": 1536,
+    "original_status_1": 573,
+    "ineligible_original_status_or_role": 809,
+    "original_status_0": 810,
+    "supported": 727,
+    "original_status_513": 100,
+    "original_status_512": 35,
+    "original_status_516": 1,
+    "original_status_16": 5,
+    "original_status_4": 12
+  },
+  "template_channel_N": 16,
+  "random_controls_N": 116,
+  "MC_parent_N": 12,
+  "MC_ideal_closure": {
+    "ideal_samples_N": 55200,
+    "max_abs_difference_ADC": 0.0,
+    "passed": true
+  },
+  "groups": [
+    {
+      "kind": "data",
+      "group": "Calo",
+      "subset": "first32",
+      "N": 42,
+      "residual_supported_N": 42,
+      "standardized_RMS_median": 1.1542183638629961,
+      "standardized_RMS_abs95": 7.14486432178353,
+      "residual_over_peak_median": 0.05492475711402376
+    },
+    {
+      "kind": "data",
+      "group": "Preshower",
+      "subset": "first32",
+      "N": 63,
+      "residual_supported_N": 63,
+      "standardized_RMS_median": 1.6111012529689681,
+      "standardized_RMS_abs95": 8.96903463034738,
+      "residual_over_peak_median": 0.034084314356099
+    },
+    {
+      "kind": "data",
+      "group": "Trigger",
+      "subset": "first32",
+      "N": 70,
+      "residual_supported_N": 70,
+      "standardized_RMS_median": 15.386910641013351,
+      "standardized_RMS_abs95": 45.35162250574289,
+      "residual_over_peak_median": 0.047574274761882904
+    },
+    {
+      "kind": "data",
+      "group": "Veto",
+      "subset": "first32",
+      "N": 125,
+      "residual_supported_N": 125,
+      "standardized_RMS_median": 24.504554599651954,
+      "standardized_RMS_abs95": 62.94939188330254,
+      "residual_over_peak_median": 0.02577440112736103
+    },
+    {
+      "kind": "data",
+      "group": "VetoNu",
+      "subset": "first32",
+      "N": 62,
+      "residual_supported_N": 62,
+      "standardized_RMS_median": 37.26059015337546,
+      "standardized_RMS_abs95": 98.06697574448985,
+      "residual_over_peak_median": 0.054006285759238715
+    },
+    {
+      "kind": "data",
+      "group": "Calo2",
+      "subset": "first32",
+      "N": 4,
+      "residual_supported_N": 0,
+      "standardized_RMS_median": null,
+      "standardized_RMS_abs95": null,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "data",
+      "group": "Calo",
+      "subset": "last32",
+      "N": 37,
+      "residual_supported_N": 37,
+      "standardized_RMS_median": 1.3213049294328616,
+      "standardized_RMS_abs95": 12.135957916883985,
+      "residual_over_peak_median": 0.058623071166662634
+    },
+    {
+      "kind": "data",
+      "group": "Preshower",
+      "subset": "last32",
+      "N": 62,
+      "residual_supported_N": 62,
+      "standardized_RMS_median": 1.6517108113764287,
+      "standardized_RMS_abs95": 3.4399885025464445,
+      "residual_over_peak_median": 0.03576206284217123
+    },
+    {
+      "kind": "data",
+      "group": "Trigger",
+      "subset": "last32",
+      "N": 80,
+      "residual_supported_N": 80,
+      "standardized_RMS_median": 15.955087917449532,
+      "standardized_RMS_abs95": 47.83083545078635,
+      "residual_over_peak_median": 0.049924790447190795
+    },
+    {
+      "kind": "data",
+      "group": "Veto",
+      "subset": "last32",
+      "N": 117,
+      "residual_supported_N": 117,
+      "standardized_RMS_median": 28.16383291171862,
+      "standardized_RMS_abs95": 86.16279275048144,
+      "residual_over_peak_median": 0.028809024003435886
+    },
+    {
+      "kind": "data",
+      "group": "VetoNu",
+      "subset": "last32",
+      "N": 61,
+      "residual_supported_N": 61,
+      "standardized_RMS_median": 30.57925448871994,
+      "standardized_RMS_abs95": 85.82599626216188,
+      "residual_over_peak_median": 0.05050148944941491
+    },
+    {
+      "kind": "data",
+      "group": "Calo2",
+      "subset": "last32",
+      "N": 4,
+      "residual_supported_N": 0,
+      "standardized_RMS_median": null,
+      "standardized_RMS_abs95": null,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:1",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9698991545085579,
+      "standardized_RMS_abs95": 1.1997208785401303,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Preshower:12",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9349359256261711,
+      "standardized_RMS_abs95": 1.2804594543497292,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Preshower:13",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.971100674967432,
+      "standardized_RMS_abs95": 1.2887965487544997,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:8",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9307415753782944,
+      "standardized_RMS_abs95": 1.2281785368981057,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:9",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9973497132338656,
+      "standardized_RMS_abs95": 1.2900539891446425,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:6",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9370308126120392,
+      "standardized_RMS_abs95": 1.2186555228755338,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:7",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9886743402347237,
+      "standardized_RMS_abs95": 1.2139291196608053,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:14",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9149996134533138,
+      "standardized_RMS_abs95": 1.1863629045227841,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:15",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9677789676310533,
+      "standardized_RMS_abs95": 1.2100638589381827,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "VetoNu:4",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.999912394080672,
+      "standardized_RMS_abs95": 1.2267172286255512,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "VetoNu:5",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9885998422160545,
+      "standardized_RMS_abs95": 1.284483879306336,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:10",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.924356530444556,
+      "standardized_RMS_abs95": 1.1677461122525123,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:11",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 1.0041373249108336,
+      "standardized_RMS_abs95": 1.311707309134033,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:3",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9240355635027961,
+      "standardized_RMS_abs95": 1.1740846836088248,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:2",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 0.9432202379971987,
+      "standardized_RMS_abs95": 1.184775004190508,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:0",
+      "subset": "first16",
+      "N": 57,
+      "residual_supported_N": 57,
+      "standardized_RMS_median": 1.0038943016137225,
+      "standardized_RMS_abs95": 1.2745949911996217,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:1",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9526709489577143,
+      "standardized_RMS_abs95": 1.31159618764721,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Preshower:12",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9737644023122589,
+      "standardized_RMS_abs95": 1.2720923615704294,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Preshower:13",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9598669666709002,
+      "standardized_RMS_abs95": 1.1719385184530529,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:8",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9932242447751802,
+      "standardized_RMS_abs95": 1.3088457297036262,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:9",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9869973255305882,
+      "standardized_RMS_abs95": 1.3005631145685619,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:6",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9510329215538144,
+      "standardized_RMS_abs95": 1.2130632453614398,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:7",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9232253504054583,
+      "standardized_RMS_abs95": 1.2556165458262085,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:14",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.931301268313134,
+      "standardized_RMS_abs95": 1.2000702397776664,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Veto:15",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9996772913757028,
+      "standardized_RMS_abs95": 1.2256137952692283,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "VetoNu:4",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9443621291792775,
+      "standardized_RMS_abs95": 1.290680302330154,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "VetoNu:5",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.989885954859514,
+      "standardized_RMS_abs95": 1.2598847278700094,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:10",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9654592817061659,
+      "standardized_RMS_abs95": 1.2649939743729408,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Trigger:11",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9180279595165454,
+      "standardized_RMS_abs95": 1.211045330595469,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:3",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9522293917452372,
+      "standardized_RMS_abs95": 1.2443637366382254,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:2",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.978404216244115,
+      "standardized_RMS_abs95": 1.251473664225958,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "random",
+      "group": "Calo:0",
+      "subset": "last16",
+      "N": 59,
+      "residual_supported_N": 59,
+      "standardized_RMS_median": 0.9820306325086907,
+      "standardized_RMS_abs95": 1.3178375527627344,
+      "residual_over_peak_median": null
+    },
+    {
+      "kind": "MC",
+      "group": "Veto",
+      "subset": "all",
+      "N": 22,
+      "residual_supported_N": 22,
+      "standardized_RMS_median": 0.03588092327701583,
+      "standardized_RMS_abs95": 207.43104171630355,
+      "residual_over_peak_median": 4.6943626695223826e-05
+    },
+    {
+      "kind": "MC",
+      "group": "Trigger",
+      "subset": "all",
+      "N": 34,
+      "residual_supported_N": 34,
+      "standardized_RMS_median": 8.598927738427466,
+      "standardized_RMS_abs95": 509.1540483772855,
+      "residual_over_peak_median": 0.009669236257642362
+    },
+    {
+      "kind": "MC",
+      "group": "Preshower",
+      "subset": "all",
+      "N": 24,
+      "residual_supported_N": 24,
+      "standardized_RMS_median": 0.021107960612847712,
+      "standardized_RMS_abs95": 4.497749566666185,
+      "residual_over_peak_median": 0.00016843678690797246
+    },
+    {
+      "kind": "MC",
+      "group": "VetoNu",
+      "subset": "all",
+      "N": 6,
+      "residual_supported_N": 6,
+      "standardized_RMS_median": 1.4741813379599422,
+      "standardized_RMS_abs95": 18.309744085065343,
+      "residual_over_peak_median": 0.016342763195726306
+    },
+    {
+      "kind": "MC",
+      "group": "Calo",
+      "subset": "all",
+      "N": 6,
+      "residual_supported_N": 6,
+      "standardized_RMS_median": 0.06325754091663091,
+      "standardized_RMS_abs95": 3.598997422172768,
+      "residual_over_peak_median": 0.004272157828422764
+    }
+  ],
+  "CPU_s": 13.400221937,
+  "wall_s": 41.961401691660285,
+  "RSS_KiB": 767460,
+  "physical_source_identified": false,
+  "real_error_coverage_certified": false,
+  "energy_fits": 0,
+  "overall_complete": false,
+  "promotion": false
+}

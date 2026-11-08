@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "real_parent_N": 4,
+  "original4_scalar_checks_N": 384,
+  "raw_support": {
+    "all_records": 96,
+    "original_status_1": 37,
+    "ineligible_original_status_or_role": 50,
+    "original_status_0": 51,
+    "supported": 46,
+    "original_status_513": 5,
+    "original_status_512": 3
+  },
+  "template_channel_N": 0,
+  "random_controls_N": 116,
+  "MC_parent_N": 2,
+  "MC_ideal_closure": {
+    "ideal_samples_N": 9600,
+    "max_abs_difference_ADC": 0.0,
+    "passed": true
+  },
+  "groups": [
+    {
+      "kind": "MC",
+      "group": "Veto",
+      "subset": "all",
+      "N": 8,
+      "residual_supported_N": 8,
+      "standardized_RMS_median": 0.016699810915997072,
+      "standardized_RMS_abs95": 0.07313125862904205,
+      "residual_over_peak_median": 2.6001489044225174e-05
+    },
+    {
+      "kind": "MC",
+      "group": "Trigger",
+      "subset": "all",
+      "N": 4,
+      "residual_supported_N": 4,
+      "standardized_RMS_median": 0.059983003002268435,
+      "standardized_RMS_abs95": 0.12172441306059494,
+      "residual_over_peak_median": 0.00010799053995164328
+    },
+    {
+      "kind": "MC",
+      "group": "Preshower",
+      "subset": "all",
+      "N": 4,
+      "residual_supported_N": 4,
+      "standardized_RMS_median": 7.50409526708391e-05,
+      "standardized_RMS_abs95": 0.0009353282708338097,
+      "residual_over_peak_median": 2.3617983933124632e-06
+    }
+  ],
+  "CPU_s": 6.268362143,
+  "wall_s": 31.24578943895176,
+  "RSS_KiB": 716880,
+  "physical_source_identified": false,
+  "real_error_coverage_certified": false,
+  "energy_fits": 0,
+  "overall_complete": false,
+  "promotion": false
+}

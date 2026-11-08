@@ -1,0 +1,37 @@
+"""One joint real/random/MC waveform-content feasibility experiment."""
+import json
+import subprocess
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'workbook/stage196_energy_ml'
+if __name__=='__main__':
+    OUT.mkdir(exist_ok=True)
+    assert not (OUT/'protocol.json').exists()
+    p=dict(stage=196,starting_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+        question='Is any shape beyond amplitude, baseline and first-order translation actually observable in original Good Hits, and does the existing time-resolved MC support such shape?',
+        data_manifest='workbook/stage162_energy_ml/matched_manifest.json',
+        original4_reference='ntuples/energy_ml_stage161/event_records.json.gz',
+        MC_protocol='workbook/stage179_energy_ml/protocol.json',
+        data_pilot_N=4,data_full_N=64,MC_pilot=[50,70],MC_full=[50,70,6,21,8,63,2,15,0,1,5,12],
+        real_selection='Exact original first64 mapped parents, no muon/purity/amplitude/energy selection; all hit/status/secondary/outsideCaloNu denominators retained. Only original primary status==0 outsideCaloNu may supply sample/time vectors and shape. Other vectors never retained or timed.',
+        data_shape='Same physical detector/channel grouped. Align at original stored-wave raw maximum, fixed lag samples-8..32 inclusive (2ns,41points). Full stored-window support required else unknown, never pad. Original entries0..31 construct one pointwise median unit-peak template per channel if >=4 eligible; entries32..63 validate. No MIP/singlepulse identity assertion about this mixture template.',
+        quotient='Project each real heldout waveform onto span{constant,template,template derivative}, derivative via central finite differences2ns with one-sided endpoints; use QR/lstsq rank3, no covariance inverse. This removes amplitude/baseline and LINEARIZED time shift, not arbitrary nonlinear timing. Report residual RMS mV, residual/raw-peak and residual/baselineRMS, coefficient signs and rank. Not a calibrated chi-square or new energy feature.',
+        random_controls='Exactly cached Stage18332files400-431/all116 strict controls; actual hardware0..19 only. No random max/arrival/lag features or reconstructed timing: use fixed ADC indices60..100 inclusive and original pedestal0..39. Project those fixed41 noise samples on the SAME data-template nuisance span. No high-dimensional covariance inverse, amplitude veto or pure-noise claim. Describe first16/last16 as well as total.',
+        MC_intervention='Exactly original12 cached full Stage179 responses, no G4/transport/reconstruction/RNG/energy inference. Original official status0 only; recover actual ideal signal from same PMT cached analog, and actual corrected per-hit times/energy from source_timing only for those eligible PMTs. Reproduce original ideal signal via Stage141Analog in frozen32float32eps bound, then collapse each PMT positive hits to one contribution at its energy-weighted corrected mean time, preserving total deposited energy. Same native kernel/oversampling, no new waveform family. Project original ideal signal onto collapsed pulse+derivative+constant on SAME41 raw-peak-centered supported samples inside original stored window. Report residual, conditioning/rank and original S0 source mixture. This is a truth-informed MC mechanism, not observable signal calibration or independent neutrino support.',
+        limits='Templates/MC/data/sample windows not migrated across PMTs/periods. Source-dependent shape vs electronics/ringing/baseline/template-mixture/2nd-order phase is not identified without independent same-setting LED/MIP signal controls. Presence of residual is not a late-hadron/afterpulse label; absence on12 not universal information limit. No nonlinear pulse/window/template-capacity scan or energy fit this stage.',
+        acceptance=['Original4 all raw/status/peak/RMS fields float32 exact and all mapped parents retained',
+                    'Only primary exact status0 eligible time/sample vectors; bad-status records have none',
+                    'Pilot prefix4 exactly matches full; no missing template imputation',
+                    'Native original MC ideal waveform closure; all12 parents retained even without eligible PMTs',
+                    'Independent scalar projection/residual checks and distinct Gram-Schmidt residual implementation',
+                    'Actual full real64 reread/audit and random116 scalar covariance-free algebra checks'],
+        admission='Pilot raw4 complete GNU including JIT +3*60*max(postfirst raw event CPU), plus3*6*complete pilot-stat CPU <=1600; used+projection+400audit<=2400; actual4 identity/status and MC ideal closure pass. No effect-size gate or cap expansion.',
+        CPU_budget_s=2400,phase_CPU_allowance_s=dict(pilot=400,full=1600,audit=400),
+        kernel_CPU_limits_s=dict(raw=120,pilot_statistics=180,full_statistics=1200,audit=360),
+        request_CPUs=4,request_memory_MB=8000,max_jobs=1,MaxRuntime_s=86400,final_cache_cap_B=8388608,
+        energy_fits=0,new_energy_forward=0,new_G4=0,
+        preserve='Stage87/all scientific gates; original roles/reserved/quarantine/allK, pz>50GeV and pz0-only first-power momentum (px/py,q/p,bending allowed); raw/signed/typedNaN/status0-only timing; Stage54 twelve assets',
+        promotion=False,overall_complete=False)
+    (OUT/'protocol.json').write_text(json.dumps(p,indent=2)+'\n')
+    print('Frozen196: real4/64 + original MC2/12 +116 fixed random controls;2400CPU seconds.')

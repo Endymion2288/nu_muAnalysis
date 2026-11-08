@@ -1,3 +1,9 @@
+# 当前执行更新：Stage196 Good Hit形状与原生MC时间结构对照完成
+
+[中文报告](../workbook/2026-11-08_stage196_good-hit-shape-and-native-time-collapse.md)沿用原4→64真实父、116随机控制及原2→12MC父；严格原status0才取sample/time。1536原记录/810status0中727个eligible patch、16通道模板；后32真实留出Trigger/Veto/VetoNu的residual/baselineRMS中位15.95508792/28.16383291/30.57925449，固定随机控制约1。Calo2无模板的8条保留未知。MC92个原Good PMT/55200理想sample复现0ADC，时间塌缩后部分残余超过实际MCnoise，支持原生时间结构；仅消幅度、baseline与一阶平移，未认证真实物理源或误差覆盖，不将两种定义直接作MC/data分辨率比。
+
+独立真实64重读及719/1856/92标量投影、76096固定随机sample、49组摘要均通过，最大归一化差2.671891715e-14。3start全0、103CPU/301聚合wall秒/0live，留3525206B、清22055624B重复，Stage54保持。零新能量fit/G4/forward，原全部门/K/角色/pz0/raw/status0保持。下一需同设置独立LED/MIP/源标签信号控制、幅度/条件与真实文件留出以分离物理结构和电子学/有限相位；支持后才另冻固定内容新训练。具体输入/验收见[需求表](../workbook/stage196_energy_ml/goal_requirements.tsv)。A固定内容阴性及身份控制保持；B/D/E与真实谱约束/独立确认仍开放，整体未完成。以下历史全文保留。
+
 # 当前执行更新：Stage195 双量程整流误差与未知比例的有限约束完成
 
 [中文报告](../workbook/2026-11-08_stage195_dual-range-rectification-and-error-identifiability.md)在原780874条、原四对PMT/全部选择分母上复现180/181，原116随机控制分57/59；旧raw正采样与signed控制分开，冻结全280点L1经验界并验证。奇8192采集块within2ns的mid100–250与high500–2000mV相对残差差为-0.0848876529, -0.0869298235, -0.0951835193, -0.0787705839；具体区间/电荷差/超界及不拟合新ρ的必要区间均完整交付。给定经验界下两组各95%覆盖必要条件未排除标志[True, True, True, True]，不是总体覆盖、非线性或真实加性误差认证。不同PMT光收集、信号baseline/窗与幅度误差/选择仍未标定；同merged文件块留出不称跨源独立。
