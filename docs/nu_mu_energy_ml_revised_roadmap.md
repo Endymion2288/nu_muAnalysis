@@ -1,3 +1,11 @@
+# 当前执行更新：Stage158 全原队列空间能量比较完成，最低能没有改善
+
+[Stage158报告](../workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md)完成原71376活动父、280 REC/37链/全部K的真实空间读取：原计数全闭合，71375 leading匹配，71370三站完整，已知row40738仍unknown。固定X62/X62+A3/X62+A3+G6恰9模型，X62逐值复现Stage87，149pilot/full及3288独立标量检查通过。内容/可用性控制的开发test两低箱为1.015321 [1.005710,1.024105]、0.997528 [0.992801,1.002389]；最低箱/传统1.970150 [1.677457,2.321940]，原联合门及Stage137双低箱5%扩大门False，cal unconfirmed总尾上差2.079023pp亦未认证。15start全exit0，5300CPU秒/3958聚合wall秒、0GPU/G4/新ν；事件13095013B精确合并，事件/新增数组/模型合计25770775B，删448564087B重复。固定摘要族结束，不续模型/距离网格，Stage87及整体未完成保持。
+
+[下一Stage159合同](../workbook/stage158_energy_ml/next_execution_contract.json)转已知实际data run15838的REC原前64父/独立前4及合并PHYS真实run/event配对，600CPU秒/2核8GB/最多1job，实际metadata/完整schema/raw15支持审计；不按entry混合、不猜geometry/producer等价、不认证data纯度/FPR。无G4/重建/ν forward/fit，缺失/歧义保留，不换来源；后续同父native payload/联合校准、真实误差/外部物理输入与独立确认仍需测量。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage157 全4096μ根联合规则完成，困难尾部仍大量误报
 
 [Stage157报告](../workbook/2026-11-08_stage157_joint-muon-response-and-partition-control.md)完成已知原4096父的当前raw／真实空间及分块控制，3708selected、3793leading、65620有效anchors／43非Measurement支持未知保留。固定Q15／Q15G6留出全体22/898、26/898，pz0[50,100)GeV均20/789；overflow9/13、8/13，高活动均6/6。空间内容没有消除这些μ根误报，不把簇存在／距离／报警标为其他根或强子。原128prefix／suffix状态、PRD、raw及RNG非干涉通过；独立标量／Cholesky计数精确，阈值差≤3.56e−14。21starts含2程序失败全计14526CPU秒／5296聚合wall秒，0live/G4/ν能量fit；事件文本25675927B精确合并，删251727780B重复。实际联合native data仍缺，单来源控制不认证总体/data FPR或ν低能改善。
@@ -2920,3 +2928,14 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 原128顺序／64suffix及全量首128状态／raw／PRD／RNG精确；两规则×四分层的8组报警计数独立标量重建精确，阈值差≤3.56e−14，实际全量不冒称4096独立RNG重放。21job／21starts含路径和审计打包2次程序失败全计14526CPU秒、5296聚合wall秒／0GPU，最终0live。64链13791.44子CPU秒，4进程driver wall重叠比3.9118仅描述实际重叠，不是受控加速比；事件25675927B、删251727780B重复，源／审计／日志胶囊回读相同，home无旧nu_mu_stage*目录。
 
 [下一Stage158合同](../workbook/stage157_energy_ml/next_execution_contract.json)只用原89033行中71376active父和真实新空间，三固定臂X62／X62+A3／X62+A3+G6，原种子／400轮／角色／K及原1.05/1.01/1.03、八层三尾+2pp、Stage137双5%门不改。五origin首源前40train加已知row40738身份unknown对照，先复现／实际schema／几何／首事件与steady成本，30000CPU预算，过门才复用Stage124的37多REC批。新覆盖／成本／能量结果未测，仍需联合data、真实误差校准／外部物理输入及独立确认；Stage87与整体未完成保持，旧§1–135与旧入口全文保留。
+
+
+## 137. Stage158：真实空间内容在原全队列没有建立低能收益
+
+[中文报告](../workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md)、[固定比较](../workbook/stage158_energy_ml/comparison_summary.json)、[独立验证](../workbook/stage158_energy_ml/validation_summary.json)给出原89033行/71376活动父；π/K/charm实际34305/31714/5357父，280REC/37链、五origin真实schema通过。计数71376全闭合、leading71375，已知row40738保持unknown/原容差；三站全支持71370，6父缺失保留。pilot实149而非201，request257无train不换父、origin82在full实际核查；149pilot/full及Stage155同40/独立首4精确。原raw62 typed不变、9模型reload精确、X62逐值复现cached direct，3288独立标量最大差3.552714e−14。
+
+内容臂/可用性控制cal两低箱1.005470 [0.998143,1.014574]、1.004207 [0.999515,1.009258]，开发test1.015321 [1.005710,1.024105]、0.997528 [0.992801,1.002389]；test all0.999450 [0.998357,1.000582]。最低test箱/传统1.970150 [1.677457,2.321940]、正tail50=13.114754%对传统0%；cal unconfirmed总尾上差+2.079023pp未过+2pp。原联合门/Stage137四项5%扩大门False，不晋升、不把低pz总体相对传统收益误作真最低E改善，也不推断全部空间信息无用。固定G6摘要族终态，不追加seed/tree/loss/空间阈值网格。
+
+15job/15start全exit0、0live、5300CPU秒/3958聚合execute wall秒/0GPU/G4/新ν；实测ROOT3,648,817,135B，37链内部4636.617782CPU秒，driver链wall重叠3.154331仅描述并发。提交4核16GB，CERN额外传输资源后Request6核18GB，未冒称已用科学核；MemoryUsage未求值表达式不当数值峰值。事件13095013B回读精确，新增数组/事件/模型25770775B<128MiB，删448564087B重复，实际源/完整审计/日志精确归档，原输入/Stage54保持。
+
+[下一Stage159冻结合同](../workbook/stage158_energy_ml/next_execution_contract.json)推进Stage132真实data缺口：已知run15838精确REC与合并PHYS，仅原0–63父和独立0–3身份重复，读取actual metadata/TagInfo/未过滤schema和EventInfo，再对完整PHYS run/event索引唯一匹配及matched raw15/pz0支持审计；600CPU秒/100audit预留/2核8GB/最多1job，无G4/重建/fit/自然ν或隔离forward。条目不同不混entry，未知/歧义保留，不以源名或runtime默认值认证producer、geometry、covariance或data FPR。之后同父实际native payload/控制纯度与校准另冻；宽能区/乳胶/GRL曝光/背景接受度/有限响应统计/真实相关nuisance/独立确认继续开放，Stage87/所有原门/原角色/K及整体goal active保持。旧§1–136及全部旧入口全文原样保留。

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "N": 89033,
+  "active_N": 71376,
+  "dimensions": {
+    "X62": 62,
+    "X62_A3": 65,
+    "X62_A3_G6": 71
+  },
+  "joint": {
+    "2_X62": false,
+    "2_X62_A3": false,
+    "2_X62_A3_G6": false,
+    "3_X62": false,
+    "3_X62_A3": false,
+    "3_X62_A3_G6": false
+  },
+  "content_two_low_5pct_expansion_gate": false,
+  "content_two_low_intervals_below1": false,
+  "X62_vs_direct_max_abs_log_difference": 0.0,
+  "reserved_forward": 0,
+  "quarantine_predictions": 0,
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "formal_arms": [
+    "X62",
+    "X62_A3",
+    "X62_A3_G6"
+  ],
+  "energy_models": 9,
+  "promotion": false,
+  "overall_complete": false,
+  "limitations": [
+    "original developed cohort; no independent confirmation",
+    "incoming proxy is not full GENIE family",
+    "conditional intervals exclude source/refit/research selection and actual correlated response systematics",
+    "real spatial content not certified other-root response or calibrated covariance",
+    "muon overflow/highactivity false alarms remain; no data joint-native calibration"
+  ]
+}

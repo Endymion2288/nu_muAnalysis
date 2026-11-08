@@ -1,0 +1,26 @@
+{
+  "admitted": true,
+  "physical_passed": true,
+  "pilot_N": 149,
+  "repeat_N": 4,
+  "reference40_exact": true,
+  "independent_prefix4_exact": true,
+  "known_leading_mismatch_preserved": true,
+  "known_mismatch_row": 40738,
+  "GNU_pilot_CPU_s": 107.3,
+  "measured_startup_and_first_events_CPU_s": 105.47484122000002,
+  "steady_mean_event_CPU_s_by_request": {
+    "0": 0.01380048897435889,
+    "254": 0.015215356333334389,
+    "255": 0.011417044025639948,
+    "260": 0.011047701846153793
+  },
+  "full37batch_3x_projected_CPU_s": 14965.74119636423,
+  "already_used_scheduler_CPU_s": 223.0,
+  "audit_fit_reserve_CPU_s": 1000,
+  "CPU_budget_s": 30000,
+  "remaining_CPU_s": 29777.0,
+  "new_G4": 0,
+  "energy_fits": 0,
+  "limitation": "Prospective affine cost model, all source first events retained in base; no measured full runtime or energy risk. Singleton mismatch is not a steady-cost estimator."
+}

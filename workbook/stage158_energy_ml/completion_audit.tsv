@@ -1,0 +1,46 @@
+check	passed	detail
+all_15_jobs_terminal	True	15 starts, all exit0; CPU5300s
+protocol_frozen	True	byte equality
+all_prior_roadmap_text_preserved	True	entire HEAD text appears verbatim between new head and section137
+python_AST	True	all stage158 Python files parsed; no scientific local execution
+worker_shell	True	bash -n
+nine_models	True	exact9 model files; no grid/retry
+independent_validation	True	3288 scalar checks; max3.552713678800501e-14
+pilot_full_exact	True	all149 native pilot records compared to full before fitting
+preserved:AnalysisZipFramework/submission/ml_tracker_occupancy_prepare.sub	True	size and mtime unchanged; no SHA
+preserved:AnalysisZipFramework/submission/run_ml_tracker_occupancy_prepare.sh	True	size and mtime unchanged; no SHA
+preserved:ml/prepare_tracker_occupancy.py	True	size and mtime unchanged; no SHA
+preserved:ntuples/energy_ml_stage54/data_12.json	True	size and mtime unchanged; no SHA
+preserved:ntuples/energy_ml_stage54/data_13.json	True	size and mtime unchanged; no SHA
+preserved:ntuples/energy_ml_stage54/data_14.json	True	size and mtime unchanged; no SHA
+preserved:ntuples/energy_ml_stage54/data_15.json	True	size and mtime unchanged; no SHA
+preserved:ntuples/energy_ml_stage54/data_16.json	True	size and mtime unchanged; no SHA
+preserved:ntuples/energy_ml_stage54/data_17.json	True	size and mtime unchanged; no SHA
+preserved:workbook/stage54_energy_ml/prepare_smoke.json	True	size and mtime unchanged; no SHA
+preserved:workbook/stage54_energy_ml/sampling_protocol.json	True	size and mtime unchanged; no SHA
+preserved:workbook/stage54_energy_ml/schema_pilot.json	True	size and mtime unchanged; no SHA
+link:stage157_energy_ml/next_execution_contract.json	True	local destination exists
+link:stage158_energy_ml/protocol.json	True	local destination exists
+link:stage158_energy_ml/full_admission.json	True	local destination exists
+link:stage158_energy_ml/native_coverage.tsv	True	local destination exists
+link:stage158_energy_ml/native_identity_exceptions.tsv	True	local destination exists
+link:stage158_energy_ml/source_schema.tsv	True	local destination exists
+link:stage158_energy_ml/feature_dynamic_range.tsv	True	local destination exists
+link:stage158_energy_ml/typed_feature_audit.tsv	True	local destination exists
+link:stage158_energy_ml/metrics.tsv	True	local destination exists
+link:stage158_energy_ml/paired.tsv	True	local destination exists
+link:stage158_energy_ml/support.tsv	True	local destination exists
+link:stage158_energy_ml/source_direction.tsv	True	local destination exists
+link:stage158_energy_ml/native_energy_comparison.png	True	local destination exists
+link:stage158_energy_ml/gates.tsv	True	local destination exists
+link:stage158_energy_ml/validation_summary.json	True	local destination exists
+link:stage158_energy_ml/independent_validation.tsv	True	local destination exists
+link:stage158_energy_ml/pilot_full_validation.tsv	True	local destination exists
+link:stage158_energy_ml/process_resources.tsv	True	local destination exists
+link:stage158_energy_ml/native_resources.tsv	True	local destination exists
+link:stage158_energy_ml/resource_audit.json	True	local destination exists
+link:stage158_energy_ml/storage_cleanup.json	True	local destination exists
+link:stage158_energy_ml/next_execution_contract.json	True	local destination exists
+storage_verified	True	event text/source/log bytes verified before redundant deletion
+new_section137	True	one new roadmap section
+diff_whitespace	True	git diff --check

@@ -1,0 +1,882 @@
+{
+  "all_jobs_terminal": true,
+  "event_text_equality": true,
+  "source_and_logs_byte_equality": true,
+  "event_capsule": {
+    "path": "ntuples/energy_ml_stage158/event_records.json.gz",
+    "bytes": 13095013
+  },
+  "final_event_features_and_models_bytes": 25770775,
+  "limit_bytes": 134217728,
+  "archives": [
+    {
+      "path": "software/stage158/execution_audits.tar.gz",
+      "bytes": 5253
+    },
+    {
+      "path": "software/stage158/native_audits.tar.gz",
+      "bytes": 663645
+    },
+    {
+      "path": "software/stage158/source_snapshots.tar.gz",
+      "bytes": 546248
+    },
+    {
+      "path": "software/stage158/worker_logs.tar.gz",
+      "bytes": 34552
+    }
+  ],
+  "deleted": [
+    {
+      "path": "ntuples/energy_ml_stage158/native_00.json.gz",
+      "bytes": 416319
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_01.json.gz",
+      "bytes": 420862
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_02.json.gz",
+      "bytes": 326469
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_03.json.gz",
+      "bytes": 193610
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_04.json.gz",
+      "bytes": 396795
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_05.json.gz",
+      "bytes": 404361
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_06.json.gz",
+      "bytes": 403531
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_07.json.gz",
+      "bytes": 415368
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_08.json.gz",
+      "bytes": 400463
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_09.json.gz",
+      "bytes": 426712
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_10.json.gz",
+      "bytes": 366126
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_11.json.gz",
+      "bytes": 318376
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_12.json.gz",
+      "bytes": 372099
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_13.json.gz",
+      "bytes": 324413
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_14.json.gz",
+      "bytes": 328330
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_15.json.gz",
+      "bytes": 377790
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_16.json.gz",
+      "bytes": 370976
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_17.json.gz",
+      "bytes": 373120
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_18.json.gz",
+      "bytes": 19849
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_19.json.gz",
+      "bytes": 273290
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_20.json.gz",
+      "bytes": 235622
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_21.json.gz",
+      "bytes": 380633
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_22.json.gz",
+      "bytes": 386766
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_23.json.gz",
+      "bytes": 393227
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_24.json.gz",
+      "bytes": 410521
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_25.json.gz",
+      "bytes": 392084
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_26.json.gz",
+      "bytes": 363552
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_27.json.gz",
+      "bytes": 359544
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_28.json.gz",
+      "bytes": 312590
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_29.json.gz",
+      "bytes": 379010
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_30.json.gz",
+      "bytes": 311931
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_31.json.gz",
+      "bytes": 320442
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_32.json.gz",
+      "bytes": 384989
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_33.json.gz",
+      "bytes": 371684
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_34.json.gz",
+      "bytes": 330980
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_35.json.gz",
+      "bytes": 264228
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/native_36.json.gz",
+      "bytes": 240965
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/pilot.json.gz",
+      "bytes": 30180
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/repeat.json.gz",
+      "bytes": 4383
+    },
+    {
+      "path": "software/stage158/1794107352022342164/energy-ml-stage158.tar.gz",
+      "bytes": 24815052
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/admission_result.tar.gz",
+      "bytes": 1064
+    },
+    {
+      "path": "software/stage158/1794107498954967154/energy-ml-stage158.tar.gz",
+      "bytes": 24761693
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_00_result.tar.gz",
+      "bytes": 1423625
+    },
+    {
+      "path": "software/stage158/1794107503233504127/energy-ml-stage158.tar.gz",
+      "bytes": 24761693
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_01_result.tar.gz",
+      "bytes": 1699590
+    },
+    {
+      "path": "software/stage158/1794107506991279801/energy-ml-stage158.tar.gz",
+      "bytes": 24761693
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_02_result.tar.gz",
+      "bytes": 1586710
+    },
+    {
+      "path": "software/stage158/1794107510705323554/energy-ml-stage158.tar.gz",
+      "bytes": 24761693
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_03_result.tar.gz",
+      "bytes": 1471501
+    },
+    {
+      "path": "software/stage158/1794107868053415280/energy-ml-stage158.tar.gz",
+      "bytes": 24761941
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_04_result.tar.gz",
+      "bytes": 1090904
+    },
+    {
+      "path": "software/stage158/1794107872165755000/energy-ml-stage158.tar.gz",
+      "bytes": 24761941
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_05_result.tar.gz",
+      "bytes": 1467842
+    },
+    {
+      "path": "software/stage158/1794107908201385296/energy-ml-stage158.tar.gz",
+      "bytes": 24761941
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_06_result.tar.gz",
+      "bytes": 1601603
+    },
+    {
+      "path": "software/stage158/1794107912235507636/energy-ml-stage158.tar.gz",
+      "bytes": 24761941
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_07_result.tar.gz",
+      "bytes": 1391628
+    },
+    {
+      "path": "software/stage158/1794108284952513289/energy-ml-stage158.tar.gz",
+      "bytes": 24764522
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_08_result.tar.gz",
+      "bytes": 1419533
+    },
+    {
+      "path": "software/stage158/1794108325525979232/energy-ml-stage158.tar.gz",
+      "bytes": 24764522
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/batch_09_result.tar.gz",
+      "bytes": 257320
+    },
+    {
+      "path": "software/stage158/1794108738779359507/energy-ml-stage158.tar.gz",
+      "bytes": 47523186
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/fit_result.tar.gz",
+      "bytes": 6795725
+    },
+    {
+      "path": "software/stage158/1794106927846500563/energy-ml-stage158.tar.gz",
+      "bytes": 24753832
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/pilot_result.tar.gz",
+      "bytes": 46092
+    },
+    {
+      "path": "software/stage158/1794109387374181426/energy-ml-stage158.tar.gz",
+      "bytes": 24792389
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/plot_result.tar.gz",
+      "bytes": 107238
+    },
+    {
+      "path": "software/stage158/1794109072296096455/energy-ml-stage158.tar.gz",
+      "bytes": 40829040
+    },
+    {
+      "path": "ntuples/energy_ml_stage158/validate_result.tar.gz",
+      "bytes": 89697
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_00_summary.json",
+      "bytes": 115029
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_01_summary.json",
+      "bytes": 116245
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_02_summary.json",
+      "bytes": 95211
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_03_summary.json",
+      "bytes": 46731
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_04_summary.json",
+      "bytes": 112127
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_05_summary.json",
+      "bytes": 112622
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_06_summary.json",
+      "bytes": 113630
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_07_summary.json",
+      "bytes": 115835
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_08_summary.json",
+      "bytes": 112847
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_09_summary.json",
+      "bytes": 117158
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_10_summary.json",
+      "bytes": 104390
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_11_summary.json",
+      "bytes": 97792
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_12_summary.json",
+      "bytes": 104713
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_13_summary.json",
+      "bytes": 97334
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_14_summary.json",
+      "bytes": 97963
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_15_summary.json",
+      "bytes": 105925
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_16_summary.json",
+      "bytes": 105777
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_17_summary.json",
+      "bytes": 105668
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_18_summary.json",
+      "bytes": 8640
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_19_summary.json",
+      "bytes": 88124
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_20_summary.json",
+      "bytes": 83127
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_21_summary.json",
+      "bytes": 109900
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_22_summary.json",
+      "bytes": 111590
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_23_summary.json",
+      "bytes": 111938
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_24_summary.json",
+      "bytes": 114757
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_25_summary.json",
+      "bytes": 112193
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_26_summary.json",
+      "bytes": 100404
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_27_summary.json",
+      "bytes": 102761
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_28_summary.json",
+      "bytes": 95839
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_29_summary.json",
+      "bytes": 105705
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_30_summary.json",
+      "bytes": 96154
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_31_summary.json",
+      "bytes": 97292
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_32_summary.json",
+      "bytes": 106258
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_33_summary.json",
+      "bytes": 104709
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_34_summary.json",
+      "bytes": 92162
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_35_summary.json",
+      "bytes": 88263
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_36_summary.json",
+      "bytes": 78437
+    },
+    {
+      "path": "workbook/stage158_energy_ml/pilot_summary.json",
+      "bytes": 34572
+    },
+    {
+      "path": "workbook/stage158_energy_ml/repeat_summary.json",
+      "bytes": 6574
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_00.log",
+      "bytes": 30877
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_01.log",
+      "bytes": 30908
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_02.log",
+      "bytes": 30717
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_03.log",
+      "bytes": 30461
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_04.log",
+      "bytes": 30799
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_05.log",
+      "bytes": 30855
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_06.log",
+      "bytes": 30850
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_07.log",
+      "bytes": 30889
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_08.log",
+      "bytes": 30889
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_09.log",
+      "bytes": 30910
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_10.log",
+      "bytes": 30782
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_11.log",
+      "bytes": 30691
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_12.log",
+      "bytes": 30787
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_13.log",
+      "bytes": 30685
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_14.log",
+      "bytes": 30684
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_15.log",
+      "bytes": 30783
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_16.log",
+      "bytes": 30782
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_17.log",
+      "bytes": 30782
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_18.log",
+      "bytes": 30139
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_19.log",
+      "bytes": 30595
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_20.log",
+      "bytes": 30532
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_21.log",
+      "bytes": 30845
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_22.log",
+      "bytes": 30722
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_23.log",
+      "bytes": 30854
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_24.log",
+      "bytes": 30876
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_25.log",
+      "bytes": 30845
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_26.log",
+      "bytes": 30787
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_27.log",
+      "bytes": 30749
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_28.log",
+      "bytes": 30685
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_29.log",
+      "bytes": 30815
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_30.log",
+      "bytes": 30680
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_31.log",
+      "bytes": 30551
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_32.log",
+      "bytes": 30809
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_33.log",
+      "bytes": 30783
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_34.log",
+      "bytes": 30687
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_35.log",
+      "bytes": 30591
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_36.log",
+      "bytes": 30527
+    },
+    {
+      "path": "workbook/stage158_energy_ml/pilot.log",
+      "bytes": 29882
+    },
+    {
+      "path": "workbook/stage158_energy_ml/repeat.log",
+      "bytes": 28822
+    },
+    {
+      "path": "workbook/stage158_energy_ml/admission_time.txt",
+      "bytes": 752
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_00_driver_time.txt",
+      "bytes": 787
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_01_driver_time.txt",
+      "bytes": 786
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_02_driver_time.txt",
+      "bytes": 783
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_03_driver_time.txt",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_04_driver_time.txt",
+      "bytes": 782
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_05_driver_time.txt",
+      "bytes": 787
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_06_driver_time.txt",
+      "bytes": 788
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_07_driver_time.txt",
+      "bytes": 788
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_08_driver_time.txt",
+      "bytes": 789
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_09_driver_time.txt",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage158_energy_ml/fit_time.txt",
+      "bytes": 762
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_00_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_01_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_02_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_03_time.txt",
+      "bytes": 915
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_04_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_05_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_06_time.txt",
+      "bytes": 915
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_07_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_08_time.txt",
+      "bytes": 912
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_09_time.txt",
+      "bytes": 912
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_10_time.txt",
+      "bytes": 911
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_11_time.txt",
+      "bytes": 912
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_12_time.txt",
+      "bytes": 912
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_13_time.txt",
+      "bytes": 913
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_14_time.txt",
+      "bytes": 914
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_15_time.txt",
+      "bytes": 914
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_16_time.txt",
+      "bytes": 912
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_17_time.txt",
+      "bytes": 911
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_18_time.txt",
+      "bytes": 908
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_19_time.txt",
+      "bytes": 910
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_20_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_21_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_22_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_23_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_24_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_25_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_26_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_27_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_28_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_29_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_30_time.txt",
+      "bytes": 916
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_31_time.txt",
+      "bytes": 917
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_32_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_33_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_34_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_35_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/native_36_time.txt",
+      "bytes": 918
+    },
+    {
+      "path": "workbook/stage158_energy_ml/pilot_driver_time.txt",
+      "bytes": 780
+    },
+    {
+      "path": "workbook/stage158_energy_ml/pilot_time.txt",
+      "bytes": 909
+    },
+    {
+      "path": "workbook/stage158_energy_ml/plot_time.txt",
+      "bytes": 755
+    },
+    {
+      "path": "workbook/stage158_energy_ml/repeat_time.txt",
+      "bytes": 907
+    },
+    {
+      "path": "workbook/stage158_energy_ml/validate_time.txt",
+      "bytes": 759
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_00_driver.json",
+      "bytes": 508
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_01_driver.json",
+      "bytes": 508
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_02_driver.json",
+      "bytes": 509
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_03_driver.json",
+      "bytes": 508
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_04_driver.json",
+      "bytes": 509
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_05_driver.json",
+      "bytes": 509
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_06_driver.json",
+      "bytes": 509
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_07_driver.json",
+      "bytes": 508
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_08_driver.json",
+      "bytes": 509
+    },
+    {
+      "path": "workbook/stage158_energy_ml/batch_09_driver.json",
+      "bytes": 218
+    },
+    {
+      "path": "workbook/stage158_energy_ml/pilot_driver.json",
+      "bytes": 304
+    }
+  ],
+  "deleted_bytes": 448564087,
+  "no_persistent_ROOT": true,
+  "original_inputs_other_stages_and_Stage54_untouched": true
+}

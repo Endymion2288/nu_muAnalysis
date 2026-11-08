@@ -1,0 +1,40 @@
+{
+  "scheduler_CPU_s": 5300.0,
+  "scheduler_aggregate_wall_s": 3958.0,
+  "starts": 15,
+  "submitted_request_CPUs": 4,
+  "submitted_memory_MB": 16000,
+  "scheduler_RequestCpus": [
+    6
+  ],
+  "scheduler_RequestMemory_MB": [
+    18000
+  ],
+  "failed_jobs": [],
+  "full_native_parent_N": 71376,
+  "actual_REC_N": 280,
+  "actual_origins": [
+    55,
+    70,
+    81,
+    82,
+    83
+  ],
+  "native_parents_by_component": {
+    "charm": 5357,
+    "k": 31714,
+    "pi": 34305
+  },
+  "full_native_internal_CPU_s": 4636.617782249001,
+  "full_native_internal_wall_s": 10729.84368416731,
+  "full_driver_aggregate_wall_s": 3401.6230051054736,
+  "measured_chain_wall_overlap": 3.1543306439493612,
+  "full_native_ROOT_read_bytes": 3648817135,
+  "full_native_ROOT_bytes_per_parent": 51121.06499383546,
+  "full_native_internal_CPU_s_per_parent": 0.06496045984993556,
+  "max_native_RSS_KiB": 2100828,
+  "GPU_jobs": 0,
+  "interpretation": "Chain overlap is measured concurrency, not a matched serial speedup. Scheduler totals include descendants; do not add nested process CPU again.",
+  "scheduler_max_reported_ResidentSetSize_KiB": 7500000,
+  "scheduler_MemoryUsage_unresolved_expression": true
+}

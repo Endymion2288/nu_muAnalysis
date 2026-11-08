@@ -1,0 +1,44 @@
+{
+  "next_stage": 159,
+  "question": "Can the known real-data REC and merged PHYS be paired by actual native run/event identity, with measured source metadata and readout support, before claiming joint native data calibration?",
+  "basis": "Stage158 fixed spatial-content arm did not pass the original or expansion gates; no same-family energy grid. Stage132 actual data joint response remains open. Existing exact run15838 REC and PHYS paths are known from the untouched Stage54 schema pilot; PHYS path is also tracked in ml/configs/calonu_muon_files.tsv. No broad source search or fictitious joint data.",
+  "sources": {
+    "REC": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00000-r0022-xAOD.root",
+    "PHYS": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root"
+  },
+  "parents": "Exactly REC original entries0..63 without track/charge/energy selection; separately repeat entries0..3. Keep absent/ambiguous/unsupported parents in the denominator; no replacement source or best-looking event selection.",
+  "native": "Pinned prebuilt runtime; read actual full file metadata/TagInfo and CollectionTree branch/class inventory, then EventInfo only via PoolRead, no detector reconstruction or waveform instantiation. No guessed detector geometry/conditions certification from runtime defaults. Do not infer absent waveform content from the historical filtered Stage54 branch list.",
+  "identity": "Exact actual native run/event against the entire named PHYS run/event index (merged50 subfiles). Require unique match for a pair; duplicate or missing identity stays unknown. Never equate REC and PHYS entry numbers. Independent prefix4 native identities must match exactly. No pz tolerance adjustment or producer-equivalence claim.",
+  "PHYS": "Read only run/event full index; read matched rows for pz0, px/py, track quality/counts and15 raw-charge/raw-peak/baselineRMS/status fields when present. Report exact source schema and absent branches, pz50-100 support, single-track control eligibility and signed raw/missing/overflow counts. Missing channels remain unknown; no fitted charge/time fallback. Only pz0 first-power momentum; no p0/p1/pz1 features. No timing feature or score.",
+  "outputs": [
+    "actual metadata and relevant native/PHYS schemas",
+    "64 parent identity pair table with REC/PHYS entry separation",
+    "independent first4 identity repeat check",
+    "native waveform-container presence and producer/geometry/conditions evidence or explicit missing fields",
+    "PHYS raw support and selected-lowpz coverage, no purity/FPR claim",
+    "actual CPU/wall/ROOT and uproot bytes/RSS and compact storage audit"
+  ],
+  "resources": {
+    "CPU_budget_s": 600,
+    "audit_reserve_CPU_s": 100,
+    "request_CPUs": 2,
+    "memory_MB": 8000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "max_active_jobs": 1,
+    "final_bytes_cap": 8388608
+  },
+  "execution": "All ROOT/metadata/event arrays/statistics run in HTCondor ~/condor/nu_muAnalysis/stage159/. One fixed prefix64 and separate prefix4 native subprocesses, followed by unique identity matching and fixed raw support audit. Local work only text/transport/scheduler. No sweep or further production in this stage.",
+  "stop": "After the fixed pairing/support audit, stop. Program failures may be corrected with all costs retained; unsupported schema, absent identity/readout/metadata is an honest support result, not permission to substitute another producer or force historical geometry. No native joint score or energy fitting in this experiment.",
+  "storage": "No REC/PHYS/xAOD copy or full waveform persistence. Preserve only source metadata,64 compact parent records, repeat4 identities and exact source/log snapshots; consolidate verified transports after all jobs terminal, no SHA; preserve Stage54 and other stages.",
+  "followup": "Use actual pairing and metadata evidence to freeze a minimal real-data native state/PRD/raw consistency pilot. Joint calibration still requires same-producer measurements and documented muon-control purity; alerts are not data FPR. Real covariance/pull calibration, wider source support, emulsion, GRL/exposure/background/acceptance/correlated nuisances and independent confirmation stay open.",
+  "invariant": "Stage87 champion; original risk gates and Stage137 expansion gate, roles/allK/reserved0/pz0-only first-power momentum/raw11/typedNaN/legal signed/status0 timing/Calo missing unchanged.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "energy_fits": 0,
+  "natural_nu_forward": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false
+}
