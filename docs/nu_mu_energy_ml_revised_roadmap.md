@@ -1,3 +1,11 @@
+# 当前执行更新：Stage174 完成Timing双端校准，转全队列均时支持
+
+[Stage174报告](../workbook/2026-11-08_stage174_timing-dual-end-control.md)固定三来源各256→4096，12288输入，真实CableMapping与hist title同片/异PMT一致。12项校准与三源独立前4例、标量残差验证通过；MC两片差时/均时过门，但真实两来源的差时/有效位置全部不过门，不能以MC精度认证真实位置。data8006两片及data15838第一片均时通过abs95门，较大RMSE尾部及跨run迁移仍未知。3start全exit0、78CPU/108聚合wall秒、0live；保留1258607B控制数组，删4809194B重复、Stage54保持，无能量训练/晋升。
+
+下一Stage175先固定旧89033/280源selected entry的Timing实际支持：原pi/K/charm各32train小pilot→成本门→全队列，缺时/缺源/困难/K/隔离分母保持；只用真实与MC均有支持的均时，不移植data offset、不输出不合格差时位置。同步固定尾部来源诊断，之后才另冻X/V/T新训练。S0前后辐射和同窗读出干预继续推进；Stage87与全部原门不变，整体目标未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage173 完成一次读出适用性判定，转Timing双端与S0新物理
 
 [Stage173报告](../workbook/2026-11-08_stage173_readout-regime-applicability.md)实际两v10 GRL确认inclusive含15838、CaloNu专用无该run；16条件查询支持，data实际calo/calo2各4路、Timing8/9和10/11同片两端、硬件31为clock。HV0–19单IOV覆盖原稳定查询，20–23/31缺记录，DAQ config与真实gain/timewalk/正常CaloNu迁移仍未知。两GRL独立字节/成员及两点COOL重读通过，3start全exit0、46CPU/195聚合wall秒/0live/事件ROOT/fit/G4；官方源52503B、删174044B重复、Stage54保持。旧未提交Stage172草稿6文件精确归档，原合同/用户两研究文档不改写。
@@ -3184,3 +3192,8 @@ Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；
 [完整报告](../workbook/2026-11-08_stage173_readout-regime-applicability.md)实取inclusive/CaloNu两GRL，15838仅前者有；16明确条件query全部支持但20–23/31无HV，硬件31为clock，calo/calo2各4路。实际IOV/原字节/成员及两点重读验证通过，0物理校准/DAQ exact config/曝光认证。3终态start、46CPU秒/195wall秒，无事件ROOT/fit/G4；官方源52503B、删174044B重复，Stage54保持。一次条件判定至此结束。
 
 下一固定三μ来源每份256→成本→4096，先做Timing同片双端差/相对均时/x残差与留出覆盖，严守status0、signed、原角色和全门；全ν覆盖/新能量对照另冻。S0 actual state/material与μ前后辐射、实际同窗读出干预/高幅参考/小型backscatter/物理背景效率加权账目及独立确认按新方案继续，不因噪声或metadata无限前置。原32文件合同历史保留不执行，整体目标未完成。
+
+
+## 154. Stage174：真实μ双端校准完成，差时位置与均时支持分开
+
+[完整报告](../workbook/2026-11-08_stage174_timing-dual-end-control.md)三源各4096例，MC双片Δ/M通过，data8006双片Δ的abs95为2.125391/2.282651ns、有效位置163.022/180.845mm，data15838为2.636573/3.140225ns及219.930/311.102mm，均不过门。真实M三项通过、第四项abs95=3.561739ns不过；部分M的RMSE达4ns量级，保留尾部不删，原因未知。12项标量与三源原前4例重读通过，3start/78CPU/108wall秒/0live，0能量fit/G4。下一全队列均时范围/缺失与固定尾部诊断后才决定有限新训练，不用MC认证真实位置，不调门。S0与读出干预按用户研究方案继续，整体未完成。

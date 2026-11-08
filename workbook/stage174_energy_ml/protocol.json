@@ -1,0 +1,100 @@
+{
+  "stage": 174,
+  "parent_stage": 173,
+  "question": "Can actual same-slab dual-ended Timing time difference and prompt-relative mean be calibrated in independent real-muon controls, with explicit full denominator and position support?",
+  "references": [
+    "workbook/2026-11-08_stage172_retraining-and-detector-readout-supplement.md",
+    "workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md"
+  ],
+  "sources": [
+    {
+      "label": "data8006",
+      "run": 8006,
+      "kind": "data",
+      "path": "/eos/experiment/faser/data0/phys/2022_back/r0021/008006/Faser-Physics-008006-00000-00049-PHYS.root"
+    },
+    {
+      "label": "MC100012",
+      "run": 100012,
+      "kind": "MC",
+      "path": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root"
+    },
+    {
+      "label": "data15838",
+      "run": 15838,
+      "kind": "data",
+      "path": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root"
+    }
+  ],
+  "pilot_N_per_source": 256,
+  "full_N_per_source": 4096,
+  "audit_original_prefix_N": 4,
+  "controls": "Single long track; leading highest pz0 50<pz0<2000GeV, >=7layers, chi2/ndof<10, finite actual X/Y_atTrig with abs<1000mm to exclude placeholder999999; no neutrino truth/energy input.",
+  "strict": "Both original end status exactly0, finite localtime>0; derived timing/position NaN otherwise. Positive finite rawQ only within timewalk calibration; signed rawQ retained for all rows.",
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "reference": "Veto21 strict original status0, finite localtime>0, positive rawQ for relative-mean calibration.",
+  "mapping": "Actual per-source CableMapping at run (data CONDBR3, MC OFLP200 tag05); first4 Timing hardware entries sorted as actual ntuple producer and hRandomCharge titles if present. Require same plate opposite PMT per pair. Missing mapping rejects feature, not event.",
+  "time_coordinate": "local acquisition times only. Same-board difference cancels common clock phase. Retain clockPhase/bcidtime/triggertime only as QA; do not subtract phase a second time. Relative mean uses Veto21, not an unanchored absolute time.",
+  "fit_split": "Original input entry even calibration, odd validation; finite same-file conditional validation, not independent run transfer.",
+  "difference_design": [
+    "1",
+    "x_atTrig_mm/100",
+    "1/sqrt(qL_pC)",
+    "1/sqrt(qR_pC)"
+  ],
+  "mean_design": [
+    "1",
+    "1/sqrt(qL_pC)",
+    "1/sqrt(qR_pC)",
+    "1/sqrt(qRef_pC)"
+  ],
+  "target_difference": "tL-tR; report effective slope, sign and x_light residual. No physical shower-centroid label.",
+  "target_mean": "(tL+tR)/2-tRef minus conventional straight-slope path: data dz*sqrt(1+tx^2+ty^2)/c, MC dz*(sqrt(...)-1)/c; dz1598.9mm. Actual material/clock-transfer uncertainty not thereby certified.",
+  "gates": {
+    "train_N_min": 100,
+    "validation_N_min": 100,
+    "design_rank": 4,
+    "condition_max": 1000000.0,
+    "train_x_SD_min_mm": 10,
+    "delta_validation_abs95_max_ns": 2,
+    "position_validation_abs95_max_mm": 100,
+    "relative_mean_validation_abs95_max_ns": 2
+  },
+  "ranges": "Only training min/max charge and x/y ranges support later application. No weak-signal extrapolation or thresholds tuned on nu energy.",
+  "pilot_admission": "All actual identities and required schema present or explicitly unsupported; exact original Stage129 run/event prefix for controls where available; GNU complete CPU threefold 4096/256 plus300audit reserve within1200.",
+  "failure_policy": "Unknown/missing support remains. Do not change source/fit family/quality gate; no energy training until physically supported calibrated observables and whole-cohort coverage have separate contract.",
+  "CPU_budget_s": 1200,
+  "phase_CPU_allowance_s": {
+    "pilot": 250,
+    "full": 650,
+    "audit": 300
+  },
+  "request_CPUs": 4,
+  "request_memory_MB": 8000,
+  "max_jobs": 1,
+  "worker_processes": 3,
+  "MaxRuntime_s": 86400,
+  "short_application_timeout": false,
+  "no": [
+    "new energy fits",
+    "nu labels",
+    "role/reserved changes",
+    "bad-hit times",
+    "charge-zero clipping",
+    "phase-as-energy-input",
+    "GLS/new covariance prior",
+    "unbounded data scans"
+  ],
+  "preserve": "Stage87/all original gates; pz0-only first-power momentum; px/py/q/p/bending allowed; raw11/typedNaN/signed/status0 timing/Calo missing; pz>50GeV/allK/roles/reserved/quarantine/Stage54",
+  "overall_complete": false,
+  "promotion": false
+}

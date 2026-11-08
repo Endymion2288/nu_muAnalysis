@@ -1,0 +1,1268 @@
+[
+  {
+    "label": "data8006",
+    "pair": [
+      0,
+      1
+    ],
+    "kind": "difference",
+    "input_N": 4096,
+    "control_N": 2998,
+    "strict_pair_N": 2003,
+    "positive_charge_supported_N": 2003,
+    "train_N": 985,
+    "validation_N": 1018,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": false,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -3.268942409417183,
+      -1.3037470897457109,
+      5.101996350703693,
+      4.70750989677153
+    ],
+    "rank": 4,
+    "condition": 44.982702264279744,
+    "train_x_SD_mm": 66.54220338606447,
+    "validation_RMSE_ns": 1.9995319440445487,
+    "validation_median_ns": 0.012302475798026569,
+    "validation_abs95_ns": 2.125390843249393,
+    "training_ranges": {
+      "qL_pC": [
+        0.8746679425239563,
+        496.7872619628906
+      ],
+      "qR_pC": [
+        0.7880859375,
+        479.17315673828125
+      ],
+      "x_mm": [
+        -120.73643181003,
+        123.88264982440361
+      ],
+      "y_mm": [
+        -123.42959254882282,
+        119.59792338352217
+      ]
+    },
+    "raw_validation_RMSE_ns": 2.116497039521028,
+    "slope_ns_per_mm": -0.01303747089745711,
+    "effective_speed_magnitude_mm_per_ns": 153.40398576767598,
+    "validation_position_abs95_mm": 163.02171333428936
+  },
+  {
+    "label": "data8006",
+    "pair": [
+      0,
+      1
+    ],
+    "kind": "relative_mean",
+    "input_N": 4096,
+    "control_N": 2998,
+    "strict_pair_N": 2003,
+    "positive_charge_supported_N": 1888,
+    "train_N": 935,
+    "validation_N": 953,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -7.531069869530874,
+      0.5937888720481315,
+      13.855979594196963,
+      3.5326370984306905
+    ],
+    "rank": 4,
+    "condition": 53.625092518139766,
+    "train_x_SD_mm": 66.65193057954414,
+    "validation_RMSE_ns": 4.661894525850578,
+    "validation_median_ns": -0.07569481087335106,
+    "validation_abs95_ns": 1.8114713761377181,
+    "training_ranges": {
+      "qL_pC": [
+        0.8746679425239563,
+        496.7872619628906
+      ],
+      "qR_pC": [
+        0.9231836199760437,
+        479.17315673828125
+      ],
+      "qRef_pC": [
+        62.88267517089844,
+        679.9629516601562
+      ],
+      "x_mm": [
+        -120.73643181003,
+        123.88264982440361
+      ],
+      "y_mm": [
+        -123.42959254882282,
+        119.59792338352217
+      ]
+    },
+    "raw_validation_RMSE_ns": 4.935330956659485
+  },
+  {
+    "label": "data8006",
+    "pair": [
+      2,
+      3
+    ],
+    "kind": "difference",
+    "input_N": 4096,
+    "control_N": 2998,
+    "strict_pair_N": 1393,
+    "positive_charge_supported_N": 1393,
+    "train_N": 683,
+    "validation_N": 710,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": false,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -0.8569974376267063,
+      -1.2622155674720987,
+      2.97725896793435,
+      0.7969521346723533
+    ],
+    "rank": 4,
+    "condition": 35.197198809485855,
+    "train_x_SD_mm": 66.26017001624416,
+    "validation_RMSE_ns": 1.7780023328734866,
+    "validation_median_ns": 0.030779404824329518,
+    "validation_abs95_ns": 2.2826507738927853,
+    "training_ranges": {
+      "qL_pC": [
+        0.7506445050239563,
+        540.2169799804688
+      ],
+      "qR_pC": [
+        1.5165332555770874,
+        547.0692138671875
+      ],
+      "x_mm": [
+        -120.05782017263323,
+        124.75396970626922
+      ],
+      "y_mm": [
+        -120.73070705853395,
+        125.36985259272448
+      ]
+    },
+    "raw_validation_RMSE_ns": 1.9062691112988979,
+    "slope_ns_per_mm": -0.012622155674720987,
+    "effective_speed_magnitude_mm_per_ns": 158.4515396213579,
+    "validation_position_abs95_mm": 180.84476477059798
+  },
+  {
+    "label": "data8006",
+    "pair": [
+      2,
+      3
+    ],
+    "kind": "relative_mean",
+    "input_N": 4096,
+    "control_N": 2998,
+    "strict_pair_N": 1393,
+    "positive_charge_supported_N": 1301,
+    "train_N": 640,
+    "validation_N": 661,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 28024661606400,
+        "until": 59648505806848,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -4.647308480700647,
+      1.0662155377755207,
+      5.541756222444748,
+      -1.998196575021702
+    ],
+    "rank": 4,
+    "condition": 52.64514495827358,
+    "train_x_SD_mm": 66.12243025765504,
+    "validation_RMSE_ns": 1.0863862179659516,
+    "validation_median_ns": -0.06512957257875751,
+    "validation_abs95_ns": 1.6170799069735309,
+    "training_ranges": {
+      "qL_pC": [
+        0.7506445050239563,
+        540.2169799804688
+      ],
+      "qR_pC": [
+        1.5165332555770874,
+        547.0692138671875
+      ],
+      "qRef_pC": [
+        61.919189453125,
+        732.2754516601562
+      ],
+      "x_mm": [
+        -117.31154906690627,
+        124.75396970626922
+      ],
+      "y_mm": [
+        -120.73070705853395,
+        125.36985259272448
+      ]
+    },
+    "raw_validation_RMSE_ns": 1.280288304835846
+  },
+  {
+    "label": "MC100012",
+    "pair": [
+      0,
+      1
+    ],
+    "kind": "difference",
+    "input_N": 4096,
+    "control_N": 3611,
+    "strict_pair_N": 1758,
+    "positive_charge_supported_N": 1758,
+    "train_N": 870,
+    "validation_N": 888,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      1.1691812269357547,
+      1.3449893135948114,
+      -41.169494540997604,
+      34.77519377741522
+    ],
+    "rank": 4,
+    "condition": 398.5886463465896,
+    "train_x_SD_mm": 50.24001725362846,
+    "validation_RMSE_ns": 0.6943287181617132,
+    "validation_median_ns": 0.0182816116807496,
+    "validation_abs95_ns": 0.42341241600386254,
+    "training_ranges": {
+      "qL_pC": [
+        1.3298437595367432,
+        154.22740173339844
+      ],
+      "qR_pC": [
+        1.339746117591858,
+        154.40367126464844
+      ],
+      "x_mm": [
+        -109.72538232582765,
+        105.75759530885321
+      ],
+      "y_mm": [
+        -115.8880247256714,
+        103.8843498103223
+      ]
+    },
+    "raw_validation_RMSE_ns": 0.7790467038735677,
+    "slope_ns_per_mm": 0.013449893135948115,
+    "effective_speed_magnitude_mm_per_ns": 148.7000662224232,
+    "validation_position_abs95_mm": 31.480727149585277
+  },
+  {
+    "label": "MC100012",
+    "pair": [
+      0,
+      1
+    ],
+    "kind": "relative_mean",
+    "input_N": 4096,
+    "control_N": 3611,
+    "strict_pair_N": 1758,
+    "positive_charge_supported_N": 1729,
+    "train_N": 851,
+    "validation_N": 878,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      5.493528005938173,
+      -13.535805647482212,
+      10.923333269411778,
+      1.7695992924147097
+    ],
+    "rank": 4,
+    "condition": 397.70026193572824,
+    "train_x_SD_mm": 50.373294127538905,
+    "validation_RMSE_ns": 0.6413539019035339,
+    "validation_median_ns": 0.009063250229638609,
+    "validation_abs95_ns": 0.1743942552281954,
+    "training_ranges": {
+      "qL_pC": [
+        1.3298437595367432,
+        154.22740173339844
+      ],
+      "qR_pC": [
+        1.339746117591858,
+        154.40367126464844
+      ],
+      "qRef_pC": [
+        65.64681243896484,
+        596.3423461914062
+      ],
+      "x_mm": [
+        -109.72538232582765,
+        105.75759530885321
+      ],
+      "y_mm": [
+        -115.8880247256714,
+        103.8843498103223
+      ]
+    },
+    "raw_validation_RMSE_ns": 0.5857377056893402
+  },
+  {
+    "label": "MC100012",
+    "pair": [
+      2,
+      3
+    ],
+    "kind": "difference",
+    "input_N": 4096,
+    "control_N": 3611,
+    "strict_pair_N": 2053,
+    "positive_charge_supported_N": 2053,
+    "train_N": 1048,
+    "validation_N": 1005,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      0.006654474045400848,
+      1.4594083819681078,
+      7.591375423378384,
+      -7.640829265932013
+    ],
+    "rank": 4,
+    "condition": 385.88125566265853,
+    "train_x_SD_mm": 50.63478331677912,
+    "validation_RMSE_ns": 0.2814855994785508,
+    "validation_median_ns": 0.0005625084259310853,
+    "validation_abs95_ns": 0.18655597053411888,
+    "training_ranges": {
+      "qL_pC": [
+        1.2132959365844727,
+        163.48976135253906
+      ],
+      "qR_pC": [
+        1.1169482469558716,
+        163.24337768554688
+      ],
+      "x_mm": [
+        -111.83359125587614,
+        113.63965956006206
+      ],
+      "y_mm": [
+        -115.8880247256714,
+        117.77007485157922
+      ]
+    },
+    "raw_validation_RMSE_ns": 0.7996486787952198,
+    "slope_ns_per_mm": 0.014594083819681079,
+    "effective_speed_magnitude_mm_per_ns": 137.04183316412565,
+    "validation_position_abs95_mm": 12.78298609485413
+  },
+  {
+    "label": "MC100012",
+    "pair": [
+      2,
+      3
+    ],
+    "kind": "relative_mean",
+    "input_N": 4096,
+    "control_N": 3611,
+    "strict_pair_N": 2053,
+    "positive_charge_supported_N": 2027,
+    "train_N": 1034,
+    "validation_N": 993,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 0,
+        "until": 9223372036854775807,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      4.762374931448827,
+      -14.248065078178858,
+      16.3160609448369,
+      0.6795990459543
+    ],
+    "rank": 4,
+    "condition": 436.9496781675001,
+    "train_x_SD_mm": 50.6862047527986,
+    "validation_RMSE_ns": 0.24539264674893585,
+    "validation_median_ns": -0.011657553557530065,
+    "validation_abs95_ns": 0.16868234344669267,
+    "training_ranges": {
+      "qL_pC": [
+        1.2132959365844727,
+        163.48976135253906
+      ],
+      "qR_pC": [
+        1.1169482469558716,
+        163.24337768554688
+      ],
+      "qRef_pC": [
+        65.63924407958984,
+        625.7664794921875
+      ],
+      "x_mm": [
+        -111.83359125587614,
+        113.63965956006206
+      ],
+      "y_mm": [
+        -115.8880247256714,
+        117.77007485157922
+      ]
+    },
+    "raw_validation_RMSE_ns": 0.26434624545653035
+  },
+  {
+    "label": "data15838",
+    "pair": [
+      0,
+      1
+    ],
+    "kind": "difference",
+    "input_N": 4096,
+    "control_N": 2587,
+    "strict_pair_N": 1553,
+    "positive_charge_supported_N": 1553,
+    "train_N": 768,
+    "validation_N": 785,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": false,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -2.5342114198097674,
+      -1.198825239374365,
+      13.883306100324509,
+      -8.206749187355353
+    ],
+    "rank": 4,
+    "condition": 40.458629392668406,
+    "train_x_SD_mm": 70.59562509752105,
+    "validation_RMSE_ns": 3.969417552280104,
+    "validation_median_ns": 0.03616621328790348,
+    "validation_abs95_ns": 2.6365734503762686,
+    "training_ranges": {
+      "qL_pC": [
+        0.989453136920929,
+        533.5918579101562
+      ],
+      "qR_pC": [
+        0.6499804854393005,
+        511.1640625
+      ],
+      "x_mm": [
+        -124.39695925820762,
+        125.05863750880944
+      ],
+      "y_mm": [
+        -121.48554537366354,
+        120.6012904600454
+      ]
+    },
+    "raw_validation_RMSE_ns": 3.8298019856677903,
+    "slope_ns_per_mm": -0.01198825239374365,
+    "effective_speed_magnitude_mm_per_ns": 166.82998775065386,
+    "validation_position_abs95_mm": 219.92975821498607
+  },
+  {
+    "label": "data15838",
+    "pair": [
+      0,
+      1
+    ],
+    "kind": "relative_mean",
+    "input_N": 4096,
+    "control_N": 2587,
+    "strict_pair_N": 1553,
+    "positive_charge_supported_N": 1409,
+    "train_N": 698,
+    "validation_N": 711,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": true,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -5.860795608987404,
+      2.190398868272611,
+      5.888697900801246,
+      -1.6881443529279656
+    ],
+    "rank": 4,
+    "condition": 49.23493588915884,
+    "train_x_SD_mm": 70.27578318800407,
+    "validation_RMSE_ns": 4.3745565967750775,
+    "validation_median_ns": -0.0600795064065931,
+    "validation_abs95_ns": 1.4317213217230234,
+    "training_ranges": {
+      "qL_pC": [
+        0.989453136920929,
+        533.5918579101562
+      ],
+      "qR_pC": [
+        0.6499804854393005,
+        511.1640625
+      ],
+      "qRef_pC": [
+        61.9366569519043,
+        678.9463500976562
+      ],
+      "x_mm": [
+        -124.39695925820762,
+        125.05863750880944
+      ],
+      "y_mm": [
+        -121.48554537366354,
+        120.6012904600454
+      ]
+    },
+    "raw_validation_RMSE_ns": 4.542183553265183
+  },
+  {
+    "label": "data15838",
+    "pair": [
+      2,
+      3
+    ],
+    "kind": "difference",
+    "input_N": 4096,
+    "control_N": 2587,
+    "strict_pair_N": 1459,
+    "positive_charge_supported_N": 1459,
+    "train_N": 701,
+    "validation_N": 758,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": false,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -1.5709118518539122,
+      -1.009386337129845,
+      -5.681049855792967,
+      13.149377465174794
+    ],
+    "rank": 4,
+    "condition": 37.098829811451964,
+    "train_x_SD_mm": 71.98653117658243,
+    "validation_RMSE_ns": 2.1187206365501114,
+    "validation_median_ns": 0.11643115655559799,
+    "validation_abs95_ns": 3.1402248735581924,
+    "training_ranges": {
+      "qL_pC": [
+        0.7538378834724426,
+        402.1671142578125
+      ],
+      "qR_pC": [
+        0.8214990496635437,
+        430.4635925292969
+      ],
+      "x_mm": [
+        -124.39695925820762,
+        123.00491160535923
+      ],
+      "y_mm": [
+        -119.82139922948274,
+        126.06114943543675
+      ]
+    },
+    "raw_validation_RMSE_ns": 1.8425389837498836,
+    "slope_ns_per_mm": -0.01009386337129845,
+    "effective_speed_magnitude_mm_per_ns": 198.14018938347536,
+    "validation_position_abs95_mm": 311.1023755767601
+  },
+  {
+    "label": "data15838",
+    "pair": [
+      2,
+      3
+    ],
+    "kind": "relative_mean",
+    "input_N": 4096,
+    "control_N": 2587,
+    "strict_pair_N": 1459,
+    "positive_charge_supported_N": 1318,
+    "train_N": 644,
+    "validation_N": 674,
+    "physical_same_slab_mapping": true,
+    "mapping": [
+      {
+        "hardware": 8,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 9,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 0,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      },
+      {
+        "hardware": 10,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 1
+        }
+      },
+      {
+        "hardware": 11,
+        "since": 67950677590016,
+        "until": 68053756805120,
+        "payload": {
+          "type": "trigger",
+          "station": 0,
+          "plate": 1,
+          "row": 0,
+          "module": 0,
+          "pmt": 0
+        }
+      }
+    ],
+    "usable": false,
+    "units": "ns; x in mm; rawQ in pC",
+    "coefficient": [
+      -6.478484838708604,
+      7.077089004850597,
+      14.742751041107663,
+      -11.009469527661233
+    ],
+    "rank": 4,
+    "condition": 47.05040447501551,
+    "train_x_SD_mm": 70.99360330202539,
+    "validation_RMSE_ns": 4.258487445883655,
+    "validation_median_ns": -0.07571705523973082,
+    "validation_abs95_ns": 3.561738949167238,
+    "training_ranges": {
+      "qL_pC": [
+        0.7538378834724426,
+        402.1671142578125
+      ],
+      "qR_pC": [
+        0.8214990496635437,
+        430.4635925292969
+      ],
+      "qRef_pC": [
+        56.317298889160156,
+        742.640380859375
+      ],
+      "x_mm": [
+        -124.39695925820762,
+        123.00491160535923
+      ],
+      "y_mm": [
+        -119.82139922948274,
+        126.06114943543675
+      ]
+    },
+    "raw_validation_RMSE_ns": 3.9913030110645242
+  }
+]

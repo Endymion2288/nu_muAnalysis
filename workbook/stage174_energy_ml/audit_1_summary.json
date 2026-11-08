@@ -1,0 +1,51 @@
+{
+  "index": 1,
+  "label": "MC100012",
+  "source": {
+    "label": "MC100012",
+    "run": 100012,
+    "kind": "MC",
+    "path": "/eos/experiment/faser/sim/mc24/particle_gun/100012/phy/s0012-r0023/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-00004-s0012-r0023-PHYS.root"
+  },
+  "N_total": 50000,
+  "missing": [],
+  "supported": true,
+  "original_Stage129_control_identity_Veto21_exact": true,
+  "N": 4,
+  "track_muon_N": 4,
+  "projection_valid_N": 4,
+  "control_N": 4,
+  "strict_end_N": [
+    3,
+    3,
+    1,
+    1,
+    4
+  ],
+  "signed_negative_rawQ_N": 0,
+  "placeholder_minus999_N": 0,
+  "histogram_titles": {
+    "hRandomCharge12": "Preshower0 Ch12 Charge from RandomEvents",
+    "hRandomCharge13": "Preshower1 Ch13 Charge from RandomEvents",
+    "hRandomCharge8": "Timing0 Ch8 Charge from RandomEvents",
+    "hRandomCharge9": "Timing1 Ch9 Charge from RandomEvents",
+    "hRandomCharge10": "Timing2 Ch10 Charge from RandomEvents",
+    "hRandomCharge11": "Timing3 Ch11 Charge from RandomEvents",
+    "hRandomCharge14": "Veto10 Ch14 Charge from RandomEvents",
+    "hRandomCharge6": "Veto20 Ch6 Charge from RandomEvents",
+    "hRandomCharge7": "Veto21 Ch7 Charge from RandomEvents",
+    "hRandomCharge4": "VetoNu0 Ch4 Charge from RandomEvents",
+    "hRandomCharge5": "VetoNu1 Ch5 Charge from RandomEvents",
+    "hRandomCharge0": "Calo0 Ch0 Charge from RandomEvents",
+    "hRandomCharge1": "Calo1 Ch1 Charge from RandomEvents",
+    "hRandomCharge2": "Calo2 Ch2 Charge from RandomEvents",
+    "hRandomCharge3": "Calo3 Ch3 Charge from RandomEvents"
+  },
+  "raw_time_values_are_diagnostics": true,
+  "energy_fits": 0,
+  "read_bytes": 515886,
+  "CPU_s": 0.558164224,
+  "wall_s": 0.735245552030392,
+  "RSS_KiB": 93716,
+  "bytes": 3833
+}
