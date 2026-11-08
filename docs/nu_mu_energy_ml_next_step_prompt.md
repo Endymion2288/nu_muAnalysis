@@ -1,3 +1,9 @@
+# 当前执行更新：Stage197 真实低pz切流完成，最终选择输入按用户决定留空
+
+[中文报告](../workbook/2026-11-08_stage197_real-low-pz-candidate-support-and-aux-gap.md)实际读取原run15838首PHYS前8192条并独立标量重读。原谱仪/几何选择后、VetoNu veto之前2647条，其中pz0=50–100GeV351条；它们含穿透μ/未知背景，不是低真Eν候选产额。PHYS无原生reduced charge，配置的私有aux目录返回Operation not permitted（不是证明样本不存在）；全部2647最终选择未知，confirmed selected0不得当成零产额。三倍全量投影73046.38313CPU秒>16000，未提交16文件full，MC读取0，无fit/forward/G4。
+
+独立8192累积切流/2647身份raw/status和351低pz计数通过；2start全0、61CPU/78聚合wall秒/0live，留353246B、清812224B重复，Stage54保持。用户明确当前无aux及相应独立控制，暂时留空、之后有输入由用户继续；本分支不重问、不换目录/选择/放大旧预算。其他路线及整体目标仍按[完成审计](../workbook/stage197_energy_ml/completion_audit.tsv)和[需求表](../workbook/stage197_energy_ml/goal_requirements.tsv)保留未完成项；原Stage87/所有门/K/角色/pz0/raw/status0保持。以下历史全文保留。
+
 # 当前执行更新：Stage196 Good Hit形状与原生MC时间结构对照完成
 
 [中文报告](../workbook/2026-11-08_stage196_good-hit-shape-and-native-time-collapse.md)沿用原4→64真实父、116随机控制及原2→12MC父；严格原status0才取sample/time。1536原记录/810status0中727个eligible patch、16通道模板；后32真实留出Trigger/Veto/VetoNu的residual/baselineRMS中位15.95508792/28.16383291/30.57925449，固定随机控制约1。Calo2无模板的8条保留未知。MC92个原Good PMT/55200理想sample复现0ADC，时间塌缩后部分残余超过实际MCnoise，支持原生时间结构；仅消幅度、baseline与一阶平移，未认证真实物理源或误差覆盖，不将两种定义直接作MC/data分辨率比。

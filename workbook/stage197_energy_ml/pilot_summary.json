@@ -1,0 +1,475 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "files": [
+    {
+      "file": 0,
+      "supported": true,
+      "schema": {
+        "supported": true,
+        "mapping": {
+          "run": "run",
+          "eventID": "eventID",
+          "eventTime": "eventTime",
+          "distanceToCollidingBCID": "distanceToCollidingBCID",
+          "inputBits": "inputBits",
+          "longTracks": "longTracks",
+          "nClusters0": "nClusters0",
+          "Track_pz0": "Track_pz0",
+          "Track_px0": "Track_px0",
+          "Track_py0": "Track_py0",
+          "Track_Y_atTrig": "Track_Y_atTrig",
+          "Track_nLayers": "Track_nLayers",
+          "Track_nDoF": "Track_nDoF",
+          "Track_Chi2": "Track_Chi2",
+          "Track_r_atMaxRadius": "Track_r_atMaxRadius",
+          "Track_X_atVetoStation2": "Track_X_atVetoStation2",
+          "Track_Y_atVetoStation2": "Track_Y_atVetoStation2",
+          "Track_X_atVetoNu": "Track_X_atVetoNu",
+          "Track_Y_atVetoNu": "Track_Y_atVetoNu",
+          "VetoNu0_charge": "VetoNu0_charge",
+          "VetoNu0_raw_charge": "VetoNu0_raw_charge",
+          "VetoNu0_status": "VetoNu0_status",
+          "VetoNu1_charge": "VetoNu1_charge",
+          "VetoNu1_raw_charge": "VetoNu1_raw_charge",
+          "VetoNu1_status": "VetoNu1_status",
+          "Veto10_charge": "Veto10_charge",
+          "Veto10_raw_charge": "Veto10_raw_charge",
+          "Veto10_status": "Veto10_status",
+          "Veto20_charge": "Veto20_charge",
+          "Veto20_raw_charge": "Veto20_raw_charge",
+          "Veto20_status": "Veto20_status",
+          "Veto21_charge": "Veto21_charge",
+          "Veto21_raw_charge": "Veto21_raw_charge",
+          "Veto21_status": "Veto21_status",
+          "Timing0_charge": "Timing0_charge",
+          "Timing0_raw_charge": "Timing0_raw_charge",
+          "Timing0_status": "Timing0_status",
+          "Timing1_charge": "Timing1_charge",
+          "Timing1_raw_charge": "Timing1_raw_charge",
+          "Timing1_status": "Timing1_status",
+          "Timing2_charge": "Timing2_charge",
+          "Timing2_raw_charge": "Timing2_raw_charge",
+          "Timing2_status": "Timing2_status",
+          "Timing3_charge": "Timing3_charge",
+          "Timing3_raw_charge": "Timing3_raw_charge",
+          "Timing3_status": "Timing3_status",
+          "Preshower0_charge": "Preshower0_charge",
+          "Preshower0_raw_charge": "Preshower0_raw_charge",
+          "Preshower0_status": "Preshower0_status",
+          "Preshower1_charge": "Preshower1_charge",
+          "Preshower1_raw_charge": "Preshower1_raw_charge",
+          "Preshower1_status": "Preshower1_status"
+        },
+        "native_reduced": false
+      },
+      "source_N": 780874,
+      "processed_N": 8192,
+      "cutflow": {
+        "input": 8192,
+        "colliding": 8101,
+        "trigger": 8101,
+        "GoodTimes": 8101,
+        "notExcluded": 8101,
+        "longTracks": 8101,
+        "CaloNuStatus": 7872,
+        "Veto2": 7758,
+        "TimingCharge": 7757,
+        "Preshower": 7744,
+        "pz0_gt50": 6351,
+        "layers": 6190,
+        "nDoF": 5941,
+        "chi2": 5907,
+        "rMax": 2730,
+        "rIFT": 2647,
+        "rVetoNu": 2647,
+        "theta": 2647
+      },
+      "prefix64": [
+        {
+          "run": 15838,
+          "eventID": 787406,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787410,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787411,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787414,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787417,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787419,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787420,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787422,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787423,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787425,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787429,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787431,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787434,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787437,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787446,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787447,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787451,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787459,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787461,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787472,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787473,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787477,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787478,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787487,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787489,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787499,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787500,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787530,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787553,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787557,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787560,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787577,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787590,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787593,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787596,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787600,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787604,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787607,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787614,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787617,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787618,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787628,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787641,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787642,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787644,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787646,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787652,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787654,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787660,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787679,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787683,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787698,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787720,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787732,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787733,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787734,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787735,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787737,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787741,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787747,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787751,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787756,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787758,
+          "eventTime": 1720449636
+        },
+        {
+          "run": 15838,
+          "eventID": 787783,
+          "eventTime": 1720449636
+        }
+      ],
+      "block_resources": [
+        {
+          "start": 0,
+          "N": 4096,
+          "CPU_s": 4.922960242
+        },
+        {
+          "start": 4096,
+          "N": 4096,
+          "CPU_s": 7.000885274
+        }
+      ],
+      "read_bytes": 3310176,
+      "CPU_s": 12.420672571999999,
+      "wall_s": 13.871448604390025,
+      "RSS_KiB": 91492
+    }
+  ],
+  "pre_veto_N": 2647,
+  "pre_veto_pz_counts": {
+    "ge100": 2296,
+    "50_100": 351
+  },
+  "cutflow": {
+    "input": 8192,
+    "colliding": 8101,
+    "trigger": 8101,
+    "GoodTimes": 8101,
+    "notExcluded": 8101,
+    "longTracks": 8101,
+    "CaloNuStatus": 7872,
+    "Veto2": 7758,
+    "TimingCharge": 7757,
+    "Preshower": 7744,
+    "pz0_gt50": 6351,
+    "layers": 6190,
+    "nDoF": 5941,
+    "chi2": 5907,
+    "rMax": 2730,
+    "rIFT": 2647,
+    "rVetoNu": 2647,
+    "theta": 2647
+  },
+  "final_states": {
+    "aux_missing": 2647
+  },
+  "observed_selected_N": 0,
+  "observed_selected_pz50_100_N": 0,
+  "unresolved_final_selection_N": 2647,
+  "background_subtracted": false,
+  "neutrino_purity_certified": false,
+  "matched_exposure_certified": false,
+  "energy_fits": 0,
+  "model_forward": 0,
+  "overall_complete": false,
+  "promotion": false,
+  "aux_resources": {
+    "supported": false,
+    "reason": "actual aux inventory/schema unavailable",
+    "processed_N": 0,
+    "CPU_s": 0.0,
+    "wall_s": 0.0
+  },
+  "driver_CPU_s": 12.769183497,
+  "wall_s": 14.380339475348592
+}

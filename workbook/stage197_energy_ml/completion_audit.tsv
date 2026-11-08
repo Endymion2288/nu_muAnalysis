@@ -1,0 +1,12 @@
+requirement	status	evidence	interpretation
+A	fixed_experiment_complete_goal_unmet	workbook/stage191_energy_ml/content_decision.json;workbook/stage194_energy_ml/independent_validation.json	Fixed IFT content failed energy gates; conditional identity explanation is not data response coverage
+B	missing_actual_input	workbook/stage196_energy_ml/goal_requirements.tsv	Original LOS units/sign/plane and actual active/badstrip support remain uncertified
+C	fixed_experiment_complete_negative	workbook/stage189_energy_ml/content_decision.json	Signed composition fixed package ended; no transform grid
+D	missing_actual_input_user_deferred	workbook/stage197_energy_ml/input_status.json	Same-setting real conversion/overlay/testbeam manifest and errors absent
+E	insufficient_evidence	workbook/stage196_energy_ml/goal_requirements.tsv	Paired2025 names do not certify four-plane pixel payload, calibration or matched MC
+F	partial_support_user_deferred_control	workbook/stage196_energy_ml/full_summary.json;workbook/stage196_energy_ml/independent_validation.json	Real linearized-nuisance residual and native MC temporal support; no independent physical-source control or content energy fit
+dual_range	fixed_benchmark_complete_not_identified	workbook/stage195_energy_ml/independent_validation.json	Conditional noise/rho constraints do not identify real amplitude error/absolute response
+spectrum	incomplete_actual_physical_inputs	workbook/2026-11-07_stage140_finite-MC-profile-coverage.md;workbook/stage167_energy_ml/exposure_evidence.json	Conditional MC precision does not certify exposure/background/full weighted efficiency/correlated auxiliaries
+real_selected_data	pilot_verified_final_yield_unknown_user_deferred	workbook/stage197_energy_ml/independent_validation.json;workbook/stage197_energy_ml/admission.json	Observed pre-veto low-pz support measured; final aux selection and MC intersection not measured
+low_true_energy_superiority	not_achieved	workbook/stage191_energy_ml/content_decision.json;workbook/stage196_energy_ml/full_summary.json	No new energy fit or independent confirmation; original true-E and tail gates unchanged
+deployment_invariants	preserved_within_executed_scope	workbook/stage197_energy_ml/protocol.json;workbook/stage197_energy_ml/storage_cleanup.json	No energy feature/model or MC role change; Stage54 twelve assets preserved
