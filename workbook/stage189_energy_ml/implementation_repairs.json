@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "job": "9678363.0",
+      "CPU_s": 21,
+      "exit": 1,
+      "issue": "Independent model/transform/central checks reached decision; paired TSV omitted from batch input package.",
+      "fix": "Include existing paired TSV, repeat audit only within remaining579 of original600 audit CPU seconds. No new fits or changed predictions."
+    }
+  ],
+  "scientific_protocol_budget_and_original_parents_unchanged": true
+}

@@ -1,0 +1,85 @@
+{
+  "stage": 189,
+  "starting_commit": "129e36f24e7cf4eb111b84ea9870e1b64fee7698",
+  "question": "Does a fixed four-variable signed layer-composition package help finite-depth BDT beyond original X62, matched availability and conditionally shuffled composition?",
+  "research": "workbook/2026-11-08_stage187_electronic-only-observables-research.md \u00a75/C",
+  "input": "ntuples/energy_ml_stage119/old_input.npz",
+  "Q0_pC": 1.0,
+  "pairs": [
+    [
+      "VetoNu0_raw_charge",
+      "VetoNu1_raw_charge"
+    ],
+    [
+      "Veto20_raw_charge",
+      "Veto21_raw_charge"
+    ],
+    [
+      "Preshower0_raw_charge",
+      "Preshower1_raw_charge"
+    ],
+    [
+      "Preshower0_raw_charge",
+      "VetoNu0_raw_charge"
+    ]
+  ],
+  "formula": "asinh(Q_i / 1 pC) - asinh(Q_j / 1 pC); use original typed float32 primitives, double transform, cast float32. Keep signed negative and NaN; no fitted scintillator charge, timing or new momentum.",
+  "physical_question": "Upstream/downstream and paired-layer composition at fixed overall activity; detector responses differ, this is not energy balance, transfer truth, independent measurement or restored leaked energy.",
+  "conditioning_charge_columns": [
+    "VetoNu0_raw_charge",
+    "VetoNu1_raw_charge",
+    "Veto20_raw_charge",
+    "Veto21_raw_charge",
+    "Preshower0_raw_charge",
+    "Preshower1_raw_charge"
+  ],
+  "pz_condition_edges_GeV": [
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200
+  ],
+  "asinh_charge_condition_edges": [
+    -3,
+    0,
+    1,
+    3,
+    5,
+    7,
+    9,
+    12
+  ],
+  "shuffle_seed": 20261108189,
+  "shuffle": "One joint four-column permutation within original role, component, fixed observable pz/activity bins and exact finite pattern; singleton rows retained. No true energy, labels or errors in assignment. No repeated shuffles or selection of a favorable realization.",
+  "arms": {
+    "X": 62,
+    "A": 66,
+    "C": 70,
+    "S": 70
+  },
+  "fits": "X pilot3 + A/C/S full9, exactly original Stage87 CPUhist seeds/400 rounds/depth5; one incoming-weighted global cal offset/arm; no hyperparameter or transform search.",
+  "evaluation": "Original train/cal/developed test/quarantine, all K and pz>50GeV, 8 strata x3 tails, original 1.05/1.01/1.03 and +2pp gates. 500 fixed incoming/component bootstraps. For content expansion C must beat X,A,S on both cal/test trueE50-100 and100-200: point<=.95 and upper95<1, with all tail safeguards. End fixed package otherwise; no new independent confirmation.",
+  "resources": {
+    "CPU_budget_s": 2400,
+    "phase_CPU_s": {
+      "pilot": 400,
+      "full": 1400,
+      "audit": 600
+    },
+    "request_CPUs": 4,
+    "memory_MB": 8000,
+    "max_live_jobs": 1,
+    "MaxRuntime_s": 86400
+  },
+  "admission": "Pilot exact original baseline to1e-7logGeV and no excluded-role predictions; GNU complete pilot CPU times3 remaining arms times3 safety times70/62<=1400; used+projection+600<=2400; RSS*4/1024<=8000MB.",
+  "GPU": "Keep exact fixed CPUhist for baseline reproducibility and this small bounded package; 3 independent candidate ensembles run concurrently on 4 requested CPUs. No measured GPU speedup claimed.",
+  "new_ROOT": 0,
+  "new_G4": 0,
+  "new_reco": 0,
+  "reserved_predictions": 0,
+  "promotion": false,
+  "overall_complete": false
+}

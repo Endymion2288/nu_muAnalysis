@@ -1,3 +1,9 @@
+# 当前执行更新：Stage189 固定电荷组成包新训练阴性结束
+
+[Stage189报告](../workbook/2026-11-08_stage189_signed-charge-composition-control.md)按路线C完成X62/A66/C70/S70共12个原队列新fit。四个固定signed raw asinh层间对比保留全部K、角色与NaN/合法负值，availability完整且与X预测相同；一个同条件联合打乱控制，无变量/尺度/seed扫描。test C/X两真E低箱为1.016564868 [1.007492308,1.028268646] / 0.998936946 [0.994305943,1.003965259]，C相对X/A/S双低扩展均false，原cal/test所有joint均false。最低箱C/传统1.972563334；该固定包结束、不晋升，不把旧X有限变换当新能量真值或信息极限。
+
+12模型/全active与offset精确，285504标量变换及64组中心RMSE/三尾独立通过。4start含1提交包漏表审计失败，213CPU/200聚合wall秒/0live，清152422600B重复、留17109300B模型/cache，Stage54保持。Stage188真实IFT预测与SDO关联混杂已完成；Stage190原真实data4父同面预测已成功、全4匹配，按原成本门评估64，不重开旧raw问题。整体低能优于传统、data覆盖、真实系统谱和独立确认仍未完成，原全门不变。以下历史全文保留。
+
 # 当前执行更新：Stage188 真实IFT留出测量面预测完成
 
 [Stage188报告](../workbook/2026-11-08_stage188_unused-IFT-surface-predictions.md)按新的电子观测主线完成原MC100012前64与π/K/charm各32train的真实surface/完整cov/field/material预测。160父156起始面支持、115原leading匹配（ν96/96，μ控制19/64）；全部未匹配和原缺面保留。π/K/charm共享fit SDO贡献候选pull RMS约1.17/1.10/1.22，非共享约181/211/154，显示关联混杂必须保留；共享贡献不是已认证主μ身份或错误率。坏道mask、真实覆盖与Eν收益仍未认证，不直接加回材料。

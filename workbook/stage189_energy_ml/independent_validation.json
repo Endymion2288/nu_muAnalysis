@@ -1,0 +1,399 @@
+{
+  "passed": true,
+  "actual_models_reloaded_N": 12,
+  "all_active_predictions_exact": true,
+  "calibration_exact": true,
+  "scalar_transform_checks_N": 285504,
+  "max_scalar_transform_float32_difference": 0.0,
+  "shuffle_original_roles_component_support_exact": true,
+  "central_metrics_checks": [
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "X",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "A",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "C",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "S",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "X",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "A",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "C",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "S",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "X",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "A",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "C",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "S",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "X",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "A",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "C",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "S",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "X",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "A",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "C",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "S",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "X",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "A",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "C",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "S",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "X",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "A",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "C",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "S",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "X",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "A",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "C",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "S",
+      "N": 421
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "X",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "A",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "C",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "S",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "X",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "A",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "C",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "S",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "X",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "A",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "C",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "S",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "X",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "A",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "C",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "S",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "X",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "A",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "C",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "S",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "X",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "A",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "C",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "S",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "X",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "A",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "C",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "S",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "X",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "A",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "C",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "S",
+      "N": 468
+    }
+  ],
+  "max_central_metric_difference": 1.4210854715202004e-14,
+  "quarantine_predictions": 0,
+  "reserved_predictions": 0,
+  "overall_complete": false
+}

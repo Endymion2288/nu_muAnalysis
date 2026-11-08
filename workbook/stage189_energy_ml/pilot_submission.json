@@ -1,0 +1,26 @@
+{
+  "phase": "pilot",
+  "result": "9678339.0 - 9678339.0",
+  "CPU_allowance_s": 400,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage189\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794166355322409100.sh pilot\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage189/worker_1794166355322409100.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage189/1794166355322409100/energy-ml-stage189.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 8000MB\nrequest_disk = 2000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage189 frozen disjoint CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 400\n+NuMuStage = \"energy-ml-stage189\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage189/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage189/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage189/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage189/1794166355322409100/energy-ml-stage189.tar.gz",
+    "bytes": 30543955,
+    "files": [
+      "ml/stage189_common.py",
+      "ml/stage189_pilot.py",
+      "ml/stage189_full.py",
+      "ml/stage189_audit.py",
+      "ml/stage143_monitor.py",
+      "ml/stage129_energy.py",
+      "ml/stage119_curve_common.py",
+      "ml/stage119_reportcurve.py",
+      "ml/audited_features.py",
+      "ml/configs/audited_features.json",
+      "workbook/stage189_energy_ml/protocol.json",
+      "workbook/stage87_energy_ml/protocol.json",
+      "ntuples/energy_ml_stage119/old_input.npz",
+      "ml/artifacts/stage87/predictions.npz"
+    ]
+  }
+}
