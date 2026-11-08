@@ -1,0 +1,95 @@
+{
+  "all_jobs_terminal": true,
+  "event_text_equality": true,
+  "source_logs_GNU_byte_equality": true,
+  "event_capsule": {
+    "path": "ntuples/energy_ml_stage162/event_records.json.gz",
+    "bytes": 6732
+  },
+  "archives": [
+    {
+      "path": "software/stage162/comparison_tables.tar.gz",
+      "bytes": 67
+    },
+    {
+      "path": "software/stage162/execution_audits.tar.gz",
+      "bytes": 821
+    },
+    {
+      "path": "software/stage162/source_snapshots.tar.gz",
+      "bytes": 145146
+    },
+    {
+      "path": "software/stage162/worker_logs.tar.gz",
+      "bytes": 4765
+    },
+    {
+      "path": "software/stage162/table_transport.tar.gz",
+      "bytes": 3438
+    }
+  ],
+  "deleted": [
+    {
+      "path": "software/stage162/1794116440823843090/energy-ml-stage162.tar.gz",
+      "bytes": 51205
+    },
+    {
+      "path": "ntuples/energy_ml_stage162/content_audit_result.tar.gz",
+      "bytes": 4677
+    },
+    {
+      "path": "software/stage162/1794116259942799232/energy-ml-stage162.tar.gz",
+      "bytes": 43370
+    },
+    {
+      "path": "ntuples/energy_ml_stage162/pilot_result.tar.gz",
+      "bytes": 10423
+    },
+    {
+      "path": "ntuples/energy_ml_stage162/pilot_raw.json.gz",
+      "bytes": 6626
+    },
+    {
+      "path": "workbook/stage162_energy_ml/content_audit_time.txt",
+      "bytes": 757
+    },
+    {
+      "path": "workbook/stage162_energy_ml/pilot_native_time.txt",
+      "bytes": 804
+    },
+    {
+      "path": "workbook/stage162_energy_ml/pilot_raw_time.txt",
+      "bytes": 766
+    },
+    {
+      "path": "workbook/stage162_energy_ml/pilot_native.log",
+      "bytes": 1492
+    },
+    {
+      "path": "workbook/stage162_energy_ml/pilot_raw.log",
+      "bytes": 24617
+    },
+    {
+      "path": "software/stage162/1794116677624669874/energy-ml-stage162.tar.gz",
+      "bytes": 53050
+    },
+    {
+      "path": "ntuples/energy_ml_stage162/producer_audit_result.tar.gz",
+      "bytes": 3522
+    },
+    {
+      "path": "workbook/stage162_energy_ml/producer_audit_time.txt",
+      "bytes": 758
+    }
+  ],
+  "deleted_bytes": 202067,
+  "original_inputs_other_stages_Stage54_untouched": true,
+  "no_persistent_ROOT": true,
+  "supplement_exact_archived": "producer_audit",
+  "table_formatting": {
+    "path": "workbook/stage162_energy_ml/pilot_window_content.tsv",
+    "original_archive": "software/stage162/table_transport.tar.gz",
+    "CSV_string_cells_exact": true,
+    "change": "Quote fields so empty timing cells do not create trailing whitespace; no values recomputed."
+  }
+}

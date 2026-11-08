@@ -1,0 +1,54 @@
+{
+  "next_stage": 163,
+  "question": "Does measured ordinaryCalo raw-integral content, including valid bad-fit views, improve original-cohort neutrino energy beyond X62 and status/availability alone?",
+  "basis": "Stage161 proves actual data24readout raw/peak/RMS/status384scalar exact; Stage162 tests actual stored windows but old dictionary native initialization unsupported in pinned runtime. This is not data-transfer calibration. Source audit identifies ordinaryCalo raw absent fromX62, priorQ15 used muoncontrols only, Stage47 idealHITS not raw. Stage162 current signed-window formula fails actuallegacydata; source history specifies positive-sample legacy raw. Require producer-definition summary before any MC/data comparison; do not call all raw_charge signed integrals. Actual96/96 stored legacyraw float32 exactly match positive-part sum,17signedwindow integralsnegative,maxoffset1.1296728515625034pC. No claim this explains originalnu low-energy deficit.",
+  "prerequisite": "Finish Stage162 scalar content audit and exact terminal archive/Chinese report/commit. Before newcal/test energy access, freeze source PHYS mapping and exact original selectors; no inference from native ID mismatch or actualdata energy truth.",
+  "inputs": {
+    "dataset": "ntuples/energy_ml_stage119/old_input.npz",
+    "source_requests": "workbook/stage124_energy_ml/native_contract.json",
+    "baseline": "ml/artifacts/stage87/predictions.npz",
+    "manifests": [
+      "ml/configs/low_energy_files.tsv",
+      "ml/configs/alternative_support_pilot.json",
+      "workbook/stage81_energy_ml/source_plan.json",
+      "workbook/stage82_energy_ml/production_protocol.json",
+      "workbook/stage83_energy_ml/protocol.json"
+    ],
+    "feature_policy": "ml/configs/audited_features.json",
+    "baseline_protocol": "workbook/stage87_energy_ml/protocol.json"
+  },
+  "cohort": "Exactly original89033 rows/roles0-3=17657/46575/11612/13189. Only71376active read/forward; allK and same incoming weights, no split change ornewparents. No reserved/role0 prediction. Existing selected PHYS denominator and cuts unchanged.",
+  "extraction": "Use original per-origin/source PHYS manifests, actualrun/event unique join and stored entry checked against source_requests; never assume event-1. Scalar run/event plus Calo0-3 raw_charge/status/baseline_rms/E_EM and original scint raw11 and pz0 for exact controls. Cache onlyactive rows. No native converter/geometry/reco, hit/ADC arrays or truth oracle. DifferentCaloHi/Lo producer names not guessed: freeze a unique source-proven field mapping before firstpilot; unsupported source keeps parent but appended measurements unknown. Freeze and report actual source producer raw-definition/version support; preserved PHYS raw is used as-produced, no automatic mapping between old positive-sample integral and current signed integral. Separate unsupported definition from missing measurement.",
+  "pilot": "Five predeclared request indices0,254,255,257,260, originalfirst40role1 per source; any source withno train remainsno support, no substitution. Independent first4 request0. Read only bounded original entry ranges and declared scalar branches; preserve holes/identityunknown and exactX typed rules. No energy fits/cal/test risks inpilot. Report measured rawvalid whilefitinvalid/overflow, signed negatives and missing semantics and actual startup/I/O/CPU. Require at least some additional finite ordinaryCalo raw amplitude not a deterministic recomputation of fittedE; unsupported all ends experiment, noalternatefeature scan.",
+  "raw_policy": "Stored raw pC follows actual producer raw_integral/50; old positive-sample versus current signed-window definition must be labelled, never equated, no fitted fallback. Finite raw + integer known status with (status & (8|128|256))==0 and positive finite baseline RMS define valid raw. Fitfailed16/32 and overflow4 do not erase raw; overflow is censored measurement, not recovered true charge. Legitimate signed -1/negative values retained. Nonfinite/explicit producer-documented sentinel and invalid wave=>NaN; do not blanket-delete -999 in signed raw without source sentinel evidence. Missing/rmsnegative/statussentinel handled by typed domain, not zero imputation; keep all parents.",
+  "representation": "M12: per fourCalo modules valid_raw indicator, fit_invalid indicator for bits(8|128|256|16|32|4), overflowbit4 indicator; missingstatus gives valid0 and remainingtwoNaN. Q4=asinh(valid as-produced raw_charge/1pC) with legitimate signed values retained, otherwiseNaN. No raw peak/RMS amplitude feature, gain inversion, sum/nansum, timing, muon alarm score, ideal deposits or vertextruth. OriginalX62 unchanged including fitted Calo missing propagation.",
+  "arms": [
+    "X62",
+    "X62_M12",
+    "X62_M12_Q4"
+  ],
+  "fit": "Exactly Stage87 original3seeds2026110255-257/400round/depth5/eta.04/subsample.8/min_child_weight20/lambda10/hist/nthread1, originalincomingweighted mean base_score and no boost_from_average. One independent fixedrole2 ensemble logoffset per arm. Ninefits total, noearlystop/grid/loss/seed followup. X62 must exactly reproduce cachedStage87 predictions; modelreload exact. Fork/share read-onlyinput and parallelize using allocated4cores. Do not change small fixedhist algorithm just forGPU.",
+  "evaluation": "Same original developedcal/test, incomingpaired bootstrap500 seed20261108163+role acrossarms. Content vsM12 separates amplitude from status availability; report vsX62 andtraditionalpz0/.8. Original8protected strata/3tails plus fitinvalid/overflow/rawmissing diagnostic support,N/incoming/ESS,RMSE,bias,R68,tail50 and perorigin support; conditional intervals not joint95 orindependent confirmation. Independently recompute scalar predictions/metrics/paired bounds, typed invariants, roles and completeK.",
+  "gates": "All originaljoint gates unchanged: both true lowbins/traditional upper95<=1.05,all/X<=1.01,other5<=1.03,8strata3taildiffupper95<=+2pp. Two-lowcal/test content vsM12 each point<=.95 andupper95<1 required for Stage137 further expansion. Lowestbin true superiority and independentconfirmation still required for final goal. Negative ends this fixedordinaryCalo rawQ implementation, not all waveform information.",
+  "resources": {
+    "CPU_budget_s": 12000,
+    "pilot_CPU_allowance_s": 700,
+    "audit_fit_reserve_CPU_s": 1500,
+    "request_CPUs": 4,
+    "memory_MB": 16000,
+    "max_active_jobs": 4,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_new_event_and_model_bytes_cap": 67108864
+  },
+  "cost": "Before full scalar extraction, 3x measured sum overoriginalPHYS sources startup+activeevent throughput+measured read-byte scaling, plusallused+1500auditfit <=12000; source-dependentpilotmaximum, do not claim CPU-only bound for unmeasuredI/O. Freeze disjoint batch allowances underremaining budget,max4jobs. Before submission testpilot andindependent4; failure no enlarged budget or alternate sources. All failedCPU retained. Measure actual CPU/wall/RSS/ROOT requestedbytes and actual paralleloverlap, no controlledspeedup claim.",
+  "execution": "All ROOT/arrays/stats/fits on HTCondor ~/condor/nu_muAnalysis/stage163/. Local source/text/scheduler/exactarchive only. Reuse prior compactinputs and source manifests, no giantduplicate dataset/ROOT/xAOD; consolidate archive and delete only byte-verified duplicates; preserveStage54. One phase Chinese report thenConventionalCommit,no push.",
+  "interpretation": "MC energy experiment conditional on existing response and developed families; actualdata4window closure not producer/gain/FPR migration certification. New observable measuredraw4, not repackagedG6/oldX grid or completed finiteMC toys. Distinguish program identity/mask errors from physical no increment.",
+  "outstanding": "Real jointdata purity/covariance calibration, broadmuon/data transfer and radiation tails, GRL/exposure/background/fullacceptance, emulsion, realcorrelatedauxiliaries and independentconfirmation remainopen.",
+  "invariant": "Stage87/alloriginalgates/Stage137low5pct;pz0-onlyfirstpower,px/py/qOverP/bendingallowed;raw11/typedmissing/legal signed/status0timing/Calomissing/allK/roles/reserved unchanged.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "promotion": false,
+  "overall_complete": false
+}

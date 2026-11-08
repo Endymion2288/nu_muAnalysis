@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "terminal_experiment": true,
+  "admitted": false,
+  "N": 4,
+  "Stage161_raw_controls_exact": true,
+  "window_content": {
+    "N": 96,
+    "closed_N": 0,
+    "max_delta_pC": 1.1296728515625034,
+    "max_bound_pC": 9.765627569272904e-06,
+    "sample_counts": [
+      76,
+      101
+    ],
+    "raw_peak_exact_N": 96,
+    "finite_sample_N": 8496,
+    "nonzero_status_N": 45,
+    "status0_spacing2_N": 51,
+    "status0_window_endpoints_ns": [
+      [
+        112.0,
+        262.0
+      ],
+      [
+        124.0,
+        324.0
+      ],
+      [
+        156.0,
+        306.0
+      ],
+      [
+        160.0,
+        360.0
+      ],
+      [
+        178.0,
+        378.0
+      ]
+    ],
+    "by_detector": {
+      "Calo": {
+        "N": 16,
+        "closed_N": 0,
+        "nonzero_status_N": 12
+      },
+      "Calo2": {
+        "N": 16,
+        "closed_N": 0,
+        "nonzero_status_N": 16
+      },
+      "CaloNu": {
+        "N": 16,
+        "closed_N": 0,
+        "nonzero_status_N": 11
+      },
+      "Preshower": {
+        "N": 8,
+        "closed_N": 0,
+        "nonzero_status_N": 0
+      },
+      "Trigger": {
+        "N": 16,
+        "closed_N": 0,
+        "nonzero_status_N": 6
+      },
+      "Veto": {
+        "N": 16,
+        "closed_N": 0,
+        "nonzero_status_N": 0
+      },
+      "VetoNu": {
+        "N": 8,
+        "closed_N": 0,
+        "nonzero_status_N": 0
+      }
+    }
+  },
+  "native_events": 0,
+  "dictionary_runtime": "failed initialization: pinned FaserDetectorID requires VetoGm/Muon labels absent in frozen old dictionary",
+  "physical_ID_closure": "unmeasured in old helper; Stage161 mismatch retained",
+  "waveform_scope": "Stored reconstruction windows only by source; no full acquisition or raw ADC certification",
+  "ROOT_reads_this_audit": 0,
+  "new_G4": 0,
+  "energy_fits": 0,
+  "promotion": false,
+  "overall_complete": false
+}

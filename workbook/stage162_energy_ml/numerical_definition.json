@@ -1,0 +1,11 @@
+{
+  "frozen_before_pilot": true,
+  "pin": "d32b0ff3",
+  "source": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx:390-443,findRawHitValues:839-841",
+  "measured_quantity": "Stored baseline-subtracted float mV window only; signed rawQ=sum(double(sample))*2ns/50ohm pC; raw_peak=max(sample).",
+  "bound": "No tuned tolerance: abs(Q-reported)<= half_ulp_float(reported_integral)/50 + gamma(N+2,double)*sum(abs(sample))*2/50; gamma(k)=k*2^-53/(1-k*2^-53). Require finite nonempty, peak bit-exact.",
+  "timing": "status0 only: time-vector endpoints and equal2ns spacing; nonzero status only structural length, no time values",
+  "dictionary_resolution": "Static ExpatCoreParser::generic_parse first fopen(relative path), then prefix, then XMLPATH. Create exact sole ScintIdDictFiles/IdDictScintillator.xml in CWD, prepend shadow to XMLPATH and DATAPATH; current native manager must report4 scint regions. No other XML overridden.",
+  "parser_source": "/cvmfs/atlas.cern.ch/repo/sw/software/24.0/Athena/24.0.41/InstallArea/x86_64-el9-gcc13-opt/src/Tools/XMLCoreParser/src/ExpatCoreParser.cxx:264-310",
+  "full_gate": "original physical/raw gate AND content closure AND runtime4region proof AND original3x cost; <=2000 cumulative with200audit reserve"
+}

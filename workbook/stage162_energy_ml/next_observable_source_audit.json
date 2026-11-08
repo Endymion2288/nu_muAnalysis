@@ -1,0 +1,30 @@
+{
+  "source_checks": [
+    {
+      "path": "ml/configs/audited_features.json",
+      "finding": "X62 has11scint raw, ordinaryCalo only4fitted calibrated E_EM plus total; no ordinaryCalo raw integral."
+    },
+    {
+      "path": "ml/audited_features.py",
+      "finding": "Ordinary fitted E_EM masked for WAVE_INVALID|16|32|4; module missing propagates NaN. Raw ordinaryCalo may survive fit failure, needs direct test."
+    },
+    {
+      "path": "ml/ordinary_calo_information.py",
+      "finding": "Stage47 appends ideal HITS sensitive deposits and truez, not ordinaryCalo raw waveform integral."
+    },
+    {
+      "path": "ml/stage129_extract.py",
+      "finding": "Saturation extraction/energy recovery concerns11scint fields, not an ordinaryCalo rawQ4 energy comparison."
+    },
+    {
+      "path": "workbook/2026-11-08_stage157_joint-muon-response-and-partition-control.md",
+      "finding": "Q15 already uses4Calo raw in muon-only control; new question is full original natural-nu energy increment beyondX62 and validity/status, not first raw measurement."
+    },
+    {
+      "path": "ml/prepare_calonu_response.py",
+      "finding": "PriorCaloNu raw studies use different upstream subsystem, not ordinary4moduleCalo energy comparison."
+    }
+  ],
+  "search": "rg scoped raw_charge/raw_peak/Calo and ordinarycalo sources/report text; absence of literal match not proof no past experiment",
+  "proposed_physical_hypothesis": "Signed measured ordinaryCalo integrals retain activity when official calibrated fitted E_EM is unavailable/unreliable; assess actual raw amplitude beyond status/missingness alone, not relabel oracle deposits or repeat fixedX architecture grid."
+}

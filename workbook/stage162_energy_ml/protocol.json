@@ -1,0 +1,40 @@
+{
+  "next_stage": 162,
+  "question": "Does source-derived historical scintillator dictionary recover actual physical IDs, and do actual stored data waveform amplitudes close the original raw integral?",
+  "inputs": {
+    "manifest": "workbook/stage160_energy_ml/matched_manifest.json",
+    "REC": "same exact Stage161 REC00006",
+    "PHYS": "same exact Stage161 PHYS",
+    "old_dictionary": "workbook/stage161_energy_ml/IdDictScintillator_2024.xml",
+    "current_dictionary": "workbook/stage161_energy_ml/IdDictScintillator.xml"
+  },
+  "prerequisite": "Stage161 archived terminal negative ID-admission pilot; existing4 and old raw4 equality/384 independent scalar checks passed. Source-old candidate exactly equals pre-expansion default a443e427; not assumed producer bytes.",
+  "cohort": "Exactly same original PHYS first4 pilot, then same original first64 only after ID/content/cost gates, independent first4 repeat; no low-pz or charge-based parent substitution.",
+  "dictionary": "Pinned prebuilt only. Use job-local DATAPATH shadow of sole ScintIdDictFiles/IdDictScintillator.xml with exact frozen2024 bytes. Keep geometry04/tag05/CONDBR3, detector geometry/cable payload and other dictionaries unchanged. Verify actual helper dict-manager filename/content resolution and actual cable map channel/id32 against stored hit. Retain original mismatched current-default control. No editing stored identifiers, tolerance or physical channel selection. If shadow not demonstrably used, stop rather than try multiple layouts.",
+  "waveform": "Direct actual v1 aux reader, bypass converter; process stored baseline-subtracted mV samples transiently. Record sample count/finite count and signed sum*2ns/50ohm pC, max mV against actual raw_integral/50 and raw_peak float32. Stage161 raw/status/baseline/presence and identities must match exactly. Inspect time-vector values only status==0 for structural spacing/window endpoints; nonzero-status no timing values/input. Do not call stored window full digitizer acquisition or raw ADC codes. No baseline refit, CB fitted charge fallback, clipping recovery, arbitrary windows or fit.",
+  "native": "Same two actual stored forward/backward collections separately, no merger/refit/reco. Preserve original separate PHYS comparison, no choosing collection by match. Actual covariance/PRD support is uncalibrated.",
+  "gates": "All original4 identities and required19readouts plus any optional mapped channels must have unique primaries and physical id32 exact under one frozen old dictionary, raw/status/baseline unchanged; content finite/nonempty and raw closure within source-implied float accumulation bound; no tolerance tuned on new values. Missing or genuine inconsistent support ends this fixed experiment. Validate source numerical bound before submission. Startup/complete-event CPU3x full64 plus used+200 reserve <=2000. No artificial requirement of signal or low-pz support.",
+  "resources": {
+    "CPU_budget_s": 2000,
+    "pilot_CPU_allowance_s": 650,
+    "audit_reserve_CPU_s": 200,
+    "request_CPUs": 2,
+    "memory_MB": 8000,
+    "max_active_jobs": 1,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_event_bytes_cap": 8388608
+  },
+  "execution": "HTCondor ~/condor/nu_muAnalysis/stage162/ for all ROOT/arrays/statistics. Local source/text/scheduler/exact archives only. Reuse pinned software; cumulative failures retained, no persistent ROOT/waveform samples. Report actual CPU/wall/RSS/read bytes, exact cache/source/GNU/log archive and delete only verified duplicates; preserve Stage54.",
+  "physical_decision": "If IDs and content close, certify only actual stored-window response support for these named data parents, quantify support and permit separately frozen joint MC/data response study. If stored window is only original fitted window, do not claim out-of-window/late energy observable. Does not establish nu energy, muon purity, FPR, gain/timing calibration or old producer byte identity.",
+  "followup": "Return to Stage132 real joint-response/DAQ-observable question; assess actual new Calo raw/window observables versus existing X62 and documented prior saturation controls before any energy experiment. No reopen fixed G6/X grids or completed Stage136/140 finite-MC toys. Exposure/GRL/background/full acceptance/emulsion/real correlated auxiliaries/independent confirmation remain open.",
+  "invariant": "Stage87/all original gates/Stage137 low5pct; pz0-only first-power momentum, px/py/qOverP/bending allowed; raw11, typed sentinel, signed legal negatives, Calo missing, status0-only timing; allK/roles/reserved unchanged.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "energy_fits": 0,
+  "natural_nu_forward": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false
+}

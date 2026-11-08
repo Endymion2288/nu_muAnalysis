@@ -1,0 +1,21 @@
+{
+  "job": "9675632.0",
+  "exit_code": 1,
+  "scheduler_CPU_s": 24,
+  "scheduler_wall_s": 51,
+  "raw_parents_completed": 4,
+  "native_events": 0,
+  "exact_error_lines": [
+    "FaserDetectorIDHelper                             WARNING initialize_from_dictionary - unable to find vetogm region index: id, reg 2/6 999",
+    "FaserDetectorIDHelper                             WARNING initialize_from_dictionary - unable to find muon region index: id, reg 2/5 999",
+    "FaserDetectorID                                     ERROR initLevelsFromDict - unable to find 'VetoGm' label ",
+    "VetoNuIDDetDescrCnv                                 ERROR Unable to initialize VetoNuID",
+    "DataProxy                                         WARNING accessData: conversion failed for data object 247779284/VetoNuID",
+    " Returning NULL DataObject pointer  ",
+    "GeoModelSvc.VetoNuDetectorTool                      ERROR VetoNuGeoModel/src/VetoNuDetectorTool.cxx:122 (StatusCode VetoNuDetectorTool::create()): code FAILURE: detStore()->retrieve(idHelper, \"VetoNuID\")",
+    "GeoModelSvc                                         ERROR Unable to create detector GeoModelSvc.VetoNuDetectorTool",
+    "GeoModelSvc                                         ERROR GeoModelSvc/src/GeoModelSvc.cxx:119 (StatusCode GeoModelSvc::initialize()): code FAILURE: geoInit()"
+  ],
+  "scope": "Only frozen old dictionary tried. Existing pinned FaserDetectorID requires newer labels; stop this fixed runtime implementation, no alternate layouts, helper patch or rebuild.",
+  "followup_audit": "Existing raw cache only, original4controls and source-defined window sum/peak; no native fallback or full admission"
+}
