@@ -1,3 +1,11 @@
+# 当前执行更新：Stage179 同父同窗读出干预与S0源响应完成
+
+[Stage179报告](../workbook/2026-11-08_stage179_matched-window-readout-and-S0-sources.md)固定12父/9原重选，121200实际ADC逐值、202通道、36 signed负raw及源加和独立通过。Veto26/48通道有截断损失，Σabs(clip)=354493.432617pC，取消clip后Σabs(raw−ideal)=9.416048pC；普通Ecal48条无非零clip损失，误差8.842335pC主要为噪声/基线项。此为条件12父机制，不能当总体比例、电荷覆盖或Eν收益。Ecal同窗S0前/后源0.0251198714/0.823696626pC，未知0.304313038pC，出生侧不等于可加回能损。
+
+4start含空集合键失败、1502CPU/800聚合wall秒/0live；float相减先于round的反事实实现修正有原字节及11通道清单，actual ADC/RNG/原raw始终精确。清55350423B、留5583102B response，Stage54保持，无新G4/重建/能量fit或forward。原lowpz_highE两父缺面继续未测；真实高幅参考/电荷误差覆盖仍缺，Stage181同源strict双读出时间审计已通过待独立阶段归档。下一有限上游时间/来源支持检查不得放松status0或把其他根命名为backscatter；Stage87/原门/角色/K/reserved与整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage180 实际普通Ecal双读出支持已测，相对比例有幅度依赖
 
 [Stage180报告](../workbook/2026-11-08_stage180_ordinary-Ecal-dual-range-support.md)对已知run15838单PHYS完整780874例，四模块同实际mapping的Lo0–3/Hi16–19均有信号；固定两端status0/高SNR/正Q重叠5802/7489/4989/5850。even-only四固定比例约.03655–.03857，odd验证低幅大正尾，500–1000mV Lo箱中位−8.22%至−13.06%；单一比例不能描述全幅度，不把趋势直接归因PMT非线性或给绝对幅度真值。

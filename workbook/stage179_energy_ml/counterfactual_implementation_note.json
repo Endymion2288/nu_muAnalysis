@@ -1,0 +1,13 @@
+{
+  "discovered_before_full_result_collection": true,
+  "cause": "Pinned Stage141Analog uses float baseline and amplitude, so baseline-amplitude rounds to float before std::round. Initial Python contrast subtracted promoted double values.",
+  "change": "Independent audit rederives only no_clip_same_noise, ADC-rounding and clipping contributions from retained actual analog samples using explicit float32 subtraction; final aggregate table is authoritative. Preserve native per-parent tables and returned bytes unchanged.",
+  "unaffected": [
+    "actual ADC, private RNG, signed raw and original-reference comparisons",
+    "ideal analog/source signals",
+    "cached energy predictions, selected parents and all gates"
+  ],
+  "scientific_contract_and_budget_unchanged": true,
+  "new_G4": 0,
+  "new_reconstruction": 0
+}

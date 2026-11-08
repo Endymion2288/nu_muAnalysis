@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "cause": "Pinned baseline-amplitude is float subtraction before std::round; native Python initial counterfactual promoted subtraction to double. Actual Stage141Analog/ADC/raw/source signals unaffected.",
+  "no_new_transport_or_reconstruction": true,
+  "original_per_parent_TSV_unchanged": true,
+  "final_table": "charge_interventions.tsv",
+  "corrected_channels": [
+    {
+      "index": 50,
+      "detector": "Trigger",
+      "channel": 10,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 39.93130371093756,
+          "corrected": 39.92642089843756
+        },
+        "rounding_pC": {
+          "original": -0.007489762335506356,
+          "corrected": -0.012372574835506356
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 70,
+      "detector": "Veto",
+      "channel": 15,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 81.26024902343775,
+          "corrected": 81.25536621093775
+        },
+        "rounding_pC": {
+          "original": -0.0124097451754146,
+          "corrected": -0.0172925576754146
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 6,
+      "detector": "Calo",
+      "channel": 2,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 0.011601562499805596,
+          "corrected": 0.0067187499998055955
+        },
+        "rounding_pC": {
+          "original": -0.0035680702186358104,
+          "corrected": -0.00845088271863581
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 6,
+      "detector": "Veto",
+      "channel": 6,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 68.49907226562529,
+          "corrected": 68.49418945312529
+        },
+        "rounding_pC": {
+          "original": -0.001229215102860337,
+          "corrected": -0.006112027602860337
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 6,
+      "detector": "Trigger",
+      "channel": 10,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 75.31694335937493,
+          "corrected": 75.31206054687493
+        },
+        "rounding_pC": {
+          "original": 0.0006131476531390234,
+          "corrected": -0.004269664846860977
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 63,
+      "detector": "Calo",
+      "channel": 1,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 0.0683203125002052,
+          "corrected": 0.0634375000002052
+        },
+        "rounding_pC": {
+          "original": 0.01105287514388209,
+          "corrected": 0.0061700626438820905
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 2,
+      "detector": "Veto",
+      "channel": 15,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 75909.00450683595,
+          "corrected": 75909.00938964843
+        },
+        "rounding_pC": {
+          "original": 0.0009695131418130387,
+          "corrected": 0.005852325641813039
+        },
+        "clipping_pC": {
+          "original": -71931.9921875,
+          "corrected": -71931.9970703125
+        }
+      }
+    },
+    {
+      "index": 2,
+      "detector": "Trigger",
+      "channel": 10,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 207.49057617187486,
+          "corrected": 207.48569335937486
+        },
+        "rounding_pC": {
+          "original": 0.010687377169897871,
+          "corrected": 0.0058045646698978715
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "detector": "Preshower",
+      "channel": 13,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 4.223359374999935,
+          "corrected": 4.218476562499935
+        },
+        "rounding_pC": {
+          "original": -0.014037752142712634,
+          "corrected": -0.018920564642712634
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 12,
+      "detector": "Calo",
+      "channel": 1,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": -0.3037695312499622,
+          "corrected": -0.3086523437499622
+        },
+        "rounding_pC": {
+          "original": 0.00024847128593741274,
+          "corrected": -0.004634341214062587
+        },
+        "clipping_pC": {
+          "original": -0.0048828125,
+          "corrected": 0.0
+        }
+      }
+    },
+    {
+      "index": 12,
+      "detector": "Veto",
+      "channel": 6,
+      "changes": {
+        "no_clip_same_noise_pC": {
+          "original": 22070.53528808595,
+          "corrected": 22070.54017089844
+        },
+        "rounding_pC": {
+          "original": -0.016844896620016314,
+          "corrected": -0.011962084120016314
+        },
+        "clipping_pC": {
+          "original": -18986.3720703125,
+          "corrected": -18986.376953125
+        }
+      }
+    }
+  ]
+}

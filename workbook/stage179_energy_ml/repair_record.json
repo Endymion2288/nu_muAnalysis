@@ -1,0 +1,8 @@
+{
+  "failure": "9676909 preflight: absent VetoNuHits entry when the actual hit collection is empty, KeyError after successful digi.",
+  "repair": "Get empty ordered source tags only for an actually empty collection, assert cardinality against actual timing; no physical change.",
+  "frozen_protocol_unchanged": true,
+  "failed_scheduler_CPU_s": 79,
+  "remaining_preflight_CPU_s": 921,
+  "extra_G4": 0
+}
