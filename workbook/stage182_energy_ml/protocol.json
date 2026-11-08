@@ -1,0 +1,87 @@
+{
+  "stage": 182,
+  "question": "Do the fixed12 upstream readouts have strict joint timing and necessary charge-calibration support, and which same-window source categories contribute?",
+  "indices": [
+    50,
+    70,
+    6,
+    21,
+    8,
+    63,
+    2,
+    15,
+    0,
+    1,
+    5,
+    12
+  ],
+  "pilot_indices": [
+    50
+  ],
+  "response_stage": 179,
+  "calibration": "workbook/stage129_energy_ml/timing_calibration.json",
+  "charge_table": "workbook/stage179_energy_ml/charge_interventions.tsv",
+  "pairs": [
+    {
+      "name": "VN0_VN1",
+      "i": 4,
+      "j": 5,
+      "calibration": "0-1"
+    },
+    {
+      "name": "V20_V21",
+      "i": 6,
+      "j": 7,
+      "calibration": "3-4"
+    },
+    {
+      "name": "VN0_V20",
+      "i": 4,
+      "j": 6,
+      "calibration": "0-3"
+    },
+    {
+      "name": "VN1_V20",
+      "i": 5,
+      "j": 6,
+      "calibration": "1-3"
+    }
+  ],
+  "status": "Only actual wave present, status==0 and finite localtime>0 supplies time; all other rows have null physical time. Legal signed Q retained.",
+  "calibration_scope": "Use original MC calibration usable flags and qi/qj ranges unchanged, as necessary charge support only. Actual track positions are not in these readout records; no full-range certificate, calibrated delta, spatial extrapolation or energy input is produced.",
+  "sources": "Reuse Stage179 same-window six-source analog charges; independent sum from retained split samples. Direct muon/before/after/other/unknown remain source labels, not direction or backscatter truth.",
+  "time_scope": "No extra TOF/phase subtraction. Original digitized 2ns samples and official stored780-980ns window remain fixed. Report source analog charge inside/whole retained ADC range, not global physics integration or extrapolated late tails.",
+  "summary": "All12 parents, all five original VetoNu/Veto channels including absent ones. Pair counts for total/present/status0/strict/strict+necessary Qrange; source totals. Individual raw delta only if strict, no calibration/extrapolation/new fit.",
+  "acceptance": [
+    "Stage179 authoritative raw/source/status exact",
+    "pilot/full first parent exact",
+    "all12 denominators preserved",
+    "independent scalar pair counts and split-integral checks",
+    "no finite timing from bad or absent wave"
+  ],
+  "CPU_budget_s": 300,
+  "phase_CPU_allowance_s": {
+    "pilot": 50,
+    "full": 150,
+    "audit": 100
+  },
+  "request_CPUs": 2,
+  "request_memory_MB": 4000,
+  "max_jobs": 1,
+  "MaxRuntime_s": 86400,
+  "admission": "Threefold complete pilot GNU CPU*12<=150 and used+projection+100audit<=300; no changed selection or budget.",
+  "stop": "If necessary charge support or actual direction/weak-signal calibration is absent, end this fixed candidate with explicit missing inputs; no larger replay/time-window/calibration/model grid.",
+  "no": [
+    "ROOT/G4/reconstruction",
+    "new neutrinos",
+    "energy fit or forward",
+    "time recovery from bad hits",
+    "new calibration",
+    "backscatter direction inferred from local coordinates",
+    "vertex inversion",
+    "automatic full4032 replay"
+  ],
+  "preserve": "Stage87/all gates;pz0-only firstpower/raw11/typedNaN/signed/status0-only timing/Calo missing;pz>50GeV/K/roles/reserved/quarantine/Stage54",
+  "overall_complete": false,
+  "promotion": false
+}

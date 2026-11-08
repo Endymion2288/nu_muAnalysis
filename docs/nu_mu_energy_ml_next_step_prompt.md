@@ -1,3 +1,11 @@
+# 当前执行更新：Stage182 上游时间候选无必要Q支持，固定探索结束
+
+[Stage182报告](../workbook/2026-11-08_stage182_upstream-strict-time-and-source-support.md)复用原12父同窗响应，VN0–VN1/VN0–V20/VN1–V20严格时间1/0/2父，加入原MC必要Q范围均0；V20–V21为6/12。没有实际track空间/弱信号迁移认证，不输出校准Δt或反演顶点。VetoNu同窗analog主要其他根，但缺global方向，不称backscatter。原bad/缺时与signed保持，独立full/标量通过，3start全0/7CPU/24wall秒/0live、清11474365B重复，Stage54保持；此候选结束。
+
+Stage179普通Ecal无clip且噪声/基线主导提供新理由；下一Stage183另冻普通Ecal Lo0–3/Hi16–19严格随机联合统计：同已知RAW400–431固定前缀、先2成本门/再30、2400CPU秒/4进程，固定窗与fileblock区间，只描述相关性和稳定性，不反演/注入/能量fit。旧Stage172 CaloNu合同保持历史不执行，20–23/clock31不用于普通Ecal响应推断。信号保真/覆盖及实际MC迁移未知，Stage87/原门/角色/K/reserved和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage181 真实双量程时间关联完成，转上游有限支持
 
 [Stage181报告](../workbook/2026-11-08_stage181_dual-range-time-association.md)保持原780874总分母和Stage180 Q尺度；原5802/7489/4989/5850重叠均有strict status0时间。even-only offset/odd诊断表独立全源重读及8标量中位通过。Lo0–50mV原154/782/57/177中仅6/21/9/12在固定±2ns带内，带外中位时间约−6ns；低幅大Q尾与时间不一致相关，但不能证明不同pulse。Lo500–1000mV带内Q中位仍−.094167/−.136206/−.082899/−.085868，不能以时间筛选消除高幅趋势或据此宣称PMT非线性。

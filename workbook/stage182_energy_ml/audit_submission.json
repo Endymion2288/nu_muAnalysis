@@ -1,0 +1,35 @@
+{
+  "phase": "audit",
+  "result": "9676989.0 - 9676989.0",
+  "CPU_allowance_s": 100,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage182\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794139696419649239.sh audit\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage182/worker_1794139696419649239.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage182/1794139696419649239/energy-ml-stage182.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 2\nrequest_memory = 4000MB\nrequest_disk = 3000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage182 frozen disjoint CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 100\n+NuMuStage = \"energy-ml-stage182\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage182/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage182/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage182/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage182/1794139696419649239/energy-ml-stage182.tar.gz",
+    "bytes": 5607544,
+    "files": [
+      "ml/stage182_measure.py",
+      "workbook/stage182_energy_ml/protocol.json",
+      "workbook/stage129_energy_ml/timing_calibration.json",
+      "workbook/stage179_energy_ml/charge_interventions.tsv",
+      "ntuples/energy_ml_stage179/parent_50_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_70_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_6_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_21_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_8_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_63_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_2_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_15_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_0_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_1_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_5_response.json.gz",
+      "ntuples/energy_ml_stage179/parent_12_response.json.gz",
+      "workbook/stage182_energy_ml/admission.json",
+      "workbook/stage182_energy_ml/pilot_channels.tsv",
+      "workbook/stage182_energy_ml/pilot_pairs.tsv",
+      "workbook/stage182_energy_ml/full_channels.tsv",
+      "workbook/stage182_energy_ml/full_pairs.tsv",
+      "workbook/stage182_energy_ml/full_support.tsv",
+      "workbook/stage182_energy_ml/full_sources.tsv"
+    ]
+  }
+}

@@ -1,3 +1,11 @@
+# 当前执行更新：Stage182 上游时间候选无必要Q支持，固定探索结束
+
+[Stage182报告](../workbook/2026-11-08_stage182_upstream-strict-time-and-source-support.md)复用原12父同窗响应，VN0–VN1/VN0–V20/VN1–V20严格时间1/0/2父，加入原MC必要Q范围均0；V20–V21为6/12。没有实际track空间/弱信号迁移认证，不输出校准Δt或反演顶点。VetoNu同窗analog主要其他根，但缺global方向，不称backscatter。原bad/缺时与signed保持，独立full/标量通过，3start全0/7CPU/24wall秒/0live、清11474365B重复，Stage54保持；此候选结束。
+
+Stage179普通Ecal无clip且噪声/基线主导提供新理由；下一Stage183另冻普通Ecal Lo0–3/Hi16–19严格随机联合统计：同已知RAW400–431固定前缀、先2成本门/再30、2400CPU秒/4进程，固定窗与fileblock区间，只描述相关性和稳定性，不反演/注入/能量fit。旧Stage172 CaloNu合同保持历史不执行，20–23/clock31不用于普通Ecal响应推断。信号保真/覆盖及实际MC迁移未知，Stage87/原门/角色/K/reserved和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage181 真实双量程时间关联完成，转上游有限支持
 
 [Stage181报告](../workbook/2026-11-08_stage181_dual-range-time-association.md)保持原780874总分母和Stage180 Q尺度；原5802/7489/4989/5850重叠均有strict status0时间。even-only offset/odd诊断表独立全源重读及8标量中位通过。Lo0–50mV原154/782/57/177中仅6/21/9/12在固定±2ns带内，带外中位时间约−6ns；低幅大Q尾与时间不一致相关，但不能证明不同pulse。Lo500–1000mV带内Q中位仍−.094167/−.136206/−.082899/−.085868，不能以时间筛选消除高幅趋势或据此宣称PMT非线性。
@@ -3302,3 +3310,8 @@ Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；
 ## 162. Stage181：双量程低幅异常有时间关联，高幅趋势保留
 
 [实测报告](../workbook/2026-11-08_stage181_dual-range-time-association.md)同780874真实父与固定Q标度，strict时间不增加缺失；低幅多数带外约−6ns，高幅时间带内仍−8%至−14%量级。独立full/原生128+4标量/8中位通过，3starts/15CPU/60wall秒、0live，删3361790B重复。±2ns仅关联诊断，不改能量选择、不认证pulse身份或PMT非线性，固定问题结束；下一原12父上游时间/来源/实际校准范围有限检验。高幅真值/匹配双路MC和独立确认缺口、Stage87/所有原门及整体未完成保持，历史全文保留。
+
+
+## 163. Stage182：上游必要校准支持阴性，转普通Ecal描述性联合控制
+
+[报告](../workbook/2026-11-08_stage182_upstream-strict-time-and-source-support.md)原12父上游strict关系1/0/2、必要Q范围均0，下游6/12，不放宽门或反演顶点。其他根上游源不等于有global方向的backscatter；独立审计通过，3starts/7CPU/24wall秒/0live、删11474365B重复。此有限候选结束。下一[Stage183新协议](../workbook/stage183_energy_ml/protocol.json)因Stage179普通Ecal噪声证据，独立定义Lo/Hi8通道实际随机联合统计，32已知固定前缀/2400CPU秒/小pilot成本门/4进程，无CaloNu迁移或估计器/能量注入；历史Stage172合同不执行。原全门/Stage87及整体未完成保持，历史全文保留。

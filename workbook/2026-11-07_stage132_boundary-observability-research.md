@@ -217,3 +217,8 @@ Stage133 直接承接 [Stage131 冻结合同](stage131_energy_ml/next_execution_
 ### Stage181 回填：真实双量程时间关联
 
 [Stage181](2026-11-08_stage181_dual-range-time-association.md)在同780874数据/固定Q标度给低幅异常与约−6ns时间差关联，而高幅固定±2ns内仍有响应趋势。全源独立复核通过、15CPU秒，不由此确定pulse身份或PMT非线性，不据此加energy cut。下一小型上游strict timing/源支持检验；真实高幅参考及双路MC仍缺，整体未完成。
+
+
+### Stage182 回填：上游严格时间与必要Q支持
+
+[Stage182](2026-11-08_stage182_upstream-strict-time-and-source-support.md)原12父三种上游关系必要Q支持均0，停止本固定候选；其他根来源未认证global方向，不当backscatter或顶点测量。全量/标量通过、7CPU秒。下一Stage183只测普通Ecal实际联合随机控制，理由为Stage179噪声/基线主导，旧CaloNu合同不执行；误差覆盖/MC迁移与整体能量目标仍未达。
