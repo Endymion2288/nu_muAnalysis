@@ -1,3 +1,9 @@
+# 当前执行更新：Stage191 原完整队列IFT内容新训练未达双低能门
+
+[中文报告](../workbook/2026-11-08_stage191_original-cohort-unused-IFT-energy.md)覆盖原280来源/71376 active及全部K，71372原pz0匹配、71014起始面支持；X/A/σ-only/内容/条件联合打乱五臂恰15fit，X精确Stage87，无隔离/reserved预测。test C/X真E50–100为1.014804521 [0.989836728,1.039204196]，100–200为0.986479458 [0.969642752,0.999367692]；最低箱C/传统1.969147522，双低5%扩展及原cal/test所有joint均false。最低箱相对Stage87总/正尾上95% cal+2.696684/test+3.048780 pp未过原+2pp。此固定表示结束，不扫层/seed/容量，也不证明IFT信息上限。
+
+35组全成功，group32原null PHYS及legacy pz差异在观察算法前失败，以原冻结父身份/pz为权威修复、原float32匹配不变、无替父或扩预算。15模型/全active、268pilot、6600标量变换、80中心与32独立区间验证通过；12start含3失败全计5956CPU/2871聚合wall秒、0live，留43771801B模型/cache、清264900928B重复、Stage54保持。Stage192原16/160实际SDO粒子指针控制完整读取已结束待独立审计，解释主μ/次级/未知混合，不作真实data关联或覆盖认证。B需真实LOS/active mask，D/E/F与物理谱仍须具体真实输入；整体低能优势与独立确认未完成，原所有门/角色/K/pz0/raw/status0保持。以下历史全文保留。
+
 # 当前执行更新：Stage190 真实data未用IFT同面预测通过
 
 [Stage190报告](../workbook/2026-11-08_stage190_real-data-unused-IFT-control.md)完成run15838原4/64配对、真实geometry04/tag05/CONDBR3和固定backward集合。64父63原leading匹配/起始面支持、9匹配pz0=50–100GeV；329界内wafer预测、12无cluster、63多候选，442全候选pull RMS42.37973936。全候选混合/相关且data无SDO，不认证正确关联率、μ纯度或动量误差覆盖，未将MC/data宽尾直接比较成分辨率。

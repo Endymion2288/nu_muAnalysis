@@ -1,0 +1,37 @@
+{
+  "admitted": true,
+  "projection_CPU_s": 20122.8088757793,
+  "production_cap_CPU_s": 48000,
+  "used_CPU_s": 110.0,
+  "per_event_projection_CPU_s": 1587.0275875281015,
+  "subsequent_mean_CPU_s": 0.016741714367815973,
+  "source_mean_CPU_s": {
+    "0": 0.016741714367815973,
+    "48": 0.020516197051281236,
+    "113": 0.018238017128205015,
+    "254": 0.016741714367815973,
+    "255": 0.022348396333333798,
+    "257": 0.016741714367815973,
+    "260": 0.01707944428205056,
+    "129": 0.016741714367815973
+  },
+  "max_first_source_CPU_s": 43.442153459,
+  "pilot_GNU": {
+    "CPU_s": 78.78999999999999,
+    "wall_s": 207.44,
+    "RSS_KiB": 1836716
+  },
+  "compile_GNU": {
+    "CPU_s": 24.07,
+    "wall_s": 30.82,
+    "RSS_KiB": 1332236
+  },
+  "eight_reader_RSS_projection_MB": 17936.6796875,
+  "peak_RSS_MB": 1793.66796875,
+  "pz50_100_N": 21,
+  "trueE50_100_N": 12,
+  "trueE100_200_N": 24,
+  "pilot_ROOT_read_bytes": 38180689,
+  "limit": "Conservative projection from measured source pilot; no controlled CPU/GPU speedup, calibrated coverage or energy success.",
+  "overall_complete": false
+}

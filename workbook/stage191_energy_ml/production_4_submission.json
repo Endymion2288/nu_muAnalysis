@@ -1,0 +1,34 @@
+{
+  "phase": "production_4",
+  "result": "9678444.0 - 9678444.0",
+  "CPU_allowance_s": 9600,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage191\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794169795207632729.sh production_4\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage191/worker_1794169795207632729.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage191/1794169795207632729/energy-ml-stage191.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 8\nrequest_memory = 24000MB\nrequest_disk = 6000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+NuMuStage = \"energy-ml-stage191\"\n+PeriodicRemoveReason = \"Stage191 frozen disjoint CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 9600\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage191/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage191/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage191/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage191/1794169795207632729/energy-ml-stage191.tar.gz",
+    "bytes": 3659098,
+    "files": [
+      "setup_env.sh",
+      "ml/stage143_monitor.py",
+      "ml/stage158_finalize.py",
+      "ml/stage188_native.hxx",
+      "ml/stage188_bridge.cxx",
+      "workbook/stage129_energy_ml/extraction_contract.json",
+      "workbook/stage191_energy_ml/protocol.json",
+      "workbook/stage191_energy_ml/build_spec.json",
+      "workbook/stage191_energy_ml/pinned_source_evidence.json",
+      "ml/stage191_audit.py",
+      "ml/stage191_common.py",
+      "ml/stage191_compile.py",
+      "ml/stage191_document.py",
+      "ml/stage191_driver.py",
+      "ml/stage191_fit.py",
+      "ml/stage191_freeze.py",
+      "ml/stage191_native.py",
+      "ml/stage191_ops.py",
+      "ml/stage191_review.py",
+      "ml/stage191_summary.py",
+      "workbook/stage191_energy_ml/admission.json",
+      "workbook/stage191_energy_ml/pilot_validation.json"
+    ]
+  }
+}

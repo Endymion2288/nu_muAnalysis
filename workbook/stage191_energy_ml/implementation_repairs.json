@@ -1,0 +1,21 @@
+{
+  "issue": "Review completed all268 identities/13495 scalar checks, then JSON write failed on NumPy int64 true-E support counts.",
+  "fix": "Explicit int() for two measured counts; no new native reading, training, changed protocol, summaries or budget. Repair within remaining original1000 review CPU seconds.",
+  "failed_review_CPU_s": 3.05,
+  "production_repair": {
+    "failed_group": 32,
+    "cause": "Original source257 has PHYS=null and356 active K cal/test parents; TFile.Open(None) fails before any Athena event. Pilot has original0 train here.",
+    "fix": "Use original frozen manifest pz/run/event for source257 only, exactly crosschecked against original input dataset at preparation/audit. Same float32 matching, no new file/parent, role or tolerance. Rerun only32 within remaining original family4 CPU cap.",
+    "source257_active_N": 356,
+    "original_family_cap_CPU_s": 9600,
+    "original_family_used_CPU_s": 1018,
+    "remaining_family_CPU_s": 8582
+  },
+  "production_repair2": {
+    "cause": "Group32 passed null-PHYS fallback, then another legacy PHYS pz disagreed with frozen original pz before any Athena observer. Original legacy origin82 PHYS paths are not guaranteed the same producer as cached model input.",
+    "fix": "All parents use original frozen manifest pz/run/event as authoritative; completed34 groups had already certified direct PHYS equal, so unchanged feature/reference values there. Legacy origin82 actual differences are retained in batch metadata; same run/event and exact float32 matching retained. No original observable replaced.",
+    "previous_repair_CPU_s": 43,
+    "remaining_original_family_CPU_s": 8539,
+    "new_physics_outputs_before_failure": 0
+  }
+}

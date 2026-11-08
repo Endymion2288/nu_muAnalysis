@@ -1,4 +1,4 @@
-"""Terminal-only exact-byte compaction for the two bounded electronic experiments."""
+"""Terminal-only exact-byte compaction for the bounded electronic experiments."""
 import json
 import subprocess
 import sys
@@ -9,7 +9,7 @@ from stage158_finalize import archive_exact, gnu
 
 
 def main(stage):
-    assert stage in [188,189,190]
+    assert stage in [188,189,190,191]
     root=Path(__file__).resolve().parents[1]
     out=root/f'workbook/stage{stage}_energy_ml'
     cache=root/f'ntuples/energy_ml_stage{stage}'
@@ -18,7 +18,7 @@ def main(stage):
     assert not (out/'storage_cleanup.json').exists()
     a=json.loads((out/'scheduler_accounting.json').read_text())
     assert not a['live_N'] and all(j['JobStatus'] in [3,4] for j in a['jobs'])
-    assert a['total_CPU_s']<=({188:4800,189:2400,190:1200}[stage])
+    assert a['total_CPU_s']<=({188:4800,189:2400,190:1200,191:60000}[stage])
     assert json.loads((out/'independent_validation.json').read_text())['passed']
     queue=json.loads(subprocess.check_output(['condor_q','-json','-attributes','ClusterId,Iwd'],text=True).strip() or '[]')
     assert all(Path(j.get('Iwd','/'))!=spool for j in queue)
@@ -58,7 +58,7 @@ def main(stage):
     artifacts=root/f'ml/artifacts/stage{stage}'
     if artifacts.exists():retained += [f for f in artifacts.rglob('*') if f.is_file()]
     size=sum(f.stat().st_size for f in retained)
-    assert size<=(16777216 if stage in [188,190] else 33554432)
+    assert size<={188:16777216,189:33554432,190:16777216,191:100663296}[stage]
     deleted=[]
     for f in dict.fromkeys(transports+files+list(out.glob('*.log'))+list(out.glob('*_time.txt'))):
         deleted.append(dict(path=str(f),bytes=f.stat().st_size));f.unlink()

@@ -1,0 +1,971 @@
+{
+  "passed": true,
+  "actual_models_reloaded_N": 15,
+  "all_active_predictions_exact": true,
+  "calibration_exact": true,
+  "scalar_transform_checks_N": 6600,
+  "max_scalar_transform_float32_difference": 0.0,
+  "shuffle_original_roles_component_support_exact": true,
+  "raw_source_audits": [
+    {
+      "group": 0,
+      "passed": true,
+      "parents_N": 2287,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 210,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 1,
+      "passed": true,
+      "parents_N": 2305,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 562,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 2,
+      "passed": true,
+      "parents_N": 2342,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 501,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 3,
+      "passed": true,
+      "parents_N": 2418,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 899,
+      "max_position_closure_mm": 9.155272593375231e-07
+    },
+    {
+      "group": 4,
+      "passed": true,
+      "parents_N": 2308,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 467,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 5,
+      "passed": true,
+      "parents_N": 2463,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 276,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 6,
+      "passed": true,
+      "parents_N": 2012,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1540,
+      "max_position_closure_mm": 9.155272593375231e-07
+    },
+    {
+      "group": 7,
+      "passed": true,
+      "parents_N": 1776,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 854,
+      "max_position_closure_mm": 9.155272522320957e-07
+    },
+    {
+      "group": 8,
+      "passed": true,
+      "parents_N": 2028,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1299,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 9,
+      "passed": true,
+      "parents_N": 1765,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 271,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 10,
+      "passed": true,
+      "parents_N": 1786,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 990,
+      "max_position_closure_mm": 9.155272522320957e-07
+    },
+    {
+      "group": 11,
+      "passed": true,
+      "parents_N": 2073,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 740,
+      "max_position_closure_mm": 9.15527259337523e-07
+    },
+    {
+      "group": 12,
+      "passed": true,
+      "parents_N": 2063,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1024,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 13,
+      "passed": true,
+      "parents_N": 2060,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 768,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 14,
+      "passed": true,
+      "parents_N": 1309,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1021,
+      "max_position_closure_mm": 9.15527259337523e-07
+    },
+    {
+      "group": 15,
+      "passed": true,
+      "parents_N": 1421,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1705,
+      "max_position_closure_mm": 9.15527259337523e-07
+    },
+    {
+      "group": 16,
+      "passed": true,
+      "parents_N": 1934,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1074,
+      "max_position_closure_mm": 9.155272522320956e-07
+    },
+    {
+      "group": 17,
+      "passed": true,
+      "parents_N": 2289,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 421,
+      "max_position_closure_mm": 9.155272522320956e-07
+    },
+    {
+      "group": 18,
+      "passed": true,
+      "parents_N": 2248,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 663,
+      "max_position_closure_mm": 9.15527259337523e-07
+    },
+    {
+      "group": 19,
+      "passed": true,
+      "parents_N": 2373,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 233,
+      "max_position_closure_mm": 9.155272522320957e-07
+    },
+    {
+      "group": 20,
+      "passed": true,
+      "parents_N": 2227,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 317,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 21,
+      "passed": true,
+      "parents_N": 2419,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 868,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 22,
+      "passed": true,
+      "parents_N": 1952,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1904,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 23,
+      "passed": true,
+      "parents_N": 1700,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1095,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 24,
+      "passed": true,
+      "parents_N": 2057,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 858,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 25,
+      "passed": true,
+      "parents_N": 1712,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 380,
+      "max_position_closure_mm": 9.15527259337523e-07
+    },
+    {
+      "group": 26,
+      "passed": true,
+      "parents_N": 1754,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 670,
+      "max_position_closure_mm": 9.155272522320957e-07
+    },
+    {
+      "group": 27,
+      "passed": true,
+      "parents_N": 2077,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 721,
+      "max_position_closure_mm": 9.155272522320956e-07
+    },
+    {
+      "group": 28,
+      "passed": true,
+      "parents_N": 2020,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 626,
+      "max_position_closure_mm": 9.155272557848093e-07
+    },
+    {
+      "group": 29,
+      "passed": true,
+      "parents_N": 1953,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 383,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 30,
+      "passed": true,
+      "parents_N": 1428,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 641,
+      "max_position_closure_mm": 9.155272664429505e-07
+    },
+    {
+      "group": 31,
+      "passed": true,
+      "parents_N": 1513,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 1680,
+      "max_position_closure_mm": 9.155272557848094e-07
+    },
+    {
+      "group": 32,
+      "passed": true,
+      "parents_N": 2674,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 581,
+      "max_position_closure_mm": 9.155272522320957e-07
+    },
+    {
+      "group": 33,
+      "passed": true,
+      "parents_N": 2426,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 838,
+      "max_position_closure_mm": 9.155272593375231e-07
+    },
+    {
+      "group": 34,
+      "passed": true,
+      "parents_N": 2204,
+      "raw_audit_N": 16,
+      "scalar_checks_N": 454,
+      "max_position_closure_mm": 9.155272557848093e-07
+    }
+  ],
+  "independent_row_bootstrap_checks": [
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "reference": "V",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "reference": "S",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "reference": "V",
+      "max_difference": 1.1102230246251565e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "reference": "S",
+      "max_difference": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "reference": "V",
+      "max_difference": 7.771561172376096e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "reference": "S",
+      "max_difference": 1.1102230246251565e-15
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "reference": "V",
+      "max_difference": 7.771561172376096e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "reference": "S",
+      "max_difference": 1.1102230246251565e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "reference": "V",
+      "max_difference": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "reference": "S",
+      "max_difference": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "reference": "V",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "reference": "S",
+      "max_difference": 8.881784197001252e-16
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "reference": "V",
+      "max_difference": 8.881784197001252e-16
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "reference": "S",
+      "max_difference": 2.220446049250313e-15
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "reference": "V",
+      "max_difference": 1.3322676295501878e-15
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "reference": "S",
+      "max_difference": 1.7763568394002505e-15
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "reference": "V",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "reference": "S",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "reference": "V",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "reference": "S",
+      "max_difference": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "reference": "V",
+      "max_difference": 1.1102230246251565e-15
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "reference": "S",
+      "max_difference": 1.2212453270876722e-15
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "reference": "V",
+      "max_difference": 1.4432899320127035e-15
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "reference": "S",
+      "max_difference": 5.551115123125783e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "reference": "V",
+      "max_difference": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "reference": "S",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "reference": "V",
+      "max_difference": 2.6645352591003757e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "reference": "S",
+      "max_difference": 1.7763568394002505e-15
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "reference": "V",
+      "max_difference": 3.774758283725532e-15
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "reference": "S",
+      "max_difference": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "reference": "V",
+      "max_difference": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "reference": "S",
+      "max_difference": 6.661338147750939e-16
+    }
+  ],
+  "central_metrics_checks": [
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "X",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "A",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "V",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "C",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "arm": "S",
+      "N": 183
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "X",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "A",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "V",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "C",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "arm": "S",
+      "N": 904
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "X",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "A",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "V",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "C",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "arm": "S",
+      "N": 11612
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "X",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "A",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "V",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "C",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "arm": "S",
+      "N": 10525
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "X",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "A",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "V",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "C",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "arm": "S",
+      "N": 660
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "X",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "A",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "V",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "C",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "arm": "S",
+      "N": 284
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "X",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "A",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "V",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "C",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "arm": "S",
+      "N": 328
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "X",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "A",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "V",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "C",
+      "N": 421
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "arm": "S",
+      "N": 421
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "X",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "A",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "V",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "C",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "arm": "S",
+      "N": 183
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "X",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "A",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "V",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "C",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "arm": "S",
+      "N": 856
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "X",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "A",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "V",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "C",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "arm": "S",
+      "N": 13189
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "X",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "A",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "V",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "C",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "arm": "S",
+      "N": 12150
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "X",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "A",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "V",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "C",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "arm": "S",
+      "N": 659
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "X",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "A",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "V",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "C",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "arm": "S",
+      "N": 297
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "X",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "A",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "V",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "C",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "arm": "S",
+      "N": 385
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "X",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "A",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "V",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "C",
+      "N": 468
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "arm": "S",
+      "N": 468
+    }
+  ],
+  "max_central_metric_difference": 1.4210854715202004e-14,
+  "quarantine_predictions": 0,
+  "reserved_predictions": 0,
+  "overall_complete": false
+}
