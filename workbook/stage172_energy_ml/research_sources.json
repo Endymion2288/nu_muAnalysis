@@ -1,0 +1,111 @@
+{
+  "stage": 172,
+  "date": "2026-11-08",
+  "purpose": "Research reassessment using existing workbook results and primary literature; no new physics computation",
+  "new_physics_measurements": false,
+  "new_training_or_inference": false,
+  "event_arrays_read": false,
+  "sources": [
+    {
+      "id": "R1",
+      "url": "https://twiki.cern.ch/twiki/bin/view/FASER/BadFASERRuns",
+      "title": "FASER Bad Run Page",
+      "page_revision_date": "2026-06-01",
+      "read_scope": "Run table, including run15838 and distinction between bad and changed conditions",
+      "supported_claim": "Run15838 is listed with bad CaloNu data because settings were optimized during the run; the row has no precise bad-time interval",
+      "limit": "Does not establish the exact CaloNu GRL membership or IOV of the pilot prefix; does not classify all other subdetectors as bad"
+    },
+    {
+      "id": "R2",
+      "url": "https://twiki.cern.ch/twiki/bin/view/FASER/FaserLuminosity",
+      "title": "FASER luminosity and good run lists",
+      "page_revision_date": "2026-01-26",
+      "read_scope": "Datasets and Luminosities and run-list version/path",
+      "supported_claim": "2024 v10 inclusive physics list is 120.13 fb^-1; distinct good-CaloNu-period subset is 69.18 fb^-1",
+      "limit": "Neither page total is certified luminosity for the local PHYS subset; CaloNu-specific JSON contents were not acquired this stage"
+    },
+    {
+      "id": "R3",
+      "url": "https://link.springer.com/article/10.1140/epjc/s10052-016-4120-y",
+      "title": "Muon reconstruction performance of the ATLAS detector in proton-proton collision data at sqrt(s)=13 TeV",
+      "publication": "EPJC 76, 292 (2016)",
+      "read_scope": "Relevant reconstruction paragraphs on parameter reference points and combined material/calorimeter energy loss",
+      "use": "Motivates reference-surface-consistent muon energy accounting",
+      "limit": "ATLAS layout, reconstruction selection and precision are not FASER performance predictions"
+    },
+    {
+      "id": "R4",
+      "url": "https://link.springer.com/article/10.1140/epjc/s10052-025-14062-8",
+      "title": "The performance of missing transverse momentum reconstruction and its significance with the ATLAS detector using 140 fb^-1 of sqrt(s)=13 TeV pp collisions",
+      "publication": "EPJC 85, 606 (2025)",
+      "read_scope": "Section 6.3.1 Muon overlap with jets",
+      "use": "Distinguishes muon calorimeter loss already included in momentum from radiation not recovered in muon reconstruction",
+      "limit": "Motivates a FASER hypothesis; does not demonstrate before/after-S0 classification or provide usable FASER cuts"
+    },
+    {
+      "id": "R5",
+      "url": "https://link.springer.com/article/10.1140/epjc/s10052-024-13151-4",
+      "title": "Operation and performance of the ATLAS tile calorimeter in LHC Run 2",
+      "publication": "EPJC 84, 1313 (2024)",
+      "read_scope": "Sections 3.1 and 7.4 on reconstruction, fixed calibrated phase, electronic noise and pile-up controls",
+      "use": "Supports matched measurement/control definitions and weak-signal amplitude estimation",
+      "limit": "Fixed single-channel template plus baseline was already tested in Stage38; ATLAS sampling and dual gain are not FASER inputs"
+    },
+    {
+      "id": "R6",
+      "url": "https://arxiv.org/abs/1404.6454",
+      "title": "The Time Structure of Hadronic Showers in highly granular Calorimeters with Tungsten and Steel Absorbers",
+      "publication": "JINST 9, P07022 (2014)",
+      "read_scope": "Abstract and publication metadata only",
+      "use": "Motivates attention to absorber-dependent shower timing and low-energy neutron transport",
+      "limit": "Not evidence for FASER timing resolution, weak-hit calibration or response beyond the retained neutron time limit"
+    },
+    {
+      "id": "R7",
+      "url": "https://arxiv.org/html/2607.20419v1",
+      "title": "Interaction-model dependence in calorimetric energy reconstruction methods due to non-linear material effects in modern neutrino detectors",
+      "publication": "arXiv:2607.20419v1 (2026), preprint",
+      "read_scope": "Abstract, introduction and Section VII on alternative analysis strategies",
+      "use": "Motivates composition-resolved forward response instead of assuming one-dimensional calorimetric response is universal",
+      "limit": "Low-energy LAr/scintillator quantitative biases do not transfer to FASER; forward folding still needs adequate conditioning and efficiency/background treatment"
+    },
+    {
+      "id": "R8",
+      "url": "https://arxiv.org/html/2404.18992v2",
+      "title": "Unifying Simulation and Inference with Normalizing Flows",
+      "publication": "arXiv:2404.18992v2; PRD 111, 076004 (2025)",
+      "read_scope": "Introduction and Section II on direct regression, universal conditional response and MLE",
+      "use": "Makes explicit the universal-response condition behind prior-independent MLE",
+      "limit": "Does not establish universality, unbiased inference or recoverability of hidden transport states for nu_muAnalysis"
+    },
+    {
+      "id": "R9",
+      "url": "https://faser.web.cern.ch/20260326/",
+      "title": "More Muon Neutrinos with FASER's Electronic Detector",
+      "article_date": "2026-03-26",
+      "read_scope": "Official briefing, including electronic-emulsion matching status",
+      "use": "Establishes collaboration context for electronic spectrum measurements and matching research",
+      "limit": "Not proof that this branch has a usable event-matched emulsion sample; rapidity is not inelasticity y"
+    },
+    {
+      "id": "attachment_previous_review",
+      "local_path": "/Users/aaaa/Downloads/FASER Waveform Reconstruction and Energy Calibration.pdf",
+      "read_scope": "This stage reuses Stage128's documented text and rendered-page examination of pages 6-7; no new full-PDF reading",
+      "local_evidence": "workbook/2026-11-07_stage128_vertex-timing-saturation-research.md",
+      "use": "Existing clipped-sample exclusion, Crystal Ball fitting and status semantics",
+      "limit": "Technical document statements are source evidence, not user execution instructions or proof of current producer settings"
+    }
+  ],
+  "novelty_and_history": {
+    "single_channel_fixed_template": "Already measured in Stage38 and timing tradeoff in Stage40; not a new proposal",
+    "rectified_noise_hypothesis": "Already investigated in Stage36-40; Stage162 adds exact stored-window evidence for four real-data parents",
+    "upstream_backscatter": "Previously suggested in Stage128; renewed motivation from Stage137, not a completed measurement",
+    "muon_radiation_position_relative_to_S0": "No measured before/after-S0 comparison found in the workbook reports reviewed; proposed mechanism, not a demonstrated gain",
+    "DAQ_alignment": "Finite actual source/ADC closure already measured in Stage138/141-144/148; not an unstarted task",
+    "finite_MC_spectrum_toys": "Stage140 completed all 3000; no repeat at the same point proposed"
+  },
+  "future_stage_number": 173,
+  "historical_unexecuted_contract": "workbook/stage171_energy_ml/next_execution_contract.json",
+  "historical_contract_internal_stage": 172,
+  "future_execution_status": "Research proposals only; no new executable production contract or automatic expansion created"
+}

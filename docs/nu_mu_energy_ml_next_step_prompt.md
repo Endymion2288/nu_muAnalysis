@@ -1,3 +1,17 @@
+# 当前后续入口：Stage172研究已完成，下一实际阶段编号Stage173
+
+先读[Stage172研究报告](../workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md)及[资料适用性](../workbook/stage172_energy_ml/research_sources.json)。本轮用户只要求用workbook和文献开展新思路研究；当前终端没有工作环境，已完成文档研究，没有读取事件数组、复算指标、训练或提交作业。后面的历史“下一Stage172”不是本轮已经执行的统计。
+
+下一次有执行环境时，先完成一次有界条件判定：官方已标run15838的CaloNu设置在运行中优化、数据质量不佳；取得目标子系统专用GRL/已有配置IOV与通道/几何对应，明确哪些量仅能描述原条件，哪些有迁移依据，缺什么便记未知。inclusive GRL和850.979pb⁻¹整run查表不能认证CaloNu或局部曝光；也不能因此判Veto/普通Ecal全部坏。原ν队列是wo_caloNu，CaloNu20–23统计不直接标定X62。不要无界追旧构建/metadata。
+
+Stage171的[旧下一合同](../workbook/stage171_energy_ml/next_execution_contract.json)仍内部写stage=172，保持原字节，尚未执行。若决定完成其工程统计，使用新Stage173协议显式引用它，保持固定RAW400–431、前8192、严格TAP=TBP=16、原窗口/限额/2400CPU秒/4核8GB/原pilot和审计；结论限定为该时期描述性联合ADC，不认证正常CaloNu校准，不反演/正则化协方差、不造prior、不注入能量模型、不替换文件或扩全run。没有足量控制或适用条件时，保留缺口并结束该工程支线。
+
+研究优先级已调整：第一物理候选为实际pz0参考面S0前/后的μ辐射位置，先核参考面和已含材料修正，以真实过面能量/产点和DAQ对齐源响应做固定小pilot；有机制及新的可测伴随量才另冻能量对照。第二候选为匹配目标几何/通道的波形信息价值干预，先判定去噪声/去clip响应是否有价值，再考虑联合电荷估计；不重复Stage38单通道模板。上游反散射与下游prompt仅作严格status0的覆盖/来源探索，不从坏hit补时间或扫窗。不自动扩大4032父G4、旧代理/G6/Q4/网络/4N。
+
+物理谱路线承认Stage140已完成3000toy和direct条件收益，联合nominal覆盖93.4%尚未认证95%；后续补真实背景、效率、明确全生成加权处理账目与响应组成/条件约束，再验证改变后的具体模型。保持Stage87、原1.05/1.01/1.03和八层三尾+2pp、全部K/pz0-only/raw11/typedNaN/signed/Calo缺失、原cuts/角色/reserved/隔离；真正低能胜出和完整物理精度仍未完成。新增研究的输入、物理验收、停止条件和未测项见报告§6–11，未来计算须先测小样本成本，走统一Condor目录，不把研究建议当已冻结生产合同。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage171 取得严格随机25通道ADC控制，尚未校准联合误差
 
 [Stage171报告](../workbook/2026-11-08_stage171_cached-reference-random-ADC-pilot.md)单次reference解压修正后同56全硬件/原62720ADC精确，GNU1.05CPU秒三倍投影460.8秒过原门。固定8192 PhysicsTag内4严格TAP=TBP=16，均GRL、25实际通道0–23/31、280采样、status2/input0/0，不按幅度删。独立8192重读及60保留事例ADC、标量触发4例精确，审计metadata补完通过。5start含原smoke路径自比较失效及audit漏摘要exit1，均修正/全计17scheddCPU秒/44wall秒/0live；留1021640B、删16482236B，Stage170 reference精确恢复、Stage54保持。4控制不足以校准25维误差，不认证纯noise/全run。

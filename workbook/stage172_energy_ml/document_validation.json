@@ -1,0 +1,75 @@
+{
+  "stage": 172,
+  "date": "2026-11-08",
+  "scope": "Documentation validation only; no event-array reads, metric recalculation, training, reconstruction or submission",
+  "passed": true,
+  "history": {
+    "docs/nu_mu_energy_ml_revised_roadmap.md": {
+      "original_full_text_preserved": true,
+      "prefix_added": true,
+      "appendix_added": true
+    },
+    "docs/nu_mu_energy_ml_next_step_prompt.md": {
+      "original_full_text_preserved": true,
+      "prefix_added": true,
+      "appendix_added": false
+    }
+  },
+  "historical_stage171_next_contract_original_bytes_preserved": true,
+  "historical_contract_internal_stage": 172,
+  "future_stage_number": 173,
+  "local_markdown_link_occurrences_checked": 22,
+  "reference_definitions_and_uses": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "source_records": 10,
+  "source_json_syntax_valid": true,
+  "new_markdown_code_and_display_math_fences_balanced": true,
+  "new_markdown_tables": [
+    {
+      "path": "workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md",
+      "rows": 12,
+      "columns": 3
+    },
+    {
+      "path": "workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md",
+      "rows": 5,
+      "columns": 2
+    },
+    {
+      "path": "workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md",
+      "rows": 7,
+      "columns": 3
+    },
+    {
+      "path": "workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md",
+      "rows": 11,
+      "columns": 3
+    }
+  ],
+  "quoted_numeric_literals_checked_without_recalculation": 39,
+  "quote_source_reports": [
+    "workbook/2026-11-07_stage133_boundary-supervised-proxy.md",
+    "workbook/2026-11-07_stage134_boundary-without-ideal-deposits.md",
+    "workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md",
+    "workbook/2026-11-08_stage164_depth-and-unaccepted-energy.md",
+    "workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md",
+    "workbook/2026-11-08_stage163_ordinary-calo-raw-energy.md",
+    "workbook/2026-11-08_stage162_historical-dictionary-and-stored-window.md",
+    "workbook/2026-11-07_stage140_finite-MC-profile-coverage.md",
+    "workbook/2026-11-07_stage129_saturation-timing-material-energy.md"
+  ],
+  "git_diff_check_passed": true,
+  "tracked_changes_limited_to_two_documentation_files_before_staging": true,
+  "stage54_tracked_paths_unchanged": true,
+  "new_physics_results": "未测量；本阶段仅引用已有结果与资料",
+  "performance_tests": "不适用：本阶段无计算或I/O实现改动；未来实验成本未测量"
+}
