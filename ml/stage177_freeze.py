@@ -1,0 +1,21 @@
+"""One fixed newly trained content/status comparison after actual support audit."""
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'workbook/stage177_energy_ml'
+assert json.loads((ROOT/'workbook/stage175_energy_ml/independent_validation.json').read_text())['passed']
+assert (ROOT/'workbook/stage175_energy_ml/storage_cleanup.json').exists()
+assert not (OUT/'protocol.json').exists()
+p=dict(stage=177,input='ntuples/energy_ml_stage175/cohort.npz',baseline='ntuples/energy_ml_stage119/old_input.npz',support='workbook/stage175_energy_ml/timing_support.tsv',
+ question='Does newly calibrated same-slab prompt-relative mean contain energy information beyond its availability, on the entire unchanged original cohort?',
+ arms=dict(X='Original audited62 refit exactly',V='X+4 original strict-reference/range-support flags,2per slab',T='V+2 calibrated relative means ns; NaN for any invalid/missing/range-unsupported source'),
+ dimensions=dict(X=62,V=66,T=68),training='Stage87 immutable3seeds x400round CPU hist nthread1, original train46575/cal11612/test13189/quarantine17657; incoming unit weight; independent per-arm cal mean logoffset. No test selection/grid or resumed old model.',
+ pilot='Only X3 full fits, reloadexact and match Stage87 direct_cal maxabslogdiff<=1e-7 on all active; actual full training cost before V/T risk.',
+ full='Only V/T6 full fits, same train/cal/active rows. Evaluate X/V/T vs traditional/direct and T/V content, whole cohort and original8strata/three tail50;500 component-stratified incoming-group bootstrap, fixed seed same original129.',
+ audit='Reload all9 actual models and independently average active predictions/cal offset; scalar central weighted RMSE and total/positive/negative tail on every8strata role2/3; forbidden timing missingness exact.',
+ gates='Original low2/traditional upper95<=1.05 noninferiority only;all/direct<=1.01;other5<=1.03;8x3tails upper95<=+2pp. Require cal/test jointly; final superiority and independent physics confirmation remain distinct.',
+ interpretation='Finite developed MC cohort, not blind or independent. Calibration tails/weak signals/data transfer not certified. Even successful joint cannot alone certify deployment. No S0 truth/radiation or absolute times as features.',
+ resources='Use3 independent arm/seed CPU tasks at most; original CPU hist ensures exact reference. Not large GPU workload; no switch of original tree method to claim bitwise match.',
+ CPU_budget_s=2400,phase_CPU_allowance_s=dict(pilot=400,full=1400,audit=600),request_CPUs=4,request_memory_MB=8000,max_jobs=1,MaxRuntime_s=86400,short_application_timeout=False,
+ admission='After successful X,3*complete GNU CPU*2 candidate arms + usedschedulerCPU +600audit <=2400 and <=1400 full allowance;otherwise no full.',
+ preserve='Stage87/roles/K/pz0-only/raw11/typedNaN/signed/status0 timing/Calo missing/pz>50GeV/reserved/quarantine/Stage54',overall_complete=False,promotion=False)
+(OUT/'protocol.json').write_text(json.dumps(p,indent=2)+'\n');(ROOT/'ml/artifacts/stage177').mkdir(parents=True,exist_ok=True);(ROOT/'ntuples/energy_ml_stage177').mkdir(parents=True,exist_ok=True)

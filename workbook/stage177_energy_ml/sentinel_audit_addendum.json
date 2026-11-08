@@ -1,0 +1,7 @@
+{
+  "reason": "User explicitly requires nonphysical placeholder handling. Review found Stage174 upper chi2 cut alone could admit a negative chi2 placeholder; finite projection abs<1000 would not by itself exclude -999.",
+  "action": "Independently re-read same3x4096 control rows only, report finite/nonnegative chi2 and exact -999 projection counts in original controls. If any invalid control existed, suspend energy interpretation and repair calibration separately; do not silently retune or remove tails.",
+  "phase": "audit",
+  "within_original_CPU_allowance_s": 600,
+  "physics_model_inputs_and_protocol_unchanged": true
+}
