@@ -1,0 +1,11 @@
+{
+  "admitted": false,
+  "raw_support_exact": false,
+  "already_used_plus_pilot_GNU_CPU_s": 228.10000000000002,
+  "projected_full_raw_3x_CPU_s": 51.11292957999996,
+  "projected_full_native_3x_CPU_s": 331.89837072599926,
+  "audit_reserve_CPU_s": 200,
+  "CPU_budget_s": 2000,
+  "raw_already_in_prior_scheduler": true,
+  "scope": "Before pilot job exits: newly executed GNU plus prior scheduler; cached raw not charged twice; compare/probe CPU charged at next submission gate"
+}

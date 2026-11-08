@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "N": 4,
+  "identity_exact": true,
+  "mapped_readout_N": 24,
+  "all_mapped_raw_float32_exact": false,
+  "missing_required_labels": [],
+  "stored_wave_sample_nonempty_N": 96,
+  "stored_wave_sample_empty_N": 0,
+  "empty_time_vector_N": 0,
+  "legal_negative_raw_N": 0,
+  "nonzero_status_N": 45,
+  "track_comparison": {
+    "CKFTrackCollectionWithoutIFT": {
+      "parent_N": 4,
+      "collection_present_N": 4,
+      "native_long_track_N": 2,
+      "PHYS_long_count_equal_N": 2,
+      "pz0_vector_exact_N": 0,
+      "all_state_vectors_exact_N": 0,
+      "max_leading_pz0_difference_GeV": 196.44459375
+    },
+    "CKFTrackCollectionBackwardWithoutIFT": {
+      "parent_N": 4,
+      "collection_present_N": 4,
+      "native_long_track_N": 4,
+      "PHYS_long_count_equal_N": 4,
+      "pz0_vector_exact_N": 4,
+      "all_state_vectors_exact_N": 4,
+      "max_leading_pz0_difference_GeV": 0.0
+    }
+  },
+  "covariance_and_control": {
+    "long_track_N": 6,
+    "measurement_N": 104,
+    "linked_measurement_N": 104,
+    "unlinked_measurement_N": 0,
+    "complete_finite_covariance_N": 6,
+    "exact_symmetric_covariance_N": 6,
+    "positive_definite_covariance_N": 6,
+    "PHYS_parent_N": 4,
+    "PHYS_track_control_eligible_N": 2,
+    "PHYS_track_control_pz50_100_N": 0
+  },
+  "PHYS_read_bytes": 2324395,
+  "source_conditions": {
+    "AtlasRelease": "Athena-24.0.41",
+    "GeoFaser": "FASERNU-04",
+    "IOVDbGlobalTag": "OFLCOND-FASER-05"
+  },
+  "prefix4_exact": false,
+  "muon_purity": "unmeasured",
+  "covariance_coverage": "unmeasured",
+  "FPR": "unmeasured",
+  "energy_fits": 0,
+  "new_G4": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "admitted": false,
+  "terminal_experiment": true
+}

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "replicas": [
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200_261030.db",
+      "database_instances": [
+        "CONDBR3",
+        "OFLP200"
+      ],
+      "requested_instance": "CONDBR3",
+      "folder": "/Tracker/Align",
+      "supported": true,
+      "resolved_tag": "TRACKER-ALIGN-05",
+      "single_version": false,
+      "payload_columns": [
+        "PoolRef"
+      ]
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "database_instances": [
+        "CONDBR3",
+        "OFLP200"
+      ],
+      "requested_instance": "CONDBR3",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "supported": true,
+      "resolved_tag": null,
+      "single_version": true,
+      "payload_columns": [
+        "type",
+        "station",
+        "plate",
+        "row",
+        "module",
+        "pmt"
+      ]
+    }
+  ],
+  "change": "Disable Athena data DBReplicaSvc COOLSQLiteVetoPattern=/DBRelease/ only; retain actual CONDBR3/tag05/run/geometry",
+  "no_fallback": true,
+  "no_conditions_payload_modification": true
+}

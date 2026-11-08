@@ -1,0 +1,54 @@
+{
+  "failed_job": "9675424.0",
+  "exit_code": 129,
+  "scheduler_CPU_s": 31,
+  "failure": "Cling compile before reading: nonconst DataVector iterator returns ElementProxy; auto* deduction invalid",
+  "repair": "Explicit const xAOD::WaveformHit_v1* loop, same as pinned official converter",
+  "question_cohort_policy_budget_unchanged": true,
+  "pilot_remaining_CPU_allowance_s": 569,
+  "original_source_retained_in_immutable_package": true,
+  "linkage_failure": {
+    "job": "9675433.0",
+    "exit_code": 1,
+    "scheduler_CPU_s": 18,
+    "stage": "Before Reader construction/event access",
+    "cause": "Cling header compiled but AthenaKernel BaseInfo/CLIDRegistry and GaudiKernel symbols not loaded in stand-alone ROOT",
+    "repair": "Explicitly load existing GaudiKernel/AthenaKernel/AthContainers/xAODCore/xAODFaserWaveform and Dict libraries before Cling",
+    "cohort_and_budget_unchanged": true,
+    "pilot_CPU_remaining_s": 551
+  },
+  "schema_failure": {
+    "job": "9675443.0",
+    "exit_code": 1,
+    "scheduler_CPU_s": 18,
+    "stage": "First mapped entry raw read returned; output dictionary construction failed",
+    "cause": "Incorrect parent key entry; actual frozen manifest uses PHYS_entry",
+    "repair": "Use PHYS_entry in both raw/native output identity fields",
+    "question_cohort_budget_unchanged": true,
+    "pilot_CPU_remaining_s": 533
+  },
+  "serialization_failure": {
+    "job": "9675450.0",
+    "exit_code": 1,
+    "scheduler_CPU_s": 21,
+    "scheduler_wall_s": 181,
+    "stage": "All4 raw records written, summary serialization failed",
+    "cause": "list(reader.containers()) contains cppyy std::string; explicit str conversion needed",
+    "repair": "str(v) for containers; native reader strings already explicitly converted; force covariance symmetry boolean to Python bool for counters",
+    "question_cohort_budget_unchanged": true,
+    "pilot_CPU_remaining_s": 512,
+    "completed_raw4_retained": "ntuples/energy_ml_stage161/pilot3_raw.json.gz"
+  },
+  "data_replica_failure": {
+    "job": "9675458.0",
+    "exit_code": 1,
+    "scheduler_CPU_s": 30,
+    "scheduler_wall_s": 135,
+    "stage": "Raw4 and raw resource passed; before native event execution",
+    "cause": "Athena IOVDbSvc adds DBReplicaSvc COOLSQLiteVetoPattern=/DBRelease/ for data, rejecting FASER read-only replicas",
+    "repair": "First probe original CONDBR3 and tag05 in exact configured ALLP200/CABP200 replicas, then disable only SQLite-veto transport policy; retain original data isMCFalse/CONDBR3/tag05/geometry04",
+    "raw_records_and_cost_reused": true,
+    "pilot_CPU_remaining_s": 482,
+    "no_database_fallback": true
+  }
+}

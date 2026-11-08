@@ -1,0 +1,38 @@
+<IdDictionary name="Scintillator">
+
+  <field name="part" >
+    <label name="Veto" value="1" />
+    <label name="Trigger" value="2" />
+    <label name="Preshower" value="3" />
+    <label name="VetoNu" value="4" />
+  </field>
+
+  <region>
+    <range field="part" value="Veto" />
+    <range field="station" minvalue="0" maxvalue="1" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="0" />
+  </region>
+
+  <region>
+    <range field="part" value="Trigger"/>
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="1" />
+  </region>
+
+  <region>
+    <range field="part" value="Preshower" />
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="0" />
+  </region>
+
+  <region>
+    <range field="part" value="VetoNu" />
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="0" />
+  </region>
+
+</IdDictionary>
