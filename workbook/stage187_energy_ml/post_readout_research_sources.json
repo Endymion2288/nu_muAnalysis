@@ -1,0 +1,78 @@
+{
+  "stage": 187,
+  "kind": "post_readout_research_supplement",
+  "date": "2026-11-08",
+  "new_physics_measurements": false,
+  "training_or_inference_run": false,
+  "event_arrays_read": false,
+  "physics_metrics_recomputed": false,
+  "future_execution_stage_unchanged": 188,
+  "sources": [
+    {
+      "id": "P1",
+      "title": "First Measurement of the Muon Neutrino Interaction Cross Section and Flux as a Function of Energy at the LHC with FASER",
+      "url": "https://arxiv.org/html/2412.03186v2",
+      "read_scope": "Relevant signal-extraction, selected-muon 0.8 factor and background paragraphs",
+      "use": "Distinguishes a selected-population calibration and response from a per-event energy identity",
+      "limit": "Published p_mu greater than 100 GeV selection/background/efficiency are not the current pz0 greater than 50 GeV selection"
+    },
+    {
+      "id": "P2",
+      "title": "Measurement of Muon Neutrinos as a Function of Energy and Rapidity with FASER",
+      "url": "https://repository.cern/records/eg0mj-1ep53",
+      "pdf_url": "https://repository.cern/records/eg0mj-1ep53/files/CERN-FASER-CONF-2026-005.pdf?download=1",
+      "publication": "CERN-FASER-CONF-2026-005, conference note",
+      "read_scope": "Signal extraction and alignment-systematics paragraphs; PDF page 7 rendered and viewed",
+      "use": "Charge/momentum and transverse extrapolation response; background/efficiency/response likelihood and correlated alignment variations",
+      "limit": "Neither a longitudinal z measurement nor evidence that this repository owns matched data. Overlapping published data are not an independent auxiliary measurement"
+    },
+    {
+      "id": "P3",
+      "title": "The FASER experiment at the Large Hadron Collider",
+      "url": "https://arxiv.org/html/2604.19199v2",
+      "read_scope": "Section 5.3 alignment, momentum and charge performance paragraphs",
+      "use": "Supports studying curvature response and correlated geometry effects",
+      "limit": "Does not identify alignment as the cause of the current MC low-energy failure"
+    },
+    {
+      "id": "P4",
+      "title": "Momentum Measurement of Charged Particles in FASER's Emulsion Detector at the LHC",
+      "url": "https://arxiv.org/html/2602.17575v1",
+      "read_scope": "Method motivation and section 4 test-beam passages",
+      "use": "MCS provides a different measurement mechanism, validated in 100-300 GeV muon test beam",
+      "limit": "Not a certified uncertainty for this cohort, arbitrary TeV tails or 50-100 GeV neutrinos; no matched sample acquired"
+    },
+    {
+      "id": "P5",
+      "title": "Some Aspects of Measurement Error in Linear Regression of Astronomical Data",
+      "url": "https://arxiv.org/abs/0705.2774",
+      "read_scope": "Abstract and stated scope of correlated/heteroscedastic measurement errors, non-detections and selection",
+      "use": "Motivates a joint errors-in-variables double-readout contrast",
+      "limit": "No algorithm executed or astronomy prior/performance transferred"
+    },
+    {
+      "id": "P6",
+      "title": "Nuisance hardened data compression for fast likelihood-free inference",
+      "url": "https://arxiv.org/abs/1903.01473",
+      "read_scope": "Abstract and accessible indexed method excerpt about score projection/Fisher information",
+      "use": "Motivates assessing useful signal information after nuisance constraints",
+      "limit": "Local/asymptotic statement; not a finite-MC coverage theorem for this analysis"
+    },
+    {
+      "id": "P7",
+      "title": "Uncertainty quantification for wide-bin unfolding: one-at-a-time strict bounds and prior-optimized confidence intervals",
+      "url": "https://arxiv.org/abs/2111.01091",
+      "read_scope": "Abstract and problem statement about unknown within-bin shape dependence",
+      "use": "Motivates functional intervals and explicit response-shape ambiguity",
+      "limit": "No proof/full-method validation or guaranteed intervals computed here"
+    },
+    {
+      "id": "P8",
+      "title": "Shape-constrained uncertainty quantification in unfolding steeply falling elementary particle spectra",
+      "url": "https://arxiv.org/abs/1512.00905",
+      "read_scope": "Abstract only",
+      "use": "Alternative uncertainty/coverage viewpoint",
+      "limit": "Neutrino selected spectrum is not assumed monotone or convex; response uncertainty remains"
+    }
+  ]
+}
