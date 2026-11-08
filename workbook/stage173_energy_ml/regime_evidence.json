@@ -1,0 +1,2325 @@
+{
+  "passed": true,
+  "data_cable_type_counts": {
+    "calo": 4,
+    "vetonu": 2,
+    "veto": 4,
+    "trigger": 4,
+    "preshower": 2,
+    "calo2": 4,
+    "calonu": 4,
+    "none": 7,
+    "clock": 1
+  },
+  "channels": [
+    {
+      "hardware_channel": 0,
+      "cable_payload": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 1,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 0,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 905.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 0,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [
+          {
+            "channel": 0,
+            "since": 67628555042816,
+            "until": 68431713927168,
+            "payload": {
+              "NominalTriggerTime": 200.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 0,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 0,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 2.4590001106262207,
+              "HV_ref": 905.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 1,
+      "cable_payload": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 1,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 910.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 1,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 1,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 1,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 2.503000020980835,
+              "HV_ref": 910.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 2,
+      "cable_payload": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 1,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 2,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 940.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 2,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 2,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 2,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 2.4800000190734863,
+              "HV_ref": 940.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 3,
+      "cable_payload": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 3,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 940.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 3,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 3,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 3,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 2.484999895095825,
+              "HV_ref": 940.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 4,
+      "cable_payload": {
+        "type": "vetonu",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 4,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 860.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 4,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 4,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -35.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 5,
+      "cable_payload": {
+        "type": "vetonu",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 5,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 875.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 5,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 5,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -35.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 6,
+      "cable_payload": {
+        "type": "veto",
+        "station": 1,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 6,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1525.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 6,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 6,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 7,
+      "cable_payload": {
+        "type": "veto",
+        "station": 1,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 7,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1470.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 7,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 7,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 8,
+      "cable_payload": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "HV_coverage": {
+        "channel": 8,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1845.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 8,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 8,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 9,
+      "cable_payload": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 9,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1715.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 9,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 9,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 10,
+      "cable_payload": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "HV_coverage": {
+        "channel": 10,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1770.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 10,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 10,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 11,
+      "cable_payload": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 11,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1710.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 11,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 11,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 12,
+      "cable_payload": {
+        "type": "preshower",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 12,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1110.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 12,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 12,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 18.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 12,
+            "since": 30064771072000,
+            "until": 78138340016128,
+            "payload": {
+              "charge_ref": 4.5960001945495605,
+              "HV_ref": 1110.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 13,
+      "cable_payload": {
+        "type": "preshower",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 13,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1100.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 13,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 13,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 18.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 13,
+            "since": 30064771072000,
+            "until": 78138340016128,
+            "payload": {
+              "charge_ref": 4.5929999351501465,
+              "HV_ref": 1100.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 14,
+      "cable_payload": {
+        "type": "veto",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 14,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1610.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 14,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 14,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 15,
+      "cable_payload": {
+        "type": "veto",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 15,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1475.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 15,
+            "since": 67280662691840,
+            "until": 69179038236672,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 15,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": 0.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 16,
+      "cable_payload": {
+        "type": "calo2",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 1,
+        "pmt": 1
+      },
+      "HV_coverage": {
+        "channel": 16,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 940.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 16,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 16,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 16,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 0.08269999921321869,
+              "HV_ref": 940.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 17,
+      "cable_payload": {
+        "type": "calo2",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "HV_coverage": {
+        "channel": 17,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 1000.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 17,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 17,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 17,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 0.08479999750852585,
+              "HV_ref": 1000.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 18,
+      "cable_payload": {
+        "type": "calo2",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 1,
+        "pmt": 1
+      },
+      "HV_coverage": {
+        "channel": 18,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 892.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 18,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 18,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 18,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 0.08209999650716782,
+              "HV_ref": 892.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 19,
+      "cable_payload": {
+        "type": "calo2",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 0,
+        "pmt": 1
+      },
+      "HV_coverage": {
+        "channel": 19,
+        "record_N": 1,
+        "payloads": [
+          {
+            "HV": 905.0
+          }
+        ],
+        "gap_seconds": 0,
+        "complete_interval": true
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 19,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 19,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -4.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 19,
+            "since": 61847529062400,
+            "until": 9223372036854775807,
+            "payload": {
+              "charge_ref": 0.08320000022649765,
+              "HV_ref": 905.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 20,
+      "cable_payload": {
+        "type": "calonu",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 1,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 20,
+        "record_N": 0,
+        "payloads": [],
+        "gap_seconds": 53588.0,
+        "complete_interval": false
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 20,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 20,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -48.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 20,
+            "since": 67950677590016,
+            "until": 72348724101119,
+            "payload": {
+              "charge_ref": 1.8919999599456787,
+              "HV_ref": 485.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 21,
+      "cable_payload": {
+        "type": "calonu",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 21,
+        "record_N": 0,
+        "payloads": [],
+        "gap_seconds": 53588.0,
+        "complete_interval": false
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 21,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 21,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -48.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 21,
+            "since": 67950677590016,
+            "until": 72348724101119,
+            "payload": {
+              "charge_ref": 1.847000002861023,
+              "HV_ref": 482.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 22,
+      "cable_payload": {
+        "type": "calonu",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 1,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 22,
+        "record_N": 0,
+        "payloads": [],
+        "gap_seconds": 53588.0,
+        "complete_interval": false
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 22,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 22,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -48.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 22,
+            "since": 67950677590016,
+            "until": 72348724101119,
+            "payload": {
+              "charge_ref": 1.9019999504089355,
+              "HV_ref": 485.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 23,
+      "cable_payload": {
+        "type": "calonu",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 23,
+        "record_N": 0,
+        "payloads": [],
+        "gap_seconds": 53588.0,
+        "complete_interval": false
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 23,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [
+          {
+            "channel": 23,
+            "since": 67950677590016,
+            "until": 68053756805119,
+            "payload": {
+              "TriggerOffset": -48.0
+            }
+          }
+        ],
+        "/WAVE/Calibration/MIP_ref": [
+          {
+            "channel": 23,
+            "since": 67950677590016,
+            "until": 72348724101119,
+            "payload": {
+              "charge_ref": 1.9859999418258667,
+              "HV_ref": 488.0
+            }
+          }
+        ]
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 24,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 24,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 25,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 25,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 26,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 26,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 27,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 27,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 28,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 28,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 29,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 29,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 30,
+      "cable_payload": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": null,
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 30,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    },
+    {
+      "hardware_channel": 31,
+      "cable_payload": {
+        "type": "clock",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "HV_coverage": {
+        "channel": 31,
+        "record_N": 0,
+        "payloads": [],
+        "gap_seconds": 53588.0,
+        "complete_interval": false
+      },
+      "condition_records_at_same_channel": {
+        "/WAVE/DAQ/Range": [
+          {
+            "channel": 31,
+            "since": 67280662691840,
+            "until": 69243462746112,
+            "payload": {
+              "range": 2.0
+            }
+          }
+        ],
+        "/WAVE/DAQ/Timing": [],
+        "/WAVE/DAQ/TimingOffset": [],
+        "/WAVE/Calibration/MIP_ref": []
+      },
+      "condition_scope": "Channel IDs are exact folder keys; global/board keys remain in source records, not guessed as per-PMT calibrations.",
+      "physics_calibration_certified": false
+    }
+  ],
+  "HV_coverage": [
+    {
+      "channel": 0,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 905.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 1,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 910.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 2,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 940.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 3,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 940.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 4,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 860.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 5,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 875.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 6,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1525.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 7,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1470.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 8,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1845.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 9,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1715.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 10,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1770.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 11,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1710.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 12,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1110.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 13,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1100.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 14,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1610.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 15,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1475.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 16,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 940.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 17,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 1000.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 18,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 892.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 19,
+      "record_N": 1,
+      "payloads": [
+        {
+          "HV": 905.0
+        }
+      ],
+      "gap_seconds": 0,
+      "complete_interval": true
+    },
+    {
+      "channel": 20,
+      "record_N": 0,
+      "payloads": [],
+      "gap_seconds": 53588.0,
+      "complete_interval": false
+    },
+    {
+      "channel": 21,
+      "record_N": 0,
+      "payloads": [],
+      "gap_seconds": 53588.0,
+      "complete_interval": false
+    },
+    {
+      "channel": 22,
+      "record_N": 0,
+      "payloads": [],
+      "gap_seconds": 53588.0,
+      "complete_interval": false
+    },
+    {
+      "channel": 23,
+      "record_N": 0,
+      "payloads": [],
+      "gap_seconds": 53588.0,
+      "complete_interval": false
+    },
+    {
+      "channel": 31,
+      "record_N": 0,
+      "payloads": [],
+      "gap_seconds": 53588.0,
+      "complete_interval": false
+    }
+  ],
+  "MC_cable_maps": {
+    "100012": {
+      "0": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 1,
+        "pmt": 0
+      },
+      "1": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "2": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 1,
+        "pmt": 0
+      },
+      "3": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 0,
+        "pmt": 0
+      },
+      "4": {
+        "type": "vetonu",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "5": {
+        "type": "vetonu",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "6": {
+        "type": "veto",
+        "station": 1,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "7": {
+        "type": "veto",
+        "station": 1,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "8": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "9": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "10": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "11": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "12": {
+        "type": "preshower",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "13": {
+        "type": "preshower",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "14": {
+        "type": "veto",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "15": {
+        "type": "veto",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "16": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "17": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "18": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "19": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "20": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "21": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "22": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "23": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "24": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "25": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "26": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "27": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "28": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "29": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "30": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "31": {
+        "type": "clock",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      }
+    },
+    "100049": {
+      "0": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 1,
+        "pmt": 0
+      },
+      "1": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "2": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 1,
+        "pmt": 0
+      },
+      "3": {
+        "type": "calo",
+        "station": 0,
+        "plate": 0,
+        "row": 1,
+        "module": 0,
+        "pmt": 0
+      },
+      "4": {
+        "type": "vetonu",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "5": {
+        "type": "vetonu",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "6": {
+        "type": "veto",
+        "station": 1,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "7": {
+        "type": "veto",
+        "station": 1,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "8": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "9": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "10": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 1
+      },
+      "11": {
+        "type": "trigger",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "12": {
+        "type": "preshower",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "13": {
+        "type": "preshower",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "14": {
+        "type": "veto",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "15": {
+        "type": "veto",
+        "station": 0,
+        "plate": 1,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "16": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "17": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "18": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "19": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "20": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "21": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "22": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "23": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "24": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "25": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "26": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "27": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "28": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "29": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "30": {
+        "type": "none",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      },
+      "31": {
+        "type": "clock",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      }
+    }
+  },
+  "CaloNu_run_in_dedicated_GRL": false,
+  "normal_CaloNu_calibration_certified": false,
+  "source_type_scope": "Current explicit COOL replica records for exact run/time; not original producer snapshot, physical-ID validation, historical calibration or DAQ-config recovery.",
+  "missing": [
+    "Original exact DAQ configuration/HV optimization history beyond recorded IOVs",
+    "Independent muon timewalk/position and high-amplitude signal-gain validation",
+    "Matched target MC/data response covariance and geometry",
+    "File-subset live luminosity/efficiency/background and generator-weighted accounting"
+  ],
+  "next": "Stop regime lookups here. Next finite task: Timing same-slab calibration/support, alongside S0 source/persistent-support inventory.",
+  "overall_complete": false
+}

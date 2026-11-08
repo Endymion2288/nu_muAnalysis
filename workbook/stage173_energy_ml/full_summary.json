@@ -1,0 +1,355 @@
+{
+  "passed": true,
+  "run": 15838,
+  "inclusive_GRL": {
+    "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json",
+    "bytes": 141894,
+    "run_present": true,
+    "record": {
+      "start_time": "2024-07-08T13:01:17.720435",
+      "stop_time": "2024-07-09T05:35:58.048976",
+      "start_utime": 1720443677.720435,
+      "stop_utime": 1720503358.048976,
+      "stable_list": [
+        {
+          "lhc_fill": 9877,
+          "start_utime": 1720449636.0,
+          "stop_utime": 1720503223.0,
+          "start_time": "2024-07-08T14:40:36.000000",
+          "stop_time": "2024-07-09T05:33:43.000000"
+        }
+      ]
+    },
+    "ranges": {
+      "stable_list": [
+        [
+          1720449636,
+          1720503223
+        ]
+      ],
+      "excluded_list": []
+    },
+    "fixed_time_membership": {
+      "1720449636": true,
+      "1720473060": true,
+      "1720473064": true,
+      "1720503223": true
+    }
+  },
+  "CaloNu_GRL": {
+    "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics_calonu.json",
+    "bytes": 73215,
+    "run_present": false,
+    "record": null,
+    "ranges": {},
+    "fixed_time_membership": {
+      "1720449636": false,
+      "1720473060": false,
+      "1720473064": false,
+      "1720503223": false
+    }
+  },
+  "channel_mapping": {
+    "0": {
+      "type": "calo",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 1,
+      "pmt": 0
+    },
+    "1": {
+      "type": "calo",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "2": {
+      "type": "calo",
+      "station": 0,
+      "plate": 0,
+      "row": 1,
+      "module": 1,
+      "pmt": 0
+    },
+    "3": {
+      "type": "calo",
+      "station": 0,
+      "plate": 0,
+      "row": 1,
+      "module": 0,
+      "pmt": 0
+    },
+    "4": {
+      "type": "vetonu",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "5": {
+      "type": "vetonu",
+      "station": 0,
+      "plate": 1,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "6": {
+      "type": "veto",
+      "station": 1,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "7": {
+      "type": "veto",
+      "station": 1,
+      "plate": 1,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "8": {
+      "type": "trigger",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 1
+    },
+    "9": {
+      "type": "trigger",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "10": {
+      "type": "trigger",
+      "station": 0,
+      "plate": 1,
+      "row": 0,
+      "module": 0,
+      "pmt": 1
+    },
+    "11": {
+      "type": "trigger",
+      "station": 0,
+      "plate": 1,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "12": {
+      "type": "preshower",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "13": {
+      "type": "preshower",
+      "station": 0,
+      "plate": 1,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "14": {
+      "type": "veto",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "15": {
+      "type": "veto",
+      "station": 0,
+      "plate": 1,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "16": {
+      "type": "calo2",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 1,
+      "pmt": 1
+    },
+    "17": {
+      "type": "calo2",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 1
+    },
+    "18": {
+      "type": "calo2",
+      "station": 0,
+      "plate": 0,
+      "row": 1,
+      "module": 1,
+      "pmt": 1
+    },
+    "19": {
+      "type": "calo2",
+      "station": 0,
+      "plate": 0,
+      "row": 1,
+      "module": 0,
+      "pmt": 1
+    },
+    "20": {
+      "type": "calonu",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 1,
+      "pmt": 0
+    },
+    "21": {
+      "type": "calonu",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "22": {
+      "type": "calonu",
+      "station": 0,
+      "plate": 0,
+      "row": 1,
+      "module": 1,
+      "pmt": 0
+    },
+    "23": {
+      "type": "calonu",
+      "station": 0,
+      "plate": 0,
+      "row": 1,
+      "module": 0,
+      "pmt": 0
+    },
+    "24": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "25": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "26": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "27": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "28": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "29": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "30": {
+      "type": "none",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    },
+    "31": {
+      "type": "clock",
+      "station": 0,
+      "plate": 0,
+      "row": 0,
+      "module": 0,
+      "pmt": 0
+    }
+  },
+  "supported_condition_queries": 16,
+  "condition_queries": 16,
+  "missing_or_truncated": [],
+  "applicability": [
+    {
+      "subsystem": "CaloNu",
+      "verdict": "Original-condition engineering control; normal-physics calibration not certified",
+      "basis": "Dedicated GRL membership and official run-specific bad-voltage note; numeric HV is not signal calibration."
+    },
+    {
+      "subsystem": "ordinary Ecal",
+      "verdict": "Readout mapping/condition metadata measured; response transfer unknown",
+      "basis": "Data dual-range support is checked by actual cable payload. Original four-readout MC does not gain a second range."
+    },
+    {
+      "subsystem": "Veto/VetoNu/Timing/Preshower",
+      "verdict": "Original-condition control; independent timing/gain calibration still required",
+      "basis": "CaloNu exclusion does not exclude these systems. Actual payload and IOV do not establish calibrated response."
+    },
+    {
+      "subsystem": "hardware31",
+      "verdict": "Use actual cable type only; physical-response interpretation conditional",
+      "basis": {
+        "type": "clock",
+        "station": 0,
+        "plate": 0,
+        "row": 0,
+        "module": 0,
+        "pmt": 0
+      }
+    }
+  ],
+  "DAQ_config_exact_snapshot_acquired": false,
+  "producer_history_complete": false,
+  "signal_gain_calibrated": false,
+  "luminosity_for_RAW_subset": null,
+  "normal_CaloNu_calibration_certified": false,
+  "next": "End one regime audit; proceed to same-slab Timing joint measurement support and S0 radiation instrumentation; do not make 32-file noise study an energy prerequisite.",
+  "CPU_s": 11.093028888000001,
+  "wall_s": 33.08425362606067,
+  "RSS_KiB": 586460,
+  "energy_fits": 0,
+  "new_G4": 0,
+  "overall_complete": false,
+  "promotion": false
+}

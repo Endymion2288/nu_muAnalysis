@@ -1,0 +1,216 @@
+{
+  "source_pin": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "source": {
+    "ntuple": {
+      "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+      "matches": [
+        {
+          "line": 253,
+          "text": "      m_wave_bcidtime[ch] = hit->bcid_time(); // Now corrected for offsets",
+          "context": [
+            "      m_wave_localtime[ch]=hit->localtime();",
+            "      m_wave_bcidtime[ch] = hit->bcid_time(); // Now corrected for offsets",
+            "      // Not sure why this doesn't exist in MC...",
+            "      if (!isMC)"
+          ]
+        },
+        {
+          "line": 256,
+          "text": "\tm_wave_triggertime[ch] = hit->trigger_time(); // + m_clock_phase;",
+          "context": [
+            "      if (!isMC)",
+            "\tm_wave_triggertime[ch] = hit->trigger_time(); // + m_clock_phase;",
+            "      m_wave_peak[ch]=hit->peak();",
+            "      m_wave_width[ch]=hit->width();"
+          ]
+        },
+        {
+          "line": 489,
+          "text": "  m_tree->Branch(\"Track_pz0\", &m_pzup);",
+          "context": [
+            "  m_tree->Branch(\"Track_py0\", &m_pyup);",
+            "  m_tree->Branch(\"Track_pz0\", &m_pzup);",
+            "  m_tree->Branch(\"Track_p0\", &m_pup);",
+            "  m_tree->Branch(\"Track_x1\", &m_xdown);"
+          ]
+        },
+        {
+          "line": 1678,
+          "text": "    const Trk::TrackParameters* upstreamParameters = track->trackParameters()->front();",
+          "context": [
+            "    ",
+            "    const Trk::TrackParameters* upstreamParameters = track->trackParameters()->front();",
+            "    const Trk::TrackParameters* downstreamParameters = track->trackParameters()->back();",
+            ""
+          ]
+        },
+        {
+          "line": 1681,
+          "text": "    if ((upstreamParameters == nullptr) || (downstreamParameters == nullptr)) continue;",
+          "context": [
+            "",
+            "    if ((upstreamParameters == nullptr) || (downstreamParameters == nullptr)) continue;",
+            "",
+            "\t  m_nLayers.push_back(layerMap.size());"
+          ]
+        },
+        {
+          "line": 1706,
+          "text": "    m_pzup.push_back(upstreamParameters->momentum().z());",
+          "context": [
+            "    m_pyup.push_back(upstreamParameters->momentum().y());",
+            "    m_pzup.push_back(upstreamParameters->momentum().z());",
+            "    m_pup.push_back(sqrt( pow(upstreamParameters->momentum().x(),2) + pow(upstreamParameters->momentum().y(),2) + pow(upstreamParameters->momentum().z(),2) ));",
+            ""
+          ]
+        },
+        {
+          "line": 1951,
+          "text": "    auto targetSurface_Trig = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 0.0), Acts::Vector3(0, 0, 1)); // 0 mm is z position of Trig planes overlapping",
+          "context": [
+            "",
+            "    auto targetSurface_Trig = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 0.0), Acts::Vector3(0, 0, 1)); // 0 mm is z position of Trig planes overlapping",
+            "    std::optional<const Acts::BoundTrackParameters> targetParameters_Trig =m_extrapolationTool->propagate(ctx, startParameters_up, *targetSurface_Trig, Acts::Direction::Backward); // must extrapolate backsards to trig plane if track starts in station 1",
+            "    "
+          ]
+        }
+      ]
+    },
+    "waveform": {
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "matches": [
+        {
+          "line": 333,
+          "text": "      digi_offset = -16.;",
+          "context": [
+            "    if (hit->status_bit(xAOD::WaveformStatus::TIMING_SHIFTED)) {",
+            "      digi_offset = -16.;",
+            "    }",
+            "    "
+          ]
+        },
+        {
+          "line": 338,
+          "text": "    hit->set_trigger_time(hit->localtime() - (trigger_time + trigger_offset + digi_offset));",
+          "context": [
+            "    trigger_offset = m_timingTool->triggerTimeOffset(hit->channel());",
+            "    hit->set_trigger_time(hit->localtime() - (trigger_time + trigger_offset + digi_offset));",
+            "",
+            "    //"
+          ]
+        },
+        {
+          "line": 345,
+          "text": "      hit->set_bcid_time(clock->time_from_clock(hit->localtime()-(trigger_offset + digi_offset)));",
+          "context": [
+            "    if (clock_valid) {",
+            "      hit->set_bcid_time(clock->time_from_clock(hit->localtime()-(trigger_offset + digi_offset)));",
+            "    } else {",
+            "      hit->set_status_bit(xAOD::WaveformStatus::CLOCK_INVALID);"
+          ]
+        },
+        {
+          "line": 348,
+          "text": "      hit->set_bcid_time(-1.);",
+          "context": [
+            "      hit->set_status_bit(xAOD::WaveformStatus::CLOCK_INVALID);",
+            "      hit->set_bcid_time(-1.);",
+            "    }",
+            ""
+          ]
+        }
+      ]
+    },
+    "digitization": {
+      "path": "Waveform/WaveDigiTools/src/WaveformDigitisationTool.cxx",
+      "matches": [
+        {
+          "line": 269,
+          "text": "      dtime = digiCondTool->trigger_time_slope(ctx) * (hit.localStartPosition().x()+hit.localEndPosition().x()) / 2.;",
+          "context": [
+            "      // Checked sign with Deion",
+            "      dtime = digiCondTool->trigger_time_slope(ctx) * (hit.localStartPosition().x()+hit.localEndPosition().x()) / 2.;",
+            "      id = m_triggerID->pmt_id(plate_id, 0); // ID for PMT 0",
+            "      tof = time_of_flight[id];"
+          ]
+        },
+        {
+          "line": 274,
+          "text": "      fill_evst_hist(evst_hist, id, hit.meanTime()-dtime-tof, hit.energyLoss());",
+          "context": [
+            "      // Fill our histogram for this channel",
+            "      fill_evst_hist(evst_hist, id, hit.meanTime()-dtime-tof, hit.energyLoss());",
+            "",
+            "      id = m_triggerID->pmt_id(plate_id, 1); // ID for PMT 1"
+          ]
+        },
+        {
+          "line": 278,
+          "text": "      fill_evst_hist(evst_hist, id, hit.meanTime()+dtime-tof, hit.energyLoss());",
+          "context": [
+            "      tof = time_of_flight[id];",
+            "      fill_evst_hist(evst_hist, id, hit.meanTime()+dtime-tof, hit.energyLoss());",
+            "",
+            "      // Could also change amplitude based on distance to PMT, but not yet"
+          ]
+        },
+        {
+          "line": 295,
+          "text": "      fill_evst_hist(evst_hist, id, hit.meanTime()+dtime-tof, hit.energyLoss());  ",
+          "context": [
+            "\t  ",
+            "      fill_evst_hist(evst_hist, id, hit.meanTime()+dtime-tof, hit.energyLoss());  ",
+            "    }",
+            ""
+          ]
+        }
+      ]
+    },
+    "fitter": {
+      "path": "Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx",
+      "matches": [
+        {
+          "line": 37,
+          "text": "  m_fit = makeTrackFitterFunction(m_trackingGeometryTool->trackingGeometry(), magneticField, true, true, reverseFilteringMomThreshold, Acts::FreeToBoundCorrection(false), *m_logger); ",
+          "context": [
+            "  //@todo: the multiple scattering and energy loss are originallly turned off ",
+            "  m_fit = makeTrackFitterFunction(m_trackingGeometryTool->trackingGeometry(), magneticField, true, true, reverseFilteringMomThreshold, Acts::FreeToBoundCorrection(false), *m_logger); ",
+            "  return StatusCode::SUCCESS;",
+            "}"
+          ]
+        }
+      ]
+    },
+    "ckf": {
+      "path": "Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx",
+      "matches": [
+        {
+          "line": 87,
+          "text": "  m_fitter = makeTrackFitterFunction(trackingGeometry, magneticField, ",
+          "context": [
+            "  //@todo: the multiple scattering and energy loss are originallly turned off ",
+            "  m_fitter = makeTrackFitterFunction(trackingGeometry, magneticField, ",
+            "                                  true, true, reverseFilteringMomThreshold, Acts::FreeToBoundCorrection(false), *m_logger);",
+            " "
+          ]
+        },
+        {
+          "line": 88,
+          "text": "                                  true, true, reverseFilteringMomThreshold, Acts::FreeToBoundCorrection(false), *m_logger);",
+          "context": [
+            "  m_fitter = makeTrackFitterFunction(trackingGeometry, magneticField, ",
+            "                                  true, true, reverseFilteringMomThreshold, Acts::FreeToBoundCorrection(false), *m_logger);",
+            " ",
+            "  m_finder = makeTrackFinderFunction(trackingGeometry, magneticField,"
+          ]
+        }
+      ]
+    }
+  },
+  "timing": "Local acquisition time; trigger_time removes nominal/offset/digitizer shift; bcid_time already uses clock. No additional phase subtraction authorized.",
+  "S0": "Track_pz0 comes from first stored TrackParameters, labelled most-upstream measurement; actual event state/surface and original producer must still be measured.",
+  "material": "Pinned fitter/CKF call enable scattering and energy-loss; this alone does not identify historical producer corrections at S0 or permit adding radiated energy.",
+  "new_measurements": false,
+  "no_energy_features_added": true,
+  "overall_complete": false
+}

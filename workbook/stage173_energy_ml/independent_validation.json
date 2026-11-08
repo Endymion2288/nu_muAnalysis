@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "GRL_checks": [
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json",
+      "exact_bytes": true,
+      "membership_exact": true
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics_calonu.json",
+      "exact_bytes": true,
+      "membership_exact": true
+    }
+  ],
+  "actual_condition_point_requeries_exact_N": 2,
+  "IOV_intersection_valid": true,
+  "physical_calibration_certified": false,
+  "energy_fits": 0,
+  "overall_complete": false
+}

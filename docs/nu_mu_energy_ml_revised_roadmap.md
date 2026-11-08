@@ -1,3 +1,11 @@
+# 当前执行更新：Stage173 完成一次读出适用性判定，转Timing双端与S0新物理
+
+[Stage173报告](../workbook/2026-11-08_stage173_readout-regime-applicability.md)实际两v10 GRL确认inclusive含15838、CaloNu专用无该run；16条件查询支持，data实际calo/calo2各4路、Timing8/9和10/11同片两端、硬件31为clock。HV0–19单IOV覆盖原稳定查询，20–23/31缺记录，DAQ config与真实gain/timewalk/正常CaloNu迁移仍未知。两GRL独立字节/成员及两点COOL重读通过，3start全exit0、46CPU/195聚合wall秒/0live/事件ROOT/fit/G4；官方源52503B、删174044B重复、Stage54保持。旧未提交Stage172草稿6文件精确归档，原合同/用户两研究文档不改写。
+
+下一Stage174先真实μ控制的同片Timing校准/联合支持，固定data8006、MC100012和data15838各256→成本→4096，严格status0/原signed电荷，分别校准留出差时、相对均时和x兼容性，不以旧Veto pair重训冒充新输入。S0前后μ辐射与匹配同窗读出干预继续按新方案；原32文件噪声不作无限前置。[全部需求清单](../workbook/stage173_energy_ml/goal_requirements.tsv)区分已测、条件任务及外部缺口。Stage87/原完整门、角色/K/reserved和整体未完成保持。
+
+以下保留此前入口原文。
+
 # Stage172 补充：恢复电荷与 Veto timing 已分别重训，新增方向是 Timing 双端联合测量
 
 [重训核查与 FASER 技术资料补充](../workbook/2026-11-08_stage172_retraining-and-detector-readout-supplement.md)确认 Stage129 的 Q89、T78 均从头训练，46575 train/11612 cal、3 seed×400轮；未重训的是后续标定压力测试。Q89保留 raw 并追加恢复估计/区间，T78使用严格status0的四个Veto pair；原joint失败不能归因于没重训，也不能推广为所有波形/时间信息无用。Stage79只诊断过未校准Timing双端差，新增校准均时/差时与tracker位置相容性是不同观测。2026综述确认普通Ecal在2023年末升级双量程，但原四路MC、Veto与CaloNu不能自动享有第二读出。先有实际校准/支持再做一次固定新表示训练；统一Q、Q+T联合及双端/双量程效果均未测量。Stage172原物理路线、Stage87/全部门、历史Stage171合同与下一执行编号Stage173保持。下方原文完整保留。
@@ -3169,3 +3177,10 @@ C++ROOT四pilot N、独立type/scalar和22表/映射/16边界验证通过，3job
 Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；不重复同点3000toys，补真实背景/效率/全生成加权账目和组成/条件响应，保留弱识别方向。物理谱收益和低能单事例目标分别验收；不造强prior、不打开reserved/隔离/role4。
 
 旧Stage171下一合同内部stage=172原字节保留；本轮Stage172为研究复盘，后续编号Stage173。32文件统计若执行只作原条件描述，需另立Stage173协议引用旧合同，路径/选择/窗口/2400CPU秒及限额保持；不自动反演或注入模型，也不因新研究自动扩大G4。所有新增性能/成本/样本数均未测量，具体输入/验收/停止条件见报告§6–11。中文报告先存、本地Conventional Commit、不push；旧全文、Stage54和整体未完成状态保持。
+
+
+## 153. Stage173：实际运行条件判定结束，开启新测量支持
+
+[完整报告](../workbook/2026-11-08_stage173_readout-regime-applicability.md)实取inclusive/CaloNu两GRL，15838仅前者有；16明确条件query全部支持但20–23/31无HV，硬件31为clock，calo/calo2各4路。实际IOV/原字节/成员及两点重读验证通过，0物理校准/DAQ exact config/曝光认证。3终态start、46CPU秒/195wall秒，无事件ROOT/fit/G4；官方源52503B、删174044B重复，Stage54保持。一次条件判定至此结束。
+
+下一固定三μ来源每份256→成本→4096，先做Timing同片双端差/相对均时/x残差与留出覆盖，严守status0、signed、原角色和全门；全ν覆盖/新能量对照另冻。S0 actual state/material与μ前后辐射、实际同窗读出干预/高幅参考/小型backscatter/物理背景效率加权账目及独立确认按新方案继续，不因噪声或metadata无限前置。原32文件合同历史保留不执行，整体目标未完成。

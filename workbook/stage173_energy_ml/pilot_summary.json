@@ -1,0 +1,755 @@
+{
+  "passed": true,
+  "grls": [
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json",
+      "bytes": 141894,
+      "run_present": true,
+      "record": {
+        "start_time": "2024-07-08T13:01:17.720435",
+        "stop_time": "2024-07-09T05:35:58.048976",
+        "start_utime": 1720443677.720435,
+        "stop_utime": 1720503358.048976,
+        "stable_list": [
+          {
+            "lhc_fill": 9877,
+            "start_utime": 1720449636.0,
+            "stop_utime": 1720503223.0,
+            "start_time": "2024-07-08T14:40:36.000000",
+            "stop_time": "2024-07-09T05:33:43.000000"
+          }
+        ]
+      },
+      "ranges": {
+        "stable_list": [
+          [
+            1720449636,
+            1720503223
+          ]
+        ],
+        "excluded_list": []
+      },
+      "fixed_time_membership": {
+        "1720449636": true,
+        "1720473060": true,
+        "1720473064": true,
+        "1720503223": true
+      }
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics_calonu.json",
+      "bytes": 73215,
+      "run_present": false,
+      "record": null,
+      "ranges": {},
+      "fixed_time_membership": {
+        "1720449636": false,
+        "1720473060": false,
+        "1720473064": false,
+        "1720503223": false
+      }
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://twiki.cern.ch/twiki/bin/view/FASER/FaserLuminosity",
+      "bytes": 68094,
+      "excerpts": [
+        "dly changing lumi 15455 MD Non-physics fill 15553 MD Non-physics fill 15694 ATLAS solenoid Magnet down, lumi unreliable 15838 CaloNu CaloNu voltages not nominal (only removed from CaloNu dataset) 15993 BSRT fill few bunches, rapidly changing luminosity 16669 Short fill 2 minute duration 16972 ATLAS solenoid Magnet ramping, lumi unreliable The following runs were removed for having total luminosity under 10 pb-1. Thes"
+      ]
+    },
+    {
+      "url": "https://twiki.cern.ch/twiki/bin/view/FASER/BadFASERRuns",
+      "bytes": 50406,
+      "excerpts": [
+        "creenshot in attachments below 15694 ATLAS solenoid/toroid down and low-mu running so ATLAS lumi measurement unreliable 15838 8/7/24 - 9/7/24 CaloNu data bad as settings being optimized during run elog 19205 - end of fill 10629 Timing for tracker ST2 L 1 was said wrongly. (during 400b fills on intensity ramp up 2025 19270 (fill: 10640) 18/5/25 after 00h23 cooling failure 19524 8/6/25 3am - 8.26am PMT timings are off "
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "folder": "/WAVE/DAQ/CableMapping",
+      "instance": "CONDBR3",
+      "run": 15838,
+      "seconds": null,
+      "interval": null,
+      "global_tag": "",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo2",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 17,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo2",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 18,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo2",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 19,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calo2",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 20,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "calonu",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 25,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 26,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 67950677590016,
+          "until": 68053756805120,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "supported": true,
+      "description": "<timeStamp>run-lumi</timeStamp><addrHeader><address_header clid=\"1238547719\" service_type=\"71\" /></addrHeader><typeName>CondAttrListCollection</typeName>",
+      "single_version": true,
+      "resolved_tag": "",
+      "columns": [
+        "type",
+        "station",
+        "plate",
+        "row",
+        "module",
+        "pmt"
+      ],
+      "key_start": 68023692034048,
+      "key_stop": 68023692034048,
+      "returned_N": 32,
+      "requested_channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        31
+      ]
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/ALLP200_261030.db",
+      "folder": "/WAVE/Calibration/HV",
+      "instance": "CONDBR3",
+      "run": null,
+      "seconds": 1720473060,
+      "interval": null,
+      "global_tag": "",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 1720432794641999872,
+          "until": 1720617677464999936,
+          "payload": {
+            "HV": 905.0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 1720432790840000000,
+          "until": 1720617673660999936,
+          "payload": {
+            "HV": 910.0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 1720432790840000000,
+          "until": 1720617673660999936,
+          "payload": {
+            "HV": 940.0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 1720432790940000000,
+          "until": 1720617673760999936,
+          "payload": {
+            "HV": 940.0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 1720432586896000000,
+          "until": 1720617693480999936,
+          "payload": {
+            "HV": 860.0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 1720432594601000192,
+          "until": 1720617678064999936,
+          "payload": {
+            "HV": 875.0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 1720432513237999872,
+          "until": 1720617681569999872,
+          "payload": {
+            "HV": 1525.0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 1720432482415000064,
+          "until": 1720617670058000128,
+          "payload": {
+            "HV": 1470.0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 1720432544161999872,
+          "until": 1720617693180999936,
+          "payload": {
+            "HV": 1845.0
+          }
+        },
+        {
+          "channel": 9,
+          "since": 1720432571184000000,
+          "until": 1720617693280999936,
+          "payload": {
+            "HV": 1715.0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 1720432575086999808,
+          "until": 1720617697184000000,
+          "payload": {
+            "HV": 1770.0
+          }
+        },
+        {
+          "channel": 11,
+          "since": 1720432582892999936,
+          "until": 1720617677864999936,
+          "payload": {
+            "HV": 1710.0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 1720432567480000000,
+          "until": 1720617697284000000,
+          "payload": {
+            "HV": 1110.0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 1720432571384000000,
+          "until": 1720617681868999936,
+          "payload": {
+            "HV": 1100.0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 1720432513138000128,
+          "until": 1720617689176999936,
+          "payload": {
+            "HV": 1610.0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 1720432482315000064,
+          "until": 1720617685372999936,
+          "payload": {
+            "HV": 1475.0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 1720432794042000128,
+          "until": 1720617688376000000,
+          "payload": {
+            "HV": 940.0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 1720432821064000000,
+          "until": 1720617676864000000,
+          "payload": {
+            "HV": 1000.0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 1720432790239000064,
+          "until": 1720617680768999936,
+          "payload": {
+            "HV": 892.0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 1720432790239000064,
+          "until": 1720617676964000000,
+          "payload": {
+            "HV": 905.0
+          }
+        }
+      ],
+      "supported": true,
+      "description": "<timeStamp>time</timeStamp><addrHeader><address_header clid=\"1238547719\" service_type=\"71\" /></addrHeader><typeName>CondAttrListCollection</typeName>",
+      "single_version": true,
+      "resolved_tag": "",
+      "columns": [
+        "HV"
+      ],
+      "key_start": 1720473060000000000,
+      "key_stop": 1720473060000000000,
+      "returned_N": 20,
+      "requested_channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        31
+      ]
+    }
+  ],
+  "CPU_s": 8.981139969000001,
+  "wall_s": 29.843400739016943,
+  "RSS_KiB": 565560,
+  "missing_fields_are_not_fatal": true,
+  "energy_fits": 0,
+  "new_G4": 0,
+  "overall_complete": false
+}

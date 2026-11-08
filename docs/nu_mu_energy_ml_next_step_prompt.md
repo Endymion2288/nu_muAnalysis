@@ -1,3 +1,11 @@
+# 当前执行更新：Stage173 完成一次读出适用性判定，转Timing双端与S0新物理
+
+[Stage173报告](../workbook/2026-11-08_stage173_readout-regime-applicability.md)实际两v10 GRL确认inclusive含15838、CaloNu专用无该run；16条件查询支持，data实际calo/calo2各4路、Timing8/9和10/11同片两端、硬件31为clock。HV0–19单IOV覆盖原稳定查询，20–23/31缺记录，DAQ config与真实gain/timewalk/正常CaloNu迁移仍未知。两GRL独立字节/成员及两点COOL重读通过，3start全exit0、46CPU/195聚合wall秒/0live/事件ROOT/fit/G4；官方源52503B、删174044B重复、Stage54保持。旧未提交Stage172草稿6文件精确归档，原合同/用户两研究文档不改写。
+
+下一Stage174先真实μ控制的同片Timing校准/联合支持，固定data8006、MC100012和data15838各256→成本→4096，严格status0/原signed电荷，分别校准留出差时、相对均时和x兼容性，不以旧Veto pair重训冒充新输入。S0前后μ辐射与匹配同窗读出干预继续按新方案；原32文件噪声不作无限前置。[全部需求清单](../workbook/stage173_energy_ml/goal_requirements.tsv)区分已测、条件任务及外部缺口。Stage87/原完整门、角色/K/reserved和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前后续入口：Stage172研究已完成，下一实际阶段编号Stage173
 
 先读[Stage172研究报告](../workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md)及[资料适用性](../workbook/stage172_energy_ml/research_sources.json)。本轮用户只要求用workbook和文献开展新思路研究；当前终端没有工作环境，已完成文档研究，没有读取事件数组、复算指标、训练或提交作业。后面的历史“下一Stage172”不是本轮已经执行的统计。
