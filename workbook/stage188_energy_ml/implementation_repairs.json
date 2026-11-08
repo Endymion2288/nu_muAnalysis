@@ -1,0 +1,19 @@
+{
+  "records": [
+    {
+      "job": "9678308.0",
+      "CPU_s": 265,
+      "exit": 129,
+      "issue": "First ACTS propagation SIGSEGV; no observations persisted.",
+      "fix": "gcc13 C++20 bridge plus explicit official material map. Joint repair; does not isolate cause of initial failure."
+    },
+    {
+      "job": "9678329.0",
+      "CPU_s": 4,
+      "exit": 1,
+      "issue": "Bridge compiler missing aggregate Athena include path.",
+      "fix": "Add actual pinned Athena include root. Same inputs and pilot budget."
+    }
+  ],
+  "scientific_protocol_budget_and_original_parents_unchanged": true
+}

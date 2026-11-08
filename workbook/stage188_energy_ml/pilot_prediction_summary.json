@@ -1,0 +1,251 @@
+{
+  "groups": [
+    {
+      "label": "MC100012",
+      "parents_N": 4,
+      "original_leading_matched_N": 2,
+      "start_supported_N": 4,
+      "matched_start_N": 2,
+      "matched_pz50_100_N": 2,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 4
+      },
+      "source_propagation_roundtrip_success_N": 4,
+      "wafer_propagation_failed_N": 169,
+      "successful_wafer_predictions_N": 11,
+      "inside_geometric_wafer_predictions_N": 11,
+      "geometric_no_cluster_N": 0,
+      "multi_candidate_wafer_N": 0,
+      "compatible3_zero_N": 0,
+      "compatible3_multiple_N": 0,
+      "SDO_parent_N": 4,
+      "all_candidate_residual_mm": {
+        "N": 11,
+        "mean": 2.4329323116178623,
+        "RMS": 3.183604982821904,
+        "median": 4.1153003294352715,
+        "abs95": 4.466699120085536,
+        "abs_gt3_N": 6
+      },
+      "all_candidate_pull": {
+        "N": 11,
+        "mean": 1.3474948745721476,
+        "RMS": 1.6421419049449817,
+        "median": 2.1247722304742287,
+        "abs95": 2.238161982445493,
+        "abs_gt3_N": 0
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 11,
+        "mean": 1.3474948745721476,
+        "RMS": 1.6421419049449817,
+        "median": 2.1247722304742287,
+        "abs95": 2.238161982445493,
+        "abs_gt3_N": 0
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 0,
+        "mean": null,
+        "RMS": null,
+        "median": null,
+        "abs95": null,
+        "abs_gt3_N": 0
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 11,
+        "mean": 1.0414613910417112,
+        "RMS": 1.0420774392701115,
+        "median": 1.0716879069921479,
+        "abs95": 1.0762090433682179,
+        "abs_gt3_N": 0
+      }
+    },
+    {
+      "label": "pi_0",
+      "parents_N": 4,
+      "original_leading_matched_N": 4,
+      "start_supported_N": 4,
+      "matched_start_N": 4,
+      "matched_pz50_100_N": 0,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 4
+      },
+      "source_propagation_roundtrip_success_N": 4,
+      "wafer_propagation_failed_N": 168,
+      "successful_wafer_predictions_N": 24,
+      "inside_geometric_wafer_predictions_N": 24,
+      "geometric_no_cluster_N": 6,
+      "multi_candidate_wafer_N": 7,
+      "compatible3_zero_N": 6,
+      "compatible3_multiple_N": 0,
+      "SDO_parent_N": 4,
+      "all_candidate_residual_mm": {
+        "N": 25,
+        "mean": -1.4861103770516484,
+        "RMS": 4.015121077490016,
+        "median": 0.0582513988461848,
+        "abs95": 10.921800607694527,
+        "abs_gt3_N": 4
+      },
+      "all_candidate_pull": {
+        "N": 25,
+        "mean": -16.19368519344491,
+        "RMS": 44.30469943557797,
+        "median": 0.6543488314930321,
+        "abs95": 115.23766418249245,
+        "abs_gt3_N": 7
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 18,
+        "mean": 0.6665089592793605,
+        "RMS": 1.1145710273103433,
+        "median": 0.8531430602352108,
+        "abs95": 2.1141743307034986,
+        "abs_gt3_N": 0
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 7,
+        "mean": -59.54847015759303,
+        "RMS": 83.70893361401929,
+        "median": -62.048943290726584,
+        "abs95": 143.2771377896341,
+        "abs_gt3_N": 7
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 24,
+        "mean": 1.0244068865516065,
+        "RMS": 1.024644197096046,
+        "median": 1.0178817592030274,
+        "abs95": 1.0607990594239103,
+        "abs_gt3_N": 0
+      }
+    },
+    {
+      "label": "k_48",
+      "parents_N": 4,
+      "original_leading_matched_N": 4,
+      "start_supported_N": 4,
+      "matched_start_N": 4,
+      "matched_pz50_100_N": 0,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 4
+      },
+      "source_propagation_roundtrip_success_N": 4,
+      "wafer_propagation_failed_N": 169,
+      "successful_wafer_predictions_N": 23,
+      "inside_geometric_wafer_predictions_N": 23,
+      "geometric_no_cluster_N": 0,
+      "multi_candidate_wafer_N": 6,
+      "compatible3_zero_N": 0,
+      "compatible3_multiple_N": 2,
+      "SDO_parent_N": 4,
+      "all_candidate_residual_mm": {
+        "N": 435,
+        "mean": 11.198030979036249,
+        "RMS": 23.508218555315032,
+        "median": 8.595806385975791,
+        "abs95": 48.38780620287031,
+        "abs_gt3_N": 353
+      },
+      "all_candidate_pull": {
+        "N": 435,
+        "mean": 92.49806256555961,
+        "RMS": 205.7152329815423,
+        "median": 73.65460776915931,
+        "abs95": 428.5909987387058,
+        "abs_gt3_N": 410
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 23,
+        "mean": 0.6774750443798523,
+        "RMS": 0.8588253754353468,
+        "median": 0.5661477901739533,
+        "abs95": 1.5851611980740186,
+        "abs_gt3_N": 0
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 412,
+        "mean": 97.62396915047984,
+        "RMS": 211.37921087604792,
+        "median": 80.89562187064567,
+        "abs95": 431.95934390015435,
+        "abs_gt3_N": 410
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 23,
+        "mean": 1.0045649476035015,
+        "RMS": 1.004582231540246,
+        "median": 1.0003081826480738,
+        "abs95": 1.0181451425336034,
+        "abs_gt3_N": 0
+      }
+    },
+    {
+      "label": "charm_113",
+      "parents_N": 4,
+      "original_leading_matched_N": 4,
+      "start_supported_N": 4,
+      "matched_start_N": 4,
+      "matched_pz50_100_N": 0,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 4
+      },
+      "source_propagation_roundtrip_success_N": 4,
+      "wafer_propagation_failed_N": 169,
+      "successful_wafer_predictions_N": 23,
+      "inside_geometric_wafer_predictions_N": 23,
+      "geometric_no_cluster_N": 0,
+      "multi_candidate_wafer_N": 6,
+      "compatible3_zero_N": 0,
+      "compatible3_multiple_N": 2,
+      "SDO_parent_N": 4,
+      "all_candidate_residual_mm": {
+        "N": 671,
+        "mean": -8.42541941964735,
+        "RMS": 17.384112009481374,
+        "median": -7.875191168392586,
+        "abs95": 34.207824710302106,
+        "abs_gt3_N": 570
+      },
+      "all_candidate_pull": {
+        "N": 671,
+        "mean": -71.25112864707326,
+        "RMS": 149.90461085935888,
+        "median": -59.5196224588108,
+        "abs95": 295.82223281791414,
+        "abs_gt3_N": 646
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 23,
+        "mean": -0.008784046275108015,
+        "RMS": 1.0795510239207373,
+        "median": -0.24936211971817643,
+        "abs95": 1.7292148375292078,
+        "abs_gt3_N": 0
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 648,
+        "mean": -73.77979211284232,
+        "RMS": 152.54162286956782,
+        "median": -67.57624232255871,
+        "abs95": 296.3448279395179,
+        "abs_gt3_N": 646
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 23,
+        "mean": 1.0116598711706197,
+        "RMS": 1.0118052610286488,
+        "median": 1.0019661795734993,
+        "abs95": 1.0424960850944955,
+        "abs_gt3_N": 0
+      }
+    }
+  ],
+  "scope": "All candidates on geometrically intersected wafers; correlated/shared PRD observations, not independent events or calibrated pull coverage. No nearest-hit selection. Geometry-only absence is not a certified masked-detector hole.",
+  "association_error_rate": null,
+  "independent_real_control_coverage": null,
+  "new_energy_performance": null,
+  "SDO_note": "Shared-contributor diagnostic only, not a certified primary-muon label or wrong-association rate. No truth enters deployed features.",
+  "promotion": false,
+  "overall_complete": false
+}

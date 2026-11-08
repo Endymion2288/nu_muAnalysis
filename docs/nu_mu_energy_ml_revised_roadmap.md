@@ -1,3 +1,9 @@
+# 当前执行更新：Stage188 真实IFT留出测量面预测完成
+
+[Stage188报告](../workbook/2026-11-08_stage188_unused-IFT-surface-predictions.md)按新的电子观测主线完成原MC100012前64与π/K/charm各32train的真实surface/完整cov/field/material预测。160父156起始面支持、115原leading匹配（ν96/96，μ控制19/64）；全部未匹配和原缺面保留。π/K/charm共享fit SDO贡献候选pull RMS约1.17/1.10/1.22，非共享约181/211/154，显示关联混杂必须保留；共享贡献不是已认证主μ身份或错误率。坏道mask、真实覆盖与Eν收益仍未认证，不直接加回材料。
+
+6832标量/172source检查通过，pilot16与full逐值相同；6start含2程序失败、540CPU/764聚合wall秒/0live。gcc13小bridge及显式官方材料图修复初次调用问题，未单独识别崩溃唯一原因，所有耗时计入原4800预算。最小摘要及原字节来源/日志归档，Stage54保持。Stage189固定四电荷组成包与matched availability/条件打乱新训练已完成待阶段归档；Stage190真实run15838原4/64配对同面预测正在执行，不等待乳胶，也不借旧raw不匹配关闭新轨迹问题。原所有门/K/角色/pz0-only/raw/status0与整体未完成保持。以下历史全文保留。
+
 # Stage187研究补充：无乳胶匹配依赖的电子观测路线
 
 最新用户约束是目前没有可用的大批量乳胶—电子匹配。[电子观测研究补充](../workbook/2026-11-08_stage187_electronic-only-observables-research.md)因此将研究优先级改为：withoutIFT主轨迹对未使用IFT测量的预测残差/关联与覆盖；统一上游参考面和实际LOS下的μ散射平面有符号活动；少量有物理问题的交叉变换。不是重复Stage44的dx/dy、Stage124的σ(q/p)/cluster宽度/三格时间、Stage157的条件MIP残差或Stage158的绝对距离和。新观测入模型均从头重训并带可用性/物理控制。

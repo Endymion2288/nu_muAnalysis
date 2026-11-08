@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "phases": [
+    "pilot",
+    "full"
+  ],
+  "scalar_residual_variance_pull_checks_N": 6832,
+  "source_representation_checks_N": 172,
+  "max_source_roundtrip_mm": 9.15527259337523e-07,
+  "pilot_full_exact_N": 16,
+  "source_covariance_inverse_units_checked": true,
+  "actual_ACTS_native_measurement_frames_checked": true,
+  "all_candidates_retained": true,
+  "source_propagation_roundtrip_success_N": 172,
+  "source_propagation_roundtrip_max_abs_parameter_difference": 1.4210854715202004e-14,
+  "source_propagation_roundtrip_note": "Mixed-unit diagnostic only; source representation closure is separately checked. Empty propagation is retained, not replaced by an identity.",
+  "calibrated_association_error_rate": null,
+  "independent_real_data_pull_coverage": null,
+  "limits": "Scalar audit does not independently certify the ACTS transport algorithm or producer covariance coverage; no smoothed residual labeled independent pull.",
+  "overall_complete": false,
+  "promotion": false
+}

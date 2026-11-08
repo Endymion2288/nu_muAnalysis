@@ -1,0 +1,11 @@
+{
+  "initial_job": "9678308.0",
+  "initial_exit": 129,
+  "initial_CPU_s": 265.0,
+  "initial_failure": "First ACTS propagation SIGSEGV; no event observations persisted. Program failure, not physics evidence.",
+  "repair": "Use gcc13/C++20 compiled bridge with pinned dependency includes instead of Cling constructing ACTS/Eigen objects; explicit official material map; add source-surface propagation roundtrip. Exact same original parents, no changed budget.",
+  "material_map": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/acts/material-maps-alma9.json",
+  "diagnostic_pull_band": 3.0,
+  "diagnostic_note": "Fixed descriptive 3-sigma band, all candidates retained; not calibrated coverage or nearest-hit selection. Support must include actual candidates in both mu and nu.",
+  "remaining_pilot_CPU_s": 935.0
+}

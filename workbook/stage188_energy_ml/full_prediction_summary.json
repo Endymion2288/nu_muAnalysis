@@ -1,0 +1,253 @@
+{
+  "groups": [
+    {
+      "label": "MC100012",
+      "parents_N": 64,
+      "original_leading_matched_N": 19,
+      "start_supported_N": 60,
+      "matched_start_N": 19,
+      "matched_pz50_100_N": 17,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 60,
+        "no_long_track": 3,
+        "source_position_closure_failed": 1
+      },
+      "source_propagation_roundtrip_success_N": 60,
+      "wafer_propagation_failed_N": 2522,
+      "successful_wafer_predictions_N": 116,
+      "inside_geometric_wafer_predictions_N": 116,
+      "geometric_no_cluster_N": 9,
+      "multi_candidate_wafer_N": 28,
+      "compatible3_zero_N": 21,
+      "compatible3_multiple_N": 5,
+      "SDO_parent_N": 64,
+      "all_candidate_residual_mm": {
+        "N": 235,
+        "mean": 1.8317890563242574,
+        "RMS": 13.03506552917197,
+        "median": 0.0586790860184081,
+        "abs95": 30.019345629483215,
+        "abs_gt3_N": 125
+      },
+      "all_candidate_pull": {
+        "N": 235,
+        "mean": 6.08035873083295,
+        "RMS": 42.658173945694365,
+        "median": 0.21978874640453916,
+        "abs95": 80.69629828060751,
+        "abs_gt3_N": 135
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 107,
+        "mean": -0.3714637823260619,
+        "RMS": 1.577688743582257,
+        "median": 0.17356486891145007,
+        "abs95": 3.559959047421567,
+        "abs_gt3_N": 12
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 128,
+        "mean": 11.47367911292681,
+        "RMS": 57.7824462518137,
+        "median": 7.464512780884331,
+        "abs95": 99.6136635003129,
+        "abs_gt3_N": 123
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 116,
+        "mean": 1.0451120736648576,
+        "RMS": 1.0460059963211317,
+        "median": 1.0309610136243164,
+        "abs95": 1.123371669595411,
+        "abs_gt3_N": 0
+      }
+    },
+    {
+      "label": "pi_0",
+      "parents_N": 32,
+      "original_leading_matched_N": 32,
+      "start_supported_N": 32,
+      "matched_start_N": 32,
+      "matched_pz50_100_N": 3,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 32
+      },
+      "source_propagation_roundtrip_success_N": 32,
+      "wafer_propagation_failed_N": 1358,
+      "successful_wafer_predictions_N": 178,
+      "inside_geometric_wafer_predictions_N": 178,
+      "geometric_no_cluster_N": 22,
+      "multi_candidate_wafer_N": 80,
+      "compatible3_zero_N": 26,
+      "compatible3_multiple_N": 13,
+      "SDO_parent_N": 32,
+      "all_candidate_residual_mm": {
+        "N": 1146,
+        "mean": 5.843808097122904,
+        "RMS": 16.97299853751461,
+        "median": 2.1380919498424493,
+        "abs95": 39.531328928487724,
+        "abs_gt3_N": 800
+      },
+      "all_candidate_pull": {
+        "N": 1146,
+        "mean": 53.18741809119637,
+        "RMS": 168.0028691692678,
+        "median": 17.80369505867815,
+        "abs95": 369.6572297997337,
+        "abs_gt3_N": 976
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 155,
+        "mean": -0.18220533537716263,
+        "RMS": 1.1715915857581052,
+        "median": -0.15240120517528197,
+        "abs95": 2.1981662279704,
+        "abs_gt3_N": 4
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 991,
+        "mean": 61.534836487885464,
+        "RMS": 180.6636382753005,
+        "median": 45.01418006154451,
+        "abs95": 395.1472457706691,
+        "abs_gt3_N": 972
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 178,
+        "mean": 1.0400936775202783,
+        "RMS": 1.0417539641114308,
+        "median": 1.0149782012978443,
+        "abs95": 1.150690375070528,
+        "abs_gt3_N": 0
+      }
+    },
+    {
+      "label": "k_48",
+      "parents_N": 32,
+      "original_leading_matched_N": 32,
+      "start_supported_N": 32,
+      "matched_start_N": 32,
+      "matched_pz50_100_N": 2,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 32
+      },
+      "source_propagation_roundtrip_success_N": 32,
+      "wafer_propagation_failed_N": 1342,
+      "successful_wafer_predictions_N": 194,
+      "inside_geometric_wafer_predictions_N": 194,
+      "geometric_no_cluster_N": 4,
+      "multi_candidate_wafer_N": 116,
+      "compatible3_zero_N": 9,
+      "compatible3_multiple_N": 14,
+      "SDO_parent_N": 32,
+      "all_candidate_residual_mm": {
+        "N": 1998,
+        "mean": 1.709891509904069,
+        "RMS": 19.937926461956074,
+        "median": 0.19633929369220127,
+        "abs95": 42.735431121243586,
+        "abs_gt3_N": 1624
+      },
+      "all_candidate_pull": {
+        "N": 1998,
+        "mean": 12.567328114870445,
+        "RMS": 200.47583206396934,
+        "median": 1.3383301381791215,
+        "abs95": 436.23738542547545,
+        "abs_gt3_N": 1799
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 187,
+        "mean": 0.4178931485729588,
+        "RMS": 1.0972091037559908,
+        "median": 0.31108115759999944,
+        "abs95": 2.0818893375234886,
+        "abs_gt3_N": 2
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 1811,
+        "mean": 13.821852873952517,
+        "RMS": 210.57166575133584,
+        "median": 17.774538118993735,
+        "abs95": 444.36925175259336,
+        "abs_gt3_N": 1797
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 194,
+        "mean": 1.0192196596808867,
+        "RMS": 1.0198209126747098,
+        "median": 1.0070660577736898,
+        "abs95": 1.074818163723071,
+        "abs_gt3_N": 0
+      }
+    },
+    {
+      "label": "charm_113",
+      "parents_N": 32,
+      "original_leading_matched_N": 32,
+      "start_supported_N": 32,
+      "matched_start_N": 32,
+      "matched_pz50_100_N": 2,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 32
+      },
+      "source_propagation_roundtrip_success_N": 32,
+      "wafer_propagation_failed_N": 1342,
+      "successful_wafer_predictions_N": 194,
+      "inside_geometric_wafer_predictions_N": 194,
+      "geometric_no_cluster_N": 11,
+      "multi_candidate_wafer_N": 130,
+      "compatible3_zero_N": 19,
+      "compatible3_multiple_N": 32,
+      "SDO_parent_N": 32,
+      "all_candidate_residual_mm": {
+        "N": 2024,
+        "mean": -2.8192860859242574,
+        "RMS": 17.85219476507515,
+        "median": -0.40652806461690894,
+        "abs95": 37.606262706297386,
+        "abs_gt3_N": 1518
+      },
+      "all_candidate_pull": {
+        "N": 2024,
+        "mean": -24.694552226352787,
+        "RMS": 147.32983717809233,
+        "median": -2.622367678237574,
+        "abs95": 310.527111383084,
+        "abs_gt3_N": 1803
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 181,
+        "mean": 0.1556672860078031,
+        "RMS": 1.2241146913196521,
+        "median": -0.054483251406139625,
+        "abs95": 2.547732452906523,
+        "abs_gt3_N": 7
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 1843,
+        "mean": -27.135078396584625,
+        "RMS": 154.39454600747032,
+        "median": -11.458017672315918,
+        "abs95": 319.36026602791856,
+        "abs_gt3_N": 1796
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 194,
+        "mean": 1.0196932386779671,
+        "RMS": 1.021384683065689,
+        "median": 1.0016981228733042,
+        "abs95": 1.1034228163652704,
+        "abs_gt3_N": 0
+      }
+    }
+  ],
+  "scope": "All candidates on geometrically intersected wafers; correlated/shared PRD observations, not independent events or calibrated pull coverage. No nearest-hit selection. Geometry-only absence is not a certified masked-detector hole.",
+  "association_error_rate": null,
+  "independent_real_control_coverage": null,
+  "new_energy_performance": null,
+  "SDO_note": "Shared-contributor diagnostic only, not a certified primary-muon label or wrong-association rate. No truth enters deployed features.",
+  "promotion": false,
+  "overall_complete": false
+}
