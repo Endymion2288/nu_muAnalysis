@@ -64,3 +64,5 @@ python3 ml/stage182_validate_docs.py
 Stage179普通Ecal同窗误差由噪声/基线主导的新证据，给Stage172联合噪声候选提供了具体检验理由。下一Stage183另冻同run已知RAW400–431前缀的普通Ecal Lo0–3/Hi16–19描述性联合控制，先400/401成本和原8192闭合，过门才固定30文件。原2400CPU秒、4进程、固定pedestal/signal/offpulse窗；测协方差/有效N/秩、两量程四路和方差比及fileblock区间，绝不反演或自动注入。**这不是执行历史Stage172 CaloNu合同**；旧合同原字节保持，不以坏CaloNu20–23或clock31推普通Ecal校准。实际DAQ配置/μ或quiet纯度/MC窗口迁移/信号保真/电荷误差覆盖仍缺，阳性只允许另冻估计器验证。
 
 Stage87/原低能与八层三尾全部门、角色/全部K/reserved关闭保持。S0困难侧缺面、读出干预总体能量增益、真实高幅参考、背景效率加权账目/真实辅助约束、乳胶与独立确认仍开放，整体目标未完成。
+
+收尾复核修正：Stage182 compact提交索引曾因复制模板写stage=181，已将实际 `~/condor/nu_muAnalysis/stage182/execution_index.json` 及生成器同步改为182；原job ID/归档路径和科学产物不变，未复算或重跑。另核Stage179/181/182/183四个索引stage字段与目录均一致，四阶段队列均为空。

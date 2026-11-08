@@ -50,7 +50,7 @@ if __name__=='__main__':
         deleted.append(dict(path=str(path),bytes=path.stat().st_size));path.unlink()
     for path in transport:
         if path.parent!=CACHE and path.parent.exists() and not any(path.parent.iterdir()):path.parent.rmdir()
-    (SPOOL/'execution_index.json').write_text(json.dumps(dict(stage=181,terminal_jobs=[r['ClusterId'] for r in account['jobs']],archive=str(SOFT/'terminal_spool.tar.gz')),indent=2)+'\n')
+    (SPOOL/'execution_index.json').write_text(json.dumps(dict(stage=182,terminal_jobs=[r['ClusterId'] for r in account['jobs']],archive=str(SOFT/'terminal_spool.tar.gz')),indent=2)+'\n')
     result=dict(passed=True,deleted_bytes=sum(r['bytes'] for r in deleted),deleted=deleted,
         retained_event_B=sum(p.stat().st_size for p in CACHE.glob('*') if p.is_file()),
         retained_scope='No new persistent event payload; Stage179 inputs retained in original location.',
