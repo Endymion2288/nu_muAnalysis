@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "all_jobs_terminal": true,
+  "live_N": 0,
+  "starts": 4,
+  "scheduler_CPU_s": 322.0,
+  "scheduler_aggregate_wall_s": 531.0,
+  "failed_jobs": [
+    "9678642.0"
+  ],
+  "unavailable_results": [
+    {
+      "phase": "audit",
+      "cluster": 9678642,
+      "reason": "Removed by original CPU allowance before result transfer; no GNU/scientific result available."
+    }
+  ],
+  "exact_source_logs_scalar_spool_archives": true,
+  "Stage54_preserved_N": 12,
+  "retained_cache_models_B": 1964637,
+  "deleted_B": 14867054,
+  "deleted": [
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage195/1794175653943161478/energy-ml-stage195.tar.gz",
+      "bytes": 4153346
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage195/audit_repair_result.tar.gz",
+      "bytes": 1058
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage195/1794175216059937805/energy-ml-stage195.tar.gz",
+      "bytes": 4152356
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage195/1794174908826129710/energy-ml-stage195.tar.gz",
+      "bytes": 2220130
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage195/full_result.tar.gz",
+      "bytes": 2064698
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage195/1794174517889258810/energy-ml-stage195.tar.gz",
+      "bytes": 2217230
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage195/pilot_result.tar.gz",
+      "bytes": 29788
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/worker_1794174517889258810.sh",
+      "bytes": 1272
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/pilot_1794174517889258810.sub",
+      "bytes": 1033
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/worker_1794174908826129710.sh",
+      "bytes": 1272
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/full_1794174908826129710.sub",
+      "bytes": 1032
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/worker_1794175216059937805.sh",
+      "bytes": 1272
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/audit_1794175216059937805.sub",
+      "bytes": 1033
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/worker_1794175653943161478.sh",
+      "bytes": 1273
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/audit_repair_1794175653943161478.sub",
+      "bytes": 1040
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678616.0.log",
+      "bytes": 1987
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678616.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678616.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678630.0.log",
+      "bytes": 2137
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678630.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678630.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678642.0.log",
+      "bytes": 1390
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678663.0.log",
+      "bytes": 2143
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678663.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage195/logs/9678663.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage195_energy_ml/audit_repair.log",
+      "bytes": 53
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage195_energy_ml/full.log",
+      "bytes": 6776
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage195_energy_ml/pilot.log",
+      "bytes": 2431
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage195_energy_ml/audit_repair_time.txt",
+      "bytes": 775
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage195_energy_ml/full_time.txt",
+      "bytes": 767
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage195_energy_ml/pilot_time.txt",
+      "bytes": 762
+    }
+  ],
+  "no_ROOT_or_xAOD_persistence": true,
+  "overall_complete": false,
+  "promotion": false,
+  "failure_definition": "A removed JobStatus3 is failed even when its terminal ad retains ExitCode0. Corrected scalar failure classification; exact archives/deletions unchanged.",
+  "postformat_source_versions_appended_exact": 9
+}

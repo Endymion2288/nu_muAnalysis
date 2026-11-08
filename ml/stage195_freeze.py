@@ -1,0 +1,42 @@
+"""Freeze one conditional dual-readout error benchmark before event processing."""
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'workbook/stage195_energy_ml'
+
+if __name__ == '__main__':
+    OUT.mkdir(exist_ok=True)
+    assert not (OUT / 'protocol.json').exists()
+    old = json.loads((ROOT / 'workbook/stage180_energy_ml/protocol.json').read_text())
+    p = dict(stage=195, starting_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+        question='Can the observed dual-readout amplitude trend be covered by a fixed additive random-waveform error benchmark, after accounting explicitly for rectification and selection?',
+        PHYS=old['PHYS'], condition_input=old['condition_input'],
+        inputs=['workbook/stage180_energy_ml/full_summary.json',
+                'workbook/stage181_energy_ml/full_summary.json',
+                'workbook/stage183_energy_ml/protocol.json'],
+        pilot_N=8192, bins_raw_peak_mV=old['bins_raw_peak_mV'],
+        readout='Historical rectified rawQ, original peak/RMS/status; signed negatives and invalid counts retained in all-entry denominators. Only exact status0 permits time access; invalid time remains NaN.',
+        selection='Original both status0, finite positive rawQ/RMS and both peak>=10*RMS. Also report positive-paired-status0 before SNR, plus original within/outside2ns localtime using frozen Stage181 offsets. No new threshold/window scan.',
+        split='Original entry blocks of8192: even block fits one median log(Hi/Lo) scale per module; odd blocks validate. This is acquisition-block holdout within ONE merged PHYS, not certified source/file independence. Original Stage180 odd-entry diagnostics reproduced independently.',
+        controls='Exactly32 cached Stage183 controls files400-431, all116 strict events, no RAW reread/expansion. First16 files define bound, last16 test its empirical transfer. No amplitude/status veto.',
+        noise_definition='e=mean(ADC[0:40])-ADC on all280 actual samples. Use actual range2V and RawWaveform::mv_per_bit=range/16.384 mV/code, 2ns/sample,50ohm. Signed/positive-part integrals only in original Stage183 windows; B_ch=(2/50)*(range/16.384)*sum_all280(abs(e)). B bounds positive-part integral perturbations on ANY subset within these280 samples under the explicitly assumed additive fixed-baseline model; it is not a calibrated signal-error bound.',
+        bound='B_ch is maximum of first16-file controls per channel, not a population quantile guarantee. On heldout controls report joint-pair bound exceedances; on signal |Hi-rho*Lo| compared with B_H+rho*B_L. Count fraction exceeding and 95th percentile required multiplier. No claim that 116 randoms calibrate tails, adaptive signal baselines, pulse finding, clipping, optical fluctuations or amplitude-dependent errors.',
+        diagnostics='Unnormalized difference in pC, ratio residual and conditional slopes against Lo and Hi/rho for preSNR/all/within2ns/outside2ns; original Lo peak bins. Fixed pooled100-250 vs500-2000mV within2ns contrast and500 seed20261108195 block-bootstrap95% intervals conditional on fitted scale. No nonlinear alternative or EIV likelihood fit without certified errors.',
+        identifiability='Do not reject all linear response models or certify nonlinearity from benchmark failure. Show exact latent-amplitude/error reparameterization and list missing same-pulse independent amplitude/error/selection and file identities. No absoluteQ, MC migration or energy improvement claim.',
+        acceptance=['Original8192 prefix matches Stage181 every field', 'Original full780874/overlaps and odd-entry scales/quantiles match Stage180',
+                    'All116 controls/channels280 supported; first16/last16 retained', 'Independent scalar positive/signed/L1 integrals and Lipschitz checks',
+                    'Independent scalar selection/fit/bin/heldout residual and cached identity checks'],
+        CPU_budget_s=1200, phase_CPU_allowance_s=dict(pilot=200, full=800, audit=200),
+        request_CPUs=4, request_memory_MB=8000, max_jobs=1, MaxRuntime_s=86400,
+        admission='Complete pilot GNU startup+postprocess plus two4096 read chunks; threefold(startup+N/8192*chunkCPU)<=800; used+projection+200audit<=1200. Actual schema/prefix and116 controls required; no budget/source expansion.',
+        final_cache_cap_B=16777216,
+        preserve=old['preserve']+' Stage54 twelve original assets untouched; no reserved/quarantine/new fit/G4/forward.',
+        overall_complete=False, promotion=False)
+    (OUT / 'protocol.json').write_text(json.dumps(p, indent=2) + '\n')
+    paths=[Path('/eos/home-x/xcheng/FASER/calypso/Waveform/WaveRawEvent/WaveRawEvent/RawWaveform.h'),
+           Path('/eos/home-x/xcheng/FASER/calypso/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx')]
+    evidence={str(f):f.read_text() for f in paths}
+    (OUT / 'source_evidence.json').write_text(json.dumps(evidence, indent=2)+'\n')
+    print('Frozen Stage195: one conditional benchmark;1200 CPU s, no energy training.')

@@ -1,3 +1,9 @@
+# 当前执行更新：Stage195 双量程整流误差与未知比例的有限约束完成
+
+[中文报告](../workbook/2026-11-08_stage195_dual-range-rectification-and-error-identifiability.md)在原780874条、原四对PMT/全部选择分母上复现180/181，原116随机控制分57/59；旧raw正采样与signed控制分开，冻结全280点L1经验界并验证。奇8192采集块within2ns的mid100–250与high500–2000mV相对残差差为-0.0848876529, -0.0869298235, -0.0951835193, -0.0787705839；具体区间/电荷差/超界及不拟合新ρ的必要区间均完整交付。给定经验界下两组各95%覆盖必要条件未排除标志[True, True, True, True]，不是总体覆盖、非线性或真实加性误差认证。不同PMT光收集、信号baseline/窗与幅度误差/选择仍未标定；同merged文件块留出不称跨源独立。
+
+独立全ROOT重读/2784积分/2784代数及128分箱、16矩/逐缓存身份与比例必要界通过；4start全终态（含原审计超200秒限额被移除，修复NPZ重复解压问题后从原1200总预算内修复）、322CPU/531聚合wall秒、0live，留1964637B、清14867054B重复、Stage54保持。零新能量fit/G4/forward，原Stage87与全部科学门/K/角色/pz0/raw/status0保持。该固定支线结束，下一需要同设置同pulse独立幅度/LED及真实文件留出，详见[需求表](../workbook/stage195_energy_ml/goal_requirements.tsv)；B/D/E/F与真实背景效率加权/相关辅助/独立确认继续开放，整体未完成。以下历史全文保留。
+
 # 当前执行更新：Stage194 原fit实际沉积解释了条件宽尾的身份问题
 
 [中文报告](../workbook/2026-11-08_stage194_actual-fit-primary-deposit-support.md)固定原16/160，恢复原确定性merge，仅取cached leading index，pz0/charge/全部barcode贡献精确。2737个fit clusters实际SDO正权指针分类及16pilot/full通过；charm原200089/944和1094两低pz父的35个fit clusters全部解析为无直接主μ、unknown/无SDO均0，占原纯主μIFT候选Σpull²的0.995541388。原pz0为52.6450546875/75.412859375GeV、真E188.08/875.07GeV；不能当最低真E箱代表，也不能把这些fit直接当主μ误差覆盖测试。π另1父17cluster同样全无直接主μ；未删父、不改轨迹、不宣称真实data错轨率。

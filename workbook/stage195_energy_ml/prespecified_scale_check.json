@@ -1,0 +1,8 @@
+{
+  "frozen_before_full_submission": true,
+  "reason": "A median ratio scale need not equal the unknown clean linear rho under rectification/selection; fixed-scale residual failure alone cannot reject the benchmark.",
+  "definition": "Without fitting a second scale, each heldout within2ns event gives rho in [max(0,Hi-BH)/(Lo+BL),(Hi+BH)/(Lo-BL)] with infinite upper if Lo<=BL. For each fixed100-250 and500-2000mV group, k=ceil(.95*N): necessary lower=kth smallest lower; necessary upper=(N-k+1)th smallest upper. Intersect these necessary intervals. Empty means no common rho covers at least95% of EACH empirical group under the chosen finite-control bound. Nonempty is not sufficient. No population coverage/transfer or nonlinearity claim.",
+  "extra_fits": 0,
+  "extra_sources": 0,
+  "budget_change": 0
+}

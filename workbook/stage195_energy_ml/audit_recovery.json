@@ -1,0 +1,15 @@
+{
+  "original_audit_cluster": 9678642,
+  "original_audit_terminal_status": 3,
+  "original_audit_scheduler_CPU_s": 292,
+  "original_audit_allowance_s": 200,
+  "original_phase_contract_passed": false,
+  "reason": "Repeated NpzFile key access inside scalar loops repeatedly decompresses arrays; scheduler accounting lag removes job only at292CPU seconds. No returned scientific audit result; no full-data result or scientific parameter changed.",
+  "fix": "Decode each module cache into an in-memory dictionary exactly once; retain original scalar formulas/denominators/acceptance. Kernel RLIMIT_CPU180 to stop independently of scheduler updates.",
+  "repair_CPU_allowance_s": 200,
+  "total_CPU_budget_s": 1200,
+  "scheduler_used_before_repair_CPU_s": 303,
+  "remaining_total_before_repair_CPU_s": 897,
+  "no_new_fit_or_full_measurement": true,
+  "scope": "One implementation repair charged explicitly to remaining original total budget; original200 audit phase failed and is not retroactively marked compliant."
+}
