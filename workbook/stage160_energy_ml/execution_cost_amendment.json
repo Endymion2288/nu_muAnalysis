@@ -1,0 +1,8 @@
+{
+  "frozen_before_any_new_candidate_read": true,
+  "reason": "EventInfo-only execute CPU omits POOL conversion/event handling between calls; extrapolating execute-only work can underestimate a full identity scan.",
+  "measurement": "At each execute entry record process CPU. Steady intervals are execute-entry[i]-execute-entry[i-1] for i>=2, excluding the interval containing the first execute/lazy work. These complete event-boundary intervals include prior execute and inter-event POOL/framework CPU. Also retain execute-only CPU separately.",
+  "admission": "3*(GNU pilot child CPU - steady_complete_interval_CPU_sum + actual_source_N * steady_complete_interval_CPU_mean), plus already used scheduler CPU and200 audit reserve <=2000. No budget or threshold change. Native reading, cohort, candidates and stop conditions unchanged.",
+  "GPU": 0,
+  "energy_fits": 0
+}

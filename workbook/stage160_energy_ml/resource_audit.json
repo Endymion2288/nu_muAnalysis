@@ -1,0 +1,118 @@
+{
+  "scheduler_CPU_s": 529.0,
+  "scheduler_aggregate_wall_s": 877.0,
+  "starts": 6,
+  "failed_jobs": [
+    "9675360.0"
+  ],
+  "submitted_request_CPUs": 2,
+  "submitted_memory_MB": 8000,
+  "scheduler_RequestCpus": [
+    3
+  ],
+  "scheduler_RequestMemory_MB": [
+    9000
+  ],
+  "GNU_processes": [
+    {
+      "task": "admission_decision",
+      "CPU_s": 0.06999999999999999,
+      "wall_s": 0.08,
+      "RSS_KiB": 12800
+    },
+    {
+      "task": "audit_decision",
+      "CPU_s": 0.05,
+      "wall_s": 0.06,
+      "RSS_KiB": 13120
+    },
+    {
+      "task": "audit",
+      "CPU_s": 65.22999999999999,
+      "wall_s": 169.81,
+      "RSS_KiB": 1581044
+    },
+    {
+      "task": "full_decision",
+      "CPU_s": 0.09,
+      "wall_s": 0.1,
+      "RSS_KiB": 13824
+    },
+    {
+      "task": "full",
+      "CPU_s": 275.11,
+      "wall_s": 332.32,
+      "RSS_KiB": 1544940
+    },
+    {
+      "task": "headers_decision_decision",
+      "CPU_s": 0.06999999999999999,
+      "wall_s": 0.08,
+      "RSS_KiB": 12288
+    },
+    {
+      "task": "headers_decision",
+      "CPU_s": 0.09999999999999999,
+      "wall_s": 0.11,
+      "RSS_KiB": 12288
+    },
+    {
+      "task": "headers",
+      "CPU_s": 85.46000000000001,
+      "wall_s": 131.22,
+      "RSS_KiB": 1555224
+    },
+    {
+      "task": "pilot",
+      "CPU_s": 84.71,
+      "wall_s": 167.54,
+      "RSS_KiB": 1534532
+    },
+    {
+      "task": "targets",
+      "CPU_s": 2.4299999999999997,
+      "wall_s": 4.41,
+      "RSS_KiB": 224092
+    }
+  ],
+  "native_processes": [
+    {
+      "phase": "audit",
+      "N": 64,
+      "CPU_s": 61.485905042000006,
+      "wall_s": 162.30781047046185,
+      "ROOT_read_bytes": 11782732,
+      "RSS_KiB": 1581044,
+      "steady_complete_interval_mean_CPU_s": 0.001229322145161267
+    },
+    {
+      "phase": "full",
+      "N": 118505,
+      "CPU_s": 269.28571389,
+      "wall_s": 322.56342607102124,
+      "ROOT_read_bytes": 24620068,
+      "RSS_KiB": 1544940,
+      "steady_complete_interval_mean_CPU_s": 0.001574673645021645
+    },
+    {
+      "phase": "headers",
+      "N": 12,
+      "CPU_s": 80.037558042,
+      "wall_s": 122.68553911498748,
+      "ROOT_read_bytes": 45666973,
+      "RSS_KiB": 1555224,
+      "steady_complete_interval_mean_CPU_s": 0.467177384099999
+    },
+    {
+      "phase": "pilot",
+      "N": 1024,
+      "CPU_s": 80.168635522,
+      "wall_s": 159.83247979695443,
+      "ROOT_read_bytes": 11860596,
+      "RSS_KiB": 1534532,
+      "steady_complete_interval_mean_CPU_s": 0.001290414239726034
+    }
+  ],
+  "GPU_jobs": 0,
+  "interpretation": "Nested process CPU is not added to scheduler. No controlled speedup claim."
+}

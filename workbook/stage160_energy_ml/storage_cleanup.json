@@ -1,0 +1,172 @@
+{
+  "all_jobs_terminal": true,
+  "event_text_equality": true,
+  "source_logs_GNU_byte_equality": true,
+  "event_capsule": {
+    "path": "ntuples/energy_ml_stage160/event_records.json.gz",
+    "bytes": 13773
+  },
+  "archives": [
+    {
+      "path": "software/stage160/execution_audits.tar.gz",
+      "bytes": 1239
+    },
+    {
+      "path": "software/stage160/source_snapshots.tar.gz",
+      "bytes": 121628
+    },
+    {
+      "path": "software/stage160/worker_logs.tar.gz",
+      "bytes": 6184
+    }
+  ],
+  "deleted": [
+    {
+      "path": "software/stage160/1794112664265159164/energy-ml-stage160.tar.gz",
+      "bytes": 23418
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/admission_result.tar.gz",
+      "bytes": 917
+    },
+    {
+      "path": "software/stage160/1794113237659507417/energy-ml-stage160.tar.gz",
+      "bytes": 23776
+    },
+    {
+      "path": "software/stage160/1794112755241510280/energy-ml-stage160.tar.gz",
+      "bytes": 22822
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/full_result.tar.gz",
+      "bytes": 7709
+    },
+    {
+      "path": "software/stage160/1794112125242928064/energy-ml-stage160.tar.gz",
+      "bytes": 19595
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/headers_decision_result.tar.gz",
+      "bytes": 1686
+    },
+    {
+      "path": "software/stage160/1794111881022377087/energy-ml-stage160.tar.gz",
+      "bytes": 16731
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/headers_result.tar.gz",
+      "bytes": 4166
+    },
+    {
+      "path": "software/stage160/1794112345672964420/energy-ml-stage160.tar.gz",
+      "bytes": 18468
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/pilot_result.tar.gz",
+      "bytes": 5882
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/audit.json.gz",
+      "bytes": 752
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/full.json.gz",
+      "bytes": 6561
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/headers.json.gz",
+      "bytes": 484
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/pilot.json.gz",
+      "bytes": 6096
+    },
+    {
+      "path": "workbook/stage160_energy_ml/admission_decision_time.txt",
+      "bytes": 756
+    },
+    {
+      "path": "workbook/stage160_energy_ml/audit_decision_time.txt",
+      "bytes": 754
+    },
+    {
+      "path": "workbook/stage160_energy_ml/audit_time.txt",
+      "bytes": 776
+    },
+    {
+      "path": "workbook/stage160_energy_ml/full_decision_time.txt",
+      "bytes": 750
+    },
+    {
+      "path": "workbook/stage160_energy_ml/full_time.txt",
+      "bytes": 782
+    },
+    {
+      "path": "workbook/stage160_energy_ml/headers_decision_decision_time.txt",
+      "bytes": 755
+    },
+    {
+      "path": "workbook/stage160_energy_ml/headers_decision_time.txt",
+      "bytes": 791
+    },
+    {
+      "path": "workbook/stage160_energy_ml/headers_time.txt",
+      "bytes": 777
+    },
+    {
+      "path": "workbook/stage160_energy_ml/pilot_time.txt",
+      "bytes": 776
+    },
+    {
+      "path": "workbook/stage160_energy_ml/targets_time.txt",
+      "bytes": 757
+    },
+    {
+      "path": "workbook/stage160_energy_ml/audit.log",
+      "bytes": 7155
+    },
+    {
+      "path": "workbook/stage160_energy_ml/full.log",
+      "bytes": 47908
+    },
+    {
+      "path": "workbook/stage160_energy_ml/headers.log",
+      "bytes": 3739
+    },
+    {
+      "path": "workbook/stage160_energy_ml/pilot.log",
+      "bytes": 47266
+    },
+    {
+      "path": "ntuples/energy_ml_stage160/audit_result.tar.gz",
+      "bytes": 3798
+    }
+  ],
+  "deleted_bytes": 276603,
+  "original_inputs_other_stages_Stage54_untouched": true,
+  "no_persistent_ROOT": true,
+  "late_transport_cleanup": {
+    "reason": "EOS FUSE initially did not report the just-transferred audit result at finalization",
+    "members_verified_against_retained_outputs_event_text_and_log_GNU_archives": [
+      "workbook/stage160_energy_ml/summary.json",
+      "workbook/stage160_energy_ml/audit.log",
+      "workbook/stage160_energy_ml/audit_time.txt",
+      "workbook/stage160_energy_ml/audit_summary.json",
+      "workbook/stage160_energy_ml/audit_decision_time.txt",
+      "workbook/stage160_energy_ml/independent_validation.json",
+      "workbook/stage160_energy_ml/audit_exitcode.txt",
+      "ntuples/energy_ml_stage160/audit.json.gz"
+    ]
+  },
+  "native_audit_compaction": {
+    "exact_original_archive": "software/stage160/native_audits.tar.gz",
+    "bytes": 2252,
+    "members": [
+      "workbook/stage160_energy_ml/headers_summary.json",
+      "workbook/stage160_energy_ml/pilot_summary.json",
+      "workbook/stage160_energy_ml/full_summary.json",
+      "workbook/stage160_energy_ml/audit_summary.json"
+    ],
+    "removed_repeated_schema_metadata_only": true
+  }
+}

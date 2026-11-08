@@ -1,3 +1,11 @@
+# 当前执行更新：Stage160 已回收真实data同父原生身份映射
+
+[Stage160报告](../workbook/2026-11-08_stage160_bounded-data-source-and-identity-map.md)固定四REC候选的真实首尾后唯一定位00006，全118505条EventInfo扫描、原1024prefix精确复现；PHYS原前64新控制父全部唯一配对，64timestamp相同，并独立按实际native entry重读64身份全通过。没有用entry=event−1，也没有替换Stage159原64无支持父。1024pilot完整事件间隔1.290414ms CPU，三倍全源预测708.935CPU秒通过原2000累计预算；实际全源GNU275.11CPU秒。6start含一次header后处理路径失败全部计529CPU秒/877聚合wall秒，0live/GPU/G4/fit；事件13773B精确合并，源/日志/GNU归档后删276603B重复。此处只认证同源身份，不认证track/raw producer、ADC、纯度或data FPR。
+
+[下一Stage161合同](../workbook/stage160_energy_ml/next_execution_contract.json)同PHYS原4→成本及raw支持通过才原64→独立原4，2000CPU秒/2核8GB/最多1job。安全直读actual v1 waveform aux，明确空vector并绕开旧转换器time_vector()[0]风险；actual event-IOV cable map/id32/LoHi命名及raw/peak/RMS/status按PHYS float32核对，分别检查原stored forward/backward状态/fullcovariance/PRD，不merge/fit或选更接近集合。非0status禁timing、signed负raw/缺失保持。Stage136/140有限MC工作模型已完成，不重复toy；真实相关系统/曝光GRL/背景/全生成接受度/乳胶与独立确认仍开放，Stage87/原全部门及整体goal active保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage159 实际data前缀配对缺口已定位，下一步有限源定位
 
 [Stage159报告](../workbook/2026-11-08_stage159_real-data-native-identity-pairing.md)实读run15838原REC前64及独立前4，124391/780874实际条目数，0/64严格配对；独立索引重算同0。native event1–64/time1720443680–82s在同run PHYS event787406–5939966/time1720449636–1720452640s之前，解释前缀覆盖缺口，不推断整份REC无交集或上游选择原因。实际TagInfo为FASERNU04/OFLCOND05/Athena24.0.41，确有WaveformHit容器；PHYS有CaloHi/Lo等raw分支，旧Calo0–3字段缺失，不自动映射、不认证原始ADC或gain/producer/纯度/data FPR。2start全exit0、177CPU秒/248聚合wall秒、0GPU/G4/fit，594B身份胶囊，精确归档后删75093B重复。
@@ -2958,3 +2966,12 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 2job/2start全exit0、0live，177CPU秒/248聚合wall秒、0GPU/G4/ν/fit；申请2核8GB，CERN实际3核9GB；64身份+repeat缓存594B，源码/原生审计/GNU/日志字节回读相等，删75093B重复，无ROOT/波形复制或SHA，Stage54保持。旧Stage158阴性及所有原门不改。
 
 [下一Stage160合同](../workbook/stage159_energy_ml/next_execution_contract.json)用不同且明确标注的PHYS原前64控制父集，固定REC00005/00006/00007/00008四个候选与00000首4reference，先真实首尾metadata/EventInfo。近6.3的文件数只启发locator，不是事件范围证明；无唯一候选则有限结束、不加路径。唯一候选再前1024成本pilot，三倍startup+steady×实际N连同全部已用CPU/200audit须在2000CPU内才全源EventInfo scan；全量前1024须精确复现，输出严格身份到真实entry map及全部未知/歧义，禁止entry=event−1或event-only替代。2核8GB/最多1job，无detector/raw payload/G4/fit/自然ν或隔离forward。之后同源实际state/PRD/raw及CaloHi/Lo物理通道另冻；Stage132真实校准/宽能区/乳胶/曝光GRL/背景接受度/有限响应统计/真实nuisance/独立确认仍开放，Stage87/原全门/角色/K/整体goal active保持。旧§1–137和全部旧入口全文原样保留。
+
+
+## 139. Stage160：实际data源定位及64同父身份映射完成
+
+[中文报告](../workbook/2026-11-08_stage160_bounded-data-source-and-identity-map.md)、[映射](../workbook/stage160_energy_ml/matched_manifest.json)和[独立复核](../workbook/stage160_energy_ml/independent_validation.json)固定REC00005–00008实际首尾，唯一00006为118505条/event728718–847222。完整EventInfo扫描给PHYS原前64全部唯一配对、64相同timestamp，actual-entry独立读取全通过；原1024pilot/full精确。端点是locator，不证明所有excluded源无重复；Stage159原REC前64的无配对保持原文，不混父。actual geometry04/tag05/release24.0.41不等于payload或迁移认证。
+
+事前完整事件边界成本修订保留lazy startup及POOL间隔；1024pilot均1.290414ms CPU，全源三倍预测708.935+已用181+200audit<2000，实际GNU275.11CPU秒。6job/6starts含一次header路径后处理失败，修复只重做JSON不重读ROOT；全计529CPU秒/877聚合wall秒，0live/GPU/G4/新ν/能量fit。提交2核8GB、CERN实际3核9GB，峰值native RSS1581044KiB；嵌套时序不重复累加。事件13773B回读精确、源/完整日志/GNU归档、删276603B重复；Stage54/原输入保持。
+
+[Stage161下一合同](../workbook/stage160_energy_ml/next_execution_contract.json)同64父实际payload：原4pilot、原64成本及raw一致性门、独立原4，2000累计CPU秒/600pilot/200audit。direct v1 aux安全读取原raw/status及wave/time结构长度，不调用空time_vector不安全转换；实际逐event map/物理id32/LoHi字段命名及float32逐值检查。仅读已有forward/backward两轨迹集合/fullcovariance/真实PRD，不merge/refit/GhostBusters或选择最吻合集合。空向量/状态/typed占位/signed负/Calo缺失全保留，不认证μ纯度/FPR、covariance覆盖、gain或ADC code。后续按实际新测量支持另冻问题，Stage136/140已完成的有限MC工作模型不重复；真实相关nuisance/data条件/背景接受度/乳胶/独立确认仍缺。原所有门/Stage137双箱5%门/全部K/角色/reserved/Stage87与整体未完成保持，旧§1–138及全部入口原文保留。

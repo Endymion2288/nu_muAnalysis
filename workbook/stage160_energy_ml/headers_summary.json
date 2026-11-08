@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "phase": "headers",
+  "N": 12,
+  "source_N": 598453,
+  "native_runs": {
+    "15838": 12
+  },
+  "event_min": 1,
+  "event_max": 1084223,
+  "first_execute_CPU_s": 53.421958594,
+  "execute_CPU_s": 53.42361353500003,
+  "steady_complete_interval_N": 10,
+  "steady_complete_interval_CPU_s": 4.67177384099999,
+  "steady_complete_interval_mean_CPU_s": 0.467177384099999,
+  "CPU_s": 80.037558042,
+  "wall_s": 122.68553911498748,
+  "ROOT_read_bytes": 45666973,
+  "RSS_KiB": 1555224,
+  "scope": "EventInfo only; no detector geometry, state, waveform payload, energy fit or G4",
+  "complete_metadata_schema_and_original_audit_archive": "software/stage160/native_audits.tar.gz",
+  "archive_member": "workbook/stage160_energy_ml/headers_summary.json"
+}

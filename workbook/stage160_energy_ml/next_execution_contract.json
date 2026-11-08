@@ -1,0 +1,38 @@
+{
+  "next_stage": 161,
+  "question": "Do the actual stored real-data raw waveform summaries, cable map and track/PRD payload agree with the named PHYS parents, without reconstruction or guessed Calo aliases?",
+  "inputs": {
+    "manifest": "workbook/stage160_energy_ml/matched_manifest.json",
+    "REC": "/eos/experiment/faser/data0/rec/2024/r0022/015838/Faser-Physics-015838-00006-r0022-xAOD.root",
+    "PHYS": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root"
+  },
+  "prerequisite": "Stage160 all64 unique source-indexed pairs and independently reread run/event/timestamp; same actual geometry04/conditions05 metadata. Otherwise no native payload execution under this contract.",
+  "cohort": "Exactly Stage160 original PHYS first64 in original order; first4 pilot, admitted first64 full, independent first4 repeat. No selection by charge, tracks, pz or matching quality; missing/unsupported states retained.",
+  "representation": "Read actual xAOD::WaveformHitAuxContainer_v1 with TTreeReader and old interface directly. The pinned v1->current converter uses unchecked time_vector()[0]; do not invoke it to infer payload support. Record channel/id32/status/secondary/raw_integral/50 pC/raw_peak mV/baseline/RMS and structural wave/time vector lengths. Store no waveform sample arrays; vectors are stored mV/ns by EDM, not certified ADC codes. No time-vector value or synthesized timing. localtime only status==0; empty vectors remain empty.",
+  "native": "Pinned prebuilt d32b0ff3, EventInfo+PoolRead+geometry FASERNU-04/OFLCOND-FASER-05, data CONDBR3. No ntuple writer, GhostBusters, merge, track fit or reconstruction. Read two actual stored forward/backward WithoutIFT track collections separately, first stored state/full5x5 covariance, real PRD membership, actual per-event cable map/physical id32. Preserve missing tracks/covariance. Never subtract curvilinear local parameters from wafer measurements or call native covariance calibrated.",
+  "comparison": "Actual same-entry native EventInfo must equal manifest. Sort actual cable-map channels within physical detector type exactly as pinned ntuple definition: calo->CaloLo, calo2->CaloHi, calonu->CaloNu, veto station labels, trigger->Timing. Check raw getter/float32 PHYS equality, peak/RMS/status/id32 and primary multiplicities; no fitted charge fallback. Require all11 scint and4Lo/4Hi supported to expand; optional actual CaloNu also reported. Compare both stored track collections against PHYS state vectors separately; mismatch is measured, never choose the best collection or rerun merge. PHYS track-quality/pz0[50,100) support is not certified muon purity/FPR.",
+  "cost": "Cumulative2000 CPU s including failures, pilot allowance600, audit reserve200. Before full64:3*(pilot GNU raw CPU - post-first raw read sum +64*post-first raw mean)+3*(pilot GNU native CPU - steady complete-interval sum +64*max complete interval), plus prior scheduler and current pilot raw/native GNU and200 <=2000; local submit rechecks actual terminal total plus projections+200. Full complete-event intervals exclude first lazy event. No lowered gate or larger source/cohort if rejected. Comparison cost charged by terminal scheduler at submit.",
+  "resources": {
+    "CPU_budget_s": 2000,
+    "pilot_CPU_allowance_s": 600,
+    "audit_reserve_CPU_s": 200,
+    "request_CPUs": 2,
+    "memory_MB": 8000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "max_active_jobs": 1,
+    "GPU": 0,
+    "final_event_bytes_cap": 8388608
+  },
+  "execution": "All ROOT/array/statistical work on HTCondor ~/condor/nu_muAnalysis/stage161/. Locally only source/text/scheduler/exact archival. Reuse pinned prebuilt; no rebuild, no persistent ROOT/xAOD or sample arrays. Archive exact source versions/logs/GNU, consolidate compact records, verify before duplicate deletion; preserve Stage54.",
+  "stop": "One four-parent payload/conditions/readout pilot, admitted64 and independent first4 only. Missing or inconsistent raw support ends this implementation without substitution; technical failures may be repaired within unchanged question/budget and all costs retained. No data purity/FPR claim, gain/time/seed/threshold/model grid, MC transport or energy fit.",
+  "followup": "Actual consistency establishes source measurement support only. Empty wave vectors close stored-v1 waveform-content access for these named records, not all waveforms. If nonempty, separately freeze necessary actual-content experiment; if empty, assess actual ByteStream availability for the same identities or raw/state joint response migration with physically matched conditions. Stage136/140 finite-MC work-model precision/coverage is already measured and must not be repeated. Exposure/GRL/background/acceptance/emulsion/real correlated nuisance and independent confirmation remain open; no invented priors.",
+  "invariant": "Stage87 champion and all original gates/Stage137 two-low5% expansion gates; first-power momentum pz0 only, px/py/qOverP/bending allowed; raw11, typed sentinels/legal signed/Calo missing/status0 timing; allK/roles/reserved protected.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "energy_fits": 0,
+  "natural_nu_forward": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false
+}

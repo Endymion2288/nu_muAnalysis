@@ -1,0 +1,24 @@
+{
+  "scope": "Static source reading only; no new detector payload or calibration.",
+  "analysis_alias": {
+    "path": "AnalysisZipFramework/source/Analyis.cxx",
+    "function": "Analysis::setupCaloCompatibility",
+    "definition": "When single-readout Calo fields absent and CaloLo exists, exact same suffix is aliased CaloLo -> Calo; existing code, unchanged."
+  },
+  "pinned_ntuple_source": {
+    "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+    "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+    "references": [
+      "lines148-156: dual-gain branch labels CaloLo/CaloHi",
+      "lines259-264: raw charge=hit.raw_integral()/50 pC and raw_peak/baseline_rms/hit_status"
+    ],
+    "definition": "CaloLo labels calo channels; CaloHi labels calo2 channels. Actual per-event cable-map channel ordering still requires verification."
+  },
+  "local_checkout_commit": "35c484237462284beee31fbd32eedfec4a4c1d70",
+  "limitations": [
+    "Exact pinned source inspected through git show; local current checkout is a different commit.",
+    "No certification the historical PHYS writer used this exact commit or same cable-map IOV.",
+    "WaveformHit persistence does not certify full raw ADC samples.",
+    "No automatic Stage159 missing-field replacement or energy model input change."
+  ]
+}
