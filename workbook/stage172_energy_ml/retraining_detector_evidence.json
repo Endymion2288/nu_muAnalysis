@@ -1,0 +1,389 @@
+{
+  "stage": 172,
+  "kind": "research_supplement",
+  "date": "2026-11-08",
+  "scope": {
+    "new_training": false,
+    "new_inference": false,
+    "event_arrays_read": false,
+    "physics_metrics_recomputed": false,
+    "jobs_submitted": false,
+    "new_calibration_or_energy_performance": "未测量",
+    "future_execution_stage": 173
+  },
+  "training_policy": {
+    "features": 62,
+    "seeds": [
+      2026110255,
+      2026110256,
+      2026110257
+    ],
+    "rounds": 400,
+    "xgboost": {
+      "max_depth": 5,
+      "eta": 0.04,
+      "subsample": 0.8,
+      "colsample_bytree": 1.0,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "tree_method": "hist",
+      "nthread": 1,
+      "objective": "reg:squarederror"
+    },
+    "initialization": "weighted mean training logE with boost_from_average disabled, same for all seeds",
+    "calibration": "one incoming-weighted mean cal log residual for ensemble"
+  },
+  "static_training_evidence": [
+    {
+      "path": "ml/stage129_energy.py",
+      "line": 49,
+      "claim": "xgb.train called for each seed; fresh fits, saved and reloaded"
+    },
+    {
+      "path": "ml/stage129_saturation.py",
+      "line": 60,
+      "claim": "V74 and Q89 tasks call shared fit; original raw retained"
+    },
+    {
+      "path": "ml/stage129_timing.py",
+      "line": 76,
+      "claim": "V74 and T78 tasks call shared fit; four Veto pairs"
+    },
+    {
+      "path": "ml/stage129_energystress.py",
+      "line": 56,
+      "claim": "no_refit applies to fixed-model calibration sensitivity, not feature experiments"
+    }
+  ],
+  "experiments": {
+    "saturation": {
+      "fit_source": "workbook/stage129_energy_ml/saturation_fits.json",
+      "fits": [
+        {
+          "arm": "V",
+          "dimensions": 74,
+          "train_N": 46575,
+          "cal_N": 11612,
+          "reload_exact": true,
+          "CPU_s": 31.878028277
+        },
+        {
+          "arm": "Q",
+          "dimensions": 89,
+          "train_N": 46575,
+          "cal_N": 11612,
+          "reload_exact": true,
+          "CPU_s": 51.04717735
+        }
+      ],
+      "summary": {
+        "experiment": "saturation",
+        "N": 89033,
+        "roles": [
+          17657,
+          46575,
+          11612,
+          13189
+        ],
+        "baseline_max_abs_log_difference": 0.0,
+        "joint": {
+          "2_X": false,
+          "2_V": false,
+          "2_Q": false,
+          "3_X": false,
+          "3_V": false,
+          "3_Q": false
+        },
+        "quarantine_predictions": 0,
+        "reserved_predictions": 0,
+        "limits": "developed pool; conditional incoming bootstrap, not full GENIE/source/refit/system or independent confirmation"
+      },
+      "paired_source": "workbook/stage129_energy_ml/saturation_paired.tsv",
+      "quoted_existing_pairs": [
+        {
+          "role": "2",
+          "stratum": "E50_100",
+          "candidate": "Q",
+          "reference": "X",
+          "RMSE_ratio": "0.9845628117884928",
+          "low95": "0.9593846639967588",
+          "high95": "1.0122833683353056"
+        },
+        {
+          "role": "2",
+          "stratum": "E50_100",
+          "candidate": "Q",
+          "reference": "V",
+          "RMSE_ratio": "0.9795834943403315",
+          "low95": "0.9548720882821947",
+          "high95": "1.0041326130535568"
+        },
+        {
+          "role": "2",
+          "stratum": "E100_200",
+          "candidate": "Q",
+          "reference": "X",
+          "RMSE_ratio": "0.9815857106181164",
+          "low95": "0.9668834711500779",
+          "high95": "0.9938488098387466"
+        },
+        {
+          "role": "2",
+          "stratum": "E100_200",
+          "candidate": "Q",
+          "reference": "V",
+          "RMSE_ratio": "0.982733851204657",
+          "low95": "0.9688148802168556",
+          "high95": "0.994707801906635"
+        },
+        {
+          "role": "3",
+          "stratum": "E50_100",
+          "candidate": "Q",
+          "reference": "X",
+          "RMSE_ratio": "1.0057841559778837",
+          "low95": "0.9756357942128332",
+          "high95": "1.0332627928722389"
+        },
+        {
+          "role": "3",
+          "stratum": "E50_100",
+          "candidate": "Q",
+          "reference": "V",
+          "RMSE_ratio": "1.0096550494131338",
+          "low95": "0.9817149291080971",
+          "high95": "1.0350221360709004"
+        },
+        {
+          "role": "3",
+          "stratum": "E100_200",
+          "candidate": "Q",
+          "reference": "X",
+          "RMSE_ratio": "0.992483250550977",
+          "low95": "0.9816517759380635",
+          "high95": "1.0034555793993554"
+        },
+        {
+          "role": "3",
+          "stratum": "E100_200",
+          "candidate": "Q",
+          "reference": "V",
+          "RMSE_ratio": "0.9960494219823799",
+          "low95": "0.9849748861663153",
+          "high95": "1.0073181937235822"
+        }
+      ]
+    },
+    "timing": {
+      "fit_source": "workbook/stage129_energy_ml/timing_fits.json",
+      "fits": [
+        {
+          "arm": "V",
+          "dimensions": 74,
+          "train_N": 46575,
+          "cal_N": 11612,
+          "reload_exact": true,
+          "CPU_s": 31.792205627
+        },
+        {
+          "arm": "T",
+          "dimensions": 78,
+          "train_N": 46575,
+          "cal_N": 11612,
+          "reload_exact": true,
+          "CPU_s": 32.712577989
+        }
+      ],
+      "summary": {
+        "experiment": "timing",
+        "N": 89033,
+        "roles": [
+          17657,
+          46575,
+          11612,
+          13189
+        ],
+        "baseline_max_abs_log_difference": 0.0,
+        "joint": {
+          "2_X": false,
+          "2_V": false,
+          "2_T": false,
+          "3_X": false,
+          "3_V": false,
+          "3_T": false
+        },
+        "quarantine_predictions": 0,
+        "reserved_predictions": 0,
+        "limits": "developed pool; conditional incoming bootstrap, not full GENIE/source/refit/system or independent confirmation"
+      },
+      "paired_source": "workbook/stage129_energy_ml/timing_paired.tsv",
+      "quoted_existing_pairs": [
+        {
+          "role": "2",
+          "stratum": "E50_100",
+          "candidate": "T",
+          "reference": "X",
+          "RMSE_ratio": "1.0021525986702842",
+          "low95": "0.9887275654514303",
+          "high95": "1.0160491763100505"
+        },
+        {
+          "role": "2",
+          "stratum": "E50_100",
+          "candidate": "T",
+          "reference": "V",
+          "RMSE_ratio": "0.993527868468969",
+          "low95": "0.9838908715173101",
+          "high95": "1.0035849919016717"
+        },
+        {
+          "role": "2",
+          "stratum": "E100_200",
+          "candidate": "T",
+          "reference": "X",
+          "RMSE_ratio": "1.0013512253822325",
+          "low95": "0.9936014190921381",
+          "high95": "1.0076565663366663"
+        },
+        {
+          "role": "2",
+          "stratum": "E100_200",
+          "candidate": "T",
+          "reference": "V",
+          "RMSE_ratio": "0.9988386516136477",
+          "low95": "0.9917394051332231",
+          "high95": "1.0051782791466062"
+        },
+        {
+          "role": "3",
+          "stratum": "E50_100",
+          "candidate": "T",
+          "reference": "X",
+          "RMSE_ratio": "1.0121305839793053",
+          "low95": "0.9996659305146369",
+          "high95": "1.0247305135820293"
+        },
+        {
+          "role": "3",
+          "stratum": "E50_100",
+          "candidate": "T",
+          "reference": "V",
+          "RMSE_ratio": "0.9995712645570154",
+          "low95": "0.9864919069053232",
+          "high95": "1.0126260589760185"
+        },
+        {
+          "role": "3",
+          "stratum": "E100_200",
+          "candidate": "T",
+          "reference": "X",
+          "RMSE_ratio": "0.9929373752208064",
+          "low95": "0.9872704450012713",
+          "high95": "0.9990082573057499"
+        },
+        {
+          "role": "3",
+          "stratum": "E100_200",
+          "candidate": "T",
+          "reference": "V",
+          "RMSE_ratio": "0.9919518797509598",
+          "low95": "0.9858329618086283",
+          "high95": "0.9979204202440984"
+        }
+      ]
+    }
+  },
+  "timing_test_coverage_source": "workbook/stage129_energy_ml/timing_application_support.tsv",
+  "timing_test_coverage": [
+    {
+      "role": "3",
+      "pair": "0_1",
+      "N": "13189",
+      "original_strict": "2560",
+      "replay_strict": "2560",
+      "calibrated_range": "27"
+    },
+    {
+      "role": "3",
+      "pair": "3_4",
+      "N": "13189",
+      "original_strict": "6788",
+      "replay_strict": "6788",
+      "calibrated_range": "6457"
+    },
+    {
+      "role": "3",
+      "pair": "0_3",
+      "N": "13189",
+      "original_strict": "1946",
+      "replay_strict": "1946",
+      "calibrated_range": "68"
+    },
+    {
+      "role": "3",
+      "pair": "1_3",
+      "N": "13189",
+      "original_strict": "2091",
+      "replay_strict": "2091",
+      "calibrated_range": "111"
+    }
+  ],
+  "uncompleted_representations_in_inspected_records": [
+    "all-hit same-definition hybrid charge",
+    "Q plus T combined energy arm",
+    "calibrated same-Timing-plate mean/difference jointly trained with track-position consistency",
+    "dual-range ordinary Ecal energy arm for an actually supported cohort"
+  ],
+  "sources": [
+    {
+      "id": "D1",
+      "title": "The FASER Detector",
+      "url": "https://arxiv.org/abs/2207.11427",
+      "read_scope": "Relevant scintillator, PMT linearity, timing and clock/digitizer sections; PDF Figure 13 and 24 viewed on physical pages 26 and 36",
+      "limits": "Historical hardware configuration and commissioning performance, not the current cohort calibration"
+    },
+    {
+      "id": "D2",
+      "title": "The FASER experiment at the Large Hadron Collider",
+      "url": "https://arxiv.org/html/2604.19199v2",
+      "version_date": "2026-07-08",
+      "read_scope": "Sections 3.3-3.4 and 4.3, including Figure 4.7 caption",
+      "supports": "End-2023 ordinary Ecal two-PMT optical split 97/3 percent; LE 0.1-100 GeV, HE 10-3000 GeV and 10-100 GeV overlap; early-2025 pixel preshower upgrade",
+      "limits": "No evidence that the old four-channel MC or Veto/CaloNu has these additional measurements"
+    },
+    {
+      "id": "D3",
+      "title": "Range extension for FASER electromagnetic calorimeter",
+      "url": "https://doi.org/10.1051/epjconf/202532000057",
+      "read_scope": "Searchable abstract and bibliographic metadata only; full text not acquired",
+      "limits": "Quantitative upgrade claims use D2, not this unread full text"
+    },
+    {
+      "id": "D4",
+      "title": "The trigger and data acquisition system of the FASER experiment",
+      "url": "https://arxiv.org/abs/2110.15186",
+      "read_scope": "Relevant clock and PMT digitizer paragraphs",
+      "limits": "Historical single digitizer design does not override actual two-board Stage171 observations"
+    },
+    {
+      "id": "D5",
+      "title": "FASER OfflineDatabases",
+      "url": "https://twiki.cern.ch/twiki/bin/view/FASER/OfflineDatabases",
+      "read_scope": "HV, MIP_ref, Timing, TimingOffset, Range and CableMapping field descriptions",
+      "limits": "Documentation only; no actual conditions payload acquired. No FitWindow fields are claimed from this page"
+    },
+    {
+      "id": "D6",
+      "title": "FaserCaloScintCalibrations",
+      "url": "https://twiki.cern.ch/twiki/bin/view/FASER/FaserCaloScintCalibrations",
+      "read_scope": "Descriptions of controls and ledFastCaloScan no longer used since 2024",
+      "limits": "Actual LED/HV scan records not acquired; noise-rate scan is not a signal linearity curve"
+    },
+    {
+      "id": "attachment",
+      "title": "FASER Waveform Reconstruction and Energy Calibration",
+      "read_scope": "Relies on Stage128 existing text and page verification of pp.6-7, not reread in this supplement",
+      "limits": "Technical material is not a user instruction or proof of actual producer settings"
+    }
+  ]
+}

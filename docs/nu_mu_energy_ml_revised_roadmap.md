@@ -1,3 +1,7 @@
+# Stage172 补充：恢复电荷与 Veto timing 已分别重训，新增方向是 Timing 双端联合测量
+
+[重训核查与 FASER 技术资料补充](../workbook/2026-11-08_stage172_retraining-and-detector-readout-supplement.md)确认 Stage129 的 Q89、T78 均从头训练，46575 train/11612 cal、3 seed×400轮；未重训的是后续标定压力测试。Q89保留 raw 并追加恢复估计/区间，T78使用严格status0的四个Veto pair；原joint失败不能归因于没重训，也不能推广为所有波形/时间信息无用。Stage79只诊断过未校准Timing双端差，新增校准均时/差时与tracker位置相容性是不同观测。2026综述确认普通Ecal在2023年末升级双量程，但原四路MC、Veto与CaloNu不能自动享有第二读出。先有实际校准/支持再做一次固定新表示训练；统一Q、Q+T联合及双端/双量程效果均未测量。Stage172原物理路线、Stage87/全部门、历史Stage171合同与下一执行编号Stage173保持。下方原文完整保留。
+
 # 当前研究更新：Stage172 转向读出适用条件、μ辐射位置与能量可观测性
 
 [Stage172研究报告](../workbook/2026-11-08_stage172_readout-regimes-and-observability-research.md)综合Stage133–171既有实测和原始文献，未读事件数组、复算物理指标或运行训练/重建。H给定真z仍有低能条件增量，但原joint失败、名义通量支持为0；旧边界代理、G6和普通Calo raw4的固定实现已结束。Stage140的3000有限MC toys已完成，direct条件谱收益保留，联合nominal覆盖点估计93.4%尚未认证95%。Stage87、原全部门和最终两项目标保持。
