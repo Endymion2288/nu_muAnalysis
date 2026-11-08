@@ -1,3 +1,9 @@
+# 当前执行更新：Stage153 原生同面支持审计完成，保存的 local state 不能直接与 cluster 相减
+
+[Stage153报告](../workbook/2026-11-08_stage153_native-cluster-surface-basis-pilot.md)完成原REC request0前40role1：原身份/pz0及cluster4/SP/longTracks全匹配，第一父精确重复。697真实PRD链接/identifier/Measurement均通过、完整covariance有限且loc1方差正，但一维locX及measurement/state同面均0；参数为curvilinear，不能因同为PlaneSurface就直接相减。站1–3同wafer非leading候选63/29/56真实存在，因anchor不支持而score全缺失；不是空间活动物理零，也没有r2/roundtrip数值认证或能量fit。2job全exit0、116CPU秒/156聚合wall秒/0GPU/G4/新ν；事件10812B精确合并、删7245092B重复。旧Stage124直接locX残差不再作物理pull证据，Stage87保持。下一Stage154另冻真实GLOBAL位置→wafer的几何闭合/未归一化dx pilot，前4→最多同40、1200CPU秒、无covariance修补/fullpool/fit；原全部门和Stage137扩大门/整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage152 实际Ecal控制闭合，本例有限窗损失很小
 
 [Stage152报告](../workbook/2026-11-08_stage152_Ecal-HITS-window-diagnosis.md)完成已知μ原entry0：157 SD修正hit/48.329432MeV，2400ADC零差、同current04 raw/status/privateRNG精确；Calo2 finite/full=.999957391063、histogram外hit0，弱raw不能由本例大量漏窗解释。实际模拟信号.064892711495pC，baseline/噪声与取整后raw.04904296875pC；其他三路无hit但有ADC噪声，不填缺失或当沉积。3倍四父预测935.71CPU秒+100预留>剩878，未扩四例/预算；2start全部exit0、122CPU秒/152wall秒/0GPU/G4/fit，保留一父方法结果而非总体校准。事件文本13560B精确合并、删4402897B重复。下一Stage153只读原已知REC最多40train父，测真实同面cluster局部位置/拟合误差/PRD归属及固定scaled-separation摘要；无新G4/能量fit，不重开旧gain/time/seed追查，先物理基底/新内容/成本。原门/Stage137扩大门/Stage87及整体未完成保持。
@@ -2849,3 +2855,10 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 [实测报告](../workbook/2026-11-08_stage152_Ecal-HITS-window-diagnosis.md)及[实际通道表](../workbook/stage152_energy_ml/pilot_channels.tsv)给出原μentry0的157hit/48.329432MeV、Calo2 finite780–930ns/full600sample=.999957391063、histogram排除0。独立2400ADC和current04 raw/status/privateRNG精确；raw噪声/取整分解差≤2.4303e−13pC。单例不能校准gain／辐射尾或解释全部旧PHYS差；四父成本门False，3倍预测935.71+100>剩878CPU秒，未绕过预算。2作业exit0、122CPU秒/152聚合wall秒、无新G4/fit/持久ROOT；证据13560B、删4.403MB重复。
 
 [Stage153冻结合同](../workbook/stage152_energy_ml/next_execution_contract.json)转回Stage132§5.5新测量：已知Stage124 request0原REC前最多40role1，真实同面/同基底cluster局部位置、正方差及leading真实PRD链接，固定局部scaled separation和排列无关摘要；1200CPU秒、无digi/reco/G4/能量fit，不看cal/test。拟合误差未校准，不把scaled separation当χ²覆盖、pull或关联后验。先证实新实际内容和成本，再另冻μ控制/全原队列能量工作；不自动扩大生产或旧模型网格。Stage132其余外部输入/真实系统/校准/data/独立确认仍缺，原所有门和Stage87保持，整体goal未完成。历史§1–130及所有旧入口原文保留。
+
+
+## 132. Stage153：真实cluster局部关联因状态基底不一致而结束固定实现
+
+[实测报告](../workbook/2026-11-08_stage153_native-cluster-surface-basis-pilot.md)和[审计表](../workbook/stage153_energy_ml/station_support.tsv)给出原request0前40train父、40身份/旧计数精确、第一父native精确重复。697leading测量真实链接全部通过、完整covariance有限且loc1方差正，但一维locX0、同面0；保存的curvilinear状态和硅片measurement虽都PlaneSurface却非同一变换/基底。站1–3的63/29/56个同wafer非leading候选因anchor不可用而保留未知，不作物理零。没有r2/同面roundtrip/动态范围认证、能量fit、关联概率、pull或FPR。旧Stage124未证同基底locX残差不能再作物理证据；历史能量结果原文不改，Stage87保留。
+
+2job/2starts全部exit0，116CPU秒/156聚合wall秒/0GPU/G4/新ν；10812B文本精确合并，删7.245MB重复，无持久ROOT。固定scaled-separation实现终态，不放松面匹配或原门。[下一Stage154合同](../workbook/stage153_energy_ml/next_execution_contract.json)是不同的几何问题：同原前4→最多40，实际GLOBAL状态位置映到真实wafer，验证plane距离/roundtrip/独立点积，只测未归一化dx，1200CPU秒/先成本准入；不修补或借用未知基底covariance。支持失败不换父/调容差，通过也不自动fullpool/fit；之后μ辐射/data控制及全原队列风险仍需独立冻结。Stage132其他校准/外部物理输入/独立确认缺口和全部原门、Stage137双5%扩大门/Stage87/角色/K保持，整体未完成。旧§1–131与旧入口全文保留。

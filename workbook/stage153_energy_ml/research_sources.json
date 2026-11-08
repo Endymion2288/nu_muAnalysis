@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2106.13593",
+      "title": "[2106.13593] A Common Tracking Software Project",
+      "access": "Abstract actually read this stage; no full-paper covariance formula claimed.",
+      "feasibility": "Supports using geometry-aware tracking interfaces. Coordinate conversions and fitted covariance still require direct project-specific validation; no imported performance."
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.04965",
+      "title": "Particle-flow reconstruction and global event description with the CMS detector",
+      "access": "Stage132/152 reference; not reread this stage",
+      "feasibility": "Real track/cluster linking motivates the question; CMS granularity does not transfer."
+    },
+    {
+      "url": "https://arxiv.org/abs/1703.06114",
+      "title": "Deep Sets",
+      "access": "Stage152 abstract reference; not reread this stage",
+      "feasibility": "Fixed permutation-invariant summaries only; no new network or information from aggregation."
+    }
+  ],
+  "unsuccessful_access": {
+    "url": "https://acts.readthedocs.io/en/latest/core/track_fitting.html",
+    "result": "HTTP403; contents not read or relied on"
+  }
+}

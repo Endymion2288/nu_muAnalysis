@@ -1,0 +1,33 @@
+{
+  "next_stage": 153,
+  "question": "Can real unused/nonleading SCT cluster positions on exactly matched leading-measurement surfaces provide a covariance-scaled spatial separation observable, beyond Stage124 ownership/count summaries and Stage108 point relations? First establish physical coordinate/identity/variance support on existing train REC, before response calibration or any energy fitting.",
+  "basis": "Stage1325.5 requests genuinely retained measured spatial/association information. Stage149 obtained real state/covariance/PRD links, not calibrated posteriors; Stage151/152 ended a finite tag/time-window explanation of weak Ecal. Do not extend old producer/gain/time/seed archaeology. Stage124 original REC remains available without new G4.",
+  "input_native_request": "workbook/stage124_energy_ml/native_contract.json",
+  "input_request_index": 0,
+  "expected_REC": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rec/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-xAOD.root",
+  "parent_selection": "Only first at most40 role1 cases of request0 ordered by original REC entry. Assert actual path equals expected_REC. No cal/test/reserved/role4/isolation processing, energy/risk/activity selection, parent replacement or input-directory scans. If no role1 support, record actual0 and stop this pilot. This one-source pi pilot does not remove K or any role from later original-cohort work.",
+  "muon_basis_reference": "ntuples/energy_ml_stage149/event_records.json.gz: existing61leading TSOS loc1/state/measurement variance and real link checks may be used only as a basis-access reference; do not claim unused-cluster control, current data calibration or population FPR from these summaries.",
+  "execution": "Existing pinned d32 tracker-only native reading and MergeTrackCfg as Stage124; no digi/reco resimulation, G4 or full NtupleDumper. Read actual PRD cluster, rdoList/wafer, long-track measurement TSOS, global and local positions, surfaces and unmodified full fitted covariance. Match original row/run/event/leading and cluster/SP/longTrack counts by existing policy; preserve unknown leading fields rather than substitute or relax identity.",
+  "frozen_measurement": "For each leading measurement wafer, require truly identical measurement/state/cluster surface transform and basis, one-dimensional loc1, finite positive relevant measured/fitted variances. Exclude actual leading-owned PRDs by real object linkage, not approximate coordinates or compact-ID guessing. For other-owned/unassigned candidates on this exact surface compute r2=(cluster loc1-state loc1)^2/(cluster variance+fitted-state variance). This is a scaled separation, not chi-square coverage, an association probability or independent-error certificate. State covariances are fitted/smoothed and not same-surface-truth calibrated. Preserve all missing/invalid/surface mismatch cases; no covariance repair.",
+  "fixed_summary": "For each station1-3, candidate_N, mean exp(-r2/2), mean log1p(r2), max log1p(r2), plus explicit eligible-surface/candidate coverage and availability. Empty or unsupported score statistics remain NaN, never delete parent; legitimate zero candidate count distinct from unknown. Station0 noIFT state coverage explicitly separate. Freeze these summaries now, no threshold, radius, loss, network, seed or winner scan. These are new position/error observables only if actually measured beyond old X/Z; aggregation alone does not create information.",
+  "outputs": "Actual basis/surface equality, units, counts, linked PRDs, variance positivity/support, finite/new-content dynamic range, same-event old counts/leading identity, deterministic repeat of first actual parent (same process allowed), per-event compact summaries and <=4 small exact-identity QA excerpts. Real CPU/wall/RSS/ROOT read bytes. No energy risk, class efficiency or FPR claims. Native schema/support failure ends this fixed implementation with concrete measured missing input; do not proceed to full extraction or fitting.",
+  "resources": {
+    "CPU_budget_s": 1200,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "parent_cap": 40,
+    "final_event_bytes_cap": 8388608
+  },
+  "followup_gate": "Only after actual original-parent identity, same-surface/basis/units, nonleading candidate content and measured-cost checks may a separate finite muon-control and full-original-cohort energy contract be frozen. Muon radiation/data control remains required before deploying calibrated response/association probabilities; no claim that this pilot completes Stage1325.5. Do not automatically run full native pool or energy fits from pilot success.",
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "energy_fits": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "overall_complete": false,
+  "invariant": "Stage87direct62/original1.05-1.01-1.03/eight-layer-three-tail+2pp and Stage137dual5pct expansion gate unchanged. pz0-only first-power momentum/raw11/typedNaN/legal signed/status0 timing/Calo missing/allK/roles/reserved maintained. No natural-nu large production or old proxy/network grids.",
+  "storage": "Scientific arrays/ROOT/Cling only HTCondor ~/condor/nu_muAnalysis/stage153/. No persistent REC/ROOT copies or full cluster clouds; compact original identities, measurements and few QA records. Do not alter Stage124/149/151/152 evidence."
+}

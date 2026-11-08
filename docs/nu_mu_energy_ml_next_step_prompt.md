@@ -1,3 +1,9 @@
+# 当前执行更新：Stage153 原生同面支持审计完成，保存的 local state 不能直接与 cluster 相减
+
+[Stage153报告](../workbook/2026-11-08_stage153_native-cluster-surface-basis-pilot.md)完成原REC request0前40role1：原身份/pz0及cluster4/SP/longTracks全匹配，第一父精确重复。697真实PRD链接/identifier/Measurement均通过、完整covariance有限且loc1方差正，但一维locX及measurement/state同面均0；参数为curvilinear，不能因同为PlaneSurface就直接相减。站1–3同wafer非leading候选63/29/56真实存在，因anchor不支持而score全缺失；不是空间活动物理零，也没有r2/roundtrip数值认证或能量fit。2job全exit0、116CPU秒/156聚合wall秒/0GPU/G4/新ν；事件10812B精确合并、删7245092B重复。旧Stage124直接locX残差不再作物理pull证据，Stage87保持。下一Stage154另冻真实GLOBAL位置→wafer的几何闭合/未归一化dx pilot，前4→最多同40、1200CPU秒、无covariance修补/fullpool/fit；原全部门和Stage137扩大门/整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage152 实际Ecal控制闭合，本例有限窗损失很小
 
 [Stage152报告](../workbook/2026-11-08_stage152_Ecal-HITS-window-diagnosis.md)完成已知μ原entry0：157 SD修正hit/48.329432MeV，2400ADC零差、同current04 raw/status/privateRNG精确；Calo2 finite/full=.999957391063、histogram外hit0，弱raw不能由本例大量漏窗解释。实际模拟信号.064892711495pC，baseline/噪声与取整后raw.04904296875pC；其他三路无hit但有ADC噪声，不填缺失或当沉积。3倍四父预测935.71CPU秒+100预留>剩878，未扩四例/预算；2start全部exit0、122CPU秒/152wall秒/0GPU/G4/fit，保留一父方法结果而非总体校准。事件文本13560B精确合并、删4402897B重复。下一Stage153只读原已知REC最多40train父，测真实同面cluster局部位置/拟合误差/PRD归属及固定scaled-separation摘要；无新G4/能量fit，不重开旧gain/time/seed追查，先物理基底/新内容/成本。原门/Stage137扩大门/Stage87及整体未完成保持。

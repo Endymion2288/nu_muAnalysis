@@ -1,0 +1,9 @@
+{
+  "commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "source_capsule": "software/stage153/basis_source_reference.tar.gz",
+  "actual_reader": "Stage153 runs only PoolRead/MergeTrack; CreateTrkTrackTool is not rerun on the old REC.",
+  "static_observation": "Pinned CreateTrkTrackTool constructs a two-local-parameter COT; ConvertActsTrackParameterToATLAS creates CurvilinearParameters and copies the top-left bound covariance with q/p unit conversion; no explicit spatial basis Jacobian is present in that function.",
+  "limitation": "This identifies a current-code representation hazard, not the certified producer of the historical REC. Do not declare all old covariance incorrect, transform it blindly, or infer calibrated uncertainty from positive definiteness.",
+  "old_stage124": "Its s[22:24] measured COT locX minus state locX without proving common surfaces. Do not interpret those old engineered summaries as physical residual/pull evidence. Keep historical energy results unchanged; Stage87 baseline does not use the native Z57 extension.",
+  "followup": "Check only actual global fitted position against the measured wafer frame before proposing geometry-only separation; covariance-scaled quantities require independently established covariance basis/transport."
+}

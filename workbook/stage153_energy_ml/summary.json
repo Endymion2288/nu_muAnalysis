@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "N": 40,
+  "original_identities_exact": true,
+  "leading_identity_known_N": 40,
+  "first_parent_repeat_exact": true,
+  "anchors": {
+    "total": 697,
+    "linked": 697,
+    "identifier_equal": 697,
+    "measurement": 697,
+    "outlier": 0,
+    "oneD_locX": 0,
+    "same_surface": 0,
+    "valid": 0
+  },
+  "overlapping_invalid_reasons": {
+    "missing_link": 0,
+    "wrong_dimension": 697,
+    "surface_mismatch": 697,
+    "missing_or_nonfinite_covariance": 0,
+    "nonpositive_or_missing_state_variance": 0
+  },
+  "anchor_surface_types": [
+    [
+      "N3Trk12PlaneSurfaceE",
+      "N3Trk12PlaneSurfaceE",
+      "N3Trk22CurvilinearParametersTILi5ENS_7ChargedENS_12PlaneSurfaceEEE"
+    ]
+  ],
+  "max_anchor_transform_difference": {
+    "N": 40,
+    "min": 12.31012237548828,
+    "max": 63.36991822719574,
+    "distinct_N": 40
+  },
+  "state_roundtrip_mm": {
+    "N": 0,
+    "min": null,
+    "max": null,
+    "distinct_N": 0
+  },
+  "candidate_roundtrip_mm": {
+    "N": 0,
+    "min": null,
+    "max": null,
+    "distinct_N": 0
+  },
+  "independent_r2_max_delta": 0.0,
+  "stations": [
+    {
+      "station": 0,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 3910,
+      "leadingOwned": 0,
+      "nonleading": 3910,
+      "offMeasuredWafer": 3910,
+      "onMeasuredWafer": 0,
+      "measuredWafers": 0,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidVariance": 0,
+      "unusableAnchorCandidates": 0,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_exp_minus_half_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 1,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 581,
+      "leadingOwned": 230,
+      "nonleading": 351,
+      "offMeasuredWafer": 288,
+      "onMeasuredWafer": 63,
+      "measuredWafers": 230,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidVariance": 0,
+      "unusableAnchorCandidates": 63,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_exp_minus_half_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 2,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 616,
+      "leadingOwned": 229,
+      "nonleading": 387,
+      "offMeasuredWafer": 358,
+      "onMeasuredWafer": 29,
+      "measuredWafers": 229,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidVariance": 0,
+      "unusableAnchorCandidates": 29,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_exp_minus_half_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    },
+    {
+      "station": 3,
+      "available_parent_N": 0,
+      "nonzero_candidate_parent_N": 0,
+      "clusters": 520,
+      "leadingOwned": 238,
+      "nonleading": 282,
+      "offMeasuredWafer": 226,
+      "onMeasuredWafer": 56,
+      "measuredWafers": 238,
+      "eligibleWafers": 0,
+      "duplicateAnchors": 0,
+      "eligibleCandidates": 0,
+      "candidateSurfaceMismatch": 0,
+      "candidateInvalidVariance": 0,
+      "unusableAnchorCandidates": 56,
+      "candidateMissingElement": 0,
+      "candidateInvalidRDO": 0,
+      "feature_ranges": {
+        "candidate_N": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_exp_minus_half_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "mean_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        },
+        "max_log1p_r2": {
+          "N": 0,
+          "min": null,
+          "max": null,
+          "distinct_N": 0
+        }
+      }
+    }
+  ],
+  "new_spatial_measurement_support": false,
+  "result": "fixed same-surface implementation has no supported candidates; no expansion or energy fit",
+  "native_resources": {
+    "passed": true,
+    "N": 40,
+    "selected_input_role": 1,
+    "request_index": 0,
+    "REC": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rec/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-xAOD.root",
+    "PHYS": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200082/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-merge-PHYS.root",
+    "original_PHYS_branches": [
+      "run",
+      "eventID",
+      "longTracks",
+      "SpacePoints",
+      "Track_pz0",
+      "nClusters0",
+      "nClusters1",
+      "nClusters2",
+      "nClusters3"
+    ],
+    "geometry": "FASERNU-04",
+    "conditions": "OFLCOND-FASER-06",
+    "configured_tracker_only": true,
+    "native_support": false,
+    "leading_identity_known_N": 40,
+    "exact_old_count_N": 40,
+    "same_process_first_parent_repeat": true,
+    "CPU_s": 103.82461976399999,
+    "wall_s": 128.92318169213831,
+    "ROOT_read_bytes": 3615643,
+    "RSS_KiB": 1780104,
+    "event_bytes": 10607,
+    "calibrated_association_probability": false,
+    "calibrated_pull": false,
+    "new_G4": 0,
+    "fits": 0,
+    "reserved_forward": 0,
+    "overall_complete": false
+  },
+  "CPU_s": 0.689410984,
+  "wall_s": 0.7013380378484726,
+  "RSS_KiB": 82040,
+  "new_G4": 0,
+  "fits": 0,
+  "calibrated_association": false,
+  "calibrated_pull": false,
+  "population_muon_FPR_measured": false,
+  "promotion": false,
+  "overall_complete": false
+}
