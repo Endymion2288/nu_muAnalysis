@@ -1,0 +1,72 @@
+{
+  "next_stage": 165,
+  "question": "Does the fixed Stage164 conditional-H improvement persist separately for the original pion/kaon/charm parent components and nominal/alternative flux-source supports, or is the inclusive gain specific to their mixture?",
+  "basis": "Stage132 sections4.2 and5.3 ask for source dependence; Stage164 four conditional-H lowbins pass but its protectedtail continuation fails. This is a zero-fit descriptive transport diagnostic, not sample expansion, another oracle model grid, nuisance calibration or deployment selection.",
+  "inputs": [
+    "ntuples/energy_ml_stage131/matched_input.npz",
+    "ntuples/energy_ml_stage131/bootstrap_draws.npz",
+    "ml/artifacts/stage164/energy_predictions.npz",
+    "workbook/stage130_energy_ml/source_protocol.json",
+    "workbook/stage164_energy_ml/paired.tsv"
+  ],
+  "cohort": "Exact Stage131 3002 selected of4032; original1708/653/641 roles,HTweights/allK/199boundaryNaN retained; use only cached predictions,never forward reserved/quarantine or refit. Validate source index-to-manifest component before new risks.",
+  "groups": {
+    "component": [
+      "pi",
+      "k",
+      "charm"
+    ],
+    "flux_context": [
+      "nominal",
+      "alternative"
+    ]
+  },
+  "group_semantics": "Two overlapping sets of diagnostic marginal partitions, not independent samples. nominal uses the manifest Boolean only; no nominal status guessed from run number. An empty group remains empty; no source borrowing. Do not treat component as particle class at target exit, or source label as generator-family independence.",
+  "comparisons": [
+    [
+      "AZH",
+      "AZ"
+    ],
+    [
+      "AZH",
+      "H"
+    ],
+    [
+      "H",
+      "A"
+    ]
+  ],
+  "strata": [
+    "E50_100",
+    "E100_200",
+    "all",
+    "pz50_100",
+    "pz50_100_trueE200",
+    "high_y"
+  ],
+  "evaluation": "All declared groups,roles2/3,contrasts and strata; original HTweighted logRMSE and positive/negative/total relativeerror>.5 tails,N/ESS/weightedsupport and exact500 old draws restricted to each group. CI unavailable if fewer475 valid draws,not imputed or eventgroup dropped. Keep full inclusive3002 denominators and exact Stage164 matching; do not resample or refit according to risk.",
+  "interpretation": "Report each predeclared lowbin comparison and support without selecting favourable groups. Local95 intervals are not simultaneous; wide/sparse intervals are inconclusive. Source heterogeneity is a dependence diagnostic under this fixed finite policy,not causal flux/material decomposition,certified domain transfer,real nuisance constraints or proof that H is measurable. No arbitrary source-mixture priors and no same-input N-boost promise.",
+  "decision": "No performance-based continuation to G4,models or sampleproduction in this stage,even if subgroups look favourable. Original Stage164 tail failure and original joint failures retained. Next actual detector/calibration study needs a new physical measurement and input-specific bounded contract; unsupported external tasks remain explicitly missing.",
+  "resources": {
+    "CPU_budget_s": 600,
+    "analysis_allowance_s": 350,
+    "independent_audit_allowance_s": 250,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "max_active_jobs": 1,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_event_model_bytes_cap": 1048576
+  },
+  "execution": "HTCondor ~/condor/nu_muAnalysis/stage165/ for all arrays/stats; local text,exactarchives and validatedTSV plotting only. Zero ROOT/G4/digi/reco,zero newfits/modelinference,newindependentnu0; freeze before new subgroup risks. Chinese report then ConventionalCommit,no push.",
+  "invariant": "Stage87,pz0-only firstpower,px/py/qOverP/bending,raw11,typedNaN,legalsigned,status0timing,CaloNaN,all originalcuts/K/roles/reserved/gates and Stage137dual5pct unchanged.",
+  "outstanding": "Realdata purity,gain/time/covariance and broadmuon radiation constraints,matched emulsion,GRLexposure/background/fullgenerationacceptance,realcorrelatedauxiliaryconstraints and independent confirmation still missing. Completed Stage136/140 finiteMC work is not repeated.",
+  "prerequisite": "Complete Stage164 independent audit,terminal archives,Chinese report and ConventionalCommit first.",
+  "energy_fits": 0,
+  "model_forward": 0,
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "promotion": false,
+  "overall_complete": false
+}

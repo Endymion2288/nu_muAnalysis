@@ -1,3 +1,11 @@
+# 当前执行更新：Stage164 的H增量在给定真深度后仍存在，但尾部未认证
+
+[Stage164报告](../workbook/2026-11-08_stage164_depth-and-unaccepted-energy.md)完成原3002缓存的AZ/AZH两臂6fit；1708/653/641角色、全部K1156、199NaN和原500draw保持。H给定真z的cal两低箱.718646/.823290、开发test.807279[.701427,.904019]/.770997[.672326,.862127]，四项5%门True；z给定H四低箱约1、均未支持5%改善。不能把H效果全归于深度，也不能将有限政策条件不对称叫因果或H可测。条件H test低pz正tail上差+2.123522pp未过+2门，continuation=False；最低箱AZH/传统cal1.182494、test1.000832且上95均>1.05，4原joint均False。3504独立标量/模型重载通过，最大差4.97e−14；5提交/3start全exit0/2未启动撤销、52CPU秒/61聚合wall秒/0live/GPU/G4/新ν，最终5.578MB、删41.784MB重复，Stage54保持。
+
+[下一Stage165合同](../workbook/stage164_energy_ml/next_execution_contract.json)只作零fit来源依赖诊断：原3002、固定AZH/AZ、AZH/H、H/A，预定π/K/charm及manifest nominal/alternative边际划分、原HT/500draw/N/ESS/三尾；先核source/component，600CPU秒/4核12GB、不改模型/父/门、不自动扩大G4，空组和宽区间保持未知。实际data校准/宽μ辐射尾、乳胶、曝光GRL/背景接受度/真实相关系统/独立确认仍缺；Stage87和原全部门、整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage163 普通Calo raw幅度未建立低能增量
 
 [Stage163报告](../workbook/2026-11-08_stage163_ordinary-calo-raw-energy.md)完成原71376active/全部K/三固定臂九fit；可读原PHYS70332，原Stage82临时merge不留存，误映射的两个旧bck候选被精确门拒绝后改为新增字段未知，1044父原X/角色保留。281308有效raw视图、113320合法负数、31raw有效而原fitted缺失；最低cal/test箱均无后者。content/M12 cal两低箱.990793/.998796，开发test1.006770[.998989,1.014749]/1.003566[.998652,1.009052]；最低test/传统1.951627[1.653734,2.308464]，正tail13.661202%对0%。原joint及Stage137双5%门False，原其他RMSE/尾保护通过不等于低能恢复，固定Q4结束。X62精确复现Stage87；285504独立标量域检查、9模型及3718风险标量通过，最大差2.84e−14。22提交/17start含3执行失败和5未启动撤销，全计438CPU秒/526聚合wall秒、0live/GPU/G4/新ν；26.38MB事件/新增数组/模型，删678.71MB重复，Stage54保持。
@@ -3024,3 +3032,10 @@ content/M12 cal两低箱.990793[.977914,1.000999]/.998796[.995081,1.003146]，te
 22提交/17start全计438CPU秒/526聚合execute wall秒、0live/GPU/G4/新ν，含3执行失败及5未启动撤销；完整成功提取ROOT200943606B、187.968297内部CPU秒，sourcewall重叠3.753792不当受控加速比。事件/新数组/模型26383050B<64MiB，两份manifest及10份NPZ精确归档，删678712536B重复，actual源码/日志/GNU与Stage54保持。图仅从已验证TSV重排长轴标签，未在本地读事件或重算统计。
 
 [下一Stage164有限合同](../workbook/stage163_energy_ml/next_execution_contract.json)沿Stage132§5.2但使用新的Stage137 H/A双箱支持：同3002父，A+真z与A+真z+未接受H两臂恰6fit，既有A/H不重训；原3002角色/HT权重、199边界NaN、全部K及500draw相同。900累计CPU秒/4核12GB，零fit缓存QA后分析/独立审计，不ROOT/G4/新父、不改旧G/raw4模型族。报告H给定真z及z给定H的条件比、八层三尾和区间功效边界；有限学习下冗余不称因果/不可见信息界，无部署晋升。真实联合data/协方差增益时基/宽μ辐射尾、乳胶、曝光GRL/背景完整接受度、真实辅助系统及独立确认仍开放，Stage87/原全门/Stage137扩大门/整体goal active保持。旧§1–141及所有旧入口全文原样保留。
+
+
+## 143. Stage164：真深度不能解释掉未接受H的固定政策增量
+
+[实测报告](../workbook/2026-11-08_stage164_depth-and-unaccepted-energy.md)在同原3002及199NaN上只补6fit，条件H四低箱5%门通过、条件z/H未获5%支持；H不是可读出能量或因果贡献。test低pz正tail差区间[−6.281520,+2.123522]pp未认证原+2pp保护，不能称已证实恶化。最低箱AZH/传统上95 cal1.325595/test1.180136，4原joint全False；独立3504数值和全部旧预测/6模型精确，52CPU秒、0live、事件/模型5578139B、删除41784036B重复。
+
+[Stage165冻结合同](../workbook/stage164_energy_ml/next_execution_contract.json)沿Stage132§4.2/5.3做固定预测来源依赖零fit检查，同π/K/charm与原名义/替代manifest，原500draw和全部分母不变；600CPU秒、无新ROOT/G4/模型/父，不按分组结果自动扩大生产。外部实际校准/曝光背景接受度/乳胶/相关约束/独立确认仍需真实输入，Stage87/全部原门及整体未完成保持。历史§1–142与全部旧入口原文保留。

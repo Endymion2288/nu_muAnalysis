@@ -1,3 +1,11 @@
+# 当前执行更新：Stage164 的H增量在给定真深度后仍存在，但尾部未认证
+
+[Stage164报告](../workbook/2026-11-08_stage164_depth-and-unaccepted-energy.md)完成原3002缓存的AZ/AZH两臂6fit；1708/653/641角色、全部K1156、199NaN和原500draw保持。H给定真z的cal两低箱.718646/.823290、开发test.807279[.701427,.904019]/.770997[.672326,.862127]，四项5%门True；z给定H四低箱约1、均未支持5%改善。不能把H效果全归于深度，也不能将有限政策条件不对称叫因果或H可测。条件H test低pz正tail上差+2.123522pp未过+2门，continuation=False；最低箱AZH/传统cal1.182494、test1.000832且上95均>1.05，4原joint均False。3504独立标量/模型重载通过，最大差4.97e−14；5提交/3start全exit0/2未启动撤销、52CPU秒/61聚合wall秒/0live/GPU/G4/新ν，最终5.578MB、删41.784MB重复，Stage54保持。
+
+[下一Stage165合同](../workbook/stage164_energy_ml/next_execution_contract.json)只作零fit来源依赖诊断：原3002、固定AZH/AZ、AZH/H、H/A，预定π/K/charm及manifest nominal/alternative边际划分、原HT/500draw/N/ESS/三尾；先核source/component，600CPU秒/4核12GB、不改模型/父/门、不自动扩大G4，空组和宽区间保持未知。实际data校准/宽μ辐射尾、乳胶、曝光GRL/背景接受度/真实相关系统/独立确认仍缺；Stage87和原全部门、整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage163 普通Calo raw幅度未建立低能增量
 
 [Stage163报告](../workbook/2026-11-08_stage163_ordinary-calo-raw-energy.md)完成原71376active/全部K/三固定臂九fit；可读原PHYS70332，原Stage82临时merge不留存，误映射的两个旧bck候选被精确门拒绝后改为新增字段未知，1044父原X/角色保留。281308有效raw视图、113320合法负数、31raw有效而原fitted缺失；最低cal/test箱均无后者。content/M12 cal两低箱.990793/.998796，开发test1.006770[.998989,1.014749]/1.003566[.998652,1.009052]；最低test/传统1.951627[1.653734,2.308464]，正tail13.661202%对0%。原joint及Stage137双5%门False，原其他RMSE/尾保护通过不等于低能恢复，固定Q4结束。X62精确复现Stage87；285504独立标量域检查、9模型及3718风险标量通过，最大差2.84e−14。22提交/17start含3执行失败和5未启动撤销，全计438CPU秒/526聚合wall秒、0live/GPU/G4/新ν；26.38MB事件/新增数组/模型，删678.71MB重复，Stage54保持。
