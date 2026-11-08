@@ -1,0 +1,43 @@
+{
+  "next_stage": 188,
+  "status": "requires_specific_physical_input_before_executable_protocol",
+  "previous_bounded_stage_complete": 187,
+  "question": "Use an actual independent observable/calibration/physical auxiliary input to break the measured response/geometry/interaction ambiguity; do not restart ended fixed readout or ordinary timing families.",
+  "required_input_options": [
+    {
+      "kind": "vertex_or_early_track_anchor",
+      "requirements": "Actual emulsion-electronic matches or early-track measurements with run/event/source identity, selection, z/geometry uncertainty and original low-energy support; no truth-z deployment."
+    },
+    {
+      "kind": "track_reference_and_uncertainty",
+      "requirements": "Actual per-track applied material-loss convention/covariance plus leading-primary identity and lowpz_highE fitted-surface support; original missing parents remain. No material correction inferred from current nine residuals."
+    },
+    {
+      "kind": "high_amplitude_response",
+      "requirements": "Independent measured amplitude reference or calibrated same-pulse gain path with units/settings/selection/error coverage; matching actual dual-range MC if used for new training."
+    },
+    {
+      "kind": "physical_spectrum_auxiliary",
+      "requirements": "Defined processed production, actual generator/flux weights, background and trigger/selection efficiency inputs plus correlated auxiliary constraints. Count headers are not acceptance/normalization; no arbitrary strong prior."
+    },
+    {
+      "kind": "independent_confirmation",
+      "requirements": "Actual new production families or real matched sample with selection/errors; existing developed-pool roles/reserved/isolation remain closed."
+    }
+  ],
+  "first_steps": [
+    "Verify a supplied actual manifest and measurement units/conditions/selection and immutable roles on text/metadata evidence; do not start unbounded discovery.",
+    "Only after actual supported input exists, freeze a specific scientific contrast, small batch pilot, measured cost gate, independent audit and fixed stopping rule. No new budget or large production is automatically authorized by this input contract."
+  ],
+  "closed_families": [
+    "Stage186 A/R/I fixed charge representation; all expansion gates false",
+    "Stage177 fixed Timing mean content",
+    "Stage182 unsupported necessary upstream weak-Q timing candidate",
+    "Stage183 ordinary Ecal fixed random-control expansion",
+    "Existing same-point finite-MC3000toys"
+  ],
+  "remaining_goal": "Actual original low-energy superiority and matched-condition full physical precision with independent confirmation",
+  "overall_complete": false,
+  "promotion": false,
+  "execution_started": false
+}

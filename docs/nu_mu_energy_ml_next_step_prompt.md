@@ -1,3 +1,13 @@
+# 当前执行更新：Stage187 固定S0能量账目完成，后续需具体物理输入
+
+[Stage187报告](../workbook/2026-11-08_stage187_S0-primary-energy-and-window-ledger.md)完成原固定12父的主μ初始/步端点与Stage179同窗源账目，9面/9主μ关联、8/63/2原缺面保持。28746步有理数能量恒等式精确、相邻gap0MeV、371来源标量通过。50/70面前损能约13.29/.697GeV而普通Calo面前源均0pC，缓存拟合参考残差−2.999/+.685GeV；5号+776.248GeV大残差保留，不作材料加回或删父。不是纯辐射能量、部署修正、总体发生率或能量收益。
+
+3start全0、13CPU/28聚合wall秒/0live，零G4/fit/forward；保留166502B标量图、清35534258B重复，37原输入字节和Stage54保持。Stage186的9固定实际/理想电荷fit已阴性结束，两低能目标未达；现有Timing/上游必要支持/双路/联合随机控制及固定S0账目均已给有界结果，不能将未知当“整体全部完成”。
+
+后续[具体输入合同](../workbook/stage187_energy_ml/next_execution_contract.json)需要有身份/设置/selection/误差的实际z或早期track锚点、逐track材料/协方差与困难侧S0、独立幅度参考/匹配双路MC，或真实背景效率/生成权重/辅助约束与独立确认。输入到位再另冻小pilot/成本/固定验收；不自动加预算、重开旧模型/窗口/seed或重复同点3000toys，不追加无新物理问题的metadata。完整缺口见[需求表](../workbook/stage187_energy_ml/goal_requirements.tsv)。Stage87/原所有门/K/角色/reserved关闭和整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage186 原队列实际/理想电荷新训练完成，双低能增量阴性
 
 [Stage186报告](../workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md)在原280来源/71376active、全部K与原角色上认证同物理PMT/原窗，A107/R122/I122共9新fit。test I/R两低箱0.997731 [0.984972,1.009262] / 0.998340 [0.991194,1.006067]，cal亦近1；三个内容扩展门均false。实际R/传统test最低箱1.958185、第二箱上95%=1.061147，原两低门均失败；6个cal/test joint全false，I困难侧总尾/正尾上95%=2.912151/2.344359pp也不过。固定表示结束，不晋升、不继续窗/seed/容量或波形估计器网格；不是所有波形的Bayes上限。

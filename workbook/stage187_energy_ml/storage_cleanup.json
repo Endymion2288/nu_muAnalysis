@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "starts": 3,
+  "scheduler_CPU_s": 13.0,
+  "scheduler_aggregate_wall_s": 28.0,
+  "phase_budgets": [
+    {
+      "phase": "pilot",
+      "CPU_s": 1.0,
+      "cap_CPU_s": 40
+    },
+    {
+      "phase": "analysis",
+      "CPU_s": 7.0,
+      "cap_CPU_s": 100
+    },
+    {
+      "phase": "audit",
+      "CPU_s": 5.0,
+      "cap_CPU_s": 100
+    }
+  ],
+  "CPU_cap_s": 240,
+  "live_N": 0,
+  "deleted_B": 35534258,
+  "deleted": [
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage187/1794150094975252028/energy-ml-stage187.tar.gz",
+      "bytes": 11797154
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage187/pilot_result.tar.gz",
+      "bytes": 2247
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage187/1794150282651207661/energy-ml-stage187.tar.gz",
+      "bytes": 11799664
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage187/analysis_result.tar.gz",
+      "bytes": 107837
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage187/1794150426171581989/energy-ml-stage187.tar.gz",
+      "bytes": 11806716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage187/audit_result.tar.gz",
+      "bytes": 1294
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/worker_1794150094975252028.sh",
+      "bytes": 1386
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/pilot_1794150094975252028.sub",
+      "bytes": 1031
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/worker_1794150282651207661.sh",
+      "bytes": 1386
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/analysis_1794150282651207661.sub",
+      "bytes": 1035
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/worker_1794150426171581989.sh",
+      "bytes": 1386
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/audit_1794150426171581989.sub",
+      "bytes": 1032
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677503.0.log",
+      "bytes": 1992
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677503.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677503.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677511.0.log",
+      "bytes": 2139
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677511.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677511.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677514.0.log",
+      "bytes": 1987
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677514.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage187/logs/9677514.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/admission.log",
+      "bytes": 459
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/analysis.log",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/audit.log",
+      "bytes": 1917
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/pilot.log",
+      "bytes": 1310
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/analysis_time.txt",
+      "bytes": 766
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/audit_time.txt",
+      "bytes": 760
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage187_energy_ml/pilot_time.txt",
+      "bytes": 760
+    }
+  ],
+  "retained_scientific_scalar_plot_B": 166502,
+  "cap_B": 2097152,
+  "original_input_assets_bytes_verified_N": 37,
+  "Stage54_preserved_N": 12,
+  "new_G4": 0,
+  "new_fits": 0,
+  "new_forward": 0,
+  "overall_complete": false,
+  "promotion": false
+}
