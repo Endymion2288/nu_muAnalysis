@@ -1,0 +1,170 @@
+{
+  "stage": 183,
+  "question": "Do ordinary Ecal Lo0-3 and Hi16-19 have reproducible joint signed-integral correlations in actual strict random controls, sufficient to motivate any new joint estimator?",
+  "motivation": "Stage179 matched MC12 ordinary Ecal charge error is dominated by noise/baseline with zero clipping loss; Stage173 identifies actual ordinary Ecal and excludes normal CaloNu migration. This new bounded ordinary-Ecal descriptive measurement is not execution of historical Stage172 CaloNu variance/25-channel contract.",
+  "source_contract": "workbook/stage171_energy_ml/next_execution_contract.json",
+  "paths": [
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00400.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00401.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00402.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00403.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00404.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00405.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00406.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00407.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00408.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00409.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00410.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00411.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00412.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00413.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00414.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00415.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00416.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00417.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00418.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00419.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00420.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00421.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00422.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00423.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00424.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00425.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00426.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00427.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00428.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00429.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00430.raw",
+    "/eos/experiment/faser/raw/2024/015838/Faser-Physics-015838-00431.raw"
+  ],
+  "catalog": "workbook/stage167_energy_ml/inventory.json",
+  "run": 15838,
+  "reference": "ntuples/energy_ml_stage171/pilot_rows.jsonl.gz",
+  "GRL": "workbook/stage166_energy_ml/exposure_input_manifest.json",
+  "mapping": "workbook/stage173_energy_ml/condition_records.json",
+  "pilot_files": [
+    400,
+    401
+  ],
+  "full_files": [
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431
+  ],
+  "audit_RAW_files": [
+    400,
+    401
+  ],
+  "limits": {
+    "physics_per_file": 8192,
+    "max_RAW_frames_per_file": 16384,
+    "bytes_before_next_frame": 134217728,
+    "max_strict_per_file": 256,
+    "final_event_bytes": 12582912
+  },
+  "windows": {
+    "pedestal": [
+      0,
+      40
+    ],
+    "signal_diagnostic": [
+      60,
+      140
+    ],
+    "offpulse": [
+      180,
+      256
+    ]
+  },
+  "active_groups": {
+    "ordinary_Ecal_Lo": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ordinary_Ecal_Hi": [
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "ADC": "Keep all actual hardware ADC for strict controls only, no amplitude/status/GRL veto. Valid unique decoded nonfailed boards and finite sufficient sample length are required per channel measurement; missing/bad support stays null, all triggers remain denominators.",
+  "strict_selection": "Same unique supported framed valid TLB TAP==16 && TBP==16; preserve current/next bits, statuses and amplitudes.",
+  "measurement": "For each hardware channel: residual=mean(ADC[0:40])-ADC. Signed integrals are sums over fixed windows in ADC-code*samples; legitimate negatives retained. No fitted charge and no arrival-time input.",
+  "units": "ADC-code*samples only; no pC/gain/PMT calibration or matching MC/data window claim.",
+  "statistics": [
+    "For signal_diagnostic/offpulse: eight-channel pairwise N/covariance/correlation; complete8 covariance rank/eigenvalues, no inverse.",
+    "Per ordinary-Ecal group and fixed window: variance of four-channel sum / sum of four variances on exactly same complete4 events.",
+    "1000 fixedseed20261108183 file-block bootstrap conditional95 intervals for four fixed ratios, no discovery scan.",
+    "First16 and last16 fileblocks same four ratios, retain empty files/unknowns.",
+    "All actual channel lengths/status/input bits/GRL/timestamps/rail counts, no amplitude cleaning; no pure-noise assertion."
+  ],
+  "applicability": "Only actual run15838 prefix conditions/ordinary Ecal hardware and fixed raw windows. CaloNu20-23 and clock31 may be retained as audit bytes but supply no response inference. Exact DAQ config, signal purity and target MC migration remain uncertified.",
+  "acceptance": [
+    "Original400 full8192 metadata/all retained ADC exact vs Stage171",
+    "401 framing and at least1 actual strict control",
+    "all32 literal paths in existing actual catalog",
+    "independent RAW400/401 reread",
+    "scalar integrals and scalar ratio/covariance checks",
+    "all32 denominators and fileblocks preserved"
+  ],
+  "admission": "Threefold complete pilot GNU CPU*32/2 <=1400 and used+projection+600audit<=2400; valid401 control required. No path replacement or budget growth.",
+  "CPU_budget_s": 2400,
+  "phase_CPU_allowance_s": {
+    "pilot": 400,
+    "full": 1400,
+    "audit": 600
+  },
+  "request_CPUs": 4,
+  "request_memory_MB": 8000,
+  "worker_processes": 4,
+  "max_jobs": 1,
+  "MaxRuntime_s": 86400,
+  "stop": "Descriptive evidence only. Unknown purity, weak support or file instability prevents estimator certification; no inverse/shrinkage/prior/automatic injection or energy refit. A future estimator requires separate signal-fidelity, charge-error/coverage and matched-regime support.",
+  "no": [
+    "new directory discovery",
+    "full files or full run",
+    "RAW/xAOD copy",
+    "G4/reconstruction",
+    "energy fit or forward",
+    "amplitude veto",
+    "fitted timing",
+    "inverse covariance prior",
+    "new neutrino independence claim",
+    "CaloNu migration certification",
+    "timing from bad hits",
+    "claiming measured improvement of E_nu from covariance"
+  ],
+  "preserve": "Stage87/all original gates; pz0-only first-power momenta; px/py/q/p/bending allowed; raw11; typedNaN/signed/status0-only timing/Calo missing; pz>50GeV; allK/roles/reserved/quarantine/Stage54",
+  "overall_complete": false,
+  "promotion": false
+}

@@ -1,3 +1,13 @@
+# 当前执行更新：Stage183 普通Ecal联合控制完成，未获共同噪声主导支持
+
+[Stage183报告](../workbook/2026-11-08_stage183_ordinary-Ecal-random-joint-controls.md)固定32份已知RAW前缀262144条，116 strict/全8路支持、每路280 samples，Lo/Hi两窗complete8秩均8。signal四路和方差比Lo.939781[.759109,1.122998]、Hi1.136804[.862918,1.399470]；offpulse Lo.756712[.517232,1.029395]、Hi1.182531[.970258,1.402404]。全部条件区间含1，未取得明显共同项主导支持，不证明无相关；前后16块57/59控制和完整矩阵保留。此有限控制结束，不反演/造prior/扩大文件追显著或自动训练。
+
+原400全8192精确、另两RAW实际重读、1856标量积分0差、128协方差/4比值独立通过。3start全0、67CPU/52聚合wall秒/0live，4文件进程；逻辑RAW前缀2212665383B非实测网络I/O，留1105870B控制ADC、清5631334B重复，Stage54保持。只对普通Ecal0–3/16–19作描述，历史Stage172 CaloNu合同原文未执行，坏20–23/clock31不作迁移推断。
+
+Stage179同窗源/读出机制、Stage181真实双量程时间关联、Stage182上游必要Q支持阴性均已完成并提交。本轮没有可认证的新部署校准，故不重复Q89/T78/Timing均时或旧X模型。后续需真实高幅参考/匹配双路MC、弱信号校准/方向、S0困难侧与材料约定、真实背景效率加权生成/相关辅助约束和独立确认；具体输入与验收见本报告及[需求表](../workbook/stage183_energy_ml/goal_requirements.tsv)。Stage87/原两低箱/八层三尾/所有门、角色/K/reserved保持，整体低能优势与完整物理目标未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage182 上游时间候选无必要Q支持，固定探索结束
 
 [Stage182报告](../workbook/2026-11-08_stage182_upstream-strict-time-and-source-support.md)复用原12父同窗响应，VN0–VN1/VN0–V20/VN1–V20严格时间1/0/2父，加入原MC必要Q范围均0；V20–V21为6/12。没有实际track空间/弱信号迁移认证，不输出校准Δt或反演顶点。VetoNu同窗analog主要其他根，但缺global方向，不称backscatter。原bad/缺时与signed保持，独立full/标量通过，3start全0/7CPU/24wall秒/0live、清11474365B重复，Stage54保持；此候选结束。

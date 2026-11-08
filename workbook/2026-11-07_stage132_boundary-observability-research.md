@@ -222,3 +222,8 @@ Stage133 直接承接 [Stage131 冻结合同](stage131_energy_ml/next_execution_
 ### Stage182 回填：上游严格时间与必要Q支持
 
 [Stage182](2026-11-08_stage182_upstream-strict-time-and-source-support.md)原12父三种上游关系必要Q支持均0，停止本固定候选；其他根来源未认证global方向，不当backscatter或顶点测量。全量/标量通过、7CPU秒。下一Stage183只测普通Ecal实际联合随机控制，理由为Stage179噪声/基线主导，旧CaloNu合同不执行；误差覆盖/MC迁移与整体能量目标仍未达。
+
+
+### Stage183 回填：普通Ecal联合随机控制
+
+[Stage183](2026-11-08_stage183_ordinary-Ecal-random-joint-controls.md)取得32固定前缀116严格随机控制，8路完整/协方差秩8；四预定和方差比区间全含1，未获共同noise主导支持。原参考/实际RAW复读与1856标量积分/128协方差/4比值通过、67CPU秒；不反演或拟合降噪器，不恢复历史坏CaloNu迁移。真实信号/误差覆盖、匹配MC和外部物理/独立输入仍缺，整体目标未完成。

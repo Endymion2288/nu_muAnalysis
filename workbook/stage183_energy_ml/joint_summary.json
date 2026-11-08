@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "retained_strict_N": 116,
+  "ratios": [
+    {
+      "window": "signal_diagnostic",
+      "group": "ordinary_Ecal_Lo",
+      "N": 116,
+      "ratio": 0.9397807454639323,
+      "sum_variances": 8775.640329835493,
+      "sum_charge_variance": 8247.177811096148,
+      "low95": 0.7591086044224621,
+      "high95": 1.1229977277275653,
+      "bootstrap_valid_N": 1000,
+      "bootstrap_draw_N": 1000,
+      "first16": {
+        "N": 57,
+        "ratio": 0.9869411549703702,
+        "sum_variances": 8626.030075187598,
+        "sum_charge_variance": 8513.384085214797
+      },
+      "last16": {
+        "N": 59,
+        "ratio": 0.8945194842688825,
+        "sum_variances": 8968.331385156273,
+        "sum_charge_variance": 8022.3471654024215
+      }
+    },
+    {
+      "window": "signal_diagnostic",
+      "group": "ordinary_Ecal_Hi",
+      "N": 116,
+      "ratio": 1.1368037246147673,
+      "sum_variances": 8955.938155921036,
+      "sum_charge_variance": 10181.143853070544,
+      "low95": 0.8629184944233925,
+      "high95": 1.399470332461713,
+      "bootstrap_valid_N": 1000,
+      "bootstrap_draw_N": 1000,
+      "first16": {
+        "N": 57,
+        "ratio": 1.1330249049853665,
+        "sum_variances": 9359.305137843556,
+        "sum_charge_variance": 10604.325814534246
+      },
+      "last16": {
+        "N": 59,
+        "ratio": 1.1187659053695538,
+        "sum_variances": 8582.870835767664,
+        "sum_charge_variance": 9602.223261247549
+      }
+    },
+    {
+      "window": "offpulse",
+      "group": "ordinary_Ecal_Lo",
+      "N": 116,
+      "ratio": 0.7567115060916814,
+      "sum_variances": 9282.9693583214,
+      "sum_charge_variance": 7024.529724138315,
+      "low95": 0.5172317010046048,
+      "high95": 1.0293954362069302,
+      "bootstrap_valid_N": 1000,
+      "bootstrap_draw_N": 1000,
+      "first16": {
+        "N": 57,
+        "ratio": 0.805688320739953,
+        "sum_variances": 8646.828446115069,
+        "sum_charge_variance": 6966.648690476907
+      },
+      "last16": {
+        "N": 59,
+        "ratio": 0.7095339478797447,
+        "sum_variances": 10026.88940970333,
+        "sum_charge_variance": 7114.418427820406
+      }
+    },
+    {
+      "window": "offpulse",
+      "group": "ordinary_Ecal_Hi",
+      "N": 116,
+      "ratio": 1.1825312740948013,
+      "sum_variances": 7892.263800598348,
+      "sum_charge_variance": 9332.848767613843,
+      "low95": 0.9702584644339202,
+      "high95": 1.4024039232815655,
+      "bootstrap_valid_N": 1000,
+      "bootstrap_draw_N": 1000,
+      "first16": {
+        "N": 57,
+        "ratio": 1.2956605620842638,
+        "sum_variances": 8695.781340850697,
+        "sum_charge_variance": 11266.780939848468
+      },
+      "last16": {
+        "N": 59,
+        "ratio": 1.0598418675947898,
+        "sum_variances": 7111.742600816919,
+        "sum_charge_variance": 7537.32255990323
+      }
+    }
+  ],
+  "complete8": [
+    {
+      "window": "signal_diagnostic",
+      "complete8_N": 116,
+      "rank": 8,
+      "eigenvalues": [
+        1489.0739859963317,
+        1625.3890491256411,
+        1822.4003104951091,
+        1902.4232622540287,
+        2408.6870382518273,
+        2511.9111778998754,
+        2897.8010097538654,
+        3073.8926519798533
+      ],
+      "no_inverse": true
+    },
+    {
+      "window": "offpulse",
+      "complete8_N": 116,
+      "rank": 8,
+      "eigenvalues": [
+        1286.2774146109832,
+        1530.767453525308,
+        1587.6450044811156,
+        1799.4669518540866,
+        2064.286746274827,
+        2334.328781549715,
+        2952.7691263229044,
+        3619.6916803008144
+      ],
+      "no_inverse": true
+    }
+  ],
+  "readout_counts": {
+    "files_N": 32,
+    "physics_N": 262144,
+    "strict_N": 116,
+    "cap_exceeded_files": [],
+    "logical_RAW_bytes_through": 2212665383,
+    "timestamp_min_us": 1720473060859252,
+    "timestamp_max_us": 1720474904380367,
+    "control_status_counts": {
+      "2": 113,
+      "0": 3
+    },
+    "control_input_bits_counts": {
+      "0/0": 116
+    },
+    "original_denominators_complete": true,
+    "retained_controls_bytes": 1105870
+  },
+  "unsupported_group_interpretation": [
+    "CaloNu20-23",
+    "clock31"
+  ],
+  "pure_noise_certified": false,
+  "charge_error_coverage_certified": false,
+  "MC_migration_certified": false,
+  "overall_complete": false
+}
