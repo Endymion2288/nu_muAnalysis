@@ -1,3 +1,11 @@
+# 当前执行更新：Stage157 全4096μ根联合规则完成，困难尾部仍大量误报
+
+[Stage157报告](../workbook/2026-11-08_stage157_joint-muon-response-and-partition-control.md)完成已知原4096父的当前raw／真实空间及分块控制，3708selected、3793leading、65620有效anchors／43非Measurement支持未知保留。固定Q15／Q15G6留出全体22/898、26/898，pz0[50,100)GeV均20/789；overflow9/13、8/13，高活动均6/6。空间内容没有消除这些μ根误报，不把簇存在／距离／报警标为其他根或强子。原128prefix／suffix状态、PRD、raw及RNG非干涉通过；独立标量／Cholesky计数精确，阈值差≤3.56e−14。21starts含2程序失败全计14526CPU秒／5296聚合wall秒，0live/G4/ν能量fit；事件文本25675927B精确合并，删251727780B重复。实际联合native data仍缺，单来源控制不认证总体/data FPR或ν低能改善。
+
+[Stage158冻结合同](../workbook/stage157_energy_ml/next_execution_contract.json)转原71376active父的新空间能量比较：原角色／全部K及隔离零forward不变，复用Stage124多REC批读；先五origin前40train及已知leading mismatch身份对照与实测成本，30000CPU预算，通过才原37批。恰X62／X62+A3／X62+A3+G6三固定臂，区分空间内容与可用性，保留原baseline／8层3尾／Stage137双箱5%扩大门；不放松pz身份容差，不把μ报警作部署特征。新能量结果未测，原Stage87及整体未完成状态保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage156 真实μ空间控制闭合，非leading本身不能标为其他根
 
 [Stage156报告](../workbook/2026-11-08_stage156_muon-native-spatial-control.md)完成原HITS前4→64：64根/current06状态/covariance/PRD/raw/RNG配对精确，61leading、3无leading保留，1063leading anchors全通过相同float32区间几何。站1–3分别39/34/25候选，43/64父非空；pz0[50,100)GeV组41/57非空，overflow只有3父/1非空。μ根加辐射/噪声控制本身有数十mm活动，不能把nonleading或大dx直接叫hadronic或FPR；逐cluster成因未测。前4跨作业精确，五作业含一次旧metadata字段审计失败全计361CPU秒/574聚合wall秒，0live/G4/能量fit；2155857B事件文本回读精确、删22261548B重复。下一[Stage157合同](../workbook/stage156_energy_ml/next_execution_contract.json)转真正联合响应/留出控制：同一已核4096μ根前缀，先128sequential/64suffix分块复现与成本，再准入64chunks/16job×4进程，60000CPU预算、初始最多4job并发；Q15与Q15+真实空间G6两个固定低维评分，不扫描，不forward自然ν。实际联合native data仍缺manifest，不假造data空间，不将有限留出误报当总体/data认证。全原ν能量比较另冻，原门/Stage137双5%扩大门/Stage87和整体未完成保持。
@@ -2903,3 +2911,12 @@ Stage144已冻四个Stage142缓存Ecal控制，600CPU秒、无新G4，首例实�
 前4跨独立作业native/geometry/QA/raw/RNG/schema精确；5job/5starts含一次旧native缺配置字段的审计脚本失败，修复不重跑物理，全部终态，361CPU秒/574聚合wall秒/0GPU/G4/新ν。事件文本2155857B精确合并、删22261548B重复，无持久ROOT。旧native未保存的conditions元数据保持缺失，实际digi条件从双方seeds核对，不补造历史字段。
 
 [Stage157冻结合同](../workbook/stage156_energy_ml/next_execution_contract.json)只用已核Stage146的原4096μ根，同pinned链/原几何：先原0–127 sequential和64–127 suffix核分块state/raw/PRD/RNG非干涉，再按实际GNU准入固定64×64entry chunks、16Condorjob各4独立科学进程，初始最多4job并发；60000CPU秒/1500pilot/500audit预留，不用wall超时或抬预算。比较固定Q15与Q15+新空间G6的point条件OLS/经验响应covariance/95th校准，原entry modulo4留出，报告all/低pz/overflow/highactivity的报警计数及Wilson95和未评分分母；非leading不直接当规则。真实native data manifest仍缺，不能混旧producer raw与新空间补造联合data。后续全原ν能量风险另冻，covariance校准/宽能区迁移/外部输入/独立确认仍开放；原全门/Stage137双5%扩大门/Stage87/原角色/K保持，整体未完成。旧§1–134及所有旧入口全文保留。
+
+
+## 136. Stage157：全μ根联合响应的困难尾部未被空间量消除
+
+[中文报告](../workbook/2026-11-08_stage157_joint-muon-response-and-partition-control.md)、[完整审计](../workbook/stage157_energy_ml/summary.json)和[配对报警](../workbook/stage157_energy_ml/paired_alerts.tsv)覆盖4096原entry／3708selected，65663同面表示兼容anchors中65620有效、43非Measurement保持未知；真实站1–3候选2610/2294/2300，2388父非空。Q15／Q15G6全体留出22/898与26/898，低pz均20/789但有3+3报警翻转；overflow9/13、8/13，高活动均6/6。规则误报不能直接标为其他根，边际低误报率不认证困难尾部或data／宽能区迁移。未评分分母明确，合法负raw10055保留，typed/status/空集QA通过。没有ν能量fit或模型晋升。
+
+原128顺序／64suffix及全量首128状态／raw／PRD／RNG精确；两规则×四分层的8组报警计数独立标量重建精确，阈值差≤3.56e−14，实际全量不冒称4096独立RNG重放。21job／21starts含路径和审计打包2次程序失败全计14526CPU秒、5296聚合wall秒／0GPU，最终0live。64链13791.44子CPU秒，4进程driver wall重叠比3.9118仅描述实际重叠，不是受控加速比；事件25675927B、删251727780B重复，源／审计／日志胶囊回读相同，home无旧nu_mu_stage*目录。
+
+[下一Stage158合同](../workbook/stage157_energy_ml/next_execution_contract.json)只用原89033行中71376active父和真实新空间，三固定臂X62／X62+A3／X62+A3+G6，原种子／400轮／角色／K及原1.05/1.01/1.03、八层三尾+2pp、Stage137双5%门不改。五origin首源前40train加已知row40738身份unknown对照，先复现／实际schema／几何／首事件与steady成本，30000CPU预算，过门才复用Stage124的37多REC批。新覆盖／成本／能量结果未测，仍需联合data、真实误差校准／外部物理输入及独立确认；Stage87与整体未完成保持，旧§1–135与旧入口全文保留。

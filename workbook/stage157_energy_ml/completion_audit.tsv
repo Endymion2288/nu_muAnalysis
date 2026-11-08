@@ -1,0 +1,15 @@
+task	status	evidence_or_limit
+original4096_current_native	complete	4096 root/current identity exact;3708selected;303no-leading;all parents retained
+partition_noninterference	complete	prefix64 vsStage156, overlap64 and fullprefix128 state/raw/PRD/RNG exact
+native_spatial_support	complete	65620valid/65663anchors;43nonMeasurement unsupported;station0/offwafer unknown
+fixed_response_rules	complete	Two OLS/covariance/calibrated rules only;no heldout tuning;0energyfits
+heldout_lowpz_overflow_highactivity	complete_negative_endpoint	all22/898,26/898;lowpz20/789each;overflow9/13,8/13;highactivity6/6each
+independent_numerical_validation	complete	all8group counts exact;threshold delta<=3.552713678800501e-14;no refit
+typed_missing_signed_status	complete	cleaned sentinel/nonzero-status timing/unknown numeric count/empty numeric distance violations0;10055signed negative raw preserved
+resource_budget_and_parallel_measurement	complete	21starts/2failures;14526CPU_s/5296aggregatewall_s;0GPU;60000CPU_s budget unchanged
+compact_storage_and_home	complete	25675927B final event text exact;251727780B duplicates removed;no legacy home submitdirs
+joint_native_data	input_missing	No paired actual dataREC/PRD/state/raw manifest;historical raw-only controls not synthetic jointdata
+calibrated_track_covariance_and_association	not_certified	Actual stored covariance and positions do not establish pull/coverage/association posterior
+neutrino_energy_increment	not_measured	Frozen separate Stage158 original-cohort3arm comparison;no Stage158 execution yet
+wider_source_energy_and_physics_inputs	open	emulsion/GRL/exposure/background/acceptance/correlated nuisances/transfer/independent confirmation remain
+overall_physics_goal	incomplete	No promotion;originalStage87/allgates/Stage137expansiongate unchanged

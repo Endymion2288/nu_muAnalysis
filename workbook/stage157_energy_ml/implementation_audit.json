@@ -1,0 +1,9 @@
+{
+  "frozen_protocol_bytes_unchanged": true,
+  "geometry_helpers_reused_from_stage156": true,
+  "explicit_slice_changes": "HITS EventSelector SkipEvents and original-entry bookkeeping only; physical seeds unchanged",
+  "complete_valid_geometry_for_response": "Require station available, all leading-measured wafers eligible and all on-measured-wafer candidates valid; otherwise G6 remainsNaN. Other-wafer coverage is outside the fixed observable. This implements frozen complete-valid-measurement/missing policy, not a tuned geometry cut.",
+  "observed_zero_policy": "Empty valid supported set sum0; distance mean/min/max/RMS staynull; invalid/unsupported never repaired",
+  "score_independent_check": "First64available scores inverse quadratic vsCholeskywhitening; rtol1e-8/atol1e-8; no new fit",
+  "scientific_statistics_computed_locally": false
+}

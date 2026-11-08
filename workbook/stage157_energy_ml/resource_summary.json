@@ -1,0 +1,21 @@
+{
+  "full_chain_N": 64,
+  "full_parent_executions": 4096,
+  "total_children_GNU_CPU_s": 13791.44,
+  "aggregate_driver_wall_s": 4366.534947012551,
+  "aggregate_individual_chain_wall_s": 17081.025211291155,
+  "observed_chain_wall_overlap_factor": 3.911803161675705,
+  "child_CPU_per_allocated_4core_driver_wall": 0.7896100779770284,
+  "parents_per_aggregate_driver_wall_s": 0.9380435630779406,
+  "child_CPU_per_parent_s": 3.36705078125,
+  "largest_single_child_RSS_KiB": 2105220,
+  "largest_single_chain_temporary_ROOT_bytes": 2370454,
+  "conservative_4chain_temporary_ROOT_bytes": 9481816,
+  "ROOT_requested_bytes": {
+    "digi": 2255891652,
+    "native": 1116863296,
+    "extract": 15898401
+  },
+  "scope": "Measured complete fixed4096 processing, includes startup/lazyJIT; overlap is not a controlled serial-vs-parallel speedup. ROOT bytes exclude uninstrumented reco/metadata and are not physical network IO. Child RSS is not simultaneous job RSS.",
+  "GPU": 0
+}

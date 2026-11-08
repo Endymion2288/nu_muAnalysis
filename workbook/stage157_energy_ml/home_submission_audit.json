@@ -1,0 +1,39 @@
+{
+  "home": "/afs/cern.ch/user/x/xcheng",
+  "legacy_nu_mu_stage_paths": [],
+  "deleted_paths": [],
+  "reason": "No legacy nu_mu_stage* submit directory remains in home; no deletion needed.",
+  "current_queue": [
+    {
+      "Args": "worker_1794104947566026136.sh batch_08",
+      "ClusterId": 9675107,
+      "Cmd": "/bin/bash",
+      "Iwd": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage157",
+      "ProcId": 0
+    },
+    {
+      "Args": "worker_1794105074901320526.sh batch_11",
+      "ClusterId": 9675115,
+      "Cmd": "/bin/bash",
+      "Iwd": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage157",
+      "ProcId": 0
+    },
+    {
+      "Args": "worker_1794105233788580770.sh batch_12",
+      "ClusterId": 9675120,
+      "Cmd": "/bin/bash",
+      "Iwd": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage157",
+      "ProcId": 0
+    },
+    {
+      "Args": "worker_1794105273180915344.sh batch_13",
+      "ClusterId": 9675123,
+      "Cmd": "/bin/bash",
+      "Iwd": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage157",
+      "ProcId": 0
+    }
+  ],
+  "submission_directory": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage157",
+  "Stage54_untracked_assets_preserved": true,
+  "other_projects_untouched": true
+}

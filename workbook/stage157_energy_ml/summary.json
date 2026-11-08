@@ -1,0 +1,1637 @@
+{
+  "phase": "full",
+  "passed": true,
+  "independent_parent_N": 4096,
+  "physical_parent_executions": 4416,
+  "duplicate_parent_executions": 320,
+  "root_identity_exact_N": 4096,
+  "current_native_ntuple_exact_N": 4096,
+  "current_selected_N": 3708,
+  "no_leading_N": 303,
+  "anchors": {
+    "total": 65663,
+    "linked": 65663,
+    "identifier_equal": 65663,
+    "measurement": 65620,
+    "measurement_detector_same": 65663,
+    "valid": 65620,
+    "dimension2_key3": 65663,
+    "old_strict_off_plane": 45623,
+    "exact_float32": 65663,
+    "plane_compatible": 65663
+  },
+  "strata": {
+    "all": {
+      "N": 4096,
+      "nonempty_parent_N": 2388,
+      "stations": [
+        {
+          "stratum": "all",
+          "N": 4096,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonempty_parent_N": 0,
+          "clusters": 38957,
+          "leadingOwned": 0,
+          "nonleading": 38957,
+          "offMeasuredWafer": 38957,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "all",
+          "N": 4096,
+          "station": 1,
+          "available_parent_N": 3793,
+          "nonempty_parent_N": 1142,
+          "clusters": 33225,
+          "leadingOwned": 21975,
+          "nonleading": 11250,
+          "offMeasuredWafer": 8607,
+          "onMeasuredWafer": 2643,
+          "measuredWafers": 21975,
+          "eligibleWafers": 21965,
+          "eligibleCandidates": 2610,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 33,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3793,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 20.0,
+              "mean": 0.6881096757184287
+            },
+            "mean_abs_dx_mm": {
+              "N": 1142,
+              "min": 0.1154096888470022,
+              "median": 10.076342129429996,
+              "max": 58.46270064226066,
+              "mean": 13.780302333242794
+            },
+            "min_abs_dx_mm": {
+              "N": 1142,
+              "min": 0.021228166157328587,
+              "median": 5.313923535309435,
+              "max": 58.46270064226066,
+              "mean": 11.328740878796118
+            },
+            "max_abs_dx_mm": {
+              "N": 1142,
+              "min": 0.1154096888470022,
+              "median": 12.593494806416723,
+              "max": 58.74181382514023,
+              "mean": 16.44738277433746
+            },
+            "RMS_dx_mm": {
+              "N": 1142,
+              "min": 0.1154096888470022,
+              "median": 11.240050914482126,
+              "max": 58.46270064226066,
+              "mean": 14.481356779114176
+            }
+          }
+        },
+        {
+          "stratum": "all",
+          "N": 4096,
+          "station": 2,
+          "available_parent_N": 3793,
+          "nonempty_parent_N": 1051,
+          "clusters": 32457,
+          "leadingOwned": 21924,
+          "nonleading": 10533,
+          "offMeasuredWafer": 8206,
+          "onMeasuredWafer": 2327,
+          "measuredWafers": 21924,
+          "eligibleWafers": 21906,
+          "eligibleCandidates": 2294,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 33,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3793,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 101.0,
+              "mean": 0.604798312681255
+            },
+            "mean_abs_dx_mm": {
+              "N": 1051,
+              "min": 0.12695159585983617,
+              "median": 9.579031688868044,
+              "max": 56.7893388967601,
+              "mean": 13.007498555109693
+            },
+            "min_abs_dx_mm": {
+              "N": 1051,
+              "min": 0.12497824272884372,
+              "median": 5.958325623407632,
+              "max": 56.7893388967601,
+              "mean": 11.053872707665798
+            },
+            "max_abs_dx_mm": {
+              "N": 1051,
+              "min": 0.12695159585983617,
+              "median": 11.154664408950218,
+              "max": 61.03999800986106,
+              "mean": 15.317366886090905
+            },
+            "RMS_dx_mm": {
+              "N": 1051,
+              "min": 0.12695159585983617,
+              "median": 10.242453070692434,
+              "max": 56.7893388967601,
+              "mean": 13.588959548455326
+            }
+          }
+        },
+        {
+          "stratum": "all",
+          "N": 4096,
+          "station": 3,
+          "available_parent_N": 3793,
+          "nonempty_parent_N": 1018,
+          "clusters": 31615,
+          "leadingOwned": 21764,
+          "nonleading": 9851,
+          "offMeasuredWafer": 7547,
+          "onMeasuredWafer": 2304,
+          "measuredWafers": 21764,
+          "eligibleWafers": 21749,
+          "eligibleCandidates": 2300,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 4,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3793,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 120.0,
+              "mean": 0.6063801740047455
+            },
+            "mean_abs_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 8.782194397544469,
+              "max": 58.463527128386986,
+              "mean": 13.101043891944428
+            },
+            "min_abs_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 5.121133505893116,
+              "max": 58.463527128386986,
+              "mean": 11.006022972613104
+            },
+            "max_abs_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 11.013952467550707,
+              "max": 58.463527128386986,
+              "mean": 15.624976302616671
+            },
+            "RMS_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 9.868450540663385,
+              "max": 58.463527128386986,
+              "mean": 13.772809964985642
+            }
+          }
+        }
+      ]
+    },
+    "current_leading": {
+      "N": 3793,
+      "nonempty_parent_N": 2388,
+      "stations": [
+        {
+          "stratum": "current_leading",
+          "N": 3793,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonempty_parent_N": 0,
+          "clusters": 35718,
+          "leadingOwned": 0,
+          "nonleading": 35718,
+          "offMeasuredWafer": 35718,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "current_leading",
+          "N": 3793,
+          "station": 1,
+          "available_parent_N": 3793,
+          "nonempty_parent_N": 1142,
+          "clusters": 30777,
+          "leadingOwned": 21975,
+          "nonleading": 8802,
+          "offMeasuredWafer": 6159,
+          "onMeasuredWafer": 2643,
+          "measuredWafers": 21975,
+          "eligibleWafers": 21965,
+          "eligibleCandidates": 2610,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 33,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3793,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 20.0,
+              "mean": 0.6881096757184287
+            },
+            "mean_abs_dx_mm": {
+              "N": 1142,
+              "min": 0.1154096888470022,
+              "median": 10.076342129429996,
+              "max": 58.46270064226066,
+              "mean": 13.780302333242794
+            },
+            "min_abs_dx_mm": {
+              "N": 1142,
+              "min": 0.021228166157328587,
+              "median": 5.313923535309435,
+              "max": 58.46270064226066,
+              "mean": 11.328740878796118
+            },
+            "max_abs_dx_mm": {
+              "N": 1142,
+              "min": 0.1154096888470022,
+              "median": 12.593494806416723,
+              "max": 58.74181382514023,
+              "mean": 16.44738277433746
+            },
+            "RMS_dx_mm": {
+              "N": 1142,
+              "min": 0.1154096888470022,
+              "median": 11.240050914482126,
+              "max": 58.46270064226066,
+              "mean": 14.481356779114176
+            }
+          }
+        },
+        {
+          "stratum": "current_leading",
+          "N": 3793,
+          "station": 2,
+          "available_parent_N": 3793,
+          "nonempty_parent_N": 1051,
+          "clusters": 30362,
+          "leadingOwned": 21924,
+          "nonleading": 8438,
+          "offMeasuredWafer": 6111,
+          "onMeasuredWafer": 2327,
+          "measuredWafers": 21924,
+          "eligibleWafers": 21906,
+          "eligibleCandidates": 2294,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 33,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3793,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 101.0,
+              "mean": 0.604798312681255
+            },
+            "mean_abs_dx_mm": {
+              "N": 1051,
+              "min": 0.12695159585983617,
+              "median": 9.579031688868044,
+              "max": 56.7893388967601,
+              "mean": 13.007498555109693
+            },
+            "min_abs_dx_mm": {
+              "N": 1051,
+              "min": 0.12497824272884372,
+              "median": 5.958325623407632,
+              "max": 56.7893388967601,
+              "mean": 11.053872707665798
+            },
+            "max_abs_dx_mm": {
+              "N": 1051,
+              "min": 0.12695159585983617,
+              "median": 11.154664408950218,
+              "max": 61.03999800986106,
+              "mean": 15.317366886090905
+            },
+            "RMS_dx_mm": {
+              "N": 1051,
+              "min": 0.12695159585983617,
+              "median": 10.242453070692434,
+              "max": 56.7893388967601,
+              "mean": 13.588959548455326
+            }
+          }
+        },
+        {
+          "stratum": "current_leading",
+          "N": 3793,
+          "station": 3,
+          "available_parent_N": 3793,
+          "nonempty_parent_N": 1018,
+          "clusters": 30217,
+          "leadingOwned": 21764,
+          "nonleading": 8453,
+          "offMeasuredWafer": 6149,
+          "onMeasuredWafer": 2304,
+          "measuredWafers": 21764,
+          "eligibleWafers": 21749,
+          "eligibleCandidates": 2300,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 4,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3793,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 120.0,
+              "mean": 0.6063801740047455
+            },
+            "mean_abs_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 8.782194397544469,
+              "max": 58.463527128386986,
+              "mean": 13.101043891944428
+            },
+            "min_abs_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 5.121133505893116,
+              "max": 58.463527128386986,
+              "mean": 11.006022972613104
+            },
+            "max_abs_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 11.013952467550707,
+              "max": 58.463527128386986,
+              "mean": 15.624976302616671
+            },
+            "RMS_dx_mm": {
+              "N": 1018,
+              "min": 0.12381885322841413,
+              "median": 9.868450540663385,
+              "max": 58.463527128386986,
+              "mean": 13.772809964985642
+            }
+          }
+        }
+      ]
+    },
+    "pz0_50_100": {
+      "N": 3240,
+      "nonempty_parent_N": 1994,
+      "stations": [
+        {
+          "stratum": "pz0_50_100",
+          "N": 3240,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonempty_parent_N": 0,
+          "clusters": 30529,
+          "leadingOwned": 0,
+          "nonleading": 30529,
+          "offMeasuredWafer": 30529,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "pz0_50_100",
+          "N": 3240,
+          "station": 1,
+          "available_parent_N": 3240,
+          "nonempty_parent_N": 932,
+          "clusters": 25919,
+          "leadingOwned": 18849,
+          "nonleading": 7070,
+          "offMeasuredWafer": 5082,
+          "onMeasuredWafer": 1988,
+          "measuredWafers": 18849,
+          "eligibleWafers": 18849,
+          "eligibleCandidates": 1988,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3240,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 19.0,
+              "mean": 0.6135802469135803
+            },
+            "mean_abs_dx_mm": {
+              "N": 932,
+              "min": 0.1154096888470022,
+              "median": 10.51854097410282,
+              "max": 58.46270064226066,
+              "mean": 14.1490479867216
+            },
+            "min_abs_dx_mm": {
+              "N": 932,
+              "min": 0.1154096888470022,
+              "median": 5.572845375797979,
+              "max": 58.46270064226066,
+              "mean": 11.895757935069355
+            },
+            "max_abs_dx_mm": {
+              "N": 932,
+              "min": 0.1154096888470022,
+              "median": 12.683338146499862,
+              "max": 58.46270064226066,
+              "mean": 16.60129376959843
+            },
+            "RMS_dx_mm": {
+              "N": 932,
+              "min": 0.1154096888470022,
+              "median": 11.441353246757997,
+              "max": 58.46270064226066,
+              "mean": 14.80702017734637
+            }
+          }
+        },
+        {
+          "stratum": "pz0_50_100",
+          "N": 3240,
+          "station": 2,
+          "available_parent_N": 3240,
+          "nonempty_parent_N": 873,
+          "clusters": 25135,
+          "leadingOwned": 18738,
+          "nonleading": 6397,
+          "offMeasuredWafer": 4742,
+          "onMeasuredWafer": 1655,
+          "measuredWafers": 18738,
+          "eligibleWafers": 18737,
+          "eligibleCandidates": 1655,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3240,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 27.0,
+              "mean": 0.5108024691358025
+            },
+            "mean_abs_dx_mm": {
+              "N": 873,
+              "min": 0.12695159585983617,
+              "median": 9.3392415766766,
+              "max": 56.7893388967601,
+              "mean": 13.020145390905675
+            },
+            "min_abs_dx_mm": {
+              "N": 873,
+              "min": 0.12497824272884372,
+              "median": 5.978994631359512,
+              "max": 56.7893388967601,
+              "mean": 11.317980861512034
+            },
+            "max_abs_dx_mm": {
+              "N": 873,
+              "min": 0.12695159585983617,
+              "median": 10.823770255244693,
+              "max": 56.7893388967601,
+              "mean": 14.991184848015052
+            },
+            "RMS_dx_mm": {
+              "N": 873,
+              "min": 0.12695159585983617,
+              "median": 9.998092757599068,
+              "max": 56.7893388967601,
+              "mean": 13.533107363613286
+            }
+          }
+        },
+        {
+          "stratum": "pz0_50_100",
+          "N": 3240,
+          "station": 3,
+          "available_parent_N": 3240,
+          "nonempty_parent_N": 846,
+          "clusters": 25228,
+          "leadingOwned": 18638,
+          "nonleading": 6590,
+          "offMeasuredWafer": 4874,
+          "onMeasuredWafer": 1716,
+          "measuredWafers": 18638,
+          "eligibleWafers": 18632,
+          "eligibleCandidates": 1716,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3240,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 52.0,
+              "mean": 0.5296296296296297
+            },
+            "mean_abs_dx_mm": {
+              "N": 846,
+              "min": 0.12381885322841413,
+              "median": 8.522255709600051,
+              "max": 58.463527128386986,
+              "mean": 13.079065165620142
+            },
+            "min_abs_dx_mm": {
+              "N": 846,
+              "min": 0.12381885322841413,
+              "median": 5.049142532932937,
+              "max": 58.463527128386986,
+              "mean": 11.125466390905878
+            },
+            "max_abs_dx_mm": {
+              "N": 846,
+              "min": 0.12381885322841413,
+              "median": 10.557168305034452,
+              "max": 58.463527128386986,
+              "mean": 15.331513749268055
+            },
+            "RMS_dx_mm": {
+              "N": 846,
+              "min": 0.12381885322841413,
+              "median": 9.51358031815499,
+              "max": 58.463527128386986,
+              "mean": 13.702395140106844
+            }
+          }
+        }
+      ]
+    },
+    "overflow": {
+      "N": 109,
+      "nonempty_parent_N": 65,
+      "stations": [
+        {
+          "stratum": "overflow",
+          "N": 109,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonempty_parent_N": 0,
+          "clusters": 3509,
+          "leadingOwned": 0,
+          "nonleading": 3509,
+          "offMeasuredWafer": 3509,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "overflow",
+          "N": 109,
+          "station": 1,
+          "available_parent_N": 98,
+          "nonempty_parent_N": 36,
+          "clusters": 1410,
+          "leadingOwned": 573,
+          "nonleading": 837,
+          "offMeasuredWafer": 691,
+          "onMeasuredWafer": 146,
+          "measuredWafers": 573,
+          "eligibleWafers": 571,
+          "eligibleCandidates": 127,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 19,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 98,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 20.0,
+              "mean": 1.2959183673469388
+            },
+            "mean_abs_dx_mm": {
+              "N": 36,
+              "min": 0.6734541688429658,
+              "median": 12.442318387827623,
+              "max": 54.089490155265885,
+              "mean": 14.83771421566874
+            },
+            "min_abs_dx_mm": {
+              "N": 36,
+              "min": 0.3489703963185562,
+              "median": 5.864247815225475,
+              "max": 54.089490155265885,
+              "mean": 11.634956868268548
+            },
+            "max_abs_dx_mm": {
+              "N": 36,
+              "min": 0.6734541688429658,
+              "median": 14.475472777665303,
+              "max": 54.45502146282847,
+              "mean": 18.944863253313216
+            },
+            "RMS_dx_mm": {
+              "N": 36,
+              "min": 0.6734541688429658,
+              "median": 12.442742102595759,
+              "max": 54.089490155265885,
+              "mean": 15.678346204840405
+            }
+          }
+        },
+        {
+          "stratum": "overflow",
+          "N": 109,
+          "station": 2,
+          "available_parent_N": 98,
+          "nonempty_parent_N": 33,
+          "clusters": 1139,
+          "leadingOwned": 561,
+          "nonleading": 578,
+          "offMeasuredWafer": 448,
+          "onMeasuredWafer": 130,
+          "measuredWafers": 561,
+          "eligibleWafers": 557,
+          "eligibleCandidates": 114,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 16,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 98,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 22.0,
+              "mean": 1.163265306122449
+            },
+            "mean_abs_dx_mm": {
+              "N": 33,
+              "min": 0.3623817222396326,
+              "median": 12.072905289767306,
+              "max": 44.32470975119225,
+              "mean": 14.41498276827015
+            },
+            "min_abs_dx_mm": {
+              "N": 33,
+              "min": 0.17700332703300603,
+              "median": 6.536572598527243,
+              "max": 44.32470975119225,
+              "mean": 12.036668338429225
+            },
+            "max_abs_dx_mm": {
+              "N": 33,
+              "min": 0.3623817222396326,
+              "median": 13.219823915063586,
+              "max": 56.49329988128896,
+              "mean": 18.15897280551997
+            },
+            "RMS_dx_mm": {
+              "N": 33,
+              "min": 0.3623817222396326,
+              "median": 12.704177710808835,
+              "max": 44.32470975119225,
+              "mean": 15.190767646017715
+            }
+          }
+        },
+        {
+          "stratum": "overflow",
+          "N": 109,
+          "station": 3,
+          "available_parent_N": 98,
+          "nonempty_parent_N": 25,
+          "clusters": 945,
+          "leadingOwned": 547,
+          "nonleading": 398,
+          "offMeasuredWafer": 339,
+          "onMeasuredWafer": 59,
+          "measuredWafers": 547,
+          "eligibleWafers": 545,
+          "eligibleCandidates": 59,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 98,
+              "min": 0.0,
+              "median": 0.0,
+              "max": 21.0,
+              "mean": 0.6020408163265306
+            },
+            "mean_abs_dx_mm": {
+              "N": 25,
+              "min": 0.33554568754995273,
+              "median": 6.785375037357535,
+              "max": 51.82533007663896,
+              "mean": 11.231395350546968
+            },
+            "min_abs_dx_mm": {
+              "N": 25,
+              "min": 0.15986545471501756,
+              "median": 2.3821510246431927,
+              "max": 51.82533007663896,
+              "mean": 8.619151620504123
+            },
+            "max_abs_dx_mm": {
+              "N": 25,
+              "min": 0.33554568754995273,
+              "median": 8.17669347537111,
+              "max": 51.82533007663896,
+              "mean": 13.787156206676352
+            },
+            "RMS_dx_mm": {
+              "N": 25,
+              "min": 0.33554568754995273,
+              "median": 8.17669347537111,
+              "max": 51.82533007663896,
+              "mean": 11.994590135291041
+            }
+          }
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "max_abs_normal_mm": {
+      "N": 3793,
+      "min": 9.76562478080652e-06,
+      "median": 4.882812482030154e-05,
+      "max": 7.812500007286091e-05,
+      "mean": 4.690100392281398e-05
+    },
+    "max_state_roundtrip_mm": {
+      "N": 3793,
+      "min": 3.552713678800501e-15,
+      "median": 1.464821375527116e-14,
+      "max": 3.256115871121665e-14,
+      "mean": 1.4740734505345687e-14
+    },
+    "max_PRD_roundtrip_mm": {
+      "N": 3793,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "independent_dx_max_delta_mm": {
+      "N": 2388,
+      "min": 0.0,
+      "median": 3.9968028886505635e-15,
+      "max": 2.842170943040401e-14,
+      "mean": 5.643192036872438e-15
+    },
+    "max_candidate_roundtrip_mm": {
+      "N": 2388,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "max_candidate_dx_interval_width_mm": {
+      "N": 2388,
+      "min": 2.4434285705865477e-08,
+      "median": 3.890223212010824e-06,
+      "max": 7.780446424021648e-06,
+      "mean": 4.071933490362025e-06
+    }
+  },
+  "prefix128_current_and_RNG_exact": true,
+  "full_RNG_state_retained_parent_executions": 128,
+  "remaining_RNG_scope": "Per-event actual seeds and observed changed flags; exact full-state pairing only pilot/prefix and fixed chunk boundary snapshots, not all4096independentreplays",
+  "response": {
+    "input_parent_N": 4096,
+    "selected_parent_N": 3708,
+    "unselected_parent_N": 388,
+    "split_counts": {
+      "0": 924,
+      "1": 928,
+      "2": 937,
+      "3": 919
+    },
+    "complete_raw15_G6_N": 3655,
+    "high_activity_unknown_raw_parent_N": 50,
+    "heldout_high_activity_unknown_raw_parent_N": 15,
+    "measured_rule_group_rows": 8,
+    "policy_support": {
+      "Q15": true,
+      "Q15G6": true
+    },
+    "response_fit_attempt_N": 2,
+    "raw15_G6_correlation": [
+      [
+        1.0,
+        0.7765070209120472,
+        -0.0006677564194426953,
+        -0.009262444011849006,
+        -0.0064758032418366805,
+        -0.022719691188626434,
+        -0.023652505023129645,
+        0.021325351736828563,
+        0.021514086485557988,
+        -0.012083276375248465,
+        -0.029166321811413286,
+        0.02180632751329634,
+        -0.008037653198296255,
+        -0.0008239770225871518,
+        -0.01813390210839777,
+        0.018241652818166233,
+        0.03077142008297499,
+        0.01589605831071317,
+        0.023096631526776157,
+        0.004117939002608481,
+        -0.014172069791724503
+      ],
+      [
+        0.7765070209120472,
+        1.0,
+        -0.009933670442130928,
+        -0.009597692203807037,
+        -0.0032743175039536988,
+        -0.03426520202656458,
+        -0.03363307280441212,
+        0.0300764032191568,
+        0.029421973215459526,
+        -0.01919482732684544,
+        -0.010139709276703698,
+        0.013141016022246457,
+        -0.02470807154117899,
+        -0.00906540626820552,
+        -0.009092018058176547,
+        0.0005941542190160413,
+        0.00583096376939095,
+        0.010333299044208002,
+        0.01707627613559985,
+        -0.0010144681288842116,
+        -0.01608394337943647
+      ],
+      [
+        -0.0006677564194426955,
+        -0.009933670442130928,
+        1.0,
+        0.036854103323802075,
+        0.03063809677708212,
+        -0.0015650649063167928,
+        -0.003149335950199984,
+        0.007632488986453861,
+        0.007961026872952985,
+        0.00148236006588443,
+        -0.021155391881233457,
+        -0.009116028484685824,
+        -0.013692243752937054,
+        0.017504259680595567,
+        0.003986005547980233,
+        -0.011460719221469606,
+        -0.007830569420178714,
+        0.004513610334975028,
+        -0.0014379769518166883,
+        0.005485535244799554,
+        -0.0036568601184142732
+      ],
+      [
+        -0.009262444011849008,
+        -0.009597692203807039,
+        0.03685410332380207,
+        1.0,
+        0.7248300587889366,
+        0.06454398258594689,
+        0.06329322713561365,
+        -0.0021816280318673054,
+        -0.00164083373220155,
+        0.13712073965171775,
+        0.08623062494952821,
+        0.003283027674415251,
+        0.0051249159841345055,
+        -0.00858336819729781,
+        -0.019830578665191136,
+        0.06123945117012661,
+        0.03498533416383626,
+        0.033757325496191606,
+        0.027290003588319806,
+        -0.0027303040527697016,
+        -0.016211259946023744
+      ],
+      [
+        -0.0064758032418366805,
+        -0.0032743175039536988,
+        0.030638096777082124,
+        0.7248300587889366,
+        1.0,
+        0.05775783233278735,
+        0.05731502755162631,
+        0.007650100413849103,
+        0.008803754877620964,
+        0.12607467483197374,
+        0.08778533391422069,
+        0.010284361278552765,
+        -0.0003791155613018053,
+        0.004155814891011376,
+        -0.013889670306131039,
+        0.045968944992701995,
+        0.026748367028605034,
+        0.029604626540095654,
+        0.021062690499613165,
+        0.0037290982600691014,
+        -0.010959520721978682
+      ],
+      [
+        -0.022719691188626434,
+        -0.03426520202656458,
+        -0.0015650649063167928,
+        0.06454398258594687,
+        0.05775783233278735,
+        1.0,
+        0.9924164985133883,
+        -0.893470769979083,
+        -0.8934565611386676,
+        0.022370556699021257,
+        0.021967844797959754,
+        0.12019977654698125,
+        0.11108929838030011,
+        -0.10191460054549241,
+        -0.07705663337902063,
+        0.03956699489269491,
+        0.03524149745803727,
+        0.058595093194661635,
+        0.031006474210596807,
+        0.018350902698737005,
+        0.02431500209337723
+      ],
+      [
+        -0.023652505023129645,
+        -0.03363307280441212,
+        -0.003149335950199984,
+        0.06329322713561365,
+        0.05731502755162632,
+        0.9924164985133882,
+        0.9999999999999998,
+        -0.893756863432341,
+        -0.8937402978257246,
+        0.024433894181415644,
+        0.021596511815418357,
+        0.12031842786331352,
+        0.11344439287175159,
+        -0.10075050895300137,
+        -0.07429084957793604,
+        0.039445721716263205,
+        0.03772509196578523,
+        0.05854549782602817,
+        0.03075690131796783,
+        0.020822191136392686,
+        0.025966837941795325
+      ],
+      [
+        0.021325351736828563,
+        0.030076403219156802,
+        0.007632488986453862,
+        -0.0021816280318673054,
+        0.007650100413849103,
+        -0.893470769979083,
+        -0.8937568634323411,
+        1.0,
+        0.9935865833871256,
+        0.016690413356541284,
+        0.016661924843262513,
+        -0.11676183373549674,
+        -0.11271245953789433,
+        0.10442703372621945,
+        0.07158431058559428,
+        0.014023498534045482,
+        0.007478241724373189,
+        -0.03058152665366402,
+        -0.011957310185099702,
+        -0.0009649523722604558,
+        -0.012355372865240638
+      ],
+      [
+        0.021514086485557988,
+        0.029421973215459522,
+        0.007961026872952985,
+        -0.00164083373220155,
+        0.008803754877620962,
+        -0.8934565611386677,
+        -0.8937402978257247,
+        0.9935865833871257,
+        1.0,
+        0.015225966958581423,
+        0.014236894594921787,
+        -0.11598270787409765,
+        -0.11117557787206288,
+        0.10746599354989234,
+        0.07283358270695135,
+        0.015531653765768942,
+        0.007414537827769207,
+        -0.030460777063653233,
+        -0.011197573163459507,
+        -0.0017582768334525089,
+        -0.011511026825583059
+      ],
+      [
+        -0.012083276375248465,
+        -0.01919482732684544,
+        0.00148236006588443,
+        0.13712073965171775,
+        0.12607467483197374,
+        0.022370556699021257,
+        0.024433894181415644,
+        0.016690413356541284,
+        0.015225966958581423,
+        0.9999999999999999,
+        0.44736997090612235,
+        0.02540773736819833,
+        0.02030823054964292,
+        0.0365710995323676,
+        0.003821291153126181,
+        0.05930720150276211,
+        0.04835417983121294,
+        0.0747112019483933,
+        0.06834652623837704,
+        0.15958638996237598,
+        0.10701885514683765
+      ],
+      [
+        -0.029166321811413286,
+        -0.010139709276703698,
+        -0.021155391881233453,
+        0.08623062494952821,
+        0.08778533391422069,
+        0.02196784479795975,
+        0.021596511815418357,
+        0.016661924843262517,
+        0.014236894594921787,
+        0.4473699709061223,
+        1.0,
+        0.0346552499149837,
+        0.01944098719069158,
+        0.05817525852455484,
+        0.012424402728293786,
+        0.05460041340494319,
+        0.030421844739055487,
+        0.052373878351557955,
+        0.04279821963348523,
+        0.13602714716767084,
+        0.08980786545429835
+      ],
+      [
+        0.021806327513296343,
+        0.013141016022246457,
+        -0.009116028484685824,
+        0.003283027674415251,
+        0.010284361278552766,
+        0.12019977654698123,
+        0.12031842786331352,
+        -0.11676183373549674,
+        -0.11598270787409766,
+        0.02540773736819833,
+        0.0346552499149837,
+        1.0,
+        0.013651591238496692,
+        0.006158998787574799,
+        -0.027875480846322995,
+        -0.017114408668520504,
+        -0.0019714077762688657,
+        0.0071308819996931715,
+        0.0010003009492063073,
+        0.012911723689893928,
+        0.01053524397865479
+      ],
+      [
+        -0.008037653198296255,
+        -0.02470807154117899,
+        -0.013692243752937056,
+        0.0051249159841345055,
+        -0.0003791155613018053,
+        0.11108929838030011,
+        0.1134443928717516,
+        -0.11271245953789433,
+        -0.11117557787206289,
+        0.02030823054964292,
+        0.01944098719069158,
+        0.013651591238496692,
+        0.9999999999999999,
+        -0.01758338774408791,
+        0.016579691050718152,
+        -0.006869560560832283,
+        0.0010128625642980653,
+        0.028249670801876892,
+        0.03260684984918318,
+        0.023672170966791996,
+        0.030645420832524743
+      ],
+      [
+        -0.0008239770225871518,
+        -0.00906540626820552,
+        0.017504259680595567,
+        -0.00858336819729781,
+        0.004155814891011376,
+        -0.10191460054549241,
+        -0.10075050895300139,
+        0.10442703372621945,
+        0.10746599354989232,
+        0.0365710995323676,
+        0.05817525852455484,
+        0.006158998787574799,
+        -0.01758338774408791,
+        1.0,
+        0.010471852833929905,
+        0.015544964788143467,
+        0.009295215145628666,
+        -0.02049329847043826,
+        -0.010603469070904271,
+        -0.016190304284511153,
+        -0.009536002434556923
+      ],
+      [
+        -0.01813390210839777,
+        -0.009092018058176547,
+        0.003986005547980232,
+        -0.019830578665191136,
+        -0.013889670306131039,
+        -0.07705663337902065,
+        -0.07429084957793604,
+        0.07158431058559428,
+        0.07283358270695135,
+        0.003821291153126181,
+        0.012424402728293786,
+        -0.027875480846322995,
+        0.016579691050718156,
+        0.010471852833929905,
+        1.0,
+        -0.010519046892811797,
+        -0.018838948152800992,
+        -0.01998278631537509,
+        -0.016968436538015753,
+        0.02235542000145362,
+        0.02020580059600128
+      ],
+      [
+        0.018241652818166233,
+        0.0005941542190160413,
+        -0.011460719221469608,
+        0.06123945117012661,
+        0.04596894499270199,
+        0.03956699489269491,
+        0.039445721716263205,
+        0.014023498534045482,
+        0.01553165376576894,
+        0.059307201502762114,
+        0.054600413404943184,
+        -0.017114408668520504,
+        -0.006869560560832282,
+        0.015544964788143469,
+        -0.010519046892811797,
+        1.0,
+        0.875237100189175,
+        0.021867948036152985,
+        0.01823869069867555,
+        0.03873593728241237,
+        0.026926375158386407
+      ],
+      [
+        0.03077142008297499,
+        0.005830963769390949,
+        -0.007830569420178714,
+        0.03498533416383626,
+        0.026748367028605034,
+        0.03524149745803727,
+        0.03772509196578524,
+        0.007478241724373188,
+        0.007414537827769207,
+        0.04835417983121294,
+        0.030421844739055487,
+        -0.0019714077762688657,
+        0.0010128625642980653,
+        0.009295215145628666,
+        -0.01883894815280099,
+        0.875237100189175,
+        1.0,
+        0.03311718674223514,
+        0.038087621243958765,
+        0.01733652628485172,
+        0.002542992891385505
+      ],
+      [
+        0.01589605831071317,
+        0.010333299044208004,
+        0.004513610334975028,
+        0.033757325496191606,
+        0.029604626540095654,
+        0.05859509319466164,
+        0.05854549782602818,
+        -0.030581526653664017,
+        -0.030460777063653233,
+        0.0747112019483933,
+        0.052373878351557955,
+        0.007130881999693172,
+        0.02824967080187689,
+        -0.02049329847043826,
+        -0.01998278631537509,
+        0.021867948036152985,
+        0.03311718674223514,
+        1.0,
+        0.8643210784113283,
+        0.020120888130461402,
+        0.0093070451820651
+      ],
+      [
+        0.02309663152677616,
+        0.01707627613559985,
+        -0.001437976951816688,
+        0.027290003588319803,
+        0.021062690499613162,
+        0.031006474210596807,
+        0.030756901317967832,
+        -0.0119573101850997,
+        -0.011197573163459507,
+        0.06834652623837704,
+        0.042798219633485235,
+        0.0010003009492063075,
+        0.03260684984918318,
+        -0.010603469070904271,
+        -0.016968436538015753,
+        0.01823869069867555,
+        0.038087621243958765,
+        0.8643210784113283,
+        1.0,
+        0.015889898606137424,
+        0.007418681507836757
+      ],
+      [
+        0.004117939002608481,
+        -0.0010144681288842116,
+        0.005485535244799554,
+        -0.0027303040527697016,
+        0.0037290982600691014,
+        0.018350902698737005,
+        0.020822191136392682,
+        -0.0009649523722604558,
+        -0.001758276833452509,
+        0.15958638996237598,
+        0.13602714716767084,
+        0.012911723689893928,
+        0.023672170966791996,
+        -0.016190304284511153,
+        0.02235542000145362,
+        0.03873593728241237,
+        0.01733652628485172,
+        0.020120888130461402,
+        0.015889898606137424,
+        1.0,
+        0.8709723998624975
+      ],
+      [
+        -0.014172069791724503,
+        -0.01608394337943647,
+        -0.0036568601184142737,
+        -0.016211259946023744,
+        -0.01095952072197868,
+        0.02431500209337723,
+        0.025966837941795325,
+        -0.012355372865240636,
+        -0.01151102682558306,
+        0.10701885514683765,
+        0.08980786545429835,
+        0.010535243978654789,
+        0.03064542083252474,
+        -0.009536002434556923,
+        0.020205800596001283,
+        0.026926375158386407,
+        0.0025429928913855045,
+        0.0093070451820651,
+        0.007418681507836757,
+        0.8709723998624976,
+        1.0
+      ]
+    ],
+    "correlation_scope": "Descriptive selected complete-parent correlation; not independent information or causal contribution",
+    "negative_signed_raw_N": 10055,
+    "legal_exact_minus1_raw_N": 0,
+    "heldout": [
+      {
+        "source_index": 0,
+        "policy": "Q15",
+        "group": "all",
+        "original_heldout_N": 919,
+        "scored_N": 898,
+        "alerts": 22,
+        "alert_fraction": 0.024498886414253896,
+        "Wilson95_low": 0.016233517380827296,
+        "Wilson95_high": 0.0368151181113297,
+        "missing_N": 15,
+        "outside_fit_state_range_N": 6,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15",
+        "group": "overflow",
+        "original_heldout_N": 14,
+        "scored_N": 13,
+        "alerts": 9,
+        "alert_fraction": 0.6923076923076923,
+        "Wilson95_low": 0.42369343180549035,
+        "Wilson95_high": 0.8731929634428948,
+        "missing_N": 0,
+        "outside_fit_state_range_N": 1,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15",
+        "group": "high_activity",
+        "original_heldout_N": 6,
+        "scored_N": 6,
+        "alerts": 6,
+        "alert_fraction": 1.0,
+        "Wilson95_low": 0.6096657120978346,
+        "Wilson95_high": 1.0,
+        "missing_N": 0,
+        "outside_fit_state_range_N": 0,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15",
+        "group": "pz50_100",
+        "original_heldout_N": 799,
+        "scored_N": 789,
+        "alerts": 20,
+        "alert_fraction": 0.025348542458808618,
+        "Wilson95_low": 0.01646824614799328,
+        "Wilson95_high": 0.0388283813592334,
+        "missing_N": 5,
+        "outside_fit_state_range_N": 5,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15G6",
+        "group": "all",
+        "original_heldout_N": 919,
+        "scored_N": 898,
+        "alerts": 26,
+        "alert_fraction": 0.028953229398663696,
+        "Wilson95_low": 0.019833884264571323,
+        "Wilson95_high": 0.04208549000517672,
+        "missing_N": 16,
+        "outside_fit_state_range_N": 5,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15G6",
+        "group": "overflow",
+        "original_heldout_N": 14,
+        "scored_N": 13,
+        "alerts": 8,
+        "alert_fraction": 0.6153846153846154,
+        "Wilson95_low": 0.355228915126657,
+        "Wilson95_high": 0.8229029220223743,
+        "missing_N": 1,
+        "outside_fit_state_range_N": 0,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15G6",
+        "group": "high_activity",
+        "original_heldout_N": 6,
+        "scored_N": 6,
+        "alerts": 6,
+        "alert_fraction": 1.0,
+        "Wilson95_low": 0.6096657120978346,
+        "Wilson95_high": 1.0,
+        "missing_N": 0,
+        "outside_fit_state_range_N": 0,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      },
+      {
+        "source_index": 0,
+        "policy": "Q15G6",
+        "group": "pz50_100",
+        "original_heldout_N": 799,
+        "scored_N": 789,
+        "alerts": 20,
+        "alert_fraction": 0.025348542458808618,
+        "Wilson95_low": 0.01646824614799328,
+        "Wilson95_high": 0.0388283813592334,
+        "missing_N": 6,
+        "outside_fit_state_range_N": 4,
+        "interpretation": "mu-only MC empirical false alarm fraction"
+      }
+    ],
+    "paired_alerts": [
+      {
+        "group": "all",
+        "common_scored_N": 898,
+        "both_alert_N": 19,
+        "only_Q15_alert_N": 3,
+        "only_Q15G6_alert_N": 7,
+        "neither_alert_N": 869,
+        "Q15_only_support_N": 0,
+        "Q15G6_only_support_N": 0,
+        "scope": "Descriptive fixed-rule paired alerts; no threshold tuning or other-root classification"
+      },
+      {
+        "group": "pz50_100",
+        "common_scored_N": 789,
+        "both_alert_N": 17,
+        "only_Q15_alert_N": 3,
+        "only_Q15G6_alert_N": 3,
+        "neither_alert_N": 766,
+        "Q15_only_support_N": 0,
+        "Q15G6_only_support_N": 0,
+        "scope": "Descriptive fixed-rule paired alerts; no threshold tuning or other-root classification"
+      },
+      {
+        "group": "overflow",
+        "common_scored_N": 13,
+        "both_alert_N": 8,
+        "only_Q15_alert_N": 1,
+        "only_Q15G6_alert_N": 0,
+        "neither_alert_N": 4,
+        "Q15_only_support_N": 0,
+        "Q15G6_only_support_N": 0,
+        "scope": "Descriptive fixed-rule paired alerts; no threshold tuning or other-root classification"
+      },
+      {
+        "group": "high_activity",
+        "common_scored_N": 6,
+        "both_alert_N": 6,
+        "only_Q15_alert_N": 0,
+        "only_Q15G6_alert_N": 0,
+        "neither_alert_N": 0,
+        "Q15_only_support_N": 0,
+        "Q15G6_only_support_N": 0,
+        "scope": "Descriptive fixed-rule paired alerts; no threshold tuning or other-root classification"
+      }
+    ],
+    "CPU_s": 0.18146757700000027,
+    "wall_s": 0.19892391562461853,
+    "RSS_KiB": 256572,
+    "population_FPR_certified": false,
+    "data_native_calibration": "input_missing",
+    "energy_fits": 0,
+    "new_G4": 0,
+    "reserved_forward": 0,
+    "calibrated_track_covariance": false,
+    "other_root_classifier_certified": false
+  },
+  "new_G4": 0,
+  "energy_fits": 0,
+  "reserved_forward": 0,
+  "population_FPR_certified": false,
+  "data_native_calibration": "input_missing",
+  "overall_complete": false,
+  "CPU_s": 6.154459599999999,
+  "wall_s": 9.445107059553266,
+  "typed_QA": {
+    "nonzero_status_with_timing_N": 0,
+    "cleaned_raw_finite_sentinel_N": 0,
+    "undefined_surface_with_numeric_candidate_N": 0,
+    "valid_empty_set_with_numeric_distance_N": 0
+  },
+  "RSS_KiB": 307436
+}

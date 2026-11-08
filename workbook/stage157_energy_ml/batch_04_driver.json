@@ -1,0 +1,33 @@
+{
+  "phase": "batch_04",
+  "tasks": [
+    {
+      "label": "chunk_16",
+      "begin": 1024,
+      "N": 64,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_17",
+      "begin": 1088,
+      "N": 64,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_18",
+      "begin": 1152,
+      "N": 64,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_19",
+      "begin": 1216,
+      "N": 64,
+      "returncode": 0
+    }
+  ],
+  "wall_s": 286.75548099400476,
+  "processes_at_once": 4,
+  "requested_CPU_cores": 4,
+  "passed": true
+}

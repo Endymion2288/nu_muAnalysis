@@ -1,0 +1,5270 @@
+{
+  "all_jobs_terminal": true,
+  "event_text_equality": true,
+  "failed_job_ids": [
+    "9675026.0",
+    "9675145.0"
+  ],
+  "merged": {
+    "path": "ntuples/energy_ml_stage157/event_records.json.gz",
+    "bytes": 25675927
+  },
+  "source_capsule": {
+    "path": "software/stage157/source_snapshots.tar.gz",
+    "bytes": 716195
+  },
+  "chain_audits": {
+    "N": 798,
+    "path": "software/stage157/chain_audits.tar.gz",
+    "bytes": 2599749,
+    "byte_equality": true
+  },
+  "logs": {
+    "N": 331,
+    "path": "software/stage157/worker_logs.tar.gz",
+    "bytes": 2551791,
+    "byte_equality": true
+  },
+  "identical_metadata_copies_merged": 67,
+  "deleted": [
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_00/native.json.gz",
+      "bytes": 115542
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_01/native.json.gz",
+      "bytes": 115370
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_02/native.json.gz",
+      "bytes": 114584
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_03/native.json.gz",
+      "bytes": 112095
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_04/native.json.gz",
+      "bytes": 113283
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_05/native.json.gz",
+      "bytes": 110679
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_06/native.json.gz",
+      "bytes": 108969
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_07/native.json.gz",
+      "bytes": 113642
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_08/native.json.gz",
+      "bytes": 110015
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_09/native.json.gz",
+      "bytes": 112023
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_10/native.json.gz",
+      "bytes": 113971
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_11/native.json.gz",
+      "bytes": 112220
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_12/native.json.gz",
+      "bytes": 111851
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_13/native.json.gz",
+      "bytes": 111391
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_14/native.json.gz",
+      "bytes": 111296
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_15/native.json.gz",
+      "bytes": 115892
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_16/native.json.gz",
+      "bytes": 110237
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_17/native.json.gz",
+      "bytes": 110761
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_18/native.json.gz",
+      "bytes": 112190
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_19/native.json.gz",
+      "bytes": 114938
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_20/native.json.gz",
+      "bytes": 110505
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_21/native.json.gz",
+      "bytes": 112305
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_22/native.json.gz",
+      "bytes": 110037
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_23/native.json.gz",
+      "bytes": 114661
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_24/native.json.gz",
+      "bytes": 116083
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_25/native.json.gz",
+      "bytes": 112757
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_26/native.json.gz",
+      "bytes": 109435
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_27/native.json.gz",
+      "bytes": 114529
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_28/native.json.gz",
+      "bytes": 111124
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_29/native.json.gz",
+      "bytes": 112953
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_30/native.json.gz",
+      "bytes": 115118
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_31/native.json.gz",
+      "bytes": 113412
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_32/native.json.gz",
+      "bytes": 112200
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_33/native.json.gz",
+      "bytes": 110509
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_34/native.json.gz",
+      "bytes": 109576
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_35/native.json.gz",
+      "bytes": 112338
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_36/native.json.gz",
+      "bytes": 111941
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_37/native.json.gz",
+      "bytes": 110002
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_38/native.json.gz",
+      "bytes": 109911
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_39/native.json.gz",
+      "bytes": 107714
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_40/native.json.gz",
+      "bytes": 112651
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_41/native.json.gz",
+      "bytes": 116489
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_42/native.json.gz",
+      "bytes": 115030
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_43/native.json.gz",
+      "bytes": 115828
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_44/native.json.gz",
+      "bytes": 109978
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_45/native.json.gz",
+      "bytes": 115538
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_46/native.json.gz",
+      "bytes": 112570
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_47/native.json.gz",
+      "bytes": 110834
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_48/native.json.gz",
+      "bytes": 111532
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_49/native.json.gz",
+      "bytes": 115636
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_50/native.json.gz",
+      "bytes": 112641
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_51/native.json.gz",
+      "bytes": 111391
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_52/native.json.gz",
+      "bytes": 115404
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_53/native.json.gz",
+      "bytes": 114846
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_54/native.json.gz",
+      "bytes": 116052
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_55/native.json.gz",
+      "bytes": 114512
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_56/native.json.gz",
+      "bytes": 110591
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_57/native.json.gz",
+      "bytes": 113580
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_58/native.json.gz",
+      "bytes": 110677
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_59/native.json.gz",
+      "bytes": 109698
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_60/native.json.gz",
+      "bytes": 111603
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_61/native.json.gz",
+      "bytes": 112952
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_62/native.json.gz",
+      "bytes": 112411
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_63/native.json.gz",
+      "bytes": 108795
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/pilot_failed_seq/native.json.gz",
+      "bytes": 319086
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/pilot_seq/native.json.gz",
+      "bytes": 319089
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/pilot_suffix/native.json.gz",
+      "bytes": 115390
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_00/paired.json.gz",
+      "bytes": 65636
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_01/paired.json.gz",
+      "bytes": 65954
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_02/paired.json.gz",
+      "bytes": 65795
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_03/paired.json.gz",
+      "bytes": 65746
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_04/paired.json.gz",
+      "bytes": 65630
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_05/paired.json.gz",
+      "bytes": 65018
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_06/paired.json.gz",
+      "bytes": 64623
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_07/paired.json.gz",
+      "bytes": 65221
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_08/paired.json.gz",
+      "bytes": 64901
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_09/paired.json.gz",
+      "bytes": 64818
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_10/paired.json.gz",
+      "bytes": 65800
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_11/paired.json.gz",
+      "bytes": 65388
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_12/paired.json.gz",
+      "bytes": 64971
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_13/paired.json.gz",
+      "bytes": 65026
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_14/paired.json.gz",
+      "bytes": 65801
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_15/paired.json.gz",
+      "bytes": 66382
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_16/paired.json.gz",
+      "bytes": 65752
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_17/paired.json.gz",
+      "bytes": 65088
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_18/paired.json.gz",
+      "bytes": 65766
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_19/paired.json.gz",
+      "bytes": 65825
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_20/paired.json.gz",
+      "bytes": 65263
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_21/paired.json.gz",
+      "bytes": 65553
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_22/paired.json.gz",
+      "bytes": 65015
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_23/paired.json.gz",
+      "bytes": 65953
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_24/paired.json.gz",
+      "bytes": 66002
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_25/paired.json.gz",
+      "bytes": 65205
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_26/paired.json.gz",
+      "bytes": 64967
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_27/paired.json.gz",
+      "bytes": 65902
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_28/paired.json.gz",
+      "bytes": 65162
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_29/paired.json.gz",
+      "bytes": 64692
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_30/paired.json.gz",
+      "bytes": 66170
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_31/paired.json.gz",
+      "bytes": 65359
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_32/paired.json.gz",
+      "bytes": 64987
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_33/paired.json.gz",
+      "bytes": 65844
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_34/paired.json.gz",
+      "bytes": 64974
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_35/paired.json.gz",
+      "bytes": 65587
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_36/paired.json.gz",
+      "bytes": 65095
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_37/paired.json.gz",
+      "bytes": 65004
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_38/paired.json.gz",
+      "bytes": 65323
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_39/paired.json.gz",
+      "bytes": 64743
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_40/paired.json.gz",
+      "bytes": 65188
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_41/paired.json.gz",
+      "bytes": 65706
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_42/paired.json.gz",
+      "bytes": 66031
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_43/paired.json.gz",
+      "bytes": 65989
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_44/paired.json.gz",
+      "bytes": 64749
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_45/paired.json.gz",
+      "bytes": 66103
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_46/paired.json.gz",
+      "bytes": 65784
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_47/paired.json.gz",
+      "bytes": 64981
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_48/paired.json.gz",
+      "bytes": 65414
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_49/paired.json.gz",
+      "bytes": 65788
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_50/paired.json.gz",
+      "bytes": 65747
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_51/paired.json.gz",
+      "bytes": 65404
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_52/paired.json.gz",
+      "bytes": 65732
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_53/paired.json.gz",
+      "bytes": 65683
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_54/paired.json.gz",
+      "bytes": 66286
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_55/paired.json.gz",
+      "bytes": 65623
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_56/paired.json.gz",
+      "bytes": 65117
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_57/paired.json.gz",
+      "bytes": 65448
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_58/paired.json.gz",
+      "bytes": 65403
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_59/paired.json.gz",
+      "bytes": 64211
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_60/paired.json.gz",
+      "bytes": 64858
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_61/paired.json.gz",
+      "bytes": 65505
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_62/paired.json.gz",
+      "bytes": 65239
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/chunk_63/paired.json.gz",
+      "bytes": 63912
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/pilot_seq/paired.json.gz",
+      "bytes": 130500
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/chains/pilot_suffix/paired.json.gz",
+      "bytes": 65954
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/seeds.json",
+      "bytes": 138065
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/seeds.json",
+      "bytes": 138219
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/seeds.json",
+      "bytes": 138187
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/seeds.json",
+      "bytes": 138385
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/seeds.json",
+      "bytes": 138169
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/seeds.json",
+      "bytes": 138225
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/seeds.json",
+      "bytes": 138266
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/seeds.json",
+      "bytes": 138258
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/seeds.json",
+      "bytes": 138389
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/seeds.json",
+      "bytes": 138291
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/seeds.json",
+      "bytes": 138316
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/seeds.json",
+      "bytes": 138082
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/seeds.json",
+      "bytes": 138167
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/seeds.json",
+      "bytes": 138110
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/seeds.json",
+      "bytes": 138351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/seeds.json",
+      "bytes": 138470
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/seeds.json",
+      "bytes": 138361
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/seeds.json",
+      "bytes": 138392
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/seeds.json",
+      "bytes": 138333
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/seeds.json",
+      "bytes": 138264
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/seeds.json",
+      "bytes": 138412
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/seeds.json",
+      "bytes": 138540
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/seeds.json",
+      "bytes": 138422
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/seeds.json",
+      "bytes": 138256
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/seeds.json",
+      "bytes": 138398
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/seeds.json",
+      "bytes": 138277
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/seeds.json",
+      "bytes": 138320
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/seeds.json",
+      "bytes": 138337
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/seeds.json",
+      "bytes": 138491
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/seeds.json",
+      "bytes": 138303
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/seeds.json",
+      "bytes": 138202
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/seeds.json",
+      "bytes": 138451
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/seeds.json",
+      "bytes": 138485
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/seeds.json",
+      "bytes": 138327
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/seeds.json",
+      "bytes": 138432
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/seeds.json",
+      "bytes": 138397
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/seeds.json",
+      "bytes": 138424
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/seeds.json",
+      "bytes": 138390
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/seeds.json",
+      "bytes": 138367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/seeds.json",
+      "bytes": 138463
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/seeds.json",
+      "bytes": 138423
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/seeds.json",
+      "bytes": 138230
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/seeds.json",
+      "bytes": 138303
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/seeds.json",
+      "bytes": 138311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/seeds.json",
+      "bytes": 138197
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/seeds.json",
+      "bytes": 138461
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/seeds.json",
+      "bytes": 138307
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/seeds.json",
+      "bytes": 138359
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/seeds.json",
+      "bytes": 138543
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/seeds.json",
+      "bytes": 138350
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/seeds.json",
+      "bytes": 138274
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/seeds.json",
+      "bytes": 138290
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/seeds.json",
+      "bytes": 138209
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/seeds.json",
+      "bytes": 138386
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/seeds.json",
+      "bytes": 138266
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/seeds.json",
+      "bytes": 138216
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/seeds.json",
+      "bytes": 138401
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/seeds.json",
+      "bytes": 138479
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/seeds.json",
+      "bytes": 138295
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/seeds.json",
+      "bytes": 138287
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/seeds.json",
+      "bytes": 138424
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/seeds.json",
+      "bytes": 138274
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/seeds.json",
+      "bytes": 138303
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/seeds.json",
+      "bytes": 138240
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/seeds.json",
+      "bytes": 6702414
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/seeds.json",
+      "bytes": 6702414
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/seeds.json",
+      "bytes": 3351366
+    },
+    {
+      "path": "software/stage157/1794103614377127149/energy-ml-stage157.tar.gz",
+      "bytes": 13002260
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/admission_result.tar.gz",
+      "bytes": 4138557
+    },
+    {
+      "path": "software/stage157/1794106041490373592/energy-ml-stage157.tar.gz",
+      "bytes": 33681662
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/audit_retry_result.tar.gz",
+      "bytes": 4272208
+    },
+    {
+      "path": "software/stage157/1794105858241313953/energy-ml-stage157.tar.gz",
+      "bytes": 33680013
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/audit_result.tar.gz",
+      "bytes": 4141136
+    },
+    {
+      "path": "software/stage157/1794103898513345436/energy-ml-stage157.tar.gz",
+      "bytes": 6732896
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_00_result.tar.gz",
+      "bytes": 1305500
+    },
+    {
+      "path": "software/stage157/1794103900161893146/energy-ml-stage157.tar.gz",
+      "bytes": 2595942
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_01_result.tar.gz",
+      "bytes": 1294325
+    },
+    {
+      "path": "software/stage157/1794103901368977371/energy-ml-stage157.tar.gz",
+      "bytes": 2595942
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_02_result.tar.gz",
+      "bytes": 1301175
+    },
+    {
+      "path": "software/stage157/1794103902605265442/energy-ml-stage157.tar.gz",
+      "bytes": 2595942
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_03_result.tar.gz",
+      "bytes": 1304920
+    },
+    {
+      "path": "software/stage157/1794104426537270065/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_04_result.tar.gz",
+      "bytes": 1303601
+    },
+    {
+      "path": "software/stage157/1794104428051124477/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_05_result.tar.gz",
+      "bytes": 1301211
+    },
+    {
+      "path": "software/stage157/1794104429243241503/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_06_result.tar.gz",
+      "bytes": 1307652
+    },
+    {
+      "path": "software/stage157/1794104430504217501/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_07_result.tar.gz",
+      "bytes": 1306184
+    },
+    {
+      "path": "software/stage157/1794104947566026136/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_08_result.tar.gz",
+      "bytes": 1298367
+    },
+    {
+      "path": "software/stage157/1794104948851643143/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_09_result.tar.gz",
+      "bytes": 1287014
+    },
+    {
+      "path": "software/stage157/1794104950208829852/energy-ml-stage157.tar.gz",
+      "bytes": 2597180
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_10_result.tar.gz",
+      "bytes": 1316087
+    },
+    {
+      "path": "software/stage157/1794105074901320526/energy-ml-stage157.tar.gz",
+      "bytes": 2598327
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_11_result.tar.gz",
+      "bytes": 1302625
+    },
+    {
+      "path": "software/stage157/1794105233788580770/energy-ml-stage157.tar.gz",
+      "bytes": 2599550
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_12_result.tar.gz",
+      "bytes": 1306065
+    },
+    {
+      "path": "software/stage157/1794105273180915344/energy-ml-stage157.tar.gz",
+      "bytes": 2599550
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_13_result.tar.gz",
+      "bytes": 1314544
+    },
+    {
+      "path": "software/stage157/1794105399378335077/energy-ml-stage157.tar.gz",
+      "bytes": 2599565
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_14_result.tar.gz",
+      "bytes": 1292920
+    },
+    {
+      "path": "software/stage157/1794105502556306285/energy-ml-stage157.tar.gz",
+      "bytes": 2599565
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/batch_15_result.tar.gz",
+      "bytes": 1296426
+    },
+    {
+      "path": "software/stage157/1794103092196187550/energy-ml-stage157.tar.gz",
+      "bytes": 2594731
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/pilot_retry_result.tar.gz",
+      "bytes": 6356637
+    },
+    {
+      "path": "software/stage157/1794102753571856477/energy-ml-stage157.tar.gz",
+      "bytes": 2589296
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/pilot_result.tar.gz",
+      "bytes": 4050252
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/charge.tsv",
+      "bytes": 78565
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/covariance.tsv",
+      "bytes": 24828
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/extract_time.txt",
+      "bytes": 1178
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/native_time.txt",
+      "bytes": 1306
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/pipeline.json",
+      "bytes": 3222
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/reco_time.txt",
+      "bytes": 1126
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/reco_timing.json",
+      "bytes": 1418
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/transport_proof.json",
+      "bytes": 7866
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/charge.tsv",
+      "bytes": 79452
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/covariance.tsv",
+      "bytes": 25291
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/pipeline.json",
+      "bytes": 3224
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/reco_timing.json",
+      "bytes": 1406
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/transport_proof.json",
+      "bytes": 7906
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/charge.tsv",
+      "bytes": 79901
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/covariance.tsv",
+      "bytes": 24955
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/native_time.txt",
+      "bytes": 1305
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/pipeline.json",
+      "bytes": 3229
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/reco_timing.json",
+      "bytes": 1386
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/charge.tsv",
+      "bytes": 80215
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/covariance.tsv",
+      "bytes": 24165
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/extract_time.txt",
+      "bytes": 1180
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/native_time.txt",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/pipeline.json",
+      "bytes": 3228
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/reco_timing.json",
+      "bytes": 1461
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/charge.tsv",
+      "bytes": 79906
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/covariance.tsv",
+      "bytes": 24968
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/pipeline.json",
+      "bytes": 3239
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/reco_timing.json",
+      "bytes": 1423
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/charge.tsv",
+      "bytes": 79668
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/covariance.tsv",
+      "bytes": 24154
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/pipeline.json",
+      "bytes": 3240
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/reco_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/reco_timing.json",
+      "bytes": 1399
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/charge.tsv",
+      "bytes": 79693
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/covariance.tsv",
+      "bytes": 22922
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/pipeline.json",
+      "bytes": 3239
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/reco_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/reco_timing.json",
+      "bytes": 1416
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/charge.tsv",
+      "bytes": 79812
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/covariance.tsv",
+      "bytes": 24146
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/extract_time.txt",
+      "bytes": 1184
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/pipeline.json",
+      "bytes": 3239
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/reco_timing.json",
+      "bytes": 1495
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/charge.tsv",
+      "bytes": 79720
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/covariance.tsv",
+      "bytes": 23372
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/extract_time.txt",
+      "bytes": 1180
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/native_time.txt",
+      "bytes": 1303
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/pipeline.json",
+      "bytes": 3224
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/reco_time.txt",
+      "bytes": 1125
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/reco_timing.json",
+      "bytes": 1426
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/charge.tsv",
+      "bytes": 79480
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/covariance.tsv",
+      "bytes": 24165
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/extract_time.txt",
+      "bytes": 1180
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/native_time.txt",
+      "bytes": 1307
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/pipeline.json",
+      "bytes": 3228
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/reco_timing.json",
+      "bytes": 1433
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/summary.json",
+      "bytes": 790
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/charge.tsv",
+      "bytes": 79948
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/covariance.tsv",
+      "bytes": 25365
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/digi_time.txt",
+      "bytes": 1136
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/extract_time.txt",
+      "bytes": 1178
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/native_time.txt",
+      "bytes": 1307
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/pipeline.json",
+      "bytes": 3230
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/reco_time.txt",
+      "bytes": 1127
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/reco_timing.json",
+      "bytes": 1363
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/summary.json",
+      "bytes": 791
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/charge.tsv",
+      "bytes": 79888
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/covariance.tsv",
+      "bytes": 24183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/extract_time.txt",
+      "bytes": 1180
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/native_time.txt",
+      "bytes": 1303
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/pipeline.json",
+      "bytes": 3229
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/reco_timing.json",
+      "bytes": 1387
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/charge.tsv",
+      "bytes": 79599
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/covariance.tsv",
+      "bytes": 23757
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/extract_time.txt",
+      "bytes": 1177
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/native_time.txt",
+      "bytes": 1299
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/pipeline.json",
+      "bytes": 3216
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/reco_time.txt",
+      "bytes": 1126
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/reco_timing.json",
+      "bytes": 1411
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/schema.json",
+      "bytes": 4524
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/summary.json",
+      "bytes": 798
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/charge.tsv",
+      "bytes": 79692
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/covariance.tsv",
+      "bytes": 23743
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/digi_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/extract_time.txt",
+      "bytes": 1177
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/native_time.txt",
+      "bytes": 1300
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/pipeline.json",
+      "bytes": 3215
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/reco_time.txt",
+      "bytes": 1122
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/reco_timing.json",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/schema.json",
+      "bytes": 4524
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/charge.tsv",
+      "bytes": 80094
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/covariance.tsv",
+      "bytes": 24550
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/digi_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/extract_time.txt",
+      "bytes": 1179
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/native_time.txt",
+      "bytes": 1300
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/pipeline.json",
+      "bytes": 3216
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/reco_time.txt",
+      "bytes": 1122
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/reco_timing.json",
+      "bytes": 1395
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/schema.json",
+      "bytes": 4524
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/transport_proof.json",
+      "bytes": 133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/charge.tsv",
+      "bytes": 80734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/covariance.tsv",
+      "bytes": 25437
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/digi_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/extract_time.txt",
+      "bytes": 1176
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/native_time.txt",
+      "bytes": 1297
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/pipeline.json",
+      "bytes": 3212
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/reco_time.txt",
+      "bytes": 1122
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/reco_timing.json",
+      "bytes": 1369
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/schema.json",
+      "bytes": 4524
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/transport_proof.json",
+      "bytes": 134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/charge.tsv",
+      "bytes": 81217
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/covariance.tsv",
+      "bytes": 24298
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/reco_timing.json",
+      "bytes": 1485
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/charge.tsv",
+      "bytes": 81005
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/covariance.tsv",
+      "bytes": 23898
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/native_time.txt",
+      "bytes": 1310
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/reco_timing.json",
+      "bytes": 1323
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/charge.tsv",
+      "bytes": 81318
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/covariance.tsv",
+      "bytes": 24242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/digi_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/extract_time.txt",
+      "bytes": 1185
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/reco_timing.json",
+      "bytes": 1503
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/summary.json",
+      "bytes": 791
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/charge.tsv",
+      "bytes": 81122
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/covariance.tsv",
+      "bytes": 25506
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/digi_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/reco_timing.json",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/charge.tsv",
+      "bytes": 81153
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/covariance.tsv",
+      "bytes": 23028
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/native_time.txt",
+      "bytes": 1314
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/reco_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/reco_timing.json",
+      "bytes": 1430
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/charge.tsv",
+      "bytes": 81271
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/covariance.tsv",
+      "bytes": 23907
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/digi_time.txt",
+      "bytes": 1138
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/native_time.txt",
+      "bytes": 1310
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/pipeline.json",
+      "bytes": 3240
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/reco_timing.json",
+      "bytes": 1423
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/charge.tsv",
+      "bytes": 81055
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/covariance.tsv",
+      "bytes": 23488
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/extract_time.txt",
+      "bytes": 1187
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/native_time.txt",
+      "bytes": 1313
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/reco_timing.json",
+      "bytes": 1429
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/summary.json",
+      "bytes": 791
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/charge.tsv",
+      "bytes": 81403
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/covariance.tsv",
+      "bytes": 24682
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/native_time.txt",
+      "bytes": 1314
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/reco_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/reco_timing.json",
+      "bytes": 1376
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/charge.tsv",
+      "bytes": 81373
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/covariance.tsv",
+      "bytes": 25515
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/digi_time.txt",
+      "bytes": 1138
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/pipeline.json",
+      "bytes": 3244
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/reco_timing.json",
+      "bytes": 1418
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/charge.tsv",
+      "bytes": 80708
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/covariance.tsv",
+      "bytes": 24660
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/extract_time.txt",
+      "bytes": 1185
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/pipeline.json",
+      "bytes": 3240
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/reco_timing.json",
+      "bytes": 1446
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/summary.json",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/charge.tsv",
+      "bytes": 80919
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/covariance.tsv",
+      "bytes": 23460
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/pipeline.json",
+      "bytes": 3244
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/reco_timing.json",
+      "bytes": 1391
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/charge.tsv",
+      "bytes": 81144
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/covariance.tsv",
+      "bytes": 25514
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/reco_timing.json",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/summary.json",
+      "bytes": 798
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/charge.tsv",
+      "bytes": 81002
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/covariance.tsv",
+      "bytes": 23472
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/digi_time.txt",
+      "bytes": 1136
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/extract_time.txt",
+      "bytes": 1185
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/reco_timing.json",
+      "bytes": 1461
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/summary.json",
+      "bytes": 780
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/charge.tsv",
+      "bytes": 80489
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/covariance.tsv",
+      "bytes": 23894
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/digi_time.txt",
+      "bytes": 1136
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/reco_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/reco_timing.json",
+      "bytes": 1375
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/charge.tsv",
+      "bytes": 81302
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/covariance.tsv",
+      "bytes": 25515
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/pipeline.json",
+      "bytes": 3244
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/reco_timing.json",
+      "bytes": 1296
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/charge.tsv",
+      "bytes": 80867
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/covariance.tsv",
+      "bytes": 24654
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/extract_time.txt",
+      "bytes": 1187
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/reco_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/reco_timing.json",
+      "bytes": 1317
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/charge.tsv",
+      "bytes": 80725
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/covariance.tsv",
+      "bytes": 24709
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/digi_time.txt",
+      "bytes": 1138
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/extract_time.txt",
+      "bytes": 1184
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/native_time.txt",
+      "bytes": 1315
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/reco_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/reco_timing.json",
+      "bytes": 1299
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/charge.tsv",
+      "bytes": 81397
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/covariance.tsv",
+      "bytes": 24694
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/native_time.txt",
+      "bytes": 1316
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/reco_timing.json",
+      "bytes": 1342
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/charge.tsv",
+      "bytes": 80888
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/covariance.tsv",
+      "bytes": 23491
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/digi_time.txt",
+      "bytes": 1138
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/native_time.txt",
+      "bytes": 1316
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/reco_timing.json",
+      "bytes": 1464
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/summary.json",
+      "bytes": 804
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/charge.tsv",
+      "bytes": 81123
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/covariance.tsv",
+      "bytes": 24274
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/digi_time.txt",
+      "bytes": 1138
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/extract_time.txt",
+      "bytes": 1188
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/native_time.txt",
+      "bytes": 1314
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/reco_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/reco_timing.json",
+      "bytes": 1420
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/summary.json",
+      "bytes": 791
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/charge.tsv",
+      "bytes": 81011
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/covariance.tsv",
+      "bytes": 23428
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/digi_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/native_time.txt",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/reco_timing.json",
+      "bytes": 1341
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/charge.tsv",
+      "bytes": 80838
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/covariance.tsv",
+      "bytes": 23473
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/digi_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/native_time.txt",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/reco_timing.json",
+      "bytes": 1344
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/charge.tsv",
+      "bytes": 81003
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/covariance.tsv",
+      "bytes": 24273
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/digi_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/native_time.txt",
+      "bytes": 1307
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/reco_timing.json",
+      "bytes": 1433
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/charge.tsv",
+      "bytes": 80870
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/covariance.tsv",
+      "bytes": 22646
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/digi_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/extract_time.txt",
+      "bytes": 1181
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/native_time.txt",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/reco_timing.json",
+      "bytes": 1486
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/charge.tsv",
+      "bytes": 80887
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/covariance.tsv",
+      "bytes": 24689
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/digi_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/reco_timing.json",
+      "bytes": 1457
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/summary.json",
+      "bytes": 779
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/charge.tsv",
+      "bytes": 81009
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/covariance.tsv",
+      "bytes": 25530
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/digi_time.txt",
+      "bytes": 1136
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/reco_timing.json",
+      "bytes": 1475
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/charge.tsv",
+      "bytes": 81432
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/covariance.tsv",
+      "bytes": 25527
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/reco_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/reco_timing.json",
+      "bytes": 1434
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/summary.json",
+      "bytes": 804
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/charge.tsv",
+      "bytes": 81255
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/covariance.tsv",
+      "bytes": 25938
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/reco_timing.json",
+      "bytes": 1344
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/charge.tsv",
+      "bytes": 80713
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/covariance.tsv",
+      "bytes": 23054
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/extract_time.txt",
+      "bytes": 1179
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/native_time.txt",
+      "bytes": 1304
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/pipeline.json",
+      "bytes": 3229
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/reco_time.txt",
+      "bytes": 1124
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/reco_timing.json",
+      "bytes": 1304
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/charge.tsv",
+      "bytes": 81391
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/covariance.tsv",
+      "bytes": 25504
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/native_time.txt",
+      "bytes": 1307
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/pipeline.json",
+      "bytes": 3227
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/reco_time.txt",
+      "bytes": 1127
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/reco_timing.json",
+      "bytes": 1396
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/charge.tsv",
+      "bytes": 81188
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/covariance.tsv",
+      "bytes": 24651
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/digi_time.txt",
+      "bytes": 1136
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/extract_time.txt",
+      "bytes": 1180
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/native_time.txt",
+      "bytes": 1302
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/pipeline.json",
+      "bytes": 3230
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/reco_time.txt",
+      "bytes": 1124
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/reco_timing.json",
+      "bytes": 1408
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/charge.tsv",
+      "bytes": 81018
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/covariance.tsv",
+      "bytes": 23052
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/extract_time.txt",
+      "bytes": 1180
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/native_time.txt",
+      "bytes": 1305
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/pipeline.json",
+      "bytes": 3231
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/reco_time.txt",
+      "bytes": 1127
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/reco_timing.json",
+      "bytes": 1408
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/schema.json",
+      "bytes": 4525
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/charge.tsv",
+      "bytes": 81172
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/covariance.tsv",
+      "bytes": 23470
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/digi_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/reco_timing.json",
+      "bytes": 1327
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/charge.tsv",
+      "bytes": 81082
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/covariance.tsv",
+      "bytes": 25511
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/native_time.txt",
+      "bytes": 1310
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/reco_timing.json",
+      "bytes": 1308
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/summary.json",
+      "bytes": 779
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/charge.tsv",
+      "bytes": 81413
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/covariance.tsv",
+      "bytes": 24289
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/digi_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/pipeline.json",
+      "bytes": 3240
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/reco_timing.json",
+      "bytes": 1355
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/charge.tsv",
+      "bytes": 81127
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/covariance.tsv",
+      "bytes": 24252
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/pipeline.json",
+      "bytes": 3244
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/reco_timing.json",
+      "bytes": 1327
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/summary.json",
+      "bytes": 805
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/charge.tsv",
+      "bytes": 80912
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/covariance.tsv",
+      "bytes": 25482
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/native_time.txt",
+      "bytes": 1310
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/pipeline.json",
+      "bytes": 3240
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/reco_timing.json",
+      "bytes": 1367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/summary.json",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/charge.tsv",
+      "bytes": 80973
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/covariance.tsv",
+      "bytes": 25113
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/native_time.txt",
+      "bytes": 1310
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/reco_time.txt",
+      "bytes": 1128
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/reco_timing.json",
+      "bytes": 1320
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/charge.tsv",
+      "bytes": 81313
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/covariance.tsv",
+      "bytes": 25954
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/digi_time.txt",
+      "bytes": 1135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/native_time.txt",
+      "bytes": 1310
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/reco_timing.json",
+      "bytes": 1334
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/summary.json",
+      "bytes": 772
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/charge.tsv",
+      "bytes": 80889
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/covariance.tsv",
+      "bytes": 25513
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/digi_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/extract_time.txt",
+      "bytes": 1184
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/reco_timing.json",
+      "bytes": 1401
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/charge.tsv",
+      "bytes": 81038
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/covariance.tsv",
+      "bytes": 23447
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/reco_timing.json",
+      "bytes": 1430
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/summary.json",
+      "bytes": 779
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/charge.tsv",
+      "bytes": 81011
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/covariance.tsv",
+      "bytes": 24679
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/extract_time.txt",
+      "bytes": 1183
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/native_time.txt",
+      "bytes": 1309
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/pipeline.json",
+      "bytes": 3244
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/reco_timing.json",
+      "bytes": 1449
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/charge.tsv",
+      "bytes": 81235
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/covariance.tsv",
+      "bytes": 23875
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/digi_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/extract_time.txt",
+      "bytes": 1186
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/pipeline.json",
+      "bytes": 3243
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/reco_timing.json",
+      "bytes": 1302
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/charge.tsv",
+      "bytes": 80051
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/covariance.tsv",
+      "bytes": 23472
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/native_time.txt",
+      "bytes": 1311
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/reco_timing.json",
+      "bytes": 1444
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/summary.json",
+      "bytes": 784
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/charge.tsv",
+      "bytes": 80919
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/covariance.tsv",
+      "bytes": 23467
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/digi_time.txt",
+      "bytes": 1132
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/reco_time.txt",
+      "bytes": 1131
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/reco_timing.json",
+      "bytes": 1509
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/summary.json",
+      "bytes": 786
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/charge.tsv",
+      "bytes": 81028
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/covariance.tsv",
+      "bytes": 25071
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/digi_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/pipeline.json",
+      "bytes": 3244
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/reco_timing.json",
+      "bytes": 1324
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/summary.json",
+      "bytes": 785
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/charge.tsv",
+      "bytes": 81252
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/covariance.tsv",
+      "bytes": 23434
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/digi_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/native_time.txt",
+      "bytes": 1312
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/pipeline.json",
+      "bytes": 3241
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/reco_time.txt",
+      "bytes": 1129
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/reco_timing.json",
+      "bytes": 1414
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/summary.json",
+      "bytes": 780
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/charge.tsv",
+      "bytes": 80141
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/covariance.tsv",
+      "bytes": 23008
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/extract_time.txt",
+      "bytes": 1186
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/native_time.txt",
+      "bytes": 1313
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/pipeline.json",
+      "bytes": 3242
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/reco_time.txt",
+      "bytes": 1130
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/reco_timing.json",
+      "bytes": 1461
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/schema.json",
+      "bytes": 4526
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/transport_proof.json",
+      "bytes": 135
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/digi_time.txt",
+      "bytes": 1139
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/extract_time.txt",
+      "bytes": 1217
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/native_time.txt",
+      "bytes": 1317
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/pipeline.json",
+      "bytes": 2828
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/reco_time.txt",
+      "bytes": 1133
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/reco_timing.json",
+      "bytes": 2475
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/schema.json",
+      "bytes": 4527
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/charge.tsv",
+      "bytes": 157932
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/covariance.tsv",
+      "bytes": 49926
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/extract_time.txt",
+      "bytes": 1182
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/native_time.txt",
+      "bytes": 1316
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/pipeline.json",
+      "bytes": 3250
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/reco_time.txt",
+      "bytes": 1134
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/reco_timing.json",
+      "bytes": 2844
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/schema.json",
+      "bytes": 4527
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/summary.json",
+      "bytes": 795
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/charge.tsv",
+      "bytes": 79452
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/covariance.tsv",
+      "bytes": 25291
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/digi_time.txt",
+      "bytes": 1137
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/extract_time.txt",
+      "bytes": 1187
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/input_metadata.json",
+      "bytes": 2367
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/native_time.txt",
+      "bytes": 1326
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/pipeline.json",
+      "bytes": 3279
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/reco_time.txt",
+      "bytes": 1136
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/reco_timing.json",
+      "bytes": 1482
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/schema.json",
+      "bytes": 4530
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/summary.json",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/digi.log",
+      "bytes": 117826
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/native.log",
+      "bytes": 76853
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_00/reco.log",
+      "bytes": 163083
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/digi.log",
+      "bytes": 122557
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/native.log",
+      "bytes": 76745
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_01/reco.log",
+      "bytes": 165716
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/digi.log",
+      "bytes": 126911
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/native.log",
+      "bytes": 76750
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_02/reco.log",
+      "bytes": 162675
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/digi.log",
+      "bytes": 131601
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/native.log",
+      "bytes": 76744
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_03/reco.log",
+      "bytes": 166702
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/digi.log",
+      "bytes": 135094
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/native.log",
+      "bytes": 76755
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_04/reco.log",
+      "bytes": 164646
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/digi.log",
+      "bytes": 138581
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/native.log",
+      "bytes": 76759
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_05/reco.log",
+      "bytes": 162052
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/digi.log",
+      "bytes": 143266
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/native.log",
+      "bytes": 76762
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_06/reco.log",
+      "bytes": 168908
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/digi.log",
+      "bytes": 147956
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/native.log",
+      "bytes": 76756
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_07/reco.log",
+      "bytes": 165282
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/digi.log",
+      "bytes": 151709
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/native.log",
+      "bytes": 76852
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_08/reco.log",
+      "bytes": 163579
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/digi.log",
+      "bytes": 150913
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/extract.log",
+      "bytes": 732
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/native.log",
+      "bytes": 77049
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_09/reco.log",
+      "bytes": 165350
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/digi.log",
+      "bytes": 152113
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/extract.log",
+      "bytes": 733
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/native.log",
+      "bytes": 76744
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_10/reco.log",
+      "bytes": 162620
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/digi.log",
+      "bytes": 152110
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/native.log",
+      "bytes": 76747
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_11/reco.log",
+      "bytes": 163762
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/digi.log",
+      "bytes": 151712
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/extract.log",
+      "bytes": 736
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/native.log",
+      "bytes": 76840
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_12/reco.log",
+      "bytes": 163617
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/digi.log",
+      "bytes": 151314
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/native.log",
+      "bytes": 76732
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_13/reco.log",
+      "bytes": 164728
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/digi.log",
+      "bytes": 152513
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/native.log",
+      "bytes": 76732
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_14/reco.log",
+      "bytes": 163084
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/digi.log",
+      "bytes": 152984
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/native.log",
+      "bytes": 76735
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_15/reco.log",
+      "bytes": 164169
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/digi.log",
+      "bytes": 152351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_16/reco.log",
+      "bytes": 196867
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/digi.log",
+      "bytes": 151551
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_17/reco.log",
+      "bytes": 163744
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/digi.log",
+      "bytes": 152354
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/extract.log",
+      "bytes": 733
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_18/reco.log",
+      "bytes": 163950
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/digi.log",
+      "bytes": 151551
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_19/reco.log",
+      "bytes": 162364
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/digi.log",
+      "bytes": 151948
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_20/reco.log",
+      "bytes": 164385
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/digi.log",
+      "bytes": 151948
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_21/reco.log",
+      "bytes": 164677
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/digi.log",
+      "bytes": 151151
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/extract.log",
+      "bytes": 733
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/native.log",
+      "bytes": 76990
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_22/reco.log",
+      "bytes": 165713
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/digi.log",
+      "bytes": 152348
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_23/reco.log",
+      "bytes": 163889
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/digi.log",
+      "bytes": 152351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_24/reco.log",
+      "bytes": 163663
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/digi.log",
+      "bytes": 150351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/extract.log",
+      "bytes": 718
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/native.log",
+      "bytes": 76761
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_25/reco.log",
+      "bytes": 164305
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/digi.log",
+      "bytes": 151556
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_26/reco.log",
+      "bytes": 163469
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/digi.log",
+      "bytes": 151948
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/extract.log",
+      "bytes": 736
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_27/reco.log",
+      "bytes": 163188
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/digi.log",
+      "bytes": 151952
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_28/reco.log",
+      "bytes": 162010
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/digi.log",
+      "bytes": 149951
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_29/reco.log",
+      "bytes": 169905
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/digi.log",
+      "bytes": 152351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/native.log",
+      "bytes": 76767
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_30/reco.log",
+      "bytes": 162935
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/digi.log",
+      "bytes": 151554
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_31/reco.log",
+      "bytes": 162437
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/digi.log",
+      "bytes": 150755
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/native.log",
+      "bytes": 76877
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_32/reco.log",
+      "bytes": 164327
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/digi.log",
+      "bytes": 152351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/native.log",
+      "bytes": 76877
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_33/reco.log",
+      "bytes": 163176
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/digi.log",
+      "bytes": 151554
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/extract.log",
+      "bytes": 742
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_34/reco.log",
+      "bytes": 168360
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/digi.log",
+      "bytes": 151952
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/extract.log",
+      "bytes": 733
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_35/reco.log",
+      "bytes": 164634
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/digi.log",
+      "bytes": 151952
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_36/reco.log",
+      "bytes": 164275
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/digi.log",
+      "bytes": 150752
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_37/reco.log",
+      "bytes": 163508
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/digi.log",
+      "bytes": 151149
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_38/reco.log",
+      "bytes": 164011
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/digi.log",
+      "bytes": 151152
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/native.log",
+      "bytes": 76761
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_39/reco.log",
+      "bytes": 165874
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/digi.log",
+      "bytes": 151551
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/extract.log",
+      "bytes": 725
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/native.log",
+      "bytes": 76875
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_40/reco.log",
+      "bytes": 162116
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/digi.log",
+      "bytes": 151152
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/native.log",
+      "bytes": 76878
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_41/reco.log",
+      "bytes": 161025
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/digi.log",
+      "bytes": 152751
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/extract.log",
+      "bytes": 742
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/native.log",
+      "bytes": 76762
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_42/reco.log",
+      "bytes": 165352
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/digi.log",
+      "bytes": 152354
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_43/reco.log",
+      "bytes": 161389
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/digi.log",
+      "bytes": 151149
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/native.log",
+      "bytes": 76862
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_44/reco.log",
+      "bytes": 165867
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/digi.log",
+      "bytes": 152349
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/native.log",
+      "bytes": 76749
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_45/reco.log",
+      "bytes": 162667
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/digi.log",
+      "bytes": 151951
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/native.log",
+      "bytes": 76752
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_46/reco.log",
+      "bytes": 162088
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/digi.log",
+      "bytes": 151149
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/native.log",
+      "bytes": 76753
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_47/reco.log",
+      "bytes": 165159
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/digi.log",
+      "bytes": 151551
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/native.log",
+      "bytes": 76770
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_48/reco.log",
+      "bytes": 165653
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/digi.log",
+      "bytes": 151951
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/extract.log",
+      "bytes": 725
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_49/reco.log",
+      "bytes": 162728
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/digi.log",
+      "bytes": 152754
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_50/reco.log",
+      "bytes": 167502
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/digi.log",
+      "bytes": 151954
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/extract.log",
+      "bytes": 743
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/native.log",
+      "bytes": 76768
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_51/reco.log",
+      "bytes": 163097
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/digi.log",
+      "bytes": 151551
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/extract.log",
+      "bytes": 718
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_52/reco.log",
+      "bytes": 162905
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/digi.log",
+      "bytes": 151551
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/native.log",
+      "bytes": 76876
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_53/reco.log",
+      "bytes": 164903
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/digi.log",
+      "bytes": 151948
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/extract.log",
+      "bytes": 718
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/native.log",
+      "bytes": 76761
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_54/reco.log",
+      "bytes": 164077
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/digi.log",
+      "bytes": 150751
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_55/reco.log",
+      "bytes": 162606
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/digi.log",
+      "bytes": 151955
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/extract.log",
+      "bytes": 725
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/native.log",
+      "bytes": 76765
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_56/reco.log",
+      "bytes": 163452
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/digi.log",
+      "bytes": 151951
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/native.log",
+      "bytes": 76768
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_57/reco.log",
+      "bytes": 162390
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/digi.log",
+      "bytes": 151948
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_58/reco.log",
+      "bytes": 164852
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/digi.log",
+      "bytes": 149951
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/native.log",
+      "bytes": 76877
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_59/reco.log",
+      "bytes": 164692
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/digi.log",
+      "bytes": 151952
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/extract.log",
+      "bytes": 728
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_60/reco.log",
+      "bytes": 164796
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/digi.log",
+      "bytes": 151548
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/extract.log",
+      "bytes": 727
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/native.log",
+      "bytes": 76764
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_61/reco.log",
+      "bytes": 163426
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/digi.log",
+      "bytes": 152351
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/extract.log",
+      "bytes": 726
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/native.log",
+      "bytes": 76761
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_62/reco.log",
+      "bytes": 163513
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/digi.log",
+      "bytes": 149951
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/native.log",
+      "bytes": 76763
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/chunk_63/reco.log",
+      "bytes": 163921
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/digi.log",
+      "bytes": 165992
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/extract.log",
+      "bytes": 1260
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/native.log",
+      "bytes": 85511
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_failed_seq/reco.log",
+      "bytes": 236585
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/digi.log",
+      "bytes": 165994
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/extract.log",
+      "bytes": 737
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/native.log",
+      "bytes": 85514
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_seq/reco.log",
+      "bytes": 236581
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/digi.log",
+      "bytes": 122556
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/extract.log",
+      "bytes": 734
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/native.log",
+      "bytes": 76793
+    },
+    {
+      "path": "workbook/stage157_energy_ml/chains/pilot_suffix/reco.log",
+      "bytes": 165746
+    },
+    {
+      "path": "ntuples/energy_ml_stage157/pilot_reference.json.gz",
+      "bytes": 4135545
+    }
+  ],
+  "deleted_bytes": 251727780,
+  "no_persistent_ROOT": true,
+  "original_HITS_PHYS_other_stages_Stage54_untouched": true
+}

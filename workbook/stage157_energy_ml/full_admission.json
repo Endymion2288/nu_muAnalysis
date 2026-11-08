@@ -1,0 +1,36 @@
+{
+  "admitted": true,
+  "physical_passed": true,
+  "costs": [
+    {
+      "label": "pilot_seq",
+      "child_GNU_CPU_s": {
+        "digi": 80.80000000000001,
+        "reco": 25.839999999999996,
+        "native": 77.78,
+        "extract": 4.02
+      },
+      "total_child_GNU_CPU_s": 188.44
+    },
+    {
+      "label": "pilot_suffix",
+      "child_GNU_CPU_s": {
+        "digi": 79.46,
+        "reco": 24.37,
+        "native": 101.49,
+        "extract": 3.42
+      },
+      "total_child_GNU_CPU_s": 208.73999999999998
+    }
+  ],
+  "full64chunks_factor3_CPU_s": 40078.079999999994,
+  "audit_reserve_CPU_s": 500,
+  "already_used_scheduler_CPU_s": 588.0,
+  "remaining_CPU_s": 59412.0,
+  "independent_parent_cap": 4096,
+  "chunk_N": 64,
+  "job_N": 16,
+  "CPUs_per_job": 4,
+  "max_initial_active_jobs": 4,
+  "scope": "Includes first/lazyJIT; max actual complete128/suffix64 GNU child totals per64 chunk. Prospective cost, no measured4096 or parallel speedup claim."
+}

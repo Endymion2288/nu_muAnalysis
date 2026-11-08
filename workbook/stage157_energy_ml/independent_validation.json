@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "scalar_reconstruction": true,
+  "models_refitted": 0,
+  "checks": [
+    {
+      "policy": "Q15",
+      "group": "all",
+      "original_heldout_N": 919,
+      "scored_N": 898,
+      "alerts": 22,
+      "missing_N": 15,
+      "outside_fit_state_range_N": 6,
+      "exact": true
+    },
+    {
+      "policy": "Q15",
+      "group": "overflow",
+      "original_heldout_N": 14,
+      "scored_N": 13,
+      "alerts": 9,
+      "missing_N": 0,
+      "outside_fit_state_range_N": 1,
+      "exact": true
+    },
+    {
+      "policy": "Q15",
+      "group": "high_activity",
+      "original_heldout_N": 6,
+      "scored_N": 6,
+      "alerts": 6,
+      "missing_N": 0,
+      "outside_fit_state_range_N": 0,
+      "exact": true
+    },
+    {
+      "policy": "Q15",
+      "group": "pz50_100",
+      "original_heldout_N": 799,
+      "scored_N": 789,
+      "alerts": 20,
+      "missing_N": 5,
+      "outside_fit_state_range_N": 5,
+      "exact": true
+    },
+    {
+      "policy": "Q15",
+      "calibration_N": 918,
+      "threshold_abs_delta": 1.4210854715202004e-14,
+      "max_Cholesky_vs_linear_solve_delta": 4.263256414560601e-14
+    },
+    {
+      "policy": "Q15G6",
+      "group": "all",
+      "original_heldout_N": 919,
+      "scored_N": 898,
+      "alerts": 26,
+      "missing_N": 16,
+      "outside_fit_state_range_N": 5,
+      "exact": true
+    },
+    {
+      "policy": "Q15G6",
+      "group": "overflow",
+      "original_heldout_N": 14,
+      "scored_N": 13,
+      "alerts": 8,
+      "missing_N": 1,
+      "outside_fit_state_range_N": 0,
+      "exact": true
+    },
+    {
+      "policy": "Q15G6",
+      "group": "high_activity",
+      "original_heldout_N": 6,
+      "scored_N": 6,
+      "alerts": 6,
+      "missing_N": 0,
+      "outside_fit_state_range_N": 0,
+      "exact": true
+    },
+    {
+      "policy": "Q15G6",
+      "group": "pz50_100",
+      "original_heldout_N": 799,
+      "scored_N": 789,
+      "alerts": 20,
+      "missing_N": 6,
+      "outside_fit_state_range_N": 4,
+      "exact": true
+    },
+    {
+      "policy": "Q15G6",
+      "calibration_N": 916,
+      "threshold_abs_delta": 3.552713678800501e-14,
+      "max_Cholesky_vs_linear_solve_delta": 9.947598300641403e-14
+    }
+  ],
+  "population_FPR_certified": false
+}
