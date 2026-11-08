@@ -1,0 +1,12 @@
+{
+  "issue": "Text substitution changed initial pilot descriptor memory12000to15000MB before execution",
+  "cluster": 9676426,
+  "observed_before_edit": {
+    "JobStatus": 1,
+    "NumJobStarts": 0,
+    "RequestMemory": 15000
+  },
+  "action": "condor_qedit9676426.0RequestMemory12000;correctedsourcefuturedescriptors",
+  "scientific_protocol_changed": false,
+  "CPU_allowances_unchanged": true
+}

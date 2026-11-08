@@ -1,0 +1,35 @@
+{
+  "next_stage": 168,
+  "question": "What actual complete EVNT entry counts and persistent generator/normalization metadata are available for the 22 already authorized nominal/alternative flux inputs, and how far does the existing simulation-range evidence support a full-generation denominator?",
+  "basis": "Stage132 section6 full-generation acceptance input acquisition. Stage130 certified222515 selected EVNT identities over666 sources, but PHYS6606398 entries and selected222515 are not a full generated denominator. Stage167 ends its two-directory real-data catalogue without certifying exposure; do not continue alternate data-directory probing.",
+  "inputs": {
+    "source_manifest": "workbook/stage130_energy_ml/source_protocol.json",
+    "actual_range_proof": "workbook/stage130_energy_ml/parent_range_proof.json",
+    "production_contract": "workbook/stage130_energy_ml/production_contract.json",
+    "selected_entry_validation": "workbook/stage130_energy_ml/parent_event_entry_validation.json",
+    "EVNT_paths": "Exactly the22 already named inventory EVNT values for runs200080-200101; freeze their literal list before submission. No directory listing, new paths, logs, RAW/RDO/REC payload or sample production. Duplicate paths, missing files or inconsistent run-to-path mappings remain explicit; do not replace."
+  },
+  "pilot": "Deterministically first alternative-pi, first nominal-pi, first k and first charm inventory paths in ascendingrun order; deduplicate in that order and freeze exactnames before execution. Only TFile/POOL top-level key names/classes, actual CollectionTree N and stored branch-name/type schema, plus bounded metadata below. No CollectionTree event payload, detector arrays, truth weights/particles or reserved/model forward. Record CPU/wall/ROOT requestedbytes/RSS including startup.",
+  "bounded_metadata": "For actual non-CollectionTree top-level metadata TTree record N and complete schema within64KiB; at most first4 primitive fixed numeric scalar rows, no jagged/object payloads. For actual TNamed/TObjString only explicitly metadata/config/input/provenance/normalization-named keys and object/text<=64KiB. All metadata serialized<=128KiB/file. Report absence/omitted vector or opaque persistent objects as unknown; do not infer a weight normalization, flux exposure, GENIE seed independence or selection efficiency from branch names, filename or N.",
+  "admission": "All frozenpilot files supported;3*completepilotGNUCPU*actualuniqueEVNT_N/pilot_N plus actualusedCPU and300auditreserve<=1500 and projectedfull<=900. Failed or rejected pilot terminates this fixed metadata implementation, no budget growth or favourable replacement.",
+  "full": "All exact unique EVNT paths once,4file processes with1decompressionthread each, same header/schema/boundedmetadata only. Pilot/full records exact. Read actual retained range-proof and source records; separate actual logged skip/count evidence from unverified filename range claims. Check only logged ranges against actual N; no invented proof for remaining sources, no ratios of selected to full N called acceptance.",
+  "audit": "IndependentROOT header/schema reread of the frozenpilot, exact input path/run mapping and retained logged skip/count parsing, table and totals validation. Entry counts are generator records,not certified independent interactions or a physically weighted denominator. No complete event/tree scan.",
+  "decision": "Deliver actual per-source complete EVNT N and metadata availability plus explicit missing weighted generator normalization and per-generated-event simulation/selection accounting. No full physics likelihood or acceptance/efficiency certification, no arbitrary prior. If only opaque weights/provenance remain,stop this bounded acquisition and require real generator inputs; do not launch a large native scan automatically.",
+  "resources": {
+    "CPU_budget_s": 1500,
+    "pilot_allowance_s": 300,
+    "full_allowance_s": 900,
+    "audit_allowance_s": 300,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "max_active_jobs": 1,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_new_metadata_bytes_cap": 4194304
+  },
+  "prerequisite": "Stage167 independent audit/terminal exact archives/Chinese report/ConventionalCommit complete, then freeze literal pilot/allpath list before firstEVNT read. All data/stat/scientific work through HTCondor ~/condor/nu_muAnalysis/stage168/; local text/scheduler/exactarchives only.",
+  "invariant": "Stage87,alloriginalgates,Stage1375pct,pz0-only firstpower/allowedpx,py,qOverP,bending/raw11/typedNaN/legalsigned/status0timing/CaloNaN/allK/originalcuts/roles/reserved/quarantine remain unchanged. No energyfit/forward/G4/digi/reco/newindependentnu, no rebuilding pinnedCalypso,no push.",
+  "overall_complete": false,
+  "promotion": false
+}

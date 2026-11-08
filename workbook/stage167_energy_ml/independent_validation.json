@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "directory_listings_exact": 2,
+  "independent_range_sets_exact": true,
+  "original3_scalar_headers_exact": true,
+  "reference64_exact": true,
+  "per_file_table_exact": 16,
+  "reads": [
+    {
+      "path": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root",
+      "read_bytes": 426828
+    },
+    {
+      "path": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00050-00099-r0022-PHYS.root",
+      "read_bytes": 444301
+    },
+    {
+      "path": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00100-00149-r0022-PHYS.root",
+      "read_bytes": 447173
+    }
+  ],
+  "exposure_certified": false,
+  "dataset_luminosity_pb_inv": null,
+  "limitation": "No complete interiors, RAW payload, producer input-vector contents or DAQ/luminosity-by-time proof tested."
+}

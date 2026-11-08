@@ -1,3 +1,11 @@
+# 当前执行更新：Stage167 真实文件manifest完成，曝光仍未认证
+
+[Stage167报告](../workbook/2026-11-08_stage167_real-run-file-coverage.md)在两个固定目录取得16PHYS/778PhysicsRAW，声明编号0–777无重叠缺口；首尾/header逐文件通过、原3pilot及reference64精确，N合计14237355但未作内部去重/完整ν选择。端点包络53580秒；全部0份允许producer metadata，RAW另有Incomplete/Monitoring等非匹配名字只记录未读。文件名和端点不证明逐输入处理成功/DAQ活时间，850.979pb⁻¹整run查表不附给文件集合，曝光仍null。独立目录/range-set/原3逐分支和16行表精确；3start全exit0、14CPU秒/28聚合wall秒、0live/G4/fit/forward；最终元数据183226B，删94366B重复，Stage54保持。
+
+[下一Stage168合同](../workbook/stage167_energy_ml/next_execution_contract.json)转Stage132§6另一真实缺口：Stage130已知22个完整EVNT生成分母header/有限metadata。先固定alternative-π/nominal-π/K/charm原路径pilot及成本，最多4进程全部22，1500CPU秒/4核12GB，无事件payload/新目录/G4/能量模型；不把生成记录数当独立ν、权重归一化或接受度。真实处理/DAQ亮度、背景/全生成选择账目/相关校准/乳胶/独立确认仍需实际证据；Stage87/全部原门和整体未完成保持。本阶段结束两目录data覆盖核查，不无限追其他版本。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage166 已取得真实GRL/整run亮度，局部文件曝光未认证
 
 [Stage166报告](../workbook/2026-11-08_stage166_real-GRL-and-shard-exposure.md)实际取得六份官方v10源，run15838记录亮度850.979pb⁻¹、稳定区间53587秒；同原PHYS780874条全通过时间GRL、四项数据质量后774232条，原1024prefix精确。该文件时间包络只有3004秒，不能直接附整run亮度，也不按时间/事件比例缩放；[输入清单](../workbook/stage166_energy_ml/exposure_input_manifest.json)仍标文件曝光未认证。实际C++3004秒/6边界、独立1024身份/DQ及六源原字节通过；4start含一次CSV列名解析失败全计11CPU秒/43聚合wall秒、0live/fit/forward/G4/新ν。最终源/1024输入66794B，删6292436B重复；源码3857逻辑版本按精确内容存975份，再减4264543B，Stage54保持。
@@ -3069,3 +3077,10 @@ content/M12 cal两低箱.990793[.977914,1.000999]/.998796[.995081,1.003146]，te
 [实测报告](../workbook/2026-11-08_stage166_real-GRL-and-shard-exposure.md)及[输入清单](../workbook/stage166_energy_ml/exposure_input_manifest.json)给run15838官方v10记录亮度850.979pb⁻¹、合格53587秒；原PHYS780874条时间GRL全通过/DQ774232，实际事件支持3004秒不证明整run或局部曝光。原metadata lumi仅run查表，不能替代完整处理/DAQ/逐时间亮度证据。C++实际TimeRanges、独立身份/计数和源字节验证通过；含一次失败共11CPU秒、无新fit/G4、0live；留66794B紧凑输入，重复运输/spool和源码版本已精确去重。
 
 [Stage167合同](../workbook/stage166_energy_ml/next_execution_contract.json)有限取得同run真实文件manifest/首尾与实际metadata，1500CPU秒、固定两目录/caps/小pilot与成本门，不展开RAW payload/ν风险或新候选。匹配文件曝光、背景、接受度、真实相关系统与乳胶/独立确认仍开放，Stage87/原门及整体未完成保持。历史§1–144和旧入口原文保留。
+
+
+## 146. Stage167：真实run文件清单完整取得，producer/DAQ曝光证明仍缺
+
+[实测报告](../workbook/2026-11-08_stage167_real-run-file-coverage.md)与[证据表](../workbook/stage167_energy_ml/exposure_evidence.json)给16PHYS/778PhysicsRAW、0–777声明覆盖、N合计14237355和端点包络53580秒。全部没有允许producer metadata，另有Incomplete等非匹配名字未读，不能以命名覆盖认证处理完整、DAQ或曝光；官方整run850.979pb⁻¹和文件集合匹配亮度null分别保留。独立两目录/regex-range/前三文件逐分支/reference64及16行表通过，3job全exit0、14CPU秒/0live，元数据183226B、删除94366B重复，Stage54保持。
+
+[Stage168合同](../workbook/stage167_energy_ml/next_execution_contract.json)取得既有22EVNT实际生成N/schema和有限归一化metadata，pilot/成本后最多全22header；不读事件payload，不做未经加权/完整处理证明的acceptance比值、不重复有限MC toys或新G4。实际data处理账目/活时间/逐时间亮度和背景/全生成接受度/相关系统/乳胶/独立确认仍开放，Stage87与原全部门、整体未完成保持。历史§1–145及旧入口原文保留。

@@ -1,0 +1,55 @@
+{
+  "run": 15838,
+  "actual_PHYS_files": 16,
+  "actual_RAW_files": 778,
+  "PHYS_records_sum": 14237355,
+  "sum_is_unique_events": false,
+  "PHYS_nonmatching_names": [],
+  "RAW_nonmatching_names": [
+    "Faser-Histograms-015838-00000.json.gz",
+    "Faser-Histograms-015838-00001.json.gz",
+    "Faser-Histograms-015838-00002.json.gz",
+    "Faser-Histograms-015838-00003.json.gz",
+    "Faser-Histograms-015838-00004.json.gz",
+    "Faser-Histograms-015838-00005.json.gz",
+    "Faser-Histograms-015838-00006.json.gz",
+    "Faser-Histograms-015838-00007.json.gz",
+    "Faser-Histograms-015838-00008.json.gz",
+    "Faser-Histograms-015838-00009.json.gz",
+    "Faser-Histograms-015838-00010.json.gz",
+    "Faser-Histograms-015838-00011.json.gz",
+    "Faser-Histograms-015838-00012.json.gz",
+    "Faser-Histograms-015838-00013.json.gz",
+    "Faser-Histograms-015838-00014.json.gz",
+    "Faser-Histograms-015838-00015.json.gz",
+    "Faser-Histograms-015838-00016.json.gz",
+    "Faser-Incomplete-015838-00000.raw",
+    "Faser-Monitoring-015838-00000.raw",
+    "Faser-TLBMonitoring-015838-00000.raw"
+  ],
+  "observed_endpoint_min_unix_s": 1720449636,
+  "observed_endpoint_max_unix_s": 1720503216,
+  "endpoint_envelope_s": 53580,
+  "official_stable_ranges_s": [
+    [
+      1720449636,
+      1720503223
+    ]
+  ],
+  "official_run_recorded_lumi_pb_inv": 850.979,
+  "files_with_allowed_producer_metadata": 0,
+  "all_endpoint_runs15838": true,
+  "read_scope": "First/last actual rows only; full interior time/identity/DQ and complete nu selection unmeasured",
+  "all_RAW_indices_have_exactly_one_filename_claim": true,
+  "actual_consumed_RAW_inputs_proven": false,
+  "complete_processing_proven": false,
+  "DAQ_livetime_proven": false,
+  "dataset_exposure_certified": false,
+  "dataset_luminosity_pb_inv": null,
+  "missing": [
+    "producer RAW-to-PHYS success/selection accounting for each actual input",
+    "DAQ accepted/live-time and official luminosity correspondence under the same selection",
+    "background and full-generation acceptance, real correlated auxiliaries and independent confirmation"
+  ],
+  "decision": "Finite catalogue complete; do not probe alternative directories or assign luminosity from names/endpoints. No physics fit or deployment promotion."
+}
