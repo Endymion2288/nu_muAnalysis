@@ -1,0 +1,14 @@
+id	priority	candidate	information_class	required_input	existing_evidence	bounded_contrast	main_limit	sources	performance	resource_cost
+E01	A	withoutIFT预测与IFT原生留出残差	未被主拟合使用的电子测量	native PRD与1D measurement;真实surface/fullcov;field/material;实际μ控制	Stage124 station0 raw存在且withoutIFT归属为0;Stage149 fullcov可读	先校准关联/残差/覆盖;再X+availability与X+content从头训练	密集cluster最小残差选择偏差;alignment弱模式;非独立绝对p真值	R02,R05,R09	未测量	未测量
+E02	A	主谱仪真正leave-module/station-out innovations	重新组织实际measurement约束	原生拟合链/测量链接;实际测量轴与误差	Stage124仅sigma(q/p)和摘要;Stage149未认证pull	固定小组留出与同面误差;不以smoothed residual作独立pull	共享磁场/条件不消失;重拟合成本未测	R05,R09,R19	未测量	未测量
+E03	B	μ–ν近似散射平面有符号方向矩	物理表示与原生方向内容	原strips/clusters;μ到IFT运输;run对应LOS;真实active mask	Stage44有dx/dy;Stage158仅站1–3绝对距离和	少量预定矩;availability及条件打乱轴控制;从头训练	厚靶散射/级联/中性漏失可能抹除;高y非必大pT	R08,R10,R11,R12	未测量	未测量
+E04	C	beam-relative角度与chi_mu_obs	旧输入的确定性交叉变换	允许pz0/slopes;参考面和束流条件	Stage94已试普通log/asinh;Stage51已试角度会聚	一个固定物理交叉包与X62重训	不是新信息;观测chi不等于vertex xy/y/Q2;不作硬E边界	R08,R10,R11	未测量	未测量
+E05	C	μ预计Ecal模块与其他块/preshower对比	旧能量和几何的联合表示	四Ecal原能量;μ运输/误差;原preshower	Stage157已有μ条件Q残差;不是重复MIP扣除	与方向/起始假说合成少量固定对比;保留原尺度	四块无纵向分段;负Q保留;不得称强子pT	R01,R13,R14	未测量	未测量
+E06	B	纵向活动起始与跨探测器空间一致性	原生拓扑内容与物理表示	各站物理cluster;μ预测;Preshower/Ecal实际mapping	Stage51会聚失败;Stage137大部分侧漏不被下游接受	固定early shower与late μ radiation两假说;不输出精确target z	活动开始层不等于ν反应点;接受度/效率改变模式	R01,R13	未测量	未测量
+E07	D	μ辐射光子转换三轨迹控制	额外真实电子控制数据	同期间manifest与测量误差;外部标定;同条件MC	公开FASER已用;本项目输入未认证	约束辐射/转换/shared hits及E/p响应;留出验证	非ν E真值;E/p不能同时独立定track与calo绝对尺度	R04,R01,R20	未测量	未测量
+E08	D	真实tracker raw overlay	额外重建控制数据	真实单轨RDO;时间/重叠规则;条件匹配与重建	公开FASER已用two-track overlay	固定拥挤度/分离对照用于E01关联与错配	不生成完整强子shower;不增加独立νN;波形非线性不可线性叠加	R04,R02	未测量	未测量
+E09	C	有效面积/坏道/hole与物理边界方向	额外条件与接受度表示	实际active channel/wafer mask;阈值;几何;传播误差	Stage124有计数与unknown;尚非所有条件量可用	区分有效未命中/不在接受度/未采集;保留全父	不是漏失GeV标签;不把missing变0或删父	R02,R03,R19	未测量	未测量
+E10	D	BCID/trigger/prescale和读出历史	额外仪器条件元数据	真实TLB/GRL/period;MC一致条件;实际偏差证据	TDAQ论文说明字段;当前reduced ntuple保留未认证	仅在实际关联偏差成立后校准响应/效率	不得作run/beam/trigger能量捷径;不另开无终点metadata	R03,R02	未测量	未测量
+E11	E	2025+四平面像素preshower空间信息	新硬件观测	真实四平面data/MC;ADC/阈值/噪声;共同trigger/GRL与ν覆盖	官方确认Feb2025四实际平面;本项目样本未认证	独立新时期模型:core/宽度/深度增长/μ距离;重新训练	旧2022–24不可补造;非目标内或全Ehad测量;非逐pixel精密时间	R01,R06	未测量	未测量
+E12	F	Good Hit单pulse之外的残余形状/时间组分	条件性新波形内容	仅原始status恰0 ADC;真实MIP/随机/LED控制;相应MC时间物理	Stage80 peak/width;129恢复Q/T;177均时;186理想标量均已试	先证实物理shape结构与MC支持;再固定新训练	不能借形状提bad-hit timing;ringing/afterpulse与有限随机控制	R15,R16,R22	未测量	未测量
+E13	D	已有测试束π/μ/e及位置/HV响应	外部测量校准	实际测试束数据/设置/单位与当前响应迁移	原始测试束论文存在;本项目可用输入未认证	约束量能器空间/粒种响应而非直接训练ν能量	测试束几何与厚靶ν不同;不能移植标定或完成侧漏	R20,R01	未测量	未测量

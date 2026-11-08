@@ -1,0 +1,193 @@
+{
+  "stage": 187,
+  "kind": "electronic_only_observables_research_supplement",
+  "date": "2026-11-08",
+  "next_execution_stage_unchanged": 188,
+  "bulk_emulsion_match_dependency": false,
+  "event_arrays_read": false,
+  "new_physics_measurements": false,
+  "training_or_inference_run": false,
+  "physics_metrics_recomputed": false,
+  "sha_audit_run": false,
+  "new_candidate_performance": "未测量",
+  "new_candidate_resource_cost": "未测量",
+  "search_scope": "FASER instrumentation/tracking/DAQ/calibration/upgrades and electronic neutrinos; DIS/track uncertainty/hadronic topology and timing/waveform decomposition/representation learning. Selected primary sources and official material; not an exhaustive search of all papers.",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "The FASER experiment at the Large Hadron Collider",
+      "url": "https://arxiv.org/html/2604.19199v2",
+      "read_scope": "相关§3.3、4.3、5.1–5.3正文",
+      "use": "电子结构、四平面preshower升级与控制样本的技术依据",
+      "limit": "不是本项目现有数据清单；不移植公开性能"
+    },
+    {
+      "id": "R02",
+      "title": "The tracking detector of the FASER experiment",
+      "url": "https://arxiv.org/html/2112.01116v2",
+      "read_scope": "ASIC二值/三格流水线与§5.4标定段",
+      "use": "二值strip、阈值、实际测量轴",
+      "limit": "不提供逐hit analog电荷或精密TOF"
+    },
+    {
+      "id": "R03",
+      "title": "The trigger and data acquisition system of the FASER experiment",
+      "url": "https://arxiv.org/html/2110.15186v2",
+      "read_scope": "事件包、BCID、触发与粗细时间相关段",
+      "use": "可用的仪器条件/触发元数据",
+      "limit": "当前reduced ntuple保留程度未认证；不作Eν捷径标签"
+    },
+    {
+      "id": "R04",
+      "title": "Search for Dark Photons with the FASER detector at the LHC",
+      "url": "https://arxiv.org/html/2308.05587v2",
+      "read_scope": "§VIII量能器/跟踪系统正文",
+      "use": "三轨迹E/p、转换质量与真实raw tracker overlay控制",
+      "limit": "相同时期控制输入未取得；不移植该分析5%/6%/7%常数"
+    },
+    {
+      "id": "R05",
+      "title": "FASER Public Plots",
+      "url": "https://faser-public-plots.app.cern.ch/",
+      "read_scope": "去module跟踪残差及2026 AHCAL/FASERCal图注",
+      "use": "真实留出残差技术路径；off-axis原型位置",
+      "limit": "公开图不是本项目逐事件联合读出或校准"
+    },
+    {
+      "id": "R06",
+      "title": "Initial performance assessment and calibration techniques of the production monolithic silicon pixel detector ASIC for the detection of electromagnetic showers of TeV energy in the FASER experiment at the LHC",
+      "url": "https://arxiv.org/html/2409.19030v1",
+      "read_scope": "§2、4及设计相关段",
+      "use": "像素4-bit电荷、fast-OR时间和校准",
+      "limit": "早期六平面设计不等于最终四平面；不假定逐pixel精密时间"
+    },
+    {
+      "id": "R07",
+      "title": "Neutrino Experiments at the LHC and the HL-LHC",
+      "url": "https://arxiv.org/html/2609.00842v1",
+      "read_scope": "§5.1升级相关段",
+      "use": "2026原型off-axis及长期新主动读出背景",
+      "limit": "未来设计/邻近原型不当当前on-axis漏能计"
+    },
+    {
+      "id": "R08",
+      "title": "First Measurement of the Muon Neutrino Interaction Cross Section and Flux as a Function of Energy at the LHC with FASER",
+      "url": "https://arxiv.org/html/2412.03186v2",
+      "read_scope": "LOS/crossing、选择和系统相关正文",
+      "use": "束流相对坐标与电子ν测量背景",
+      "limit": "其pμ>100 GeV不同于本项目pz0>50 GeV；不移植选择/背景/效率"
+    },
+    {
+      "id": "R09",
+      "title": "General Broken Lines as advanced track fitting method",
+      "url": "https://arxiv.org/html/1201.4320v1",
+      "read_scope": "摘要与§1–2",
+      "use": "材料、散射与全协方差的轨迹描述",
+      "limit": "只借方法原则；不自动替换ACTS或宣称残差独立绝对标尺"
+    },
+    {
+      "id": "R10",
+      "title": "Reconstructing the Kinematics of Deep Inelastic Scattering with Deep Learning",
+      "url": "https://arxiv.org/html/2110.05505v2",
+      "read_scope": "§2及table1正文",
+      "use": "物理组合、角度与辐射失衡的表示",
+      "limit": "ep束流与完整HFS假设不适用于ν厚靶直接解能"
+    },
+    {
+      "id": "R11",
+      "title": "Nuclear binding energy and transverse momentum imbalance in neutrino-nucleus reactions",
+      "url": "https://arxiv.org/html/1910.08658v2",
+      "read_scope": "摘要与引言横向不平衡段；另核摘要页题名",
+      "use": "平行/垂直横向方向与核效应的动机",
+      "limit": "GeV无介子末态不是FASER DIS；只作方向启发"
+    },
+    {
+      "id": "R12",
+      "title": "Energy flow polynomials: A complete linear basis for jet substructure",
+      "url": "https://arxiv.org/abs/1712.07124",
+      "read_scope": "摘要",
+      "use": "少量有物理含义的角关联量",
+      "limit": "二值occupancy不继承energy-flow完整性或IRC安全定理"
+    },
+    {
+      "id": "R13",
+      "title": "Studies of Hadronic Showers in SND@LHC",
+      "url": "https://arxiv.org/html/2504.01716v2",
+      "read_scope": "§3.1–3.4",
+      "use": "纵向起始与两个采样响应联合约束",
+      "limit": "主动采样/测试束与FASER不同，不能移植线性标定系数"
+    },
+    {
+      "id": "R14",
+      "title": "Hadronic energy resolution of a highly granular scintillator-steel hadron calorimeter using software compensation techniques",
+      "url": "https://arxiv.org/abs/1207.4210",
+      "read_scope": "摘要",
+      "use": "密度、成分和尺度分开",
+      "limit": "需要细粒度含能HCAL；不证明四块Ecal可做到同样补偿"
+    },
+    {
+      "id": "R15",
+      "title": "The Time Structure of Hadronic Showers in highly granular Calorimeters with Tungsten and Steel Absorbers",
+      "url": "https://arxiv.org/abs/1404.6454",
+      "read_scope": "摘要",
+      "use": "材料相关迟发强子响应动机",
+      "limit": "未证明FASER有可用中子/late标签或相应采集覆盖"
+    },
+    {
+      "id": "R16",
+      "title": "Reconstruction of signal amplitudes in the CMS electromagnetic calorimeter in the presence of overlapping proton-proton interactions",
+      "url": "https://arxiv.org/html/2006.14359v2",
+      "read_scope": "摘要与引言multi-pulse段",
+      "use": "模板/噪声条件下的多pulse分解",
+      "limit": "CMS out-of-time pileup机制与FASER不同，不移植收益"
+    },
+    {
+      "id": "R17",
+      "title": "An improved method for measuring muon energy using the truncated mean of dE/dx",
+      "url": "https://arxiv.org/abs/1208.3430",
+      "read_scope": "摘要",
+      "use": "长路径随机μ能损与稳健统计的方法参照",
+      "limit": "不能将km级TeV方法用于少数MIP层的50–100 GeV精确测量"
+    },
+    {
+      "id": "R18",
+      "title": "Towards foundation-style models for energy-frontier heterogeneous neutrino detectors via self-supervised pre-training",
+      "url": "https://arxiv.org/html/2604.07037v2",
+      "read_scope": "摘要及§IV.1–IV.2相关片段",
+      "use": "对新主动FASERCal模拟的表征研究",
+      "limit": "不是当前FASER数据；不重开Stage108泛预训练"
+    },
+    {
+      "id": "R19",
+      "title": "FASER tracker performance",
+      "url": "https://doi.org/10.1016/j.nima.2025.170605",
+      "read_scope": "出版方摘要、引言预览与summary；未获全文",
+      "use": "效率、运行稳定性和alignment研究入口",
+      "limit": "未完整阅读，不移植效率/低能响应结论"
+    },
+    {
+      "id": "R20",
+      "title": "FASER’s Electromagnetic Calorimeter Test Beam Studies",
+      "url": "https://www.mdpi.com/2410-390X/6/3/31",
+      "read_scope": "检索摘要与可见§3.1方法片段；出版方全文请求受限，CDS打开为反爬页",
+      "use": "独立测试束、位置/HV、π/μ/e响应的原始标定入口",
+      "limit": "未获取本项目可用测试束数据；不同几何/时期不充当ν能量真值"
+    },
+    {
+      "id": "R21",
+      "title": "Photographing TeV Neutrinos with FASER",
+      "url": "https://faser.web.cern.ch/briefing-20260325/",
+      "read_scope": "官方说明乳胶重建相关正文",
+      "use": "乳胶与电子分析的资源/技术区别",
+      "limit": "不是本仓库已拥有大批量乳胶匹配的证据"
+    },
+    {
+      "id": "R22",
+      "title": "PMT Waveform Reconstruction and Calorimeter Energy Calibration",
+      "local_path": "/Users/aaaa/Downloads/FASER Waveform Reconstruction and Energy Calibration.pdf",
+      "read_scope": "全文文本抽取，重点第5–10页；第6页渲染并目视核对",
+      "use": "CB饱和边沿拟合、status、持久化与历史数字化",
+      "limit": "2023-03-01 v1、2023-XXX历史稿，不认证当前producer"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "stage": 187,
+  "kind": "electronic_only_research_document_validation",
+  "date": "2026-11-08",
+  "scope": "Only added research documents, metadata, quoted text and entry prefixes; no event data or physics recomputation.",
+  "passed": true,
+  "json_files_parsed": [
+    "workbook/stage187_energy_ml/electronic_only_research_sources.json",
+    "workbook/stage187_energy_ml/electronic_only_quote_evidence.json"
+  ],
+  "source_count": 22,
+  "candidate_count": 13,
+  "candidate_columns": [
+    "id",
+    "priority",
+    "candidate",
+    "information_class",
+    "required_input",
+    "existing_evidence",
+    "bounded_contrast",
+    "main_limit",
+    "sources",
+    "performance",
+    "resource_cost"
+  ],
+  "new_performance_and_cost_all_unmeasured": true,
+  "candidate_source_ids_valid": true,
+  "quote_source_paths_exist": true,
+  "existing_numeric_literal_checks": [
+    {
+      "source": "workbook/2026-11-06_stage124_native-association-energy.md",
+      "literal": "0.999412677",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-06_stage124_native-association-energy.md",
+      "literal": "0.979539244",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-06_stage124_native-association-energy.md",
+      "literal": "1.024001700",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-06_stage124_native-association-energy.md",
+      "literal": "0.994265678",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-06_stage124_native-association-energy.md",
+      "literal": "0.981327591",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-06_stage124_native-association-energy.md",
+      "literal": "1.007733216",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage149_native-covariance-and-raw-control.md",
+      "literal": "0.941346",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage149_native-covariance-and-raw-control.md",
+      "literal": "0.0237178",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage149_native-covariance-and-raw-control.md",
+      "literal": "0.394096",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md",
+      "literal": "1.015321",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md",
+      "literal": "1.005710",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage158_original-cohort-spatial-energy-comparison.md",
+      "literal": "1.024105",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage177_timing-mean-energy-content.md",
+      "literal": "0.997941",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage177_timing-mean-energy-content.md",
+      "literal": "0.991337",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage177_timing-mean-energy-content.md",
+      "literal": "1.005005",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage177_timing-mean-energy-content.md",
+      "literal": "0.997533",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage177_timing-mean-energy-content.md",
+      "literal": "0.992882",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage177_timing-mean-energy-content.md",
+      "literal": "1.002306",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "0.997731",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "0.984972",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "1.009262",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "0.998340",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "0.991194",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "1.006067",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "1.958185",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "1.695659",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md",
+      "literal": "2.293622",
+      "source_and_report_contain_literal": true
+    },
+    {
+      "source": "workbook/2026-11-07_stage137_geometry-accepted-energy-mechanism.md",
+      "literal": "0.000576854",
+      "source_and_report_contain_literal": true
+    }
+  ],
+  "checked_existing_local_links": [
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-01_stage44_local-muon-activity.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-02_stage51_segment-angle-information.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-03_stage67_research-reassessment.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-04_stage94_architecture-comparison.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-05_stage108_full-point-relation-comparison.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-06_stage124_native-association-energy.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-07_stage129_saturation-timing-material-energy.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-08_stage149_native-covariance-and-raw-control.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-08_stage157_joint-muon-response-and-partition-control.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-08_stage158_original-cohort-spatial-energy-comparison.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-08_stage174_timing-dual-end-control.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-08_stage177_timing-mean-energy-content.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-08_stage186_original-cohort-actual-ideal-energy.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "/Users/aaaa/Downloads/FASER Waveform Reconstruction and Energy Calibration.pdf"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "2026-11-07_stage137_geometry-accepted-energy-mechanism.md"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "stage187_energy_ml/electronic_only_candidates.tsv"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "stage187_energy_ml/electronic_only_research_sources.json"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "stage187_energy_ml/electronic_only_quote_evidence.json"
+    },
+    {
+      "from": "workbook/2026-11-08_stage187_electronic-only-observables-research.md",
+      "target": "stage187_energy_ml/next_execution_contract.json"
+    },
+    {
+      "from": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "target": "../workbook/2026-11-08_stage187_electronic-only-observables-research.md"
+    },
+    {
+      "from": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "target": "../workbook/2026-11-08_stage187_electronic-only-observables-research.md"
+    }
+  ],
+  "validation_self_link": "workbook/stage187_energy_ml/electronic_only_document_validation.json",
+  "entry_preservation": [
+    {
+      "path": "docs/nu_mu_energy_ml_revised_roadmap.md",
+      "previous_full_text_preserved_as_exact_suffix": true
+    },
+    {
+      "path": "docs/nu_mu_energy_ml_next_step_prompt.md",
+      "previous_full_text_preserved_as_exact_suffix": true
+    }
+  ],
+  "stage187_execution_contract_unchanged": true,
+  "next_execution_stage": 188,
+  "execution_started": false,
+  "stage54_tracked_files_unchanged": true,
+  "math_and_code_fences_balanced": true,
+  "git_diff_check_passed": true,
+  "event_arrays_read": false,
+  "physics_metrics_recomputed": false,
+  "training_or_inference_run": false,
+  "new_jobs_submitted": false,
+  "sha_audit_run": false,
+  "new_resource_benchmark": "未测量"
+}
