@@ -1,0 +1,11 @@
+{
+  "first_failure": "Prefix-taking IdDictDictionary::unpack used on a full compact ID; exact roundtrip failed. No historical physical conclusion drawn.",
+  "diagnostic_failure": "Added ExpandedIdentifier to ostream without an operator; Cling compilation failed, followed by ROOT teardown signal; exit129. Original failed source/log retained.",
+  "correction": "Field-specific unpack(id,0,field,region) in actual source-dictionary regions, validate each declared field range and require one exact compact roundtrip. No guessed bit shifts, no charge matching and no source/dictionary grid.",
+  "static_API_reference": "https://github.com/rolandjansky/athena/blob/master/DetectorDescription/IdDict/src/IdDictMgr.cxx",
+  "reference_scope": "Public upstream implementation read as API diagnosis, not claimed byte-identical to installed binary; exact numerical identity certificate executed in pinned runtime.",
+  "preflight_total_cap_CPU_s": 500,
+  "used_before_success_CPU_s": 45,
+  "original_full_budget_CPU_s": 2400,
+  "original_protocol_changed": false
+}

@@ -1,0 +1,329 @@
+{
+  "next_stage": 185,
+  "question": "Certify actual historical physical PMT identity before original-cohort ideal-readout intervention; then amortize Athena initialization across fixed train-only sources.",
+  "motivation": "Stage184 original4 channel14 storedID1107296256/current1073741824; current other-front idealQ matches raw while currentchannel14 differs by hundreds pC. Original6d6 log says no channel for0x4000000000000000; numerical fast-integral certificate remains valid, original same-PMT intervention not certified.",
+  "inputs": [
+    "workbook/stage184_energy_ml/protocol.json",
+    "workbook/stage184_energy_ml/audit_source_0_summary.json",
+    "workbook/stage184_energy_ml/preflight_source_0_charges.tsv",
+    "workbook/stage184_energy_ml/original_source_producer_evidence.json",
+    "workbook/stage161_energy_ml/IdDictScintillator_2024.xml",
+    "workbook/stage129_energy_ml/extraction_contract.json"
+  ],
+  "identity": "Get exact6d6 source dictionary and independent IdDict field unpack/packing (no loading old compact ID into current Faser helper); compare actual stored PMT physical coordinates with actual MC source-run04 cable payload/current06. No charge-minimum or waveform-based permutation. Unknown stays unknown. Do not mutate Stage184 source records or X62.",
+  "pilot": "Same original4 pi; originalK/charm requests48/113 first4 train before outcomes. First actual identity/schema/producer closure; then at most these12 for one-process multi-source sparse selector. No replacement if one fails. No cal/test or energy fits.",
+  "batch": "One Athena accumulator, concatenate only exact declared HITS and use measured per-fileN/global entry offsets; same originalrun/event/incoming and savedADC checked per source. Reuse initialized geometry/tools per source with actual IOV; no giant rewrittenROOT/cache.",
+  "acceptance": [
+    "Original physical station/plate/pmt certified from source/dictionary and exact observed ID roundtrip",
+    "Original4 pi independent current-physical response and signed raw readout controls rejoin exact",
+    "Exact frozen12 HITS/RDO identity, actual totalN, all declared channels physical support or explicit missing",
+    "Same frozen Stage18432float32eps literal integral tolerance on first2 per source",
+    "Full process CPU/wall/RSS/read bytes and startup/event decomposition, independent4 reread"
+  ],
+  "resources": {
+    "CPU_budget_s": 2400,
+    "identity_preflight_allowance_s": 500,
+    "batch_pilot_allowance_s": 1200,
+    "audit_allowance_s": 700,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "max_jobs": 1,
+    "MaxRuntime_s": 86400,
+    "new_event_bytes_cap": 8388608,
+    "GPU": 0
+  },
+  "stop": "No proof of actual old physical PMT -> no ideal energy training; no mapping/window/tag grid. Keep Stage184 full96 denied and its4000budget unchanged. This is new historical source identity and shared-startup path, not rerunning denied per-source96.",
+  "after": "Only after semantic and cost certification separately freeze meaningful original71376active/roles/K matched status/actual-summary/ideal-summary new fits and original8layers/3tails. Stage17912 is not energy-information evidence.",
+  "invariant": "Stage87/alloriginalgates/Stage137two-low5pct,pz>50,pz0-only firstpower,raw11/typedmissing/legal signed/status0time,allK/roles/reserved/quarantine unchanged.",
+  "overall_complete": false,
+  "stage": 185,
+  "starting_commit": "fe91789",
+  "sources": [
+    {
+      "index": 0,
+      "component": "pi",
+      "run": 200082,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-RDO.root",
+      "parent_N": 10000,
+      "hits": [
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00001-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00002-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00003-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00004-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00005-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00006-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00007-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00008-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00009-s0014-HITS.root"
+      ],
+      "cases": [
+        {
+          "row": 0,
+          "entry": 19,
+          "event": 19,
+          "run": 200082,
+          "pz": 246.122359375,
+          "role": 1,
+          "incoming": [
+            14.0,
+            -45.72883987426758,
+            -31.944162368774414,
+            347510.0
+          ]
+        },
+        {
+          "row": 1,
+          "entry": 52,
+          "event": 52,
+          "run": 200082,
+          "pz": 283.38321875,
+          "role": 1,
+          "incoming": [
+            14.0,
+            12.057217597961426,
+            3.8639707565307617,
+            297320.0
+          ]
+        },
+        {
+          "row": 2,
+          "entry": 59,
+          "event": 59,
+          "run": 200082,
+          "pz": 746.2924375,
+          "role": 1,
+          "incoming": [
+            -14.0,
+            -31.473175048828125,
+            6.776240348815918,
+            783480.0
+          ]
+        },
+        {
+          "row": 3,
+          "entry": 62,
+          "event": 62,
+          "run": 200082,
+          "pz": 274.48884375,
+          "role": 1,
+          "incoming": [
+            14.0,
+            83.76854705810547,
+            92.49808502197266,
+            761740.0
+          ]
+        }
+      ],
+      "producer_log": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/log/s0014/FaserMC-MC24_Genie_epos_pi-200082-RDO-merge-0.rdo.log"
+    },
+    {
+      "index": 48,
+      "component": "k",
+      "run": 200083,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/rdo/s0014/FaserMC-MC24_Genie_epos_k-200083-00000-00009-s0014-RDO.root",
+      "parent_N": 10000,
+      "hits": [
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00000-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00001-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00002-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00003-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00004-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00005-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00006-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00007-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00008-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/sim/s0014/FaserMC-MC24_Genie_epos_k-200083-00009-s0014-HITS.root"
+      ],
+      "cases": [
+        {
+          "row": 16421,
+          "entry": 6,
+          "event": 6,
+          "run": 200083,
+          "pz": 1129.43475,
+          "role": 1,
+          "incoming": [
+            14.0,
+            -85.38915252685547,
+            -43.60248565673828,
+            790860.0
+          ]
+        },
+        {
+          "row": 16423,
+          "entry": 225,
+          "event": 225,
+          "run": 200083,
+          "pz": 301.56025,
+          "role": 1,
+          "incoming": [
+            -14.0,
+            -10.184453964233398,
+            68.73095703125,
+            648650.0
+          ]
+        },
+        {
+          "row": 16424,
+          "entry": 239,
+          "event": 239,
+          "run": 200083,
+          "pz": 384.59009375,
+          "role": 1,
+          "incoming": [
+            14.0,
+            2.129225492477417,
+            -4.50794792175293,
+            384670.0
+          ]
+        },
+        {
+          "row": 16426,
+          "entry": 272,
+          "event": 272,
+          "run": 200083,
+          "pz": 538.2469375,
+          "role": 1,
+          "incoming": [
+            -14.0,
+            0.779463529586792,
+            -150.9650421142578,
+            789690.0
+          ]
+        }
+      ],
+      "producer_log": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200083/log/s0014/FaserMC-MC24_Genie_epos_k-200083-RDO-merge-0.rdo.log"
+    },
+    {
+      "index": 113,
+      "component": "charm",
+      "run": 200089,
+      "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/rdo/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-00009-s0014-RDO.root",
+      "parent_N": 10000,
+      "hits": [
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00001-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00002-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00003-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00004-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00005-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00006-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00007-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00008-s0014-HITS.root",
+        "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/sim/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00009-s0014-HITS.root"
+      ],
+      "cases": [
+        {
+          "row": 38363,
+          "entry": 202,
+          "event": 202,
+          "run": 200089,
+          "pz": 565.1204375,
+          "role": 1,
+          "incoming": [
+            -14.0,
+            40.8855094909668,
+            11.613744735717773,
+            506730.0
+          ]
+        },
+        {
+          "row": 38364,
+          "entry": 235,
+          "event": 235,
+          "run": 200089,
+          "pz": 252.046984375,
+          "role": 1,
+          "incoming": [
+            14.0,
+            262.9894714355469,
+            -165.2395477294922,
+            1538400.0
+          ]
+        },
+        {
+          "row": 38365,
+          "entry": 278,
+          "event": 278,
+          "run": 200089,
+          "pz": 967.1203125,
+          "role": 1,
+          "incoming": [
+            -14.0,
+            -101.55448913574219,
+            78.77987670898438,
+            1314400.0
+          ]
+        },
+        {
+          "row": 38366,
+          "entry": 284,
+          "event": 284,
+          "run": 200089,
+          "pz": 2175.08575,
+          "role": 1,
+          "incoming": [
+            14.0,
+            48.123497009277344,
+            -409.84271240234375,
+            2388500.0
+          ]
+        }
+      ],
+      "producer_log": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200089/log/s0014/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-RDO-merge-0.rdo.log"
+    }
+  ],
+  "dictionary_sources": [
+    {
+      "commit": "6d6ab70b",
+      "path": "DetectorDescription/GeoModel/FaserGeoModel/data/IdDictFASER.xml",
+      "bytes": 708
+    },
+    {
+      "commit": "6d6ab70b",
+      "path": "Scintillator/ScintDetDescr/ScintIdDictFiles/data/IdDictScintillator.xml",
+      "bytes": 1416
+    },
+    {
+      "commit": "6d6ab70b",
+      "path": "Neutrino/NeutrinoDetDescr/NeutrinoIdDictFiles/data/IdDictNeutrino_730.xml",
+      "bytes": 495
+    },
+    {
+      "commit": "6d6ab70b",
+      "path": "Tracker/TrackerDetDescr/TrackerIdDictFiles/data/IdDictInterface.xml",
+      "bytes": 1789
+    },
+    {
+      "commit": "6d6ab70b",
+      "path": "Calorimeter/CaloDetDescr/CaloIdDictFiles/data/IdDictCalorimeter.xml",
+      "bytes": 1107
+    }
+  ],
+  "geometry": "FASERNU-04",
+  "global_tag": "OFLCOND-FASER-06",
+  "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "phase_CPU_allowance_s": {
+    "identity": 500,
+    "batch": 1200,
+    "audit": 700
+  },
+  "CPU_budget_s": 2400
+}

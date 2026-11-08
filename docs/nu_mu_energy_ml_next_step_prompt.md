@@ -1,3 +1,11 @@
+# 当前执行更新：Stage185 历史PMT与三来源共享读取审计完成
+
+[Stage185报告](../workbook/2026-11-08_stage185_historical-PMT-and-shared-source-readout.md)按原6d6字典逐字段唯一回环认证11路，历史channel14是plate1（当前channel15）；当前04/06 DB均14→plate0，不将差异归因tag切换。原4父actual保持，修正理想积分252.604567/110.492456/0/247.188731pC，原row3错误830.095pC不再当噪声。原π/K/charm各4train共180记录、90literal最大差1.77623e-5pC、4父独立重读与原raw/status精确通过。一个Athena跨三原源，完整83.92CPU/201.99wall秒；首execute另含40.90CPU秒JIT，未冒称全队列成本或受控加速比。
+
+5start含2程序错误终态、262CPU/520聚合wall秒/0live，清340472B重复、无新事件cache、Stage54保持。电荷机制与PMT前置完成，**有意义支持上的实际/理想能量增量仍待测**，不把12父认证当能量收益。下一[Stage186合同](../workbook/stage185_energy_ml/next_execution_contract.json)先原7来源×40train认证producer/原X62/raw11/pz0及成本，准入才全原71376active/K/角色；A107/R122/I122共9固定新fit，matched availability、原八层三尾/所有门和500 paired incoming区间。新180000CPU秒完整独立预算、8核24GB/最多4作业×8读者、0新G4，不扩大旧预算。原Stage87/整体未完成及外部输入缺口保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage184 快速积分通过，原队列前端PMT回接需先认证
 
 [Stage184报告](../workbook/2026-11-08_stage184_original-HITS-window-and-channel-identity.md)实查原280来源2800 HITS全部存在；原12参考202积分、新原源2父30逐点卷积均过冻结数值界，原4train/60通道跨作业重读精确。首4完整91.61CPU秒，原三倍外推6321.09>full2200门，未提交96父，不增预算；两作业全0/204CPU/323聚合wall秒/0live，清5800994B重复、无新事件数组、Stage54保持。

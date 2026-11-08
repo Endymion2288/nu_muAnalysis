@@ -1,0 +1,56 @@
+{
+  "next_stage": 186,
+  "question": "On the original meaningful-support cohort, does ideal same-physical-PMT/window charge add low-energy information beyond actual readout and availability, enough to motivate further readout estimation?",
+  "inputs": {
+    "dataset": "ntuples/energy_ml_stage119/old_input.npz",
+    "sources": "workbook/stage129_energy_ml/extraction_contract.json",
+    "baseline": "ml/artifacts/stage87/predictions.npz",
+    "policy": "workbook/stage87_energy_ml/protocol.json",
+    "physical_certificate": "workbook/stage185_energy_ml/independent_validation.json",
+    "features": "ml/configs/audited_features.json"
+  },
+  "cohort": "Exactly original89033 rows: role0/1/2/3=17657/46575/11612/13189,71376active; allK and originalincomingweights. No new split/GENIE/G4/reconstruction/reserved/role0features orpredictions; retain everyactiveparent.",
+  "sources": "Only280 original requests/2800 knownHITS. ExactRDO producerlogs and installed/source dictionary evidence first. Decode actualstored compactID by corresponding source-version dictionary and require unique physicaltuple/roundtrip; no hardware-only current join, no charge-selected permutation or guessed layouts. CurrentDB snapshot is not historical bytes. Unsupported source keeps parents and common appended missingness; report perorigin/component/role coverage.",
+  "pilot": {
+    "source_indices": [
+      0,
+      48,
+      113,
+      254,
+      255,
+      257,
+      260
+    ],
+    "train_per_source": 40,
+    "repeat": "first4originaltrain source0",
+    "selection": "First40originalrole1 byentry, no outcomes or replacements; allavailable producer/version/physical and actualRDO controls audited before newcal/testfeature reading."
+  },
+  "producer_gate": "Reuse Stage185 source6d6 certificates only where exact source evidence agrees; separately certify any actually different dictionary/producer. Actual originalX62/scint11/pz0 and ordinaryCalo/status controls exact at declaredfloatprecision on pilot, including originalproducerdefinition. Current signed raw is declared explicitly if historicalPHYS uses positive-part integral. No silent equivalence or fit-charge fallback.",
+  "extraction": "OneAthena accumulator per group of<=8sources with actual perHITSN/globalentry checks and sparse original identities; 35groups oforiginalrequestorder. All15originalphysicalPMTs andinclusivewindows scint780-980ns/Calo780-930ns only if verified per source. Stage184 fastwindow method and32float32eps unchanged. No cachedADC/step/source arrays. Independent literalfirst2train/source inpilot only; no fullcohort literal replay. Finalscientificcacheonlycompactscalars/flags/identities.",
+  "representation": "Common15channel availability C=actual valid signedraw and certified same-PMT HITS/response. A=X62+M45; R=A+asinh(actual same-window signedQ/1pC)15; I=A+asinh(ideal same-window positive-signalQ/1pC)15. R andI share C, unavailable measurements NaN, allparents retained. M45 perchannel commonavailability,knownfitinvalid andactualoverflow/censor indicator, definitions frozen from producer before newfeatures. No oracle birth/S0/y/vertex/energy ortruthavailability feature, no changedX62/pz0 policy ornewtiming.",
+  "missingness": "Use producer status/domain guards; no blanket -999/-1 deletion from signedraw, no negative clamp, nozero imputation. Fitfailure alone does not erase validraw, censored ADC retains flag, ADCabsence != measuredzero. Truthsignal oracle is diagnostic, never deployable correctedcharge.",
+  "fits": "Exactly3arms A107/R122/I122 with originalStage87 3seeds/400round/depth5/eta.04/subsample.8/minchild20/lambda10/CPUhist/nthread1 and originalincomingweighted base_score/boost_from_average0. Ninefits, noearlystop/grid/extra seeds; perarm one role2 ensemble logoffset. Reuse Stage87 lockedbaseline after exactcohort/Xcontrols; noX-onlyrefit. Reloadexact, no newscore/prior/window models.",
+  "evaluation": "Original8protectedstrata and3tail50 directions, allcal/testjoint gates, pairedincoming500 bootstrap fixedseed20261108186+role; report N/incoming/ESS,RMSE,bias/R68/tails, perorigin/component and appendedmissing/censoredsupport. MainI/R mechanismcontrast, I/A andR/A contentcontrols, each/traditional andStage87. Independent predictions/weights/masks/scalar metrics/interval recomputation. Intervals conditional, originaldevelopedpool not newindependentconfirmation.",
+  "gates": "Unchanged bothlow/traditional upper95<=1.05; all/Stage87<=1.01; other5<=1.03; all8strata3taildiffupper95<=+2pp. Stage137 bothlow cal/test content point<=.95 andupper95<1 plus tails for further expansion. Finaltarget still actual lowenergy superiority/independentconfirmation, notoracle performance.",
+  "resources": {
+    "CPU_budget_s": 180000,
+    "pilot_total_CPU_cap_s": 4000,
+    "production_total_CPU_cap_s": 168000,
+    "fit_audit_CPU_cap_s": 8000,
+    "request_CPUs": 8,
+    "memory_MB": 24000,
+    "max_active_jobs": 4,
+    "reader_processes_per_job": 8,
+    "sources_per_reader_max": 8,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_new_event_and_model_bytes_cap": 67108864
+  },
+  "admission": "Beforefull freeze a measured cost decomposition: GNUcompletepilot/firstcallJIT + metadata/per-source initialization + sparseevent andROOTrequested-byte scaling. Triple measured sourcewise conservative projection +alreadyused+8000fit/audit <=180000; no replacing CPU withwall or ignoring coldfirstexecute. Wall/I/O projection explicitly provisional. Fixed disjoint per-job CPU allowances sum<=168000, max4live, all failures count. Original Stage184/185budgets unchanged. Source-dependent closures gate full; nocal/testfeatures/fit untiladmitted.",
+  "computing": "Allscientificoperations onHTCondor ~/condor/nu_muAnalysis/stage186. 8independentreaderprocesses/groupedjob,BLAS/ROOT innerthreads1,atmost32readers concurrently; eventformats cannot useCUDA. Retain fixedsmall CPUhist reproducibility; no unmeasuredGPU speedclaim. Report actual throughput/I/O/RSS and overlaps; noROOT/xAOD or largewaveform intermediates; exactaudit archive and delete verifiedduplicates/ownterminalspool afterqueueIwd check. Stage54 preserved.",
+  "interpretation": "ActualQ15control includes already studiedraw11/raw4; its retraining is necessary matchedcontrol, notclaimednewdetectorinformation. I adds source-matched simulated no-noise/no-clip signal, neitherindependentnu nor Bayeslimit/data calibration. IfIweak whileHstrong, prioritize geometry/externalanchor/interaction input rather than waveformgrid; ifIhelps andRfails, identifycalibratable estimation/supportgap beforeanyhybrid/Q+T.",
+  "pending": "Executionnotstarted; fullcohortPMT/producercoverage, costs, newenergybenefit anddata/independenttransfer unmeasured.",
+  "overall_complete": false,
+  "promotion": false
+}

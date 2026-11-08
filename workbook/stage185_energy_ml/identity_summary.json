@@ -1,0 +1,2698 @@
+{
+  "passed": true,
+  "historical_scint_channel_N": 11,
+  "source_commit": "6d6ab70b",
+  "actual_decoder": "Standalone IdDictParser with exact source dictionaries, compact expanded compact roundtrip",
+  "physical_mapping_selected_by_charge": false,
+  "channels": [
+    {
+      "detector": "Veto",
+      "channel": 14,
+      "stored_id32": 1107296256,
+      "subdet": 2,
+      "part": 1,
+      "station": 0,
+      "plate": 1,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Veto",
+      "channel": 6,
+      "stored_id32": 1140850688,
+      "subdet": 2,
+      "part": 1,
+      "station": 1,
+      "plate": 0,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Veto",
+      "channel": 7,
+      "stored_id32": 1174405120,
+      "subdet": 2,
+      "part": 1,
+      "station": 1,
+      "plate": 1,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Trigger",
+      "channel": 9,
+      "stored_id32": 1207959552,
+      "subdet": 2,
+      "part": 2,
+      "station": 0,
+      "plate": 0,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Trigger",
+      "channel": 8,
+      "stored_id32": 1224736768,
+      "subdet": 2,
+      "part": 2,
+      "station": 0,
+      "plate": 0,
+      "pmt": 1,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Trigger",
+      "channel": 11,
+      "stored_id32": 1241513984,
+      "subdet": 2,
+      "part": 2,
+      "station": 0,
+      "plate": 1,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Trigger",
+      "channel": 10,
+      "stored_id32": 1258291200,
+      "subdet": 2,
+      "part": 2,
+      "station": 0,
+      "plate": 1,
+      "pmt": 1,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Preshower",
+      "channel": 12,
+      "stored_id32": 1342177280,
+      "subdet": 2,
+      "part": 3,
+      "station": 0,
+      "plate": 0,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "Preshower",
+      "channel": 13,
+      "stored_id32": 1375731712,
+      "subdet": 2,
+      "part": 3,
+      "station": 0,
+      "plate": 1,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "VetoNu",
+      "channel": 4,
+      "stored_id32": 1476395008,
+      "subdet": 2,
+      "part": 4,
+      "station": 0,
+      "plate": 0,
+      "pmt": 0,
+      "roundtrip_exact": true
+    },
+    {
+      "detector": "VetoNu",
+      "channel": 5,
+      "stored_id32": 1509949440,
+      "subdet": 2,
+      "part": 4,
+      "station": 0,
+      "plate": 1,
+      "pmt": 0,
+      "roundtrip_exact": true
+    }
+  ],
+  "current_condition_records": [
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "run": 200082,
+      "tag": "OFLCOND-FASER-04",
+      "single_version": false,
+      "resolved_tag": "CableMapping-00",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 25,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 26,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "historical_bytes_certified": false,
+      "caveat": "Current DB snapshot is queried exactly; this does not recover historical database bytes."
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "run": 200082,
+      "tag": "OFLCOND-FASER-06",
+      "single_version": false,
+      "resolved_tag": "CableMapping-01",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 25,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 26,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "muon",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "muon",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "historical_bytes_certified": false,
+      "caveat": "Current DB snapshot is queried exactly; this does not recover historical database bytes."
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "run": 200083,
+      "tag": "OFLCOND-FASER-04",
+      "single_version": false,
+      "resolved_tag": "CableMapping-00",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 25,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 26,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "historical_bytes_certified": false,
+      "caveat": "Current DB snapshot is queried exactly; this does not recover historical database bytes."
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "run": 200083,
+      "tag": "OFLCOND-FASER-06",
+      "single_version": false,
+      "resolved_tag": "CableMapping-01",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 25,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 26,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "muon",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "muon",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "historical_bytes_certified": false,
+      "caveat": "Current DB snapshot is queried exactly; this does not recover historical database bytes."
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "run": 200089,
+      "tag": "OFLCOND-FASER-04",
+      "single_version": false,
+      "resolved_tag": "CableMapping-00",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 25,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 26,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "historical_bytes_certified": false,
+      "caveat": "Current DB snapshot is queried exactly; this does not recover historical database bytes."
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/sqlite200/CABP200_261028.db",
+      "run": 200089,
+      "tag": "OFLCOND-FASER-06",
+      "single_version": false,
+      "resolved_tag": "CableMapping-01",
+      "rows": [
+        {
+          "channel": 0,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 1,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 2,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 1,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 3,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "calo",
+            "station": 0,
+            "plate": 0,
+            "row": 1,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 4,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 5,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "vetonu",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 6,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 7,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 1,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 8,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 9,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 10,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 11,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "trigger",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 12,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 13,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 14,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 15,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "veto",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 16,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 17,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 18,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 19,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 20,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 21,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 22,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 23,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 24,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 25,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "preshower",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 1
+          }
+        },
+        {
+          "channel": 26,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "muon",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 27,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "muon",
+            "station": 0,
+            "plate": 1,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 28,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 29,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 30,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "none",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        },
+        {
+          "channel": 31,
+          "since": 0,
+          "until": 9223372036854775807,
+          "payload": {
+            "type": "clock",
+            "station": 0,
+            "plate": 0,
+            "row": 0,
+            "module": 0,
+            "pmt": 0
+          }
+        }
+      ],
+      "historical_bytes_certified": false,
+      "caveat": "Current DB snapshot is queried exactly; this does not recover historical database bytes."
+    }
+  ],
+  "original_historical_database_bytes": "unavailable; physical stored identifier decoded directly",
+  "energy_fits": 0,
+  "new_G4": 0,
+  "overall_complete": false
+}

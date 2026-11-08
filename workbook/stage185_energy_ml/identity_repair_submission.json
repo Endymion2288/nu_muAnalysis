@@ -1,0 +1,19 @@
+{
+  "phase": "identity_repair",
+  "result": "9677089.0 - 9677089.0",
+  "CPU_allowance_s": 487.0,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage185\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794142762911101080.sh identity_repair\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage185/worker_1794142762911101080.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage185/1794142762911101080/energy-ml-stage185.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 12000MB\nrequest_disk = 4000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage185 fixed phase CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 487.0\n+NuMuStage = \"energy-ml-stage185\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage185/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage185/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage185/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage185/1794142762911101080/energy-ml-stage185.tar.gz",
+    "bytes": 12033,
+    "files": [
+      "setup_env.sh",
+      "ml/stage143_monitor.py",
+      "ml/stage185_identity.py",
+      "ml/stage185_identity.hxx",
+      "workbook/stage185_energy_ml/protocol.json",
+      "workbook/stage185_energy_ml/IdDict_6d6ab70b.xml",
+      "workbook/stage184_energy_ml/audit_source_0_summary.json"
+    ]
+  }
+}

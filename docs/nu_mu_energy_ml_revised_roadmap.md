@@ -1,3 +1,11 @@
+# 当前执行更新：Stage185 历史PMT与三来源共享读取审计完成
+
+[Stage185报告](../workbook/2026-11-08_stage185_historical-PMT-and-shared-source-readout.md)按原6d6字典逐字段唯一回环认证11路，历史channel14是plate1（当前channel15）；当前04/06 DB均14→plate0，不将差异归因tag切换。原4父actual保持，修正理想积分252.604567/110.492456/0/247.188731pC，原row3错误830.095pC不再当噪声。原π/K/charm各4train共180记录、90literal最大差1.77623e-5pC、4父独立重读与原raw/status精确通过。一个Athena跨三原源，完整83.92CPU/201.99wall秒；首execute另含40.90CPU秒JIT，未冒称全队列成本或受控加速比。
+
+5start含2程序错误终态、262CPU/520聚合wall秒/0live，清340472B重复、无新事件cache、Stage54保持。电荷机制与PMT前置完成，**有意义支持上的实际/理想能量增量仍待测**，不把12父认证当能量收益。下一[Stage186合同](../workbook/stage185_energy_ml/next_execution_contract.json)先原7来源×40train认证producer/原X62/raw11/pz0及成本，准入才全原71376active/K/角色；A107/R122/I122共9固定新fit，matched availability、原八层三尾/所有门和500 paired incoming区间。新180000CPU秒完整独立预算、8核24GB/最多4作业×8读者、0新G4，不扩大旧预算。原Stage87/整体未完成及外部输入缺口保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage184 快速积分通过，原队列前端PMT回接需先认证
 
 [Stage184报告](../workbook/2026-11-08_stage184_original-HITS-window-and-channel-identity.md)实查原280来源2800 HITS全部存在；原12参考202积分、新原源2父30逐点卷积均过冻结数值界，原4train/60通道跨作业重读精确。首4完整91.61CPU秒，原三倍外推6321.09>full2200门，未提交96父，不增预算；两作业全0/204CPU/323聚合wall秒/0live，清5800994B重复、无新事件数组、Stage54保持。
@@ -3345,3 +3353,8 @@ Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；
 ## 165. Stage184：原队列快速积分已证数值，历史前端物理PMT未闭合
 
 [报告](../workbook/2026-11-08_stage184_original-HITS-window-and-channel-identity.md)原2800 HITS路径全在；202原参考/30新literal积分与4父独立读取通过。完整4父91.61CPU秒，原6321.09>2200成本门，不生产96；两终态全0/204CPU/323wall秒，清5800994B、Stage54保持。原channel14与当前物理元素对接出现明确差异，实际247.683pC不等于当前830.095pC，另一前端247.189pC只作身份诊断，不能按幅度选配或称已测去噪能量收益。下一Stage185历史字段/原COOL解码与同进程多源成本证据，固定12train/2400CPU秒/0fit，原门/Stage87/角色/K/reserved及整体未完成保持。历史全文保留。
+
+
+## 166. Stage185：原历史PMT身份闭合与共享多源读取
+
+[报告](../workbook/2026-11-08_stage185_historical-PMT-and-shared-source-readout.md)独立原6d6字段解码11路，channel14=plate1；不能依据相似Q置换通道，也不能将当前DB当历史字节。原12train/3源180路、90literal与4父独立重读均通过，无新能量fit。5start含两程序错误/262CPU/520wall秒/0live，清340472B重复，Stage54保持。下一Stage186先源producer/控制/完整成本准入，再原队列A/R/I实际理想能量对照，冻结独立180000CPU秒与9fit；不声称已改善能量。原角色/K/八层三尾/Stage87/全部门和整体未完成保持，历史全文保留。

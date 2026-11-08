@@ -1,0 +1,189 @@
+<IdDict>
+<IdDictionary name="FASER">
+
+  <field name="subdet">
+    <label name="Neutrino"        value="1"  />
+    <label name="Scintillator"    value="2"  />
+    <label name="Tracker"         value="3"  />
+    <label name="Calorimeter"     value="4"  />
+ </field>
+
+  <region>
+    <range field="subdet" value="Neutrino" />
+    <dictionary name="Neutrino" />
+  </region>
+
+  <region>
+    <range field="subdet" value="Scintillator" />
+    <dictionary name="Scintillator" />
+  </region>
+
+  <region>
+    <range field="subdet" value="Tracker" />
+    <dictionary name="Tracker" />
+  </region>
+
+  <region>
+    <range field ="subdet" value="Calorimeter" />
+    <dictionary name="Calorimeter" />
+  </region>
+  
+</IdDictionary>
+
+
+<IdDictionary name="Scintillator">
+
+  <field name="part" >
+    <label name="Veto" value="1" />
+    <label name="Trigger" value="2" />
+    <label name="Preshower" value="3" />
+    <label name="VetoNu" value="4" />
+    <label name="Muon" value="5" />
+  </field>
+
+  <region>
+    <range field="part" value="Veto" />
+    <range field="station" minvalue="0" maxvalue="1" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="0" />
+  </region>
+
+  <region>
+    <range field="part" value="Trigger"/>
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="1" />
+  </region>
+
+  <region>
+    <range field="part" value="Preshower" />
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="1" />
+  </region>
+
+  <region>
+    <range field="part" value="VetoNu" />
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="0" />
+  </region>
+
+  <region>
+    <range field="part" value="Muon" />
+    <range field="station" minvalue="0" maxvalue="0" />
+    <range field="plate" minvalue="0" maxvalue="1" />
+    <range field="pmt" minvalue="0" maxvalue="0" />
+  </region>
+
+</IdDictionary>
+
+<IdDictionary name="Neutrino" version="FASERNU-04-730">
+
+  <field name="part">
+    <label name="Emulsion" value="1" />
+  </field>
+
+  <field name="film">
+    <label name="Upstream" value="0" />
+    <label name="Downstream" value="1" />
+  </field>
+
+  <region>
+    <range field="part" value="Emulsion" />
+    <range field="module" minvalue="0" maxvalue="72" />
+    <range field="base" minvalue="0" maxvalue="9" />
+    <range field="film" values="Upstream Downstream" />
+  </region>
+
+</IdDictionary>
+<IdDictionary name="Tracker" version="FaserNu">
+
+  <field name="part">
+    <label name="SCT"        value="1" />
+  </field>
+
+<!-- This file includes the Interface detector -->
+  <field name="station" >
+    <label name="Interface"  value="0" />
+    <label name="Upstream"   value="1" />
+    <label name="Central"    value="2" />
+    <label name="Downstream" value="3" />
+  </field>
+
+  <field name="layer" >
+    <label name="Upstream"   value="0" />
+    <label name="Central"    value="1" />
+    <label name="Downstream" value="2" />
+  </field>
+
+  <field name="phi_module">
+    <label name="Bottom"       value="0" /> 
+    <label name="LowerMiddle"  value="1" />
+    <label name="UpperMiddle"  value="2" />
+    <label name="Top"          value="3" />
+  </field>
+
+  <field name="eta_module">
+  <!-- facing downstream (hence "starboard" and "port")
+       x must increase right to left for a right-handed
+       coordinate system -->
+  <!-- numbers straddle zero for consistency with ATLAS -->       
+    <label name="Starboard"   value="-1" />
+    <label name="Port"        value="+1" />
+  </field>
+
+  <field name="side">
+  <!-- The "upper" side is the side with the pigtail -->
+    <label name="Upper"    value="0" />
+    <label name="Lower"    value="1" />
+  </field>
+
+  <region>
+    <range field="part"       value="SCT" />
+    <range field="station"    values="Interface Upstream Central Downstream" />
+    <range field="layer"      values="Upstream Central Downstream" />
+    <range field="phi_module" values="Bottom LowerMiddle UpperMiddle Top" wraparound="FALSE" />
+    <range field="eta_module" values="Starboard Port" wraparound="FALSE" />
+    <range field="side"       values="Upper Lower" />
+    <range field="strip"      minvalue="0" maxvalue="767" />
+  </region>
+
+</IdDictionary>
+<IdDictionary name="Calorimeter">
+
+  <field name="part" >
+    <label name="Ecal"   value="1" />
+    <label name="CaloNu" value="2" />
+  </field>
+
+  <field name="row">
+    <label name="Bottom"       value="0" /> 
+    <label name="Top"          value="1" />
+  </field>
+
+  <field name="module">
+  <!-- facing downstream (hence "starboard" and "port")
+       x must increase right to left for a right-handed
+       coordinate system -->
+    <label name="Starboard"   value="0" />
+    <label name="Port"        value="1" />
+  </field>
+
+  <region>
+    <range field="part"       value="Ecal" />
+    <range field="row"        values="Bottom Top" wraparound="FALSE" />
+    <range field="module"     values="Starboard Port" wraparound="FALSE" />
+    <range field="pmt"        minvalue="0" maxvalue="1" />
+  </region>
+
+  <region>
+    <range field="part"       value="CaloNu" />
+    <range field="row"        values="Bottom Top" wraparound="FALSE" />
+    <range field="module"     values="Starboard Port" wraparound="FALSE" />
+    <range field="pmt"        minvalue="0" maxvalue="0" />
+  </region>    
+
+</IdDictionary>
+
+</IdDict>
