@@ -1,0 +1,164 @@
+{
+  "verified": true,
+  "REC": "/pool/condor/dir_1400214/nu_mu_stage156.z81aYJ/chain_full/FaserMC-MC24_PG_muon_fasernu_100GeV-100012-00000-s0012-xAOD.root",
+  "inspected_trees": [
+    "##Params",
+    "##Params",
+    "##Shapes",
+    "##Shapes",
+    "##Links",
+    "##Links",
+    "CollectionTree",
+    "POOLContainer",
+    "POOLContainerForm",
+    "POOLCollectionTree",
+    "MetaData",
+    "MetaDataHdr",
+    "MetaDataHdrForm"
+  ],
+  "actual_track_branches": [
+    {
+      "tree": "CollectionTree",
+      "name": "CKFTrackCollection",
+      "class_name": "Trk::TrackCollection_tlp6"
+    },
+    {
+      "tree": "CollectionTree",
+      "name": "CKFTrackCollectionBackward",
+      "class_name": "Trk::TrackCollection_tlp6"
+    },
+    {
+      "tree": "CollectionTree",
+      "name": "CKFTrackCollectionBackwardWithoutIFT",
+      "class_name": "Trk::TrackCollection_tlp6"
+    },
+    {
+      "tree": "CollectionTree",
+      "name": "CKFTrackCollectionWithoutIFT",
+      "class_name": "Trk::TrackCollection_tlp6"
+    },
+    {
+      "tree": "CollectionTree",
+      "name": "SegmentFit",
+      "class_name": "Trk::TrackCollection_tlp6"
+    }
+  ],
+  "relevant_inputs": {
+    "CKFTrackCollectionWithoutIFT": [
+      {
+        "tree": "CollectionTree",
+        "name": "CKFTrackCollectionWithoutIFT",
+        "class_name": "Trk::TrackCollection_tlp6"
+      }
+    ],
+    "CKFTrackCollectionBackwardWithoutIFT": [
+      {
+        "tree": "CollectionTree",
+        "name": "CKFTrackCollectionBackwardWithoutIFT",
+        "class_name": "Trk::TrackCollection_tlp6"
+      }
+    ]
+  },
+  "on_file_streamers": [
+    {
+      "name": "Trk::TrackCollection_tlp6",
+      "version": 1,
+      "members": [
+        {
+          "name": "m_trackCollections",
+          "type": "vector<Trk::TrackCollection_p1>"
+        },
+        {
+          "name": "m_tracks",
+          "type": "vector<Trk::Track_p4>"
+        },
+        {
+          "name": "m_trackStates",
+          "type": "vector<Trk::TrackStateOnSurface_p3>"
+        },
+        {
+          "name": "m_pseudoMeasurementOnTrack",
+          "type": "vector<Trk::PseudoMeasurementOnTrack_p2>"
+        },
+        {
+          "name": "m_parameters",
+          "type": "vector<Trk::TrackParameters_p2>"
+        },
+        {
+          "name": "m_surfaces",
+          "type": "vector<Trk::Surface_p2>"
+        },
+        {
+          "name": "m_hepSymMatrices",
+          "type": "vector<Trk::HepSymMatrix_p1>"
+        },
+        {
+          "name": "m_matEffectsBases",
+          "type": "vector<Trk::MaterialEffectsBase_p1>"
+        },
+        {
+          "name": "m_energyLosses",
+          "type": "vector<Trk::EnergyLoss_p1>"
+        },
+        {
+          "name": "m_materialEffects",
+          "type": "vector<Trk::MaterialEffectsOnTrack_p2>"
+        },
+        {
+          "name": "m_estimatedBrems",
+          "type": "vector<Trk::EstimatedBremOnTrack_p1>"
+        },
+        {
+          "name": "m_fitQualities",
+          "type": "vector<Trk::FitQuality_p1>"
+        },
+        {
+          "name": "m_localDirections",
+          "type": "vector<Trk::LocalDirection_p1>"
+        },
+        {
+          "name": "m_localPositions",
+          "type": "vector<Trk::LocalPosition_p1>"
+        },
+        {
+          "name": "m_localParameters",
+          "type": "vector<Trk::LocalParameters_p1>"
+        },
+        {
+          "name": "m_trackerTrackExt",
+          "type": "Tracker::Track_tlp2*"
+        }
+      ]
+    },
+    {
+      "name": "Trk::TrackParameters_p2",
+      "version": 1,
+      "members": [
+        {
+          "name": "m_parameters",
+          "type": "vector<float>"
+        },
+        {
+          "name": "m_surfaceType",
+          "type": "unsigned char"
+        },
+        {
+          "name": "m_associatedDetElementId",
+          "type": "ULong64_t"
+        },
+        {
+          "name": "m_transform",
+          "type": "vector<float>"
+        },
+        {
+          "name": "m_errorMatrix",
+          "type": "TPObjRef"
+        }
+      ]
+    }
+  ],
+  "collection_parameter_member_type": "vector<Trk::TrackParameters_p2>",
+  "parameter_value_member_type": "vector<float>",
+  "pinned_converter": "d32 TrackCollectionCnv GUID3228B252-2C5D-11E8-B170-0800271C02BC -> TrackCollection_tlp6 -> TrackParametersCnv_p2; latter stores3globalposition+3momentum+charge for Curvilinear parameters",
+  "limitation": "Schema and native float32 equality establish a representation model; no historical alignment, fit covariance calibration or discarded pre-rounding position is certified."
+}

@@ -1,0 +1,41 @@
+{
+  "admitted": true,
+  "physical_support": true,
+  "positive_candidate_required": false,
+  "costs": [
+    {
+      "step": "digi",
+      "GNU_CPU4_s": 69.57,
+      "first_event_end_CPU_s": 64.349459437,
+      "fourth_event_end_CPU_s": 64.804962234,
+      "post_first3_CPU_s": 0.4555027970000083,
+      "projected64_CPU_s": 78.68005594000016
+    },
+    {
+      "step": "reco",
+      "GNU_CPU4_s": 17.79,
+      "first_event_end_CPU_s": 15.111702965,
+      "fourth_event_end_CPU_s": 15.742384900000001,
+      "post_first3_CPU_s": 0.6306819350000019,
+      "projected64_CPU_s": 30.403638700000037
+    },
+    {
+      "step": "native",
+      "GNU_CPU4_s": 80.25,
+      "first_event_end_CPU_s": 73.695788501,
+      "fourth_event_end_CPU_s": 73.80896111899999,
+      "post_first3_CPU_s": 0.11317261799999301,
+      "projected64_CPU_s": 82.51345235999986
+    }
+  ],
+  "GNU_extract4_CPU_s": 3.37,
+  "projected_extract64_CPU_s": 53.92,
+  "full64_factor3_projected_CPU_s": 736.5514410000003,
+  "audit_reserve_CPU_s": 150,
+  "already_used_scheduler_CPU_s": 176.0,
+  "remaining_CPU_s": 2824.0,
+  "pilot_parent_N": 4,
+  "full_parent_cap": 64,
+  "prefix_overlap_N": 4,
+  "scope": "Measured GNU child totals plus post-first event process CPU; first/lazyJIT retained. Prospective cost, not measured full throughput."
+}

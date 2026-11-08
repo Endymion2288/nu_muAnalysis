@@ -1,0 +1,89 @@
+{
+  "all_jobs_terminal": true,
+  "event_text_equality": true,
+  "failed_job_ids": [
+    "9674985.0"
+  ],
+  "merged": {
+    "path": "ntuples/energy_ml_stage156/event_records.json.gz",
+    "bytes": 2155857
+  },
+  "source_capsule": {
+    "path": "software/stage156/source_snapshots.tar.gz",
+    "bytes": 137106
+  },
+  "deleted": [
+    {
+      "path": "ntuples/energy_ml_stage156/full/native.json.gz",
+      "bytes": 115542
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/pilot/native.json.gz",
+      "bytes": 13544
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/full/paired.json.gz",
+      "bytes": 65636
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/pilot/paired.json.gz",
+      "bytes": 4975
+    },
+    {
+      "path": "workbook/stage156_energy_ml/full/seeds.json",
+      "bytes": 3351452
+    },
+    {
+      "path": "workbook/stage156_energy_ml/pilot/seeds.json",
+      "bytes": 209624
+    },
+    {
+      "path": "software/stage156/1794101495515734170/energy-ml-stage156.tar.gz",
+      "bytes": 2858014
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/admission_retry_result.tar.gz",
+      "bytes": 4030
+    },
+    {
+      "path": "software/stage156/1794101263512554718/energy-ml-stage156.tar.gz",
+      "bytes": 2857865
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/admission_result.tar.gz",
+      "bytes": 597
+    },
+    {
+      "path": "software/stage156/1794102194616746262/energy-ml-stage156.tar.gz",
+      "bytes": 4959027
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/audit_result.tar.gz",
+      "bytes": 5631
+    },
+    {
+      "path": "software/stage156/1794101759508324715/energy-ml-stage156.tar.gz",
+      "bytes": 2858316
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/full_result.tar.gz",
+      "bytes": 2100631
+    },
+    {
+      "path": "software/stage156/1794100739870491725/energy-ml-stage156.tar.gz",
+      "bytes": 2679025
+    },
+    {
+      "path": "ntuples/energy_ml_stage156/pilot_result.tar.gz",
+      "bytes": 177639
+    }
+  ],
+  "deleted_bytes": 22261548,
+  "source_HITS_PHYS_and_other_stages_untouched": true,
+  "identical_input_metadata_copies_merged": 2,
+  "logs_compacted": {
+    "N": 23,
+    "path": "software/stage156/worker_logs.tar.gz",
+    "bytes": 75834
+  }
+}

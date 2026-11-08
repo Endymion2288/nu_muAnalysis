@@ -12,7 +12,7 @@ ATTR = ['ClusterId', 'ProcId', 'JobStatus', 'ExitCode', 'ExitBySignal',
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--stage', type=int, default=143, choices=[143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155])
+    parser.add_argument('--stage', type=int, default=143, choices=[143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156])
     stage = parser.parse_args().stage
     OUT = ROOT/f'workbook/stage{stage}_energy_ml'
     budget = json.loads((OUT/'protocol.json').read_text())['resources']['CPU_budget_s']

@@ -1,0 +1,115 @@
+{
+  "file_type": "POOL",
+  "file_size": 1205670747,
+  "nentries": 10000,
+  "auto_flush": 10,
+  "file_guid": "4A82423A-3B13-484D-906E-08466313BB0F",
+  "file_comp_alg": 2,
+  "file_comp_level": 1,
+  "metadata_items": {
+    "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAux.": "xAOD::FileMetaDataAuxInfo_v1",
+    "EventStreamInfo_p3_StreamHITS": "EventStreamInfo",
+    "xAOD::FileMetaData_v1_FileMetaData": "FileMetaData",
+    "xAOD::EventFormat_v1_EventFormatStreamHITS": "xAOD::EventFormat_v1",
+    "/TagInfo": "IOVMetaDataContainer",
+    "xAOD::FileMetaDataAuxInfo_v1_FileMetaDataAuxDyn.conditionsTag": "string"
+  },
+  "FileMetaData": {
+    "conditionsTag": "OFLCOND-FASER-04",
+    "productionRelease": "Athena-22.0.49",
+    "dataType": "HITS",
+    "runNumbers": [],
+    "lumiBlocks": []
+  },
+  "EventStreamInfo_p3_StreamHITS": {
+    "eventTypes": [
+      {
+        "bit_mask": [
+          true
+        ],
+        "mc_channel_number": 0,
+        "mc_event_number": 0,
+        "mc_event_weights": [
+          1.0
+        ],
+        "user_type": "McEvent",
+        "type": [
+          "IS_SIMULATION",
+          "IS_ATLAS",
+          "IS_PHYSICS"
+        ]
+      }
+    ],
+    "numberOfEvents": 10000,
+    "runNumbers": [
+      100012
+    ],
+    "lumiBlockNumbers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "processingTags": [
+      "OutputStreamHITS"
+    ],
+    "itemList": [
+      [
+        "EventInfo",
+        "McEventInfo"
+      ],
+      [
+        "McEventCollection",
+        "BeamTruthEvent"
+      ],
+      [
+        "McEventCollection",
+        "TruthEvent"
+      ],
+      [
+        "DataHeader",
+        "OutputStreamHITS"
+      ],
+      [
+        "ScintHitCollection",
+        "PreshowerHits"
+      ],
+      [
+        "ScintHitCollection",
+        "TriggerHits"
+      ],
+      [
+        "ScintHitCollection",
+        "VetoHits"
+      ],
+      [
+        "ScintHitCollection",
+        "VetoNuHits"
+      ],
+      [
+        "NeutrinoHitCollection",
+        "EmulsionHits"
+      ],
+      [
+        "CaloHitCollection",
+        "EcalHits"
+      ],
+      [
+        "FaserSiHitCollection",
+        "SCT_Hits"
+      ]
+    ]
+  },
+  "xAOD::EventFormat_v1_EventFormatStreamHITS": {},
+  "/TagInfo": {
+    "AtlasRelease": "Athena-22.0.49",
+    "GeoFaser": "FASERNU-04",
+    "IOVDbGlobalTag": "OFLCOND-FASER-04"
+  }
+}

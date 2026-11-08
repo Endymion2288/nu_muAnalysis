@@ -1,0 +1,1262 @@
+{
+  "passed": true,
+  "phase": "full",
+  "independent_parent_N": 64,
+  "repeated_parent_executions": 4,
+  "total_parent_executions": 68,
+  "paired_current06_exact_N": 64,
+  "root_identity_exact_N": 64,
+  "current_selected_N": 61,
+  "no_leading_entries": [
+    11,
+    30,
+    47
+  ],
+  "anchors": {
+    "total": 1063,
+    "linked": 1063,
+    "identifier_equal": 1063,
+    "measurement": 1063,
+    "measurement_detector_same": 1063,
+    "valid": 1063,
+    "dimension2_key3": 1063,
+    "old_strict_off_plane": 743,
+    "exact_float32": 1063,
+    "plane_compatible": 1063
+  },
+  "diagnostics": {
+    "max_abs_normal_mm": {
+      "N": 61,
+      "min": 9.765625003299974e-06,
+      "median": 4.88281248189154e-05,
+      "mean": 4.3304943661344206e-05,
+      "max": 7.812500007280967e-05,
+      "RMS": 4.801692320919892e-05
+    },
+    "max_state_roundtrip_mm": {
+      "N": 61,
+      "min": 7.105427357601002e-15,
+      "median": 1.464821375527116e-14,
+      "mean": 1.391065079105452e-14,
+      "max": 2.1316282072803006e-14,
+      "RMS": 1.432686361732078e-14
+    },
+    "max_PRD_roundtrip_mm": {
+      "N": 61,
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "max": 0.0,
+      "RMS": 0.0
+    },
+    "independent_dx_max_delta_mm": {
+      "N": 43,
+      "min": 0.0,
+      "median": 4.468647674116255e-15,
+      "mean": 6.257914083570287e-15,
+      "max": 2.1316282072803006e-14,
+      "RMS": 7.740429401505819e-15
+    },
+    "max_candidate_roundtrip_mm": {
+      "N": 43,
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "max": 0.0,
+      "RMS": 0.0
+    },
+    "max_normal_arithmetic_margin_mm": {
+      "N": 61,
+      "min": 6.905992333550159e-11,
+      "median": 6.984222949979468e-11,
+      "mean": 6.988899085141613e-11,
+      "max": 7.006804095266439e-11,
+      "RMS": 6.988926408520928e-11
+    },
+    "max_normal_interval_width_mm": {
+      "N": 61,
+      "min": 0.000244140625,
+      "median": 0.000244140625,
+      "mean": 0.000244140625,
+      "max": 0.000244140625,
+      "RMS": 0.000244140625
+    },
+    "max_state_locX_interval_width_mm": {
+      "N": 61,
+      "min": 3.909486139264118e-07,
+      "median": 3.890223212010824e-06,
+      "mean": 4.466943274296432e-06,
+      "max": 7.704157562571368e-06,
+      "RMS": 5.16790399756879e-06
+    },
+    "max_candidate_dx_interval_width_mm": {
+      "N": 43,
+      "min": 1.2872155252807715e-07,
+      "median": 3.852078780397505e-06,
+      "mean": 4.191210433524253e-06,
+      "max": 7.704157562571368e-06,
+      "RMS": 4.963000975231055e-06
+    }
+  },
+  "strata": {
+    "all": {
+      "N": 64,
+      "entries": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "leading_parent_N": 61,
+      "nonempty_candidate_parent_N": 43,
+      "stations": [
+        {
+          "stratum": "all",
+          "N": 64,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonzero_parent_N": 0,
+          "clusters": 706,
+          "leadingOwned": 0,
+          "nonleading": 706,
+          "offMeasuredWafer": 706,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "all",
+          "N": 64,
+          "station": 1,
+          "available_parent_N": 61,
+          "nonzero_parent_N": 17,
+          "clusters": 536,
+          "leadingOwned": 357,
+          "nonleading": 179,
+          "offMeasuredWafer": 140,
+          "onMeasuredWafer": 39,
+          "measuredWafers": 357,
+          "eligibleWafers": 357,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 39,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 61,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.639344262295082,
+              "max": 6.0,
+              "RMS": 1.476593332252472
+            },
+            "mean_abs_dx_mm": {
+              "N": 17,
+              "min": 0.6390879211540259,
+              "median": 14.503713839139856,
+              "mean": 12.459507130253904,
+              "max": 23.700017202261012,
+              "RMS": 14.633608293923153
+            },
+            "min_abs_dx_mm": {
+              "N": 17,
+              "min": 0.18401679566455442,
+              "median": 4.87378491126438,
+              "mean": 8.437771308888856,
+              "max": 23.21126026339457,
+              "RMS": 11.874625930394311
+            },
+            "max_abs_dx_mm": {
+              "N": 17,
+              "min": 0.6457199576070352,
+              "median": 16.359401005639114,
+              "mean": 16.603326094424986,
+              "max": 35.69699015845177,
+              "RMS": 19.832692417519763
+            },
+            "RMS_dx_mm": {
+              "N": 17,
+              "min": 0.6457199576070352,
+              "median": 14.503713839139856,
+              "mean": 13.81658654069207,
+              "max": 25.171728722714835,
+              "RMS": 16.19614683129914
+            }
+          }
+        },
+        {
+          "stratum": "all",
+          "N": 64,
+          "station": 2,
+          "available_parent_N": 61,
+          "nonzero_parent_N": 21,
+          "clusters": 491,
+          "leadingOwned": 353,
+          "nonleading": 138,
+          "offMeasuredWafer": 104,
+          "onMeasuredWafer": 34,
+          "measuredWafers": 353,
+          "eligibleWafers": 353,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 34,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 61,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.5573770491803278,
+              "max": 6.0,
+              "RMS": 1.201092398951751
+            },
+            "mean_abs_dx_mm": {
+              "N": 21,
+              "min": 0.24549278689675447,
+              "median": 7.820277418748643,
+              "mean": 12.930133115567568,
+              "max": 47.420495604783184,
+              "RMS": 19.506296126746335
+            },
+            "min_abs_dx_mm": {
+              "N": 21,
+              "min": 0.17553980893077892,
+              "median": 5.987249445343153,
+              "mean": 12.597884427008724,
+              "max": 47.420495604783184,
+              "RMS": 19.458446160267236
+            },
+            "max_abs_dx_mm": {
+              "N": 21,
+              "min": 0.24549278689675447,
+              "median": 10.144284391547274,
+              "mean": 13.326213857127904,
+              "max": 47.420495604783184,
+              "RMS": 19.608534640116666
+            },
+            "RMS_dx_mm": {
+              "N": 21,
+              "min": 0.24549278689675447,
+              "median": 7.995177524071967,
+              "mean": 13.019560914173784,
+              "max": 47.420495604783184,
+              "RMS": 19.520923304006132
+            }
+          }
+        },
+        {
+          "stratum": "all",
+          "N": 64,
+          "station": 3,
+          "available_parent_N": 61,
+          "nonzero_parent_N": 19,
+          "clusters": 441,
+          "leadingOwned": 353,
+          "nonleading": 88,
+          "offMeasuredWafer": 63,
+          "onMeasuredWafer": 25,
+          "measuredWafers": 353,
+          "eligibleWafers": 353,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 25,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 61,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.4098360655737705,
+              "max": 4.0,
+              "RMS": 0.8395939690034018
+            },
+            "mean_abs_dx_mm": {
+              "N": 19,
+              "min": 0.3202597743370035,
+              "median": 8.3343949101519,
+              "mean": 11.863880943245498,
+              "max": 46.81790335105309,
+              "RMS": 17.50465983616033
+            },
+            "min_abs_dx_mm": {
+              "N": 19,
+              "min": 0.17446651290195447,
+              "median": 6.655515634969078,
+              "mean": 10.918340570433136,
+              "max": 46.81790335105309,
+              "RMS": 16.634534679153443
+            },
+            "max_abs_dx_mm": {
+              "N": 19,
+              "min": 0.3202597743370035,
+              "median": 8.3343949101519,
+              "mean": 12.776627318572125,
+              "max": 47.745464157559496,
+              "RMS": 18.809763167396557
+            },
+            "RMS_dx_mm": {
+              "N": 19,
+              "min": 0.3202597743370035,
+              "median": 8.3343949101519,
+              "mean": 12.125453954637312,
+              "max": 46.81790335105309,
+              "RMS": 17.751701107385024
+            }
+          }
+        }
+      ]
+    },
+    "current_leading": {
+      "N": 61,
+      "entries": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "leading_parent_N": 61,
+      "nonempty_candidate_parent_N": 43,
+      "stations": [
+        {
+          "stratum": "current_leading",
+          "N": 61,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonzero_parent_N": 0,
+          "clusters": 687,
+          "leadingOwned": 0,
+          "nonleading": 687,
+          "offMeasuredWafer": 687,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "current_leading",
+          "N": 61,
+          "station": 1,
+          "available_parent_N": 61,
+          "nonzero_parent_N": 17,
+          "clusters": 498,
+          "leadingOwned": 357,
+          "nonleading": 141,
+          "offMeasuredWafer": 102,
+          "onMeasuredWafer": 39,
+          "measuredWafers": 357,
+          "eligibleWafers": 357,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 39,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 61,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.639344262295082,
+              "max": 6.0,
+              "RMS": 1.476593332252472
+            },
+            "mean_abs_dx_mm": {
+              "N": 17,
+              "min": 0.6390879211540259,
+              "median": 14.503713839139856,
+              "mean": 12.459507130253904,
+              "max": 23.700017202261012,
+              "RMS": 14.633608293923153
+            },
+            "min_abs_dx_mm": {
+              "N": 17,
+              "min": 0.18401679566455442,
+              "median": 4.87378491126438,
+              "mean": 8.437771308888856,
+              "max": 23.21126026339457,
+              "RMS": 11.874625930394311
+            },
+            "max_abs_dx_mm": {
+              "N": 17,
+              "min": 0.6457199576070352,
+              "median": 16.359401005639114,
+              "mean": 16.603326094424986,
+              "max": 35.69699015845177,
+              "RMS": 19.832692417519763
+            },
+            "RMS_dx_mm": {
+              "N": 17,
+              "min": 0.6457199576070352,
+              "median": 14.503713839139856,
+              "mean": 13.81658654069207,
+              "max": 25.171728722714835,
+              "RMS": 16.19614683129914
+            }
+          }
+        },
+        {
+          "stratum": "current_leading",
+          "N": 61,
+          "station": 2,
+          "available_parent_N": 61,
+          "nonzero_parent_N": 21,
+          "clusters": 470,
+          "leadingOwned": 353,
+          "nonleading": 117,
+          "offMeasuredWafer": 83,
+          "onMeasuredWafer": 34,
+          "measuredWafers": 353,
+          "eligibleWafers": 353,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 34,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 61,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.5573770491803278,
+              "max": 6.0,
+              "RMS": 1.201092398951751
+            },
+            "mean_abs_dx_mm": {
+              "N": 21,
+              "min": 0.24549278689675447,
+              "median": 7.820277418748643,
+              "mean": 12.930133115567568,
+              "max": 47.420495604783184,
+              "RMS": 19.506296126746335
+            },
+            "min_abs_dx_mm": {
+              "N": 21,
+              "min": 0.17553980893077892,
+              "median": 5.987249445343153,
+              "mean": 12.597884427008724,
+              "max": 47.420495604783184,
+              "RMS": 19.458446160267236
+            },
+            "max_abs_dx_mm": {
+              "N": 21,
+              "min": 0.24549278689675447,
+              "median": 10.144284391547274,
+              "mean": 13.326213857127904,
+              "max": 47.420495604783184,
+              "RMS": 19.608534640116666
+            },
+            "RMS_dx_mm": {
+              "N": 21,
+              "min": 0.24549278689675447,
+              "median": 7.995177524071967,
+              "mean": 13.019560914173784,
+              "max": 47.420495604783184,
+              "RMS": 19.520923304006132
+            }
+          }
+        },
+        {
+          "stratum": "current_leading",
+          "N": 61,
+          "station": 3,
+          "available_parent_N": 61,
+          "nonzero_parent_N": 19,
+          "clusters": 433,
+          "leadingOwned": 353,
+          "nonleading": 80,
+          "offMeasuredWafer": 55,
+          "onMeasuredWafer": 25,
+          "measuredWafers": 353,
+          "eligibleWafers": 353,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 25,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 61,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.4098360655737705,
+              "max": 4.0,
+              "RMS": 0.8395939690034018
+            },
+            "mean_abs_dx_mm": {
+              "N": 19,
+              "min": 0.3202597743370035,
+              "median": 8.3343949101519,
+              "mean": 11.863880943245498,
+              "max": 46.81790335105309,
+              "RMS": 17.50465983616033
+            },
+            "min_abs_dx_mm": {
+              "N": 19,
+              "min": 0.17446651290195447,
+              "median": 6.655515634969078,
+              "mean": 10.918340570433136,
+              "max": 46.81790335105309,
+              "RMS": 16.634534679153443
+            },
+            "max_abs_dx_mm": {
+              "N": 19,
+              "min": 0.3202597743370035,
+              "median": 8.3343949101519,
+              "mean": 12.776627318572125,
+              "max": 47.745464157559496,
+              "RMS": 18.809763167396557
+            },
+            "RMS_dx_mm": {
+              "N": 19,
+              "min": 0.3202597743370035,
+              "median": 8.3343949101519,
+              "mean": 12.125453954637312,
+              "max": 46.81790335105309,
+              "RMS": 17.751701107385024
+            }
+          }
+        }
+      ]
+    },
+    "pz0_50_100": {
+      "N": 57,
+      "entries": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "leading_parent_N": 57,
+      "nonempty_candidate_parent_N": 41,
+      "stations": [
+        {
+          "stratum": "pz0_50_100",
+          "N": 57,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonzero_parent_N": 0,
+          "clusters": 654,
+          "leadingOwned": 0,
+          "nonleading": 654,
+          "offMeasuredWafer": 654,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "pz0_50_100",
+          "N": 57,
+          "station": 1,
+          "available_parent_N": 57,
+          "nonzero_parent_N": 15,
+          "clusters": 464,
+          "leadingOwned": 333,
+          "nonleading": 131,
+          "offMeasuredWafer": 98,
+          "onMeasuredWafer": 33,
+          "measuredWafers": 333,
+          "eligibleWafers": 333,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 33,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 57,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.5789473684210527,
+              "max": 6.0,
+              "RMS": 1.3701069237311885
+            },
+            "mean_abs_dx_mm": {
+              "N": 15,
+              "min": 0.6390879211540259,
+              "median": 16.04890564763167,
+              "mean": 13.81015633695166,
+              "max": 23.700017202261012,
+              "RMS": 15.543266004384554
+            },
+            "min_abs_dx_mm": {
+              "N": 15,
+              "min": 0.18401679566455442,
+              "median": 6.388905323382403,
+              "mean": 9.38956023037811,
+              "max": 23.21126026339457,
+              "RMS": 12.630343033375702
+            },
+            "max_abs_dx_mm": {
+              "N": 15,
+              "min": 0.8260381151244829,
+              "median": 19.397396393230387,
+              "mean": 18.380267120414057,
+              "max": 35.69699015845177,
+              "RMS": 21.057697350396605
+            },
+            "RMS_dx_mm": {
+              "N": 15,
+              "min": 0.6658706676153905,
+              "median": 16.301799147796707,
+              "mean": 15.324450667584813,
+              "max": 25.171728722714835,
+              "RMS": 17.204357043664526
+            }
+          }
+        },
+        {
+          "stratum": "pz0_50_100",
+          "N": 57,
+          "station": 2,
+          "available_parent_N": 57,
+          "nonzero_parent_N": 20,
+          "clusters": 440,
+          "leadingOwned": 333,
+          "nonleading": 107,
+          "offMeasuredWafer": 74,
+          "onMeasuredWafer": 33,
+          "measuredWafers": 333,
+          "eligibleWafers": 333,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 33,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 57,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.5789473684210527,
+              "max": 6.0,
+              "RMS": 1.2354415362426845
+            },
+            "mean_abs_dx_mm": {
+              "N": 20,
+              "min": 0.24549278689675447,
+              "median": 9.386094585079336,
+              "mean": 13.52511808375896,
+              "max": 47.420495604783184,
+              "RMS": 19.98667752098129
+            },
+            "min_abs_dx_mm": {
+              "N": 20,
+              "min": 0.17553980893077892,
+              "median": 8.469580598376591,
+              "mean": 13.176256960772173,
+              "max": 47.420495604783184,
+              "RMS": 19.937642629829224
+            },
+            "max_abs_dx_mm": {
+              "N": 20,
+              "min": 0.24549278689675447,
+              "median": 10.548098071478652,
+              "mean": 13.941002862397315,
+              "max": 47.420495604783184,
+              "RMS": 20.09144774732403
+            },
+            "RMS_dx_mm": {
+              "N": 20,
+              "min": 0.24549278689675447,
+              "median": 9.473544637740998,
+              "mean": 13.619017272295485,
+              "max": 47.420495604783184,
+              "RMS": 20.001666912712498
+            }
+          }
+        },
+        {
+          "stratum": "pz0_50_100",
+          "N": 57,
+          "station": 3,
+          "available_parent_N": 57,
+          "nonzero_parent_N": 18,
+          "clusters": 407,
+          "leadingOwned": 329,
+          "nonleading": 78,
+          "offMeasuredWafer": 54,
+          "onMeasuredWafer": 24,
+          "measuredWafers": 329,
+          "eligibleWafers": 329,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 24,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 57,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.42105263157894735,
+              "max": 4.0,
+              "RMS": 0.8583950752789521
+            },
+            "mean_abs_dx_mm": {
+              "N": 18,
+              "min": 0.3202597743370035,
+              "median": 8.549391757252987,
+              "mean": 12.45950809890001,
+              "max": 46.81790335105309,
+              "RMS": 17.98231181345261
+            },
+            "min_abs_dx_mm": {
+              "N": 18,
+              "min": 0.17446651290195447,
+              "median": 7.494955272560489,
+              "mean": 11.46143770537585,
+              "max": 46.81790335105309,
+              "RMS": 17.088237700966964
+            },
+            "max_abs_dx_mm": {
+              "N": 18,
+              "min": 0.3202597743370035,
+              "median": 8.549391757252987,
+              "mean": 13.422962606189227,
+              "max": 47.745464157559496,
+              "RMS": 19.323317953325603
+            },
+            "RMS_dx_mm": {
+              "N": 18,
+              "min": 0.3202597743370035,
+              "median": 8.549391757252987,
+              "mean": 12.735612944258037,
+              "max": 46.81790335105309,
+              "RMS": 18.23615065849976
+            }
+          }
+        }
+      ]
+    },
+    "any_raw15_overflow": {
+      "N": 3,
+      "entries": [
+        12,
+        29,
+        50
+      ],
+      "leading_parent_N": 3,
+      "nonempty_candidate_parent_N": 1,
+      "stations": [
+        {
+          "stratum": "any_raw15_overflow",
+          "N": 3,
+          "station": 0,
+          "available_parent_N": 0,
+          "nonzero_parent_N": 0,
+          "clusters": 185,
+          "leadingOwned": 0,
+          "nonleading": 185,
+          "offMeasuredWafer": 185,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 0,
+          "eligibleWafers": 0,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "any_raw15_overflow",
+          "N": 3,
+          "station": 1,
+          "available_parent_N": 3,
+          "nonzero_parent_N": 1,
+          "clusters": 28,
+          "leadingOwned": 16,
+          "nonleading": 12,
+          "offMeasuredWafer": 10,
+          "onMeasuredWafer": 2,
+          "measuredWafers": 16,
+          "eligibleWafers": 16,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 2,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.6666666666666666,
+              "max": 2.0,
+              "RMS": 1.1547005383792515
+            },
+            "mean_abs_dx_mm": {
+              "N": 1,
+              "min": 12.511378300866372,
+              "median": 12.511378300866372,
+              "mean": 12.511378300866372,
+              "max": 12.511378300866372,
+              "RMS": 12.511378300866372
+            },
+            "min_abs_dx_mm": {
+              "N": 1,
+              "min": 12.365756389190622,
+              "median": 12.365756389190622,
+              "mean": 12.365756389190622,
+              "max": 12.365756389190622,
+              "RMS": 12.365756389190622
+            },
+            "max_abs_dx_mm": {
+              "N": 1,
+              "min": 12.657000212542123,
+              "median": 12.657000212542123,
+              "mean": 12.657000212542123,
+              "max": 12.657000212542123,
+              "RMS": 12.657000212542123
+            },
+            "RMS_dx_mm": {
+              "N": 1,
+              "min": 12.512225730402646,
+              "median": 12.512225730402646,
+              "mean": 12.512225730402646,
+              "max": 12.512225730402646,
+              "RMS": 12.512225730402646
+            }
+          }
+        },
+        {
+          "stratum": "any_raw15_overflow",
+          "N": 3,
+          "station": 2,
+          "available_parent_N": 3,
+          "nonzero_parent_N": 0,
+          "clusters": 19,
+          "leadingOwned": 16,
+          "nonleading": 3,
+          "offMeasuredWafer": 3,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 16,
+          "eligibleWafers": 16,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.0,
+              "max": 0.0,
+              "RMS": 0.0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        },
+        {
+          "stratum": "any_raw15_overflow",
+          "N": 3,
+          "station": 3,
+          "available_parent_N": 3,
+          "nonzero_parent_N": 0,
+          "clusters": 17,
+          "leadingOwned": 14,
+          "nonleading": 3,
+          "offMeasuredWafer": 3,
+          "onMeasuredWafer": 0,
+          "measuredWafers": 14,
+          "eligibleWafers": 14,
+          "duplicateAnchors": 0,
+          "eligibleCandidates": 0,
+          "candidateSurfaceMismatch": 0,
+          "unusableAnchorCandidates": 0,
+          "candidateMissingElement": 0,
+          "candidateInvalidRDO": 0,
+          "candidateInvalidLocal": 0,
+          "candidateRoundtripFailure": 0,
+          "distributions": {
+            "candidate_N": {
+              "N": 3,
+              "min": 0.0,
+              "median": 0.0,
+              "mean": 0.0,
+              "max": 0.0,
+              "RMS": 0.0
+            },
+            "mean_abs_dx_mm": {
+              "N": 0
+            },
+            "min_abs_dx_mm": {
+              "N": 0
+            },
+            "max_abs_dx_mm": {
+              "N": 0
+            },
+            "RMS_dx_mm": {
+              "N": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "prefix_reproducibility": {
+    "passed": true,
+    "N": 4,
+    "schema_exact_except_scratch_path": true,
+    "checks": [
+      {
+        "entry": 0,
+        "native_geometry_raw_exact": true,
+        "paired_exact": true,
+        "RNG_exact": true
+      },
+      {
+        "entry": 1,
+        "native_geometry_raw_exact": true,
+        "paired_exact": true,
+        "RNG_exact": true
+      },
+      {
+        "entry": 2,
+        "native_geometry_raw_exact": true,
+        "paired_exact": true,
+        "RNG_exact": true
+      },
+      {
+        "entry": 3,
+        "native_geometry_raw_exact": true,
+        "paired_exact": true,
+        "RNG_exact": true
+      }
+    ]
+  },
+  "typed_QA": {
+    "nonzero_status_with_timing_N": 0,
+    "negative_signed_raw_N": 245
+  },
+  "native_CPU_s": 68.477636299,
+  "native_wall_s": 81.70120386907365,
+  "ROOT_read_bytes": 17498706,
+  "schema_verified": true,
+  "overall_complete": false,
+  "reference_native_conditions_metadata": "not_stored_in_Stage149_native; reference_digi_conditions_geometry_verified_from_actual_seeds; native_state_raw_pairing_checked_separately",
+  "population_FPR_measured": false,
+  "data_transfer_certified": false,
+  "calibrated_covariance": false,
+  "association_posterior_measured": false,
+  "energy_fits": 0,
+  "response_fits": 0,
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "reserved_forward": 0,
+  "promotion": false,
+  "audit_CPU_s": 0.202701204,
+  "audit_wall_s": 0.21482099196873605,
+  "audit_RSS_KiB": 48080
+}
