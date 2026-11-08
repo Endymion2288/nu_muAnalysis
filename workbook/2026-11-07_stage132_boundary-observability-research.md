@@ -212,3 +212,8 @@ Stage133 直接承接 [Stage131 冻结合同](stage131_energy_ml/next_execution_
 ### Stage179 回填：实际同窗读出与出生源干预
 
 [Stage179](2026-11-08_stage179_matched-window-readout-and-S0-sources.md)固定12父121200ADC及202通道闭合；Veto有严重数字clip，普通Ecal此控制无clip损失而以噪声/基线为主。六源先同窗卷积后共同读出，S0出生侧不是能损加回。11通道反事实float算术修正与原字节并存、独立审计通过，1502CPU秒、0新G4/fit/forward。困难侧缺面、高幅绝对参考/覆盖及总体能量增益仍缺，Stage87和原全部门保持。
+
+
+### Stage181 回填：真实双量程时间关联
+
+[Stage181](2026-11-08_stage181_dual-range-time-association.md)在同780874数据/固定Q标度给低幅异常与约−6ns时间差关联，而高幅固定±2ns内仍有响应趋势。全源独立复核通过、15CPU秒，不由此确定pulse身份或PMT非线性，不据此加energy cut。下一小型上游strict timing/源支持检验；真实高幅参考及双路MC仍缺，整体未完成。

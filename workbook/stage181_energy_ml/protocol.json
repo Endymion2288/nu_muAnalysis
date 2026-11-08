@@ -1,0 +1,53 @@
+{
+  "stage": 181,
+  "question": "Are the measured dual-range charge-ratio tails and amplitude trends associated with inconsistent stored pulse times?",
+  "PHYS": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root",
+  "condition_input": "workbook/stage173_energy_ml/condition_records.json",
+  "control_input": "ntuples/energy_ml_stage161/event_records.json.gz",
+  "relative_input": "workbook/stage180_energy_ml/full_summary.json",
+  "pilot_N": 8192,
+  "bins_raw_peak_mV": [
+    0,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    1500,
+    2000,
+    1e+300
+  ],
+  "selection": "All entries denominator. Descriptive paired overlap requires both status0, finite positive rawQ, finite RMS>0, raw_peak/RMS>=10. Status/missing/signed outside this selection remain counted. No track/energy/error or amplitude re-selection.",
+  "timing": "Read actual localtime and bcidtime for original8 PMTs. Existence only when both status0, finite localtime>0 and finite bcidtime not explicit-999; no time fallback or extra phase subtraction. Keep raw-local and stored-bcid differences separate; do not assume cross-board clock calibration.",
+  "fit": "Per module one median Hi-Lo time offset on even highSNR original controls, separately local/bcid. Q scale stays exactly Stage180, no Q refit. Odd-only fixed amplitude-bin comparison, no window/timing model grid.",
+  "diagnostic": "Fixed abs(time residual)<=2ns band is descriptive, not a signal-purity or calibrated-resolution gate. Compare charge-ratio residual distributions in/out/all. All original denominators retained; no cut applied to any energy model.",
+  "acceptance": [
+    "original128 native scalar readout comparisons",
+    "strict-only native localtime comparisons where actually present",
+    "pilot/full8192 exact",
+    "independent full reread plus scalar support/time-median/old-Q-scale checks",
+    "unsupported time branches or empty controls explicit"
+  ],
+  "CPU_budget_s": 900,
+  "phase_CPU_allowance_s": {
+    "pilot": 150,
+    "full": 600,
+    "audit": 150
+  },
+  "request_CPUs": 4,
+  "request_memory_MB": 8000,
+  "max_jobs": 1,
+  "MaxRuntime_s": 86400,
+  "admission": "Same startup/two4096-chunk timing model; threefold full projection<=600 and used+projection+150audit<=900, otherwise finite stop.",
+  "no": [
+    "waveform/ADC reconstruction",
+    "new calibration or PMT-nonlinearity claim",
+    "new energy fit/forward",
+    "changed Q/timing selection",
+    "discarding inconsistent pulses",
+    "additional sources or scanned timing bands"
+  ],
+  "preserve": "Stage87/all original gates, roles/K/pz>50GeV and pz0-only/raw/typed/signed/status0 timing remain unchanged.",
+  "overall_complete": false,
+  "promotion": false
+}

@@ -1,3 +1,11 @@
+# 当前执行更新：Stage181 真实双量程时间关联完成，转上游有限支持
+
+[Stage181报告](../workbook/2026-11-08_stage181_dual-range-time-association.md)保持原780874总分母和Stage180 Q尺度；原5802/7489/4989/5850重叠均有strict status0时间。even-only offset/odd诊断表独立全源重读及8标量中位通过。Lo0–50mV原154/782/57/177中仅6/21/9/12在固定±2ns带内，带外中位时间约−6ns；低幅大Q尾与时间不一致相关，但不能证明不同pulse。Lo500–1000mV带内Q中位仍−.094167/−.136206/−.082899/−.085868，不能以时间筛选消除高幅趋势或据此宣称PMT非线性。
+
+3start全0、15CPU/60聚合wall秒/0live，清3361790B重复、留1084536B前缀、Stage54保持；无新能量fit/forward/G4。此固定关联实验结束，不扫时间/幅度网格、不增能量cut。下一冻结原12父上游status0/校准范围/同窗来源支持，方向或弱信号迁移缺则保留未知；双路MC和绝对高幅参考仍缺，Stage87/原门/角色/K/reserved与整体未完成保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage179 同父同窗读出干预与S0源响应完成
 
 [Stage179报告](../workbook/2026-11-08_stage179_matched-window-readout-and-S0-sources.md)固定12父/9原重选，121200实际ADC逐值、202通道、36 signed负raw及源加和独立通过。Veto26/48通道有截断损失，Σabs(clip)=354493.432617pC，取消clip后Σabs(raw−ideal)=9.416048pC；普通Ecal48条无非零clip损失，误差8.842335pC主要为噪声/基线项。此为条件12父机制，不能当总体比例、电荷覆盖或Eν收益。Ecal同窗S0前/后源0.0251198714/0.823696626pC，未知0.304313038pC，出生侧不等于可加回能损。
@@ -3289,3 +3297,8 @@ Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；
 ## 161. Stage179：同窗源响应与读出误差的独立干预完成
 
 [报告](../workbook/2026-11-08_stage179_matched-window-readout-and-S0-sources.md)与[独立审计](../workbook/stage179_energy_ml/independent_validation.json)给固定12父121200ADC精确、202通道及36负raw保留。Veto26条clip，取消clip绝对差合计由354496.499908降至9.416048pC；普通Ecal无clip电荷损失，噪声/基线主导其8.842335pC差。来源按同窗卷积与出生侧，不以SD或charge代μ能损。4starts含1失败/1502CPU/800wall秒、0live，清55350423B重复；11通道反事实float算术修正透明保留，不改实际ADC/协议。仅9原重选train的旧预测诊断，无新fit/forward/G4或晋升；困难侧2父缺面、独立参考和覆盖仍缺。下一strict上游联合支持与实际源解释另冻，Stage181真实双路时间关联待归档；Stage87/原门与整体未完成保持，历史全文保留。
+
+
+## 162. Stage181：双量程低幅异常有时间关联，高幅趋势保留
+
+[实测报告](../workbook/2026-11-08_stage181_dual-range-time-association.md)同780874真实父与固定Q标度，strict时间不增加缺失；低幅多数带外约−6ns，高幅时间带内仍−8%至−14%量级。独立full/原生128+4标量/8中位通过，3starts/15CPU/60wall秒、0live，删3361790B重复。±2ns仅关联诊断，不改能量选择、不认证pulse身份或PMT非线性，固定问题结束；下一原12父上游时间/来源/实际校准范围有限检验。高幅真值/匹配双路MC和独立确认缺口、Stage87/所有原门及整体未完成保持，历史全文保留。

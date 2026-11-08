@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "phase": "pilot",
+  "N": 8192,
+  "source_N": 780874,
+  "loop_CPU_s": [
+    0.06355103700000009,
+    0.07600410699999993
+  ],
+  "CPU_s": 1.0405582519999999,
+  "wall_s": 1.7242847160669044,
+  "ROOT_read_bytes": 3497942,
+  "RSS_KiB": 60796,
+  "original_native128_exact": true,
+  "native_status0_localtime_checks": 4,
+  "prefix8192_exact": false,
+  "support": [
+    {
+      "module": 0,
+      "N": 8192,
+      "original_charge_overlap_N": 53,
+      "strict_time_N": 53,
+      "unknown_time_on_charge_overlap_N": 0
+    },
+    {
+      "module": 1,
+      "N": 8192,
+      "original_charge_overlap_N": 66,
+      "strict_time_N": 66,
+      "unknown_time_on_charge_overlap_N": 0
+    },
+    {
+      "module": 2,
+      "N": 8192,
+      "original_charge_overlap_N": 47,
+      "strict_time_N": 47,
+      "unknown_time_on_charge_overlap_N": 0
+    },
+    {
+      "module": 3,
+      "N": 8192,
+      "original_charge_overlap_N": 66,
+      "strict_time_N": 66,
+      "unknown_time_on_charge_overlap_N": 0
+    }
+  ],
+  "offsets": [
+    {
+      "module": 0,
+      "definition": "local",
+      "fit_N": 20,
+      "heldout_N": 33,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 0,
+      "definition": "bcid",
+      "fit_N": 20,
+      "heldout_N": 33,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 1,
+      "definition": "local",
+      "fit_N": 34,
+      "heldout_N": 32,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 1,
+      "definition": "bcid",
+      "fit_N": 34,
+      "heldout_N": 32,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 2,
+      "definition": "local",
+      "fit_N": 17,
+      "heldout_N": 30,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 2,
+      "definition": "bcid",
+      "fit_N": 17,
+      "heldout_N": 30,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 3,
+      "definition": "local",
+      "fit_N": 34,
+      "heldout_N": 32,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    },
+    {
+      "module": 3,
+      "definition": "bcid",
+      "fit_N": 34,
+      "heldout_N": 32,
+      "offset_ns": null,
+      "heldout_abs95_ns": null
+    }
+  ],
+  "original_Q_scales_frozen": true,
+  "no_bad_hit_timing": true,
+  "overall_complete": false
+}
