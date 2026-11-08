@@ -1,0 +1,72 @@
+{
+  "groups": [
+    {
+      "label": "data15838",
+      "parents_N": 64,
+      "original_leading_matched_N": 63,
+      "start_supported_N": 63,
+      "matched_start_N": 63,
+      "matched_pz50_100_N": 9,
+      "start_reasons": {
+        "actual_measurement_surface_recovered": 63,
+        "no_long_track": 1
+      },
+      "source_propagation_roundtrip_success_N": 63,
+      "wafer_propagation_failed_N": 2695,
+      "successful_wafer_predictions_N": 329,
+      "inside_geometric_wafer_predictions_N": 329,
+      "geometric_no_cluster_N": 12,
+      "multi_candidate_wafer_N": 63,
+      "compatible3_zero_N": 62,
+      "compatible3_multiple_N": 11,
+      "SDO_parent_N": 0,
+      "all_candidate_residual_mm": {
+        "N": 442,
+        "mean": 0.43855720021463906,
+        "RMS": 8.563751088779691,
+        "median": 0.031644145499324594,
+        "abs95": 23.331196747244313,
+        "abs_gt3_N": 133
+      },
+      "all_candidate_pull": {
+        "N": 442,
+        "mean": 3.552412576530635,
+        "RMS": 42.379739359980576,
+        "median": 0.07456415337508178,
+        "abs95": 89.67763442907498,
+        "abs_gt3_N": 157
+      },
+      "SDO_shared_with_fit_contributor_pull": {
+        "N": 0,
+        "mean": null,
+        "RMS": null,
+        "median": null,
+        "abs95": null,
+        "abs_gt3_N": 0
+      },
+      "SDO_no_shared_fit_contributor_pull": {
+        "N": 0,
+        "mean": null,
+        "RMS": null,
+        "median": null,
+        "abs95": null,
+        "abs_gt3_N": 0
+      },
+      "material_over_no_material_sigma_ratio": {
+        "N": 329,
+        "mean": 1.054691068754834,
+        "RMS": 1.06500445352961,
+        "median": 1.001439074691655,
+        "abs95": 1.3112048152314473,
+        "abs_gt3_N": 0
+      }
+    }
+  ],
+  "scope": "All candidates on geometrically intersected wafers; correlated/shared PRD observations, not independent events or calibrated pull coverage. No nearest-hit selection. Geometry-only absence is not a certified masked-detector hole.",
+  "association_error_rate": null,
+  "independent_real_control_coverage": null,
+  "new_energy_performance": null,
+  "SDO_note": "Shared-contributor diagnostic only, not a certified primary-muon label or wrong-association rate. No truth enters deployed features.",
+  "promotion": false,
+  "overall_complete": false
+}

@@ -1,0 +1,21 @@
+{
+  "records": [
+    {
+      "job": "9678362.0",
+      "CPU_s": 37,
+      "exit": 1,
+      "issue": "COOLSQLiteVetoPattern was changed before later service merges, causing configuration conflict. No event observer ran.",
+      "fix": "Apply identical actual CONDBR3 SQLite replica policy after all merges. Same tag05/geometry/run and original400 pilot allowance."
+    }
+  ],
+  "scientific_protocol_budget_and_original_parents_unchanged": true,
+  "scheduler_eviction": {
+    "job": "9678403.0",
+    "reason": "Job not found at execution machine; automatic rescheduling after socket loss, no duplicate submission.",
+    "lost_attempt_reported_CPU_s": 0,
+    "lost_attempt_actual_CPU_s": null,
+    "reported_wall_s": 22,
+    "event_log_retained": true,
+    "successful_audit_GNU_CPU_s": 0.58
+  }
+}

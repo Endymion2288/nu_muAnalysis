@@ -58,7 +58,7 @@ def main(stage):
     artifacts=root/f'ml/artifacts/stage{stage}'
     if artifacts.exists():retained += [f for f in artifacts.rglob('*') if f.is_file()]
     size=sum(f.stat().st_size for f in retained)
-    assert size<=(16777216 if stage==188 else 33554432)
+    assert size<=(16777216 if stage in [188,190] else 33554432)
     deleted=[]
     for f in dict.fromkeys(transports+files+list(out.glob('*.log'))+list(out.glob('*_time.txt'))):
         deleted.append(dict(path=str(f),bytes=f.stat().st_size));f.unlink()

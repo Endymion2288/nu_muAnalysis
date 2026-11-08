@@ -1,3 +1,9 @@
+# 当前执行更新：Stage190 真实data未用IFT同面预测通过
+
+[Stage190报告](../workbook/2026-11-08_stage190_real-data-unused-IFT-control.md)完成run15838原4/64配对、真实geometry04/tag05/CONDBR3和固定backward集合。64父63原leading匹配/起始面支持、9匹配pz0=50–100GeV；329界内wafer预测、12无cluster、63多候选，442全候选pull RMS42.37973936。全候选混合/相关且data无SDO，不认证正确关联率、μ纯度或动量误差覆盖，未将MC/data宽尾直接比较成分辨率。
+
+471项r/S/pull、67source表示与原pilot4/full逐值独立通过；5调度start含1配置失败，另有审计丢失执行槽自动重排，报告282CPU/592聚合wall秒/0live。留581447B摘要、清1569514B重复，Stage54保持。新Stage191已冻结原280来源/71376active及X/A/σ-only/内容/条件打乱5臂、15新fit；原八来源268train pilot完成（268匹配、267起始面支持），成本与身份审计准入后才全队列。新预算独立，不扩大188/190或重开189；整体低能优于传统/真实覆盖/物理谱/独立确认仍未完成，原所有门/K/角色/pz0/raw/status0保持。以下历史全文保留。
+
 # 当前执行更新：Stage189 固定电荷组成包新训练阴性结束
 
 [Stage189报告](../workbook/2026-11-08_stage189_signed-charge-composition-control.md)按路线C完成X62/A66/C70/S70共12个原队列新fit。四个固定signed raw asinh层间对比保留全部K、角色与NaN/合法负值，availability完整且与X预测相同；一个同条件联合打乱控制，无变量/尺度/seed扫描。test C/X两真E低箱为1.016564868 [1.007492308,1.028268646] / 0.998936946 [0.994305943,1.003965259]，C相对X/A/S双低扩展均false，原cal/test所有joint均false。最低箱C/传统1.972563334；该固定包结束、不晋升，不把旧X有限变换当新能量真值或信息极限。
