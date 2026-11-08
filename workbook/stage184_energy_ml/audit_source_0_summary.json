@@ -1,0 +1,1067 @@
+{
+  "passed": true,
+  "source_index": 0,
+  "phase": "audit",
+  "parents_N": 4,
+  "channel_records_N": 60,
+  "identities": [
+    {
+      "row": 0,
+      "entry": 19,
+      "run": 200082,
+      "event": 19,
+      "role": 1,
+      "incoming": [
+        14,
+        -45.72883987426758,
+        -31.944162368774414,
+        347510.0
+      ]
+    },
+    {
+      "row": 1,
+      "entry": 52,
+      "run": 200082,
+      "event": 52,
+      "role": 1,
+      "incoming": [
+        14,
+        12.057217597961426,
+        3.8639707565307617,
+        297320.0
+      ]
+    },
+    {
+      "row": 2,
+      "entry": 59,
+      "run": 200082,
+      "event": 59,
+      "role": 1,
+      "incoming": [
+        -14,
+        -31.473175048828125,
+        6.776240348815918,
+        783480.0
+      ]
+    },
+    {
+      "row": 3,
+      "entry": 62,
+      "run": 200082,
+      "event": 62,
+      "role": 1,
+      "incoming": [
+        14,
+        83.76854705810547,
+        92.49808502197266,
+        761740.0
+      ]
+    }
+  ],
+  "HITS_counts": [
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00000-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00001-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00002-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00003-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00004-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00005-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00006-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00007-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00008-s0014-HITS.root",
+      "N": 1000
+    },
+    {
+      "path": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/sim/s0014/FaserMC-MC24_Genie_epos_pi-200082-00009-s0014-HITS.root",
+      "N": 1000
+    }
+  ],
+  "configuration": {
+    "Calo": {
+      "conditions": [
+        15650.0,
+        3.0,
+        0.004347825888544321,
+        -0.3199999928474426,
+        1000.0,
+        3.6700000762939453,
+        820.0,
+        0.550000011920929
+      ],
+      "cable_map": [
+        [
+          0,
+          3355443200
+        ],
+        [
+          1,
+          3221225472
+        ],
+        [
+          2,
+          3623878656
+        ],
+        [
+          3,
+          3489660928
+        ]
+      ],
+      "window_samples": [
+        390,
+        465
+      ]
+    },
+    "VetoNu": {
+      "conditions": [
+        15650.0,
+        3.0,
+        0.004347825888544321,
+        -0.2800000011920929,
+        1000.0,
+        5.0,
+        800.0,
+        10420.0
+      ],
+      "cable_map": [
+        [
+          4,
+          1476395008,
+          0,
+          0
+        ],
+        [
+          5,
+          1484783616,
+          0,
+          1
+        ]
+      ],
+      "window_samples": [
+        390,
+        490
+      ]
+    },
+    "Veto": {
+      "conditions": [
+        15650.0,
+        3.0,
+        0.004347825888544321,
+        -0.3199999928474426,
+        9.0,
+        3.3499999046325684,
+        825.0,
+        8890.0
+      ],
+      "cable_map": [
+        [
+          6,
+          1140850688,
+          1,
+          0
+        ],
+        [
+          7,
+          1149239296,
+          1,
+          1
+        ],
+        [
+          14,
+          1073741824,
+          0,
+          0
+        ],
+        [
+          15,
+          1082130432,
+          0,
+          1
+        ]
+      ],
+      "window_samples": [
+        390,
+        490
+      ]
+    },
+    "Trigger": {
+      "conditions": [
+        15650.0,
+        3.0,
+        0.004347825888544321,
+        -0.42399999499320984,
+        6.139999866485596,
+        3.2100000381469727,
+        830.0,
+        6360.0
+      ],
+      "cable_map": [
+        [
+          8,
+          1212153856,
+          0,
+          0
+        ],
+        [
+          9,
+          1207959552,
+          0,
+          0
+        ],
+        [
+          10,
+          1220542464,
+          0,
+          1
+        ],
+        [
+          11,
+          1216348160,
+          0,
+          1
+        ]
+      ],
+      "window_samples": [
+        390,
+        490
+      ]
+    },
+    "Preshower": {
+      "conditions": [
+        15650.0,
+        3.0,
+        0.004347825888544321,
+        -0.3199999928474426,
+        1000.0,
+        4.0,
+        850.0,
+        530.0
+      ],
+      "cable_map": [
+        [
+          12,
+          1342177280,
+          0,
+          0
+        ],
+        [
+          13,
+          1350565888,
+          0,
+          1
+        ],
+        [
+          24,
+          1346371584,
+          0,
+          0
+        ],
+        [
+          25,
+          1354760192,
+          0,
+          1
+        ]
+      ],
+      "window_samples": [
+        390,
+        490
+      ]
+    }
+  },
+  "RDO_schema": [
+    {
+      "branch": "RawWaveformContainer_p0_CaloWaveforms",
+      "checksum": 1036687253
+    },
+    {
+      "branch": "RawWaveformContainer_p0_VetoNuWaveforms",
+      "checksum": 1036687253
+    },
+    {
+      "branch": "RawWaveformContainer_p0_VetoWaveforms",
+      "checksum": 1036687253
+    },
+    {
+      "branch": "RawWaveformContainer_p0_TriggerWaveforms",
+      "checksum": 1036687253
+    },
+    {
+      "branch": "RawWaveformContainer_p0_PreshowerWaveforms",
+      "checksum": 1036687253
+    },
+    {
+      "branch": "xAOD::EventAuxInfo_v3_EventInfoAux.",
+      "checksum": 3545528082
+    }
+  ],
+  "literal_checks": [
+    {
+      "row": 0,
+      "channel": 0,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 0,
+      "channel": 1,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 0,
+      "channel": 2,
+      "fast_pC": 0.0003290453779355979,
+      "literal_pC": 0.0003290453781714125,
+      "abs_delta_pC": 2.358146230369007e-13,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 0,
+      "channel": 3,
+      "fast_pC": 0.11337898170828736,
+      "literal_pC": 0.11337898170385051,
+      "abs_delta_pC": 4.436853662248552e-12,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 0,
+      "channel": 4,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 0,
+      "channel": 5,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 0,
+      "channel": 14,
+      "fast_pC": 289.24220467465614,
+      "literal_pC": 289.24220432775576,
+      "abs_delta_pC": 3.4690037864493206e-07,
+      "tolerance_pC": 0.0011033714459524374
+    },
+    {
+      "row": 0,
+      "channel": 6,
+      "fast_pC": 169.04664853357394,
+      "literal_pC": 169.04664865668104,
+      "abs_delta_pC": 1.2310709962548572e-07,
+      "tolerance_pC": 0.0006448617883937113
+    },
+    {
+      "row": 0,
+      "channel": 7,
+      "fast_pC": 98.87944274443106,
+      "literal_pC": 98.87944263138306,
+      "abs_delta_pC": 1.1304800295874884e-07,
+      "tolerance_pC": 0.000377195139432461
+    },
+    {
+      "row": 0,
+      "channel": 8,
+      "fast_pC": 27.157567298485134,
+      "literal_pC": 27.157567316575477,
+      "abs_delta_pC": 1.8090343445464896e-08,
+      "tolerance_pC": 0.00010359789778356734
+    },
+    {
+      "row": 0,
+      "channel": 9,
+      "fast_pC": 27.157311378405986,
+      "literal_pC": 27.157311396497292,
+      "abs_delta_pC": 1.809130623087185e-08,
+      "tolerance_pC": 0.00010359692152594487
+    },
+    {
+      "row": 0,
+      "channel": 10,
+      "fast_pC": 28.777076421521745,
+      "literal_pC": 28.777076358445484,
+      "abs_delta_pC": 6.307626065904515e-08,
+      "tolerance_pC": 0.00010977583449724382
+    },
+    {
+      "row": 0,
+      "channel": 11,
+      "fast_pC": 28.77680517095164,
+      "literal_pC": 28.77680510787731,
+      "abs_delta_pC": 6.307433153551756e-08,
+      "tolerance_pC": 0.0001097747997584431
+    },
+    {
+      "row": 0,
+      "channel": 12,
+      "fast_pC": 4.712937391489252,
+      "literal_pC": 4.712937392457437,
+      "abs_delta_pC": 9.681855317467125e-10,
+      "tolerance_pC": 1.7978429384069204e-05
+    },
+    {
+      "row": 0,
+      "channel": 13,
+      "fast_pC": 4.866333494201244,
+      "literal_pC": 4.8663335022706935,
+      "abs_delta_pC": 8.06944910891616e-09,
+      "tolerance_pC": 1.8563589104731344e-05
+    },
+    {
+      "row": 1,
+      "channel": 0,
+      "fast_pC": 0.0012220582915595701,
+      "literal_pC": 0.0012220582899181653,
+      "abs_delta_pC": 1.6414048939483727e-12,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 1,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 2,
+      "fast_pC": 0.06714092628052984,
+      "literal_pC": 0.06714092630429039,
+      "abs_delta_pC": 2.376054908381775e-11,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 3,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 4,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 5,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 14,
+      "fast_pC": 88.21731831569203,
+      "literal_pC": 88.21731830099729,
+      "abs_delta_pC": 1.4694734318254632e-08,
+      "tolerance_pC": 0.00033652236290358464
+    },
+    {
+      "row": 1,
+      "channel": 6,
+      "fast_pC": 148.76507234864786,
+      "literal_pC": 148.76507234523498,
+      "abs_delta_pC": 3.4128788684029132e-09,
+      "tolerance_pC": 0.0005674937146958732
+    },
+    {
+      "row": 1,
+      "channel": 7,
+      "fast_pC": 79.48680888709107,
+      "literal_pC": 79.48680892839262,
+      "abs_delta_pC": 4.130154707127076e-08,
+      "tolerance_pC": 0.00030321811267239616
+    },
+    {
+      "row": 1,
+      "channel": 8,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 9,
+      "fast_pC": 0.0,
+      "literal_pC": 0.0,
+      "abs_delta_pC": 0.0,
+      "tolerance_pC": 3.814697265625e-06
+    },
+    {
+      "row": 1,
+      "channel": 10,
+      "fast_pC": 23.874657750085237,
+      "literal_pC": 23.874657818831942,
+      "abs_delta_pC": 6.874670432921448e-08,
+      "tolerance_pC": 9.107459189923074e-05
+    },
+    {
+      "row": 1,
+      "channel": 11,
+      "fast_pC": 23.874770399359512,
+      "literal_pC": 23.874770468107197,
+      "abs_delta_pC": 6.874768487818983e-08,
+      "tolerance_pC": 9.107502162211303e-05
+    },
+    {
+      "row": 1,
+      "channel": 12,
+      "fast_pC": 6.872604811473852,
+      "literal_pC": 6.872604820083517,
+      "abs_delta_pC": 8.609664980951948e-09,
+      "tolerance_pC": 2.6216906814893786e-05
+    },
+    {
+      "row": 1,
+      "channel": 13,
+      "fast_pC": 4.525105901170196,
+      "literal_pC": 4.525105909938495,
+      "abs_delta_pC": 8.768298975780908e-09,
+      "tolerance_pC": 1.7261909141305905e-05
+    }
+  ],
+  "mapping_diagnostics": [
+    {
+      "row": 0,
+      "detector": "Calo",
+      "channel": 1,
+      "stored_id32": 3221225472,
+      "current_cable_id32": 3221225472,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Calo",
+      "channel": 0,
+      "stored_id32": 3355443200,
+      "current_cable_id32": 3355443200,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Calo",
+      "channel": 3,
+      "stored_id32": 3489660928,
+      "current_cable_id32": 3489660928,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Calo",
+      "channel": 2,
+      "stored_id32": 3623878656,
+      "current_cable_id32": 3623878656,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Veto",
+      "channel": 14,
+      "stored_id32": 1107296256,
+      "current_cable_id32": 1073741824,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 169.04664853357394,
+        "7": 98.87944274443106,
+        "14": 289.24220467465614,
+        "15": 252.60456657734943
+      }
+    },
+    {
+      "row": 0,
+      "detector": "Veto",
+      "channel": 6,
+      "stored_id32": 1140850688,
+      "current_cable_id32": 1140850688,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 169.04664853357394,
+        "7": 98.87944274443106,
+        "14": 289.24220467465614,
+        "15": 252.60456657734943
+      }
+    },
+    {
+      "row": 0,
+      "detector": "Veto",
+      "channel": 7,
+      "stored_id32": 1174405120,
+      "current_cable_id32": 1149239296,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 169.04664853357394,
+        "7": 98.87944274443106,
+        "14": 289.24220467465614,
+        "15": 252.60456657734943
+      }
+    },
+    {
+      "row": 0,
+      "detector": "Trigger",
+      "channel": 9,
+      "stored_id32": 1207959552,
+      "current_cable_id32": 1207959552,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Trigger",
+      "channel": 8,
+      "stored_id32": 1224736768,
+      "current_cable_id32": 1212153856,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Trigger",
+      "channel": 11,
+      "stored_id32": 1241513984,
+      "current_cable_id32": 1216348160,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Trigger",
+      "channel": 10,
+      "stored_id32": 1258291200,
+      "current_cable_id32": 1220542464,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Preshower",
+      "channel": 12,
+      "stored_id32": 1342177280,
+      "current_cable_id32": 1342177280,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 0,
+      "detector": "Preshower",
+      "channel": 13,
+      "stored_id32": 1375731712,
+      "current_cable_id32": 1350565888,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Calo",
+      "channel": 1,
+      "stored_id32": 3221225472,
+      "current_cable_id32": 3221225472,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Calo",
+      "channel": 0,
+      "stored_id32": 3355443200,
+      "current_cable_id32": 3355443200,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Calo",
+      "channel": 3,
+      "stored_id32": 3489660928,
+      "current_cable_id32": 3489660928,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Calo",
+      "channel": 2,
+      "stored_id32": 3623878656,
+      "current_cable_id32": 3623878656,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Veto",
+      "channel": 14,
+      "stored_id32": 1107296256,
+      "current_cable_id32": 1073741824,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 148.76507234864786,
+        "7": 79.48680888709107,
+        "14": 88.21731831569203,
+        "15": 110.49245606946165
+      }
+    },
+    {
+      "row": 1,
+      "detector": "Veto",
+      "channel": 6,
+      "stored_id32": 1140850688,
+      "current_cable_id32": 1140850688,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 148.76507234864786,
+        "7": 79.48680888709107,
+        "14": 88.21731831569203,
+        "15": 110.49245606946165
+      }
+    },
+    {
+      "row": 1,
+      "detector": "Veto",
+      "channel": 7,
+      "stored_id32": 1174405120,
+      "current_cable_id32": 1149239296,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 148.76507234864786,
+        "7": 79.48680888709107,
+        "14": 88.21731831569203,
+        "15": 110.49245606946165
+      }
+    },
+    {
+      "row": 1,
+      "detector": "Trigger",
+      "channel": 9,
+      "stored_id32": 1207959552,
+      "current_cable_id32": 1207959552,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Trigger",
+      "channel": 8,
+      "stored_id32": 1224736768,
+      "current_cable_id32": 1212153856,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Trigger",
+      "channel": 11,
+      "stored_id32": 1241513984,
+      "current_cable_id32": 1216348160,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Trigger",
+      "channel": 10,
+      "stored_id32": 1258291200,
+      "current_cable_id32": 1220542464,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Preshower",
+      "channel": 12,
+      "stored_id32": 1342177280,
+      "current_cable_id32": 1342177280,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 1,
+      "detector": "Preshower",
+      "channel": 13,
+      "stored_id32": 1375731712,
+      "current_cable_id32": 1350565888,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Calo",
+      "channel": 1,
+      "stored_id32": 3221225472,
+      "current_cable_id32": 3221225472,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Calo",
+      "channel": 0,
+      "stored_id32": 3355443200,
+      "current_cable_id32": 3355443200,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Calo",
+      "channel": 3,
+      "stored_id32": 3489660928,
+      "current_cable_id32": 3489660928,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Calo",
+      "channel": 2,
+      "stored_id32": 3623878656,
+      "current_cable_id32": 3623878656,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Veto",
+      "channel": 14,
+      "stored_id32": 1107296256,
+      "current_cable_id32": 1073741824,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 375.29770191550176,
+        "7": 364.032138046121,
+        "14": 0.0,
+        "15": 0.0
+      }
+    },
+    {
+      "row": 2,
+      "detector": "Veto",
+      "channel": 6,
+      "stored_id32": 1140850688,
+      "current_cable_id32": 1140850688,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 375.29770191550176,
+        "7": 364.032138046121,
+        "14": 0.0,
+        "15": 0.0
+      }
+    },
+    {
+      "row": 2,
+      "detector": "Veto",
+      "channel": 7,
+      "stored_id32": 1174405120,
+      "current_cable_id32": 1149239296,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 375.29770191550176,
+        "7": 364.032138046121,
+        "14": 0.0,
+        "15": 0.0
+      }
+    },
+    {
+      "row": 2,
+      "detector": "Trigger",
+      "channel": 9,
+      "stored_id32": 1207959552,
+      "current_cable_id32": 1207959552,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Trigger",
+      "channel": 8,
+      "stored_id32": 1224736768,
+      "current_cable_id32": 1212153856,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Trigger",
+      "channel": 11,
+      "stored_id32": 1241513984,
+      "current_cable_id32": 1216348160,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Trigger",
+      "channel": 10,
+      "stored_id32": 1258291200,
+      "current_cable_id32": 1220542464,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Preshower",
+      "channel": 12,
+      "stored_id32": 1342177280,
+      "current_cable_id32": 1342177280,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 2,
+      "detector": "Preshower",
+      "channel": 13,
+      "stored_id32": 1375731712,
+      "current_cable_id32": 1350565888,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Calo",
+      "channel": 1,
+      "stored_id32": 3221225472,
+      "current_cable_id32": 3221225472,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Calo",
+      "channel": 0,
+      "stored_id32": 3355443200,
+      "current_cable_id32": 3355443200,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Calo",
+      "channel": 3,
+      "stored_id32": 3489660928,
+      "current_cable_id32": 3489660928,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Calo",
+      "channel": 2,
+      "stored_id32": 3623878656,
+      "current_cable_id32": 3623878656,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "VetoNu",
+      "channel": 4,
+      "stored_id32": 1476395008,
+      "current_cable_id32": 1476395008,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "VetoNu",
+      "channel": 5,
+      "stored_id32": 1509949440,
+      "current_cable_id32": 1484783616,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Veto",
+      "channel": 14,
+      "stored_id32": 1107296256,
+      "current_cable_id32": 1073741824,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 264.574155039793,
+        "7": 166.55268912498147,
+        "14": 830.0950765972515,
+        "15": 247.18873121197697
+      }
+    },
+    {
+      "row": 3,
+      "detector": "Veto",
+      "channel": 6,
+      "stored_id32": 1140850688,
+      "current_cable_id32": 1140850688,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 264.574155039793,
+        "7": 166.55268912498147,
+        "14": 830.0950765972515,
+        "15": 247.18873121197697
+      }
+    },
+    {
+      "row": 3,
+      "detector": "Veto",
+      "channel": 7,
+      "stored_id32": 1174405120,
+      "current_cable_id32": 1149239296,
+      "all_Veto_current_physical_Q_pC": {
+        "6": 264.574155039793,
+        "7": 166.55268912498147,
+        "14": 830.0950765972515,
+        "15": 247.18873121197697
+      }
+    },
+    {
+      "row": 3,
+      "detector": "Trigger",
+      "channel": 9,
+      "stored_id32": 1207959552,
+      "current_cable_id32": 1207959552,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Trigger",
+      "channel": 8,
+      "stored_id32": 1224736768,
+      "current_cable_id32": 1212153856,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Trigger",
+      "channel": 11,
+      "stored_id32": 1241513984,
+      "current_cable_id32": 1216348160,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Trigger",
+      "channel": 10,
+      "stored_id32": 1258291200,
+      "current_cable_id32": 1220542464,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Preshower",
+      "channel": 12,
+      "stored_id32": 1342177280,
+      "current_cable_id32": 1342177280,
+      "all_Veto_current_physical_Q_pC": {}
+    },
+    {
+      "row": 3,
+      "detector": "Preshower",
+      "channel": 13,
+      "stored_id32": 1375731712,
+      "current_cable_id32": 1350565888,
+      "all_Veto_current_physical_Q_pC": {}
+    }
+  ],
+  "signed_negative_raw_N": 10,
+  "ADC_missing_N": 6,
+  "CPU_s": 89.859224201,
+  "wall_s": 166.1665236959234,
+  "RSS_KiB": 1784448,
+  "ROOT_read_bytes": 8016930,
+  "G4_N": 0,
+  "energy_fits": 0,
+  "new_forward": 0,
+  "overall_complete": false
+}
