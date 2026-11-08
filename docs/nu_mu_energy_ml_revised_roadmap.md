@@ -1,3 +1,9 @@
+# 当前执行更新：Stage194 原fit实际沉积解释了条件宽尾的身份问题
+
+[中文报告](../workbook/2026-11-08_stage194_actual-fit-primary-deposit-support.md)固定原16/160，恢复原确定性merge，仅取cached leading index，pz0/charge/全部barcode贡献精确。2737个fit clusters实际SDO正权指针分类及16pilot/full通过；charm原200089/944和1094两低pz父的35个fit clusters全部解析为无直接主μ、unknown/无SDO均0，占原纯主μIFT候选Σpull²的0.995541388。原pz0为52.6450546875/75.412859375GeV、真E188.08/875.07GeV；不能当最低真E箱代表，也不能把这些fit直接当主μ误差覆盖测试。π另1父17cluster同样全无直接主μ；未删父、不改轨迹、不宣称真实data错轨率。
+
+4start全0、246CPU/373聚合wall秒、0live，完整成本投影494.00731344<600；留89917B紧凑cache、清7640882B重复、Stage54保持，零新fit/G4/IFT运输。A的固定内容新训练191已经未达低能门；本控制解释同面残差的身份分母，不重开模型/窗口/seed。后续具体输入及验收见[逐路线需求表](../workbook/stage194_energy_ml/goal_requirements.tsv)：B实际LOS/active条件、D同设置真实控制、E新时期四像素平面/MC共同覆盖、F status0物理形状和相应MC、真实背景效率加权/相关辅助与独立确认仍开放。整体低能优于传统及完整物理谱未完成，原角色/K/pz0/raw/status0与全部门保持。以下历史全文保留。
+
 # 当前执行更新：Stage193 charm宽尾与原fit主μ贡献缺失相关
 
 [中文报告](../workbook/2026-11-08_stage193_IFT-parent-fit-support-accounting.md)固定原160缓存/16pilot、零新ROOT/G4/fit，完整五fit支持类×四deposit类逐父账目。charm原fit无主μbarcode的2父有9纯直接主μIFT候选，Σpull²=46262.420360826，占该类全来源0.995541388；29个仅存主μbarcode父134候选RMS1.219141183、1混合父6候选1.156508571。汇总17.66不能直接当正确主μfit误差覆盖失配；未删异常或把SDO不完整自动等同错轨，所有父/未知保持。
