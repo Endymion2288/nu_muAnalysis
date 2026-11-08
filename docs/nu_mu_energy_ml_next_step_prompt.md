@@ -1,3 +1,11 @@
+# 当前执行更新：Stage166 已取得真实GRL/整run亮度，局部文件曝光未认证
+
+[Stage166报告](../workbook/2026-11-08_stage166_real-GRL-and-shard-exposure.md)实际取得六份官方v10源，run15838记录亮度850.979pb⁻¹、稳定区间53587秒；同原PHYS780874条全通过时间GRL、四项数据质量后774232条，原1024prefix精确。该文件时间包络只有3004秒，不能直接附整run亮度，也不按时间/事件比例缩放；[输入清单](../workbook/stage166_energy_ml/exposure_input_manifest.json)仍标文件曝光未认证。实际C++3004秒/6边界、独立1024身份/DQ及六源原字节通过；4start含一次CSV列名解析失败全计11CPU秒/43聚合wall秒、0live/fit/forward/G4/新ν。最终源/1024输入66794B，删6292436B重复；源码3857逻辑版本按精确内容存975份，再减4264543B，Stage54保持。
+
+[下一Stage167合同](../workbook/stage166_energy_ml/next_execution_contract.json)仅同run15838已知PHYS和RAW目录各一次非递归listing，≤64PHYS/4096RAW；原前3header/首尾/有限metadata和reference64先验收/成本，再4进程全目录PHYS header及独立审计。1500CPU秒/4核12GB、无RAW payload/ν选择/模型/G4；文件名区间与端点不能单独认证完整处理/DAQ曝光，不无界追目录。真实背景/全生成接受度/相关校准/乳胶/独立确认仍缺，Stage87和所有原门保持，整体未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage165 完成固定H来源诊断，名义通量支持为空
 
 [Stage165报告](../workbook/2026-11-08_stage165_fixed-H-source-composition.md)完成同原3002、578source及216预定比较单元，零fit/forward/G4。π的条件H两低箱cal .715567/.832242、开发test .808396[.700383,.912952]/.762770[.656478,.880233]；K test28/35父，.798155[.564649,1.122367]/.863245[.644905,1.140405]，未共同确认，不等于K无收益或π/K差异显著。charm低箱只有0/1父，退化经验区间不认证总体；原全部3002来自alternative，nominal0，跨通量效果未测量。原inclusive432项差≤2.49e−14、独立2016项差≤2.14e−14、48缺失区间保留；2start全exit0、26CPU秒/37聚合wall秒、0live、0新事件/模型持久化，删6.255MB重复，Stage54保持。

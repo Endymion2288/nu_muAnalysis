@@ -1,0 +1,50 @@
+{
+  "stage": 166,
+  "run": 15838,
+  "official_GRL_input_acquired": true,
+  "official_source_version": "v10",
+  "official_original_bytes_archive": "ntuples/energy_ml_stage166/official_grl_inputs.tar.gz",
+  "run_recorded_luminosity": {
+    "value": 850.979,
+    "unit": "pb^-1",
+    "uncertainty": null,
+    "source": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.csv",
+    "meaning": "official full-run lookup,not certified exposure for a PHYS subset"
+  },
+  "stable_inclusive_unix_seconds": [
+    [
+      1720449636,
+      1720503223
+    ]
+  ],
+  "excluded_inclusive_unix_seconds": [],
+  "observed_files": [
+    {
+      "path": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root",
+      "N": 780874,
+      "time_min_unix_s": 1720449636,
+      "time_max_unix_s": 1720452640,
+      "DQ_counts": {
+        "N": 780874,
+        "stable_N": 780874,
+        "excluded_N": 0,
+        "accepted_time_N": 780874,
+        "colliding_N": 774232,
+        "trigger_N": 774823,
+        "colliding_trigger_N": 774232,
+        "colliding_trigger_stable_N": 774232,
+        "colliding_trigger_accepted_N": 774232
+      },
+      "certified_luminosity_pb_inv": null
+    }
+  ],
+  "dataset_processing_completeness_certified": false,
+  "dataset_live_luminosity_certified": false,
+  "full_nu_selection_applied": false,
+  "next_contract": "workbook/stage166_energy_ml/next_execution_contract.json",
+  "missing": [
+    "RAW-to-PHYS complete processing provenance and luminosity/live-time correspondence",
+    "same-selection backgrounds and full-generation acceptance",
+    "real correlated physical auxiliary constraints and independent confirmation"
+  ]
+}

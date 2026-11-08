@@ -1,0 +1,46 @@
+{
+  "stage": 166,
+  "question": "What real GRL and recorded-luminosity inputs apply to the exact run15838 PHYS shard already identity-matched in Stage160, and does that shard certify full-run exposure?",
+  "basis": "Stage132 section6 needs matched actual exposure. The current grl_config.yaml already names six official v10 JSON/CSV paths; acquire and validate them rather than claim they cannot be obtained. No automatic H/G4 followup from Stage165 and no energy candidate.",
+  "inputs": {
+    "PHYS": "/eos/experiment/faser/data0/phys/2024_back/r0022/015838/Faser-Physics-015838-00000-00049-r0022-PHYS.root",
+    "reference_manifest": "workbook/stage160_energy_ml/matched_manifest.json",
+    "GRL_config": "AnalysisZipFramework/config/grl_config.yaml",
+    "GRL_implementation": [
+      "AnalysisZipFramework/include/GRLUtils.h",
+      "AnalysisZipFramework/source/GRLUtitls.cxx",
+      "AnalysisZipFramework/source/Analyis.cxx"
+    ],
+    "DQ_config": "AnalysisZipFramework/config/cuts.yaml"
+  },
+  "fixed_run": 15838,
+  "science": "Read only run,eventID,eventTime and optional inputBits/distanceToCollidingBCID. No track,charge,model,truth,fullphysicsselection or native reprocessing. Data-quality counts are descriptive within an already produced PHYS shard,not trigger/selection efficiencies or muon/neutrino yields.",
+  "official_inputs": "Read exactly six configured official paths,no discovery or version scan. Save original bytes once in compact exact archive and preserve run record/CSV headers,row and provenance. Require unique matched run entry and numeric finite nonnegative lumi_rec in the actual fourth CSV column used by repository. Unit pb^-1 is repository-config convention; report provenance and do not claim independent luminosity calibration or uncertainty.",
+  "time_semantics": "Use repository inclusive stable and excluded Unix-second ranges,exact conversion to long long; GoodTimes && !ExcludedTimes. No arrival-time use or revised cuts. DQ first colliding distance==0 then any inputBits0x8/0x10/0x20/0x40,then stable,then not excluded. Missing optional DQ fields remain unmeasured; do not guess. Preserve legitimate signed detector variables by not reading or altering them.",
+  "pilot": "First1024 PHYS rows in two512 blocks; actual tree schema/N and timing/readbytes/RSS; first64 run/event/timestamp exact Stage160. Stop unsupported source/schema/GRL,never switch file or version. Read no new physics risk. Record source opening/first512 CPU separately from second512 complete CPU and actual wall. Small pilot must succeed before any full scan.",
+  "admission": "3*(opening+first512 CPU+ceil((source_N-512)/512)*second512 CPU)+prior scheduler used+pilot measured GNU CPU+300 audit reserve <=1200, and projected full <=600 allowance. It is a conservative empirical projection,not measured fullcost or a guarantee. Do not raise budget after rejection.",
+  "full": "Only admitted exact PHYS shard,stream65536 rows with four allocated decompression threads and BLAS1; require original prefix1024 exact and run15838 all; aggregate perintegersecond N and DQprefix counts plus GRLflags,actual min/max/gaps. Save no full event array,only prefix1024 and compact time bins. No directory expansion to whole run.",
+  "exposure": "Report official full-run recorded lumi separately from dataset exposure. Timestamp bounding-span overlap and occupied seconds are descriptive support,not delivered/recorded luminosity or livetime. No multiplying fullrun lumi by event/time fractions or using events/sec as exposure. Without complete processing/DAQ livetime and luminosity-by-time evidence,the shard luminosity remains unmeasured even if all its events satisfy GRL.",
+  "audit": "Independent actual C++ GRLUtils::TimeRanges from repository header for every occupied second and each originalrange endpoint\u00b11,plus absent-run check; independently sum persecond aggregates and scalar DQ/identity re-read first1024 from originalROOT. Verify exact archived official bytes and originalprefix and semantic boundary behavior. Numerical/structural audit is not actual neutrino purity/background/full acceptance certification.",
+  "resources": {
+    "CPU_budget_s": 1200,
+    "pilot_allowance_s": 300,
+    "full_allowance_s": 600,
+    "audit_allowance_s": 300,
+    "request_CPUs": 4,
+    "memory_MB": 12000,
+    "max_active_jobs": 1,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_event_and_official_input_bytes_cap": 2097152
+  },
+  "execution": "All ROOT,arrays,GRL/luminosity parsing and statistics via HTCondor ~/condor/nu_muAnalysis/stage166/. Local text/scheduling/exactarchives and validatedTSV plotting only. No rebuild/push of Calypso; no persistent ROOT/xAOD,newG4/digi/reco/newnu/fits/forward. Failedattempts count; terminal exactarchives and Stage54 preserved; Chinese workbook before ConventionalCommit.",
+  "decision": "Update section6 input status using actual matched evidence. Run GRL/lumi acquisition may be complete while shard exposure,backgrounds and acceptance remain missing. No promotion or change to Stage87/alloriginalgates,roles,K,pz0-only/raw11/typedNaN/signed/status0timing/reserved. Next physics fit only after real matched exposure/background/acceptance/auxiliary constraints; do not invent missing priors.",
+  "energy_fits": 0,
+  "model_forward": 0,
+  "new_G4": 0,
+  "new_independent_nu": 0,
+  "promotion": false,
+  "overall_complete": false
+}

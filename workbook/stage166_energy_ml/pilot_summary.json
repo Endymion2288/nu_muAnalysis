@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "N": 1024,
+  "source_N": 780874,
+  "branches": [
+    "run",
+    "eventID",
+    "eventTime",
+    "distanceToCollidingBCID",
+    "inputBits"
+  ],
+  "missing_optional": [],
+  "branch_types": {
+    "run": "int32_t",
+    "eventID": "int32_t",
+    "eventTime": "int32_t",
+    "distanceToCollidingBCID": "int32_t",
+    "inputBits": "int32_t"
+  },
+  "original64_identity_exact": true,
+  "first512_and_open_CPU_s": 0.525675661,
+  "second512_CPU_s": 0.012630731000000006,
+  "second512_wall_s": 0.013949968968518078,
+  "opened_to_first512_CPU_s": 0.01593243099999997,
+  "official_inputs_CPU_s": 0.07971963500000001,
+  "read_bytes": 303296,
+  "CPU_s": 0.650746125,
+  "wall_s": 1.390291173942387,
+  "RSS_KiB": 52224,
+  "recorded_run_lumi_pb_inv": 850.979,
+  "dataset_lumi_pb_inv": null,
+  "energy_fits": 0,
+  "model_forward": 0,
+  "new_G4": 0,
+  "promotion": false
+}

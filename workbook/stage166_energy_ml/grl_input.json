@@ -1,0 +1,76 @@
+{
+  "run": 15838,
+  "JSON": {
+    "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json",
+    "record": {
+      "start_time": "2024-07-08T13:01:17.720435",
+      "stop_time": "2024-07-09T05:35:58.048976",
+      "start_utime": 1720443677.720435,
+      "stop_utime": 1720503358.048976,
+      "stable_list": [
+        {
+          "lhc_fill": 9877,
+          "start_utime": 1720449636.0,
+          "stop_utime": 1720503223.0,
+          "start_time": "2024-07-08T14:40:36.000000",
+          "stop_time": "2024-07-09T05:33:43.000000"
+        }
+      ]
+    }
+  },
+  "CSV": {
+    "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.csv",
+    "header": [
+      "Run",
+      " Fill",
+      " LumiDel",
+      " LumiRec",
+      " TimeDel",
+      " TimeRec"
+    ],
+    "row": [
+      "15838",
+      " 9877",
+      " 869.654",
+      " 850.979",
+      " 53587.000",
+      " 52447.279"
+    ],
+    "recorded_lumi_pb_inv": 850.979
+  },
+  "files": [
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2022_physics.json",
+      "bytes": 288166
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2023_physics.json",
+      "bytes": 54474
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.json",
+      "bytes": 141894
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2022_physics.csv",
+      "bytes": 7995
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2023_physics.csv",
+      "bytes": 3795
+    },
+    {
+      "path": "/cvmfs/faser.cern.ch/repo/sw/runlist/v10/faser_goodrunlist_2024_physics.csv",
+      "bytes": 12762
+    }
+  ],
+  "stable_ranges_s": [
+    [
+      1720449636,
+      1720503223
+    ]
+  ],
+  "excluded_ranges_s": [],
+  "luminosity_unit_basis": "Repository grl_config.yaml: lumi_rec in pb^-1; not an independent luminosity calibration",
+  "dataset_luminosity_pb_inv": null
+}

@@ -1,0 +1,204 @@
+{
+  "all_jobs_terminal": true,
+  "event_inputs_byte_equality": true,
+  "source_and_logs_byte_equality": true,
+  "transport_checks": [
+    {
+      "phase": "audit",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "full",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "pilot_retry",
+      "result_archive_exact": true
+    },
+    {
+      "phase": "pilot",
+      "result_archive_exact": true
+    }
+  ],
+  "final_event_features_and_models_bytes": 66794,
+  "limit_bytes": 2097152,
+  "final_files": [
+    {
+      "path": "ntuples/energy_ml_stage166/official_grl_inputs.tar.gz",
+      "bytes": 62686
+    },
+    {
+      "path": "ntuples/energy_ml_stage166/prefix1024.json.gz",
+      "bytes": 4108
+    }
+  ],
+  "archives": [
+    {
+      "path": "software/stage166/execution_audits.tar.gz",
+      "bytes": 793
+    },
+    {
+      "path": "software/stage166/source_snapshots.tar.gz",
+      "bytes": 1489384
+    },
+    {
+      "path": "software/stage166/terminal_spool.tar.gz",
+      "bytes": 2694
+    },
+    {
+      "path": "software/stage166/worker_logs.tar.gz",
+      "bytes": 2834
+    }
+  ],
+  "deleted": [
+    {
+      "path": "software/stage166/1794123078088551882/energy-ml-stage166.tar.gz",
+      "bytes": 1593804
+    },
+    {
+      "path": "ntuples/energy_ml_stage166/audit_result.tar.gz",
+      "bytes": 1235
+    },
+    {
+      "path": "software/stage166/1794122901795587791/energy-ml-stage166.tar.gz",
+      "bytes": 1572442
+    },
+    {
+      "path": "ntuples/energy_ml_stage166/full_result.tar.gz",
+      "bytes": 23423
+    },
+    {
+      "path": "software/stage166/1794122650914380617/energy-ml-stage166.tar.gz",
+      "bytes": 1507882
+    },
+    {
+      "path": "ntuples/energy_ml_stage166/pilot_retry_result.tar.gz",
+      "bytes": 64445
+    },
+    {
+      "path": "software/stage166/1794122340917527661/energy-ml-stage166.tar.gz",
+      "bytes": 1505269
+    },
+    {
+      "path": "ntuples/energy_ml_stage166/pilot_result.tar.gz",
+      "bytes": 820
+    },
+    {
+      "path": "workbook/stage166_energy_ml/audit_time.txt",
+      "bytes": 756
+    },
+    {
+      "path": "workbook/stage166_energy_ml/full_time.txt",
+      "bytes": 755
+    },
+    {
+      "path": "workbook/stage166_energy_ml/pilot_retry_time.txt",
+      "bytes": 756
+    },
+    {
+      "path": "workbook/stage166_energy_ml/pilot_time.txt",
+      "bytes": 792
+    },
+    {
+      "path": "workbook/stage166_energy_ml/audit.log",
+      "bytes": 713
+    },
+    {
+      "path": "workbook/stage166_energy_ml/full.log",
+      "bytes": 1152
+    },
+    {
+      "path": "workbook/stage166_energy_ml/pilot.log",
+      "bytes": 484
+    },
+    {
+      "path": "workbook/stage166_energy_ml/pilot_retry.log",
+      "bytes": 782
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/worker_1794122340917527661.sh",
+      "bytes": 1177
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/pilot_1794122340917527661.sub",
+      "bytes": 1034
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/worker_1794122650914380617.sh",
+      "bytes": 1219
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/pilot_retry_1794122650914380617.sub",
+      "bytes": 1040
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/worker_1794122901795587791.sh",
+      "bytes": 1219
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/full_1794122901795587791.sub",
+      "bytes": 1033
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/worker_1794123078088551882.sh",
+      "bytes": 1219
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/audit_1794123078088551882.sub",
+      "bytes": 1034
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676366.0.log",
+      "bytes": 1991
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676366.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676366.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676377.0.log",
+      "bytes": 1987
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676377.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676377.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676386.0.log",
+      "bytes": 1988
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676386.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676386.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676396.0.log",
+      "bytes": 1985
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676396.0.out",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage166/logs/9676396.0.err",
+      "bytes": 0
+    }
+  ],
+  "deleted_bytes": 6292436,
+  "no_persistent_ROOT": true,
+  "Stage54_size_mtime_preserved": true,
+  "live_queue_Iwd_checked": true,
+  "source_version_index": "source_compaction.json"
+}

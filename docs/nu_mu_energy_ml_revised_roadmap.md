@@ -1,3 +1,11 @@
+# 当前执行更新：Stage166 已取得真实GRL/整run亮度，局部文件曝光未认证
+
+[Stage166报告](../workbook/2026-11-08_stage166_real-GRL-and-shard-exposure.md)实际取得六份官方v10源，run15838记录亮度850.979pb⁻¹、稳定区间53587秒；同原PHYS780874条全通过时间GRL、四项数据质量后774232条，原1024prefix精确。该文件时间包络只有3004秒，不能直接附整run亮度，也不按时间/事件比例缩放；[输入清单](../workbook/stage166_energy_ml/exposure_input_manifest.json)仍标文件曝光未认证。实际C++3004秒/6边界、独立1024身份/DQ及六源原字节通过；4start含一次CSV列名解析失败全计11CPU秒/43聚合wall秒、0live/fit/forward/G4/新ν。最终源/1024输入66794B，删6292436B重复；源码3857逻辑版本按精确内容存975份，再减4264543B，Stage54保持。
+
+[下一Stage167合同](../workbook/stage166_energy_ml/next_execution_contract.json)仅同run15838已知PHYS和RAW目录各一次非递归listing，≤64PHYS/4096RAW；原前3header/首尾/有限metadata和reference64先验收/成本，再4进程全目录PHYS header及独立审计。1500CPU秒/4核12GB、无RAW payload/ν选择/模型/G4；文件名区间与端点不能单独认证完整处理/DAQ曝光，不无界追目录。真实背景/全生成接受度/相关校准/乳胶/独立确认仍缺，Stage87和所有原门保持，整体未完成。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage165 完成固定H来源诊断，名义通量支持为空
 
 [Stage165报告](../workbook/2026-11-08_stage165_fixed-H-source-composition.md)完成同原3002、578source及216预定比较单元，零fit/forward/G4。π的条件H两低箱cal .715567/.832242、开发test .808396[.700383,.912952]/.762770[.656478,.880233]；K test28/35父，.798155[.564649,1.122367]/.863245[.644905,1.140405]，未共同确认，不等于K无收益或π/K差异显著。charm低箱只有0/1父，退化经验区间不认证总体；原全部3002来自alternative，nominal0，跨通量效果未测量。原inclusive432项差≤2.49e−14、独立2016项差≤2.14e−14、48缺失区间保留；2start全exit0、26CPU秒/37聚合wall秒、0live、0新事件/模型持久化，删6.255MB重复，Stage54保持。
@@ -3054,3 +3062,10 @@ content/M12 cal两低箱.990793[.977914,1.000999]/.998796[.995081,1.003146]，te
 [实测报告](../workbook/2026-11-08_stage165_fixed-H-source-composition.md)及[完整状态](../workbook/stage165_energy_ml/research_status.json)给出原3002/578source/216预定比较，π四低箱条件H均有局部收益、K低能区间宽、charm0/1父无法总体认证。全部输入为alternative，nominal为空；不能把空组、宽区间或相同预测重复当支持。原inclusive432标量和独立2016标量闭合，48区间NA保持，26CPU秒/0live/零新fit与模型推理；紧凑源/日志归档后删6255140B重复，Stage54保持。
 
 本阶段不触发生产或候选网格。Stage164尾部及原joint失败、最低能目标未达、Stage87/全部原门保持。下一步必须取得明确新测量或辅助输入并另冻有界实验；当前实际校准/宽辐射尾/名义H/曝光背景接受度/乳胶匹配/真实相关系统及独立确认仍缺，不用任意prior或既有MC oracle替代。历史§1–143与旧入口原文保留，整体goal未完成。
+
+
+## 145. Stage166：真实run级GRL与亮度输入已取得，文件曝光保持未知
+
+[实测报告](../workbook/2026-11-08_stage166_real-GRL-and-shard-exposure.md)及[输入清单](../workbook/stage166_energy_ml/exposure_input_manifest.json)给run15838官方v10记录亮度850.979pb⁻¹、合格53587秒；原PHYS780874条时间GRL全通过/DQ774232，实际事件支持3004秒不证明整run或局部曝光。原metadata lumi仅run查表，不能替代完整处理/DAQ/逐时间亮度证据。C++实际TimeRanges、独立身份/计数和源字节验证通过；含一次失败共11CPU秒、无新fit/G4、0live；留66794B紧凑输入，重复运输/spool和源码版本已精确去重。
+
+[Stage167合同](../workbook/stage166_energy_ml/next_execution_contract.json)有限取得同run真实文件manifest/首尾与实际metadata，1500CPU秒、固定两目录/caps/小pilot与成本门，不展开RAW payload/ν风险或新候选。匹配文件曝光、背景、接受度、真实相关系统与乳胶/独立确认仍开放，Stage87/原门及整体未完成保持。历史§1–144和旧入口原文保留。
