@@ -1,0 +1,32 @@
+{
+  "phase": "profile",
+  "result": "9676779.0 - 9676779.0",
+  "CPU_allowance_s": 200,
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175\nexecutable = /bin/bash\ntransfer_executable = False\narguments = worker_1794134116868806608.sh profile\ntransfer_input_files = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/worker_1794134116868806608.sh, root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage175/1794134116868806608/energy-ml-stage175.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 8\nrequest_memory = 12000MB\nrequest_disk = 4000MB\nmax_retries = 0\n+MaxRuntime = 86400\n+PeriodicRemoveReason = \"Stage175 frozen disjoint CPU allowance\"\nperiodic_remove = (RemoteUserCpu + RemoteSysCpu) > 200\n+NuMuStage = \"energy-ml-stage175\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/$(ClusterId).$(ProcId).err\nqueue 1\n",
+  "package": {
+    "path": "software/stage175/1794134116868806608/energy-ml-stage175.tar.gz",
+    "bytes": 24777727,
+    "files": [
+      "ml/stage175_common.py",
+      "ml/stage175_mapping.py",
+      "ml/stage175_pilot.py",
+      "ml/stage175_profile.py",
+      "ml/stage175_full.py",
+      "ml/stage175_audit.py",
+      "ml/stage175_tails.py",
+      "ml/stage143_monitor.py",
+      "setup_env.sh",
+      "workbook/stage175_energy_ml/protocol.json",
+      "workbook/stage129_energy_ml/extraction_contract.json",
+      "workbook/stage174_energy_ml/calibrations.json",
+      "ntuples/energy_ml_stage119/old_input.npz",
+      "workbook/stage175_energy_ml/cost_profile_addendum.json",
+      "workbook/stage175_energy_ml/pilot_summary.json",
+      "workbook/stage175_energy_ml/cable_mapping.json",
+      "workbook/stage175_energy_ml/admission.json",
+      "ntuples/energy_ml_stage175/pilot_0.npz",
+      "ntuples/energy_ml_stage175/pilot_48.npz",
+      "ntuples/energy_ml_stage175/pilot_113.npz"
+    ]
+  }
+}

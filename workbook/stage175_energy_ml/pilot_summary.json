@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "sources": [
+    {
+      "index": 0,
+      "phase": "pilot",
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200082/FaserMC-MC24_Genie_epos_pi-200082-00000-00009-s0014-merge-PHYS.root",
+      "N": 32,
+      "schema_supported": true,
+      "missing": [],
+      "S0_missing": [],
+      "histogram_mapping": true,
+      "present_N": 32,
+      "leading_match_N": 32,
+      "strict_end_N": [
+        16,
+        16,
+        24,
+        24,
+        22
+      ],
+      "negative_rawQ_N": 16,
+      "minus999_rawQ_N": 0,
+      "S0_finite_N": 32,
+      "ROOT_read_bytes": 358101,
+      "CPU_s": 1.375521303,
+      "wall_s": 1.806418752996251,
+      "RSS_KiB": 577852,
+      "output_bytes": 5743
+    },
+    {
+      "index": 48,
+      "phase": "pilot",
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200083/FaserMC-MC24_Genie_epos_k-200083-00000-00009-s0014-merge-PHYS.root",
+      "N": 32,
+      "schema_supported": true,
+      "missing": [],
+      "S0_missing": [],
+      "histogram_mapping": true,
+      "present_N": 32,
+      "leading_match_N": 32,
+      "strict_end_N": [
+        22,
+        22,
+        19,
+        19,
+        19
+      ],
+      "negative_rawQ_N": 25,
+      "minus999_rawQ_N": 0,
+      "S0_finite_N": 32,
+      "ROOT_read_bytes": 386005,
+      "CPU_s": 1.383634777,
+      "wall_s": 1.860447846003808,
+      "RSS_KiB": 578476,
+      "output_bytes": 5785
+    },
+    {
+      "index": 113,
+      "phase": "pilot",
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/merge_mc24_master_d32b0ff3/200089/FaserMC-MC24_Genie_powheg_pythia_charm_central-200089-00000-00009-s0014-merge-PHYS.root",
+      "N": 32,
+      "schema_supported": true,
+      "missing": [],
+      "S0_missing": [],
+      "histogram_mapping": true,
+      "present_N": 32,
+      "leading_match_N": 32,
+      "strict_end_N": [
+        18,
+        18,
+        25,
+        25,
+        16
+      ],
+      "negative_rawQ_N": 22,
+      "minus999_rawQ_N": 0,
+      "S0_finite_N": 32,
+      "ROOT_read_bytes": 686629,
+      "CPU_s": 1.250338504,
+      "wall_s": 2.070813560974784,
+      "RSS_KiB": 574960,
+      "output_bytes": 5795
+    }
+  ],
+  "support": [
+    {
+      "index": 0,
+      "N": 32,
+      "strict_and_supported_N": [
+        8,
+        8,
+        15,
+        15
+      ],
+      "derived_finite_N": [
+        8,
+        15
+      ]
+    },
+    {
+      "index": 48,
+      "N": 32,
+      "strict_and_supported_N": [
+        10,
+        10,
+        11,
+        9
+      ],
+      "derived_finite_N": [
+        10,
+        9
+      ]
+    },
+    {
+      "index": 113,
+      "N": 32,
+      "strict_and_supported_N": [
+        6,
+        6,
+        11,
+        10
+      ],
+      "derived_finite_N": [
+        6,
+        10
+      ]
+    }
+  ],
+  "energy_fits": 0,
+  "overall_complete": false
+}

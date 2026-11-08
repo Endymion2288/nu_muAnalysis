@@ -1,0 +1,10 @@
+{
+  "reason": "Initial full not admitted: treating fixed file/dictionary startup as per-entry may overproject; this is unmeasured until exact same96 source entries are profiled.",
+  "physics_inputs_unchanged": true,
+  "original_protocol_unchanged": true,
+  "profile": "Same original3x32train entries only; separately time file setup,first GetEntry,remaining entry loop,save and process startup; compare every profile field exactly to original pilot.",
+  "profile_CPU_allowance_s": 200,
+  "source": "Unused original pilot allowance: pilot actual28+profile200 <=300. Original full3600/audit600 and total4500 remain.",
+  "projection": "Threefold (per-file metadata/first-entry/closing overhead scaled280/3 + subsequent-loop CPU scaled original_N/(96-3) + global startup scaled8/3 + mapping once). Admit only <=3600 and used+projection+600<=4500. If not, stop full; no budget expansion.",
+  "no_new_physics_or_fit": true
+}

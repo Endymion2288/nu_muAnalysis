@@ -1,0 +1,1356 @@
+{
+  "passed": true,
+  "all_terminal": true,
+  "exact_source_metadata_bytes": true,
+  "source_logical_N": 84,
+  "source_unique_N": 34,
+  "deleted_bytes": 117011795,
+  "deleted": [
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage175/1794134622691081337/energy-ml-stage175.tar.gz",
+      "bytes": 32948993
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/audit_result.tar.gz",
+      "bytes": 3030
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage175/1794134348546796761/energy-ml-stage175.tar.gz",
+      "bytes": 26020501
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/full_result.tar.gz",
+      "bytes": 8198511
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage175/1794133797225844320/energy-ml-stage175.tar.gz",
+      "bytes": 24763410
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/pilot_result.tar.gz",
+      "bytes": 14171
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage175/1794134116868806608/energy-ml-stage175.tar.gz",
+      "bytes": 24777727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/profile_result.tar.gz",
+      "bytes": 13640
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/audit_time.txt",
+      "bytes": 756
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_time.txt",
+      "bytes": 769
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/mapping_time.txt",
+      "bytes": 766
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/pilot_time.txt",
+      "bytes": 760
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/profile_time.txt",
+      "bytes": 765
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/audit.log",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full.log",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/mapping.log",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/pilot.log",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/profile.log",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/worker_1794133797225844320.sh",
+      "bytes": 1575
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/pilot_1794133797225844320.sub",
+      "bytes": 1034
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/worker_1794134116868806608.sh",
+      "bytes": 1575
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/profile_1794134116868806608.sub",
+      "bytes": 1036
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/worker_1794134348546796761.sh",
+      "bytes": 1575
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/full_1794134348546796761.sub",
+      "bytes": 1034
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/worker_1794134622691081337.sh",
+      "bytes": 1575
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/audit_1794134622691081337.sub",
+      "bytes": 1034
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676764.0.log",
+      "bytes": 2148
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676764.0.out",
+      "bytes": 312
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676764.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676779.0.log",
+      "bytes": 2142
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676779.0.out",
+      "bytes": 157
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676779.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676790.0.log",
+      "bytes": 2141
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676790.0.out",
+      "bytes": 157
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676790.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676807.0.log",
+      "bytes": 2145
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676807.0.out",
+      "bytes": 157
+    },
+    {
+      "path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage175/logs/9676807.0.err",
+      "bytes": 0
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/pilot_0.npz",
+      "bytes": 5743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/pilot_48.npz",
+      "bytes": 5785
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/pilot_113.npz",
+      "bytes": 5795
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/profile_0.npz",
+      "bytes": 5743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/profile_48.npz",
+      "bytes": 5785
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/profile_113.npz",
+      "bytes": 5795
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/audit_0.npz",
+      "bytes": 2579
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/audit_48.npz",
+      "bytes": 2591
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/energy_ml_stage175/audit_113.npz",
+      "bytes": 2591
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_0_summary.json",
+      "bytes": 721
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_100_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_101_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_102_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_103_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_104_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_105_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_106_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_107_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_108_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_109_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_10_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_110_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_111_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_112_summary.json",
+      "bytes": 718
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_113_summary.json",
+      "bytes": 744
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_114_summary.json",
+      "bytes": 745
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_115_summary.json",
+      "bytes": 742
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_116_summary.json",
+      "bytes": 745
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_117_summary.json",
+      "bytes": 743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_118_summary.json",
+      "bytes": 743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_119_summary.json",
+      "bytes": 743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_11_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_120_summary.json",
+      "bytes": 743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_121_summary.json",
+      "bytes": 744
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_122_summary.json",
+      "bytes": 742
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_123_summary.json",
+      "bytes": 744
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_124_summary.json",
+      "bytes": 745
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_125_summary.json",
+      "bytes": 744
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_126_summary.json",
+      "bytes": 743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_127_summary.json",
+      "bytes": 743
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_128_summary.json",
+      "bytes": 730
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_129_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_12_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_130_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_131_summary.json",
+      "bytes": 750
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_132_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_133_summary.json",
+      "bytes": 742
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_134_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_135_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_136_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_137_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_138_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_139_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_13_summary.json",
+      "bytes": 725
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_140_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_141_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_142_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_143_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_144_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_145_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_146_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_147_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_148_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_149_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_14_summary.json",
+      "bytes": 717
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_150_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_151_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_152_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_153_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_154_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_155_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_156_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_157_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_158_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_159_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_15_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_160_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_161_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_162_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_163_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_164_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_165_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_166_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_167_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_168_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_169_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_16_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_170_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_171_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_172_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_173_summary.json",
+      "bytes": 750
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_174_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_175_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_176_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_177_summary.json",
+      "bytes": 738
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_178_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_179_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_17_summary.json",
+      "bytes": 717
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_180_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_181_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_182_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_183_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_184_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_185_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_186_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_187_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_188_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_189_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_18_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_190_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_191_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_192_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_193_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_194_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_195_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_196_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_197_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_198_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_199_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_19_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_1_summary.json",
+      "bytes": 714
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_200_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_201_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_202_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_203_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_204_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_205_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_206_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_207_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_208_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_209_summary.json",
+      "bytes": 739
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_20_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_210_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_211_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_212_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_213_summary.json",
+      "bytes": 741
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_214_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_215_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_216_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_217_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_218_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_219_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_21_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_220_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_221_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_222_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_223_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_224_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_225_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_226_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_227_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_228_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_229_summary.json",
+      "bytes": 746
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_22_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_230_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_231_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_232_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_233_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_234_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_235_summary.json",
+      "bytes": 748
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_236_summary.json",
+      "bytes": 745
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_237_summary.json",
+      "bytes": 747
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_238_summary.json",
+      "bytes": 749
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_239_summary.json",
+      "bytes": 766
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_23_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_240_summary.json",
+      "bytes": 769
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_241_summary.json",
+      "bytes": 768
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_242_summary.json",
+      "bytes": 768
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_243_summary.json",
+      "bytes": 759
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_244_summary.json",
+      "bytes": 768
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_245_summary.json",
+      "bytes": 766
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_246_summary.json",
+      "bytes": 768
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_247_summary.json",
+      "bytes": 769
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_248_summary.json",
+      "bytes": 767
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_249_summary.json",
+      "bytes": 768
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_24_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_250_summary.json",
+      "bytes": 770
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_251_summary.json",
+      "bytes": 767
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_252_summary.json",
+      "bytes": 767
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_253_summary.json",
+      "bytes": 767
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_254_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_255_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_256_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_257_summary.json",
+      "bytes": 524
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_258_summary.json",
+      "bytes": 705
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_259_summary.json",
+      "bytes": 703
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_25_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_260_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_261_summary.json",
+      "bytes": 726
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_262_summary.json",
+      "bytes": 726
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_263_summary.json",
+      "bytes": 725
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_264_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_265_summary.json",
+      "bytes": 720
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_266_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_267_summary.json",
+      "bytes": 725
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_268_summary.json",
+      "bytes": 728
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_269_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_26_summary.json",
+      "bytes": 717
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_270_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_271_summary.json",
+      "bytes": 726
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_272_summary.json",
+      "bytes": 725
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_273_summary.json",
+      "bytes": 726
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_274_summary.json",
+      "bytes": 719
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_275_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_276_summary.json",
+      "bytes": 728
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_277_summary.json",
+      "bytes": 728
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_278_summary.json",
+      "bytes": 727
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_279_summary.json",
+      "bytes": 726
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_27_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_28_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_29_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_2_summary.json",
+      "bytes": 720
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_30_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_31_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_32_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_33_summary.json",
+      "bytes": 717
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_34_summary.json",
+      "bytes": 715
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_35_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_36_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_37_summary.json",
+      "bytes": 717
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_38_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_39_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_3_summary.json",
+      "bytes": 720
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_40_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_41_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_42_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_43_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_44_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_45_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_46_summary.json",
+      "bytes": 717
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_47_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_48_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_49_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_4_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_50_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_51_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_52_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_53_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_54_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_55_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_56_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_57_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_58_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_59_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_5_summary.json",
+      "bytes": 715
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_60_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_61_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_62_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_63_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_64_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_65_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_66_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_67_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_68_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_69_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_6_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_70_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_71_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_72_summary.json",
+      "bytes": 716
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_73_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_74_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_75_summary.json",
+      "bytes": 724
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_76_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_77_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_78_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_79_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_7_summary.json",
+      "bytes": 713
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_80_summary.json",
+      "bytes": 721
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_81_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_82_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_83_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_84_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_85_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_86_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_87_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_88_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_89_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_8_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_90_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_91_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_92_summary.json",
+      "bytes": 722
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_93_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_94_summary.json",
+      "bytes": 720
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_95_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_96_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_97_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_98_summary.json",
+      "bytes": 720
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_99_summary.json",
+      "bytes": 723
+    },
+    {
+      "path": "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage175_energy_ml/full_9_summary.json",
+      "bytes": 721
+    }
+  ],
+  "Stage54_preserved": true,
+  "queue_Iwd_checked": true,
+  "retained_cohort_array_bytes": 8283583,
+  "source_summary_duplicates_removed_N": 280,
+  "prefix_dedup_scientifically_verified": true,
+  "scheduler_CPU_s": 511.0,
+  "scheduler_aggregate_wall_s": 178.0,
+  "starts": 4,
+  "live_N": 0,
+  "scheduler_RequestCpus": [
+    8
+  ],
+  "scheduler_RequestMemory_MB": [
+    24000
+  ],
+  "archives": [
+    {
+      "path": "software/stage175/execution_audits.tar.gz",
+      "bytes": 868
+    },
+    {
+      "path": "software/stage175/source_snapshots.tar.gz",
+      "bytes": 3687583
+    },
+    {
+      "path": "software/stage175/terminal_spool.tar.gz",
+      "bytes": 3022
+    },
+    {
+      "path": "software/stage175/worker_logs.tar.gz",
+      "bytes": 194
+    }
+  ],
+  "energy_fits": 0,
+  "model_forward": 0,
+  "new_G4": 0,
+  "GPU_jobs": 0,
+  "overall_complete": false
+}
