@@ -1,0 +1,37 @@
+{
+  "admitted": true,
+  "conservative_8reader_RSS_projection_MB": 19106.953125,
+  "memory_cap_MB": 24000,
+  "complete_main_GNU": {
+    "CPU_s": 187.59,
+    "wall_s": 236.86,
+    "RSS_KiB": 1956552
+  },
+  "startup_before_first_execute_CPU_s": 38.423550036,
+  "first_execute_including_cold_JIT_CPU_s": 58.34601564999999,
+  "source_subsequent_mean_CPU_s": {
+    "0": 0.28931446880269013,
+    "48": 0.28931446880269013,
+    "113": 0.5348677489487178,
+    "254": 0.28931446880269013,
+    "255": 0.28931446880269013,
+    "260": 0.28931446880269013,
+    "129": 0.28931446880269013
+  },
+  "global_subsequent_mean_CPU_s": 0.28931446880269013,
+  "per_event_full_projection_CPU_s": 37801.7605901807,
+  "extra_transition_CPU_s": 2036.6944729599998,
+  "triple_production_projection_CPU_s": 139212.3151894221,
+  "already_used_scheduler_CPU_s": 431.0,
+  "pending_pilot_audit_CPU_reserve_s": 1000,
+  "fit_audit_reserved_CPU_s": 8000,
+  "total_projection_CPU_s": 148643.3151894221,
+  "CPU_budget_s": 180000,
+  "pilot_ROOT_requested_B": 500633784,
+  "event_ROOT_requested_B": 254066704,
+  "full_ROOT_requested_B_projection": 96366813156.10434,
+  "wall_IO_projection": "provisional; source/file/cache variation not controlled",
+  "energy_fits": 0,
+  "new_cal_test_fields": 0,
+  "overall_complete": false
+}

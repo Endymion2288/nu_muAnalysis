@@ -1,0 +1,83 @@
+{
+  "next_stage": 187,
+  "question": "For the fixed original12 natural parents, what measured primary-muon energy change is supported before/at S0, and how does it coexist with already measured before/after-source same-window charge? Close the finite energy ledger without turning birth energy or charge into missing-energy corrections.",
+  "rationale": "Stage186 actual/ideal same-PMT charge content failed all both-low expansion gates. Existing Stage178/179 records already contain real primary endpoints and source-resolved analog charge, but nine-plane energy ledger and fit-reference interpretation are not fully tabulated. This is a different bounded transport-mechanism question, not readout/model/window expansion.",
+  "inputs": {
+    "protocol": "workbook/stage178_energy_ml/protocol.json",
+    "boxes": "workbook/stage178_energy_ml/state_boxes.json",
+    "native_reference": "workbook/stage176_energy_ml/parent_50_S0.json",
+    "lineage_reference": "ntuples/energy_ml_stage176/parent_50_lineage.json.gz",
+    "lineage_others": "ntuples/energy_ml_stage178/parent_{index}_lineage.json.gz",
+    "side_labels": "workbook/stage178_energy_ml/parent_{index}_intervals.json",
+    "same_window_sources": "workbook/stage179_energy_ml/charge_interventions.tsv",
+    "diagnostics": "workbook/stage179_energy_ml/parent_diagnostics.tsv",
+    "matched_input": "ntuples/energy_ml_stage131/matched_input.npz",
+    "original_cases": "ntuples/energy_ml_stage131/production_cases.json.gz",
+    "certificates": [
+      "workbook/stage178_energy_ml/independent_validation.json",
+      "workbook/stage179_energy_ml/independent_validation.json",
+      "workbook/stage186_energy_ml/decision_summary.json"
+    ]
+  },
+  "parents": [
+    50,
+    70,
+    6,
+    21,
+    8,
+    63,
+    2,
+    15,
+    0,
+    1,
+    5,
+    12
+  ],
+  "pilot": [
+    50
+  ],
+  "unknown_planes": [
+    8,
+    63,
+    2
+  ],
+  "selection": "Original fixed12, retain every parent, no replacements or outcome/charge selection. Nine current fitted-plane supports only; original lowpz_highE parents8/63 remain unknown. Old train diagnostics do not become independent validation.",
+  "method": [
+    "Certify primary root, step ordering and saved field units from pinned observer source. Per parent keep primary initial totalE and all actual pre/post totalE endpoints; audit adjacent endpoint continuity and measured numerical discrepancies before any energy ledger claim.",
+    "Use already certified finite S0 plane intervals and original robust crossings. Report actual crossing-step endpoint energies separately and as ordered endpoint bracket, no interpolation or nominal-z replacement. Unknown planes/crossing/primary association stay null.",
+    "Report primary initial minus actual crossing endpoint energies, and actual final stored endpoint separately with its actual location/time; do not call final transport energy a calorimeter energy or escaped-energy total without support. Keep crossing-step contribution and any recrossings explicit.",
+    "Use cached fitted momentum components only to diagnose existing fitted energy/reference residual where stored leading-primary association supports the interpretation. Do not create p0/p1/pz1/log momentum features, refit tracks or infer material correction. If association is absent, label geometric-plane transport ledger only and fitted-primary comparison unknown.",
+    "Join original Stage179 per-channel six-source same-window analog charges and fixed old nine train errors by exact frame identity. Charge is pC, primary total energy is GeV, birth source side is not the energy-loss location of every secondary interaction. Do not sum daughter kinetic energies as primary radiative loss or add Q/energy to reconstructed neutrino.",
+    "Give per-parent tables and fixed descriptive plots for original six sampling strata, with denominator12/plane9/missing3. No regression/significance claim from nine, no new model forward/fit, no data calibration or population/low-energy gain claim."
+  ],
+  "validation": [
+    "Pilot original50 must recover existing actual native crossing endpoints and source-Q scalars within original Stage178/179 declared arithmetic bounds, with exact identities; unmeasured items remain explicit.",
+    "Measure complete pilot CPU/wall/RSS and input bytes. Only admit remaining fixed11 if triple measured pilot scaling plus already used plus audit reserve fits240CPU s. Do not enlarge budget or replace missing parents.",
+    "Independent scalar audit reloads original primary/step fields, uses rational differences/telescoping checks and stored S0 bounds/crossing ordinals, independently joins all source-Q rows and original old predictions; report any nonclosure with actual values. No silent tolerance enlargement or inferred process labels."
+  ],
+  "resources": {
+    "CPU_budget_s": 240,
+    "pilot_cap_s": 40,
+    "analysis_cap_s": 100,
+    "audit_cap_s": 100,
+    "request_CPUs": 2,
+    "memory_MB": 4000,
+    "max_live_jobs": 1,
+    "MaxRuntime_s": 3600,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_new_scalar_bytes_cap": 2097152
+  },
+  "computing": "All gz/NPZ/step calculations, statistical summaries and plots on HTCondor under ~/condor/nu_muAnalysis/stage187. Local text/source/package/archive/documentation only. No ROOT/G4/digitization/reconstruction, no new native parents and no scientific arrays duplicated unnecessarily.",
+  "acceptance": "One finite measured conclusion about energy/reference versus source-window support, with exact identities, explicit original missing difficult side and independent ledger closure. Not required to be positive; failure/unknown closes this finite question. No automatic larger replay, no deployable correction or hybrid/Q+T expansion. Only actual new measured companion/calibration input can authorize a separately frozen later energy experiment.",
+  "preserve": "Stage87 and all original roles/K/reserved/isolation, pz>50GeV, pz0-only first-power momentum, raw charge/typed missingness/signed negatives, strict status0 physical timing, original eight strata/three tails/all gates, Stage54 12 assets and all historical budgets remain unchanged.",
+  "external_missing": [
+    "Per-track fitted material correction and matching lowpz_highE S0 support",
+    "Independent high-amplitude reference and matching dual-range MC",
+    "Real background/trigger-selection efficiency/weighted generator normalization/auxiliary constraints",
+    "Actual emulsion-electronic matches or new-production independent confirmation"
+  ],
+  "overall_complete": false,
+  "promotion": false,
+  "execution_started": false
+}

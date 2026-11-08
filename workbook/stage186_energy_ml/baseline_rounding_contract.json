@@ -1,0 +1,27 @@
+{
+  "question": "Explain new refit vs actual cached PHYS charge differences without deleting parents or changing any representation",
+  "observed_failures": [
+    {
+      "group": 3,
+      "source": 27,
+      "row": 9524,
+      "channel": 10,
+      "delta_pC_approx": 0.00049316
+    },
+    {
+      "group": 27,
+      "source": 217,
+      "row": 71087,
+      "channel": 11,
+      "delta_pC_approx": 0.000494
+    }
+  ],
+  "hypothesis": "One float32 baseline ULP times101samples*2ns/50ohm; hypothesis only until actual baselines and exact closures certify",
+  "verification": "For every new refit disagreement: actual source PHYS run/event and original raw match X exactly; old/new measured positive baselines differ<=1float32ULP; old and current signed ADC sums each match corresponding float32 raw EXACT. No charge tolerance; no idealQ tolerance change. Archive scalar ADCsum, baselines and both charges for independent rational audit.",
+  "representation": "Original X62 and frozen current official R/M/I unchanged; current R value/status/mask retained. This only corrects extra validation assumption that independently refitted baseline is always bit-identical.",
+  "parents_removed": 0,
+  "new_model_fits": 0,
+  "extra_G4": 0,
+  "budget": "Repairs only in unspent original production family allowances; all failures count, totalproduction<=168000,total<=180000; max4jobs/32readers.",
+  "overall_complete": false
+}

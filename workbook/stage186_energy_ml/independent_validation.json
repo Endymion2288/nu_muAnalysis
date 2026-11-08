@@ -1,0 +1,1031 @@
+{
+  "passed": true,
+  "reloaded_models": 9,
+  "all_active_prediction_and_cal_offset_exact": true,
+  "Stage87_baseline_exact": true,
+  "cohort_cache_all_full_scalars_exact": true,
+  "pilot_parents_all_fields_exact": 230,
+  "scalar_metric_max_delta": 2.842170943040401e-14,
+  "independent_row_space_bootstrap_checks": 144,
+  "interval_max_delta": 2.842170943040401e-14,
+  "interval_checks": [
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 1.1102230246251565e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 3.3306690738754696e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 1.1102230246251565e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.1102230246251565e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 3.3306690738754696e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 8.326672684688674e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 5.412337245047638e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 3.0531133177191805e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 3.885780586188048e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.7763568394002505e-15
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 3.552713678800501e-15
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 4.996003610813204e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 4.926614671774132e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 7.216449660063518e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 5.329070518200751e-15
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 4.163336342344337e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 5.329070518200751e-15
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 5.967448757360216e-16
+    },
+    {
+      "role": 2,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 3.3306690738754696e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 5.551115123125783e-17
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 3.552713678800501e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.4424906541753444e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.1102230246251565e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.5543122344752192e-15
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.842170943040401e-14
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 8.881784197001252e-16
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-15
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-15
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.1316282072803006e-14
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-15
+    },
+    {
+      "role": 2,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 1.7763568394002505e-15
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.9984014443252818e-15
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 5.551115123125783e-17
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.842170943040401e-14
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 2,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.842170943040401e-14
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 3.3306690738754696e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.1102230246251565e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E50_100",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E100_200",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.498001805406602e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 4.163336342344337e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.7755575615628914e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 5.828670879282072e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 8.881784197001252e-15
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 6.38378239159465e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 6.217248937900877e-15
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 3.3306690738754696e-16
+    },
+    {
+      "role": 3,
+      "stratum": "all",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 6.38378239159465e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 7.216449660063518e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 4.3021142204224816e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 3.3306690738754696e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 3.552713678800501e-15
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 5.551115123125783e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 3.552713678800501e-15
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "E200_inf",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 5.329070518200751e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 1.9984014443252818e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 3.552713678800501e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.1102230246251565e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 3.552713678800501e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 1.3322676295501878e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 1.1102230246251565e-15
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 0.0
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.1316282072803006e-14
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 4.440892098500626e-16
+    },
+    {
+      "role": 3,
+      "stratum": "pz50_100_trueE200",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 1.9984014443252818e-15
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.1102230246251565e-16
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 7.105427357601002e-15
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.7763568394002505e-15
+    },
+    {
+      "role": 3,
+      "stratum": "high_y",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "R",
+      "reference": "A",
+      "row_space_interval_max_delta": 1.9984014443252818e-15
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "A",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "R",
+      "row_space_interval_max_delta": 2.220446049250313e-16
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "A",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 6.439293542825908e-15
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "A",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 2.1316282072803006e-14
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "R",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 8.881784197001252e-16
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "R",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "direct_cal",
+      "row_space_interval_max_delta": 1.3322676295501878e-15
+    },
+    {
+      "role": 3,
+      "stratum": "unconfirmed",
+      "candidate": "I",
+      "reference": "traditional",
+      "row_space_interval_max_delta": 1.4210854715202004e-14
+    }
+  ],
+  "expansion_gate": {
+    "I/R": false,
+    "I/A": false,
+    "R/A": false
+  },
+  "roles_original": true,
+  "quarantine_predictions": 0,
+  "reserved_predictions": 0,
+  "overall_complete": false,
+  "promotion": false
+}

@@ -1,0 +1,520 @@
+{
+  "next_stage": 186,
+  "question": "On the original meaningful-support cohort, does ideal same-physical-PMT/window charge add low-energy information beyond actual readout and availability, enough to motivate further readout estimation?",
+  "inputs": {
+    "dataset": "ntuples/energy_ml_stage119/old_input.npz",
+    "sources": "workbook/stage129_energy_ml/extraction_contract.json",
+    "baseline": "ml/artifacts/stage87/predictions.npz",
+    "policy": "workbook/stage87_energy_ml/protocol.json",
+    "physical_certificate": "workbook/stage185_energy_ml/independent_validation.json",
+    "features": "ml/configs/audited_features.json"
+  },
+  "cohort": "Exactly original89033 rows: role0/1/2/3=17657/46575/11612/13189,71376active; allK and originalincomingweights. No new split/GENIE/G4/reconstruction/reserved/role0features orpredictions; retain everyactiveparent.",
+  "sources": "Only280 original requests/2800 knownHITS. ExactRDO producerlogs and installed/source dictionary evidence first. Decode actualstored compactID by corresponding source-version dictionary and require unique physicaltuple/roundtrip; no hardware-only current join, no charge-selected permutation or guessed layouts. CurrentDB snapshot is not historical bytes. Unsupported source keeps parents and common appended missingness; report perorigin/component/role coverage.",
+  "pilot": {
+    "source_indices": [
+      0,
+      48,
+      113,
+      254,
+      255,
+      257,
+      260,
+      129
+    ],
+    "train_per_source": 40,
+    "repeat": "first4originaltrain source0",
+    "selection": "First40originalrole1 byentry, no outcomes or replacements; allavailable producer/version/physical and actualRDO controls audited before newcal/testfeature reading.",
+    "actual_train_N": {
+      "0": 40,
+      "48": 40,
+      "113": 40,
+      "254": 28,
+      "255": 40,
+      "257": 0,
+      "260": 40,
+      "129": 2
+    },
+    "shortage_policy": "Use min(40,original train N); source254 has28, source257 has0. No substitute/role0 read; source257 remains original missing denominator."
+  },
+  "producer_gate": "Reuse Stage185 source6d6 certificates only where exact source evidence agrees; separately certify any actually different dictionary/producer. Actual originalX62/scint11/pz0 and ordinaryCalo/status controls exact at declaredfloatprecision on pilot, including originalproducerdefinition. Current signed raw is declared explicitly if historicalPHYS uses positive-part integral. No silent equivalence or fit-charge fallback.",
+  "extraction": "OneAthena accumulator per group of<=8sources with actual perHITSN/globalentry checks and sparse original identities; 35groups oforiginalrequestorder. All15originalphysicalPMTs andinclusivewindows scint780-980ns/Calo780-930ns only if verified per source. Stage184 fastwindow method and32float32eps unchanged. No cachedADC/step/source arrays. Independent literalfirst2train/source inpilot only; no fullcohort literal replay. Finalscientificcacheonlycompactscalars/flags/identities.",
+  "representation": "Common15channel availability C=actual valid signedraw and certified same-PMT HITS/response. A=X62+M45; R=A+asinh(actual same-window signedQ/1pC)15; I=A+asinh(ideal same-window positive-signalQ/1pC)15. R andI share C, unavailable measurements NaN, allparents retained. M45 perchannel commonavailability,knownfitinvalid andactualoverflow/censor indicator, definitions frozen from producer before newfeatures. No oracle birth/S0/y/vertex/energy ortruthavailability feature, no changedX62/pz0 policy ornewtiming.",
+  "missingness": "Use producer status/domain guards; no blanket -999/-1 deletion from signedraw, no negative clamp, nozero imputation. Fitfailure alone does not erase validraw, censored ADC retains flag, ADCabsence != measuredzero. Truthsignal oracle is diagnostic, never deployable correctedcharge.",
+  "fits": "Exactly3arms A107/R122/I122 with originalStage87 3seeds/400round/depth5/eta.04/subsample.8/minchild20/lambda10/CPUhist/nthread1 and originalincomingweighted base_score/boost_from_average0. Ninefits, noearlystop/grid/extra seeds; perarm one role2 ensemble logoffset. Reuse Stage87 lockedbaseline after exactcohort/Xcontrols; noX-onlyrefit. Reloadexact, no newscore/prior/window models.",
+  "evaluation": "Original8protectedstrata and3tail50 directions, allcal/testjoint gates, pairedincoming500 bootstrap fixedseed20261108186+role; report N/incoming/ESS,RMSE,bias/R68/tails, perorigin/component and appendedmissing/censoredsupport. MainI/R mechanismcontrast, I/A andR/A contentcontrols, each/traditional andStage87. Independent predictions/weights/masks/scalar metrics/interval recomputation. Intervals conditional, originaldevelopedpool not newindependentconfirmation.",
+  "gates": "Unchanged bothlow/traditional upper95<=1.05; all/Stage87<=1.01; other5<=1.03; all8strata3taildiffupper95<=+2pp. Stage137 bothlow cal/test content point<=.95 andupper95<1 plus tails for further expansion. Finaltarget still actual lowenergy superiority/independentconfirmation, notoracle performance.",
+  "resources": {
+    "CPU_budget_s": 180000,
+    "pilot_total_CPU_cap_s": 4000,
+    "production_total_CPU_cap_s": 168000,
+    "fit_audit_CPU_cap_s": 8000,
+    "request_CPUs": 8,
+    "memory_MB": 24000,
+    "max_active_jobs": 4,
+    "reader_processes_per_job": 8,
+    "sources_per_reader_max": 8,
+    "MaxRuntime_s": 86400,
+    "application_timeout": null,
+    "GPU": 0,
+    "final_new_event_and_model_bytes_cap": 67108864
+  },
+  "admission": "Beforefull freeze a measured cost decomposition: GNUcompletepilot/firstcallJIT + metadata/per-source initialization + sparseevent andROOTrequested-byte scaling. Triple measured sourcewise conservative projection +alreadyused+8000fit/audit <=180000; no replacing CPU withwall or ignoring coldfirstexecute. Wall/I/O projection explicitly provisional. Fixed disjoint per-job CPU allowances sum<=168000, max4live, all failures count. Original Stage184/185budgets unchanged. Source-dependent closures gate full; nocal/testfeatures/fit untiladmitted.",
+  "computing": "Allscientificoperations onHTCondor ~/condor/nu_muAnalysis/stage186. 8independentreaderprocesses/groupedjob,BLAS/ROOT innerthreads1,atmost32readers concurrently; eventformats cannot useCUDA. Retain fixedsmall CPUhist reproducibility; no unmeasuredGPU speedclaim. Report actual throughput/I/O/RSS and overlaps; noROOT/xAOD or largewaveform intermediates; exactaudit archive and delete verifiedduplicates/ownterminalspool afterqueueIwd check. Stage54 preserved.",
+  "interpretation": "ActualQ15control includes already studiedraw11/raw4; its retraining is necessary matchedcontrol, notclaimednewdetectorinformation. I adds source-matched simulated no-noise/no-clip signal, neitherindependentnu nor Bayeslimit/data calibration. IfIweak whileHstrong, prioritize geometry/externalanchor/interaction input rather than waveformgrid; ifIhelps andRfails, identifycalibratable estimation/supportgap beforeanyhybrid/Q+T.",
+  "pending": "Executionnotstarted; fullcohortPMT/producercoverage, costs, newenergybenefit anddata/independenttransfer unmeasured.",
+  "overall_complete": false,
+  "promotion": false,
+  "stage": 186,
+  "starting_commit": "645757f479d5964d549b81eb256c6a8fb59aa827",
+  "producer_evidence": "workbook/stage186_energy_ml/source_producers.json",
+  "geometry": "FASERNU-04",
+  "global_tag": "OFLCOND-FASER-06",
+  "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "concrete_missingness": {
+    "WAVE_INVALID": 392,
+    "FIT_INVALID": 444,
+    "common": "ADC present, finite current signedraw, no WAVE_INVALID, historical source+actualID/window/response certified",
+    "known_fit_invalid": "current official reconstruction FIT_INVALID bitmask when ADC present; NaN for absent",
+    "censor": "any actual ADC code0 or16383 in fixed inclusive window, or WAVE_OVERFLOW bit4; NaN for absent"
+  },
+  "old_producer_raw": "6d6 positive-part full-window integral (2*sum(max(wave_mV,0))/50), float32 product/output. Original X62/raw11 unchanged; new R uses d32 signed full-window integral. Explicitly different estimands.",
+  "production_groups": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    [
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87
+    ],
+    [
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    [
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    [
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111
+    ],
+    [
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119
+    ],
+    [
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127
+    ],
+    [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ],
+    [
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
+    ],
+    [
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151
+    ],
+    [
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159
+    ],
+    [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167
+    ],
+    [
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175
+    ],
+    [
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183
+    ],
+    [
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191
+    ],
+    [
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ],
+    [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207
+    ],
+    [
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215
+    ],
+    [
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223
+    ],
+    [
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231
+    ],
+    [
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239
+    ],
+    [
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247
+    ],
+    [
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ],
+    [
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263
+    ],
+    [
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271
+    ],
+    [
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279
+    ]
+  ],
+  "production_jobs": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    [
+      32,
+      33,
+      34
+    ]
+  ],
+  "production_job_CPU_allowances_s": [
+    38400,
+    38400,
+    38400,
+    38400,
+    14400
+  ],
+  "pilot_job_CPU_allowance_s": 3000,
+  "pilot_audit_CPU_reserve_s": 1000,
+  "cost_formula": "3 * (35 * measured main complete GNU CPU + sum_source activeN * max(measured source mean subsequent nonliteral event CPU,global such mean)) + alreadyused schedulerCPU + 8000 <=180000 and projectedproduction<=168000. Complete GNU includes cold init,firstexecute,JIT,all metadata,30+HITS file opens andsource transitions; repeated in35groups, then full per-event cost added conservatively (intentional double counting pilot events). Unsupported producer active parents counted but additionalQ missing; no role0 read. ROOT byte projection 35*measuredbytes+active/pilot*eventreadbytes remains provisional.",
+  "producer_versions": [
+    "6d6ab70b",
+    "4a0e366b"
+  ],
+  "dictionary_paths": {
+    "6d6ab70b": "workbook/stage185_energy_ml/IdDict_6d6ab70b.xml",
+    "4a0e366b": "workbook/stage186_energy_ml/IdDict_4a0e366b.xml"
+  },
+  "producer_identity_addendum": {
+    "source_index": 129,
+    "first_train_N": 2,
+    "purpose": "First exact4a0e366b original producer. Before full feature extraction, independently decode actualstored IDs by exact4a source dictionary and validate literal integrals/old PHYS controls; no source replacement or outcome-selected sample. Added before any Stage186 scientific execution; within original4000pilot budget. Exact4a reconstruction/digitization source diff against6d6 is empty; scint dictionary adds VetoGm and must be separately decoded."
+  }
+}

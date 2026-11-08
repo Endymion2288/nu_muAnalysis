@@ -1,3 +1,13 @@
+# 当前执行更新：Stage186 原队列实际/理想电荷新训练完成，双低能增量阴性
+
+[Stage186报告](../workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md)在原280来源/71376active、全部K与原角色上认证同物理PMT/原窗，A107/R122/I122共9新fit。test I/R两低箱0.997731 [0.984972,1.009262] / 0.998340 [0.991194,1.006067]，cal亦近1；三个内容扩展门均false。实际R/传统test最低箱1.958185、第二箱上95%=1.061147，原两低门均失败；6个cal/test joint全false，I困难侧总尾/正尾上95%=2.912151/2.344359pp也不过。固定表示结束，不晋升、不继续窗/seed/容量或波形估计器网格；不是所有波形的Bayes上限。
+
+9模型/全部active预测/230pilot精确、144配对区间最大差2.84e-14，699408原raw控制含4条实际baseline差1ULP，各旧/新ADC积分及独立有理数精确闭合；父不删、X/R/ideal容差不改。35成功/39 reader尝试，15job start含5失败、29521CPU/10175聚合wall秒/0live；清629822295B重复、留35717802B标量模型、Stage54保持。原fit首次缺xgboost在import结束（零模型），改回原LCG109，在原预算完成9次fit，失败耗时均计入。
+
+下一[Stage187合同](../workbook/stage186_energy_ml/next_execution_contract.json)转原固定12父已有S0逐步端点/9面与Stage179同窗源的有限μ能量账目；先50小验证/成本再固定11及独立标量审计，新240CPU秒/2核4GB，零G4/新父/模型fit或forward。原缺面8/63/2不替换，不把出生能量或charge当损能、不插值过面/重复材料能损；支持不足明确结束，不扩大重放。真实高幅参考/双路MC、困难侧材料、背景效率加权及独立确认仍缺，[需求表](../workbook/stage186_energy_ml/goal_requirements.tsv)和整体未完成状态保持，Stage87/全部原门/reserved保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage185 历史PMT与三来源共享读取审计完成
 
 [Stage185报告](../workbook/2026-11-08_stage185_historical-PMT-and-shared-source-readout.md)按原6d6字典逐字段唯一回环认证11路，历史channel14是plate1（当前channel15）；当前04/06 DB均14→plate0，不将差异归因tag切换。原4父actual保持，修正理想积分252.604567/110.492456/0/247.188731pC，原row3错误830.095pC不再当噪声。原π/K/charm各4train共180记录、90literal最大差1.77623e-5pC、4父独立重读与原raw/status精确通过。一个Athena跨三原源，完整83.92CPU/201.99wall秒；首execute另含40.90CPU秒JIT，未冒称全队列成本或受控加速比。

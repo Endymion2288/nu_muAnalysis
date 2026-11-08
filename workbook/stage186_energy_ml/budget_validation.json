@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "measured_CPU_s": {
+    "pilot": 543.0,
+    "fit_audit": 196.0,
+    "production_0": 5798.0,
+    "production_1": 7146.0,
+    "production_2": 6504.0,
+    "production_3": 6955.0,
+    "production_4": 2379.0
+  },
+  "limits_CPU_s": {
+    "pilot": 4000,
+    "fit_audit": 8000,
+    "production_0": 38400,
+    "production_1": 38400,
+    "production_2": 38400,
+    "production_3": 38400,
+    "production_4": 14400
+  },
+  "attempts": [
+    {
+      "phase": "pilot",
+      "family": "pilot",
+      "CPU_s": 83.0,
+      "exit": 1
+    },
+    {
+      "phase": "probe",
+      "family": "pilot",
+      "CPU_s": 87.0,
+      "exit": 0
+    },
+    {
+      "phase": "pilot_repair",
+      "family": "pilot",
+      "CPU_s": 261.0,
+      "exit": 0
+    },
+    {
+      "phase": "pilot_audit",
+      "family": "pilot",
+      "CPU_s": 112.0,
+      "exit": 0
+    },
+    {
+      "phase": "production_0",
+      "family": "production_0",
+      "CPU_s": 5099.0,
+      "exit": 1
+    },
+    {
+      "phase": "production_1",
+      "family": "production_1",
+      "CPU_s": 7146.0,
+      "exit": 0
+    },
+    {
+      "phase": "production_2",
+      "family": "production_2",
+      "CPU_s": 5203.0,
+      "exit": 1
+    },
+    {
+      "phase": "production_3",
+      "family": "production_3",
+      "CPU_s": 5971.0,
+      "exit": 1
+    },
+    {
+      "phase": "production_4",
+      "family": "production_4",
+      "CPU_s": 2379.0,
+      "exit": 0
+    },
+    {
+      "phase": "repair_0",
+      "family": "production_0",
+      "CPU_s": 699.0,
+      "exit": 0
+    },
+    {
+      "phase": "repair_2",
+      "family": "production_2",
+      "CPU_s": 1301.0,
+      "exit": 0
+    },
+    {
+      "phase": "repair_3",
+      "family": "production_3",
+      "CPU_s": 984.0,
+      "exit": 0
+    },
+    {
+      "phase": "fit",
+      "family": "fit_audit",
+      "CPU_s": 5.0,
+      "exit": 1
+    },
+    {
+      "phase": "fit_repair",
+      "family": "fit_audit",
+      "CPU_s": 161.0,
+      "exit": 0
+    },
+    {
+      "phase": "audit",
+      "family": "fit_audit",
+      "CPU_s": 30.0,
+      "exit": 0
+    }
+  ],
+  "total_CPU_s": 29521.0,
+  "total_cap_CPU_s": 180000,
+  "all_failed_attempts_counted": true
+}

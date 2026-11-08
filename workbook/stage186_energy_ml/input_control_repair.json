@@ -1,0 +1,13 @@
+{
+  "reason": "Two invalid assumptions in new validation code, not a physics selection failure",
+  "metadata": "Source254 original Stage70 input_schema/protocol and current independent counts HITS=RDO=784, not Stage129 genericparent_N10000. Keep original manifest; use actual per-file totals foroffsets and require exact HITSsum=actualRDOGetEntries plus every selected actual identity/incoming. No source or parent replacement.",
+  "Calo": "Original origin70 X62 is Stage70 reference_matrix(x_produced), not a new direct PHYS E/1000 cast. Reproduce it exactly from archived producedcache/payload. Current oldPHYS comparison uses only original Stage70 calibration_closure comparison_rtol1e-6/comparison_atol_GeV1e-6, unchanged. All other sources retain bitwise float32 controls.",
+  "raw": "RDO log6d6/4a is digitizationproducer, not current d32 PHYS reconstructionproducer. Existing PHYS signedraw verified by originalStage70/129 and actual negative values. Replace erroneous positive-only control with actuald32 signed full-window float arithmetic; retain original failed record.",
+  "original_protocol_bytes_preserved": true,
+  "energy_gates_changed": false,
+  "numerical_ideal_tolerance_changed": false,
+  "extra_parents": 0,
+  "CPU_budget_s": 4000,
+  "all_failures_counted": true,
+  "overall_complete": false
+}

@@ -1,3 +1,13 @@
+# 当前执行更新：Stage186 原队列实际/理想电荷新训练完成，双低能增量阴性
+
+[Stage186报告](../workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md)在原280来源/71376active、全部K与原角色上认证同物理PMT/原窗，A107/R122/I122共9新fit。test I/R两低箱0.997731 [0.984972,1.009262] / 0.998340 [0.991194,1.006067]，cal亦近1；三个内容扩展门均false。实际R/传统test最低箱1.958185、第二箱上95%=1.061147，原两低门均失败；6个cal/test joint全false，I困难侧总尾/正尾上95%=2.912151/2.344359pp也不过。固定表示结束，不晋升、不继续窗/seed/容量或波形估计器网格；不是所有波形的Bayes上限。
+
+9模型/全部active预测/230pilot精确、144配对区间最大差2.84e-14，699408原raw控制含4条实际baseline差1ULP，各旧/新ADC积分及独立有理数精确闭合；父不删、X/R/ideal容差不改。35成功/39 reader尝试，15job start含5失败、29521CPU/10175聚合wall秒/0live；清629822295B重复、留35717802B标量模型、Stage54保持。原fit首次缺xgboost在import结束（零模型），改回原LCG109，在原预算完成9次fit，失败耗时均计入。
+
+下一[Stage187合同](../workbook/stage186_energy_ml/next_execution_contract.json)转原固定12父已有S0逐步端点/9面与Stage179同窗源的有限μ能量账目；先50小验证/成本再固定11及独立标量审计，新240CPU秒/2核4GB，零G4/新父/模型fit或forward。原缺面8/63/2不替换，不把出生能量或charge当损能、不插值过面/重复材料能损；支持不足明确结束，不扩大重放。真实高幅参考/双路MC、困难侧材料、背景效率加权及独立确认仍缺，[需求表](../workbook/stage186_energy_ml/goal_requirements.tsv)和整体未完成状态保持，Stage87/全部原门/reserved保持。
+
+以下保留此前入口原文。
+
 # 当前执行更新：Stage185 历史PMT与三来源共享读取审计完成
 
 [Stage185报告](../workbook/2026-11-08_stage185_historical-PMT-and-shared-source-readout.md)按原6d6字典逐字段唯一回环认证11路，历史channel14是plate1（当前channel15）；当前04/06 DB均14→plate0，不将差异归因tag切换。原4父actual保持，修正理想积分252.604567/110.492456/0/247.188731pC，原row3错误830.095pC不再当噪声。原π/K/charm各4train共180记录、90literal最大差1.77623e-5pC、4父独立重读与原raw/status精确通过。一个Athena跨三原源，完整83.92CPU/201.99wall秒；首execute另含40.90CPU秒JIT，未冒称全队列成本或受控加速比。
@@ -3358,3 +3368,12 @@ Stage140已有direct谱精度收益，但联合nominal覆盖93.4%不认证95%；
 ## 166. Stage185：原历史PMT身份闭合与共享多源读取
 
 [报告](../workbook/2026-11-08_stage185_historical-PMT-and-shared-source-readout.md)独立原6d6字段解码11路，channel14=plate1；不能依据相似Q置换通道，也不能将当前DB当历史字节。原12train/3源180路、90literal与4父独立重读均通过，无新能量fit。5start含两程序错误/262CPU/520wall秒/0live，清340472B重复，Stage54保持。下一Stage186先源producer/控制/完整成本准入，再原队列A/R/I实际理想能量对照，冻结独立180000CPU秒与9fit；不声称已改善能量。原角色/K/八层三尾/Stage87/全部门和整体未完成保持，历史全文保留。
+
+
+## 167. Stage186：有意义原队列的实际/理想同窗电荷增量阴性
+
+[完整实测报告](../workbook/2026-11-08_stage186_original-cohort-actual-ideal-energy.md)与[独立决策](../workbook/stage186_energy_ml/decision_summary.json)给原89033角色/71376active/全部K、280producer/历史PMT逐源认证，A107/R122/I122的9fit/3600轮。test I/R低箱.997731/.998340、cal1.000146/1.003684，各区间含1，三内容扩展及6原joint全false。最低箱R/传统1.958185、第二箱上95%=1.061147，低能优势未达；I困难侧尾部另失败，固定表示结束不扩大。原X/raw/pz0政策/八层三尾门及Stage87保持，不将oracle当Bayes界或部署校准。
+
+35成功reader/39尝试，4条baseline一ULP差通过实际旧/新ADC积分与独立有理数，原父/X/R不改；9模型/active/230pilot和144区间独立验证通过。15start含5失败、29521CPU秒/0live，清629822295B重复、留35717802B标量模型、Stage54保持；完整失败/成功源码日志按phase归档。
+
+下一Stage187按新240CPU秒有限合同复用原12父已有主μ逐步能量端点和同窗S0来源，先50与成本，再固定11和独立审计；9面/缺3及困难侧不替换，零G4/fit/forward，不加回charge/出生能量或未测材料校正。真实辅助输入/背景效率加权和独立确认仍缺，整体目标未完成；历史§1–166与全部旧入口原文保留。
