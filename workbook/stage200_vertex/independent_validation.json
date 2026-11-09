@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "relaxed_native": [
+    {
+      "truth_r_mm": 100,
+      "native_N": 390,
+      "event_sets_exact": true,
+      "command": [
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/build/analysis",
+        "--isMC",
+        "-r",
+        "200082",
+        "-j",
+        "1",
+        "--file-config",
+        "/tmp/xcheng/vertex200_qa_bz4vorxw/files.yaml",
+        "--output-config",
+        "/tmp/xcheng/vertex200_qa_bz4vorxw/output.yaml",
+        "--definitions-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/definitions.yaml",
+        "--cuts-config",
+        "/tmp/xcheng/vertex200_qa_bz4vorxw/relaxed.yaml",
+        "--grl-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/grl_config.yaml",
+        "-o",
+        "/tmp/xcheng/vertex200_qa_bz4vorxw/selected.root"
+      ]
+    },
+    {
+      "truth_r_mm": "none",
+      "native_N": 450,
+      "event_sets_exact": true,
+      "command": [
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/build/analysis",
+        "--isMC",
+        "-r",
+        "200082",
+        "-j",
+        "1",
+        "--file-config",
+        "/tmp/xcheng/vertex200_qa_bkkyd1e6/files.yaml",
+        "--output-config",
+        "/tmp/xcheng/vertex200_qa_bkkyd1e6/output.yaml",
+        "--definitions-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/definitions.yaml",
+        "--cuts-config",
+        "/tmp/xcheng/vertex200_qa_bkkyd1e6/relaxed.yaml",
+        "--grl-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/grl_config.yaml",
+        "-o",
+        "/tmp/xcheng/vertex200_qa_bkkyd1e6/selected.root"
+      ]
+    }
+  ],
+  "invalid_or_sentinel_standard_position_N": {
+    "vetonu_x": 0,
+    "vetonu_y": 0,
+    "veto1_x": 0,
+    "veto1_y": 0
+  },
+  "groups": {
+    "box": {
+      "selected_N": 73717,
+      "primary_valid_N": 73717,
+      "confirmed_N": 72332,
+      "theta_below_minus30_mrad_N": 649,
+      "theta_above30_mrad_N": 0,
+      "unique_source_event_N": 73717
+    },
+    "box_or_lead": {
+      "selected_N": 77298,
+      "primary_valid_N": 77298,
+      "confirmed_N": 75685,
+      "theta_below_minus30_mrad_N": 760,
+      "theta_above30_mrad_N": 0,
+      "unique_source_event_N": 77298
+    }
+  },
+  "raw_projection_conservation": true,
+  "average_residual_identity": true,
+  "wall_s": 15.175025096163154,
+  "geometry_source": "Calypso d32b0ff3, PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx:1909,1923",
+  "plane_z_mm": {
+    "VetoNu": -3112,
+    "Veto1": -1769.65,
+    "average": -2440.825
+  }
+}

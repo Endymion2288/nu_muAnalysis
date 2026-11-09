@@ -1,0 +1,5 @@
+{
+  "result": "9679881.0 - 9679881.15\n",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage200_vertex\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage200_vertex/worker_v1.sh $(Process)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/vertex-stage200.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 4\nrequest_memory = 5000MB\nrequest_disk = 1000MB\nmax_retries = 0\n+MaxRuntime = 3600\n+NuMuStage = \"stage200-vertex\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage200_vertex/logs/$(ClusterId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage200_vertex/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage200_vertex/logs/$(ClusterId).$(ProcId).err\nqueue 16\n",
+  "package_bytes": 572324
+}

@@ -1,0 +1,88 @@
+Histograms: []
+Cuts:
+  Colliding:
+    expression: distanceToCollidingBCID == 0
+    data_type: DATA
+  Trigger:
+    expression: (inputBits & 0x8) == 0x8 || (inputBits & 0x10) == 0x10 || (inputBits
+      & 0x20) == 0x20 || (inputBits & 0x40) == 0x40
+    data_type: DATA
+  Good times:
+    expression: GoodTimes
+    data_type: DATA
+  Excluded times:
+    expression: '!ExcludedTimes'
+    data_type: DATA
+  Remove CaloNu PMT region (truth):
+    expression: (!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)
+    data_type: ASIMOV
+  CC events only:
+    expression: is_cc
+    data_type: MC
+  nu_mu only:
+    expression: abs(SafeAt(truth_pdg, 0)) == 14
+    data_type: MC
+  In Faser Nu Box or Lead Block:
+    expression: decay_box || decay_lead
+    data_type: MC
+  Truth dec r < 100 mm:
+    expression: truth_dec_r < 100
+    data_type: MC
+  Truth pz > 100 GeV:
+    expression: truth_pz_nu > 100
+    data_type: MC
+  At least one long track:
+    expression: longTracks > 0
+  CaloNu status cleaning:
+    expression: caloNuStatusCleaning
+    data_type: DATA
+  Veto20 and Veto21 charge > 40 pC:
+    expression: Veto20_charge > 40 && Veto21_charge > 40
+  Timing Station Charge > 20 pC:
+    expression: hitsTiming
+  Preshower Charge > 2.5 pC:
+    expression: Preshower0_charge > 2.5 && Preshower1_charge > 2.5
+  Track pz > 100 GeV:
+    expression: LeadTrack_pz0 > 100
+  Leading track has at >= 7 layers:
+    expression: LeadTrack_nLayers >= 7
+  Track nDoF >= 9:
+    expression: LeadTrack_nDoF >= 9
+  Leading track has chi2/ndof < 15:
+    expression: LeadTrack_Chi2_NDF < 15
+  Track R at max radius < 95 mm:
+    expression: LeadTrack_r_atMaxRadius < 95
+  Track R at IFT < 95 mm:
+    expression: LeadTrack_rIFT < 95
+  Track rVetoNu < 120 mm:
+    expression: LeadTrack_rVetoNu < 120
+  Leading track theta < 25 mrad:
+    expression: LeadTrack_Theta < 25
+  Sanity cut to remove events with missing aux data:
+    expression: AuxLookupSuccess
+    requires:
+    - aux_reduced_charge
+  VetoNu0 reduced charge < 30 pC:
+    expression: VetoNu0_reduced_charge < 30
+    requires:
+    - reduced_charge
+  VetoNu1 reduced charge < 30 pC:
+    expression: VetoNu1_reduced_charge < 30
+    requires:
+    - reduced_charge
+  VetoNu0 raw charge < 40 pC (fallback to raw charge if reduced charge invalid):
+    expression: fallbackVetoNu0Charge < 40
+    requires:
+    - aux_reduced_charge
+  VetoNu1 raw charge < 40 pC (fallback to raw charge if reduced charge invalid):
+    expression: fallbackVetoNu1Charge < 40
+    requires:
+    - aux_reduced_charge
+  VetoNu0 raw charge < 40 pC:
+    expression: VetoNu0_raw_charge < 40
+    requires:
+    - no_reduced_charge
+  VetoNu1 raw charge < 40 pC:
+    expression: VetoNu1_raw_charge < 40
+    requires:
+    - no_reduced_charge

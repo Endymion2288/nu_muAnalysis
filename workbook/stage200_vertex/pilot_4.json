@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "index": 4,
+      "raw_N": 10000,
+      "box_N": 3745,
+      "box_r100_N": 1886,
+      "candidates_N": 669,
+      "standard_N": 334,
+      "standard_box_N": 316,
+      "wall_s": 35.27274760603905,
+      "python_CPU_s": 0.594470534,
+      "child_CPU_s": 12.590266,
+      "peak_RSS_KiB": 96988,
+      "peak_child_RSS_KiB": 662748,
+      "uproot_raw_requested_bytes": 604482,
+      "native_read_bytes": "未测量",
+      "native_command": [
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/build/analysis",
+        "--isMC",
+        "-r",
+        "200082",
+        "-j",
+        "1",
+        "--file-config",
+        "/tmp/xcheng/vertex200_hhvi_d23/files.yaml",
+        "--output-config",
+        "/tmp/xcheng/vertex200_hhvi_d23/output.yaml",
+        "--definitions-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/definitions.yaml",
+        "--cuts-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/workbook/stage200_vertex/deferred_cuts.yaml",
+        "--grl-config",
+        "/eos/home-x/xcheng/FASER/nu_muAnalysis/AnalysisZipFramework/config/grl_config.yaml",
+        "-o",
+        "/tmp/xcheng/vertex200_hhvi_d23/selected.root"
+      ],
+      "pilot_native_standard_exact": true
+    }
+  ],
+  "wall_s": 35.31976498197764,
+  "peak_parent_RSS_KiB": 96988
+}
