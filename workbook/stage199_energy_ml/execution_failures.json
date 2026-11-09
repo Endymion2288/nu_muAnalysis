@@ -1,0 +1,56 @@
+[
+  {
+    "phase": "prepare",
+    "job": "nu-mu-energy-stage199-prepare",
+    "pod": "nu-mu-energy-stage199-prepare-htwcl",
+    "primary_exit": {
+      "containerID": "containerd://8d15b3dc8cf799d5a6dec486d6ee9d73602c4345cb91623b58697f0a70175c14",
+      "exitCode": 54,
+      "finishedAt": "2026-11-09T14:16:28Z",
+      "reason": "Error",
+      "startedAt": "2026-11-09T14:16:18Z"
+    },
+    "worker_error": "[ERROR] Server responded with an error: [3010] Unable to give access - user access restricted - unauthorized identity used: Permission denied; \n\n",
+    "reason": "xrdcp output transport unauthorized; replace with EOS mounted-path atomic publication before fitting",
+    "scientific_exit_status_unknown": true,
+    "formal_energy_fits_N": 0,
+    "CPU_s": "unmeasured"
+  },
+  {
+    "phase": "prepare",
+    "job": "nu-mu-energy-stage199-prepare-r1",
+    "pod": "nu-mu-energy-stage199-prepare-r1-kcfmf",
+    "primary_exit": {
+      "containerID": "containerd://264f48d83d6ced9495890dc8ad4cf3668e1f787d2255abafee1777ce8ea8c2a2",
+      "exitCode": 127,
+      "finishedAt": "2026-11-09T14:20:48Z",
+      "reason": "Error",
+      "startedAt": "2026-11-09T14:20:36Z"
+    },
+    "worker_error": "phase=prepare science_exit=127\n/eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234006047626679/worker.sh: line 19: /usr/bin/time: No such file or directory\n",
+    "science_exit": 127,
+    "reason": "Image lacks /usr/bin/time, so Python was not executed. Package existing x86_64 EL9 GNU Time1.9 utility with libc-only dependency.",
+    "formal_energy_fits_N": 0,
+    "CPU_s": "unmeasured"
+  },
+  {
+    "phase": "audit",
+    "job": "nu-mu-energy-stage199-audit",
+    "pod": "nu-mu-energy-stage199-audit-pj9ns",
+    "primary_exit": {
+      "containerID": "containerd://35bd7270898e7cd93564987c3d0fe8e8893f31d6d69ef42fdfd939b3a3782d90",
+      "exitCode": 1,
+      "finishedAt": "2026-11-09T14:33:39Z",
+      "reason": "Error",
+      "startedAt": "2026-11-09T14:33:04Z"
+    },
+    "science_exit": 1,
+    "reason": "Initial CPU/GPU absolute tolerance5e-7 logE was exceeded: max7.62939453e-6. Independently evaluate every leaf path and float64 leaf sum, test row-specific float32 forward-error bounds, and calibrate actual frozen GPU predictions at2e-12. Models, predictions and physics acceptance gates unchanged.",
+    "process": {
+      "CPU_s": 20.48,
+      "wall_s": 33.59,
+      "RSS_KiB": 1543012
+    },
+    "formal_energy_fits_N": 0
+  }
+]

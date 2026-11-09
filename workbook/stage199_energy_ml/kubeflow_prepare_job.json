@@ -1,0 +1,104 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "creationTimestamp": "2026-11-09T14:23:44Z",
+    "generation": 1,
+    "labels": {
+      "analysis-stage": "nu-mu-energy-199"
+    },
+    "name": "nu-mu-energy-stage199-prepare-r2",
+    "namespace": "xcheng",
+    "resourceVersion": "676852123",
+    "uid": "355d470d-2eb1-4a78-9a8a-6e4b5f90c40a"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 7200,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "355d470d-2eb1-4a78-9a8a-6e4b5f90c40a"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "355d470d-2eb1-4a78-9a8a-6e4b5f90c40a",
+          "batch.kubernetes.io/job-name": "nu-mu-energy-stage199-prepare-r2",
+          "controller-uid": "355d470d-2eb1-4a78-9a8a-6e4b5f90c40a",
+          "home": "eos",
+          "job-name": "nu-mu-energy-stage199-prepare-r2",
+          "mount-cvmfs": "true",
+          "mount-eos": "true"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "args": [
+              "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234210100486041/worker.sh prepare /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234210100486041/energy-ml-stage199-science.tar.gz"
+            ],
+            "command": [
+              "bash",
+              "-lc"
+            ],
+            "image": "registry.cern.ch/mlops/lxplus-like:9",
+            "imagePullPolicy": "IfNotPresent",
+            "name": "prepare",
+            "resources": {
+              "limits": {
+                "cpu": "8",
+                "memory": "12Gi"
+              },
+              "requests": {
+                "cpu": "2",
+                "memory": "6Gi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default-editor",
+        "serviceAccountName": "default-editor",
+        "terminationGracePeriodSeconds": 30
+      }
+    }
+  },
+  "status": {
+    "completionTime": "2026-11-09T14:25:12Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-09T14:25:12Z",
+        "lastTransitionTime": "2026-11-09T14:25:12Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-09T14:25:12Z",
+        "lastTransitionTime": "2026-11-09T14:25:12Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-09T14:23:44Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "nu-mu-energy-stage199-prepare",
+    "namespace": "xcheng",
+    "labels": {
+      "analysis-stage": "nu-mu-energy-199"
+    }
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 7200,
+    "template": {
+      "metadata": {
+        "labels": {
+          "mount-eos": "true",
+          "mount-cvmfs": "true",
+          "home": "eos"
+        }
+      },
+      "spec": {
+        "serviceAccountName": "default-editor",
+        "restartPolicy": "Never",
+        "containers": [
+          {
+            "name": "prepare",
+            "image": "registry.cern.ch/mlops/lxplus-like:9",
+            "imagePullPolicy": "IfNotPresent",
+            "command": [
+              "bash",
+              "-lc"
+            ],
+            "args": [
+              "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794233651376060266/worker.sh prepare /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794233651376060266/energy-ml-stage199-science.tar.gz"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "8",
+                "memory": "12Gi"
+              },
+              "limits": {
+                "cpu": "8",
+                "memory": "12Gi"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "xgboost": "2.1.3",
+  "gpu": "NVIDIA H100 NVL, [Insufficient Permissions], 590.48.01\n",
+  "device": "cuda",
+  "train_only_QA": [
+    {
+      "requested_device": "cpu",
+      "actual_device": "cpu",
+      "success": true,
+      "prefix_train_N": 2048,
+      "rounds": 20,
+      "CPU_s": 0.06876269699999993,
+      "wall_s": 0.07006457692477852,
+      "peak_RSS_KiB": 792964
+    },
+    {
+      "requested_device": "cuda",
+      "actual_device": "cuda:0",
+      "success": true,
+      "prefix_train_N": 2048,
+      "rounds": 20,
+      "CPU_s": 0.08186991999999993,
+      "wall_s": 2.1261093700304627,
+      "peak_RSS_KiB": 914276
+    }
+  ],
+  "GPU_full_training_speedup_unmeasured": true,
+  "no_test_based_selection": true
+}

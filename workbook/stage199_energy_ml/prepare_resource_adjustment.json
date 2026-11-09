@@ -1,0 +1,11 @@
+{
+  "UTC": "2026-11-09T14:09:00.149294+00:00",
+  "job": "9679884.0",
+  "operation": "condor_qedit conditional JobStatus==1 and NumJobStarts==0",
+  "matching_jobs": 1,
+  "RequestCpus": 8,
+  "previous_RequestMemory_MB": 24000,
+  "actual_RequestMemory_MB": 12000,
+  "reason": "Reduce memory reservation for compact selected-array preparation while retaining 8 CPUs; source ROOT/reconstruction jobs unchanged.",
+  "sample_split_weights_or_model_changed": false
+}

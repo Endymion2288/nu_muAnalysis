@@ -1,0 +1,52 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "nu-mu-energy-stage199-audit",
+    "namespace": "xcheng",
+    "labels": {
+      "analysis-stage": "nu-mu-energy-199"
+    }
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 7200,
+    "template": {
+      "metadata": {
+        "labels": {
+          "mount-eos": "true",
+          "mount-cvmfs": "true",
+          "home": "eos"
+        }
+      },
+      "spec": {
+        "serviceAccountName": "default-editor",
+        "restartPolicy": "Never",
+        "containers": [
+          {
+            "name": "audit",
+            "image": "registry.cern.ch/mlops/lxplus-like:9",
+            "imagePullPolicy": "IfNotPresent",
+            "command": [
+              "bash",
+              "-lc"
+            ],
+            "args": [
+              "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234769214813496/worker.sh audit /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234769214813496/energy-ml-stage199-science.tar.gz"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "2",
+                "memory": "6Gi"
+              },
+              "limits": {
+                "cpu": "8",
+                "memory": "12Gi"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

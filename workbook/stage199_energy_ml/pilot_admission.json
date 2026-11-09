@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "pilot": [
+    {
+      "index": 9,
+      "mode": "local",
+      "component": "pi",
+      "selected_N": 358,
+      "raw_N": 10000,
+      "parent_N": 10000,
+      "times_CPU_s": {
+        "extract": 15.53
+      },
+      "total_nested_CPU_s": 15.53
+    },
+    {
+      "index": 172,
+      "mode": "local",
+      "component": "k",
+      "selected_N": 330,
+      "raw_N": 10000,
+      "parent_N": 10000,
+      "times_CPU_s": {
+        "extract": 15.66
+      },
+      "total_nested_CPU_s": 15.66
+    },
+    {
+      "index": 509,
+      "mode": "local",
+      "component": "charm",
+      "selected_N": 177,
+      "raw_N": 10000,
+      "parent_N": 10000,
+      "times_CPU_s": {
+        "extract": 15.61
+      },
+      "total_nested_CPU_s": 15.61
+    },
+    {
+      "index": 257,
+      "mode": "reco",
+      "component": "pi",
+      "selected_N": 37,
+      "raw_N": 193,
+      "parent_N": 1000,
+      "times_CPU_s": {
+        "extract": 14.9,
+        "ntuple": 26.810000000000002,
+        "reco": 70.19000000000001,
+        "request": 1.8900000000000001
+      },
+      "total_nested_CPU_s": 113.79
+    },
+    {
+      "index": 55,
+      "mode": "reco",
+      "component": "k",
+      "selected_N": 45,
+      "raw_N": 150,
+      "parent_N": 1000,
+      "times_CPU_s": {
+        "extract": 14.950000000000001,
+        "ntuple": 33.05,
+        "reco": 122.32,
+        "request": 1.9300000000000002
+      },
+      "total_nested_CPU_s": 172.25
+    },
+    {
+      "index": 506,
+      "mode": "reco",
+      "component": "charm",
+      "selected_N": 13,
+      "raw_N": 93,
+      "parent_N": 1000,
+      "times_CPU_s": {
+        "extract": 13.94,
+        "ntuple": 25.27,
+        "reco": 82.62,
+        "request": 1.8900000000000001
+      },
+      "total_nested_CPU_s": 123.72000000000001
+    }
+  ],
+  "reco164_projection_CPU_s": 231841.10000000015,
+  "projection_scope": "10x first1000 parent pilot per component; planning estimate, not measured full cost or statistical upper bound",
+  "resources": "8CPU/24GB batches, up to20 concurrent, two-day job class; no former K one-hour limit",
+  "fits_so_far": 0,
+  "sample_coverage_reduced": false
+}

@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "records_N": 366316,
+  "sources_N": 1134,
+  "incoming_role_sets_N": 229997,
+  "canonical_flux_event_role_sets_N": 360307,
+  "EVNT_event_role_sets_N": 366316,
+  "all_parent_and_incoming_role_sets_single": true,
+  "all_sources_included": true,
+  "old_quarantine_reserved_policy_overridden_as_requested": true,
+  "base_weights_exact": true,
+  "flat_weights_train_only": true,
+  "model_checks": [
+    {
+      "arm": "incoming",
+      "models_N": 3,
+      "all_rows_N": 366316,
+      "CPU_GPU_max_abs_log_prediction_difference": 7.62939453125e-06,
+      "GPU_float64_leaf_sum_max_abs_log_difference": 1.7742955620292378e-06,
+      "max_ensemble_float32_forward_error_bound": 0.00022563291707526146,
+      "all_rows_within_float32_forward_error_bound": true,
+      "seed_checks": [
+        {
+          "seed": 2026110255,
+          "CPU_float64_leaf_sum_max_abs_difference": 1.2074713595211506e-05,
+          "max_float32_forward_error_bound": 0.00022579298247018355,
+          "all_rows_within_forward_error_bound": true
+        },
+        {
+          "seed": 2026110256,
+          "CPU_float64_leaf_sum_max_abs_difference": 1.1953064237957278e-05,
+          "max_float32_forward_error_bound": 0.00022594499683915243,
+          "all_rows_within_forward_error_bound": true
+        },
+        {
+          "seed": 2026110257,
+          "CPU_float64_leaf_sum_max_abs_difference": 1.1093026955677487e-05,
+          "max_float32_forward_error_bound": 0.00022735542210862333,
+          "all_rows_within_forward_error_bound": true
+        }
+      ]
+    },
+    {
+      "arm": "flat",
+      "models_N": 3,
+      "all_rows_N": 366316,
+      "CPU_GPU_max_abs_log_prediction_difference": 9.5367431640625e-06,
+      "GPU_float64_leaf_sum_max_abs_log_difference": 1.8186540939879592e-06,
+      "max_ensemble_float32_forward_error_bound": 0.00023155628409072087,
+      "all_rows_within_float32_forward_error_bound": true,
+      "seed_checks": [
+        {
+          "seed": 2026110255,
+          "CPU_float64_leaf_sum_max_abs_difference": 1.7565515122441866e-05,
+          "max_float32_forward_error_bound": 0.00023315333267402065,
+          "all_rows_within_forward_error_bound": true
+        },
+        {
+          "seed": 2026110256,
+          "CPU_float64_leaf_sum_max_abs_difference": 1.4411560329108397e-05,
+          "max_float32_forward_error_bound": 0.00023371204778384753,
+          "all_rows_within_forward_error_bound": true
+        },
+        {
+          "seed": 2026110257,
+          "CPU_float64_leaf_sum_max_abs_difference": 1.8573230931906437e-05,
+          "max_float32_forward_error_bound": 0.0002324945652564394,
+          "all_rows_within_forward_error_bound": true
+        }
+      ]
+    }
+  ],
+  "CPU_xgboost_version": "2.1.3",
+  "GPU_fitted_xgboost_version": "2.1.3",
+  "numerical_validation": "All six CPU leaf-path sums accumulated in float64 on every row; frozen GPU ensemble and CPU replay within row-specific float32 forward-error bounds. Calibration independently recomputed from actual frozen predictions at 2e-12, no energy refit or changed physics gates.",
+  "source_array_roundtrip_checks_N": 13608,
+  "scalar_risk_tail_checks_N": 3360,
+  "max_scalar_difference": 4.277467269275803e-12,
+  "independent_rowspace_low_bin_interval_endpoints_N": 32,
+  "Stage54_assets_preserved_N": 12,
+  "source_system_independence_unmeasured": true,
+  "CPU_s": 70.806528846,
+  "wall_s": 75.44831462670118,
+  "peak_RSS_KiB": 3287856
+}

@@ -1,0 +1,349 @@
+{
+  "original_job": {
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+      "creationTimestamp": "2026-11-09T14:26:45Z",
+      "generation": 1,
+      "labels": {
+        "analysis-stage": "nu-mu-energy-199"
+      },
+      "name": "nu-mu-energy-stage199-fit",
+      "namespace": "xcheng",
+      "resourceVersion": "676857234",
+      "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+    },
+    "spec": {
+      "activeDeadlineSeconds": 7200,
+      "backoffLimit": 0,
+      "completionMode": "NonIndexed",
+      "completions": 1,
+      "manualSelector": false,
+      "parallelism": 1,
+      "podReplacementPolicy": "TerminatingOrFailed",
+      "selector": {
+        "matchLabels": {
+          "batch.kubernetes.io/controller-uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        }
+      },
+      "suspend": false,
+      "template": {
+        "metadata": {
+          "labels": {
+            "batch.kubernetes.io/controller-uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703",
+            "batch.kubernetes.io/job-name": "nu-mu-energy-stage199-fit",
+            "controller-uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703",
+            "home": "eos",
+            "job-name": "nu-mu-energy-stage199-fit",
+            "mount-cvmfs": "true",
+            "mount-eos": "true"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "args": [
+                "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234397695550639/worker.sh fit /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234397695550639/energy-ml-stage199-science.tar.gz"
+              ],
+              "command": [
+                "bash",
+                "-lc"
+              ],
+              "image": "registry.cern.ch/mlops/lxplus-like:9",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "fit",
+              "resources": {
+                "limits": {
+                  "cpu": "8",
+                  "memory": "24Gi",
+                  "nvidia.com/mig-3g.47gb": "1"
+                },
+                "requests": {
+                  "cpu": "8",
+                  "memory": "16Gi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File"
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "nodeSelector": {
+            "nvidia.com/gpu.product": "NVIDIA-H100-NVL"
+          },
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "default-editor",
+          "serviceAccountName": "default-editor",
+          "terminationGracePeriodSeconds": 30
+        }
+      }
+    },
+    "status": {
+      "ready": 0,
+      "startTime": "2026-11-09T14:26:45Z",
+      "terminating": 0,
+      "uncountedTerminatedPods": {}
+    }
+  },
+  "events": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:26:45Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857229",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:26:45Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-92gzt was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:26:45Z",
+          "name": "nu-mu-energy-stage199-fit.18e666af7677539c",
+          "namespace": "xcheng",
+          "resourceVersion": "676857233",
+          "uid": "547d02f2-8cd1-4ca9-815a-2c8aeca2262d"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:26:46Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:26:46Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-9r6l7 was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:26:46Z",
+          "name": "nu-mu-energy-stage199-fit.18e666afbcd052ee",
+          "namespace": "xcheng",
+          "resourceVersion": "676857318",
+          "uid": "54e48028-907c-44ea-8764-4a0dccc9a2db"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:26:48Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:26:48Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-t8j9s was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:26:48Z",
+          "name": "nu-mu-energy-stage199-fit.18e666b03c705096",
+          "namespace": "xcheng",
+          "resourceVersion": "676857407",
+          "uid": "8971db10-26a6-440e-8941-1fcff41f17cf"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:26:52Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:26:52Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-thm4x was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:26:52Z",
+          "name": "nu-mu-energy-stage199-fit.18e666b1341ed2c9",
+          "namespace": "xcheng",
+          "resourceVersion": "676857641",
+          "uid": "d9a1db07-9202-46e2-8284-b33d6f8aa435"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:27:00Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:27:00Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-ljwjt was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:27:00Z",
+          "name": "nu-mu-energy-stage199-fit.18e666b319b8d533",
+          "namespace": "xcheng",
+          "resourceVersion": "676858057",
+          "uid": "20b26601-4d3d-4f50-8d86-f0f29128843f"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:27:17Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:27:17Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-xnh76 was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:27:17Z",
+          "name": "nu-mu-energy-stage199-fit.18e666b6dc010288",
+          "namespace": "xcheng",
+          "resourceVersion": "676858899",
+          "uid": "acf88261-49cf-403e-ad9a-3d51613e2817"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:27:49Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:27:49Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-t5vd8 was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:27:49Z",
+          "name": "nu-mu-energy-stage199-fit.18e666be58939a0f",
+          "namespace": "xcheng",
+          "resourceVersion": "676860574",
+          "uid": "06ee65f4-ad30-472e-863a-3e8fd6132e7a"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-11-09T14:28:49Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "nu-mu-energy-stage199-fit",
+          "namespace": "xcheng",
+          "resourceVersion": "676857234",
+          "uid": "94af8945-b310-41ea-9de6-f5dbb9f8e703"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-11-09T14:28:49Z",
+        "message": "Error creating: admission webhook \"validate.kyverno.svc-fail\" denied the request: \n\nresource Pod/xcheng/nu-mu-energy-stage199-fit-zwkch was blocked due to the following policies \n\nvalidate-cpu-memory-resources:\n  pod: Resources are allocated automatically. Please remove any CPU or memory allocations.\n",
+        "metadata": {
+          "creationTimestamp": "2026-11-09T14:28:49Z",
+          "name": "nu-mu-energy-stage199-fit.18e666cc59c4b4bf",
+          "namespace": "xcheng",
+          "resourceVersion": "676863919",
+          "uid": "20a7a6d2-1f85-4908-a118-9fef410004ef"
+        },
+        "reason": "FailedCreate",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Warning"
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  },
+  "formal_fits_started": 0,
+  "reason": "GPU admission automatically assigns CPU and memory. Remove manual CPU/memory, retain same MIG GPU, worker, input and model parameters."
+}

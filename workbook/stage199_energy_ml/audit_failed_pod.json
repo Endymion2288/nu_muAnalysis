@@ -1,0 +1,868 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "annotations": {
+      "injectedusermounts": "true",
+      "oauth2-refresh-controller.cern.ch/to-inject": "[\n  {\n    \"secretName\": \"oauth2-session\",\n    \"container\": \"audit\",\n    \"templateConfigMapName\": \"oauth2-token-eos-template\",\n    \"owner\": 180107\n  },\n  {\n    \"secretName\": \"oauth2-session\",\n    \"container\":  \"oauth2-sidecar\",\n    \"templateConfigMapName\": \"oauth2-token-eos-template\",\n    \"owner\": 0\n  }\n]\n",
+      "poddefault.admission.kubeflow.org/poddefault-mount-cvmfs-poddefault": "131335780",
+      "poddefault.admission.kubeflow.org/poddefault-mount-eos-poddefault": "131335972"
+    },
+    "creationTimestamp": "2026-11-09T14:32:59Z",
+    "generateName": "nu-mu-energy-stage199-audit-",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "2f2b7597-afcf-4c52-aad0-694abd653d93",
+      "batch.kubernetes.io/job-name": "nu-mu-energy-stage199-audit",
+      "controller-uid": "2f2b7597-afcf-4c52-aad0-694abd653d93",
+      "home": "eos",
+      "job-name": "nu-mu-energy-stage199-audit",
+      "mount-cvmfs": "true",
+      "mount-eos": "true"
+    },
+    "name": "nu-mu-energy-stage199-audit-pj9ns",
+    "namespace": "xcheng",
+    "ownerReferences": [
+      {
+        "apiVersion": "batch/v1",
+        "blockOwnerDeletion": true,
+        "controller": true,
+        "kind": "Job",
+        "name": "nu-mu-energy-stage199-audit",
+        "uid": "2f2b7597-afcf-4c52-aad0-694abd653d93"
+      }
+    ],
+    "resourceVersion": "676882820",
+    "uid": "c9558a1e-6b77-4651-89fb-6ae235870cd0"
+  },
+  "spec": {
+    "containers": [
+      {
+        "args": [
+          "bash /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234769214813496/worker.sh audit /eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794234769214813496/energy-ml-stage199-science.tar.gz"
+        ],
+        "command": [
+          "bash",
+          "-lc"
+        ],
+        "env": [
+          {
+            "name": "PS1",
+            "value": "xcheng@\\h:\\w\\$ "
+          },
+          {
+            "name": "PROMPT",
+            "value": "xcheng@%m:%~%# "
+          },
+          {
+            "name": "HOME",
+            "value": "/eos/user/x/xcheng"
+          },
+          {
+            "name": "JUPYTER_SERVER_ROOT",
+            "value": "/eos/user/x/xcheng"
+          },
+          {
+            "name": "PROMPT_COMMAND",
+            "value": "printf \"\\033]0;%s@%s:%s\\007\" \"xcheng\" \"${HOSTNAME%%.*}\" \"${PWD/#$HOME/\\~}\""
+          },
+          {
+            "name": "USER",
+            "value": "xcheng"
+          },
+          {
+            "name": "SHELL",
+            "value": "/usr/bin/bash"
+          }
+        ],
+        "image": "registry.cern.ch/mlops/lxplus-like:9",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "audit",
+        "resources": {
+          "limits": {
+            "cpu": "8",
+            "memory": "12Gi"
+          },
+          "requests": {
+            "cpu": "2",
+            "memory": "6Gi"
+          }
+        },
+        "securityContext": {
+          "runAsGroup": 1399,
+          "runAsUser": 180107
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/etc/group",
+            "name": "passwdgroup",
+            "subPath": "group"
+          },
+          {
+            "mountPath": "/etc/shadow",
+            "name": "passwdgroup",
+            "subPath": "shadow"
+          },
+          {
+            "mountPath": "/etc/passwd",
+            "name": "passwdgroup",
+            "subPath": "passwd"
+          },
+          {
+            "mountPath": "/etc/sudoers.d/user",
+            "name": "passwdgroup",
+            "subPath": "sudoersuser"
+          },
+          {
+            "mountPath": "/shared",
+            "name": "shared"
+          },
+          {
+            "mountPath": "/usr/bin/containerssh-agent",
+            "name": "agent-binary-volume",
+            "readOnly": true,
+            "subPath": "containerssh-agent"
+          },
+          {
+            "mountPath": "/eos",
+            "mountPropagation": "HostToContainer",
+            "name": "eos"
+          },
+          {
+            "mountPath": "/cvmfs",
+            "mountPropagation": "HostToContainer",
+            "name": "cvmfs"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/var/token",
+            "name": "oauth2-token"
+          },
+          {
+            "mountPath": "/tmp/oauthtk_180107",
+            "name": "inj-oauth2-tokens",
+            "subPath": "audit/tmp/oauthtk_180107"
+          }
+        ],
+        "workingDir": "/eos/user/x/xcheng"
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "initContainers": [
+      {
+        "args": [
+          "cp /usr/bin/containerssh-agent /agent-binary/containerssh-agent\nchmod 755 /agent-binary/containerssh-agent\n"
+        ],
+        "command": [
+          "/bin/sh",
+          "-c"
+        ],
+        "image": "registry.cern.ch/ngt/containerssh/containerssh-agent-injector:0.2",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "agent-injector",
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "securityContext": {
+          "runAsUser": 0
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/agent-binary",
+            "name": "agent-binary-volume"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true
+          }
+        ]
+      },
+      {
+        "args": [
+          "--zap-log-level=1"
+        ],
+        "command": [
+          "/tokens-bootstrap"
+        ],
+        "env": [
+          {
+            "name": "TOKENS_BOOTSTRAP_TO_INJECT",
+            "value": "[{\"secretName\":\"oauth2-session\",\"container\":\"oauth2-sidecar\",\"owner\":0,\"template\":\"b2F1dGgyOiQoQUNDRVNTX1RPS0VOKTphdXRoLmNlcm4uY2gvYXV0aC9yZWFsbXMvY2Vybi9wcm90b2NvbC9vcGVuaWQtY29ubmVjdC91c2VyaW5mbw==\",\"templateConfigMapName\":\"\",\"filepath\":\"/tmp/oauthtk_0\"}]"
+          }
+        ],
+        "image": "registry.cern.ch/kubernetes/oauth2-refresh-controller:v1.3.7",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "oauth2-refresh-bootstrap-0",
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "securityContext": {
+          "runAsGroup": 0,
+          "runAsUser": 0
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/secrets/oauth2-session",
+            "name": "inj-oauth2-secret-oauth2-session",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/tokens",
+            "name": "inj-oauth2-tokens"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true
+          }
+        ]
+      },
+      {
+        "args": [
+          "--zap-log-level=1"
+        ],
+        "command": [
+          "/tokens-bootstrap"
+        ],
+        "env": [
+          {
+            "name": "TOKENS_BOOTSTRAP_TO_INJECT",
+            "value": "[{\"secretName\":\"oauth2-session\",\"container\":\"audit\",\"owner\":180107,\"template\":\"b2F1dGgyOiQoQUNDRVNTX1RPS0VOKTphdXRoLmNlcm4uY2gvYXV0aC9yZWFsbXMvY2Vybi9wcm90b2NvbC9vcGVuaWQtY29ubmVjdC91c2VyaW5mbw==\",\"templateConfigMapName\":\"\",\"filepath\":\"/tmp/oauthtk_180107\"}]"
+          }
+        ],
+        "image": "registry.cern.ch/kubernetes/oauth2-refresh-controller:v1.3.7",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "oauth2-refresh-bootstrap-180107",
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "securityContext": {
+          "runAsGroup": 180107,
+          "runAsUser": 180107
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/secrets/oauth2-session",
+            "name": "inj-oauth2-secret-oauth2-session",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/tokens",
+            "name": "inj-oauth2-tokens"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true
+          }
+        ]
+      },
+      {
+        "args": [
+          "-c",
+          "trap 'exit 0' TERM\nwhile true; do\n  if [ -s /tmp/oauthtk_0 ]; then\n    cp /tmp/oauthtk_0 /var/token/tmp_token\n    chmod 400 /var/token/tmp_token\n    chown 0 /var/token/tmp_token\n    mv /var/token/tmp_token /var/token/oauthtk_0\n  fi\n  sleep 5 &\n  wait $!\ndone\n"
+        ],
+        "command": [
+          "/bin/sh"
+        ],
+        "image": "registry.cern.ch/kubernetes/busybox@sha256:6e494387c901caf429c1bf77bd92fb82b33a68c0e19f6d1aa6a3ac8d27a7049d",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "oauth2-sidecar",
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "restartPolicy": "Always",
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/var/token",
+            "name": "oauth2-token"
+          },
+          {
+            "mountPath": "/tmp/oauthtk_0",
+            "name": "inj-oauth2-tokens",
+            "subPath": "oauth2-sidecar/tmp/oauthtk_0"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "nodeName": "ml-004-large-ima-ezvzcs5rssbe-node-0",
+    "nodeSelector": {
+      "large-images": "true"
+    },
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 0,
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {
+      "seccompProfile": {
+        "localhostProfile": "block-afalg.json",
+        "type": "Localhost"
+      }
+    },
+    "serviceAccount": "default-editor",
+    "serviceAccountName": "default-editor",
+    "terminationGracePeriodSeconds": 30,
+    "tolerations": [
+      {
+        "effect": "NoSchedule",
+        "key": "large-images",
+        "operator": "Exists"
+      },
+      {
+        "effect": "NoExecute",
+        "key": "virtual-node.liqo.io/not-allowed",
+        "operator": "Exists"
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "configMap": {
+          "defaultMode": 420,
+          "items": [
+            {
+              "key": "group",
+              "path": "group"
+            },
+            {
+              "key": "shadow",
+              "path": "shadow"
+            },
+            {
+              "key": "passwdeos",
+              "path": "passwd"
+            },
+            {
+              "key": "sudoersuser",
+              "path": "sudoersuser"
+            }
+          ],
+          "name": "passwdgroup"
+        },
+        "name": "passwdgroup"
+      },
+      {
+        "name": "shared",
+        "persistentVolumeClaim": {
+          "claimName": "shared"
+        }
+      },
+      {
+        "emptyDir": {},
+        "name": "agent-binary-volume"
+      },
+      {
+        "name": "eos",
+        "persistentVolumeClaim": {
+          "claimName": "eos"
+        }
+      },
+      {
+        "name": "cvmfs",
+        "persistentVolumeClaim": {
+          "claimName": "cvmfs"
+        }
+      },
+      {
+        "name": "kube-api-access-zmwbm",
+        "projected": {
+          "defaultMode": 420,
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ],
+                "name": "kube-root-ca.crt"
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    },
+                    "path": "namespace"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "emptyDir": {},
+        "name": "oauth2-token"
+      },
+      {
+        "name": "inj-oauth2-secret-oauth2-session",
+        "secret": {
+          "defaultMode": 292,
+          "secretName": "oauth2-session"
+        }
+      },
+      {
+        "emptyDir": {},
+        "name": "inj-oauth2-tokens"
+      }
+    ]
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-09T14:33:40Z",
+        "observedGeneration": 1,
+        "status": "False",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-09T14:33:04Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-09T14:33:39Z",
+        "observedGeneration": 1,
+        "reason": "PodFailed",
+        "status": "False",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-09T14:33:39Z",
+        "observedGeneration": 1,
+        "reason": "PodFailed",
+        "status": "False",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-09T14:32:59Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "2",
+          "memory": "6Gi"
+        },
+        "containerID": "containerd://35bd7270898e7cd93564987c3d0fe8e8893f31d6d69ef42fdfd939b3a3782d90",
+        "image": "registry.cern.ch/mlops/lxplus-like:9",
+        "imageID": "registry.cern.ch/mlops/lxplus-like@sha256:2e6adfe49eeaaca1a9e39f342ba2b1f2db8d5ddfb2aa50e02e3470e8a5151014",
+        "lastState": {},
+        "name": "audit",
+        "ready": false,
+        "resources": {
+          "limits": {
+            "cpu": "8",
+            "memory": "12Gi"
+          },
+          "requests": {
+            "cpu": "2",
+            "memory": "6Gi"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://35bd7270898e7cd93564987c3d0fe8e8893f31d6d69ef42fdfd939b3a3782d90",
+            "exitCode": 1,
+            "finishedAt": "2026-11-09T14:33:39Z",
+            "reason": "Error",
+            "startedAt": "2026-11-09T14:33:04Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 1399,
+            "supplementalGroups": [
+              1399
+            ],
+            "uid": 180107
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/etc/group",
+            "name": "passwdgroup"
+          },
+          {
+            "mountPath": "/etc/shadow",
+            "name": "passwdgroup"
+          },
+          {
+            "mountPath": "/etc/passwd",
+            "name": "passwdgroup"
+          },
+          {
+            "mountPath": "/etc/sudoers.d/user",
+            "name": "passwdgroup"
+          },
+          {
+            "mountPath": "/shared",
+            "name": "shared"
+          },
+          {
+            "mountPath": "/usr/bin/containerssh-agent",
+            "name": "agent-binary-volume",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/eos",
+            "name": "eos"
+          },
+          {
+            "mountPath": "/cvmfs",
+            "name": "cvmfs"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/var/token",
+            "name": "oauth2-token"
+          },
+          {
+            "mountPath": "/tmp/oauthtk_180107",
+            "name": "inj-oauth2-tokens"
+          }
+        ]
+      }
+    ],
+    "hostIP": "188.185.129.154",
+    "hostIPs": [
+      {
+        "ip": "188.185.129.154"
+      }
+    ],
+    "initContainerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "100Mi"
+        },
+        "containerID": "containerd://8e8fe608ba8993237b2cf3f21ebae5ffb18dbaff4cd6214e0060e75ccaa64d55",
+        "image": "registry.cern.ch/ngt/containerssh/containerssh-agent-injector:0.2",
+        "imageID": "registry.cern.ch/ngt/containerssh/containerssh-agent-injector@sha256:49fc805ead9b38057dbf7638ebdaa68484de8420e38c3d1bbd69caf61ab99017",
+        "lastState": {},
+        "name": "agent-injector",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://8e8fe608ba8993237b2cf3f21ebae5ffb18dbaff4cd6214e0060e75ccaa64d55",
+            "exitCode": 0,
+            "finishedAt": "2026-11-09T14:33:00Z",
+            "reason": "Completed",
+            "startedAt": "2026-11-09T14:33:00Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 0,
+            "supplementalGroups": [
+              0,
+              10
+            ],
+            "uid": 0
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/agent-binary",
+            "name": "agent-binary-volume"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      },
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "100Mi"
+        },
+        "containerID": "containerd://496e7d20b23297f4583d7cf3b3437d92ea4e960605db7d9b3e00db394ab7dd7e",
+        "image": "registry.cern.ch/kubernetes/oauth2-refresh-controller:v1.3.7",
+        "imageID": "registry.cern.ch/kubernetes/oauth2-refresh-controller@sha256:0467aa550fcda7f1d6ddaf8dd4adf27db8d5f5f651855849976e9e6af12e79e6",
+        "lastState": {},
+        "name": "oauth2-refresh-bootstrap-0",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://496e7d20b23297f4583d7cf3b3437d92ea4e960605db7d9b3e00db394ab7dd7e",
+            "exitCode": 0,
+            "finishedAt": "2026-11-09T14:33:01Z",
+            "reason": "Completed",
+            "startedAt": "2026-11-09T14:33:01Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 0,
+            "supplementalGroups": [
+              0
+            ],
+            "uid": 0
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/secrets/oauth2-session",
+            "name": "inj-oauth2-secret-oauth2-session",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/tokens",
+            "name": "inj-oauth2-tokens"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      },
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "100Mi"
+        },
+        "containerID": "containerd://c2b2fa402f9162dceb9948da0535f8976dafdef26775df2f40f0c837807189f1",
+        "image": "registry.cern.ch/kubernetes/oauth2-refresh-controller:v1.3.7",
+        "imageID": "registry.cern.ch/kubernetes/oauth2-refresh-controller@sha256:0467aa550fcda7f1d6ddaf8dd4adf27db8d5f5f651855849976e9e6af12e79e6",
+        "lastState": {},
+        "name": "oauth2-refresh-bootstrap-180107",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://c2b2fa402f9162dceb9948da0535f8976dafdef26775df2f40f0c837807189f1",
+            "exitCode": 0,
+            "finishedAt": "2026-11-09T14:33:02Z",
+            "reason": "Completed",
+            "startedAt": "2026-11-09T14:33:02Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 180107,
+            "supplementalGroups": [
+              180107
+            ],
+            "uid": 180107
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/secrets/oauth2-session",
+            "name": "inj-oauth2-secret-oauth2-session",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/tokens",
+            "name": "inj-oauth2-tokens"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      },
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "100Mi"
+        },
+        "containerID": "containerd://96423aa65301fa13a1bb65127821a29dcfb5d2863511f27944fd913e4039ddd3",
+        "image": "sha256:b539af69bc01c6c1c1eae5474a94b0abaab36b93c165c0cf30b7a0ab294135a3",
+        "imageID": "registry.cern.ch/kubernetes/busybox@sha256:6e494387c901caf429c1bf77bd92fb82b33a68c0e19f6d1aa6a3ac8d27a7049d",
+        "lastState": {},
+        "name": "oauth2-sidecar",
+        "ready": false,
+        "resources": {
+          "limits": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "100Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://96423aa65301fa13a1bb65127821a29dcfb5d2863511f27944fd913e4039ddd3",
+            "exitCode": 0,
+            "finishedAt": "2026-11-09T14:33:39Z",
+            "reason": "Completed",
+            "startedAt": "2026-11-09T14:33:03Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 0,
+            "supplementalGroups": [
+              0,
+              10
+            ],
+            "uid": 0
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/var/token",
+            "name": "oauth2-token"
+          },
+          {
+            "mountPath": "/tmp/oauthtk_0",
+            "name": "inj-oauth2-tokens"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zmwbm",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Failed",
+    "podIP": "10.100.9.152",
+    "podIPs": [
+      {
+        "ip": "10.100.9.152"
+      }
+    ],
+    "qosClass": "Burstable",
+    "startTime": "2026-11-09T14:32:59Z"
+  }
+}

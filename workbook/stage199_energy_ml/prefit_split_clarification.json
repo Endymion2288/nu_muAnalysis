@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-09T13:25:04.567041+00:00",
+  "before_any_split_or_fit": true,
+  "original_algorithm": "Union all response views by conservative component:eventID across flux/eras, actual EVNT path:eventID, and exact float32 native-MeV incoming(PDG,px,py,pz); split connected families with deterministic seeded permutation within component. No target/prediction used. Keep all rows; no quarantine. Source files can contain several roles; no shared parent or incoming across roles.",
+  "active_algorithm": "Union all response views by conservative canonical-flux:eventID across eras (strip only 24_xing_angle_wo_caloNu_ prefix), actual EVNT path:eventID, and exact float32 native-MeV incoming(PDG,px,py,pz); split connected families with deterministic seeded permutation within component. No target/prediction used. Keep all rows; no quarantine. Source files can contain several roles; no shared parent or incoming across roles.",
+  "reason": "Different flux EVNT files contain different generated events at the same ordinal. Link actual EVNT path/entry plus canonical same-flux cross-era parent index and exact incoming; do not fabricate same-parent identity from a component alone.",
+  "production_source_selection_or_features_changed": false
+}

@@ -1,3 +1,7 @@
+# 当前执行更新：Stage199 全flux direct62分箱flat重训完成
+
+[中文报告](../workbook/2026-11-09_stage199_all-flux-energy-flat-direct62.md)确认Stage87 direct62只有incoming重复视图权重、没有能量flat训练。新实验覆盖22run全部1134来源/366316选中记录，保留全部flux和K、排除其他Geant4运行号；按parent/重复incoming互斥重划train/cal/test，各三seed重训incoming与train-only能量倍增分箱flat两臂，共6fit。原谱/冻结flat映射、各真E箱和三方向tail、raw/两种cal offset及独立审计均已交付，具体性能与决定见报告，不以总体或reco低pz替代真低E。用户暂停的Stage187路线保持暂停；旧模型/数据只读，新测试属于开发留出而非盲测，原pz0/raw/NaN/status规则保持。以下旧路线全文保留。
+
 # Stage198研究补充：下一步物理问题与精确输入规格
 
 [本轮研究评估](../workbook/2026-11-09_stage198_research-reassessment-and-input-specification.md)在已完成129/177/186/189/191新训练及194/196机制结果上调整投入：近期先检验真实LOS下跨层一致的有符号方向；独立控制到位后研究联合关联/null或多通道信号来源，而非重开普通Q/均时/逐层IFT摘要。旧结果已有很强低pz H/L排序，下一问题包含新独立family上的稀有低能误判与连续校正风险，不能从开发test AUC宣称信息不足或再次调阈值。

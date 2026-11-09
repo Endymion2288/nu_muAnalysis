@@ -1,0 +1,54 @@
+{
+  "decisions": [
+    {
+      "spectrum": "original",
+      "candidate": "flat_cal",
+      "reference": "incoming_cal",
+      "two_low_5pct_gain": true,
+      "RMSE_guard_pass": false,
+      "tail_guard_pass": false,
+      "traditional_two_low_noninferiority": true,
+      "traditional_two_low_superiority": true,
+      "development_extension": false,
+      "independent_confirmation": false
+    },
+    {
+      "spectrum": "original",
+      "candidate": "flat_flatcal",
+      "reference": "incoming_flatcal",
+      "two_low_5pct_gain": true,
+      "RMSE_guard_pass": false,
+      "tail_guard_pass": false,
+      "traditional_two_low_noninferiority": false,
+      "traditional_two_low_superiority": false,
+      "development_extension": false,
+      "independent_confirmation": false
+    },
+    {
+      "spectrum": "train_flat_map",
+      "candidate": "flat_cal",
+      "reference": "incoming_cal",
+      "two_low_5pct_gain": true,
+      "RMSE_guard_pass": false,
+      "tail_guard_pass": false,
+      "traditional_two_low_noninferiority": true,
+      "traditional_two_low_superiority": true,
+      "development_extension": false,
+      "independent_confirmation": false
+    },
+    {
+      "spectrum": "train_flat_map",
+      "candidate": "flat_flatcal",
+      "reference": "incoming_flatcal",
+      "two_low_5pct_gain": true,
+      "RMSE_guard_pass": false,
+      "tail_guard_pass": false,
+      "traditional_two_low_noninferiority": false,
+      "traditional_two_low_superiority": false,
+      "development_extension": false,
+      "independent_confirmation": false
+    }
+  ],
+  "automatic_promotion": false,
+  "blind_confirmation": false
+}

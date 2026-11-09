@@ -1,0 +1,18 @@
+{
+  "UTC": "2026-11-09T14:14:09.984180+00:00",
+  "cancelled_unstarted_condor": [
+    "9679884.0"
+  ],
+  "NumJobStarts": 0,
+  "RemoteCPU_s": 0,
+  "RemoteWall_s": 0,
+  "reason": "More than ten minutes idle. User explicitly makes Kubeflow available; move only compact selected-array science to Kubeflow CPU, reserve GPU for fitting. Bulk ROOT reconstruction already completed on HTCondor.",
+  "scientific_sample_split_weights_model_changed": false,
+  "platforms": {
+    "source": "HTCondor",
+    "prepare": "Kubeflow CPU",
+    "fit": "Kubeflow GPU if QA passes",
+    "report": "Kubeflow CPU",
+    "audit": "Kubeflow CPU"
+  }
+}

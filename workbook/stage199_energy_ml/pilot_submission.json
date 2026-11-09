@@ -1,0 +1,24 @@
+{
+  "result": "9679817.0 - 9679817.0",
+  "phase": "pilot",
+  "batches": [
+    [
+      9,
+      172,
+      509,
+      257,
+      55,
+      506
+    ]
+  ],
+  "indices": [
+    9,
+    172,
+    509,
+    257,
+    55,
+    506
+  ],
+  "package": "software/stage199/1794230130618681454/energy-ml-stage199.tar.gz",
+  "descriptor": "universe = vanilla\ninitialdir = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage199\nexecutable = /bin/bash\ntransfer_executable = False\narguments = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage199/worker_1794230130618681454.sh pilot $(indices)\ntransfer_input_files = root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/software/stage199/1794230130618681454/energy-ml-stage199.tar.gz\nshould_transfer_files = YES\ntransfer_output_files = \"\"\nrequest_cpus = 8\nrequest_memory = 24000MB\nrequest_disk = 50000MB\nmax_retries = 0\nmax_materialize = 20\nmax_idle = 20\n+MaxRuntime = 172800\n+NuMuStage = \"energy-ml-stage199\"\nlog = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage199/logs/$(ClusterId).$(ProcId).log\noutput = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage199/logs/$(ClusterId).$(ProcId).out\nerror = /afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage199/logs/$(ClusterId).$(ProcId).err\nqueue indices from (\n9,172,509,257,55,506\n)\n"
+}
