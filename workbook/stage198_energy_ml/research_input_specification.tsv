@@ -1,0 +1,8 @@
+id	priority_or_state	package	required_fields_and_units	smallest_usable_delivery	scientific_question	limits	status
+I01	近期优先；B尚未执行	MC/data beam与测量坐标	producer对crossingAngle/LOS的单位、全/半角、符号、x/y、原点/参考面；run/fill beam映射及误差；survey/local-global变换；active/badstrip/DAQ条件	小型说明/conditions及既有PRD入口，不需乳胶或新大样本	相对散射平面的固定有符号活动	无真实轴不以探测器z轴替代；无active不认证hole	能量收益/成本未测量；不改变B旧准入
+I02	并行设计；不授权生产	新独立interaction families	生成文件+entry/incoming/family、原角色与全部K/权重、E/y/顶点、主μ身份和同面truth、原选择/失败分母、GENIE/FSI/flux/G4设置	先manifest及实际支持小表；仅在需要来源研究时补有时hit/PRD-SDO链	低真能量误判尾部和来源迁移的独立确认	重放不是新interaction；旧reserved不打开；flatten EVNT不恢复FSI谱系	N依实际精度/权重/source设计；未来资源未测量
+I03	用户暂缺；未来接口	真实信号波形与幅度参考	原status0 ADC/采样/极性/channel/窗口/baseline；非0只原状态/允许电荷/分母；PMT/HV/gain/rail/光路；LED独立monitor与误差；MIP位置/方向；完整状态分母和文件留出	同设置已有小信号控制及conditions；SPE模型另需SPE形状/charge/transit-time	区分有限相位/电子学/光统计与物理源，多通道预测闭合	新timing/shape原status必须0；无monitor不叫准确Q；LED路径不等同闪烁光	按用户决定留空；不搜替代私有目录
+I04	用户暂缺；未来接口	独立μ/转换/raw-overlay控制	manifest与不循环的selection；track全cov/参考面/PRD；转换几何和误差；overlay种子及前后匹配、失败/缺轨分母和条件	已有同设置控制及支持范围表；无需大批乳胶匹配	跨层联合关联/null和响应迁移	最高pz假设非独立身份；E/p不单独解开共同尺度；空支持不外推	按用户决定留空；效果/成本未测量
+I05	用户暂缺；原最终选择恢复	run15838 VetoNu aux	tree=tree；run/event；myVetoNu0_rawCharge35与myVetoNu1_rawCharge35，pC；匹配/有效/重复/缺失及producer定义	可访问原aux，或保留两个值+原raw/status+pass/unknown+完整切流的等价紧凑表	原选择的真实最终候选与低pz支持	valid reduced<30pC；invalid fallback raw<40pC；2024 zero且raw>30无效；不raw-only代替	2647最终选择未知；351低pz不是ν产额；不重开旧预算
+I06	物理谱逐步需要	曝光、背景、完整响应和相关辅助	同选择GRL/live-time/lumi/prescale；背景与相关误差；MC生成分母/权重/效率/响应；实际相关辅助与协方差	先明确条件shape/产额/绝对flux或截面所需的对应最小包	从条件谱方法接到实际物理推断	selected MC不提供完整效率；不无约束同时解flux和截面	独立确认和系统覆盖未完成
+I07	可选新时期	2025+四平面像素	实际hits/pixels及量纲；geometry/alignment/threshold/noisy mask；电子事件键；同期GRL/ν选择；匹配MC	先实际schema及共同事件支持小表	新淋浴空间/纵向采样是否提高来源或能量辨识	不依文件名认证payload；旧父不插补像素	不阻塞旧数据路线

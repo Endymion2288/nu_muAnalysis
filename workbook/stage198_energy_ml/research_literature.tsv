@@ -1,0 +1,10 @@
+id	title	source	read_scope	useful_principle	applicability_limit	role
+R01	PMT Waveform Reconstruction and Calorimeter Energy Calibration	/Users/aaaa/Downloads/FASER Waveform Reconstruction and Energy Calibration.pdf	2023-03-01 Version1.0 pp3-10；p6渲染检查	官方已有饱和未触顶部分CB拟合；status与时序定义	技术资料不作指令；名义窗口不覆盖Stage129实际批次；不证明恢复Q准确	附件
+R02	The FASER experiment at the Large Hadron Collider	https://arxiv.org/html/2604.19199v2	4.1/4.3与5.1相关正文	实际双PMT分光与四平面像素；运行条件影响响应	升级不等于旧父新增观测；PMT非同一模拟脉冲复制	FASER技术主来源
+R03	First Measurement of the Muon Neutrino Interaction Cross Section and Flux as a Function of Energy at the LHC with FASER	https://arxiv.org/html/2412.03186v2	Signal Extraction及Systematic Uncertainties	LOS/crossing；响应、效率、背景和归一化分工	公开选择/曝光/系统数值不能直接转给当前pz0>50分析	FASER物理方法
+R04	Search for Dark Photons with the FASER detector at the LHC	https://arxiv.org/html/2308.05587v2	VII.2与VIII	真实转换E/p和raw tracker overlay作为控制的先例	最高pz身份假设和E/p有局限；不借用其数值系统	FASER控制设计
+R05	GENFIT – a Generic Track-Fitting Toolkit	https://arxiv.org/html/1410.3698v2	5.3 DAF正文；数据结构概述	竞争测量软权重/离群关联的测量层建模	不自动识别主μ或粒种；不要求迁移ACTS/整套软件	跨实验方法
+R06	Towards the ultimate PMT waveform analysis for neutrino and dark matter experiments	https://arxiv.org/html/2112.06913v3	2.1-2.2光曲线/SER与标定假设	光电子数、charge涨落、SPE响应和电子噪声分层	研究不处理saturation；假定响应/噪声已知；性能不能转用	光统计方法
+R07	Pmt waveform simulation and reconstruction with conditional diffusion network	https://link.springer.com/article/10.1140/epjc/s10052-026-16415-3	摘要及2.1-2.3电子学MC	弱监督双向波形生成/重建的候选工具	JUNO式低PE模拟；不是FASER高幅饱和或真实PE标签验证	2026方法筛选；低优先
+R08	Neyman-Pearson classification: parametrics and sample size requirement	https://arxiv.org/html/1802.02557v4	摘要及1节样本下限/经验错误率讨论；JMLR2020摘要	强排序与低FPR总体控制的区别；独立校准样本需求	iid/无权重下限不能直接套source相关加权K；不以LDA假设绕过真实校准	统计设计
+R09	The role of final-state interaction modeling in neutrino energy reconstruction and oscillation measurements	https://arxiv.org/html/2511.03964v1	Method and models正文	相互作用模型可与重建/物理参数退化，需区分源和探测器	DUNE GeV氩靶；不是FASER高能DIS效应大小或G4列表包络	跨实验物理边界

@@ -1,3 +1,9 @@
+# Stage198研究补充：下一步物理问题与精确输入规格
+
+[本轮研究评估](../workbook/2026-11-09_stage198_research-reassessment-and-input-specification.md)在已完成129/177/186/189/191新训练及194/196机制结果上调整投入：近期先检验真实LOS下跨层一致的有符号方向；独立控制到位后研究联合关联/null或多通道信号来源，而非重开普通Q/均时/逐层IFT摘要。旧结果已有很强低pz H/L排序，下一问题包含新独立family上的稀有低能误判与连续校正风险，不能从开发test AUC宣称信息不足或再次调阈值。
+
+[分支输入清单](../workbook/stage198_energy_ml/research_input_specification.tsv)给出最小beam/geometry说明、新独立MC、未来信号/身份控制、原aux及谱归一化接口；[文献筛选](../workbook/stage198_energy_ml/research_literature.tsv)记录可借用方法及限制。用户暂缺的aux和LED/MIP/转换控制继续留空，不重复询问或搜索替代私有目录；不依赖大批乳胶匹配。本补充没有新事件读取/计算/训练、执行编号或预算，原合同、Stage87/全部K/角色/reserved/原cuts/pz0/raw/typedNaN/严格status0及全部科学门保持，整体目标未完成。以下历史全文保留。
+
 # 当前研究综合：Stage198 已有电子观测结果与待输入验收
 
 [综合报告](../workbook/2026-11-09_stage198_electronic-observables-results-synthesis.md)汇总 Stage188–197，并联系186同窗电荷及140条件谱结果。这是路线允许的研究产物整理，没有新实验、训练或预算。原test真Eν50–100 GeV中，理想/实际电荷比0.997730906，signed组成/基线1.016564868，IFT内容/基线1.014804521；各自参考及条件区间见报告。IFT第二箱有限改善没有补齐最低箱和尾部门，当前无新模型晋升。低reco pz的收益不替代低真E验收，fit身份混杂不当data覆盖认证；波形有结构但物理源与信号误差仍未识别。
