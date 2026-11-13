@@ -5,6 +5,7 @@ import gc
 import json
 from pathlib import Path
 import re
+import shutil
 import time
 
 import matplotlib
@@ -13,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import uproot
 
-from compare_tracking import MODES, selection
+from compare_tracking import MODES, selection, ENERGY_EDGES, RADIUS_EDGES, Z_EDGES
 from extract_tracking_georotation import TRACK_FIELDS, PAIR_FIELDS
 from report_tracking_comparison import report as cutflow_report, save_table, figure_save, fraction, wilson, COLORS
 from report_tracking_z import report as z_report
@@ -43,6 +44,11 @@ def load(manifest, output):
                 perf = json.loads(str(source['performance_json']))
                 row = dict(index=int(record[0]), run=int(record[1]), events=int(source['counts'][0,0]),
                            output_bytes=Path(record[5]).stat().st_size, host=str(source['host']))
+                if 'root_file_bytes_json' in source:
+                    root_bytes=json.loads(str(source['root_file_bytes_json']))
+                    row['temporary_root_bytes_total']=sum(root_bytes.values())
+                    for name in ('input-RDO','input-xAOD','forward','backward','merge'):
+                        row[name.replace('-','_')+'_bytes']=root_bytes.get(name+'.root',0)
                 for name, value in perf.items():
                     numbers = dict(re.findall(r'(\w+)=([0-9.]+)', value))
                     row.update({name + '_' + k: float(v) for k,v in numbers.items()})
@@ -68,7 +74,11 @@ def load(manifest, output):
                  file_offsets=np.r_[0, np.cumsum([len(e['event_run']) for e in events])])
     np.savez_compressed(output / 'fiducial_events.npz', **event)
     arrays = dict(tracks=np.concatenate(tracks), pairs=np.concatenate(pairs), migrations=np.concatenate(migrations),
-                  track_fields=np.array(TRACK_FIELDS), pair_fields=np.array(PAIR_FIELDS))
+                  track_fields=np.array(TRACK_FIELDS), pair_fields=np.array(PAIR_FIELDS),
+                  manifest_indices=summary['manifest_indices'],
+                  track_file_offsets=np.r_[0,np.cumsum([len(t) for t in tracks])],
+                  pair_file_offsets=np.r_[0,np.cumsum([len(p) for p in pairs])],
+                  migration_file_offsets=np.r_[0,np.cumsum([len(m) for m in migrations])])
     np.savez_compressed(output / 'candidate_diagnostics.npz', **arrays)
     if performance:
         save_table(output/'performance.tsv', list(performance[0]), performance)
@@ -78,12 +88,41 @@ def load(manifest, output):
     return summary, event, arrays
 
 
+def numerical_tables(arrays, output):
+    tracks = arrays['tracks']
+    col = {name: tracks[:, i] for i, name in enumerate(TRACK_FIELDS)}
+    numerical=[]
+    for m,mode in enumerate(MODES):
+        for name,mask in [('raw',col['mode']==m),('long',(col['mode']==m)&(col['long']==1))]:
+            numerical.append(dict(mode=mode,scope=name,tracks=int(mask.sum()),
+                nonfinite_chi2=int((mask&~np.isfinite(col['chi2'])).sum()),
+                negative_finite_chi2=int((mask&np.isfinite(col['chi2'])&(col['chi2']<0)).sum()),
+                nonpositive_ndof=int((mask&(col['ndof']<=0)).sum()),
+                ndof_less_than_minus5=int((mask&(col['ndof']< -5)).sum()),
+                nonfinite_pz=int((mask&~np.isfinite(col['pz_mev'])).sum())))
+    save_table(output/'numerical_quality.tsv',list(numerical[0]),numerical)
+    # The combined candidate cache already preserves every invalid-DoF track;
+    # avoid duplicating hundreds of thousands of rows as uncompressed text.
+    nonfinite=tracks[~np.isfinite(col['chi2'])|~np.isfinite(col['pz_mev'])]
+    if len(nonfinite):save_table(output/'nonfinite_raw_tracks.tsv',TRACK_FIELDS,
+                                [dict(zip(TRACK_FIELDS,r)) for r in nonfinite])
+    invalid=[]
+    for m,mode in enumerate(MODES):
+        mask=(col['mode']==m)&(col['ndof']<=0)
+        keys=np.column_stack([col['measurements'][mask],col['ndof'][mask],col['long'][mask]])
+        unique,number=np.unique(keys,axis=0,return_counts=True)
+        invalid.extend(dict(mode=mode,measurements=int(k[0]),ndof=float(k[1]),long=int(k[2]),tracks=int(n))
+                       for k,n in zip(unique,number))
+    save_table(output/'nonpositive_ndof_by_measurements.tsv',list(invalid[0]),invalid)
+
+
 def duplicate_tables(summary, event, arrays, output):
     tracks, pairs = arrays['tracks'], arrays['pairs']
     col = {name: tracks[:, i] for i, name in enumerate(TRACK_FIELDS)}
     ids = event_key(col['run'], col['event'])
     fid_ids = event_key(event['event_run'], event['event_eventID'])
     fid = np.isin(ids, fid_ids)
+    numerical_tables(arrays, output)
     final = [fid_ids[event['event_cut_bits'][:,m] == 16383] for m in range(3)]
     fit_quality = ((col['layers'] >= 7) & (col['ndof'] >= 9) &
                    np.isfinite(col['chi2']) & (col['chi2'] < 15*col['ndof']))
@@ -99,10 +138,16 @@ def duplicate_tables(summary, event, arrays, output):
     left = np.array([lookup[tuple(map(int, r[:4]))] for r in pairs], dtype=int)
     right = np.array([lookup[(int(r[0]),int(r[1]),int(r[2]),int(r[4]))] for r in pairs], dtype=int)
     duplicate_rows, pair_rows, truth_rows = [], [], []
+    duplicate_sets = {}
+    denominators = {}
     groups = dict(all=np.ones(len(tracks), dtype=bool), nominal=col['run'] != 200080)
     groups.update({str(r): col['run'] == r for r in sorted(set(summary['runs']))})
     for group, group_mask in groups.items():
+        file_mask = (np.ones(len(summary['runs']),dtype=bool) if group == 'all' else
+                     summary['runs'] != 200080 if group == 'nominal' else summary['runs'] == int(group))
         for scope, scope_mask in scopes.items():
+            reference_n = int(summary['counts'][file_mask,0,0 if scope in ('raw_all','long_all') else 6].sum())
+            denominators[group,scope] = reference_n
             for m, mode in enumerate(MODES):
                 selected = group_mask & scope_mask & (col['mode'] == m)
                 event_ids = ids[selected]
@@ -116,6 +161,7 @@ def duplicate_tables(summary, event, arrays, output):
                     excess = int(np.maximum(counts-1, 0).sum())
                     duplicates = unique[counts > 1]
                     duplicate_events = np.unique(duplicates.f0)
+                    duplicate_sets[group,scope,threshold,m] = duplicate_events
                     matched_events, y = np.unique(selected_ids, return_counts=True)
                     x = np.zeros(len(matched_events))
                     np.add.at(x, np.searchsorted(matched_events, unique.f0), np.maximum(counts-1, 0))
@@ -127,6 +173,8 @@ def duplicate_tables(summary, event, arrays, output):
                         tracks=track_count, events_with_tracks=len(active_events), truth_matched_tracks=denominator,
                         distinct_truth_particles=len(unique), duplicate_truth_groups=len(duplicates),
                         excess_duplicate_tracks=excess, duplicate_events=len(duplicate_events),
+                        common_reference_events=reference_n,
+                        duplicate_events_per_common_reference_percent=100*float(fraction(len(duplicate_events),reference_n)),
                         excess_fraction_percent=100*rate, event_cluster_se_percent=100*se,
                         duplicate_event_fraction_percent=100*float(fraction(len(duplicate_events), len(active_events))),
                         duplicate_event_wilson_low_percent=100*lo, duplicate_event_wilson_high_percent=100*hi))
@@ -159,6 +207,27 @@ def duplicate_tables(summary, event, arrays, output):
     save_table(output/'duplicates.tsv', list(duplicate_rows[0]), duplicate_rows)
     save_table(output/'hit_overlap.tsv', list(pair_rows[0]), pair_rows)
     save_table(output/'primary_muon_truth.tsv', list(truth_rows[0]), truth_rows)
+    paired_rows=[]
+    for group in groups:
+        for scope in scopes:
+            n=denominators[group,scope]
+            for threshold in (.5,.7,.9):
+                for left_mode,right_mode in ((0,1),(0,2),(1,2)):
+                    a=duplicate_sets[group,scope,threshold,left_mode]
+                    b=duplicate_sets[group,scope,threshold,right_mode]
+                    both=len(np.intersect1d(a,b));lost=len(a)-both;gain=len(b)-both
+                    delta=float(fraction(gain-lost,n))
+                    se=np.sqrt(max(0.,float(fraction(gain+lost,n))-delta**2)/n) if n else np.nan
+                    paired_rows.append(dict(group=group,scope=scope,purity_threshold=threshold,
+                        pair=MODES[right_mode]+'-'+MODES[left_mode],common_reference_events=n,
+                        first_only=lost,second_only=gain,both=both,
+                        delta_percentage_points=100*delta,paired_se_percentage_points=100*se))
+    save_table(output/'duplicate_paired_events.tsv',list(paired_rows[0]),paired_rows)
+    duplicate_figure(duplicate_rows, output)
+    return duplicate_rows, pair_rows, truth_rows
+
+
+def duplicate_figure(duplicate_rows, output):
     fig, axes = plt.subplots(1, 2, figsize=(12,4.5))
     displayed = ['raw_all','long_all','long_truthfid','long_fit_quality_truthfid','long_final']
     for m, mode in enumerate(MODES):
@@ -170,12 +239,11 @@ def duplicate_tables(summary, event, arrays, output):
         axes[1].plot(x, [r['duplicate_event_fraction_percent'] for r in rows], 'o', color=COLORS[m], label=mode)
     for ax in axes:
         ax.set_xticks(range(len(displayed)), displayed, rotation=22, ha='right')
-        ax.grid(alpha=.25); ax.legend(); ax.set_ylim(bottom=0)
+        ax.set_yscale('log'); ax.set_ylim(1e-4, 40); ax.grid(alpha=.25); ax.legend()
     axes[0].set_ylabel('Excess / truth-matched tracks (%)')
     axes[1].set_ylabel('Duplicate events / events with tracks (%)')
     fig.suptitle('Same truth barcode with hit purity >= 0.7; independent of shared-hit criterion')
     fig.tight_layout(); figure_save(fig, output, 'duplicate_comparison')
-    return duplicate_rows, pair_rows, truth_rows
 
 
 def migrations(event, arrays, output):
@@ -207,6 +275,163 @@ def migrations(event, arrays, output):
     counts = {name: sum(r['category']==name for r in rows) for name in sorted({r['category'] for r in rows})}
     (output/'migration_summary.json').write_text(json.dumps(counts,indent=2)+'\n')
     return counts
+
+
+def leader_truth_comparison(repo,event,arrays,output,skip_old=False):
+    from scipy.stats import binomtest
+    fields=['source_mode','pz_mev','chi2','ndof','measurements','barcode','pdg',
+            'truth_hits','truth_pz_mev','neutrino_parent']
+    rows=arrays['tracks']
+    ids=event_key(event['event_run'],event['event_eventID'])
+    event_order=np.argsort(ids)
+    leaders=np.full((len(ids),3,len(fields)),np.nan)
+    for m in range(3):
+        selected=rows[(rows[:,2]==m)&(rows[:,TRACK_FIELDS.index('long')]==1)]
+        keys=event_key(selected[:,0],selected[:,1])
+        order=np.lexsort((selected[:,3],keys));selected=selected[order];keys=keys[order]
+        _,starts,numbers=np.unique(keys,return_index=True,return_counts=True)
+        ranks=np.arange(len(keys))-np.repeat(starts,numbers)
+        in_fid=np.isin(keys,ids)
+        positions=event_order[np.searchsorted(ids[event_order],keys[in_fid])]
+        selected=selected[in_fid];ranks=ranks[in_fid]
+        keep=ranks==event['event_LeadTrack_Idx'][positions,m]
+        leaders[positions[keep],m]=selected[keep][:,[TRACK_FIELDS.index(f) for f in fields]]
+        assert np.count_nonzero(np.isfinite(leaders[:,m,0]))==np.count_nonzero(event['event_LeadTrack_Idx'][:,m]>=0)
+    b=leaders[:,1];m=leaders[:,2]
+    matched=(np.abs(b[:,6])==13)&(np.abs(m[:,6])==13)&(b[:,9]==1)&(m[:,9]==1)& \
+        (b[:,5]==m[:,5])&(b[:,7]>=.7*b[:,4])&(m[:,7]>=.7*m[:,4])
+    eb=np.abs(fraction(b[:,1]-b[:,8],b[:,8]));em=np.abs(fraction(m[:,1]-m[:,8],m[:,8]))
+    qb=fraction(b[:,2],b[:,3]);qm=fraction(m[:,2],m[:,3])
+    chi_better=(b[:,3]>0)&(m[:,3]>0)&(qm<qb)
+    matched&=np.isfinite(eb)&np.isfinite(em)
+    bp=event['event_cut_bits'][:,1]==16383;mp=event['event_cut_bits'][:,2]==16383
+    populations=dict(all=matched,merge_forward=matched&(m[:,0]==0),
+        backward_only=matched&bp&~mp,merge_only=matched&~bp&mp,
+        both_pass=matched&bp&mp,neither_pass=matched&~bp&~mp)
+    statistics=[]
+    for name,select in populations.items():
+        bwin=int((select&(eb<em-1e-10)).sum());mwin=int((select&(em<eb-1e-10)).sum())
+        statistics.append(dict(population=name,pairs=int(select.sum()),backward_closer=bwin,
+            merge_closer=mwin,ties=int(select.sum())-bwin-mwin,
+            sign_test_p=float(binomtest(bwin,bwin+mwin,.5).pvalue) if bwin+mwin else np.nan,
+            backward_median_absolute_relative_pz_error_percent=float(100*np.median(eb[select])) if select.any() else np.nan,
+            merge_median_absolute_relative_pz_error_percent=float(100*np.median(em[select])) if select.any() else np.nan,
+            positive_ndof_pairs=int((select&(b[:,3]>0)&(m[:,3]>0)).sum()),
+            merge_lower_chi2_ndof_pairs=int((select&chi_better).sum()),
+            merge_lower_chi2_but_worse_pz_pairs=int((select&chi_better&(em>eb+1e-10)).sum())))
+    save_table(output/'paired_primary_muon_accuracy.tsv',list(statistics[0]),statistics)
+    old89=np.zeros(len(ids),dtype=bool)
+    if not skip_old:
+        with np.load(repo/'workbook/stage10_tracking_z/fiducial_events.npz') as old:
+            mask=(old['event_cut_bits'][:,1]==16383)&(old['event_cut_bits'][:,2]!=16383)
+            old89=np.isin(ids,event_key(old['event_run'][mask],old['event_eventID'][mask]))
+            assert int(old89.sum())==89
+    details=[]
+    for i in np.flatnonzero((bp!=mp)|old89):
+        row=dict(run=int(event['event_run'][i]),event=int(event['event_eventID'][i]),old89=bool(old89[i]),
+                 truth_nu_pz_gev=float(event['event_truth_pz_nu'][i]),
+                 truth_vertex_r_mm=float(np.hypot(event['event_truth_dec_x_nu'][i],event['event_truth_dec_y_nu'][i])),
+                 truth_vertex_z_mm=float(event['event_truth_dec_z_nu'][i]))
+        for j,mode in enumerate(MODES):
+            row[mode+'_bits']=int(event['event_cut_bits'][i,j])
+            for k,field in enumerate(fields):row[mode+'_'+field]=float(leaders[i,j,k])
+        details.append(row)
+    if details:save_table(output/'loss_gain_and_old89_truth.tsv',list(details[0]),details)
+    historical=rows[(rows[:,0]==200094)&(rows[:,1]==401649)]
+    if len(historical):save_table(output/'old_nan_event401649.tsv',TRACK_FIELDS,
+                                [dict(zip(TRACK_FIELDS,r)) for r in historical])
+    # Compare actual merge-forward leaders; copied backward tracks otherwise dominate ties.
+    select=populations['merge_forward']
+    fig,axes=plt.subplots(1,2,figsize=(11,4.5))
+    if select.any():
+        for value,label,color in ((eb,'backward',COLORS[1]),(em,'merge forward',COLORS[2])):
+            axes[0].hist(100*value[select],bins=np.linspace(0,100,41),histtype='step',label=label,color=color)
+        axes[1].scatter(100*eb[select],100*em[select],s=3,alpha=.2,rasterized=True)
+        axes[1].plot([0,100],[0,100],color='grey',lw=1)
+    axes[0].set_xlabel('Absolute relative error in production pz (%)');axes[0].set_ylabel('Matched leader pairs')
+    axes[0].legend();axes[1].set_xlabel('Backward absolute relative pz error (%)')
+    axes[1].set_ylabel('Merge-forward absolute relative pz error (%)')
+    axes[1].set_xlim(0,100);axes[1].set_ylim(0,100)
+    for ax in axes:ax.grid(alpha=.25)
+    fig.suptitle(f'Same primary muon, purity >=0.7; {int(select.sum()):,} pairs; tails retained in tables')
+    fig.tight_layout();figure_save(fig,output,'paired_primary_muon_accuracy')
+
+
+def loss_distributions(repo,event,output,skip_old=False):
+    samples={'new':event}
+    if not skip_old:
+        with np.load(repo/'workbook/stage10_tracking_z/fiducial_events.npz') as source:
+            old={key:source[key] for key in source.files}
+        old_ids=event_key(old['event_run'],old['event_eventID'])
+        common=np.isin(event_key(event['event_run'],event['event_eventID']),old_ids)
+        samples={'old_common342':old,'new_common342':{key:value[common] for key,value in event.items()
+                    if key.startswith('event_')}}
+    fig,axes=plt.subplots(1,3,figsize=(14,4.8))
+    rows=[]
+    for name,sample in samples.items():
+        b=sample['event_cut_bits'][:,1]==16383
+        loss=b&(sample['event_cut_bits'][:,2]!=16383)
+        values=[sample['event_truth_pz_nu'],np.hypot(sample['event_truth_dec_x_nu'],sample['event_truth_dec_y_nu']),
+                sample['event_truth_dec_z_nu']]
+        for ax,label,variable,edges in zip(axes,('pz','radius','z'),values,(ENERGY_EDGES,RADIUS_EDGES,Z_EDGES)):
+            den=np.histogram(variable[b],edges)[0];num=np.histogram(variable[loss],edges)[0]
+            n=den.astype(float);p=fraction(num,den);z=1.959963984540054
+            center=fraction(p+fraction(z*z/2,n),1+fraction(z*z,n))
+            half=fraction(z*np.sqrt(fraction(p*(1-p),n)+fraction(z*z/4,n*n)),1+fraction(z*z,n))
+            finite=np.isfinite(edges[1:]);x=(edges[:-1]+edges[1:])/2
+            if label=='pz':x=np.sqrt(edges[:-1]*edges[1:])
+            ax.errorbar(x[finite],100*p[finite],yerr=100*np.vstack([np.maximum(0,p-center+half),
+                np.maximum(0,center+half-p)])[:,finite],fmt='o-',ms=3,capsize=2,label=name)
+            for j in range(len(den)):
+                rows.append(dict(sample=name,variable=label,low=edges[j],high=edges[j+1],
+                    backward_pass=int(den[j]),merge_fail=int(num[j]),loss_fraction_percent=100*p[j],
+                    wilson95_low_percent=100*(center[j]-half[j]),wilson95_high_percent=100*(center[j]+half[j])))
+    for ax,label in zip(axes,('Truth neutrino pz (GeV)','Truth interaction radius (mm)','Truth interaction z (mm)')):
+        ax.set_xlabel(label);ax.grid(alpha=.25);ax.legend();ax.set_ylim(bottom=0)
+    axes[0].set_xscale('log');axes[0].set_ylabel('Merge fail / backward final pass (%)')
+    fig.suptitle('Conditional event loss; 95% Wilson intervals; empty bins remain undefined')
+    fig.tight_layout();figure_save(fig,output,'backward_only_loss_distributions')
+    save_table(output/'backward_only_loss_bins.tsv',list(rows[0]),rows)
+
+
+def loss_associations(event,output):
+    from report_tracking_loss import logistic, interval
+    from scipy.stats import fisher_exact
+    run=event['event_run'];pz=event['event_truth_pz_nu'];z=event['event_truth_dec_z_nu']
+    radius=np.hypot(event['event_truth_dec_x_nu'],event['event_truth_dec_y_nu'])
+    selected=event['event_cut_bits'][:,1]==16383
+    lost=selected&(event['event_cut_bits'][:,2]!=16383)
+    groups={'all':np.ones(len(run),dtype=bool),'nominal':run!=200080,
+            'radius_lt80mm':radius<80,'radius_ge80mm':radius>=80,
+            'z_lt_minus2400mm':z< -2400,'z_ge_minus2400mm':z>= -2400,
+            'pz_lt500GeV':pz<500,'pz_ge500GeV':pz>=500,'box':z< -1950,'lead':z> -1900}
+    groups.update({str(r):run==r for r in np.unique(run)})
+    rows=[]
+    for name,mask in groups.items():
+        n=int((lost&mask).sum());d=int((selected&mask).sum());rate,lo,hi=interval(n,d)
+        rows.append(dict(group=name,backward_pass=d,merge_fail=n,loss_percent=100*rate,
+                         wilson95_low_percent=100*lo,wilson95_high_percent=100*hi))
+    save_table(output/'backward_only_groups.tsv',list(rows[0]),rows)
+    contrasts=[]
+    for name,mask in [('radius_ge80mm',radius>=80),('z_ge_minus2400mm',z>= -2400),('pz_ge500GeV',pz>=500)]:
+        n1,d1=int((lost&mask).sum()),int((selected&mask).sum())
+        n0,d0=int((lost&~mask).sum()),int((selected&~mask).sum())
+        odds,p=fisher_exact([[n1,d1-n1],[n0,d0-n0]])
+        contrasts.append(dict(contrast=name,loss1=n1,total1=d1,loss0=n0,total0=d0,
+            rate_ratio=float(fraction(fraction(n1,d1),fraction(n0,d0))),odds_ratio=odds,
+            fisher_two_sided_p=p,bonferroni_p=min(1.,3*p)))
+    save_table(output/'backward_only_contrasts.tsv',list(contrasts[0]),contrasts)
+    models=[];status=[]
+    for name in ('all','nominal'):
+        mask=selected&groups[name]
+        separated=[int(r) for r in np.unique(run[mask]) if not lost[mask&(run==r)].any()]
+        if separated:
+            status.append(dict(scope=name,status='no finite full-model MLE: zero losses in run indicator',runs=separated))
+            continue
+        models+=logistic(pz[mask],radius[mask],z[mask],run[mask],lost[mask],name)
+        status.append(dict(scope=name,status='converged',runs=[]))
+    if models:save_table(output/'backward_only_adjusted_logistic.tsv',list(models[0]),models)
+    (output/'backward_only_model_status.json').write_text(json.dumps(status,indent=2)+'\n')
 
 
 def compare_old(repo, summary, event, output):
@@ -285,7 +510,8 @@ def scintillator_control(repo, manifest, event, output, skip_old=False):
         if int(record[0]) not in old_indices:
             continue
         start,stop = event['file_offsets'][i:i+2]
-        with uproot.open(record[4]) as source:
+        old_path=('root://eoshome-x.cern.ch/'+record[4] if record[4].startswith('/eos/') else record[4])
+        with uproot.open(old_path) as source:
             old = source['nt'].arrays(columns,library='np')
         ids = event_key(old['run'],old['eventID'])
         target = event_key(event['event_run'][start:stop],event['event_eventID'][start:stop])
@@ -309,18 +535,32 @@ def scintillator_control(repo, manifest, event, output, skip_old=False):
     assert len(positions)==int(common.sum()) and np.array_equal(new_ids[positions],old_ids)
     previous=((old_bits[:,:,None]>>np.arange(14))&1).astype(bool)
     rows=[]
-    for m,mode in enumerate(MODES):
-        for j,name in enumerate(names):
-            new_native=native[positions,m,j]
-            control=controlled_cumulative[positions,m,j]
-            for label,a,b in [('old_to_new_fixed_old_scintillator',previous[:,m,j],control),
-                              ('new_native_to_fixed_old_scintillator',new_native,control)]:
+    groups={'all':np.ones(len(positions),dtype=bool),'nominal':event['event_run'][positions]!=200080}
+    groups.update({str(run):event['event_run'][positions]==run for run in sorted(set(event['event_run'][positions]))})
+    pair_rows=[]
+    for group,mask in groups.items():
+        if not mask.any():continue
+        for m,mode in enumerate(MODES):
+            for j,name in enumerate(names):
+                new_native=native[positions,m,j][mask]
+                control=controlled_cumulative[positions,m,j][mask]
+                for label,a,b in [('old_to_new_fixed_old_scintillator',previous[:,m,j][mask],control),
+                                  ('new_native_to_fixed_old_scintillator',new_native,control)]:
+                    lost=int((a&~b).sum());gain=int((~a&b).sum());n=len(a);delta=(gain-lost)/n
+                    rows.append(dict(group=group,comparison=label,mode=mode,cut=name,denominator=n,
+                        first_pass=int(a.sum()),second_pass=int(b.sum()),first_only=lost,second_only=gain,
+                        both=int((a&b).sum()),delta_percentage_points=100*delta,
+                        paired_se_percentage_points=100*np.sqrt(((lost+gain)/n-delta**2)/n)))
+        for left,right in ((0,1),(0,2),(1,2)):
+            for j,name in enumerate(names):
+                a=controlled_cumulative[positions,left,j][mask];b=controlled_cumulative[positions,right,j][mask]
                 lost=int((a&~b).sum());gain=int((~a&b).sum());n=len(a);delta=(gain-lost)/n
-                rows.append(dict(comparison=label,mode=mode,cut=name,denominator=n,
+                pair_rows.append(dict(group=group,pair=MODES[right]+'-'+MODES[left],cut=name,denominator=n,
                     first_pass=int(a.sum()),second_pass=int(b.sum()),first_only=lost,second_only=gain,
                     both=int((a&b).sum()),delta_percentage_points=100*delta,
                     paired_se_percentage_points=100*np.sqrt(((lost+gain)/n-delta**2)/n)))
     save_table(output/'fixed_scintillator_version_comparison.tsv',list(rows[0]),rows)
+    save_table(output/'fixed_scintillator_mode_comparison.tsv',list(pair_rows[0]),pair_rows)
     np.savez_compressed(output/'fixed_old_scintillator_events.npz',
                         run=event['event_run'][positions],event=event['event_eventID'][positions],
                         cumulative=controlled_cumulative[positions])
@@ -339,18 +579,44 @@ def main():
     parser.add_argument('--manifest',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--skip-old',action='store_true')
+    parser.add_argument('--combined',type=Path,help='Read the three validated final NPZ caches instead of redundant shards')
     args = parser.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
-    summary,event,arrays = load(args.manifest,args.output)
+    if args.combined:
+        caches={}
+        for name in ('paired_results','fiducial_events','candidate_diagnostics'):
+            with np.load(args.combined/(name+'.npz')) as source:caches[name]={k:source[k] for k in source.files}
+        summary,event,arrays=(caches[n] for n in ('paired_results','fiducial_events','candidate_diagnostics'))
+        np.savez_compressed(args.output/'counts_input.npz',**summary)
+        for name in ('fiducial_events','candidate_diagnostics'):
+            source=args.combined/(name+'.npz');target=args.output/(name+'.npz')
+            if source.resolve()!=target.resolve():shutil.copyfile(source,target)
+        for name in ('performance.tsv','effective_reco.json'):
+            source=args.combined/name;target=args.output/name
+            if source.exists() and source.resolve()!=target.resolve():shutil.copyfile(source,target)
+    else:
+        summary,event,arrays = load(args.manifest,args.output)
     cutflow_report(args.repo,args.manifest,args.output,args.output/'counts_input.npz',
                    require_existing=False, software_label='geoRotation 88c457c1 + isolated smoothing')
     z_report(args.repo,args.manifest,args.output/'paired_results.npz',args.output,
              combined=args.output/'fiducial_events.npz')
+    with np.load(args.output/'counts_input.npz') as original,np.load(args.output/'paired_results.npz') as saved:
+        assert set(original.files)==set(saved.files)
+        for key in original.files:assert np.array_equal(original[key],saved[key],equal_nan=True),key
+    (args.output/'counts_input.npz').unlink()
     # Correct the old report's historical-context sentence for this new sample.
     zpath = args.output/'comparison_z.md'
-    zpath.write_text(zpath.read_text().replace('与阶段 09 相同的', '本次新版重建的'))
+    zpath.write_text(zpath.read_text().replace('与阶段 09 相同的', '本次新版重建的').replace(
+        '只保存共同真值事件的 run/eventID、truth pz/x/y/z 和三模式 uint16 cut 位掩码',
+        '保存共同真值事件的 run/eventID、truth pz/x/y/z、三模式 cut 位掩码及 leader/cut 控制列'))
+    for path in args.output.glob('*.md'):
+        path.write_text(path.read_text().replace('.png)', '.svg)'))
     duplicate_rows,pair_rows,truth_rows = duplicate_tables(summary,event,arrays,args.output)
     migration = migrations(event,arrays,args.output)
+    leader_truth_comparison(args.repo,event,arrays,args.output,args.skip_old)
+    loss_distributions(args.repo,event,args.output,args.skip_old)
+    if not args.skip_old:
+        loss_associations(event,args.output)
     old = {} if args.skip_old else compare_old(args.repo,summary,event,args.output)
     scintillator_control(args.repo,args.manifest,event,args.output,args.skip_old)
     counts = summary['counts'].sum(axis=0)

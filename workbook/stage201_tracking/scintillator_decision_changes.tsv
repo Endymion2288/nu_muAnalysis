@@ -1,0 +1,16 @@
+mode	cut	denominator	individual_decision_changed
+forward	Veto20 and Veto21 charge > 40 pC	383670	206
+forward	Timing Station Charge > 20 pC	383670	34
+forward	Preshower Charge > 2.5 pC	383670	2655
+forward	VetoNu0 reduced charge < 30 pC	383670	127
+forward	VetoNu1 reduced charge < 30 pC	383670	145
+backward	Veto20 and Veto21 charge > 40 pC	383670	206
+backward	Timing Station Charge > 20 pC	383670	37
+backward	Preshower Charge > 2.5 pC	383670	2655
+backward	VetoNu0 reduced charge < 30 pC	383670	127
+backward	VetoNu1 reduced charge < 30 pC	383670	145
+merge	Veto20 and Veto21 charge > 40 pC	383670	206
+merge	Timing Station Charge > 20 pC	383670	38
+merge	Preshower Charge > 2.5 pC	383670	2655
+merge	VetoNu0 reduced charge < 30 pC	383670	127
+merge	VetoNu1 reduced charge < 30 pC	383670	145

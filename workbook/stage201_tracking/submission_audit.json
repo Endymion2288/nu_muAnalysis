@@ -52,5 +52,123 @@
     "cluster": 9717382,
     "reason": "record individual cut bits and trigger Y for fixed old-scintillator control after detecting waveform version differences",
     "published_outputs": 0
+  },
+  "pilot1000_result": {
+    "events": 1000,
+    "truth_events": 124,
+    "final_FBM": [
+      30,
+      33,
+      33
+    ],
+    "raw_counts_FBM": [
+      440,
+      396,
+      630
+    ],
+    "raw_long_FBM": [
+      143,
+      181,
+      190
+    ],
+    "nonfinite_raw_chi2_FBM": [
+      0,
+      0,
+      0
+    ],
+    "truth_matches_checked_FBM": [
+      141,
+      167,
+      176
+    ],
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.41 max_rss_kib=55508 user_seconds=0.03 system_seconds=0.10",
+      "runtime_unpack": "runtime_unpack wall_seconds=1.68 max_rss_kib=5632 user_seconds=1.46 system_seconds=0.51",
+      "input": "input wall_seconds=2.24 max_rss_kib=79672 user_seconds=0.14 system_seconds=0.98",
+      "reco": "reco wall_seconds=171.18 max_rss_kib=1102288 user_seconds=136.38 system_seconds=4.48",
+      "forward": "forward wall_seconds=35.71 max_rss_kib=914556 user_seconds=30.79 system_seconds=2.40",
+      "backward": "backward wall_seconds=38.02 max_rss_kib=901412 user_seconds=32.78 system_seconds=2.75",
+      "merge": "merge wall_seconds=200.27 max_rss_kib=1960532 user_seconds=115.06 system_seconds=9.68",
+      "extract": "extract wall_seconds=33.02 max_rss_kib=731988 user_seconds=27.69 system_seconds=2.16"
+    },
+    "output_bytes": 67416
+  },
+  "retry53_cluster": 9717416,
+  "details_pilot_cluster": 9717423,
+  "details_part1_cluster": 9717425,
+  "details_part1_pending_events": 132,
+  "details_part1_manifest": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage201_tracking/details_part1/manifest.tsv",
+  "retry53_outcome": "same backward-maker exit129 after3001 heartbeat on two nodes; recovered all10000 events with ten disjoint1000-event jobs",
+  "debug53_cluster": 9717426,
+  "recovery53_cluster": 9717429,
+  "details_clusters": [
+    {
+      "name": "pilot",
+      "cluster": 9717423
+    },
+    {
+      "name": "part1",
+      "cluster": 9717425
+    },
+    {
+      "name": "part2",
+      "cluster": 9717427
+    },
+    {
+      "name": "part3",
+      "cluster": 9717436
+    },
+    {
+      "name": "old_nan",
+      "cluster": 9717455
+    },
+    {
+      "name": "part4",
+      "cluster": 9717509
+    }
+  ],
+  "details_submission_issue": "comma-separated reasons were parsed as additional queue fields for 7 overlapping old89/new-loss events; validated physics then wrong upload path; changed delimiter to + and reran affected IDs",
+  "details_part4_cluster": 9717509,
+  "old_nan_detailed_rerun_exit": 0,
+  "all10_recovery_slices_exit": 0,
+  "recovery53_uploaded_and_readback_validated": true,
+  "details_part5_cluster": 9717951,
+  "full_sample_expected_truth_fiducial": 384779,
+  "reconstruction_slice_recovery_note": "Event-by-event reconstruction can be split; all ranges checked against primitive RDO mcEventNumber; two independent runs of skip3000/nevents1000 yielded identical full compact arrays. Root cause of full-file backward-maker crash remains unmeasured.",
+  "loss_model_validation": "old383670-event baseline:21 model rows agree with stage17 within1e-10 relative/1e-12 absolute",
+  "validated_recovery53_events": 10000,
+  "validated_recovery53_truth": 1294,
+  "validated_recovery53_final_FBM": [
+    269,
+    274,
+    289
+  ],
+  "all343_validated_events": 3384987,
+  "full_report_cluster": 9718005,
+  "details_final_cluster": 9718004,
+  "details_final_target_events": 212,
+  "full_final_FBM": [
+    88233,
+    99351,
+    103056
+  ],
+  "details_report_cluster": 9718023,
+  "storage_validation_clusters": [
+    9718028,
+    9718040
+  ],
+  "storage_validation_exact_arrays": true,
+  "storage_validation_exact_detail_events": 212,
+  "all343_final_exit": 0,
+  "full_final_truth": 384779,
+  "validated_duplicate_quality_purity07_excess_FBM": [
+    2,
+    1,
+    2
+  ],
+  "completion_note": "Full reconstruction, paired old-scintillator controls, duplicate checks, 212-event details and storage readback completed; shards removed after validation.",
+  "withdrawn_duplicate_validation": {
+    "cluster": 9718039,
+    "reason": "stale preparation after unavailable default python; removed before result used"
   }
 }

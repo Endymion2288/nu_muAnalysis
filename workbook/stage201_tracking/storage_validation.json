@@ -1,0 +1,3749 @@
+{
+  "files": 343,
+  "events": 3384987,
+  "exact_array_readback": true,
+  "source_bytes": 177596615,
+  "retained_npz_bytes": {
+    "fiducial_events.npz": 25646793,
+    "candidate_diagnostics.npz": 146555345,
+    "paired_results.npz": 252784,
+    "fixed_old_scintillator_events.npz": 1080517
+  },
+  "metadata_preserved_in": [
+    "input_manifest.tsv",
+    "performance.tsv",
+    "effective_reco.json",
+    "software_provenance.json",
+    "recovery53_audit.json"
+  ],
+  "checked_keys": [
+    "counts",
+    "overlaps",
+    "nonfinite_leading_quality",
+    "nontrack_columns",
+    "existing_merge_verified",
+    "fiducial_index",
+    "tracking_index",
+    "energy_den",
+    "energy_pass",
+    "radius_den",
+    "radius_pass",
+    "z_den",
+    "z_pass",
+    "raw_counts",
+    "raw_long",
+    "nonfinite_raw_chi2",
+    "truth_matches_checked",
+    "measurement_length_mismatches",
+    "event_cut_bits",
+    "event_reco_decision_bits",
+    "event_run",
+    "event_eventID",
+    "event_truth_pz_nu",
+    "event_truth_dec_x_nu",
+    "event_truth_dec_y_nu",
+    "event_truth_dec_z_nu",
+    "event_LeadTrack_Idx",
+    "event_LeadTrack_pz0",
+    "event_LeadTrack_Chi2_NDF",
+    "event_LeadTrack_r_atMaxRadius",
+    "event_LeadTrack_rIFT",
+    "event_LeadTrack_Theta",
+    "event_Lead_Track_Y_atTrig",
+    "tracks",
+    "pairs",
+    "migrations",
+    "track_fields",
+    "pair_fields",
+    "effective_reco_json",
+    "software_provenance_json",
+    "performance_json",
+    "host",
+    "root_file_bytes_json"
+  ],
+  "sources": [
+    {
+      "index": 0,
+      "events": 10000,
+      "source_bytes": 564605,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/000.npz"
+    },
+    {
+      "index": 1,
+      "events": 10000,
+      "source_bytes": 559866,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/001.npz"
+    },
+    {
+      "index": 2,
+      "events": 10000,
+      "source_bytes": 570894,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/002.npz"
+    },
+    {
+      "index": 3,
+      "events": 10000,
+      "source_bytes": 564946,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/003.npz"
+    },
+    {
+      "index": 4,
+      "events": 10000,
+      "source_bytes": 572698,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/004.npz"
+    },
+    {
+      "index": 5,
+      "events": 10000,
+      "source_bytes": 562151,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/005.npz"
+    },
+    {
+      "index": 6,
+      "events": 10000,
+      "source_bytes": 567358,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/006.npz"
+    },
+    {
+      "index": 7,
+      "events": 10000,
+      "source_bytes": 559182,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/007.npz"
+    },
+    {
+      "index": 8,
+      "events": 10000,
+      "source_bytes": 551302,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/008.npz"
+    },
+    {
+      "index": 9,
+      "events": 10000,
+      "source_bytes": 556832,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/009.npz"
+    },
+    {
+      "index": 10,
+      "events": 10000,
+      "source_bytes": 569245,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/010.npz"
+    },
+    {
+      "index": 11,
+      "events": 10000,
+      "source_bytes": 565540,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/011.npz"
+    },
+    {
+      "index": 12,
+      "events": 10000,
+      "source_bytes": 555017,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/012.npz"
+    },
+    {
+      "index": 13,
+      "events": 10000,
+      "source_bytes": 562211,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/013.npz"
+    },
+    {
+      "index": 14,
+      "events": 10000,
+      "source_bytes": 545817,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/014.npz"
+    },
+    {
+      "index": 15,
+      "events": 10000,
+      "source_bytes": 552083,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/015.npz"
+    },
+    {
+      "index": 16,
+      "events": 10000,
+      "source_bytes": 561383,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/016.npz"
+    },
+    {
+      "index": 17,
+      "events": 10000,
+      "source_bytes": 553761,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/017.npz"
+    },
+    {
+      "index": 18,
+      "events": 10000,
+      "source_bytes": 566329,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/018.npz"
+    },
+    {
+      "index": 19,
+      "events": 10000,
+      "source_bytes": 560562,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/019.npz"
+    },
+    {
+      "index": 20,
+      "events": 10000,
+      "source_bytes": 558098,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/020.npz"
+    },
+    {
+      "index": 21,
+      "events": 10000,
+      "source_bytes": 564969,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/021.npz"
+    },
+    {
+      "index": 22,
+      "events": 10000,
+      "source_bytes": 572640,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/022.npz"
+    },
+    {
+      "index": 23,
+      "events": 10000,
+      "source_bytes": 568680,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/023.npz"
+    },
+    {
+      "index": 24,
+      "events": 10000,
+      "source_bytes": 568962,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/024.npz"
+    },
+    {
+      "index": 25,
+      "events": 10000,
+      "source_bytes": 576533,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/025.npz"
+    },
+    {
+      "index": 26,
+      "events": 10000,
+      "source_bytes": 558624,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/026.npz"
+    },
+    {
+      "index": 27,
+      "events": 10000,
+      "source_bytes": 549822,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/027.npz"
+    },
+    {
+      "index": 28,
+      "events": 10000,
+      "source_bytes": 562661,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/028.npz"
+    },
+    {
+      "index": 29,
+      "events": 10000,
+      "source_bytes": 571415,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/029.npz"
+    },
+    {
+      "index": 30,
+      "events": 10000,
+      "source_bytes": 565763,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/030.npz"
+    },
+    {
+      "index": 31,
+      "events": 10000,
+      "source_bytes": 554872,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/031.npz"
+    },
+    {
+      "index": 32,
+      "events": 10000,
+      "source_bytes": 562548,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/032.npz"
+    },
+    {
+      "index": 33,
+      "events": 10000,
+      "source_bytes": 552986,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/033.npz"
+    },
+    {
+      "index": 34,
+      "events": 10000,
+      "source_bytes": 577368,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/034.npz"
+    },
+    {
+      "index": 35,
+      "events": 10000,
+      "source_bytes": 568358,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/035.npz"
+    },
+    {
+      "index": 36,
+      "events": 10000,
+      "source_bytes": 553815,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/036.npz"
+    },
+    {
+      "index": 37,
+      "events": 10000,
+      "source_bytes": 578072,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/037.npz"
+    },
+    {
+      "index": 38,
+      "events": 10000,
+      "source_bytes": 554294,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/038.npz"
+    },
+    {
+      "index": 39,
+      "events": 10000,
+      "source_bytes": 558866,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/039.npz"
+    },
+    {
+      "index": 40,
+      "events": 10000,
+      "source_bytes": 563574,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/040.npz"
+    },
+    {
+      "index": 41,
+      "events": 10000,
+      "source_bytes": 560497,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/041.npz"
+    },
+    {
+      "index": 42,
+      "events": 10000,
+      "source_bytes": 552314,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/042.npz"
+    },
+    {
+      "index": 43,
+      "events": 10000,
+      "source_bytes": 560949,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/043.npz"
+    },
+    {
+      "index": 44,
+      "events": 784,
+      "source_bytes": 57045,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/044.npz"
+    },
+    {
+      "index": 45,
+      "events": 10000,
+      "source_bytes": 539939,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/045.npz"
+    },
+    {
+      "index": 46,
+      "events": 10000,
+      "source_bytes": 551476,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/046.npz"
+    },
+    {
+      "index": 47,
+      "events": 10000,
+      "source_bytes": 539930,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/047.npz"
+    },
+    {
+      "index": 48,
+      "events": 10000,
+      "source_bytes": 528929,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/048.npz"
+    },
+    {
+      "index": 49,
+      "events": 10000,
+      "source_bytes": 553079,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/049.npz"
+    },
+    {
+      "index": 50,
+      "events": 10000,
+      "source_bytes": 550413,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/050.npz"
+    },
+    {
+      "index": 51,
+      "events": 10000,
+      "source_bytes": 539304,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/051.npz"
+    },
+    {
+      "index": 52,
+      "events": 10000,
+      "source_bytes": 557515,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/052.npz"
+    },
+    {
+      "index": 53,
+      "events": 10000,
+      "source_bytes": 546133,
+      "checked_key_count": 44,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/053.npz"
+    },
+    {
+      "index": 54,
+      "events": 10000,
+      "source_bytes": 562850,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/054.npz"
+    },
+    {
+      "index": 55,
+      "events": 10000,
+      "source_bytes": 547706,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/055.npz"
+    },
+    {
+      "index": 56,
+      "events": 10000,
+      "source_bytes": 551659,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/056.npz"
+    },
+    {
+      "index": 57,
+      "events": 10000,
+      "source_bytes": 551238,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/057.npz"
+    },
+    {
+      "index": 58,
+      "events": 10000,
+      "source_bytes": 553886,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/058.npz"
+    },
+    {
+      "index": 59,
+      "events": 10000,
+      "source_bytes": 545090,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/059.npz"
+    },
+    {
+      "index": 60,
+      "events": 10000,
+      "source_bytes": 534370,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/060.npz"
+    },
+    {
+      "index": 61,
+      "events": 10000,
+      "source_bytes": 556012,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/061.npz"
+    },
+    {
+      "index": 62,
+      "events": 10000,
+      "source_bytes": 550037,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/062.npz"
+    },
+    {
+      "index": 63,
+      "events": 10000,
+      "source_bytes": 548853,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/063.npz"
+    },
+    {
+      "index": 64,
+      "events": 10000,
+      "source_bytes": 556070,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/064.npz"
+    },
+    {
+      "index": 65,
+      "events": 10000,
+      "source_bytes": 549439,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/065.npz"
+    },
+    {
+      "index": 66,
+      "events": 10000,
+      "source_bytes": 558066,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/066.npz"
+    },
+    {
+      "index": 67,
+      "events": 10000,
+      "source_bytes": 543517,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/067.npz"
+    },
+    {
+      "index": 68,
+      "events": 10000,
+      "source_bytes": 556426,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/068.npz"
+    },
+    {
+      "index": 69,
+      "events": 10000,
+      "source_bytes": 553635,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/069.npz"
+    },
+    {
+      "index": 70,
+      "events": 10000,
+      "source_bytes": 551253,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/070.npz"
+    },
+    {
+      "index": 71,
+      "events": 10000,
+      "source_bytes": 546251,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/071.npz"
+    },
+    {
+      "index": 72,
+      "events": 10000,
+      "source_bytes": 544848,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/072.npz"
+    },
+    {
+      "index": 73,
+      "events": 10000,
+      "source_bytes": 547121,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/073.npz"
+    },
+    {
+      "index": 74,
+      "events": 10000,
+      "source_bytes": 544193,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/074.npz"
+    },
+    {
+      "index": 75,
+      "events": 10000,
+      "source_bytes": 544860,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/075.npz"
+    },
+    {
+      "index": 76,
+      "events": 10000,
+      "source_bytes": 557423,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/076.npz"
+    },
+    {
+      "index": 77,
+      "events": 10000,
+      "source_bytes": 539518,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/077.npz"
+    },
+    {
+      "index": 78,
+      "events": 10000,
+      "source_bytes": 537385,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/078.npz"
+    },
+    {
+      "index": 79,
+      "events": 10000,
+      "source_bytes": 539012,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/079.npz"
+    },
+    {
+      "index": 80,
+      "events": 10000,
+      "source_bytes": 550527,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/080.npz"
+    },
+    {
+      "index": 81,
+      "events": 10000,
+      "source_bytes": 555967,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/081.npz"
+    },
+    {
+      "index": 82,
+      "events": 10000,
+      "source_bytes": 539673,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/082.npz"
+    },
+    {
+      "index": 83,
+      "events": 10000,
+      "source_bytes": 550772,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/083.npz"
+    },
+    {
+      "index": 84,
+      "events": 10000,
+      "source_bytes": 547885,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/084.npz"
+    },
+    {
+      "index": 85,
+      "events": 10000,
+      "source_bytes": 535807,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/085.npz"
+    },
+    {
+      "index": 86,
+      "events": 10000,
+      "source_bytes": 557729,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/086.npz"
+    },
+    {
+      "index": 87,
+      "events": 10000,
+      "source_bytes": 559557,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/087.npz"
+    },
+    {
+      "index": 88,
+      "events": 10000,
+      "source_bytes": 554212,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/088.npz"
+    },
+    {
+      "index": 89,
+      "events": 10000,
+      "source_bytes": 552836,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/089.npz"
+    },
+    {
+      "index": 90,
+      "events": 10000,
+      "source_bytes": 554584,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/090.npz"
+    },
+    {
+      "index": 91,
+      "events": 10000,
+      "source_bytes": 536675,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/091.npz"
+    },
+    {
+      "index": 92,
+      "events": 10000,
+      "source_bytes": 545027,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/092.npz"
+    },
+    {
+      "index": 93,
+      "events": 10000,
+      "source_bytes": 545007,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/093.npz"
+    },
+    {
+      "index": 94,
+      "events": 10000,
+      "source_bytes": 559003,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/094.npz"
+    },
+    {
+      "index": 95,
+      "events": 10000,
+      "source_bytes": 561442,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/095.npz"
+    },
+    {
+      "index": 96,
+      "events": 10000,
+      "source_bytes": 544716,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/096.npz"
+    },
+    {
+      "index": 97,
+      "events": 10000,
+      "source_bytes": 559455,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/097.npz"
+    },
+    {
+      "index": 98,
+      "events": 10000,
+      "source_bytes": 552338,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/098.npz"
+    },
+    {
+      "index": 99,
+      "events": 10000,
+      "source_bytes": 547593,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/099.npz"
+    },
+    {
+      "index": 100,
+      "events": 9607,
+      "source_bytes": 524072,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/100.npz"
+    },
+    {
+      "index": 101,
+      "events": 10000,
+      "source_bytes": 514978,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/101.npz"
+    },
+    {
+      "index": 102,
+      "events": 10000,
+      "source_bytes": 523190,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/102.npz"
+    },
+    {
+      "index": 103,
+      "events": 10000,
+      "source_bytes": 516521,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/103.npz"
+    },
+    {
+      "index": 104,
+      "events": 10000,
+      "source_bytes": 528050,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/104.npz"
+    },
+    {
+      "index": 105,
+      "events": 10000,
+      "source_bytes": 521509,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/105.npz"
+    },
+    {
+      "index": 106,
+      "events": 10000,
+      "source_bytes": 546745,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/106.npz"
+    },
+    {
+      "index": 107,
+      "events": 10000,
+      "source_bytes": 520505,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/107.npz"
+    },
+    {
+      "index": 108,
+      "events": 10000,
+      "source_bytes": 520293,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/108.npz"
+    },
+    {
+      "index": 109,
+      "events": 10000,
+      "source_bytes": 518979,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/109.npz"
+    },
+    {
+      "index": 110,
+      "events": 10000,
+      "source_bytes": 533090,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/110.npz"
+    },
+    {
+      "index": 111,
+      "events": 10000,
+      "source_bytes": 516575,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/111.npz"
+    },
+    {
+      "index": 112,
+      "events": 10000,
+      "source_bytes": 524028,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/112.npz"
+    },
+    {
+      "index": 113,
+      "events": 10000,
+      "source_bytes": 526566,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/113.npz"
+    },
+    {
+      "index": 114,
+      "events": 10000,
+      "source_bytes": 512642,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/114.npz"
+    },
+    {
+      "index": 115,
+      "events": 10000,
+      "source_bytes": 520084,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/115.npz"
+    },
+    {
+      "index": 116,
+      "events": 10000,
+      "source_bytes": 526710,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/116.npz"
+    },
+    {
+      "index": 117,
+      "events": 10000,
+      "source_bytes": 516045,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/117.npz"
+    },
+    {
+      "index": 118,
+      "events": 10000,
+      "source_bytes": 513390,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/118.npz"
+    },
+    {
+      "index": 119,
+      "events": 10000,
+      "source_bytes": 527418,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/119.npz"
+    },
+    {
+      "index": 120,
+      "events": 10000,
+      "source_bytes": 532152,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/120.npz"
+    },
+    {
+      "index": 121,
+      "events": 10000,
+      "source_bytes": 512680,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/121.npz"
+    },
+    {
+      "index": 122,
+      "events": 10000,
+      "source_bytes": 515159,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/122.npz"
+    },
+    {
+      "index": 123,
+      "events": 10000,
+      "source_bytes": 525209,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/123.npz"
+    },
+    {
+      "index": 124,
+      "events": 10000,
+      "source_bytes": 517917,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/124.npz"
+    },
+    {
+      "index": 125,
+      "events": 10000,
+      "source_bytes": 521526,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/125.npz"
+    },
+    {
+      "index": 126,
+      "events": 10000,
+      "source_bytes": 529557,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/126.npz"
+    },
+    {
+      "index": 127,
+      "events": 10000,
+      "source_bytes": 519794,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/127.npz"
+    },
+    {
+      "index": 128,
+      "events": 10000,
+      "source_bytes": 506255,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/128.npz"
+    },
+    {
+      "index": 129,
+      "events": 10000,
+      "source_bytes": 520774,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/129.npz"
+    },
+    {
+      "index": 130,
+      "events": 10000,
+      "source_bytes": 518558,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/130.npz"
+    },
+    {
+      "index": 131,
+      "events": 10000,
+      "source_bytes": 513590,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/131.npz"
+    },
+    {
+      "index": 132,
+      "events": 10000,
+      "source_bytes": 511727,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/132.npz"
+    },
+    {
+      "index": 133,
+      "events": 10000,
+      "source_bytes": 519842,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/133.npz"
+    },
+    {
+      "index": 134,
+      "events": 10000,
+      "source_bytes": 518354,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/134.npz"
+    },
+    {
+      "index": 135,
+      "events": 10000,
+      "source_bytes": 514764,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/135.npz"
+    },
+    {
+      "index": 136,
+      "events": 10000,
+      "source_bytes": 516533,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/136.npz"
+    },
+    {
+      "index": 137,
+      "events": 10000,
+      "source_bytes": 527007,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/137.npz"
+    },
+    {
+      "index": 138,
+      "events": 10000,
+      "source_bytes": 518187,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/138.npz"
+    },
+    {
+      "index": 139,
+      "events": 10000,
+      "source_bytes": 527595,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/139.npz"
+    },
+    {
+      "index": 140,
+      "events": 10000,
+      "source_bytes": 517435,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/140.npz"
+    },
+    {
+      "index": 141,
+      "events": 10000,
+      "source_bytes": 525216,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/141.npz"
+    },
+    {
+      "index": 142,
+      "events": 10000,
+      "source_bytes": 513095,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/142.npz"
+    },
+    {
+      "index": 143,
+      "events": 10000,
+      "source_bytes": 524356,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/143.npz"
+    },
+    {
+      "index": 144,
+      "events": 10000,
+      "source_bytes": 520950,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/144.npz"
+    },
+    {
+      "index": 145,
+      "events": 10000,
+      "source_bytes": 519458,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/145.npz"
+    },
+    {
+      "index": 146,
+      "events": 10000,
+      "source_bytes": 517010,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/146.npz"
+    },
+    {
+      "index": 147,
+      "events": 10000,
+      "source_bytes": 506611,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/147.npz"
+    },
+    {
+      "index": 148,
+      "events": 10000,
+      "source_bytes": 524345,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/148.npz"
+    },
+    {
+      "index": 149,
+      "events": 10000,
+      "source_bytes": 519656,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/149.npz"
+    },
+    {
+      "index": 150,
+      "events": 10000,
+      "source_bytes": 518429,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/150.npz"
+    },
+    {
+      "index": 151,
+      "events": 10000,
+      "source_bytes": 515416,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/151.npz"
+    },
+    {
+      "index": 152,
+      "events": 10000,
+      "source_bytes": 510109,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/152.npz"
+    },
+    {
+      "index": 153,
+      "events": 10000,
+      "source_bytes": 508112,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/153.npz"
+    },
+    {
+      "index": 154,
+      "events": 10000,
+      "source_bytes": 504414,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/154.npz"
+    },
+    {
+      "index": 155,
+      "events": 10000,
+      "source_bytes": 509906,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/155.npz"
+    },
+    {
+      "index": 156,
+      "events": 10000,
+      "source_bytes": 521712,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/156.npz"
+    },
+    {
+      "index": 157,
+      "events": 10000,
+      "source_bytes": 523708,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/157.npz"
+    },
+    {
+      "index": 158,
+      "events": 10000,
+      "source_bytes": 520641,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/158.npz"
+    },
+    {
+      "index": 159,
+      "events": 10000,
+      "source_bytes": 521920,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/159.npz"
+    },
+    {
+      "index": 160,
+      "events": 10000,
+      "source_bytes": 519017,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/160.npz"
+    },
+    {
+      "index": 161,
+      "events": 10000,
+      "source_bytes": 517191,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/161.npz"
+    },
+    {
+      "index": 162,
+      "events": 10000,
+      "source_bytes": 518208,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/162.npz"
+    },
+    {
+      "index": 163,
+      "events": 10000,
+      "source_bytes": 517632,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/163.npz"
+    },
+    {
+      "index": 164,
+      "events": 10000,
+      "source_bytes": 523609,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/164.npz"
+    },
+    {
+      "index": 165,
+      "events": 10000,
+      "source_bytes": 513664,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/165.npz"
+    },
+    {
+      "index": 166,
+      "events": 10000,
+      "source_bytes": 519538,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/166.npz"
+    },
+    {
+      "index": 167,
+      "events": 10000,
+      "source_bytes": 531847,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/167.npz"
+    },
+    {
+      "index": 168,
+      "events": 10000,
+      "source_bytes": 521802,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/168.npz"
+    },
+    {
+      "index": 169,
+      "events": 10000,
+      "source_bytes": 524082,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/169.npz"
+    },
+    {
+      "index": 170,
+      "events": 10000,
+      "source_bytes": 510606,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/170.npz"
+    },
+    {
+      "index": 171,
+      "events": 10000,
+      "source_bytes": 534330,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/171.npz"
+    },
+    {
+      "index": 172,
+      "events": 10000,
+      "source_bytes": 517448,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/172.npz"
+    },
+    {
+      "index": 173,
+      "events": 10000,
+      "source_bytes": 518237,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/173.npz"
+    },
+    {
+      "index": 174,
+      "events": 10000,
+      "source_bytes": 526217,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/174.npz"
+    },
+    {
+      "index": 175,
+      "events": 10000,
+      "source_bytes": 520125,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/175.npz"
+    },
+    {
+      "index": 176,
+      "events": 2808,
+      "source_bytes": 156627,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/176.npz"
+    },
+    {
+      "index": 177,
+      "events": 10000,
+      "source_bytes": 425162,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/177.npz"
+    },
+    {
+      "index": 178,
+      "events": 10000,
+      "source_bytes": 421830,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/178.npz"
+    },
+    {
+      "index": 179,
+      "events": 10000,
+      "source_bytes": 413853,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/179.npz"
+    },
+    {
+      "index": 180,
+      "events": 10000,
+      "source_bytes": 421803,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/180.npz"
+    },
+    {
+      "index": 181,
+      "events": 10000,
+      "source_bytes": 411950,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/181.npz"
+    },
+    {
+      "index": 182,
+      "events": 10000,
+      "source_bytes": 422398,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/182.npz"
+    },
+    {
+      "index": 183,
+      "events": 10000,
+      "source_bytes": 404117,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/183.npz"
+    },
+    {
+      "index": 184,
+      "events": 10000,
+      "source_bytes": 422582,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/184.npz"
+    },
+    {
+      "index": 185,
+      "events": 10000,
+      "source_bytes": 420100,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/185.npz"
+    },
+    {
+      "index": 186,
+      "events": 10000,
+      "source_bytes": 419396,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/186.npz"
+    },
+    {
+      "index": 187,
+      "events": 10000,
+      "source_bytes": 408582,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/187.npz"
+    },
+    {
+      "index": 188,
+      "events": 10000,
+      "source_bytes": 423546,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/188.npz"
+    },
+    {
+      "index": 189,
+      "events": 10000,
+      "source_bytes": 424610,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/189.npz"
+    },
+    {
+      "index": 190,
+      "events": 10000,
+      "source_bytes": 425744,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/190.npz"
+    },
+    {
+      "index": 191,
+      "events": 10000,
+      "source_bytes": 416906,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/191.npz"
+    },
+    {
+      "index": 192,
+      "events": 10000,
+      "source_bytes": 415577,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/192.npz"
+    },
+    {
+      "index": 193,
+      "events": 10000,
+      "source_bytes": 409177,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/193.npz"
+    },
+    {
+      "index": 194,
+      "events": 10000,
+      "source_bytes": 408805,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/194.npz"
+    },
+    {
+      "index": 195,
+      "events": 947,
+      "source_bytes": 53017,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/195.npz"
+    },
+    {
+      "index": 196,
+      "events": 10000,
+      "source_bytes": 557709,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/196.npz"
+    },
+    {
+      "index": 197,
+      "events": 10000,
+      "source_bytes": 546582,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/197.npz"
+    },
+    {
+      "index": 198,
+      "events": 10000,
+      "source_bytes": 549826,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/198.npz"
+    },
+    {
+      "index": 199,
+      "events": 10000,
+      "source_bytes": 550149,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/199.npz"
+    },
+    {
+      "index": 200,
+      "events": 10000,
+      "source_bytes": 553026,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/200.npz"
+    },
+    {
+      "index": 201,
+      "events": 10000,
+      "source_bytes": 536297,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/201.npz"
+    },
+    {
+      "index": 202,
+      "events": 10000,
+      "source_bytes": 554470,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/202.npz"
+    },
+    {
+      "index": 203,
+      "events": 10000,
+      "source_bytes": 552430,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/203.npz"
+    },
+    {
+      "index": 204,
+      "events": 10000,
+      "source_bytes": 549100,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/204.npz"
+    },
+    {
+      "index": 205,
+      "events": 10000,
+      "source_bytes": 550216,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/205.npz"
+    },
+    {
+      "index": 206,
+      "events": 10000,
+      "source_bytes": 552113,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/206.npz"
+    },
+    {
+      "index": 207,
+      "events": 10000,
+      "source_bytes": 557632,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/207.npz"
+    },
+    {
+      "index": 208,
+      "events": 10000,
+      "source_bytes": 557236,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/208.npz"
+    },
+    {
+      "index": 209,
+      "events": 10000,
+      "source_bytes": 543762,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/209.npz"
+    },
+    {
+      "index": 210,
+      "events": 10000,
+      "source_bytes": 559128,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/210.npz"
+    },
+    {
+      "index": 211,
+      "events": 10000,
+      "source_bytes": 545786,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/211.npz"
+    },
+    {
+      "index": 212,
+      "events": 10000,
+      "source_bytes": 552058,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/212.npz"
+    },
+    {
+      "index": 213,
+      "events": 10000,
+      "source_bytes": 541021,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/213.npz"
+    },
+    {
+      "index": 214,
+      "events": 10000,
+      "source_bytes": 544738,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/214.npz"
+    },
+    {
+      "index": 215,
+      "events": 10000,
+      "source_bytes": 543362,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/215.npz"
+    },
+    {
+      "index": 216,
+      "events": 10000,
+      "source_bytes": 535864,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/216.npz"
+    },
+    {
+      "index": 217,
+      "events": 10000,
+      "source_bytes": 551704,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/217.npz"
+    },
+    {
+      "index": 218,
+      "events": 10000,
+      "source_bytes": 549784,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/218.npz"
+    },
+    {
+      "index": 219,
+      "events": 10000,
+      "source_bytes": 547118,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/219.npz"
+    },
+    {
+      "index": 220,
+      "events": 10000,
+      "source_bytes": 551466,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/220.npz"
+    },
+    {
+      "index": 221,
+      "events": 10000,
+      "source_bytes": 545059,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/221.npz"
+    },
+    {
+      "index": 222,
+      "events": 10000,
+      "source_bytes": 550015,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/222.npz"
+    },
+    {
+      "index": 223,
+      "events": 10000,
+      "source_bytes": 546673,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/223.npz"
+    },
+    {
+      "index": 224,
+      "events": 10000,
+      "source_bytes": 558999,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/224.npz"
+    },
+    {
+      "index": 225,
+      "events": 10000,
+      "source_bytes": 548763,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/225.npz"
+    },
+    {
+      "index": 226,
+      "events": 10000,
+      "source_bytes": 546704,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/226.npz"
+    },
+    {
+      "index": 227,
+      "events": 10000,
+      "source_bytes": 539805,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/227.npz"
+    },
+    {
+      "index": 228,
+      "events": 10000,
+      "source_bytes": 540804,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/228.npz"
+    },
+    {
+      "index": 229,
+      "events": 10000,
+      "source_bytes": 558994,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/229.npz"
+    },
+    {
+      "index": 230,
+      "events": 10000,
+      "source_bytes": 536536,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/230.npz"
+    },
+    {
+      "index": 231,
+      "events": 10000,
+      "source_bytes": 551042,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/231.npz"
+    },
+    {
+      "index": 232,
+      "events": 10000,
+      "source_bytes": 549302,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/232.npz"
+    },
+    {
+      "index": 233,
+      "events": 10000,
+      "source_bytes": 550794,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/233.npz"
+    },
+    {
+      "index": 234,
+      "events": 10000,
+      "source_bytes": 554973,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/234.npz"
+    },
+    {
+      "index": 235,
+      "events": 10000,
+      "source_bytes": 556899,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/235.npz"
+    },
+    {
+      "index": 236,
+      "events": 10000,
+      "source_bytes": 536659,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/236.npz"
+    },
+    {
+      "index": 237,
+      "events": 10000,
+      "source_bytes": 539921,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/237.npz"
+    },
+    {
+      "index": 238,
+      "events": 10000,
+      "source_bytes": 544304,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/238.npz"
+    },
+    {
+      "index": 239,
+      "events": 10000,
+      "source_bytes": 542043,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/239.npz"
+    },
+    {
+      "index": 240,
+      "events": 10000,
+      "source_bytes": 545907,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/240.npz"
+    },
+    {
+      "index": 241,
+      "events": 10000,
+      "source_bytes": 554834,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/241.npz"
+    },
+    {
+      "index": 242,
+      "events": 10000,
+      "source_bytes": 544930,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/242.npz"
+    },
+    {
+      "index": 243,
+      "events": 10000,
+      "source_bytes": 538280,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/243.npz"
+    },
+    {
+      "index": 244,
+      "events": 10000,
+      "source_bytes": 553943,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/244.npz"
+    },
+    {
+      "index": 245,
+      "events": 10000,
+      "source_bytes": 546018,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/245.npz"
+    },
+    {
+      "index": 246,
+      "events": 10000,
+      "source_bytes": 554394,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/246.npz"
+    },
+    {
+      "index": 247,
+      "events": 10000,
+      "source_bytes": 557266,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/247.npz"
+    },
+    {
+      "index": 248,
+      "events": 10000,
+      "source_bytes": 537804,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/248.npz"
+    },
+    {
+      "index": 249,
+      "events": 10000,
+      "source_bytes": 547309,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/249.npz"
+    },
+    {
+      "index": 250,
+      "events": 1884,
+      "source_bytes": 112585,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/250.npz"
+    },
+    {
+      "index": 251,
+      "events": 10000,
+      "source_bytes": 529245,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/251.npz"
+    },
+    {
+      "index": 252,
+      "events": 10000,
+      "source_bytes": 520853,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/252.npz"
+    },
+    {
+      "index": 253,
+      "events": 10000,
+      "source_bytes": 513514,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/253.npz"
+    },
+    {
+      "index": 254,
+      "events": 10000,
+      "source_bytes": 529334,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/254.npz"
+    },
+    {
+      "index": 255,
+      "events": 10000,
+      "source_bytes": 521424,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/255.npz"
+    },
+    {
+      "index": 256,
+      "events": 10000,
+      "source_bytes": 528986,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/256.npz"
+    },
+    {
+      "index": 257,
+      "events": 10000,
+      "source_bytes": 526738,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/257.npz"
+    },
+    {
+      "index": 258,
+      "events": 10000,
+      "source_bytes": 530423,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/258.npz"
+    },
+    {
+      "index": 259,
+      "events": 10000,
+      "source_bytes": 506687,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/259.npz"
+    },
+    {
+      "index": 260,
+      "events": 10000,
+      "source_bytes": 525322,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/260.npz"
+    },
+    {
+      "index": 261,
+      "events": 10000,
+      "source_bytes": 520332,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/261.npz"
+    },
+    {
+      "index": 262,
+      "events": 10000,
+      "source_bytes": 516500,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/262.npz"
+    },
+    {
+      "index": 263,
+      "events": 10000,
+      "source_bytes": 522274,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/263.npz"
+    },
+    {
+      "index": 264,
+      "events": 10000,
+      "source_bytes": 512617,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/264.npz"
+    },
+    {
+      "index": 265,
+      "events": 10000,
+      "source_bytes": 522783,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/265.npz"
+    },
+    {
+      "index": 266,
+      "events": 10000,
+      "source_bytes": 529861,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/266.npz"
+    },
+    {
+      "index": 267,
+      "events": 10000,
+      "source_bytes": 515302,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/267.npz"
+    },
+    {
+      "index": 268,
+      "events": 10000,
+      "source_bytes": 511614,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/268.npz"
+    },
+    {
+      "index": 269,
+      "events": 10000,
+      "source_bytes": 521902,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/269.npz"
+    },
+    {
+      "index": 270,
+      "events": 10000,
+      "source_bytes": 529435,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/270.npz"
+    },
+    {
+      "index": 271,
+      "events": 10000,
+      "source_bytes": 513600,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/271.npz"
+    },
+    {
+      "index": 272,
+      "events": 10000,
+      "source_bytes": 513398,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/272.npz"
+    },
+    {
+      "index": 273,
+      "events": 10000,
+      "source_bytes": 527110,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/273.npz"
+    },
+    {
+      "index": 274,
+      "events": 10000,
+      "source_bytes": 529030,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/274.npz"
+    },
+    {
+      "index": 275,
+      "events": 10000,
+      "source_bytes": 524346,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/275.npz"
+    },
+    {
+      "index": 276,
+      "events": 10000,
+      "source_bytes": 528784,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/276.npz"
+    },
+    {
+      "index": 277,
+      "events": 10000,
+      "source_bytes": 522855,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/277.npz"
+    },
+    {
+      "index": 278,
+      "events": 10000,
+      "source_bytes": 522756,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/278.npz"
+    },
+    {
+      "index": 279,
+      "events": 10000,
+      "source_bytes": 532315,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/279.npz"
+    },
+    {
+      "index": 280,
+      "events": 10000,
+      "source_bytes": 511151,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/280.npz"
+    },
+    {
+      "index": 281,
+      "events": 10000,
+      "source_bytes": 529944,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/281.npz"
+    },
+    {
+      "index": 282,
+      "events": 10000,
+      "source_bytes": 519920,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/282.npz"
+    },
+    {
+      "index": 283,
+      "events": 10000,
+      "source_bytes": 512376,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/283.npz"
+    },
+    {
+      "index": 284,
+      "events": 10000,
+      "source_bytes": 508305,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/284.npz"
+    },
+    {
+      "index": 285,
+      "events": 10000,
+      "source_bytes": 523164,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/285.npz"
+    },
+    {
+      "index": 286,
+      "events": 10000,
+      "source_bytes": 527006,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/286.npz"
+    },
+    {
+      "index": 287,
+      "events": 10000,
+      "source_bytes": 511251,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/287.npz"
+    },
+    {
+      "index": 288,
+      "events": 10000,
+      "source_bytes": 525178,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/288.npz"
+    },
+    {
+      "index": 289,
+      "events": 10000,
+      "source_bytes": 521626,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/289.npz"
+    },
+    {
+      "index": 290,
+      "events": 10000,
+      "source_bytes": 519476,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/290.npz"
+    },
+    {
+      "index": 291,
+      "events": 10000,
+      "source_bytes": 518351,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/291.npz"
+    },
+    {
+      "index": 292,
+      "events": 10000,
+      "source_bytes": 510020,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/292.npz"
+    },
+    {
+      "index": 293,
+      "events": 10000,
+      "source_bytes": 515714,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/293.npz"
+    },
+    {
+      "index": 294,
+      "events": 10000,
+      "source_bytes": 503466,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/294.npz"
+    },
+    {
+      "index": 295,
+      "events": 10000,
+      "source_bytes": 521643,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/295.npz"
+    },
+    {
+      "index": 296,
+      "events": 10000,
+      "source_bytes": 525368,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/296.npz"
+    },
+    {
+      "index": 297,
+      "events": 10000,
+      "source_bytes": 513231,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/297.npz"
+    },
+    {
+      "index": 298,
+      "events": 10000,
+      "source_bytes": 520748,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/298.npz"
+    },
+    {
+      "index": 299,
+      "events": 10000,
+      "source_bytes": 527054,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/299.npz"
+    },
+    {
+      "index": 300,
+      "events": 10000,
+      "source_bytes": 528904,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/300.npz"
+    },
+    {
+      "index": 301,
+      "events": 10000,
+      "source_bytes": 535767,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/301.npz"
+    },
+    {
+      "index": 302,
+      "events": 10000,
+      "source_bytes": 522171,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/302.npz"
+    },
+    {
+      "index": 303,
+      "events": 10000,
+      "source_bytes": 511757,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/303.npz"
+    },
+    {
+      "index": 304,
+      "events": 10000,
+      "source_bytes": 511689,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/304.npz"
+    },
+    {
+      "index": 305,
+      "events": 10000,
+      "source_bytes": 520276,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/305.npz"
+    },
+    {
+      "index": 306,
+      "events": 10000,
+      "source_bytes": 518661,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/306.npz"
+    },
+    {
+      "index": 307,
+      "events": 10000,
+      "source_bytes": 518239,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/307.npz"
+    },
+    {
+      "index": 308,
+      "events": 10000,
+      "source_bytes": 523800,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/308.npz"
+    },
+    {
+      "index": 309,
+      "events": 10000,
+      "source_bytes": 514385,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/309.npz"
+    },
+    {
+      "index": 310,
+      "events": 10000,
+      "source_bytes": 522077,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/310.npz"
+    },
+    {
+      "index": 311,
+      "events": 10000,
+      "source_bytes": 513869,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/311.npz"
+    },
+    {
+      "index": 312,
+      "events": 10000,
+      "source_bytes": 524943,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/312.npz"
+    },
+    {
+      "index": 313,
+      "events": 10000,
+      "source_bytes": 513164,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/313.npz"
+    },
+    {
+      "index": 314,
+      "events": 10000,
+      "source_bytes": 509191,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/314.npz"
+    },
+    {
+      "index": 315,
+      "events": 10000,
+      "source_bytes": 532928,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/315.npz"
+    },
+    {
+      "index": 316,
+      "events": 10000,
+      "source_bytes": 526525,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/316.npz"
+    },
+    {
+      "index": 317,
+      "events": 10000,
+      "source_bytes": 526561,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/317.npz"
+    },
+    {
+      "index": 318,
+      "events": 10000,
+      "source_bytes": 519381,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/318.npz"
+    },
+    {
+      "index": 319,
+      "events": 10000,
+      "source_bytes": 523963,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/319.npz"
+    },
+    {
+      "index": 320,
+      "events": 10000,
+      "source_bytes": 520104,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/320.npz"
+    },
+    {
+      "index": 321,
+      "events": 10000,
+      "source_bytes": 511247,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/321.npz"
+    },
+    {
+      "index": 322,
+      "events": 10000,
+      "source_bytes": 533225,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/322.npz"
+    },
+    {
+      "index": 323,
+      "events": 10000,
+      "source_bytes": 511447,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/323.npz"
+    },
+    {
+      "index": 324,
+      "events": 8614,
+      "source_bytes": 447387,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/324.npz"
+    },
+    {
+      "index": 325,
+      "events": 10000,
+      "source_bytes": 423656,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/325.npz"
+    },
+    {
+      "index": 326,
+      "events": 10000,
+      "source_bytes": 419561,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/326.npz"
+    },
+    {
+      "index": 327,
+      "events": 10000,
+      "source_bytes": 421045,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/327.npz"
+    },
+    {
+      "index": 328,
+      "events": 10000,
+      "source_bytes": 431329,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/328.npz"
+    },
+    {
+      "index": 329,
+      "events": 10000,
+      "source_bytes": 404021,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/329.npz"
+    },
+    {
+      "index": 330,
+      "events": 10000,
+      "source_bytes": 429879,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/330.npz"
+    },
+    {
+      "index": 331,
+      "events": 10000,
+      "source_bytes": 409983,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/331.npz"
+    },
+    {
+      "index": 332,
+      "events": 10000,
+      "source_bytes": 413680,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/332.npz"
+    },
+    {
+      "index": 333,
+      "events": 10000,
+      "source_bytes": 422984,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/333.npz"
+    },
+    {
+      "index": 334,
+      "events": 10000,
+      "source_bytes": 428605,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/334.npz"
+    },
+    {
+      "index": 335,
+      "events": 10000,
+      "source_bytes": 411734,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/335.npz"
+    },
+    {
+      "index": 336,
+      "events": 10000,
+      "source_bytes": 426634,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/336.npz"
+    },
+    {
+      "index": 337,
+      "events": 10000,
+      "source_bytes": 424720,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/337.npz"
+    },
+    {
+      "index": 338,
+      "events": 10000,
+      "source_bytes": 423637,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/338.npz"
+    },
+    {
+      "index": 339,
+      "events": 10000,
+      "source_bytes": 424918,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/339.npz"
+    },
+    {
+      "index": 340,
+      "events": 10000,
+      "source_bytes": 426782,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/340.npz"
+    },
+    {
+      "index": 341,
+      "events": 10000,
+      "source_bytes": 421694,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/341.npz"
+    },
+    {
+      "index": 342,
+      "events": 343,
+      "source_bytes": 27472,
+      "checked_key_count": 43,
+      "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/productionv2/342.npz"
+    }
+  ],
+  "removed": true,
+  "details": {
+    "events": 212,
+    "exact_json_readback": true,
+    "source_bytes": 23964233,
+    "combined_bytes": 3947302,
+    "sources": [
+      {
+        "run": 200080,
+        "event": 32276,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_32276.json",
+        "source_bytes": 73027
+      },
+      {
+        "run": 200080,
+        "event": 33925,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_33925.json",
+        "source_bytes": 46372
+      },
+      {
+        "run": 200080,
+        "event": 35703,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_35703.json",
+        "source_bytes": 47150
+      },
+      {
+        "run": 200080,
+        "event": 46304,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_46304.json",
+        "source_bytes": 47559
+      },
+      {
+        "run": 200080,
+        "event": 46887,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_46887.json",
+        "source_bytes": 391753
+      },
+      {
+        "run": 200080,
+        "event": 53372,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_53372.json",
+        "source_bytes": 208831
+      },
+      {
+        "run": 200080,
+        "event": 55175,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_55175.json",
+        "source_bytes": 51295
+      },
+      {
+        "run": 200080,
+        "event": 128524,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_128524.json",
+        "source_bytes": 152903
+      },
+      {
+        "run": 200080,
+        "event": 145839,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_145839.json",
+        "source_bytes": 45778
+      },
+      {
+        "run": 200080,
+        "event": 152670,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_152670.json",
+        "source_bytes": 49998
+      },
+      {
+        "run": 200080,
+        "event": 160048,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_160048.json",
+        "source_bytes": 87945
+      },
+      {
+        "run": 200080,
+        "event": 172407,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_172407.json",
+        "source_bytes": 51145
+      },
+      {
+        "run": 200080,
+        "event": 185954,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_185954.json",
+        "source_bytes": 47816
+      },
+      {
+        "run": 200080,
+        "event": 215159,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_215159.json",
+        "source_bytes": 119281
+      },
+      {
+        "run": 200080,
+        "event": 224760,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_224760.json",
+        "source_bytes": 219288
+      },
+      {
+        "run": 200080,
+        "event": 238539,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_238539.json",
+        "source_bytes": 46660
+      },
+      {
+        "run": 200080,
+        "event": 262380,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_262380.json",
+        "source_bytes": 46402
+      },
+      {
+        "run": 200080,
+        "event": 273992,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_273992.json",
+        "source_bytes": 87971
+      },
+      {
+        "run": 200080,
+        "event": 276322,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_276322.json",
+        "source_bytes": 45802
+      },
+      {
+        "run": 200080,
+        "event": 283011,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_283011.json",
+        "source_bytes": 170243
+      },
+      {
+        "run": 200080,
+        "event": 333545,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_333545.json",
+        "source_bytes": 81153
+      },
+      {
+        "run": 200080,
+        "event": 334392,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_334392.json",
+        "source_bytes": 53180
+      },
+      {
+        "run": 200080,
+        "event": 358775,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_358775.json",
+        "source_bytes": 50746
+      },
+      {
+        "run": 200080,
+        "event": 373200,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_373200.json",
+        "source_bytes": 47174
+      },
+      {
+        "run": 200080,
+        "event": 388619,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_388619.json",
+        "source_bytes": 197751
+      },
+      {
+        "run": 200080,
+        "event": 394733,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_394733.json",
+        "source_bytes": 46457
+      },
+      {
+        "run": 200080,
+        "event": 399346,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_399346.json",
+        "source_bytes": 783146
+      },
+      {
+        "run": 200080,
+        "event": 417693,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_417693.json",
+        "source_bytes": 44103
+      },
+      {
+        "run": 200080,
+        "event": 418861,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_418861.json",
+        "source_bytes": 46507
+      },
+      {
+        "run": 200080,
+        "event": 426140,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200080_426140.json",
+        "source_bytes": 141715
+      },
+      {
+        "run": 200082,
+        "event": 14116,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_14116.json",
+        "source_bytes": 61419
+      },
+      {
+        "run": 200082,
+        "event": 14374,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_14374.json",
+        "source_bytes": 45758
+      },
+      {
+        "run": 200082,
+        "event": 18354,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_18354.json",
+        "source_bytes": 46348
+      },
+      {
+        "run": 200082,
+        "event": 37340,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_37340.json",
+        "source_bytes": 44142
+      },
+      {
+        "run": 200082,
+        "event": 85529,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_85529.json",
+        "source_bytes": 57304
+      },
+      {
+        "run": 200082,
+        "event": 121540,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_121540.json",
+        "source_bytes": 275313
+      },
+      {
+        "run": 200082,
+        "event": 127418,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_127418.json",
+        "source_bytes": 46630
+      },
+      {
+        "run": 200082,
+        "event": 137210,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_137210.json",
+        "source_bytes": 48007
+      },
+      {
+        "run": 200082,
+        "event": 150557,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_150557.json",
+        "source_bytes": 57478
+      },
+      {
+        "run": 200082,
+        "event": 154771,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_154771.json",
+        "source_bytes": 48326
+      },
+      {
+        "run": 200082,
+        "event": 166679,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_166679.json",
+        "source_bytes": 44526
+      },
+      {
+        "run": 200082,
+        "event": 167547,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_167547.json",
+        "source_bytes": 57525
+      },
+      {
+        "run": 200082,
+        "event": 189476,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_189476.json",
+        "source_bytes": 44315
+      },
+      {
+        "run": 200082,
+        "event": 202742,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_202742.json",
+        "source_bytes": 47735
+      },
+      {
+        "run": 200082,
+        "event": 231952,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_231952.json",
+        "source_bytes": 46272
+      },
+      {
+        "run": 200082,
+        "event": 245914,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_245914.json",
+        "source_bytes": 46222
+      },
+      {
+        "run": 200082,
+        "event": 249109,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_249109.json",
+        "source_bytes": 46155
+      },
+      {
+        "run": 200082,
+        "event": 255115,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_255115.json",
+        "source_bytes": 169272
+      },
+      {
+        "run": 200082,
+        "event": 259865,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_259865.json",
+        "source_bytes": 56294
+      },
+      {
+        "run": 200082,
+        "event": 297558,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_297558.json",
+        "source_bytes": 52309
+      },
+      {
+        "run": 200082,
+        "event": 334373,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_334373.json",
+        "source_bytes": 44358
+      },
+      {
+        "run": 200082,
+        "event": 348750,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_348750.json",
+        "source_bytes": 69857
+      },
+      {
+        "run": 200082,
+        "event": 387839,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_387839.json",
+        "source_bytes": 46148
+      },
+      {
+        "run": 200082,
+        "event": 396791,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_396791.json",
+        "source_bytes": 55782
+      },
+      {
+        "run": 200082,
+        "event": 415070,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_415070.json",
+        "source_bytes": 84645
+      },
+      {
+        "run": 200082,
+        "event": 422207,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_422207.json",
+        "source_bytes": 103886
+      },
+      {
+        "run": 200082,
+        "event": 436239,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_436239.json",
+        "source_bytes": 47780
+      },
+      {
+        "run": 200082,
+        "event": 451190,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_451190.json",
+        "source_bytes": 46093
+      },
+      {
+        "run": 200082,
+        "event": 467549,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_467549.json",
+        "source_bytes": 46342
+      },
+      {
+        "run": 200082,
+        "event": 475148,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_475148.json",
+        "source_bytes": 43607
+      },
+      {
+        "run": 200082,
+        "event": 483306,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_483306.json",
+        "source_bytes": 64669
+      },
+      {
+        "run": 200082,
+        "event": 488250,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_488250.json",
+        "source_bytes": 46312
+      },
+      {
+        "run": 200082,
+        "event": 489920,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_489920.json",
+        "source_bytes": 45401
+      },
+      {
+        "run": 200082,
+        "event": 500306,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_500306.json",
+        "source_bytes": 54149
+      },
+      {
+        "run": 200082,
+        "event": 514917,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_514917.json",
+        "source_bytes": 47668
+      },
+      {
+        "run": 200082,
+        "event": 518259,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_518259.json",
+        "source_bytes": 45057
+      },
+      {
+        "run": 200082,
+        "event": 518332,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_518332.json",
+        "source_bytes": 69317
+      },
+      {
+        "run": 200082,
+        "event": 520156,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_520156.json",
+        "source_bytes": 46861
+      },
+      {
+        "run": 200082,
+        "event": 520320,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200082_520320.json",
+        "source_bytes": 64101
+      },
+      {
+        "run": 200083,
+        "event": 681,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_681.json",
+        "source_bytes": 291702
+      },
+      {
+        "run": 200083,
+        "event": 4392,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_4392.json",
+        "source_bytes": 101912
+      },
+      {
+        "run": 200083,
+        "event": 5843,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_5843.json",
+        "source_bytes": 48891
+      },
+      {
+        "run": 200083,
+        "event": 13343,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_13343.json",
+        "source_bytes": 97651
+      },
+      {
+        "run": 200083,
+        "event": 18704,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_18704.json",
+        "source_bytes": 45663
+      },
+      {
+        "run": 200083,
+        "event": 31093,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_31093.json",
+        "source_bytes": 164365
+      },
+      {
+        "run": 200083,
+        "event": 58111,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_58111.json",
+        "source_bytes": 45268
+      },
+      {
+        "run": 200083,
+        "event": 69152,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_69152.json",
+        "source_bytes": 46082
+      },
+      {
+        "run": 200083,
+        "event": 110323,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_110323.json",
+        "source_bytes": 242527
+      },
+      {
+        "run": 200083,
+        "event": 120411,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_120411.json",
+        "source_bytes": 48359
+      },
+      {
+        "run": 200083,
+        "event": 166865,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_166865.json",
+        "source_bytes": 46413
+      },
+      {
+        "run": 200083,
+        "event": 184298,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_184298.json",
+        "source_bytes": 45331
+      },
+      {
+        "run": 200083,
+        "event": 188905,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_188905.json",
+        "source_bytes": 165680
+      },
+      {
+        "run": 200083,
+        "event": 194149,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_194149.json",
+        "source_bytes": 46638
+      },
+      {
+        "run": 200083,
+        "event": 202402,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_202402.json",
+        "source_bytes": 69017
+      },
+      {
+        "run": 200083,
+        "event": 203389,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_203389.json",
+        "source_bytes": 46573
+      },
+      {
+        "run": 200083,
+        "event": 252205,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_252205.json",
+        "source_bytes": 158674
+      },
+      {
+        "run": 200083,
+        "event": 263854,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_263854.json",
+        "source_bytes": 42944
+      },
+      {
+        "run": 200083,
+        "event": 271859,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_271859.json",
+        "source_bytes": 54420
+      },
+      {
+        "run": 200083,
+        "event": 292734,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_292734.json",
+        "source_bytes": 47682
+      },
+      {
+        "run": 200083,
+        "event": 296435,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_296435.json",
+        "source_bytes": 45156
+      },
+      {
+        "run": 200083,
+        "event": 302954,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_302954.json",
+        "source_bytes": 46844
+      },
+      {
+        "run": 200083,
+        "event": 372285,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_372285.json",
+        "source_bytes": 329353
+      },
+      {
+        "run": 200083,
+        "event": 398217,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_398217.json",
+        "source_bytes": 752430
+      },
+      {
+        "run": 200083,
+        "event": 424236,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_424236.json",
+        "source_bytes": 45756
+      },
+      {
+        "run": 200083,
+        "event": 425765,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_425765.json",
+        "source_bytes": 62941
+      },
+      {
+        "run": 200083,
+        "event": 446012,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_446012.json",
+        "source_bytes": 60059
+      },
+      {
+        "run": 200083,
+        "event": 455141,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_455141.json",
+        "source_bytes": 46502
+      },
+      {
+        "run": 200083,
+        "event": 506861,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_506861.json",
+        "source_bytes": 60729
+      },
+      {
+        "run": 200083,
+        "event": 521167,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_521167.json",
+        "source_bytes": 46821
+      },
+      {
+        "run": 200083,
+        "event": 529532,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_529532.json",
+        "source_bytes": 123364
+      },
+      {
+        "run": 200083,
+        "event": 532909,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_532909.json",
+        "source_bytes": 61915
+      },
+      {
+        "run": 200083,
+        "event": 544373,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_544373.json",
+        "source_bytes": 207921
+      },
+      {
+        "run": 200083,
+        "event": 573557,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_573557.json",
+        "source_bytes": 106849
+      },
+      {
+        "run": 200083,
+        "event": 583601,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_583601.json",
+        "source_bytes": 121106
+      },
+      {
+        "run": 200083,
+        "event": 597179,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_597179.json",
+        "source_bytes": 52338
+      },
+      {
+        "run": 200083,
+        "event": 599765,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_599765.json",
+        "source_bytes": 48070
+      },
+      {
+        "run": 200083,
+        "event": 617054,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_617054.json",
+        "source_bytes": 110171
+      },
+      {
+        "run": 200083,
+        "event": 625201,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_625201.json",
+        "source_bytes": 48466
+      },
+      {
+        "run": 200083,
+        "event": 652909,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_652909.json",
+        "source_bytes": 49538
+      },
+      {
+        "run": 200083,
+        "event": 689894,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_689894.json",
+        "source_bytes": 274980
+      },
+      {
+        "run": 200083,
+        "event": 691713,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_691713.json",
+        "source_bytes": 136209
+      },
+      {
+        "run": 200083,
+        "event": 705999,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_705999.json",
+        "source_bytes": 49630
+      },
+      {
+        "run": 200083,
+        "event": 733069,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_733069.json",
+        "source_bytes": 47068
+      },
+      {
+        "run": 200083,
+        "event": 734900,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_734900.json",
+        "source_bytes": 125064
+      },
+      {
+        "run": 200083,
+        "event": 745007,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200083_745007.json",
+        "source_bytes": 93456
+      },
+      {
+        "run": 200089,
+        "event": 7310,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_7310.json",
+        "source_bytes": 45134
+      },
+      {
+        "run": 200089,
+        "event": 63154,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_63154.json",
+        "source_bytes": 48759
+      },
+      {
+        "run": 200089,
+        "event": 87470,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_87470.json",
+        "source_bytes": 45772
+      },
+      {
+        "run": 200089,
+        "event": 92698,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_92698.json",
+        "source_bytes": 317010
+      },
+      {
+        "run": 200089,
+        "event": 92910,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_92910.json",
+        "source_bytes": 130484
+      },
+      {
+        "run": 200089,
+        "event": 97562,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_97562.json",
+        "source_bytes": 109388
+      },
+      {
+        "run": 200089,
+        "event": 129105,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_129105.json",
+        "source_bytes": 45920
+      },
+      {
+        "run": 200089,
+        "event": 131946,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_131946.json",
+        "source_bytes": 47073
+      },
+      {
+        "run": 200089,
+        "event": 140607,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_140607.json",
+        "source_bytes": 150721
+      },
+      {
+        "run": 200089,
+        "event": 143827,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_143827.json",
+        "source_bytes": 44680
+      },
+      {
+        "run": 200089,
+        "event": 170435,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200089_170435.json",
+        "source_bytes": 533932
+      },
+      {
+        "run": 200093,
+        "event": 6531,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_6531.json",
+        "source_bytes": 48911
+      },
+      {
+        "run": 200093,
+        "event": 69642,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_69642.json",
+        "source_bytes": 47798
+      },
+      {
+        "run": 200093,
+        "event": 146376,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_146376.json",
+        "source_bytes": 53818
+      },
+      {
+        "run": 200093,
+        "event": 150492,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_150492.json",
+        "source_bytes": 47102
+      },
+      {
+        "run": 200093,
+        "event": 158956,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_158956.json",
+        "source_bytes": 788377
+      },
+      {
+        "run": 200093,
+        "event": 168269,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_168269.json",
+        "source_bytes": 45354
+      },
+      {
+        "run": 200093,
+        "event": 172163,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_172163.json",
+        "source_bytes": 191713
+      },
+      {
+        "run": 200093,
+        "event": 207507,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_207507.json",
+        "source_bytes": 45079
+      },
+      {
+        "run": 200093,
+        "event": 218506,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_218506.json",
+        "source_bytes": 232101
+      },
+      {
+        "run": 200093,
+        "event": 259344,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_259344.json",
+        "source_bytes": 46705
+      },
+      {
+        "run": 200093,
+        "event": 302155,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_302155.json",
+        "source_bytes": 91369
+      },
+      {
+        "run": 200093,
+        "event": 303060,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_303060.json",
+        "source_bytes": 46751
+      },
+      {
+        "run": 200093,
+        "event": 338039,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_338039.json",
+        "source_bytes": 48444
+      },
+      {
+        "run": 200093,
+        "event": 349236,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_349236.json",
+        "source_bytes": 258108
+      },
+      {
+        "run": 200093,
+        "event": 354928,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_354928.json",
+        "source_bytes": 46678
+      },
+      {
+        "run": 200093,
+        "event": 363330,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_363330.json",
+        "source_bytes": 339371
+      },
+      {
+        "run": 200093,
+        "event": 377537,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_377537.json",
+        "source_bytes": 47640
+      },
+      {
+        "run": 200093,
+        "event": 382392,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_382392.json",
+        "source_bytes": 51815
+      },
+      {
+        "run": 200093,
+        "event": 386752,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_386752.json",
+        "source_bytes": 46013
+      },
+      {
+        "run": 200093,
+        "event": 387431,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_387431.json",
+        "source_bytes": 106566
+      },
+      {
+        "run": 200093,
+        "event": 388940,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_388940.json",
+        "source_bytes": 46700
+      },
+      {
+        "run": 200093,
+        "event": 403969,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_403969.json",
+        "source_bytes": 47074
+      },
+      {
+        "run": 200093,
+        "event": 404862,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_404862.json",
+        "source_bytes": 45764
+      },
+      {
+        "run": 200093,
+        "event": 413321,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_413321.json",
+        "source_bytes": 47861
+      },
+      {
+        "run": 200093,
+        "event": 430259,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_430259.json",
+        "source_bytes": 47541
+      },
+      {
+        "run": 200093,
+        "event": 441485,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_441485.json",
+        "source_bytes": 47206
+      },
+      {
+        "run": 200093,
+        "event": 452110,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_452110.json",
+        "source_bytes": 48592
+      },
+      {
+        "run": 200093,
+        "event": 465257,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_465257.json",
+        "source_bytes": 45599
+      },
+      {
+        "run": 200093,
+        "event": 469001,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_469001.json",
+        "source_bytes": 75197
+      },
+      {
+        "run": 200093,
+        "event": 470554,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_470554.json",
+        "source_bytes": 475925
+      },
+      {
+        "run": 200093,
+        "event": 484559,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_484559.json",
+        "source_bytes": 46411
+      },
+      {
+        "run": 200093,
+        "event": 511488,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_511488.json",
+        "source_bytes": 46101
+      },
+      {
+        "run": 200093,
+        "event": 525489,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_525489.json",
+        "source_bytes": 53071
+      },
+      {
+        "run": 200093,
+        "event": 541642,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200093_541642.json",
+        "source_bytes": 138489
+      },
+      {
+        "run": 200094,
+        "event": 2598,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_2598.json",
+        "source_bytes": 44661
+      },
+      {
+        "run": 200094,
+        "event": 18215,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_18215.json",
+        "source_bytes": 47710
+      },
+      {
+        "run": 200094,
+        "event": 33566,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_33566.json",
+        "source_bytes": 44620
+      },
+      {
+        "run": 200094,
+        "event": 36244,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_36244.json",
+        "source_bytes": 50142
+      },
+      {
+        "run": 200094,
+        "event": 49141,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_49141.json",
+        "source_bytes": 50597
+      },
+      {
+        "run": 200094,
+        "event": 56318,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_56318.json",
+        "source_bytes": 49757
+      },
+      {
+        "run": 200094,
+        "event": 90242,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_90242.json",
+        "source_bytes": 773563
+      },
+      {
+        "run": 200094,
+        "event": 95906,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_95906.json",
+        "source_bytes": 102350
+      },
+      {
+        "run": 200094,
+        "event": 96211,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_96211.json",
+        "source_bytes": 695616
+      },
+      {
+        "run": 200094,
+        "event": 102545,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_102545.json",
+        "source_bytes": 44535
+      },
+      {
+        "run": 200094,
+        "event": 115944,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_115944.json",
+        "source_bytes": 46528
+      },
+      {
+        "run": 200094,
+        "event": 131105,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_131105.json",
+        "source_bytes": 47422
+      },
+      {
+        "run": 200094,
+        "event": 223588,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_223588.json",
+        "source_bytes": 45767
+      },
+      {
+        "run": 200094,
+        "event": 224031,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_224031.json",
+        "source_bytes": 55477
+      },
+      {
+        "run": 200094,
+        "event": 227512,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_227512.json",
+        "source_bytes": 45705
+      },
+      {
+        "run": 200094,
+        "event": 232242,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_232242.json",
+        "source_bytes": 228957
+      },
+      {
+        "run": 200094,
+        "event": 232940,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_232940.json",
+        "source_bytes": 50341
+      },
+      {
+        "run": 200094,
+        "event": 252438,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_252438.json",
+        "source_bytes": 113249
+      },
+      {
+        "run": 200094,
+        "event": 270113,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_270113.json",
+        "source_bytes": 537001
+      },
+      {
+        "run": 200094,
+        "event": 272935,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_272935.json",
+        "source_bytes": 73721
+      },
+      {
+        "run": 200094,
+        "event": 317308,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_317308.json",
+        "source_bytes": 50483
+      },
+      {
+        "run": 200094,
+        "event": 325106,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_325106.json",
+        "source_bytes": 45332
+      },
+      {
+        "run": 200094,
+        "event": 328524,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_328524.json",
+        "source_bytes": 79969
+      },
+      {
+        "run": 200094,
+        "event": 337505,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_337505.json",
+        "source_bytes": 376925
+      },
+      {
+        "run": 200094,
+        "event": 338818,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_338818.json",
+        "source_bytes": 65064
+      },
+      {
+        "run": 200094,
+        "event": 344800,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_344800.json",
+        "source_bytes": 143899
+      },
+      {
+        "run": 200094,
+        "event": 360071,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_360071.json",
+        "source_bytes": 874080
+      },
+      {
+        "run": 200094,
+        "event": 360827,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_360827.json",
+        "source_bytes": 83283
+      },
+      {
+        "run": 200094,
+        "event": 375489,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_375489.json",
+        "source_bytes": 89326
+      },
+      {
+        "run": 200094,
+        "event": 401649,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_401649.json",
+        "source_bytes": 42930
+      },
+      {
+        "run": 200094,
+        "event": 412783,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_412783.json",
+        "source_bytes": 53257
+      },
+      {
+        "run": 200094,
+        "event": 415146,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_415146.json",
+        "source_bytes": 55078
+      },
+      {
+        "run": 200094,
+        "event": 447471,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_447471.json",
+        "source_bytes": 93300
+      },
+      {
+        "run": 200094,
+        "event": 447651,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_447651.json",
+        "source_bytes": 45831
+      },
+      {
+        "run": 200094,
+        "event": 464159,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_464159.json",
+        "source_bytes": 78560
+      },
+      {
+        "run": 200094,
+        "event": 481897,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_481897.json",
+        "source_bytes": 101104
+      },
+      {
+        "run": 200094,
+        "event": 496466,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_496466.json",
+        "source_bytes": 203993
+      },
+      {
+        "run": 200094,
+        "event": 521630,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_521630.json",
+        "source_bytes": 237710
+      },
+      {
+        "run": 200094,
+        "event": 536070,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_536070.json",
+        "source_bytes": 46385
+      },
+      {
+        "run": 200094,
+        "event": 545965,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_545965.json",
+        "source_bytes": 45690
+      },
+      {
+        "run": 200094,
+        "event": 556459,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_556459.json",
+        "source_bytes": 45449
+      },
+      {
+        "run": 200094,
+        "event": 621900,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_621900.json",
+        "source_bytes": 42446
+      },
+      {
+        "run": 200094,
+        "event": 636977,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_636977.json",
+        "source_bytes": 52635
+      },
+      {
+        "run": 200094,
+        "event": 638706,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_638706.json",
+        "source_bytes": 245595
+      },
+      {
+        "run": 200094,
+        "event": 642214,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_642214.json",
+        "source_bytes": 118024
+      },
+      {
+        "run": 200094,
+        "event": 655999,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_655999.json",
+        "source_bytes": 108763
+      },
+      {
+        "run": 200094,
+        "event": 718124,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200094_718124.json",
+        "source_bytes": 86632
+      },
+      {
+        "run": 200100,
+        "event": 26430,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200100_26430.json",
+        "source_bytes": 77284
+      },
+      {
+        "run": 200100,
+        "event": 49072,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200100_49072.json",
+        "source_bytes": 671778
+      },
+      {
+        "run": 200100,
+        "event": 68044,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200100_68044.json",
+        "source_bytes": 47392
+      },
+      {
+        "run": 200100,
+        "event": 72393,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200100_72393.json",
+        "source_bytes": 149924
+      },
+      {
+        "run": 200100,
+        "event": 158205,
+        "source": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/details/200100_158205.json",
+        "source_bytes": 47214
+      }
+    ]
+  },
+  "removal_note": "After cluster9718040 exact readback and no stage201 jobs in queue; consolidated caches preserved."
+}

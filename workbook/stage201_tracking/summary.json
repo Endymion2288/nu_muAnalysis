@@ -1,0 +1,44 @@
+{
+  "files": 343,
+  "events": 3384987,
+  "truth": 384779,
+  "final": [
+    88233,
+    99351,
+    103056
+  ],
+  "raw_tracks": [
+    1425944,
+    1222084,
+    2107832
+  ],
+  "long_tracks": [
+    388775,
+    518361,
+    553333
+  ],
+  "nonfinite_raw_chi2": [
+    72,
+    1,
+    72
+  ],
+  "truth_matches_checked": [
+    383261,
+    486013,
+    519038
+  ],
+  "migration": {
+    "backward_removed_shared_hits": 100,
+    "backward_retained_other_leader": 26,
+    "merge_gain": 3835,
+    "no_merge_long_track": 4
+  },
+  "old89": {
+    "old_loss_events": 89,
+    "new_backward_pass": 45,
+    "new_merge_pass": 41,
+    "new_backward_only": 8,
+    "both_fail": 40
+  },
+  "report_wall_seconds": 716.3620736500015
+}

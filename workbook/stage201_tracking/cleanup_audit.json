@@ -1,0 +1,38 @@
+{
+  "validated_shards_removed": 555,
+  "validated_shard_bytes": 201560848,
+  "redundant_invalid_ndof_tsv_bytes": 232694210,
+  "retained_compact_bytes": 177482741,
+  "queue_stage201_empty": true,
+  "extracted_remote_archive_bytes_removed": {
+    "report.tar": 411648000,
+    "report_details.tar": 10700800,
+    "report_validation.tar": 317440
+  },
+  "temporary_readbacks_removed": [
+    {
+      "path": "/tmp/xcheng_stage201_pilot",
+      "bytes": 1220733600
+    },
+    {
+      "path": "/tmp/xcheng_stage201_summaries",
+      "bytes": 177596615
+    },
+    {
+      "path": "/tmp/xcheng_stage201_recovery53",
+      "bytes": 1828169
+    },
+    {
+      "path": "/tmp/xcheng_stage201_report.tar",
+      "bytes": 411648000
+    },
+    {
+      "path": "/tmp/xcheng_stage201_report_details.tar",
+      "bytes": 10700800
+    },
+    {
+      "path": "/tmp/xcheng_stage201_report_validation.tar",
+      "bytes": 317440
+    }
+  ]
+}

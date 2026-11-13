@@ -1,0 +1,447 @@
+{
+  "manifest_index": 53,
+  "range_convention": "[input_skip,input_skip+input_events)",
+  "original_same_input_failures": [
+    9717383,
+    9717416
+  ],
+  "recovery_cluster": 9717429,
+  "input_events": 10000,
+  "parts": [
+    {
+      "part": 0,
+      "input_skip": 0,
+      "input_events": 1000,
+      "input_first_event": 80000,
+      "input_last_event": 80999,
+      "events": 1000,
+      "truth": 143,
+      "final": [
+        33,
+        31,
+        33
+      ],
+      "raw_tracks": [
+        424,
+        353,
+        597
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9p20p5315.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.16 max_rss_kib=56740 user_seconds=0.02 system_seconds=0.08",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.38 max_rss_kib=5632 user_seconds=1.22 system_seconds=0.43",
+        "input": "input wall_seconds=3.57 max_rss_kib=79216 user_seconds=0.15 system_seconds=0.93",
+        "reco": "reco wall_seconds=115.10 max_rss_kib=1035948 user_seconds=107.58 system_seconds=3.66",
+        "forward": "forward wall_seconds=35.38 max_rss_kib=891864 user_seconds=30.17 system_seconds=2.72",
+        "backward": "backward wall_seconds=27.06 max_rss_kib=909496 user_seconds=22.97 system_seconds=2.21",
+        "merge": "merge wall_seconds=101.03 max_rss_kib=1952012 user_seconds=87.83 system_seconds=6.32",
+        "extract": "extract wall_seconds=27.93 max_rss_kib=730580 user_seconds=24.20 system_seconds=1.83"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 82926384,
+        "forward.root": 2895160,
+        "backward.root": 2918354,
+        "merge.root": 2926642
+      },
+      "summary_bytes": 66139
+    },
+    {
+      "part": 1,
+      "input_skip": 1000,
+      "input_events": 1000,
+      "input_first_event": 81000,
+      "input_last_event": 81999,
+      "events": 1000,
+      "truth": 129,
+      "final": [
+        23,
+        23,
+        25
+      ],
+      "raw_tracks": [
+        439,
+        389,
+        657
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9g23p0265.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.10 max_rss_kib=56832 user_seconds=0.02 system_seconds=0.07",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.22 max_rss_kib=6144 user_seconds=1.05 system_seconds=0.39",
+        "input": "input wall_seconds=1.75 max_rss_kib=79576 user_seconds=0.12 system_seconds=0.69",
+        "reco": "reco wall_seconds=96.93 max_rss_kib=1019048 user_seconds=92.48 system_seconds=2.06",
+        "forward": "forward wall_seconds=25.63 max_rss_kib=908568 user_seconds=21.57 system_seconds=1.89",
+        "backward": "backward wall_seconds=25.29 max_rss_kib=908168 user_seconds=21.96 system_seconds=1.74",
+        "merge": "merge wall_seconds=87.22 max_rss_kib=1955436 user_seconds=76.21 system_seconds=5.14",
+        "extract": "extract wall_seconds=20.30 max_rss_kib=737388 user_seconds=17.73 system_seconds=1.24"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 90170364,
+        "forward.root": 2905352,
+        "backward.root": 2935157,
+        "merge.root": 2951676
+      },
+      "summary_bytes": 68203
+    },
+    {
+      "part": 2,
+      "input_skip": 2000,
+      "input_events": 1000,
+      "input_first_event": 82000,
+      "input_last_event": 82999,
+      "events": 1000,
+      "truth": 129,
+      "final": [
+        32,
+        33,
+        35
+      ],
+      "raw_tracks": [
+        420,
+        362,
+        612
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9p17p6659.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.22 max_rss_kib=56608 user_seconds=0.03 system_seconds=0.08",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.42 max_rss_kib=6144 user_seconds=1.14 system_seconds=0.37",
+        "input": "input wall_seconds=2.21 max_rss_kib=80188 user_seconds=0.14 system_seconds=0.84",
+        "reco": "reco wall_seconds=121.23 max_rss_kib=1021292 user_seconds=114.71 system_seconds=3.13",
+        "forward": "forward wall_seconds=35.65 max_rss_kib=916344 user_seconds=30.68 system_seconds=2.52",
+        "backward": "backward wall_seconds=28.42 max_rss_kib=913632 user_seconds=24.55 system_seconds=2.14",
+        "merge": "merge wall_seconds=107.54 max_rss_kib=1966136 user_seconds=91.54 system_seconds=7.68",
+        "extract": "extract wall_seconds=33.73 max_rss_kib=736620 user_seconds=29.57 system_seconds=1.88"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 82350443,
+        "forward.root": 2868196,
+        "backward.root": 2888076,
+        "merge.root": 2898522
+      },
+      "summary_bytes": 65222
+    },
+    {
+      "part": 3,
+      "input_skip": 3000,
+      "input_events": 1000,
+      "input_first_event": 83000,
+      "input_last_event": 83999,
+      "events": 1000,
+      "truth": 129,
+      "final": [
+        22,
+        22,
+        25
+      ],
+      "raw_tracks": [
+        430,
+        361,
+        623
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9p29p9485.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.33 max_rss_kib=54876 user_seconds=0.03 system_seconds=0.11",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.95 max_rss_kib=5632 user_seconds=1.01 system_seconds=0.64",
+        "input": "input wall_seconds=5.99 max_rss_kib=79396 user_seconds=0.11 system_seconds=1.11",
+        "reco": "reco wall_seconds=147.73 max_rss_kib=1010632 user_seconds=105.26 system_seconds=4.71",
+        "forward": "forward wall_seconds=37.14 max_rss_kib=902476 user_seconds=25.10 system_seconds=3.83",
+        "backward": "backward wall_seconds=35.16 max_rss_kib=904160 user_seconds=24.10 system_seconds=3.62",
+        "merge": "merge wall_seconds=126.12 max_rss_kib=1952268 user_seconds=89.44 system_seconds=10.59",
+        "extract": "extract wall_seconds=28.83 max_rss_kib=733656 user_seconds=21.63 system_seconds=2.34"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 92920780,
+        "forward.root": 2850337,
+        "backward.root": 2861826,
+        "merge.root": 2878292
+      },
+      "summary_bytes": 66027
+    },
+    {
+      "part": 4,
+      "input_skip": 4000,
+      "input_events": 1000,
+      "input_first_event": 84000,
+      "input_last_event": 84999,
+      "events": 1000,
+      "truth": 132,
+      "final": [
+        27,
+        27,
+        27
+      ],
+      "raw_tracks": [
+        422,
+        358,
+        607
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9p28p3293.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.16 max_rss_kib=57116 user_seconds=0.02 system_seconds=0.11",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.72 max_rss_kib=5632 user_seconds=0.96 system_seconds=0.53",
+        "input": "input wall_seconds=4.03 max_rss_kib=80544 user_seconds=0.11 system_seconds=1.05",
+        "reco": "reco wall_seconds=85.72 max_rss_kib=1007012 user_seconds=75.62 system_seconds=3.99",
+        "forward": "forward wall_seconds=25.27 max_rss_kib=906620 user_seconds=19.29 system_seconds=3.04",
+        "backward": "backward wall_seconds=24.77 max_rss_kib=908780 user_seconds=19.67 system_seconds=2.78",
+        "merge": "merge wall_seconds=246.58 max_rss_kib=2092328 user_seconds=65.61 system_seconds=9.57",
+        "extract": "extract wall_seconds=21.17 max_rss_kib=734556 user_seconds=16.19 system_seconds=2.18"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 91356868,
+        "forward.root": 2824715,
+        "backward.root": 2847269,
+        "merge.root": 2855582
+      },
+      "summary_bytes": 65788
+    },
+    {
+      "part": 5,
+      "input_skip": 5000,
+      "input_events": 1000,
+      "input_first_event": 85000,
+      "input_last_event": 85999,
+      "events": 1000,
+      "truth": 113,
+      "final": [
+        22,
+        27,
+        26
+      ],
+      "raw_tracks": [
+        439,
+        370,
+        628
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9p26p4943.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.17 max_rss_kib=56452 user_seconds=0.02 system_seconds=0.11",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.54 max_rss_kib=5632 user_seconds=0.99 system_seconds=0.58",
+        "input": "input wall_seconds=4.88 max_rss_kib=87132 user_seconds=0.10 system_seconds=1.19",
+        "reco": "reco wall_seconds=100.51 max_rss_kib=1031684 user_seconds=87.97 system_seconds=4.68",
+        "forward": "forward wall_seconds=30.04 max_rss_kib=899076 user_seconds=22.95 system_seconds=3.39",
+        "backward": "backward wall_seconds=28.03 max_rss_kib=907900 user_seconds=22.00 system_seconds=3.04",
+        "merge": "merge wall_seconds=265.24 max_rss_kib=1907004 user_seconds=69.01 system_seconds=10.20",
+        "extract": "extract wall_seconds=25.40 max_rss_kib=734208 user_seconds=20.04 system_seconds=2.50"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 84418985,
+        "forward.root": 2845277,
+        "backward.root": 2875301,
+        "merge.root": 2879187
+      },
+      "summary_bytes": 66862
+    },
+    {
+      "part": 6,
+      "input_skip": 6000,
+      "input_events": 1000,
+      "input_first_event": 86000,
+      "input_last_event": 86999,
+      "events": 1000,
+      "truth": 140,
+      "final": [
+        32,
+        30,
+        34
+      ],
+      "raw_tracks": [
+        446,
+        396,
+        668
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9g23p4856.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.11 max_rss_kib=56832 user_seconds=0.02 system_seconds=0.09",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.46 max_rss_kib=5632 user_seconds=1.31 system_seconds=0.39",
+        "input": "input wall_seconds=0.96 max_rss_kib=78632 user_seconds=0.13 system_seconds=0.84",
+        "reco": "reco wall_seconds=119.38 max_rss_kib=1016132 user_seconds=109.44 system_seconds=2.99",
+        "forward": "forward wall_seconds=31.19 max_rss_kib=902400 user_seconds=26.78 system_seconds=2.23",
+        "backward": "backward wall_seconds=30.90 max_rss_kib=904192 user_seconds=26.62 system_seconds=2.20",
+        "merge": "merge wall_seconds=119.67 max_rss_kib=1943116 user_seconds=96.20 system_seconds=8.30",
+        "extract": "extract wall_seconds=27.22 max_rss_kib=735588 user_seconds=22.58 system_seconds=1.72"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 97267276,
+        "forward.root": 2852630,
+        "backward.root": 2878288,
+        "merge.root": 2890686
+      },
+      "summary_bytes": 69711
+    },
+    {
+      "part": 7,
+      "input_skip": 7000,
+      "input_events": 1000,
+      "input_first_event": 87000,
+      "input_last_event": 87999,
+      "events": 1000,
+      "truth": 121,
+      "final": [
+        25,
+        27,
+        28
+      ],
+      "raw_tracks": [
+        441,
+        375,
+        636
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9g23p6341.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.12 max_rss_kib=55808 user_seconds=0.02 system_seconds=0.10",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.65 max_rss_kib=6144 user_seconds=1.54 system_seconds=0.44",
+        "input": "input wall_seconds=0.75 max_rss_kib=78444 user_seconds=0.12 system_seconds=0.95",
+        "reco": "reco wall_seconds=129.11 max_rss_kib=1028688 user_seconds=120.90 system_seconds=3.19",
+        "forward": "forward wall_seconds=28.96 max_rss_kib=902864 user_seconds=24.36 system_seconds=2.41",
+        "backward": "backward wall_seconds=36.64 max_rss_kib=902820 user_seconds=32.07 system_seconds=2.59",
+        "merge": "merge wall_seconds=138.39 max_rss_kib=1951408 user_seconds=115.41 system_seconds=8.11",
+        "extract": "extract wall_seconds=25.66 max_rss_kib=728928 user_seconds=21.07 system_seconds=1.75"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 84232995,
+        "forward.root": 2950582,
+        "backward.root": 2981157,
+        "merge.root": 2998214
+      },
+      "summary_bytes": 66973
+    },
+    {
+      "part": 8,
+      "input_skip": 8000,
+      "input_events": 1000,
+      "input_first_event": 88000,
+      "input_last_event": 88999,
+      "events": 1000,
+      "truth": 130,
+      "final": [
+        31,
+        32,
+        32
+      ],
+      "raw_tracks": [
+        457,
+        408,
+        666
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9g03p2079.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.24 max_rss_kib=56320 user_seconds=0.02 system_seconds=0.13",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.89 max_rss_kib=6144 user_seconds=1.47 system_seconds=0.51",
+        "input": "input wall_seconds=2.36 max_rss_kib=80008 user_seconds=0.16 system_seconds=1.07",
+        "reco": "reco wall_seconds=128.96 max_rss_kib=991304 user_seconds=118.16 system_seconds=3.96",
+        "forward": "forward wall_seconds=40.08 max_rss_kib=889532 user_seconds=34.46 system_seconds=2.87",
+        "backward": "backward wall_seconds=35.99 max_rss_kib=886928 user_seconds=30.52 system_seconds=3.04",
+        "merge": "merge wall_seconds=149.18 max_rss_kib=1916936 user_seconds=118.28 system_seconds=9.15",
+        "extract": "extract wall_seconds=31.15 max_rss_kib=732816 user_seconds=25.63 system_seconds=1.97"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 85366259,
+        "forward.root": 2993222,
+        "backward.root": 3016332,
+        "merge.root": 3027519
+      },
+      "summary_bytes": 70755
+    },
+    {
+      "part": 9,
+      "input_skip": 9000,
+      "input_events": 1000,
+      "input_first_event": 89000,
+      "input_last_event": 89999,
+      "events": 1000,
+      "truth": 128,
+      "final": [
+        22,
+        22,
+        24
+      ],
+      "raw_tracks": [
+        414,
+        361,
+        604
+      ],
+      "nonfinite_raw_chi2": [
+        0,
+        0,
+        0
+      ],
+      "host": "b9p14p1999.cern.ch",
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.15 max_rss_kib=56176 user_seconds=0.03 system_seconds=0.09",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.50 max_rss_kib=5632 user_seconds=1.36 system_seconds=0.44",
+        "input": "input wall_seconds=4.00 max_rss_kib=78648 user_seconds=0.15 system_seconds=0.90",
+        "reco": "reco wall_seconds=119.04 max_rss_kib=1041372 user_seconds=109.42 system_seconds=3.16",
+        "forward": "forward wall_seconds=30.28 max_rss_kib=905484 user_seconds=25.16 system_seconds=2.61",
+        "backward": "backward wall_seconds=31.42 max_rss_kib=912812 user_seconds=27.01 system_seconds=2.34",
+        "merge": "merge wall_seconds=246.70 max_rss_kib=1989820 user_seconds=114.28 system_seconds=9.61",
+        "extract": "extract wall_seconds=34.12 max_rss_kib=735652 user_seconds=29.42 system_seconds=1.88"
+      },
+      "root_file_bytes": {
+        "input-RDO.root": 463394299,
+        "input-xAOD.root": 84382448,
+        "forward.root": 2851493,
+        "backward.root": 2885615,
+        "merge.root": 2895178
+      },
+      "summary_bytes": 64195
+    }
+  ],
+  "output_bytes": 546133,
+  "input_rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00080-00089-s0014-RDO.root",
+  "input_event_ids_unique": true,
+  "validation": "all disjoint slices complete; same software/config; no event discarded; exact NPZ readback",
+  "eos_uploaded_readback_all_arrays_equal": true
+}

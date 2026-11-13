@@ -5,6 +5,8 @@ index="$1"
 rdo="$2"
 nevents="${3:--1}"
 result="$4"
+skip="${5:-0}"
+debug="${6:-0}"
 tracking_scratch=$(mktemp -d "${_CONDOR_SCRATCH_DIR:-/tmp}/nu_mu_geo201.XXXXXX")
 trap 'rm -rf "$tracking_scratch"' EXIT
 tracking_launch="$PWD"
@@ -19,7 +21,18 @@ stage() {
         cat "$name.time"
     else
         cat "$name.time"
+        if command -v rg >/dev/null; then
+            rg -a -m 60 'ERROR|FATAL|[Ss]ignal|[Ss]egmentation|^#0 |^#1 |^#2 ' "$name.log" || true
+        else
+            grep -a -m 60 -E 'ERROR|FATAL|[Ss]ignal|[Ss]egmentation|^#0 |^#1 |^#2 ' "$name.log" || true
+        fi
+        if [[ -f eventLoopHeartBeat.txt ]]; then tail -n 4 eventLoopHeartBeat.txt; fi
         tail -n 90 "$name.log"
+        gzip -c "$name.log" > failure.log.gz
+        xrdcp --silent --force failure.log.gz "root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/failure_${index}_${skip}_${name}.log.gz" || true
+        if [[ "$debug" == 1 && -f input-xAOD.root ]]; then
+            xrdcp --silent --force input-xAOD.root "root://eoshome-x.cern.ch//eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_georotation_stage201/failure_${index}_${skip}_xAOD.root" || true
+        fi
         return 1
     fi
 }
@@ -32,10 +45,14 @@ source "$tracking_scratch/code/setup_env.sh"
 nu_mu_calypso_setup
 export ROOT_INCLUDE_PATH="$FASER_CALYPSO_RUN/include:${ROOT_INCLUDE_PATH:-}"
 stage input xrdcp --silent "root://eospublic.cern.ch/$rdo" input-RDO.root
-stage reco python "$tracking_scratch/code/AnalysisZipFramework/scripts/run_tracking_georotation.py" reco input-RDO.root --nevents "$nevents"
+stage reco python "$tracking_scratch/code/AnalysisZipFramework/scripts/run_tracking_georotation.py" reco input-RDO.root --nevents "$nevents" --skip "$skip"
 for mode in forward backward; do
-    stage "$mode" faser_ntuple_maker.py --isMC --geom TI12MC04 --cond OFLCOND-FASER-06 --CKFTrackType "$mode" \
-        --nevents "$nevents" --outfile "$mode.root" input-xAOD.root
+    if [[ "$debug" == 1 ]]; then
+        stage "$mode" python "$tracking_scratch/code/AnalysisZipFramework/scripts/run_tracking_georotation.py" "$mode" input-xAOD.root --nevents "$nevents" --event-log
+    else
+        stage "$mode" faser_ntuple_maker.py --isMC --geom TI12MC04 --cond OFLCOND-FASER-06 --CKFTrackType "$mode" \
+            --nevents "$nevents" --outfile "$mode.root" input-xAOD.root
+    fi
 done
 stage merge python "$tracking_scratch/code/AnalysisZipFramework/scripts/run_tracking_georotation.py" merge input-xAOD.root --nevents "$nevents"
 stage extract python "$tracking_scratch/code/AnalysisZipFramework/scripts/extract_tracking_georotation.py" \
@@ -55,4 +72,3 @@ np.savez_compressed('result.npz', **result)
 PY
 stage upload xrdcp --silent --force result.npz "root://eoshome-x.cern.ch/$result"
 echo "completed index=$index nevents=$nevents result=$result"
-

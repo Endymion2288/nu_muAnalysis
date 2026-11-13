@@ -158,7 +158,7 @@ def make_viewer(events, rows, template, output):
     output.write_text(template.read_text().replace('__EVENT_DATA__', serialized))
 
 
-def draw_event(event, row, output):
+def draw_event(event, row, output, ift_z=-1590):
     fig, axes = plt.subplots(2, 3, figsize=(17, 8), sharex=True, sharey='row')
     for col, mode in enumerate(MODES):
         part = event['modes'][mode]; raw = part['raw']; lead = int(part['scalars']['LeadTrack_Idx'])
@@ -178,7 +178,7 @@ def draw_event(event, row, output):
                 # Mark extrapolated coordinates separately; connecting them linearly would fake a field fit.
                 value = raw['Track_'+('X' if k == 0 else 'Y')+'_atVetoStation2'][i]
                 if abs(value) < 1000:
-                    ax.scatter([-1590], [value], marker='x', s=40, color=COLORS[mode])
+                    ax.scatter([ift_z], [value], marker='x', s=40, color=COLORS[mode])
             accepted = {measurement_index(event, mode, i) for i in range(len(raw['Track_pz0']))}
             for j, track in enumerate(event['measurements'][mode]):
                 if j not in accepted and track['states']:
@@ -187,7 +187,7 @@ def draw_event(event, row, output):
                             label=f'candidate {j} (not long)')
             ax.set_ylabel(f'{coordinate} (mm)'); ax.grid(alpha=.2)
             ax.set_xlim(-1800, 2500); ax.set_ylim(-125, 125)
-            ax.axvline(-1590, ls=':', color='grey')
+            ax.axvline(ift_z, ls=':', color='grey')
             if k == 0:
                 s = part['scalars']
                 ax.set_title(f'{mode}: Nlong={int(s["longTracks"])}; pz={s["LeadTrack_pz0"]:.2f} GeV\n'

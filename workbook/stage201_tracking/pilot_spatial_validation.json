@@ -1,0 +1,236 @@
+{
+  "input": "/tmp/xcheng_stage201_pilot/details/result.json",
+  "native_production_reference": "/tmp/xcheng_stage201_pilot/pilot.npz",
+  "full_raw_candidate_comparison": "passed",
+  "normalized_official_truth_momentum_check_long_tracks": 3,
+  "spatial_example": {
+    "run": 200100,
+    "event": 170137,
+    "first_failed_cut": "pilot_both_pass",
+    "mechanism": "pilot",
+    "merge_long": true,
+    "primary_reference_unique": true,
+    "backward_matched_primary": true,
+    "backward_neutrino_parent": true,
+    "backward_purity": 1.0,
+    "backward_matched_pdg": -13,
+    "backward_matched_barcode": 5,
+    "backward_truth_pz_gev": 1949.9345,
+    "backward_pz_gev": 899.3821875,
+    "backward_abs_pz_relative": 0.5387628725477702,
+    "backward_abs_p_relative": 0.5387628842362661,
+    "backward_abs_qop_error": 3.168082241916204,
+    "backward_charge_flip": 1,
+    "backward_st1_xy_mm": 0.395494926618122,
+    "backward_st1_radius_mm": 0.3455565346633378,
+    "backward_st1_slope_mrad": 0.3654178496775471,
+    "backward_st2_xy_mm": 0.00914654478741318,
+    "backward_st2_radius_mm": 0.008464301685293663,
+    "backward_st2_slope_mrad": 0.36074526560737136,
+    "backward_st3_xy_mm": 0.1413288668654614,
+    "backward_st3_radius_mm": 0.13228674874514468,
+    "backward_st3_slope_mrad": 0.1793852296630636,
+    "merge_matched_primary": true,
+    "merge_neutrino_parent": true,
+    "merge_purity": 1.0,
+    "merge_matched_pdg": -13,
+    "merge_matched_barcode": 5,
+    "merge_truth_pz_gev": 1949.9345,
+    "merge_pz_gev": 765.3690625,
+    "merge_abs_pz_relative": 0.6074898605568546,
+    "merge_abs_p_relative": 0.6074898705938623,
+    "merge_abs_qop_error": 3.5477049509855605,
+    "merge_charge_flip": 1,
+    "merge_st1_xy_mm": 0.42204937527079367,
+    "merge_st1_radius_mm": 0.3691344967951302,
+    "merge_st1_slope_mrad": 0.40242961769702656,
+    "merge_st2_xy_mm": 0.01989142682443473,
+    "merge_st2_radius_mm": 0.019744292689658494,
+    "merge_st2_slope_mrad": 0.39652339594854746,
+    "merge_st3_xy_mm": 0.1408012027569854,
+    "merge_st3_radius_mm": 0.1318123966851772,
+    "merge_st3_slope_mrad": 0.18622065676770067,
+    "merge_source_mode": "forward",
+    "both_primary": true,
+    "both_primary_purity08": true
+  },
+  "full343_merge_diagnostics_wall_s": 103.62,
+  "full343_merge_diagnostics_max_rss_kib": 2002216,
+  "condor_pilot_cluster": 9717423,
+  "condor_pilot_event": "200080/46887",
+  "condor_pilot_exit": 0,
+  "condor_pilot_full_raw_candidates": "exact match to production",
+  "report_pilot_wall_s": 3.016829683445394,
+  "all343_detector_coordinate_columns": {
+    "SpacePoint_x": {
+      "entries": 261685,
+      "finite_entries": 261685,
+      "equal_in_original_frame": true
+    },
+    "SpacePoint_y": {
+      "entries": 261685,
+      "finite_entries": 261685,
+      "equal_in_original_frame": true
+    },
+    "SpacePoint_z": {
+      "entries": 261685,
+      "finite_entries": 261685,
+      "equal_in_original_frame": true
+    },
+    "truth_st0_x": {
+      "entries": 3430,
+      "finite_entries": 28,
+      "equal_in_original_frame": true
+    },
+    "truth_st0_y": {
+      "entries": 3430,
+      "finite_entries": 28,
+      "equal_in_original_frame": true
+    },
+    "truth_st0_z": {
+      "entries": 3430,
+      "finite_entries": 28,
+      "equal_in_original_frame": true
+    },
+    "truth_st1_x": {
+      "entries": 3430,
+      "finite_entries": 36,
+      "equal_in_original_frame": true
+    },
+    "truth_st1_y": {
+      "entries": 3430,
+      "finite_entries": 36,
+      "equal_in_original_frame": true
+    },
+    "truth_st1_z": {
+      "entries": 3430,
+      "finite_entries": 36,
+      "equal_in_original_frame": true
+    },
+    "truth_st2_x": {
+      "entries": 3430,
+      "finite_entries": 38,
+      "equal_in_original_frame": true
+    },
+    "truth_st2_y": {
+      "entries": 3430,
+      "finite_entries": 38,
+      "equal_in_original_frame": true
+    },
+    "truth_st2_z": {
+      "entries": 3430,
+      "finite_entries": 38,
+      "equal_in_original_frame": true
+    },
+    "truth_st3_x": {
+      "entries": 3430,
+      "finite_entries": 50,
+      "equal_in_original_frame": true
+    },
+    "truth_st3_y": {
+      "entries": 3430,
+      "finite_entries": 50,
+      "equal_in_original_frame": true
+    },
+    "truth_st3_z": {
+      "entries": 3430,
+      "finite_entries": 50,
+      "equal_in_original_frame": true
+    },
+    "truth_st0_px": {
+      "entries": 3430,
+      "finite_entries": 28,
+      "equal_in_original_frame": true
+    },
+    "truth_st0_py": {
+      "entries": 3430,
+      "finite_entries": 28,
+      "equal_in_original_frame": true
+    },
+    "truth_st0_pz": {
+      "entries": 3430,
+      "finite_entries": 28,
+      "equal_in_original_frame": true
+    },
+    "truth_st1_px": {
+      "entries": 3430,
+      "finite_entries": 36,
+      "equal_in_original_frame": true
+    },
+    "truth_st1_py": {
+      "entries": 3430,
+      "finite_entries": 36,
+      "equal_in_original_frame": true
+    },
+    "truth_st1_pz": {
+      "entries": 3430,
+      "finite_entries": 36,
+      "equal_in_original_frame": true
+    },
+    "truth_st2_px": {
+      "entries": 3430,
+      "finite_entries": 38,
+      "equal_in_original_frame": true
+    },
+    "truth_st2_py": {
+      "entries": 3430,
+      "finite_entries": 38,
+      "equal_in_original_frame": true
+    },
+    "truth_st2_pz": {
+      "entries": 3430,
+      "finite_entries": 38,
+      "equal_in_original_frame": true
+    },
+    "truth_st3_px": {
+      "entries": 3430,
+      "finite_entries": 50,
+      "equal_in_original_frame": true
+    },
+    "truth_st3_py": {
+      "entries": 3430,
+      "finite_entries": 50,
+      "equal_in_original_frame": true
+    },
+    "truth_st3_pz": {
+      "entries": 3430,
+      "finite_entries": 50,
+      "equal_in_original_frame": true
+    }
+  },
+  "mixed15_event_report": {
+    "targets": 15,
+    "backward_only": 7,
+    "official_long_tracks_checked": 61,
+    "historical89": 8,
+    "old_nan": 0,
+    "mechanisms": {
+      "backward_leader_removed_by_merge": 5,
+      "backward_leader_retained_but_not_leading": 2
+    },
+    "blocking_priority": {
+      "more_measurements": 4,
+      "not_removed": 2,
+      "same_measurements_lower_chi2": 1
+    },
+    "nonlong_blockers": 0,
+    "primary_reference_nonunique": 0,
+    "same_primary_long": 5,
+    "same_primary_nonlong": 0,
+    "wall_seconds": 6.480776310898364,
+    "peak_rss_mib": 192.87890625,
+    "validation": "candidate source priority, primary muon matching, station position/direction residuals and event plot inspected"
+  },
+  "combined_cache_report_reproduction": {
+    "files": 5,
+    "events": 31127,
+    "truth": 4007,
+    "final": [
+      833,
+      917,
+      955
+    ],
+    "wall_s": 11.284327103756368,
+    "result": "same outputs from three combined caches; LCG109 plotting environment"
+  }
+}

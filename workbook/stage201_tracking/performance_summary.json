@@ -1,0 +1,83 @@
+{
+  "runtime_copy": {
+    "sum_wall_s": 110.55000000000003,
+    "median_wall_s": 0.21,
+    "min_wall_s": 0.1,
+    "max_wall_s": 2.17,
+    "cpu_s": 59.95000000000006,
+    "peak_rss_kib": 57700.0,
+    "throughput_events_per_wall_s": 30619.51153324287
+  },
+  "runtime_unpack": {
+    "sum_wall_s": 516.9100000000002,
+    "median_wall_s": 1.44,
+    "min_wall_s": 0.98,
+    "max_wall_s": 15.73,
+    "cpu_s": 571.2699999999996,
+    "peak_rss_kib": 6400.0,
+    "throughput_events_per_wall_s": 6548.503607978176
+  },
+  "input": {
+    "sum_wall_s": 1778.0399999999995,
+    "median_wall_s": 4.7,
+    "min_wall_s": 0.42,
+    "max_wall_s": 30.5,
+    "cpu_s": 726.7299999999998,
+    "peak_rss_kib": 87592.0,
+    "throughput_events_per_wall_s": 1903.7743807788356
+  },
+  "reco": {
+    "sum_wall_s": 539153.9100000003,
+    "median_wall_s": 1534.01,
+    "min_wall_s": 79.29,
+    "max_wall_s": 3842.79,
+    "cpu_s": 529031.9400000003,
+    "peak_rss_kib": 1540224.0,
+    "throughput_events_per_wall_s": 6.278331543584648
+  },
+  "forward": {
+    "sum_wall_s": 108991.16999999998,
+    "median_wall_s": 329.3,
+    "min_wall_s": 22.92,
+    "max_wall_s": 614.25,
+    "cpu_s": 106090.74999999993,
+    "peak_rss_kib": 1114300.0,
+    "throughput_events_per_wall_s": 31.05744254328126
+  },
+  "backward": {
+    "sum_wall_s": 110208.51999999992,
+    "median_wall_s": 330.28,
+    "min_wall_s": 18.52,
+    "max_wall_s": 623.16,
+    "cpu_s": 107304.72000000006,
+    "peak_rss_kib": 1108636.0,
+    "throughput_events_per_wall_s": 30.714385784329583
+  },
+  "merge": {
+    "sum_wall_s": 155374.97999999992,
+    "median_wall_s": 454.14,
+    "min_wall_s": 88.7,
+    "max_wall_s": 1587.67,
+    "cpu_s": 141568.8800000001,
+    "peak_rss_kib": 2348840.0,
+    "throughput_events_per_wall_s": 21.78592074476857
+  },
+  "extract": {
+    "sum_wall_s": 18866.519999999997,
+    "median_wall_s": 52.1,
+    "min_wall_s": 19.8,
+    "max_wall_s": 275.51,
+    "cpu_s": 17430.25999999999,
+    "peak_rss_kib": 794304.0,
+    "throughput_events_per_wall_s": 179.41766685112043
+  },
+  "bytes": {
+    "output_bytes": 177596615,
+    "temporary_root_bytes_total": 883020574275,
+    "input_RDO_bytes": 295078975093,
+    "input_xAOD_bytes": 546687239941,
+    "forward_bytes": 13660566399,
+    "backward_bytes": 13779119579,
+    "merge_bytes": 13814673263
+  }
+}
