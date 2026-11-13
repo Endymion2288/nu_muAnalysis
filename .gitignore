@@ -311,3 +311,8 @@ workbook/stage199_energy_ml/*.log
 ntuples/tracking_georotation_stage201/
 workbook/stage201_tracking/*.npz
 workbook/stage201_tracking/details/diagnostics.json.gz
+
+# Paired old/new station-reference truth caches; scalar audits and plots are tracked.
+ntuples/tracking_station_stage203/
+workbook/stage203_station_truth/*.npz
+workbook/stage203_station_truth/**/*.npz

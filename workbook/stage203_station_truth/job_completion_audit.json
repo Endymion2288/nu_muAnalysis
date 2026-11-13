@@ -1,0 +1,52 @@
+{
+  "clusters": [
+    {
+      "name": "production",
+      "cluster": 9718138,
+      "jobs": 693,
+      "exit_counts": {
+        "0": 692,
+        "1": 1
+      },
+      "failures": [
+        {
+          "proc": 170,
+          "exit": 1,
+          "stdout_path": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage203_station_truth/production/9718138.170.out",
+          "measured_steps": [
+            "runtime_copy wall_seconds=0.49 max_rss_kib=55980 user_seconds=0.02 system_seconds=0.19",
+            "runtime_unpack wall_seconds=1.04 max_rss_kib=6144 user_seconds=0.86 system_seconds=0.41",
+            "nu_muAnalysis environment loaded; use nu_mu_env_report for a summary.",
+            "Calypso environment loaded from /pool/condor/dir_1315068/nu_mu_station203.xtuACv/runtime",
+            "input wall_seconds=2.46 max_rss_kib=80072 user_seconds=0.13 system_seconds=1.08",
+            "reco wall_seconds=722.53 max_rss_kib=1083676 user_seconds=701.83 system_seconds=8.72",
+            "Command exited with non-zero status 129",
+            "forward wall_seconds=173.72 max_rss_kib=1527052 user_seconds=180.93 system_seconds=33.00"
+          ]
+        }
+      ],
+      "first_submit": "2026-11-13T19:20:40+01:00",
+      "first_execute": "2026-11-13T19:23:52+01:00",
+      "last_finish": "2026-11-13T21:26:38+01:00",
+      "elapsed_submit_to_finish_s": 7558.0,
+      "elapsed_first_execute_to_finish_s": 7366.0
+    },
+    {
+      "name": "recovery80",
+      "cluster": 9718141,
+      "jobs": 10,
+      "exit_counts": {
+        "0": 10
+      },
+      "failures": [],
+      "first_submit": "2026-11-13T19:42:34+01:00",
+      "first_execute": "2026-11-13T19:44:31+01:00",
+      "last_finish": "2026-11-13T19:53:55+01:00",
+      "elapsed_submit_to_finish_s": 681.0,
+      "elapsed_first_execute_to_finish_s": 564.0
+    }
+  ],
+  "attempts": 703,
+  "successful": 702,
+  "failed": 1
+}
