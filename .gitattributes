@@ -6,3 +6,9 @@ workbook/stage187_energy_ml/parent_ledger.tsv whitespace=-blank-at-eol
 
 # Empty final TSV fields denote unmeasured strata and retain their delimiters.
 workbook/stage199_energy_ml/metrics.tsv whitespace=-blank-at-eol
+
+# Preserve verbatim Calypso source formatting in the stage204 audit snapshots.
+workbook/stage204_causal/frozen_*.txt -whitespace
+workbook/stage204_causal/*_source.diff -whitespace
+# Matplotlib preserves spaces before SVG path-command line endings.
+workbook/stage204_causal/**/*.svg whitespace=-blank-at-eol

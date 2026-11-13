@@ -316,3 +316,9 @@ workbook/stage201_tracking/details/diagnostics.json.gz
 ntuples/tracking_station_stage203/
 workbook/stage203_station_truth/*.npz
 workbook/stage203_station_truth/**/*.npz
+
+# Stage204 causal controls; retain compact combined caches locally.
+ntuples/tracking_ablation_stage204/
+workbook/stage204_causal/*.npz
+workbook/stage204_causal/**/*.npz
+!workbook/stage204_causal/**/*.png

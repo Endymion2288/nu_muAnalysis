@@ -1,0 +1,37 @@
+{
+  "baselines": [
+    {
+      "variant": "old",
+      "all_columns_exact": true,
+      "events": 10592,
+      "tracks": 18035
+    },
+    {
+      "variant": "native",
+      "all_columns_exact": true,
+      "events": 10592,
+      "tracks": 18277
+    }
+  ],
+  "common_truth": 10592,
+  "accepted": 3878,
+  "variants": [
+    "native",
+    "material",
+    "material_oldprior",
+    "old"
+  ],
+  "shards": 60,
+  "exact_truth": true,
+  "exact_cache_readback": true,
+  "exact_shard_readback": true,
+  "exact_waveform_arrays_across_tracking_controls": true,
+  "source_events_by_variant": {
+    "native": 100000,
+    "material": 100000,
+    "material_oldprior": 100000
+  },
+  "full_g4_local_momentum_measured": false,
+  "wall_s": 24.98633081279695,
+  "max_rss_kib": 930516
+}

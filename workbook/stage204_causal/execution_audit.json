@@ -1,0 +1,212 @@
+{
+  "indices": [
+    0,
+    15,
+    30,
+    45,
+    63,
+    82,
+    101,
+    125,
+    150,
+    177,
+    186,
+    196,
+    214,
+    232,
+    251,
+    275,
+    300,
+    325,
+    333,
+    340
+  ],
+  "discovery": {
+    "skip": 0,
+    "nevents_per_file": 5000
+  },
+  "validation": {
+    "skip": 5000,
+    "nevents_per_file": 5000
+  },
+  "clusters": {
+    "pilot_v1": 9718150,
+    "audit_v1": 9718151,
+    "discovery_nonmaterial": 9718152,
+    "pilot_v1_report": 9718153,
+    "validation_native": 9718154,
+    "pilot_material_v2": 9718156,
+    "pilot_material_v2_noaudit": 9718157,
+    "waveform_inf": 9718158,
+    "waveform_negative": 9718159,
+    "discovery_material_v2": 9718160,
+    "validation_material_v2": 9718161,
+    "pilot_final_report": 9718162,
+    "waveform_wrong_entries": 9718163,
+    "waveform_fit_audit": 9718164,
+    "waveform_fit_audit_keepall": 9718165,
+    "discovery_final_report": 9718173,
+    "validation_final_report": 9718175
+  },
+  "retired_material_v1": {
+    "reason": "External helper used column-major JSON; installed ACTS from_json uses row-major. Actual state queries exposed x reflection. All v1 material results excluded from final physics tables.",
+    "discovery_jobs_cancelled": 80,
+    "validation_jobs_cancelled": 40,
+    "retained_audit": "software/stage204_causal/material-column-order-v1.json.gz; original frozen submission archives"
+  },
+  "actual_material_validation": {
+    "frames": 22,
+    "max_frame_error": 0,
+    "queries": 7436,
+    "max_relative_query_error": 5.78834315360617e-08,
+    "seed_rows": 1012,
+    "seed_rows_exact": true
+  },
+  "baseline_pilot": {
+    "old_tracks": 224,
+    "new_tracks": 228,
+    "truth": 143,
+    "arrays": 21,
+    "exact": true
+  },
+  "software_source_references": [
+    "https://github.com/acts-project/acts/blob/v32.0.2/Plugins/Json/src/AlgebraJsonConverter.cpp"
+  ],
+  "note": "All formal reconstruction and final reductions completed; final results use strict material v2 only.",
+  "waveform_replay": {
+    "source_windows": 2,
+    "events_per_window_per_version": 30,
+    "versions": 2,
+    "event_executions": 120,
+    "target_event_charge_cache_exact": true,
+    "integral_apis_compared_on_actual_parameters": true,
+    "keep_waveforms_audit_only": true
+  },
+  "discovery_jobs_validated_exit0": 240,
+  "monitor_note": "Automatic watch stopped after transient condor_q security negotiation read failure; source jobs unaffected. Final report submitted manually after auditing all 240 exit codes.",
+  "formal_jobs_validated_exit0": 300,
+  "final_reports_validated_exit0": 2,
+  "discovery_result": {
+    "baselines": [
+      {
+        "variant": "old",
+        "all_columns_exact": true,
+        "events": 10505,
+        "tracks": 17798
+      },
+      {
+        "variant": "native",
+        "all_columns_exact": true,
+        "events": 10505,
+        "tracks": 18052
+      }
+    ],
+    "common_truth": 10505,
+    "accepted": 3783,
+    "variants": [
+      "native",
+      "shared",
+      "oldprior",
+      "oldtheta",
+      "oldqop",
+      "norefit",
+      "interfaces",
+      "reset",
+      "material",
+      "material_oldprior",
+      "material_interfaces",
+      "material_norefit",
+      "old"
+    ],
+    "shards": 240,
+    "exact_truth": true,
+    "exact_cache_readback": true,
+    "exact_shard_readback": true,
+    "exact_waveform_arrays_across_tracking_controls": true,
+    "source_events_by_variant": {
+      "native": 100000,
+      "shared": 100000,
+      "oldprior": 100000,
+      "oldtheta": 100000,
+      "oldqop": 100000,
+      "norefit": 100000,
+      "interfaces": 100000,
+      "reset": 100000,
+      "material": 100000,
+      "material_oldprior": 100000,
+      "material_interfaces": 100000,
+      "material_norefit": 100000
+    },
+    "full_g4_local_momentum_measured": false,
+    "wall_s": 102.40927281789482,
+    "max_rss_kib": 1091064
+  },
+  "validation_result": {
+    "baselines": [
+      {
+        "variant": "old",
+        "all_columns_exact": true,
+        "events": 10592,
+        "tracks": 18035
+      },
+      {
+        "variant": "native",
+        "all_columns_exact": true,
+        "events": 10592,
+        "tracks": 18277
+      }
+    ],
+    "common_truth": 10592,
+    "accepted": 3878,
+    "variants": [
+      "native",
+      "material",
+      "material_oldprior",
+      "old"
+    ],
+    "shards": 60,
+    "exact_truth": true,
+    "exact_cache_readback": true,
+    "exact_shard_readback": true,
+    "exact_waveform_arrays_across_tracking_controls": true,
+    "source_events_by_variant": {
+      "native": 100000,
+      "material": 100000,
+      "material_oldprior": 100000
+    },
+    "full_g4_local_momentum_measured": false,
+    "wall_s": 24.98633081279695,
+    "max_rss_kib": 930516
+  },
+  "postprocessing": [
+    "Inspect all changed smoothing states from validated consolidated caches; expand invariance to all 21 scientific arrays.",
+    "Redraw controls from the same cache and metrics with a shorter y-axis label."
+  ],
+  "storage_cleanup": {
+    "queue_checked_empty": true,
+    "deleted_directory": "/eos/home-x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_ablation_stage204",
+    "deleted_files": 328,
+    "deleted_bytes": 218498744,
+    "retained_cache_bytes": 107857673,
+    "consolidated_arrays_verified_before_deletion": true,
+    "submission_archives_retained": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage204_causal"
+  },
+  "local_cache_validation": {
+    "discovery": {
+      "caches": 13,
+      "scientific_arrays_per_cache": 21,
+      "all_arrays_read_crc_checked": true,
+      "all_truth_columns_exact": true,
+      "common_curve_medians_checked": 12,
+      "max_median_difference_pp": 0.0
+    },
+    "validation": {
+      "caches": 4,
+      "scientific_arrays_per_cache": 21,
+      "all_arrays_read_crc_checked": true,
+      "all_truth_columns_exact": true,
+      "common_curve_medians_checked": 12,
+      "max_median_difference_pp": 0.0
+    }
+  }
+}

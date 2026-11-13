@@ -1,0 +1,510 @@
+{
+  "shared": {
+    "run": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "eventID": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_pz_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_dec_x_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_dec_y_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_dec_z_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "event_cut_bits": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "event_individual_bits": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 1,
+      "exact": false
+    },
+    "event_scalars": {
+      "native_shape": [
+        10505,
+        3,
+        10
+      ],
+      "variant_shape": [
+        10505,
+        3,
+        10
+      ],
+      "different_rows": 4,
+      "exact": false
+    },
+    "primary": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary_production_momentum_mev": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary_station": {
+      "native_shape": [
+        10505,
+        3,
+        6
+      ],
+      "variant_shape": [
+        10505,
+        3,
+        6
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary_layer_hits": {
+      "native_shape": [
+        10505,
+        9
+      ],
+      "variant_shape": [
+        10505,
+        9
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "scintillator": {
+      "native_shape": [
+        10505,
+        10
+      ],
+      "variant_shape": [
+        10505,
+        10
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "raw_primary_counts": {
+      "native_shape": [
+        10505,
+        3,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "tracks": {
+      "native_shape": [
+        18052,
+        25
+      ],
+      "variant_shape": [
+        18052,
+        25
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "reco_station": {
+      "native_shape": [
+        18052,
+        3,
+        6
+      ],
+      "variant_shape": [
+        18052,
+        3,
+        6
+      ],
+      "different_rows": 18,
+      "exact": false
+    },
+    "reco_at_primary_station": {
+      "native_shape": [
+        18052,
+        3,
+        6
+      ],
+      "variant_shape": [
+        18052,
+        3,
+        6
+      ],
+      "different_rows": 38,
+      "exact": false
+    },
+    "matched_truth_station": {
+      "native_shape": [
+        18052,
+        3,
+        6
+      ],
+      "variant_shape": [
+        18052,
+        3,
+        6
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "nearest_state_dz_mm": {
+      "native_shape": [
+        18052,
+        3
+      ],
+      "variant_shape": [
+        18052,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "station_method": {
+      "native_shape": [
+        18052,
+        3
+      ],
+      "variant_shape": [
+        18052,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    }
+  },
+  "reset": {
+    "run": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "eventID": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_pz_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_dec_x_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_dec_y_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "truth_dec_z_nu": {
+      "native_shape": [
+        10505
+      ],
+      "variant_shape": [
+        10505
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "event_cut_bits": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "event_individual_bits": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "event_scalars": {
+      "native_shape": [
+        10505,
+        3,
+        10
+      ],
+      "variant_shape": [
+        10505,
+        3,
+        10
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary_production_momentum_mev": {
+      "native_shape": [
+        10505,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary_station": {
+      "native_shape": [
+        10505,
+        3,
+        6
+      ],
+      "variant_shape": [
+        10505,
+        3,
+        6
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "primary_layer_hits": {
+      "native_shape": [
+        10505,
+        9
+      ],
+      "variant_shape": [
+        10505,
+        9
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "scintillator": {
+      "native_shape": [
+        10505,
+        10
+      ],
+      "variant_shape": [
+        10505,
+        10
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "raw_primary_counts": {
+      "native_shape": [
+        10505,
+        3,
+        3
+      ],
+      "variant_shape": [
+        10505,
+        3,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "tracks": {
+      "native_shape": [
+        18052,
+        25
+      ],
+      "variant_shape": [
+        18052,
+        25
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "reco_station": {
+      "native_shape": [
+        18052,
+        3,
+        6
+      ],
+      "variant_shape": [
+        18052,
+        3,
+        6
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "reco_at_primary_station": {
+      "native_shape": [
+        18052,
+        3,
+        6
+      ],
+      "variant_shape": [
+        18052,
+        3,
+        6
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "matched_truth_station": {
+      "native_shape": [
+        18052,
+        3,
+        6
+      ],
+      "variant_shape": [
+        18052,
+        3,
+        6
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "nearest_state_dz_mm": {
+      "native_shape": [
+        18052,
+        3
+      ],
+      "variant_shape": [
+        18052,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    },
+    "station_method": {
+      "native_shape": [
+        18052,
+        3
+      ],
+      "variant_shape": [
+        18052,
+        3
+      ],
+      "different_rows": 0,
+      "exact": true
+    }
+  }
+}

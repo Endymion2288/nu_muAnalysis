@@ -1,0 +1,55 @@
+{
+  "baselines": [
+    {
+      "variant": "old",
+      "all_columns_exact": true,
+      "events": 143,
+      "tracks": 224
+    },
+    {
+      "variant": "native",
+      "all_columns_exact": true,
+      "events": 143,
+      "tracks": 228
+    }
+  ],
+  "common_truth": 143,
+  "accepted": 38,
+  "variants": [
+    "old",
+    "native",
+    "shared",
+    "oldprior",
+    "oldtheta",
+    "oldqop",
+    "norefit",
+    "interfaces",
+    "reset",
+    "material",
+    "material_oldprior",
+    "material_interfaces",
+    "material_norefit"
+  ],
+  "shards": 13,
+  "exact_truth": true,
+  "exact_cache_readback": true,
+  "exact_shard_readback": true,
+  "source_events_by_variant": {
+    "old": 1000,
+    "native": 1000,
+    "shared": 1000,
+    "oldprior": 1000,
+    "oldtheta": 1000,
+    "oldqop": 1000,
+    "norefit": 1000,
+    "interfaces": 1000,
+    "reset": 1000,
+    "material": 1000,
+    "material_oldprior": 1000,
+    "material_interfaces": 1000,
+    "material_norefit": 1000
+  },
+  "full_g4_local_momentum_measured": false,
+  "wall_s": 28.981644690968096,
+  "max_rss_kib": 814808
+}

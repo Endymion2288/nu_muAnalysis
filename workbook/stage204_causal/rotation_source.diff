@@ -1,0 +1,336 @@
+diff --git a/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h b/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h
+index dad0558e..dfa5dfe6 100644
+--- a/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h
++++ b/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h
+@@ -51,10 +51,23 @@ public:
+   Acts::Result<Acts::Vector3>
+   getField(const Acts::Vector3& position, Acts::MagneticFieldProvider::Cache& gcache) const override {
+     Cache& cache = gcache.as<Cache>();
++    
++    //if geoRotation
++    Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++    rot.col(0) = Acts::Vector3(0, 0, -1);
++    rot.col(1) = Acts::Vector3(0, 1, 0);
++    rot.col(2) = Acts::Vector3(1, 0, 0);
++    Acts::Transform3 trafo(rot);
++    Acts::Vector3 copyPos = position;
++    copyPos = trafo.inverse() * copyPos;
++
+     double posXYZ[3];
+-    posXYZ[0] = position.x();
+-    posXYZ[1] = position.y();
+-    posXYZ[2] = position.z();
++    //posXYZ[0] = position.x();
++    //posXYZ[1] = position.y();
++    //posXYZ[2] = position.z();
++    posXYZ[0] = copyPos.x();
++    posXYZ[1] = copyPos.y();
++    posXYZ[2] = copyPos.z();
+     double BField[3];
+ 
+     cache.fieldCache.getField(posXYZ, BField);
+@@ -62,6 +75,8 @@ public:
+     // Magnetic field
+     Acts::Vector3 bfield{BField[0],BField[1],BField[2]};
+ 
++    bfield = trafo * bfield;
++
+     bfield *= m_bFieldUnit; // kT -> T;
+ 
+     return Acts::Result<Acts::Vector3>::success(bfield);
+@@ -73,10 +88,19 @@ public:
+                    Acts::MagneticFieldProvider::Cache& gcache) const override
+   {
+     Cache& cache = gcache.as<Cache>();
++    //if geoRotation
++    Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++    rot.col(0) = Acts::Vector3(0, 0, -1);
++    rot.col(1) = Acts::Vector3(0, 1, 0);
++    rot.col(2) = Acts::Vector3(1, 0, 0);
++    Acts::Transform3 trafo(rot);
++
++    Acts::Vector3 copyPos = position;
++    copyPos = trafo.inverse() * copyPos;
+     double posXYZ[3];
+-    posXYZ[0] = position.x();
+-    posXYZ[1] = position.y();
+-    posXYZ[2] = position.z();
++    posXYZ[0] = copyPos.x();
++    posXYZ[1] = copyPos.y();
++    posXYZ[2] = copyPos.z();
+     double BField[3];
+     double grad[9];
+ 
+@@ -88,6 +112,9 @@ public:
+     tempGrad << grad[0], grad[1], grad[2], grad[3], grad[4], grad[5], grad[6], grad[7], grad[8]; 
+     gradient = tempGrad;
+ 
++    bfield = trafo * bfield;
++    gradient = rot * gradient * rot.transpose();
++
+ 
+     bfield *= m_bFieldUnit; // kT -> T;
+     gradient *= m_bFieldUnit;
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py b/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
+index 66d7eb11..d3f3e816 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
++++ b/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
+@@ -47,11 +47,18 @@ def CKF2Cfg(flags, actsOutputTag, **kwargs):
+     sigma_loc1 = 9e-1
+     sigma_phi = 3.3e-2
+     sigma_theta = 2.9e-4
++    #sigma_theta = 3e-2
+     p = 1000
+     sigma_p = 0.1 * p
+     sigma_qop = sigma_p / (p * p)
++    initial_variance_inflation = kwargs.pop(
++        "initialVarianceInflation",
++        [100, 100, 100, 10000, 100000]
++    )
+     # initial_variance_inflation = [1000, 1000, 100, 100, 10000]
+-    initial_variance_inflation = [100, 100, 100, 100, 1000]
++    #initial_variance_inflation = [100, 100, 100, 100, 1000]
++    #initial_variance_inflation = [100, 100, 10000, 100, 100000]
++    #initial_variance_inflation = [100, 100, 100, 10000, 100000]
+     track_seed_tool.covLoc0 = initial_variance_inflation[0] * sigma_loc1 * sigma_loc1
+     track_seed_tool.covLoc1 = initial_variance_inflation[1] * sigma_loc0 * sigma_loc0
+     track_seed_tool.covPhi = initial_variance_inflation[2] * sigma_phi * sigma_phi
+@@ -77,6 +84,7 @@ def CKF2Cfg(flags, actsOutputTag, **kwargs):
+     trajectory_summary_writer_tool = CompFactory.RootTrajectorySummaryWriterTool()
+     trajectory_summary_writer_tool.noDiagnostics = kwargs.get("noDiagnostics", True)
+     trajectory_summary_writer_tool.FilePath = f"{actsOutputTag}_track_summary_ckf.root"
++    trajectory_summary_writer_tool.writeMeasurements = True
+     trajectory_summary_writer_tool1 = CompFactory.RootTrajectorySummaryWriterTool()
+     #trajectory_summary_writer_tool1.noDiagnostics = kwargs.get("noDiagnostics", True)
+     trajectory_summary_writer_tool1.noDiagnostics = True
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
+index de9d4e1f..ee327a21 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
+@@ -109,9 +109,18 @@ StatusCode CKF2::execute() {
+ 
+   std::shared_ptr<const Acts::TrackingGeometry> trackingGeometry
+       = m_trackingGeometryTool->trackingGeometry();
+-
+   const FaserActsGeometryContext& faserActsGeometryContext = m_trackingGeometryTool->getGeometryContext();
+   auto gctx = faserActsGeometryContext.context();
++  if (m_numberOfEvents == 1){
++    ATH_MSG_VERBOSE("Printing info of ACTS tracking geometry surface:");
++    trackingGeometry->visitSurfaces([&](const Acts::Surface* surface) {
++        auto center = surface->center(gctx);
++        auto rotation = surface->transform(gctx).rotation();
++        ATH_MSG_VERBOSE("ACTS surface " <<  surface->geometryId() << " has center " << center.transpose() << ", local X axis at " << rotation.col(0).transpose() <<", local Z axis at " << rotation.col(2).transpose());
++      }
++    );
++  }
++
+   Acts::MagneticFieldContext magFieldContext = getMagneticFieldContext(ctx);
+   Acts::CalibrationContext calibContext;
+ 
+@@ -185,11 +194,16 @@ StatusCode CKF2::execute() {
+   };
+ 
+   // configuration of the targetSurface of CKF in GeneralFitterOptions 
++  //Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  //rotation.col(0) = Acts::Vector3(0, 1, 0);
++  //rotation.col(1) = Acts::Vector3(1, 0, 0);
++  //rotation.col(2) = Acts::Vector3(0, 0, -1);
++  //Acts::Translation3 trans(0., 0., targetZposition);
+   Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
+   rotation.col(0) = Acts::Vector3(0, 1, 0);
+-  rotation.col(1) = Acts::Vector3(1, 0, 0);
+-  rotation.col(2) = Acts::Vector3(0, 0, -1);
+-  Acts::Translation3 trans(0., 0., targetZposition);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(targetZposition, 0., 0.);
+   Acts::Transform3 trafo(trans*rotation);
+   ATH_MSG_DEBUG("ACTS CKF target surface has center at " << trafo.translation().transpose());
+   targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(trafo);
+@@ -253,6 +267,7 @@ StatusCode CKF2::execute() {
+   while (not allTracks.empty()) {
+     TrackInfo selected = allTracks.front();
+     allTracks.erase(allTracks.begin());
++
+     
+     auto destProxy = selectedTracks.getTrack(selectedTracks.addTrack());
+     destProxy.copyFrom(tracks.getTrack(selected.index), true);  // make sure we copy track states!
+@@ -261,6 +276,27 @@ StatusCode CKF2::execute() {
+       allTracks.remove_if([&](const TrackInfo &p) {
+         return ((p.nMeasurements <= 12) || ((p.clusterSet & selected.clusterSet).count() > 6));
+       });
++      //allTracks.remove_if([&](const TrackInfo &p) {
++      //  	      ATH_MSG_DEBUG("selected"<<selected.index<<" | nMeas="<<selected.nMeasurements<<" chi2="<<selected.chi2);
++
++      //  int shared = (p.clusterSet & selected.clusterSet).count();
++      //  bool killByNMeas = (p.nMeasurements <= 3);
++      //  bool killByShared = (shared > 6);
++    
++      //    ATH_MSG_DEBUG(
++      //      "[CKF2-SELECTOR] "
++      //      << "candidate=" << p.index
++      //      << " vs selected=" << selected.index
++      //      << " | nMeas=" << p.nMeasurements
++      //      << " chi2=" << p.chi2
++      //      << " shared=" << shared
++      //      << " | killByNMeas=" << killByNMeas
++      //      << " killByShared=" << killByShared
++      //    );
++    
++      //  return killByNMeas || killByShared;
++      //});
++
+     }
+   }
+   ATH_MSG_DEBUG("There are " << selectedTracks.size() << " selected tracks for this event.");
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx
+index 123f38b9..e5500728 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx
+@@ -376,8 +376,8 @@ void CircleFitTrackSeedTool::Seed::getChi2() {
+ }
+ 
+ Acts::BoundTrackParameters CircleFitTrackSeedTool::Seed::get_params(double origin, Acts::BoundSquareMatrix cov, bool backward) const {
+-  double theta = Acts::VectorHelpers::theta(direction);
+-  double phi = Acts::VectorHelpers::phi(direction);
++ // double theta = Acts::VectorHelpers::theta(direction);
++ // double phi = Acts::VectorHelpers::phi(direction);
+ 
+   Acts::Vector3 pos(0,0,0);
+   if (!backward) {
+@@ -386,10 +386,26 @@ Acts::BoundTrackParameters CircleFitTrackSeedTool::Seed::get_params(double origi
+     size_t size = positions.size();
+     pos = positions[size-1] + (origin - positions[size-1].z())/direction.z() * direction;
+   }
+-  Acts::Vector3 direct(0,0,-1);
+-  auto refPlane = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0,0,pos.z()), direct); 
++  //Acts::Vector3 direct(0,0,-1);
++  //if geometry rotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++  Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  rotation.col(0) = Acts::Vector3(0, 1, 0);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(pos.z(), 0., 0.);
++  Acts::Transform3 traf(trans*rotation);
++  double theta = Acts::VectorHelpers::theta(trafo*direction);
++  double phi = Acts::VectorHelpers::phi(trafo*direction);
++
++//  Acts::Vector3 direct(-1,0,0);
++  auto refPlane = Acts::Surface::makeShared<Acts::PlaneSurface>(traf);; 
+   Acts::GeometryContext gctx;
+-  auto lpResult = refPlane->globalToLocal(gctx, pos);
++  auto lpResult = refPlane->globalToLocal(gctx, trafo*pos);
+   if (not lpResult.ok()) {
+     throw std::runtime_error("globalToLocal transformation failed. This should not happen");
+   }
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
+index 26ad71a9..b0056a88 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
+@@ -1,6 +1,7 @@
+ #include "KalmanFitterTool.h"
+ 
+ #include "FaserActsGeometry/FASERMagneticFieldWrapper.h"
++#include "FaserActsGeometry/FaserActsGeometryContext.h"
+ #include "FaserActsKalmanFilter/IndexSourceLink.h"
+ 
+ #include "Acts/Propagator/EigenStepper.hpp"
+@@ -354,18 +355,36 @@ KalmanFitterTool::fit(const EventContext &ctx, const Acts::GeometryContext &gctx
+     ATH_MSG_WARNING("Input track has no track parameters and cannot be fitted");
+     return nullptr;
+   }
++  
+ 
+ 
+   // set the start position 10 mm in front of the first track measurement
+-  double origin = inputTrack->trackParameters()->front()->position().z() - 10;
+-
+-  auto pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++  // if geoRotation
++  //double origin = inputTrack->trackParameters()->front()->position().z() - 10;
++  //auto pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++  double origin = inputTrack->trackParameters()->front()->position().x() - 10;
++   Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++  Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  rotation.col(0) = Acts::Vector3(0, 1, 0);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(origin, 0., 0.);
++  Acts::Transform3 traf(trans*rotation);
++  std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf);
++
++  //auto pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3 {origin, 0, 0}, Acts::Vector3{-1, 0, 0});
+ 
+   Acts::MagneticFieldContext mfContext = getMagneticFieldContext(ctx);
+   Acts::CalibrationContext calibContext = Acts::CalibrationContext();
+ 
+   auto [sourceLinks, measurements] = getMeasurementsFromTrack(inputTrack);
++
+   auto trackParameters = getParametersFromTrack(inputTrack->trackParameters()->front(), inputVector, origin);
+   //Inflate the covariance of the starting track parameters
+   //@todo: make the inflation configurable
+@@ -563,19 +582,40 @@ Acts::BoundTrackParameters
+ KalmanFitterTool::getParametersFromTrack(const Trk::TrackParameters *inputParameters,
+                                          const Acts::BoundVector& inputVector, double origin) const {
+   using namespace Acts::UnitLiterals;
+-  std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++//  if geoRotation
++  Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  rotation.col(0) = Acts::Vector3(0, 1, 0);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(origin, 0., 0.);
++  Acts::Transform3 traf(trans*rotation);
++  std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf);
++  //std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++ // std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++ //     trafo * (Acts::Vector3 {0, 0, origin}), Acts::Vector3{-1, 0, 0});
++Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
+ 
+   auto atlasParam = inputParameters->parameters();
+   auto center = inputParameters->associatedSurface().center();
++
++  //std::cout<<"atlasParameters::information: transform = "<<inputParameters->associatedSurface().transform().matrix()<<";  center = "<<inputParameters->associatedSurface().center().x()<<"; "<<inputParameters->associatedSurface().center().y()<<"; "<<inputParameters->associatedSurface().center().z()<<std::endl;
++  //Acts::GeometryContext gctx;
++  //std::cout<<"atlas-->acts::acts.surface.transform = "<<pSurface->transform(gctx).matrix()<<std::endl;
+   // Acts::BoundVector params {center[Trk::locY], center[Trk::locX],
+   //                           atlasParam[Trk::phi0], atlasParam[Trk::theta],
+   //                           charge / (inputParameters->momentum().norm() * 1_MeV),
+   //                           0.};
+   Acts::BoundVector params;
+   if (inputVector == Acts::BoundVector::Zero()) {
+-    params(0) = center[Trk::locY];
+-    params(1) = center[Trk::locX];
++    //params(0) = center[Trk::locY];
++    //params(1) = center[Trk::locX];
++    params(0) = center.y();
++    params(1) = -center.z();
+     params(2) = atlasParam[Trk::phi0];
+     params(3) = atlasParam[Trk::theta];
+     params(4) = inputParameters->charge() / (inputParameters->momentum().norm() * 1_MeV);
+@@ -583,6 +623,7 @@ KalmanFitterTool::getParametersFromTrack(const Trk::TrackParameters *inputParame
+   } else {
+     params = inputVector;
+   }
++  //std::cout<<"before params : "<<params(0)<<"    "<<params(1)<<"  "<<params(2)<<"   "<<params(3)<<"   "<<params(4)<<std::endl;
+   Acts::BoundSquareMatrix cov = Acts::BoundSquareMatrix::Identity();
+   cov.topLeftCorner(5, 5) = *inputParameters->covariance();
+ 

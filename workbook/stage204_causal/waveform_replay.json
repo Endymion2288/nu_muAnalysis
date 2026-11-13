@@ -1,0 +1,66 @@
+[
+  {
+    "sample": "waveform_inf",
+    "variant": "old",
+    "events": 30,
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.41 max_rss_kib=56412 user_seconds=0.02 system_seconds=0.14",
+      "runtime_unpack": "runtime_unpack wall_seconds=2.01 max_rss_kib=5120 user_seconds=1.31 system_seconds=0.97",
+      "input": "input wall_seconds=3.10 max_rss_kib=76528 user_seconds=0.11 system_seconds=1.26",
+      "reco": "reco wall_seconds=16.95 max_rss_kib=992272 user_seconds=8.69 system_seconds=3.39",
+      "forward": "forward wall_seconds=10.30 max_rss_kib=900136 user_seconds=5.63 system_seconds=2.58",
+      "backward": "backward wall_seconds=9.41 max_rss_kib=896932 user_seconds=5.18 system_seconds=2.41",
+      "merge": "merge wall_seconds=110.75 max_rss_kib=1935196 user_seconds=55.01 system_seconds=9.17",
+      "waveform": "waveform wall_seconds=3.17 max_rss_kib=41984 user_seconds=1.40 system_seconds=0.71",
+      "extract": "extract wall_seconds=19.18 max_rss_kib=721248 user_seconds=14.74 system_seconds=2.12"
+    }
+  },
+  {
+    "sample": "waveform_negative",
+    "variant": "native",
+    "events": 30,
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.26 max_rss_kib=54888 user_seconds=0.02 system_seconds=0.11",
+      "runtime_unpack": "runtime_unpack wall_seconds=2.47 max_rss_kib=4096 user_seconds=1.06 system_seconds=0.88",
+      "input": "input wall_seconds=6.94 max_rss_kib=72836 user_seconds=0.11 system_seconds=1.33",
+      "reco": "reco wall_seconds=31.35 max_rss_kib=928364 user_seconds=10.82 system_seconds=4.37",
+      "forward": "forward wall_seconds=15.51 max_rss_kib=851056 user_seconds=6.63 system_seconds=3.00",
+      "backward": "backward wall_seconds=15.87 max_rss_kib=855188 user_seconds=6.37 system_seconds=2.98",
+      "merge": "merge wall_seconds=155.52 max_rss_kib=1880488 user_seconds=69.50 system_seconds=10.42",
+      "waveform": "waveform wall_seconds=5.12 max_rss_kib=30720 user_seconds=1.80 system_seconds=0.76",
+      "extract": "extract wall_seconds=27.98 max_rss_kib=693148 user_seconds=19.78 system_seconds=2.34"
+    }
+  },
+  {
+    "sample": "waveform_inf",
+    "variant": "native",
+    "events": 30,
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.38 max_rss_kib=54356 user_seconds=0.02 system_seconds=0.11",
+      "runtime_unpack": "runtime_unpack wall_seconds=1.30 max_rss_kib=4096 user_seconds=0.91 system_seconds=0.62",
+      "input": "input wall_seconds=1.83 max_rss_kib=77500 user_seconds=0.14 system_seconds=1.15",
+      "reco": "reco wall_seconds=18.81 max_rss_kib=982240 user_seconds=9.18 system_seconds=3.51",
+      "forward": "forward wall_seconds=10.62 max_rss_kib=894356 user_seconds=5.90 system_seconds=2.48",
+      "backward": "backward wall_seconds=10.42 max_rss_kib=885384 user_seconds=5.49 system_seconds=2.51",
+      "merge": "merge wall_seconds=122.85 max_rss_kib=1897556 user_seconds=60.50 system_seconds=9.56",
+      "waveform": "waveform wall_seconds=3.35 max_rss_kib=41984 user_seconds=1.41 system_seconds=0.69",
+      "extract": "extract wall_seconds=21.43 max_rss_kib=718032 user_seconds=16.56 system_seconds=2.10"
+    }
+  },
+  {
+    "sample": "waveform_negative",
+    "variant": "old",
+    "events": 30,
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.32 max_rss_kib=59984 user_seconds=0.03 system_seconds=0.15",
+      "runtime_unpack": "runtime_unpack wall_seconds=2.84 max_rss_kib=4096 user_seconds=1.32 system_seconds=1.12",
+      "input": "input wall_seconds=6.52 max_rss_kib=73104 user_seconds=0.09 system_seconds=1.26",
+      "reco": "reco wall_seconds=33.20 max_rss_kib=933528 user_seconds=10.74 system_seconds=4.20",
+      "forward": "forward wall_seconds=14.75 max_rss_kib=877088 user_seconds=6.34 system_seconds=2.93",
+      "backward": "backward wall_seconds=17.84 max_rss_kib=875804 user_seconds=6.40 system_seconds=2.94",
+      "merge": "merge wall_seconds=210.23 max_rss_kib=1983852 user_seconds=73.76 system_seconds=11.65",
+      "waveform": "waveform wall_seconds=9.12 max_rss_kib=24576 user_seconds=1.97 system_seconds=0.86",
+      "extract": "extract wall_seconds=41.06 max_rss_kib=662656 user_seconds=19.87 system_seconds=2.59"
+    }
+  }
+]

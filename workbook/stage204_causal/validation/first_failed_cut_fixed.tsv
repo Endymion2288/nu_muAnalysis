@@ -1,0 +1,169 @@
+variant	mode	cut	failed
+native	forward	At least one long track	914
+native	forward	Veto20 and Veto21 charge > 40 pC	0
+native	forward	Timing Station Charge > 20 pC	2
+native	forward	Preshower Charge > 2.5 pC	0
+native	forward	Track pz > 100 GeV	98
+native	forward	Leading track has at >= 7 layers	12
+native	forward	Track nDoF >= 9	58
+native	forward	Leading track has chi2/ndof < 15	0
+native	forward	Track R at max radius < 95 mm	11
+native	forward	Track R at IFT < 95 mm	15
+native	forward	Track rVetoNu < 120 mm	1
+native	forward	Leading track theta < 25 mrad	0
+native	forward	VetoNu0 reduced charge < 30 pC	259
+native	forward	VetoNu1 reduced charge < 30 pC	115
+native	backward	At least one long track	541
+native	backward	Veto20 and Veto21 charge > 40 pC	0
+native	backward	Timing Station Charge > 20 pC	1
+native	backward	Preshower Charge > 2.5 pC	0
+native	backward	Track pz > 100 GeV	157
+native	backward	Leading track has at >= 7 layers	17
+native	backward	Track nDoF >= 9	89
+native	backward	Leading track has chi2/ndof < 15	0
+native	backward	Track R at max radius < 95 mm	14
+native	backward	Track R at IFT < 95 mm	17
+native	backward	Track rVetoNu < 120 mm	1
+native	backward	Leading track theta < 25 mrad	1
+native	backward	VetoNu0 reduced charge < 30 pC	266
+native	backward	VetoNu1 reduced charge < 30 pC	120
+native	merge	At least one long track	445
+native	merge	Veto20 and Veto21 charge > 40 pC	0
+native	merge	Timing Station Charge > 20 pC	1
+native	merge	Preshower Charge > 2.5 pC	0
+native	merge	Track pz > 100 GeV	160
+native	merge	Leading track has at >= 7 layers	16
+native	merge	Track nDoF >= 9	68
+native	merge	Leading track has chi2/ndof < 15	0
+native	merge	Track R at max radius < 95 mm	14
+native	merge	Track R at IFT < 95 mm	17
+native	merge	Track rVetoNu < 120 mm	2
+native	merge	Leading track theta < 25 mrad	1
+native	merge	VetoNu0 reduced charge < 30 pC	274
+native	merge	VetoNu1 reduced charge < 30 pC	124
+material	forward	At least one long track	922
+material	forward	Veto20 and Veto21 charge > 40 pC	0
+material	forward	Timing Station Charge > 20 pC	2
+material	forward	Preshower Charge > 2.5 pC	0
+material	forward	Track pz > 100 GeV	27
+material	forward	Leading track has at >= 7 layers	12
+material	forward	Track nDoF >= 9	60
+material	forward	Leading track has chi2/ndof < 15	0
+material	forward	Track R at max radius < 95 mm	11
+material	forward	Track R at IFT < 95 mm	16
+material	forward	Track rVetoNu < 120 mm	2
+material	forward	Leading track theta < 25 mrad	0
+material	forward	VetoNu0 reduced charge < 30 pC	264
+material	forward	VetoNu1 reduced charge < 30 pC	114
+material	backward	At least one long track	537
+material	backward	Veto20 and Veto21 charge > 40 pC	0
+material	backward	Timing Station Charge > 20 pC	1
+material	backward	Preshower Charge > 2.5 pC	0
+material	backward	Track pz > 100 GeV	92
+material	backward	Leading track has at >= 7 layers	15
+material	backward	Track nDoF >= 9	91
+material	backward	Leading track has chi2/ndof < 15	0
+material	backward	Track R at max radius < 95 mm	14
+material	backward	Track R at IFT < 95 mm	19
+material	backward	Track rVetoNu < 120 mm	3
+material	backward	Leading track theta < 25 mrad	1
+material	backward	VetoNu0 reduced charge < 30 pC	271
+material	backward	VetoNu1 reduced charge < 30 pC	120
+material	merge	At least one long track	443
+material	merge	Veto20 and Veto21 charge > 40 pC	0
+material	merge	Timing Station Charge > 20 pC	1
+material	merge	Preshower Charge > 2.5 pC	0
+material	merge	Track pz > 100 GeV	87
+material	merge	Leading track has at >= 7 layers	15
+material	merge	Track nDoF >= 9	67
+material	merge	Leading track has chi2/ndof < 15	0
+material	merge	Track R at max radius < 95 mm	14
+material	merge	Track R at IFT < 95 mm	19
+material	merge	Track rVetoNu < 120 mm	3
+material	merge	Leading track theta < 25 mrad	1
+material	merge	VetoNu0 reduced charge < 30 pC	280
+material	merge	VetoNu1 reduced charge < 30 pC	124
+material_oldprior	forward	At least one long track	859
+material_oldprior	forward	Veto20 and Veto21 charge > 40 pC	0
+material_oldprior	forward	Timing Station Charge > 20 pC	1
+material_oldprior	forward	Preshower Charge > 2.5 pC	0
+material_oldprior	forward	Track pz > 100 GeV	23
+material_oldprior	forward	Leading track has at >= 7 layers	11
+material_oldprior	forward	Track nDoF >= 9	49
+material_oldprior	forward	Leading track has chi2/ndof < 15	0
+material_oldprior	forward	Track R at max radius < 95 mm	12
+material_oldprior	forward	Track R at IFT < 95 mm	16
+material_oldprior	forward	Track rVetoNu < 120 mm	1
+material_oldprior	forward	Leading track theta < 25 mrad	0
+material_oldprior	forward	VetoNu0 reduced charge < 30 pC	272
+material_oldprior	forward	VetoNu1 reduced charge < 30 pC	118
+material_oldprior	backward	At least one long track	504
+material_oldprior	backward	Veto20 and Veto21 charge > 40 pC	0
+material_oldprior	backward	Timing Station Charge > 20 pC	1
+material_oldprior	backward	Preshower Charge > 2.5 pC	0
+material_oldprior	backward	Track pz > 100 GeV	35
+material_oldprior	backward	Leading track has at >= 7 layers	23
+material_oldprior	backward	Track nDoF >= 9	94
+material_oldprior	backward	Leading track has chi2/ndof < 15	0
+material_oldprior	backward	Track R at max radius < 95 mm	14
+material_oldprior	backward	Track R at IFT < 95 mm	19
+material_oldprior	backward	Track rVetoNu < 120 mm	3
+material_oldprior	backward	Leading track theta < 25 mrad	1
+material_oldprior	backward	VetoNu0 reduced charge < 30 pC	276
+material_oldprior	backward	VetoNu1 reduced charge < 30 pC	124
+material_oldprior	merge	At least one long track	480
+material_oldprior	merge	Veto20 and Veto21 charge > 40 pC	0
+material_oldprior	merge	Timing Station Charge > 20 pC	0
+material_oldprior	merge	Preshower Charge > 2.5 pC	0
+material_oldprior	merge	Track pz > 100 GeV	36
+material_oldprior	merge	Leading track has at >= 7 layers	23
+material_oldprior	merge	Track nDoF >= 9	82
+material_oldprior	merge	Leading track has chi2/ndof < 15	0
+material_oldprior	merge	Track R at max radius < 95 mm	14
+material_oldprior	merge	Track R at IFT < 95 mm	19
+material_oldprior	merge	Track rVetoNu < 120 mm	3
+material_oldprior	merge	Leading track theta < 25 mrad	1
+material_oldprior	merge	VetoNu0 reduced charge < 30 pC	279
+material_oldprior	merge	VetoNu1 reduced charge < 30 pC	125
+old	forward	At least one long track	858
+old	forward	Veto20 and Veto21 charge > 40 pC	0
+old	forward	Timing Station Charge > 20 pC	1
+old	forward	Preshower Charge > 2.5 pC	0
+old	forward	Track pz > 100 GeV	35
+old	forward	Leading track has at >= 7 layers	12
+old	forward	Track nDoF >= 9	54
+old	forward	Leading track has chi2/ndof < 15	0
+old	forward	Track R at max radius < 95 mm	12
+old	forward	Track R at IFT < 95 mm	14
+old	forward	Track rVetoNu < 120 mm	1
+old	forward	Leading track theta < 25 mrad	0
+old	forward	VetoNu0 reduced charge < 30 pC	270
+old	forward	VetoNu1 reduced charge < 30 pC	115
+old	backward	At least one long track	474
+old	backward	Veto20 and Veto21 charge > 40 pC	0
+old	backward	Timing Station Charge > 20 pC	0
+old	backward	Preshower Charge > 2.5 pC	0
+old	backward	Track pz > 100 GeV	49
+old	backward	Leading track has at >= 7 layers	25
+old	backward	Track nDoF >= 9	107
+old	backward	Leading track has chi2/ndof < 15	0
+old	backward	Track R at max radius < 95 mm	15
+old	backward	Track R at IFT < 95 mm	20
+old	backward	Track rVetoNu < 120 mm	2
+old	backward	Leading track theta < 25 mrad	1
+old	backward	VetoNu0 reduced charge < 30 pC	280
+old	backward	VetoNu1 reduced charge < 30 pC	125
+old	merge	At least one long track	461
+old	merge	Veto20 and Veto21 charge > 40 pC	0
+old	merge	Timing Station Charge > 20 pC	0
+old	merge	Preshower Charge > 2.5 pC	0
+old	merge	Track pz > 100 GeV	51
+old	merge	Leading track has at >= 7 layers	22
+old	merge	Track nDoF >= 9	96
+old	merge	Leading track has chi2/ndof < 15	0
+old	merge	Track R at max radius < 95 mm	15
+old	merge	Track R at IFT < 95 mm	20
+old	merge	Track rVetoNu < 120 mm	2
+old	merge	Leading track theta < 25 mrad	1
+old	merge	VetoNu0 reduced charge < 30 pC	280
+old	merge	VetoNu1 reduced charge < 30 pC	124

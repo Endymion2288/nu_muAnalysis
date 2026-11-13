@@ -1,0 +1,31 @@
+{
+  "source": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/acts/material-maps-alma9.json",
+  "output": "software/stage204_causal/material-rotated.json",
+  "entries": {
+    "Surfaces": 22,
+    "Volumes": 0
+  },
+  "points_per_surface": 4096,
+  "max_local_coordinate_difference_mm": 0.0,
+  "geometry_ids_identical": true,
+  "material_bin_data_identical": true,
+  "rotation": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "json_rotation_order": "row-major; ACTS from_json",
+  "runtime_validation": "validate_tracking_material_runtime.py must also pass"
+}
