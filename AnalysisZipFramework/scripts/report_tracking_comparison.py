@@ -57,7 +57,8 @@ def figure_save(fig, root, stem):
     plt.close(fig)
 
 
-def report(repo, manifest, output, combined_input=None, cluster=None, retries=None):
+def report(repo, manifest, output, combined_input=None, cluster=None, retries=None,
+           require_existing=True, software_label='Official master d32b0ff3'):
     output.mkdir(parents=True, exist_ok=True)
     records = [line.split("\t") for line in manifest.read_text().splitlines()]
     arrays = []
@@ -92,7 +93,8 @@ def report(repo, manifest, output, combined_input=None, cluster=None, retries=No
     assert np.all(combined["tracking_index"] == ti)
     assert np.all(np.diff(combined["counts"], axis=2) <= 0)
     assert np.all(combined["counts"][:, :, 0] == combined["counts"][:, :1, 0])
-    assert np.all(combined['existing_merge_verified'] == 1)
+    if require_existing:
+        assert np.all(combined['existing_merge_verified'] == 1)
     assert np.all(combined['nontrack_columns'] == 17)
     for pair, (left, right) in enumerate(PAIRS):
         overlap = combined['overlaps'][:, pair]
@@ -191,7 +193,7 @@ def report(repo, manifest, output, combined_input=None, cluster=None, retries=No
     axes[0].axhline(fi+.5,color="grey",ls="--",lw=1)
     axes[1].axhline(fi+.5,color="grey",ls="--",lw=1)
     fig.suptitle(f"Same-source MC cutflow · {len(records)} paired files · {counts[0,0]:,} events\n"
-                 "Official master d32b0ff3 · native VetoNu reduced charge · unweighted MC")
+                 f"{software_label} · native VetoNu reduced charge · unweighted MC")
     fig.tight_layout();figure_save(fig,output,"cutflow_efficiency")
 
     for label, edges, xlabel in [("energy",ENERGY_EDGES,"Truth neutrino pz (GeV)"),
@@ -276,8 +278,9 @@ def report(repo, manifest, output, combined_input=None, cluster=None, retries=No
               "## 配置与复核", "",
               "实际 cut 表达式见 cut_definitions.tsv；本次跳过的 DATA/aux/raw-charge 分支：", "",
               "\n".join('- '+name for name in skipped), "",
-              f"全部 {len(records)} 项均逐事件验证三种模式的 17 个非轨迹输入完全一致，"
-              "新旧 merge 的分析标量、cut 决策和事件 ID 完全相同。"
+              f"全部 {len(records)} 项均逐事件验证三种模式的 17 个非轨迹输入完全一致，" +
+              ("新旧 merge 的分析标量、cut 决策和事件 ID 完全相同。" if require_existing else
+               "本次为新版本重建；没有要求新旧 merge 的 cut 决策相同。") +
               "未比较全部 ntuple 分支的每个数值。", ""]
     (output/'comparison.md').write_text('\n'.join(lines))
     print('reported',len(records),'files',counts.tolist(),flush=True)

@@ -1,0 +1,73 @@
+{
+  "run": {
+    "exact_equal": true
+  },
+  "eventID": {
+    "exact_equal": true
+  },
+  "truth_pdg": {
+    "exact_equal": true
+  },
+  "truth_pz": {
+    "exact_equal": true
+  },
+  "truth_dec_x": {
+    "exact_equal": true
+  },
+  "truth_dec_y": {
+    "exact_equal": true
+  },
+  "truth_dec_z": {
+    "exact_equal": true
+  },
+  "Veto20_charge": {
+    "exact_equal": false,
+    "changed_events": 182,
+    "maximum_absolute_change": 269720.5625
+  },
+  "Veto21_charge": {
+    "exact_equal": false,
+    "changed_events": 177,
+    "maximum_absolute_change": 201312.171875
+  },
+  "Preshower0_charge": {
+    "exact_equal": false,
+    "changed_events": 229,
+    "maximum_absolute_change": Infinity
+  },
+  "Preshower1_charge": {
+    "exact_equal": false,
+    "changed_events": 236,
+    "maximum_absolute_change": Infinity
+  },
+  "VetoNu0_reduced_charge": {
+    "exact_equal": false,
+    "changed_events": 32,
+    "maximum_absolute_change": 183.98683166503906
+  },
+  "VetoNu1_reduced_charge": {
+    "exact_equal": false,
+    "changed_events": 33,
+    "maximum_absolute_change": 126.8892822265625
+  },
+  "Timing0_charge": {
+    "exact_equal": false,
+    "changed_events": 216,
+    "maximum_absolute_change": 206159.921875
+  },
+  "Timing1_charge": {
+    "exact_equal": false,
+    "changed_events": 216,
+    "maximum_absolute_change": 197875.75
+  },
+  "Timing2_charge": {
+    "exact_equal": false,
+    "changed_events": 218,
+    "maximum_absolute_change": 152158.609375
+  },
+  "Timing3_charge": {
+    "exact_equal": false,
+    "changed_events": 223,
+    "maximum_absolute_change": 51972.90234375
+  }
+}

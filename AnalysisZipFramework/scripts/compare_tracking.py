@@ -30,7 +30,7 @@ def selection(repo):
     return active, skipped
 
 
-def extract(path, repo, threads=1):
+def extract(path, repo, threads=1, rotated=False):
     import ROOT
     start = time.monotonic()
     if threads > 1 and not ROOT.IsImplicitMTEnabled():
@@ -38,6 +38,12 @@ def extract(path, repo, threads=1):
     ROOT.gInterpreter.AddIncludePath(str(repo / "AnalysisZipFramework/include"))
     ROOT.gInterpreter.Declare('#include "RDFDefines.h"')
     node = ROOT.RDataFrame("nt", str(path))
+    if rotated:
+        # geoRotation stores (x', y', z') = (z, y, -x). Truth input
+        # and scintillator Y remain in the original analysis convention.
+        node = node.Define("comparison_rotated_px0", "Track_px0")
+        node = node.Redefine("Track_px0", "-Track_pz0")
+        node = node.Redefine("Track_pz0", "comparison_rotated_px0")
     columns = {str(c) for c in node.GetColumnNames()}
     if not {"VetoNu0_reduced_charge", "VetoNu1_reduced_charge"} <= columns:
         raise RuntimeError("native reduced charge required for this comparison")

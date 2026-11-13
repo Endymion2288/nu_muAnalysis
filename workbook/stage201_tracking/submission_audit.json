@@ -1,0 +1,56 @@
+{
+  "pilot343_local": {
+    "events": 343,
+    "truth": 16,
+    "final_FBM": [
+      3,
+      4,
+      4
+    ],
+    "raw_tracks_FBM": [
+      128,
+      109,
+      204
+    ],
+    "raw_long_FBM": [
+      19,
+      38,
+      41
+    ],
+    "nonfinite_raw_chi2_FBM": [
+      0,
+      0,
+      0
+    ],
+    "native_Cpp_all_20_cuts": "passed",
+    "reco_wall_s": 91.2,
+    "reco_max_rss_kib": 1086512,
+    "maker_wall_s_FBM": [
+      24.28,
+      23.35,
+      89.01
+    ],
+    "maker_max_rss_kib_FBM": [
+      902720,
+      901776,
+      1949612
+    ],
+    "diagnostic_output_bytes": 23236,
+    "report_wall_s": 7.33377122040838
+  },
+  "withdrawn_idle_pilot": {
+    "cluster": 9717379,
+    "reason": "remove two unused simulation libraries from runtime archive to reduce per-job network traffic",
+    "executed": false
+  },
+  "pilot1000_cluster": 9717381,
+  "production_expected_rdos": 343,
+  "production_expected_events": 3384987,
+  "production_cluster": 9717383,
+  "production_directory": "/afs/cern.ch/user/x/xcheng/condor/nu_muAnalysis/stage201_tracking/productionv2",
+  "withdrawn_initial_production": {
+    "cluster": 9717382,
+    "reason": "record individual cut bits and trigger Y for fixed old-scintillator control after detecting waveform version differences",
+    "published_outputs": 0
+  }
+}
