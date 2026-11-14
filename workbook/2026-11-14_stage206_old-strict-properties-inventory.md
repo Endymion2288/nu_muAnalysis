@@ -36,6 +36,8 @@ Station参考继续为SiHit方向乘HepMC产生动量大小，缺少G4局部输�
 
 W1–W6的源码修改属于两版Calypso间已有的波形版本差异，**几何旋转本身并不要求改变ADC波形积分算法**。本阶段没有理由把这些差异统称为“旋转必然带来的效果”。详见 [源码核对](stage206_old_strict/source_inventory.json)、[已有波形diff](stage204_causal/waveform_source.diff)、[新增配置/cleanup diff](stage206_old_strict/waveform_config_cleanup.diff)；[Tracking/Waveform上游改动文件表](stage206_old_strict/upstream_changed_files.tsv)提供扩展审计入口，不将所有改变的文件都假定为有物理影响。
 
+**阶段207历史方向补充：** 本表按old→strict展示差异，不代表实际提交先后。Git核查确认strict继承较早的波形实现，old master包含2026-08-16的`dd56a65e`波形更新；`geometryRotation`提交在`Waveform/`的改动为0。W1–W8涉及的五个波形文件分别精确等于该更新之前/之后的版本。见[版本溯源报告](2026-11-14_stage207_waveform-source-lineage.md)；本表所有实测数值不变。
+
 ## 电荷差异体现在哪里：完整事件上的测量
 
 [全部详细表](stage206_old_strict/full/detailed_results.md)给出每个run、方法和通道的原始TSV入口；以下分母统一为140,132个accepted事件。正常Preshower主峰几乎不动，PS0中位数old/strict为 **5.69122/5.68520 pC**，PS1为 **5.87945/5.87431 pC**。差异不是整体标定平移到2.5 pC阈值以下，而是小比例严重异常：

@@ -35,7 +35,7 @@ Station 动量参考仍为 **SiHit 方向 × 链接 HepMC 产生动量大小**�
 | 383 | 4.7842822 | −∞ | 5.1467190 | 0 | 同一组真实 CB 参数，`TF1::Integral` 为 −∞，`IntegralOneDim` 为 239.2174409 mV·ns，即 4.7843488 pC；积分器报告的误差估计 1.55×10⁻⁷ mV·ns |
 | 1915 | 4.4452720 | −0.00589046 | 4.6946287 | 48 | GFIT_FAILED (16) + CBFIT_FAILED (32)，Gaussian peak −1474.76 mV、width 7.967×10⁻⁵ ns，失败结果仍写入 hit |
 
-旧源码以“avoid FPE from symbolic integrator”的注释采用 `IntegralOneDim`，新源码改回 `Integral`，且 event 383 的非有限积分未使 status 置错。event 1915 对应的新 `reconstructHit` 在两次 Gaussian 失败后仍无条件保存 gfit，CB 失败仅保留这些结果，旧版 fallback 流程不同。不能仅通过删掉失败事件来修复接受度；也不能把 raw charge 无校准地统一当作最终电荷。见 [真实拟合参数与积分 API](stage204_causal/waveform_fit_383.json)、[失败拟合参数](stage204_causal/waveform_fit_1915.json)、[重放目标表](stage204_causal/waveform_targeted_events.tsv)、[历史缓存逐值验证](stage204_causal/waveform_cache_validation.json)。
+旧源码以“avoid FPE from symbolic integrator”的注释采用 `IntegralOneDim`，旋转版源码采用 `Integral`，且 event 383 的非有限积分未使 status 置错。阶段207补充核查历史：不是旋转提交“改回”该API，而是旋转分支继承较早实现、old master后来包含`dd56a65e`波形更新，见[版本溯源报告](2026-11-14_stage207_waveform-source-lineage.md)。event 1915 对应的新 `reconstructHit` 在两次 Gaussian 失败后仍无条件保存 gfit，CB 失败仅保留这些结果，旧版 fallback 流程不同。不能仅通过删掉失败事件来修复接受度；也不能把 raw charge 无校准地统一当作最终电荷。见 [真实拟合参数与积分 API](stage204_causal/waveform_fit_383.json)、[失败拟合参数](stage204_causal/waveform_fit_1915.json)、[重放目标表](stage204_causal/waveform_targeted_events.tsv)、[历史缓存逐值验证](stage204_causal/waveform_cache_validation.json)。
 
 ## 种子先验的变化与角度坐标含义
 

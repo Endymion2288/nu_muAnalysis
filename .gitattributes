@@ -24,3 +24,7 @@ workbook/stage206_old_strict/*.tsv whitespace=cr-at-eol
 # Preserve generated report endings and the exact time(1) command record.
 workbook/stage206_old_strict/**/detailed_results.md whitespace=-blank-at-eof
 workbook/stage206_old_strict/full/staging_resources.txt whitespace=-blank-at-eol
+
+# Preserve the exact upstream waveform patch and numbered source excerpts.
+workbook/stage207_waveform_lineage/upstream_waveform_update.diff -whitespace
+workbook/stage207_waveform_lineage/source_excerpts.md whitespace=-blank-at-eol,-space-before-tab

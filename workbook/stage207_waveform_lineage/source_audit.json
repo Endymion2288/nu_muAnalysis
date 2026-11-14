@@ -1,0 +1,310 @@
+{
+  "old": "d32b0ff3",
+  "strict": "88c457c1",
+  "waveform_update": "dd56a65e",
+  "rotation_parent": "73c9775854a39193426eac843f04daa302390b05",
+  "ancestry": {
+    "update_in_old": true,
+    "update_in_strict": false,
+    "old_in_strict": false,
+    "strict_in_old": false
+  },
+  "comparisons": [
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "old_equals_update": true,
+      "strict_equals_before_update": true,
+      "rotation_commit_unchanged": true,
+      "current_equals_rotated": true
+    },
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.h",
+      "old_equals_update": true,
+      "strict_equals_before_update": true,
+      "rotation_commit_unchanged": true,
+      "current_equals_rotated": true
+    },
+    {
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "old_equals_update": true,
+      "strict_equals_before_update": true,
+      "rotation_commit_unchanged": true,
+      "current_equals_rotated": true
+    },
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformCleanupTool.cxx",
+      "old_equals_update": true,
+      "strict_equals_before_update": true,
+      "rotation_commit_unchanged": true,
+      "current_equals_rotated": true
+    },
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformCleanupTool.h",
+      "old_equals_update": true,
+      "strict_equals_before_update": true,
+      "rotation_commit_unchanged": true,
+      "current_equals_rotated": true
+    }
+  ],
+  "rotation_commit_waveform_changed_files": [],
+  "update_to_old_waveform_changed_files": [],
+  "strict_local_waveform_changed_files": [],
+  "timing_conditions_changed_files": [],
+  "full_wave_writer_exact": false,
+  "charge_assignments_exact": true,
+  "charge_assignments": {
+    "d32b0ff3": [
+      "m_wave_charge[ch]=hit->integral()/50;  // In pC",
+      "m_wave_raw_charge[ch]=hit->raw_integral()/50;  // In pC"
+    ],
+    "88c457c1": [
+      "m_wave_charge[ch]=hit->integral()/50;  // In pC",
+      "m_wave_raw_charge[ch]=hit->raw_integral()/50;  // In pC"
+    ]
+  },
+  "source_locations": [
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::reconstructPrimary(",
+      "line": 52
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::fillRawHitValues(",
+      "line": 391
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::reconstructHit(",
+      "line": 455
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::findRawHitValues(",
+      "line": 797
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::fitGaussian(",
+      "line": 867
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::fitCBall(",
+      "line": 1011
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.h",
+      "needle": "BooleanProperty m_removeOverflow",
+      "line": 106
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "\"PreshowerWaveformRecAlg\"",
+      "line": 31
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "\"PreshowerWaveformRecAlg\"",
+      "line": 47
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "for key in [\"PeakThreshold\"",
+      "line": 81
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "for key in [\"KeepAll\"",
+      "line": 86
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.cxx",
+      "needle": "RawWaveformRecAlg::execute(",
+      "line": 45
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 72
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 75
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 80
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 83
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "ToolHandle",
+      "line": 27
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "ToolHandle",
+      "line": 62
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "ToolHandle",
+      "line": 68
+    },
+    {
+      "commit": "d32b0ff3",
+      "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+      "needle": "void NtupleDumperAlg::FillWaveBranches(",
+      "line": 246
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::reconstructPrimary(",
+      "line": 52
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::fillRawHitValues(",
+      "line": 391
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::reconstructHit(",
+      "line": 440
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::findRawHitValues(",
+      "line": 707
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::fitGaussian(",
+      "line": 761
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "needle": "WaveformReconstructionTool::fitCBall(",
+      "line": 815
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.h",
+      "needle": "BooleanProperty m_removeOverflow",
+      "line": 106
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "\"PreshowerWaveformRecAlg\"",
+      "line": 31
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "\"PreshowerWaveformRecAlg\"",
+      "line": 47
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "for key in [\"PeakThreshold\"",
+      "line": 81
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "needle": "for key in [\"KeepAll\"",
+      "line": 86
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.cxx",
+      "needle": "RawWaveformRecAlg::execute(",
+      "line": 45
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 72
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 75
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 80
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "SG::ReadHandleKey",
+      "line": 83
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "ToolHandle",
+      "line": 27
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "ToolHandle",
+      "line": 62
+    },
+    {
+      "commit": "88c457c1",
+      "path": "Waveform/WaveRecAlgs/src/RawWaveformRecAlg.h",
+      "needle": "ToolHandle",
+      "line": 68
+    },
+    {
+      "commit": "88c457c1",
+      "path": "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+      "needle": "void NtupleDumperAlg::FillWaveBranches(",
+      "line": 246
+    }
+  ],
+  "scope": "source ancestry and dependency audit; no reconstruction or physics configuration changed",
+  "wall_s": 33.08625188656151,
+  "max_rss_kib": 519892
+}

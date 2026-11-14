@@ -1,0 +1,28 @@
+{
+  "root_version": "6.28/12",
+  "input": "workbook/stage204_causal/waveform_fit_383.json",
+  "run": 200080,
+  "event": 383,
+  "hits": [
+    {
+      "channel": 12,
+      "status": 0,
+      "integral_mV_ns": -Infinity,
+      "numerical_integral_mV_ns": 239.21744092873178,
+      "numerical_error_mV_ns": 1.5478521634367878e-07,
+      "charge_pc": -Infinity,
+      "numerical_charge_pc": 4.784348818574635
+    },
+    {
+      "channel": 13,
+      "status": 0,
+      "integral_mV_ns": 2145.2173871641075,
+      "numerical_integral_mV_ns": 2145.217387156664,
+      "numerical_error_mV_ns": 4.3570146822992937e-07,
+      "charge_pc": 42.90434774328215,
+      "numerical_charge_pc": 42.90434774313328
+    }
+  ],
+  "geometry_or_track_input": false,
+  "scope": "fixed real fitted parameters; not an RDO replay or fit comparison"
+}

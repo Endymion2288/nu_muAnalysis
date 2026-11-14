@@ -1,0 +1,864 @@
+diff --git a/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py b/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py
+index 3a704d5c..c2da611a 100644
+--- a/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py
++++ b/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py
+@@ -83,7 +83,7 @@ def WaveformHitRecCfg(flags, name="WaveformRecAlg", source="", **kwargs):
+     tool  = WaveformReconstructionTool(name=source+"WaveformRecTool", **toolargs)
+ 
+     toolargs = {}
+-    for key in ["KeepAll", "Prescale"]:
++    for key in ["KeepAll", "Prescale", "KeepOverflow"]:
+         if key in kwargs: toolargs[key] = kwargs.pop(key)        
+     tool2 = WaveformCleanupTool(name=source+"WaveformCleanupTool", **toolargs)
+     
+diff --git a/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx b/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx
+index b696ed45..19f98ab8 100644
+--- a/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx
++++ b/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx
+@@ -34,6 +34,9 @@ WaveformCleanupTool::initialize() {
+     
+     if (m_keepErrors.value()) 
+       ATH_MSG_INFO("Will keep waveforms with fit errors");
++
++    if (m_keepOverflow.value())
++      ATH_MSG_INFO("Will keep waveforms with overflows");
+     
+     ATH_MSG_INFO("Waveform prescale = " << m_prescale);
+   }
+@@ -72,8 +75,11 @@ WaveformCleanupTool::cleanupWaveforms(
+ 	 )) {
+       // Dont delete (or prescale) this waveform
+       continue;
++      
++    } else if (m_keepOverflow && hit->status_bit(xAOD::WaveformStatus::WAVE_OVERFLOW)) {
++      continue;
+     }
+-	       
++    
+     // Deal with applying prescale
+     if ((m_prescale > 0) && (evtnum % m_prescale))
+       hit->clear_waveform();
+diff --git a/Waveform/WaveRecTools/src/WaveformCleanupTool.h b/Waveform/WaveRecTools/src/WaveformCleanupTool.h
+index 5786fd9e..dfbbd719 100644
+--- a/Waveform/WaveRecTools/src/WaveformCleanupTool.h
++++ b/Waveform/WaveRecTools/src/WaveformCleanupTool.h
+@@ -53,6 +53,9 @@ class WaveformCleanupTool: public extends<AthAlgTool, IWaveformCleanupTool> {
+ 
+   // KeepErrors - keep waveform for any fit errors 
+   BooleanProperty m_keepErrors{this, "KeepErrors", true};
++
++  // KeepOverflow - keep waveforms that overflow digitizer range
++  BooleanProperty m_keepOverflow{this, "KeepOverflow", false};
+   
+   // Prescale - save only every N waveforms: !(event_number % m_prescale)
+   IntegerProperty m_prescale{this, "Prescale", 23};
+diff --git a/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx b/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx
+index 3460b884..ffdbaa9e 100644
+--- a/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx
++++ b/Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx
+@@ -80,14 +80,14 @@ WaveformReconstructionTool::reconstructPrimary(
+     return StatusCode::SUCCESS;
+   }
+ 
+-  // Find the baseline for this waveform
++    // Find the baseline for this waveform
+   findBaseline(wave, newhit);
+ 
+   // Check for problems
+   if (newhit->status_bit(xAOD::WaveformStatus::BASELINE_FAILED)) {
+     return StatusCode::SUCCESS;
+   }
+-  
++
+   // Get the nominal trigger time (in ns) from config
+   float trigger_time = m_timingTool->nominalTriggerTime();
+ 
+@@ -407,22 +407,38 @@ WaveformReconstructionTool::fillRawHitValues(const RawWaveform& wave,
+   std::vector<float> wtime(hi_edge-lo_edge+1);
+   std::vector<float> wwave(hi_edge-lo_edge+1);
+ 
++  // Also look for overflows here
++  int iover_start = 9999;
++  int iover_end = 0;
++  
+   for (int i=lo_edge; i<=hi_edge; i++) {
+     unsigned int j = i-lo_edge;
+     wtime[j] = 2.*i; // 2ns per sample at 500 MHz
+     wwave[j] = hit->baseline_mean() - wave.mv_per_bit() * wave.adc_counts()[i];
++
++    if (wave.adc_counts()[i] <= 0) {
++      iover_start = std::min(iover_start, i);
++      iover_end = std::max(iover_end, i);
++    }
+   }
+ 
+   hit->set_time_vector(wtime);
+   hit->set_wave_vector(wwave);
+ 
++  float overtime = 0.;
++  if (iover_end > iover_start) {
++    overtime = 2.*(iover_end - iover_start); 
++    hit->set_status_bit(xAOD::WaveformStatus::WAVE_OVERFLOW);
++  }
++  hit->set_over_time(overtime);
++    
+   // Set raw values
+   WaveformFitResult raw = findRawHitValues(wtime, wwave);
+   hit->set_peak(raw.peak);
+   hit->set_mean(raw.mean);
+   hit->set_width(raw.sigma);
+   hit->set_integral(raw.integral);
+-  hit->set_localtime(raw.mean);
++  hit->set_localtime(raw.time);
+   hit->set_raw_peak(raw.peak);
+   hit->set_raw_integral(raw.integral);
+ 
+@@ -430,7 +446,6 @@ WaveformReconstructionTool::fillRawHitValues(const RawWaveform& wave,
+   if (wave.trigger_offset() >= 1) {
+     hit->set_status_bit(xAOD::WaveformStatus::TIMING_SHIFTED);
+   }
+-      
+ 
+ }
+ 
+@@ -449,61 +464,99 @@ WaveformReconstructionTool::reconstructHit(xAOD::WaveformHit* hit) const {
+ 		<< " to " << wtime.back());
+ 
+   // Fill values needed for fit (peak, mean, and sigma)
++  // Save initial values (from parameter estimation)
+   WaveformFitResult raw;
+   raw.peak = hit->peak();
+   raw.mean = hit->mean();
+   raw.sigma = hit->width();
+-
++  raw.time = hit->localtime();
++  raw.integral = hit->integral();
++  
+   //
+-  // Perform Gaussian fit to waveform
+-  WaveformFitResult gfit = fitGaussian(raw, wtime, wwave);
+-  if (! gfit.valid) {
+-    // Lets try again with a more restricted width
+-    ATH_MSG_WARNING( " Gaussian waveform fit failed with width " << raw.sigma << " try reducing width to 1 " );
+-    raw.sigma = 1.;
+-    gfit = fitGaussian(raw, wtime, wwave);
+-    if (!gfit.valid) {
+-      hit->set_status_bit(xAOD::WaveformStatus::GFIT_FAILED);
++  // Check for overflow (now done in fillRawHitValues
++  // This will also remove overflow values based on m_removeOverflow or m_removeAllOverflow
++  if (hit->overflow()) {
++    if (!findOverflow(hit->baseline_mean(), wtime, wwave)) {
++      ATH_MSG_INFO("finOverflow returned false even though overflow bit set!  tover = " << hit->over_time());
++    } else {
++      ATH_MSG_DEBUG("Found waveform overflow");
+     }
+-  } 
+-
+-  // Fit results (or raw if it failed)
+-  hit->set_peak(gfit.peak);
+-  hit->set_mean(gfit.mean);
+-  hit->set_width(gfit.sigma);
+-  hit->set_integral(gfit.integral);
+-  hit->set_localtime(gfit.time);
++  }
+   
+   //
+-  // Check for overflow
+-  if (m_removeOverflow && findOverflow(hit->baseline_mean(), wtime, wwave)) {
+-    ATH_MSG_INFO("Found waveform overflow");
+-    hit->set_status_bit(xAOD::WaveformStatus::WAVE_OVERFLOW);
++  // Perform Gaussian fit to waveform
++  WaveformFitResult previous_fit;
++  WaveformFitResult gfit = fitGaussian(raw, wtime, wwave);
++  if (! gfit.valid) {
++    ATH_MSG_INFO( " Gaussian waveform fit failed for channel " << hit->channel() << "!  Status: " << gfit.fit_status);
++    hit->set_status_bit(xAOD::WaveformStatus::GFIT_FAILED);
++    previous_fit = raw;    
++  } else {
++    // Update if fit succeeded
++    hit->set_peak(gfit.peak);
++    hit->set_mean(gfit.mean);
++    hit->set_width(gfit.sigma);
++    hit->set_localtime(gfit.time);
++    hit->set_integral(gfit.integral);
++    previous_fit = gfit;
+   }
+   
+   //
+   // Perform CB fit
+-  WaveformFitResult cbfit = fitCBall(gfit, wtime, wwave);
+-  if (! cbfit.valid) {
+-    ATH_MSG_WARNING("CrystalBall fit failed for channel " << hit->channel() << "!");
+-    // Still have gaussian parameters as an estimate
++  WaveformFitResult cbfit;
++  if (hit->status_bit(xAOD::WaveformStatus::WAVE_OVERFLOW)) {
++    cbfit = fitCBallOverflow(previous_fit, wtime, wwave);
++  } else {
++    cbfit = fitCBall(previous_fit, wtime, wwave);
++  }
++
++  if (!cbfit.valid) {
++    // CB fit failed, mark it here
++    ATH_MSG_INFO("CrystalBall fit failed for channel " << hit->channel() << "!   Status: " << cbfit.fit_status);
+     hit->set_status_bit(xAOD::WaveformStatus::CBFIT_FAILED);
++    
++    if (hit->status_bit(xAOD::WaveformStatus::WAVE_OVERFLOW)) {
++      // For overflow, use raw values as likely better estimate than Gauss fit
++      // Time comes from peak, which is first overflow
++      hit->set_peak(raw.peak);
++      hit->set_mean(raw.mean);
++      hit->set_width(raw.sigma);
++      hit->set_localtime(raw.time);  
++      hit->set_integral(raw.integral);
++    }
++    
++    // for(unsigned int i=0; i<wwave.size(); i++) {
++    //   ATH_MSG_INFO(" Time: " << wtime[i] << " Value: " << wwave[i]);
++    // }
++
+   } else {
++    // CB fit succeeded
+     hit->set_peak(cbfit.peak);
+     hit->set_mean(cbfit.mean);
+     hit->set_width(cbfit.sigma);
+-    hit->set_integral(cbfit.integral);
+-    hit->set_localtime(cbfit.time);
+-    
+     hit->set_alpha(cbfit.alpha);
+     hit->set_nval(cbfit.nval);
++    hit->set_localtime(cbfit.time);    
++    hit->set_integral(cbfit.integral);
++  }
++
++  // Check time (to avoid NaN)
++  // This shouldn't happen any more
++  if (isnan(hit->localtime())) {
++    ATH_MSG_WARNING("Found waveform time NaN for channel " << hit->channel() << "!  valid = " << cbfit.valid);
++    hit->set_localtime(raw.time);
+   }
+ 
++  if (isnan(hit->integral())) {
++    ATH_MSG_WARNING("Found waveform integral NaN for channel " << hit->channel() << "!  valid = " << cbfit.valid);
++    hit->set_integral(raw.integral);
++  }
++  
+   ATH_MSG_DEBUG("Done reconstructing channel " << hit->channel() 
+ 		<< " waveform from " << wtime.front() << " to " << wtime.back());
+-
+ }
+ 
++
+ // Returns location of peak in array wave
+ // Return value is -1 if peak is below threshold
+ int
+@@ -528,6 +581,7 @@ WaveformReconstructionTool::findPeak(WaveformBaselineData& baseline,
+   return imax;
+ }
+ 
++// Return overflow time (in ns)
+ bool
+ WaveformReconstructionTool::findOverflow(float baseline,
+ 	      std::vector<float>& time, std::vector<float>& wave) const {
+@@ -537,21 +591,57 @@ WaveformReconstructionTool::findOverflow(float baseline,
+   // If peak value is less than baseline, we have no overflow
+   if (*peakloc < baseline) return false;
+ 
+-  ATH_MSG_DEBUG("Removing overflows from waveform with length " << wave.size());
+-
+   // We have an overflow, remove all elements that are overflowing
+-  unsigned int i = peakloc - wave.begin();
+-  for (; i<wave.size(); i++) {
+-    if (wave[i] < baseline) continue;
++  if (m_removeAllOverflow.value()) {
++    
++    // Remove everything from first to last overflowing
++    ATH_MSG_DEBUG("Removing overflows from waveform with length " << wave.size());
++    unsigned int istart = peakloc - wave.begin();
++    unsigned int iend = istart;  // Position in vector
++    unsigned int i = istart; // Position in original vector
++    
++    for (; i<wave.size(); i++) {
++      if (wave[i] < baseline) continue;  // Not overflow
++      iend = i;
++    }
+ 
+-    ATH_MSG_DEBUG("Removing position "<< i<< " with value " << wave[i] << " > " << baseline);
+-    // This is an overflow, remove elements
+-    time.erase(time.begin() + i);
+-    wave.erase(wave.begin() + i);
+-    i--;  // Decrement so that loop itertaion points to next element
+-  }
++    // Don't ever remove first or last entry!
++    if (istart<1) istart = 1;
++    if (iend > (wave.size()-2)) iend = wave.size()-2;
++    
++    i = istart;
++    ATH_MSG_DEBUG("Found overflows from "<<istart<<" to "<<iend);
++    for(unsigned int j=istart; j<=iend; j++) {
++      ATH_MSG_DEBUG("Removing position "<< j<< " with value " << wave[i] << " > " << baseline);
++      // This is an overflow, remove elements
++      // Can always delete at the same place as we keep removing elements
++      time.erase(time.begin() + i);
++      wave.erase(wave.begin() + i);
++    }
++    
++    ATH_MSG_DEBUG("Removed overflows, length now " << wave.size());
++    
++  } else if (m_removeOverflow.value()) {
++    // Just remove values that have overflowed  
++    ATH_MSG_DEBUG("Removing overflows from waveform with length " << wave.size());
++
++    unsigned int i = peakloc - wave.begin();  // Position in current vector
++    unsigned int j = i;  // Position in original vector
++    for (; i<wave.size(); i++, j++) {
++      if (wave[i] < baseline) continue;
++
++      ATH_MSG_DEBUG("Removing position "<< j<< " with value " << wave[i] << " >= " << baseline);
++      // This is an overflow, remove elements
++      time.erase(time.begin() + i);
++      wave.erase(wave.begin() + i);
++      i--;  // Decrement so that loop itertaion points to next element
++    }
++    ATH_MSG_DEBUG("Removed overflows, length now " << wave.size());
+ 
+-  ATH_MSG_DEBUG("Removed overflows, length now " << wave.size());
++  } else {
++    ATH_MSG_DEBUG("Found overflow but nothing removed");
++  }
++  
+   return true;
+ }
+ 
+@@ -712,46 +802,62 @@ WaveformReconstructionTool::findRawHitValues(const std::vector<float> time, cons
+   static WaveformFitResult rfit;
+   rfit.clear();
+ 
++  // Better to start with the peak and find mean and RMS from narrower window?
++
++  // Pointer to peak
++  auto peakloc = std::max_element(wave.begin(), wave.end());
++  int ipeak = std::distance(wave.begin(), peakloc);
++  int size = wave.size();
++  
++  // Define a truncated range around peak to calculate raw quantities
++  unsigned int istart = std::max(ipeak-10, 0);
++  unsigned int iend   = std::min(ipeak+10, size-1);
++
++  // ATH_MSG_INFO("Calculating raw quantities from " << istart << " to " << iend);
++  
+   // First, estimate starting values from input waveform
+   // Will use this to pre-set fit values, but also as a backup in case fit fails
+   double tot = 0.;
+   double sum = 0.;
+   double sum2 = 0.;
+-  for (unsigned int i=0; i<time.size(); i++) {
+-    //ATH_MSG_DEBUG("findRawHitValues Time: " << time[i] << " Wave: " << wave[i]);
+-    if (wave[i] <= 0.) continue; // Don't sum negative values, causes problems with RMS
++  for (unsigned int i=istart; i<=iend; i++) {
++    // ATH_MSG_INFO("findRawHitValues Time: " << time[i] << " Wave: " << wave[i]);
++    if (wave[i] <= 0.) continue; // Don't sum negative values, causes problems
+     tot += wave[i];
+     sum += time[i] * wave[i];
+     sum2 += time[i] * time[i] * wave[i];
+   }
+ 
+-  // Pointer to peak
+-  auto peakloc = std::max_element(wave.begin(), wave.end());
+-
+-  // Initial parameters from waveform
++  // Initial parameters from waveform  
+   rfit.mean = sum/tot;
+   rfit.sigma = std::sqrt(sum2/tot - rfit.mean*rfit.mean);
+   rfit.peak = *peakloc;
+-  rfit.integral = 2*tot; // Factor of 2 because at 500 MHz, dt = 2 ns
+-  rfit.time = rfit.mean;
++  // Time is set to peak location
++  // This works well for overflows as it is the time of overflow
++  rfit.time = time[ipeak];
++
++  // For integral, use entire range
++  // Factor of 2 because at 500 MHz, dt = 2 ns
++  rfit.integral = 2*std::accumulate(wave.begin(), wave.end(), 0.);
+ 
+   ATH_MSG_DEBUG( 
+-		"Initial Mean: " << rfit.mean 
++		"findRawHitValues Initial Mean: " << rfit.mean 
+ 		<< " RMS: " << rfit.sigma 
+-		<< " Peak: " << rfit.peak 
++		<< " Peak: " << rfit.peak
++		<< " Time: " << rfit.time
+ 		<< " Integral: " << rfit.integral
+ 		 );  
+ 
+   // Fix bad values
+   if (isnan(rfit.sigma)) {
+-    ATH_MSG_DEBUG("Found sigma: " << rfit.sigma << " Replace with 2.");
++    ATH_MSG_WARNING("findRawHitValues Found sigma: " << rfit.sigma << " Replace with 2.");
+     rfit.sigma = 2.;
+   }
+ 
+   if (rfit.mean < time.front() || rfit.mean > time.back()) {
+-    rfit.mean = (3*time.front() + time.back())/4.; // Set time to 1/4 of way through window
+-    ATH_MSG_DEBUG("Found mean: " << rfit.time << " out of range " << time.front() << "-" << time.back() << " Replace with " << rfit.mean);
+-    rfit.time = rfit.mean;
++    ATH_MSG_WARNING("findRawHitValues Found mean: " << rfit.mean << " out of range " << time.front() << "-" << time.back() << " Replace with peak time " << rfit.time);
++    // Use peak time instead
++    rfit.mean = rfit.time;
+   }
+ 
+   return rfit;
+@@ -778,16 +884,43 @@ WaveformReconstructionTool::fitGaussian(const WaveformFitResult& raw, const std:
+   gfunc.SetParameters(raw.peak, raw.mean, raw.sigma);
+   gfunc.SetParError(0, raw.peak/10.);
+   gfunc.SetParError(1, raw.sigma);
+-  gfunc.SetParError(2, raw.sigma / 5.);
+-  gfunc.SetParLimits(2, 0., 20.);  // Constrain width
++  gfunc.SetParError(2, raw.sigma / 10.);
++  gfunc.SetParLimits(0, 1, 5000);
++  gfunc.SetParLimits(1, time.front(), time.back());
++  gfunc.SetParLimits(2, 1, 50);  // Constrain width
++
++  // First fix the width
++  gfunc.FixParameter(2, raw.sigma);
++  TFitResultPtr gfitptr = tg.Fit(&gfunc, "QNSB", "");
++
++  gfit.fit_status = gfitptr;
++  gfit.valid = (gfit.fit_status%10 == 0);
+ 
+-  TFitResultPtr gfitptr = tg.Fit(&gfunc, "QNS", "");
++  if (!gfit.valid) {
++    ATH_MSG_DEBUG( " First Gaussian waveform fit failed!");
++    ATH_MSG_DEBUG( " Raw    Mean: " << raw.mean << " RMS: " << raw.sigma << " Peak:" << raw.peak);
++    ATH_MSG_DEBUG( " G Fit  Mean: " << gfitptr->Parameter(1) << " RMS: " << gfitptr->Parameter(2) << " Peak:" << gfitptr->Parameter(0));
++  }
++
++  // Now release width and fit again
++  gfunc.ReleaseParameter(2);
++  gfunc.SetParameter(2, raw.sigma);
++  gfunc.SetParError(2, raw.sigma / 10.);
++  gfunc.SetParLimits(2, 1, 50); // Constrain width
++
++  gfitptr = tg.Fit(&gfunc, "QNSB", "");  
+ 
+   gfit.fit_status = gfitptr;
+-  gfit.valid = (gfit.fit_status == 0);
++  gfit.valid = (gfit.fit_status%10 == 0);
++
++  // Only consider fit failed if minimization fails (Migrad)
++  // Failure in errors (Minos or Hesse) are not critical
++  //if (!gfitptr->IsValid()) {
++  if (!gfit.valid) {
++    ATH_MSG_DEBUG( " Second Gaussian waveform fit failed!");
++    ATH_MSG_DEBUG( " Raw    Mean: " << raw.mean << " RMS: " << raw.sigma << " Peak:" << raw.peak);
++    ATH_MSG_DEBUG( " G Fit  Mean: " << gfitptr->Parameter(1) << " RMS: " << gfitptr->Parameter(2) << " Peak:" << gfitptr->Parameter(0));
+ 
+-  if (!gfitptr->IsValid()) {
+-    ATH_MSG_WARNING( " Gaussian waveform fit failed! ");
+   } else {
+     // Improve estimation with fit results
+     gfit.peak = gfitptr->Parameter(0);
+@@ -796,18 +929,81 @@ WaveformReconstructionTool::fitGaussian(const WaveformFitResult& raw, const std:
+     gfit.integral = gfunc.Integral(time.front(), time.back());
+ 
+     // Find time here
+-    gfit.time = gfunc.GetX( gfit.peak * m_timingPeakFraction, time.front(), gfit.mean );
++    //gfit.time = gfunc.GetX( gfit.peak * m_timingPeakFraction, time.front(), gfit.mean );
++    // Start checking function from t=0 in case Gaussian width pushes time
++    // before start of window
++    gfit.time = gfunc.GetX( gfit.peak * m_timingPeakFraction, 0., gfit.mean );
+ 
+     if (isnan(gfit.time)) {
+-      ATH_MSG_WARNING(" Gaussian fit returned time as NaN, assume fit failed");
++      ATH_MSG_DEBUG(" Gaussian fit returned time as NaN, assume fit failed");
++      ATH_MSG_DEBUG( " Raw    Mean: " << raw.mean << " RMS: " << raw.sigma << " Peak:" << raw.peak);
++      ATH_MSG_DEBUG( " G Fit  Mean: " << gfitptr->Parameter(1) << " RMS: " << gfitptr->Parameter(2) << " Peak:" << gfitptr->Parameter(0));
++
+       gfit = raw;
+-      gfit.fit_status = false;
++      gfit.fit_status = 4;
++      gfit.valid = false;
+     }
+ 
+     ATH_MSG_DEBUG("G Fit   Mean: " << gfit.mean << " RMS: " << gfit.sigma 
+ 		  << " Peak: " << gfit.peak << " Int: " << gfit.integral << " Time: " << gfit.time);
+   }
+ 
++  // If we have a valid fit, return it
++  if (gfit.valid) return gfit;
++
++  // Try last chance
++  ATH_MSG_DEBUG("Attempting emergency Gaussian fit!");
++
++  // Fit to restricted range around peak (+/- 10ns)
++  TF1 gfunc2("gfunc2", "gaus", raw.time-10, raw.time+10);
++  gfunc2.SetParameters(raw.peak, raw.mean, raw.sigma);
++  gfunc2.SetParError(0, raw.peak/10.);
++  gfunc2.SetParLimits(0, 0, 5000);
++  gfunc2.FixParameter(1, raw.mean);
++  gfunc2.SetParError(2, raw.sigma/10.);
++  gfunc2.SetParLimits(2, 0.5, 10);
++
++  gfitptr = tg.Fit(&gfunc2, "QNSB", "");
++
++  // Now release mean and fix width
++  //gfunc2.ReleaseParameter(1);
++  //gfunc2.SetParameter(1, gfitptr->Parameter(1));
++  //gfunc2.SetParError(1, gfitptr->Parameter(2)/10.);
++  //gfunc2.FixParameter(2, gfitptr->Parameter(2));
++
++  //gfitptr = tg.Fit(&gfunc2, "QNS", "");
++    
++  gfit.fit_status = gfitptr;
++  gfit.valid = (gfit.fit_status%10 == 0);
++
++  if (!gfit.valid) {
++    ATH_MSG_DEBUG( " Emergency Gaussian waveform fit failed!");
++    ATH_MSG_DEBUG( " Raw    Mean: " << raw.mean << " RMS: " << raw.sigma << " Peak:" << raw.peak);
++    ATH_MSG_DEBUG( " G Fit  Mean: " << gfitptr->Parameter(1) << " RMS: " << gfitptr->Parameter(2) << " Peak:" << gfitptr->Parameter(0));
++  
++    //for(unsigned int i=0; i<wave.size(); i++) {
++    //  ATH_MSG_DEBUG(" Time: " << time[i] << " Value: " << wave[i]);
++    //}
++  } else {
++    gfit.peak = gfitptr->Parameter(0);
++    gfit.mean = gfitptr->Parameter(1);
++    gfit.sigma = gfitptr->Parameter(2);
++    gfit.integral = gfunc2.Integral(time.front(), time.back());
++
++    gfit.time = gfunc2.GetX( gfit.peak * m_timingPeakFraction, 0., gfit.mean );
++
++    if (isnan(gfit.time)) {
++      ATH_MSG_DEBUG(" Emergency Gaussian fit returned time as NaN, assume fit failed");
++      ATH_MSG_DEBUG( " Raw    Mean: " << raw.mean << " RMS: " << raw.sigma << " Peak:" << raw.peak);
++      ATH_MSG_DEBUG( " G Fit  Mean: " << gfitptr->Parameter(1) << " RMS: " << gfitptr->Parameter(2) << " Peak:" << gfitptr->Parameter(0));
++
++      gfit = raw;
++      gfit.fit_status = 4;
++      gfit.valid = false;
++    }
++    
++  }
++      
+   return gfit;
+ }
+ 
+@@ -827,8 +1023,8 @@ WaveformReconstructionTool::fitCBall(const WaveformFitResult& gfit,
+   // Values to preset CB fit
+   cbfit.peak = abs(gfit.peak);
+   cbfit.mean = gfit.mean;
+-  cbfit.sigma = abs(gfit.sigma);
+-  if (cbfit.sigma > 20.) cbfit.sigma = 2.;
++  cbfit.sigma = std::min(abs(gfit.sigma), 10.);
++  //if (cbfit.sigma > 20.) cbfit.sigma = 2.;
+   cbfit.alpha = -0.5;  // Negative to get tail on high side
+   cbfit.nval = 2.;
+ 
+@@ -838,34 +1034,45 @@ WaveformReconstructionTool::fitCBall(const WaveformFitResult& gfit,
+   cbfunc.SetParError(0,  cbfit.peak/10.);
+   cbfunc.SetParameter(1, cbfit.mean); // Mean
+   cbfunc.SetParError(1, cbfit.sigma);
++  cbfunc.SetParLimits(1, time.front(), time.back());
+   cbfunc.SetParameter(2, cbfit.sigma);  // Width
+   cbfunc.SetParError(2, cbfit.sigma/5.);
+-  cbfunc.SetParLimits(2, 0., 20.);
++  cbfunc.SetParLimits(2, 0.5, 20.);
+   cbfunc.SetParameter(3, cbfit.alpha); // Tail parameter (negative for high-side tail)
+   cbfunc.SetParError(3, -cbfit.alpha/5.);
+   cbfunc.SetParLimits(3, -10., 0.);
+   // Try fixing the tail first
++  cbfunc.FixParameter(3, cbfit.alpha);
+   cbfunc.FixParameter(4, cbfit.nval);
+ 
+-  TFitResultPtr cbfitptr = tg.Fit(&cbfunc, "QNS", "");
++  TFitResultPtr cbfitptr = tg.Fit(&cbfunc, "QNSB", "");
+ 
+-  if (!cbfitptr->IsValid()) {
++  if (cbfitptr%10) {
+     ATH_MSG_DEBUG( " First Crystal Ball waveform fit failed! ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
+   }
+ 
+   // Now try releasing the tail parameter
++  cbfunc.ReleaseParameter(3);
++  cbfunc.SetParameter(3, cbfit.alpha); // Tail parameter (negative for high-side tail)
++  cbfunc.SetParError(3, -cbfit.alpha/5.);
++  cbfunc.SetParLimits(3, -10., 0.);
++  
+   cbfunc.ReleaseParameter(4);
+   cbfunc.SetParameter(4, cbfit.nval);  // Tail power
+   cbfunc.SetParError(4, cbfit.nval/5.);
+   cbfunc.SetParLimits(4, 0., 1.E3);
+ 
+-  cbfitptr = tg.Fit(&cbfunc, "QNS", "");
++  cbfitptr = tg.Fit(&cbfunc, "QNSB", "");
+ 
+   cbfit.fit_status = cbfitptr;
+-  cbfit.valid = (cbfit.fit_status == 0);
++  cbfit.valid = (cbfit.fit_status%10 == 0);
+ 
+-  if (!cbfitptr->IsValid()) {
++  if (! cbfit.valid) {
+     ATH_MSG_DEBUG( " Full Crystal Ball waveform fit failed! ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
+   } else {
+     // Improve estimation with fit results
+     cbfit.peak = cbfitptr->Parameter(0);
+@@ -879,15 +1086,22 @@ WaveformReconstructionTool::fitCBall(const WaveformFitResult& gfit,
+     if (ndf == 0) ndf = 1;
+     cbfit.chi2ndf = chi2/ndf;
+ 
+-    cbfit.integral = cbfunc.Integral(time.front(), time.back());
++    // cbfit.integral = cbfunc.Integral(time.front(), time.back());
+ 
+-    // Find time here
+-    cbfit.time = cbfunc.GetX( cbfit.peak * m_timingPeakFraction, time.front(), cbfit.mean );
++    // Try specific integral function to avoid FPE from symbolic integrator failing?
++    // Start with default precision values, yes this works!
++    double error;
++    cbfit.integral = cbfunc.IntegralOneDim(time.front(), time.back(), -1, -1, error);
++
++    // Find time here (start from t=0 to avoid NaN)
++    cbfit.time = cbfunc.GetX( cbfit.peak * m_timingPeakFraction, 0., cbfit.mean );
+ 
+     if (isnan(cbfit.time)) {
+       ATH_MSG_WARNING(" Crystal Ball fit returned time as NaN, assume fit failes");
+-      cbfit.time = gfit.time;
+-      cbfit.fit_status = false;
++      cbfit = gfit;
++      //cbfit.time = gfit.time;
++      cbfit.fit_status = 4;
++      cbfit.valid = false;
+     }
+ 
+     ATH_MSG_DEBUG("CB Fit  Mean: " << cbfit.mean << " RMS: " << cbfit.sigma 
+@@ -900,3 +1114,196 @@ WaveformReconstructionTool::fitCBall(const WaveformFitResult& gfit,
+ 
+   return cbfit;
+ }
++
++WaveformFitResult&
++WaveformReconstructionTool::fitCBallOverflow(const WaveformFitResult& gfit, 
++					     const std::vector<float> time,
++					     const std::vector<float> wave) const {
++
++  ATH_MSG_DEBUG("fitCBallOverflow called");
++
++  // This must be static so we can return a reference
++  static WaveformFitResult cbfit;
++  cbfit.clear();
++
++  // Must pass arrays to TGraph, use pointer to first vector element
++  TGraph tg(time.size(), &time[0], &wave[0]);
++
++  // Find overflow times
++  // Must look for removed elements
++  float tover_start = time.front();
++  float tover_end = time.back();
++
++  for (unsigned int i=1; i<wave.size(); i++) {
++    if (time[i]-time[i-1] <= 2.1) continue; // 2ns is normal spacing
++    tover_start = time[i-1];
++    tover_end = time[i];
++    break;
++  }
++  
++  if (tover_start == time.front()) {
++    ATH_MSG_INFO("fitCBOverflow called but no overflow found!"); 
++  }
++
++  auto peakloc = std::max_element(wave.begin(), wave.end());
++  float maxval = *peakloc;
++  
++  // Values to preset CB fit
++  cbfit.peak = std::max(abs(gfit.peak), 1.1*maxval);
++  cbfit.mean = (2*tover_start + tover_end)/3.;  // 1/3 of the way through
++  cbfit.sigma = 4.;
++  cbfit.alpha = -2.;  // Negative to get tail on high side
++  cbfit.nval = 2.;
++
++  //
++  // Will try a series of fits, only update cbfit if a fit succeeds
++  //
++  
++  // Lets try fixing the mean first and fit the tail parameters
++  
++  // Define fit function and preset values
++  // Only fit to + m_overflowFitRange (170 ns) to avoid undershoot at end
++  TF1 cbfunc("cbfunc", "crystalball", time.front(), std::min(time.front()+m_overflowFitRange, time.back()));
++  cbfunc.SetParameter(0, cbfit.peak); // Peak height
++  cbfunc.SetParError(0, cbfit.peak/10.);
++  cbfunc.SetParLimits(0, maxval, 1.E6); 
++  cbfunc.FixParameter(1, cbfit.mean);
++  cbfunc.FixParameter(2, cbfit.sigma);
++  
++  // Fit the tail parameters
++  cbfunc.SetParameter(3, cbfit.alpha); // Tail parameter (negative for high-side tail)
++  cbfunc.SetParError(3, -cbfit.alpha/5.);
++  cbfunc.SetParLimits(3, -10., 0.);
++  cbfunc.SetParameter(4, cbfit.nval);  // Tail power
++  cbfunc.SetParError(4, cbfit.nval/5.);
++  cbfunc.SetParLimits(4, 0., 1.E3);
++
++  TFitResultPtr cbfitptr = tg.Fit(&cbfunc, "QNSB", "");
++
++  // Always take result of first fit
++  cbfit.fit_status = cbfitptr;
++  cbfit.valid = (cbfit.fit_status%10 == 0);
++
++  cbfit.peak = cbfitptr->Parameter(0);
++  cbfit.mean = cbfitptr->Parameter(1);
++  cbfit.sigma = cbfitptr->Parameter(2);
++  cbfit.alpha = cbfitptr->Parameter(3);
++  cbfit.nval = cbfitptr->Parameter(4);
++
++  double chi2 = cbfitptr->Chi2();
++  unsigned int ndf = std::max(cbfitptr->Ndf(), static_cast<unsigned int>(1));
++  cbfit.chi2ndf = chi2/ndf;
++  
++  if (cbfitptr%10) {
++    // Bad fit
++    ATH_MSG_DEBUG( " First Crystal Ball waveform fit failed! ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
++  } else {
++    // Good fit
++    ATH_MSG_DEBUG( " First Crystal Ball waveform fit ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
++  }
++
++  // Now lets just release the mean and fix the rest
++  cbfunc.ReleaseParameter(1);
++  cbfunc.SetParameter(1, cbfit.mean);
++  cbfunc.SetParError(1, cbfit.sigma);
++  cbfunc.SetParLimits(1, tover_start, (tover_start+tover_end)/2.);
++  cbfunc.FixParameter(2, cbfit.sigma);  
++  cbfunc.FixParameter(3, cbfit.alpha);
++  cbfunc.FixParameter(4, cbfit.nval);
++
++  cbfitptr = tg.Fit(&cbfunc, "QNSB", "");
++
++  // Only update if fit succeeded
++  
++  if (cbfitptr%10) {
++    ATH_MSG_DEBUG( " Second Crystal Ball waveform fit failed! ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
++  } else {
++    ATH_MSG_DEBUG( " Second Crystal Ball waveform fit ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
++
++    // Update parameters
++    cbfit.fit_status = cbfitptr;
++    cbfit.valid = (cbfit.fit_status%10 == 0);
++
++    cbfit.peak = cbfitptr->Parameter(0);
++    cbfit.mean = cbfitptr->Parameter(1);
++    cbfit.sigma = cbfitptr->Parameter(2);
++    cbfit.alpha = cbfitptr->Parameter(3);
++    cbfit.nval = cbfitptr->Parameter(4);
++
++    chi2 = cbfitptr->Chi2();
++    ndf = std::max(cbfitptr->Ndf(), static_cast<unsigned int>(1));
++    cbfit.chi2ndf = chi2/ndf;
++  }
++
++  // Now relax all limits
++  cbfunc.ReleaseParameter(2);
++  cbfunc.SetParLimits(2, 2., 10.);
++  cbfunc.SetParError(2, cbfit.sigma/5.);
++  cbfunc.ReleaseParameter(3);
++  cbfunc.ReleaseParameter(4);
++  
++  cbfitptr = tg.Fit(&cbfunc, "QNSB", "");
++
++  // Only update if fit succeeded
++  if (cbfitptr%10) {
++    ATH_MSG_DEBUG( " Full Crystal Ball waveform fit failed! ");
++    ATH_MSG_DEBUG( " Gauss Mean: " << gfit.mean << " RMS: " << gfit.sigma << " Peak:" << gfit.peak);
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
++  } else {
++    ATH_MSG_DEBUG( " Full Crystal Ball waveform fit ");
++    ATH_MSG_DEBUG( " CB    Mean: " << cbfitptr->Parameter(1) << " RMS: " << cbfitptr->Parameter(2) << " Peak:" << cbfitptr->Parameter(0) << " Alpha: " << cbfitptr->Parameter(3));
++
++    cbfit.fit_status = cbfitptr;
++    cbfit.valid = (cbfit.fit_status%10 == 0);
++
++    cbfit.peak = cbfitptr->Parameter(0);
++    cbfit.mean = cbfitptr->Parameter(1);
++    cbfit.sigma = cbfitptr->Parameter(2);
++    cbfit.alpha = cbfitptr->Parameter(3);
++    cbfit.nval = cbfitptr->Parameter(4);
++    
++    chi2 = cbfitptr->Chi2();
++    ndf = std::max(cbfitptr->Ndf(), static_cast<unsigned int>(1));
++    cbfit.chi2ndf = chi2/ndf;
++  }
++
++  // If we have a good fit, extract integral and time
++  if (cbfit.valid) {
++    
++    // Try specific integral function to avoid FPE from symbolic integrator failing?
++    // Start with default precision values, yes this works!
++    double error;
++    cbfit.integral = cbfunc.IntegralOneDim(time.front(), time.back(), -1, -1, error);
++
++    // Find time here (start from t=0 to avoid NaN)
++    cbfit.time = cbfunc.GetX( cbfit.peak * m_timingPeakFraction, 0., cbfit.mean );
++
++    if (isnan(cbfit.time)) {
++      ATH_MSG_WARNING(" Crystal Ball fit returned time as NaN, assume fit failes");
++      cbfit = gfit;
++      cbfit.time = tover_start;
++      cbfit.fit_status = 4;
++      cbfit.valid = false;
++    }
++  } else {
++    // Fit failed, use overflow start for time
++    // I think this gets overwritten anyways
++    cbfit.time = tover_start;
++  }
++  
++  ATH_MSG_DEBUG("CB Fit  Mean: " << cbfit.mean << " RMS: " << cbfit.sigma 
++	       << " Peak: " << cbfit.peak << " Int: " << cbfit.integral
++	       << " Time: " << cbfit.time 
++	       << " N: " << cbfit.nval << " Alpha: " << cbfit.alpha 
++	       << " Chi2/Ndf: " << cbfit.chi2ndf );
++
++  return cbfit;
++}
+diff --git a/Waveform/WaveRecTools/src/WaveformReconstructionTool.h b/Waveform/WaveRecTools/src/WaveformReconstructionTool.h
+index 2559616d..95d1873a 100644
+--- a/Waveform/WaveRecTools/src/WaveformReconstructionTool.h
++++ b/Waveform/WaveRecTools/src/WaveformReconstructionTool.h
+@@ -103,8 +103,15 @@ class WaveformReconstructionTool: public extends<AthAlgTool, IWaveformReconstruc
+ 
+   //
+   // Remove overflow values from CB fit
+-  BooleanProperty m_removeOverflow{this, "RemoveOverflow", true};
++  BooleanProperty m_removeOverflow{this, "RemoveOverflow", false};
+ 
++  //
++  // Remove from first to last overflow
++  BooleanProperty m_removeAllOverflow{this, "RemoveAllOverflow", true};
++
++  // Maximum range to fit overflows (to avoid overshoot at end) in ns!
++  IntegerProperty m_overflowFitRange{this, "OverflowFitRange", 170};
++  
+   //
+   // Fraction of peak to set local hit time
+   FloatProperty m_timingPeakFraction{this, "TimingPeakFraction", 0.4};
+@@ -154,6 +161,10 @@ class WaveformReconstructionTool: public extends<AthAlgTool, IWaveformReconstruc
+ 			      const std::vector<float> time, 
+ 			      const std::vector<float> wave) const;
+ 
++  WaveformFitResult& fitCBallOverflow(const WaveformFitResult& gfit, 
++				      const std::vector<float> time, 
++				      const std::vector<float> wave) const;
++
+ };
+ 
+ #endif // WAVERECTOOLS_WAVEFORMRECONSTRUCTIONTOOL_H
