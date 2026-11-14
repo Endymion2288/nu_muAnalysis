@@ -329,3 +329,7 @@ workbook/stage205_material/**/*.npz
 workbook/stage205_material/*.npz
 !workbook/stage205_material/**/*.png
 workbook/stage205_material/details/diagnostics.json.gz
+
+# Stage206 old/strict inventory: use existing caches; keep scalar audits and plots.
+ntuples/tracking_properties_stage206/
+!workbook/stage206_old_strict/**/*.png

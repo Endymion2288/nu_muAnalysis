@@ -1,0 +1,53 @@
+{
+  "old_commit": "d32b0ff3",
+  "new_commit": "88c457c1",
+  "strict_production": "stage205 frozen runtime + validated row-major material; no waveform changes in this stage",
+  "waveform_files": [
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.cxx",
+      "old_bytes": 43706,
+      "new_bytes": 27556,
+      "old_new_equal": false,
+      "current_exact_new_commit": true
+    },
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformReconstructionTool.h",
+      "old_bytes": 6209,
+      "new_bytes": 5786,
+      "old_new_equal": false,
+      "current_exact_new_commit": true
+    },
+    {
+      "path": "Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py",
+      "old_bytes": 6583,
+      "new_bytes": 6567,
+      "old_new_equal": false,
+      "current_exact_new_commit": true
+    },
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformCleanupTool.cxx",
+      "old_bytes": 2183,
+      "new_bytes": 1984,
+      "old_new_equal": false,
+      "current_exact_new_commit": true
+    },
+    {
+      "path": "Waveform/WaveRecTools/src/WaveformCleanupTool.h",
+      "old_bytes": 1755,
+      "new_bytes": 1626,
+      "old_new_equal": false,
+      "current_exact_new_commit": true
+    }
+  ],
+  "reduced_charge_algorithm_exact_old_to_current": true,
+  "reduced_charge_input_dependency": "veto fitted time; preshower fitted time if veto unavailable; raw charge if both NaN; VetoNu waveform values and time window",
+  "fit_charge_units": "integral (mV ns) / 50 ohm = pC",
+  "track_sign_cut_active": false,
+  "analysis_cut_thresholds_changed": false,
+  "source_evidence_reused": [
+    "workbook/stage204_causal/waveform_source.diff",
+    "workbook/stage204_causal/rotation_source.diff",
+    "workbook/stage201_tracking/calypso_local_changes.patch"
+  ],
+  "production_cache_evidence": "workbook/stage205_material/full/summary.json"
+}

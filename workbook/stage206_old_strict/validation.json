@@ -1,0 +1,45 @@
+{
+  "full_job": {
+    "ClusterId": 9718262,
+    "ExitCode": 0,
+    "JobStatus": 4,
+    "ProcId": 0,
+    "RemoteWallClockTime": 181.0
+  },
+  "pilot": "pilot_validation.json",
+  "four_corners_match_prior_stage205_rows": 90,
+  "all_32_waveform_subsets_per_group_mode": true,
+  "shapley_sum_exact_tolerance": true,
+  "first_failure_partition_exact": true,
+  "archive_files_exact_except_enriched_event_table_and_readability_plot": 18,
+  "event_enrichment_rows": 3185,
+  "event_enrichment_original_numeric_fields_exact": true,
+  "event_failure_classification_updated_for_old_only_failures": true,
+  "plot_change": "explicit symlog ticks only; same input, bins, threshold and selected events",
+  "archive_roundtrip_exact_bytes": 1515520,
+  "performance": {
+    "versions": [
+      "old",
+      "strict"
+    ],
+    "input_paths": {
+      "old": "workbook/stage203_station_truth/old.npz",
+      "strict": "workbook/stage205_material/full/strict.npz"
+    },
+    "pilot": false,
+    "events": 383670,
+    "accepted": 140132,
+    "exact_ids_and_truth": true,
+    "exact_raw_and_cumulative_cut_reproduction": true,
+    "exact_previous_waveform_control": true,
+    "all_32_waveform_subsets_measured": true,
+    "shapley_sum_closure": true,
+    "active_charge_sign_cut": false,
+    "control_scope": "conditional cached selection replacement, not waveform reconstruction or unique causal decomposition",
+    "raw_all_candidate_parameters_available": false,
+    "transported_G4_station_momentum_available": false,
+    "wall_s": 170.48713338305242,
+    "max_rss_kib": 1927580
+  },
+  "no_calypso_or_analysis_selection_changes": true
+}

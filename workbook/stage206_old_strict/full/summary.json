@@ -1,0 +1,24 @@
+{
+  "versions": [
+    "old",
+    "strict"
+  ],
+  "input_paths": {
+    "old": "workbook/stage203_station_truth/old.npz",
+    "strict": "workbook/stage205_material/full/strict.npz"
+  },
+  "pilot": false,
+  "events": 383670,
+  "accepted": 140132,
+  "exact_ids_and_truth": true,
+  "exact_raw_and_cumulative_cut_reproduction": true,
+  "exact_previous_waveform_control": true,
+  "all_32_waveform_subsets_measured": true,
+  "shapley_sum_closure": true,
+  "active_charge_sign_cut": false,
+  "control_scope": "conditional cached selection replacement, not waveform reconstruction or unique causal decomposition",
+  "raw_all_candidate_parameters_available": false,
+  "transported_G4_station_momentum_available": false,
+  "wall_s": 170.48713338305242,
+  "max_rss_kib": 1927580
+}

@@ -15,3 +15,12 @@ workbook/stage204_causal/**/*.svg whitespace=-blank-at-eol
 
 # Preserve blank context lines in the exact Calypso installation patch.
 workbook/stage205_material/calypso_material_installation.patch whitespace=-blank-at-eol
+
+# Preserve verbatim source context in the stage206 waveform audit.
+workbook/stage206_old_strict/waveform_config_cleanup.diff whitespace=-blank-at-eol,-space-before-tab
+# Python csv output uses CRLF; retain archive bytes and validate data as written.
+workbook/stage206_old_strict/**/*.tsv whitespace=cr-at-eol
+workbook/stage206_old_strict/*.tsv whitespace=cr-at-eol
+# Preserve generated report endings and the exact time(1) command record.
+workbook/stage206_old_strict/**/detailed_results.md whitespace=-blank-at-eof
+workbook/stage206_old_strict/full/staging_resources.txt whitespace=-blank-at-eol

@@ -1,0 +1,54 @@
+diff --git a/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py b/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py
+index c2da611a..3a704d5c 100644
+--- a/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py
++++ b/Waveform/WaveRecAlgs/python/WaveRecAlgsConfig.py
+@@ -83,7 +83,7 @@ def WaveformHitRecCfg(flags, name="WaveformRecAlg", source="", **kwargs):
+     tool  = WaveformReconstructionTool(name=source+"WaveformRecTool", **toolargs)
+ 
+     toolargs = {}
+-    for key in ["KeepAll", "Prescale", "KeepOverflow"]:
++    for key in ["KeepAll", "Prescale"]:
+         if key in kwargs: toolargs[key] = kwargs.pop(key)        
+     tool2 = WaveformCleanupTool(name=source+"WaveformCleanupTool", **toolargs)
+     
+diff --git a/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx b/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx
+index 19f98ab8..b696ed45 100644
+--- a/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx
++++ b/Waveform/WaveRecTools/src/WaveformCleanupTool.cxx
+@@ -34,9 +34,6 @@ WaveformCleanupTool::initialize() {
+     
+     if (m_keepErrors.value()) 
+       ATH_MSG_INFO("Will keep waveforms with fit errors");
+-
+-    if (m_keepOverflow.value())
+-      ATH_MSG_INFO("Will keep waveforms with overflows");
+     
+     ATH_MSG_INFO("Waveform prescale = " << m_prescale);
+   }
+@@ -75,11 +72,8 @@ WaveformCleanupTool::cleanupWaveforms(
+ 	 )) {
+       // Dont delete (or prescale) this waveform
+       continue;
+-      
+-    } else if (m_keepOverflow && hit->status_bit(xAOD::WaveformStatus::WAVE_OVERFLOW)) {
+-      continue;
+     }
+-    
++	       
+     // Deal with applying prescale
+     if ((m_prescale > 0) && (evtnum % m_prescale))
+       hit->clear_waveform();
+diff --git a/Waveform/WaveRecTools/src/WaveformCleanupTool.h b/Waveform/WaveRecTools/src/WaveformCleanupTool.h
+index dfbbd719..5786fd9e 100644
+--- a/Waveform/WaveRecTools/src/WaveformCleanupTool.h
++++ b/Waveform/WaveRecTools/src/WaveformCleanupTool.h
+@@ -53,9 +53,6 @@ class WaveformCleanupTool: public extends<AthAlgTool, IWaveformCleanupTool> {
+ 
+   // KeepErrors - keep waveform for any fit errors 
+   BooleanProperty m_keepErrors{this, "KeepErrors", true};
+-
+-  // KeepOverflow - keep waveforms that overflow digitizer range
+-  BooleanProperty m_keepOverflow{this, "KeepOverflow", false};
+   
+   // Prescale - save only every N waveforms: !(event_number % m_prescale)
+   IntegerProperty m_prescale{this, "Prescale", 23};
