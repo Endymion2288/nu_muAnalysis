@@ -1,0 +1,26 @@
+{
+  "actual_pilot_events": 1000,
+  "main_tables_byte_exact": [
+    "station_residuals",
+    "station_accuracy_fractions",
+    "station_binned_residuals",
+    "station_coverage",
+    "paired_station_accuracy",
+    "paired_mode_station_accuracy",
+    "momentum_bin_purity",
+    "momentum_response_matrix",
+    "momentum_response_flows"
+  ],
+  "fixed_final_rows_exact": [
+    "station_residuals",
+    "station_accuracy_fractions",
+    "station_binned_residuals",
+    "station_coverage",
+    "paired_station_accuracy",
+    "paired_mode_station_accuracy",
+    "momentum_bin_purity",
+    "momentum_response_matrix",
+    "momentum_response_flows"
+  ],
+  "optimization": "share station response arrays between modes; compute only changed final scopes for old-charge control"
+}

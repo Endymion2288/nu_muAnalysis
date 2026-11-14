@@ -12,3 +12,6 @@ workbook/stage204_causal/frozen_*.txt -whitespace
 workbook/stage204_causal/*_source.diff -whitespace
 # Matplotlib preserves spaces before SVG path-command line endings.
 workbook/stage204_causal/**/*.svg whitespace=-blank-at-eol
+
+# Preserve blank context lines in the exact Calypso installation patch.
+workbook/stage205_material/calypso_material_installation.patch whitespace=-blank-at-eol

@@ -1,0 +1,104 @@
+{
+  "active_analysis_cuts": [
+    [
+      "Remove CaloNu PMT region (truth)",
+      "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)"
+    ],
+    [
+      "CC events only",
+      "is_cc"
+    ],
+    [
+      "nu_mu only",
+      "abs(SafeAt(truth_pdg, 0)) == 14"
+    ],
+    [
+      "In Faser Nu Box or Lead Block",
+      "decay_box || decay_lead"
+    ],
+    [
+      "Truth dec r < 100 mm",
+      "truth_dec_r < 100"
+    ],
+    [
+      "Truth pz > 100 GeV",
+      "truth_pz_nu > 100"
+    ],
+    [
+      "At least one long track",
+      "longTracks > 0"
+    ],
+    [
+      "Veto20 and Veto21 charge > 40 pC",
+      "Veto20_charge > 40 && Veto21_charge > 40"
+    ],
+    [
+      "Timing Station Charge > 20 pC",
+      "hitsTiming"
+    ],
+    [
+      "Preshower Charge > 2.5 pC",
+      "Preshower0_charge > 2.5 && Preshower1_charge > 2.5"
+    ],
+    [
+      "Track pz > 100 GeV",
+      "LeadTrack_pz0 > 100"
+    ],
+    [
+      "Leading track has at >= 7 layers",
+      "LeadTrack_nLayers >= 7"
+    ],
+    [
+      "Track nDoF >= 9",
+      "LeadTrack_nDoF >= 9"
+    ],
+    [
+      "Leading track has chi2/ndof < 15",
+      "LeadTrack_Chi2_NDF < 15"
+    ],
+    [
+      "Track R at max radius < 95 mm",
+      "LeadTrack_r_atMaxRadius < 95"
+    ],
+    [
+      "Track R at IFT < 95 mm",
+      "LeadTrack_rIFT < 95"
+    ],
+    [
+      "Track rVetoNu < 120 mm",
+      "LeadTrack_rVetoNu < 120"
+    ],
+    [
+      "Leading track theta < 25 mrad",
+      "LeadTrack_Theta < 25"
+    ],
+    [
+      "VetoNu0 reduced charge < 30 pC",
+      "VetoNu0_reduced_charge < 30"
+    ],
+    [
+      "VetoNu1 reduced charge < 30 pC",
+      "VetoNu1_reduced_charge < 30"
+    ]
+  ],
+  "skipped_analysis_cuts": [
+    "Colliding",
+    "Trigger",
+    "Good times",
+    "Excluded times",
+    "CaloNu status cleaning",
+    "Sanity cut to remove events with missing aux data",
+    "VetoNu0 raw charge < 40 pC (fallback to raw charge if reduced charge invalid)",
+    "VetoNu1 raw charge < 40 pC (fallback to raw charge if reduced charge invalid)",
+    "VetoNu0 raw charge < 40 pC",
+    "VetoNu1 raw charge < 40 pC"
+  ],
+  "truth_acceptance": "truth-fiducial; unique primary muon; finite positive-pz reference at all 3 stations; >=7 hit layers; mean station r<95mm, reference pz>100GeV and theta<25mrad at all 3 stations",
+  "truth_acceptance_limit": "proxy only: no truth IFT/rmax surface, fit chi2/ndof, scintillator response, or transported G4 momentum",
+  "primary": "unique signed muon PDG inferred from incident neutrino, production xyz equal neutrino decay xyz within 1e-4 mm, searched among truth particles persisted by ntuple",
+  "truth_hit_purity": "dominant truth barcode contributions / track measurements; default >=0.7; thresholds 0.5, 0.7, 0.9 also tabulated",
+  "momentum_bin_purity": "correct primary AND same truth/reco pz bin / all selected leaders with finite local reco pz in that bin; missing truth/local fit is reported separately",
+  "matched_bin_stability": "same bin / correct primary selected leaders in the truth bin",
+  "accepted_diagonal_efficiency": "truth-accepted selected correct primary in same bin / truth-accepted events in truth bin",
+  "weighting": "unweighted events; nominal excludes alternative generator run 200080; no systematic uncertainties"
+}

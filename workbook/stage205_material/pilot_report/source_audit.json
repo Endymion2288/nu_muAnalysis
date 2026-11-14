@@ -1,0 +1,78 @@
+[
+  {
+    "index": 53,
+    "version": "afs",
+    "skip": 0,
+    "source_path": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_ablation_205_material/pilot_afs/material_053_00000.npz",
+    "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00080-00089-s0014-RDO.root",
+    "events": 1000,
+    "truth": 143,
+    "final_FBM": [
+      32,
+      31,
+      33
+    ],
+    "long_tracks": 228,
+    "summary_bytes": 427517,
+    "host": "b9g03p5635.cern.ch",
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.34 max_rss_kib=55256 user_seconds=0.02 system_seconds=0.12",
+      "runtime_unpack": "runtime_unpack wall_seconds=1.52 max_rss_kib=3072 user_seconds=1.39 system_seconds=0.40",
+      "input": "input wall_seconds=2.70 max_rss_kib=78652 user_seconds=0.15 system_seconds=0.99",
+      "reco": "reco wall_seconds=142.47 max_rss_kib=1007604 user_seconds=130.46 system_seconds=4.51",
+      "audit": "audit wall_seconds=20.32 max_rss_kib=35328 user_seconds=18.86 system_seconds=0.73",
+      "forward": "forward wall_seconds=43.97 max_rss_kib=893116 user_seconds=37.66 system_seconds=3.15",
+      "backward": "backward wall_seconds=44.37 max_rss_kib=910104 user_seconds=38.29 system_seconds=2.79",
+      "merge": "merge wall_seconds=173.80 max_rss_kib=2008420 user_seconds=106.72 system_seconds=9.24",
+      "extract": "extract wall_seconds=39.34 max_rss_kib=742380 user_seconds=34.56 system_seconds=2.20"
+    },
+    "root_bytes": {
+      "input-RDO.root": 463394299,
+      "input-xAOD.root": 82918223,
+      "forward.root": 2893293,
+      "backward.root": 2923981,
+      "merge.root": 2931998
+    },
+    "official_long_matches_checked": 228,
+    "prior_cut_bits_verified": false,
+    "runtime_material_file": "'/pool/condor/dir_3889898/nu_mu_ablation204.ukNq0H/material-rotated.json'"
+  },
+  {
+    "index": 53,
+    "version": "strict",
+    "skip": 0,
+    "source_path": "/eos/user/x/xcheng/FASER/nu_muAnalysis/ntuples/tracking_ablation_205_material/pilot_strict/material_053_00000.npz",
+    "rdo": "/eos/experiment/fasernu-data0/faser/sim/mc24/genie/200082/rdo/s0014/FaserMC-MC24_Genie_epos_pi-200082-00080-00089-s0014-RDO.root",
+    "events": 1000,
+    "truth": 143,
+    "final_FBM": [
+      32,
+      31,
+      33
+    ],
+    "long_tracks": 228,
+    "summary_bytes": 443990,
+    "host": "b9p13p0528.cern.ch",
+    "performance": {
+      "runtime_copy": "runtime_copy wall_seconds=0.59 max_rss_kib=55808 user_seconds=0.02 system_seconds=0.08",
+      "runtime_unpack": "runtime_unpack wall_seconds=1.17 max_rss_kib=3072 user_seconds=1.09 system_seconds=0.34",
+      "input": "input wall_seconds=2.34 max_rss_kib=78476 user_seconds=0.14 system_seconds=0.80",
+      "reco": "reco wall_seconds=104.71 max_rss_kib=1013660 user_seconds=96.29 system_seconds=2.88",
+      "audit": "audit wall_seconds=14.36 max_rss_kib=38912 user_seconds=13.56 system_seconds=0.35",
+      "forward": "forward wall_seconds=23.24 max_rss_kib=911544 user_seconds=19.91 system_seconds=1.47",
+      "backward": "backward wall_seconds=24.01 max_rss_kib=916392 user_seconds=20.62 system_seconds=1.67",
+      "merge": "merge wall_seconds=98.78 max_rss_kib=1947492 user_seconds=73.08 system_seconds=4.89",
+      "extract": "extract wall_seconds=22.96 max_rss_kib=743856 user_seconds=19.30 system_seconds=1.13"
+    },
+    "root_bytes": {
+      "input-RDO.root": 463394299,
+      "input-xAOD.root": 82922247,
+      "forward.root": 2893351,
+      "backward.root": 2923921,
+      "merge.root": 2932081
+    },
+    "official_long_matches_checked": 228,
+    "prior_cut_bits_verified": false,
+    "runtime_material_file": "'/pool/condor/dir_3140685/nu_mu_ablation204.L3HsIM/material-rotated.json'"
+  }
+]

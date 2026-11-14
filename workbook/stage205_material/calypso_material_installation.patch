@@ -1,0 +1,22 @@
+--- /eos/home-x/xcheng/FASER/geoRotation_calypso/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py
++++ /eos/home-x/xcheng/FASER/geoRotation_calypso/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py
+@@ -193,7 +193,7 @@
+     # Enable ACTS material corrections, this crashes testbeam geometries
+     # Use alma-9 specific file
+     print(">>> Using alma9 specific ACTS material file! <<<")
+-    configFlags.TrackingGeometry.MaterialSource = "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/acts/material-maps-alma9.json"
++    configFlags.TrackingGeometry.MaterialSource = "/eos/home-x/xcheng/FASER/geoRotation_calypso/run/material-maps-alma9-rotated-rowmajor.json"
+ 
+ # Must use original input string here, as pathlib mangles double // in path names
+ configFlags.Input.Files = [ args.file_path ]
+--- /eos/home-x/xcheng/FASER/geoRotation_calypso/run/bin/faser_reco.py
++++ /eos/home-x/xcheng/FASER/geoRotation_calypso/run/bin/faser_reco.py
+@@ -193,7 +193,7 @@
+     # Enable ACTS material corrections, this crashes testbeam geometries
+     # Use alma-9 specific file
+     print(">>> Using alma9 specific ACTS material file! <<<")
+-    configFlags.TrackingGeometry.MaterialSource = "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/acts/material-maps-alma9.json"
++    configFlags.TrackingGeometry.MaterialSource = "/eos/home-x/xcheng/FASER/geoRotation_calypso/run/material-maps-alma9-rotated-rowmajor.json"
+ 
+ # Must use original input string here, as pathlib mangles double // in path names
+ configFlags.Input.Files = [ args.file_path ]

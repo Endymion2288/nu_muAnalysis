@@ -1,0 +1,13 @@
+{
+  "source": "/eos/home-x/xcheng/FASER/nu_muAnalysis/software/stage205_material/material-manual-rowmajor.json.gz",
+  "installed_map": "/eos/home-x/xcheng/FASER/geoRotation_calypso/run/material-maps-alma9-rotated-rowmajor.json",
+  "map_bytes": 11866364,
+  "exact_frozen_map_bytes": true,
+  "original_material_source": "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/acts/material-maps-alma9.json",
+  "modified_python": [
+    "/eos/home-x/xcheng/FASER/geoRotation_calypso/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py",
+    "/eos/home-x/xcheng/FASER/geoRotation_calypso/run/bin/faser_reco.py"
+  ],
+  "build_bin": "symlink to modified source; no C++ rebuild",
+  "frozen_bulk_runtime": "unchanged; used the identical map through the final accumulator override"
+}

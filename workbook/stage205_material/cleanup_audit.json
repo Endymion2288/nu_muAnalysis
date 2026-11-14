@@ -1,0 +1,87 @@
+{
+  "time_utc": "2026-11-14T01:21:23.844295+00:00",
+  "condor_queue_empty": true,
+  "removed_eos_files": 1459,
+  "removed_eos_bytes": 997098592,
+  "groups": {
+    "details": {
+      "files": 50,
+      "bytes": 9431693
+    },
+    "details_pilot": {
+      "files": 1,
+      "bytes": 391632
+    },
+    "full_afs": {
+      "files": 694,
+      "bytes": 238526143
+    },
+    "full_strict": {
+      "files": 693,
+      "bytes": 238082453
+    },
+    "pilot_afs": {
+      "files": 1,
+      "bytes": 427517
+    },
+    "pilot_strict": {
+      "files": 1,
+      "bytes": 443990
+    },
+    "recovery_afs_v1": {
+      "files": 5,
+      "bytes": 254322
+    },
+    "recovery_strict_v1": {
+      "files": 10,
+      "bytes": 909802
+    },
+    "report_full.tar": {
+      "files": 1,
+      "bytes": 484352000
+    },
+    "report_pilot.tar": {
+      "files": 1,
+      "bytes": 8181760
+    },
+    "report_pilot_final.tar": {
+      "files": 1,
+      "bytes": 8960000
+    },
+    "report_pilot_optimized.tar": {
+      "files": 1,
+      "bytes": 7137280
+    }
+  },
+  "removed_temporary_archives": [
+    {
+      "path": "/tmp/stage205_report_full.tar",
+      "bytes": 484352000
+    },
+    {
+      "path": "/tmp/stage205_pilot_optimized.tar",
+      "bytes": 7137280
+    }
+  ],
+  "retained_local_caches": [
+    {
+      "path": "workbook/stage205_material/full/afs.npz",
+      "bytes": 228836175
+    },
+    {
+      "path": "workbook/stage205_material/full/strict.npz",
+      "bytes": 228995692
+    },
+    {
+      "path": "workbook/stage205_material/details/diagnostics.json.gz",
+      "bytes": 1680112
+    }
+  ],
+  "basis": [
+    "full/summary.json: 1402 shard science arrays exactly recovered from merged caches",
+    "details/production_validation.json: all 50 events validated; diagnostics gzip exact readback recorded",
+    "pilot and report scalar audits, plots, code/config/provenance retained"
+  ],
+  "removed_file_manifest": "cleanup_removed_files.tsv",
+  "result": "all selected files removed; no other stage touched"
+}

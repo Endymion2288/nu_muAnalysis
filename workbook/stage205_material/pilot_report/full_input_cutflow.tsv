@@ -1,0 +1,127 @@
+version	mode	cut	passed	initial
+afs	forward	NoCuts	1000	1000
+afs	forward	Remove CaloNu PMT region (truth)	1000	1000
+afs	forward	CC events only	753	1000
+afs	forward	nu_mu only	751	1000
+afs	forward	In Faser Nu Box or Lead Block	311	1000
+afs	forward	Truth dec r < 100 mm	162	1000
+afs	forward	Truth pz > 100 GeV	143	1000
+afs	forward	At least one long track	70	1000
+afs	forward	Veto20 and Veto21 charge > 40 pC	70	1000
+afs	forward	Timing Station Charge > 20 pC	70	1000
+afs	forward	Preshower Charge > 2.5 pC	70	1000
+afs	forward	Track pz > 100 GeV	64	1000
+afs	forward	Leading track has at >= 7 layers	64	1000
+afs	forward	Track nDoF >= 9	62	1000
+afs	forward	Leading track has chi2/ndof < 15	62	1000
+afs	forward	Track R at max radius < 95 mm	39	1000
+afs	forward	Track R at IFT < 95 mm	39	1000
+afs	forward	Track rVetoNu < 120 mm	38	1000
+afs	forward	Leading track theta < 25 mrad	34	1000
+afs	forward	VetoNu0 reduced charge < 30 pC	33	1000
+afs	forward	VetoNu1 reduced charge < 30 pC	32	1000
+afs	backward	NoCuts	1000	1000
+afs	backward	Remove CaloNu PMT region (truth)	1000	1000
+afs	backward	CC events only	753	1000
+afs	backward	nu_mu only	751	1000
+afs	backward	In Faser Nu Box or Lead Block	311	1000
+afs	backward	Truth dec r < 100 mm	162	1000
+afs	backward	Truth pz > 100 GeV	143	1000
+afs	backward	At least one long track	71	1000
+afs	backward	Veto20 and Veto21 charge > 40 pC	71	1000
+afs	backward	Timing Station Charge > 20 pC	71	1000
+afs	backward	Preshower Charge > 2.5 pC	71	1000
+afs	backward	Track pz > 100 GeV	62	1000
+afs	backward	Leading track has at >= 7 layers	61	1000
+afs	backward	Track nDoF >= 9	61	1000
+afs	backward	Leading track has chi2/ndof < 15	61	1000
+afs	backward	Track R at max radius < 95 mm	38	1000
+afs	backward	Track R at IFT < 95 mm	38	1000
+afs	backward	Track rVetoNu < 120 mm	37	1000
+afs	backward	Leading track theta < 25 mrad	33	1000
+afs	backward	VetoNu0 reduced charge < 30 pC	32	1000
+afs	backward	VetoNu1 reduced charge < 30 pC	31	1000
+afs	merge	NoCuts	1000	1000
+afs	merge	Remove CaloNu PMT region (truth)	1000	1000
+afs	merge	CC events only	753	1000
+afs	merge	nu_mu only	751	1000
+afs	merge	In Faser Nu Box or Lead Block	311	1000
+afs	merge	Truth dec r < 100 mm	162	1000
+afs	merge	Truth pz > 100 GeV	143	1000
+afs	merge	At least one long track	76	1000
+afs	merge	Veto20 and Veto21 charge > 40 pC	76	1000
+afs	merge	Timing Station Charge > 20 pC	76	1000
+afs	merge	Preshower Charge > 2.5 pC	76	1000
+afs	merge	Track pz > 100 GeV	66	1000
+afs	merge	Leading track has at >= 7 layers	65	1000
+afs	merge	Track nDoF >= 9	65	1000
+afs	merge	Leading track has chi2/ndof < 15	65	1000
+afs	merge	Track R at max radius < 95 mm	40	1000
+afs	merge	Track R at IFT < 95 mm	40	1000
+afs	merge	Track rVetoNu < 120 mm	39	1000
+afs	merge	Leading track theta < 25 mrad	35	1000
+afs	merge	VetoNu0 reduced charge < 30 pC	34	1000
+afs	merge	VetoNu1 reduced charge < 30 pC	33	1000
+strict	forward	NoCuts	1000	1000
+strict	forward	Remove CaloNu PMT region (truth)	1000	1000
+strict	forward	CC events only	753	1000
+strict	forward	nu_mu only	751	1000
+strict	forward	In Faser Nu Box or Lead Block	311	1000
+strict	forward	Truth dec r < 100 mm	162	1000
+strict	forward	Truth pz > 100 GeV	143	1000
+strict	forward	At least one long track	70	1000
+strict	forward	Veto20 and Veto21 charge > 40 pC	70	1000
+strict	forward	Timing Station Charge > 20 pC	70	1000
+strict	forward	Preshower Charge > 2.5 pC	70	1000
+strict	forward	Track pz > 100 GeV	64	1000
+strict	forward	Leading track has at >= 7 layers	64	1000
+strict	forward	Track nDoF >= 9	62	1000
+strict	forward	Leading track has chi2/ndof < 15	62	1000
+strict	forward	Track R at max radius < 95 mm	39	1000
+strict	forward	Track R at IFT < 95 mm	39	1000
+strict	forward	Track rVetoNu < 120 mm	38	1000
+strict	forward	Leading track theta < 25 mrad	34	1000
+strict	forward	VetoNu0 reduced charge < 30 pC	33	1000
+strict	forward	VetoNu1 reduced charge < 30 pC	32	1000
+strict	backward	NoCuts	1000	1000
+strict	backward	Remove CaloNu PMT region (truth)	1000	1000
+strict	backward	CC events only	753	1000
+strict	backward	nu_mu only	751	1000
+strict	backward	In Faser Nu Box or Lead Block	311	1000
+strict	backward	Truth dec r < 100 mm	162	1000
+strict	backward	Truth pz > 100 GeV	143	1000
+strict	backward	At least one long track	71	1000
+strict	backward	Veto20 and Veto21 charge > 40 pC	71	1000
+strict	backward	Timing Station Charge > 20 pC	71	1000
+strict	backward	Preshower Charge > 2.5 pC	71	1000
+strict	backward	Track pz > 100 GeV	63	1000
+strict	backward	Leading track has at >= 7 layers	62	1000
+strict	backward	Track nDoF >= 9	62	1000
+strict	backward	Leading track has chi2/ndof < 15	62	1000
+strict	backward	Track R at max radius < 95 mm	38	1000
+strict	backward	Track R at IFT < 95 mm	38	1000
+strict	backward	Track rVetoNu < 120 mm	37	1000
+strict	backward	Leading track theta < 25 mrad	33	1000
+strict	backward	VetoNu0 reduced charge < 30 pC	32	1000
+strict	backward	VetoNu1 reduced charge < 30 pC	31	1000
+strict	merge	NoCuts	1000	1000
+strict	merge	Remove CaloNu PMT region (truth)	1000	1000
+strict	merge	CC events only	753	1000
+strict	merge	nu_mu only	751	1000
+strict	merge	In Faser Nu Box or Lead Block	311	1000
+strict	merge	Truth dec r < 100 mm	162	1000
+strict	merge	Truth pz > 100 GeV	143	1000
+strict	merge	At least one long track	76	1000
+strict	merge	Veto20 and Veto21 charge > 40 pC	76	1000
+strict	merge	Timing Station Charge > 20 pC	76	1000
+strict	merge	Preshower Charge > 2.5 pC	76	1000
+strict	merge	Track pz > 100 GeV	66	1000
+strict	merge	Leading track has at >= 7 layers	65	1000
+strict	merge	Track nDoF >= 9	65	1000
+strict	merge	Leading track has chi2/ndof < 15	65	1000
+strict	merge	Track R at max radius < 95 mm	40	1000
+strict	merge	Track R at IFT < 95 mm	40	1000
+strict	merge	Track rVetoNu < 120 mm	39	1000
+strict	merge	Leading track theta < 25 mrad	35	1000
+strict	merge	VetoNu0 reduced charge < 30 pC	34	1000
+strict	merge	VetoNu1 reduced charge < 30 pC	33	1000

@@ -1,0 +1,24 @@
+{
+  "versions": [
+    "old",
+    "new",
+    "afs",
+    "strict"
+  ],
+  "baseline_source": "stage203 immutable full caches; old and new were not reconstructed again",
+  "common_events": null,
+  "common_truth_fiducial": 143,
+  "truth_accepted": 38,
+  "exact_truth": true,
+  "exact_all_event_ids": false,
+  "exact_new_waveforms": true,
+  "exact_cache_readback": true,
+  "old_charge_self_control_all_cut_bits_exact": true,
+  "same_effective_nonmaterial_configuration": true,
+  "exact_shard_science_readback": true,
+  "checked_shards": 2,
+  "local_reference": "SiHit station direction times linked HepMC production momentum magnitude",
+  "transported_g4_local_momentum_measured": false,
+  "wall_s": 43.839321483974345,
+  "max_rss_kib": 1501112
+}

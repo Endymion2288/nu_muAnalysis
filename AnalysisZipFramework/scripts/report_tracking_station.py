@@ -46,7 +46,7 @@ def combine(records,version,output):
                 summary_bytes=Path(r[5]).stat().st_size,host=str(f['host']),
                 performance=json.loads(str(f['performance_json'])),root_bytes=json.loads(str(f['root_bytes_json'])),
                 official_long_matches_checked=int(f['official_long_matches_checked']),
-                prior_cut_bits_verified=bool(f['prior_cut_bits_verified']),
+                prior_cut_bits_verified=bool(f['prior_cut_bits_verified']) if 'prior_cut_bits_verified' in f else False,
                 effective_reco=str(f['effective_reco_json'])))
     data={k:np.concatenate(v) for k,v in events.items()};data.update({k:np.concatenate(v) for k,v in tracks.items()})
     keys=data['run'].astype(np.int64)*1000000000+data['eventID'].astype(np.int64)
@@ -119,7 +119,7 @@ def basic_metrics(data,der,output,groups,truth_masks,cuts):
                 any_primary_quality=counts[:,2]>0,has_long=has,correct_leader=correct,
                 track_cuts=d['track_pass'][:,m],track_cuts_correct=d['track_pass'][:,m]&correct,
                 final=d['final'][:,m],final_correct=d['final'][:,m]&correct)
-            if version=='new':stages['final_fixed_old_scintillator']=d['control'][:,:,-1][:,m]
+            if 'control' in d:stages['final_fixed_old_scintillator']=d['control'][:,:,-1][:,m]
             for group,gmask in groups.items():
                 for denom_name,den in [('fiducial',truth_masks['fiducial']),('truth_station_acceptance',truth_masks['truth_station_acceptance'])]:
                     denominator=gmask&den
@@ -243,24 +243,28 @@ def residual_summary(x):
         median_absolute=float(np.median(abs(x))),q68_absolute=float(np.quantile(abs(x),.68)),tail_absolute_gt_half=int((abs(x)>.5).sum()))
 
 
-def response_metrics(data,der,output,groups,truth_masks):
+def response_metrics(data,der,output,groups,truth_masks,paired_versions=None,only_final=False):
     residuals=[];coverage=[];paired=[];bins=[];matrices=[];flows=[];accuracy=[];binned_residuals=[]
     all_responses={}
     for version,a in data.items():
         d=der[version];c=d['col'];idx=d['idx'];good=d['primary']&(d['purity']>=.7)
         all_responses[version]={}
+        station_responses={}
         for m,mode in enumerate(MODES):
             scopes=dict(matched_long=good&(c['mode']==m),matched_quality=good&d['quality']&(c['mode']==m),
                 matched_leader=good&(c['mode']==m)&(c['leader']==1),
                 matched_final_leader=good&(c['mode']==m)&(c['leader']==1)&d['final'][idx,m])
+            if only_final:scopes={'matched_final_leader':scopes['matched_final_leader']}
             for station in range(3):
                 pred=a['reco_station'][:,station];truth=a['matched_truth_station'][:,station]
-                rp=np.linalg.norm(pred[:,3:],axis=1);tp=np.linalg.norm(truth[:,3:],axis=1)
-                with np.errstate(invalid='ignore',divide='ignore'):
-                    responses=dict(p_relative=rp/tp-1,pz_relative=pred[:,5]/truth[:,5]-1,
-                        qop_normalized=(c['charge']/rp+np.sign(c['pdg'])/tp)*tp,
-                        slope_mrad=1000*np.linalg.norm(pred[:,3:5]/pred[:,5,None]-truth[:,3:5]/truth[:,5,None],axis=1),
-                        xy_mm=np.linalg.norm(pred[:,:2]-truth[:,:2],axis=1))
+                if station not in station_responses:
+                    rp=np.linalg.norm(pred[:,3:],axis=1);tp=np.linalg.norm(truth[:,3:],axis=1)
+                    with np.errstate(invalid='ignore',divide='ignore'):
+                        station_responses[station]=dict(p_relative=rp/tp-1,pz_relative=pred[:,5]/truth[:,5]-1,
+                            qop_normalized=(c['charge']/rp+np.sign(c['pdg'])/tp)*tp,
+                            slope_mrad=1000*np.linalg.norm(pred[:,3:5]/pred[:,5,None]-truth[:,3:5]/truth[:,5,None],axis=1),
+                            xy_mm=np.linalg.norm(pred[:,:2]-truth[:,:2],axis=1))
+                responses=station_responses[station]
                 all_responses[version][m,station]=responses
                 for group,gmask in groups.items():
                     for scope,mask in scopes.items():
@@ -296,7 +300,8 @@ def response_metrics(data,der,output,groups,truth_masks):
                 finite=has&np.isfinite(reco)&np.isfinite(truthpz)&(truthpz>0)
                 tb=np.searchsorted(EDGES,truthpz,side='right')-1;rb=np.searchsorted(EDGES,reco,side='right')-1
                 for group,gmask in groups.items():
-                    for scope,selected in [('leader',has),('track_cuts',d['track_pass'][:,m]),('final',d['final'][:,m])]:
+                    selections=[('final',d['final'][:,m])] if only_final else [('leader',has),('track_cuts',d['track_pass'][:,m]),('final',d['final'][:,m])]
+                    for scope,selected in selections:
                         source=selected&gmask
                         flows.append(dict(version=version,group=group,mode=mode,station=station+1,scope=scope,
                             selected_events=int(source.sum()),finite_positive_truth=int((source&finite).sum()),
@@ -333,28 +338,30 @@ def response_metrics(data,der,output,groups,truth_masks):
                                 accepted_diagonal_efficiency_wilson68_low_percent=100*efficiency_low,
                                 accepted_diagonal_efficiency_wilson68_high_percent=100*efficiency_high))
     # Paired leaders on identical events, primary identity, and same station validity.
-    for m,mode in enumerate(MODES):
-        for station in range(3):
-            bo=der['old']['leaders'][:,m];bn=der['new']['leaders'][:,m];has=(bo>=0)&(bn>=0)
-            io=np.maximum(bo,0);inew=np.maximum(bn,0)
-            matched=has&der['old']['primary'][io]&der['new']['primary'][inew]& \
-                (der['old']['purity'][io]>=.7)&(der['new']['purity'][inew]>=.7)
-            for group,gmask in groups.items():
-                scopes=dict(common_matched_leaders=matched&gmask,
-                    both_final=matched&gmask&der['old']['final'][:,m]&der['new']['final'][:,m],
-                    truth_accepted_common=matched&gmask&truth_masks['truth_station_acceptance'])
-                for scope,mask in scopes.items():
-                    for metric in ['p_relative','pz_relative','qop_normalized','slope_mrad','xy_mm']:
-                        x=all_responses['old'][m,station][metric][io];y=all_responses['new'][m,station][metric][inew]
-                        select=mask&np.isfinite(x)&np.isfinite(y);x,y=abs(x[select]),abs(y[select])
-                        if not len(x):continue
-                        oldwin=int((x<y-1e-10).sum());newwin=int((y<x-1e-10).sum());delta=y-x
-                        paired.append(dict(group=group,mode=mode,station=station+1,scope=scope,metric=metric,pairs=len(x),
-                            old_closer=oldwin,new_closer=newwin,ties=len(x)-oldwin-newwin,
-                            sign_p=float(binomtest(newwin,newwin+oldwin).pvalue) if newwin+oldwin else np.nan,
-                            old_median_absolute=float(np.median(x)),new_median_absolute=float(np.median(y)),
-                            mean_absolute_difference_new_minus_old=float(delta.mean()),
-                            mean_difference_se=float(delta.std(ddof=1)/np.sqrt(len(delta))) if len(delta)>1 else np.nan))
+    for baseline,variant in paired_versions or [('old','new')]:
+        for m,mode in enumerate(MODES):
+            for station in range(3):
+                bo=der[baseline]['leaders'][:,m];bn=der[variant]['leaders'][:,m];has=(bo>=0)&(bn>=0)
+                io=np.maximum(bo,0);inew=np.maximum(bn,0)
+                matched=has&der[baseline]['primary'][io]&der[variant]['primary'][inew]& \
+                    (der[baseline]['purity'][io]>=.7)&(der[variant]['purity'][inew]>=.7)
+                for group,gmask in groups.items():
+                    scopes=dict(common_matched_leaders=matched&gmask,
+                        both_final=matched&gmask&der[baseline]['final'][:,m]&der[variant]['final'][:,m],
+                        truth_accepted_common=matched&gmask&truth_masks['truth_station_acceptance'])
+                    if only_final:scopes={'both_final':scopes['both_final']}
+                    for scope,mask in scopes.items():
+                        for metric in ['p_relative','pz_relative','qop_normalized','slope_mrad','xy_mm']:
+                            x=all_responses[baseline][m,station][metric][io];y=all_responses[variant][m,station][metric][inew]
+                            select=mask&np.isfinite(x)&np.isfinite(y);x,y=abs(x[select]),abs(y[select])
+                            if not len(x):continue
+                            oldwin=int((x<y-1e-10).sum());newwin=int((y<x-1e-10).sum());delta=y-x
+                            paired.append(dict(baseline=baseline,variant=variant,group=group,mode=mode,station=station+1,scope=scope,metric=metric,pairs=len(x),
+                                old_closer=oldwin,new_closer=newwin,ties=len(x)-oldwin-newwin,
+                                sign_p=float(binomtest(newwin,newwin+oldwin).pvalue) if newwin+oldwin else np.nan,
+                                old_median_absolute=float(np.median(x)),new_median_absolute=float(np.median(y)),
+                                mean_absolute_difference_new_minus_old=float(delta.mean()),
+                                mean_difference_se=float(delta.std(ddof=1)/np.sqrt(len(delta))) if len(delta)>1 else np.nan))
     mode_pairs=[]
     for version,a in data.items():
         d=der[version]
@@ -362,8 +369,9 @@ def response_metrics(data,der,output,groups,truth_masks):
             l=d['leaders'][:,left];r=d['leaders'][:,right];il=np.maximum(l,0);ir=np.maximum(r,0)
             matched=(l>=0)&(r>=0)&d['primary'][il]&d['primary'][ir]&(d['purity'][il]>=.7)&(d['purity'][ir]>=.7)
             for group,gmask in groups.items():
-                for scope,mask in [('common_matched_leaders',matched&gmask),
-                    ('both_final',matched&gmask&d['final'][:,left]&d['final'][:,right])]:
+                selections=[('both_final',matched&gmask&d['final'][:,left]&d['final'][:,right])]
+                if not only_final:selections.insert(0,('common_matched_leaders',matched&gmask))
+                for scope,mask in selections:
                     for station in range(3):
                         for metric in ['p_relative','pz_relative','qop_normalized','slope_mrad','xy_mm']:
                             x=all_responses[version][left,station][metric][il]
@@ -386,7 +394,7 @@ def response_metrics(data,der,output,groups,truth_masks):
 
 def performance_summary(audit,output):
     rows=[];summary={}
-    for version in ['old','new']:
+    for version in dict.fromkeys(r['version'] for r in audit):
         selected=[r for r in audit if r['version']==version];steps={};root_bytes={}
         for r in selected:
             for name,value in r['performance'].items():
@@ -431,7 +439,7 @@ def plots(data,der,output,truth_masks,residuals,bins):
     for m,mode in enumerate(MODES):
         for station in range(3):
             ax=axes[station,m]
-            for version,color in [('old','tab:blue'),('new','tab:orange')]:
+            for version,color in zip(data,plt.rcParams['axes.prop_cycle'].by_key()['color']):
                 a=data[version];d=der[version];c=d['col'];selected=d['primary']&(d['purity']>=.7)&(c['mode']==m)&(c['leader']==1)
                 p=a['reco_station'][:,station,5];t=a['matched_truth_station'][:,station,5]
                 with np.errstate(invalid='ignore',divide='ignore'):x=p/t-1
@@ -443,7 +451,7 @@ def plots(data,der,output,truth_masks,residuals,bins):
     fig.tight_layout();figure_save(fig,output,'station_pz_response')
     fig,axes=plt.subplots(1,3,figsize=(14,4.5))
     for m,mode in enumerate(MODES):
-        for version,style in [('old','-'),('new','--')]:
+        for version,style in zip(data,['-','--','-.',':']):
             rows=[r for r in bins if r['version']==version and r['group']=='all' and r['mode']==mode and r['station']==1 and r['scope']=='final']
             centers=[np.sqrt(max(1,r['low_gev'])*r['high_gev']) for r in rows if np.isfinite(r['high_gev'])]
             axes[0].plot(centers,[r['momentum_bin_purity_percent'] for r in rows if np.isfinite(r['high_gev'])],style,label=version+' '+mode)
@@ -457,7 +465,7 @@ def plots(data,der,output,truth_masks,residuals,bins):
         ax=axes[m];t=data['old']['primary_station'][:,0,5]/1000
         edges=np.r_[EDGES[:-1],20000]
         ax.hist(t[np.isfinite(t)],bins=edges,histtype='step',label='truth primary, fiducial',color='black')
-        for version in ['old','new']:
+        for version in data:
             a=data[version];d=der[version];li=np.maximum(d['leaders'][:,m],0);sel=d['final'][:,m]&(d['leaders'][:,m]>=0)
             p=a['reco_at_primary_station'][li,0,5]/1000
             ax.hist(p[sel&np.isfinite(p)],bins=edges,histtype='step',label=version+' final leader')

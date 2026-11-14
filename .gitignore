@@ -322,3 +322,10 @@ ntuples/tracking_ablation_stage204/
 workbook/stage204_causal/*.npz
 workbook/stage204_causal/**/*.npz
 !workbook/stage204_causal/**/*.png
+
+# Stage205 material production: retained merged caches, compact scalar reports.
+ntuples/tracking_ablation_205_material/
+workbook/stage205_material/**/*.npz
+workbook/stage205_material/*.npz
+!workbook/stage205_material/**/*.png
+workbook/stage205_material/details/diagnostics.json.gz

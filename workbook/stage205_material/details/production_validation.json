@@ -1,0 +1,72 @@
+{
+  "events": 50,
+  "official_long_tracks_checked": 309,
+  "long_candidates_exact": true,
+  "raw_primary_counts_exact": true,
+  "all_analysis_bits_and_leader_scalars_exact": true,
+  "all_raw_candidate_values_in_bulk_saved": false,
+  "independent_pilot_repeat_exact_keys": [
+    "run",
+    "event",
+    "expected_bits",
+    "modes",
+    "measurements",
+    "raw_truth"
+  ],
+  "performance": {
+    "runtime_copy": {
+      "wall_total_s": 18.24,
+      "user_total_s": 1.1200000000000008,
+      "sys_total_s": 5.59,
+      "max_rss_kib": 57404.0
+    },
+    "runtime_unpack": {
+      "wall_total_s": 73.08999999999999,
+      "user_total_s": 59.04,
+      "sys_total_s": 25.42000000000001,
+      "max_rss_kib": 6144.0
+    },
+    "locate": {
+      "wall_total_s": 477.8500000000001,
+      "user_total_s": 55.23999999999998,
+      "sys_total_s": 34.959999999999994,
+      "max_rss_kib": 45568.0
+    },
+    "input": {
+      "wall_total_s": 267.04999999999995,
+      "user_total_s": 12.329999999999997,
+      "sys_total_s": 93.78000000000002,
+      "max_rss_kib": 88088.0
+    },
+    "reco": {
+      "wall_total_s": 848.9700000000001,
+      "user_total_s": 475.76,
+      "sys_total_s": 153.87,
+      "max_rss_kib": 1020412.0
+    },
+    "forward": {
+      "wall_total_s": 571.9499999999999,
+      "user_total_s": 342.33000000000004,
+      "sys_total_s": 119.39999999999998,
+      "max_rss_kib": 913224.0
+    },
+    "backward": {
+      "wall_total_s": 570.8,
+      "user_total_s": 338.66,
+      "sys_total_s": 119.82000000000002,
+      "max_rss_kib": 918236.0
+    },
+    "merge": {
+      "wall_total_s": 5173.719999999998,
+      "user_total_s": 3632.4300000000003,
+      "sys_total_s": 436.06000000000006,
+      "max_rss_kib": 2138116.0
+    },
+    "extract": {
+      "wall_total_s": 1275.6499999999999,
+      "user_total_s": 1044.6200000000001,
+      "sys_total_s": 109.21,
+      "max_rss_kib": 744820.0
+    }
+  }
+}

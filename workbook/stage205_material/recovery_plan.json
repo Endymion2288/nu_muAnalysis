@@ -1,0 +1,33 @@
+{
+  "failed": [
+    {
+      "cluster": 9718184,
+      "proc": 7,
+      "index": 3,
+      "skip": 5000,
+      "nevents": 5000,
+      "failure": "merge maker exit129; precise crash cause not measured"
+    },
+    {
+      "cluster": 9718184,
+      "proc": 12,
+      "index": 6,
+      "skip": 0,
+      "nevents": 5000,
+      "failure": "extraction ModuleNotFoundError: awkward"
+    },
+    {
+      "cluster": 9718183,
+      "proc": 664,
+      "index": 327,
+      "skip": 0,
+      "nevents": 5000,
+      "failure": "extraction ModuleNotFoundError: awkward"
+    }
+  ],
+  "recovery_jobs": 15,
+  "recovery_nevents": 1000,
+  "complete_ranges_retained": true,
+  "awkward_missing_node": "b9p13p2679.cern.ch",
+  "same_node_for_both_missing_module_failures": true
+}
