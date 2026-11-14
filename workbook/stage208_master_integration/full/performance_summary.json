@@ -1,0 +1,80 @@
+{
+  "latest": {
+    "events": 3374987,
+    "jobs": 351,
+    "summary_bytes": 235020102,
+    "transient_root_bytes": {
+      "input-RDO.root": 293997350473,
+      "input-xAOD.root": 544597038078,
+      "forward.root": 13613756923,
+      "backward.root": 13735324842,
+      "merge.root": 13768738459
+    },
+    "steps": {
+      "runtime_copy": {
+        "wall_total_s": 223.87999999999994,
+        "median_job_wall_s": 0.21,
+        "max_rss_kib": 69376,
+        "cpu_user_total_s": 10.139999999999999,
+        "cpu_system_total_s": 48.879999999999995,
+        "events_per_summed_wall_s": 15074.982133285694
+      },
+      "runtime_unpack": {
+        "wall_total_s": 732.54,
+        "median_job_wall_s": 2.12,
+        "max_rss_kib": 6400,
+        "cpu_user_total_s": 652.3900000000001,
+        "cpu_system_total_s": 213.46,
+        "events_per_summed_wall_s": 4607.239195129277
+      },
+      "input": {
+        "wall_total_s": 3791.0499999999997,
+        "median_job_wall_s": 4.12,
+        "max_rss_kib": 83904,
+        "cpu_user_total_s": 92.15,
+        "cpu_system_total_s": 553.35,
+        "events_per_summed_wall_s": 890.25124965379
+      },
+      "reco": {
+        "wall_total_s": 640059.03,
+        "median_job_wall_s": 1652.48,
+        "max_rss_kib": 1367520,
+        "cpu_user_total_s": 628003.3999999999,
+        "cpu_system_total_s": 4567.19,
+        "events_per_summed_wall_s": 5.272930842019368
+      },
+      "forward": {
+        "wall_total_s": 126979.81999999999,
+        "median_job_wall_s": 332.07,
+        "max_rss_kib": 1118468,
+        "cpu_user_total_s": 123322.37999999999,
+        "cpu_system_total_s": 1438.3000000000002,
+        "events_per_summed_wall_s": 26.578924115658694
+      },
+      "backward": {
+        "wall_total_s": 127996.85999999999,
+        "median_job_wall_s": 347.62,
+        "max_rss_kib": 1076928,
+        "cpu_user_total_s": 124502.13999999998,
+        "cpu_system_total_s": 1438.62,
+        "events_per_summed_wall_s": 26.36773277094454
+      },
+      "merge": {
+        "wall_total_s": 174486.51,
+        "median_job_wall_s": 457.55,
+        "max_rss_kib": 2251864,
+        "cpu_user_total_s": 160447.59,
+        "cpu_system_total_s": 3467.4,
+        "events_per_summed_wall_s": 19.342395008072543
+      },
+      "extract": {
+        "wall_total_s": 24537.219999999998,
+        "median_job_wall_s": 69.71,
+        "max_rss_kib": 866036,
+        "cpu_user_total_s": 22692.58,
+        "cpu_system_total_s": 740.6299999999999,
+        "events_per_summed_wall_s": 137.54561437685282
+      }
+    }
+  }
+}

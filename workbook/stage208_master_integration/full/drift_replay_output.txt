@@ -1,0 +1,16 @@
+runtime_copy wall_seconds=0.47 max_rss_kib=57920 user_seconds=0.03 system_seconds=0.11
+runtime_unpack wall_seconds=2.17 max_rss_kib=6080 user_seconds=1.99 system_seconds=0.58
+input wall_seconds=4.99 max_rss_kib=82728 user_seconds=0.28 system_seconds=1.79
+nu_muAnalysis environment loaded; use nu_mu_env_report for a summary.
+Calypso environment loaded from /pool/condor/dir_196849/nu_mu_master208.1jEk6M/runtime
+reco wall_seconds=23.52 max_rss_kib=1036616 user_seconds=13.50 system_seconds=3.03
+forward wall_seconds=11.59 max_rss_kib=899244 user_seconds=7.88 system_seconds=1.85
+backward wall_seconds=13.12 max_rss_kib=906260 user_seconds=9.25 system_seconds=2.15
+merge wall_seconds=103.20 max_rss_kib=1926332 user_seconds=73.69 system_seconds=7.22
+extract wall_seconds=23.31 max_rss_kib=734428 user_seconds=19.66 system_seconds=1.48
+extracted forward.root events=10 wall=11.87s
+extracted backward.root events=10 wall=0.93s
+extracted merge.root events=10 wall=0.94s
+{"events": 10, "truth": 2, "long_tracks": 3, "checked": 3, "wall_s": 20.332100484520197, "bytes": 8419}
+upload wall_seconds=0.29 max_rss_kib=13760 user_seconds=0.01 system_seconds=0.06
+completed master integration index=166 skip=2250

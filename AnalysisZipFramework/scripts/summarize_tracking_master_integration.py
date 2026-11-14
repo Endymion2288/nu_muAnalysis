@@ -129,6 +129,9 @@ def main():
         [('version', '版本'), ('scope', '质量'), ('matched_primary_events', '匹配事件'),
          ('duplicate_primary_events', '重复事件'), ('excess_primary_tracks', '多余 tracks'),
          ('duplicate_given_primary_match_percent', '条件重复率 %')])
+    lines.extend(['duplicate 指同一事件、同一 truth barcode 被至少两条满足 hit-purity 阈值的轨迹匹配；'
+                  '不是简单按轨迹数大于一计数。quality 要求 layers≥7、ndof≥9、有限 chi2 且 chi2/ndof<15，'
+                  '不等同于完整事例选择。完整 TSV 同时保留 purity 0.5 / 0.7 / 0.9。', ''])
     table('Forward / Backward / Merge 的效率',
         [r for r in eff if r['group'] == 'all' and r['denominator_name'] == 'truth_station_acceptance'
          and r['stage'] in ['any_primary_quality', 'track_cuts', 'final', 'final_correct']],
@@ -141,6 +144,40 @@ def main():
         [r for r in eff if r['group'] not in ['all', 'nominal'] and r['mode'] == 'merge'
          and r['denominator_name'] == 'truth_station_acceptance' and r['stage'] == 'final'],
         [('version', '版本'), ('group', 'run'), ('denominator', '分母'), ('passed', '通过'), ('efficiency_percent', '效率 %')])
+    if (out / 'momentum_tail_audit.tsv').exists():
+        table('保留全部有限极端值的 Merge 动量尾部审计', read('momentum_tail_audit'),
+            [('version', '版本'), ('station', '站'), ('scope', '选择'), ('pairs', 'pairs'),
+             ('median', '绝对相对误差中位数'), ('q95', 'q95'), ('q99', 'q99'),
+             ('mean', '算术均值'), ('maximum', '最大值'), ('error_gt_thousand', '|误差|>1000')])
+        lines.extend(['上述相对误差无量纲。中位数、q95/q99 与 >50% 的尾部均明显改善，'
+                      '但极少数巨大有限动量仍通过当前 cuts，足以恶化算术均值；不能声称所有误差指标都改善。'
+                      '未截断或删除这些事件，run/event 与拟合质量见 `extreme_momentum_events.tsv`。', ''])
+    residual = out / 'residual_audit.json'
+    if residual.exists():
+        audit = json.loads(residual.read_text())
+        lines.extend(['## strict 与 latest 的少量非波形差异', '',
+            f"全量有 {audit['strict_latest_changed_long_track_events']} 个 fiducial 事件的 long track 或状态数组不同，"
+            f"合计 long tracks 差 {audit['strict_latest_long_track_delta']}；"
+            f"event scalar 差 {audit['strict_latest_changed_event_scalar_cells']} 个单元。"
+            '因此 pilot 的非波形数组精确相同不能外推到全量。事件与逐轨内容见 '
+            '`strict_changed_track_events.json`，标量见 `strict_changed_scalars.tsv`。', '',
+            '固定旧电荷后 strict / latest 的 accepted Merge final 为 102810 / 102807，'
+            '丢失 3、新增 0。实际 final 为 101692 / 102807，净增加 1115；'
+            '按固定电荷控制分解为恢复波形 +1118、少量轨迹差异 −3。'
+            '尚未证实这 9 个事件的具体源码原因，不将静态 seed map 等候选问题写成已确认因果。', ''])
+    replay_path = out / 'drift_replay_comparison.json'
+    if replay_path.exists():
+        replay = json.loads(replay_path.read_text())
+        differences = {version: [k for k, value in rows.items() if not value['exact']]
+                       for version, rows in replay['comparisons'].items()}
+        lines.extend(['额外短片段重放（同一冻结源码及运行包，index 166、skip 2250、10 输入事件，'
+                      '2 个 fiducial，含 200083:652256）与 strict 全量的差异数组为 '
+                      f"`{', '.join(differences['strict_full'])}`；与 latest 全量为 "
+                      f"`{', '.join(differences['latest_full'])}`。"
+                      '即该片段重放的非波形 science arrays 与 strict 精确一致。'
+                      '两个运行使用不同 worker，尚未区分事件历史、数值环境及未定义行为。'
+                      '不能将它直接归因为一个固定的 master 配置变更。完整证据见 '
+                      '`drift_replay_comparison.json`。', ''])
     performance = json.loads((out / 'performance_summary.json').read_text())
     rows = []
     for version, measured in performance.items():
@@ -182,6 +219,7 @@ def main():
         '局部 truth-pass/reco-fail 见 `local_cut_migrations.tsv`，材料与四个 smoothing 的实际配置见 '
         '`effective_configuration.json`，源码 provenance 见 `runtime_source_provenance.json`。'
         '误差条、nominal / 分 run 及阈值变化保留在原表，稀疏高能 bin 不作过度外推。', ''])
+    lines.extend(['表中 p=0 是浮点数值下溢，不能解读为真实概率严格为零。', ''])
     (out / 'detailed_results.md').write_text('\n'.join(lines))
     print(out / 'detailed_results.md')
 
