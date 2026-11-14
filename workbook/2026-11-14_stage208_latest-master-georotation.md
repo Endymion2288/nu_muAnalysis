@@ -20,7 +20,7 @@
 
 打包材料 `Tracking/Acts/FaserActsGeometry/data/material-maps-alma9-rotated-rowmajor.json.gz` 与阶段 205 冻结 strict 图逐字节一致：压缩 **2,271,338 bytes**，解压 **11,866,364 bytes**。使用 PathResolver 定位安装文件，在每个进程的临时目录仅解压一次，生产配置无需依赖个人 EOS 路径。ACTS 内部坐标变换为 `(x_A,y_A,z_A)=(z_F,y_F,-x_F)`；分析显式转回 FASER 坐标。
 
-`CKF2.IsolateCandidateSmoothing=True` 为默认值。回归测试已通过：能复现共享状态覆盖，验证隔离后的参数 / 协方差、候选顺序独立、输入不变及单状态情况。实测 wall **0.09 s**，详见 [测试记录](stage208_master_integration/smoothing_test.log)。材料安装定位与逐字节比较已通过，实测 wall **5.571 s**，见 [材料验证](stage208_master_integration/packaged_material_validation.json)。本次环境 ACTS JSON decoder 进一步验证全部 **22 frames 最大旋转误差 0**、无遗漏材料，wall **9.44 s**，RSS **724,568 KiB**，见 [decoder 验证](stage208_master_integration/material_runtime_decoder.json)。后续每个 RDO 作业还会断言实际材料 bytes 与全部四个 CKF2 的 smoothing 属性。
+`CKF2.IsolateCandidateSmoothing=True` 为默认值。回归测试已通过：能复现共享状态覆盖，验证隔离后的参数 / 协方差、候选顺序独立、输入不变及单状态情况。实测 wall **0.09 s**，详见 [测试记录](stage208_master_integration/smoothing_test_output.txt)。材料安装定位与逐字节比较已通过，实测 wall **5.571 s**，见 [材料验证](stage208_master_integration/packaged_material_validation.json)。本次环境 ACTS JSON decoder 进一步验证全部 **22 frames 最大旋转误差 0**、无遗漏材料，wall **9.44 s**，RSS **724,568 KiB**，见 [decoder 验证](stage208_master_integration/material_runtime_decoder.json)。后续每个 RDO 作业还会断言实际材料 bytes 与全部四个 CKF2 的 smoothing 属性。
 
 ## 样本、选择与定义
 
@@ -32,9 +32,19 @@ Station 1 / 2 / 3 动量参考仍为 **SiHit 方向 × HepMC 产生点动量模�
 
 ## 编译与运行验证
 
-状态：完整编译通过（exit 0）。CMake 配置 210 packages，通过，wall **84.86 s**；Athena 24.0.41、GCC 13.1、ACTS 32.0.2、ROOT 6.28/12，编译并发 8，完整 build wall **3,042.60 s（50 min 42.60 s）**，累计 user **11,323.80 s**、system **5,157.95 s**，time(1) 报告最大进程 RSS **2,858,332 KiB**（不是全部并行进程 RSS 之和）。GeoGetIds、GeoVisitVolumes、CandidateIsolatedSmoothing 三个 CTest 均通过（0 失败，测试总 wall 2.05 s），见 [CTest](stage208_master_integration/ctest.log)。安装通过，wall **60.06 s**。独立 runtime 解压后 4 个库加载、5 个组件配置、材料精确性、smoothing 默认值均通过，内部 wall **5.738 s**，进程 wall **6.64 s**、RSS **628,860 KiB**。runtime archive **61,699,093 bytes**，1,760 entries、regular payload **206,500,351 bytes**，无 symlink、无 debug symbols、无源码 / 构建树；压缩 wall **10.56 s**。见 [组件验证](stage208_master_integration/portable_runtime_validation.json)、[运行包](stage208_master_integration/runtime_package.json)。
+状态：完整编译通过（exit 0）。CMake 配置 210 packages，通过，wall **84.86 s**；Athena 24.0.41、GCC 13.1、ACTS 32.0.2、ROOT 6.28/12，编译并发 8，完整 build wall **3,042.60 s（50 min 42.60 s）**，累计 user **11,323.80 s**、system **5,157.95 s**，time(1) 报告最大进程 RSS **2,858,332 KiB**（不是全部并行进程 RSS 之和）。GeoGetIds、GeoVisitVolumes、CandidateIsolatedSmoothing 三个 CTest 均通过（0 失败，测试总 wall 2.05 s），见 [CTest](stage208_master_integration/ctest_output.txt)。安装通过，wall **60.06 s**。独立 runtime 解压后 4 个库加载、5 个组件配置、材料精确性、smoothing 默认值均通过，内部 wall **5.738 s**，进程 wall **6.64 s**、RSS **628,860 KiB**。runtime archive **61,699,093 bytes**，1,760 entries、regular payload **206,500,351 bytes**，无 symlink、无 debug symbols、无源码 / 构建树；压缩 wall **10.56 s**。见 [组件验证](stage208_master_integration/portable_runtime_validation.json)、[运行包](stage208_master_integration/runtime_package.json)。
 
 30-event smoke 全链路通过，truth-fiducial 4 events，但无跨三站 long track，因此不能作为轨迹诊断验收。实际四个算法为 `CKF2 / CKF_Back / CKF_woIFT / CKF_Back_woIFT`，全部 isolated，实际材料 exact。reco / forward / backward / merge / extract wall 分别 **16.58 / 10.95 / 11.16 / 78.70 / 20.79 s**；merge 含首次诊断 JIT，不能据这个样本作速度结论。补充 index 0、skip 380、10-event 片段通过：truth-fiducial 2 events（383 / 388），3 条 long tracks 均通过官方 ntuple 的逐轨核对，见 [长轨迹 smoke](stage208_master_integration/smoke_long_validation.json)。7 个、每个最多 2,500 events 的 paired pilot 已提交 HTCondor **9718286**，运行先后次序交替。index 342 输入实际仅 **343 events**，首个配对归约通过：16 个 fiducial / 6 个 accepted，旧版 21 个 science arrays 对冻结缓存完全一致，truth 与分片回读通过，新版波形全部与旧版逐值一致。其后加入正常 2,500-event 的 index 63：两对合计 **2,843 input / 320 fiducial / 102 accepted events**，旧版 21 science arrays 精确重放、两版全部输入 ID 相同、truth 精确、材料与四个 smoothing 检查通过、fiducial 全部波形与旧版逐值一致；归约 wall **33.316 s**，RSS **1,535,240 KiB**。old / strict / latest 的 accepted Merge final 为 **77 / 73 / 74**，该样本不足以得出效率差异结论。其余复杂样本 pilot 继续运行。
+
+## 完整 paired pilot 结果
+
+7/7 个重建作业全部 exit 0，归约 cluster **9718299 exit 0**。总输入 **15,343 events**（6 个 2,500-event 片段及 index 342 的全部 343 events），fiducial **1,568**、truth-accepted **607**。旧版全部 21 个 science arrays 对冻结 cache 精确一致；两版输入 ID 与 truth 字段一致；所有分片配置一致，材料 exact、四个 isolated smoothing 全部生效；全部 fiducial 波形与旧版逐值一致。集成版对 strict 的差异仅为 `scintillator`、individual/cumulative cut bits，其他所有 science arrays 精确一致。归约内部 wall **43.198 s**、RSS **1,534,596 KiB**，archive **11,427,840 bytes** 上传回读 cmp 完全相同。
+
+truth-accepted Merge final：old **437/607（71.9934%）**、strict **425/607（70.0165%）**、latest **435/607（71.6639%）**。old→latest 丢失 **6**、新增 **4**，差 **−0.32949 pp**，配对 95% 区间 **[−1.35025,+0.69127] pp**、McNemar **p=0.753906**，不能在该 pilot 声称效率升降。strict→latest 新增 **10**、丢失 **0**，归因于已验证的波形恢复，而非轨迹变化。
+
+truth-accepted 且两版正确匹配的 Merge leader，Station 1 / 2 / 3 的 pz 绝对相对误差中位数：old **6.39764 / 6.37597 / 6.31132%**，latest **5.23952 / 5.24309 / 5.22165%**。共同有效 pairs **522 / 521 / 516**；latest 更接近 truth 的事件 **314 / 312 / 311**，old **208 / 209 / 205**。sign p 分别 **4.0130×10⁻⁶ / 7.3791×10⁻⁶ / 3.5213×10⁻⁶**，仅对应已说明的 station-reference proxy，未包含 G4 能损系统误差。全量与高能分 bin 结果仍待测量。
+
+同 worker、交替先后顺序的 7 对重建：old / latest reco 累计 wall **3,455.24 / 3,565.88 s**，latest 高 **3.2021%**；CPU **3,390.01 / 3,505.72 s**，高 **3.4133%**。reco 最大 RSS **1,219,116 / 1,245,192 KiB**；merge（含诊断）的累计 wall **1,508.72 / 1,542.39 s**。不能将此 pilot ratio 当作所有样本的固定速度差。完整明细见 [pilot 报告](stage208_master_integration/pilot/detailed_results.md)、[配对计时](stage208_master_integration/pilot/paired_timing_summary.json)、[验证摘要](stage208_master_integration/pilot/summary.json)。
 
 ## 详细性能结果
 
@@ -43,6 +53,39 @@ Station 1 / 2 / 3 动量参考仍为 **SiHit 方向 × HepMC 产生点动量模�
 ## 执行命令与产物
 
 源码审计脚本：`AnalysisZipFramework/scripts/audit_calypso_master_integration.py`；生产重建配置验证：`run_tracking_master_integration.py`；独立运行包组件与材料验收 `validate_calypso_master_runtime.py`；批量准备与 worker：`AnalysisZipFramework/submission/prepare_tracking_master_integration.py`、`run_tracking_master_integration.sh`；归约脚本：`report_tracking_master_integration.py`、`prepare_tracking_master_report.py`；中文数据报告由 `summarize_tracking_master_integration.py` 从实测表直接生成。
+
+实际执行的核心命令（Git 合并冲突按上文保留两项引用解决，未 squash）：
+
+```bash
+git fetch https://:@gitlab.cern.ch:8443/faser/calypso.git master:refs/remotes/official/master
+git merge --no-ff --no-commit official/master
+```
+
+编译在 `/tmp/xcheng_calypso_master20261114` 中使用项目 `setup_environment.sh --build` 设置环境后执行：
+
+```bash
+cmake -S . -B /tmp/xcheng_calypso_master20261114_build \
+  -DCMAKE_INSTALL_PREFIX=/tmp/xcheng_calypso_master20261114_run \
+  -DATLAS_PACKAGE_FILTER_FILE=/tmp/xcheng_calypso_master20261114/package_filters.txt \
+  -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_C_COMPILER_LAUNCHER=ccache
+cmake --build /tmp/xcheng_calypso_master20261114_build --parallel 8
+cmake --install /tmp/xcheng_calypso_master20261114_build
+```
+
+分析仓库中的实际提交命令：
+
+```bash
+python3 AnalysisZipFramework/submission/prepare_tracking_master_integration.py \
+  --name paired_pilot --indices 0 63 125 186 251 300 342 --nevents 2500 --paired-old
+condor_submit ~/condor/nu_muAnalysis/stage208_master_integration/paired_pilot/jobs.sub
+python3 AnalysisZipFramework/submission/prepare_tracking_master_integration.py \
+  --name full --all --nevents -1
+condor_submit ~/condor/nu_muAnalysis/stage208_master_integration/full/jobs.sub
+python3 AnalysisZipFramework/submission/prepare_tracking_master_report.py \
+  --name full --manifest ~/condor/nu_muAnalysis/stage208_master_integration/full/manifest.tsv
+```
+
+提交脚本请求 1 CPU / 3,500 MB memory / 7,000 MB disk；站点策略实际将其转换为 **2 CPU / 6,000 MB memory / 7,168,000 KiB disk**，`condor_q` 和完成作业 resource table 均已核对。Athena 事件处理与 BLAS 仍为单线程。最终报告区分累计 worker wall、CPU time 和单 job RSS，不将异构 worker 的全量 wall 比值当作受控速度比较。
 
 所有提交目录使用 `~/condor/nu_muAnalysis/stage208_master_integration/`。worker 先暂存 RDO / runtime 至 scratch，仅上传紧凑 NPZ，退出清除 xAOD 与 ROOT 中间文件。运行缓存计划保留于 `ntuples/tracking_master_stage208/`，最终小表与图保留于 `workbook/stage208_master_integration/`。
 

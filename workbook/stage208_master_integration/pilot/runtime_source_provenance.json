@@ -1,0 +1,79 @@
+{
+  "source": "/tmp/xcheng_calypso_master20261114",
+  "commit": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "official_commit": "7f2d16812070a263210d2b2dc56633345e5a10b1",
+  "preserved_ancestors": [
+    "88c457c1",
+    "73c97758",
+    "1c06c7b6",
+    "25147d80",
+    "7f2d16812070a263210d2b2dc56633345e5a10b1"
+  ],
+  "exact_official_directories": {
+    "Waveform": true,
+    "Tracker": true,
+    "Simulation": true,
+    "Generators": true,
+    "xAOD": true
+  },
+  "material_bytes": 11866364,
+  "material_gzip_bytes": 2271338,
+  "exact_frozen_strict_material": true,
+  "rename_and_default_checks": {
+    "Tracking/Acts/RootWriterTools/src/RootTrajectoryStatesWriterTool.cxx": [
+      "rot.col(0) = Acts::Vector3(0, 0, -1)",
+      "std::hypot(global[Acts::ePos1],global[Acts::ePos2])"
+    ],
+    "Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx": [
+      "#include \"FaserActsGeometry/FaserActsGeometryContext.h\"",
+      "#include \"ActsInterop/IndexSourceLink.h\""
+    ],
+    "Tracking/Acts/FaserActsKalmanFilter/src/CKF2.h": [
+      "\"IsolateCandidateSmoothing\", true"
+    ],
+    "Control/CalypsoExample/Reconstruction/scripts/faser_reco.py": [
+      "configFlags.TrackingGeometry.MaterialSource = rotatedMaterialMapPath()",
+      "args.cond}"
+    ]
+  },
+  "merge_commits": [
+    "a2c3e5228c0cbce4493494200591bcea3be3ba9f 25147d8028e2e7439700a1395a38884d640b7581 7f2d16812070a263210d2b2dc56633345e5a10b1 merge(tracking): integrate official master with rotated geometry and isolated smoothing"
+  ],
+  "merge_request": "https://gitlab.cern.ch/xcheng/calypso/-/merge_requests/1",
+  "target_branch": "geoRotation_latestMaster",
+  "changed_files": [
+    ".gitignore",
+    "Control/CalypsoExample/Reconstruction/scripts/faser_reco.py",
+    "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx",
+    "PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h",
+    "Tracking/Acts/FaserActsGeometry/CMakeLists.txt",
+    "Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h",
+    "Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FaserActsGeometryContext.h",
+    "Tracking/Acts/FaserActsGeometry/data/material-maps-alma9-rotated-rowmajor.json.gz",
+    "Tracking/Acts/FaserActsGeometry/doc/master_integration.md",
+    "Tracking/Acts/FaserActsGeometry/python/RotatedMaterialMap.py",
+    "Tracking/Acts/FaserActsGeometry/src/CuboidVolumeBuilder.cxx",
+    "Tracking/Acts/FaserActsGeometry/src/FaserActsDetectorElement.cxx",
+    "Tracking/Acts/FaserActsGeometry/src/FaserActsLayerBuilder.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/CMakeLists.txt",
+    "Tracking/Acts/FaserActsKalmanFilter/doc/candidate_smoothing.md",
+    "Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py",
+    "Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/src/CKF2.h",
+    "Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/src/CreateTrkTrackTool.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/src/RootSeedWriteTool.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/src/RootTrajectorySummaryWriterTool.cxx",
+    "Tracking/Acts/FaserActsKalmanFilter/test/CandidateIsolatedSmoothing_test.cxx",
+    "Tracking/Acts/RootWriterTools/src/RootTrajectoryStatesWriterTool.cxx",
+    "Tracking/Acts/TrackFinders/TrackFinders/TruthBasedInitialParameterTool.h",
+    "Tracking/Acts/TrackFinders/src/TruthBasedInitialParameterTool.cxx",
+    "build_local.sh",
+    "package_filters.txt",
+    "setup_environment.sh",
+    "verify_local.sh"
+  ],
+  "clean_worktree": true,
+  "wall_s": 1.8556219832971692
+}

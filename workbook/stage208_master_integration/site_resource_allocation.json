@@ -1,0 +1,11 @@
+{
+  "submit_requested_cpus": 1,
+  "submit_requested_memory_mb": 3500,
+  "site_effective_requested_cpus": 2,
+  "site_effective_requested_memory_mb": 6000,
+  "site_effective_requested_disk_kib": 7168000,
+  "blas_threads": 1,
+  "athena_threads": 1,
+  "example_job": "9718288.0",
+  "evidence": "condor_q RequestCpus RequestMemory RequestDisk and successful job event resource table"
+}

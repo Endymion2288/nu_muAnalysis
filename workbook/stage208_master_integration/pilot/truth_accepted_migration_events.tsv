@@ -1,0 +1,48 @@
+mode	run	eventID	old_final	latest_final	old_first_failed	latest_first_failed
+forward	200080	680	True	False	pass	Track pz > 100 GeV
+forward	200082	180299	True	False	pass	At least one long track
+forward	200082	181560	True	False	pass	Track nDoF >= 9
+forward	200082	181570	True	False	pass	At least one long track
+forward	200082	181843	True	False	pass	At least one long track
+forward	200082	182123	True	False	pass	Track nDoF >= 9
+forward	200083	240292	True	False	pass	Leading track has at >= 7 layers
+forward	200083	240961	True	False	pass	Track pz > 100 GeV
+forward	200083	241728	False	True	Leading track has chi2/ndof < 15	pass
+forward	200083	242116	True	False	pass	Track pz > 100 GeV
+forward	200083	242368	True	False	pass	At least one long track
+forward	200094	490593	False	True	Track R at IFT < 95 mm	pass
+forward	200094	491234	True	False	pass	At least one long track
+forward	200094	492125	True	False	pass	At least one long track
+forward	200100	170159	True	False	pass	At least one long track
+backward	200080	737	True	False	pass	At least one long track
+backward	200080	1200	False	True	Track nDoF >= 9	pass
+backward	200082	180566	True	False	pass	At least one long track
+backward	200082	181192	True	False	pass	Track nDoF >= 9
+backward	200082	181570	True	False	pass	At least one long track
+backward	200082	181870	True	False	pass	At least one long track
+backward	200082	182073	True	False	pass	At least one long track
+backward	200082	182123	True	False	pass	At least one long track
+backward	200083	240292	True	False	pass	Leading track has at >= 7 layers
+backward	200083	241765	True	False	pass	Track pz > 100 GeV
+backward	200089	90529	True	False	pass	At least one long track
+backward	200094	627	False	True	Track pz > 100 GeV	pass
+backward	200094	1119	True	False	pass	At least one long track
+backward	200094	1247	False	True	Track nDoF >= 9	pass
+backward	200094	1757	True	False	pass	At least one long track
+backward	200094	1867	False	True	Track nDoF >= 9	pass
+backward	200094	490008	True	False	pass	Track nDoF >= 9
+backward	200094	490337	True	False	pass	Track nDoF >= 9
+backward	200094	490696	True	False	pass	At least one long track
+backward	200094	492115	True	False	pass	At least one long track
+backward	200094	492333	False	True	Track nDoF >= 9	pass
+backward	200094	492485	True	False	pass	At least one long track
+merge	200082	181560	True	False	pass	Track nDoF >= 9
+merge	200082	181570	True	False	pass	At least one long track
+merge	200082	182123	True	False	pass	Track nDoF >= 9
+merge	200083	240292	True	False	pass	Leading track has at >= 7 layers
+merge	200094	627	False	True	Track pz > 100 GeV	pass
+merge	200094	1119	True	False	pass	At least one long track
+merge	200094	1247	False	True	Track nDoF >= 9	pass
+merge	200094	1867	False	True	Track nDoF >= 9	pass
+merge	200094	490008	True	False	pass	Track nDoF >= 9
+merge	200094	492333	False	True	Track nDoF >= 9	pass

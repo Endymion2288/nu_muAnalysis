@@ -1,0 +1,55 @@
+{
+  "versions": [
+    "old",
+    "strict",
+    "latest"
+  ],
+  "source_commit": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "common_events": 15343,
+  "fiducial": 1568,
+  "accepted": 607,
+  "full_sample": false,
+  "exact_truth": true,
+  "exact_all_ids": false,
+  "exact_shard_science_readback": true,
+  "checked_shards": 7,
+  "exact_old_waveforms": true,
+  "final_counts": {
+    "old": [
+      387,
+      442,
+      449
+    ],
+    "strict": [
+      366,
+      423,
+      439
+    ],
+    "latest": [
+      376,
+      432,
+      449
+    ]
+  },
+  "accepted_final_counts": {
+    "old": [
+      384,
+      430,
+      437
+    ],
+    "strict": [
+      363,
+      409,
+      425
+    ],
+    "latest": [
+      373,
+      418,
+      435
+    ]
+  },
+  "station_reference": "SiHit direction times HepMC production momentum magnitude; G4 local momentum unavailable",
+  "baseline_scope": "old and strict reused validated full caches; latest newly reconstructed",
+  "wall_s": 43.19818647089414,
+  "max_rss_kib": 1534596
+}

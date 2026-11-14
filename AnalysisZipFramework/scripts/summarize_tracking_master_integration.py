@@ -54,6 +54,11 @@ def main():
         lines.append('')
 
     eff = read('efficiency')
+    table('从完整共同输入开始的 Merge cutflow', filtered('full_input_cutflow', mode='merge'),
+        [('version', '版本'), ('cut', 'cut'), ('passed', '通过'), ('initial', '原始输入分母')])
+    lines.extend(['首六项仅依赖共同 RDO truth，使用本次计数作为所有版本共享的 truth 前缀；'
+                  '重建选择部分分别从对应版本累计 cut bits 精确计算，latest 另与 worker 完整 cutflow 闭合。'
+                  '这不是对旧版重新读取全部 RDO 的计数。', ''])
     stages = ['any_primary_raw', 'any_primary_long', 'any_primary_quality', 'correct_leader',
               'track_cuts', 'track_cuts_correct', 'final', 'final_correct', 'final_fixed_old_scintillator']
     table('Merge 接受度及正确 primary 效率',
@@ -148,16 +153,27 @@ def main():
     paired = out / 'paired_old_replay.json'
     if paired.exists():
         rows = []
-        for job in json.loads(paired.read_text()):
+        replay = json.loads(paired.read_text())
+        totals = {version: {} for version in ['old', 'latest']}
+        for job in replay:
             for version in ['old', 'latest']:
                 for step in ['reco', 'forward', 'backward', 'merge', 'extract']:
                     value = job[version][step]
                     measured = dict(re.findall(r'(\w+)=(\d+(?:\.\d+)?)', value))
+                    aggregate = totals[version].setdefault(step, dict(wall_s=0., cpu_s=0., max_rss_kib=0))
+                    aggregate['wall_s'] += float(measured['wall_seconds'])
+                    aggregate['cpu_s'] += float(measured['user_seconds']) + float(measured['system_seconds'])
+                    aggregate['max_rss_kib'] = max(aggregate['max_rss_kib'], int(measured['max_rss_kib']))
                     rows.append(dict(index=job['index'], version=version, order=job['order'],
                                      host=job['host'], step=step, events=job['events'], **measured))
         table('同节点、交替顺序的旧版重放与计时', rows,
             [('index', 'index'), ('version', '版本'), ('order', '顺序'), ('host', 'worker'), ('step', '步骤'),
              ('events', '事件'), ('wall_seconds', 'wall s'), ('user_seconds', 'user s'), ('max_rss_kib', 'RSS KiB')])
+        timing = dict(jobs=len(replay), events=sum(j['events'] for j in replay),
+            all_old_cache_exact=all(j['exact_old_cache'] for j in replay), sums=totals,
+            ratio_latest_over_old={step: {key: totals['latest'][step][key] / totals['old'][step][key]
+                for key in ['wall_s', 'cpu_s']} for step in totals['old']})
+        (out / 'paired_timing_summary.json').write_text(json.dumps(timing, indent=2) + '\n')
     lines.extend(['## 验证与可追溯数据', '',
         f"共同 truth 检查：{summary['exact_truth']}；全量输入 ID 检查：{summary['exact_all_ids']}；"
         f"分片 science arrays 回读恢复：{summary['exact_shard_science_readback']}；"

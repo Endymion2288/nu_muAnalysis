@@ -130,6 +130,8 @@ def main():
             old_shard = ordered(load(old_path))
             for key in ['all_run', 'all_eventID']:
                 assert np.array_equal(old_shard[key], shard[key]), ('paired input IDs', record[0], key)
+            for key in truth:
+                assert np.array_equal(old_shard[key], shard[key], equal_nan=shard[key].dtype.kind in 'fc'), ('paired truth', record[0], key)
             reference = subset(data['old'], event_key(old_shard))
             for k in station.EVENT_KEYS + station.TRACK_KEYS:
                 assert np.array_equal(old_shard[k], reference[k], equal_nan=old_shard[k].dtype.kind in 'fc'), ('old replay', record[0], k)
@@ -154,10 +156,28 @@ def main():
     cutrows = []
     totals = np.sum(source_counts, axis=0)
     names = ['NoCuts'] + [name for name, _ in selection(args.repo)[0]]
-    for m, mode in enumerate(MODES):
-        for j, name in enumerate(names):
-            cutrows.append(dict(version='latest', mode=mode, cut=name, passed=int(totals[m, j]), initial=int(totals[m, 0])))
+    assert np.array_equal(totals[:, 6], np.full(3, len(latest['run'])))
+    for version, a in data.items():
+        for m, mode in enumerate(MODES):
+            for j, name in enumerate(names):
+                # The first six cuts use only unchanged truth inputs from common RDOs.
+                # Later counts are exact sums of each version's cached cumulative bits.
+                passed = int(totals[m, j]) if j <= 6 else int(((a['event_cut_bits'][:, m] >> (j - 7)) & 1).sum())
+                if version == 'latest':
+                    assert passed == totals[m, j], ('raw/fiducial cutflow closure', mode, name)
+                cutrows.append(dict(version=version, mode=mode, cut=name, passed=passed,
+                    initial=int(totals[m, 0]), source='common RDO truth cuts measured in latest' if j <= 6 else 'version cumulative event bits'))
     station.table(out / 'full_input_cutflow.tsv', cutrows)
+    cutrows = []
+    for version, a in data.items():
+        for m, mode in enumerate(MODES):
+            for j, name in enumerate(cuts):
+                passed = ((a['event_cut_bits'][:, m] >> j) & 1).astype(bool)
+                cutrows.append(dict(version=version, mode=mode, cut=name, truth_fiducial=len(a['run']),
+                    actual_passed=int(passed.sum()), fixed_old_charge_passed=int(der[version]['control'][:, m, j].sum()),
+                    truth_accepted=int(masks['truth_station_acceptance'].sum()),
+                    truth_accepted_passed=int((passed & masks['truth_station_acceptance']).sum())))
+    station.table(out / 'fiducial_cutflow.tsv', cutrows)
     station.basic_metrics(data, der, out, groups, masks, cuts)
     residuals, bins = station.response_metrics(data, der, out, groups, masks, comparisons)
     station.particle_content(data, der, groups, out)
