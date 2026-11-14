@@ -1,0 +1,408 @@
+{
+  "variants": {
+    "large": {
+      "science_arrays_exact": true,
+      "checks": {
+        "run": true,
+        "eventID": true,
+        "truth_pz_nu": true,
+        "truth_dec_x_nu": true,
+        "truth_dec_y_nu": true,
+        "truth_dec_z_nu": true,
+        "event_cut_bits": true,
+        "event_individual_bits": true,
+        "event_scalars": true,
+        "primary": true,
+        "primary_production_momentum_mev": true,
+        "primary_station": true,
+        "primary_layer_hits": true,
+        "scintillator": true,
+        "raw_primary_counts": true,
+        "tracks": true,
+        "reco_station": true,
+        "reco_at_primary_station": true,
+        "matched_truth_station": true,
+        "nearest_state_dz_mm": true,
+        "station_method": true,
+        "all_run": true,
+        "all_eventID": true
+      },
+      "input_events": 5,
+      "fiducial": 1,
+      "final_FBM": [
+        1,
+        0,
+        1
+      ],
+      "configuration": {
+        "variance": "large",
+        "initial_variance_inflation": [
+          100,
+          100,
+          100,
+          10000,
+          100000
+        ],
+        "algorithms": {
+          "CKF2": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 0.000841,
+              "covQOverP": 0.001
+            },
+            "properties": {
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=0.000841, covQOverP=0.001, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_4station_forward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=False, streamName='input_4station_forward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool')",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          },
+          "CKF_Back": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 0.000841,
+              "covQOverP": 0.001
+            },
+            "properties": {
+              "OutputCollection": "DataHandle('CKFTrackCollectionBackward','W','DataVector<Trk::Track,DataModel_detail::NoBase>')",
+              "BackwardPropagation": "True",
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=0.000841, covQOverP=0.001, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_4station_backward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=True, streamName='input_4station_backward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool')",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          },
+          "CKF_woIFT": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 0.000841,
+              "covQOverP": 0.001
+            },
+            "properties": {
+              "maskedLayers": "[0, 1, 2, 3, 4, 5]",
+              "OutputCollection": "DataHandle('CKFTrackCollectionWithoutIFT','W','DataVector<Trk::Track,DataModel_detail::NoBase>')",
+              "BackwardPropagation": "False",
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=0.000841, covQOverP=0.001, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_3station_forward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=False, streamName='input_3station_forward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool')",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          },
+          "CKF_Back_woIFT": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 0.000841,
+              "covQOverP": 0.001
+            },
+            "properties": {
+              "maskedLayers": "[0, 1, 2, 3, 4, 5]",
+              "OutputCollection": "DataHandle('CKFTrackCollectionBackwardWithoutIFT','W','DataVector<Trk::Track,DataModel_detail::NoBase>')",
+              "BackwardPropagation": "True",
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=0.000841, covQOverP=0.001, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_3station_backward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=True, streamName='input_3station_backward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool', OutputLevel=3)",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          }
+        },
+        "material_file": "/pool/condor/dir_1439362/tmp/faser_rotated_material_f6dhsmzy/material-maps-alma9-rotated-rowmajor.json",
+        "material_bytes": 11866364,
+        "exact_strict_map": true,
+        "preshower": {
+          "FitWindowWidth": "100",
+          "BaselineSampleHi": "60",
+          "RemoveOverflow": "False"
+        }
+      },
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.31 max_rss_kib=57464 user_seconds=0.02 system_seconds=0.13",
+        "runtime_unpack": "runtime_unpack wall_seconds=1.70 max_rss_kib=6144 user_seconds=1.60 system_seconds=0.43",
+        "input": "input wall_seconds=2.87 max_rss_kib=83248 user_seconds=0.15 system_seconds=0.83",
+        "reco": "reco wall_seconds=20.82 max_rss_kib=1041592 user_seconds=12.32 system_seconds=3.26",
+        "forward": "forward wall_seconds=11.10 max_rss_kib=891520 user_seconds=7.39 system_seconds=1.97",
+        "backward": "backward wall_seconds=11.51 max_rss_kib=906820 user_seconds=7.62 system_seconds=2.08",
+        "merge": "merge wall_seconds=111.67 max_rss_kib=1933416 user_seconds=90.03 system_seconds=7.44",
+        "extract": "extract wall_seconds=31.03 max_rss_kib=734980 user_seconds=26.34 system_seconds=1.93"
+      }
+    },
+    "small": {
+      "science_arrays_exact": true,
+      "checks": {
+        "run": true,
+        "eventID": true,
+        "truth_pz_nu": true,
+        "truth_dec_x_nu": true,
+        "truth_dec_y_nu": true,
+        "truth_dec_z_nu": true,
+        "event_cut_bits": true,
+        "event_individual_bits": true,
+        "event_scalars": true,
+        "primary": true,
+        "primary_production_momentum_mev": true,
+        "primary_station": true,
+        "primary_layer_hits": true,
+        "scintillator": true,
+        "raw_primary_counts": true,
+        "tracks": true,
+        "reco_station": true,
+        "reco_at_primary_station": true,
+        "matched_truth_station": true,
+        "nearest_state_dz_mm": true,
+        "station_method": true,
+        "all_run": true,
+        "all_eventID": true
+      },
+      "input_events": 5,
+      "fiducial": 1,
+      "final_FBM": [
+        1,
+        1,
+        1
+      ],
+      "configuration": {
+        "variance": "small",
+        "initial_variance_inflation": [
+          100,
+          100,
+          100,
+          100,
+          1000
+        ],
+        "algorithms": {
+          "CKF2": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 8.41e-06,
+              "covQOverP": 1e-05
+            },
+            "properties": {
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=8.41e-06, covQOverP=1e-05, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_4station_forward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_forward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=False, streamName='input_4station_forward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool')",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          },
+          "CKF_Back": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 8.41e-06,
+              "covQOverP": 1e-05
+            },
+            "properties": {
+              "OutputCollection": "DataHandle('CKFTrackCollectionBackward','W','DataVector<Trk::Track,DataModel_detail::NoBase>')",
+              "BackwardPropagation": "True",
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=8.41e-06, covQOverP=1e-05, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_4station_backward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_4station_backward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=True, streamName='input_4station_backward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool')",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          },
+          "CKF_woIFT": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 8.41e-06,
+              "covQOverP": 1e-05
+            },
+            "properties": {
+              "maskedLayers": "[0, 1, 2, 3, 4, 5]",
+              "OutputCollection": "DataHandle('CKFTrackCollectionWithoutIFT','W','DataVector<Trk::Track,DataModel_detail::NoBase>')",
+              "BackwardPropagation": "False",
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=8.41e-06, covQOverP=1e-05, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_3station_forward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_forward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=False, streamName='input_3station_forward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool')",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          },
+          "CKF_Back_woIFT": {
+            "isolated_smoothing": true,
+            "seed_covariance": {
+              "covLoc0": 81.0,
+              "covLoc1": 0.0361,
+              "covPhi": 0.10890000000000001,
+              "covTheta": 8.41e-06,
+              "covQOverP": 1e-05
+            },
+            "properties": {
+              "maskedLayers": "[0, 1, 2, 3, 4, 5]",
+              "OutputCollection": "DataHandle('CKFTrackCollectionBackwardWithoutIFT','W','DataVector<Trk::Track,DataModel_detail::NoBase>')",
+              "BackwardPropagation": "True",
+              "noDiagnostics": "True",
+              "KalmanFitterTool1": "KalmanFitterTool('fitterTool1', noDiagnostics=True, ActsLogging='INFO', SummaryWriter=False, StatesWriter=False, SeedCovarianceScale=10.0, isMC=True, RootTrajectoryStatesWriterTool=RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_states_ckf1.root'), RootTrajectorySummaryWriterTool=RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_summary_ckf1.root'))",
+              "TrackSeed": "CircleFitTrackSeedTool('CircleFitTrackSeedTool', covLoc0=81.0, covLoc1=0.0361, covPhi=0.10890000000000001, covTheta=8.41e-06, covQOverP=1e-05, std_cluster=0.0231, TrackCollection=DataHandle('Segments','R','DataVector<Trk::Track,DataModel_detail::NoBase>'))",
+              "ActsLogging": "'INFO'",
+              "RootSeedWriterTool": "RootSeedWriterTool('RootSeedWriterTool', noDiagnostics=True, FilePath='input_3station_backward_seed_summary_circleFitTrackSeedTool.root')",
+              "RootTrajectoryStatesWriterTool": "RootTrajectoryStatesWriterTool('RootTrajectoryStatesWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_states_ckf.root')",
+              "RootTrajectorySummaryWriterTool": "RootTrajectorySummaryWriterTool('RootTrajectorySummaryWriterTool', noDiagnostics=True, FilePath='input_3station_backward_track_summary_ckf.root', writeMeasurements=True)",
+              "RootAlignmentDerivativesWriterTool": "RootAlignmentDerivativesWriterTool('RootAlignmentDerivativesWriterTool', writeAlignment=False, BackwardPropagation=True, streamName='input_3station_backward')",
+              "TrackingGeometryTool": "FaserActsTrackingGeometryTool('TrackingGeometryTool', OutputLevel=3)",
+              "isMC": "True",
+              "seedWriter": "False",
+              "SummaryWriter": "False",
+              "StatesWriter": "False",
+              "alignmentWriter": "False",
+              "PerformanceWriter": "False",
+              "nMax": "10",
+              "chi2Max": "25.0",
+              "maxSteps": "5000.0",
+              "addFittedParamsToTrack": "True",
+              "OutputLevel": "3"
+            }
+          }
+        },
+        "material_file": "/pool/condor/dir_1080806/tmp/faser_rotated_material_nksocx6r/material-maps-alma9-rotated-rowmajor.json",
+        "material_bytes": 11866364,
+        "exact_strict_map": true,
+        "preshower": {
+          "FitWindowWidth": "100",
+          "BaselineSampleHi": "60",
+          "RemoveOverflow": "False"
+        }
+      },
+      "performance": {
+        "runtime_copy": "runtime_copy wall_seconds=0.49 max_rss_kib=54272 user_seconds=0.03 system_seconds=0.15",
+        "runtime_unpack": "runtime_unpack wall_seconds=2.34 max_rss_kib=5632 user_seconds=2.00 system_seconds=0.71",
+        "input": "input wall_seconds=1.70 max_rss_kib=82704 user_seconds=0.14 system_seconds=1.00",
+        "reco": "reco wall_seconds=20.47 max_rss_kib=1012876 user_seconds=11.10 system_seconds=3.39",
+        "forward": "forward wall_seconds=12.25 max_rss_kib=878332 user_seconds=7.75 system_seconds=2.26",
+        "backward": "backward wall_seconds=12.16 max_rss_kib=878088 user_seconds=7.68 system_seconds=2.28",
+        "merge": "merge wall_seconds=109.15 max_rss_kib=2006864 user_seconds=84.47 system_seconds=8.63",
+        "extract": "extract wall_seconds=27.18 max_rss_kib=717492 user_seconds=22.53 system_seconds=1.97"
+      }
+    }
+  },
+  "production_runtime_only": true,
+  "wall_s": 0.04955870471894741
+}

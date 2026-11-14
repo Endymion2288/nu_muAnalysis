@@ -1,0 +1,92 @@
+{
+  "old_commit": "d32b0ff3cc4a2dad4abfb1474a82422c3c25b305",
+  "rotated_commit": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "old_cache": "workbook/stage203_station_truth/old.npz",
+  "large_cache": "workbook/stage208_master_integration/full/latest.npz",
+  "runtime": "software/stage208_master/calypso_runtime.tar.gz",
+  "initial_variance_inflation": {
+    "old": [
+      100,
+      100,
+      100,
+      100,
+      1000
+    ],
+    "large": [
+      100,
+      100,
+      100,
+      10000,
+      100000
+    ],
+    "small": [
+      100,
+      100,
+      100,
+      100,
+      1000
+    ]
+  },
+  "seed_variance": {
+    "old": [
+      81,
+      0.0361,
+      0.1089,
+      8.41e-06,
+      1e-05
+    ],
+    "large": [
+      81,
+      0.0361,
+      0.1089,
+      0.000841,
+      0.001
+    ],
+    "small": [
+      81,
+      0.0361,
+      0.1089,
+      8.41e-06,
+      1e-05
+    ]
+  },
+  "units": [
+    "mm^2",
+    "mm^2",
+    "rad^2",
+    "rad^2",
+    "GeV^-2"
+  ],
+  "rotated_common": {
+    "material": "packaged strict rowmajor map, decompressed bytes asserted",
+    "isolated_smoothing": true,
+    "conditions": "OFLCOND-FASER-06",
+    "geometry": "TI12MC04"
+  },
+  "scope": "large and small differ only in covTheta and covQOverP; old/rotated is a complete version comparison, not geometry-only ablation",
+  "station_reference": "SiHit direction times HepMC production momentum magnitude; G4 transported local momentum not saved",
+  "clusters": {
+    "smoke": 9718353,
+    "full_small": 9718354,
+    "smoke_report": 9718355,
+    "full_report": 9718417
+  },
+  "production_defaults_changed": false,
+  "smoke_report_validation": {
+    "cluster": 9718355,
+    "exit_code": 0,
+    "archive_roundtrip_exact": true,
+    "reduction_wall_s": 25.191285301931202,
+    "max_rss_kib": 1518964
+  },
+  "full_report_validation": {
+    "cluster": 9718417,
+    "exit_code": 0,
+    "archive_roundtrip_exact": true,
+    "archive_bytes": 244828160,
+    "all_checks_passed": true,
+    "input_events": 3374987,
+    "fiducial": 383670,
+    "truth_accepted": 140132
+  }
+}

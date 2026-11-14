@@ -1,0 +1,53 @@
+{
+  "full_sample": true,
+  "versions": [
+    "old",
+    "large",
+    "small"
+  ],
+  "checked_shards": 351,
+  "input_events": 3374987,
+  "fiducial": 383670,
+  "accepted": 140132,
+  "source_commit": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "exact_truth_and_waveforms": true,
+  "exact_all_input_ids": true,
+  "exact_shard_readback": true,
+  "accepted_final": {
+    "old": [
+      91270,
+      101356,
+      102273
+    ],
+    "large": [
+      88539,
+      99084,
+      102807
+    ],
+    "small": [
+      91359,
+      101710,
+      102739
+    ]
+  },
+  "accepted_final_correct": {
+    "old": [
+      91163,
+      101149,
+      102066
+    ],
+    "large": [
+      88422,
+      98840,
+      102576
+    ],
+    "small": [
+      91254,
+      101493,
+      102525
+    ]
+  },
+  "station_reference": "SiHit direction times HepMC production momentum magnitude; no G4 local momentum",
+  "wall_s": 722.2457999780308,
+  "max_rss_kib": 3086124
+}

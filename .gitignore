@@ -344,3 +344,9 @@ workbook/stage208_master_integration/*.npz
 ntuples/tracking_causes_stage209/
 workbook/stage209_master_causes/**/*.npz
 !workbook/stage209_master_causes/**/*.png
+
+# Stage210 covariance comparison: keep only combined local caches and scalar reports.
+ntuples/tracking_covariance_stage210/
+workbook/stage210_covariance/**/*.npz
+workbook/stage210_covariance/*.npz
+!workbook/stage210_covariance/**/*.png

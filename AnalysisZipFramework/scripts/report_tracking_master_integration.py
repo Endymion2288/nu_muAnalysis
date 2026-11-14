@@ -18,10 +18,10 @@ def load(path):
         return {k: source[k] for k in source.files}
 
 
-def paired_momentum_bands(data, der, masks, output):
+def paired_momentum_bands(data, der, masks, output, comparisons=None):
     """Hold event identity fixed when comparing low and high momentum accuracy."""
     rows = []
-    for baseline, variant in [('old', 'latest'), ('strict', 'latest')]:
+    for baseline, variant in comparisons or [('old', 'latest'), ('strict', 'latest')]:
         for m, mode in enumerate(MODES):
             left, right = der[baseline]['leaders'][:, m], der[variant]['leaders'][:, m]
             il, ir = np.maximum(left, 0), np.maximum(right, 0)

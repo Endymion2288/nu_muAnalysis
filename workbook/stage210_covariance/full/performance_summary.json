@@ -1,0 +1,80 @@
+{
+  "small": {
+    "events": 3374987,
+    "jobs": 351,
+    "summary_bytes": 234822633,
+    "transient_root_bytes": {
+      "input-RDO.root": 293997350473,
+      "input-xAOD.root": 544511516230,
+      "forward.root": 13612977987,
+      "backward.root": 13720184958,
+      "merge.root": 13744425530
+    },
+    "steps": {
+      "runtime_copy": {
+        "wall_total_s": 106.07000000000001,
+        "median_job_wall_s": 0.21,
+        "max_rss_kib": 77312,
+        "cpu_user_total_s": 10.21,
+        "cpu_system_total_s": 47.82,
+        "events_per_summed_wall_s": 31818.48779108136
+      },
+      "runtime_unpack": {
+        "wall_total_s": 737.69,
+        "median_job_wall_s": 2.11,
+        "max_rss_kib": 6720,
+        "cpu_user_total_s": 660.22,
+        "cpu_system_total_s": 197.02999999999997,
+        "events_per_summed_wall_s": 4575.074895959006
+      },
+      "input": {
+        "wall_total_s": 1597.3999999999999,
+        "median_job_wall_s": 4.11,
+        "max_rss_kib": 89780,
+        "cpu_user_total_s": 89.34,
+        "cpu_system_total_s": 516.08,
+        "events_per_summed_wall_s": 2112.800175284838
+      },
+      "reco": {
+        "wall_total_s": 648045.3400000001,
+        "median_job_wall_s": 1855.56,
+        "max_rss_kib": 1341964,
+        "cpu_user_total_s": 637065.9199999999,
+        "cpu_system_total_s": 3617.3900000000003,
+        "events_per_summed_wall_s": 5.207948875922786
+      },
+      "forward": {
+        "wall_total_s": 130968.84000000001,
+        "median_job_wall_s": 400.04,
+        "max_rss_kib": 1096684,
+        "cpu_user_total_s": 127311.45,
+        "cpu_system_total_s": 1355.29,
+        "events_per_summed_wall_s": 25.76938911576219
+      },
+      "backward": {
+        "wall_total_s": 131880.25,
+        "median_job_wall_s": 396.0,
+        "max_rss_kib": 1103984,
+        "cpu_user_total_s": 128359.89,
+        "cpu_system_total_s": 1345.22,
+        "events_per_summed_wall_s": 25.591299682856228
+      },
+      "merge": {
+        "wall_total_s": 176734.34000000003,
+        "median_job_wall_s": 508.3,
+        "max_rss_kib": 2282052,
+        "cpu_user_total_s": 164027.62,
+        "cpu_system_total_s": 3298.72,
+        "events_per_summed_wall_s": 19.09638500361616
+      },
+      "extract": {
+        "wall_total_s": 25109.550000000003,
+        "median_job_wall_s": 71.09,
+        "max_rss_kib": 866552,
+        "cpu_user_total_s": 23284.280000000002,
+        "cpu_system_total_s": 712.7900000000001,
+        "events_per_summed_wall_s": 134.41049321871557
+      }
+    }
+  }
+}

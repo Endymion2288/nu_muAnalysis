@@ -1,0 +1,30 @@
+version	mode	run	eventID	barcode	tracks	primary	truth_accepted	final	leader_in_group	raw_indices	minimum_hit_purity	minimum_pz_gev	maximum_pz_gev
+old	forward	200080	301715	5	2	True	False	False	True	[0, 1]	0.8	174.557	432.51453125
+old	forward	200080	372265	29	2	False	True	True	False	[3, 5]	0.7142857142857143	27.181638671875	42.78336328125
+old	forward	200100	84692	5	2	True	False	False	True	[0, 1]	0.8	182.65971875	763.9698125
+old	backward	200080	235555	30	2	False	False	False	False	[0, 1]	0.9285714285714286	21.821630859375	24.883568359375
+old	backward	200083	138570	5	2	True	True	True	True	[0, 1]	0.8	394.79228125	510.7436875
+old	backward	200093	2010	28	2	False	False	False	True	[0, 1]	0.8571428571428571	119.131375	355.310375
+old	merge	200080	301715	5	2	True	False	False	True	[0, 1]	0.8	174.557	432.51453125
+old	merge	200080	372265	29	2	False	True	True	False	[3, 5]	0.7142857142857143	27.181638671875	42.78336328125
+old	merge	200083	138570	5	2	True	True	True	True	[0, 1]	0.8	394.79228125	510.7436875
+old	merge	200083	346914	5	2	True	False	False	True	[1, 3]	0.8	656.9188125	1541.65325
+old	merge	200093	2010	28	2	False	False	False	True	[0, 1]	0.8571428571428571	119.131375	355.310375
+old	merge	200100	84692	5	2	True	False	False	True	[0, 1]	0.8	182.65971875	763.9698125
+large	forward	200083	523910	38	2	False	False	False	False	[1, 3]	0.7058823529411765	110.5648359375	795.61575
+large	forward	200089	123559	5	2	True	False	False	True	[0, 1]	0.8	528.242625	544.0099375
+large	forward	200094	313410	5	2	True	False	False	True	[0, 1]	0.8	816.8813125	80325.76
+large	backward	200083	38713	5	2	True	False	False	True	[0, 1]	0.8571428571428571	35.8231171875	38.93267578125
+large	merge	200083	38713	5	2	True	False	False	True	[0, 1]	0.8571428571428571	35.8231171875	38.93267578125
+large	merge	200089	123559	5	2	True	False	False	True	[0, 1]	0.8	528.242625	544.0099375
+large	merge	200094	313410	5	2	True	False	False	True	[0, 1]	0.8	816.8813125	80325.76
+small	forward	200080	301715	5	2	True	False	False	True	[0, 1]	0.8	177.57165625	428.372
+small	forward	200083	172344	39	3	False	False	True	False	[2, 6, 7]	0.7222222222222222	136.604875	536.0805625
+small	forward	200100	84692	5	2	True	False	False	True	[0, 1]	0.8	178.396859375	526.9786875
+small	backward	200083	745280	30	2	False	False	False	True	[0, 1]	0.8	92.952625	118.510828125
+small	backward	200093	2010	28	2	False	False	False	True	[0, 1]	0.8571428571428571	132.874015625	162.706921875
+small	merge	200080	301715	5	2	True	False	False	True	[0, 1]	0.8	177.57165625	428.372
+small	merge	200083	346914	5	2	True	False	False	True	[1, 3]	0.8	640.26875	680.4154375
+small	merge	200083	745280	30	2	False	False	False	True	[0, 1]	0.8	92.952625	118.510828125
+small	merge	200093	2010	28	2	False	False	False	True	[0, 1]	0.8571428571428571	132.874015625	162.706921875
+small	merge	200100	84692	5	2	True	False	False	True	[0, 1]	0.8	178.396859375	526.9786875
