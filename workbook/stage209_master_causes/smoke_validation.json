@@ -1,0 +1,29 @@
+{
+  "events": 5,
+  "fiducial": 1,
+  "target_event": 728039,
+  "all_science_exact_frozen_full": true,
+  "arrays": {
+    "run": true,
+    "eventID": true,
+    "truth_pz_nu": true,
+    "truth_dec_x_nu": true,
+    "truth_dec_y_nu": true,
+    "truth_dec_z_nu": true,
+    "event_cut_bits": true,
+    "event_individual_bits": true,
+    "event_scalars": true,
+    "primary": true,
+    "primary_production_momentum_mev": true,
+    "primary_station": true,
+    "primary_layer_hits": true,
+    "scintillator": true,
+    "raw_primary_counts": true,
+    "tracks": true,
+    "reco_station": true,
+    "reco_at_primary_station": true,
+    "matched_truth_station": true,
+    "nearest_state_dz_mm": true,
+    "station_method": true
+  }
+}

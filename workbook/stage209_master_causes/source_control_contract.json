@@ -1,0 +1,47 @@
+{
+  "source_base": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "variance_change_commit": "88c457c1e4bf4154e67b96114ee8e7020d9b1a97",
+  "old_seed_variance": [
+    81,
+    0.0361,
+    0.1089,
+    8.41e-06,
+    1e-05
+  ],
+  "latest_seed_variance": [
+    81,
+    0.0361,
+    0.1089,
+    0.000841,
+    0.001
+  ],
+  "units": [
+    "mm^2",
+    "mm^2",
+    "rad^2",
+    "rad^2",
+    "GeV^-2"
+  ],
+  "causal_controls": {
+    "oldtheta": {
+      "covTheta": 8.41e-06
+    },
+    "oldqop": {
+      "covQOverP": 1e-05
+    },
+    "oldseed": {
+      "covTheta": 8.41e-06,
+      "covQOverP": 1e-05
+    },
+    "tightphi": {
+      "covPhi": 8.41e-06
+    },
+    "shared": {
+      "IsolateCandidateSmoothing": false
+    }
+  },
+  "material": "stage208 packaged strict rowmajor; exact decompressed bytes asserted in every job",
+  "default_isolated_smoothing": true,
+  "truth_station_limit": "SiHit direction times HepMC production momentum magnitude; no G4 local momentum",
+  "production_change": "none"
+}

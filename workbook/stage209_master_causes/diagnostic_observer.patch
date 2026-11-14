@@ -1,0 +1,104 @@
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
+index 34bde4b9..62b65760 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
+@@ -1,4 +1,5 @@
+ #include "CKF2.h"
++#include "TrackingFitAudit.h"
+ 
+ #include "StoreGate/ReadHandle.h"
+ #include "StoreGate/ReadCondHandleKey.h"
+@@ -223,6 +224,7 @@ StatusCode CKF2::execute() {
+   m_numberOfTrackSeeds += initialParameters->size();
+   ATH_MSG_DEBUG("Invoke track finding with " << initialParameters->size() << " seeds.");
+ 
++  TrackingFitAudit fitAudit(name(), ctx.eventID().event_number());
+   unsigned int nSeed = 0;
+ 
+   for (std::size_t iseed = 0; iseed < (*initialParameters).size(); ++iseed) {
+@@ -232,6 +234,18 @@ StatusCode CKF2::execute() {
+     // Clear trackContainerTemp and trackStateContainerTemp
+     tracksTemp.clear();
+ 
++    fitAudit.candidate = iseed;
++    fitAudit.parameters("seed",gctx,(*initialParameters).at(iseed));
++    if(fitAudit && Tool && iseed < Tool->seeds()->size()) {
++      const auto& seed = Tool->seeds()->at(iseed);
++      fitAudit.begin("seed_circle");
++      fitAudit.out << ",\"stations\":" << seed.stations << ",\"momentum_GeV\":";
++      fitAudit.number(seed.momentum);
++      fitAudit.out << ",\"fake_positions_F\":[";
++      for(size_t i=0;i<seed.fakePositions.size();++i) {if(i) fitAudit.out << ',';fitAudit.vector(seed.fakePositions[i]);}
++      fitAudit.out << ']';fitAudit.end();
++    }
++
+     auto result = (*m_finder)((*initialParameters).at(iseed), options, calibrator, slAccessor, Acts::MeasurementSelector(measurementSelectorCfg), tracksTemp);
+    
+     if (!result.ok()) {
+@@ -243,6 +257,7 @@ StatusCode CKF2::execute() {
+     m_numberOfFittedTracks += tracksForSeed.size();
+     ATH_MSG_DEBUG("Find " << tracksForSeed.size() << " tracks for this seed");
+     for (auto& track : tracksForSeed) {
++      fitAudit.track("found",gctx,track);
+       // Set the seed number, this number decrease by 1 since the seed number
+       // has already been updated
+       seedNumber(track) = nSeed - 1;
+@@ -274,6 +289,8 @@ StatusCode CKF2::execute() {
+     // CKF branches share ancestor states. Their smoothed values may have been
+     // overwritten by another branch before the finder returned. Deep-copying
+     // alone preserves those values: recompute only after the states are private.
++    fitAudit.candidate = selected.index;
++    fitAudit.track("selected_shared",gctx,destProxy);
+     if (m_isolateSmoothing) {
+       const auto status = Acts::GainMatrixSmoother()(
+           gctx, selectedTracks.trackStateContainer(), destProxy.tipIndex(), *m_logger);
+@@ -284,6 +301,7 @@ StatusCode CKF2::execute() {
+       }
+     }
+     
++    fitAudit.track("selected_isolated",gctx,destProxy);
+     if(not allTracks.empty()){ 
+       allTracks.remove_if([&](const TrackInfo &p) {
+         return ((p.nMeasurements <= 12) || ((p.clusterSet & selected.clusterSet).count() > 6));
+@@ -331,10 +349,15 @@ StatusCode CKF2::execute() {
+     }
+ 
+     std::unique_ptr<Trk::Track> trk = m_createTrkTrackTool->createTrack(gctx, track, fittedParams, m_backwardPropagation);
++    fitAudit.candidate = track.index();
++    fitAudit.trk("converted",trk.get());
++    currentTrackingFitAudit = &fitAudit;
+     m_numberOfSelectedTracks++;
+     //@todo: make the KF refit configurable 
+     std::unique_ptr<Trk::Track> trk2 = m_kalmanFitterTool1->fit(
+       ctx, gctx, trk.get(), Acts::BoundVector::Zero(), m_isMC);
++    currentTrackingFitAudit = nullptr;
++    fitAudit.trk("refit_result",trk2.get());
+     if (trk2 != nullptr) {
+       outputTracks->push_back(std::move(trk2));
+       refitStatus[track.index()] = true;
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
+index 45ed8905..870e82b4 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
+@@ -1,4 +1,5 @@
+ #include "KalmanFitterTool.h"
++#include "TrackingFitAudit.h"
+ 
+ #include "FaserActsGeometry/FASERMagneticFieldWrapper.h"
+ #include "FaserActsGeometry/FaserActsGeometryContext.h"
+@@ -392,6 +393,7 @@ KalmanFitterTool::fit(const EventContext &ctx, const Acts::GeometryContext &gctx
+     trackParameters.covariance() = (trackParameters.covariance().value())*10; 
+   }
+  
++  if(currentTrackingFitAudit) currentTrackingFitAudit->parameters("refit_input",gctx,trackParameters);
+   ATH_MSG_DEBUG("trackParameters: " << trackParameters.parameters().transpose());
+   ATH_MSG_DEBUG("position: " << trackParameters.position(gctx).transpose());
+   ATH_MSG_DEBUG("momentum: " << trackParameters.momentum().transpose());
+@@ -420,6 +422,7 @@ KalmanFitterTool::fit(const EventContext &ctx, const Acts::GeometryContext &gctx
+ 
+   if (result.ok()) {
+     const auto& track = result.value();
++    if(currentTrackingFitAudit) currentTrackingFitAudit->track("refit_acts",gctx,track);
+     //if (track.hasReferenceSurface()) {
+       //const auto& params = track.fittedParameters.value();
+       //ATH_MSG_DEBUG("ReFitted parameters");

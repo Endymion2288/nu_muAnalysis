@@ -1,0 +1,38 @@
+commit 88c457c1e4bf4154e67b96114ee8e7020d9b1a97
+Author: Saimeng Zhang <sazhang@lxplus957.cern.ch>
+Date:   Tue Nov 4 09:45:58 2025 +0100
+
+    geometryRotation
+
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py b/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
+index 66d7eb11..d3f3e816 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
++++ b/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
+@@ -47,11 +47,18 @@ def CKF2Cfg(flags, actsOutputTag, **kwargs):
+     sigma_loc1 = 9e-1
+     sigma_phi = 3.3e-2
+     sigma_theta = 2.9e-4
++    #sigma_theta = 3e-2
+     p = 1000
+     sigma_p = 0.1 * p
+     sigma_qop = sigma_p / (p * p)
++    initial_variance_inflation = kwargs.pop(
++        "initialVarianceInflation",
++        [100, 100, 100, 10000, 100000]
++    )
+     # initial_variance_inflation = [1000, 1000, 100, 100, 10000]
+-    initial_variance_inflation = [100, 100, 100, 100, 1000]
++    #initial_variance_inflation = [100, 100, 100, 100, 1000]
++    #initial_variance_inflation = [100, 100, 10000, 100, 100000]
++    #initial_variance_inflation = [100, 100, 100, 10000, 100000]
+     track_seed_tool.covLoc0 = initial_variance_inflation[0] * sigma_loc1 * sigma_loc1
+     track_seed_tool.covLoc1 = initial_variance_inflation[1] * sigma_loc0 * sigma_loc0
+     track_seed_tool.covPhi = initial_variance_inflation[2] * sigma_phi * sigma_phi
+@@ -77,6 +84,7 @@ def CKF2Cfg(flags, actsOutputTag, **kwargs):
+     trajectory_summary_writer_tool = CompFactory.RootTrajectorySummaryWriterTool()
+     trajectory_summary_writer_tool.noDiagnostics = kwargs.get("noDiagnostics", True)
+     trajectory_summary_writer_tool.FilePath = f"{actsOutputTag}_track_summary_ckf.root"
++    trajectory_summary_writer_tool.writeMeasurements = True
+     trajectory_summary_writer_tool1 = CompFactory.RootTrajectorySummaryWriterTool()
+     #trajectory_summary_writer_tool1.noDiagnostics = kwargs.get("noDiagnostics", True)
+     trajectory_summary_writer_tool1.noDiagnostics = True

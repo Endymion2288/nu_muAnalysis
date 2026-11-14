@@ -1,0 +1,47 @@
+{
+  "control": "default",
+  "algorithms": {
+    "CKF2": {
+      "isolated_smoothing": true,
+      "seed_covariance": {
+        "covLoc0": 81.0,
+        "covLoc1": 0.0361,
+        "covPhi": 0.10890000000000001,
+        "covTheta": 0.000841,
+        "covQOverP": 0.001
+      }
+    },
+    "CKF_Back": {
+      "isolated_smoothing": true,
+      "seed_covariance": {
+        "covLoc0": 81.0,
+        "covLoc1": 0.0361,
+        "covPhi": 0.10890000000000001,
+        "covTheta": 0.000841,
+        "covQOverP": 0.001
+      }
+    },
+    "CKF_woIFT": {
+      "isolated_smoothing": true,
+      "seed_covariance": {
+        "covLoc0": 81.0,
+        "covLoc1": 0.0361,
+        "covPhi": 0.10890000000000001,
+        "covTheta": 0.000841,
+        "covQOverP": 0.001
+      }
+    },
+    "CKF_Back_woIFT": {
+      "isolated_smoothing": true,
+      "seed_covariance": {
+        "covLoc0": 81.0,
+        "covLoc1": 0.0361,
+        "covPhi": 0.10890000000000001,
+        "covTheta": 0.000841,
+        "covQOverP": 0.001
+      }
+    }
+  },
+  "material_file": "/tmp/xcheng/faser_rotated_material_ims8augj/material-maps-alma9-rotated-rowmajor.json",
+  "exact_strict_map": true
+}

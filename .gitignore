@@ -339,3 +339,8 @@ ntuples/tracking_master_stage208/
 workbook/stage208_master_integration/**/*.npz
 workbook/stage208_master_integration/*.npz
 !workbook/stage208_master_integration/**/*.png
+
+# Stage209 targeted reconstruction caches and diagnostic archives remain local.
+ntuples/tracking_causes_stage209/
+workbook/stage209_master_causes/**/*.npz
+!workbook/stage209_master_causes/**/*.png

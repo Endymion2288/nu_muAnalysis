@@ -1,0 +1,14 @@
+{
+  "base_commit": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "branch": "diagnostic/georotation-stage209",
+  "changes": "Read-only seed/found/smoothing/refit observer, environment-selective; production branch unchanged",
+  "header": "AnalysisZipFramework/include/TrackingFitAudit.h",
+  "patch": "diagnostic_observer.patch",
+  "overlay_bytes": 2821936,
+  "seedstarts_patch": "diagnostic_seedstarts.patch",
+  "seedstarts_changes": "Optional CALYPSO_DIAG_START_P_GEV changes only initial q/p in diagnostic overlay 2; default path checked against frozen full cache",
+  "production_commit_unchanged": "7fd40df8cd3b60e81b4095a4f84310c4a54700a0",
+  "production_status": "",
+  "diagnostic_commit": "7caa04ec1aaaae0956900d074885e2811da636ab",
+  "durable_diagnostic_branch": "/eos/home-x/xcheng/FASER/geoRotation_calypso_latest:diagnostic/georotation-stage209"
+}

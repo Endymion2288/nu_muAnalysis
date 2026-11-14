@@ -1,0 +1,73 @@
+{
+  "rotation_F_to_A": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "angular_jacobian": [
+    [
+      0.001676694540439894,
+      -0.09784215384624267
+    ],
+    [
+      0.00016484186194029097,
+      0.995201959324597
+    ]
+  ],
+  "old_angular_covariance_rad2": [
+    [
+      0.1089,
+      0.0
+    ],
+    [
+      0.0,
+      8.41e-06
+    ]
+  ],
+  "production_rotated_angular_covariance_rad2": [
+    [
+      0.1089,
+      0.0
+    ],
+    [
+      0.0,
+      0.000841
+    ]
+  ],
+  "linearly_transformed_old_angular_covariance_rad2": [
+    [
+      3.866607312259452e-07,
+      -7.888056229159167e-07
+    ],
+    [
+      -7.888056229159167e-07,
+      8.332449686299859e-06
+    ]
+  ],
+  "linearized_direction_rms_old_mrad": 2.952813798821006,
+  "linearized_direction_rms_production_mrad": 331.27132965257255,
+  "direction_covariance_closure_max": 5.082197683525802e-21,
+  "seed_stations": 3,
+  "seed_momentum_gev": 375484157.575732,
+  "seed_reference_radius_mm": 2275661561065.0425,
+  "segment_center_chord_slope": -0.000164842126971395,
+  "segment_tangent_slopes": [
+    -0.0006509233020211416,
+    -0.0006177773690105033,
+    -0.0006509233020212638
+  ],
+  "central_y_sagitta_mm": 3.127218768383955e-07,
+  "limitation": "Angular Jacobian is a local linearized diagnostic; not a fully calibrated seed covariance, transport, or complete prior equivalence."
+}
