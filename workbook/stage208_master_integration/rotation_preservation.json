@@ -1,0 +1,17 @@
+{
+  "geometry_rotation_sources_exact_88c457c1": true,
+  "only_geometry_package_additions": [
+    "Tracking/Acts/FaserActsGeometry/CMakeLists.txt",
+    "Tracking/Acts/FaserActsGeometry/data/material-maps-alma9-rotated-rowmajor.json.gz",
+    "Tracking/Acts/FaserActsGeometry/doc/master_integration.md",
+    "Tracking/Acts/FaserActsGeometry/python/RotatedMaterialMap.py"
+  ],
+  "ckf_physics_body_exact_validated_smoothing_branch": true,
+  "ckf_changes_only_include_package_renames": [
+    "-#include \"FaserActsKalmanFilter/IndexSourceLink.h\"",
+    "-#include \"FaserActsKalmanFilter/Measurement.h\"",
+    "+#include \"ActsInterop/IndexSourceLink.h\"",
+    "+#include \"ActsInterop/Measurement.h\""
+  ],
+  "seed_covariance_python_exact_validated_rotation": true
+}

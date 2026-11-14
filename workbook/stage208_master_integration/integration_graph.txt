@@ -1,0 +1,56 @@
+* 7fd40df8 build(calypso): add reproducible setup and rotation verification helpers
+* 4e442485 docs(tracking): document master integration and validated production defaults
+* 7b5d951f fix(config): report the requested conditions tag without an invalid argument
+* e73dadbd fix(geometry): package validated rotated material and retain physical angle control
+*   a2c3e522 merge(tracking): integrate official master with rotated geometry and isolated smoothing
+|\  
+| *   7f2d1681 Merge branch 'migrate-athena-vol-debug' into 'master'
+| |\  
+| | * df4eb268 Port Athena's VolumeDebugger as FaserVolumeDebugger.
+| * |   d9c5a885 Merge branch 'torrence-xaod' into 'master'
+| |\ \  
+| | |/  
+| |/|   
+| | * 2281a5cf Waveform xAOD patch
+| |/  
+| *   f31737c1 Merge branch 'fix/flukareader-eventid' into 'master'
+| |\  
+| | * d4c328ad FlukaReader: full EventID (run, LBN, timestamp) for generated events
+| * |   2b36a5bc Merge branch 'refactor-acts-folder' into 'master'
+| |\ \  
+| | |/  
+| |/|   
+| | * 7ba795bf Refactor FaserActsKalmanFilter folder
+| |/  
+| *   1fd87f41 Merge branch 'pythia-tau-fix' into 'master'
+| |\  
+| | * 57ffaf3f Add tau decay handling
+| |/  
+| *   12364675 Merge branch 'quirk-sim' into 'master'
+| |\  
+| | * dd5890ca add cmake stuff to gitignore
+| | * e0b5d2a8 remove cmake junk and outdated README
+| | * fa02e05b trying after CI test storage fix
+| | * 4a29e9f1 trying after CI test storage fix
+| | * 48ac50c4 retrying CI test with more space
+| | * 78001b06 publishing quirks branch
+| * |   d32b0ff3 Merge branch 'ci-opts' into 'master'
+| |\ \  
+| | * | c25f6cf4 CI Optimizations -- Reduce build size
+| |/ /  
+| * / c2b7c585 Try to clean up artifacts after 2 days to prevent hogging available space
+| |/  
+| *   1eb885ae Merge branch 'Station-Level-Alignment' into 'master'
+| |\  
+| | * 3d4399ff Fix multiple writing of the station level alignment to the db
+| | * 7f123e84 Fix the handling of station level alignment during the creation of the DB.
+| * |   65be93b1 Merge branch 'Updated-DecayList' into 'master'
+| |\ \  
+| | * | ec56fecd Update Decay list
+| | |/  
+| * |   bc0c0149 Merge branch 'two-track-overlay-2025' into 'master'
+| |\ \  
+| | |/  
+| |/|   
+| | * 3a7cfb43 Retrieve SCT_ID helper
+| |/  

@@ -333,3 +333,9 @@ workbook/stage205_material/details/diagnostics.json.gz
 # Stage206 old/strict inventory: use existing caches; keep scalar audits and plots.
 ntuples/tracking_properties_stage206/
 !workbook/stage206_old_strict/**/*.png
+
+# Stage208 integrated-master reconstruction and compact cache outputs.
+ntuples/tracking_master_stage208/
+workbook/stage208_master_integration/**/*.npz
+workbook/stage208_master_integration/*.npz
+!workbook/stage208_master_integration/**/*.png

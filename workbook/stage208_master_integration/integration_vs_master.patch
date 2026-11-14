@@ -1,0 +1,2402 @@
+diff --git a/.gitignore b/.gitignore
+index 2909bfc2..bfc6823b 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -30,3 +30,7 @@ cmake_install.cmake
+ CTestTestfile.cmake
+ *_clid.db
+ genConf/
++
++# Local rotated-geometry build and installation.
++/build/
++/run/
+diff --git a/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py b/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py
+index b2550f47..943aaee5 100755
+--- a/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py
++++ b/Control/CalypsoExample/Reconstruction/scripts/faser_reco.py
+@@ -189,13 +189,14 @@ else:
+ # Check if we want to override global conditions tag
+ if len(args.cond):
+     configFlags.IOVDb.GlobalTag = args.cond
+-    print(f"Override global tag configFlags.IOVDb.GlobalTag = {args.config}") 
++    print(f"Override global tag configFlags.IOVDb.GlobalTag = {args.cond}")
+ 
+ if useCKF:
+     # Enable ACTS material corrections, this crashes testbeam geometries
+     # Use alma-9 specific file
+     print(">>> Using alma9 specific ACTS material file! <<<")
+-    configFlags.TrackingGeometry.MaterialSource = "/cvmfs/faser.cern.ch/repo/sw/database/DBRelease/current/acts/material-maps-alma9.json"
++    from FaserActsGeometry.RotatedMaterialMap import rotatedMaterialMapPath
++    configFlags.TrackingGeometry.MaterialSource = rotatedMaterialMapPath()
+ 
+ # Must use original input string here, as pathlib mangles double // in path names
+ configFlags.Input.Files = [ args.file_path ]
+diff --git a/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx b/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx
+index c1e1c280..d5594078 100644
+--- a/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx
++++ b/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx
+@@ -23,6 +23,7 @@
+ #include "Acts/Geometry/GeometryIdentifier.hpp"
+ #include "Acts/Geometry/TrackingGeometry.hpp"
+ #include "Acts/Surfaces/Surface.hpp"
++#include "Acts/Utilities/Helpers.hpp"
+ 
+ #include <cmath>
+ #include <TH1F.h>
+@@ -733,6 +734,13 @@ StatusCode NtupleDumperAlg::initialize()
+ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+ {
+   clearTree();
++  
++  //if geometry rotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
+ 
+   // Define waveform channels on first event
+   if (m_first) {
+@@ -1718,8 +1726,15 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+     double maxRadius = 0;
+     Amg::Vector3D positionAtMaxRadius {};
+     for (const Trk::TrackParameters* trackParameters : *track->trackParameters()) {
+-      if (radius(trackParameters->position()) > maxRadius) {
+-        maxRadius = radius(trackParameters->position());
++      //if (radius(trackParameters->position()) > maxRadius) {
++      //  maxRadius = radius(trackParameters->position());
++      //  positionAtMaxRadius = trackParameters->position();
++      //}
++      //if geometry rotation
++      auto position = trackParameters->position();
++      auto r_hit = std::hypot(position.y(),position.z());
++      if (r_hit > maxRadius) {
++        maxRadius = r_hit;
+         positionAtMaxRadius = trackParameters->position();
+       }
+     }
+@@ -1788,47 +1803,77 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+         // the track fit eats up 5 degrees of freedom, thus the number of hits on track is m_DoF + 5
+         m_t_truthHitRatio.push_back(hitCount / (m_DoF.back() + 5));
+         m_isFiducial.push_back(m_fiducialParticleTool->isFiducial(truthParticle->barcode()));
++        //if geometryRotation
+         auto positions = m_fiducialParticleTool->getTruthPositions(truthParticle->barcode());
+         for (int station = 0; station < 4; ++station) {
+-          m_t_st_x[station].push_back(positions[station].x());
+-          m_t_st_y[station].push_back(positions[station].y());
+-          m_t_st_z[station].push_back(positions[station].z());
++          auto pos = trafo * (Acts::Vector3(positions[station].x(), positions[station].y(), positions[station].z()));
++          m_t_st_x[station].push_back(pos.x());
++          m_t_st_y[station].push_back(pos.y());
++          m_t_st_z[station].push_back(pos.z());
++          //m_t_st_x[station].push_back(positions[station].x());
++          //m_t_st_y[station].push_back(positions[station].y());
++          //m_t_st_z[station].push_back(positions[station].z());
+         }
+-        
++       
++        //if geometryRotation
+         auto momenta = m_fiducialParticleTool->getTruthMomenta(truthParticle->barcode());
+         for (int station = 0; station < 4; ++station) {
+-          m_t_st_px[station].push_back(momenta[station].x());
+-          m_t_st_py[station].push_back(momenta[station].y());
+-          m_t_st_pz[station].push_back(momenta[station].z());
++          auto mo = trafo * (Acts::Vector3(momenta[station].x(), momenta[station].y(), momenta[station].z()));
++          m_t_st_px[station].push_back(mo.x());
++          m_t_st_py[station].push_back(mo.y());
++          m_t_st_pz[station].push_back(mo.z());
++          //m_t_st_px[station].push_back(momenta[station].x());
++          //m_t_st_py[station].push_back(momenta[station].y());
++          //m_t_st_pz[station].push_back(momenta[station].z());
+         }
+ 
+         if (truthParticle->hasProdVtx()) {
+-          m_t_prodVtx_x.push_back(truthParticle->prodVtx()->x());
+-          m_t_prodVtx_y.push_back(truthParticle->prodVtx()->y());
+-          m_t_prodVtx_z.push_back(truthParticle->prodVtx()->z());
++          //if geometryRotation
++          auto vertex = trafo * Acts::Vector3(truthParticle->prodVtx()->x(), truthParticle->prodVtx()->y(), truthParticle->prodVtx()->z()); 
++          m_t_prodVtx_x.push_back(vertex.x());
++          m_t_prodVtx_y.push_back(vertex.y());
++          m_t_prodVtx_z.push_back(vertex.z());
++          //m_t_prodVtx_x.push_back(truthParticle->prodVtx()->x());
++          //m_t_prodVtx_y.push_back(truthParticle->prodVtx()->y());
++          //m_t_prodVtx_z.push_back(truthParticle->prodVtx()->z());
+         } else {
+           m_t_prodVtx_x.push_back(999999);
+           m_t_prodVtx_y.push_back(999999);
+           m_t_prodVtx_z.push_back(999999);
+         }
+         if (truthParticle->hasDecayVtx()) {
+-          m_t_decayVtx_x.push_back(truthParticle->decayVtx()->x());
+-          m_t_decayVtx_y.push_back(truthParticle->decayVtx()->y());
+-          m_t_decayVtx_z.push_back(truthParticle->decayVtx()->z());
++          //if geometryRotation
++          auto vertex = trafo * Acts::Vector3(truthParticle->decayVtx()->x(), truthParticle->decayVtx()->y(), truthParticle->decayVtx()->z());
++          m_t_decayVtx_x.push_back(vertex.x());
++          m_t_decayVtx_y.push_back(vertex.y());
++          m_t_decayVtx_z.push_back(vertex.z());
++          
++          //m_t_decayVtx_x.push_back(truthParticle->decayVtx()->x());
++          //m_t_decayVtx_y.push_back(truthParticle->decayVtx()->y());
++          //m_t_decayVtx_z.push_back(truthParticle->decayVtx()->z());
+         } else {
+           m_t_decayVtx_x.push_back(999999);
+           m_t_decayVtx_y.push_back(999999);
+           m_t_decayVtx_z.push_back(999999);
+         }
+-        m_t_px.push_back(truthParticle->px());
+-        m_t_py.push_back(truthParticle->py());
+-        m_t_pz.push_back(truthParticle->pz());
+-        m_t_theta.push_back(truthParticle->p4().Theta());
+-        m_t_phi.push_back(truthParticle->p4().Phi());
+-        // std::cout << "Filling t_P with " << truthParticle->p4().P() << std::endl;
++        //if geometryRotation
++        auto truthMomentum = trafo * (Acts::Vector3(truthParticle->px(), truthParticle->py(), truthParticle->pz()));
++        m_t_px.push_back(truthMomentum.x());
++        m_t_py.push_back(truthMomentum.y());
++        m_t_pz.push_back(truthMomentum.z());
++        m_t_theta.push_back(Acts::VectorHelpers::theta(truthMomentum.normalized()));
++        m_t_phi.push_back(Acts::VectorHelpers::phi(truthMomentum.normalized()));
+         m_t_p.push_back(truthParticle->p4().P());
+         m_t_pT.push_back(truthParticle->p4().Pt());
+-        m_t_eta.push_back(truthParticle->p4().Eta());
++        m_t_eta.push_back(Acts::VectorHelpers::eta(truthMomentum.normalized()));
++        //m_t_px.push_back(truthParticle->px());
++        //m_t_py.push_back(truthParticle->py());
++        //m_t_pz.push_back(truthParticle->pz());
++        //m_t_theta.push_back(truthParticle->p4().Theta());
++        //m_t_phi.push_back(truthParticle->p4().Phi());
++        //m_t_p.push_back(truthParticle->p4().P());
++        //m_t_pT.push_back(truthParticle->p4().Pt());
++        //m_t_eta.push_back(truthParticle->p4().Eta());
+       } else {
+         ATH_MSG_WARNING("Can not find truthParticle.");
+         // std::cout << "Not finding truth partices" << std::endl;
+@@ -1872,13 +1917,35 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+     // Define paramters for track extrapolation from most upstream measurement
+     Amg::Vector3D position_up = upstreamParameters->position();
+     Amg::Vector3D momentum_up = upstreamParameters->momentum();
++    Acts::RotationMatrix3 rotation1 = Acts::RotationMatrix3::Identity();
++    rotation1.col(0) = Acts::Vector3(0, -1, 0);
++    rotation1.col(1) = Acts::Vector3(0, 0, -1);
++    rotation1.col(2) = Acts::Vector3(1, 0, 0);
++    Acts::Translation3 trans_up(position_up.x(), 0., 0.);
++    Acts::Transform3 traf_up(trans_up * rotation1);
++    auto startSurface_up = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_up);
++    auto lpResult_up = startSurface_up->globalToLocal(gctx, position_up);
++    if (not lpResult_up.ok()) {
++        throw std::runtime_error("globalToLocal transformation failed. This should not happen");
++    }
++    auto lPosition_up = lpResult_up.value();
+     Acts::BoundVector params_up = Acts::BoundVector::Zero();
+-    params_up[Acts::eBoundLoc0] = -position_up.y();
+-    params_up[Acts::eBoundLoc1] = position_up.x();
++    params_up[Acts::eBoundLoc0] = lPosition_up.x();
++    params_up[Acts::eBoundLoc1] = lPosition_up.y();
+     params_up[Acts::eBoundPhi] = momentum_up.phi();
+     params_up[Acts::eBoundTheta] = momentum_up.theta();
+     params_up[Acts::eBoundQOverP] = upstreamParameters->charge() / (momentum_up.mag() * 1_MeV);
+     params_up[Acts::eBoundTime] = 0;
++    
++    //Amg::Vector3D position_up = upstreamParameters->position();
++    //Amg::Vector3D momentum_up = upstreamParameters->momentum();
++    //Acts::BoundVector params_up = Acts::BoundVector::Zero();
++    //params_up[Acts::eBoundLoc0] = -position_up.y();
++    //params_up[Acts::eBoundLoc1] = position_up.x();
++    //params_up[Acts::eBoundPhi] = momentum_up.phi();
++    //params_up[Acts::eBoundTheta] = momentum_up.theta();
++    //params_up[Acts::eBoundQOverP] = upstreamParameters->charge() / (momentum_up.mag() * 1_MeV);
++    //params_up[Acts::eBoundTime] = 0;
+ 
+     Acts::BoundSquareMatrix cov = Acts::BoundSquareMatrix::Zero();
+     cov(Acts::eBoundLoc0, Acts::eBoundLoc0) = 1;
+@@ -1889,44 +1956,62 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+     cov(Acts::eBoundTime, Acts::eBoundTime) = 1;
+ 
+ 
+-    auto startSurface_up = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, position_up.z()), Acts::Vector3(0, 0, 1));
++    //auto startSurface_up = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, position_up.z()), Acts::Vector3(0, 0, 1));
+     Acts::BoundTrackParameters startParameters_up(std::move(startSurface_up), params_up, cov, Acts::ParticleHypothesis::muon());
+ 
+     // Define paramters for track extrapolation from most downstream measurement
+     Amg::Vector3D position_down = downstreamParameters->position();
+     Amg::Vector3D momentum_down = downstreamParameters->momentum();
++    Acts::Translation3 trans_down(position_down.x(), 0., 0.);
++    Acts::Transform3 traf_down(trans_down * rotation1);
++    auto startSurface_down = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_down);
++    auto lpResult_down = startSurface_down->globalToLocal(gctx, position_down);
++    if (not lpResult_down.ok()) {
++        throw std::runtime_error("globalToLocal transformation failed. This should not happen");
++    }
++    auto lPosition_down = lpResult_down.value();
+     Acts::BoundVector params_down = Acts::BoundVector::Zero();
+-    params_down[Acts::eBoundLoc0] = -position_down.y();
+-    params_down[Acts::eBoundLoc1] = position_down.x();
++    params_down[Acts::eBoundLoc0] = lPosition_down.x();
++    params_down[Acts::eBoundLoc1] = lPosition_down.y();
+     params_down[Acts::eBoundPhi] = momentum_down.phi();
+     params_down[Acts::eBoundTheta] = momentum_down.theta();
+     params_down[Acts::eBoundQOverP] = downstreamParameters->charge() / (momentum_down.mag() * 1_MeV);
+     params_down[Acts::eBoundTime] = 0;
+-    auto startSurface_down = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, position_down.z()), Acts::Vector3(0, 0, 1));
++    //auto startSurface_down = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, position_down.z()), Acts::Vector3(0, 0, 1));
+     Acts::BoundTrackParameters startParameters_down(std::move(startSurface_down), params_down, cov, Acts::ParticleHypothesis::muon());
+ 
+     // Extrapolate track to scintillators
+-    auto targetSurface_VetoNu = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, -3112.0), Acts::Vector3(0, 0, 1)); // -3112 mm is z position of VetoNu planes touching
++    Acts::Translation3 trans_VetoNu(-3112.0, 0., 0.);
++    Acts::Transform3 traf_VetoNu(trans_VetoNu * rotation1);
++    auto targetSurface_VetoNu = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_VetoNu);
++//    auto targetSurface_VetoNu = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, -3112.0), Acts::Vector3(0, 0, 1)); // -3112 mm is z position of VetoNu planes touching
+     std::optional<const Acts::BoundTrackParameters> targetParameters_VetoNu =m_extrapolationTool->propagate(ctx, startParameters_up, *targetSurface_VetoNu, Acts::Direction::Backward);
+ 
+     if (targetParameters_VetoNu) {
+       auto targetPosition_VetoNu = targetParameters_VetoNu->position(gctx);
+       auto targetMomentum_VetoNu = targetParameters_VetoNu->momentum();
+-      m_xVetoNu[m_longTracks] = targetPosition_VetoNu.x();
++      m_xVetoNu[m_longTracks] = targetPosition_VetoNu.z();
+       m_yVetoNu[m_longTracks] = targetPosition_VetoNu.y();
+       m_thetaxVetoNu[m_longTracks] = atan(targetMomentum_VetoNu[0]/targetMomentum_VetoNu[2]);
+       m_thetayVetoNu[m_longTracks] = atan(targetMomentum_VetoNu[1]/targetMomentum_VetoNu[2]);
++      if (m_rotatedPhysicalAngles) {
++        m_thetaxVetoNu[m_longTracks] = std::atan2(-targetMomentum_VetoNu[2], targetMomentum_VetoNu[0]);
++        m_thetayVetoNu[m_longTracks] = std::atan2(targetMomentum_VetoNu[1], targetMomentum_VetoNu[0]);
++      }
+     } else {
+       ATH_MSG_INFO("vetoNu null targetParameters");
+     }
+ 
+-    auto targetSurface_Veto1 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, -1769.65), Acts::Vector3(0, 0, 1)); // -1769.65 mm is z position of center of operational layer in Veto station 1
++    Acts::Translation3 trans_Veto1(-1769.65, 0., 0.);
++    Acts::Transform3 traf_Veto1(trans_Veto1 * rotation1);
++    auto targetSurface_Veto1 = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_Veto1);
++//    auto targetSurface_Veto1 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, -1769.65), Acts::Vector3(0, 0, 1)); // -1769.65 mm is z position of center of operational layer in Veto station 1
+     std::optional<const Acts::BoundTrackParameters> targetParameters_Veto1 =m_extrapolationTool->propagate(ctx, startParameters_up, *targetSurface_Veto1, Acts::Direction::Backward);
+     
+     if (targetParameters_Veto1) {
+       auto targetPosition_Veto1 = targetParameters_Veto1->position(gctx);
+       auto targetMomentum_Veto1 = targetParameters_Veto1->momentum();
+-      m_xVetoStation1[m_longTracks] = targetPosition_Veto1.x();
++      m_xVetoStation1[m_longTracks] = targetPosition_Veto1.z();
+       m_yVetoStation1[m_longTracks] = targetPosition_Veto1.y();
+       m_thetaxVetoStation1[m_longTracks] = atan(targetMomentum_Veto1[0]/targetMomentum_Veto1[2]);
+       m_thetayVetoStation1[m_longTracks] = atan(targetMomentum_Veto1[1]/targetMomentum_Veto1[2]);
+@@ -1934,13 +2019,16 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+       ATH_MSG_INFO("veto1 null targetParameters");
+     }
+ 
+-    auto targetSurface_Veto2 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, -1609.65), Acts::Vector3(0, 0, 1)); // -1609.65 mm is z position of where planes touch in Veto station 2
++    Acts::Translation3 trans_Veto2(-1609.65, 0., 0.);
++    Acts::Transform3 traf_Veto2(trans_Veto2 * rotation1);
++    auto targetSurface_Veto2 = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_Veto2);
++//    auto targetSurface_Veto2 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, -1609.65), Acts::Vector3(0, 0, 1)); // -1609.65 mm is z position of where planes touch in Veto station 2
+     std::optional<const Acts::BoundTrackParameters> targetParameters_Veto2 =m_extrapolationTool->propagate(ctx, startParameters_up, *targetSurface_Veto2, Acts::Direction::Backward);
+     
+     if (targetParameters_Veto2) {
+       auto targetPosition_Veto2 = targetParameters_Veto2->position(gctx);
+       auto targetMomentum_Veto2 = targetParameters_Veto2->momentum();
+-      m_xVetoStation2[m_longTracks] = targetPosition_Veto2.x();
++      m_xVetoStation2[m_longTracks] = targetPosition_Veto2.z();
+       m_yVetoStation2[m_longTracks] = targetPosition_Veto2.y();
+       m_thetaxVetoStation2[m_longTracks] = atan(targetMomentum_Veto2[0]/targetMomentum_Veto2[2]);
+       m_thetayVetoStation2[m_longTracks] = atan(targetMomentum_Veto2[1]/targetMomentum_Veto2[2]);
+@@ -1948,13 +2036,16 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+       ATH_MSG_INFO("veto2 null targetParameters");
+     }
+ 
+-    auto targetSurface_Trig = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 0.0), Acts::Vector3(0, 0, 1)); // 0 mm is z position of Trig planes overlapping
++    Acts::Translation3 trans_Trig(0.0, 0., 0.);
++    Acts::Transform3 traf_Trig(trans_Trig * rotation1);
++    auto targetSurface_Trig = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_Trig);
++//    auto targetSurface_Trig = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 0.0), Acts::Vector3(0, 0, 1)); // 0 mm is z position of Trig planes overlapping
+     std::optional<const Acts::BoundTrackParameters> targetParameters_Trig =m_extrapolationTool->propagate(ctx, startParameters_up, *targetSurface_Trig, Acts::Direction::Backward); // must extrapolate backsards to trig plane if track starts in station 1
+     
+     if (targetParameters_Trig) {
+       auto targetPosition_Trig = targetParameters_Trig->position(gctx);
+       auto targetMomentum_Trig = targetParameters_Trig->momentum();
+-      m_xTrig[m_longTracks] = targetPosition_Trig.x();
++      m_xTrig[m_longTracks] = targetPosition_Trig.z();
+       m_yTrig[m_longTracks] = targetPosition_Trig.y();
+       m_thetaxTrig[m_longTracks] = atan(targetMomentum_Trig[0]/targetMomentum_Trig[2]);
+       m_thetayTrig[m_longTracks] = atan(targetMomentum_Trig[1]/targetMomentum_Trig[2]);
+@@ -1962,13 +2053,16 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+       ATH_MSG_INFO("Trig null targetParameters");
+     }
+ 
+-    auto targetSurface_Preshower1 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 2582.68), Acts::Vector3(0, 0, 1)); // 2582.68  mm is z position of center of upstream preshower layer
++    Acts::Translation3 trans_Preshower1(2582.68, 0., 0.);
++    Acts::Transform3 traf_Preshower1(trans_Preshower1 * rotation1);
++    auto targetSurface_Preshower1 = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_Preshower1);
++//    auto targetSurface_Preshower1 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 2582.68), Acts::Vector3(0, 0, 1)); // 2582.68  mm is z position of center of upstream preshower layer
+     std::optional<const Acts::BoundTrackParameters> targetParameters_Preshower1 =m_extrapolationTool->propagate(ctx, startParameters_down, *targetSurface_Preshower1, Acts::Direction::Forward);
+     
+     if (targetParameters_Preshower1) {
+       auto targetPosition_Preshower1 = targetParameters_Preshower1->position(gctx);
+       auto targetMomentum_Preshower1 = targetParameters_Preshower1->momentum();
+-      m_xPreshower1[m_longTracks] = targetPosition_Preshower1.x();
++      m_xPreshower1[m_longTracks] = targetPosition_Preshower1.z();
+       m_yPreshower1[m_longTracks] = targetPosition_Preshower1.y();
+       m_thetaxPreshower1[m_longTracks] = atan(targetMomentum_Preshower1[0]/targetMomentum_Preshower1[2]);
+       m_thetayPreshower1[m_longTracks] = atan(targetMomentum_Preshower1[1]/targetMomentum_Preshower1[2]);
+@@ -1976,13 +2070,16 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+       ATH_MSG_INFO("Preshower1 null targetParameters");
+     }
+ 
+-    auto targetSurface_Preshower2 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 2657.68), Acts::Vector3(0, 0, 1)); // 2657.68  mm is z position of center of downstream preshower layer
++    Acts::Translation3 trans_Preshower2(2657.68, 0., 0.);
++    Acts::Transform3 traf_Preshower2(trans_Preshower2 * rotation1);
++    auto targetSurface_Preshower2 = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_Preshower2);
++//    auto targetSurface_Preshower2 = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 2657.68), Acts::Vector3(0, 0, 1)); // 2657.68  mm is z position of center of downstream preshower layer
+     std::optional<const Acts::BoundTrackParameters> targetParameters_Preshower2 =m_extrapolationTool->propagate(ctx, startParameters_down, *targetSurface_Preshower2, Acts::Direction::Forward);
+     
+     if (targetParameters_Preshower2) {
+       auto targetPosition_Preshower2 = targetParameters_Preshower2->position(gctx);
+       auto targetMomentum_Preshower2 = targetParameters_Preshower2->momentum();
+-      m_xPreshower2[m_longTracks] = targetPosition_Preshower2.x();
++      m_xPreshower2[m_longTracks] = targetPosition_Preshower2.z();
+       m_yPreshower2[m_longTracks] = targetPosition_Preshower2.y();
+       m_thetaxPreshower2[m_longTracks] = atan(targetMomentum_Preshower2[0]/targetMomentum_Preshower2[2]);
+       m_thetayPreshower2[m_longTracks] =  atan(targetMomentum_Preshower2[1]/targetMomentum_Preshower2[2]);
+@@ -1990,13 +2087,16 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+       ATH_MSG_INFO("Preshower2 null targetParameters");
+     }
+ 
+-    auto targetSurface_Calo = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 2760.0), Acts::Vector3(0, 0, 1)); // 2760  mm is estimated z position of calorimeter face
++    Acts::Translation3 trans_Calo(2760.0, 0., 0.);
++    Acts::Transform3 traf_Calo(trans_Calo * rotation1);
++    auto targetSurface_Calo = Acts::Surface::makeShared<Acts::PlaneSurface>(traf_Calo);
++//    auto targetSurface_Calo = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0, 0, 2760.0), Acts::Vector3(0, 0, 1)); // 2760  mm is estimated z position of calorimeter face
+     std::optional<const Acts::BoundTrackParameters> targetParameters_Calo =m_extrapolationTool->propagate(ctx, startParameters_down, *targetSurface_Calo, Acts::Direction::Forward);
+     
+     if (targetParameters_Calo) {
+       auto targetPosition_Calo = targetParameters_Calo->position(gctx);
+       auto targetMomentum_Calo = targetParameters_Calo->momentum();
+-      m_xCalo[m_longTracks] = targetPosition_Calo.x();
++      m_xCalo[m_longTracks] = targetPosition_Calo.z();
+       m_yCalo[m_longTracks] = targetPosition_Calo.y();
+       m_thetaxCalo[m_longTracks] = atan(targetMomentum_Calo[0]/targetMomentum_Calo[2]) ;
+       m_thetayCalo[m_longTracks] = atan(targetMomentum_Calo[1]/targetMomentum_Calo[2]) ;
+@@ -2022,12 +2122,15 @@ StatusCode NtupleDumperAlg::execute(const EventContext &ctx) const
+   m_vertex_pz1 = 0.;
+   m_vertex_p1 = 0.;
+ 
++  //To do : need to modify more codes if geometryRotation
+   if (m_runVertexing && goodTracks.size() >= 2) {
+     m_two_tracks ++;
+     
+     // sort tracks by momentum and reconstruct vertex
+     std::sort(goodTracks.begin(), goodTracks.end(), [](const Trk::Track *lhs, const Trk::Track *rhs){
+-      return lhs->trackParameters()->front()->momentum().z() < rhs->trackParameters()->front()->momentum().z();
++      //if geometryRotation
++      return lhs->trackParameters()->front()->momentum().x() < rhs->trackParameters()->front()->momentum().x();
++      //return lhs->trackParameters()->front()->momentum().z() < rhs->trackParameters()->front()->momentum().z();
+     });
+     std::vector<const Trk::Track*> lowMomentumTracks {goodTracks[0], goodTracks[1]};
+ 
+diff --git a/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h b/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h
+index c7a5236d..35d1174c 100644
+--- a/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h
++++ b/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h
+@@ -129,6 +129,7 @@ private:
+   const FaserSCT_ID* m_sctHelper;
+ 
+   BooleanProperty m_useIFT               { this, "UseIFT", false, "Use IFT tracks" };
++  BooleanProperty m_rotatedPhysicalAngles { this, "RotatedPhysicalAngles", false, "Write physical FASER VetoNu angles from rotated ACTS momentum" };
+   BooleanProperty m_doCalib              { this, "DoCalib", true, "Fill calibrated calorimeter quantities" };
+   BooleanProperty m_doBlinding           { this, "DoBlinding", true, "Blinding will not output events with no veto signal adn Calo signal > 20 GeV e-" };
+   BooleanProperty m_onlyBlinded          { this, "OnlyBlinded", false, "Only events that would be blinded are saved" };
+diff --git a/Tracking/Acts/FaserActsGeometry/CMakeLists.txt b/Tracking/Acts/FaserActsGeometry/CMakeLists.txt
+index 20567a27..d1fc6c0b 100755
+--- a/Tracking/Acts/FaserActsGeometry/CMakeLists.txt
++++ b/Tracking/Acts/FaserActsGeometry/CMakeLists.txt
+@@ -84,6 +84,7 @@ atlas_add_component( FaserActsGeometry
+ # Install files from the package:
+ # atlas_install_headers( FaserActsGeometry )
+ atlas_install_python_modules( python/*.py )
++atlas_install_data( data/*.json.gz )
+ atlas_install_scripts( test/*.py )
+ 
+ atlas_add_test( FaserActsGeometryBoundary_test
+diff --git a/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h b/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h
+index dad0558e..dfa5dfe6 100644
+--- a/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h
++++ b/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FASERMagneticFieldWrapper.h
+@@ -51,10 +51,23 @@ public:
+   Acts::Result<Acts::Vector3>
+   getField(const Acts::Vector3& position, Acts::MagneticFieldProvider::Cache& gcache) const override {
+     Cache& cache = gcache.as<Cache>();
++    
++    //if geoRotation
++    Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++    rot.col(0) = Acts::Vector3(0, 0, -1);
++    rot.col(1) = Acts::Vector3(0, 1, 0);
++    rot.col(2) = Acts::Vector3(1, 0, 0);
++    Acts::Transform3 trafo(rot);
++    Acts::Vector3 copyPos = position;
++    copyPos = trafo.inverse() * copyPos;
++
+     double posXYZ[3];
+-    posXYZ[0] = position.x();
+-    posXYZ[1] = position.y();
+-    posXYZ[2] = position.z();
++    //posXYZ[0] = position.x();
++    //posXYZ[1] = position.y();
++    //posXYZ[2] = position.z();
++    posXYZ[0] = copyPos.x();
++    posXYZ[1] = copyPos.y();
++    posXYZ[2] = copyPos.z();
+     double BField[3];
+ 
+     cache.fieldCache.getField(posXYZ, BField);
+@@ -62,6 +75,8 @@ public:
+     // Magnetic field
+     Acts::Vector3 bfield{BField[0],BField[1],BField[2]};
+ 
++    bfield = trafo * bfield;
++
+     bfield *= m_bFieldUnit; // kT -> T;
+ 
+     return Acts::Result<Acts::Vector3>::success(bfield);
+@@ -73,10 +88,19 @@ public:
+                    Acts::MagneticFieldProvider::Cache& gcache) const override
+   {
+     Cache& cache = gcache.as<Cache>();
++    //if geoRotation
++    Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++    rot.col(0) = Acts::Vector3(0, 0, -1);
++    rot.col(1) = Acts::Vector3(0, 1, 0);
++    rot.col(2) = Acts::Vector3(1, 0, 0);
++    Acts::Transform3 trafo(rot);
++
++    Acts::Vector3 copyPos = position;
++    copyPos = trafo.inverse() * copyPos;
+     double posXYZ[3];
+-    posXYZ[0] = position.x();
+-    posXYZ[1] = position.y();
+-    posXYZ[2] = position.z();
++    posXYZ[0] = copyPos.x();
++    posXYZ[1] = copyPos.y();
++    posXYZ[2] = copyPos.z();
+     double BField[3];
+     double grad[9];
+ 
+@@ -88,6 +112,9 @@ public:
+     tempGrad << grad[0], grad[1], grad[2], grad[3], grad[4], grad[5], grad[6], grad[7], grad[8]; 
+     gradient = tempGrad;
+ 
++    bfield = trafo * bfield;
++    gradient = rot * gradient * rot.transpose();
++
+ 
+     bfield *= m_bFieldUnit; // kT -> T;
+     gradient *= m_bFieldUnit;
+diff --git a/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FaserActsGeometryContext.h b/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FaserActsGeometryContext.h
+index e88db406..332f0e30 100644
+--- a/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FaserActsGeometryContext.h
++++ b/Tracking/Acts/FaserActsGeometry/FaserActsGeometry/FaserActsGeometryContext.h
+@@ -17,6 +17,8 @@
+ struct FaserActsGeometryContext {
+ 
+   bool construction{false};
++  
++  bool geometryRotation{true};
+ 
+   std::unique_ptr<const FaserActsAlignmentStore> ownedAlignmentStore{nullptr};
+ 
+diff --git a/Tracking/Acts/FaserActsGeometry/data/material-maps-alma9-rotated-rowmajor.json.gz b/Tracking/Acts/FaserActsGeometry/data/material-maps-alma9-rotated-rowmajor.json.gz
+new file mode 100644
+index 00000000..366e3fe4
+Binary files /dev/null and b/Tracking/Acts/FaserActsGeometry/data/material-maps-alma9-rotated-rowmajor.json.gz differ
+diff --git a/Tracking/Acts/FaserActsGeometry/doc/master_integration.md b/Tracking/Acts/FaserActsGeometry/doc/master_integration.md
+new file mode 100644
+index 00000000..83413687
+--- /dev/null
++++ b/Tracking/Acts/FaserActsGeometry/doc/master_integration.md
+@@ -0,0 +1,43 @@
++# Rotated geometry on official master
++
++This branch merges `faser/calypso:master` at
++`7f2d16812070a263210d2b2dc56633345e5a10b1` (13 November 2026) into the
++rotation history at `88c457c1`, including the isolated smoothing repair
++`1c06c7b6` and its regression test. The merge retains both parent histories;
++it is not a squash or a replacement of the master source tree.
++
++The new master Tracking package layout is retained. Rotation changes in the
++trajectory state writer and truth parameter tool follow the files to
++`RootWriterTools` and `TrackFinders`. The KalmanFitterTool include conflict
++retains the rotation geometry context and the new `ActsInterop/IndexSourceLink.h`.
++
++The ACTS internal global frame is `(x_A,y_A,z_A)=(z_F,y_F,-x_F)`.
++The default reconstruction material map is packaged as
++`FaserActsGeometry/material-maps-alma9-rotated-rowmajor.json.gz`. It is the
++validated row-major rotation of the alma9 map, preserving geometry IDs,
++binning and material cells. `rotatedMaterialMapPath()` locates the installed
++data through PathResolver, expands it once in a temporary directory, and
++keeps it alive until process exit. No user home path is required.
++
++CKF2 defaults to `IsolateCandidateSmoothing=True`. Each selected candidate
++owns its states before its RTS smoothing runs. The existing test checks
++shared state contamination and private smoothing order independence.
++
++All waveform reconstruction and waveform conditions source is exactly the
++official master version, including `IntegralOneDim`, fit constraints and
++failure fallback. This is distinct from the older waveform implementation
++in the original rotation branch. The original research worktree is retained;
++optional truth position, audit and interface control experiments are not
++enabled or silently copied into this production integration.
++
++The optional `NtupleDumperAlg.RotatedPhysicalAngles` control is retained from
++the validated research worktree, with its existing default. Compact physics
++comparison explicitly converts track momentum and fitted states to the FASER
++frame. The comparison therefore does not interpret ACTS polar angles as
++physical beam angles.
++
++Validation and performance measurements are recorded in the companion
++`nu_muAnalysis` repository, `workbook/stage208_master_integration/`. A build
++alone is not a physics validation: reconstruction must verify the effective
++material bytes, all four isolated smoothing defaults, common truth IDs,
++station momentum response, purity, efficiency and duplicate rates.
+diff --git a/Tracking/Acts/FaserActsGeometry/python/RotatedMaterialMap.py b/Tracking/Acts/FaserActsGeometry/python/RotatedMaterialMap.py
+new file mode 100644
+index 00000000..854cca72
+--- /dev/null
++++ b/Tracking/Acts/FaserActsGeometry/python/RotatedMaterialMap.py
+@@ -0,0 +1,23 @@
++# Copyright (C) 2026 CERN for the benefit of the FASER collaboration
++"""Locate the validated material map for the rotated ACTS global frame."""
++from functools import lru_cache
++import gzip
++from pathlib import Path
++from tempfile import TemporaryDirectory
++
++_materialDirectories = []
++
++
++@lru_cache(maxsize=1)
++def rotatedMaterialMapPath():
++    """Expand the packaged map once and keep it alive for this process."""
++    from PathResolver import PathResolver
++    source = PathResolver.FindCalibFile(
++        "FaserActsGeometry/material-maps-alma9-rotated-rowmajor.json.gz")
++    if not source:
++        raise FileNotFoundError("Packaged rotated ACTS material map was not installed")
++    directory = TemporaryDirectory(prefix="faser_rotated_material_")
++    _materialDirectories.append(directory)
++    target = Path(directory.name) / "material-maps-alma9-rotated-rowmajor.json"
++    target.write_bytes(gzip.decompress(Path(source).read_bytes()))
++    return str(target)
+diff --git a/Tracking/Acts/FaserActsGeometry/src/CuboidVolumeBuilder.cxx b/Tracking/Acts/FaserActsGeometry/src/CuboidVolumeBuilder.cxx
+index cf4d3679..f190ff50 100644
+--- a/Tracking/Acts/FaserActsGeometry/src/CuboidVolumeBuilder.cxx
++++ b/Tracking/Acts/FaserActsGeometry/src/CuboidVolumeBuilder.cxx
+@@ -7,6 +7,7 @@
+ // file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ 
+ #include "FaserActsGeometry/CuboidVolumeBuilder.h"
++#include "FaserActsGeometry/FaserActsGeometryContext.h"
+ 
+ #include "Acts/Geometry/CuboidVolumeBounds.hpp"
+ #include "Acts/Geometry/Layer.hpp"
+@@ -59,6 +60,15 @@ CuboidVolumeBuilder::buildSurface(
+ std::shared_ptr<const Acts::Layer> CuboidVolumeBuilder::buildLayer(
+     const Acts::GeometryContext& gctx,
+     CuboidVolumeBuilder::LayerConfig& cfg) const {
++  
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 tra(rot);
++
+   // Build the surface
+   if ( cfg.surface==nullptr && cfg.surfaces.empty() ) {
+     cfg.surface = buildSurface(gctx, cfg.surfaceCfg);
+@@ -66,43 +76,56 @@ std::shared_ptr<const Acts::Layer> CuboidVolumeBuilder::buildLayer(
+   // Build transformation centered at the surface position
+   Acts::Transform3 trafo(Acts::Transform3::Identity() * cfg.surfaceCfg.rotation);
+   trafo.translation() = cfg.surfaceCfg.position;
++  //std::cout<<"CuboidVolumeBuilder::LayerBUilder.transform = "<<trafo.matrix()<<std::endl;
+ 
+   Acts::LayerCreator::Config lCfg;
+   lCfg.surfaceArrayCreator = std::make_shared<const Acts::SurfaceArrayCreator>();
+   Acts::LayerCreator layerCreator(lCfg);
+ 
+   std::unique_ptr<Acts::ApproachDescriptor> ap(cfg.approachDescriptor);
++  auto binningValue = fgctx->geometryRotation ? Acts::BinningValue::binX : Acts::BinningValue::binZ;
+ 
+   if ( !cfg.surfaces.empty() ) {
+     return layerCreator.planeLayer(gctx, cfg.surfaces, cfg.binsX, cfg.binsY,
+-                                 Acts::BinningValue::binZ, std::nullopt, trafo,
++                                 binningValue, std::nullopt, trafo,
+ 				 std::move(ap));
+   } else {
+     return layerCreator.planeLayer(gctx, {cfg.surface}, cfg.binsX, cfg.binsY,
+-                                 Acts::BinningValue::binZ, std::nullopt, trafo, std::move(ap));
++                                 binningValue, std::nullopt, trafo, std::move(ap));
+   }
+ }
+ 
+ std::pair<double, double> CuboidVolumeBuilder::binningRange(
+-    const Acts::GeometryContext& /*gctx*/,
++    const Acts::GeometryContext& gctx,
+     const CuboidVolumeBuilder::VolumeConfig& cfg) const {
+   using namespace Acts::UnitLiterals;
++  
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  
+   // Construct return value
+   std::pair<double, double> minMax = std::make_pair(
+       std::numeric_limits<double>::max(), -std::numeric_limits<double>::max());
+   for (const auto& layercfg : cfg.layerCfg) {
++	  auto pos = fgctx->geometryRotation ? layercfg.surfaceCfg.position.x() : layercfg.surfaceCfg.position.z();
+     // Test if new extreme is found and set it
+     
+     // For Faser, the thickness of each layer is about 5 mm due to staggering structure of SCTs
+     //if (layercfg.surfaceCfg.position.z() - 1_um < minMax.first) {
+       //minMax.first = layercfg.surfaceCfg.position.z() - 1_um;
+-    if (layercfg.surfaceCfg.position.z() - 8_mm < minMax.first) {
+-      minMax.first = layercfg.surfaceCfg.position.z() - 8_mm;
++    //if (layercfg.surfaceCfg.position.z() - 8_mm < minMax.first) {
++    //  minMax.first = layercfg.surfaceCfg.position.z() - 8_mm;
++    //}
++    if (pos - 8_mm < minMax.first) {
++      minMax.first = pos - 8_mm;
+     }
+     //if (layercfg.surfaceCfg.position.z() + 1_um > minMax.second) {
+       //minMax.second = layercfg.surfaceCfg.position.z() + 1_um;
+-    if (layercfg.surfaceCfg.position.z() + 8_mm > minMax.second) {
+-      minMax.second = layercfg.surfaceCfg.position.z() + 8_mm;
++    //if (layercfg.surfaceCfg.position.z() + 8_mm > minMax.second) {
++    //  minMax.second = layercfg.surfaceCfg.position.z() + 8_mm;
++    //}
++    if (pos + 8_mm > minMax.second) {
++      minMax.second = pos + 8_mm;
+     }
+   }
+   return minMax;
+@@ -111,8 +134,20 @@ std::pair<double, double> CuboidVolumeBuilder::binningRange(
+ std::shared_ptr<Acts::TrackingVolume> CuboidVolumeBuilder::buildVolume(
+     const Acts::GeometryContext& gctx,
+     CuboidVolumeBuilder::VolumeConfig& cfg) const {
++  
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 tra(rot);
++  
+   // Build transformation
+   Acts::Transform3 trafo(Acts::Transform3::Identity());
++  if(fgctx->geometryRotation){
++	  trafo = tra;
++  }
+   trafo.translation() = cfg.position;
+   // Set bounds
+   auto bounds = std::make_shared<const Acts::CuboidVolumeBounds>(
+@@ -129,6 +164,9 @@ std::shared_ptr<Acts::TrackingVolume> CuboidVolumeBuilder::buildVolume(
+     //sCfg.rotation.col(0) = xPos;
+     //sCfg.rotation.col(1) = yPos;
+     //sCfg.rotation.col(2) = zPos;
++    if(fgctx->geometryRotation){
++      sCfg.rotation = tra.rotation();
++    }
+     // Bounds
+     sCfg.rBounds = std::make_shared<const Acts::RectangleBounds>(
+         Acts::RectangleBounds(cfg.length.x() * 0.5, cfg.length.y() * 0.5));
+@@ -145,6 +183,10 @@ std::shared_ptr<Acts::TrackingVolume> CuboidVolumeBuilder::buildVolume(
+     cfg.layers.reserve(cfg.layerCfg.size());
+ 
+     for (auto& layerCfg : cfg.layerCfg) {
++      //firstly need to add rotation for surface if geometryRotation
++      if(fgctx->geometryRotation){
++        layerCfg.surfaceCfg.rotation = tra.rotation();
++      }
+       cfg.layers.push_back(buildLayer(gctx, layerCfg));
+       layVec.push_back(cfg.layers.back());
+     }
+@@ -154,47 +196,83 @@ std::shared_ptr<Acts::TrackingVolume> CuboidVolumeBuilder::buildVolume(
+     }
+   }
+ 
++
+   // Build layer array
+   std::pair<double, double> minMax = binningRange(gctx, cfg);
+   Acts::LayerArrayCreator::Config lacCnf;
+   Acts::LayerArrayCreator layArrCreator(
+       lacCnf, Acts::getDefaultLogger("Acts::LayerArrayCreator", Acts::Logging::INFO));
++
++  auto binningValue = fgctx->geometryRotation ? Acts::BinningValue::binX : Acts::BinningValue::binZ;
+   std::unique_ptr<const Acts::LayerArray> layArr(
+       layArrCreator.layerArray(gctx, layVec, minMax.first, minMax.second,
+-                               Acts::BinningType::arbitrary, Acts::BinningValue::binZ));
++                               Acts::BinningType::arbitrary, binningValue));
+ 
+   // Build confined volumes
+      if (cfg.trackingVolumes.empty())
+-       for (VolumeConfig vc : cfg.volumeCfg)            
++       for (VolumeConfig vc : cfg.volumeCfg)           
+ 	  cfg.trackingVolumes.push_back(buildVolume(gctx, vc));
+                
+   // Build TrackingVolume
++  //std::cout<<"[DEBUG]volume.name = "<<cfg.name<<";  trafo = "<<trafo.matrix()<<std::endl;
+   auto trackVolume = Acts::TrackingVolume::create(
+       trafo, bounds, cfg.volumeMaterial, std::move(layArr), nullptr, cfg.trackingVolumes, cfg.name);
+-  
++ // std::cout<<"[DEBUG]buildVolume over******************************************"<<std::endl;
+   return trackVolume;
+ }
+ 
+ Acts::MutableTrackingVolumePtr CuboidVolumeBuilder::trackingVolume(
+     const Acts::GeometryContext& gctx, Acts::TrackingVolumePtr /*unused*/,
+     Acts::VolumeBoundsPtr /*unused*/) const {
++  
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 tra(rot);
++  
+   // Build volumes
+   std::vector<std::shared_ptr<Acts::TrackingVolume>> volumes;
+   volumes.reserve(m_cfg.volumeCfg.size());
+   for (VolumeConfig volCfg : m_cfg.volumeCfg) {
++	  //std::cout<<"CuboidVolumeBuilder::volume: "<<volCfg.name<<"; "<<volCfg.position.transpose()<<std::endl;
+     volumes.push_back(buildVolume(gctx, volCfg));
+   }
++  //for (auto& tv : volumes){
++  //        for (auto& bs : tv->boundarySurfaces()) {
++  //	  auto& s = bs->surfaceRepresentation();
++  //	  auto n = s.normal(gctx,s.center(gctx));
++  //	  auto c = s.center(gctx);
++  //        std::cout<<"Boundary center = " << c.transpose()
++  //	               << " normal = " << n.transpose()
++  //	               << std::endl;
++  //        }
++  //        std::cout<<"-------------------------------------------------------------"<<std::endl;
+ 
+-  // Glue volumes
++  //}
++ 
++  // Glue volumes along Z or X depending on geometry rotation
++  Acts::BoundarySurfaceFace negFace, posFace;
++  
++ // if (fgctx->geometryRotation) {
++ //   negFace = Acts::BoundarySurfaceFace::negativeFaceYZ;
++ //   posFace = Acts::BoundarySurfaceFace::positiveFaceYZ;
++ // } else {
++    negFace = Acts::BoundarySurfaceFace::negativeFaceXY;
++    posFace = Acts::BoundarySurfaceFace::positiveFaceXY;
++  //}
++  
+   for (unsigned int i = 0; i < volumes.size() - 1; i++) {
+-    volumes[i + 1]->glueTrackingVolume(
+-        gctx, Acts::BoundarySurfaceFace::negativeFaceXY, volumes[i].get(),
+-        Acts::BoundarySurfaceFace::positiveFaceXY);
+-    volumes[i]->glueTrackingVolume(gctx, Acts::BoundarySurfaceFace::positiveFaceXY,
+-                                   volumes[i + 1].get(),
+-                                   Acts::BoundarySurfaceFace::negativeFaceXY);
++	 // std::cout << "[DEBUG] Glue volumes: "
++         //     << volumes[i]->center().transpose() << " -> "
++         //     << volumes[i+1]->center().transpose() << std::endl;
++    volumes[i + 1]->glueTrackingVolume(gctx, negFace, volumes[i].get(), posFace);
++    volumes[i]->glueTrackingVolume(gctx, posFace, volumes[i + 1].get(), negFace);
+   }
+ 
++
+   // Translation
+   Acts::Transform3 trafo(Acts::Transform3::Identity());
+   trafo.translation() = m_cfg.position;
+@@ -211,16 +289,20 @@ Acts::MutableTrackingVolumePtr CuboidVolumeBuilder::trackingVolume(
+   }
+ 
+   // Set bin boundaries along binning
++  auto v0Z = fgctx->geometryRotation ? volumes[0]->center().x() : volumes[0]->center().z();
+   std::vector<float> binBoundaries;
+-  binBoundaries.push_back(volumes[0]->center().z() -
++  binBoundaries.push_back(v0Z -
+                           m_cfg.volumeCfg[0].length.z() * 0.5);
+   for (size_t i = 0; i < volumes.size(); i++) {
+-    binBoundaries.push_back(volumes[i]->center().z() +
++    auto  vZ = fgctx->geometryRotation ? volumes[i]->center().x() : volumes[i]->center().z();
++    //std::cout << "[DEBUG] Volume " << i << " center along binning axis = " << vZ << std::endl;
++    binBoundaries.push_back(vZ +
+                             m_cfg.volumeCfg[i].length.z() * 0.5);
+   }
+ 
+   // Build binning
+-  Acts::BinningData binData(Acts::BinningOption::open, Acts::BinningValue::binZ, binBoundaries);
++  auto binningValue = fgctx->geometryRotation ? Acts::BinningValue::binX : Acts::BinningValue::binZ;
++  Acts::BinningData binData(Acts::BinningOption::open, binningValue, binBoundaries);
+   auto bu = std::make_unique<const Acts::BinUtility>(binData);
+ 
+   // Build TrackingVolume array
+diff --git a/Tracking/Acts/FaserActsGeometry/src/FaserActsDetectorElement.cxx b/Tracking/Acts/FaserActsGeometry/src/FaserActsDetectorElement.cxx
+index 457ce195..39246dfd 100644
+--- a/Tracking/Acts/FaserActsGeometry/src/FaserActsDetectorElement.cxx
++++ b/Tracking/Acts/FaserActsGeometry/src/FaserActsDetectorElement.cxx
+@@ -89,6 +89,12 @@ FaserActsDetectorElement::identityHelper() const
+ const Acts::Transform3&
+ FaserActsDetectorElement::transform(const Acts::GeometryContext& anygctx) const
+ {
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++  
+   // any cast to known context type
+   const FaserActsGeometryContext* gctx = anygctx.get<const FaserActsGeometryContext*>();
+ 
+@@ -96,10 +102,16 @@ FaserActsDetectorElement::transform(const Acts::GeometryContext& anygctx) const
+   // consistent view of the geometry yet, and thus we can't populate an alignment store
+   // at that time.
+   if (gctx->construction) {
++    if(gctx->geometryRotation) {
++      static thread_local Acts::Transform3 rotatedTransform;
++      rotatedTransform = trafo * (getDefaultTransformMutexed());
++      return rotatedTransform;
++    }
+     // this should only happen at initialize (1 thread, but mutex anyway)
+     return getDefaultTransformMutexed();
+   }
+ 
++
+   // unpack the alignment store from the context
+   const FaserActsAlignmentStore* alignmentStore = gctx->alignmentStore;
+ 
+@@ -111,7 +123,7 @@ FaserActsDetectorElement::transform(const Acts::GeometryContext& anygctx) const
+   const Transform3* cachedTrf = alignmentStore->getTransform(this);
+ 
+   assert(cachedTrf != nullptr);
+-
++  
+   return *cachedTrf;
+ }
+ 
+@@ -126,6 +138,19 @@ FaserActsDetectorElement::storeTransform(FaserActsAlignmentStore* gas) const
+   // need to make sure translation has correct units
+   g2l.translation() *= length_unit;
+ 
++  //if geometry rotation
++  
++  // any cast to known context type
++  FaserActsGeometryContext gctx;
++  if (gctx.geometryRotation) {
++    Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++    rot.col(0) = Acts::Vector3(0, 0, -1);
++    rot.col(1) = Acts::Vector3(0, 1, 0);
++    rot.col(2) = Acts::Vector3(1, 0, 0);
++    Acts::Transform3 trafo(rot);
++    g2l = trafo * g2l;
++  }
++
+   gas->setTransform(this, g2l);
+   if (gas->getTransform(this) == nullptr) {
+     throw std::runtime_error("Detector element was unable to store transform in GAS");
+diff --git a/Tracking/Acts/FaserActsGeometry/src/FaserActsLayerBuilder.cxx b/Tracking/Acts/FaserActsGeometry/src/FaserActsLayerBuilder.cxx
+index 18d30a04..bbbe93cb 100644
+--- a/Tracking/Acts/FaserActsGeometry/src/FaserActsLayerBuilder.cxx
++++ b/Tracking/Acts/FaserActsGeometry/src/FaserActsLayerBuilder.cxx
+@@ -9,6 +9,7 @@
+ // PACKAGE
+ #include "FaserActsGeometry/FaserActsLayerBuilder.h"
+ #include "FaserActsGeometry/FaserActsDetectorElement.h"
++#include "FaserActsGeometry/FaserActsGeometryContext.h"
+ #include "FaserActsGeometry/CuboidVolumeBuilder.h"
+ #include "ActsInterop/IdentityHelper.h"
+ #include "GeoModelKernel/GeoBox.h"
+@@ -39,6 +40,8 @@ using namespace Acts::UnitLiterals;
+ 
+ FaserActs::CuboidVolumeBuilder::Config FaserActsLayerBuilder::buildVolume(const Acts::GeometryContext& gctx)
+ {
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++ 
+   FaserActs::CuboidVolumeBuilder::Config cvbConfig;
+   std::vector<FaserActs::CuboidVolumeBuilder::VolumeConfig> volumeConfigs = {};
+ 
+@@ -77,7 +80,7 @@ FaserActs::CuboidVolumeBuilder::Config FaserActsLayerBuilder::buildVolume(const
+       layerConfigs.push_back(layercfg);
+ 
+       if (iPlane == 1) {
+-	volumeConfig.position = Acts::Vector3(0, 0, surfacecfg.position.z()); 
++	volumeConfig.position = fgctx->geometryRotation ? Acts::Vector3(surfacecfg.position.x(), 0, 0) : Acts::Vector3(0, 0, surfacecfg.position.z()); 
+       }
+     }
+     volumeConfig.length   = m_trackerDimensions;
+@@ -150,11 +153,18 @@ FaserActs::CuboidVolumeBuilder::Config FaserActsLayerBuilder::buildVolume(const
+   }
+ 
+   //sort the geometry by the  Z position, neccessary to have the correct boundary
+-  auto sortFunc = [](FaserActs::CuboidVolumeBuilder::VolumeConfig& v1, FaserActs::CuboidVolumeBuilder::VolumeConfig& v2){return v1.position.z()<v2.position.z();};
++  auto sortFunc = [fgctx](FaserActs::CuboidVolumeBuilder::VolumeConfig& v1, FaserActs::CuboidVolumeBuilder::VolumeConfig& v2){
++     if(fgctx->geometryRotation){ return v1.position.x()<v2.position.x();}
++     else{ return v1.position.z()<v2.position.z();}
++  };
+   std::sort(volumeConfigs.begin(),volumeConfigs.end(), sortFunc);
+   //check volume positions
+   if (logger().doPrint(Acts::Logging::VERBOSE)) {
+-    for(auto iter: volumeConfigs) ACTS_VERBOSE(" build volume centerred at Z = " << iter.position.z());
++    if(fgctx->geometryRotation){
++      for(auto iter: volumeConfigs) ACTS_VERBOSE(" build volume centerred at X = " << iter.position.x());
++    }else{
++      for(auto iter: volumeConfigs) ACTS_VERBOSE(" build volume centerred at Z = " << iter.position.z());
++    }
+   }
+ 
+   cvbConfig.position  = m_worldCenter;
+@@ -170,6 +180,13 @@ FaserActsLayerBuilder::buildLayers(const Acts::GeometryContext& gctx,
+     FaserActs::CuboidVolumeBuilder::LayerConfig& layercfg,
+     FaserActs::CuboidVolumeBuilder::SurfaceConfig& surfacecfg)
+ {
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
+ 
+   auto siDetMng = static_cast<const TrackerDD::SCT_DetectorManager*>(m_cfg.mng);
+ 
+@@ -198,7 +215,7 @@ FaserActsLayerBuilder::buildLayers(const Acts::GeometryContext& gctx,
+ 
+ 
+   Acts::ProtoLayer pl(gctx, surfaces);
+-
++  
+   if (logger().doPrint(Acts::Logging::VERBOSE)) {
+     ACTS_VERBOSE(" Plane's zMin / zMax: " << pl.min(Acts::binZ) << " / " << pl.max(Acts::binZ));
+   }
+@@ -222,6 +239,27 @@ FaserActsLayerBuilder::buildLayers(const Acts::GeometryContext& gctx,
+   Transform3 transformInner(Translation3(0., 0., layerZInner));
+ 
+   Transform3 transformOuter(Translation3(0., 0., layerZOuter));
++  
++
++  if (fgctx->geometryRotation) {
++    
++    if (logger().doPrint(Acts::Logging::VERBOSE)) {
++      ACTS_VERBOSE(" Plane's zMin / zMax: " << pl.min(Acts::binX) << " / " << pl.max(Acts::binX));
++    }
++    layerZ = 0.5 * (pl.min(Acts::binX) + pl.max(Acts::binX));
++    // increase layerThickness by 4 mm so that after alignment shifts all modules are still within the boundaries
++    layerThickness = (pl.max(Acts::binX) - pl.min(Acts::binX)) + 4_mm;
++    layerZInner = layerZ - layerThickness/2.;
++    layerZOuter = layerZ + layerThickness/2.;
++  
++	 
++    surfacecfg.position = trafo * Acts::Vector3(0, 0, layerZ);
++    if (std::abs(layerZInner) > std::abs(layerZOuter)) std::swap(layerZInner, layerZOuter);
++    transformNominal = trafo * Transform3(Translation3(0., 0., layerZ));
++    transformInner = trafo * Transform3(Translation3(0., 0., layerZInner));
++    transformOuter = trafo * Transform3(Translation3(0., 0., layerZOuter));
++  
++  }
+ 
+   std::shared_ptr<Acts::PlaneSurface> innerBoundary 
+     = Acts::Surface::makeShared<Acts::PlaneSurface>(transformInner, rBounds);
+@@ -231,10 +269,10 @@ FaserActsLayerBuilder::buildLayers(const Acts::GeometryContext& gctx,
+ 
+   std::shared_ptr<Acts::PlaneSurface> outerBoundary 
+     = Acts::Surface::makeShared<Acts::PlaneSurface>(transformOuter, rBounds);
+-
++  
+   size_t matBinsX = layercfg.binsX*m_cfg.MaterialBins.first;
+   size_t matBinsY = layercfg.binsY*m_cfg.MaterialBins.second;
+-
++  
+   Acts::BinUtility materialBinUtil(
+       matBinsX, -0.5*layercfg.binsY*m_ModuleWidth, 0.5*layercfg.binsY*m_ModuleWidth, Acts::open, Acts::binX);
+   materialBinUtil += Acts::BinUtility(
+@@ -270,6 +308,14 @@ FaserActsLayerBuilder::buildLayers(const Acts::GeometryContext& gctx,
+ 
+ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildDipoleVolume(const Acts::GeometryContext& gctx, double zpos, double zhalflength, double rmin, double rmax, std::string name){
+ 
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++
+   FaserActs::CuboidVolumeBuilder::VolumeConfig volumeConfig;
+ 
+   std::vector<FaserActs::CuboidVolumeBuilder::LayerConfig> layerConfigs;
+@@ -288,38 +334,48 @@ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildDipoleV
+ 
+   layercfg.active = true;
+ 
+-  //bounds are hard coded
+-  layercfg.surfaceCfg = surfacecfg;
+-
+   Transform3 transformCenter(Translation3(0., 0., (zpos)*1_mm));
+ 
+-  std::shared_ptr<Acts::DiscSurface> centerBoundary =
+-   Acts::Surface::makeShared<Acts::DiscSurface>(
+-   transformCenter, rmin, rmax);
+-
+   // @note: 0.001 mm is added to avoid overlapping surfaces and volume boundarys; 
+   // This can cause issue in boundary intersecton check as any tiny overstepLimit is not allowed here:
+   // https://github.com/acts-project/acts/blob/v32.0.2/Core/src/Geometry/TrackingVolume.cpp#L485 
+   Transform3 transformInner(Translation3(0., 0., (zpos-zhalflength+0.001)*1_mm));
+ 
++  Transform3 transformOuter(Translation3(0., 0., (zpos+zhalflength)*1_mm));
++
++
++  if (fgctx->geometryRotation){
++    surfacecfg.position = trafo * Acts::Vector3(0, 0, zpos);
++    transformCenter = trafo * transformCenter;
++    transformInner = trafo * transformInner;
++    transformOuter = trafo * transformOuter;
++
++  }
++  
++  //bounds are hard coded
++  layercfg.surfaceCfg = surfacecfg;
++  
++  std::shared_ptr<Acts::DiscSurface> centerBoundary =
++   Acts::Surface::makeShared<Acts::DiscSurface>(
++   transformCenter, rmin, rmax);
++
+   std::shared_ptr<Acts::DiscSurface> innerBoundary =
+    Acts::Surface::makeShared<Acts::DiscSurface>(
+    transformInner, rmin, rmax);
+ 
+-  Transform3 transformOuter(Translation3(0., 0., (zpos+zhalflength)*1_mm));
+-
+   std::shared_ptr<Acts::DiscSurface> outerBoundary =
+    Acts::Surface::makeShared<Acts::DiscSurface>(
+    transformOuter, rmin, rmax);
+-
+-
+-//  size_t matBinsX = m_cfg.MaterialBins.first;
++  
++  //  size_t matBinsX = m_cfg.MaterialBins.first;
+   size_t matBinsY = m_cfg.MaterialBins.second;
+-//  set bin size to 1 at phi and MaterialBins-Y at r direction
++
++  //  set bin size to 1 at phi and MaterialBins-Y at r direction
+   Acts::BinUtility materialBinUtil(1, -M_PI, M_PI, Acts::closed, Acts::binPhi);
+   materialBinUtil +=
+     Acts::BinUtility(matBinsY, rmin, rmax, Acts::open, Acts::binR, transformInner);
+ 
++
+   std::shared_ptr<const Acts::ProtoSurfaceMaterial> materialProxy =
+     std::make_shared<const Acts::ProtoSurfaceMaterial>(materialBinUtil);
+ 
+@@ -336,7 +392,7 @@ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildDipoleV
+   layercfg.approachDescriptor = new Acts::GenericApproachDescriptor(aSurfaces);
+ 
+   layerConfigs.push_back(layercfg);
+-  volumeConfig.position = Acts::Vector3(0, 0, zpos); 
++  volumeConfig.position = fgctx->geometryRotation ? trafo * Acts::Vector3(0, 0, zpos) : Acts::Vector3(0, 0, zpos); 
+   Acts::Vector3 length= { 500.0*1_mm, 500.0*1_mm, zhalflength*2.*1_mm };
+   volumeConfig.length   = length;
+   //volumeConfig.layerCfg = {};
+@@ -349,6 +405,14 @@ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildDipoleV
+ 
+ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildScintVolume(const Acts::GeometryContext& gctx, double xpos, double ypos, double zpos, double xhalflength, double yhalflength, double zhalflength, std::string name){
+ 
++  //if geometry rotation
++  const FaserActsGeometryContext* fgctx = gctx.get<const FaserActsGeometryContext*>();
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++
+   FaserActs::CuboidVolumeBuilder::VolumeConfig volumeConfig;
+ 
+   std::vector<FaserActs::CuboidVolumeBuilder::LayerConfig> layerConfigs;
+@@ -367,8 +431,6 @@ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildScintVo
+ 
+   layercfg.active = true;
+ 
+-  //bounds are hard coded
+-  layercfg.surfaceCfg = surfacecfg;
+ 
+   auto rBounds = std::make_shared<const Acts::RectangleBounds>( xhalflength*1_mm, yhalflength*1_mm) ;
+ //  surfacecfg.rBounds=rBounds;
+@@ -379,30 +441,45 @@ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildScintVo
+   // https://github.com/acts-project/acts/blob/v32.0.2/Core/src/Geometry/TrackingVolume.cpp#L485 
+   Transform3 transformInner(Translation3(xpos*1_mm, ypos*1_mm, (zpos-zhalflength+0.001)*1_mm));
+ 
++  Transform3 transformCenter(Translation3(xpos*1_mm, ypos*1_mm, zpos*1_mm));
++  
++  // @note: 0.001 mm is added to avoid overlapping surfaces and volume boundarys; 
++  // This can cause issue in boundary intersecton check as any tiny overstepLimit is not allowed here:
++  // https://github.com/acts-project/acts/blob/v32.0.2/Core/src/Geometry/TrackingVolume.cpp#L485 
++  // @todo: since no material is mapped to trigger or dipole station, will remove the trigger/dipole station building in ACTS 
++  Transform3 transformOuter(Translation3(xpos*1_mm, ypos*1_mm, (zpos+zhalflength-0.001)*1_mm));
++
++
++  if (fgctx->geometryRotation) {
++    
++    surfacecfg.position = trafo * Acts::Vector3(xpos, ypos, zpos);
++    transformInner = trafo * transformInner;
++    transformCenter = trafo * transformCenter;
++    transformOuter = trafo * transformOuter;
++
++  }
++
+   std::shared_ptr<Acts::PlaneSurface> innerBoundary =
+    Acts::Surface::makeShared<Acts::PlaneSurface>(
+    transformInner, rBounds);
+ 
+-  Transform3 transformCenter(Translation3(xpos*1_mm, ypos*1_mm, zpos*1_mm));
+   std::shared_ptr<Acts::PlaneSurface> centerBoundary =
+    Acts::Surface::makeShared<Acts::PlaneSurface>(
+    transformCenter, rBounds);
+ 
+-  // @note: 0.001 mm is added to avoid overlapping surfaces and volume boundarys; 
+-  // This can cause issue in boundary intersecton check as any tiny overstepLimit is not allowed here:
+-  // https://github.com/acts-project/acts/blob/v32.0.2/Core/src/Geometry/TrackingVolume.cpp#L485 
+-  // @todo: since no material is mapped to trigger or dipole station, will remove the trigger/dipole station building in ACTS 
+-  Transform3 transformOuter(Translation3(xpos*1_mm, ypos*1_mm, (zpos+zhalflength-0.001)*1_mm));
+-
+   std::shared_ptr<Acts::PlaneSurface> outerBoundary =
+    Acts::Surface::makeShared<Acts::PlaneSurface>(
+    transformOuter, rBounds);
+-
+-//  set bin size to 2 
++  
++  //bounds are hard coded
++  layercfg.surfaceCfg = surfacecfg;
++  
++  //  set bin size to 2 
+   Acts::BinUtility materialBinUtil(2, (0.-xhalflength)*1_mm, xhalflength*1_mm, Acts::open, Acts::binX);
+   materialBinUtil +=
+     Acts::BinUtility(2, (0.-yhalflength)*1_mm, yhalflength*1_mm, Acts::open, Acts::binY, transformInner);
+ 
++
+   std::shared_ptr<const Acts::ProtoSurfaceMaterial> materialProxy =
+     std::make_shared<const Acts::ProtoSurfaceMaterial>(materialBinUtil);
+ 
+@@ -419,7 +496,7 @@ FaserActs::CuboidVolumeBuilder::VolumeConfig FaserActsLayerBuilder::buildScintVo
+   layercfg.approachDescriptor = new Acts::GenericApproachDescriptor(aSurfaces);
+ 
+   layerConfigs.push_back(layercfg);
+-  volumeConfig.position = Acts::Vector3(0, 0, zpos); 
++  volumeConfig.position = fgctx->geometryRotation ? trafo * Acts::Vector3(0, 0, zpos) : Acts::Vector3(0, 0, zpos); 
+   Acts::Vector3 length= { 500.0*1_mm, 500.0*1_mm, zhalflength*2.*1_mm };
+   volumeConfig.length   = length;
+   //volumeConfig.layerCfg = {};
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/CMakeLists.txt b/Tracking/Acts/FaserActsKalmanFilter/CMakeLists.txt
+index ede6a41e..e4a43388 100755
+--- a/Tracking/Acts/FaserActsKalmanFilter/CMakeLists.txt
++++ b/Tracking/Acts/FaserActsKalmanFilter/CMakeLists.txt
+@@ -92,6 +92,13 @@ atlas_add_component(FaserActsKalmanFilter
+ )
+ 
+ # Install files from the package:
++atlas_add_test( CandidateIsolatedSmoothing
++    SOURCES test/CandidateIsolatedSmoothing_test.cxx
++    INCLUDE_DIRS ${EIGEN_INCLUDE_DIRS} ${BOOST_INCLUDE_DIRS}
++    LINK_LIBRARIES ActsCore ${EIGEN_LIBRARIES}
++    POST_EXEC_SCRIPT nopost.sh
++)
++
+ # atlas_install_headers(FaserActsKalmanFilter)
+ atlas_install_python_modules( python/*.py )
+ atlas_install_scripts( test/*.py )
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/doc/candidate_smoothing.md b/Tracking/Acts/FaserActsKalmanFilter/doc/candidate_smoothing.md
+new file mode 100644
+index 00000000..d2b79969
+--- /dev/null
++++ b/Tracking/Acts/FaserActsKalmanFilter/doc/candidate_smoothing.md
+@@ -0,0 +1,50 @@
++# Candidate-isolated smoothing in CKF2
++
++`CKF2.IsolateCandidateSmoothing` defaults to `True`. No Python configuration
++change is required to enable it.
++
++The CKF can return several candidates whose state paths share ancestors in an
++ACTS `VectorMultiTrajectory`. The gain-matrix smoother writes its result into
++each visited state's smoothed parameter and covariance buffers. Smoothing a
++later branch can therefore overwrite an earlier branch's shared ancestors.
++Deep-copying the candidates after the finder returns also copies these
++overwritten values.
++
++After candidate selection, CKF2 deep-copies the selected candidate's entire
++state path with `copyFrom(..., true)`, then reruns `Acts::GainMatrixSmoother` on
++that private path. Downstream track conversion, refitting and state writers
++receive candidate-specific smoothed parameters and covariance. A smoothing
++error fails the event rather than exporting partially recomputed states.
++
++The repair leaves candidate ranking, hit selection, predicted/filtered states,
++seed covariance and the CKF's reference-surface fitted parameters unchanged.
++It does not replace the subsequent Kalman refit or modify the ACTS library.
++It recomputes smoothing only for selected candidates, reusing the existing
++deep copy, with work linear in their total number of states.
++
++For a controlled comparison with the previous shared-state output, explicitly
++set `IsolateCandidateSmoothing=False` in the arguments to `CKF2Cfg`, or on the
++configured CKF2 algorithm. This option should be recorded with the results.
++
++The `CandidateIsolatedSmoothing` CTest uses the actual ACTS containers and
++gain-matrix smoother. It reproduces shared-ancestor parameter and covariance
++overwrites, checks the analytical RTS solution after isolation, tests both
++candidate orders, verifies unchanged filtering inputs and reference parameters,
++and checks the single-state endpoint case. Run it after configuring/building
++Calypso in the usual Athena environment:
++
++```sh
++cmake --build build --target FaserActsKalmanFilter_CandidateIsolatedSmoothing --parallel 2
++ctest --test-dir build -R FaserActsKalmanFilter_CandidateIsolatedSmoothing --output-on-failure --no-tests=error
++```
++
++Validated with Athena 24.0.41 (`x86_64-el9-gcc13-opt`): the package CTest passes.
++A real Calypso smoke run uses DSID 110051, the first RDO file's entries [0,20),
++rotated geometry and unchanged seed/selection settings. Its 42 writer tracks
++contain 718 measurement states. All 103 saved parameter, uncertainty, hit and
++metadata arrays match exactly between the new default and explicit `True`.
++The 27 native-truth P/F/S histograms also match the previous explicitly isolated
++build in all 102 bins including flow, raw entries and sumw2. Against explicit
++`False`, the non-smoothed arrays remain identical while 156 states change their
++smoothed q/p. This is a software regression sample, not a full-sample resolution
++measurement. The original GitHub plotting cuts are used for this regression.
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py b/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
+index 66d7eb11..d3f3e816 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
++++ b/Tracking/Acts/FaserActsKalmanFilter/python/CKF2Config.py
+@@ -47,11 +47,18 @@ def CKF2Cfg(flags, actsOutputTag, **kwargs):
+     sigma_loc1 = 9e-1
+     sigma_phi = 3.3e-2
+     sigma_theta = 2.9e-4
++    #sigma_theta = 3e-2
+     p = 1000
+     sigma_p = 0.1 * p
+     sigma_qop = sigma_p / (p * p)
++    initial_variance_inflation = kwargs.pop(
++        "initialVarianceInflation",
++        [100, 100, 100, 10000, 100000]
++    )
+     # initial_variance_inflation = [1000, 1000, 100, 100, 10000]
+-    initial_variance_inflation = [100, 100, 100, 100, 1000]
++    #initial_variance_inflation = [100, 100, 100, 100, 1000]
++    #initial_variance_inflation = [100, 100, 10000, 100, 100000]
++    #initial_variance_inflation = [100, 100, 100, 10000, 100000]
+     track_seed_tool.covLoc0 = initial_variance_inflation[0] * sigma_loc1 * sigma_loc1
+     track_seed_tool.covLoc1 = initial_variance_inflation[1] * sigma_loc0 * sigma_loc0
+     track_seed_tool.covPhi = initial_variance_inflation[2] * sigma_phi * sigma_phi
+@@ -77,6 +84,7 @@ def CKF2Cfg(flags, actsOutputTag, **kwargs):
+     trajectory_summary_writer_tool = CompFactory.RootTrajectorySummaryWriterTool()
+     trajectory_summary_writer_tool.noDiagnostics = kwargs.get("noDiagnostics", True)
+     trajectory_summary_writer_tool.FilePath = f"{actsOutputTag}_track_summary_ckf.root"
++    trajectory_summary_writer_tool.writeMeasurements = True
+     trajectory_summary_writer_tool1 = CompFactory.RootTrajectorySummaryWriterTool()
+     #trajectory_summary_writer_tool1.noDiagnostics = kwargs.get("noDiagnostics", True)
+     trajectory_summary_writer_tool1.noDiagnostics = True
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
+index 27a49d96..34bde4b9 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.cxx
+@@ -109,9 +109,18 @@ StatusCode CKF2::execute() {
+ 
+   std::shared_ptr<const Acts::TrackingGeometry> trackingGeometry
+       = m_trackingGeometryTool->trackingGeometry();
+-
+   const FaserActsGeometryContext& faserActsGeometryContext = m_trackingGeometryTool->getGeometryContext();
+   auto gctx = faserActsGeometryContext.context();
++  if (m_numberOfEvents == 1){
++    ATH_MSG_VERBOSE("Printing info of ACTS tracking geometry surface:");
++    trackingGeometry->visitSurfaces([&](const Acts::Surface* surface) {
++        auto center = surface->center(gctx);
++        auto rotation = surface->transform(gctx).rotation();
++        ATH_MSG_VERBOSE("ACTS surface " <<  surface->geometryId() << " has center " << center.transpose() << ", local X axis at " << rotation.col(0).transpose() <<", local Z axis at " << rotation.col(2).transpose());
++      }
++    );
++  }
++
+   Acts::MagneticFieldContext magFieldContext = getMagneticFieldContext(ctx);
+   Acts::CalibrationContext calibContext;
+ 
+@@ -185,11 +194,16 @@ StatusCode CKF2::execute() {
+   };
+ 
+   // configuration of the targetSurface of CKF in GeneralFitterOptions 
++  //Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  //rotation.col(0) = Acts::Vector3(0, 1, 0);
++  //rotation.col(1) = Acts::Vector3(1, 0, 0);
++  //rotation.col(2) = Acts::Vector3(0, 0, -1);
++  //Acts::Translation3 trans(0., 0., targetZposition);
+   Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
+   rotation.col(0) = Acts::Vector3(0, 1, 0);
+-  rotation.col(1) = Acts::Vector3(1, 0, 0);
+-  rotation.col(2) = Acts::Vector3(0, 0, -1);
+-  Acts::Translation3 trans(0., 0., targetZposition);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(targetZposition, 0., 0.);
+   Acts::Transform3 trafo(trans*rotation);
+   ATH_MSG_DEBUG("ACTS CKF target surface has center at " << trafo.translation().transpose());
+   targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(trafo);
+@@ -253,14 +267,48 @@ StatusCode CKF2::execute() {
+   while (not allTracks.empty()) {
+     TrackInfo selected = allTracks.front();
+     allTracks.erase(allTracks.begin());
++
+     
+     auto destProxy = selectedTracks.getTrack(selectedTracks.addTrack());
+     destProxy.copyFrom(tracks.getTrack(selected.index), true);  // make sure we copy track states!
++    // CKF branches share ancestor states. Their smoothed values may have been
++    // overwritten by another branch before the finder returned. Deep-copying
++    // alone preserves those values: recompute only after the states are private.
++    if (m_isolateSmoothing) {
++      const auto status = Acts::GainMatrixSmoother()(
++          gctx, selectedTracks.trackStateContainer(), destProxy.tipIndex(), *m_logger);
++      if (!status.ok()) {
++        ATH_MSG_ERROR("Isolated candidate smoothing failed for candidate "
++                      << selected.index << ": " << status.error());
++        return StatusCode::FAILURE;
++      }
++    }
+     
+     if(not allTracks.empty()){ 
+       allTracks.remove_if([&](const TrackInfo &p) {
+         return ((p.nMeasurements <= 12) || ((p.clusterSet & selected.clusterSet).count() > 6));
+       });
++      //allTracks.remove_if([&](const TrackInfo &p) {
++      //  	      ATH_MSG_DEBUG("selected"<<selected.index<<" | nMeas="<<selected.nMeasurements<<" chi2="<<selected.chi2);
++
++      //  int shared = (p.clusterSet & selected.clusterSet).count();
++      //  bool killByNMeas = (p.nMeasurements <= 3);
++      //  bool killByShared = (shared > 6);
++    
++      //    ATH_MSG_DEBUG(
++      //      "[CKF2-SELECTOR] "
++      //      << "candidate=" << p.index
++      //      << " vs selected=" << selected.index
++      //      << " | nMeas=" << p.nMeasurements
++      //      << " chi2=" << p.chi2
++      //      << " shared=" << shared
++      //      << " | killByNMeas=" << killByNMeas
++      //      << " killByShared=" << killByShared
++      //    );
++    
++      //  return killByNMeas || killByShared;
++      //});
++
+     }
+   }
+   ATH_MSG_DEBUG("There are " << selectedTracks.size() << " selected tracks for this event.");
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.h b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.h
+index bc0674d1..1b459587 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.h
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CKF2.h
+@@ -94,6 +94,9 @@ private:
+   Gaudi::Property<bool> m_performanceWriter {this, "PerformanceWriter", true};
+   Gaudi::Property<bool> m_noDiagnostics {this, "noDiagnostics", true, "Set ACTS logging level to INFO and do not run performance writer, states writer or summary writer"};
+   Gaudi::Property<bool> m_summaryWriter {this, "SummaryWriter", true};
++  Gaudi::Property<bool> m_isolateSmoothing {
++      this, "IsolateCandidateSmoothing", true,
++      "Recompute smoothed parameters and covariance on each selected candidate's private states"};
+   Gaudi::Property<bool> m_statesWriter {this, "StatesWriter", false};
+   Gaudi::Property<bool> m_seedWriter {this, "seedWriter", true};
+   Gaudi::Property<bool> m_alignmentWriter {this, "alignmentWriter", false};
+@@ -104,7 +107,7 @@ private:
+   Gaudi::Property<double> m_maxSteps {this, "maxSteps", 10000};
+   Gaudi::Property<double> m_chi2Max {this, "chi2Max", 15};
+   Gaudi::Property<unsigned long> m_nMax {this, "nMax", 10};
+-  Gaudi::Property<std::vector<int>> m_maskedLayers {this, "maskedLayers", {}};
++  Gaudi::Property<std::vector<int>> m_maskedLayers {this, "maskedLayers", {0,1,2}};
+   SG::ReadCondHandleKey<FaserFieldCacheCondObj> m_fieldCondObjInputKey {this, "FaserFieldCacheCondObj", "fieldCondObj", "Name of the Magnetic Field conditions object key"};
+   ToolHandle<ITrackSeedTool> m_trackSeedTool {this, "TrackSeed", "ClusterTrackSeedTool"};
+   ToolHandle<IFaserActsTrackingGeometryTool> m_trackingGeometryTool {this, "TrackingGeometryTool", "FaserActsTrackingGeometryTool"};
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx
+index 804fc277..f5f41847 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CircleFitTrackSeedTool.cxx
+@@ -376,8 +376,8 @@ void CircleFitTrackSeedTool::Seed::getChi2() {
+ }
+ 
+ Acts::BoundTrackParameters CircleFitTrackSeedTool::Seed::get_params(double origin, Acts::BoundSquareMatrix cov, bool backward) const {
+-  double theta = Acts::VectorHelpers::theta(direction);
+-  double phi = Acts::VectorHelpers::phi(direction);
++ // double theta = Acts::VectorHelpers::theta(direction);
++ // double phi = Acts::VectorHelpers::phi(direction);
+ 
+   Acts::Vector3 pos(0,0,0);
+   if (!backward) {
+@@ -386,10 +386,26 @@ Acts::BoundTrackParameters CircleFitTrackSeedTool::Seed::get_params(double origi
+     size_t size = positions.size();
+     pos = positions[size-1] + (origin - positions[size-1].z())/direction.z() * direction;
+   }
+-  Acts::Vector3 direct(0,0,-1);
+-  auto refPlane = Acts::Surface::makeShared<Acts::PlaneSurface>(Acts::Vector3(0,0,pos.z()), direct); 
++  //Acts::Vector3 direct(0,0,-1);
++  //if geometry rotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++  Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  rotation.col(0) = Acts::Vector3(0, 1, 0);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(pos.z(), 0., 0.);
++  Acts::Transform3 traf(trans*rotation);
++  double theta = Acts::VectorHelpers::theta(trafo*direction);
++  double phi = Acts::VectorHelpers::phi(trafo*direction);
++
++//  Acts::Vector3 direct(-1,0,0);
++  auto refPlane = Acts::Surface::makeShared<Acts::PlaneSurface>(traf);; 
+   Acts::GeometryContext gctx;
+-  auto lpResult = refPlane->globalToLocal(gctx, pos);
++  auto lpResult = refPlane->globalToLocal(gctx, trafo*pos);
+   if (not lpResult.ok()) {
+     throw std::runtime_error("globalToLocal transformation failed. This should not happen");
+   }
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/CreateTrkTrackTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/CreateTrkTrackTool.cxx
+index d1502391..93307aa3 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/CreateTrkTrackTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/CreateTrkTrackTool.cxx
+@@ -123,5 +123,47 @@ CreateTrkTrackTool::ConvertActsTrackParameterToATLAS(const Acts::BoundTrackParam
+   double p = std::abs(1. / tqOverP);
+   Amg::Vector3D tmom(p * std::cos(tphi) * std::sin(ttheta), p * std::sin(tphi) * std::sin(ttheta), p * std::cos(ttheta));
+   double charge = tqOverP > 0. ? 1. : -1.;
++  //std::cout
++  //  << "\n===== ACTS -> ATLAS conversion =====\n"
++  //  << "ACTS surface center = "
++  //  << actsParameter.referenceSurface().center(gctx).transpose()
++  //  << "\n"
++  //  <<"Acts surface transform = "
++  //  <<actsParameter.referenceSurface().transform(gctx).matrix()
++  //  <<"\n"
++
++  //  <<"Acts Params : "
++  //  <<actsParameter.parameters().transpose()
++  //  <<"\n"
++
++  //  << "ACTS position = "
++  //  << pos.x() << ", "
++  //  << pos.y() << ", "
++  //  << pos.z()
++  //  << "\n"
++
++  //  << "ACTS phi/theta = "
++  //  << tphi << ", "
++  //  << ttheta
++  //  << "\n"
++
++  //  << "ACTS q/p = "
++  //  << tqOverP
++  //  << "\n"
++
++  //  << "Constructed tmom = "
++  //  << tmom.x() << ", "
++  //  << tmom.y() << ", "
++  //  << tmom.z()
++  //  << "\n"
++
++  //  << "tmom direction = "
++  //  << tmom.unit().x() << ", "
++  //  << tmom.unit().y() << ", "
++  //  << tmom.unit().z()
++  //  << "\n"
++
++  //  << "====================================\n"
++  //  << std::endl;
+   return std::make_unique<Trk::CurvilinearParameters>(pos,tmom,charge, cov);
+ }
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
+index 8bde34e2..45ed8905 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/KalmanFitterTool.cxx
+@@ -1,6 +1,7 @@
+ #include "KalmanFitterTool.h"
+ 
+ #include "FaserActsGeometry/FASERMagneticFieldWrapper.h"
++#include "FaserActsGeometry/FaserActsGeometryContext.h"
+ #include "ActsInterop/IndexSourceLink.h"
+ 
+ #include "Acts/Propagator/EigenStepper.hpp"
+@@ -354,18 +355,36 @@ KalmanFitterTool::fit(const EventContext &ctx, const Acts::GeometryContext &gctx
+     ATH_MSG_WARNING("Input track has no track parameters and cannot be fitted");
+     return nullptr;
+   }
++  
+ 
+ 
+   // set the start position 10 mm in front of the first track measurement
+-  double origin = inputTrack->trackParameters()->front()->position().z() - 10;
+-
+-  auto pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++  // if geoRotation
++  //double origin = inputTrack->trackParameters()->front()->position().z() - 10;
++  //auto pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++  double origin = inputTrack->trackParameters()->front()->position().x() - 10;
++   Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++  Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  rotation.col(0) = Acts::Vector3(0, 1, 0);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(origin, 0., 0.);
++  Acts::Transform3 traf(trans*rotation);
++  std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf);
++
++  //auto pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3 {origin, 0, 0}, Acts::Vector3{-1, 0, 0});
+ 
+   Acts::MagneticFieldContext mfContext = getMagneticFieldContext(ctx);
+   Acts::CalibrationContext calibContext = Acts::CalibrationContext();
+ 
+   auto [sourceLinks, measurements] = getMeasurementsFromTrack(inputTrack);
++
+   auto trackParameters = getParametersFromTrack(inputTrack->trackParameters()->front(), inputVector, origin);
+   //Inflate the covariance of the starting track parameters
+   //@todo: make the inflation configurable
+@@ -563,19 +582,40 @@ Acts::BoundTrackParameters
+ KalmanFitterTool::getParametersFromTrack(const Trk::TrackParameters *inputParameters,
+                                          const Acts::BoundVector& inputVector, double origin) const {
+   using namespace Acts::UnitLiterals;
+-  std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++//  if geoRotation
++  Acts::RotationMatrix3 rotation = Acts::RotationMatrix3::Identity();
++  rotation.col(0) = Acts::Vector3(0, 1, 0);
++  rotation.col(1) = Acts::Vector3(0, 0, -1);
++  rotation.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans(origin, 0., 0.);
++  Acts::Transform3 traf(trans*rotation);
++  std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf);
++  //std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3 {0, 0, origin}, Acts::Vector3{0, 0, -1});
++ // std::shared_ptr<const Acts::Surface> pSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++ //     trafo * (Acts::Vector3 {0, 0, origin}), Acts::Vector3{-1, 0, 0});
++Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
+ 
+   auto atlasParam = inputParameters->parameters();
+   auto center = inputParameters->associatedSurface().center();
++
++  //std::cout<<"atlasParameters::information: transform = "<<inputParameters->associatedSurface().transform().matrix()<<";  center = "<<inputParameters->associatedSurface().center().x()<<"; "<<inputParameters->associatedSurface().center().y()<<"; "<<inputParameters->associatedSurface().center().z()<<std::endl;
++  //Acts::GeometryContext gctx;
++  //std::cout<<"atlas-->acts::acts.surface.transform = "<<pSurface->transform(gctx).matrix()<<std::endl;
+   // Acts::BoundVector params {center[Trk::locY], center[Trk::locX],
+   //                           atlasParam[Trk::phi0], atlasParam[Trk::theta],
+   //                           charge / (inputParameters->momentum().norm() * 1_MeV),
+   //                           0.};
+   Acts::BoundVector params;
+   if (inputVector == Acts::BoundVector::Zero()) {
+-    params(0) = center[Trk::locY];
+-    params(1) = center[Trk::locX];
++    //params(0) = center[Trk::locY];
++    //params(1) = center[Trk::locX];
++    params(0) = center.y();
++    params(1) = -center.z();
+     params(2) = atlasParam[Trk::phi0];
+     params(3) = atlasParam[Trk::theta];
+     params(4) = inputParameters->charge() / (inputParameters->momentum().norm() * 1_MeV);
+@@ -583,6 +623,7 @@ KalmanFitterTool::getParametersFromTrack(const Trk::TrackParameters *inputParame
+   } else {
+     params = inputVector;
+   }
++  //std::cout<<"before params : "<<params(0)<<"    "<<params(1)<<"  "<<params(2)<<"   "<<params(3)<<"   "<<params(4)<<std::endl;
+   Acts::BoundSquareMatrix cov = Acts::BoundSquareMatrix::Identity();
+   cov.topLeftCorner(5, 5) = *inputParameters->covariance();
+ 
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/RootSeedWriteTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/RootSeedWriteTool.cxx
+index 232e35e4..98445d6f 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/RootSeedWriteTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/RootSeedWriteTool.cxx
+@@ -245,6 +245,15 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+   std::shared_ptr<TrackerSimDataCollection> simData {nullptr};
+   std::map<int, const HepMC::GenParticle*> particles {};
+   std::map<int,std::vector<FaserSiHit>> hitCountMap;
++  
++  //if geometry rotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++
++
+   if (isMC) {
+     
+     //get simulated hits
+@@ -320,11 +329,16 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+       bool isFiducial = m_fiducialParticleTool->isFiducial(barcode);
+ 
+       //The mother is always non-fiducial?
++      //if geometryRotation
++      auto mo = trafo * Acts::Vector3(particle->momentum().x(), particle->momentum().y(), particle->momentum().z());
+       if(particle->pdg_id() == 32){
+         m_truthM_P.push_back(particle->momentum().e());
+-        m_truthM_px.push_back(particle->momentum().x());
+-        m_truthM_py.push_back(particle->momentum().y());
+-        m_truthM_pz.push_back(particle->momentum().z());
++        //m_truthM_px.push_back(particle->momentum().x());
++        //m_truthM_py.push_back(particle->momentum().y());
++        //m_truthM_pz.push_back(particle->momentum().z());
++        m_truthM_px.push_back(mo.x());
++        m_truthM_py.push_back(mo.y());
++        m_truthM_pz.push_back(mo.z());
+         m_truthM_isFiducial.push_back(isFiducial);
+       }
+    
+@@ -358,7 +372,9 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+         const HepMC::GenParticle* truthparticle = &(*particle);
+         //we store the particle momentum at production vertex?
+         //ref to https://gitlab.cern.ch/hepmc/HepMC3/-/blob/master/include/HepMC3/FourVector.h 
+-        auto momentum = Acts::Vector3(truthparticle->momentum().x(), truthparticle->momentum().y(), truthparticle->momentum().z());
++        //if geometryRotation
++	auto momentum = trafo * Acts::Vector3(truthparticle->momentum().x(), truthparticle->momentum().y(), truthparticle->momentum().z());
++        //auto momentum = Acts::Vector3(truthparticle->momentum().x(), truthparticle->momentum().y(), truthparticle->momentum().z());
+         truth_p = truthparticle->momentum().rho();
+         truth_px = momentum.x();
+         truth_py = momentum.y();
+@@ -371,17 +387,27 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+ 	//if particle has production vertex
+         if(particle->production_vertex()){
+           const HepMC::FourVector & production_vertex = particle->production_vertex()->position();
+-          truth_prod_x = production_vertex.x();
+-          truth_prod_y = production_vertex.y();
+-          truth_prod_z = production_vertex.z();
++	  //if geometryRotation
++	  auto vertex = trafo * Acts::Vector3(production_vertex.x(), production_vertex.y(), production_vertex.z());
++          truth_prod_x = vertex.x();
++          truth_prod_y = vertex.y();
++          truth_prod_z = vertex.z();
++          //truth_prod_x = production_vertex.x();
++          //truth_prod_y = production_vertex.y();
++          //truth_prod_z = production_vertex.z();
+         }
+ 
+         //if particle has decay vertex
+         if(particle->end_vertex()){
+           const HepMC::FourVector & decay_vertex = particle->end_vertex()->position();
+-          truth_decay_x = decay_vertex.x();
+-          truth_decay_y = decay_vertex.y();
+-          truth_decay_z = decay_vertex.z();
++	  //if geometryRotation
++	  auto vertex = trafo * Acts::Vector3(decay_vertex.x(), decay_vertex.y(), decay_vertex.z());
++          truth_decay_x = vertex.x();
++          truth_decay_y = vertex.y();
++          truth_decay_z = vertex.z();
++          //truth_decay_x = decay_vertex.x();
++          //truth_decay_y = decay_vertex.y();
++          //truth_decay_z = decay_vertex.z();
+         }
+         
+         m_truth_barcode.push_back(barcode);
+@@ -404,18 +430,25 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+         m_truth_decay_y.push_back(truth_decay_y);
+         m_truth_decay_z.push_back(truth_decay_z);
+         
++        //if geometryRotation
+         auto positions = m_fiducialParticleTool->getTruthPositions(barcode); // Add truth position information at each station
+-        for (int station = 0; station < 4; ++station) {
+-          m_truth_st_x[station].push_back(positions[station].x());
+-          m_truth_st_y[station].push_back(positions[station].y());
+-          m_truth_st_z[station].push_back(positions[station].z());
++	for (int station = 0; station < 4; ++station) {
++	  auto pos = trafo * (Acts::Vector3(positions[station].x(), positions[station].y(), positions[station].z()));
++          m_truth_st_x[station].push_back(pos.x());
++          m_truth_st_y[station].push_back(pos.y());
++          m_truth_st_z[station].push_back(pos.z());
++          //m_truth_st_x[station].push_back(positions[station].x());
++          //m_truth_st_y[station].push_back(positions[station].y());
++          //m_truth_st_z[station].push_back(positions[station].z());
+         }
+ 
++	//if geometryRotation
+         auto momenta = m_fiducialParticleTool->getTruthMomenta(barcode); //  Add truth momentum information at each station
+         for (int station = 0; station < 4; ++station) {
+-          m_truth_st_px[station].push_back(momenta[station].x());
+-          m_truth_st_py[station].push_back(momenta[station].y());
+-          m_truth_st_pz[station].push_back(momenta[station].z());
++	  auto mo = trafo * (Acts::Vector3(momenta[station].x(), momenta[station].y(), momenta[station].z()));
++          m_truth_st_px[station].push_back(mo.x());
++          m_truth_st_py[station].push_back(mo.y());
++          m_truth_st_pz[station].push_back(mo.z());
+         }
+         
+ 
+@@ -433,9 +466,13 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+             m_truthd0_z.push_back(truth_prod_z);
+            
+             for (int station = 1; station < 4; ++station) {
+-              m_truthd0_x.push_back(positions[station].x());
+-              m_truthd0_y.push_back(positions[station].y());
+-              m_truthd0_z.push_back(positions[station].z());
++	      auto pos = trafo * (Acts::Vector3(positions[station].x(), positions[station].y(), positions[station].z()));
++              m_truthd0_x.push_back(pos.x());
++              m_truthd0_y.push_back(pos.y());
++              m_truthd0_z.push_back(pos.z());
++              //m_truthd0_x.push_back(positions[station].x());
++              //m_truthd0_y.push_back(positions[station].y());
++              //m_truthd0_z.push_back(positions[station].z());
+             }
+           }
+           if ( particle->pdg_id() == -11) { // daughter particle (positron)
+@@ -450,9 +487,13 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+             m_truthd1_z.push_back(truth_prod_z);
+ 
+             for (int station = 1; station < 4; ++station) {
+-              m_truthd1_x.push_back(positions[station].x());
+-              m_truthd1_y.push_back(positions[station].y());
+-              m_truthd1_z.push_back(positions[station].z());
++	      auto pos = trafo * (Acts::Vector3(positions[station].x(), positions[station].y(), positions[station].z()));
++              m_truthd1_x.push_back(pos.x());
++              m_truthd1_y.push_back(pos.y());
++              m_truthd1_z.push_back(pos.z());
++              //m_truthd1_x.push_back(positions[station].x());
++              //m_truthd1_y.push_back(positions[station].y());
++              //m_truthd1_z.push_back(positions[station].z());
+             }
+           }
+         }
+@@ -572,15 +613,20 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+ 
+         const auto& locPos = cluster->localPosition();
+         const auto& gloPos = cluster->globalPosition();
++	//if geometryRotation
++	auto glPos = trafo * (Acts::Vector3(gloPos[0], gloPos[1], gloPos[2]));
+ 
+     	//Which seed does the cluster come from?
+         m_clusterIndex.push_back(iseed);
+     
+ 	m_clusterLocX.push_back(locPos[0]);
+         m_clusterLocY.push_back(locPos[1]);
+-        m_clusterGloX.push_back(gloPos[0]);
+-        m_clusterGloY.push_back(gloPos[1]);
+-        m_clusterGloZ.push_back(gloPos[2]);
++        //m_clusterGloX.push_back(gloPos[0]);
++        //m_clusterGloY.push_back(gloPos[1]);
++        //m_clusterGloZ.push_back(gloPos[2]);
++        m_clusterGloX.push_back(glPos.x());
++        m_clusterGloY.push_back(glPos.y());
++        m_clusterGloZ.push_back(glPos.z());
+         
+         
+ 	m_clusterStation.push_back(m_idHelper->station(id));
+@@ -592,7 +638,9 @@ StatusCode RootSeedWriterTool::write(const Acts::GeometryContext& geoContext, co
+       }
+     }
+ 
+-    for(auto fake : seed.fakePositions){
++    for(auto fake : seed.fakePositions){	    
++      //if geometryRotation
++      fake = trafo * fake;
+       m_fakePositionIndex.push_back(iseed);
+       m_fakePositionX.push_back(fake.x());
+       m_fakePositionY.push_back(fake.y());
+@@ -915,14 +963,38 @@ std::optional<const Acts::BoundTrackParameters> RootSeedWriterTool::extrapolateT
+ 
+   // The coordinate system of the Acts::PlaneSurface is defined as
+   // T = Z = normal, U = X x T = -Y, V = T x U = x
+-  auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3(0, 0, vertex.z()), Acts::Vector3(0, 0, 1));
+-  auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
++  //
++  // if geometryRotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++
++  Acts::RotationMatrix3 rotation1 = Acts::RotationMatrix3::Identity();
++  rotation1.col(0) = Acts::Vector3(0, -1, 0);
++  rotation1.col(1) = Acts::Vector3(0, 0, -1);
++  rotation1.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Translation3 trans1(vertex.z(), 0., 0.);
++  Acts::Transform3 traf1(trans1 * rotation1);
++  auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf1);
++
++  Acts::RotationMatrix3 rotation2 = Acts::RotationMatrix3::Identity();
++  rotation2.col(0) = Acts::Vector3(0, 1, 0);
++  rotation2.col(1) = Acts::Vector3(0, 0, -1);
++  rotation2.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans2(targetZ, 0., 0.);
++  Acts::Transform3 traf2(trans2 * rotation2);
++  auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf2);
++
++//  auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++//      Acts::Vector3(0, 0, vertex.z()), Acts::Vector3(0, 0, 1));
++//  auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++//      Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
+ 
+   Acts::GeometryContext gctx;
+   Acts::Vector3 p3(vertex.x(),vertex.y(),vertex.z());
+-  auto lpResult = startSurface->globalToLocal(gctx, p3);
++  auto lpResult = startSurface->globalToLocal(gctx, trafo * p3);
+   if (not lpResult.ok()) {
+     throw std::runtime_error("globalToLocal transformation failed. This should not happen");
+   }
+@@ -931,8 +1003,11 @@ std::optional<const Acts::BoundTrackParameters> RootSeedWriterTool::extrapolateT
+   Acts::BoundVector params = Acts::BoundVector::Zero();
+   params[Acts::eBoundLoc0] = lPosition.x();
+   params[Acts::eBoundLoc1] = lPosition.y();
+-  params[Acts::eBoundPhi] = momentum.phi();
+-  params[Acts::eBoundTheta] = momentum.theta();
++  //params[Acts::eBoundPhi] = momentum.phi();
++  //params[Acts::eBoundTheta] = momentum.theta();
++  auto mo = trafo * Acts::Vector3(momentum.x(), momentum.y(), momentum.z());
++  params[Acts::eBoundPhi] = phi(mo.normalized());
++  params[Acts::eBoundTheta] = theta(mo.normalized());;
+   // FIXME get charge of HepMC::GenParticle, the following does not work, e.g. for pions
+   double charge = particle->pdg_id() > 0 ? -1 : 1;
+   double MeV2GeV = 1e-3;
+@@ -992,14 +1067,24 @@ std::optional<const Acts::BoundTrackParameters> RootSeedWriterTool::extrapolateT
+ //  //    Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
+ // 
+ //  
++//  //auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++//  //    Acts::Vector3(0, 0, avgPos.z()), Acts::Vector3(0, 0, 1));
++//  //auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++//  //    Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
+ //  auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-//      Acts::Vector3(0, 0, avgPos.z()), Acts::Vector3(0, 0, 1));
++//      Acts::Vector3(avgPos.z(), 0, 0), Acts::Vector3(1, 0, 0));
+ //  auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-//      Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
++//      Acts::Vector3(targetZ, 0, 0), Acts::Vector3(-1, 0, 0));
++//// if geometryRotation
++//  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++//  rot.col(0) = Acts::Vector3(0, 0, -1);
++//  rot.col(1) = Acts::Vector3(0, 1, 0);
++//  rot.col(2) = Acts::Vector3(1, 0, 0);
++//  Acts::Transform3 trafo(rot);
+ //
+ //  Acts::GeometryContext gctx;
+ //  Acts::Vector3 p3(avgPos.x(),avgPos.y(),avgPos.z());
+-//  auto lpResult = startSurface->globalToLocal(gctx, p3);
++//  auto lpResult = startSurface->globalToLocal(gctx, trafo * p3);
+ //  if (not lpResult.ok()) {
+ //    throw std::runtime_error("globalToLocal transformation failed. This should not happen");
+ //  }
+@@ -1008,8 +1093,8 @@ std::optional<const Acts::BoundTrackParameters> RootSeedWriterTool::extrapolateT
+ //  Acts::BoundVector params = Acts::BoundVector::Zero();
+ //  params[Acts::eBoundLoc0] = lPosition.x();
+ //  params[Acts::eBoundLoc1] = lPosition.y();
+-//  params[Acts::eBoundPhi] = avgMom.phi();
+-//  params[Acts::eBoundTheta] = avgMom.theta();
++//  params[Acts::eBoundPhi] = (trafo * avgMom).phi();
++//  params[Acts::eBoundTheta] = (trafo * avgMom).theta();
+ //  // FIXME get charge of HepMC::GenParticle, the following does not work, e.g. for pions
+ //  double charge = particle->pdg_id() > 0 ? -1 : 1;
+ //  double MeV2GeV = 1e-3;
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/src/RootTrajectorySummaryWriterTool.cxx b/Tracking/Acts/FaserActsKalmanFilter/src/RootTrajectorySummaryWriterTool.cxx
+index 784e4370..08643d00 100644
+--- a/Tracking/Acts/FaserActsKalmanFilter/src/RootTrajectorySummaryWriterTool.cxx
++++ b/Tracking/Acts/FaserActsKalmanFilter/src/RootTrajectorySummaryWriterTool.cxx
+@@ -184,6 +184,12 @@ StatusCode RootTrajectorySummaryWriterTool::write(
+     const Acts::GeometryContext& geoContext, const FaserActsTrackContainer& tracks, const std::vector<Measurement>& measurements,
+     bool isMC) const {
+   EventContext ctx = Gaudi::Hive::currentContext();
++  //if geometry rotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
+ 
+   std::shared_ptr<TrackerSimDataCollection> simData {nullptr};
+   std::map<int, const HepMC::GenParticle*> particles {};
+@@ -278,13 +284,17 @@ StatusCode RootTrajectorySummaryWriterTool::write(
+         }
+         const auto& geoId = sl.geometryId();
+         const auto& locPos = cluster->localPosition(); 
+-        const auto& gloPos = cluster->globalPosition(); 
++        const auto& gloPos = cluster->globalPosition();
++	Acts::Vector3 glPos = trafo * Acts::Vector3(gloPos[0], gloPos[1], gloPos[2]);
+         //m_inputMeasurementLocX.push_back(measVec[0]);  
+         m_inputMeasurementLocX.push_back(locPos[0]);  
+         m_inputMeasurementLocY.push_back(locPos[1]);  
+-        m_inputMeasurementGloX.push_back(gloPos[0]);  
+-        m_inputMeasurementGloY.push_back(gloPos[1]);  
+-        m_inputMeasurementGloZ.push_back(gloPos[2]);  
++        m_inputMeasurementGloX.push_back(glPos.x());  
++        m_inputMeasurementGloY.push_back(glPos.y());  
++        m_inputMeasurementGloZ.push_back(glPos.z());  
++        //m_inputMeasurementGloX.push_back(gloPos[0]);  
++        //m_inputMeasurementGloY.push_back(gloPos[1]);  
++        //m_inputMeasurementGloZ.push_back(gloPos[2]);  
+         m_inputMeasurementVolume.push_back(geoId.volume());  
+         m_inputMeasurementLayer.push_back(geoId.layer());  
+         m_inputMeasurementSensitive.push_back(geoId.sensitive());  
+@@ -356,7 +366,7 @@ StatusCode RootTrajectorySummaryWriterTool::write(
+           // The direction does not matter for plane surface 
+           Acts::Vector3 global =
+               surface.localToGlobal(geoContext, local, truthUnitDir);
+-          auto r_hit = std::hypot(global[Acts::ePos0],global[Acts::ePos1]);
++          auto r_hit = std::hypot(global[Acts::ePos1],global[Acts::ePos2]);
+           if(r_hit>rMax_hit){
+             rMax_hit = r_hit;
+           }
+@@ -415,7 +425,10 @@ StatusCode RootTrajectorySummaryWriterTool::write(
+       track.hasReferenceSurface() ? &track.referenceSurface() : nullptr;
+     double fittedParametersZPosition = 0;
+     if(pSurface){  
+-      fittedParametersZPosition =  pSurface->center(geoContext).z();
++      //if geometryRotation
++      fittedParametersZPosition =  pSurface->center(geoContext).x();
++
++//      fittedParametersZPosition =  pSurface->center(geoContext).z();
+     }
+ 
+     if (isMC) {
+@@ -697,15 +710,40 @@ std::optional<const Acts::BoundTrackParameters> RootTrajectorySummaryWriterTool:
+ 
+   // The coordinate system of the Acts::PlaneSurface is defined as
+   // T = Z = normal, U = X x T = -Y, V = T x U = x
+-  auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3(0, 0, vertex.z()), Acts::Vector3(0, 0, 1));
+-  auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
+-      Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
++  //auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3(0, 0, vertex.z()), Acts::Vector3(0, 0, 1));
++  //auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++  //    Acts::Vector3(0, 0, targetZ), Acts::Vector3(0, 0, -1));
++  
++  //  if geoRotation
++  Acts::RotationMatrix3 rotation1 = Acts::RotationMatrix3::Identity();
++  rotation1.col(0) = Acts::Vector3(0, -1, 0);
++  rotation1.col(1) = Acts::Vector3(0, 0, -1);
++  rotation1.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Translation3 trans1(vertex.z(), 0., 0.);
++  Acts::Transform3 traf1(trans1 * rotation1);
++  auto startSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf1);
++
++  Acts::RotationMatrix3 rotation2 = Acts::RotationMatrix3::Identity();
++  rotation2.col(0) = Acts::Vector3(0, 1, 0);
++  rotation2.col(1) = Acts::Vector3(0, 0, -1);
++  rotation2.col(2) = Acts::Vector3(-1, 0, 0);
++  Acts::Translation3 trans2(targetZ, 0., 0.);
++  Acts::Transform3 traf2(trans2 * rotation2);
++  auto targetSurface = Acts::Surface::makeShared<Acts::PlaneSurface>(traf2);
++
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
++
++  auto mo = trafo * Acts::Vector3(momentum.x(), momentum.y(), momentum.z());
+   Acts::BoundVector params = Acts::BoundVector::Zero();
+   params[Acts::eBoundLoc0] = -vertex.y();
+   params[Acts::eBoundLoc1] = vertex.x();
+-  params[Acts::eBoundPhi] = momentum.phi();
+-  params[Acts::eBoundTheta] = momentum.theta();
++  params[Acts::eBoundPhi] = phi(mo.normalized());
++  params[Acts::eBoundTheta] = theta(mo.normalized());
+   // FIXME get charge of HepMC::GenParticle, the following does not work, e.g. for pions
+   double charge = particle->pdg_id() > 0 ? -1 : 1;
+   double MeV2GeV = 1e-3;
+diff --git a/Tracking/Acts/FaserActsKalmanFilter/test/CandidateIsolatedSmoothing_test.cxx b/Tracking/Acts/FaserActsKalmanFilter/test/CandidateIsolatedSmoothing_test.cxx
+new file mode 100644
+index 00000000..1e096746
+--- /dev/null
++++ b/Tracking/Acts/FaserActsKalmanFilter/test/CandidateIsolatedSmoothing_test.cxx
+@@ -0,0 +1,189 @@
++// Exercise the ACTS state containers and RTS smoother used by CKF2.
++#include "Acts/EventData/TrackContainer.hpp"
++#include "Acts/EventData/VectorMultiTrajectory.hpp"
++#include "Acts/EventData/VectorTrackContainer.hpp"
++#include "Acts/Surfaces/PlaneSurface.hpp"
++#include "Acts/TrackFitting/GainMatrixSmoother.hpp"
++
++#include <array>
++#include <iostream>
++#include <stdexcept>
++#include <vector>
++
++namespace {
++using Tracks = Acts::TrackContainer<Acts::VectorTrackContainer,
++                                    Acts::VectorMultiTrajectory>;
++
++void require(bool condition, const char* message) {
++  if (!condition) throw std::runtime_error(message);
++}
++
++struct State {
++  Acts::BoundVector predicted, filtered, smoothed;
++  Acts::BoundMatrix predictedCovariance, filteredCovariance, smoothedCovariance;
++  Acts::BoundMatrix jacobian;
++};
++
++std::vector<State> snapshot(const Tracks::TrackProxy& track) {
++  std::vector<State> states;
++  for (const auto state : track.trackStatesReversed()) {
++    states.push_back({state.predicted(), state.filtered(), state.smoothed(),
++                      state.predictedCovariance(), state.filteredCovariance(),
++                      state.smoothedCovariance(), state.jacobian()});
++  }
++  return states;
++}
++
++void checkEqual(const std::vector<State>& a, const std::vector<State>& b,
++                bool checkSmoothed) {
++  require(a.size() == b.size(), "State count changed");
++  for (std::size_t i = 0; i < a.size(); ++i) {
++    require(a[i].predicted == b[i].predicted &&
++                a[i].filtered == b[i].filtered &&
++                a[i].predictedCovariance == b[i].predictedCovariance &&
++                a[i].filteredCovariance == b[i].filteredCovariance &&
++                a[i].jacobian == b[i].jacobian,
++            "Smoothing changed filtering inputs");
++    if (checkSmoothed) {
++      require(a[i].smoothed == b[i].smoothed &&
++                  a[i].smoothedCovariance == b[i].smoothedCovariance,
++              "Another candidate changed saved smoothed values");
++    }
++  }
++}
++
++void run() {
++  const Acts::GeometryContext gctx;
++  const auto logger = Acts::getDefaultLogger("CandidateSmoothingTest",
++                                            Acts::Logging::WARNING);
++  const auto surface = Acts::Surface::makeShared<Acts::PlaneSurface>(
++      Acts::Transform3::Identity());
++  Acts::BoundVector base = Acts::BoundVector::Zero();
++  base[Acts::eBoundPhi] = 0.1;
++  base[Acts::eBoundTheta] = 1.0;
++  base[Acts::eBoundQOverP] = 0.001;
++
++  Acts::VectorTrackContainer backend;
++  Acts::VectorMultiTrajectory states;
++  Tracks source(backend, states);
++  const auto mask = Acts::TrackStatePropMask::Predicted |
++                    Acts::TrackStatePropMask::Filtered |
++                    Acts::TrackStatePropMask::Smoothed |
++                    Acts::TrackStatePropMask::Jacobian;
++  auto append = [&](auto track, const Acts::BoundVector& filtered,
++                    double variance) {
++    auto state = track.appendTrackState(mask);
++    state.setReferenceSurface(surface);
++    state.predicted() = base;
++    state.predictedCovariance() = 2.0 * Acts::BoundMatrix::Identity();
++    state.filtered() = filtered;
++    state.filteredCovariance() = variance * Acts::BoundMatrix::Identity();
++    state.smoothed().setZero();
++    state.smoothedCovariance().setZero();
++    state.jacobian().setIdentity();
++    state.typeFlags().set(Acts::TrackStateFlag::MeasurementFlag);
++    return state.index();
++  };
++  auto a = source.getTrack(source.addTrack());
++  append(a, base, 1.0);
++  const auto prefixTip = append(a, base, 1.0);
++  Acts::BoundVector endA = base, endB = base;
++  endA[Acts::eBoundLoc0] = 2.0;
++  endA[Acts::eBoundQOverP] = 0.002;
++  endB[Acts::eBoundLoc0] = -3.0;
++  endB[Acts::eBoundQOverP] = 0.0005;
++  append(a, endA, 0.4);
++  auto b = source.getTrack(source.addTrack());
++  b.tipIndex() = prefixTip;
++  append(b, endB, 0.8);
++  for (auto track : source) {
++    track.parameters() = base;
++    track.covariance().setIdentity();
++    track.nMeasurements() = 3;
++    track.setReferenceSurface(surface);
++  }
++  auto smooth = [&](Tracks& tracks, auto track) {
++    const auto status = Acts::GainMatrixSmoother()(
++        gctx, tracks.trackStateContainer(), track.tipIndex(), *logger);
++    require(status.ok(), "ACTS smoother failed");
++  };
++
++  // Reproduce the ownership bug: B overwrites both of A's shared ancestors.
++  smooth(source, a);
++  const auto correctA = snapshot(a);
++  smooth(source, b);
++  const auto contaminatedA = snapshot(a);
++  require(!correctA.back().smoothed.isApprox(contaminatedA.back().smoothed),
++          "Fixture did not reproduce shared parameter overwrite");
++  require(!correctA.back().smoothedCovariance.isApprox(
++              contaminatedA.back().smoothedCovariance),
++          "Fixture did not reproduce shared covariance overwrite");
++  const auto correctB = snapshot(b);
++
++  // CKF2's repair: deep-copy selected paths, then recompute their smoothing.
++  // Repeat in both candidate orders, including within one destination backend.
++  for (const bool reverse : {false, true}) {
++    Acts::VectorTrackContainer outputBackend;
++    Acts::VectorMultiTrajectory outputStates;
++    Tracks output(outputBackend, outputStates);
++    std::array<std::vector<State>, 2> saved;
++    for (unsigned int step = 0; step < 2; ++step) {
++      const unsigned int candidate = reverse ? 1 - step : step;
++      auto input = source.getTrack(candidate);
++      auto copied = output.getTrack(output.addTrack());
++      copied.copyFrom(input, true);
++      const auto before = snapshot(copied);
++      checkEqual(before, snapshot(input), true);
++      smooth(output, copied);
++      const auto after = snapshot(copied);
++      checkEqual(before, after, false);
++      checkEqual(after, candidate == 0 ? correctA : correctB, true);
++      // For identity transport, the two backward gains are both 1/2.
++      const auto& end = candidate == 0 ? endA : endB;
++      const double variance = candidate == 0 ? 0.4 : 0.8;
++      require(after.back().smoothed.isApprox(base + 0.25 * (end - base)),
++              "Incorrect candidate-specific RTS parameters");
++      require(after.back().smoothedCovariance.isApprox(
++                  (0.625 + 0.0625 * variance) * Acts::BoundMatrix::Identity()),
++              "Incorrect candidate-specific RTS covariance");
++      require(copied.nMeasurements() == input.nMeasurements() &&
++                  copied.parameters() == input.parameters() &&
++                  copied.covariance() == input.covariance(),
++              "Track metadata or reference-surface parameters changed");
++      for (const auto state : copied.trackStatesReversed()) {
++        require(state.typeFlags().test(Acts::TrackStateFlag::MeasurementFlag) &&
++                    &state.referenceSurface() == surface.get(),
++                "Measurement flags or surfaces changed");
++      }
++      saved[step] = after;
++      if (step == 1) checkEqual(saved[0], snapshot(output.getTrack(0)), true);
++      checkEqual(contaminatedA, snapshot(a), true);
++      checkEqual(correctB, snapshot(b), true);
++    }
++  }
++
++  // A one-state candidate must keep its filtered mean and covariance exactly.
++  Acts::VectorTrackContainer singleBackend;
++  Acts::VectorMultiTrajectory singleStates;
++  Tracks single(singleBackend, singleStates);
++  auto one = single.getTrack(single.addTrack());
++  append(one, endA, 0.4);
++  smooth(single, one);
++  const auto only = snapshot(one).front();
++  require(only.smoothed == only.filtered &&
++              only.smoothedCovariance == only.filteredCovariance,
++          "One-state smoothing changed the endpoint");
++}
++}  // namespace
++
++int main() {
++  try {
++    run();
++    std::cout << "Shared overwrite reproduced; isolated parameters/covariance, "
++                 "candidate order, unchanged inputs and single-state case passed\n";
++    return 0;
++  } catch (const std::exception& error) {
++    std::cerr << error.what() << '\n';
++    return 1;
++  }
++}
+diff --git a/Tracking/Acts/RootWriterTools/src/RootTrajectoryStatesWriterTool.cxx b/Tracking/Acts/RootWriterTools/src/RootTrajectoryStatesWriterTool.cxx
+index f1addacc..2a327f9a 100644
+--- a/Tracking/Acts/RootWriterTools/src/RootTrajectoryStatesWriterTool.cxx
++++ b/Tracking/Acts/RootWriterTools/src/RootTrajectoryStatesWriterTool.cxx
+@@ -273,6 +273,12 @@ StatusCode RootTrajectoryStatesWriterTool::finalize() {
+ 
+ StatusCode RootTrajectoryStatesWriterTool::write(const Acts::GeometryContext& gctx, const FaserActsTrackContainer& tracks, bool isMC) const {
+   float nan = std::numeric_limits<float>::quiet_NaN();
++  //if geometry rotation
++  Acts::RotationMatrix3 rot = Acts::RotationMatrix3::Identity();
++  rot.col(0) = Acts::Vector3(0, 0, -1);
++  rot.col(1) = Acts::Vector3(0, 1, 0);
++  rot.col(2) = Acts::Vector3(1, 0, 0);
++  Acts::Transform3 trafo(rot);
+ 
+   if (m_outputFile == nullptr)
+     return StatusCode::SUCCESS;
+@@ -409,8 +415,11 @@ StatusCode RootTrajectoryStatesWriterTool::write(const Acts::GeometryContext& gc
+               Amg::EigenTransformToCLHEP(element->transformHit()) * localStartPos;
+           const HepGeom::Point3D<double> globalEndPosition =
+               Amg::EigenTransformToCLHEP(element->transformHit()) * localEndPos;
+-          auto globalPosition = 0.5 * (globalStartPosition + globalEndPosition);
+-          auto globalDirection = globalEndPosition - globalStartPosition;
++	  //if geoRotation
++	  auto pos = 0.5 * (globalStartPosition + globalEndPosition);
++	  auto dir = globalEndPosition - globalStartPosition;
++          auto globalPosition = trafo * (Acts::Vector3(pos.x(), pos.y(), pos.z()));
++          auto globalDirection = trafo * (Acts::Vector3(dir.x(), dir.y(), dir.z()));
+           truthUnitDir += Acts::Vector3(globalDirection.x(), globalDirection.y(), globalDirection.z()).normalized();
+           truthPos += Acts::Vector3(globalPosition.x() , globalPosition.y(), globalPosition.z());
+           if(siHit->particleLink()){ 
+@@ -445,7 +454,7 @@ StatusCode RootTrajectoryStatesWriterTool::write(const Acts::GeometryContext& gc
+         m_t_dx.push_back(truthUnitDir[Acts::eMom0]);
+         m_t_dy.push_back(truthUnitDir[Acts::eMom1]);
+         m_t_dz.push_back(truthUnitDir[Acts::eMom2]);
+-        auto t_r = std::hypot(truthPos[Acts::ePos0],truthPos[Acts::ePos1]);
++        auto t_r = std::hypot(truthPos[Acts::ePos1],truthPos[Acts::ePos2]);
+         if(t_r> t_rMax){
+           t_rMax = t_r;
+         }
+@@ -516,7 +525,7 @@ StatusCode RootTrajectoryStatesWriterTool::write(const Acts::GeometryContext& gc
+       m_x_hit.push_back(global[Acts::ePos0]);
+       m_y_hit.push_back(global[Acts::ePos1]);
+       m_z_hit.push_back(global[Acts::ePos2]);
+-      auto r_hit = std::hypot(global[Acts::ePos0],global[Acts::ePos1]);
++      auto r_hit = std::hypot(global[Acts::ePos1],global[Acts::ePos2]);
+       if(r_hit>rMax_hit){
+         rMax_hit = r_hit;
+       }
+@@ -674,7 +683,7 @@ StatusCode RootTrajectoryStatesWriterTool::write(const Acts::GeometryContext& gc
+         m_x[ipar].push_back(freeParams[Acts::eFreePos0]);
+         m_y[ipar].push_back(freeParams[Acts::eFreePos1]);
+         m_z[ipar].push_back(freeParams[Acts::eFreePos2]);
+-        auto r = std::hypot(freeParams[Acts::eFreePos0], freeParams[Acts::eFreePos1]);
++        auto r = std::hypot(freeParams[Acts::eFreePos1], freeParams[Acts::eFreePos2]);
+         if(r>rMax_fit[ipar]){
+           rMax_fit[ipar] = r;
+         }
+@@ -682,8 +691,8 @@ StatusCode RootTrajectoryStatesWriterTool::write(const Acts::GeometryContext& gc
+         m_px[ipar].push_back(p * freeParams[Acts::eFreeDir0]);
+         m_py[ipar].push_back(p * freeParams[Acts::eFreeDir1]);
+         m_pz[ipar].push_back(p * freeParams[Acts::eFreeDir2]);
+-        m_pT[ipar].push_back(p * std::hypot(freeParams[Acts::eFreeDir0],
+-                                            freeParams[Acts::eFreeDir1]));
++        m_pT[ipar].push_back(p * std::hypot(freeParams[Acts::eFreeDir1],
++                                            freeParams[Acts::eFreeDir2]));
+         m_eta[ipar].push_back(Acts::VectorHelpers::eta(
+             freeParams.segment<3>(Acts::eFreeDir0)));
+       
+diff --git a/Tracking/Acts/TrackFinders/TrackFinders/TruthBasedInitialParameterTool.h b/Tracking/Acts/TrackFinders/TrackFinders/TruthBasedInitialParameterTool.h
+index 51c3df7f..a83dda28 100644
+--- a/Tracking/Acts/TrackFinders/TrackFinders/TruthBasedInitialParameterTool.h
++++ b/Tracking/Acts/TrackFinders/TrackFinders/TruthBasedInitialParameterTool.h
+@@ -7,6 +7,10 @@
+ 
+ #include "Acts/EventData/TrackParameters.hpp"
+ 
++#include "HepMC3/GenParticle.h"
++#include "Acts/EventData/detail/TransformationBoundToFree.hpp"
++
++
+ 
+ class TruthBasedInitialParameterTool : public AthAlgTool {
+  public:
+diff --git a/Tracking/Acts/TrackFinders/src/TruthBasedInitialParameterTool.cxx b/Tracking/Acts/TrackFinders/src/TruthBasedInitialParameterTool.cxx
+index 08fe9c32..b7203171 100644
+--- a/Tracking/Acts/TrackFinders/src/TruthBasedInitialParameterTool.cxx
++++ b/Tracking/Acts/TrackFinders/src/TruthBasedInitialParameterTool.cxx
+@@ -7,6 +7,12 @@
+ #include <random>
+ #include <cmath>
+ 
++#include "Acts/EventData/detail/TransformationBoundToFree.hpp"
++#include "Acts/Utilities/Helpers.hpp"
++
++#include "HepMC3/GenParticle.h"
++#include "HepMC3/GenVertex.h"
++
+ 
+ using namespace Acts::UnitLiterals;
+ 
+@@ -116,3 +122,4 @@ Acts::BoundTrackParameters TruthBasedInitialParameterTool::getInitialParameters(
+  
+   return Acts::BoundTrackParameters(perigee, params, cov, particleHypothesis); 
+ }
++
+diff --git a/build_local.sh b/build_local.sh
+new file mode 100755
+index 00000000..85aa758a
+--- /dev/null
++++ b/build_local.sh
+@@ -0,0 +1,11 @@
++#!/usr/bin/env bash
++# Usage: bash ./build_local.sh [parallel jobs, default 8]
++set -o pipefail
++georotation_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)" || exit
++source "$georotation_root/setup_environment.sh" --build || exit
++set -e
++cmake -S "$georotation_root" -B "$georotation_root/build" \
++    -DCMAKE_INSTALL_PREFIX="$georotation_root/run" \
++    -DATLAS_PACKAGE_FILTER_FILE="$georotation_root/package_filters.txt"
++cmake --build "$georotation_root/build" --parallel "${1:-8}"
++cmake --install "$georotation_root/build"
+diff --git a/package_filters.txt b/package_filters.txt
+index dfb1021d..0011ebc1 100644
+--- a/package_filters.txt
++++ b/package_filters.txt
+@@ -1,3 +1,5 @@
++-run/.*
++-build/.*
+ +Calorimeter/.*
+ +Control/.*
+ +Database/ConnectionManagement/FaserAuthentication
+diff --git a/setup_environment.sh b/setup_environment.sh
+new file mode 100755
+index 00000000..286d6d6f
+--- /dev/null
++++ b/setup_environment.sh
+@@ -0,0 +1,28 @@
++#!/usr/bin/env bash
++# Usage: source ./setup_environment.sh [--build]
++if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
++    echo 'Use: source ./setup_environment.sh [--build]' >&2
++    exit 1
++fi
++_georotation_environment() {
++    local georotation_root georotation_cwd="$PWD" georotation_status
++    georotation_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)" || return
++    export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
++    source "${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh" --quiet || return
++    cd "$georotation_root" || return
++    source "${AtlasSetup}/scripts/asetup.sh" --input="$georotation_root/asetup.faser" Athena,24.0.41
++    georotation_status=$?
++    cd "$georotation_cwd" || return
++    [[ $georotation_status -eq 0 ]] || return "$georotation_status"
++    if [[ "${1:-}" != --build ]]; then
++        [[ -f "$georotation_root/run/setup.sh" ]] || {
++            echo 'Build first with: bash ./build_local.sh' >&2
++            return 1
++        }
++        source "$georotation_root/run/setup.sh" || return
++    fi
++}
++_georotation_environment "$@"
++_georotation_status=$?
++unset -f _georotation_environment
++return "$_georotation_status"
+diff --git a/verify_local.sh b/verify_local.sh
+new file mode 100755
+index 00000000..35625a3f
+--- /dev/null
++++ b/verify_local.sh
+@@ -0,0 +1,26 @@
++#!/usr/bin/env bash
++set -o pipefail
++georotation_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)" || exit
++source "$georotation_root/setup_environment.sh" || exit
++set -e
++export GEOROTATION_VERIFY_ROOT="$georotation_root"
++python3 - <<'PY'
++import ctypes
++import os
++from pathlib import Path
++from AthenaConfiguration.ComponentFactory import CompFactory
++
++root = Path(os.environ['GEOROTATION_VERIFY_ROOT'])
++for name in ('GeoModelFaserUtilities', 'FaserActsGeometry', 'FaserActsKalmanFilter', 'NtupleDumper'):
++    path = root / 'run' / 'lib' / ('lib' + name + '.so')
++    assert path.is_file(), path
++    ctypes.CDLL(str(path), mode=os.RTLD_GLOBAL)
++    print('Loaded:', path)
++for name in ('FaserActsTrackingGeometrySvc', 'FaserActsTrackingGeometryTool', 'CKF2', 'KalmanFitterTool', 'NtupleDumperAlg'):
++    instance = CompFactory.getComp(name)('BuildVerification')
++    print('Configured:', instance.getType())
++print('Athena:', os.environ.get('AtlasVersion'))
++print('Calypso:', os.environ.get('Calypso_DIR'))
++PY
++ctest --test-dir "$georotation_root/build" \
++    -R 'GeoModelFaserUtilities_Geo(GetIds|VisitVolumes)_test|FaserActsKalmanFilter_CandidateIsolatedSmoothing'  --no-tests=error --output-on-failure

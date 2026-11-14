@@ -28,3 +28,8 @@ workbook/stage206_old_strict/full/staging_resources.txt whitespace=-blank-at-eol
 # Preserve the exact upstream waveform patch and numbered source excerpts.
 workbook/stage207_waveform_lineage/upstream_waveform_update.diff -whitespace
 workbook/stage207_waveform_lineage/source_excerpts.md whitespace=-blank-at-eol,-space-before-tab
+
+# Retain the exact pre-integration research patch and generated numeric tables.
+workbook/stage208_master_integration/*.patch -whitespace
+workbook/stage208_master_integration/**/*.tsv whitespace=cr-at-eol,-blank-at-eol
+workbook/stage208_master_integration/integration_graph.txt whitespace=-blank-at-eol

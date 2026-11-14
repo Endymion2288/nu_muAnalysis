@@ -1,0 +1,296 @@
+{
+  "run": {
+    "strict_shape": [
+      2
+    ],
+    "latest_shape": [
+      2
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 2
+  },
+  "eventID": {
+    "strict_shape": [
+      2
+    ],
+    "latest_shape": [
+      2
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 2
+  },
+  "truth_pz_nu": {
+    "strict_shape": [
+      2
+    ],
+    "latest_shape": [
+      2
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 2
+  },
+  "truth_dec_x_nu": {
+    "strict_shape": [
+      2
+    ],
+    "latest_shape": [
+      2
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 2
+  },
+  "truth_dec_y_nu": {
+    "strict_shape": [
+      2
+    ],
+    "latest_shape": [
+      2
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 2
+  },
+  "truth_dec_z_nu": {
+    "strict_shape": [
+      2
+    ],
+    "latest_shape": [
+      2
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 2
+  },
+  "event_cut_bits": {
+    "strict_shape": [
+      2,
+      3
+    ],
+    "latest_shape": [
+      2,
+      3
+    ],
+    "same_shape": true,
+    "exact": false,
+    "unequal_elements": 3,
+    "elements": 6
+  },
+  "event_individual_bits": {
+    "strict_shape": [
+      2,
+      3
+    ],
+    "latest_shape": [
+      2,
+      3
+    ],
+    "same_shape": true,
+    "exact": false,
+    "unequal_elements": 3,
+    "elements": 6
+  },
+  "event_scalars": {
+    "strict_shape": [
+      2,
+      3,
+      10
+    ],
+    "latest_shape": [
+      2,
+      3,
+      10
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 60
+  },
+  "primary": {
+    "strict_shape": [
+      2,
+      3
+    ],
+    "latest_shape": [
+      2,
+      3
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 6
+  },
+  "primary_production_momentum_mev": {
+    "strict_shape": [
+      2,
+      3
+    ],
+    "latest_shape": [
+      2,
+      3
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 6
+  },
+  "primary_station": {
+    "strict_shape": [
+      2,
+      3,
+      6
+    ],
+    "latest_shape": [
+      2,
+      3,
+      6
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 36
+  },
+  "primary_layer_hits": {
+    "strict_shape": [
+      2,
+      9
+    ],
+    "latest_shape": [
+      2,
+      9
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 18
+  },
+  "scintillator": {
+    "strict_shape": [
+      2,
+      10
+    ],
+    "latest_shape": [
+      2,
+      10
+    ],
+    "same_shape": true,
+    "exact": false,
+    "unequal_elements": 12,
+    "elements": 20
+  },
+  "raw_primary_counts": {
+    "strict_shape": [
+      2,
+      3,
+      3
+    ],
+    "latest_shape": [
+      2,
+      3,
+      3
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 18
+  },
+  "tracks": {
+    "strict_shape": [
+      3,
+      25
+    ],
+    "latest_shape": [
+      3,
+      25
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 75
+  },
+  "reco_station": {
+    "strict_shape": [
+      3,
+      3,
+      6
+    ],
+    "latest_shape": [
+      3,
+      3,
+      6
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 54
+  },
+  "reco_at_primary_station": {
+    "strict_shape": [
+      3,
+      3,
+      6
+    ],
+    "latest_shape": [
+      3,
+      3,
+      6
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 54
+  },
+  "matched_truth_station": {
+    "strict_shape": [
+      3,
+      3,
+      6
+    ],
+    "latest_shape": [
+      3,
+      3,
+      6
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 54
+  },
+  "nearest_state_dz_mm": {
+    "strict_shape": [
+      3,
+      3
+    ],
+    "latest_shape": [
+      3,
+      3
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 9
+  },
+  "station_method": {
+    "strict_shape": [
+      3,
+      3
+    ],
+    "latest_shape": [
+      3,
+      3
+    ],
+    "same_shape": true,
+    "exact": true,
+    "unequal_elements": 0,
+    "elements": 9
+  }
+}
