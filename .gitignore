@@ -350,3 +350,9 @@ ntuples/tracking_covariance_stage210/
 workbook/stage210_covariance/**/*.npz
 workbook/stage210_covariance/*.npz
 !workbook/stage210_covariance/**/*.png
+
+# Stage211-212 Run 3 scintillator timing audit & calibration caches
+ntuples/timing_stage211/
+ntuples/timing_stage212/
+!workbook/stage211_timing_t0/**/*.png
+!workbook/stage212_timing_t1/**/*.png
