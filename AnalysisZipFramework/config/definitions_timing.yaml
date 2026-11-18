@@ -1,0 +1,182 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# nuAnalysis timing-aware definitions config (Stage T3 / Stage 214)
+# Extends definitions.yaml with Zone A/B, orthogonal blinding guard, and S0/S1/S2
+# selection flags for use with `./analysis --timing-calib <dir>`.
+# ─────────────────────────────────────────────────────────────────────────────
+
+Definitions:
+
+  # ── MC truth ([0] is the incoming neutrino; SafeAt guards against empty truth vectors) ──
+  truth_dec_r:
+    expression: "Radius(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0))"
+    data_type: ASIMOV
+
+  is_cc:
+    expression: "Contains(abs(truth_pdg), {11, 13, 15})"
+    data_type: ASIMOV
+
+  decay_box:
+    expression: "inFaserNuBox(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))"
+    data_type: ASIMOV
+
+  decay_lead:
+    expression: "inLeadBlock(SafeAt(truth_dec_x, 0), SafeAt(truth_dec_y, 0), SafeAt(truth_dec_z, 0))"
+    data_type: ASIMOV
+
+  inCaloNuPMT:    # always cut on in MC (material mismodelling); NaN-safe, also defined for data
+    expression: "inCaloNuPMT(SafeAt(truth_dec_z, 0))"
+
+  truth_pz_nu:    # GeV
+    expression: "SafeAt(truth_pz, 0) / 1000"
+    data_type: ASIMOV
+
+  truth_dec_x_nu:
+    expression: "SafeAt(truth_dec_x, 0)"
+
+  truth_dec_y_nu:
+    expression: "SafeAt(truth_dec_y, 0)"
+
+  truth_dec_z_nu:
+    expression: "SafeAt(truth_dec_z, 0)"
+
+  # ── CaloNu period scintillator status cleaning (data) ────────────────────────
+  caloNuVeto2StatusBug:
+    expression: "(Veto20_status == 528 || Veto21_status == 528) && isCaloNuPeriod"
+    data_type: DATA
+
+  caloNuVetoNuStatusKeep:
+    expression: "GoodVetoNuStatus && isCaloNuPeriod"
+    data_type: DATA
+
+  caloNuStatusCleaning:
+    expression: "!isCaloNuPeriod || (!caloNuVeto2StatusBug && caloNuVetoNuStatusKeep)"
+    data_type: DATA
+
+  # ── Timing station ───────────────────────────────────────────────────────────
+  Timing_charge_bottom:
+    expression: "Timing0_charge + Timing1_charge"
+
+  Timing_charge_top:
+    expression: "Timing2_charge + Timing3_charge"
+
+  Timing_charge_total:
+    expression: "Timing_charge_top + Timing_charge_bottom"
+
+  # ── Tracks ───────────────────────────────────────────────────────────────────
+  hasLeadTrack:
+    expression: "Track_pz0.size() > 0"
+
+  LeadTrack_Idx:
+    expression: "Track_pz0.empty() ? -1 : static_cast<int>(ROOT::VecOps::ArgMax(Track_pz0))"
+
+  Track_rVetoNu:
+    expression: "Radius(Track_X_atVetoNu, Track_Y_atVetoNu)"
+
+  Lead_Track_Y_atTrig:
+    expression: "SafeAt(Track_Y_atTrig, LeadTrack_Idx)"
+
+  hitsTiming:
+    expression: "((Lead_Track_Y_atTrig > 20 && Timing_charge_top > 20) ||
+                  (Lead_Track_Y_atTrig < -20 && Timing_charge_bottom > 20) ||
+                  (fabs(Lead_Track_Y_atTrig) < 20 && Timing_charge_total > 20))"
+
+  Track_rVetoStation1:
+    expression: "Radius(SafeAt(Track_X_atVetoStation1, LeadTrack_Idx), SafeAt(Track_Y_atVetoStation1, LeadTrack_Idx))"
+
+  Track_rVetoStation2:
+    expression: "Radius(SafeAt(Track_X_atVetoStation2, LeadTrack_Idx), SafeAt(Track_Y_atVetoStation2, LeadTrack_Idx))"
+
+  Track_rIFT:
+    expression: "Radius(Track_X_atVetoStation2, Track_Y_atVetoStation2)"
+
+  Track_Theta:
+    expression: "Theta(Track_px0, Track_py0, Track_pz0)"
+
+  LeadTrack_pz0:      # GeV
+    expression: "SafeAt(Track_pz0, LeadTrack_Idx) / 1000"
+
+  LeadTrack_Theta:    # mrad
+    expression: "SafeAt(Track_Theta, LeadTrack_Idx) * 1000"
+
+  LeadTrack_nLayers:
+    expression: "SafeAt(Track_nLayers, LeadTrack_Idx)"
+
+  LeadTrack_nDoF:
+    expression: "SafeAt(Track_nDoF, LeadTrack_Idx)"
+
+  LeadTrack_Chi2:
+    expression: "SafeAt(Track_Chi2, LeadTrack_Idx)"
+
+  LeadTrack_Chi2_NDF:
+    expression: "LeadTrack_Chi2 / LeadTrack_nDoF"
+
+  LeadTrack_rVetoNu:
+    expression: "SafeAt(Track_rVetoNu, LeadTrack_Idx)"
+
+  LeadTrack_r_atMaxRadius:
+    expression: "SafeAt(Track_r_atMaxRadius, LeadTrack_Idx)"
+
+  LeadTrack_rIFT:
+    expression: "SafeAt(Track_rIFT, LeadTrack_Idx)"
+
+  LeadTrack_charge:
+    expression: "SafeAt(Track_charge, LeadTrack_Idx)"
+
+  LeadTrack_qop:
+    expression: "LeadTrack_charge / SafeAt(Track_pz0, LeadTrack_Idx)"
+
+  # ── Timing Zone A/B & S0/S1/S2 Columns (require --timing-calib) ──
+  # Timing_Allow_SR_ZoneB (DATA=false, ASIMOV=true) and VetoNu{0,1}_zone_a
+  # (reduced_charge < 30 with raw_charge < 40 fallback) are registered in C++
+  # by Analysis::defineTimingCalibrationColumns().
+
+  Timing_ZoneA:
+    expression: "VetoNu0_zone_a && VetoNu1_zone_a"
+
+  VetoNu0_active:
+    expression: "!VetoNu0_zone_a"
+
+  VetoNu1_active:
+    expression: "!VetoNu1_zone_a"
+
+  Timing_n_active:
+    expression: "(VetoNu0_active ? 1 : 0) + (VetoNu1_active ? 1 : 0)"
+
+  Timing_down_ok:
+    expression: "n_down_used >= 2 && std::isfinite(t0_down) && (ndof_down <= 0 || (chi2_down / std::max(ndof_down, 1)) < 5.0)"
+
+  VetoNu0_wave_ok:
+    expression: "VetoNu0_timing_valid && std::isfinite(VetoNu0_dt) && std::isfinite(VetoNu0_width) && VetoNu0_width > 1.5 && VetoNu0_width < 19.5"
+
+  VetoNu1_wave_ok:
+    expression: "VetoNu1_timing_valid && std::isfinite(VetoNu1_dt) && std::isfinite(VetoNu1_width) && VetoNu1_width > 1.5 && VetoNu1_width < 19.5"
+
+  Timing_act_wave_ok:
+    expression: "(!VetoNu0_active || VetoNu0_wave_ok) && (!VetoNu1_active || VetoNu1_wave_ok)"
+
+  VetoNu0_mip_band:
+    expression: "VetoNu0_raw_charge >= 55.0 && VetoNu0_raw_charge <= 130.0"
+
+  VetoNu1_mip_band:
+    expression: "VetoNu1_raw_charge >= 55.0 && VetoNu1_raw_charge <= 130.0"
+
+  passed_S0:
+    expression: "Timing_ZoneA"
+
+  passed_S1_zoneB:
+    expression: "!Timing_ZoneA && Timing_Allow_SR_ZoneB && Timing_down_ok && Timing_act_wave_ok &&
+                 ((Timing_n_active == 2 && VetoNu0_dt > 2.2 && VetoNu0_dt < 22.0 && VetoNu1_dt > 2.2 && VetoNu1_dt < 22.0) ||
+                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt > 3.0 && VetoNu0_dt < 22.0) ||
+                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt > 3.0 && VetoNu1_dt < 22.0))"
+
+  passed_S1:
+    expression: "passed_S0 || passed_S1_zoneB"
+
+  passed_S2_zoneB:
+    expression: "!Timing_ZoneA && Timing_Allow_SR_ZoneB && Timing_down_ok && Timing_act_wave_ok &&
+                 ((Timing_n_active == 2 && VetoNu0_dt < 22.0 && VetoNu1_dt < 22.0 && std::isfinite(delta_chi2_back) && delta_chi2_back > 25.0 && VetoNu0_pull > 3.0 && VetoNu1_pull > 3.0) ||
+                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt < 22.0 && VetoNu0_pull > (VetoNu0_mip_band ? 6.0 : 5.0)) ||
+                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt < 22.0 && VetoNu1_pull > (VetoNu1_mip_band ? 6.0 : 5.0)))"
+
+  passed_S2:
+    expression: "passed_S0 || passed_S2_zoneB"

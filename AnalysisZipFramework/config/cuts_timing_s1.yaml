@@ -1,0 +1,145 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# nuAnalysis S1 selection config (Stage T3 / Stage 214):
+# Zone A (pure-charge veto) OR blinded-safe Zone B backward-hadron timing window.
+# Use with:
+#   ./analysis --timing-calib <dir> --definitions-config config/definitions_timing.yaml --cuts-config config/cuts_timing_s1.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+
+Histograms: []
+
+Cuts:
+
+  # ── Data quality (data only) ──────────────────────────────────────────────
+  Colliding:
+    expression: "distanceToCollidingBCID == 0"
+    data_type: DATA
+
+  Trigger:
+    expression: "(inputBits & 0x8) == 0x8 || (inputBits & 0x10) == 0x10 || (inputBits & 0x20) == 0x20 || (inputBits & 0x40) == 0x40"
+    data_type: DATA
+
+  Good times:
+    expression: "GoodTimes"
+    data_type: DATA
+
+  Excluded times:
+    expression: "!ExcludedTimes"
+    data_type: DATA
+    histograms:
+      - name: crossingAngle
+        title: Crossing angle
+        x: {variable: crossingAngle, bins: 400, min: -200, max: 200}
+
+  # ── MC truth selection ────────────────────────────────────────────────────
+  Remove CaloNu PMT region (truth):
+    expression: "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)"
+    data_type: ASIMOV
+
+  CC events only:
+    expression: "is_cc"
+    data_type: MC
+
+  nu_mu only:
+    expression: "abs(SafeAt(truth_pdg, 0)) == 14"
+    data_type: MC
+    histograms:
+      - name: truth_pz_nu_preFiducialCuts
+        title: Truth pz (pre-fiducial)
+        data_type: ASIMOV
+        x: {variable: truth_pz_nu, bins: 200, min: 0, max: 10000}
+
+  In Faser Nu Box or Lead Block:
+    expression: "decay_box || decay_lead"
+    data_type: MC
+
+  Truth dec r < 100 mm:
+    expression: "truth_dec_r < 100"
+    data_type: MC
+    histograms:
+      - name: truth_pz_nu
+        title: Truth pz
+        data_type: ASIMOV
+        x: {variable: truth_pz_nu, bins: 200, min: 0, max: 10000}
+
+  Truth pz > 100 GeV:
+    expression: "truth_pz_nu > 100"
+    data_type: MC
+
+  # ── Reconstruction selection ──────────────────────────────────────────────
+  At least one long track:
+    expression: "longTracks > 0"
+
+  CaloNu status cleaning:
+    expression: "caloNuStatusCleaning"
+    data_type: DATA
+
+  Veto20 and Veto21 charge > 40 pC:
+    expression: "Veto20_charge > 40 && Veto21_charge > 40"
+
+  Timing Station Charge > 20 pC:
+    expression: "hitsTiming"
+
+  Preshower Charge > 2.5 pC:
+    expression: "Preshower0_charge > 2.5 && Preshower1_charge > 2.5"
+
+  Track pz > 100 GeV:
+    expression: "LeadTrack_pz0 > 100"
+
+  Leading track has at >= 7 layers:
+    expression: "LeadTrack_nLayers >= 7"
+
+  Track nDoF >= 9:
+    expression: "LeadTrack_nDoF >= 9"
+
+  Leading track has chi2/ndof < 15:
+    expression: "LeadTrack_Chi2_NDF < 15"
+
+  Track R at max radius < 95 mm:
+    expression: "LeadTrack_r_atMaxRadius < 95"
+
+  Track R at IFT < 95 mm:
+    expression: "LeadTrack_rIFT < 95"
+
+  Track rVetoNu < 120 mm:
+    expression: "LeadTrack_rVetoNu < 120"
+
+  Leading track theta < 25 mrad:
+    expression: "LeadTrack_Theta < 25"
+
+  # ── Aux lookup & pre-VetoNu histograms (ASIMOV-only for unblinded timing) ─
+  Sanity cut to remove events with missing aux data:
+    expression: "AuxLookupSuccess"
+    requires: [aux_reduced_charge]
+    histograms:
+      - name: VetoNu0_dt_preVetoNu
+        title: VetoNu0 dt (pre-VetoNu, MC/Asimov)
+        data_type: ASIMOV
+        x: {variable: VetoNu0_dt, bins: 160, min: -10, max: 30}
+      - name: VetoNu1_dt_preVetoNu
+        title: VetoNu1 dt (pre-VetoNu, MC/Asimov)
+        data_type: ASIMOV
+        x: {variable: VetoNu1_dt, bins: 160, min: -10, max: 30}
+      - name: t0_down_preVetoNu
+        title: Trimmed downstream t0 (pre-VetoNu)
+        x: {variable: t0_down, bins: 160, min: -4, max: 4}
+
+  # ── S1 VetoNu Zone A + Timing-Rescued Zone B (Data SR-ZoneB locked by Timing_Allow_SR_ZoneB) ─
+  VetoNu S1 ZoneA or Timing Rescue:
+    expression: "passed_S1"
+    histograms:
+      - name: VetoNu0_reduced_charge_postS1
+        title: VetoNu0 reduced charge (post-S1)
+        requires: [reduced_charge]
+        x: {variable: VetoNu0_reduced_charge, bins: 501, min: -1, max: 500}
+      - name: VetoNu1_reduced_charge_postS1
+        title: VetoNu1 reduced charge (post-S1)
+        requires: [reduced_charge]
+        x: {variable: VetoNu1_reduced_charge, bins: 501, min: -1, max: 500}
+      - name: truth_dec_z_nu_postS1
+        title: Truth decay z (post-S1)
+        data_type: ASIMOV
+        x: {variable: truth_dec_z_nu, bins: 200, min: -3050, max: -1550}
+      - name: truth_pz_nu_postS1
+        title: Truth pz (post-S1)
+        data_type: ASIMOV
+        x: {variable: truth_pz_nu, bins: 200, min: 0, max: 4000}

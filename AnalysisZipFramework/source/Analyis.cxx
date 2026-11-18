@@ -1097,7 +1097,12 @@ void Analysis::defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPres
             [calib, hasRedQ](Int_t run, const RawInputArray& inputs, Float_t q0, Float_t q1) -> TimingEventSummary {
                 TimingEventSummary s;
                 s.evt = calib->calibrateDataEvent(run, inputs, calib->hasTofMaps(), true);
-                s.down = TimingCalib::TimingCalibrator::fitDownstreamReference(s.evt);
+                const auto& t01In = inputs[static_cast<int>(TimingCalib::TimingChannel::Timing01)];
+                const auto& t23In = inputs[static_cast<int>(TimingCalib::TimingChannel::Timing23)];
+                const double leadYTrig = t01In.validPos ? t01In.yMm
+                                                        : (t23In.validPos ? t23In.yMm : std::numeric_limits<double>::quiet_NaN());
+                s.down = TimingCalib::TimingCalibrator::fitDownstreamReferenceMode(
+                    s.evt, TimingCalib::DownstreamMode::Trimmed3Sigma, leadYTrig, &inputs);
                 s.speed = TimingCalib::TimingCalibrator::fitSpeedAndArrival(s.evt);
                 const bool act0 = hasRedQ ? ((q0 >= 0.0f) ? (q0 >= 30.0f) : (inputs[0].rawCharge >= 40.0)) : (inputs[0].rawCharge >= 40.0);
                 const bool act1 = hasRedQ ? ((q1 >= 0.0f) ? (q1 >= 30.0f) : (inputs[1].rawCharge >= 40.0)) : (inputs[1].rawCharge >= 40.0);
@@ -1110,7 +1115,12 @@ void Analysis::defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPres
             [calib, hasRedQ](Int_t run, Int_t eventID, const RawInputArray& inputs, Float_t q0, Float_t q1) -> TimingEventSummary {
                 TimingEventSummary s;
                 s.evt = calib->calibrateMCEvent(run, static_cast<int64_t>(eventID), inputs, true, true);
-                s.down = TimingCalib::TimingCalibrator::fitDownstreamReference(s.evt);
+                const auto& t01In = inputs[static_cast<int>(TimingCalib::TimingChannel::Timing01)];
+                const auto& t23In = inputs[static_cast<int>(TimingCalib::TimingChannel::Timing23)];
+                const double leadYTrig = t01In.validPos ? t01In.yMm
+                                                        : (t23In.validPos ? t23In.yMm : std::numeric_limits<double>::quiet_NaN());
+                s.down = TimingCalib::TimingCalibrator::fitDownstreamReferenceMode(
+                    s.evt, TimingCalib::DownstreamMode::Trimmed3Sigma, leadYTrig, &inputs);
                 s.speed = TimingCalib::TimingCalibrator::fitSpeedAndArrival(s.evt);
                 const bool act0 = hasRedQ ? ((q0 >= 0.0f) ? (q0 >= 30.0f) : (inputs[0].rawCharge >= 40.0)) : (inputs[0].rawCharge >= 40.0);
                 const bool act1 = hasRedQ ? ((q1 >= 0.0f) ? (q1 >= 30.0f) : (inputs[1].rawCharge >= 40.0)) : (inputs[1].rawCharge >= 40.0);
@@ -1203,6 +1213,22 @@ void Analysis::defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPres
             return s.evt.channels[c].valid ? s.evt.channels[c].sigmaCalNs : std::numeric_limits<double>::quiet_NaN();
         }, {"_timing_evt_summary"}, ALL, origin);
     }
+
+    // Orthogonal blinding lock & Zone A charge definitions for YAML timing selection configs
+    Define("Timing_Allow_SR_ZoneB", [](Int_t) -> bool { return false; }, {"run"}, DATA, origin);
+    Define("Timing_Allow_SR_ZoneB", [](Int_t) -> bool { return true; }, {"run"}, ASIMOV, origin);
+    Define("VetoNu0_zone_a",
+        [hasRedQ](Float_t q0, const RawInputArray& inputs) -> bool {
+            const double qr = inputs[0].rawCharge;
+            return hasRedQ ? ((q0 >= 0.0f) ? (q0 < 30.0f) : (qr < 40.0)) : (qr < 40.0);
+        },
+        {q0Col, "_timing_raw_inputs"}, ALL, origin);
+    Define("VetoNu1_zone_a",
+        [hasRedQ](Float_t q1, const RawInputArray& inputs) -> bool {
+            const double qr = inputs[1].rawCharge;
+            return hasRedQ ? ((q1 >= 0.0f) ? (q1 < 30.0f) : (qr < 40.0)) : (qr < 40.0);
+        },
+        {q1Col, "_timing_raw_inputs"}, ALL, origin);
 }
 
 // Main analysis function that runs the analysis and applies cuts, then saves the output to a file if specified.
