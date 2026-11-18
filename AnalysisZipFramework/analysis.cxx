@@ -30,6 +30,7 @@ int main(int argc, char* argv[]) {
     std::string outputConfigPath = "config/output_columns.yaml";
     std::string cutsConfigPath   = "config/cuts.yaml";
     std::string definitionsConfigPath = "config/definitions.yaml";
+    std::string timingCalibDir   = "";
     // Alternative to --run: take all .root files in these directories (file config not used)
     std::vector<std::string> inputDirs;
     std::vector<std::string> auxDirs;
@@ -105,6 +106,13 @@ int main(int argc, char* argv[]) {
             }
             definitionsConfigPath = argv[++i];
 
+        } else if (arg == "--timing-calib") {
+            if (i + 1 >= argc) {
+                ERROR("Error: --timing-calib requires an argument.");
+                return 1;
+            }
+            timingCalibDir = argv[++i];
+
         } else if (arg == "--isMC") {
             isMC = true;
             INFO("Running in MC mode: GRL, BCID and trigger cuts will be skipped.");
@@ -145,7 +153,7 @@ int main(int argc, char* argv[]) {
 
         } else {
             ERROR("Unknown argument: ", arg);
-            ERROR("Usage: ", argv[0], " (--run <run_number> | --input-dir <dir> [--aux-dir <dir>]) [--output <file>] [--file-config <yaml>] [--grl-config <yaml>] [--output-config <yaml>] [--definitions-config <yaml>] [--cuts-config <yaml>] [-j [n]] [--isMC] [--isAsimov] [--no-reduced-charge] [-v]");
+            ERROR("Usage: ", argv[0], " (--run <run_number> | --input-dir <dir> [--aux-dir <dir>]) [--output <file>] [--file-config <yaml>] [--grl-config <yaml>] [--output-config <yaml>] [--definitions-config <yaml>] [--cuts-config <yaml>] [--timing-calib <dir>] [-j [n]] [--isMC] [--isAsimov] [--no-reduced-charge] [-v]");
             return 1;
         }
     }
@@ -264,6 +272,9 @@ int main(int argc, char* argv[]) {
     analysis.setOutputColumns(outputConfig);
     analysis.setDefinitions(definitions);
     analysis.setSelection(selection);
+    if (!timingCalibDir.empty()) {
+        analysis.setTimingCalibration(timingCalibDir);
+    }
     // Catch exceptions so that buffered log messages are flushed and the job exits with a
     // non-zero code (an uncaught exception aborts before std::cout is flushed)
     try {

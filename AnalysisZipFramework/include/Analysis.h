@@ -12,6 +12,7 @@
 #include "MessageService.hpp"
 #include "GRLUtils.h"
 #include "ConfigUtils.h"
+#include "TimingCalibration.h"
 #include <memory>
 #include <stdexcept>
 
@@ -60,6 +61,10 @@ class Analysis {
 
         // Cuts and histograms to apply (see config/cuts.yaml). Required before Run().
         void setSelection(const ConfigUtils::SelectionConfig& selection) { m_selection = selection; }
+
+        // Optional Stage T1 Run 3 scintillator timing calibration tables directory.
+        // When unset, BuildDataFrame() leaves all columns and outputs bit-for-bit unchanged.
+        void setTimingCalibration(const std::string& calibDir);
 
         // ── Adding columns ───────────────────────────────────────────────────
         // All new columns (built-in C++ and config/definitions.yaml) go through these methods, so
@@ -206,5 +211,10 @@ class Analysis {
         bool requirementsMet(const std::vector<std::string>& requirements, std::string& why) const;
 
         std::vector<ROOT::RDF::RResultPtr<TH1>> m_histResults;
+
+        // Optional Stage T1 timing calibration state (nullptr unless --timing-calib is set)
+        std::shared_ptr<const TimingCalib::TimingCalibrator> m_timingCalib;
+        std::vector<std::string> m_internalTimingColumns;
+        void defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPreshower23, bool hasMuon);
 
 };
