@@ -1,0 +1,37 @@
+{
+  "n_data_runs_evaluated": 40,
+  "n_data_blinded_excluded": 2988315,
+  "n_fluka_runs_evaluated": 19,
+  "max_dt01_width_rel_diff_pct": 3.98,
+  "dt01_width_agreement_lt_5pct": true,
+  "data_kin_sr_t0down_cov": 1.0,
+  "data_kin_sr_veto2_cov": 0.928947,
+  "fluka_kin_sr_t0down_cov": 1.0,
+  "fluka_kin_sr_veto2_cov": 0.896495,
+  "sf_chi2_down_3p0_prompt": 1.00283,
+  "sf_chi2_down_3p0_shower_sb": 1.01276,
+  "sf_chi2_down_3p0_all1trk": 1.00174,
+  "genie_nu_mu_cc_coverage": {
+    "2022_2023": {
+      "n_kin_sr": 71347,
+      "n_t0_down_valid": 71326,
+      "n_veto2_non_sat": 44223,
+      "t0_down_valid_cov": 0.999706,
+      "veto2_non_sat_cov": 0.61983
+    },
+    "2024_noCaloNu": {
+      "n_kin_sr": 79259,
+      "n_t0_down_valid": 79237,
+      "n_veto2_non_sat": 45595,
+      "t0_down_valid_cov": 0.999722,
+      "veto2_non_sat_cov": 0.575266
+    },
+    "2024_CaloNu": {
+      "n_kin_sr": 41370,
+      "n_t0_down_valid": 41342,
+      "n_veto2_non_sat": 19759,
+      "t0_down_valid_cov": 0.999323,
+      "veto2_non_sat_cov": 0.477617
+    }
+  }
+}

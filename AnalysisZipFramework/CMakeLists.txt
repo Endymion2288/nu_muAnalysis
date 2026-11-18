@@ -90,7 +90,21 @@ target_link_libraries(timing_calib_scanner
                       )
 
 target_compile_features(timing_calib_scanner PRIVATE cxx_std_17)
+
+add_executable(mc_timing_scanner mc_timing_scanner.cxx ${sources})
+
+target_compile_definitions(mc_timing_scanner PRIVATE
+    PROJECT_INCLUDE_DIR="${CMAKE_SOURCE_DIR}/include"
+)
+
+target_link_libraries(mc_timing_scanner
+                      nlohmann_json::nlohmann_json
+                      ${YAML_CPP_TARGET}
+                      ${ROOT_LIBRARIES}
+                      )
+
+target_compile_features(mc_timing_scanner PRIVATE cxx_std_17)
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS analysis timing_calib_scanner DESTINATION bin)
+install(TARGETS analysis timing_calib_scanner mc_timing_scanner DESTINATION bin)

@@ -463,10 +463,9 @@ void Analysis::BuildDataFrame() {
 
     if (m_timingCalib) {
         if (isMC) {
-            INFO("TimingCalibration: DATA calibration columns skipped for MC/Asimov (MC smearing scheduled for T2).");
-        } else {
-            defineTimingCalibrationColumns(hasNativeVeto11, hasPreshower23, hasMuon);
+            setupMCTimingCompatibility();
         }
+        defineTimingCalibrationColumns(hasNativeVeto11, hasPreshower23, hasMuon);
     }
 
     // ── Definitions from config/definitions.yaml ────────────────────────────
@@ -844,6 +843,7 @@ struct TimingEventSummary {
     TimingCalib::EventTimingOutput evt;
     TimingCalib::DownstreamRefResult down;
     TimingCalib::SpeedFitResult speed;
+    TimingCalib::BackwardHypoResult back;
 };
 
 void extractLeadPos(const ROOT::VecOps::RVec<double>& tkPz,
@@ -898,6 +898,36 @@ void attachSingleChannel(Analysis& owner,
         origin);
 }
 
+void attachSingleChannelMC(Analysis& owner,
+                           TimingCalib::TimingChannel ch,
+                           const std::string& prefix,
+                           const std::string& xCol,
+                           const std::string& yCol,
+                           const std::string& origin) {
+    const int chIdx = static_cast<int>(ch);
+    owner.Redefine("_timing_raw_inputs",
+        [chIdx](const RawInputArray& prev,
+                Int_t st, Float_t loc, Float_t qRaw, Float_t width,
+                const ROOT::VecOps::RVec<double>& tkPz,
+                const ROOT::VecOps::RVec<double>& tkX,
+                const ROOT::VecOps::RVec<double>& tkY) -> RawInputArray {
+            RawInputArray out = prev;
+            auto& slot = out[chIdx];
+            slot.present = true;
+            slot.goodStatus = TimingCalib::TimingCalibrator::isGoodWaveformStatus(st);
+            slot.localTime = static_cast<double>(loc);
+            slot.rawCharge = static_cast<double>(qRaw);
+            slot.width = static_cast<double>(width);
+            extractLeadPos(tkPz, tkX, tkY, slot.xMm, slot.yMm, slot.validPos);
+            return out;
+        },
+        {"_timing_raw_inputs",
+         prefix + "_status", prefix + "_localtime",
+         prefix + "_raw_charge", prefix + "_width",
+         "Track_pz0", xCol, yCol},
+        origin);
+}
+
 void attachTimingPair(Analysis& owner,
                       TimingCalib::TimingChannel ch,
                       const std::string& prefix0,
@@ -930,25 +960,88 @@ void attachTimingPair(Analysis& owner,
         origin);
 }
 
+void attachTimingPairMC(Analysis& owner,
+                        TimingCalib::TimingChannel ch,
+                        const std::string& prefix0,
+                        const std::string& prefix1,
+                        const std::string& origin) {
+    const int chIdx = static_cast<int>(ch);
+    owner.Redefine("_timing_raw_inputs",
+        [chIdx](const RawInputArray& prev,
+                Int_t st0, Float_t loc0, Float_t q0, Float_t w0,
+                Int_t st1, Float_t loc1, Float_t q1, Float_t w1,
+                const ROOT::VecOps::RVec<double>& tkPz,
+                const ROOT::VecOps::RVec<double>& tkX,
+                const ROOT::VecOps::RVec<double>& tkY) -> RawInputArray {
+            RawInputArray out = prev;
+            double xMm = 999999.0, yMm = 999999.0;
+            bool validPos = false;
+            extractLeadPos(tkPz, tkX, tkY, xMm, yMm, validPos);
+            out[chIdx] = TimingCalib::TimingCalibrator::combineTimingPairMC(
+                TimingCalib::TimingCalibrator::isGoodWaveformStatus(st0), loc0, q0, w0,
+                TimingCalib::TimingCalibrator::isGoodWaveformStatus(st1), loc1, q1, w1,
+                xMm, yMm, validPos);
+            return out;
+        },
+        {"_timing_raw_inputs",
+         prefix0 + "_status", prefix0 + "_localtime", prefix0 + "_raw_charge", prefix0 + "_width",
+         prefix1 + "_status", prefix1 + "_localtime", prefix1 + "_raw_charge", prefix1 + "_width",
+         "Track_pz0", "Track_X_atTrig", "Track_Y_atTrig"},
+        origin);
+}
+
 } // namespace
 
 void Analysis::setTimingCalibration(const std::string& calibDir) {
     auto cal = std::make_shared<TimingCalib::TimingCalibrator>();
     cal->loadFromDirectory(calibDir);
     m_timingCalib = std::move(cal);
-    INFO("Loaded Stage T1 scintillator timing calibration from ", calibDir);
+    INFO("Loaded Stage T1/T2 scintillator timing calibration from ", calibDir);
+}
+
+void Analysis::setupMCTimingCompatibility() {
+    const std::array<const char*, 16> prefixes = {{
+        "VetoNu0", "VetoNu1", "Veto10", "Veto11", "Veto20", "Veto21",
+        "Timing0", "Timing1", "Timing2", "Timing3",
+        "Preshower0", "Preshower1", "Preshower2", "Preshower3",
+        "Muon0", "Muon1"
+    }};
+    std::vector<std::string> aliased;
+    for (const char* p : prefixes) {
+        const std::string pfx(p);
+        const std::string locName = pfx + "_localtime";
+        const std::string oldName = pfx + "_time";
+        if (!isColumnDefined(locName) && isColumnDefined(oldName)) {
+            Alias(locName, oldName, "MC timing compatibility (old *_time naming)");
+            aliased.push_back(oldName + " -> " + locName);
+        }
+    }
+    if (!aliased.empty()) {
+        INFO("MC timing compatibility: aliased ", aliased.size(), " *_time branches to *_localtime (e.g. ", aliased.front(), ").");
+    }
 }
 
 void Analysis::defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPreshower23, bool hasMuon) {
-    const std::string origin = "timing calibration (Stage T1)";
-    if (!isColumnDefined("VetoNu0_bcidtime") || !isColumnDefined("VetoNu0_triggertime")) {
-        WARNING("TimingCalibration: input lacks *_bcidtime / *_triggertime branches; skipping calibrated timing columns.");
-        return;
+    const std::string origin = isMC ? "timing calibration (Stage T2)" : "timing calibration (Stage T1)";
+    if (!isMC) {
+        if (!isColumnDefined("VetoNu0_bcidtime") || !isColumnDefined("VetoNu0_triggertime")) {
+            WARNING("TimingCalibration: DATA input lacks *_bcidtime / *_triggertime branches; skipping calibrated timing columns.");
+            return;
+        }
+    } else {
+        if (!isColumnDefined("VetoNu0_localtime")) {
+            WARNING("TimingCalibration: MC input lacks *_localtime (*_time) branches; skipping calibrated timing columns.");
+            return;
+        }
+        if (!m_timingCalib->hasMcCalib()) {
+            WARNING("TimingCalibration: mc_timing_calib.json not loaded; skipping MC timing columns.");
+            return;
+        }
     }
 
     Define("_timing_raw_inputs",
         [](Int_t) -> RawInputArray { return RawInputArray{}; },
-        {"run"}, DATA, origin);
+        {"run"}, ALL, origin);
     m_internalTimingColumns.push_back("_timing_raw_inputs");
 
     struct SingleSpec {
@@ -976,63 +1069,113 @@ void Analysis::defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPres
     for (const auto& s : singles) {
         if (!s.present) continue;
         const std::string pfx = s.prefix;
-        if (!isColumnDefined(pfx + "_status") || !isColumnDefined(pfx + "_bcidtime") ||
-            !isColumnDefined(s.xCol) || !isColumnDefined(s.yCol)) {
+        if (!isColumnDefined(pfx + "_status") || !isColumnDefined(s.xCol) || !isColumnDefined(s.yCol)) {
             continue;
         }
-        attachSingleChannel(*this, s.ch, pfx, s.xCol, s.yCol, origin);
+        if (!isMC) {
+            if (!isColumnDefined(pfx + "_bcidtime") || !isColumnDefined(pfx + "_triggertime")) continue;
+            attachSingleChannel(*this, s.ch, pfx, s.xCol, s.yCol, origin);
+        } else {
+            if (!isColumnDefined(pfx + "_localtime")) continue;
+            attachSingleChannelMC(*this, s.ch, pfx, s.xCol, s.yCol, origin);
+        }
     }
-    attachTimingPair(*this, TimingCalib::TimingChannel::Timing01, "Timing0", "Timing1", origin);
-    attachTimingPair(*this, TimingCalib::TimingChannel::Timing23, "Timing2", "Timing3", origin);
+    if (!isMC) {
+        attachTimingPair(*this, TimingCalib::TimingChannel::Timing01, "Timing0", "Timing1", origin);
+        attachTimingPair(*this, TimingCalib::TimingChannel::Timing23, "Timing2", "Timing3", origin);
+    } else {
+        attachTimingPairMC(*this, TimingCalib::TimingChannel::Timing01, "Timing0", "Timing1", origin);
+        attachTimingPairMC(*this, TimingCalib::TimingChannel::Timing23, "Timing2", "Timing3", origin);
+    }
 
     const auto calib = m_timingCalib;
-    Define("_timing_evt_summary",
-        [calib](Int_t run, const RawInputArray& inputs) -> TimingEventSummary {
-            TimingEventSummary s;
-            s.evt = calib->calibrateDataEvent(run, inputs, calib->hasTofMaps(), false);
-            s.down = TimingCalib::TimingCalibrator::fitDownstreamReference(s.evt);
-            s.speed = TimingCalib::TimingCalibrator::fitSpeedAndArrival(s.evt);
-            return s;
-        },
-        {"run", "_timing_raw_inputs"}, DATA, origin);
+    const bool hasRedQ = (m_reducedChargeSource != ReducedChargeSource::None);
+    const std::string q0Col = hasRedQ ? "VetoNu0_reduced_charge" : "VetoNu0_raw_charge";
+    const std::string q1Col = hasRedQ ? "VetoNu1_reduced_charge" : "VetoNu1_raw_charge";
+    if (!isMC) {
+        Define("_timing_evt_summary",
+            [calib, hasRedQ](Int_t run, const RawInputArray& inputs, Float_t q0, Float_t q1) -> TimingEventSummary {
+                TimingEventSummary s;
+                s.evt = calib->calibrateDataEvent(run, inputs, calib->hasTofMaps(), true);
+                s.down = TimingCalib::TimingCalibrator::fitDownstreamReference(s.evt);
+                s.speed = TimingCalib::TimingCalibrator::fitSpeedAndArrival(s.evt);
+                const bool act0 = hasRedQ ? ((q0 >= 0.0f) ? (q0 >= 30.0f) : (inputs[0].rawCharge >= 40.0)) : (inputs[0].rawCharge >= 40.0);
+                const bool act1 = hasRedQ ? ((q1 >= 0.0f) ? (q1 >= 30.0f) : (inputs[1].rawCharge >= 40.0)) : (inputs[1].rawCharge >= 40.0);
+                s.back = TimingCalib::TimingCalibrator::evaluateBackwardHypothesis(s.evt, s.down, act0, act1);
+                return s;
+            },
+            {"run", "_timing_raw_inputs", q0Col, q1Col}, ALL, origin);
+    } else {
+        Define("_timing_evt_summary",
+            [calib, hasRedQ](Int_t run, Int_t eventID, const RawInputArray& inputs, Float_t q0, Float_t q1) -> TimingEventSummary {
+                TimingEventSummary s;
+                s.evt = calib->calibrateMCEvent(run, static_cast<int64_t>(eventID), inputs, true, true);
+                s.down = TimingCalib::TimingCalibrator::fitDownstreamReference(s.evt);
+                s.speed = TimingCalib::TimingCalibrator::fitSpeedAndArrival(s.evt);
+                const bool act0 = hasRedQ ? ((q0 >= 0.0f) ? (q0 >= 30.0f) : (inputs[0].rawCharge >= 40.0)) : (inputs[0].rawCharge >= 40.0);
+                const bool act1 = hasRedQ ? ((q1 >= 0.0f) ? (q1 >= 30.0f) : (inputs[1].rawCharge >= 40.0)) : (inputs[1].rawCharge >= 40.0);
+                s.back = TimingCalib::TimingCalibrator::evaluateBackwardHypothesis(s.evt, s.down, act0, act1);
+                return s;
+            },
+            {"run", "eventID", "_timing_raw_inputs", q0Col, q1Col}, ALL, origin);
+    }
     m_internalTimingColumns.push_back("_timing_evt_summary");
 
-    Define("Timing_anchor_ch", [](const TimingEventSummary& s) { return s.evt.anchorChannel; }, {"_timing_evt_summary"}, DATA, origin);
+    Define("Timing_anchor_ch", [](const TimingEventSummary& s) { return s.evt.anchorChannel; }, {"_timing_evt_summary"}, ALL, origin);
     Define("t0_down", [](const TimingEventSummary& s) {
         return s.down.valid ? s.down.t0Ns : std::numeric_limits<double>::quiet_NaN();
-    }, {"_timing_evt_summary"}, DATA, origin);
+    }, {"_timing_evt_summary"}, ALL, origin);
     Define("sigma_t0_down", [](const TimingEventSummary& s) {
         return s.down.valid ? s.down.sigmaT0Ns : std::numeric_limits<double>::quiet_NaN();
-    }, {"_timing_evt_summary"}, DATA, origin);
+    }, {"_timing_evt_summary"}, ALL, origin);
     Define("chi2_down", [](const TimingEventSummary& s) {
         return s.down.valid ? s.down.chi2 : std::numeric_limits<double>::quiet_NaN();
-    }, {"_timing_evt_summary"}, DATA, origin);
-    Define("ndof_down", [](const TimingEventSummary& s) { return s.down.ndof; }, {"_timing_evt_summary"}, DATA, origin);
-    Define("n_down_used", [](const TimingEventSummary& s) { return s.down.nUsed; }, {"_timing_evt_summary"}, DATA, origin);
+    }, {"_timing_evt_summary"}, ALL, origin);
+    Define("ndof_down", [](const TimingEventSummary& s) { return s.down.ndof; }, {"_timing_evt_summary"}, ALL, origin);
+    Define("n_down_used", [](const TimingEventSummary& s) { return s.down.nUsed; }, {"_timing_evt_summary"}, ALL, origin);
 
     Define("timing_beta", [](const TimingEventSummary& s) {
         return s.speed.valid ? s.speed.beta : std::numeric_limits<double>::quiet_NaN();
-    }, {"_timing_evt_summary"}, DATA, origin);
+    }, {"_timing_evt_summary"}, ALL, origin);
     Define("timing_sigma_beta", [](const TimingEventSummary& s) {
         return s.speed.valid ? s.speed.sigmaBeta : std::numeric_limits<double>::quiet_NaN();
-    }, {"_timing_evt_summary"}, DATA, origin);
+    }, {"_timing_evt_summary"}, ALL, origin);
     Define("timing_speed_chi2", [](const TimingEventSummary& s) {
         return s.speed.valid ? s.speed.chi2 : std::numeric_limits<double>::quiet_NaN();
-    }, {"_timing_evt_summary"}, DATA, origin);
-    Define("timing_speed_ndof", [](const TimingEventSummary& s) { return s.speed.ndof; }, {"_timing_evt_summary"}, DATA, origin);
+    }, {"_timing_evt_summary"}, ALL, origin);
+    Define("timing_speed_ndof", [](const TimingEventSummary& s) { return s.speed.ndof; }, {"_timing_evt_summary"}, ALL, origin);
+
+    Define("VetoNu_dt_comb", [](const TimingEventSummary& s) {
+        return s.back.valid ? s.back.dtCombNs : std::numeric_limits<double>::quiet_NaN();
+    }, {"_timing_evt_summary"}, ALL, origin);
+    Define("VetoNu_z_comb", [](const TimingEventSummary& s) {
+        return s.back.valid ? s.back.zComb : std::numeric_limits<double>::quiet_NaN();
+    }, {"_timing_evt_summary"}, ALL, origin);
+    Define("VetoNu_dt10", [](const TimingEventSummary& s) {
+        return s.back.dt10Ns;
+    }, {"_timing_evt_summary"}, ALL, origin);
+    Define("delta_chi2_back", [](const TimingEventSummary& s) {
+        return s.back.valid ? s.back.deltaChi2Back : std::numeric_limits<double>::quiet_NaN();
+    }, {"_timing_evt_summary"}, ALL, origin);
+    Define("VetoNu_charge_asym", [](Float_t q0, Float_t q1) -> double {
+        const double a0 = std::max(0.0, static_cast<double>(q0));
+        const double a1 = std::max(0.0, static_cast<double>(q1));
+        const double sum = a0 + a1;
+        return (sum > 0.0) ? ((a1 - a0) / sum) : std::numeric_limits<double>::quiet_NaN();
+    }, {q0Col, q1Col}, ALL, origin);
 
     auto defineVetoNuDiff = [&](int chIdx, const std::string& baseName) {
         Define(baseName + "_dt", [chIdx](const TimingEventSummary& s) {
             const auto& cr = s.evt.channels[chIdx];
             if (!s.down.valid || !cr.valid) return std::numeric_limits<double>::quiet_NaN();
             return cr.tCalNs - s.down.t0Ns;
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
         Define(baseName + "_pull", [chIdx](const TimingEventSummary& s) {
             const auto& cr = s.evt.channels[chIdx];
             if (!s.down.valid || !cr.valid) return std::numeric_limits<double>::quiet_NaN();
             const double sig = std::hypot(cr.sigmaCalNs, s.down.sigmaT0Ns);
             return (sig > 0.0) ? ((cr.tCalNs - s.down.t0Ns) / sig) : std::numeric_limits<double>::quiet_NaN();
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
     };
     defineVetoNuDiff(static_cast<int>(TimingCalib::TimingChannel::VetoNu0), "VetoNu0");
     defineVetoNuDiff(static_cast<int>(TimingCalib::TimingChannel::VetoNu1), "VetoNu1");
@@ -1042,23 +1185,23 @@ void Analysis::defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPres
         const std::string cname = meta[c].name;
         Define(cname + "_timing_valid", [c](const TimingEventSummary& s) {
             return s.evt.channels[c].valid;
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
         Define(cname + "_t1", [c](const TimingEventSummary& s) {
             return s.evt.channels[c].valid ? s.evt.channels[c].t1Ns : std::numeric_limits<double>::quiet_NaN();
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
         Define(cname + "_t2", [c](const TimingEventSummary& s) {
             return s.evt.channels[c].valid ? s.evt.channels[c].t2Ns : std::numeric_limits<double>::quiet_NaN();
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
         Define(cname + "_r_unwrap", [c](const TimingEventSummary& s) {
             const auto& cr = s.evt.channels[c];
             return (cr.valid || cr.unwrapFailed) ? cr.rUnwrapNs : std::numeric_limits<double>::quiet_NaN();
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
         Define(cname + "_caltime", [c](const TimingEventSummary& s) {
             return s.evt.channels[c].valid ? s.evt.channels[c].tCalNs : std::numeric_limits<double>::quiet_NaN();
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
         Define(cname + "_cal_sigma", [c](const TimingEventSummary& s) {
             return s.evt.channels[c].valid ? s.evt.channels[c].sigmaCalNs : std::numeric_limits<double>::quiet_NaN();
-        }, {"_timing_evt_summary"}, DATA, origin);
+        }, {"_timing_evt_summary"}, ALL, origin);
     }
 }
 

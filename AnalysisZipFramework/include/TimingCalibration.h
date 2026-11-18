@@ -61,6 +61,7 @@ struct RawChannelInput {
 struct CalibratedChannelResult {
     bool valid{false};
     bool unwrapFailed{false};
+    bool aboveMip{false};
     double t1Ns{0.0};
     double t2Ns{0.0};
     double rUnwrapNs{0.0};
@@ -124,10 +125,54 @@ struct PeriodTofMap {
     std::array<std::vector<double>, kNumChannels> timeWalkDt{};
 };
 
+struct McChannelCalib {
+    bool valid{false};
+    double tMcRefNs{0.0};
+    double slopeXNsPerMm{0.0};
+    double slopeYNsPerMm{0.0};
+    double ampA{0.0};
+    double powerA{0.5};
+    double floorC{0.025};
+    bool hasPowerLaw{false};
+    std::vector<double> timeWalkQ{};
+    std::vector<double> timeWalkDt{};
+};
+
+struct McFamilyModel {
+    std::string name;
+    std::array<McChannelCalib, kNumChannels> channels{};
+};
+
+struct McRunOverride {
+    int run{0};
+    std::string family;
+    std::array<bool, kNumChannels> hasTRef{};
+    std::array<double, kNumChannels> tRefNs{};
+};
+
+struct BackwardHypoResult {
+    bool valid{false};
+    int nActiveLayers{0};
+    int nValidLayers{0};
+    double dtCombNs{0.0};
+    double zComb{0.0};
+    double dt10Ns{0.0};
+    double chi2Mu{0.0};
+    double chi2NuBack{0.0};
+    double deltaChi2Back{0.0};
+};
+
+enum class DownstreamMode : int {
+    AllValid = 0,
+    TimingGeom = 1,
+    Trimmed3Sigma = 2
+};
+
 /**
- * Thread-safe compiled scintillator timing calibrator implementing Steps 1-4
+ * Thread-safe compiled scintillator timing calibrator implementing Steps 1-5
  * of the Run 3 VetoNu timing pipeline (Quirk Internal Note Appendix E adapted
- * for nu_mu CC with LeadTrack extrapolation and anti-saturation downstream reference).
+ * for nu_mu CC with LeadTrack extrapolation, MC alignment/smearing, and
+ * anti-saturation downstream reference).
  */
 class TimingCalibrator {
 public:
@@ -136,12 +181,16 @@ public:
     void loadFromDirectory(const std::string& calibDir);
     void loadOffsetsJson(const std::string& path);
     void loadTofMapsJson(const std::string& path);
+    void loadMcCalibJson(const std::string& path);
 
     bool hasOffsets() const { return !m_runOffsets.empty(); }
     bool hasTofMaps() const { return !m_periodMaps.empty(); }
+    bool hasMcCalib() const { return !m_mcFamilies.empty(); }
 
     static const std::array<ChannelMeta, kNumChannels>& channelMetadata();
     static std::string periodForDataRun(int run);
+    static std::string mcFamilyForRun(int run);
+    static std::string targetDataPeriodForMC(int run, int64_t eventID);
     static double wrap25(double dtNs);
     static bool isGoodWaveformStatus(int status) {
         return (status & ~(16 | 512)) == 0;
@@ -157,6 +206,14 @@ public:
         double xMm, double yMm, bool validPos);
 
     /**
+     * MC combination of two PMT channels on the same Timing bar using localtime.
+     */
+    static RawChannelInput combineTimingPairMC(
+        bool good0, double loc0, double qRaw0, double width0,
+        bool good1, double loc1, double qRaw1, double width1,
+        double xMm, double yMm, bool validPos);
+
+    /**
      * Step 1+2+3+4 calibration on a single collision-data event.
      * If applyTofMap is false, tCalNs stops after Step 2 unwrapping (used during LOO map generation).
      */
@@ -165,6 +222,19 @@ public:
         const std::array<RawChannelInput, kNumChannels>& inputs,
         bool applyTofMap = true,
         bool allowSubMipVetoNu = false) const;
+
+    /**
+     * Step 5 calibration and deterministic position/charge-dependent Gaussian residual smearing for MC.
+     * In output CalibratedChannelResult: t2Ns = aligned unsmeared MC time t_MC^(0),
+     * t1Ns = applied smearing width sigma_smear (ns), tCalNs = smeared (or aligned) time,
+     * sigmaCalNs = target period sigma_data(x,y,Q) (or sigma_MC if applySmearing == false).
+     */
+    EventTimingOutput calibrateMCEvent(
+        int run,
+        int64_t eventID,
+        const std::array<RawChannelInput, kNumChannels>& inputs,
+        bool applySmearing = true,
+        bool allowSubMipVetoNu = true) const;
 
     /**
      * Look up 2D TOF offset, time-walk offset, and charge-parameterized uncertainty
@@ -201,6 +271,28 @@ public:
         const EventTimingOutput& evt,
         uint32_t allowedMask = defaultDownstreamMask(),
         uint32_t excludeMask = 0);
+
+    /**
+     * Variant downstream arrival estimator supporting AllValid, TimingGeom (Timing01/23
+     * restricted to compatible track Y / higher charge), and 2-pass Trimmed3Sigma outlier rejection.
+     */
+    static DownstreamRefResult fitDownstreamReferenceMode(
+        const EventTimingOutput& evt,
+        DownstreamMode mode,
+        double leadYAtTrigMm = std::numeric_limits<double>::quiet_NaN(),
+        const std::array<RawChannelInput, kNumChannels>* inputs = nullptr,
+        uint32_t allowedMask = defaultDownstreamMask(),
+        uint32_t excludeMask = 0);
+
+    /**
+     * Backward-vs-muon likelihood ratio Delta chi2_back = chi2(H_mu) - chi2(H_nu+back)
+     * plus combined weighted active-layer delay and z-pull.
+     */
+    static BackwardHypoResult evaluateBackwardHypothesis(
+        const EventTimingOutput& evt,
+        const DownstreamRefResult& down,
+        bool active0,
+        bool active1);
 
     /**
      * Leave-One-Out v=c arrival time estimate for channel targetCh using all other
@@ -258,11 +350,17 @@ public:
 private:
     const RunOffsets* findRunOffsets(int run) const;
     const PeriodTofMap* findPeriodMap(const std::string& period) const;
+    const McFamilyModel* findMcFamily(const std::string& family) const;
+    const McRunOverride* findMcRunOverride(int run) const;
     static int gridIndex(double xMm, double yMm);
     static double evalTimeWalk(const PeriodTofMap& pmap, int chIdx, double qRawPC);
+    static double evalMcTimeWalk(const McChannelCalib& mc, double qRawPC);
+    static double evalMcSigma(const McChannelCalib& mc, double qRawPC);
 
     std::unordered_map<int, RunOffsets> m_runOffsets;
     std::unordered_map<std::string, PeriodTofMap> m_periodMaps;
+    std::unordered_map<std::string, McFamilyModel> m_mcFamilies;
+    std::unordered_map<int, McRunOverride> m_mcRunOverrides;
 };
 
 } // namespace TimingCalib

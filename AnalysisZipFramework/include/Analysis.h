@@ -212,9 +212,10 @@ class Analysis {
 
         std::vector<ROOT::RDF::RResultPtr<TH1>> m_histResults;
 
-        // Optional Stage T1 timing calibration state (nullptr unless --timing-calib is set)
+        // Optional Stage T1/T2 scintillator timing calibration state (nullptr unless --timing-calib is set)
         std::shared_ptr<const TimingCalib::TimingCalibrator> m_timingCalib;
         std::vector<std::string> m_internalTimingColumns;
+        void setupMCTimingCompatibility();
         void defineTimingCalibrationColumns(bool hasNativeVeto11, bool hasPreshower23, bool hasMuon);
 
 };
