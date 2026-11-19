@@ -44,15 +44,15 @@ inline bool isKinematicSignalRegion(const EventKinematicsAndVeto& ev) {
     if (!std::isfinite(ev.veto20Charge) || !std::isfinite(ev.veto21Charge)) return false;
     if (!(ev.veto20Charge > 40.0f && ev.veto21Charge > 40.0f)) return false;
 
-    if (!std::isfinite(ev.leadYatTrig) ||
-        !std::isfinite(ev.timingChargeTop) ||
-        !std::isfinite(ev.timingChargeBottom)) {
+    if (!std::isfinite(ev.leadYatTrig)) {
         return false;
     }
     const bool hitsTiming =
-        (ev.leadYatTrig > 20.0 && ev.timingChargeTop > 20.0f) ||
-        (ev.leadYatTrig < -20.0 && ev.timingChargeBottom > 20.0f) ||
-        (std::abs(ev.leadYatTrig) <= 20.0 && (ev.timingChargeTop + ev.timingChargeBottom) > 20.0f);
+        (ev.leadYatTrig > 20.0 && std::isfinite(ev.timingChargeTop) && ev.timingChargeTop > 20.0f) ||
+        (ev.leadYatTrig < -20.0 && std::isfinite(ev.timingChargeBottom) && ev.timingChargeBottom > 20.0f) ||
+        (std::abs(ev.leadYatTrig) <= 20.0 &&
+         std::isfinite(ev.timingChargeTop) && std::isfinite(ev.timingChargeBottom) &&
+         (ev.timingChargeTop + ev.timingChargeBottom) > 20.0f);
     if (!hitsTiming) return false;
 
     if (!std::isfinite(ev.preshower0Charge) || !std::isfinite(ev.preshower1Charge)) return false;

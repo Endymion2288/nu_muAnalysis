@@ -25,9 +25,12 @@ def is_kinematic_signal_region_arrays(
 ) -> np.ndarray:
     """Return boolean mask of events passing downstream baseline nu_mu cuts."""
     hits_timing = (
-        ((lead_y_at_trig > 20.0) & (timing_charge_top > 20.0))
-        | ((lead_y_at_trig < -20.0) & (timing_charge_bottom > 20.0))
-        | ((np.abs(lead_y_at_trig) <= 20.0) & ((timing_charge_top + timing_charge_bottom) > 20.0))
+        ((lead_y_at_trig > 20.0) & np.isfinite(timing_charge_top) & (timing_charge_top > 20.0))
+        | ((lead_y_at_trig < -20.0) & np.isfinite(timing_charge_bottom) & (timing_charge_bottom > 20.0))
+        | ((np.abs(lead_y_at_trig) <= 20.0)
+           & np.isfinite(timing_charge_top)
+           & np.isfinite(timing_charge_bottom)
+           & ((timing_charge_top + timing_charge_bottom) > 20.0))
     )
     return (
         (long_tracks > 0)
@@ -36,8 +39,6 @@ def is_kinematic_signal_region_arrays(
         & (veto20_charge > 40.0)
         & (veto21_charge > 40.0)
         & np.isfinite(lead_y_at_trig)
-        & np.isfinite(timing_charge_top)
-        & np.isfinite(timing_charge_bottom)
         & hits_timing
         & np.isfinite(preshower0_charge)
         & np.isfinite(preshower1_charge)

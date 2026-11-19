@@ -74,6 +74,8 @@ def run_tests() -> None:
         (_make_base_case(name="cr_geom_theta_sideband", lead_theta_mrad=30.0, vetonu1_raw_charge=90.0, vetonu1_reduced_charge=90.0, dt1_ns=6.0), False),
         (_make_base_case(name="cr_noncoll_beam1", distance_to_colliding_bcid=5, vetonu0_raw_charge=90.0, vetonu0_reduced_charge=90.0, dt0_ns=8.0), False),
         (_make_base_case(name="mc_genie_unblinded", is_mc=True, vetonu0_raw_charge=90.0, vetonu0_reduced_charge=90.0, dt0_ns=7.5), False),
+        (_make_base_case(name="sr_zoneB_top_hit_nan_bottom", lead_y_at_trig=35.0, timing_charge_top=60.0, timing_charge_bottom=float("nan"), vetonu0_raw_charge=50.0, vetonu0_reduced_charge=50.0, dt0_ns=3.0), True),
+        (_make_base_case(name="sr_zoneB_bot_hit_nan_top", lead_y_at_trig=-35.0, timing_charge_top=float("nan"), timing_charge_bottom=60.0, vetonu1_raw_charge=50.0, vetonu1_reduced_charge=50.0, dt1_ns=3.0), True),
     ]
 
     for c, expected in cases:

@@ -104,7 +104,21 @@ target_link_libraries(mc_timing_scanner
                       )
 
 target_compile_features(mc_timing_scanner PRIVATE cxx_std_17)
+
+add_executable(t4_bkg_scanner t4_bkg_scanner.cxx ${sources})
+
+target_compile_definitions(t4_bkg_scanner PRIVATE
+    PROJECT_INCLUDE_DIR="${CMAKE_SOURCE_DIR}/include"
+)
+
+target_link_libraries(t4_bkg_scanner
+                      nlohmann_json::nlohmann_json
+                      ${YAML_CPP_TARGET}
+                      ${ROOT_LIBRARIES}
+                      )
+
+target_compile_features(t4_bkg_scanner PRIVATE cxx_std_17)
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS analysis timing_calib_scanner mc_timing_scanner DESTINATION bin)
+install(TARGETS analysis timing_calib_scanner mc_timing_scanner t4_bkg_scanner DESTINATION bin)
