@@ -452,6 +452,9 @@ void Analysis::BuildDataFrame() {
     } else if (hasNativeReducedCharge) {
         m_reducedChargeSource = ReducedChargeSource::Native;
         INFO("Reduced charge source: branches in the input NTuple.");
+        if (!isMC) {
+            WARNING("Collision data is using native NTuple VetoNu*_reduced_charge without aux waveform override; ensure file_config_run3.yaml is passed for calibrated Run 3 reduced charge.");
+        }
     } else {
         ERROR("The selection uses the VetoNu reduced charge, but no aux (waveform) files were provided and the input NTuple has no VetoNu*_reduced_charge branches.");
         ERROR("Either add 'waveform_paths' for this run to the file config, or run with --no-reduced-charge to veto on the raw VetoNu charge.");
@@ -488,12 +491,15 @@ void Analysis::BuildDataFrame() {
 // Load the reduced VetoNu charge from the aux (waveform) NTuples via an eventID lookup,
 // and define the columns needed to decide whether to trust it (with raw-charge fallback)
 void Analysis::defineReducedChargeFromAux() {
+    // Capture whether the main PHYS NTuple natively had reduced charge before Redefine()
+    // (distinguishes 2025/p0013 vs 2025/p0014 for broken Preshower localtime runs 19413..20142).
+    const bool hasNativeRedQ = isColumnDefined("VetoNu0_reduced_charge") && isColumnDefined("VetoNu1_reduced_charge");
+
     // Build a lookup map from the aux chain manually
-    // Key: {run, event}, Value: struct of aux quantities
+    // Key: ((uint64_t)run << 32) | (uint32_t)event, Value: struct of aux quantities
     struct AuxData { float charge35_nu0; float charge35_nu1; };
-    
-    // auto auxMap = std::make_shared<std::unordered_map<Int_t, AuxData>>();
-    auto auxMap = std::make_shared<std::unordered_map<Int_t, AuxData>>();
+
+    auto auxMap = std::make_shared<std::unordered_map<uint64_t, AuxData>>();
 
     Int_t  run, evt;
     float charge35_nu0, charge35_nu1;
@@ -514,10 +520,11 @@ void Analysis::defineReducedChargeFromAux() {
         ERROR("Warning: Aux chain has no entries. Check aux file paths and tree name.");
         throw std::runtime_error("Unable to open aux files.");
     }
+    auxMap->reserve(static_cast<size_t>(nAux));
     INFO("Loading ", nAux, " aux entries into lookup map...");
     for (Long64_t i = 0; i < nAux; ++i) {
         m_auxChain->GetEntry(i);
-        Int_t key = getLookupKey(run, evt);
+        const uint64_t key = getLookupKey(run, evt);
 
         if (auxMap->find(key) != auxMap->end()) {
             ERROR("Warning: Duplicate (run, event) pair in aux chain: (", run, ", ", evt, "). Overwriting previous entry.");
@@ -530,15 +537,36 @@ void Analysis::defineReducedChargeFromAux() {
     m_auxChain->ResetBranchAddresses(); // the addresses above point to local variables
 
     // Inject aux quantities as new columns via Define()
-    // Capture auxMap by shared_ptr so it stays alive
-    // Define a column which flags if an event had a good hit in either veto station or preshower - need a good hit to trust the reduced charge values from the aux file
-    // Veto status 512 is what is recorded as a good hit on the second digitizer (CaloNu period specific)
-    Define("GoodVeto20Hit",[](int status) { return !std::isnan(status) && (status & ~512) == 0; }, {"Veto20_status"});
-    Define("GoodVeto21Hit", [](int status) { return !std::isnan(status) && (status & ~512) == 0; }, {"Veto21_status"});
-    Define("GoodPreshower0Hit", [](int status) { return !std::isnan(status) && (status & ~512) == 0; }, {"Preshower0_status"}); 
-    Define("GoodPreshower1Hit", [](int status) { return !std::isnan(status) && (status & ~512) == 0; }, {"Preshower1_status"});
+    // Capture auxMap by shared_ptr so it stays alive.
+    // Veto status bit 512 denotes a valid hit on the second digitizer (CaloNu period specific).
+    Define("GoodVeto20Hit",     [](int status) { return (status & ~512) == 0; }, {"Veto20_status"});
+    Define("GoodVeto21Hit",     [](int status) { return (status & ~512) == 0; }, {"Veto21_status"});
+    Define("GoodPreshower0Hit", [](int status) { return (status & ~512) == 0; }, {"Preshower0_status"});
+    Define("GoodPreshower1Hit", [](int status) { return (status & ~512) == 0; }, {"Preshower1_status"});
+    if (isColumnDefined("Timing0_status") && isColumnDefined("Timing1_status") &&
+        isColumnDefined("Timing2_status") && isColumnDefined("Timing3_status")) {
+        Define("GoodTimingHit",
+            [](int s0, int s1, int s2, int s3) {
+                return ((s0 & ~512) == 0) || ((s1 & ~512) == 0) ||
+                       ((s2 & ~512) == 0) || ((s3 & ~512) == 0);
+            },
+            {"Timing0_status", "Timing1_status", "Timing2_status", "Timing3_status"});
+    } else {
+        Define("GoodTimingHit", "false");
+    }
 
-    Define("TimingOK", "(GoodVeto20Hit || GoodVeto21Hit || GoodPreshower0Hit || GoodPreshower1Hit)");
+    Define("TimingOK",
+        [hasNativeRedQ](Int_t runNum, bool v20, bool v21, bool ps0, bool ps1, bool trig) -> bool {
+            if (runNum < 18500) {
+                // 2022-2024 Ben Wilson waveform files use Veto2 and Preshower0/1 only
+                return v20 || v21 || ps0 || ps1;
+            }
+            // 2025-2026 raw_reduced_charge_dumper uses Veto2 -> Preshower0/1 -> Timing0..3,
+            // skipping broken Preshower localtime on 2025/p0013 runs 19413..20142.
+            const bool brokenP0013PS = (!hasNativeRedQ) && (runNum >= 19413 && runNum <= 20142);
+            return v20 || v21 || trig || (!brokenP0013PS && (ps0 || ps1));
+        },
+        {"run", "GoodVeto20Hit", "GoodVeto21Hit", "GoodPreshower0Hit", "GoodPreshower1Hit", "GoodTimingHit"});
     if (!isMC) Define("GoodScintillatorStatus", "TimingOK && GoodVetoNuStatus && !BadVetoStatus", DATA);
 
     // If the input also has native reduced-charge branches, Redefine them with the aux values
@@ -547,82 +575,39 @@ void Analysis::defineReducedChargeFromAux() {
         else                       Define(name, f, cols, ALL, "aux reduced charge");
     };
 
-    defineOrRedefine("VetoNu0_reduced_charge",
-        [this, auxMap](Int_t run, Int_t eventID, bool TimingOK, bool is2024Period, float VetoNu0_raw_charge) -> float {
-            
-            Int_t key = getLookupKey(run, eventID);
-            bool lookup_success = auxMap->count(key);
-            auto reduced_charge = -99999.f;
-            
-            if (lookup_success) {
-
-                auto it = auxMap->find(key);
-                reduced_charge = it->second.charge35_nu0;
-                
-                // If there's no good hit in the veto stations or preshower, use the original charge instead of the reduced charge
-
-                bool is2024PeriodCondition = is2024Period && reduced_charge == 0 && VetoNu0_raw_charge > 30;
-
-                if (is2024PeriodCondition)
-                {
-                    return -1;
+    auto makeLookupFn = [this, auxMap](bool isLayer0) {
+        return [this, auxMap, isLayer0](Int_t runNum, Int_t eventID, Int_t longTracks,
+                                        bool TimingOK, bool is2024Period, float rawCharge) -> float {
+            const uint64_t key = getLookupKey(runNum, eventID);
+            const auto it = auxMap->find(key);
+            if (it != auxMap->end()) {
+                const float reduced_charge = isLayer0 ? it->second.charge35_nu0 : it->second.charge35_nu1;
+                const bool isZeroBug = is2024Period && (reduced_charge == 0.0f) && (rawCharge > 30.0f);
+                if (!TimingOK || std::isnan(reduced_charge) || isZeroBug) {
+                    return -1.0f;
                 }
-
-                if (!TimingOK || std::isnan(reduced_charge) || is2024PeriodCondition){
-                    // m_NVetoNu0_fallbacks++;
-                    // return VetoNu0_raw_charge;
-                    return -1;
-                }
-                
                 return std::max(reduced_charge, 0.0f);
             }
-            
-            ERROR("Warning: Missing aux data for eventID ", eventID, " in run ", run, ". Setting reduced charge to -999.");
-            m_NVetoNu0_missing_aux++;
-            return reduced_charge;
-            
-        }, {"run", "eventID", "TimingOK", "is2024Period", "VetoNu0_raw_charge"});
-    
-    defineOrRedefine("VetoNu1_reduced_charge",
-        [this, auxMap](Int_t run, Int_t eventID, bool TimingOK, bool is2024Period, float VetoNu1_raw_charge) -> float {
-
-            Int_t key = getLookupKey(run, eventID);
-            auto reduced_charge = -99999.f;
-            
-            bool lookup_success = auxMap->count(key);
-            if (lookup_success) {
-                
-                auto it = auxMap->find(key);
-                reduced_charge = it->second.charge35_nu1;
-
-                // If there's no good hit in the veto stations or preshower, use the original charge instead of the reduced charge
-                bool is2024PeriodCondition = is2024Period && reduced_charge == 0 && VetoNu1_raw_charge > 30;
-
-                if (is2024PeriodCondition)
-                {
-                    return -1;
-                }
-
-                if (!TimingOK || std::isnan(reduced_charge) || is2024PeriodCondition){
-                    // m_NVetoNu0_fallbacks++;
-                    // return VetoNu0_raw_charge;
-                    return -1;
-                }
-
-                return std::max(reduced_charge, 0.0f);
+            if (longTracks <= 0) {
+                return -1.0f;
             }
+            ERROR("Warning: Missing aux data for eventID ", eventID, " in run ", runNum,
+                  " (longTracks=", longTracks, "). Setting reduced charge to -99999.");
+            if (isLayer0) m_NVetoNu0_missing_aux++;
+            else          m_NVetoNu1_missing_aux++;
+            return -99999.f;
+        };
+    };
 
-            ERROR("Warning: Missing aux data for eventID ", eventID, " in run ", run, ". Setting reduced charge to -999.");
-            m_NVetoNu1_missing_aux++;
-            return reduced_charge;    
-            
-            // return std::max(reduced_charge, 0.0f);
-        }, {"run", "eventID", "TimingOK", "is2024Period", "VetoNu1_raw_charge"});
+    defineOrRedefine("VetoNu0_reduced_charge", makeLookupFn(true),
+                     {"run", "eventID", "longTracks", "TimingOK", "is2024Period", "VetoNu0_raw_charge"});
+    defineOrRedefine("VetoNu1_reduced_charge", makeLookupFn(false),
+                     {"run", "eventID", "longTracks", "TimingOK", "is2024Period", "VetoNu1_raw_charge"});
 
-    Define("AuxLookupSuccess", [auxMap, this](Int_t run, Int_t eventID) -> bool {
-        Int_t key = getLookupKey(run, eventID);
-        return auxMap->count(key) > 0;
-    }, {"run", "eventID"});
+    Define("AuxLookupSuccess", [auxMap, this](Int_t runNum, Int_t eventID, Int_t longTracks) -> bool {
+        if (longTracks <= 0) return true;
+        return auxMap->count(getLookupKey(runNum, eventID)) > 0;
+    }, {"run", "eventID", "longTracks"});
 
     Define("validReducedVetoNu0Charge", "AuxLookupSuccess && VetoNu0_reduced_charge >= 0");
     Define("validReducedVetoNu1Charge", "AuxLookupSuccess && VetoNu1_reduced_charge >= 0");
@@ -635,7 +620,6 @@ void Analysis::defineReducedChargeFromAux() {
             }
             return -1234.f; // Return -1234.f to indicate no fallback needed
         }, {"validReducedVetoNu0Charge", "VetoNu0_raw_charge"});
-    
 
     Define("fallbackVetoNu1Charge",
         [this](bool validReducedVetoNu1Charge, float VetoNu1_raw_charge) -> float {

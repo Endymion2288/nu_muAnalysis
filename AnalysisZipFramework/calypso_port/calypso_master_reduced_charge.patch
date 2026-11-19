@@ -1,0 +1,206 @@
+--- a/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h
++++ b/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.h
+@@ -163,10 +163,14 @@
+   UnsignedIntegerProperty m_minHits{this, "minHits", 12, "Miminimum number of hits of a track."};
+   DoubleProperty m_maxChi2NDOF{this, "maxChi2NDOF", 25, "Maximum chi2 per degree of freedom."};
+   BooleanProperty m_runVertexing{ this, "RunVertexing", true, "Run the vertexing, defaults to true." };
+-  DoubleProperty m_veto_vetoNu_timeDiff{this, "VetoVetoNuTimeDifference", 33.2,
+-      "Time difference between Veto and VetoNu station in ns. Data: 33.2 ns, MC: 27.21 ns"};
+-  DoubleProperty m_preshower_vetoNu_timeDiff{this, "PreshowerVetoNuTimeDifference", 53.625,
+-      "Time difference between Preshower and VetoNu station in ns. Data: 53.625 ns, MC: 51.41 ns"};
++  DoubleProperty m_veto_vetoNu_timeDiff{this, "VetoVetoNuTimeDifference", -1.0,
++      "Time difference between Veto2 and VetoNu in ns (<0 auto-selects by run/MC)"};
++  DoubleProperty m_trigger_vetoNu_timeDiff{this, "TriggerVetoNuTimeDifference", -1.0,
++      "Time difference between Trigger/Timing and VetoNu in ns (<0 auto-selects by run/MC)"};
++  DoubleProperty m_preshower_vetoNu_timeDiff{this, "PreshowerVetoNuTimeDifference", -1.0,
++      "Time difference between Preshower0/1 and VetoNu in ns (<0 auto-selects by run/MC)"};
++  BooleanProperty m_disablePreshowerFallback{this, "DisablePreshowerFallback", false,
++      "Skip Preshower fallback (required for 2025/p0013 runs 19413-20142 with broken Preshower localtime)"};
+   DoubleProperty m_reducedChargeIntegrationTime{this, "ReducedChargeIntegrationTime", 35.0,
+       "Time window for reduced charge integration to cover tail of Crystall Ball function."};
+ 
+--- a/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx
++++ b/PhysicsAnalysis/NtupleDumper/src/NtupleDumperAlg.cxx
+@@ -1576,60 +1576,107 @@
+   }
+ 
+   // Calculation of the reduced VetoNu charge
+-  float vetoLocalTime = NaN;
++  // Expand Veto2 channels across single/dual digitizer layouts (6, 7 -> 22, 23 during 2024 CaloNu)
++  std::list<int> vetoChannels = {6, 7, 22, 23};
+   if (m_wave_map.contains(std::string("veto2"))) {
+-    std::list<int> vetoChannels = m_wave_map[std::string("veto2")];
++    for (int ch : m_wave_map[std::string("veto2")]) {
++      if (std::find(vetoChannels.begin(), vetoChannels.end(), ch) == vetoChannels.end()) {
++        vetoChannels.push_back(ch);
++      }
++    }
++  }
++  float vetoLocalTime = NaN;
++  if (vetoContainer.isValid()) {
+     vetoLocalTime = get_mean_scintillator_time(vetoChannels, *vetoContainer);
+   }
+-  // Veto time might be nan if the waveform amplitude overflows (e.g. if there is a neutrino
+-  //  interaction just before). Use preshower time instead.
++
++  // Primary Preshower top PMTs {12, 13} only (exclude 2025+ low-gain bottom PMTs {24, 25})
++  const std::list<int> preshowerChannels = {12, 13};
+   float preshowerLocalTime = NaN;
+-  if (m_wave_map.contains(std::string("preshower"))) {
+-    std::list<int> preshowerChannels = m_wave_map[std::string("preshower")];
++  if (!m_disablePreshowerFallback && preshowerContainer.isValid()) {
+     preshowerLocalTime = get_mean_scintillator_time(preshowerChannels, *preshowerContainer);
+   }
+-  if (std::isnan(vetoLocalTime) && std::isnan(preshowerLocalTime)) {
+-    // Use raw/total charge if both veto and preshower are not available
+-    std::list<int> vetoNuChannels = m_wave_map[std::string("vetonu")];
+-    size_t i = 0;
+-    for (int channel : vetoNuChannels) {
+-      m_vetonu_reduced_charge[i] = m_wave_raw_charge[channel];
+-      i++;
+-    }
+-  } else {  // Calculate reduced charge
+-    // expVetoNuLocalTime is the time where we expect the signal of a muon in the VetoNu
+-    // station. This is calculated using the time in the veto or preshower station and the
+-    // corresponding time-of-flight
+-    float expVetoNuLocalTime;
+-    if (!std::isnan(vetoLocalTime)) {
+-      expVetoNuLocalTime = vetoLocalTime - m_veto_vetoNu_timeDiff;
+-    } else {
+-      expVetoNuLocalTime = preshowerLocalTime - m_preshower_vetoNu_timeDiff;
++
++  // Trigger/Timing station {8, 9, 10, 11} secondary fallback if both Veto2 and Preshower fail
++  std::list<int> triggerChannels = {8, 9, 10, 11};
++  if (m_wave_map.contains(std::string("trigger"))) {
++    triggerChannels = m_wave_map[std::string("trigger")];
++  }
++  float triggerLocalTime = NaN;
++  if (triggerContainer.isValid()) {
++    triggerLocalTime = get_mean_scintillator_time(triggerChannels, *triggerContainer);
++  }
++
++  // Resolve period-aware station localtime offsets unless overridden by Gaudi properties
++  double vvDiff = m_veto_vetoNu_timeDiff;
++  double vtDiff = m_trigger_vetoNu_timeDiff;
++  double vpDiff = m_preshower_vetoNu_timeDiff;
++  if (isMC) {
++    if (vvDiff < 0.0) vvDiff = 27.21;
++    if (vtDiff < 0.0) vtDiff = 32.43;
++    if (vpDiff < 0.0) vpDiff = 51.41;
++  } else if (m_run_number >= 15821 && m_run_number <= 16924) {
++    if (vvDiff < 0.0) vvDiff = 35.783;
++    if (vtDiff < 0.0) vtDiff = 34.872;
++    if (vpDiff < 0.0) vpDiff = 53.512;
++  } else if (m_run_number >= 18500) {
++    if (vvDiff < 0.0) vvDiff = 33.166;
++    if (vtDiff < 0.0) vtDiff = 34.930;
++    if (vpDiff < 0.0) vpDiff = 13.330;
++  } else {
++    if (vvDiff < 0.0) vvDiff = 33.165;
++    if (vtDiff < 0.0) vtDiff = 34.725;
++    if (vpDiff < 0.0) vpDiff = 53.625;
++  }
++
++  float expVetoNuLocalTime = NaN;
++  if (!std::isnan(vetoLocalTime)) {
++    expVetoNuLocalTime = vetoLocalTime - static_cast<float>(vvDiff);
++  } else if (!std::isnan(preshowerLocalTime)) {
++    expVetoNuLocalTime = preshowerLocalTime - static_cast<float>(vpDiff);
++  } else if (!std::isnan(triggerLocalTime)) {
++    expVetoNuLocalTime = triggerLocalTime - static_cast<float>(vtDiff);
++  }
++
++  m_vetonu_reduced_charge[0] = -1.0f;
++  m_vetonu_reduced_charge[1] = -1.0f;
++  if (!std::isnan(expVetoNuLocalTime) && vetoNuContainer.isValid()) {
++    std::list<int> vetoNuChannels = {4, 5};
++    if (m_wave_map.contains(std::string("vetonu")) && m_wave_map[std::string("vetonu")].size() == 2) {
++      vetoNuChannels = m_wave_map[std::string("vetonu")];
+     }
++    const int ch0 = vetoNuChannels.front();
++    const int ch1 = vetoNuChannels.back();
+     bool good_vetoNu_hit[2]{false, false};
+-    for (size_t idx = 0; idx < vetoNuContainer->size(); idx++) {
+-      const xAOD::WaveformHit *hit = vetoNuContainer->at(idx);
+-      if (((hit->hit_status() & 2) == 0) || (good_vetoNu_hit[idx] == false)) {
++    for (const xAOD::WaveformHit *hit : *vetoNuContainer) {
++      const int ch = hit->channel();
++      if (ch != ch0 && ch != ch1) continue;
++      const size_t idx = (ch == ch0) ? 0 : 1;
++      if (((hit->hit_status() & 2) == 0) || !good_vetoNu_hit[idx]) {
+         good_vetoNu_hit[idx] = true;
+-        std::vector<float> vetoNuTimeVector = hit->time_vector();
+-        std::vector<float> vetoNuWaveVector = hit->wave_vector();
++        const std::vector<float>& vetoNuTimeVector = hit->time_vector();
++        const std::vector<float>& vetoNuWaveVector = hit->wave_vector();
+         if (vetoNuTimeVector.size() != vetoNuWaveVector.size()) {
+           ATH_MSG_ERROR("Time and Wave vector have to have same size.");
+           return StatusCode::FAILURE;
+         }
+         // Sum up the waveform values up to the expected local time plus a time window
+-        // which covers the tail of the Crystall Ball function
+-        m_vetonu_reduced_charge[idx] = 0;
++        // which covers the tail of the Crystal Ball function
++        float q = 0.0f;
+         for (size_t i = 0; i < vetoNuTimeVector.size(); i++) {
+           if (vetoNuTimeVector[i] < expVetoNuLocalTime + m_reducedChargeIntegrationTime) {
+-            m_vetonu_reduced_charge[idx] += vetoNuWaveVector[i];
++            q += vetoNuWaveVector[i];
+           } else {
+             break;
+           }
+         }
+-        // Calculate the charge in pC from the raw integral of the waveform by dividing
+-        // by the 50 Ohm thermal resistance and 2ns time steps
+-        m_vetonu_reduced_charge[idx] *= m_int_to_charge;
++        q *= m_int_to_charge;
++        // Guard rare truncated waveforms returning 0 pC despite large raw charge
++        if (!isMC && m_run_number >= 12000 && q == 0.0f && m_wave_raw_charge[ch] > 30.0f) {
++          m_vetonu_reduced_charge[idx] = -1.0f;
++        } else {
++          m_vetonu_reduced_charge[idx] = q;
++        }
+       }
+     }
+   }
+@@ -2230,7 +2277,7 @@
+       m_calibrated_E_EM[ii]=0;
+   }
+   for (unsigned int ii=0; ii<2; ii++) {
+-    m_vetonu_reduced_charge[ii]=0;
++    m_vetonu_reduced_charge[ii] = -1.0f;
+   }
+ 
+   m_scintHit = 0;
+@@ -2530,16 +2577,25 @@
+     const std::list<int> &channels,
+     const xAOD::WaveformHitContainer &waveformContainer) const {
+   size_t num_good_hits = 0;
+-  float localTime = 0;
++  double localTime = 0.0;
+   for (const xAOD::WaveformHit *hit : waveformContainer) {
+-    if ((hit->hit_status() == 0) &&
+-        (std::find(channels.begin(), channels.end(), hit->channel()) != channels.end())) {
+-      localTime += hit->localtime();
+-      num_good_hits++;
++    if (std::find(channels.begin(), channels.end(), hit->channel()) == channels.end()) {
++      continue;
++    }
++    const int status = hit->hit_status();
++    // Hits on the second digitizer have status bit 512 set; mask it when selecting good hits.
++    if ((status & ~512) != 0) {
++      continue;
++    }
++    double t = hit->localtime();
++    if (status & 512) {
++      t += 16.0;  // required offset correction for second digitizer (CaloNu period)
+     }
++    localTime += t;
++    num_good_hits++;
+   }
+   if (num_good_hits > 0) {
+-    return localTime / num_good_hits;
++    return static_cast<float>(localTime / num_good_hits);
+   } else {
+     return NaN;
+   }

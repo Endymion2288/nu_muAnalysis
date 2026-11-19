@@ -118,7 +118,40 @@ target_link_libraries(t4_bkg_scanner
                       )
 
 target_compile_features(t4_bkg_scanner PRIVATE cxx_std_17)
+
+find_package(ZLIB REQUIRED)
+find_package(SQLite3 REQUIRED)
+find_package(Threads REQUIRED)
+find_library(ZSTD_LIBRARY NAMES zstd REQUIRED)
+find_library(LZ4_LIBRARY NAMES lz4 REQUIRED)
+
+add_executable(t5_scanner t5_scanner.cxx ${sources})
+
+target_compile_definitions(t5_scanner PRIVATE
+    PROJECT_INCLUDE_DIR="${CMAKE_SOURCE_DIR}/include"
+)
+
+target_link_libraries(t5_scanner
+                      nlohmann_json::nlohmann_json
+                      ${YAML_CPP_TARGET}
+                      ${ROOT_LIBRARIES}
+                      )
+
+target_compile_features(t5_scanner PRIVATE cxx_std_17)
+
+add_executable(raw_reduced_charge_dumper raw_reduced_charge_dumper.cxx)
+
+target_link_libraries(raw_reduced_charge_dumper PRIVATE
+                      ${ROOT_LIBRARIES}
+                      ${ZSTD_LIBRARY}
+                      ${LZ4_LIBRARY}
+                      ZLIB::ZLIB
+                      SQLite::SQLite3
+                      Threads::Threads
+                      )
+
+target_compile_features(raw_reduced_charge_dumper PRIVATE cxx_std_17)
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS analysis timing_calib_scanner mc_timing_scanner t4_bkg_scanner DESTINATION bin)
+install(TARGETS analysis timing_calib_scanner mc_timing_scanner t4_bkg_scanner t5_scanner raw_reduced_charge_dumper DESTINATION bin)

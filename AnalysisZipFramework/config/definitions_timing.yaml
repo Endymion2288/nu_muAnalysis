@@ -1,7 +1,11 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# nuAnalysis timing-aware definitions config (Stage T3 / Stage 214)
-# Extends definitions.yaml with Zone A/B, orthogonal blinding guard, and S0/S1/S2
-# selection flags for use with `./analysis --timing-calib <dir>`.
+# nuAnalysis timing-aware definitions config (Stage T5 / Stage 216 Frozen WPs)
+# Extends definitions.yaml with Zone A/B, orthogonal blinding guard, and frozen
+# S0 / S1 (WP_Primary, WP_Strict) / S2 (WP_S2) selection flags for `./analysis --timing-calib <dir>`.
+# Frozen on 2026-11-19 after full Run 3 reduced-charge unification:
+#   WP_Primary = S1_t2_4.0_t1_3.0_Q180_w16_tm18
+#   WP_Strict  = S1_t2_4.5_t1_3.5_Q150_w12_tm16
+#   WP_S2      = S2_dc25_z2_6.0_z1_4.5_Q180_w12
 # ─────────────────────────────────────────────────────────────────────────────
 
 Definitions:
@@ -143,40 +147,58 @@ Definitions:
     expression: "(VetoNu0_active ? 1 : 0) + (VetoNu1_active ? 1 : 0)"
 
   Timing_down_ok:
-    expression: "n_down_used >= 2 && std::isfinite(t0_down) && (ndof_down <= 0 || (chi2_down / std::max(ndof_down, 1)) < 5.0)"
+    expression: "n_down_used >= 2 && std::isfinite(t0_down) && std::abs(t0_down) < 2.5 && (ndof_down <= 0 || (chi2_down / std::max(ndof_down, 1)) < 10.0)"
+
+  VetoNu_qraw_max:
+    expression: "std::max(std::isfinite(VetoNu0_raw_charge) ? static_cast<double>(VetoNu0_raw_charge) : 0.0, std::isfinite(VetoNu1_raw_charge) ? static_cast<double>(VetoNu1_raw_charge) : 0.0)"
 
   VetoNu0_wave_ok:
-    expression: "VetoNu0_timing_valid && std::isfinite(VetoNu0_dt) && std::isfinite(VetoNu0_width) && VetoNu0_width > 1.5 && VetoNu0_width < 19.5"
+    expression: "VetoNu0_timing_valid && std::isfinite(VetoNu0_dt) && std::isfinite(VetoNu0_width) && VetoNu0_width > 1.5 && VetoNu0_width < 16.0"
 
   VetoNu1_wave_ok:
-    expression: "VetoNu1_timing_valid && std::isfinite(VetoNu1_dt) && std::isfinite(VetoNu1_width) && VetoNu1_width > 1.5 && VetoNu1_width < 19.5"
+    expression: "VetoNu1_timing_valid && std::isfinite(VetoNu1_dt) && std::isfinite(VetoNu1_width) && VetoNu1_width > 1.5 && VetoNu1_width < 16.0"
 
   Timing_act_wave_ok:
     expression: "(!VetoNu0_active || VetoNu0_wave_ok) && (!VetoNu1_active || VetoNu1_wave_ok)"
 
-  VetoNu0_mip_band:
-    expression: "VetoNu0_raw_charge >= 55.0 && VetoNu0_raw_charge <= 130.0"
+  VetoNu0_wave_ok_w12:
+    expression: "VetoNu0_timing_valid && std::isfinite(VetoNu0_dt) && std::isfinite(VetoNu0_width) && VetoNu0_width > 1.5 && VetoNu0_width < 12.0"
 
-  VetoNu1_mip_band:
-    expression: "VetoNu1_raw_charge >= 55.0 && VetoNu1_raw_charge <= 130.0"
+  VetoNu1_wave_ok_w12:
+    expression: "VetoNu1_timing_valid && std::isfinite(VetoNu1_dt) && std::isfinite(VetoNu1_width) && VetoNu1_width > 1.5 && VetoNu1_width < 12.0"
+
+  Timing_act_wave_ok_w12:
+    expression: "(!VetoNu0_active || VetoNu0_wave_ok_w12) && (!VetoNu1_active || VetoNu1_wave_ok_w12)"
 
   passed_S0:
     expression: "Timing_ZoneA"
 
+  # WP_Primary: S1_t2_4.0_t1_3.0_Q180_w16_tm18
   passed_S1_zoneB:
     expression: "!Timing_ZoneA && Timing_Allow_SR_ZoneB && Timing_down_ok && Timing_act_wave_ok &&
-                 ((Timing_n_active == 2 && VetoNu0_dt > 2.2 && VetoNu0_dt < 22.0 && VetoNu1_dt > 2.2 && VetoNu1_dt < 22.0) ||
-                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt > 3.0 && VetoNu0_dt < 22.0) ||
-                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt > 3.0 && VetoNu1_dt < 22.0))"
+                 ((Timing_n_active == 2 && VetoNu_qraw_max < 180.0 && VetoNu0_dt > 4.0 && VetoNu0_dt < 18.0 && VetoNu1_dt > 4.0 && VetoNu1_dt < 18.0) ||
+                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt > 3.0 && VetoNu0_dt < 18.0) ||
+                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt > 3.0 && VetoNu1_dt < 18.0))"
 
   passed_S1:
     expression: "passed_S0 || passed_S1_zoneB"
 
+  # WP_Strict: S1_t2_4.5_t1_3.5_Q150_w12_tm16 (strict subset of WP_Primary)
+  passed_S1_strict_zoneB:
+    expression: "!Timing_ZoneA && Timing_Allow_SR_ZoneB && Timing_down_ok && Timing_act_wave_ok_w12 &&
+                 ((Timing_n_active == 2 && VetoNu_qraw_max < 150.0 && VetoNu0_dt > 4.5 && VetoNu0_dt < 16.0 && VetoNu1_dt > 4.5 && VetoNu1_dt < 16.0) ||
+                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt > 3.5 && VetoNu0_dt < 16.0) ||
+                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt > 3.5 && VetoNu1_dt < 16.0))"
+
+  passed_S1_strict:
+    expression: "passed_S0 || passed_S1_strict_zoneB"
+
+  # WP_S2: S2_dc25_z2_6.0_z1_4.5_Q180_w12
   passed_S2_zoneB:
-    expression: "!Timing_ZoneA && Timing_Allow_SR_ZoneB && Timing_down_ok && Timing_act_wave_ok &&
-                 ((Timing_n_active == 2 && VetoNu0_dt < 22.0 && VetoNu1_dt < 22.0 && std::isfinite(delta_chi2_back) && delta_chi2_back > 25.0 && VetoNu0_pull > 3.0 && VetoNu1_pull > 3.0) ||
-                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt < 22.0 && VetoNu0_pull > (VetoNu0_mip_band ? 6.0 : 5.0)) ||
-                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt < 22.0 && VetoNu1_pull > (VetoNu1_mip_band ? 6.0 : 5.0)))"
+    expression: "!Timing_ZoneA && Timing_Allow_SR_ZoneB && Timing_down_ok && Timing_act_wave_ok_w12 &&
+                 ((Timing_n_active == 2 && VetoNu_qraw_max < 180.0 && VetoNu0_dt > 1.5 && VetoNu1_dt > 1.5 && VetoNu0_dt < 16.0 && VetoNu1_dt < 16.0 && std::isfinite(delta_chi2_back) && delta_chi2_back > 25.0 && VetoNu0_pull > 6.0 && VetoNu1_pull > 6.0) ||
+                  (Timing_n_active == 1 && VetoNu0_active && VetoNu0_dt > 0.0 && VetoNu0_dt < 16.0 && VetoNu0_pull > 4.5) ||
+                  (Timing_n_active == 1 && VetoNu1_active && VetoNu1_dt > 0.0 && VetoNu1_dt < 16.0 && VetoNu1_pull > 4.5))"
 
   passed_S2:
     expression: "passed_S0 || passed_S2_zoneB"

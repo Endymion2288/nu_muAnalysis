@@ -179,9 +179,9 @@ class Analysis {
         std::atomic<int> m_NVetoNu0_missing_aux{0};
         std::atomic<int> m_NVetoNu1_missing_aux{0};
 
-        Int_t getLookupKey(int run, Int_t event) {
-            return event;
-            // return (uint64_t)run << 32 | (uint32_t)event;
+        uint64_t getLookupKey(int run, Int_t event) const {
+            return (static_cast<uint64_t>(static_cast<uint32_t>(run)) << 32) |
+                   static_cast<uint64_t>(static_cast<uint32_t>(event));
         }
 
         void applyCut(std::string cutExpression, std::string cutName, DataType dataType = ALL);

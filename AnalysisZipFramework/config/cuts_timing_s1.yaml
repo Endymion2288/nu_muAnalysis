@@ -1,5 +1,6 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# nuAnalysis S1 selection config (Stage T3 / Stage 214):
+# nuAnalysis S1 selection config (Stage T5 / Stage 216 Frozen WP_Primary):
+#   S1_t2_4.0_t1_3.0_Q180_w16_tm18 (t2 > 4.0 ns, t1 > 3.0 ns, Q2hit < 180 pC, w < 16 ns, dt < 18 ns)
 # Zone A (pure-charge veto) OR blinded-safe Zone B backward-hadron timing window.
 # Use with:
 #   ./analysis --timing-calib <dir> --definitions-config config/definitions_timing.yaml --cuts-config config/cuts_timing_s1.yaml
