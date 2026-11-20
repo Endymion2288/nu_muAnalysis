@@ -67,6 +67,10 @@ Cuts:
         title: Crossing angle
         x: {variable: crossingAngle, bins: 400, min: -200, max: 200}
 
+  Not dead VetoNu HV run:
+    expression: "!isDeadVetoNuRun"
+    data_type: DATA
+
   # Crossing angle selections (not used at the moment):
   # Crossing angle = 150 in 2024 period:
   #   expression: "(!is2024Period) || (crossingAngle == 150.0)"

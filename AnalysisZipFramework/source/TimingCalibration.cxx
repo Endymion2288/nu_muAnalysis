@@ -324,6 +324,15 @@ const RunOffsets* TimingCalibrator::findRunOffsets(int run) const {
     return nullptr;
 }
 
+bool TimingCalibrator::getChannelRunOffsets(int run, int chIdx, double& tRefBcidOut, double& tTrigRelOut) const {
+    if (chIdx < 0 || chIdx >= kNumChannels) return false;
+    const RunOffsets* ro = findRunOffsets(run);
+    if (!ro || !ro->hasBcidRef[chIdx] || !ro->hasTrigRef[chIdx]) return false;
+    tRefBcidOut = ro->tRefBcid[chIdx];
+    tTrigRelOut = ro->tTrigRelRef[chIdx];
+    return true;
+}
+
 const PeriodTofMap* TimingCalibrator::findPeriodMap(const std::string& period) const {
     auto it = m_periodMaps.find(period);
     if (it != m_periodMaps.end()) return &it->second;

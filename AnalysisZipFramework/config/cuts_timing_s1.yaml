@@ -31,6 +31,10 @@ Cuts:
         title: Crossing angle
         x: {variable: crossingAngle, bins: 400, min: -200, max: 200}
 
+  Not dead VetoNu HV run:
+    expression: "!isDeadVetoNuRun"
+    data_type: DATA
+
   # ── MC truth selection ────────────────────────────────────────────────────
   Remove CaloNu PMT region (truth):
     expression: "(!isCaloNuPeriod) || (isCaloNuPeriod && !inCaloNuPMT)"

@@ -186,6 +186,7 @@ public:
     bool hasOffsets() const { return !m_runOffsets.empty(); }
     bool hasTofMaps() const { return !m_periodMaps.empty(); }
     bool hasMcCalib() const { return !m_mcFamilies.empty(); }
+    bool getChannelRunOffsets(int run, int chIdx, double& tRefBcidOut, double& tTrigRelOut) const;
 
     static const std::array<ChannelMeta, kNumChannels>& channelMetadata();
     static std::string periodForDataRun(int run);
@@ -314,7 +315,7 @@ public:
         return 1u << static_cast<int>(ch);
     }
 
-    static constexpr uint32_t defaultPrimaryMask() {
+    static constexpr uint32_t legacyNoPreshower23PrimaryMask() {
         return channelBit(TimingChannel::VetoNu0) |
                channelBit(TimingChannel::VetoNu1) |
                channelBit(TimingChannel::Veto10) |
@@ -329,7 +330,7 @@ public:
                channelBit(TimingChannel::Muon1);
     }
 
-    static constexpr uint32_t defaultDownstreamMask() {
+    static constexpr uint32_t legacyNoPreshower23DownstreamMask() {
         return channelBit(TimingChannel::Veto10) |
                channelBit(TimingChannel::Veto11) |
                channelBit(TimingChannel::Veto20) |
@@ -340,6 +341,18 @@ public:
                channelBit(TimingChannel::Preshower1) |
                channelBit(TimingChannel::Muon0) |
                channelBit(TimingChannel::Muon1);
+    }
+
+    static constexpr uint32_t defaultPrimaryMask() {
+        return legacyNoPreshower23PrimaryMask() |
+               channelBit(TimingChannel::Preshower2) |
+               channelBit(TimingChannel::Preshower3);
+    }
+
+    static constexpr uint32_t defaultDownstreamMask() {
+        return legacyNoPreshower23DownstreamMask() |
+               channelBit(TimingChannel::Preshower2) |
+               channelBit(TimingChannel::Preshower3);
     }
 
     /**

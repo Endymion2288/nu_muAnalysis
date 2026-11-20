@@ -22,7 +22,7 @@ def run_period(run_number):
         return f"2024 data (CaloNu period, runs {CALONU_RUN_RANGE[0]}-{CALONU_RUN_RANGE[1]})"
     if run_number < 19000:
         return "2024 data (after CaloNu period)"
-    if run_number < 21000:
+    if run_number < 21500:
         return "2025 data"
     return "2026 data"
 

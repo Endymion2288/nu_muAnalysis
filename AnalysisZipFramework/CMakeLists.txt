@@ -41,7 +41,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include
 
 file(GLOB_RECURSE sources ${PROJECT_SOURCE_DIR}/source/*.cxx)
 file(GLOB_RECURSE headers ${PROJECT_SOURCE_DIR}/include/*.h)
-file(GLOB_RECURSE configs RELATIVE ${PROJECT_SOURCE_DIR} config/*.yaml)
+file(GLOB_RECURSE configs RELATIVE ${PROJECT_SOURCE_DIR} config/*.yaml config/timing_calib/*.json)
 file(GLOB_RECURSE definitions ${PROJECT_SOURCE_DIR}/include/RDFDefines.h)
 
 #----------------------------------------------------------------------------
@@ -139,6 +139,20 @@ target_link_libraries(t5_scanner
 
 target_compile_features(t5_scanner PRIVATE cxx_std_17)
 
+add_executable(t6_scanner t6_scanner.cxx ${sources})
+
+target_compile_definitions(t6_scanner PRIVATE
+    PROJECT_INCLUDE_DIR="${CMAKE_SOURCE_DIR}/include"
+)
+
+target_link_libraries(t6_scanner
+                      nlohmann_json::nlohmann_json
+                      ${YAML_CPP_TARGET}
+                      ${ROOT_LIBRARIES}
+                      )
+
+target_compile_features(t6_scanner PRIVATE cxx_std_17)
+
 add_executable(raw_reduced_charge_dumper raw_reduced_charge_dumper.cxx)
 
 target_link_libraries(raw_reduced_charge_dumper PRIVATE
@@ -154,4 +168,4 @@ target_compile_features(raw_reduced_charge_dumper PRIVATE cxx_std_17)
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS analysis timing_calib_scanner mc_timing_scanner t4_bkg_scanner t5_scanner raw_reduced_charge_dumper DESTINATION bin)
+install(TARGETS analysis timing_calib_scanner mc_timing_scanner t4_bkg_scanner t5_scanner t6_scanner raw_reduced_charge_dumper DESTINATION bin)

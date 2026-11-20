@@ -420,11 +420,28 @@ void Analysis::BuildDataFrame() {
     // ── Built-in definitions ────────────────────────────────────────────────
     // These stay in C++ because the built-in reduced-charge code relies on them.
     // All other definitions are in config/definitions.yaml (applied at the end of this function).
-    // Run periods
+    // Run periods (strictly non-overlapping across 2022–2026 DATA and MC families)
+    const bool hasNativeReducedCharge = isColumnDefined("VetoNu0_reduced_charge") && isColumnDefined("VetoNu1_reduced_charge");
     Define("isCaloNuPeriod", "15821 <= run  && run <= 16924", DATA);
     Define("isCaloNuPeriod", "(200137 <= run && run <= 200147) || (200172 <= run && run <= 200183)", ASIMOV);  // all MC
-    Define("is2024Period", "run >= 1.2e4", DATA);
-    Define("is2024Period", "(200091 < run && run < 200101) || (200160 <= run && run <= 200171) || (200137 <= run && run <= 200147) || (200172 <= run && run <= 200183)", ASIMOV);  // all MC
+    Define("is2022Period", "run < 10000", DATA);
+    Define("is2022Period", "(200080 <= run && run <= 200090) || (200104 <= run && run <= 200115)", ASIMOV);
+    Define("is2023Period", "10000 <= run && run < 14000", DATA);
+    Define("is2023Period", "false", ASIMOV);
+    Define("is2024Period", "14000 <= run && run <= 18499", DATA);
+    Define("is2024Period", "(200091 <= run && run <= 200101) || (200137 <= run && run <= 200147) || (200160 <= run && run <= 200183)", ASIMOV);  // all MC
+    Define("is2025Period", "18500 <= run && run < 21500", DATA);
+    Define("is2025Period", "false", ASIMOV);
+    Define("is2026Period", "run >= 21500", DATA);
+    Define("is2026Period", "false", ASIMOV);
+    Define("isDeadVetoNuRun", "run == 20667 || run == 20668 || run == 20675 || run == 20677", DATA);
+    Define("isDeadVetoNuRun", "false", ASIMOV);
+    Define("isBrokenPsP0013Run", hasNativeReducedCharge ? "false" : "(19413 <= run && run <= 20142)", DATA);
+    Define("isBrokenPsP0013Run", "false", ASIMOV);
+    Define("Preshower0_charge_eff", "(isBrokenPsP0013Run && Preshower0_charge <= 0.0f) ? (0.928f * Preshower0_raw_charge) : Preshower0_charge", DATA);
+    Define("Preshower0_charge_eff", "Preshower0_charge", ASIMOV);
+    Define("Preshower1_charge_eff", "(isBrokenPsP0013Run && Preshower1_charge <= 0.0f) ? (0.928f * Preshower1_raw_charge) : Preshower1_charge", DATA);
+    Define("Preshower1_charge_eff", "Preshower1_charge", ASIMOV);
 
     // Scintillator status flags (data only; used by the built-in GoodScintillatorStatus)
     if (!isMC) {
@@ -437,7 +454,6 @@ void Analysis::BuildDataFrame() {
     // --no-reduced-charge skips all of this and the VetoNu veto uses the raw charge instead.
     // TODO: once definitions/cuts/histograms are configurable, only load the reduced charge
     //       if something actually depends on it.
-    const bool hasNativeReducedCharge = isColumnDefined("VetoNu0_reduced_charge") && isColumnDefined("VetoNu1_reduced_charge");
 
     if (!useReducedCharge) {
         m_reducedChargeSource = ReducedChargeSource::None;
@@ -577,12 +593,14 @@ void Analysis::defineReducedChargeFromAux() {
 
     auto makeLookupFn = [this, auxMap](bool isLayer0) {
         return [this, auxMap, isLayer0](Int_t runNum, Int_t eventID, Int_t longTracks,
-                                        bool TimingOK, bool is2024Period, float rawCharge) -> float {
+                                        bool TimingOK, float rawCharge) -> float {
             const uint64_t key = getLookupKey(runNum, eventID);
             const auto it = auxMap->find(key);
             if (it != auxMap->end()) {
                 const float reduced_charge = isLayer0 ? it->second.charge35_nu0 : it->second.charge35_nu1;
-                const bool isZeroBug = is2024Period && (reduced_charge == 0.0f) && (rawCharge > 30.0f);
+                // Stage T6 audit on run 11613 proved exact 0.0f aux reduced-charge on MIP muons (rawCharge > 30 pC)
+                // occurs in both Waveforms-2023 (e.g. ev 23803299 when Veto2 saturates) and 2024 aux files.
+                const bool isZeroBug = (reduced_charge == 0.0f) && (rawCharge > 30.0f);
                 if (!TimingOK || std::isnan(reduced_charge) || isZeroBug) {
                     return -1.0f;
                 }
@@ -600,9 +618,9 @@ void Analysis::defineReducedChargeFromAux() {
     };
 
     defineOrRedefine("VetoNu0_reduced_charge", makeLookupFn(true),
-                     {"run", "eventID", "longTracks", "TimingOK", "is2024Period", "VetoNu0_raw_charge"});
+                     {"run", "eventID", "longTracks", "TimingOK", "VetoNu0_raw_charge"});
     defineOrRedefine("VetoNu1_reduced_charge", makeLookupFn(false),
-                     {"run", "eventID", "longTracks", "TimingOK", "is2024Period", "VetoNu1_raw_charge"});
+                     {"run", "eventID", "longTracks", "TimingOK", "VetoNu1_raw_charge"});
 
     Define("AuxLookupSuccess", [auxMap, this](Int_t runNum, Int_t eventID, Int_t longTracks) -> bool {
         if (longTracks <= 0) return true;
